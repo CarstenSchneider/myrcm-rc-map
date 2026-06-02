@@ -83,6 +83,7 @@ function parseHosts(html) {
   return hosts;
 }
 
+
 async function discoverWebsite(hostUrl) {
   if (!hostUrl) return null;
 
@@ -97,49 +98,22 @@ async function discoverWebsite(hostUrl) {
 
     const html = await response.text();
     const $ = cheerio.load(html);
-    const candidates = [];
 
-    $("a").each((_, link) => {
-      const href = $(link).attr("href");
-      const label = normalizeText($(link).text()).toLowerCase();
+    let website = null;
 
-      if (!href) return;
+    $("span.label").each((_, el) => {
+      const label = normalizeText($(el).text());
 
-      let url = "";
+      if (label === "Web:") {
+        const link = $(el).parent().find("a").first();
 
-      try {
-        url = absoluteUrl(href);
-      } catch {
-        return;
+        if (link.length) {
+          website = absoluteUrl(link.attr("href"));
+        }
       }
-
-      const lowerUrl = url.toLowerCase();
-
-      if (lowerUrl.includes("myrcm.ch")) return;
-      if (lowerUrl.startsWith("mailto:")) return;
-      if (lowerUrl.includes("facebook.com")) return;
-      if (lowerUrl.includes("instagram.com")) return;
-      if (lowerUrl.includes("youtube.com")) return;
-      if (lowerUrl.includes("twitter.com")) return;
-      if (lowerUrl.includes("x.com")) return;
-
-      candidates.push({
-        url,
-        label,
-        score:
-          (label.includes("homepage") ? 5 : 0) +
-          (label.includes("website") ? 5 : 0) +
-          (label.includes("internet") ? 4 : 0) +
-          (label.includes("webseite") ? 5 : 0) +
-          (label.includes("verein") ? 2 : 0)
-      });
     });
 
-    if (!candidates.length) return null;
-
-    candidates.sort((a, b) => b.score - a.score);
-
-    return candidates[0].url;
+    return website;
   } catch {
     return null;
   }
