@@ -22,10 +22,10 @@
   },
   {
     "id": "blankenfelde",
-    "name": "Burning Wheels Blankenfelde e.V.",
+    "name": "Burning Wheels Blankenfelde",
     "city": "Blankenfelde",
-    "lat": 52.3208953,
-    "lng": 13.4081779
+    "lat": 52.32099365980667,
+    "lng": 13.40860882307241
   },
   {
     "id": "myrcm-39671",
@@ -131,5 +131,82 @@
     "city": "Nossen",
     "lat": 51.183209912703695,
     "lng": 13.494275375841397
-  }
+  },
+  {
+  "id": "myrcm-64649",
+  "name": "Breitenfelder Sportverein von 1924 e.V.",
+  "city": "Breitenfelde",
+  "lat": 53.606169364621394,
+  "lng": 10.628400444902876
+},
+{
+  "id": "myrcm-50568",
+  "name": "DJK-SSC Lackenhäuser e.V.",
+  "city": "Neureichenau",
+  "lat": 48.735561100310875,
+  "lng": 13.798475640900763
+},
+{
+  "id": "myrcm-35606",
+  "name": "EDC Kinzigtal e.V.",
+  "city": "Gengenbach",
+  "lat": 48.424259010683336,
+  "lng": 8.017786070319858
+},
+{
+  "id": "myrcm-43367",
+  "name": "EMC-Marktoberdorf",
+  "city": "Marktoberdorf",
+  "lat": 47.77353559344614,
+  "lng": 10.596636348538459
+},
+{
+  "id": "myrcm-10117",
+  "name": "Equipe RC Nohn",
+  "city": "Nohn",
+  "lat": 48.37078150268052,
+  "lng": 10.719769403703232
+},
+{
+  "id": "myrcm-37613",
+  "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
+  "city": "Bischofsheim",
+  "lat": 49.97763075091446,
+  "lng": 8.387647129236486
+},
+{
+  "id": "myrcm-56473",
+  "name": "Greenhouse RaCer e.V.",
+  "city": "Wendelstein",
+  "lat": 49.34814240723616,
+  "lng": 11.142573203838916
+},
+{
+  "id": "myrcm-52798",
+  "name": "LA Speedway Racing Club e.V.",
+  "city": "Bruckberg",
+  "lat": 48.5135310265825,
+  "lng": 12.044646410956766
+},
+{
+  "id": "myrcm-17507",
+  "name": "Lost-Place-Racers e.V.",
+  "city": "Prüm",
+  "lat": 50.62670012162062,
+  "lng": 6.695804823655136
+},
+{
+  "id": "myrcm-19204",
+  "name": "LTS Bremerhaven Racing Team",
+  "city": "Geestland",
+  "lat": 53.588865659093905,
+  "lng": 8.58660868179531
+},
+{
+  "id": "myrcm-4602",
+  "name": "MAC Adenau",
+  "city": "Kottenborn",
+  "lat": 50.380520238217656,
+  "lng": 6.9339287153803975
+}
 ]
