@@ -1,10 +1,594 @@
 [
   {
-    "id": "sample-tsv-btm-2026-04-25",
+    "id": "tsv-mariendorf-2016-06-12-berlin-touring-masters-btm-2016-lauf-3",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters - BTM - 2016 - Lauf 3",
+    "from": "2016-06-12",
+    "to": "2016-06-12",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=24641&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2016-07-17-berlin-touring-masters-btm-2016-lauf-4",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters - BTM - 2016 - Lauf 4",
+    "from": "2016-07-17",
+    "to": "2016-07-17",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=24642&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2016-08-21-berlin-touring-masters-btm-2016-lauf-5",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters - BTM - 2016 - Lauf 5",
+    "from": "2016-08-21",
+    "to": "2016-08-21",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=24643&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2016-09-04-berlin-touring-masters-btm-2016-lauf-6",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters - BTM - 2016 - Lauf 6",
+    "from": "2016-09-04",
+    "to": "2016-09-04",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=24644&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2016-09-18-berlin-touring-masters-btm-2016-lauf-7",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters - BTM - 2016 - Lauf 7",
+    "from": "2016-09-18",
+    "to": "2016-09-18",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=24645&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2016-10-02-berlin-touring-masters-btm-2016-lauf-8-finale",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters - BTM - 2016 - Lauf 8 - Finale",
+    "from": "2016-10-02",
+    "to": "2016-10-02",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=24646&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2018-05-27-tamiya-euro-cup-2018-lauf-1",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup 2018 Lauf 1",
+    "from": "2018-05-27",
+    "to": "2018-05-27",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=39508&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2020-03-29-tamiya-euro-cup-abgesagt",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup Abgesagt",
+    "from": "2020-03-29",
+    "to": "2020-03-29",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=50737&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2022-03-27-tamiya-euro-cup-2022-egtwho-17-5",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup 2022 + EGTWHO 17,5",
+    "from": "2022-03-27",
+    "to": "2022-03-27",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=63038&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2022-06-26-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2022-06-26",
+    "to": "2022-06-26",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=64789&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2023-03-26-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2023-03-26",
+    "to": "2023-03-26",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=69173&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2023-04-15-tos-sm",
+    "venueId": "tsv-mariendorf",
+    "name": "TOS / SM",
+    "from": "2023-04-15",
+    "to": "2023-04-16",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=70022&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2023-05-28-berlin-touring-masters",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters",
+    "from": "2023-05-28",
+    "to": "2023-05-28",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=70650&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2023-06-18-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2023-06-18",
+    "to": "2023-06-18",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=70652&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2023-07-30-tonisport-onroad-series",
+    "venueId": "tsv-mariendorf",
+    "name": "ToniSport Onroad Series",
+    "from": "2023-07-30",
+    "to": "2023-07-30",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=72244&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2023-09-03-berlin-touring-masters-lauf-6",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters Lauf 6",
+    "from": "2023-09-03",
+    "to": "2023-09-03",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=72245&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "marzahn-2023-09-23-sk-lauf-sk5-und-berlin-touring-masters-finale",
+    "venueId": "marzahn",
+    "name": "SK-Lauf SK5 und Berlin Touring Masters Finale",
+    "from": "2023-09-23",
+    "to": "2023-09-24",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=68675&dLt=reg&pLa=en&lType=wList"
+  },
+  {
+    "id": "marzahn-2023-11-18-berlin-winter-series-2023-24-round-1-sk-lauf-ost",
+    "venueId": "marzahn",
+    "name": "Berlin Winter Series 2023/24 Round 1 + SK-Lauf Ost",
+    "from": "2023-11-18",
+    "to": "2023-11-19",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=74124&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "marzahn-2023-12-02-berlin-winter-series-2023-24-round-2",
+    "venueId": "marzahn",
+    "name": "Berlin Winter Series 2023/24 Round 2",
+    "from": "2023-12-02",
+    "to": "2023-12-03",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=74123&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "marzahn-2024-01-06-berlin-winter-series-2023-24-round-3-sk-lauf-ost",
+    "venueId": "marzahn",
+    "name": "Berlin Winter Series 2023/24 Round 3 + SK-Lauf Ost",
+    "from": "2024-01-06",
+    "to": "2024-01-07",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=75250&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "marzahn-2024-03-23-berlin-winter-series-2023-24-round-4-sm-lauf",
+    "venueId": "marzahn",
+    "name": "Berlin Winter Series 2023/24 Round 4 + SM-Lauf",
+    "from": "2024-03-23",
+    "to": "2024-03-24",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=76823&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2024-04-06-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2024-04-06",
+    "to": "2024-04-06",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=78146&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2024-04-07-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2024-04-07",
+    "to": "2024-04-07",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=76474&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2024-05-05-berlin-touring-masters",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters",
+    "from": "2024-05-05",
+    "to": "2024-05-05",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=77878&tId=E&hId[1]=org"
+  },
+  {
+    "id": "marzahn-2024-06-02-3-lauf-berlin-touring-masters-sk-lauf-ost",
+    "venueId": "marzahn",
+    "name": "3. Lauf Berlin Touring Masters + SK-Lauf Ost",
+    "from": "2024-06-02",
+    "to": "2024-06-02",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=78076&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2024-06-09-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2024-06-09",
+    "to": "2024-06-09",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=76480&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2024-07-06-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2024-07-06",
+    "to": "2024-07-06",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=80378&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2024-09-07-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2024-09-07",
+    "to": "2024-09-07",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=81602&tId=E&hId[1]=org"
+  },
+  {
+    "id": "marzahn-2024-09-15-7-lauf-berlin-touring-masters-sk-lauf-ost",
+    "venueId": "marzahn",
+    "name": "7. Lauf Berlin Touring Masters + Sk-Lauf Ost",
+    "from": "2024-09-15",
+    "to": "2024-09-15",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=78077&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2024-09-22-sk-lauf-tonisport-onroad-serie-tamiya-euro-cup",
+    "venueId": "bernau",
+    "name": "SK-Lauf / Tonisport Onroad Serie / Tamiya Euro Cup",
+    "from": "2024-09-22",
+    "to": "2024-09-22",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=78314&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2024-09-29-berlin-touring-masters-finale",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters Finale",
+    "from": "2024-09-29",
+    "to": "2024-09-29",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=80870&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2024-09-29-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2024-09-29",
+    "to": "2024-09-29",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=82228&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-01-25-gro-er-preis-von-berlin",
+    "venueId": "tsv-mariendorf",
+    "name": "Großer Preis von Berlin",
+    "from": "2025-01-25",
+    "to": "2025-01-26",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=83904&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-01-25-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-01-25",
+    "to": "2025-01-25",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=84725&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-01-26-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-01-26",
+    "to": "2025-01-26",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=84755&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-03-01-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-03-01",
+    "to": "2025-03-01",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85689&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-03-01-tamiya-euro-cup-tw-21-5",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup + TW 21,5",
+    "from": "2025-03-01",
+    "to": "2025-03-02",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=84385&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-03-02-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-03-02",
+    "to": "2025-03-02",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85712&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-03-08-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-03-08",
+    "to": "2025-03-08",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85910&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-03-22-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-03-22",
+    "to": "2025-03-22",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=86295&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-04-05-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-04-05",
+    "to": "2025-04-05",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=86740&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-04-06-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2025-04-06",
+    "to": "2025-04-06",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85256&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-04-12-online-event",
+    "venueId": "tsv-mariendorf",
+    "name": "Online Event",
+    "from": "2025-04-12",
+    "to": "2025-04-12",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=86991&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-04-27-berlin-touring-masters-2025-lauf-1",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters 2025 Lauf 1",
+    "from": "2025-04-27",
+    "to": "2025-04-27",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85263&tId=E&hId[1]=org"
+  },
+  {
+    "id": "tsv-mariendorf-2025-05-04-rck-klein-serie",
+    "venueId": "tsv-mariendorf",
+    "name": "RCK Klein Serie",
+    "from": "2025-05-04",
+    "to": "2025-05-04",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85259&tId=E&hId[1]=org"
+  },
+  {
+    "id": "bernau-2025-05-10-sk-lauf-ostmasters-2025-lauf-2",
+    "venueId": "bernau",
+    "name": "SK-Lauf + Ostmasters 2025 Lauf 2",
+    "from": "2025-05-10",
+    "to": "2025-05-11",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85416&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2025-05-17-sk-lauf-tonisport-onroard-serie",
+    "venueId": "bernau",
+    "name": "SK-Lauf / Tonisport Onroard Serie",
+    "from": "2025-05-17",
+    "to": "2025-05-18",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85417&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2025-05-24-berlin-touring-masters-2025-lauf-2-sk-lauf",
+    "venueId": "bernau",
+    "name": "Berlin Touring Masters 2025 Lauf 2 + SK-Lauf",
+    "from": "2025-05-24",
+    "to": "2025-05-25",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85418&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2025-06-07-berlin-touring-masters-2025-lauf-3",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters 2025 Lauf 3",
+    "from": "2025-06-07",
+    "to": "2025-06-08",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=85261&tId=E&hId[1]=org"
+  },
+  {
+    "id": "bernau-2025-06-15-tamico-offroad-cup",
+    "venueId": "bernau",
+    "name": "TAMICO Offroad Cup",
+    "from": "2025-06-15",
+    "to": "2025-06-15",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=87567&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2025-06-29-berlin-touring-masters-2025-lauf-4-sk-lauf",
+    "venueId": "bernau",
+    "name": "Berlin Touring Masters 2025 Lauf 4 + SK-Lauf",
+    "from": "2025-06-29",
+    "to": "2025-06-29",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85420&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2025-07-06-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2025-07-06",
+    "to": "2025-07-06",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=88293&tId=E&hId[1]=org"
+  },
+  {
+    "id": "bernau-2025-07-12-sk-lauf-tonisport-onroard-serie-tamiya-euro-cup",
+    "venueId": "bernau",
+    "name": "SK-Lauf / Tonisport Onroard Serie / Tamiya Euro Cup",
+    "from": "2025-07-12",
+    "to": "2025-07-13",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85421&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2025-07-19-offene-deutsche-meisterschaft-rc-motorrad-dmc",
+    "venueId": "bernau",
+    "name": "Offene Deutsche Meisterschaft RC-Motorrad DMC",
+    "from": "2025-07-19",
+    "to": "2025-07-20",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=84581&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2025-07-27-rck-kleinserie",
+    "venueId": "tsv-mariendorf",
+    "name": "RCK Kleinserie",
+    "from": "2025-07-27",
+    "to": "2025-07-27",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=89570&tId=E&hId[1]=org"
+  },
+  {
+    "id": "bernau-2025-08-03-sk-lauf-warmup-eg8gt-eg8gt3-und-vg8gt",
+    "venueId": "bernau",
+    "name": "SK-Lauf - Warmup EG8GT, EG8GT3 und VG8GT",
+    "from": "2025-08-03",
+    "to": "2025-08-03",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=88104&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2025-08-17-rck-challenge",
+    "venueId": "tsv-mariendorf",
+    "name": "RCK Challenge",
+    "from": "2025-08-17",
+    "to": "2025-08-17",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=89966&tId=E&hId[1]=org"
+  },
+  {
+    "id": "bernau-2025-08-30-deutsche-meisterschaft-eg8gt3-und-deutschlandcup-eg8gt-vg8gt",
+    "venueId": "bernau",
+    "name": "Deutsche Meisterschaft EG8GT3 und Deutschlandcup EG8GT, VG8GT",
+    "from": "2025-08-30",
+    "to": "2025-08-31",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85423&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2025-09-07-berlin-touring-masters-lauf-7",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters Lauf 7",
+    "from": "2025-09-07",
+    "to": "2025-09-07",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=89826&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2025-09-14-sk-lauf-sportkreis-ost-und-tonisport-onroard-serie",
+    "venueId": "bernau",
+    "name": "SK-Lauf Sportkreis Ost und Tonisport Onroard Serie",
+    "from": "2025-09-14",
+    "to": "2025-09-14",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=85422&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2025-09-28-btm-lauf-8-finale",
+    "venueId": "tsv-mariendorf",
+    "name": "BTM Lauf 8 Finale",
+    "from": "2025-09-28",
+    "to": "2025-09-28",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=89830&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "blankenfelde-2026-01-17-sk-lauf-ost-blankenfelde-winter-series-2025-2026-lauf-3",
+    "venueId": "blankenfelde",
+    "name": "SK Lauf Ost / Blankenfelde Winter Series 2025/2026 Lauf 3",
+    "from": "2026-01-17",
+    "to": "2026-01-18",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=92982&dLt=reg&pLa=en&lType=wList"
+  },
+  {
+    "id": "tsv-mariendorf-2026-01-24-rck-kleinserie",
+    "venueId": "tsv-mariendorf",
+    "name": "RCK Kleinserie",
+    "from": "2026-01-24",
+    "to": "2026-01-25",
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=92755&tId=E&hId[1]=org"
+  },
+  {
+    "id": "blankenfelde-2026-02-14-sk-lauf-ost-blankenfelde-winter-series-2025-2026-lauf-4",
+    "venueId": "blankenfelde",
+    "name": "SK Lauf Ost / Blankenfelde Winter Series 2025/2026 Lauf 4",
+    "from": "2026-02-14",
+    "to": "2026-02-15",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93694&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "blankenfelde-2026-03-07-sk-lauf-ost-blankenfelde-winter-series-2025-2026-lauf-5",
+    "venueId": "blankenfelde",
+    "name": "SK Lauf Ost / Blankenfelde Winter Series 2025/2026 Lauf 5",
+    "from": "2026-03-07",
+    "to": "2026-03-08",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94576&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2026-04-05-tamiya-euro-cup",
+    "venueId": "tsv-mariendorf",
+    "name": "Tamiya Euro Cup",
+    "from": "2026-04-05",
+    "to": "2026-04-05",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94105&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2026-04-25-berlin-touring-masters",
     "venueId": "tsv-mariendorf",
     "name": "Berlin Touring Masters",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "url": "https://www.myrcm.ch/"
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94212&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2026-05-09-berlin-touring-masters-sk-5-lauf",
+    "venueId": "tsv-mariendorf",
+    "name": "Berlin Touring Masters + SK 5 Lauf",
+    "from": "2026-05-09",
+    "to": "2026-05-10",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94887&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "tsv-mariendorf-2026-05-23-12-stunden-von-berlin",
+    "venueId": "tsv-mariendorf",
+    "name": "12 Stunden von Berlin",
+    "from": "2026-05-23",
+    "to": "2026-05-24",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=92759&dLt=reg&pLa=en&lType=wList"
+  },
+  {
+    "id": "bernau-2026-05-30-sk-lauf-ost-berlin-touring-masters-lauf-3",
+    "venueId": "bernau",
+    "name": "SK-Lauf Ost + Berlin Touring Masters Lauf 3",
+    "from": "2026-05-30",
+    "to": "2026-05-31",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94210&dLt=reg&pLa=en&lType=rList"
+  },
+  {
+    "id": "bernau-2026-06-13-sk-lauf-ost-berlin-touring-masters-lauf-4",
+    "venueId": "bernau",
+    "name": "SK-Lauf Ost + Berlin Touring Masters Lauf 4",
+    "from": "2026-06-13",
+    "to": "2026-06-14",
+    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94649&pLa=en"
+  },
+  {
+    "id": "bernau-2026-06-20-ostmasters",
+    "venueId": "bernau",
+    "name": "Ostmasters",
+    "from": "2026-06-20",
+    "to": "2026-06-21",
+    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=91316&pLa=en"
+  },
+  {
+    "id": "bernau-2026-06-27-tamoco-offroad-cup",
+    "venueId": "bernau",
+    "name": "Tamoco Offroad Cup",
+    "from": "2026-06-27",
+    "to": "2026-06-28",
+    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94651&pLa=en"
+  },
+  {
+    "id": "bernau-2026-08-29-sk-ost-ore-1-10-1-8",
+    "venueId": "bernau",
+    "name": "SK-Ost ORE 1:10 + 1:8",
+    "from": "2026-08-29",
+    "to": "2026-08-30",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94653&dLt=reg&pLa=en&lType=rList"
   }
 ]
