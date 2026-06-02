@@ -192,6 +192,10 @@ function parseEvents(html, host) {
     const from = dateCells[validDateIndexes[0]];
     const to = dateCells[validDateIndexes[1]] || from;
 
+    const today = new Date().toISOString().slice(0, 10);
+
+    if (to < today) return;
+
     const raceYear = Number(from.slice(0, 4));
     if (!allowedYears.includes(raceYear)) return;
 
