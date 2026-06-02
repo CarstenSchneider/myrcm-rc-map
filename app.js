@@ -141,7 +141,8 @@ function raceSearchText(race) {
     venue?.name,
     venue?.city,
     venue?.location,
-    ...(raceSeries(race) || [])
+    ...(raceSeries(race) || []),
+    ...(Array.isArray(race.classes) ? race.classes : [])
   ]
     .filter(Boolean)
     .join(" ")
@@ -276,6 +277,14 @@ function renderList(list) {
       <div class="race-name">${race.name}</div>
       <div class="race-venue">${venueDisplayName(race)}</div>
 ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
+
+${
+  Array.isArray(race.classes) && race.classes.length
+    ? `<div class="race-classes">
+        ${race.classes.map(item => `<span class="race-class">${item}</span>`).join("")}
+      </div>`
+    : ""
+}
 
 <div class="race-tags">
   ${series.map(item => `<span class="tag">${item}</span>`).join("")}
