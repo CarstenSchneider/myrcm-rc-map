@@ -8,6 +8,7 @@ const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 
 const map = L.map("map", { scrollWheelZoom: true }).setView([52.52, 13.405], 9);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap"
 }).addTo(map);
@@ -18,6 +19,13 @@ let markers = new Map();
 let activeRaceId = null;
 let selectedRange = "4";
 let selectedSeries = "all";
+
+const verifiedVenueAliases = {
+  "myrcm-18244": "tsv-mariendorf",
+  "myrcm-45925": "bernau",
+  "myrcm-41404": "marzahn",
+  "myrcm-52898": "blankenfelde"
+};
 
 function parseDate(dateString) {
   return new Date(`${dateString}T00:00:00`);
@@ -37,13 +45,24 @@ function addDays(date, days) {
 function formatDateRange(from, to) {
   const start = parseDate(from);
   const end = parseDate(to || from);
-  const fmt = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
-  const fmtShort = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit" });
+
+  const fmt = new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  });
+
+  const fmtShort = new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit"
+  });
 
   if (from === to || !to) return fmt.format(start);
+
   if (start.getFullYear() === end.getFullYear()) {
     return `${fmtShort.format(start)}–${fmt.format(end)}`;
   }
+
   return `${fmt.format(start)}–${fmt.format(end)}`;
 }
 
@@ -54,10 +73,13 @@ function detectSeries(name) {
     { label: "Speed Masters", re: /speed masters/i },
     { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf/i },
     { label: "Tamico", re: /tamico/i },
-    { label: "RCK", re: /\brck\b/i }
+    { label: "RCK", re: /\brck\b/i },
+    { label: "Ostmasters", re: /ostmasters/i }
   ];
 
-  return rules.filter(rule => rule.re.test(name)).map(rule => rule.label);
+  return rules
+    .filter(rule => rule.re.test(name))
+    .map(rule => rule.label);
 }
 
 function raceSeries(race) {
@@ -65,22 +87,69 @@ function raceSeries(race) {
   return detectSeries(race.name);
 }
 
+function venueAliasId(raceVenueId) {
+  if (!raceVenueId) return null;
+
+  for (const prefix of Object.keys(verifiedVenueAliases)) {
+    if (raceVenueId.startsWith(prefix)) {
+      return verifiedVenueAliases[prefix];
+    }
+  }
+
+  return null;
+}
+
 function venueById(id) {
-  return venues.find(venue => venue.id === id);
+  const direct = venues.find(venue => venue.id === id);
+  if (direct) return direct;
+
+  const alias = venueAliasId(id);
+  if (!alias) return null;
+
+  return venues.find(venue => venue.id === alias) || null;
+}
+
+function venueDisplayName(race) {
+  const venue = venueById(race.venueId);
+
+  return (
+    venue?.name ||
+    race.venueName ||
+    race.venueLocation ||
+    race.venueId ||
+    "Unbekannte Strecke"
+  );
 }
 
 function raceSearchText(race) {
   const venue = venueById(race.venueId);
-  return [race.name, venue?.name, venue?.city, ...raceSeries(race)].filter(Boolean).join(" ").toLowerCase();
+
+  return [
+    race.name,
+    race.venueName,
+    race.venueLocation,
+    race.venueId,
+    venue?.name,
+    venue?.city,
+    venue?.location,
+    ...(raceSeries(race) || [])
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
 }
 
 function isInSelectedRange(race) {
   const start = parseDate(race.from);
   const today = todayStart();
+
   if (start < today) return false;
 
   if (selectedRange === "season") {
-    return start.getFullYear() === today.getFullYear() || start.getFullYear() === today.getFullYear() + 1;
+    return (
+      start.getFullYear() === today.getFullYear() ||
+      start.getFullYear() === today.getFullYear() + 1
+    );
   }
 
   const weeks = Number(selectedRange);
@@ -99,11 +168,21 @@ function filteredRaces() {
 
 function buildPopup(venue, venueRaces) {
   const items = venueRaces
-    .slice(0, 6)
-    .map(race => `<div class="popup-race"><strong>${formatDateRange(race.from, race.to)}</strong><br>${race.name}</div>`)
+    .slice(0, 8)
+    .map(race => {
+      return `
+        <div class="popup-race">
+          <strong>${formatDateRange(race.from, race.to)}</strong><br>
+          ${race.name}
+        </div>
+      `;
+    })
     .join("");
 
-  return `<div class="popup-title">${venue.name}</div>${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}`;
+  return `
+    <div class="popup-title">${venue.name}</div>
+    ${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}
+  `;
 }
 
 function updateMarkers(list) {
@@ -114,34 +193,60 @@ function updateMarkers(list) {
   const bounds = [];
 
   venues.forEach(venue => {
-    if (!venueIds.has(venue.id)) return;
+    const matchingVenueIds = [...venueIds].filter(id => {
+      if (id === venue.id) return true;
+      return venueAliasId(id) === venue.id;
+    });
 
-    const venueRaces = list.filter(race => race.venueId === venue.id);
+    if (!matchingVenueIds.length) return;
+
+    const venueRaces = list.filter(race => {
+      if (race.venueId === venue.id) return true;
+      return venueAliasId(race.venueId) === venue.id;
+    });
+
     const marker = L.marker([venue.lat, venue.lng]).addTo(map);
     marker.bindPopup(buildPopup(venue, venueRaces));
     marker.on("click", () => highlightVenue(venue.id));
+
     markers.set(venue.id, marker);
     bounds.push([venue.lat, venue.lng]);
   });
 
-  if (bounds.length === 1) map.setView(bounds[0], 12);
-  if (bounds.length > 1) map.fitBounds(bounds, { padding: [40, 40] });
+  if (bounds.length === 1) {
+    map.setView(bounds[0], 12);
+  }
+
+  if (bounds.length > 1) {
+    map.fitBounds(bounds, { padding: [40, 40] });
+  }
 }
 
 function highlightVenue(venueId) {
-  const firstRace = filteredRaces().find(race => race.venueId === venueId);
+  const firstRace = filteredRaces().find(race => {
+    if (race.venueId === venueId) return true;
+    return venueAliasId(race.venueId) === venueId;
+  });
+
   if (!firstRace) return;
+
   activeRaceId = firstRace.id;
-  render();
-  document.querySelector(`[data-race-id="${firstRace.id}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  renderList(filteredRaces());
+
+  document
+    .querySelector(`[data-race-id="${firstRace.id}"]`)
+    ?.scrollIntoView({ block: "nearest", behavior: "smooth" });
 }
 
 function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
+
   activeRaceId = race.id;
   renderList(filteredRaces());
+
   map.setView([venue.lat, venue.lng], 12);
+
   const marker = markers.get(venue.id);
   if (marker) marker.openPopup();
 }
@@ -156,9 +261,9 @@ function renderList(list) {
   }
 
   for (const race of list) {
-    const venue = venueById(race.venueId);
     const series = raceSeries(race);
     const card = document.createElement("article");
+
     card.className = `race-card${race.id === activeRaceId ? " active" : ""}`;
     card.dataset.raceId = race.id;
     card.tabIndex = 0;
@@ -166,12 +271,14 @@ function renderList(list) {
     card.innerHTML = `
       <div class="race-date">${formatDateRange(race.from, race.to)}</div>
       <div class="race-name">${race.name}</div>
-      <div class="race-venue">${venue?.name || race.venueId}</div>
+      <div class="race-venue">${venueDisplayName(race)}</div>
+      ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
       ${series.length ? `<div class="race-tags">${series.map(item => `<span class="tag">${item}</span>`).join("")}</div>` : ""}
       ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
     `;
 
     card.addEventListener("click", () => focusRace(race));
+
     card.addEventListener("keydown", event => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
@@ -185,7 +292,12 @@ function renderList(list) {
 
 function populateSeries() {
   const allSeries = new Set();
-  races.forEach(race => raceSeries(race).forEach(item => allSeries.add(item)));
+
+  races.forEach(race => {
+    raceSeries(race).forEach(item => allSeries.add(item));
+  });
+
+  seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
 
   [...allSeries].sort().forEach(series => {
     const option = document.createElement("option");
@@ -205,17 +317,25 @@ function render() {
 function setLayout(layout) {
   app.classList.toggle("layout-map", layout === "map");
   app.classList.toggle("layout-list", layout === "list");
+
   mapWideButton.classList.toggle("active", layout === "map");
   listWideButton.classList.toggle("active", layout === "list");
+
   localStorage.setItem("rcRaceMapLayout", layout);
+
   setTimeout(() => map.invalidateSize(), 210);
 }
 
 rangeFilter.addEventListener("click", event => {
   const button = event.target.closest("button[data-range]");
   if (!button) return;
+
   selectedRange = button.dataset.range;
-  rangeFilter.querySelectorAll("button").forEach(item => item.classList.toggle("active", item === button));
+
+  rangeFilter
+    .querySelectorAll("button")
+    .forEach(item => item.classList.toggle("active", item === button));
+
   render();
 });
 
@@ -225,13 +345,14 @@ seriesFilter.addEventListener("change", () => {
 });
 
 searchInput.addEventListener("input", render);
+
 mapWideButton.addEventListener("click", () => setLayout("map"));
 listWideButton.addEventListener("click", () => setLayout("list"));
 
 async function init() {
   const [venuesResponse, racesResponse] = await Promise.all([
-    fetch("venues.json"),
-    fetch("races.json")
+    fetch(`venues.json?v=${Date.now()}`),
+    fetch(`races.json?v=${Date.now()}`)
   ]);
 
   venues = await venuesResponse.json();
