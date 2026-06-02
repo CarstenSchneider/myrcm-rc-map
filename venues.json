@@ -208,5 +208,82 @@
   "city": "Kottenborn",
   "lat": 50.380520238217656,
   "lng": 6.9339287153803975
+},
+  {
+  "id": "myrcm-678",
+  "name": "MAC Burgdorf e.V.",
+  "city": "Burgdorf",
+  "lat": 52.43191612480417,
+  "lng": 10.017538646084235
+},
+{
+  "id": "myrcm-20622",
+  "name": "MAC Hamburg e.V.",
+  "city": "Hamburg",
+  "lat": 53.52486125519811,
+  "lng": 10.134162196790893
+},
+{
+  "id": "myrcm-891",
+  "name": "MAC Mettenheim e.V.",
+  "city": "Vaterstetten",
+  "lat": 48.25458988422763,
+  "lng": 12.455744115925047
+},
+{
+  "id": "myrcm-9976",
+  "name": "MAC Nürnberg e.V",
+  "city": "Nürnberg",
+  "lat": 49.38767201459021,
+  "lng": 11.168661334912732
+},
+{
+  "id": "myrcm-30735",
+  "name": "MAC OR Hütschenhausen e.V.",
+  "city": "Hütschenhausen",
+  "lat": 49.41803566643476,
+  "lng": 7.457597641355012
+},
+{
+  "id": "myrcm-233",
+  "name": "MAC Saar e.V.",
+  "city": "Bexbach",
+  "lat": 49.23737851350886,
+  "lng": 7.197984131866451
+},
+{
+  "id": "myrcm-53667",
+  "name": "MAC Uetersen e.V.",
+  "city": "Uetersen",
+  "lat": 53.67639410403049,
+  "lng": 9.70171695639382
+},
+{
+  "id": "myrcm-49037",
+  "name": "MAC-Meckenheim e.V.",
+  "city": "Bad Münstereifel",
+  "lat": 50.623679184080956,
+  "lng": 7.043371956119134
+},
+{
+  "id": "myrcm-42064",
+  "name": "MAC-Solms e.V.",
+  "city": "Ehringshausen",
+  "lat": 50.53393592577889,
+  "lng": 8.601463866322767
+},
+{
+  "id": "myrcm-24873",
+  "name": "MBC Goldstein e.V.",
+  "city": "Frankfurt",
+  "lat": 50.07714491151757,
+  "lng": 8.613882094074963
+},
+{
+  "id": "myrcm-27211",
+  "name": "MBSC Wächtersbach",
+  "city": "Wächtersbach",
+  "lat": 50.246100236848775,
+  "lng": 9.291699351520423
 }
 ]
