@@ -62,9 +62,17 @@ function absoluteUrl(href) {
 }
 
 function registrationUrl(url) {
-  const parsed = new URL(url);
-  parsed.searchParams.delete("lType");
-  return parsed.toString();
+  const parsed = new URL(url, "https://www.myrcm.ch");
+  const eventId = parsed.searchParams.get("dId[E]");
+
+  if (!eventId) return url;
+
+  const target = new URL("https://www.myrcm.ch/myrcm/main");
+  target.searchParams.set("hId[1]", "bkg");
+  target.searchParams.set("dId[E]", eventId);
+  target.searchParams.set("pLa", "en");
+
+  return target.toString();
 }
 
 async function loadEventClasses(url) {
