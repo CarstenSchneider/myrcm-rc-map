@@ -1764,18 +1764,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=4441&pLa=en&pId[O]=24&dId[E]=96207&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-09-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-09",
-    "to": "2026-04-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96318&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-10-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -4109,6 +4097,18 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97940&tId=E&hId[1]=org"
   },
   {
+    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-06-02-cockpit-kartarena",
+    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
+    "venueName": "Cockpit-Kartarena GmbH",
+    "venueLocation": "Bocholt",
+    "name": "Cockpit Kartarena",
+    "from": "2026-06-02",
+    "to": "2026-06-02",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97964&tId=E&hId[1]=org"
+  },
+  {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-tamiya-euro-cup-summer-special",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
@@ -4578,11 +4578,11 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97927&pLa=en"
   },
   {
-    "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-rck-kleinserie-qualifikationslauf-sud-tsv-1871-augsburg-e-v-outdoor-ge",
+    "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-rck-kleinserie-qualifikationslauf-sud-tsv-1871-augsburg-e-v-outdoor",
     "venueId": "myrcm-991-tsv-1871-augsburg-e-v",
     "venueName": "TSV 1871 Augsburg e.V.",
     "venueLocation": "Königsbrunn",
-    "name": "RCK Kleinserie Qualifikationslauf Süd - TSV 1871 Augsburg e.V. outdoor - geplant",
+    "name": "RCK Kleinserie Qualifikationslauf Süd - TSV 1871 Augsburg e.V. outdoor",
     "from": "2026-06-14",
     "to": "2026-06-14",
     "series": [
