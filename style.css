@@ -243,6 +243,21 @@ input {
   font-size: 13px;
 }
 
+.popup-race-button {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.popup-race-button:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 860px) {
   .app,
   .app.layout-map,
