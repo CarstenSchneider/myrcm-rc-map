@@ -233,7 +233,19 @@ marker.on("popupopen", () => {
     });
 });
 
-marker.on("click", () => highlightVenue(venue.id));
+marker.on("click", () => {
+  const venueRaces = filteredRaces().filter(race => {
+    if (race.venueId === venue.id) return true;
+    return venueAliasId(race.venueId) === venue.id;
+  });
+
+  if (venueRaces.length === 1) {
+    focusRace(venueRaces[0]);
+    return;
+  }
+
+  highlightVenue(venue.id);
+});
 
     markers.set(venue.id, marker);
     bounds.push([venue.lat, venue.lng]);
