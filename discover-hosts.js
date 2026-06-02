@@ -96,9 +96,11 @@ async function main() {
     }
   }
 
-  const unique = Array.from(
-    new Map(allHosts.map(host => [host.orgId, host])).values()
-  ).sort((a, b) => a.name.localeCompare(b.name));
+const unique = Array.from(
+  new Map(allHosts.map(host => [host.orgId, host])).values()
+)
+  .filter(host => Number(host.eventCount || 0) > 0)
+  .sort((a, b) => a.name.localeCompare(b.name));
 
   await writeFile(
     "myrcm-hosts-germany.json",
