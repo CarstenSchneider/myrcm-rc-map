@@ -114,10 +114,11 @@ function venueById(id) {
   return venues.find(venue => venue.id === alias) || null;
 }
 
-function venueDisplayName(race) {
-  function hasVerifiedVenue(race) {
+function hasVerifiedVenue(race) {
   return Boolean(venueById(race.venueId));
 }
+
+function venueDisplayName(race) {
   const venue = venueById(race.venueId);
 
   return (
