@@ -17,8 +17,8 @@
     "id": "marzahn",
     "name": "Marzahner Racing Club e.V.",
     "city": "Berlin-Marzahn",
-    "lat": 52.5386281,
-    "lng": 13.5615364
+    "lat": 52.53875196434322,
+    "lng": 13.561567229887286
   },
   {
     "id": "blankenfelde",
@@ -26,5 +26,110 @@
     "city": "Blankenfelde",
     "lat": 52.3208953,
     "lng": 13.4081779
+  },
+  {
+    "id": "myrcm-39671",
+    "name": "MRC Mannheim e.V.",
+    "city": "Mannheim",
+    "lat": 49.48747754217388,
+    "lng": 8.504221524425674
+  },
+  {
+    "id": "myrcm-33",
+    "name": "AMC Hildesheim e.V.",
+    "city": "Hildesheim",
+    "lat": 52.15720104253146,
+    "lng": 9.930734865467414
+  },
+  {
+    "id": "myrcm-19597",
+    "name": "AMC Lahntal e.V.",
+    "city": "Solms",
+    "lat": 50.57298785101659,
+    "lng": 8.539485269537407
+  },
+  {
+    "id": "myrcm-6025",
+    "name": "AMC Langenfeld e.V.",
+    "city": "Solingen",
+    "lat": 51.11124440703488,
+    "lng": 6.9254506669797475
+  },
+  {
+    "id": "myrcm-44208",
+    "name": "AMC Magdeburg e.V.",
+    "city": "Magdeburg",
+    "lat": 52.089630528745495,
+    "lng": 11.557263291516346
+  },
+  {
+    "id": "myrcm-7103",
+    "name": "AMC Saarbrücken e.V.",
+    "city": "Saarbrücken",
+    "lat": 49.25494432605648,
+    "lng": 7.001039730657222
+  },
+  {
+    "id": "myrcm-58267",
+    "name": "AMC Senftenberg e.V.",
+    "city": "Senftenberg",
+    "lat": 51.513511017262914,
+    "lng": 13.997624485710512
+  },
+  {
+    "id": "myrcm-4006",
+    "name": "AMC Sonthofen e.V.",
+    "city": "Immenstadt",
+    "lat": 47.56238610077959,
+    "lng": 10.21998396888581
+  },
+  {
+    "id": "myrcm-7771",
+    "name": "amc-Hamm e.V.",
+    "city": "Bönen",
+    "lat": 51.682030657927996,
+    "lng": 7.9324199858423805
+  },
+  {
+    "id": "myrcm-82",
+    "name": "AMC-Mühlau e.V.",
+    "city": "Mühlau",
+    "lat": 50.90067043142882,
+    "lng": 12.768212160800493
+  },
+  {
+    "id": "myrcm-36",
+    "name": "AMSC Augsburg e. V.",
+    "city": "Dasing",
+    "lat": 48.403917527342564,
+    "lng": 11.077982831882666
+  },
+  {
+    "id": "myrcm-29065",
+    "name": "AMSC-Herne e.V.",
+    "city": "Bochum",
+    "lat": 51.51452313992984,
+    "lng": 7.169385692502446
+  },
+  {
+    "id": "myrcm-26821",
+    "name": "ASC Celle e.V.",
+    "city": "Celle",
+    "lat": 52.597671730560705,
+    "lng": 10.051027925236115
+  },
+  {
+    "id": "myrcm-26596",
+    "name": "ASC Potsdam e.V.",
+    "city": "Potsdam",
+    "lat": 52.309760094922,
+    "lng": 13.447708353987874
+  },
+  {
+    "id": "myrcm-861",
+    "name": "Automodellclub Meißen e.V.",
+    "city": "Nossen",
+    "lat": 51.183209912703695,
+    "lng": 13.494275375841397
   }
 ]
