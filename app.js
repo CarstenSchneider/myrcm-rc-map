@@ -171,10 +171,13 @@ function buildPopup(venue, venueRaces) {
     .slice(0, 8)
     .map(race => {
       return `
-        <div class="popup-race">
+        <button
+          class="popup-race-button"
+          data-race-id="${race.id}"
+        >
           <strong>${formatDateRange(race.from, race.to)}</strong><br>
           ${race.name}
-        </div>
+        </button>
       `;
     })
     .join("");
@@ -206,8 +209,31 @@ function updateMarkers(list) {
     });
 
     const marker = L.marker([venue.lat, venue.lng]).addTo(map);
-    marker.bindPopup(buildPopup(venue, venueRaces));
-    marker.on("click", () => highlightVenue(venue.id));
+marker.bindPopup(buildPopup(venue, venueRaces));
+
+marker.on("popupopen", () => {
+  document
+    .querySelectorAll(".popup-race-button")
+    .forEach(button => {
+      button.addEventListener("click", () => {
+        const raceId = button.dataset.raceId;
+        const race = races.find(item => item.id === raceId);
+
+        if (!race) return;
+
+        focusRace(race);
+
+        document
+          .querySelector(`[data-race-id="${race.id}"]`)
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+      });
+    });
+});
+
+marker.on("click", () => highlightVenue(venue.id));
 
     markers.set(venue.id, marker);
     bounds.push([venue.lat, venue.lng]);
