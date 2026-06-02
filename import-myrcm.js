@@ -67,7 +67,6 @@ function registrationUrl(url) {
   return parsed.toString();
 }
 
-
 async function loadEventClasses(url) {
   if (!url) return [];
 
@@ -99,17 +98,8 @@ async function loadEventClasses(url) {
     });
 
     return Array.from(new Set(sectionClasses));
-
   } catch (error) {
     console.warn(`  Klassen konnten nicht geladen werden: ${classUrl}`);
-    return [];
-  }
-});
-
-return Array.from(new Set(sectionClasses));
-    
-  } catch (error) {
-    console.warn(`  Klassen konnten nicht geladen werden: ${url}`);
     return [];
   }
 }
