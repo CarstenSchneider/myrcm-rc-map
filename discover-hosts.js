@@ -45,10 +45,10 @@ function parseHosts(html) {
 
     if (!orgId) return;
 
-    const name = cells[0];
-    const location = cells[1];
-    const country = cells[2];
-    const eventCount = Number(cells[3]) || 0;
+    const name = cells[1];
+    const location = cells[2];
+    const country = cells[3];
+    const eventCount = Number(cells[4]) || 0;
 
 console.log({ name, location, country, eventCount, orgId });
 
