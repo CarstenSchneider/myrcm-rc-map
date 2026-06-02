@@ -115,6 +115,9 @@ function venueById(id) {
 }
 
 function venueDisplayName(race) {
+  function hasVerifiedVenue(race) {
+  return Boolean(venueById(race.venueId));
+}
   const venue = venueById(race.venueId);
 
   return (
@@ -274,8 +277,17 @@ function renderList(list) {
       <div class="race-date">${formatDateRange(race.from, race.to)}</div>
       <div class="race-name">${race.name}</div>
       <div class="race-venue">${venueDisplayName(race)}</div>
-      ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
-      ${series.length ? `<div class="race-tags">${series.map(item => `<span class="tag">${item}</span>`).join("")}</div>` : ""}
+${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
+
+<div class="race-tags">
+  ${series.map(item => `<span class="tag">${item}</span>`).join("")}
+  ${
+    !hasVerifiedVenue(race)
+      ? `<span class="tag tag-missing-location">📍 Standort wird ergänzt</span>`
+      : ""
+  }
+</div>
+
       ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
     `;
 
