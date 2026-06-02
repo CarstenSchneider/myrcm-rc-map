@@ -50,8 +50,10 @@ function parseHosts(html) {
     const country = cells[2];
     const eventCount = Number(cells[3]) || 0;
 
-    if (country !== "Germany") return;
+console.log({ name, location, country, eventCount, orgId });
 
+if (!/germany|deutschland|deu/i.test(country)) return;
+    
     hosts.push({
       orgId,
       name,
