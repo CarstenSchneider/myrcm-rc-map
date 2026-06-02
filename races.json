@@ -1540,18 +1540,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94921&dLt=reg&pLa=en&lType=wList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-03-27-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-03-27",
-    "to": "2026-03-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=95775&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim-2026-03-27-tsg-traininng-27-03",
     "venueId": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim",
     "venueName": "Turnerschaft 1860 e.V. Großauheim",
@@ -1612,18 +1600,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94108&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-03-28-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-03-28",
-    "to": "2026-03-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=95813&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-6025-amc-langenfeld-e-v-2026-03-28-longfield-five-days-round-5",
@@ -1688,18 +1664,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=47444&pLa=en&pId[O]=19&dId[E]=95023&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-03-29-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-03-29",
-    "to": "2026-03-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=95864&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-38659-mcc-fellbach-e-v-2026-03-29-rck-serie-mcc-fellbach",
     "venueId": "myrcm-38659-mcc-fellbach-e-v",
     "venueName": "MCC Fellbach e.V.",
@@ -1710,30 +1674,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=38659&pLa=en&pId[O]=11&dId[E]=95695&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-01-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-01",
-    "to": "2026-04-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=95969&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-02-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-02",
-    "to": "2026-04-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96005&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-04-03-presaison-test-msc-lowen-rc-rallye-braunschweig",
@@ -1796,18 +1736,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95559&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-05-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-05",
-    "to": "2026-04-05",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96166&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-18244-tsv-m97-berlin-rccr-2026-04-05-tamiya-euro-cup",
     "venueId": "myrcm-18244-tsv-m97-berlin-rccr",
     "venueName": "TSV M97 Berlin RCCR",
@@ -1820,18 +1748,6 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94105&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-06-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-06",
-    "to": "2026-04-06",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96202&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-4441-tsv-kleinburgwedel-2026-04-06-traninig-tamiya-euro-cup-series-2-2023-vereinsmeisterschaft",
@@ -1848,18 +1764,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=4441&pLa=en&pId[O]=24&dId[E]=96207&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-08-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-08",
-    "to": "2026-04-08",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96302&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-09-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -1870,18 +1774,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96318&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-09-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-09",
-    "to": "2026-04-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96316&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-10-cockpit-kartarena",
@@ -1908,18 +1800,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94537&dLt=reg&pLa=en&lType=wList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-10-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-10",
-    "to": "2026-04-10",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96349&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-49540-fs-timing-2026-04-11-1-hessencup-lauf-2026-gro-heubach",
     "venueId": "myrcm-49540-fs-timing",
     "venueName": "FS-Timing",
@@ -1942,18 +1822,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96379&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-11-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-11",
-    "to": "2026-04-11",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96392&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-48023-mac-siersburg-e-v-2026-04-11-saar-racing-series-1-sk-wertung",
@@ -2016,18 +1884,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96422&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-12-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-12",
-    "to": "2026-04-12",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96424&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-38659-mcc-fellbach-e-v-2026-04-12-tamico-cup-mcc-fellbach",
     "venueId": "myrcm-38659-mcc-fellbach-e-v",
     "venueName": "MCC Fellbach e.V.",
@@ -2064,18 +1920,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96500&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-14-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-14",
-    "to": "2026-04-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96495&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-15-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -2086,30 +1930,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96522&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-15-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-15",
-    "to": "2026-04-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96520&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-15-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-15",
-    "to": "2026-04-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96512&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-16-cockpit-kartarena",
@@ -2148,30 +1968,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94888&dLt=reg&pLa=en&lType=wList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-16-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-16",
-    "to": "2026-04-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96552&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-16-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-16",
-    "to": "2026-04-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96543&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-33489-mc-munster-e-v-2026-04-17-1-ost-masters-sk-lauf-nord-vg5",
     "venueId": "myrcm-33489-mc-munster-e-v",
     "venueName": "MC Munster e.V.",
@@ -2196,30 +1992,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96600&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-17-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-17",
-    "to": "2026-04-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96587&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-17-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-17",
-    "to": "2026-04-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96592&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-04-17-rck-challange-auf-intermodellbau",
@@ -2282,30 +2054,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96631&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-18-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96629&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-18-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96618&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-17507-lost-place-racers-e-v-2026-04-18-norc-und-1-sk-lauf-west",
@@ -2410,30 +2158,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96681&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-19-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-19",
-    "to": "2026-04-19",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96697&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-19-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-19",
-    "to": "2026-04-19",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96670&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-04-19-rck-kleinserie-auf-intermodellbau",
     "venueId": "myrcm-6266-minicar-club-dortmund-e-v",
     "venueName": "Minicar Club Dortmund e.V.",
@@ -2472,18 +2196,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96442&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-20-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-20",
-    "to": "2026-04-20",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96724&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-21-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -2494,18 +2206,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96772&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-21-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-21",
-    "to": "2026-04-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96756&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-22-cockpit-kartarena",
@@ -2520,30 +2220,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96802&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-22-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-22",
-    "to": "2026-04-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96798&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-22-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-22",
-    "to": "2026-04-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96794&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-23-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -2554,30 +2230,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96836&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-23-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-23",
-    "to": "2026-04-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96832&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-23-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-23",
-    "to": "2026-04-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96826&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-04-24-19-international-warm-up-2026",
@@ -2602,30 +2254,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96861&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-24-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-24",
-    "to": "2026-04-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96858&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-24-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-24",
-    "to": "2026-04-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96850&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-04-24-sk-lauf-or8-ore8-sachsencup-2026",
@@ -2692,30 +2320,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95669&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-25-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-25",
-    "to": "2026-04-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96883&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-25-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-25",
-    "to": "2026-04-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96881&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-04-25-le-trophy-on-road-lauf-1",
@@ -2854,30 +2458,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95877&dLt=reg&pLa=en&lType=wList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-26-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-26",
-    "to": "2026-04-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=96938&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-26-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-26",
-    "to": "2026-04-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96927&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-04-26-nordbayern-cup-4-2026-lauf-3-nurnberg",
     "venueId": "myrcm-47444-rc-racers-toys-shop",
     "venueName": "RC Racers + Toys Shop",
@@ -2914,18 +2494,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96972&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-27-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-27",
-    "to": "2026-04-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96956&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-28-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -2936,18 +2504,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97001&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-28-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-28",
-    "to": "2026-04-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=96987&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-29-cockpit-kartarena",
@@ -2962,30 +2518,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97036&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-29-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-29",
-    "to": "2026-04-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97032&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-29-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-29",
-    "to": "2026-04-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97022&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-30-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -2996,30 +2528,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97058&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-04-30-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-04-30",
-    "to": "2026-04-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97056&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-04-30-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-04-30",
-    "to": "2026-04-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97051&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-05-01-6-std-sc-team-rennen",
@@ -3044,30 +2552,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97090&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-01-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-01",
-    "to": "2026-05-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97088&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-01-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-01",
-    "to": "2026-05-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97079&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-134-rcct-munden-e-v-2026-05-01-rck-klein-serie",
@@ -3195,30 +2679,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96041&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-02-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-02",
-    "to": "2026-05-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97117&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-02-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-02",
-    "to": "2026-05-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97112&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-05-02-motorradtreffen",
@@ -3355,30 +2815,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96809&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-03-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-03",
-    "to": "2026-05-03",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97156&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-03-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-03",
-    "to": "2026-05-03",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97139&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-55317-rc-offroad-staaken-2026-05-03-kopie-von-1-rcs-cup-2026",
     "venueId": "myrcm-55317-rc-offroad-staaken",
     "venueName": "RC Offroad Staaken",
@@ -3455,18 +2891,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96199&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-04-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-04",
-    "to": "2026-05-04",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97170&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-05-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -3479,18 +2903,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97196&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-05-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-05",
-    "to": "2026-05-05",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97193&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-06-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -3501,30 +2913,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97230&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-06-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-06",
-    "to": "2026-05-06",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97225&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-06-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-06",
-    "to": "2026-05-06",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97219&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-07-cockpit-kartarena",
@@ -3549,30 +2937,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95738&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-07-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-07",
-    "to": "2026-05-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97250&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-07-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-07",
-    "to": "2026-05-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97242&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-33489-mc-munster-e-v-2026-05-08-12-stunden-teamlauf",
@@ -3611,30 +2975,6 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93366&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-08-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-08",
-    "to": "2026-05-08",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97277&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-08-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-08",
-    "to": "2026-05-08",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97276&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v-2026-05-09-1-lauf-rallycross-bei-3e-harburg",
@@ -3711,30 +3051,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97308&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-09-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-09",
-    "to": "2026-05-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97315&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-09-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-09",
-    "to": "2026-05-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97299&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-60453-slottis-supreme-masters-2026-05-09-regionsfinale-lutherstadt-eisleben-rothenschirmbach-26-27-06295",
     "venueId": "myrcm-60453-slottis-supreme-masters",
     "venueName": "Slottis Supreme Masters",
@@ -3799,30 +3115,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97351&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-10-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-10",
-    "to": "2026-05-10",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97365&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-10-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-10",
-    "to": "2026-05-10",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97343&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-2245-mrc-mehrum-e-v-2026-05-10-offene-vereinsmeisterschaft-1",
     "venueId": "myrcm-2245-mrc-mehrum-e-v",
     "venueName": "MRC Mehrum e.V.",
@@ -3885,18 +3177,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97389&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-11-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-11",
-    "to": "2026-05-11",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97379&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-12-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -3907,18 +3187,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97412&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-12-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-12",
-    "to": "2026-05-12",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97408&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-13-cockpit-kartarena",
@@ -3933,30 +3201,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97428&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-13-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-13",
-    "to": "2026-05-13",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97426&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-13-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-13",
-    "to": "2026-05-13",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97423&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-14-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -3967,30 +3211,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97456&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-14-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-14",
-    "to": "2026-05-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97455&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-14-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-14",
-    "to": "2026-05-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97448&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-82-amc-muhlau-e-v-2026-05-14-online-event",
@@ -4027,30 +3247,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97488&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-15-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-15",
-    "to": "2026-05-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97486&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-15-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-15",
-    "to": "2026-05-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97472&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-05-16-1-lauf-zur-vereinsmeisterschaft-2026-des-amc-senftenberg",
@@ -4135,30 +3331,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96915&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-16-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-16",
-    "to": "2026-05-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97510&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-16-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-16",
-    "to": "2026-05-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97501&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-116-msc-hansa-heilbronn-e-v-2026-05-16-lrp-offroad-challenge-26-05",
@@ -4275,30 +3447,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97546&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-17-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-17",
-    "to": "2026-05-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97550&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-17-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-17",
-    "to": "2026-05-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97533&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-05-17-le-trophy-offroad-2026-lauf-1-3",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
@@ -4395,30 +3543,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93360&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-18-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-18",
-    "to": "2026-05-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97567&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-19-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-19",
-    "to": "2026-05-19",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97602&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-20-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -4429,30 +3553,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97629&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-20-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-20",
-    "to": "2026-05-20",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97627&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-20-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-20",
-    "to": "2026-05-20",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97620&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-21-cockpit-kartarena",
@@ -4467,30 +3567,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97658&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-21-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-21",
-    "to": "2026-05-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97654&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-21-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-21",
-    "to": "2026-05-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97650&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-22-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -4501,30 +3577,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97687&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-22-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-22",
-    "to": "2026-05-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97683&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-22-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-22",
-    "to": "2026-05-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97671&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-05-23-1-clublauf-2026",
@@ -4613,30 +3665,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97704&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-23-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-23",
-    "to": "2026-05-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97706&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-23-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-23",
-    "to": "2026-05-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97699&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-05-23-online-event",
     "venueId": "myrcm-39587-mrsc-amberg-e-v",
     "venueName": "MRSC Amberg e.V.",
@@ -4714,30 +3742,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97744&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-24-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-24",
-    "to": "2026-05-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97754&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-24-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-24",
-    "to": "2026-05-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97733&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-05-24-mrsc-cup-2026-lauf-1",
     "venueId": "myrcm-39587-mrsc-amberg-e-v",
     "venueName": "MRSC Amberg e.V.",
@@ -4776,30 +3780,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97770&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-25-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-25",
-    "to": "2026-05-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97779&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-25-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-25",
-    "to": "2026-05-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97769&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-678-mac-burgdorf-e-v-2026-05-25-rck-kleinserie",
     "venueId": "myrcm-678-mac-burgdorf-e-v",
     "venueName": "MAC Burgdorf e.V.",
@@ -4826,18 +3806,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97804&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-26-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-26",
-    "to": "2026-05-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97796&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-27-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -4848,30 +3816,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97825&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-27-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-27",
-    "to": "2026-05-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97822&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-27-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-27",
-    "to": "2026-05-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97820&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-2047-ets-2026-05-28-cayote-euro-touring-series-round-1-apeldoorn-nl",
@@ -4898,30 +3842,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97842&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-28-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-28",
-    "to": "2026-05-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97840&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-28-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-28",
-    "to": "2026-05-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97835&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-29-cockpit-kartarena",
     "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
     "venueName": "Cockpit-Kartarena GmbH",
@@ -4932,30 +3852,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97863&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-29-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-29",
-    "to": "2026-05-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97862&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-29-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-29",
-    "to": "2026-05-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97857&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45728-rco-ottendorf-okrilla-e-v-2026-05-30-3-sk-lauf-ost-sachsencup-2026",
@@ -5022,30 +3918,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97413&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-30-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-30",
-    "to": "2026-05-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97891&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-30-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-30",
-    "to": "2026-05-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97880&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-05-30-le-trophy-on-road-lauf-2",
@@ -5161,30 +4033,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97557&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-27227-kartbahn-straubing-2026-05-31-kartbahn",
-    "venueId": "myrcm-27227-kartbahn-straubing",
-    "venueName": "Kartbahn Straubing",
-    "venueLocation": "Straubing",
-    "name": "KARTBAHN",
-    "from": "2026-05-31",
-    "to": "2026-05-31",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&dId[E]=97922&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-05-31-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-05-31",
-    "to": "2026-05-31",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97910&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-43367-emc-marktoberdorf-2026-05-31-offroad-vm-2026-lauf-1",
     "venueId": "myrcm-43367-emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
@@ -5259,90 +4107,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97940&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-06-01-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-06-01",
-    "to": "2026-06-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97935&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30989-kartbahn-darglin-2026-06-02-kartbahn-dargelin",
-    "venueId": "myrcm-30989-kartbahn-darglin",
-    "venueName": "Kartbahn Darglin",
-    "venueLocation": "Darglin",
-    "name": "Kartbahn Dargelin",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&dId[E]=97961&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-23798-burgpark-ring-kart-gmbh-2026-06-02-standby",
-    "venueId": "myrcm-23798-burgpark-ring-kart-gmbh",
-    "venueName": "Burgpark Ring Kart GmbH",
-    "venueLocation": "Bad-Mergentheim",
-    "name": "Standby",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=23798&pLa=en&pId[O]=3&dId[E]=97956&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-35447-kartbahn-neubrandenburg-2026-06-02-standby",
-    "venueId": "myrcm-35447-kartbahn-neubrandenburg",
-    "venueName": "Kartbahn Neubrandenburg",
-    "venueLocation": "Neubrandenburg",
-    "name": "Standby",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=35447&pLa=en&pId[O]=9&dId[E]=97960&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-27704-kartbahn-stralsund-2026-06-02-standby",
-    "venueId": "myrcm-27704-kartbahn-stralsund",
-    "venueName": "Kartbahn Stralsund",
-    "venueLocation": "Stralsund",
-    "name": "Standby",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=27704&pLa=en&pId[O]=9&dId[E]=97959&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-30220-kartodrom-asbach-2026-06-02-standby",
-    "venueId": "myrcm-30220-kartodrom-asbach",
-    "venueName": "Kartodrom Asbach",
-    "venueLocation": "Asbach",
-    "name": "Standby",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=30220&pLa=en&pId[O]=9&dId[E]=97955&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-24785-kartodrom-elles-2026-06-02-standby",
-    "venueId": "myrcm-24785-kartodrom-elles",
-    "venueName": "Kartodrom Elles",
-    "venueLocation": "Buchholz",
-    "name": "Standby",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=24785&pLa=en&pId[O]=9&dId[E]=97957&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-tamiya-euro-cup-summer-special",
