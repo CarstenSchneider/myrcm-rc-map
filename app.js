@@ -280,8 +280,8 @@ ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` 
 
 ${
   Array.isArray(race.classes) && race.classes.length
-    ? `<div class="race-classes">
-        ${race.classes.map(item => `<span class="race-class">${item}</span>`).join("")}
+    ? `<div class="race-tags race-class-tags">
+        ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
       </div>`
     : ""
 }
