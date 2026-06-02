@@ -76,9 +76,7 @@ async function loadEventClasses(url) {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-    const classes = [];
-
-const classes = [];
+    const sectionClasses = [];
 
 $('select[name="Section"] option').each((_, option) => {
   const value = $(option).attr("value");
@@ -88,10 +86,11 @@ $('select[name="Section"] option').each((_, option) => {
   if (!label) return;
   if (label === "?") return;
 
-  classes.push(label);
+  sectionClasses.push(label);
 });
 
-    return Array.from(new Set(classes));
+return Array.from(new Set(sectionClasses));
+    
   } catch (error) {
     console.warn(`  Klassen konnten nicht geladen werden: ${url}`);
     return [];
