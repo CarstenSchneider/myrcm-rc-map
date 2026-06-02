@@ -2,7 +2,9 @@ name: Import MyRCM races
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: "0 5 * * *"
+    
 permissions:
   contents: write
 
