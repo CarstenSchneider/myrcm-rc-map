@@ -164,12 +164,9 @@ function isInSelectedRange(race) {
 
   if (start < today) return false;
 
-  if (selectedRange === "season") {
-    return (
-      start.getFullYear() === today.getFullYear() ||
-      start.getFullYear() === today.getFullYear() + 1
-    );
-  }
+if (selectedRange === "all") {
+  return true;
+}
 
   const weeks = Number(selectedRange);
   return start <= addDays(today, weeks * 7);
