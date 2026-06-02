@@ -12,6 +12,34 @@ const trainingTerms = [
   "practice"
 ];
 
+const excludedHostTerms = [
+  "kartbahn",
+  "kart bahn",
+  "kart-center",
+  "kartcenter",
+  "karting",
+  "go-kart",
+  "gokart",
+  "motodrom"
+];
+
+const excludedEventTerms = [
+  "kartbahn",
+  "kart bahn",
+  "karting",
+  "standby"
+];
+
+function isExcludedHost(host) {
+  const text = `${host.name} ${host.location}`.toLowerCase();
+  return excludedHostTerms.some(term => text.includes(term));
+}
+
+function isExcludedEvent(name) {
+  const lower = name.toLowerCase();
+  return excludedEventTerms.some(term => lower.includes(term));
+}
+
 function normalizeText(text) {
   return text.replace(/\s+/g, " ").trim();
 }
