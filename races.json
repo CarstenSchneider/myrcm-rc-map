@@ -1,29 +1,56 @@
 [
   {
-    "title": "Tamiya Euro Cup",
-    "host": "TSV Mariendorf 97 Berlin RCCR",
+    "id": "tec-berlin-2026-04-05",
+    "name": "Tamiya Euro Cup Berlin",
+    "series": "Tamiya Euro Cup",
     "venueId": "tsv-mariendorf",
-    "startDate": "2026-04-05",
-    "endDate": "2026-04-05",
-    "classes": ["TEC Formel", "TEC Stock", "TEC M-Chassis", "TEC Gentleman", "TEC Top Stock", "TEC Euro-TW", "TEC Race-Truck"],
-    "url": "https://www.myrcm.ch/myrcm/report?dId%5BE%5D=94105&dId%5BO%5D=18244&hId%5B1%5D=org&pLa=de&tId=E"
+    "from": "2026-04-05",
+    "to": "2026-04-05",
+    "url": "https://www.myrcm.ch/"
   },
   {
-    "title": "Berlin Touring Masters",
-    "host": "TSV Mariendorf 97 Berlin RCCR",
+    "id": "btm-berlin-2026-04-25",
+    "name": "Berlin Touring Masters",
+    "series": "Berlin Touring Masters",
     "venueId": "tsv-mariendorf",
-    "startDate": "2026-04-25",
-    "endDate": "2026-04-26",
-    "classes": ["BTM Rookie", "BTM Formel 1", "BTM FWD", "BTM Fun 21,5", "BTM LMH 21,5", "BTM ToniSport17.5"],
-    "url": "https://www.myrcm.ch/myrcm/report?dId%5BE%5D=94212&dId%5BO%5D=18244&hId%5B1%5D=org&pLa=de&tId=E"
+    "from": "2026-04-25",
+    "to": "2026-04-26",
+    "url": "https://www.myrcm.ch/"
   },
   {
-    "title": "12 Stunden von Berlin",
-    "host": "TSV Mariendorf 97 Berlin RCCR",
+    "id": "12h-berlin-2026-05-23",
+    "name": "12 Stunden von Berlin",
+    "series": "Langstrecke",
     "venueId": "tsv-mariendorf",
-    "startDate": "2026-05-23",
-    "endDate": "2026-05-24",
-    "classes": ["LMH", "GT3"],
-    "url": "https://www.myrcm.ch/myrcm/main?dId%5BE%5D=92759&dId%5BO%5D=18244&hId%5B1%5D=org&pLa=de&tId=E"
+    "from": "2026-05-23",
+    "to": "2026-05-24",
+    "url": "https://www.myrcm.ch/"
+  },
+  {
+    "id": "bernau-test-2026-06-07",
+    "name": "Testevent Bernau",
+    "series": "Testdaten",
+    "venueId": "bernau",
+    "from": "2026-06-07",
+    "to": "2026-06-07",
+    "url": "https://www.myrcm.ch/"
+  },
+  {
+    "id": "marzahn-test-2026-06-14",
+    "name": "Testevent Marzahn",
+    "series": "Testdaten",
+    "venueId": "marzahn",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "url": "https://www.myrcm.ch/"
+  },
+  {
+    "id": "blankenfelde-test-2026-06-21",
+    "name": "Testevent Blankenfelde",
+    "series": "Testdaten",
+    "venueId": "blankenfelde",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "url": "https://www.myrcm.ch/"
   }
 ]

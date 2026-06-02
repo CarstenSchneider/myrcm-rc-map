@@ -1,209 +1,206 @@
-const map = L.map("map").setView([52.410703, 13.321052], 13);
+const map = L.map("map");
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap contributors"
 }).addTo(map);
 
-const markerGroup = L.layerGroup().addTo(map);
+const dateFilter = document.querySelector("#dateFilter");
+const venueFilter = document.querySelector("#venueFilter");
+const raceList = document.querySelector("#raceList");
+const summary = document.querySelector("#summary");
 
-let allRaces = [];
-let venuesById = new Map();
-let markersByVenueId = new Map();
+let venues = [];
+let races = [];
+let markers = new Map();
 
-const filterMode = document.getElementById("filterMode");
-const monthInput = document.getElementById("monthInput");
-const weekInput = document.getElementById("weekInput");
-const monthControl = document.getElementById("monthControl");
-const weekControl = document.getElementById("weekControl");
-const applyButton = document.getElementById("applyButton");
-const summary = document.getElementById("summary");
-const raceList = document.getElementById("raceList");
+function parseDate(value) {
+  return new Date(`${value}T12:00:00`);
+}
 
-function formatDateRange(start, end) {
-  const startDate = new Date(`${start}T12:00:00`);
-  const endDate = new Date(`${end}T12:00:00`);
+function formatDateRange(from, to) {
+  const start = parseDate(from);
+  const end = parseDate(to);
   const formatter = new Intl.DateTimeFormat("de-DE", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
   });
 
-  if (start === end) return formatter.format(startDate);
-  return `${formatter.format(startDate)} - ${formatter.format(endDate)}`;
+  if (from === to) return formatter.format(start);
+  return `${formatter.format(start)} - ${formatter.format(end)}`;
 }
 
-function getWeekStartFromInput(weekValue) {
-  const [yearText, weekText] = weekValue.split("-W");
-  const year = Number(yearText);
-  const week = Number(weekText);
-  const simple = new Date(Date.UTC(year, 0, 1 + (week - 1) * 7));
-  const day = simple.getUTCDay();
-  const isoWeekStart = simple;
+function getWeekBounds(date) {
+  const start = new Date(date);
+  const day = start.getDay() || 7;
+  start.setDate(start.getDate() - day + 1);
+  start.setHours(0, 0, 0, 0);
 
-  if (day <= 4) {
-    isoWeekStart.setUTCDate(simple.getUTCDate() - simple.getUTCDay() + 1);
-  } else {
-    isoWeekStart.setUTCDate(simple.getUTCDate() + 8 - simple.getUTCDay());
+  const end = new Date(start);
+  end.setDate(start.getDate() + 7);
+  return [start, end];
+}
+
+function getMonthBounds(date, offset = 0) {
+  const start = new Date(date.getFullYear(), date.getMonth() + offset, 1);
+  const end = new Date(date.getFullYear(), date.getMonth() + offset + 1, 1);
+  return [start, end];
+}
+
+function isRaceInRange(race, start, end) {
+  const raceStart = parseDate(race.from);
+  const raceEnd = parseDate(race.to);
+  return raceEnd >= start && raceStart < end;
+}
+
+function getFilteredRaces() {
+  let filtered = [...races];
+  const now = new Date();
+
+  if (dateFilter.value === "week") {
+    const [start, end] = getWeekBounds(now);
+    filtered = filtered.filter(race => isRaceInRange(race, start, end));
   }
 
-  return isoWeekStart;
-}
-
-function dateRangesOverlap(aStart, aEnd, bStart, bEnd) {
-  return aStart <= bEnd && aEnd >= bStart;
-}
-
-function filterRaces(races) {
-  const mode = filterMode.value;
-
-  if (mode === "month") {
-    const [year, month] = monthInput.value.split("-").map(Number);
-    const monthStart = new Date(year, month - 1, 1);
-    const monthEnd = new Date(year, month, 0, 23, 59, 59);
-
-    return races.filter(race => {
-      const raceStart = new Date(`${race.startDate}T12:00:00`);
-      const raceEnd = new Date(`${race.endDate}T12:00:00`);
-      return dateRangesOverlap(raceStart, raceEnd, monthStart, monthEnd);
-    });
+  if (dateFilter.value === "month") {
+    const [start, end] = getMonthBounds(now, 0);
+    filtered = filtered.filter(race => isRaceInRange(race, start, end));
   }
 
-  if (mode === "week") {
-    const weekStartUtc = getWeekStartFromInput(weekInput.value);
-    const weekStart = new Date(weekStartUtc.getUTCFullYear(), weekStartUtc.getUTCMonth(), weekStartUtc.getUTCDate());
-    const weekEnd = new Date(weekStart);
-    weekEnd.setDate(weekEnd.getDate() + 6);
-    weekEnd.setHours(23, 59, 59, 999);
-
-    return races.filter(race => {
-      const raceStart = new Date(`${race.startDate}T12:00:00`);
-      const raceEnd = new Date(`${race.endDate}T12:00:00`);
-      return dateRangesOverlap(raceStart, raceEnd, weekStart, weekEnd);
-    });
+  if (dateFilter.value === "next-month") {
+    const [start, end] = getMonthBounds(now, 1);
+    filtered = filtered.filter(race => isRaceInRange(race, start, end));
   }
 
-  return races;
+  if (venueFilter.value !== "all") {
+    filtered = filtered.filter(race => race.venueId === venueFilter.value);
+  }
+
+  return filtered.sort((a, b) => parseDate(a.from) - parseDate(b.from));
 }
 
-function buildPopupForVenue(venue, races) {
-  const raceItems = races
-    .map(race => `<li><strong>${race.title}</strong><br>${formatDateRange(race.startDate, race.endDate)}</li>`)
+function groupRacesByVenue(filteredRaces) {
+  return venues
+    .map(venue => ({
+      venue,
+      races: filteredRaces.filter(race => race.venueId === venue.id)
+    }))
+    .filter(group => group.races.length > 0);
+}
+
+function createPopupContent(venue, venueRaces) {
+  const items = venueRaces
+    .map(race => `<li><strong>${formatDateRange(race.from, race.to)}</strong><br>${race.name}</li>`)
     .join("");
 
   return `
     <strong>${venue.name}</strong><br>
-    <span>${venue.address || ""}</span>
-    <ul style="padding-left: 18px; margin-bottom: 0;">
-      ${raceItems}
-    </ul>
+    ${venue.city || ""}
+    <ul>${items || "<li>Keine Rennen im aktuellen Filter</li>"}</ul>
   `;
 }
 
-function renderMap(races) {
-  markerGroup.clearLayers();
-  markersByVenueId = new Map();
+function renderMarkers(filteredRaces) {
+  markers.forEach(marker => map.removeLayer(marker));
+  markers.clear();
 
-  const racesByVenue = new Map();
+  const grouped = groupRacesByVenue(filteredRaces);
+  const bounds = [];
 
-  races.forEach(race => {
-    if (!racesByVenue.has(race.venueId)) racesByVenue.set(race.venueId, []);
-    racesByVenue.get(race.venueId).push(race);
+  grouped.forEach(({ venue, races: venueRaces }) => {
+    const marker = L.marker([venue.lat, venue.lng]).addTo(map);
+    marker.bindPopup(createPopupContent(venue, venueRaces));
+    markers.set(venue.id, marker);
+    bounds.push([venue.lat, venue.lng]);
   });
 
-  racesByVenue.forEach((venueRaces, venueId) => {
-    const venue = venuesById.get(venueId);
-    if (!venue || !venue.lat || !venue.lng) return;
-
-    const marker = L.marker([venue.lat, venue.lng]).addTo(markerGroup);
-    marker.bindPopup(buildPopupForVenue(venue, venueRaces));
-    markersByVenueId.set(venueId, marker);
-  });
-
-  const markers = Array.from(markersByVenueId.values());
-
-  if (markers.length === 1) {
-    const latLng = markers[0].getLatLng();
-    map.setView(latLng, 14);
-  }
-
-  if (markers.length > 1) {
-    const group = L.featureGroup(markers);
-    map.fitBounds(group.getBounds().pad(0.2));
+  if (bounds.length > 0) {
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
+  } else {
+    map.setView([52.52, 13.405], 9);
   }
 }
 
-function renderRaceList(races) {
-  raceList.innerHTML = "";
+function renderVenueFilter() {
+  venues.forEach(venue => {
+    const option = document.createElement("option");
+    option.value = venue.id;
+    option.textContent = venue.name;
+    venueFilter.appendChild(option);
+  });
+}
 
-  if (races.length === 0) {
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen fuer diesen Filter gefunden.</div>`;
+function renderList(filteredRaces) {
+  const grouped = groupRacesByVenue(filteredRaces);
+  raceList.innerHTML = "";
+  summary.textContent = `${filteredRaces.length} Rennen auf ${grouped.length} Strecken`;
+
+  if (filteredRaces.length === 0) {
+    raceList.innerHTML = `<div class="empty">Keine Rennen für diesen Filter.</div>`;
     return;
   }
 
-  races
-    .slice()
-    .sort((a, b) => a.startDate.localeCompare(b.startDate))
-    .forEach(race => {
-      const venue = venuesById.get(race.venueId);
+  grouped.forEach(({ venue, races: venueRaces }) => {
+    const group = document.createElement("section");
+    group.className = "venue-group";
+
+    const title = document.createElement("h2");
+    title.className = "venue-title";
+    title.textContent = venue.name;
+    group.appendChild(title);
+
+    if (venue.city) {
+      const meta = document.createElement("p");
+      meta.className = "venue-meta";
+      meta.textContent = venue.city;
+      group.appendChild(meta);
+    }
+
+    venueRaces.forEach(race => {
       const button = document.createElement("button");
-      button.type = "button";
       button.className = "race-card";
       button.innerHTML = `
-        <div class="race-date">${formatDateRange(race.startDate, race.endDate)}</div>
-        <div class="race-title">${race.title}</div>
-        <div class="race-venue">${venue ? venue.name : race.host}</div>
-        <div class="race-classes">${race.classes ? race.classes.join(", ") : ""}</div>
+        <span class="race-date">${formatDateRange(race.from, race.to)}</span>
+        <span class="race-name">${race.name}</span>
+        <span class="race-series">${race.series || ""}</span>
       `;
 
       button.addEventListener("click", () => {
-        const marker = markersByVenueId.get(race.venueId);
-        const venue = venuesById.get(race.venueId);
-        if (!marker || !venue) return;
-
-        map.setView([venue.lat, venue.lng], 15);
-        marker.openPopup();
+        const marker = markers.get(venue.id);
+        map.setView([venue.lat, venue.lng], 14);
+        if (marker) marker.openPopup();
       });
 
-      raceList.appendChild(button);
+      group.appendChild(button);
     });
+
+    raceList.appendChild(group);
+  });
 }
 
 function render() {
-  const visibleRaces = filterRaces(allRaces);
-  summary.textContent = `${visibleRaces.length} Rennen gefunden`;
-  renderMap(visibleRaces);
-  renderRaceList(visibleRaces);
+  const filteredRaces = getFilteredRaces();
+  renderMarkers(filteredRaces);
+  renderList(filteredRaces);
 }
 
-function updateFilterControls() {
-  monthControl.classList.toggle("is-hidden", filterMode.value !== "month");
-  weekControl.classList.toggle("is-hidden", filterMode.value !== "week");
-}
-
-async function loadData() {
+async function init() {
   const [venuesResponse, racesResponse] = await Promise.all([
     fetch("venues.json"),
     fetch("races.json")
   ]);
 
-  const venues = await venuesResponse.json();
-  allRaces = await racesResponse.json();
-  venuesById = new Map(venues.map(venue => [venue.id, venue]));
+  venues = await venuesResponse.json();
+  races = await racesResponse.json();
 
+  renderVenueFilter();
   render();
+
+  dateFilter.addEventListener("change", render);
+  venueFilter.addEventListener("change", render);
 }
 
-filterMode.addEventListener("change", () => {
-  updateFilterControls();
-  render();
-});
-
-applyButton.addEventListener("click", render);
-monthInput.addEventListener("change", render);
-weekInput.addEventListener("change", render);
-
-updateFilterControls();
-loadData().catch(error => {
+init().catch(error => {
   console.error(error);
-  summary.textContent = "Daten konnten nicht geladen werden.";
+  summary.textContent = "Fehler beim Laden der Daten.";
 });

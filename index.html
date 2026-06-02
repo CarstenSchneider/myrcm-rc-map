@@ -3,47 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RC-Rennen Deutschland</title>
+  <title>RC-Rennen Karte</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>RC-Rennen Deutschland</h1>
-    <p>Testversion: Strecken in venues.json, Rennen in races.json</p>
-  </header>
+  <main class="app">
+    <section class="map-panel">
+      <div id="map"></div>
+    </section>
 
-  <section class="controls">
-    <label>
-      Filter
-      <select id="filterMode">
-        <option value="all">Alle</option>
-        <option value="month">Monat</option>
-        <option value="week">Kalenderwoche</option>
-      </select>
-    </label>
+    <aside class="list-panel">
+      <header class="header">
+        <h1>RC-Rennen</h1>
+        <p id="summary">Lade Daten ...</p>
+      </header>
 
-    <label id="monthControl" class="is-hidden">
-      Monat
-      <input id="monthInput" type="month" value="2026-04" />
-    </label>
+      <div class="filters">
+        <label>
+          Zeitraum
+          <select id="dateFilter">
+            <option value="all">Alle</option>
+            <option value="week">Diese Woche</option>
+            <option value="month">Dieser Monat</option>
+            <option value="next-month">Nächster Monat</option>
+          </select>
+        </label>
 
-    <label id="weekControl" class="is-hidden">
-      Woche
-      <input id="weekInput" type="week" value="2026-W17" />
-    </label>
-
-    <button id="applyButton">Anzeigen</button>
-  </section>
-
-  <main class="layout">
-    <div id="map"></div>
-
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <h2>Rennen</h2>
-        <p id="summary">Lade Daten...</p>
+        <label>
+          Strecke
+          <select id="venueFilter">
+            <option value="all">Alle Strecken</option>
+          </select>
+        </label>
       </div>
+
       <div id="raceList" class="race-list"></div>
     </aside>
   </main>

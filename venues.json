@@ -1,10 +1,30 @@
 [
   {
     "id": "tsv-mariendorf",
-    "name": "TSV Mariendorf RC-Car Racing",
-    "address": "Osdorfer Str. 53, 12207 Berlin",
-    "plusCode": "C86C+6J Berlin",
+    "name": "TSV Mariendorf RC Racing",
     "lat": 52.410703,
-    "lng": 13.321052
+    "lng": 13.321052,
+    "city": "Berlin-Mariendorf"
+  },
+  {
+    "id": "bernau",
+    "name": "RC Speedracer Bernau e.V.",
+    "lat": 52.6975418,
+    "lng": 13.6211917,
+    "city": "Bernau bei Berlin"
+  },
+  {
+    "id": "marzahn",
+    "name": "Marzahner Racing Club e.V.",
+    "lat": 52.5386281,
+    "lng": 13.5615364,
+    "city": "Berlin-Marzahn"
+  },
+  {
+    "id": "blankenfelde",
+    "name": "Burning Wheels Blankenfelde e.V.",
+    "lat": 52.3208953,
+    "lng": 13.4081779,
+    "city": "Blankenfelde-Mahlow"
   }
 ]
