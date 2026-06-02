@@ -199,7 +199,8 @@ input {
 .race-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  column-gap: 5px;
+  row-gap: 8px;
 }
 
 .tag {
@@ -327,15 +328,14 @@ input {
   max-width: 100%;
 }
 
-/* fixed tag bubble height */
+/* equal tag height */
 
-.tag,
+.tag {
+  min-height: 32px;
+  line-height: 1.15;
+}
+
 .tag-class {
-  height: 26px;
-  min-height: 26px;
-  max-height: 26px;
-  line-height: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  min-height: 28px;
+  line-height: 1.15;
 }
