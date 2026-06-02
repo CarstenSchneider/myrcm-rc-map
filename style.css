@@ -327,28 +327,14 @@ input {
   max-width: 100%;
 }
 
+/* equal tag height */
 
-/* spacing adjustments */
-
-.race-venue {
-  margin-top: 8px;
-  margin-bottom: 8px;
+.tag {
+  min-height: 32px;
+  line-height: 1.15;
 }
 
-.race-link {
-  margin-top: 8px;
-}
-
-.popup-date {
-  font-weight: 800;
-  margin-bottom: 4px;
-}
-
-.popup-race-name {
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.popup-venue {
-  color: var(--muted);
+.tag-class {
+  min-height: 28px;
+  line-height: 1.15;
 }
