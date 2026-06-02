@@ -78,13 +78,12 @@ async function loadEventClasses(url) {
 
     const sectionClasses = [];
 
-$('select[name="Section"] option').each((_, option) => {
-  const value = $(option).attr("value");
+$("select option").each((_, option) => {
   const label = normalizeText($(option).text());
 
-  if (!value) return;
   if (!label) return;
   if (label === "?") return;
+  if (/please select/i.test(label)) return;
 
   sectionClasses.push(label);
 });
