@@ -286,7 +286,6 @@
   "lat": 50.246100236848775,
   "lng": 9.291699351520423
 },
-  ```json
 {
   "id": "myrcm-121",
   "name": "MC Ettlingen e.V.",
@@ -503,7 +502,7 @@
   "city": "Senden",
   "lat": 48.325191394382635,
   "lng": 10.035411116404305
-}```json
+},
 {
   "id": "myrcm-121",
   "name": "MC Ettlingen e.V.",
@@ -720,8 +719,7 @@
   "city": "Senden",
   "lat": 48.325191394382635,
   "lng": 10.035411116404305
-}
-```json
+},
 {
   "id": "myrcm-121",
   "name": "MC Ettlingen e.V.",
