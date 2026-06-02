@@ -11,7 +11,7 @@ const trainingTerms = [
   "gastfahrertag",
   "practice"
 ];
-
+ 
 const excludedHostTerms = [
   "kartbahn",
   "kart bahn",
@@ -61,11 +61,20 @@ function absoluteUrl(href) {
   return new URL(href, "https://www.myrcm.ch").toString();
 }
 
+function registrationUrl(url) {
+  const parsed = new URL(url);
+  parsed.searchParams.delete("lType");
+  return parsed.toString();
+}
+
+
 async function loadEventClasses(url) {
   if (!url) return [];
 
+  const classUrl = registrationUrl(url);
+
   try {
-    const response = await fetch(url, {
+    const response = await fetch(classUrl, {
       headers: {
         "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
       }
@@ -78,14 +87,23 @@ async function loadEventClasses(url) {
 
     const sectionClasses = [];
 
-$("select option").each((_, option) => {
-  const label = normalizeText($(option).text());
+    $('select[name="Section"] option').each((_, option) => {
+      const value = $(option).attr("value");
+      const label = normalizeText($(option).text());
 
-  if (!label) return;
-  if (label === "?") return;
-  if (/please select/i.test(label)) return;
+      if (!value) return;
+      if (!label) return;
+      if (label === "?") return;
 
-  sectionClasses.push(label);
+      sectionClasses.push(label);
+    });
+
+    return Array.from(new Set(sectionClasses));
+
+  } catch (error) {
+    console.warn(`  Klassen konnten nicht geladen werden: ${classUrl}`);
+    return [];
+  }
 });
 
 return Array.from(new Set(sectionClasses));
