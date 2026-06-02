@@ -1,106 +1,38 @@
 [
   {
-    "id": "blankenfelde-2026-01-17-sk-lauf-ost-blankenfelde-winter-series-2025-2026-lauf-3",
-    "venueId": "blankenfelde",
-    "name": "SK Lauf Ost / Blankenfelde Winter Series 2025/2026 Lauf 3",
-    "from": "2026-01-17",
-    "to": "2026-01-18",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=92982&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "tsv-mariendorf-2026-01-24-rck-kleinserie",
-    "venueId": "tsv-mariendorf",
-    "name": "RCK Kleinserie",
-    "from": "2026-01-24",
-    "to": "2026-01-25",
-    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&dId[E]=92755&tId=E&hId[1]=org"
-  },
-  {
-    "id": "blankenfelde-2026-02-14-sk-lauf-ost-blankenfelde-winter-series-2025-2026-lauf-4",
-    "venueId": "blankenfelde",
-    "name": "SK Lauf Ost / Blankenfelde Winter Series 2025/2026 Lauf 4",
-    "from": "2026-02-14",
-    "to": "2026-02-15",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93694&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "blankenfelde-2026-03-07-sk-lauf-ost-blankenfelde-winter-series-2025-2026-lauf-5",
-    "venueId": "blankenfelde",
-    "name": "SK Lauf Ost / Blankenfelde Winter Series 2025/2026 Lauf 5",
-    "from": "2026-03-07",
-    "to": "2026-03-08",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94576&dLt=reg&pLa=en&lType=rList"
-  },
-  {
     "id": "tsv-mariendorf-2026-04-05-tamiya-euro-cup",
     "venueId": "tsv-mariendorf",
     "name": "Tamiya Euro Cup",
     "from": "2026-04-05",
     "to": "2026-04-05",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94105&dLt=reg&pLa=en&lType=rList"
+    "series": ["TEC"],
+    "url": "https://www.myrcm.ch/"
   },
   {
     "id": "tsv-mariendorf-2026-04-25-berlin-touring-masters",
     "venueId": "tsv-mariendorf",
-    "name": "Berlin Touring Masters",
+    "name": "Berlin Touring Masters Lauf 2",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94212&dLt=reg&pLa=en&lType=rList"
+    "series": ["BTM"],
+    "url": "https://www.myrcm.ch/"
   },
   {
-    "id": "tsv-mariendorf-2026-05-09-berlin-touring-masters-sk-5-lauf",
-    "venueId": "tsv-mariendorf",
-    "name": "Berlin Touring Masters + SK 5 Lauf",
-    "from": "2026-05-09",
-    "to": "2026-05-10",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94887&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "tsv-mariendorf-2026-05-23-12-stunden-von-berlin",
-    "venueId": "tsv-mariendorf",
-    "name": "12 Stunden von Berlin",
-    "from": "2026-05-23",
-    "to": "2026-05-24",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=92759&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "bernau-2026-05-30-sk-lauf-ost-berlin-touring-masters-lauf-3",
+    "id": "bernau-2026-05-30-sk-btm",
     "venueId": "bernau",
     "name": "SK-Lauf Ost + Berlin Touring Masters Lauf 3",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94210&dLt=reg&pLa=en&lType=rList"
+    "series": ["BTM", "SK"],
+    "url": "https://www.myrcm.ch/"
   },
   {
-    "id": "bernau-2026-06-13-sk-lauf-ost-berlin-touring-masters-lauf-4",
-    "venueId": "bernau",
-    "name": "SK-Lauf Ost + Berlin Touring Masters Lauf 4",
-    "from": "2026-06-13",
+    "id": "blankenfelde-2026-06-14-bws",
+    "venueId": "blankenfelde",
+    "name": "BWS Lauf",
+    "from": "2026-06-14",
     "to": "2026-06-14",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94649&pLa=en"
-  },
-  {
-    "id": "bernau-2026-06-20-ostmasters",
-    "venueId": "bernau",
-    "name": "Ostmasters",
-    "from": "2026-06-20",
-    "to": "2026-06-21",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=91316&pLa=en"
-  },
-  {
-    "id": "bernau-2026-06-27-tamoco-offroad-cup",
-    "venueId": "bernau",
-    "name": "Tamoco Offroad Cup",
-    "from": "2026-06-27",
-    "to": "2026-06-28",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94651&pLa=en"
-  },
-  {
-    "id": "bernau-2026-08-29-sk-ost-ore-1-10-1-8",
-    "venueId": "bernau",
-    "name": "SK-Ost ORE 1:10 + 1:8",
-    "from": "2026-08-29",
-    "to": "2026-08-30",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94653&dLt=reg&pLa=en&lType=rList"
+    "series": [],
+    "url": "https://www.myrcm.ch/"
   }
 ]

@@ -63,6 +63,19 @@ function eventId(venueId, name, from) {
   return `${venueId}-${from}-${slug}`;
 }
 
+function detectSeries(name) {
+  const rules = [
+    { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
+    { label: "TEC", re: /tamiya euro cup|\btec\b/i },
+    { label: "Speed Masters", re: /speed masters/i },
+    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf/i },
+    { label: "Tamico", re: /tamico/i },
+    { label: "RCK", re: /\brck\b/i }
+  ];
+
+  return rules.filter(rule => rule.re.test(name)).map(rule => rule.label);
+}
+
 function parseEvents(html, host) {
   const $ = cheerio.load(html);
   const races = [];
@@ -114,6 +127,7 @@ function parseEvents(html, host) {
       name,
       from,
       to,
+      series: detectSeries(name),
       url: absoluteUrl(href) || host.url
     });
   });

@@ -1,25 +1,260 @@
+:root {
+  --bg: #f4f1ec;
+  --panel: #fffaf3;
+  --text: #1f1d1a;
+  --muted: #6f6961;
+  --line: #ded6ca;
+  --accent: #1f1d1a;
+  --card: #ffffff;
+  --shadow: 0 12px 30px rgba(31, 29, 26, 0.10);
+}
+
 * { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #171717; }
-.app { display: grid; grid-template-columns: minmax(0, 1fr) 380px; height: 100vh; }
-.map-wrap { min-width: 0; }
-#map { width: 100%; height: 100%; }
-.sidebar { border-left: 1px solid #ddd; padding: 20px; overflow-y: auto; background: #fafafa; }
-h1 { margin: 0 0 4px; font-size: 24px; }
-#summary { margin: 0 0 18px; color: #555; }
-.filters { margin-bottom: 20px; }
-label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
-select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; background: white; }
-.venue-group { margin-bottom: 22px; }
-.venue-title { margin: 0 0 8px; font-size: 18px; }
-.race-card { display: block; width: 100%; text-align: left; border: 1px solid #ddd; border-radius: 8px; background: white; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; }
-.race-card:hover { background: #f0f0f0; }
-.race-date { display: block; color: #666; font-size: 13px; margin-bottom: 3px; }
-.race-name { display: block; font-weight: 650; }
-.race-link { display: inline-block; margin-top: 6px; font-size: 13px; color: #0645ad; text-decoration: none; }
-.empty { color: #666; }
-.leaflet-popup-content ul { padding-left: 18px; margin: 8px 0 0; }
-.leaflet-popup-content li { margin-bottom: 5px; }
-@media (max-width: 800px) {
-  .app { grid-template-columns: 1fr; grid-template-rows: 55vh auto; }
-  .sidebar { border-left: 0; border-top: 1px solid #ddd; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  height: 100vh;
+  display: grid;
+  gap: 0;
+  transition: grid-template-columns 180ms ease;
+}
+
+.app.layout-map { grid-template-columns: minmax(0, 68fr) minmax(360px, 32fr); }
+.app.layout-list { grid-template-columns: minmax(360px, 34fr) minmax(0, 66fr); }
+
+.map-panel {
+  min-width: 0;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.race-panel {
+  min-width: 0;
+  overflow: auto;
+  padding: 24px;
+  background: var(--panel);
+  border-left: 1px solid var(--line);
+}
+
+.panel-header {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.view-toggle {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #eee7dc;
+  flex-shrink: 0;
+}
+
+.toggle-button,
+.segmented button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 11px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.toggle-button.active,
+.segmented button.active {
+  background: var(--text);
+  color: #fff;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.layout-list .filters {
+  grid-template-columns: 1.2fr 0.8fr 1.1fr;
+  align-items: end;
+}
+
+.filter-group,
+.filter-field {
+  display: grid;
+  gap: 7px;
+}
+
+.filter-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.segmented {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f1e8;
+  width: fit-content;
+}
+
+select,
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.result-line {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.race-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.layout-list .race-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.race-card {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  cursor: pointer;
+  text-align: left;
+}
+
+.race-card:hover,
+.race-card.active {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.race-date {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.race-name {
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.race-venue {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.race-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: var(--muted);
+  background: #faf7f2;
+}
+
+.race-link {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.empty-state {
+  padding: 22px;
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.45);
+}
+
+.leaflet-popup-content {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.popup-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.popup-race {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .app,
+  .app.layout-map,
+  .app.layout-list {
+    height: auto;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .map-panel { height: 45vh; }
+  .race-panel { border-left: 0; border-top: 1px solid var(--line); }
+  .panel-header { flex-direction: column; }
+  .layout-list .filters { grid-template-columns: 1fr; }
+  .layout-list .race-grid { grid-template-columns: 1fr; }
 }

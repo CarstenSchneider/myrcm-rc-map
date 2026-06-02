@@ -1,176 +1,248 @@
-const map = L.map("map", { scrollWheelZoom: true });
-const markers = new Map();
-let venues = [];
-let races = [];
-let venueById = new Map();
+const app = document.getElementById("app");
+const raceList = document.getElementById("raceList");
+const resultLine = document.getElementById("resultLine");
+const searchInput = document.getElementById("searchInput");
+const seriesFilter = document.getElementById("seriesFilter");
+const rangeFilter = document.getElementById("rangeFilter");
+const mapWideButton = document.getElementById("mapWideButton");
+const listWideButton = document.getElementById("listWideButton");
 
+const map = L.map("map", { scrollWheelZoom: true }).setView([52.52, 13.405], 9);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap"
 }).addTo(map);
 
-const periodFilter = document.getElementById("periodFilter");
-const raceList = document.getElementById("raceList");
-const summary = document.getElementById("summary");
+let venues = [];
+let races = [];
+let markers = new Map();
+let activeRaceId = null;
+let selectedRange = "4";
+let selectedSeries = "all";
 
-function parseDate(value) {
-  return new Date(`${value}T00:00:00`);
+function parseDate(dateString) {
+  return new Date(`${dateString}T00:00:00`);
 }
 
-function formatDateRange(race) {
-  const from = parseDate(race.from);
-  const to = parseDate(race.to || race.from);
-  const options = { day: "2-digit", month: "2-digit", year: "numeric" };
-  const fromText = from.toLocaleDateString("de-DE", options);
-  const toText = to.toLocaleDateString("de-DE", options);
-  return fromText === toText ? fromText : `${fromText} – ${toText}`;
-}
-
-function startOfWeek(date) {
-  const d = new Date(date);
-  const day = d.getDay() || 7;
-  d.setDate(d.getDate() - day + 1);
-  d.setHours(0, 0, 0, 0);
-  return d;
-}
-
-function endOfWeek(date) {
-  const d = startOfWeek(date);
-  d.setDate(d.getDate() + 6);
-  d.setHours(23, 59, 59, 999);
-  return d;
-}
-
-function raceMatchesPeriod(race) {
-  const value = periodFilter.value;
-  if (value === "all") return true;
-
+function todayStart() {
   const now = new Date();
-  const from = parseDate(race.from);
-  const to = parseDate(race.to || race.from);
-
-  if (value === "week") {
-    const start = startOfWeek(now);
-    const end = endOfWeek(now);
-    return from <= end && to >= start;
-  }
-
-  if (value === "month") {
-    return from.getFullYear() === now.getFullYear() && from.getMonth() === now.getMonth();
-  }
-
-  return true;
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
-function groupRacesByVenue(filteredRaces) {
-  const groups = new Map();
-  for (const race of filteredRaces) {
-    if (!groups.has(race.venueId)) groups.set(race.venueId, []);
-    groups.get(race.venueId).push(race);
-  }
-  for (const group of groups.values()) {
-    group.sort((a, b) => parseDate(a.from) - parseDate(b.from));
-  }
-  return groups;
+function addDays(date, days) {
+  const copy = new Date(date);
+  copy.setDate(copy.getDate() + days);
+  return copy;
 }
 
-function popupHtml(venue, venueRaces) {
-  const items = venueRaces.length
-    ? venueRaces.map(race => `<li><strong>${formatDateRange(race)}</strong><br>${race.name}${race.url ? `<br><a href="${race.url}" target="_blank" rel="noopener">MyRCM</a>` : ""}</li>`).join("")
-    : "<li>Keine Rennen im gewählten Zeitraum</li>";
+function formatDateRange(from, to) {
+  const start = parseDate(from);
+  const end = parseDate(to || from);
+  const fmt = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+  const fmtShort = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit" });
 
-  return `<strong>${venue.name}</strong><ul>${items}</ul>`;
+  if (from === to || !to) return fmt.format(start);
+  if (start.getFullYear() === end.getFullYear()) {
+    return `${fmtShort.format(start)}–${fmt.format(end)}`;
+  }
+  return `${fmt.format(start)}–${fmt.format(end)}`;
 }
 
-function renderMarkers(groups) {
+function detectSeries(name) {
+  const rules = [
+    { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
+    { label: "TEC", re: /tamiya euro cup|\btec\b/i },
+    { label: "Speed Masters", re: /speed masters/i },
+    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf/i },
+    { label: "Tamico", re: /tamico/i },
+    { label: "RCK", re: /\brck\b/i }
+  ];
+
+  return rules.filter(rule => rule.re.test(name)).map(rule => rule.label);
+}
+
+function raceSeries(race) {
+  if (Array.isArray(race.series) && race.series.length) return race.series;
+  return detectSeries(race.name);
+}
+
+function venueById(id) {
+  return venues.find(venue => venue.id === id);
+}
+
+function raceSearchText(race) {
+  const venue = venueById(race.venueId);
+  return [race.name, venue?.name, venue?.city, ...raceSeries(race)].filter(Boolean).join(" ").toLowerCase();
+}
+
+function isInSelectedRange(race) {
+  const start = parseDate(race.from);
+  const today = todayStart();
+  if (start < today) return false;
+
+  if (selectedRange === "season") {
+    return start.getFullYear() === today.getFullYear() || start.getFullYear() === today.getFullYear() + 1;
+  }
+
+  const weeks = Number(selectedRange);
+  return start <= addDays(today, weeks * 7);
+}
+
+function filteredRaces() {
+  const query = searchInput.value.trim().toLowerCase();
+
+  return races
+    .filter(isInSelectedRange)
+    .filter(race => selectedSeries === "all" || raceSeries(race).includes(selectedSeries))
+    .filter(race => !query || raceSearchText(race).includes(query))
+    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+}
+
+function buildPopup(venue, venueRaces) {
+  const items = venueRaces
+    .slice(0, 6)
+    .map(race => `<div class="popup-race"><strong>${formatDateRange(race.from, race.to)}</strong><br>${race.name}</div>`)
+    .join("");
+
+  return `<div class="popup-title">${venue.name}</div>${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}`;
+}
+
+function updateMarkers(list) {
   markers.forEach(marker => marker.remove());
   markers.clear();
 
+  const venueIds = new Set(list.map(race => race.venueId));
   const bounds = [];
-  for (const venue of venues) {
-    const venueRaces = groups.get(venue.id) || [];
-    if (!venueRaces.length && periodFilter.value !== "all") continue;
 
+  venues.forEach(venue => {
+    if (!venueIds.has(venue.id)) return;
+
+    const venueRaces = list.filter(race => race.venueId === venue.id);
     const marker = L.marker([venue.lat, venue.lng]).addTo(map);
-    marker.bindPopup(popupHtml(venue, venueRaces));
+    marker.bindPopup(buildPopup(venue, venueRaces));
+    marker.on("click", () => highlightVenue(venue.id));
     markers.set(venue.id, marker);
     bounds.push([venue.lat, venue.lng]);
-  }
+  });
 
-  if (bounds.length) map.fitBounds(bounds, { padding: [40, 40] });
-  else map.setView([52.52, 13.405], 9);
+  if (bounds.length === 1) map.setView(bounds[0], 12);
+  if (bounds.length > 1) map.fitBounds(bounds, { padding: [40, 40] });
 }
 
-function renderList(groups, filteredRaces) {
-  summary.textContent = `${filteredRaces.length} Rennen gefunden`;
+function highlightVenue(venueId) {
+  const firstRace = filteredRaces().find(race => race.venueId === venueId);
+  if (!firstRace) return;
+  activeRaceId = firstRace.id;
+  render();
+  document.querySelector(`[data-race-id="${firstRace.id}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+}
+
+function focusRace(race) {
+  const venue = venueById(race.venueId);
+  if (!venue) return;
+  activeRaceId = race.id;
+  renderList(filteredRaces());
+  map.setView([venue.lat, venue.lng], 12);
+  const marker = markers.get(venue.id);
+  if (marker) marker.openPopup();
+}
+
+function renderList(list) {
+  resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
 
-  if (!filteredRaces.length) {
-    raceList.innerHTML = `<p class="empty">Keine Rennen im gewählten Zeitraum.</p>`;
+  if (!list.length) {
+    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
     return;
   }
 
-  const sortedVenues = venues
-    .filter(venue => groups.has(venue.id))
-    .sort((a, b) => a.name.localeCompare(b.name, "de"));
+  for (const race of list) {
+    const venue = venueById(race.venueId);
+    const series = raceSeries(race);
+    const card = document.createElement("article");
+    card.className = `race-card${race.id === activeRaceId ? " active" : ""}`;
+    card.dataset.raceId = race.id;
+    card.tabIndex = 0;
 
-  for (const venue of sortedVenues) {
-    const group = document.createElement("section");
-    group.className = "venue-group";
+    card.innerHTML = `
+      <div class="race-date">${formatDateRange(race.from, race.to)}</div>
+      <div class="race-name">${race.name}</div>
+      <div class="race-venue">${venue?.name || race.venueId}</div>
+      ${series.length ? `<div class="race-tags">${series.map(item => `<span class="tag">${item}</span>`).join("")}</div>` : ""}
+      ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
+    `;
 
-    const title = document.createElement("h2");
-    title.className = "venue-title";
-    title.textContent = venue.name;
-    group.appendChild(title);
+    card.addEventListener("click", () => focusRace(race));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        focusRace(race);
+      }
+    });
 
-    for (const race of groups.get(venue.id)) {
-      const button = document.createElement("button");
-      button.className = "race-card";
-      button.innerHTML = `
-        <span class="race-date">${formatDateRange(race)}</span>
-        <span class="race-name">${race.name}</span>
-        ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noopener">MyRCM öffnen</a>` : ""}
-      `;
-      button.addEventListener("click", event => {
-        if (event.target.tagName.toLowerCase() === "a") return;
-        const marker = markers.get(venue.id);
-        if (marker) {
-          map.setView([venue.lat, venue.lng], 14);
-          marker.openPopup();
-        }
-      });
-      group.appendChild(button);
-    }
-
-    raceList.appendChild(group);
+    raceList.appendChild(card);
   }
 }
 
-function render() {
-  const filteredRaces = races.filter(raceMatchesPeriod);
-  const groups = groupRacesByVenue(filteredRaces);
-  renderMarkers(groups);
-  renderList(groups, filteredRaces);
+function populateSeries() {
+  const allSeries = new Set();
+  races.forEach(race => raceSeries(race).forEach(item => allSeries.add(item)));
+
+  [...allSeries].sort().forEach(series => {
+    const option = document.createElement("option");
+    option.value = series;
+    option.textContent = series;
+    seriesFilter.appendChild(option);
+  });
 }
+
+function render() {
+  const list = filteredRaces();
+  updateMarkers(list);
+  renderList(list);
+  setTimeout(() => map.invalidateSize(), 0);
+}
+
+function setLayout(layout) {
+  app.classList.toggle("layout-map", layout === "map");
+  app.classList.toggle("layout-list", layout === "list");
+  mapWideButton.classList.toggle("active", layout === "map");
+  listWideButton.classList.toggle("active", layout === "list");
+  localStorage.setItem("rcRaceMapLayout", layout);
+  setTimeout(() => map.invalidateSize(), 210);
+}
+
+rangeFilter.addEventListener("click", event => {
+  const button = event.target.closest("button[data-range]");
+  if (!button) return;
+  selectedRange = button.dataset.range;
+  rangeFilter.querySelectorAll("button").forEach(item => item.classList.toggle("active", item === button));
+  render();
+});
+
+seriesFilter.addEventListener("change", () => {
+  selectedSeries = seriesFilter.value;
+  render();
+});
+
+searchInput.addEventListener("input", render);
+mapWideButton.addEventListener("click", () => setLayout("map"));
+listWideButton.addEventListener("click", () => setLayout("list"));
 
 async function init() {
   const [venuesResponse, racesResponse] = await Promise.all([
-    fetch("venues.json", { cache: "no-cache" }),
-    fetch("races.json", { cache: "no-cache" })
+    fetch("venues.json"),
+    fetch("races.json")
   ]);
 
   venues = await venuesResponse.json();
   races = await racesResponse.json();
-  venueById = new Map(venues.map(venue => [venue.id, venue]));
 
-  races = races
-    .filter(race => venueById.has(race.venueId))
-    .sort((a, b) => parseDate(a.from) - parseDate(b.from));
-
-  periodFilter.addEventListener("change", render);
+  populateSeries();
+  setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
   render();
 }
 
 init().catch(error => {
   console.error(error);
-  summary.textContent = "Fehler beim Laden der Daten.";
+  resultLine.textContent = "Fehler beim Laden der Daten.";
 });

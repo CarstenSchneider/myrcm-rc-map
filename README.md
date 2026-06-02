@@ -1,27 +1,7 @@
-# MyRCM RC Map
+# RC Race Map
 
-Karte fuer RC-Rennen in Berlin/Brandenburg.
+Karte und Rennkalender für RC-Rennen. Die Daten werden aus `venues.json` und `races.json` geladen.
 
-## Dateien
+## MyRCM-Import
 
-- `venues.json`: Strecken mit Koordinaten
-- `races.json`: Rennen, die auf eine Strecke per `venueId` verweisen
-- `import-myrcm.js`: Importiert Rennen aus MyRCM und filtert Trainings aus
-- `.github/workflows/import-myrcm.yml`: GitHub Action fuer manuellen und taeglichen Import
-
-## MyRCM Import manuell starten
-
-1. Repository auf GitHub oeffnen
-2. Oben auf `Actions`
-3. Links `Import MyRCM races` auswaehlen
-4. Rechts `Run workflow`
-5. Gruenen Button `Run workflow` klicken
-
-Danach erzeugt GitHub eine neue `races.json` und committed sie automatisch.
-
-## Lokal testen
-
-```bash
-npm install
-npm run import:myrcm
-```
+Der Workflow `.github/workflows/import-myrcm.yml` kann manuell in GitHub Actions gestartet werden und läuft zusätzlich täglich um 05:00 UTC.

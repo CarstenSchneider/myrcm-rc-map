@@ -2,24 +2,28 @@
   {
     "id": "tsv-mariendorf",
     "name": "TSV Mariendorf RC Racing",
+    "city": "Berlin",
     "lat": 52.410703,
     "lng": 13.321052
   },
   {
     "id": "bernau",
     "name": "RC Speedracer Bernau",
+    "city": "Bernau",
     "lat": 52.6975418,
     "lng": 13.6211917
   },
   {
     "id": "marzahn",
     "name": "Marzahner Racing Club e.V.",
+    "city": "Berlin-Marzahn",
     "lat": 52.5386281,
     "lng": 13.5615364
   },
   {
     "id": "blankenfelde",
     "name": "Burning Wheels Blankenfelde e.V.",
+    "city": "Blankenfelde",
     "lat": 52.3208953,
     "lng": 13.4081779
   }
