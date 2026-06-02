@@ -1,4 +1,3 @@
-```js
 import * as cheerio from "cheerio";
 import { writeFile } from "node:fs/promises";
 
@@ -41,7 +40,6 @@ function getOrgId(href) {
 
 function isExcludedHost(host) {
   const text = `${host.name} ${host.location}`.toLowerCase();
-
   return excludedTerms.some(term => text.includes(term));
 }
 
@@ -67,8 +65,6 @@ function parseHosts(html) {
     const location = cells[2];
     const country = cells[3];
     const eventCount = Number(cells[4]) || 0;
-
-    console.log({ name, location, country, eventCount, orgId });
 
     if (!/germany|deutschland|deu/i.test(country)) return;
 
