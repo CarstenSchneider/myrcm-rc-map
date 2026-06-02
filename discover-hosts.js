@@ -12,6 +12,8 @@ const excludedTerms = [
   "karting",
   "gokart",
   "go-kart",
+  "cockpit-kartarena",
+  "kartarena",
   "burgpark ring kart"
 ];
 
