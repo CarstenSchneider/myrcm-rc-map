@@ -2,7 +2,11 @@ import * as cheerio from "cheerio";
 import { writeFile } from "node:fs/promises";
 
 const baseUrl = "https://www.myrcm.ch/myrcm/main?hId[1]=org&pLa=en";
+const myRcmBaseUrl = "https://www.myrcm.ch";
 const maxPages = 40;
+const requestTimeoutMs = 10000;
+const websiteConcurrency = 6;
+const retryCount = 1;
 
 const excludedTerms = [
   "kart gmbh",
@@ -17,13 +21,29 @@ const excludedTerms = [
   "burgpark ring kart"
 ];
 
-function normalizeText(text) {
+const ignoredWebsiteHosts = [
+  "myrcm.ch",
+  "www.myrcm.ch",
+  "facebook.com",
+  "www.facebook.com",
+  "instagram.com",
+  "www.instagram.com",
+  "youtube.com",
+  "www.youtube.com",
+  "youtu.be",
+  "twitter.com",
+  "www.twitter.com",
+  "x.com",
+  "www.x.com"
+];
+
+function normalizeText(text = "") {
   return text.replace(/\s+/g, " ").trim();
 }
 
 function absoluteUrl(href) {
   if (!href) return "";
-  return new URL(href, "https://www.myrcm.ch").toString();
+  return new URL(href, myRcmBaseUrl).toString();
 }
 
 function getOrgId(href) {
@@ -43,6 +63,22 @@ function getOrgId(href) {
 function isExcludedHost(host) {
   const text = `${host.name} ${host.location}`.toLowerCase();
   return excludedTerms.some(term => text.includes(term));
+}
+
+function isAllowedWebsiteUrl(url) {
+  if (!url) return false;
+
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.toLowerCase();
+
+    if (!["http:", "https:"].includes(parsed.protocol)) return false;
+    if (ignoredWebsiteHosts.includes(hostname)) return false;
+
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function parseHosts(html) {
@@ -83,42 +119,134 @@ function parseHosts(html) {
   return hosts;
 }
 
-
-async function discoverWebsite(hostUrl) {
-  if (!hostUrl) return null;
+async function fetchText(url, attempt = 0) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
 
   try {
-    const response = await fetch(hostUrl, {
+    const response = await fetch(url, {
+      signal: controller.signal,
       headers: {
         "user-agent": "Mozilla/5.0 myrcm-rc-map host discovery"
       }
     });
 
-    if (!response.ok) return null;
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
 
-    const html = await response.text();
-    const $ = cheerio.load(html);
+    return await response.text();
+  } catch (error) {
+    if (attempt < retryCount) {
+      return fetchText(url, attempt + 1);
+    }
 
-    let website = null;
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
 
-    $("span.label").each((_, el) => {
-      const label = normalizeText($(el).text());
+function directElementText($, element) {
+  return normalizeText(
+    $(element)
+      .contents()
+      .filter((_, node) => node.type === "text")
+      .text()
+  );
+}
 
-      if (label === "Web:") {
-        const link = $(el).parent().find("a").first();
+function firstAllowedLink($, root) {
+  const links = $(root).find("a").addBack("a").toArray();
 
-        if (link.length) {
-          website = absoluteUrl(link.attr("href"));
-        }
-      }
-    });
+  for (const link of links) {
+    const href = $(link).attr("href");
+    if (!href) continue;
 
-    return website;
-  } catch {
+    let url = "";
+
+    try {
+      url = absoluteUrl(href);
+    } catch {
+      continue;
+    }
+
+    if (isAllowedWebsiteUrl(url)) return url;
+  }
+
+  return null;
+}
+
+function extractWebsiteFromWebField(html) {
+  const $ = cheerio.load(html);
+
+  const rowCandidate = $("tr")
+    .toArray()
+    .map(row => {
+      const cells = $(row).find("td, th").toArray();
+      const texts = cells.map(cell => normalizeText($(cell).text()));
+
+      return { row, cells, texts };
+    })
+    .find(({ texts }) => texts.some(text => /^web\s*:?$/i.test(text) || /^web\s*:/i.test(text)));
+
+  if (rowCandidate) {
+    const url = firstAllowedLink($, rowCandidate.row);
+    if (url) return url;
+
+    const text = normalizeText($(rowCandidate.row).text());
+    const match = text.match(/web\s*:\s*(https?:\/\/\S+)/i);
+    if (match && isAllowedWebsiteUrl(match[1])) return match[1];
+  }
+
+  const labelCandidate = $("*")
+    .toArray()
+    .find(element => /^web\s*:?$/i.test(directElementText($, element)));
+
+  if (labelCandidate) {
+    const sameParentUrl = firstAllowedLink($, $(labelCandidate).parent());
+    if (sameParentUrl) return sameParentUrl;
+
+    const nextSiblingsUrl = firstAllowedLink($, $(labelCandidate).nextAll());
+    if (nextSiblingsUrl) return nextSiblingsUrl;
+  }
+
+  const bodyText = normalizeText($("body").text());
+  const textMatch = bodyText.match(/web\s*:\s*(https?:\/\/\S+)/i);
+  if (textMatch && isAllowedWebsiteUrl(textMatch[1])) return textMatch[1];
+
+  return null;
+}
+
+async function discoverWebsite(hostUrl) {
+  if (!hostUrl) return null;
+
+  try {
+    const html = await fetchText(hostUrl);
+    return extractWebsiteFromWebField(html);
+  } catch (error) {
+    console.warn(`  Website-Feld konnte nicht gelesen werden: ${error.message}`);
     return null;
   }
 }
 
+async function mapWithConcurrency(items, concurrency, mapper) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < items.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+    }
+  }
+
+  const workerCount = Math.min(concurrency, items.length);
+  await Promise.all(Array.from({ length: workerCount }, worker));
+
+  return results;
+}
 
 async function main() {
   const allHosts = [];
@@ -127,17 +255,7 @@ async function main() {
     const url = `${baseUrl}&pId[O]=${page}`;
     console.log(`Lade Hostliste Seite ${page + 1}`);
 
-    const response = await fetch(url, {
-      headers: {
-        "user-agent": "Mozilla/5.0 myrcm-rc-map host discovery"
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error(`MyRCM request failed: ${response.status}`);
-    }
-
-    const html = await response.text();
+    const html = await fetchText(url);
     const hosts = parseHosts(html);
 
     console.log(`  ${hosts.length} deutsche Hosts gefunden`);
@@ -155,10 +273,11 @@ async function main() {
     .filter(host => Number(host.eventCount || 0) > 0)
     .filter(host => !isExcludedHost(host));
 
-  for (const host of unique) {
-    console.log(`Website prüfen: ${host.name}`);
+  await mapWithConcurrency(unique, websiteConcurrency, async host => {
+    console.log(`Web-Feld lesen: ${host.name}`);
     host.website = await discoverWebsite(host.url);
-  }
+    return host;
+  });
 
   unique.sort((a, b) => a.name.localeCompare(b.name));
 
