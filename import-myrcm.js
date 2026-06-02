@@ -206,11 +206,18 @@ async function main() {
   for (const host of hosts) {
     console.log(`Lade MyRCM: ${host.name} (${host.orgId})`);
 
-    const response = await fetch(host.url, {
-      headers: {
-        "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
-      }
-    });
+let response;
+
+try {
+  response = await fetch(host.url, {
+    headers: {
+      "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
+    }
+  });
+} catch (error) {
+  console.warn(`  Übersprungen wegen Netzwerkfehler: ${host.name}`);
+  continue;
+}
 
     if (!response.ok) {
       console.warn(`  Fehler bei ${host.name}: ${response.status}`);
