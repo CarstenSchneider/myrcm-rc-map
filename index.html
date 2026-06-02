@@ -1,47 +1,35 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RC-Rennen Karte</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RC Rennen Berlin</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
-    <section class="map-panel">
+    <section class="map-wrap">
       <div id="map"></div>
     </section>
-
-    <aside class="list-panel">
-      <header class="header">
-        <h1>RC-Rennen</h1>
-        <p id="summary">Lade Daten ...</p>
+    <aside class="sidebar">
+      <header>
+        <h1>RC Rennen</h1>
+        <p id="summary">Lade Rennen...</p>
       </header>
-
       <div class="filters">
         <label>
           Zeitraum
-          <select id="dateFilter">
+          <select id="periodFilter">
             <option value="all">Alle</option>
             <option value="week">Diese Woche</option>
             <option value="month">Dieser Monat</option>
-            <option value="next-month">Nächster Monat</option>
-          </select>
-        </label>
-
-        <label>
-          Strecke
-          <select id="venueFilter">
-            <option value="all">Alle Strecken</option>
           </select>
         </label>
       </div>
-
       <div id="raceList" class="race-list"></div>
     </aside>
   </main>
-
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="app.js"></script>
 </body>

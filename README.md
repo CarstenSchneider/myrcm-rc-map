@@ -1,37 +1,27 @@
-# RC-Rennen Deutschland
+# MyRCM RC Map
 
-Testversion fuer eine RC-Rennkarte mit Leaflet und OpenStreetMap.
+Karte fuer RC-Rennen in Berlin/Brandenburg.
 
 ## Dateien
 
-- `index.html` - Grundstruktur der Seite
-- `style.css` - Layout und Gestaltung
-- `app.js` - Kartenlogik, Filter und Listenansicht
-- `races.json` - Renntermine
-- `venues.json` - Strecken mit Adresse und Koordinaten
+- `venues.json`: Strecken mit Koordinaten
+- `races.json`: Rennen, die auf eine Strecke per `venueId` verweisen
+- `import-myrcm.js`: Importiert Rennen aus MyRCM und filtert Trainings aus
+- `.github/workflows/import-myrcm.yml`: GitHub Action fuer manuellen und taeglichen Import
 
-## Datenmodell
+## MyRCM Import manuell starten
 
-Events speichern keine eigenen Koordinaten. Jedes Event verweist ueber `venueId` auf eine Strecke in `venues.json`.
+1. Repository auf GitHub oeffnen
+2. Oben auf `Actions`
+3. Links `Import MyRCM races` auswaehlen
+4. Rechts `Run workflow`
+5. Gruenen Button `Run workflow` klicken
 
-Beispiel Event:
+Danach erzeugt GitHub eine neue `races.json` und committed sie automatisch.
 
-```json
-{
-  "title": "Berlin Touring Masters",
-  "venueId": "tsv-mariendorf",
-  "startDate": "2026-04-25",
-  "endDate": "2026-04-26"
-}
-```
+## Lokal testen
 
-Beispiel Strecke:
-
-```json
-{
-  "id": "tsv-mariendorf",
-  "name": "TSV Mariendorf RC-Car Racing",
-  "lat": 52.410703,
-  "lng": 13.321052
-}
+```bash
+npm install
+npm run import:myrcm
 ```
