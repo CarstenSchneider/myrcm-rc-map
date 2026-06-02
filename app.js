@@ -278,13 +278,7 @@ function renderList(list) {
       <div class="race-venue">${venueDisplayName(race)}</div>
 ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
 
-${
-  Array.isArray(race.classes) && race.classes.length
-    ? `<div class="race-tags race-class-tags">
-        ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
-      </div>`
-    : ""
-}
+      ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
 
 <div class="race-tags">
   ${series.map(item => `<span class="tag">${item}</span>`).join("")}
@@ -295,7 +289,13 @@ ${
   }
 </div>
 
-      ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
+${
+  Array.isArray(race.classes) && race.classes.length
+    ? `<div class="race-tags race-class-tags">
+        ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
+      </div>`
+    : ""
+}
     `;
 
     card.addEventListener("click", () => focusRace(race));
