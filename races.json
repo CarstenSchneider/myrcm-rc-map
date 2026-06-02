@@ -1764,18 +1764,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=4441&pLa=en&pId[O]=24&dId[E]=96207&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-10-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-10",
-    "to": "2026-04-10",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96351&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-52798-la-speedway-racing-club-e-v-2026-04-10-easter-bunny-race-2026-landshut",
     "venueId": "myrcm-52798-la-speedway-racing-club-e-v",
     "venueName": "LA Speedway Racing Club e.V.",
@@ -1798,18 +1786,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93756&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-11-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-11",
-    "to": "2026-04-11",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96379&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-48023-mac-siersburg-e-v-2026-04-11-saar-racing-series-1-sk-wertung",
@@ -1860,18 +1836,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94338&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-12-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-12",
-    "to": "2026-04-12",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96422&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-38659-mcc-fellbach-e-v-2026-04-12-tamico-cup-mcc-fellbach",
     "venueId": "myrcm-38659-mcc-fellbach-e-v",
     "venueName": "MCC Fellbach e.V.",
@@ -1882,54 +1846,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95228&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-13-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-13",
-    "to": "2026-04-13",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96466&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-14-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-14",
-    "to": "2026-04-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96500&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-15-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-15",
-    "to": "2026-04-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96522&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-16-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-16",
-    "to": "2026-04-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96560&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-2047-ets-2026-04-16-euro-offroad-series-round-2-trencin-sk",
@@ -1968,18 +1884,6 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94183&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-17-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-17",
-    "to": "2026-04-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96600&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-04-17-rck-challange-auf-intermodellbau",
@@ -2030,18 +1934,6 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95666&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-18-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96631&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-17507-lost-place-racers-e-v-2026-04-18-norc-und-1-sk-lauf-west",
@@ -2134,18 +2026,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94267&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-19-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-19",
-    "to": "2026-04-19",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96681&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-04-19-rck-kleinserie-auf-intermodellbau",
     "venueId": "myrcm-6266-minicar-club-dortmund-e-v",
     "venueName": "Minicar Club Dortmund e.V.",
@@ -2184,42 +2064,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96442&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-21-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-21",
-    "to": "2026-04-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96772&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-22-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-22",
-    "to": "2026-04-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96802&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-23-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-23",
-    "to": "2026-04-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96836&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-04-24-19-international-warm-up-2026",
     "venueId": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v",
     "venueName": "ESV Blau-Gold Bischofsheim 1958 e.V.",
@@ -2230,18 +2074,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94032&dLt=reg&pLa=en&lType=wList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-24-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-24",
-    "to": "2026-04-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96861&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-04-24-sk-lauf-or8-ore8-sachsencup-2026",
@@ -2284,18 +2116,6 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94212&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-25-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-25",
-    "to": "2026-04-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96888&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-121-mc-ettlingen-e-v-2026-04-25-jumpstartrc-trophy-2026-1-4-ettlingen",
@@ -2408,18 +2228,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95427&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-26-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-26",
-    "to": "2026-04-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96934&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-04-26-dmc-sk-lauf",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
@@ -2470,54 +2278,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95843&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-27-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-27",
-    "to": "2026-04-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=96972&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-28-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-28",
-    "to": "2026-04-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97001&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-29-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-29",
-    "to": "2026-04-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97036&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-04-30-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-04-30",
-    "to": "2026-04-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97058&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-05-01-6-std-sc-team-rennen",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
@@ -2528,18 +2288,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=90910&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-01-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-01",
-    "to": "2026-05-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97090&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-134-rcct-munden-e-v-2026-05-01-rck-klein-serie",
@@ -2643,18 +2391,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93755&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-02-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-02",
-    "to": "2026-05-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97118&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-65451-miniatutenpark-elsterwerda-2026-05-02-freundschaftslauf-tw-und-gt3",
@@ -2767,18 +2503,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96080&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-03-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-03",
-    "to": "2026-05-03",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97148&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-05-03-fcos-2026-lauf-1",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
@@ -2879,42 +2603,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96199&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-05-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-05",
-    "to": "2026-05-05",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97196&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-06-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-06",
-    "to": "2026-05-06",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97230&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-07-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-07",
-    "to": "2026-05-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97255&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-2047-ets-2026-05-07-euro-nitro-series-onroad-round-1-ettlingen-ger",
     "venueId": "myrcm-2047-ets",
     "venueName": "ETS",
@@ -2937,18 +2625,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=33489&pLa=en&pId[O]=11&dId[E]=97334&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-08-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-08",
-    "to": "2026-05-08",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97283&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-05-08-elektro-glattbahn-saisoneroffnung-sk-lauf-und-lauf-zur-nationalen-rang",
@@ -3027,18 +2703,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94887&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-09-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-09",
-    "to": "2026-05-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97308&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-60453-slottis-supreme-masters-2026-05-09-regionsfinale-lutherstadt-eisleben-rothenschirmbach-26-27-06295",
     "venueId": "myrcm-60453-slottis-supreme-masters",
     "venueName": "Slottis Supreme Masters",
@@ -3091,18 +2755,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95429&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-10-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-10",
-    "to": "2026-05-10",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97351&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-2245-mrc-mehrum-e-v-2026-05-10-offene-vereinsmeisterschaft-1",
     "venueId": "myrcm-2245-mrc-mehrum-e-v",
     "venueName": "MRC Mehrum e.V.",
@@ -3153,54 +2805,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=56487&pLa=en&pId[O]=15&dId[E]=97253&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-11-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-11",
-    "to": "2026-05-11",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97389&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-12-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-12",
-    "to": "2026-05-12",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97412&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-13-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-13",
-    "to": "2026-05-13",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97428&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-14-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-14",
-    "to": "2026-05-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97456&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-82-amc-muhlau-e-v-2026-05-14-online-event",
     "venueId": "myrcm-82-amc-muhlau-e-v",
     "venueName": "AMC-Mühlau e.V.",
@@ -3223,18 +2827,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=66122&pLa=en&pId[O]=22&dId[E]=96749&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-15-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-15",
-    "to": "2026-05-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97488&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-05-16-1-lauf-zur-vereinsmeisterschaft-2026-des-amc-senftenberg",
@@ -3295,18 +2887,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=891&pLa=en&pId[O]=10&dId[E]=96694&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-16-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-16",
-    "to": "2026-05-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97509&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-05-16-ers-lauf-1-rc-racer-hochsauerland-2026",
@@ -3423,18 +3003,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94902&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-17-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-17",
-    "to": "2026-05-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97546&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-05-17-le-trophy-offroad-2026-lauf-1-3",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
@@ -3531,42 +3099,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=93360&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-20-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-20",
-    "to": "2026-05-20",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97629&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-21-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-21",
-    "to": "2026-05-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97658&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-22-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-22",
-    "to": "2026-05-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97687&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-05-23-1-clublauf-2026",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
@@ -3641,18 +3173,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94700&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-23-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-23",
-    "to": "2026-05-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97704&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-05-23-online-event",
     "venueId": "myrcm-39587-mrsc-amberg-e-v",
     "venueName": "MRSC Amberg e.V.",
@@ -3718,18 +3238,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96977&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-24-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-24",
-    "to": "2026-05-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97744&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-05-24-mrsc-cup-2026-lauf-1",
     "venueId": "myrcm-39587-mrsc-amberg-e-v",
     "venueName": "MRSC Amberg e.V.",
@@ -3756,18 +3264,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=678&pLa=en&pId[O]=10&dId[E]=97681&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-25-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-25",
-    "to": "2026-05-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97770&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-678-mac-burgdorf-e-v-2026-05-25-rck-kleinserie",
     "venueId": "myrcm-678-mac-burgdorf-e-v",
     "venueName": "MAC Burgdorf e.V.",
@@ -3782,30 +3278,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=678&pLa=en&pId[O]=10&dId[E]=97775&tId=E&hId[1]=org"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-26-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-26",
-    "to": "2026-05-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97804&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-27-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-27",
-    "to": "2026-05-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97825&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-2047-ets-2026-05-28-cayote-euro-touring-series-round-1-apeldoorn-nl",
     "venueId": "myrcm-2047-ets",
     "venueName": "ETS",
@@ -3816,30 +3288,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96256&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-28-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-28",
-    "to": "2026-05-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97842&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-29-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-29",
-    "to": "2026-05-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97863&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-45728-rco-ottendorf-okrilla-e-v-2026-05-30-3-sk-lauf-ost-sachsencup-2026",
@@ -3882,18 +3330,6 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96758&dLt=reg&pLa=en&lType=rList"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-30-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-30",
-    "to": "2026-05-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97892&tId=E&hId[1]=org"
   },
   {
     "id": "myrcm-33778-rc-drecksloch-e-v-2026-05-30-freundschaftsrennen-2026",
@@ -3985,18 +3421,6 @@
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97902&dLt=reg&pLa=en&lType=rList"
   },
   {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-05-31-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-05-31",
-    "to": "2026-05-31",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97917&tId=E&hId[1]=org"
-  },
-  {
     "id": "myrcm-56487-msc-hockendorf-e-v-2026-05-31-gp-von-hockendorf-fruhjahres-cup",
     "venueId": "myrcm-56487-msc-hockendorf-e-v",
     "venueName": "MSC Höckendorf e.V.",
@@ -4083,30 +3507,6 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=66122&pLa=en&pId[O]=22&dId[E]=96745&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-06-01-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-06-01",
-    "to": "2026-06-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97940&tId=E&hId[1]=org"
-  },
-  {
-    "id": "myrcm-45345-cockpit-kartarena-gmbh-2026-06-02-cockpit-kartarena",
-    "venueId": "myrcm-45345-cockpit-kartarena-gmbh",
-    "venueName": "Cockpit-Kartarena GmbH",
-    "venueLocation": "Bocholt",
-    "name": "Cockpit Kartarena",
-    "from": "2026-06-02",
-    "to": "2026-06-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?pLa=en&dId[E]=97964&pSr=1&hId[1]=evt"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-tamiya-euro-cup-summer-special",
