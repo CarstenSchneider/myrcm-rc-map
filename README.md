@@ -1,26 +1,36 @@
-# RC-Rennen TSV Mariendorf Karte
+# RC-Rennen TSV Mariendorf
 
-Ein einfacher GitHub-Pages-Test fuer RC-Rennen beim TSV Mariendorf.
+Ein erster Test fuer eine RC-Rennkarte mit Leaflet und OpenStreetMap.
 
 ## Dateien
 
-- `index.html` - Website
-- `app.js` - Kartenlogik und Filter
-- `races.json` - Testdaten
+- `index.html` - Grundstruktur der Seite
+- `app.js` - Kartenlogik, Filter und Darstellung
+- `races.json` - Renntermine
+- `venues.json` - Strecken mit Adresse und Koordinaten
 
-## Veroeffentlichen auf GitHub Pages
+## Datenmodell
 
-1. Neues Repository auf GitHub erstellen, z. B. `myrcm-tsv-map`.
-2. Diese drei Dateien hochladen: `index.html`, `app.js`, `races.json`.
-3. In GitHub: `Settings` > `Pages`.
-4. Bei `Build and deployment` die Quelle `Deploy from a branch` waehlen.
-5. Branch `main`, Ordner `/root` auswaehlen.
-6. Speichern.
+Events speichern keine eigenen Koordinaten mehr. Jedes Event verweist ueber `venueId` auf eine Strecke in `venues.json`.
 
-Danach ist die Seite erreichbar unter:
+Beispiel Event:
 
-`https://DEIN-GITHUB-NAME.github.io/myrcm-tsv-map/`
+```json
+{
+  "title": "Berlin Touring Masters",
+  "venueId": "tsv-mariendorf",
+  "startDate": "2026-04-25",
+  "endDate": "2026-04-26"
+}
+```
 
-## Daten aktualisieren
+Beispiel Strecke:
 
-Neue Rennen werden in `races.json` ergänzt.
+```json
+{
+  "id": "tsv-mariendorf",
+  "name": "TSV Mariendorf RC-Car Racing",
+  "lat": 52.4106863916474,
+  "lng": 13.321987361999637
+}
+```

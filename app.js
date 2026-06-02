@@ -1,4 +1,4 @@
-const map = L.map("map").setView([52.4299, 13.3154], 13);
+const map = L.map("map").setView([52.4106863916474, 13.321987361999637], 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap contributors"
@@ -6,6 +6,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const markerGroup = L.layerGroup().addTo(map);
 let allRaces = [];
+let venuesById = new Map();
 
 const filterMode = document.getElementById("filterMode");
 const monthInput = document.getElementById("monthInput");
@@ -87,7 +88,14 @@ function render() {
   const bounds = [];
 
   races.forEach((race) => {
-    const { lat, lng, name, address } = race.track;
+    const venue = venuesById.get(race.venueId);
+
+    if (!venue) {
+      console.warn(`Keine Strecke für venueId gefunden: ${race.venueId}`);
+      return;
+    }
+
+    const { lat, lng, name, address } = venue;
     bounds.push([lat, lng]);
 
     L.marker([lat, lng])
@@ -106,13 +114,21 @@ function render() {
     eventList.appendChild(li);
   });
 
-  map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+  if (bounds.length > 0) {
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+  }
 }
 
 async function init() {
   updateControls();
-  const response = await fetch("races.json");
-  allRaces = await response.json();
+  const [racesResponse, venuesResponse] = await Promise.all([
+    fetch("races.json"),
+    fetch("venues.json")
+  ]);
+
+  allRaces = await racesResponse.json();
+  const venues = await venuesResponse.json();
+  venuesById = new Map(venues.map((venue) => [venue.id, venue]));
   render();
 }
 
