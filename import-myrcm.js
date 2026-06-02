@@ -26,6 +26,9 @@ const hosts = [
 
 const trainingTerms = ["training", "trainings"];
 
+const currentYear = new Date().getFullYear();
+const allowedYears = [currentYear, currentYear + 1];
+
 function normalizeText(text) {
   return text.replace(/\s+/g, " ").trim();
 }
@@ -34,6 +37,7 @@ function parseDate(value) {
   const text = normalizeText(value);
   const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
   if (!match) return null;
+
   return `${match[3]}-${match[2]}-${match[1]}`;
 }
 
@@ -55,6 +59,7 @@ function eventId(venueId, name, from) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
     .slice(0, 60);
+
   return `${venueId}-${from}-${slug}`;
 }
 
@@ -63,15 +68,20 @@ function parseEvents(html, host) {
   const races = [];
 
   $("tr").each((_, row) => {
-    const cells = $(row).find("td").toArray().map(cell => normalizeText($(cell).text()));
+    const cells = $(row)
+      .find("td")
+      .toArray()
+      .map(cell => normalizeText($(cell).text()));
+
     if (cells.length < 4) return;
 
     const links = $(row).find("a").toArray();
     const href = links.length ? $(links[links.length - 1]).attr("href") : "";
 
     const dateCells = cells.map(parseDate);
+
     const validDateIndexes = dateCells
-      .map((date, index) => date ? index : -1)
+      .map((date, index) => (date ? index : -1))
       .filter(index => index >= 0);
 
     if (!validDateIndexes.length) return;
@@ -80,17 +90,23 @@ function parseEvents(html, host) {
     const to = dateCells[validDateIndexes[1]] || from;
 
     let name = "";
+
     for (const text of cells) {
       if (!text) continue;
       if (parseDate(text)) continue;
       if (/^(deu|ger|germany|switzerland|che|aut|austria)$/i.test(text)) continue;
       if (/^\d+$/.test(text)) continue;
       if (text.toLowerCase().includes("registration")) continue;
+
       name = text;
       break;
     }
 
-    if (!name || hasTrainingName(name)) return;
+    if (!name) return;
+    if (hasTrainingName(name)) return;
+
+    const raceYear = Number(from.slice(0, 4));
+    if (!allowedYears.includes(raceYear)) return;
 
     races.push({
       id: eventId(host.venueId, name, from),
@@ -110,6 +126,7 @@ async function main() {
 
   for (const host of hosts) {
     console.log(`Lade MyRCM: ${host.venueId}`);
+
     const response = await fetch(host.url, {
       headers: {
         "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
@@ -122,14 +139,24 @@ async function main() {
 
     const html = await response.text();
     const races = parseEvents(html, host);
+
     console.log(`  ${races.length} Rennen gefunden`);
+
     allRaces.push(...races);
   }
 
-  const unique = Array.from(new Map(allRaces.map(race => [race.id, race])).values())
-    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+  const unique = Array.from(
+    new Map(allRaces.map(race => [race.id, race])).values()
+  ).sort((a, b) => {
+    return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
+  });
 
-  await writeFile("races.json", JSON.stringify(unique, null, 2) + "\n", "utf8");
+  await writeFile(
+    "races.json",
+    JSON.stringify(unique, null, 2) + "\n",
+    "utf8"
+  );
+
   console.log(`races.json geschrieben: ${unique.length} Rennen`);
 }
 
