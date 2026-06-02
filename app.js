@@ -129,6 +129,11 @@ function venueDisplayName(race) {
   );
 }
 
+function venueWebsite(race) {
+  const venue = venueById(race.venueId);
+  return venue?.website || null;
+}
+
 function raceSearchText(race) {
   const venue = venueById(race.venueId);
 
@@ -196,7 +201,11 @@ function buildPopup(venue, venueRaces) {
     .join("");
 
   return `
-    <div class="popup-title">${venue.name}</div>
+    <div class="popup-title">${
+      venue.website
+        ? `<a href="${venue.website}" target="_blank" rel="noreferrer">${venue.name}</a>`
+        : venue.name
+    }</div>
     ${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}
   `;
 }
@@ -288,7 +297,11 @@ function renderList(list) {
         </div>
 
         <div class="race-card-meta">
-          <div class="race-venue">${venueDisplayName(race)}</div>
+          <div class="race-venue">${
+            venueWebsite(race)
+              ? `<a href="${venueWebsite(race)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${venueDisplayName(race)}</a>`
+              : venueDisplayName(race)
+          }</div>
           ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
         </div>
       </div>
