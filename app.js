@@ -275,12 +275,8 @@ function renderList(list) {
     card.innerHTML = `
       <div class="race-date">${formatDateRange(race.from, race.to)}</div>
       <div class="race-name">${race.name}</div>
-      <div class="race-venue">${venueDisplayName(race)}</div>
-${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
 
-      ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
-
-<div class="race-tags">
+<div class="race-tags race-series-tags">
   ${series.map(item => `<span class="tag">${item}</span>`).join("")}
   ${
     !hasVerifiedVenue(race)
@@ -288,6 +284,11 @@ ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` 
       : ""
   }
 </div>
+
+      <div class="race-venue">${venueDisplayName(race)}</div>
+${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
+
+      ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
 
 ${
   Array.isArray(race.classes) && race.classes.length
