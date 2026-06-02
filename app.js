@@ -289,7 +289,6 @@ function renderList(list) {
 
         <div class="race-card-meta">
           <div class="race-venue">${venueDisplayName(race)}</div>
-          ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
           ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
         </div>
       </div>
