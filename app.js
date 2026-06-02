@@ -273,30 +273,35 @@ function renderList(list) {
     card.tabIndex = 0;
 
     card.innerHTML = `
-      <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-      <div class="race-name">${race.name}</div>
+      <div class="race-card-main">
+        <div class="race-card-header">
+          <div class="race-date">${formatDateRange(race.from, race.to)}</div>
+          <div class="race-name">${race.name}</div>
 
-<div class="race-tags race-series-tags">
-  ${series.map(item => `<span class="tag">${item}</span>`).join("")}
-  ${
-    !hasVerifiedVenue(race)
-      ? `<span class="tag tag-missing-location">📍 Standort wird ergänzt</span>`
-      : ""
-  }
-</div>
+          <div class="race-tags race-series-tags">
+            ${series.map(item => `<span class="tag">${item}</span>`).join("")}
+            ${
+              !hasVerifiedVenue(race)
+                ? `<span class="tag tag-missing-location">📍 Standort wird ergänzt</span>`
+                : ""
+            }
+          </div>
+        </div>
 
-      <div class="race-venue">${venueDisplayName(race)}</div>
-${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
+        <div class="race-card-meta">
+          <div class="race-venue">${venueDisplayName(race)}</div>
+          ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
+          ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
+        </div>
+      </div>
 
-      ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
-
-${
-  Array.isArray(race.classes) && race.classes.length
-    ? `<div class="race-tags race-class-tags">
-        ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
-      </div>`
-    : ""
-}
+      ${
+        Array.isArray(race.classes) && race.classes.length
+          ? `<div class="race-tags race-class-tags">
+              ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
+            </div>`
+          : ""
+      }
     `;
 
     card.addEventListener("click", () => focusRace(race));
