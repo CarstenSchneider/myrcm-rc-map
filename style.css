@@ -279,3 +279,23 @@ input {
   .layout-list .filters { grid-template-columns: 1fr; }
   .layout-list .race-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Class tags */
+
+.race-class-tags {
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.tag-class {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #f7f4ef;
+  color: var(--muted);
+  max-width: 100%;
+}
+
+.race-card .race-tags + .race-tags {
+  margin-top: 2px;
+}
