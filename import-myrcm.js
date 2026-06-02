@@ -92,6 +92,14 @@ async function loadEventClasses(url) {
     const html = await response.text();
     const $ = cheerio.load(html);
 
+    console.log("URL:", url);
+    console.log("CLASS URL:", classUrl);
+    console.log("HAS SECTION:", html.includes('name="Section"'));
+    console.log(
+      "OPTION COUNT:",
+      $('select[name="Section"] option').length
+    );
+
     const sectionClasses = [];
 
     $('select[name="Section"] option').each((_, option) => {
@@ -104,6 +112,8 @@ async function loadEventClasses(url) {
 
       sectionClasses.push(label);
     });
+
+    console.log("CLASSES:", sectionClasses);
 
     return Array.from(new Set(sectionClasses));
   } catch (error) {
@@ -297,11 +307,25 @@ try {
 
     const html = await response.text();
     const races = parseEvents(html, host);
-    const enrichedRaces = await enrichRacesWithClasses(races);
+
+    const remaining = Math.max(0, 10 - allRaces.length);
+
+    if (remaining === 0) {
+      break;
+    }
+
+    const testRaces = races.slice(0, remaining);
+
+    const enrichedRaces = await enrichRacesWithClasses(testRaces);
 
     console.log(`  ${enrichedRaces.length} Rennen gefunden`);
 
     allRaces.push(...enrichedRaces);
+
+    if (allRaces.length >= 10) {
+      console.log("TEST LIMIT REACHED");
+      break;
+    }
   }
 
   const unique = Array.from(
