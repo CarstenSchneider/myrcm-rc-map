@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RC-Rennen TSV Mariendorf</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    :root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #f4f4f1; color: #1c1c1c; }
+    header { padding: 16px 20px; background: #111; color: white; }
+    h1 { margin: 0 0 4px; font-size: 22px; }
+    p { margin: 0; color: #d6d6d6; }
+    .controls { display: flex; gap: 12px; flex-wrap: wrap; padding: 14px 20px; background: white; border-bottom: 1px solid #ddd; align-items: end; }
+    label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; }
+    select, input, button { font: inherit; padding: 8px 10px; border: 1px solid #bbb; border-radius: 8px; background: white; }
+    button { cursor: pointer; background: #111; color: white; border-color: #111; }
+    #summary { padding: 0 20px 12px; background: white; font-size: 14px; color: #333; }
+    #map { height: calc(100vh - 170px); min-height: 420px; }
+    .event-list { padding: 12px 20px; background: white; border-top: 1px solid #ddd; }
+    .event-list h2 { margin: 0 0 8px; font-size: 16px; }
+    .event-list ul { margin: 0; padding-left: 18px; }
+    .event-list li { margin: 4px 0; }
+    .muted { color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RC-Rennen TSV Mariendorf</h1>
+    <p>Erster Test: feste TSV-Strecke, Events aus einer lokalen JSON-Datei</p>
+  </header>
+
+  <section class="controls">
+    <label>
+      Filter
+      <select id="filterMode">
+        <option value="all">Alle</option>
+        <option value="month">Monat</option>
+        <option value="week">Kalenderwoche</option>
+      </select>
+    </label>
+
+    <label id="monthControl">
+      Monat
+      <input id="monthInput" type="month" value="2026-04" />
+    </label>
+
+    <label id="weekControl">
+      Woche
+      <input id="weekInput" type="week" value="2026-W17" />
+    </label>
+
+    <button id="applyButton">Anzeigen</button>
+  </section>
+
+  <div id="summary"></div>
+  <div id="map"></div>
+
+  <section class="event-list">
+    <h2>Gefundene Rennen</h2>
+    <ul id="eventList"></ul>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

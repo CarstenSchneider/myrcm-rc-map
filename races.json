@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Tamiya Euro Cup",
+    "host": "TSV Mariendorf 97 Berlin RCCR",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "classes": ["TEC Formel", "TEC Stock", "TEC M-Chassis", "TEC Gentleman", "TEC Top Stock", "TEC Euro-TW", "TEC Race-Truck"],
+    "url": "https://www.myrcm.ch/myrcm/report?dId%5BE%5D=94105&dId%5BO%5D=18244&hId%5B1%5D=org&pLa=de&tId=E",
+    "track": {
+      "name": "TSV Mariendorf RC-Car Racing",
+      "address": "Osdorfer Str. 53, 12207 Berlin",
+      "lat": 52.4299,
+      "lng": 13.3154
+    }
+  },
+  {
+    "title": "Berlin Touring Masters",
+    "host": "TSV Mariendorf 97 Berlin RCCR",
+    "startDate": "2026-04-25",
+    "endDate": "2026-04-26",
+    "classes": ["BTM Rookie", "BTM Formel 1", "BTM FWD", "BTM Fun 21,5", "BTM LMH 21,5", "BTM ToniSport17.5"],
+    "url": "https://www.myrcm.ch/myrcm/report?dId%5BE%5D=94212&dId%5BO%5D=18244&hId%5B1%5D=org&pLa=de&tId=E",
+    "track": {
+      "name": "TSV Mariendorf RC-Car Racing",
+      "address": "Osdorfer Str. 53, 12207 Berlin",
+      "lat": 52.4299,
+      "lng": 13.3154
+    }
+  },
+  {
+    "title": "12 Stunden von Berlin",
+    "host": "TSV Mariendorf 97 Berlin RCCR",
+    "startDate": "2026-05-23",
+    "endDate": "2026-05-24",
+    "classes": ["LMH", "GT3"],
+    "url": "https://www.myrcm.ch/myrcm/main?dId%5BE%5D=92759&dId%5BO%5D=18244&hId%5B1%5D=org&pLa=de&tId=E",
+    "track": {
+      "name": "TSV Mariendorf RC-Car Racing",
+      "address": "Osdorfer Str. 53, 12207 Berlin",
+      "lat": 52.4299,
+      "lng": 13.3154
+    }
+  }
+]
