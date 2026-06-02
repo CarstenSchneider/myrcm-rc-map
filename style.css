@@ -327,3 +327,15 @@ input {
   max-width: 100%;
 }
 
+/* fixed tag bubble height */
+
+.tag,
+.tag-class {
+  height: 26px;
+  min-height: 26px;
+  max-height: 26px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
