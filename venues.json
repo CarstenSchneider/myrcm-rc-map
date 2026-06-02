@@ -133,1025 +133,591 @@
     "lng": 13.494275375841397
   },
   {
-  "id": "myrcm-64649",
-  "name": "Breitenfelder Sportverein von 1924 e.V.",
-  "city": "Breitenfelde",
-  "lat": 53.606169364621394,
-  "lng": 10.628400444902876
-},
-{
-  "id": "myrcm-50568",
-  "name": "DJK-SSC Lackenhäuser e.V.",
-  "city": "Neureichenau",
-  "lat": 48.735561100310875,
-  "lng": 13.798475640900763
-},
-{
-  "id": "myrcm-35606",
-  "name": "EDC Kinzigtal e.V.",
-  "city": "Gengenbach",
-  "lat": 48.424259010683336,
-  "lng": 8.017786070319858
-},
-{
-  "id": "myrcm-43367",
-  "name": "EMC-Marktoberdorf",
-  "city": "Marktoberdorf",
-  "lat": 47.77353559344614,
-  "lng": 10.596636348538459
-},
-{
-  "id": "myrcm-10117",
-  "name": "Equipe RC Nohn",
-  "city": "Nohn",
-  "lat": 48.37078150268052,
-  "lng": 10.719769403703232
-},
-{
-  "id": "myrcm-37613",
-  "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
-  "city": "Bischofsheim",
-  "lat": 49.97763075091446,
-  "lng": 8.387647129236486
-},
-{
-  "id": "myrcm-56473",
-  "name": "Greenhouse RaCer e.V.",
-  "city": "Wendelstein",
-  "lat": 49.34814240723616,
-  "lng": 11.142573203838916
-},
-{
-  "id": "myrcm-52798",
-  "name": "LA Speedway Racing Club e.V.",
-  "city": "Bruckberg",
-  "lat": 48.5135310265825,
-  "lng": 12.044646410956766
-},
-{
-  "id": "myrcm-17507",
-  "name": "Lost-Place-Racers e.V.",
-  "city": "Prüm",
-  "lat": 50.62670012162062,
-  "lng": 6.695804823655136
-},
-{
-  "id": "myrcm-19204",
-  "name": "LTS Bremerhaven Racing Team",
-  "city": "Geestland",
-  "lat": 53.588865659093905,
-  "lng": 8.58660868179531
-},
-{
-  "id": "myrcm-4602",
-  "name": "MAC Adenau",
-  "city": "Kottenborn",
-  "lat": 50.380520238217656,
-  "lng": 6.9339287153803975
-},
+    "id": "myrcm-64649",
+    "name": "Breitenfelder Sportverein von 1924 e.V.",
+    "city": "Breitenfelde",
+    "lat": 53.606169364621394,
+    "lng": 10.628400444902876
+  },
   {
-  "id": "myrcm-678",
-  "name": "MAC Burgdorf e.V.",
-  "city": "Burgdorf",
-  "lat": 52.43191612480417,
-  "lng": 10.017538646084235
-},
-{
-  "id": "myrcm-20622",
-  "name": "MAC Hamburg e.V.",
-  "city": "Hamburg",
-  "lat": 53.52486125519811,
-  "lng": 10.134162196790893
-},
-{
-  "id": "myrcm-891",
-  "name": "MAC Mettenheim e.V.",
-  "city": "Vaterstetten",
-  "lat": 48.25458988422763,
-  "lng": 12.455744115925047
-},
-{
-  "id": "myrcm-9976",
-  "name": "MAC Nürnberg e.V",
-  "city": "Nürnberg",
-  "lat": 49.38767201459021,
-  "lng": 11.168661334912732
-},
-{
-  "id": "myrcm-30735",
-  "name": "MAC OR Hütschenhausen e.V.",
-  "city": "Hütschenhausen",
-  "lat": 49.41803566643476,
-  "lng": 7.457597641355012
-},
-{
-  "id": "myrcm-233",
-  "name": "MAC Saar e.V.",
-  "city": "Bexbach",
-  "lat": 49.23737851350886,
-  "lng": 7.197984131866451
-},
-{
-  "id": "myrcm-53667",
-  "name": "MAC Uetersen e.V.",
-  "city": "Uetersen",
-  "lat": 53.67639410403049,
-  "lng": 9.70171695639382
-},
-{
-  "id": "myrcm-49037",
-  "name": "MAC-Meckenheim e.V.",
-  "city": "Bad Münstereifel",
-  "lat": 50.623679184080956,
-  "lng": 7.043371956119134
-},
-{
-  "id": "myrcm-42064",
-  "name": "MAC-Solms e.V.",
-  "city": "Ehringshausen",
-  "lat": 50.53393592577889,
-  "lng": 8.601463866322767
-},
-{
-  "id": "myrcm-24873",
-  "name": "MBC Goldstein e.V.",
-  "city": "Frankfurt",
-  "lat": 50.07714491151757,
-  "lng": 8.613882094074963
-},
-{
-  "id": "myrcm-27211",
-  "name": "MBSC Wächtersbach",
-  "city": "Wächtersbach",
-  "lat": 50.246100236848775,
-  "lng": 9.291699351520423
-},
-{
-  "id": "myrcm-121",
-  "name": "MC Ettlingen e.V.",
-  "city": "Karlsruhe",
-  "lat": 48.952957322019095,
-  "lng": 8.385964898164925
-},
-{
-  "id": "myrcm-33489",
-  "name": "MC Munster e.V.",
-  "city": "Bremen",
-  "lat": 52.97407659178928,
-  "lng": 10.099649590338768
-},
-{
-  "id": "myrcm-44699",
-  "name": "MC Welden e.V.",
-  "city": "Fuchstal",
-  "lat": 47.94302020096075,
-  "lng": 10.850811665891346
-},
-{
-  "id": "myrcm-65042",
-  "name": "MC-Fürstenwalde e.V.",
-  "city": "Fürstenwalde",
-  "lat": 52.357853903592336,
-  "lng": 14.088839478233716
-},
-{
-  "id": "myrcm-27203",
-  "name": "MC-ORC .e.V.",
-  "city": "Haren (EMS)",
-  "lat": 52.76850262675131,
-  "lng": 7.168133610754698
-},
-{
-  "id": "myrcm-21299",
-  "name": "MCC Bad Kissingen e. V.",
-  "city": "Volkershausen",
-  "lat": 50.20426740005952,
-  "lng": 10.097707772955987
-},
-{
-  "id": "myrcm-20747",
-  "name": "MCC Borgholzhausen",
-  "city": "Borgholzhausen",
-  "lat": 52.08891072518177,
-  "lng": 8.276110823386952
-},
-{
-  "id": "myrcm-38659",
-  "name": "MCC Fellbach e.V.",
-  "city": "Fellbach",
-  "lat": 48.816136176250225,
-  "lng": 9.280190041832348
-},
-{
-  "id": "myrcm-52121",
-  "name": "MCC Lüdenscheid e.V.",
-  "city": "Lüdenscheid",
-  "lat": 51.20611533323285,
-  "lng": 7.645839278803224
-},
-{
-  "id": "myrcm-49956",
-  "name": "MCC Rheda-Wiedenbrück e.V.",
-  "city": "Gütersloh",
-  "lat": 51.84430266338534,
-  "lng": 8.298642819195084
-},
-{
-  "id": "myrcm-283",
-  "name": "MCC Rhein Ahr e.V.",
-  "city": "Bad Breisig",
-  "lat": 50.53375325899502,
-  "lng": 7.273070858102529
-},
-{
-  "id": "myrcm-47",
-  "name": "MCC Türkheim e.V.",
-  "city": "Weißenhorn",
-  "lat": 48.05428273383636,
-  "lng": 10.627985640401176
-},
-{
-  "id": "myrcm-269",
-  "name": "MCC-Hocheifel e.V.",
-  "city": "Urmitz",
-  "lat": 50.22559267105539,
-  "lng": 6.484065770376564
-},
-{
-  "id": "myrcm-57549",
-  "name": "MCC-Marktredwitz e.V.",
-  "city": "Brand",
-  "lat": 50.00785047216571,
-  "lng": 12.082068046250424
-},
-{
-  "id": "myrcm-9269",
-  "name": "MCK e.V. Dormagen",
-  "city": "Köln",
-  "lat": 51.05999966648897,
-  "lng": 6.832199264013079
-},
-{
-  "id": "myrcm-12227",
-  "name": "MCSS Althengstett e.V.",
-  "city": "Althengstett",
-  "lat": 48.720094200913294,
-  "lng": 8.803626191468693
-},
-{
-  "id": "myrcm-19290",
-  "name": "MCV Dänischer Wohld e.V.",
-  "city": "Tüttendorf",
-  "lat": 54.3770640548488,
-  "lng": 10.007107746575903
-},
-{
-  "id": "myrcm-32408",
-  "name": "Megadrom RC Team Nord",
-  "city": "Hasloh",
-  "lat": 53.69876892317562,
-  "lng": 9.917927109102116
-},
-{
-  "id": "myrcm-30759",
-  "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
-  "city": "Worms",
-  "lat": 49.699215847904135,
-  "lng": 8.03184543726469
-},
-{
-  "id": "myrcm-158",
-  "name": "Mini Car Club Crailsheim e.V.",
-  "city": "Schnelldorf",
-  "lat": 49.191647337620566,
-  "lng": 10.176380433000764
-},
-{
-  "id": "myrcm-65451",
-  "name": "Miniatutenpark Elsterwerda",
-  "city": "Röderland",
-  "lat": 51.45952611051337,
-  "lng": 13.545875275034973
-},
-{
-  "id": "myrcm-6266",
-  "name": "Minicar Club Dortmund e.V.",
-  "city": "Hamm",
-  "lat": 51.557837999297135,
-  "lng": 7.521730598218899
-},
-{
-  "id": "myrcm-38488",
-  "name": "Modellbaufreunde Felsberg e.V.",
-  "city": "Felsberg",
-  "lat": 51.1326578805406,
-  "lng": 9.43564739414843
-},
-{
-  "id": "myrcm-879",
-  "name": "Modellrenngemeinschaft Dogern e.V.",
-  "city": "Wutöschingen",
-  "lat": 47.59951612211713,
-  "lng": 8.167520352321992
-},
-{
-  "id": "myrcm-60576",
-  "name": "Modellsportzentrum Zwönitz e.V.",
-  "city": "Zwönitz",
-  "lat": 50.629167742978474,
-  "lng": 12.82466326392235
-},
-{
-  "id": "myrcm-95",
-  "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-  "city": "Braunschweig",
-  "lat": 52.29247586234249,
-  "lng": 10.540686972114958
-},
-{
-  "id": "myrcm-64572",
-  "name": "Motorsportvereinigung Zittauer Land e.V.",
-  "city": "Heidenau",
-  "lat": 50.94277717894951,
-  "lng": 14.87861140171235
-},
-{
-  "id": "myrcm-64",
-  "name": "MRC Alstaden Oberhausen e.V.",
-  "city": "Oberhausen",
-  "lat": 51.47266693819382,
-  "lng": 6.844376917232489
-},
-{
-  "id": "myrcm-713",
-  "name": "MRC Leipzig e.V",
-  "city": "Zwenkau",
-  "lat": 51.372005020609464,
-  "lng": 12.462392860349764
-},
-{
-  "id": "myrcm-2245",
-  "name": "MRC Mehrum e.V.",
-  "city": "Peine",
-  "lat": 51.42615108574187,
-  "lng": 12.743702396285324
-},
-{
-  "id": "myrcm-61183",
-  "name": "MRC Senden e.V.",
-  "city": "Senden",
-  "lat": 48.325191394382635,
-  "lng": 10.035411116404305
-},
-{
-  "id": "myrcm-121",
-  "name": "MC Ettlingen e.V.",
-  "city": "Karlsruhe",
-  "lat": 48.952957322019095,
-  "lng": 8.385964898164925
-},
-{
-  "id": "myrcm-33489",
-  "name": "MC Munster e.V.",
-  "city": "Bremen",
-  "lat": 52.97407659178928,
-  "lng": 10.099649590338768
-},
-{
-  "id": "myrcm-44699",
-  "name": "MC Welden e.V.",
-  "city": "Fuchstal",
-  "lat": 47.94302020096075,
-  "lng": 10.850811665891346
-},
-{
-  "id": "myrcm-65042",
-  "name": "MC-Fürstenwalde e.V.",
-  "city": "Fürstenwalde",
-  "lat": 52.357853903592336,
-  "lng": 14.088839478233716
-},
-{
-  "id": "myrcm-27203",
-  "name": "MC-ORC .e.V.",
-  "city": "Haren (EMS)",
-  "lat": 52.76850262675131,
-  "lng": 7.168133610754698
-},
-{
-  "id": "myrcm-21299",
-  "name": "MCC Bad Kissingen e. V.",
-  "city": "Volkershausen",
-  "lat": 50.20426740005952,
-  "lng": 10.097707772955987
-},
-{
-  "id": "myrcm-20747",
-  "name": "MCC Borgholzhausen",
-  "city": "Borgholzhausen",
-  "lat": 52.08891072518177,
-  "lng": 8.276110823386952
-},
-{
-  "id": "myrcm-38659",
-  "name": "MCC Fellbach e.V.",
-  "city": "Fellbach",
-  "lat": 48.816136176250225,
-  "lng": 9.280190041832348
-},
-{
-  "id": "myrcm-52121",
-  "name": "MCC Lüdenscheid e.V.",
-  "city": "Lüdenscheid",
-  "lat": 51.20611533323285,
-  "lng": 7.645839278803224
-},
-{
-  "id": "myrcm-49956",
-  "name": "MCC Rheda-Wiedenbrück e.V.",
-  "city": "Gütersloh",
-  "lat": 51.84430266338534,
-  "lng": 8.298642819195084
-},
-{
-  "id": "myrcm-283",
-  "name": "MCC Rhein Ahr e.V.",
-  "city": "Bad Breisig",
-  "lat": 50.53375325899502,
-  "lng": 7.273070858102529
-},
-{
-  "id": "myrcm-47",
-  "name": "MCC Türkheim e.V.",
-  "city": "Weißenhorn",
-  "lat": 48.05428273383636,
-  "lng": 10.627985640401176
-},
-{
-  "id": "myrcm-269",
-  "name": "MCC-Hocheifel e.V.",
-  "city": "Urmitz",
-  "lat": 50.22559267105539,
-  "lng": 6.484065770376564
-},
-{
-  "id": "myrcm-57549",
-  "name": "MCC-Marktredwitz e.V.",
-  "city": "Brand",
-  "lat": 50.00785047216571,
-  "lng": 12.082068046250424
-},
-{
-  "id": "myrcm-9269",
-  "name": "MCK e.V. Dormagen",
-  "city": "Köln",
-  "lat": 51.05999966648897,
-  "lng": 6.832199264013079
-},
-{
-  "id": "myrcm-12227",
-  "name": "MCSS Althengstett e.V.",
-  "city": "Althengstett",
-  "lat": 48.720094200913294,
-  "lng": 8.803626191468693
-},
-{
-  "id": "myrcm-19290",
-  "name": "MCV Dänischer Wohld e.V.",
-  "city": "Tüttendorf",
-  "lat": 54.3770640548488,
-  "lng": 10.007107746575903
-},
-{
-  "id": "myrcm-32408",
-  "name": "Megadrom RC Team Nord",
-  "city": "Hasloh",
-  "lat": 53.69876892317562,
-  "lng": 9.917927109102116
-},
-{
-  "id": "myrcm-30759",
-  "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
-  "city": "Worms",
-  "lat": 49.699215847904135,
-  "lng": 8.03184543726469
-},
-{
-  "id": "myrcm-158",
-  "name": "Mini Car Club Crailsheim e.V.",
-  "city": "Schnelldorf",
-  "lat": 49.191647337620566,
-  "lng": 10.176380433000764
-},
-{
-  "id": "myrcm-65451",
-  "name": "Miniatutenpark Elsterwerda",
-  "city": "Röderland",
-  "lat": 51.45952611051337,
-  "lng": 13.545875275034973
-},
-{
-  "id": "myrcm-6266",
-  "name": "Minicar Club Dortmund e.V.",
-  "city": "Hamm",
-  "lat": 51.557837999297135,
-  "lng": 7.521730598218899
-},
-{
-  "id": "myrcm-38488",
-  "name": "Modellbaufreunde Felsberg e.V.",
-  "city": "Felsberg",
-  "lat": 51.1326578805406,
-  "lng": 9.43564739414843
-},
-{
-  "id": "myrcm-879",
-  "name": "Modellrenngemeinschaft Dogern e.V.",
-  "city": "Wutöschingen",
-  "lat": 47.59951612211713,
-  "lng": 8.167520352321992
-},
-{
-  "id": "myrcm-60576",
-  "name": "Modellsportzentrum Zwönitz e.V.",
-  "city": "Zwönitz",
-  "lat": 50.629167742978474,
-  "lng": 12.82466326392235
-},
-{
-  "id": "myrcm-95",
-  "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-  "city": "Braunschweig",
-  "lat": 52.29247586234249,
-  "lng": 10.540686972114958
-},
-{
-  "id": "myrcm-64572",
-  "name": "Motorsportvereinigung Zittauer Land e.V.",
-  "city": "Heidenau",
-  "lat": 50.94277717894951,
-  "lng": 14.87861140171235
-},
-{
-  "id": "myrcm-64",
-  "name": "MRC Alstaden Oberhausen e.V.",
-  "city": "Oberhausen",
-  "lat": 51.47266693819382,
-  "lng": 6.844376917232489
-},
-{
-  "id": "myrcm-713",
-  "name": "MRC Leipzig e.V",
-  "city": "Zwenkau",
-  "lat": 51.372005020609464,
-  "lng": 12.462392860349764
-},
-{
-  "id": "myrcm-2245",
-  "name": "MRC Mehrum e.V.",
-  "city": "Peine",
-  "lat": 51.42615108574187,
-  "lng": 12.743702396285324
-},
-{
-  "id": "myrcm-61183",
-  "name": "MRC Senden e.V.",
-  "city": "Senden",
-  "lat": 48.325191394382635,
-  "lng": 10.035411116404305
-},
-{
-  "id": "myrcm-121",
-  "name": "MC Ettlingen e.V.",
-  "city": "Karlsruhe",
-  "lat": 48.952957322019095,
-  "lng": 8.385964898164925
-},
-{
-  "id": "myrcm-33489",
-  "name": "MC Munster e.V.",
-  "city": "Bremen",
-  "lat": 52.97407659178928,
-  "lng": 10.099649590338768
-},
-{
-  "id": "myrcm-44699",
-  "name": "MC Welden e.V.",
-  "city": "Fuchstal",
-  "lat": 47.94302020096075,
-  "lng": 10.850811665891346
-},
-{
-  "id": "myrcm-65042",
-  "name": "MC-Fürstenwalde e.V.",
-  "city": "Fürstenwalde",
-  "lat": 52.357853903592336,
-  "lng": 14.088839478233716
-},
-{
-  "id": "myrcm-27203",
-  "name": "MC-ORC .e.V.",
-  "city": "Haren (EMS)",
-  "lat": 52.76850262675131,
-  "lng": 7.168133610754698
-},
-{
-  "id": "myrcm-21299",
-  "name": "MCC Bad Kissingen e. V.",
-  "city": "Volkershausen",
-  "lat": 50.20426740005952,
-  "lng": 10.097707772955987
-},
-{
-  "id": "myrcm-20747",
-  "name": "MCC Borgholzhausen",
-  "city": "Borgholzhausen",
-  "lat": 52.08891072518177,
-  "lng": 8.276110823386952
-},
-{
-  "id": "myrcm-38659",
-  "name": "MCC Fellbach e.V.",
-  "city": "Fellbach",
-  "lat": 48.816136176250225,
-  "lng": 9.280190041832348
-},
-{
-  "id": "myrcm-52121",
-  "name": "MCC Lüdenscheid e.V.",
-  "city": "Lüdenscheid",
-  "lat": 51.20611533323285,
-  "lng": 7.645839278803224
-},
-{
-  "id": "myrcm-49956",
-  "name": "MCC Rheda-Wiedenbrück e.V.",
-  "city": "Gütersloh",
-  "lat": 51.84430266338534,
-  "lng": 8.298642819195084
-},
-{
-  "id": "myrcm-283",
-  "name": "MCC Rhein Ahr e.V.",
-  "city": "Bad Breisig",
-  "lat": 50.53375325899502,
-  "lng": 7.273070858102529
-},
-{
-  "id": "myrcm-47",
-  "name": "MCC Türkheim e.V.",
-  "city": "Weißenhorn",
-  "lat": 48.05428273383636,
-  "lng": 10.627985640401176
-},
-{
-  "id": "myrcm-269",
-  "name": "MCC-Hocheifel e.V.",
-  "city": "Urmitz",
-  "lat": 50.22559267105539,
-  "lng": 6.484065770376564
-},
-{
-  "id": "myrcm-57549",
-  "name": "MCC-Marktredwitz e.V.",
-  "city": "Brand",
-  "lat": 50.00785047216571,
-  "lng": 12.082068046250424
-},
-{
-  "id": "myrcm-9269",
-  "name": "MCK e.V. Dormagen",
-  "city": "Köln",
-  "lat": 51.05999966648897,
-  "lng": 6.832199264013079
-},
-{
-  "id": "myrcm-12227",
-  "name": "MCSS Althengstett e.V.",
-  "city": "Althengstett",
-  "lat": 48.720094200913294,
-  "lng": 8.803626191468693
-},
-{
-  "id": "myrcm-19290",
-  "name": "MCV Dänischer Wohld e.V.",
-  "city": "Tüttendorf",
-  "lat": 54.3770640548488,
-  "lng": 10.007107746575903
-},
-{
-  "id": "myrcm-32408",
-  "name": "Megadrom RC Team Nord",
-  "city": "Hasloh",
-  "lat": 53.69876892317562,
-  "lng": 9.917927109102116
-},
-{
-  "id": "myrcm-30759",
-  "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
-  "city": "Worms",
-  "lat": 49.699215847904135,
-  "lng": 8.03184543726469
-},
-{
-  "id": "myrcm-158",
-  "name": "Mini Car Club Crailsheim e.V.",
-  "city": "Schnelldorf",
-  "lat": 49.191647337620566,
-  "lng": 10.176380433000764
-},
-{
-  "id": "myrcm-65451",
-  "name": "Miniatutenpark Elsterwerda",
-  "city": "Röderland",
-  "lat": 51.45952611051337,
-  "lng": 13.545875275034973
-},
-{
-  "id": "myrcm-6266",
-  "name": "Minicar Club Dortmund e.V.",
-  "city": "Hamm",
-  "lat": 51.557837999297135,
-  "lng": 7.521730598218899
-},
-{
-  "id": "myrcm-38488",
-  "name": "Modellbaufreunde Felsberg e.V.",
-  "city": "Felsberg",
-  "lat": 51.1326578805406,
-  "lng": 9.43564739414843
-},
-{
-  "id": "myrcm-879",
-  "name": "Modellrenngemeinschaft Dogern e.V.",
-  "city": "Wutöschingen",
-  "lat": 47.59951612211713,
-  "lng": 8.167520352321992
-},
-{
-  "id": "myrcm-60576",
-  "name": "Modellsportzentrum Zwönitz e.V.",
-  "city": "Zwönitz",
-  "lat": 50.629167742978474,
-  "lng": 12.82466326392235
-},
-{
-  "id": "myrcm-95",
-  "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-  "city": "Braunschweig",
-  "lat": 52.29247586234249,
-  "lng": 10.540686972114958
-},
-{
-  "id": "myrcm-64572",
-  "name": "Motorsportvereinigung Zittauer Land e.V.",
-  "city": "Heidenau",
-  "lat": 50.94277717894951,
-  "lng": 14.87861140171235
-},
-{
-  "id": "myrcm-64",
-  "name": "MRC Alstaden Oberhausen e.V.",
-  "city": "Oberhausen",
-  "lat": 51.47266693819382,
-  "lng": 6.844376917232489
-},
-{
-  "id": "myrcm-713",
-  "name": "MRC Leipzig e.V",
-  "city": "Zwenkau",
-  "lat": 51.372005020609464,
-  "lng": 12.462392860349764
-},
-{
-  "id": "myrcm-2245",
-  "name": "MRC Mehrum e.V.",
-  "city": "Peine",
-  "lat": 51.42615108574187,
-  "lng": 12.743702396285324
-},
-{
-  "id": "myrcm-61183",
-  "name": "MRC Senden e.V.",
-  "city": "Senden",
-  "lat": 48.325191394382635,
-  "lng": 10.035411116404305
-},
-{
-  "id": "myrcm-35303",
-  "name": "RC Team Sauerland e.V.",
-  "city": "Olpe",
-  "lat": 51.04612447362069,
-  "lng": 7.832926383182863
-},
-{
-  "id": "myrcm-48536",
-  "name": "RC-Bande Zwickau e.V",
-  "city": "Zwickau",
-  "lat": 50.705730356507075,
-  "lng": 12.459417126095126
-},
-{
-  "id": "myrcm-9640",
-  "name": "RC-Glashaus e.V.",
-  "city": "Quickborn",
-  "lat": 53.71544618180866,
-  "lng": 9.920860261278003
-},
-{
-  "id": "myrcm-61583",
-  "name": "RC-MSC Greuthof e.V.",
-  "city": "Wüstenrot",
-  "lat": 49.08318410406898,
-  "lng": 9.427734276568266
-},
-{
-  "id": "myrcm-48425",
-  "name": "RC-Offroad Dortmund e.V.",
-  "city": "Dortmund",
-  "lat": 51.53315328716541,
-  "lng": 7.429184485991102
-},
-{
-  "id": "myrcm-34102",
-  "name": "RC-Offroad Wattenscheid e.V.",
-  "city": "Bottrop",
-  "lat": 51.485932411521574,
-  "lng": 7.185180907695856
-},
-{
-  "id": "myrcm-20813",
-  "name": "RC-OffroadCrew Langenfeld e.V.",
-  "city": "Solingen",
-  "lat": 51.111134379040294,
-  "lng": 6.924927855933589
-},
-{
-  "id": "myrcm-1516",
-  "name": "RC-Schwalmracer e.V.",
-  "city": "Schrecksbach",
-  "lat": 50.85060797497859,
-  "lng": 9.193003534843882
-},
-{
-  "id": "myrcm-50693",
-  "name": "RC-Sonntagsfahrer e.V.",
-  "city": "Mainhausen",
-  "lat": 50.080933888749676,
-  "lng": 8.926478330328004
-},
-{
-  "id": "myrcm-33796",
-  "name": "RCC Reken e.V.",
-  "city": "Reken",
-  "lat": 51.82705102888375,
-  "lng": 7.056527374774144
-},
-{
-  "id": "myrcm-25565",
-  "name": "RCC-Steinlach e.V.",
-  "city": "Reutlingen",
-  "lat": 48.43851764334929,
-  "lng": 9.149233435298548
-},
-{
-  "id": "myrcm-20891",
-  "name": "RCCR Munzig e.V.",
-  "city": "Klipphausen",
-  "lat": 51.09476179296404,
-  "lng": 13.415717268770793
-},
-{
-  "id": "myrcm-134",
-  "name": "RCCT Münden e.V.",
-  "city": "Hann. Münden",
-  "lat": 51.42880541931611,
-  "lng": 9.640719622471616
-},
-{
-  "id": "myrcm-15091",
-  "name": "RCRT Duisburg e.V.",
-  "city": "Essen",
-  "lat": 51.361656230637536,
-  "lng": 6.770822736777177
-},
-{
-  "id": "myrcm-16961",
-  "name": "RCSF-Singen e.V.",
-  "city": "Singen",
-  "lat": 47.78020669194865,
-  "lng": 8.849791234760545
-},
-{
-  "id": "myrcm-60396",
-  "name": "RGMC Teck e.V.",
-  "city": "Holzmaden",
-  "lat": 48.62598798609776,
-  "lng": 9.518260788056162
-},
-{
-  "id": "myrcm-26406",
-  "name": "RMC Düren e.V.",
-  "city": "Niederzier",
-  "lat": 50.87690658983461,
-  "lng": 6.4702874893032805
-},
-{
-  "id": "myrcm-25939",
-  "name": "RT-Fichtenberg e.V.",
-  "city": "Fichtenberg",
-  "lat": 48.98885967809185,
-  "lng": 9.726732166292482
-},
-{
-  "id": "myrcm-43682",
-  "name": "Sator Events",
-  "city": "Bühl",
-  "lat": 48.73220943514712,
-  "lng": 8.142894965747722
-},
-{
-  "id": "myrcm-66122",
-  "name": "Schweriner SC Breitensport e.V.",
-  "city": "Schwerin",
-  "lat": 53.62627171614289,
-  "lng": 11.39820952345775
-},
-{
-  "id": "myrcm-62851",
-  "name": "Simbacher Buggyracer e.V.",
-  "city": "Simbach am Inn",
-  "lat": 48.27496711710726,
-  "lng": 13.02909415498107
-},
-{
-  "id": "myrcm-490",
-  "name": "SLR Ingoldstadt 06",
-  "city": "Ingolstadt",
-  "lat": 48.74738246710119,
-  "lng": 11.434346147401346
-},
-{
-  "id": "myrcm-21160",
-  "name": "Stoppelhopser Oberhausen e.V.",
-  "city": "Oberhausen",
-  "lat": 51.47263317681391,
-  "lng": 6.820629520111565
-},
-{
-  "id": "myrcm-38953",
-  "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-  "city": "Chemnitz",
-  "lat": 50.81598314538974,
-  "lng": 12.929561027171806
-},
-{
-  "id": "myrcm-24531",
-  "name": "ToniSport GmbH",
-  "city": "Andernach",
-  "lat": 50.432834357274274,
-  "lng": 7.414003163606077
-},
-{
-  "id": "myrcm-991",
-  "name": "TSV 1871 Augsburg e.V.",
-  "city": "Königsbrunn",
-  "lat": 48.39507365944548,
-  "lng": 10.875577200544573
-},
-{
-  "id": "myrcm-4441",
-  "name": "TSV Kleinburgwedel",
-  "city": "Burgwedel",
-  "lat": 52.51562561199805,
-  "lng": 9.871714247709363
-},
-{
-  "id": "myrcm-22897",
-  "name": "Turnerschaft 1860 e.V. Großauheim",
-  "city": "Hanau",
-  "lat": 50.1040494790181,
-  "lng": 8.951445664843742
-},
-{
-  "id": "myrcm-59129",
-  "name": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
-  "city": "Neustadt bei Coburg",
-  "lat": 50.31849908386169,
-  "lng": 11.122178706131624
-},
-{
-  "id": "myrcm-19940",
-  "name": "VFR-Rüsselsheim e.V.",
-  "city": "Rüsselsheim",
-  "lat": 49.980321844011186,
-  "lng": 8.395484362108544
-},
-{
-  "id": "myrcm-11761",
-  "name": "Wiesbadener Minicar Club e.V.",
-  "city": "Eppstein",
-  "lat": 50.032270421899874,
-  "lng": 8.270931149938278
-}
+    "id": "myrcm-50568",
+    "name": "DJK-SSC Lackenhäuser e.V.",
+    "city": "Neureichenau",
+    "lat": 48.735561100310875,
+    "lng": 13.798475640900763
+  },
+  {
+    "id": "myrcm-35606",
+    "name": "EDC Kinzigtal e.V.",
+    "city": "Gengenbach",
+    "lat": 48.424259010683336,
+    "lng": 8.017786070319858
+  },
+  {
+    "id": "myrcm-43367",
+    "name": "EMC-Marktoberdorf",
+    "city": "Marktoberdorf",
+    "lat": 47.77353559344614,
+    "lng": 10.596636348538459
+  },
+  {
+    "id": "myrcm-10117",
+    "name": "Equipe RC Nohn",
+    "city": "Nohn",
+    "lat": 48.37078150268052,
+    "lng": 10.719769403703232
+  },
+  {
+    "id": "myrcm-37613",
+    "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
+    "city": "Bischofsheim",
+    "lat": 49.97763075091446,
+    "lng": 8.387647129236486
+  },
+  {
+    "id": "myrcm-56473",
+    "name": "Greenhouse RaCer e.V.",
+    "city": "Wendelstein",
+    "lat": 49.34814240723616,
+    "lng": 11.142573203838916
+  },
+  {
+    "id": "myrcm-52798",
+    "name": "LA Speedway Racing Club e.V.",
+    "city": "Bruckberg",
+    "lat": 48.5135310265825,
+    "lng": 12.044646410956766
+  },
+  {
+    "id": "myrcm-17507",
+    "name": "Lost-Place-Racers e.V.",
+    "city": "Prüm",
+    "lat": 50.62670012162062,
+    "lng": 6.695804823655136
+  },
+  {
+    "id": "myrcm-19204",
+    "name": "LTS Bremerhaven Racing Team",
+    "city": "Geestland",
+    "lat": 53.588865659093905,
+    "lng": 8.58660868179531
+  },
+  {
+    "id": "myrcm-4602",
+    "name": "MAC Adenau",
+    "city": "Kottenborn",
+    "lat": 50.380520238217656,
+    "lng": 6.9339287153803975
+  },
+  {
+    "id": "myrcm-678",
+    "name": "MAC Burgdorf e.V.",
+    "city": "Burgdorf",
+    "lat": 52.43191612480417,
+    "lng": 10.017538646084235
+  },
+  {
+    "id": "myrcm-20622",
+    "name": "MAC Hamburg e.V.",
+    "city": "Hamburg",
+    "lat": 53.52486125519811,
+    "lng": 10.134162196790893
+  },
+  {
+    "id": "myrcm-891",
+    "name": "MAC Mettenheim e.V.",
+    "city": "Vaterstetten",
+    "lat": 48.25458988422763,
+    "lng": 12.455744115925047
+  },
+  {
+    "id": "myrcm-9976",
+    "name": "MAC Nürnberg e.V",
+    "city": "Nürnberg",
+    "lat": 49.38767201459021,
+    "lng": 11.168661334912732
+  },
+  {
+    "id": "myrcm-30735",
+    "name": "MAC OR Hütschenhausen e.V.",
+    "city": "Hütschenhausen",
+    "lat": 49.41803566643476,
+    "lng": 7.457597641355012
+  },
+  {
+    "id": "myrcm-233",
+    "name": "MAC Saar e.V.",
+    "city": "Bexbach",
+    "lat": 49.23737851350886,
+    "lng": 7.197984131866451
+  },
+  {
+    "id": "myrcm-53667",
+    "name": "MAC Uetersen e.V.",
+    "city": "Uetersen",
+    "lat": 53.67639410403049,
+    "lng": 9.70171695639382
+  },
+  {
+    "id": "myrcm-49037",
+    "name": "MAC-Meckenheim e.V.",
+    "city": "Bad Münstereifel",
+    "lat": 50.623679184080956,
+    "lng": 7.043371956119134
+  },
+  {
+    "id": "myrcm-42064",
+    "name": "MAC-Solms e.V.",
+    "city": "Ehringshausen",
+    "lat": 50.53393592577889,
+    "lng": 8.601463866322767
+  },
+  {
+    "id": "myrcm-24873",
+    "name": "MBC Goldstein e.V.",
+    "city": "Frankfurt",
+    "lat": 50.07714491151757,
+    "lng": 8.613882094074963
+  },
+  {
+    "id": "myrcm-27211",
+    "name": "MBSC Wächtersbach",
+    "city": "Wächtersbach",
+    "lat": 50.246100236848775,
+    "lng": 9.291699351520423
+  },
+  {
+    "id": "myrcm-121",
+    "name": "MC Ettlingen e.V.",
+    "city": "Karlsruhe",
+    "lat": 48.952957322019095,
+    "lng": 8.385964898164925
+  },
+  {
+    "id": "myrcm-33489",
+    "name": "MC Munster e.V.",
+    "city": "Bremen",
+    "lat": 52.97407659178928,
+    "lng": 10.099649590338768
+  },
+  {
+    "id": "myrcm-44699",
+    "name": "MC Welden e.V.",
+    "city": "Fuchstal",
+    "lat": 47.94302020096075,
+    "lng": 10.850811665891346
+  },
+  {
+    "id": "myrcm-65042",
+    "name": "MC-Fürstenwalde e.V.",
+    "city": "Fürstenwalde",
+    "lat": 52.357853903592336,
+    "lng": 14.088839478233716
+  },
+  {
+    "id": "myrcm-27203",
+    "name": "MC-ORC .e.V.",
+    "city": "Haren (EMS)",
+    "lat": 52.76850262675131,
+    "lng": 7.168133610754698
+  },
+  {
+    "id": "myrcm-21299",
+    "name": "MCC Bad Kissingen e. V.",
+    "city": "Volkershausen",
+    "lat": 50.20426740005952,
+    "lng": 10.097707772955987
+  },
+  {
+    "id": "myrcm-20747",
+    "name": "MCC Borgholzhausen",
+    "city": "Borgholzhausen",
+    "lat": 52.08891072518177,
+    "lng": 8.276110823386952
+  },
+  {
+    "id": "myrcm-38659",
+    "name": "MCC Fellbach e.V.",
+    "city": "Fellbach",
+    "lat": 48.816136176250225,
+    "lng": 9.280190041832348
+  },
+  {
+    "id": "myrcm-52121",
+    "name": "MCC Lüdenscheid e.V.",
+    "city": "Lüdenscheid",
+    "lat": 51.20611533323285,
+    "lng": 7.645839278803224
+  },
+  {
+    "id": "myrcm-49956",
+    "name": "MCC Rheda-Wiedenbrück e.V.",
+    "city": "Gütersloh",
+    "lat": 51.84430266338534,
+    "lng": 8.298642819195084
+  },
+  {
+    "id": "myrcm-283",
+    "name": "MCC Rhein Ahr e.V.",
+    "city": "Bad Breisig",
+    "lat": 50.53375325899502,
+    "lng": 7.273070858102529
+  },
+  {
+    "id": "myrcm-47",
+    "name": "MCC Türkheim e.V.",
+    "city": "Weißenhorn",
+    "lat": 48.05428273383636,
+    "lng": 10.627985640401176
+  },
+  {
+    "id": "myrcm-269",
+    "name": "MCC-Hocheifel e.V.",
+    "city": "Urmitz",
+    "lat": 50.22559267105539,
+    "lng": 6.484065770376564
+  },
+  {
+    "id": "myrcm-57549",
+    "name": "MCC-Marktredwitz e.V.",
+    "city": "Brand",
+    "lat": 50.00785047216571,
+    "lng": 12.082068046250424
+  },
+  {
+    "id": "myrcm-9269",
+    "name": "MCK e.V. Dormagen",
+    "city": "Köln",
+    "lat": 51.05999966648897,
+    "lng": 6.832199264013079
+  },
+  {
+    "id": "myrcm-12227",
+    "name": "MCSS Althengstett e.V.",
+    "city": "Althengstett",
+    "lat": 48.720094200913294,
+    "lng": 8.803626191468693
+  },
+  {
+    "id": "myrcm-19290",
+    "name": "MCV Dänischer Wohld e.V.",
+    "city": "Tüttendorf",
+    "lat": 54.3770640548488,
+    "lng": 10.007107746575903
+  },
+  {
+    "id": "myrcm-32408",
+    "name": "Megadrom RC Team Nord",
+    "city": "Hasloh",
+    "lat": 53.69876892317562,
+    "lng": 9.917927109102116
+  },
+  {
+    "id": "myrcm-30759",
+    "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
+    "city": "Worms",
+    "lat": 49.699215847904135,
+    "lng": 8.03184543726469
+  },
+  {
+    "id": "myrcm-158",
+    "name": "Mini Car Club Crailsheim e.V.",
+    "city": "Schnelldorf",
+    "lat": 49.191647337620566,
+    "lng": 10.176380433000764
+  },
+  {
+    "id": "myrcm-65451",
+    "name": "Miniatutenpark Elsterwerda",
+    "city": "Röderland",
+    "lat": 51.45952611051337,
+    "lng": 13.545875275034973
+  },
+  {
+    "id": "myrcm-6266",
+    "name": "Minicar Club Dortmund e.V.",
+    "city": "Hamm",
+    "lat": 51.557837999297135,
+    "lng": 7.521730598218899
+  },
+  {
+    "id": "myrcm-38488",
+    "name": "Modellbaufreunde Felsberg e.V.",
+    "city": "Felsberg",
+    "lat": 51.1326578805406,
+    "lng": 9.43564739414843
+  },
+  {
+    "id": "myrcm-879",
+    "name": "Modellrenngemeinschaft Dogern e.V.",
+    "city": "Wutöschingen",
+    "lat": 47.59951612211713,
+    "lng": 8.167520352321992
+  },
+  {
+    "id": "myrcm-60576",
+    "name": "Modellsportzentrum Zwönitz e.V.",
+    "city": "Zwönitz",
+    "lat": 50.629167742978474,
+    "lng": 12.82466326392235
+  },
+  {
+    "id": "myrcm-95",
+    "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "city": "Braunschweig",
+    "lat": 52.29247586234249,
+    "lng": 10.540686972114958
+  },
+  {
+    "id": "myrcm-64572",
+    "name": "Motorsportvereinigung Zittauer Land e.V.",
+    "city": "Heidenau",
+    "lat": 50.94277717894951,
+    "lng": 14.87861140171235
+  },
+  {
+    "id": "myrcm-64",
+    "name": "MRC Alstaden Oberhausen e.V.",
+    "city": "Oberhausen",
+    "lat": 51.47266693819382,
+    "lng": 6.844376917232489
+  },
+  {
+    "id": "myrcm-713",
+    "name": "MRC Leipzig e.V",
+    "city": "Zwenkau",
+    "lat": 51.372005020609464,
+    "lng": 12.462392860349764
+  },
+  {
+    "id": "myrcm-2245",
+    "name": "MRC Mehrum e.V.",
+    "city": "Peine",
+    "lat": 51.42615108574187,
+    "lng": 12.743702396285324
+  },
+  {
+    "id": "myrcm-61183",
+    "name": "MRC Senden e.V.",
+    "city": "Senden",
+    "lat": 48.325191394382635,
+    "lng": 10.035411116404305
+  },
+  {
+    "id": "myrcm-35303",
+    "name": "RC Team Sauerland e.V.",
+    "city": "Olpe",
+    "lat": 51.04612447362069,
+    "lng": 7.832926383182863
+  },
+  {
+    "id": "myrcm-48536",
+    "name": "RC-Bande Zwickau e.V",
+    "city": "Zwickau",
+    "lat": 50.705730356507075,
+    "lng": 12.459417126095126
+  },
+  {
+    "id": "myrcm-9640",
+    "name": "RC-Glashaus e.V.",
+    "city": "Quickborn",
+    "lat": 53.71544618180866,
+    "lng": 9.920860261278003
+  },
+  {
+    "id": "myrcm-61583",
+    "name": "RC-MSC Greuthof e.V.",
+    "city": "Wüstenrot",
+    "lat": 49.08318410406898,
+    "lng": 9.427734276568266
+  },
+  {
+    "id": "myrcm-48425",
+    "name": "RC-Offroad Dortmund e.V.",
+    "city": "Dortmund",
+    "lat": 51.53315328716541,
+    "lng": 7.429184485991102
+  },
+  {
+    "id": "myrcm-34102",
+    "name": "RC-Offroad Wattenscheid e.V.",
+    "city": "Bottrop",
+    "lat": 51.485932411521574,
+    "lng": 7.185180907695856
+  },
+  {
+    "id": "myrcm-20813",
+    "name": "RC-OffroadCrew Langenfeld e.V.",
+    "city": "Solingen",
+    "lat": 51.111134379040294,
+    "lng": 6.924927855933589
+  },
+  {
+    "id": "myrcm-1516",
+    "name": "RC-Schwalmracer e.V.",
+    "city": "Schrecksbach",
+    "lat": 50.85060797497859,
+    "lng": 9.193003534843882
+  },
+  {
+    "id": "myrcm-50693",
+    "name": "RC-Sonntagsfahrer e.V.",
+    "city": "Mainhausen",
+    "lat": 50.080933888749676,
+    "lng": 8.926478330328004
+  },
+  {
+    "id": "myrcm-33796",
+    "name": "RCC Reken e.V.",
+    "city": "Reken",
+    "lat": 51.82705102888375,
+    "lng": 7.056527374774144
+  },
+  {
+    "id": "myrcm-25565",
+    "name": "RCC-Steinlach e.V.",
+    "city": "Reutlingen",
+    "lat": 48.43851764334929,
+    "lng": 9.149233435298548
+  },
+  {
+    "id": "myrcm-20891",
+    "name": "RCCR Munzig e.V.",
+    "city": "Klipphausen",
+    "lat": 51.09476179296404,
+    "lng": 13.415717268770793
+  },
+  {
+    "id": "myrcm-134",
+    "name": "RCCT Münden e.V.",
+    "city": "Hann. Münden",
+    "lat": 51.42880541931611,
+    "lng": 9.640719622471616
+  },
+  {
+    "id": "myrcm-15091",
+    "name": "RCRT Duisburg e.V.",
+    "city": "Essen",
+    "lat": 51.361656230637536,
+    "lng": 6.770822736777177
+  },
+  {
+    "id": "myrcm-16961",
+    "name": "RCSF-Singen e.V.",
+    "city": "Singen",
+    "lat": 47.78020669194865,
+    "lng": 8.849791234760545
+  },
+  {
+    "id": "myrcm-60396",
+    "name": "RGMC Teck e.V.",
+    "city": "Holzmaden",
+    "lat": 48.62598798609776,
+    "lng": 9.518260788056162
+  },
+  {
+    "id": "myrcm-26406",
+    "name": "RMC Düren e.V.",
+    "city": "Niederzier",
+    "lat": 50.87690658983461,
+    "lng": 6.4702874893032805
+  },
+  {
+    "id": "myrcm-25939",
+    "name": "RT-Fichtenberg e.V.",
+    "city": "Fichtenberg",
+    "lat": 48.98885967809185,
+    "lng": 9.726732166292482
+  },
+  {
+    "id": "myrcm-43682",
+    "name": "Sator Events",
+    "city": "Bühl",
+    "lat": 48.73220943514712,
+    "lng": 8.142894965747722
+  },
+  {
+    "id": "myrcm-66122",
+    "name": "Schweriner SC Breitensport e.V.",
+    "city": "Schwerin",
+    "lat": 53.62627171614289,
+    "lng": 11.39820952345775
+  },
+  {
+    "id": "myrcm-62851",
+    "name": "Simbacher Buggyracer e.V.",
+    "city": "Simbach am Inn",
+    "lat": 48.27496711710726,
+    "lng": 13.02909415498107
+  },
+  {
+    "id": "myrcm-490",
+    "name": "SLR Ingoldstadt 06",
+    "city": "Ingolstadt",
+    "lat": 48.74738246710119,
+    "lng": 11.434346147401346
+  },
+  {
+    "id": "myrcm-21160",
+    "name": "Stoppelhopser Oberhausen e.V.",
+    "city": "Oberhausen",
+    "lat": 51.47263317681391,
+    "lng": 6.820629520111565
+  },
+  {
+    "id": "myrcm-38953",
+    "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
+    "city": "Chemnitz",
+    "lat": 50.81598314538974,
+    "lng": 12.929561027171806
+  },
+  {
+    "id": "myrcm-24531",
+    "name": "ToniSport GmbH",
+    "city": "Andernach",
+    "lat": 50.432834357274274,
+    "lng": 7.414003163606077
+  },
+  {
+    "id": "myrcm-991",
+    "name": "TSV 1871 Augsburg e.V.",
+    "city": "Königsbrunn",
+    "lat": 48.39507365944548,
+    "lng": 10.875577200544573
+  },
+  {
+    "id": "myrcm-4441",
+    "name": "TSV Kleinburgwedel",
+    "city": "Burgwedel",
+    "lat": 52.51562561199805,
+    "lng": 9.871714247709363
+  },
+  {
+    "id": "myrcm-22897",
+    "name": "Turnerschaft 1860 e.V. Großauheim",
+    "city": "Hanau",
+    "lat": 50.1040494790181,
+    "lng": 8.951445664843742
+  },
+  {
+    "id": "myrcm-59129",
+    "name": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+    "city": "Neustadt bei Coburg",
+    "lat": 50.31849908386169,
+    "lng": 11.122178706131624
+  },
+  {
+    "id": "myrcm-19940",
+    "name": "VFR-Rüsselsheim e.V.",
+    "city": "Rüsselsheim",
+    "lat": 49.980321844011186,
+    "lng": 8.395484362108544
+  },
+  {
+    "id": "myrcm-11761",
+    "name": "Wiesbadener Minicar Club e.V.",
+    "city": "Eppstein",
+    "lat": 50.032270421899874,
+    "lng": 8.270931149938278
+  }
 ]
