@@ -205,6 +205,11 @@ function updateMarkers(list) {
 
     marker.bindPopup(buildPopup(venue, venueRaces));
 
+    marker.on("popupclose", () => {
+      activeRaceId = null;
+     render();
+   });
+    
     marker.on("click", () => {
       activeRaceId = venueRaces[0]?.id || null;
       renderList(venueRaces);
