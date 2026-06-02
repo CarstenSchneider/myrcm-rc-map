@@ -1,10 +1,7 @@
 {
-  "name": "myrcm-rc-map",
-  "version": "1.0.0",
-  "private": true,
   "type": "module",
   "scripts": {
-    "import:myrcm": "node import-myrcm.js"
+    "import": "node import-myrcm.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0"
