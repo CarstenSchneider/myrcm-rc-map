@@ -1,33 +1,16 @@
 import * as cheerio from "cheerio";
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
-const hosts = [
-  {
-    orgId: "18244",
-    venueId: "tsv-mariendorf",
-    url: "https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=18244&pLa=en"
-  },
-  {
-    orgId: "45925",
-    venueId: "bernau",
-    url: "https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=45925&pLa=en"
-  },
-  {
-    orgId: "41404",
-    venueId: "marzahn",
-    url: "https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=41404&pLa=en"
-  },
-  {
-    orgId: "52898",
-    venueId: "blankenfelde",
-    url: "https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=52898&pLa=en"
-  }
-];
-
-const trainingTerms = ["training", "trainings"];
-
+const hostListFile = "myrcm-hosts-germany.json";
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear, currentYear + 1];
+
+const trainingTerms = [
+  "training",
+  "trainings",
+  "gastfahrertag",
+  "practice"
+];
 
 function normalizeText(text) {
   return text.replace(/\s+/g, " ").trim();
@@ -37,7 +20,6 @@ function parseDate(value) {
   const text = normalizeText(value);
   const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
   if (!match) return null;
-
   return `${match[3]}-${match[2]}-${match[1]}`;
 }
 
@@ -51,34 +33,63 @@ function absoluteUrl(href) {
   return new URL(href, "https://www.myrcm.ch").toString();
 }
 
-function eventId(venueId, name, from) {
-  const slug = name
+function slugify(value) {
+  return value
     .toLowerCase()
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
-    .slice(0, 60);
-
-  return `${venueId}-${from}-${slug}`;
+    .slice(0, 70);
 }
 
 function detectSeries(name) {
-  const rules = [
-    { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
-    { label: "TEC", re: /tamiya euro cup|\btec\b/i },
-    { label: "Speed Masters", re: /speed masters/i },
-    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf/i },
-    { label: "Tamico", re: /tamico/i },
-    { label: "RCK", re: /\brck\b/i }
-  ];
+  const lower = name.toLowerCase();
+  const series = [];
 
-  return rules.filter(rule => rule.re.test(name)).map(rule => rule.label);
+  if (lower.includes("berlin touring masters") || lower.includes("btm")) {
+    series.push("BTM");
+  }
+
+  if (lower.includes("tamiya euro cup") || lower.includes("tamiya")) {
+    series.push("TEC");
+  }
+
+  if (lower.includes("sk-lauf") || lower.includes("sk lauf")) {
+    series.push("SK");
+  }
+
+  if (lower.includes("speed masters")) {
+    series.push("Speed Masters");
+  }
+
+  if (lower.includes("rck kleinserie")) {
+    series.push("RCK Kleinserie");
+  }
+
+  if (lower.includes("rck challenge")) {
+    series.push("RCK Challenge");
+  }
+
+  if (lower.includes("ostmasters")) {
+    series.push("Ostmasters");
+  }
+
+  return Array.from(new Set(series));
+}
+
+function eventId(venueId, name, from) {
+  return `${venueId}-${from}-${slugify(name)}`;
+}
+
+function hostToVenueId(host) {
+  return `myrcm-${host.orgId}-${slugify(host.name)}`;
 }
 
 function parseEvents(html, host) {
   const $ = cheerio.load(html);
   const races = [];
+  const venueId = host.venueId || hostToVenueId(host);
 
   $("tr").each((_, row) => {
     const cells = $(row)
@@ -102,14 +113,20 @@ function parseEvents(html, host) {
     const from = dateCells[validDateIndexes[0]];
     const to = dateCells[validDateIndexes[1]] || from;
 
+    const raceYear = Number(from.slice(0, 4));
+    if (!allowedYears.includes(raceYear)) return;
+
     let name = "";
 
     for (const text of cells) {
       if (!text) continue;
       if (parseDate(text)) continue;
-      if (/^(deu|ger|germany|switzerland|che|aut|austria)$/i.test(text)) continue;
+      if (/^(deu|ger|germany|deutschland)$/i.test(text)) continue;
       if (/^\d+$/.test(text)) continue;
       if (text.toLowerCase().includes("registration")) continue;
+      if (text === host.name) continue;
+      if (text === host.location) continue;
+      if (text === host.country) continue;
 
       name = text;
       break;
@@ -118,16 +135,16 @@ function parseEvents(html, host) {
     if (!name) return;
     if (hasTrainingName(name)) return;
 
-    const raceYear = Number(from.slice(0, 4));
-    if (!allowedYears.includes(raceYear)) return;
-
     races.push({
-      id: eventId(host.venueId, name, from),
-      venueId: host.venueId,
+      id: eventId(venueId, name, from),
+      venueId,
+      venueName: host.name,
+      venueLocation: host.location,
       name,
       from,
       to,
       series: detectSeries(name),
+      source: "myrcm",
       url: absoluteUrl(href) || host.url
     });
   });
@@ -135,11 +152,29 @@ function parseEvents(html, host) {
   return races;
 }
 
+async function loadHosts() {
+  const raw = await readFile(hostListFile, "utf8");
+  const hosts = JSON.parse(raw);
+
+  return hosts
+    .filter(host => host.orgId && host.name)
+    .filter(host => Number(host.eventCount || 0) > 0)
+    .map(host => ({
+      ...host,
+      url:
+        host.url ||
+        `https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${host.orgId}&pLa=en`
+    }));
+}
+
 async function main() {
+  const hosts = await loadHosts();
   const allRaces = [];
 
+  console.log(`${hosts.length} deutsche Hosts mit Events geladen`);
+
   for (const host of hosts) {
-    console.log(`Lade MyRCM: ${host.venueId}`);
+    console.log(`Lade MyRCM: ${host.name} (${host.orgId})`);
 
     const response = await fetch(host.url, {
       headers: {
@@ -148,7 +183,8 @@ async function main() {
     });
 
     if (!response.ok) {
-      throw new Error(`MyRCM request failed for ${host.venueId}: ${response.status}`);
+      console.warn(`  Fehler bei ${host.name}: ${response.status}`);
+      continue;
     }
 
     const html = await response.text();
