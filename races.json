@@ -9,8 +9,8 @@
     "track": {
       "name": "TSV Mariendorf RC-Car Racing",
       "address": "Osdorfer Str. 53, 12207 Berlin",
-      "lat": 52.4299,
-      "lng": 13.3154
+  "lat": 52.4106863916474,
+  "lng": 13.321987361999637,
     }
   },
   {
@@ -23,8 +23,8 @@
     "track": {
       "name": "TSV Mariendorf RC-Car Racing",
       "address": "Osdorfer Str. 53, 12207 Berlin",
-      "lat": 52.4299,
-      "lng": 13.3154
+  "lat": 52.4106863916474,
+  "lng": 13.321987361999637,
     }
   },
   {
@@ -37,8 +37,8 @@
     "track": {
       "name": "TSV Mariendorf RC-Car Racing",
       "address": "Osdorfer Str. 53, 12207 Berlin",
-      "lat": 52.4299,
-      "lng": 13.3154
+  "lat": 52.4106863916474,
+  "lng": 13.321987361999637,
     }
   }
 ]
