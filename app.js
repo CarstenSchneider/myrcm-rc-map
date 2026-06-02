@@ -140,7 +140,12 @@ function raceSearchText(race) {
 }
 
 function isRaceAtVenue(race, venueId) {
+  if (!race.venueId) return false;
+
   if (race.venueId === venueId) return true;
+
+  if (race.venueId.startsWith(`${venueId}-`)) return true;
+
   return venueAliasId(race.venueId) === venueId;
 }
 
