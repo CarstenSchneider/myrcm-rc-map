@@ -1,8 +1,20 @@
+```js
 import * as cheerio from "cheerio";
 import { writeFile } from "node:fs/promises";
 
 const baseUrl = "https://www.myrcm.ch/myrcm/main?hId[1]=org&pLa=en";
 const maxPages = 40;
+
+const excludedTerms = [
+  "kart gmbh",
+  "kartbahn",
+  "kart-center",
+  "kartcenter",
+  "karting",
+  "gokart",
+  "go-kart",
+  "burgpark ring kart"
+];
 
 function normalizeText(text) {
   return text.replace(/\s+/g, " ").trim();
@@ -25,6 +37,12 @@ function getOrgId(href) {
   if (match) return match[1];
 
   return null;
+}
+
+function isExcludedHost(host) {
+  const text = `${host.name} ${host.location}`.toLowerCase();
+
+  return excludedTerms.some(term => text.includes(term));
 }
 
 function parseHosts(html) {
@@ -50,10 +68,10 @@ function parseHosts(html) {
     const country = cells[3];
     const eventCount = Number(cells[4]) || 0;
 
-console.log({ name, location, country, eventCount, orgId });
+    console.log({ name, location, country, eventCount, orgId });
 
-if (!/germany|deutschland|deu/i.test(country)) return;
-    
+    if (!/germany|deutschland|deu/i.test(country)) return;
+
     hosts.push({
       orgId,
       name,
@@ -96,11 +114,12 @@ async function main() {
     }
   }
 
-const unique = Array.from(
-  new Map(allHosts.map(host => [host.orgId, host])).values()
-)
-  .filter(host => Number(host.eventCount || 0) > 0)
-  .sort((a, b) => a.name.localeCompare(b.name));
+  const unique = Array.from(
+    new Map(allHosts.map(host => [host.orgId, host])).values()
+  )
+    .filter(host => Number(host.eventCount || 0) > 0)
+    .filter(host => !isExcludedHost(host))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   await writeFile(
     "myrcm-hosts-germany.json",
