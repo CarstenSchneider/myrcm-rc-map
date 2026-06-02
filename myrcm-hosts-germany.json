@@ -136,14 +136,6 @@
     "url": "https://www.myrcm.ch/?dId[O]=64649&pLa=en&pId[O]=3&hId[1]=org"
   },
   {
-    "orgId": "23798",
-    "name": "Burgpark Ring Kart GmbH",
-    "location": "Bad-Mergentheim",
-    "country": "Germany",
-    "eventCount": 843,
-    "url": "https://www.myrcm.ch/?dId[O]=23798&pLa=en&pId[O]=3&hId[1]=org"
-  },
-  {
     "orgId": "52898",
     "name": "Burning Wheels Blankenfelde",
     "location": "Blankenfelde-Mahlow",
@@ -302,38 +294,6 @@
     "country": "Germany",
     "eventCount": 62,
     "url": "https://www.myrcm.ch/?dId[O]=10490&pLa=en&pId[O]=8&hId[1]=org"
-  },
-  {
-    "orgId": "30989",
-    "name": "Kartbahn Darglin",
-    "location": "Darglin",
-    "country": "Germany",
-    "eventCount": 953,
-    "url": "https://www.myrcm.ch/?dId[O]=30989&pLa=en&pId[O]=9&hId[1]=org"
-  },
-  {
-    "orgId": "35447",
-    "name": "Kartbahn Neubrandenburg",
-    "location": "Neubrandenburg",
-    "country": "Germany",
-    "eventCount": 905,
-    "url": "https://www.myrcm.ch/?dId[O]=35447&pLa=en&pId[O]=9&hId[1]=org"
-  },
-  {
-    "orgId": "27704",
-    "name": "Kartbahn Stralsund",
-    "location": "Stralsund",
-    "country": "Germany",
-    "eventCount": 902,
-    "url": "https://www.myrcm.ch/?dId[O]=27704&pLa=en&pId[O]=9&hId[1]=org"
-  },
-  {
-    "orgId": "27227",
-    "name": "Kartbahn Straubing",
-    "location": "Straubing",
-    "country": "Germany",
-    "eventCount": 704,
-    "url": "https://www.myrcm.ch/?dId[O]=27227&pLa=en&pId[O]=9&hId[1]=org"
   },
   {
     "orgId": "30220",
