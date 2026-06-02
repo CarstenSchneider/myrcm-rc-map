@@ -2,21 +2,29 @@ import * as cheerio from "cheerio";
 import { writeFile } from "node:fs/promises";
 
 const baseUrl = "https://www.myrcm.ch/myrcm/main?hId[1]=org&pLa=en";
-const maxPages = 100;
+const maxPages = 40;
 
 function normalizeText(text) {
   return text.replace(/\s+/g, " ").trim();
 }
 
-function getOrgId(href) {
-  if (!href) return null;
-  const match = href.match(/dId\[O\]=(\d+)/);
-  return match ? match[1] : null;
-}
-
 function absoluteUrl(href) {
   if (!href) return "";
   return new URL(href, "https://www.myrcm.ch").toString();
+}
+
+function getOrgId(href) {
+  if (!href) return null;
+
+  const decoded = decodeURIComponent(href);
+
+  let match = decoded.match(/dId\[O\]=(\d+)/);
+  if (match) return match[1];
+
+  match = href.match(/dId%5BO%5D=(\d+)/i);
+  if (match) return match[1];
+
+  return null;
 }
 
 function parseHosts(html) {
@@ -42,7 +50,7 @@ function parseHosts(html) {
     const country = cells[2];
     const eventCount = Number(cells[3]) || 0;
 
-    if (!/germany|deutschland/i.test(country)) return;
+    if (country !== "Germany") return;
 
     hosts.push({
       orgId,
@@ -79,11 +87,11 @@ async function main() {
 
     console.log(`  ${hosts.length} deutsche Hosts gefunden`);
 
-    if (hosts.length === 0 && page > 0) {
+    allHosts.push(...hosts);
+
+    if (!html.includes("Next") && page > 0) {
       break;
     }
-
-    allHosts.push(...hosts);
   }
 
   const unique = Array.from(
