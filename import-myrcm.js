@@ -162,7 +162,8 @@ function parseEvents(html, host) {
 
     if (!name) return;
     if (hasTrainingName(name)) return;
-
+    if (isExcludedEvent(name)) return;    
+    
     races.push({
       id: eventId(venueId, name, from),
       venueId,
@@ -187,6 +188,7 @@ async function loadHosts() {
   return hosts
     .filter(host => host.orgId && host.name)
     .filter(host => Number(host.eventCount || 0) > 0)
+    .filter(host => !isExcludedHost(host))
     .map(host => ({
       ...host,
       url:
