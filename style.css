@@ -281,11 +281,42 @@ input {
 }
 
 
-/* Class tags */
+/* Race card rhythm */
+
+.race-card {
+  gap: 8px;
+}
+
+.race-date {
+  margin-bottom: 4px;
+}
+
+.race-name {
+  margin-bottom: 2px;
+}
+
+.race-series-tags {
+  margin-bottom: 8px;
+}
+
+.race-venue {
+  margin-top: 0;
+}
+
+.race-location {
+  margin-top: -2px;
+  margin-bottom: 4px;
+}
+
+.race-link {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
 
 .race-class-tags {
-  margin-top: 4px;
-  margin-bottom: 2px;
+  margin-top: 2px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
 }
 
 .tag-class {
@@ -294,8 +325,4 @@ input {
   background: #f7f4ef;
   color: var(--muted);
   max-width: 100%;
-}
-
-.race-card .race-tags + .race-tags {
-  margin-top: 2px;
 }
