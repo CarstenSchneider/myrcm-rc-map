@@ -189,17 +189,15 @@ function buildPopup(venue, venueRaces) {
     .map(race => {
       return `
         <div class="popup-race">
-          <strong>${formatDateRange(race.from, race.to)}</strong><br>
-          ${race.name}
+          <div class="popup-date">${formatDateRange(race.from, race.to)}</div>
+          <div class="popup-race-name">${race.name}</div>
+          <div class="popup-venue">${venue.name}</div>
         </div>
       `;
     })
     .join("");
 
-  return `
-    <div class="popup-title">${venue.name}</div>
-    ${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}
-  `;
+  return items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>";
 }
 
 function updateMarkers(list) {
@@ -290,7 +288,6 @@ function renderList(list) {
 
         <div class="race-card-meta">
           <div class="race-venue">${venueDisplayName(race)}</div>
-          ${race.venueLocation ? `<div class="race-location">${race.venueLocation}</div>` : ""}
           ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
         </div>
       </div>
