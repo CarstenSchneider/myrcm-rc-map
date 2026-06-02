@@ -78,17 +78,18 @@ async function loadEventClasses(url) {
 
     const classes = [];
 
-    $("select option").each((_, option) => {
-      const value = $(option).attr("value");
-      const label = normalizeText($(option).text());
+const classes = [];
 
-      if (!value) return;
-      if (!label) return;
-      if (label === "?") return;
-      if (/please select/i.test(label)) return;
+$('select[name="Section"] option').each((_, option) => {
+  const value = $(option).attr("value");
+  const label = normalizeText($(option).text());
 
-      classes.push(label);
-    });
+  if (!value) return;
+  if (!label) return;
+  if (label === "?") return;
+
+  classes.push(label);
+});
 
     return Array.from(new Set(classes));
   } catch (error) {
