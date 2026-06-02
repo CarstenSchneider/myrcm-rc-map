@@ -276,12 +276,25 @@ function highlightVenue(venueId) {
     ?.scrollIntoView({ block: "nearest", behavior: "smooth" });
 }
 
+function activateRace(race) {
+  activeRaceId = race.id;
+  renderList(filteredRaces());
+
+  const card = raceList.querySelector(`[data-race-id="${race.id}"]`);
+
+  if (card) {
+    raceList.scrollTo({
+      top: card.offsetTop - raceList.offsetTop - 20,
+      behavior: "smooth"
+    });
+  }
+}
+
 function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
 
-  activeRaceId = race.id;
-  renderList(filteredRaces());
+  activateRace(race);
 
   map.setView([venue.lat, venue.lng], 12);
 
@@ -320,7 +333,7 @@ function renderList(list) {
     card.addEventListener("keydown", event => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        focusRace(race);
+        activateRace(race);
       }
     });
 
