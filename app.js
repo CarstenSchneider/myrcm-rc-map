@@ -100,7 +100,12 @@ function venueAliasId(raceVenueId) {
 }
 
 function venueById(id) {
-  const direct = venues.find(venue => venue.id === id);
+  if (!id) return null;
+
+  const direct = venues.find(venue => {
+    return id === venue.id || id.startsWith(`${venue.id}-`);
+  });
+
   if (direct) return direct;
 
   const alias = venueAliasId(id);
