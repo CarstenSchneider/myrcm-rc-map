@@ -4106,7 +4106,7 @@
     "to": "2026-06-02",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=45345&pLa=en&pId[O]=5&dId[E]=97964&tId=E&hId[1]=org"
+    "url": "https://www.myrcm.ch/?pLa=en&dId[E]=97964&pSr=1&hId[1]=evt"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-tamiya-euro-cup-summer-special",
