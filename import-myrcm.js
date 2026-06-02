@@ -61,6 +61,42 @@ function absoluteUrl(href) {
   return new URL(href, "https://www.myrcm.ch").toString();
 }
 
+async function loadEventClasses(url) {
+  if (!url) return [];
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
+      }
+    });
+
+    if (!response.ok) return [];
+
+    const html = await response.text();
+    const $ = cheerio.load(html);
+
+    const classes = [];
+
+    $("select option").each((_, option) => {
+      const value = $(option).attr("value");
+      const label = normalizeText($(option).text());
+
+      if (!value) return;
+      if (!label) return;
+      if (label === "?") return;
+      if (/please select/i.test(label)) return;
+
+      classes.push(label);
+    });
+
+    return Array.from(new Set(classes));
+  } catch (error) {
+    console.warn(`  Klassen konnten nicht geladen werden: ${url}`);
+    return [];
+  }
+}
+
 function slugify(value) {
   return value
     .toLowerCase()
@@ -181,6 +217,22 @@ function parseEvents(html, host) {
   return races;
 }
 
+
+async function enrichRacesWithClasses(races) {
+  const enriched = [];
+
+  for (const race of races) {
+    const classes = await loadEventClasses(race.url);
+
+    enriched.push({
+      ...race,
+      classes
+    });
+  }
+
+  return enriched;
+}
+
 async function loadHosts() {
   const raw = await readFile(hostListFile, "utf8");
   const hosts = JSON.parse(raw);
@@ -226,10 +278,11 @@ try {
 
     const html = await response.text();
     const races = parseEvents(html, host);
+    const enrichedRaces = await enrichRacesWithClasses(races);
 
-    console.log(`  ${races.length} Rennen gefunden`);
+    console.log(`  ${enrichedRaces.length} Rennen gefunden`);
 
-    allRaces.push(...races);
+    allRaces.push(...enrichedRaces);
   }
 
   const unique = Array.from(
