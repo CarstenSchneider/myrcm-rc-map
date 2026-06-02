@@ -83,6 +83,69 @@ function parseHosts(html) {
   return hosts;
 }
 
+async function discoverWebsite(hostUrl) {
+  if (!hostUrl) return null;
+
+  try {
+    const response = await fetch(hostUrl, {
+      headers: {
+        "user-agent": "Mozilla/5.0 myrcm-rc-map host discovery"
+      }
+    });
+
+    if (!response.ok) return null;
+
+    const html = await response.text();
+    const $ = cheerio.load(html);
+    const candidates = [];
+
+    $("a").each((_, link) => {
+      const href = $(link).attr("href");
+      const label = normalizeText($(link).text()).toLowerCase();
+
+      if (!href) return;
+
+      let url = "";
+
+      try {
+        url = absoluteUrl(href);
+      } catch {
+        return;
+      }
+
+      const lowerUrl = url.toLowerCase();
+
+      if (lowerUrl.includes("myrcm.ch")) return;
+      if (lowerUrl.startsWith("mailto:")) return;
+      if (lowerUrl.includes("facebook.com")) return;
+      if (lowerUrl.includes("instagram.com")) return;
+      if (lowerUrl.includes("youtube.com")) return;
+      if (lowerUrl.includes("twitter.com")) return;
+      if (lowerUrl.includes("x.com")) return;
+
+      candidates.push({
+        url,
+        label,
+        score:
+          (label.includes("homepage") ? 5 : 0) +
+          (label.includes("website") ? 5 : 0) +
+          (label.includes("internet") ? 4 : 0) +
+          (label.includes("webseite") ? 5 : 0) +
+          (label.includes("verein") ? 2 : 0)
+      });
+    });
+
+    if (!candidates.length) return null;
+
+    candidates.sort((a, b) => b.score - a.score);
+
+    return candidates[0].url;
+  } catch {
+    return null;
+  }
+}
+
+
 async function main() {
   const allHosts = [];
 
@@ -116,8 +179,14 @@ async function main() {
     new Map(allHosts.map(host => [host.orgId, host])).values()
   )
     .filter(host => Number(host.eventCount || 0) > 0)
-    .filter(host => !isExcludedHost(host))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .filter(host => !isExcludedHost(host));
+
+  for (const host of unique) {
+    console.log(`Website prüfen: ${host.name}`);
+    host.website = await discoverWebsite(host.url);
+  }
+
+  unique.sort((a, b) => a.name.localeCompare(b.name));
 
   await writeFile(
     "myrcm-hosts-germany.json",
