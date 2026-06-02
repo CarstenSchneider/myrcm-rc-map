@@ -11,7 +11,7 @@ const trainingTerms = [
   "gastfahrertag",
   "practice"
 ];
- 
+
 const excludedHostTerms = [
   "kartbahn",
   "kart bahn",
