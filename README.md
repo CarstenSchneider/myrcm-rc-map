@@ -1,17 +1,18 @@
-# RC-Rennen TSV Mariendorf
+# RC-Rennen Deutschland
 
-Ein erster Test fuer eine RC-Rennkarte mit Leaflet und OpenStreetMap.
+Testversion fuer eine RC-Rennkarte mit Leaflet und OpenStreetMap.
 
 ## Dateien
 
 - `index.html` - Grundstruktur der Seite
-- `app.js` - Kartenlogik, Filter und Darstellung
+- `style.css` - Layout und Gestaltung
+- `app.js` - Kartenlogik, Filter und Listenansicht
 - `races.json` - Renntermine
 - `venues.json` - Strecken mit Adresse und Koordinaten
 
 ## Datenmodell
 
-Events speichern keine eigenen Koordinaten mehr. Jedes Event verweist ueber `venueId` auf eine Strecke in `venues.json`.
+Events speichern keine eigenen Koordinaten. Jedes Event verweist ueber `venueId` auf eine Strecke in `venues.json`.
 
 Beispiel Event:
 
@@ -30,7 +31,7 @@ Beispiel Strecke:
 {
   "id": "tsv-mariendorf",
   "name": "TSV Mariendorf RC-Car Racing",
-  "lat": 52.4106863916474,
-  "lng": 13.321987361999637
+  "lat": 52.410703,
+  "lng": 13.321052
 }
 ```
