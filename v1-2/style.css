@@ -538,3 +538,17 @@ input {
   border-color: var(--line);
   box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
 }
+
+
+/* v1.2: neutralize card hover/active border in the floating list.
+   In venue mode the list is already scoped to the selected pin, so the black
+   card frame suggests a selection state that is no longer useful.
+*/
+
+.layout-prototype .race-card.is-clickable:hover,
+.layout-prototype .race-card.active,
+.layout-prototype .race-card.is-clickable.active,
+.layout-prototype .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
