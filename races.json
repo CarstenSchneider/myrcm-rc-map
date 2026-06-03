@@ -1,41 +1,5 @@
 [
   {
-    "id": "myrcm-30220-kartodrom-asbach-2026-06-03-myrcm-event-97972",
-    "venueId": "myrcm-30220-kartodrom-asbach",
-    "venueName": "Kartodrom Asbach",
-    "venueLocation": "Asbach",
-    "name": "Log in",
-    "from": "2026-06-03",
-    "to": "2026-06-03",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97972&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30220&pLa=en&dId%5BE%5D=97972&tId=E&hId%5B1%5D=org",
-    "registrationRequiresLogin": false,
-    "note": null,
-    "classes": [
-      "Online"
-    ]
-  },
-  {
-    "id": "myrcm-24785-kartodrom-elles-2026-06-03-myrcm-event-97973",
-    "venueId": "myrcm-24785-kartodrom-elles",
-    "venueName": "Kartodrom Elles",
-    "venueLocation": "Buchholz",
-    "name": "Log in",
-    "from": "2026-06-03",
-    "to": "2026-06-03",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97973&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24785&pLa=en&dId%5BE%5D=97973&tId=E&hId%5B1%5D=org",
-    "registrationRequiresLogin": false,
-    "note": null,
-    "classes": [
-      "Online"
-    ]
-  },
-  {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-myrcm-event-93311",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
