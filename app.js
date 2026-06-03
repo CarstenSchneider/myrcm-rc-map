@@ -704,7 +704,7 @@ function renderList(list) {
     const series = raceSeries(race);
     const card = document.createElement("article");
 
-    card.className = `race-card registration-${registrationStatus(race)}${race.id === activeRaceId ? " active" : ""}`;
+    card.className = `race-card registration-${registrationStatus(race)}${hasVerifiedVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
     card.dataset.raceId = race.id;
     card.tabIndex = 0;
 
@@ -740,14 +740,16 @@ function renderList(list) {
       }
     `;
 
-    card.addEventListener("click", () => focusRace(race));
+    if (hasVerifiedVenue(race)) {
+      card.addEventListener("click", () => focusRace(race));
 
-    card.addEventListener("keydown", event => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        focusRace(race);
-      }
-    });
+      card.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          focusRace(race);
+        }
+      });
+    }
 
     raceList.appendChild(card);
   }
