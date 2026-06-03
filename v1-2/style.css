@@ -552,3 +552,29 @@ input {
   border-color: var(--line);
   box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
 }
+
+
+/* v1.2: card interaction states
+   Normal mode: race cards keep the original hover state.
+   Venue mode: the right list is scoped to the selected pin, so cards behave
+   like static result cards.
+*/
+
+.layout-prototype:not(.is-venue-mode) .race-card.is-clickable:hover,
+.layout-prototype:not(.is-venue-mode) .race-card.active {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.layout-prototype.is-venue-mode .race-card,
+.layout-prototype.is-venue-mode .race-card.is-clickable {
+  cursor: default;
+}
+
+.layout-prototype.is-venue-mode .race-card.is-clickable:hover,
+.layout-prototype.is-venue-mode .race-card.active,
+.layout-prototype.is-venue-mode .race-card.is-clickable.active,
+.layout-prototype.is-venue-mode .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
