@@ -1,6 +1,6 @@
 [
   {
-    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-tamiya-euro-cup-summer-special",
+    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-myrcm-event-93311",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
     "venueLocation": "Tüttendorf",
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-06-2-alpencuplauf-mrt-rosenheim",
+    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-06-myrcm-event-96388",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
     "venueLocation": "Hoehenkirchen-Siegertsbrunn",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "id": "myrcm-33838-md-timing-2026-06-06-2-nrw-cup-or8-ore8-ort-oret-mechernich",
+    "id": "myrcm-33838-md-timing-2026-06-06-myrcm-event-97390",
     "venueId": "myrcm-33838-md-timing",
     "venueName": "MD-Timing",
     "venueLocation": "Niederkrüchten",
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "id": "myrcm-25939-rt-fichtenberg-e-v-2026-06-06-kw-challenge-no-9",
+    "id": "myrcm-25939-rt-fichtenberg-e-v-2026-06-06-myrcm-event-95841",
     "venueId": "myrcm-25939-rt-fichtenberg-e-v",
     "venueName": "RT-Fichtenberg e.V.",
     "venueLocation": "Fichtenberg",
@@ -83,7 +83,22 @@
     "classes": []
   },
   {
-    "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-06-ros-race-of-summer-2026-1-sk-lauf-gruppe-sud",
+    "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-06-myrcm-event-96662",
+    "venueId": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v",
+    "venueName": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
+    "venueLocation": "Worms",
+    "name": "MyRCM Event 96662",
+    "from": "2026-06-06",
+    "to": "2026-06-06",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96662&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": []
+  },
+  {
+    "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-06-myrcm-event-94474",
     "venueId": "myrcm-12564-rc-cars-kongen-e-v",
     "venueName": "RC Cars Köngen e.V.",
     "venueLocation": "Stuttgart",
@@ -100,7 +115,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-48023-mac-siersburg-e-v-2026-06-06-saar-racing-series-2-sk-lauf-in-mannheim",
+    "id": "myrcm-48023-mac-siersburg-e-v-2026-06-06-myrcm-event-96502",
     "venueId": "myrcm-48023-mac-siersburg-e-v",
     "venueName": "MAC Siersburg e.V.",
     "venueLocation": "Dillingen",
@@ -125,7 +140,7 @@
     ]
   },
   {
-    "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-06-tamico-off-road-cup-beim-mc-dortmund",
+    "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-06-myrcm-event-97213",
     "venueId": "myrcm-6266-minicar-club-dortmund-e-v",
     "venueName": "Minicar Club Dortmund e.V.",
     "venueLocation": "Hamm",
@@ -147,7 +162,7 @@
     ]
   },
   {
-    "id": "myrcm-82-amc-muhlau-e-v-2026-06-06-teamrennen-2026",
+    "id": "myrcm-82-amc-muhlau-e-v-2026-06-06-myrcm-event-96774",
     "venueId": "myrcm-82-amc-muhlau-e-v",
     "venueName": "AMC-Mühlau e.V.",
     "venueLocation": "Mühlau",
@@ -165,7 +180,7 @@
     ]
   },
   {
-    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-06-07-3-lauf-zur-clubmeisterschaft-2026",
+    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-06-07-myrcm-event-94313",
     "venueId": "myrcm-879-modellrenngemeinschaft-dogern-e-v",
     "venueName": "Modellrenngemeinschaft Dogern e.V.",
     "venueLocation": "Wutöschingen - Horheim",
@@ -184,7 +199,7 @@
     ]
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-07-3-vereinsrennen-2026",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-07-myrcm-event-94270",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -202,7 +217,7 @@
     ]
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-07-4-lauf-zur-vereinsmeisterschaft-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-07-myrcm-event-94340",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -217,7 +232,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-15091-rcrt-duisburg-e-v-2026-06-07-gastfahrtag-juni-2026-crawler-rennstrecke",
+    "id": "myrcm-15091-rcrt-duisburg-e-v-2026-06-07-myrcm-event-97478",
     "venueId": "myrcm-15091-rcrt-duisburg-e-v",
     "venueName": "RCRT Duisburg e.V.",
     "venueLocation": "Essen",
@@ -232,7 +247,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-07-spc-mfr-morschheim",
+    "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-07-myrcm-event-96633",
     "venueId": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v",
     "venueName": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
     "venueLocation": "Worms",
@@ -247,7 +262,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-06-12-internationaler-rc-bike-grad-prix",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-06-12-myrcm-event-95070",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -268,7 +283,7 @@
     ]
   },
   {
-    "id": "myrcm-58267-amc-senftenberg-e-v-2026-06-13-2-lauf-zur-vereinsmeisterschaft-2026-des-amc-senftenberg",
+    "id": "myrcm-58267-amc-senftenberg-e-v-2026-06-13-myrcm-event-97208",
     "venueId": "myrcm-58267-amc-senftenberg-e-v",
     "venueName": "AMC Senftenberg e.V.",
     "venueLocation": "Senftenberg",
@@ -288,7 +303,7 @@
     ]
   },
   {
-    "id": "myrcm-233-mac-saar-e-v-2026-06-13-3-lander-cup-2-lauf",
+    "id": "myrcm-233-mac-saar-e-v-2026-06-13-myrcm-event-97722",
     "venueId": "myrcm-233-mac-saar-e-v",
     "venueName": "MAC Saar e.V.",
     "venueLocation": "Bexbach",
@@ -306,7 +321,7 @@
     ]
   },
   {
-    "id": "myrcm-49540-fs-timing-2026-06-13-3-hessencup-lauf-2026-heiligenstadt",
+    "id": "myrcm-49540-fs-timing-2026-06-13-myrcm-event-95507",
     "venueId": "myrcm-49540-fs-timing",
     "venueName": "FS-Timing",
     "venueLocation": "Trebur",
@@ -326,7 +341,7 @@
     ]
   },
   {
-    "id": "myrcm-33489-mc-munster-e-v-2026-06-13-3-heidecup-sk-lauf-vg8-10",
+    "id": "myrcm-33489-mc-munster-e-v-2026-06-13-myrcm-event-97831",
     "venueId": "myrcm-33489-mc-munster-e-v",
     "venueName": "MC Munster e.V.",
     "venueLocation": "Bremen",
@@ -351,7 +366,7 @@
     ]
   },
   {
-    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-06-13-4-lauf-sk-west-or8e",
+    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-06-13-myrcm-event-96918",
     "venueId": "myrcm-45781-rc-racer-hochsauerland-e-v",
     "venueName": "Rc Racer Hochsauerland e.V.",
     "venueLocation": "Bestwig",
@@ -368,7 +383,7 @@
     ]
   },
   {
-    "id": "myrcm-44699-mc-welden-e-v-2026-06-13-6-sdc-und-4-sk-lauf-sud-2026-beim-mc-welden-e-v",
+    "id": "myrcm-44699-mc-welden-e-v-2026-06-13-myrcm-event-97007",
     "venueId": "myrcm-44699-mc-welden-e-v",
     "venueName": "MC Welden e.V.",
     "venueLocation": "Fuchstal",
@@ -391,7 +406,7 @@
     ]
   },
   {
-    "id": "myrcm-42405-modellclub-flensburg-e-v-2026-06-13-8-lauf-tamiya-euro-cup-mc-flensburg-2025-26",
+    "id": "myrcm-42405-modellclub-flensburg-e-v-2026-06-13-myrcm-event-94701",
     "venueId": "myrcm-42405-modellclub-flensburg-e-v",
     "venueName": "Modellclub Flensburg e.V",
     "venueLocation": "Flensburg",
@@ -418,7 +433,7 @@
     ]
   },
   {
-    "id": "myrcm-36-amsc-augsburg-e-v-2026-06-13-amsc-cup-2026-lauf-2",
+    "id": "myrcm-36-amsc-augsburg-e-v-2026-06-13-myrcm-event-96082",
     "venueId": "myrcm-36-amsc-augsburg-e-v",
     "venueName": "AMSC Augsburg e. V.",
     "venueLocation": "Dasing",
@@ -433,7 +448,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-891-mac-mettenheim-e-v-2026-06-13-mettenheim-masters-und-1-lauf-fcts-2026",
+    "id": "myrcm-891-mac-mettenheim-e-v-2026-06-13-myrcm-event-96696",
     "venueId": "myrcm-891-mac-mettenheim-e-v",
     "venueName": "MAC Mettenheim e.V.",
     "venueLocation": "Vaterstetten",
@@ -456,7 +471,7 @@
     ]
   },
   {
-    "id": "myrcm-42064-mac-solms-e-v-2026-06-13-sk-lauf-ore-30-jahre-mac-solms-2026",
+    "id": "myrcm-42064-mac-solms-e-v-2026-06-13-myrcm-event-97556",
     "venueId": "myrcm-42064-mac-solms-e-v",
     "venueName": "MAC-Solms e.V.",
     "venueLocation": "Ehringshausen",
@@ -481,7 +496,7 @@
     ]
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-06-13-sk-lauf-ore-warm-up-dm",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-06-13-myrcm-event-95443",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -504,7 +519,7 @@
     ]
   },
   {
-    "id": "myrcm-45925-rc-speedracer-e-v-2026-06-13-sk-lauf-ost-berlin-touring-masters-lauf-4",
+    "id": "myrcm-45925-rc-speedracer-e-v-2026-06-13-myrcm-event-94649",
     "venueId": "myrcm-45925-rc-speedracer-e-v",
     "venueName": "RC Speedracer e.V.",
     "venueLocation": "Bernau",
@@ -531,7 +546,7 @@
     ]
   },
   {
-    "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-13-sk-lauf-und-norc-beim-mc-dortmund",
+    "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-13-myrcm-event-97212",
     "venueId": "myrcm-6266-minicar-club-dortmund-e-v",
     "venueName": "Minicar Club Dortmund e.V.",
     "venueLocation": "Hamm",
@@ -548,7 +563,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-06-13-tamiya-euro-cup",
+    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-06-13-myrcm-event-94707",
     "venueId": "myrcm-48536-rc-bande-zwickau-e-v",
     "venueName": "RC-Bande Zwickau e.V",
     "venueLocation": "Zwickau",
@@ -576,7 +591,7 @@
     ]
   },
   {
-    "id": "myrcm-24531-tonisport-gmbh-2026-06-13-testv3-olli",
+    "id": "myrcm-24531-tonisport-gmbh-2026-06-13-myrcm-event-96259",
     "venueId": "myrcm-24531-tonisport-gmbh",
     "venueName": "ToniSport GmbH",
     "venueLocation": "Andernach",
@@ -596,7 +611,7 @@
     ]
   },
   {
-    "id": "myrcm-27203-mc-orc-e-v-2026-06-13-towercup",
+    "id": "myrcm-27203-mc-orc-e-v-2026-06-13-myrcm-event-97594",
     "venueId": "myrcm-27203-mc-orc-e-v",
     "venueName": "MC-ORC .e.V.",
     "venueLocation": "Haren (EMS)",
@@ -611,7 +626,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-14-1-ersatztermin-2026",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-14-myrcm-event-94276",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -626,7 +641,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-06-14-2-alpencup-wertungslauf-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-06-14-myrcm-event-95132",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -641,7 +656,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49037-mac-meckenheim-e-v-2026-06-14-3-lauf-mac-challenge-dmc-sk-lauf-west",
+    "id": "myrcm-49037-mac-meckenheim-e-v-2026-06-14-myrcm-event-95423",
     "venueId": "myrcm-49037-mac-meckenheim-e-v",
     "venueName": "MAC-Meckenheim e.V.",
     "venueLocation": "Bad Münstereifel",
@@ -663,7 +678,7 @@
     ]
   },
   {
-    "id": "myrcm-7771-amc-hamm-e-v-2026-06-14-erstes-freundschaftsrennen",
+    "id": "myrcm-7771-amc-hamm-e-v-2026-06-14-myrcm-event-97526",
     "venueId": "myrcm-7771-amc-hamm-e-v",
     "venueName": "amc-Hamm e.V.",
     "venueLocation": "Bönen",
@@ -685,7 +700,7 @@
     ]
   },
   {
-    "id": "myrcm-47444-rc-racers-toys-shop-2026-06-14-nordbayern-cup-4-2026-lauf-4-bad-berneck",
+    "id": "myrcm-47444-rc-racers-toys-shop-2026-06-14-myrcm-event-95026",
     "venueId": "myrcm-47444-rc-racers-toys-shop",
     "venueName": "RC Racers + Toys Shop",
     "venueLocation": "Bad Berneck",
@@ -705,7 +720,7 @@
     ]
   },
   {
-    "id": "myrcm-61583-rc-msc-greuthof-e-v-2026-06-14-rc-msc-sommer-cup-2026-lauf-2",
+    "id": "myrcm-61583-rc-msc-greuthof-e-v-2026-06-14-myrcm-event-97927",
     "venueId": "myrcm-61583-rc-msc-greuthof-e-v",
     "venueName": "RC-MSC Greuthof e.V.",
     "venueLocation": "Wüstenrot",
@@ -725,7 +740,7 @@
     ]
   },
   {
-    "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-rck-kleinserie-qualifikationslauf-sud-tsv-1871-augsburg-e-v-outdoor",
+    "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-myrcm-event-97571",
     "venueId": "myrcm-991-tsv-1871-augsburg-e-v",
     "venueName": "TSV 1871 Augsburg e.V.",
     "venueLocation": "Königsbrunn",
@@ -742,7 +757,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-678-mac-burgdorf-e-v-2026-06-14-sk-lauf-ore-eg-und-freundschaftsrennen-ore",
+    "id": "myrcm-678-mac-burgdorf-e-v-2026-06-14-myrcm-event-96508",
     "venueId": "myrcm-678-mac-burgdorf-e-v",
     "venueName": "MAC Burgdorf e.V.",
     "venueLocation": "Burgdorf",
@@ -775,7 +790,7 @@
     ]
   },
   {
-    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-06-14-ssc-dreck-race-r3",
+    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-06-14-myrcm-event-96827",
     "venueId": "myrcm-66122-schweriner-sc-breitensport-e-v",
     "venueName": "Schweriner SC Breitensport e.V.",
     "venueLocation": "Schwerin",
@@ -790,7 +805,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-14-tamiya-euro-cup-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-14-myrcm-event-97850",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -807,7 +822,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-10490-ig-racing-team-hamm-2026-06-14-vereinsmeisterschaft-2026-lauf-3",
+    "id": "myrcm-10490-ig-racing-team-hamm-2026-06-14-myrcm-event-96444",
     "venueId": "myrcm-10490-ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
     "venueLocation": "Lippstadt",
@@ -825,7 +840,7 @@
     ]
   },
   {
-    "id": "myrcm-60453-slottis-supreme-masters-2026-06-19-deutsche-meisterschaft-kottenheim-19-21-juni-schulstrasse-12-56736-kot",
+    "id": "myrcm-60453-slottis-supreme-masters-2026-06-19-myrcm-event-94598",
     "venueId": "myrcm-60453-slottis-supreme-masters",
     "venueName": "Slottis Supreme Masters",
     "venueLocation": "Sinntal",
@@ -840,7 +855,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-53667-mac-uetersen-e-v-2026-06-19-deutsche-meisterschaft-ort-oret-2026-uetersen",
+    "id": "myrcm-53667-mac-uetersen-e-v-2026-06-19-myrcm-event-95561",
     "venueId": "myrcm-53667-mac-uetersen-e-v",
     "venueName": "MAC Uetersen e.V.",
     "venueLocation": "Uetersen",
@@ -858,7 +873,7 @@
     ]
   },
   {
-    "id": "myrcm-6025-amc-langenfeld-e-v-2026-06-19-race-of-legends-2026",
+    "id": "myrcm-6025-amc-langenfeld-e-v-2026-06-19-myrcm-event-95439",
     "venueId": "myrcm-6025-amc-langenfeld-e-v",
     "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
@@ -883,7 +898,7 @@
     ]
   },
   {
-    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-20-2-clublauf-2026",
+    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-20-myrcm-event-97145",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
     "venueLocation": "Hoehenkirchen-Siegertsbrunn",
@@ -898,7 +913,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49540-fs-timing-2026-06-20-dmc-kinder-und-jugend-tag-beim-mac-hutschenhausen-e-v-2026",
+    "id": "myrcm-49540-fs-timing-2026-06-20-myrcm-event-95671",
     "venueId": "myrcm-49540-fs-timing",
     "venueName": "FS-Timing",
     "venueLocation": "Trebur",
@@ -915,7 +930,7 @@
     ]
   },
   {
-    "id": "myrcm-7103-amc-saarbrucken-e-v-2026-06-20-fun-event-sk-vg5tw-vg5sp-vg5f1",
+    "id": "myrcm-7103-amc-saarbrucken-e-v-2026-06-20-myrcm-event-97948",
     "venueId": "myrcm-7103-amc-saarbrucken-e-v",
     "venueName": "AMC Saarbrücken e.V.",
     "venueLocation": "Saarbrücken",
@@ -935,7 +950,7 @@
     ]
   },
   {
-    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-06-20-lowen-master-cup-lauf-3",
+    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-06-20-myrcm-event-94463",
     "venueId": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
@@ -960,7 +975,7 @@
     ]
   },
   {
-    "id": "myrcm-45925-rc-speedracer-e-v-2026-06-20-ostmasters",
+    "id": "myrcm-45925-rc-speedracer-e-v-2026-06-20-myrcm-event-91316",
     "venueId": "myrcm-45925-rc-speedracer-e-v",
     "venueName": "RC Speedracer e.V.",
     "venueLocation": "Bernau",
@@ -981,7 +996,7 @@
     ]
   },
   {
-    "id": "myrcm-17008-msc-kirchhain-e-v-2026-06-20-sk-lauf-gruppe-mitte-und-dm-warmup-eg8gt-eg8gt3-vg8gt",
+    "id": "myrcm-17008-msc-kirchhain-e-v-2026-06-20-myrcm-event-97434",
     "venueId": "myrcm-17008-msc-kirchhain-e-v",
     "venueName": "MSC Kirchhain e.V.",
     "venueLocation": "Marburg",
@@ -1002,7 +1017,7 @@
     ]
   },
   {
-    "id": "myrcm-16149-rallye-club-haltern-e-v-im-adac-2026-06-20-sportkreis-meisterschaft-west-smw-vg-2026-3-4-haltern",
+    "id": "myrcm-16149-rallye-club-haltern-e-v-im-adac-2026-06-20-myrcm-event-97760",
     "venueId": "myrcm-16149-rallye-club-haltern-e-v-im-adac",
     "venueName": "Rallye-Club Haltern e.V. im ADAC",
     "venueLocation": "Haltern am See",
@@ -1027,7 +1042,7 @@
     ]
   },
   {
-    "id": "myrcm-24531-tonisport-gmbh-2026-06-20-tonisport-onroad-series-tos-lauf-rd2-mitte-west",
+    "id": "myrcm-24531-tonisport-gmbh-2026-06-20-myrcm-event-95989",
     "venueId": "myrcm-24531-tonisport-gmbh",
     "venueName": "ToniSport GmbH",
     "venueLocation": "Andernach",
@@ -1048,7 +1063,7 @@
     ]
   },
   {
-    "id": "myrcm-573-ormc-konigsbrunn-2026-06-21-3-lauf-zum-konigspokal-2026",
+    "id": "myrcm-573-ormc-konigsbrunn-2026-06-21-myrcm-event-96026",
     "venueId": "myrcm-573-ormc-konigsbrunn",
     "venueName": "ORMC Königsbrunn",
     "venueLocation": "Augsburg",
@@ -1063,7 +1078,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-12227-mcss-althengstett-e-v-2026-06-21-3-mcss-cup-2026",
+    "id": "myrcm-12227-mcss-althengstett-e-v-2026-06-21-myrcm-event-95134",
     "venueId": "myrcm-12227-mcss-althengstett-e-v",
     "venueName": "MCSS Althengstett e.V.",
     "venueLocation": "Althengstett",
@@ -1078,7 +1093,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-20622-mac-hamburg-e-v-2026-06-21-hamburger-rc-cup-lauf-2-2026",
+    "id": "myrcm-20622-mac-hamburg-e-v-2026-06-21-myrcm-event-97558",
     "venueId": "myrcm-20622-mac-hamburg-e-v",
     "venueName": "MAC Hamburg e.V.",
     "venueLocation": "Hamburg",
@@ -1093,7 +1108,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49540-fs-timing-2026-06-21-mbsc-sunday-league-round-2-wachtersbach",
+    "id": "myrcm-49540-fs-timing-2026-06-21-myrcm-event-96168",
     "venueId": "myrcm-49540-fs-timing",
     "venueName": "FS-Timing",
     "venueLocation": "Trebur",
@@ -1114,7 +1129,7 @@
     ]
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-21-rck-challenge",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-21-myrcm-event-94279",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -1131,7 +1146,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-21-vereinsmeisterschaft-2026-lauf-2",
+    "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-21-myrcm-event-95865",
     "venueId": "myrcm-12564-rc-cars-kongen-e-v",
     "venueName": "RC Cars Köngen e.V.",
     "venueLocation": "Stuttgart",
@@ -1148,7 +1163,7 @@
     ]
   },
   {
-    "id": "myrcm-134-rcct-munden-e-v-2026-06-26-germany-summerchamps-2026",
+    "id": "myrcm-134-rcct-munden-e-v-2026-06-26-myrcm-event-94607",
     "venueId": "myrcm-134-rcct-munden-e-v",
     "venueName": "RCCT Münden e.V.",
     "venueLocation": "Hann.Münden",
@@ -1171,7 +1186,7 @@
     ]
   },
   {
-    "id": "myrcm-65042-mc-furstenwalde-e-v-2026-06-27-2-berlin-brandenburg-fun-race",
+    "id": "myrcm-65042-mc-furstenwalde-e-v-2026-06-27-myrcm-event-96270",
     "venueId": "myrcm-65042-mc-furstenwalde-e-v",
     "venueName": "MC-Fürstenwalde e.V.",
     "venueLocation": "Fürstenwalde",
@@ -1191,7 +1206,7 @@
     ]
   },
   {
-    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-27-2-freundschaftsrennen",
+    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-27-myrcm-event-93312",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
     "venueLocation": "Tüttendorf",
@@ -1215,7 +1230,7 @@
     ]
   },
   {
-    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-27-6h-tamiya-tt01-rennen",
+    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-27-myrcm-event-96385",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
     "venueLocation": "Hoehenkirchen-Siegertsbrunn",
@@ -1232,7 +1247,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-06-27-fcos-2026-lauf-2",
+    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-06-27-myrcm-event-96344",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
     "venueLocation": "Attaching",
@@ -1251,7 +1266,7 @@
     ]
   },
   {
-    "id": "myrcm-283-mcc-rhein-ahr-e-v-2026-06-27-jumpstartrc-trophy-2026-2-4-bad-breisig",
+    "id": "myrcm-283-mcc-rhein-ahr-e-v-2026-06-27-myrcm-event-97707",
     "venueId": "myrcm-283-mcc-rhein-ahr-e-v",
     "venueName": "MCC Rhein Ahr e.V.",
     "venueLocation": "Bad Breisig",
@@ -1271,7 +1286,7 @@
     ]
   },
   {
-    "id": "myrcm-46202-msg-niesky-e-v-2026-06-27-nachtrennen-msg-niesky-olc-lauf",
+    "id": "myrcm-46202-msg-niesky-e-v-2026-06-27-myrcm-event-95506",
     "venueId": "myrcm-46202-msg-niesky-e-v",
     "venueName": "MSG Niesky e.V.",
     "venueLocation": "Rothenburg/Oberlausitz",
@@ -1291,7 +1306,7 @@
     ]
   },
   {
-    "id": "myrcm-45925-rc-speedracer-e-v-2026-06-27-tamico-offroad-cup-sk-lauf-ore2wd-st",
+    "id": "myrcm-45925-rc-speedracer-e-v-2026-06-27-myrcm-event-94651",
     "venueId": "myrcm-45925-rc-speedracer-e-v",
     "venueName": "RC Speedracer e.V.",
     "venueLocation": "Bernau",
@@ -1316,7 +1331,7 @@
     ]
   },
   {
-    "id": "myrcm-116-msc-hansa-heilbronn-e-v-2026-06-27-tamico-offroad-cup-2026",
+    "id": "myrcm-116-msc-hansa-heilbronn-e-v-2026-06-27-myrcm-event-95007",
     "venueId": "myrcm-116-msc-hansa-heilbronn-e-v",
     "venueName": "MSC-Hansa Heilbronn e.V.",
     "venueLocation": "Heilbronn",
@@ -1338,7 +1353,7 @@
     ]
   },
   {
-    "id": "myrcm-60576-modellsportzentrum-zwonitz-e-v-2026-06-27-tamiya-euro-cup-qualifikation",
+    "id": "myrcm-60576-modellsportzentrum-zwonitz-e-v-2026-06-27-myrcm-event-96247",
     "venueId": "myrcm-60576-modellsportzentrum-zwonitz-e-v",
     "venueName": "Modellsportzentrum Zwönitz e.V.",
     "venueLocation": "Zwönitz",
@@ -1364,7 +1379,7 @@
     ]
   },
   {
-    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-28-jugendtag-mrt-rosenheim-e-v",
+    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-28-myrcm-event-96386",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
     "venueLocation": "Hoehenkirchen-Siegertsbrunn",
@@ -1379,7 +1394,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-26821-asc-celle-e-v-2026-06-28-ore-sk-lauf-und-freundschaftsrennen",
+    "id": "myrcm-26821-asc-celle-e-v-2026-06-28-myrcm-event-97665",
     "venueId": "myrcm-26821-asc-celle-e-v",
     "venueName": "ASC Celle e.V.",
     "venueLocation": "Celle",
@@ -1407,7 +1422,7 @@
     ]
   },
   {
-    "id": "myrcm-43367-emc-marktoberdorf-2026-06-28-vereinsmeisterschaft-onroad-2026-lauf-2",
+    "id": "myrcm-43367-emc-marktoberdorf-2026-06-28-myrcm-event-93361",
     "venueId": "myrcm-43367-emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
     "venueLocation": "Marktoberdorf",
@@ -1428,7 +1443,7 @@
     ]
   },
   {
-    "id": "myrcm-2047-ets-2026-07-02-euro-nitro-series-onroad-round-2-rucphen-nl",
+    "id": "myrcm-2047-ets-2026-07-02-myrcm-event-95739",
     "venueId": "myrcm-2047-ets",
     "venueName": "ETS",
     "venueLocation": "Andernach",
@@ -1443,7 +1458,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49540-fs-timing-2026-07-04-4-hessencup-lauf-linsengericht",
+    "id": "myrcm-49540-fs-timing-2026-07-04-myrcm-event-95508",
     "venueId": "myrcm-49540-fs-timing",
     "venueName": "FS-Timing",
     "venueLocation": "Trebur",
@@ -1463,7 +1478,7 @@
     ]
   },
   {
-    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-04-ers-lauf-3-rc-racer-hochsauerland-2026",
+    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-04-myrcm-event-96916",
     "venueId": "myrcm-45781-rc-racer-hochsauerland-e-v",
     "venueName": "Rc Racer Hochsauerland e.V.",
     "venueLocation": "Bestwig",
@@ -1478,7 +1493,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-04-msc-lowen-rallye-2",
+    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-04-myrcm-event-94464",
     "venueId": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
@@ -1497,7 +1512,7 @@
     ]
   },
   {
-    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-07-05-4-lauf-zur-clubmeisterschaft-2026",
+    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-07-05-myrcm-event-94314",
     "venueId": "myrcm-879-modellrenngemeinschaft-dogern-e-v",
     "venueName": "Modellrenngemeinschaft Dogern e.V.",
     "venueLocation": "Wutöschingen - Horheim",
@@ -1516,7 +1531,7 @@
     ]
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-07-05-5-lauf-zur-vereinsmeisterschaft-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-07-05-myrcm-event-94341",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -1531,7 +1546,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-20622-mac-hamburg-e-v-2026-07-05-hamburger-rc-cup-lauf-3-2026",
+    "id": "myrcm-20622-mac-hamburg-e-v-2026-07-05-myrcm-event-97559",
     "venueId": "myrcm-20622-mac-hamburg-e-v",
     "venueName": "MAC Hamburg e.V.",
     "venueLocation": "Hamburg",
@@ -1546,7 +1561,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-07-05-le-trophy-offroad-2026-lauf-2-3",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-07-05-myrcm-event-95146",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -1571,7 +1586,7 @@
     ]
   },
   {
-    "id": "myrcm-7771-amc-hamm-e-v-2026-07-05-zweites-freundschaftsrennen",
+    "id": "myrcm-7771-amc-hamm-e-v-2026-07-05-myrcm-event-97527",
     "venueId": "myrcm-7771-amc-hamm-e-v",
     "venueName": "amc-Hamm e.V.",
     "venueLocation": "Bönen",
@@ -1593,7 +1608,7 @@
     ]
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-07-11-3-clubrennen-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-07-11-myrcm-event-95123",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -1608,7 +1623,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-53667-mac-uetersen-e-v-2026-07-11-5-sk-lauf-nord",
+    "id": "myrcm-53667-mac-uetersen-e-v-2026-07-11-myrcm-event-97962",
     "venueId": "myrcm-53667-mac-uetersen-e-v",
     "venueName": "MAC Uetersen e.V.",
     "venueLocation": "Uetersen",
@@ -1625,7 +1640,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-07-11-dm-warm-up-race-2026",
+    "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-07-11-myrcm-event-97691",
     "venueId": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v",
     "venueName": "ESV Blau-Gold Bischofsheim 1958 e.V.",
     "venueLocation": "Bischofsheim",
@@ -1640,7 +1655,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-7771-amc-hamm-e-v-2026-07-11-offene-deutsche-meisterschaft-motorrad",
+    "id": "myrcm-7771-amc-hamm-e-v-2026-07-11-myrcm-event-97758",
     "venueId": "myrcm-7771-amc-hamm-e-v",
     "venueName": "amc-Hamm e.V.",
     "venueLocation": "Bönen",
@@ -1661,7 +1676,7 @@
     ]
   },
   {
-    "id": "myrcm-15091-rcrt-duisburg-e-v-2026-07-11-sk-lauf-west-norc",
+    "id": "myrcm-15091-rcrt-duisburg-e-v-2026-07-11-myrcm-event-97801",
     "venueId": "myrcm-15091-rcrt-duisburg-e-v",
     "venueName": "RCRT Duisburg e.V.",
     "venueLocation": "Essen",
@@ -1678,7 +1693,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-11-tamiya-euro-cup-braunschweig",
+    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-11-myrcm-event-94506",
     "venueId": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
@@ -1705,7 +1720,7 @@
     ]
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-12-4-vereinsrennen-2026",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-12-myrcm-event-94273",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -1720,7 +1735,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-07-12-fcts-lauf-2-2026",
+    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-07-12-myrcm-event-92877",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
     "venueLocation": "Ainring",
@@ -1735,7 +1750,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-47444-rc-racers-toys-shop-2026-07-12-nordbayern-cup-4-2026-lauf-5-amberg",
+    "id": "myrcm-47444-rc-racers-toys-shop-2026-07-12-myrcm-event-95028",
     "venueId": "myrcm-47444-rc-racers-toys-shop",
     "venueName": "RC Racers + Toys Shop",
     "venueLocation": "Bad Berneck",
@@ -1750,7 +1765,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-07-12-ssc-airbeat-one-race-r4",
+    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-07-12-myrcm-event-96828",
     "venueId": "myrcm-66122-schweriner-sc-breitensport-e-v",
     "venueName": "Schweriner SC Breitensport e.V.",
     "venueLocation": "Schwerin",
@@ -1765,7 +1780,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-18-ers-6-stunden-rennen",
+    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-18-myrcm-event-96919",
     "venueId": "myrcm-45781-rc-racer-hochsauerland-e-v",
     "venueName": "Rc Racer Hochsauerland e.V.",
     "venueLocation": "Bestwig",
@@ -1780,7 +1795,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-35606-edc-kinzigtal-e-v-2026-07-18-king-of-the-black-forest-2026-2-sk-lauf-gruppe-sud-ore",
+    "id": "myrcm-35606-edc-kinzigtal-e-v-2026-07-18-myrcm-event-97756",
     "venueId": "myrcm-35606-edc-kinzigtal-e-v",
     "venueName": "EDC Kinzigtal e.V.",
     "venueLocation": "Gengenbach",
@@ -1797,7 +1812,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-18-norispokal-sk-lauf-vg8-10-eg8e-gt",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-18-myrcm-event-96139",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -1814,7 +1829,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-18-rck-challenge-braunschweig",
+    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-18-myrcm-event-94465",
     "venueId": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
@@ -1831,7 +1846,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-891-mac-mettenheim-e-v-2026-07-18-rck-challenge-lauf-gruppe-sud-mac-mettenheim",
+    "id": "myrcm-891-mac-mettenheim-e-v-2026-07-18-myrcm-event-96695",
     "venueId": "myrcm-891-mac-mettenheim-e-v",
     "venueName": "MAC Mettenheim e.V.",
     "venueLocation": "Vaterstetten",
@@ -1848,7 +1863,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v-2026-07-19-2-lauf-rallycross-in-winsen-luhe",
+    "id": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v-2026-07-19-myrcm-event-97409",
     "venueId": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v",
     "venueName": "Breitenfelder Sportverein von 1924 e.V.",
     "venueLocation": "Breitenfelde",
@@ -1863,7 +1878,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-19-4-mcss-cup-2026",
+    "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-19-myrcm-event-95135",
     "venueId": "myrcm-12227-mcss-althengstett-e-v",
     "venueName": "MCSS Althengstett e.V.",
     "venueLocation": "Althengstett",
@@ -1878,7 +1893,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49037-mac-meckenheim-e-v-2026-07-19-4-lauf-mac-challenge",
+    "id": "myrcm-49037-mac-meckenheim-e-v-2026-07-19-myrcm-event-95430",
     "venueId": "myrcm-49037-mac-meckenheim-e-v",
     "venueName": "MAC-Meckenheim e.V.",
     "venueLocation": "Bad Münstereifel",
@@ -1898,7 +1913,32 @@
     ]
   },
   {
-    "id": "myrcm-10490-ig-racing-team-hamm-2026-07-19-vereinsmeisterschaft-2026-lauf-4",
+    "id": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim-2026-07-19-myrcm-event-97884",
+    "venueId": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim",
+    "venueName": "Turnerschaft 1860 e.V. Großauheim",
+    "venueLocation": "Hanau Grossauheim",
+    "name": "MyRCM Event 97884",
+    "from": "2026-07-19",
+    "to": "2026-07-19",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97884&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": [
+      "Gastklasse LMH 17.5T / GT3 21.5T",
+      "TEC Euro TW",
+      "TEC Fighter Kids",
+      "TEC Formel-E",
+      "TEC Gentleman",
+      "TEC M-Chassis",
+      "TEC Race-Truck",
+      "TEC Stock",
+      "TEC Top Stock"
+    ]
+  },
+  {
+    "id": "myrcm-10490-ig-racing-team-hamm-2026-07-19-myrcm-event-96445",
     "venueId": "myrcm-10490-ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
     "venueLocation": "Lippstadt",
@@ -1916,7 +1956,7 @@
     ]
   },
   {
-    "id": "myrcm-2047-ets-2026-07-23-cayote-euro-touring-series-round-2-trencin-sk",
+    "id": "myrcm-2047-ets-2026-07-23-myrcm-event-97810",
     "venueId": "myrcm-2047-ets",
     "venueName": "ETS",
     "venueLocation": "Andernach",
@@ -1931,7 +1971,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-07-25-3-clublauf-2026",
+    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-07-25-myrcm-event-97146",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
     "venueLocation": "Hoehenkirchen-Siegertsbrunn",
@@ -1946,7 +1986,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-07-25-4-clubrennen-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-07-25-myrcm-event-95124",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -1961,7 +2001,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49540-fs-timing-2026-07-25-5-hessencup-lauf-2026-msc-ober-morlen",
+    "id": "myrcm-49540-fs-timing-2026-07-25-myrcm-event-96171",
     "venueId": "myrcm-49540-fs-timing",
     "venueName": "FS-Timing",
     "venueLocation": "Trebur",
@@ -1976,7 +2016,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-39587-mrsc-amberg-e-v-2026-07-25-6h-team-rennen-tamiya-tt-01e",
+    "id": "myrcm-39587-mrsc-amberg-e-v-2026-07-25-myrcm-event-95178",
     "venueId": "myrcm-39587-mrsc-amberg-e-v",
     "venueName": "MRSC Amberg e.V.",
     "venueLocation": "Amberg",
@@ -1993,7 +2033,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-25-mcss-6h-endurance-race",
+    "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-25-myrcm-event-95464",
     "venueId": "myrcm-12227-mcss-althengstett-e-v",
     "venueName": "MCSS Althengstett e.V.",
     "venueLocation": "Althengstett",
@@ -2008,7 +2048,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-25-rck-kleinserie-braunschweig",
+    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-25-myrcm-event-94466",
     "venueId": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
@@ -2025,7 +2065,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-573-ormc-konigsbrunn-2026-07-26-4-lauf-zum-konigspokal-2026",
+    "id": "myrcm-573-ormc-konigsbrunn-2026-07-26-myrcm-event-96027",
     "venueId": "myrcm-573-ormc-konigsbrunn",
     "venueName": "ORMC Königsbrunn",
     "venueLocation": "Augsburg",
@@ -2040,7 +2080,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-07-26-fcos-2026-lauf-3",
+    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-07-26-myrcm-event-96345",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
     "venueLocation": "Attaching",
@@ -2059,7 +2099,7 @@
     ]
   },
   {
-    "id": "myrcm-43367-emc-marktoberdorf-2026-07-26-vereinsmeisterschaft-onroad-2026-lauf-3",
+    "id": "myrcm-43367-emc-marktoberdorf-2026-07-26-myrcm-event-93362",
     "venueId": "myrcm-43367-emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
     "venueLocation": "Marktoberdorf",
@@ -2080,7 +2120,7 @@
     ]
   },
   {
-    "id": "myrcm-17008-msc-kirchhain-e-v-2026-08-01-sk-lauf-gruppe-mitte-vg8-kl1-vg8-k2-vg8s-vg10-eg8",
+    "id": "myrcm-17008-msc-kirchhain-e-v-2026-08-01-myrcm-event-97433",
     "venueId": "myrcm-17008-msc-kirchhain-e-v",
     "venueName": "MSC Kirchhain e.V.",
     "venueLocation": "Marburg",
@@ -2103,7 +2143,7 @@
     ]
   },
   {
-    "id": "myrcm-26596-asc-potsdam-e-v-2026-08-01-tamico-offroad-cup-2026",
+    "id": "myrcm-26596-asc-potsdam-e-v-2026-08-01-myrcm-event-95353",
     "venueId": "myrcm-26596-asc-potsdam-e-v",
     "venueName": "ASC Potsdam e.V.",
     "venueLocation": "Potsdam",
@@ -2129,7 +2169,7 @@
     ]
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-08-02-6-lauf-zur-vereinsmeisterschaft-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-08-02-myrcm-event-94342",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -2144,7 +2184,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-tamiya-euro-cup-2-4h-truck-rennen-2026",
+    "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93401",
     "venueId": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
     "venueLocation": "Neustadt bei Coburg",
@@ -2161,7 +2201,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-tamiya-euro-cup-deutschland-finale-2026",
+    "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93402",
     "venueId": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
     "venueLocation": "Neustadt bei Coburg",
@@ -2178,7 +2218,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-08-fcos-2026-lauf-4",
+    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-08-myrcm-event-96346",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
     "venueLocation": "Attaching",
@@ -2197,7 +2237,7 @@
     ]
   },
   {
-    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-08-09-5-lauf-zur-clubmeisterschaft-2026",
+    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-08-09-myrcm-event-94315",
     "venueId": "myrcm-879-modellrenngemeinschaft-dogern-e-v",
     "venueName": "Modellrenngemeinschaft Dogern e.V.",
     "venueLocation": "Wutöschingen - Horheim",
@@ -2216,7 +2256,7 @@
     ]
   },
   {
-    "id": "myrcm-12227-mcss-althengstett-e-v-2026-08-09-5-mcss-cup-2026",
+    "id": "myrcm-12227-mcss-althengstett-e-v-2026-08-09-myrcm-event-95136",
     "venueId": "myrcm-12227-mcss-althengstett-e-v",
     "venueName": "MCSS Althengstett e.V.",
     "venueLocation": "Althengstett",
@@ -2231,7 +2271,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-20622-mac-hamburg-e-v-2026-08-09-hamburger-rc-cup-lauf-4-2026",
+    "id": "myrcm-20622-mac-hamburg-e-v-2026-08-09-myrcm-event-97560",
     "venueId": "myrcm-20622-mac-hamburg-e-v",
     "venueName": "MAC Hamburg e.V.",
     "venueLocation": "Hamburg",
@@ -2246,7 +2286,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-2047-ets-2026-08-13-euro-nitro-series-onroad-round-3-aigen-at",
+    "id": "myrcm-2047-ets-2026-08-13-myrcm-event-95740",
     "venueId": "myrcm-2047-ets",
     "venueName": "ETS",
     "venueLocation": "Andernach",
@@ -2261,7 +2301,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-58267-amc-senftenberg-e-v-2026-08-15-sk-lauf-ostmasters-2026-lauf-6",
+    "id": "myrcm-58267-amc-senftenberg-e-v-2026-08-15-myrcm-event-97914",
     "venueId": "myrcm-58267-amc-senftenberg-e-v",
     "venueName": "AMC Senftenberg e.V.",
     "venueLocation": "Senftenberg",
@@ -2279,7 +2319,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-15-sk-lauf-und-sachsencup",
+    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-15-myrcm-event-94712",
     "venueId": "myrcm-48536-rc-bande-zwickau-e-v",
     "venueName": "RC-Bande Zwickau e.V",
     "venueLocation": "Zwickau",
@@ -2302,7 +2342,7 @@
     ]
   },
   {
-    "id": "myrcm-573-ormc-konigsbrunn-2026-08-16-5-lauf-zum-konigspokal-2026",
+    "id": "myrcm-573-ormc-konigsbrunn-2026-08-16-myrcm-event-96028",
     "venueId": "myrcm-573-ormc-konigsbrunn",
     "venueName": "ORMC Königsbrunn",
     "venueLocation": "Augsburg",
@@ -2317,7 +2357,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-10490-ig-racing-team-hamm-2026-08-16-vereinsmeisterschaft-2026-lauf-5",
+    "id": "myrcm-10490-ig-racing-team-hamm-2026-08-16-myrcm-event-96446",
     "venueId": "myrcm-10490-ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
     "venueLocation": "Lippstadt",
@@ -2335,7 +2375,7 @@
     ]
   },
   {
-    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-08-22-4-clublauf-2026",
+    "id": "myrcm-4483-mrt-rosenheim-e-v-2026-08-22-myrcm-event-97147",
     "venueId": "myrcm-4483-mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
     "venueLocation": "Hoehenkirchen-Siegertsbrunn",
@@ -2350,7 +2390,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-08-22-le-trophy-on-road-lauf-3",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-08-22-myrcm-event-95455",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -2371,7 +2411,7 @@
     ]
   },
   {
-    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-22-rck-kleinserie",
+    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-22-myrcm-event-97359",
     "venueId": "myrcm-48536-rc-bande-zwickau-e-v",
     "venueName": "RC-Bande Zwickau e.V",
     "venueLocation": "Zwickau",
@@ -2386,7 +2426,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-49037-mac-meckenheim-e-v-2026-08-23-5-lauf-mac-challenge",
+    "id": "myrcm-49037-mac-meckenheim-e-v-2026-08-23-myrcm-event-95431",
     "venueId": "myrcm-49037-mac-meckenheim-e-v",
     "venueName": "MAC-Meckenheim e.V.",
     "venueLocation": "Bad Münstereifel",
@@ -2406,7 +2446,7 @@
     ]
   },
   {
-    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-23-fcos-2026-lauf-5",
+    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-23-myrcm-event-96347",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
     "venueLocation": "Attaching",
@@ -2425,7 +2465,7 @@
     ]
   },
   {
-    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-08-23-ssc-indischer-weltraumtag-race-r5",
+    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-08-23-myrcm-event-96829",
     "venueId": "myrcm-66122-schweriner-sc-breitensport-e-v",
     "venueName": "Schweriner SC Breitensport e.V.",
     "venueLocation": "Schwerin",
@@ -2440,7 +2480,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-4441-tsv-kleinburgwedel-2026-08-23-tamico-offroad-cup-2026",
+    "id": "myrcm-4441-tsv-kleinburgwedel-2026-08-23-myrcm-event-96206",
     "venueId": "myrcm-4441-tsv-kleinburgwedel",
     "venueName": "TSV Kleinburgwedel",
     "venueLocation": "Burgwedel",
@@ -2462,7 +2502,7 @@
     ]
   },
   {
-    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-08-29-3-freundschaftsrennen",
+    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-08-29-myrcm-event-93313",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
     "venueLocation": "Tüttendorf",
@@ -2486,7 +2526,7 @@
     ]
   },
   {
-    "id": "myrcm-45925-rc-speedracer-e-v-2026-08-29-sk-ost-ore-1-10-1-8",
+    "id": "myrcm-45925-rc-speedracer-e-v-2026-08-29-myrcm-event-94653",
     "venueId": "myrcm-45925-rc-speedracer-e-v",
     "venueName": "RC Speedracer e.V.",
     "venueLocation": "Bernau",
@@ -2501,7 +2541,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-08-30-ecn-9-lauf-2026-rc-racer-hochsauerland-e-v",
+    "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-08-30-myrcm-event-96917",
     "venueId": "myrcm-45781-rc-racer-hochsauerland-e-v",
     "venueName": "Rc Racer Hochsauerland e.V.",
     "venueLocation": "Bestwig",
@@ -2516,7 +2556,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-08-30-le-trophy-offroad-2026-lauf-3-3",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-08-30-myrcm-event-95147",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -2541,7 +2581,7 @@
     ]
   },
   {
-    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-09-05-fcos-2026-lauf-6",
+    "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-09-05-myrcm-event-96348",
     "venueId": "myrcm-53665-rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
     "venueLocation": "Attaching",
@@ -2560,7 +2600,7 @@
     ]
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-09-06-5-vereinsrennen-2026",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-09-06-myrcm-event-94274",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -2575,7 +2615,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-09-06-6-lauf-zur-clubmeisterschaft-2026",
+    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-09-06-myrcm-event-94316",
     "venueId": "myrcm-879-modellrenngemeinschaft-dogern-e-v",
     "venueName": "Modellrenngemeinschaft Dogern e.V.",
     "venueLocation": "Wutöschingen - Horheim",
@@ -2594,7 +2634,7 @@
     ]
   },
   {
-    "id": "myrcm-12227-mcss-althengstett-e-v-2026-09-06-6-mcss-cup-2026",
+    "id": "myrcm-12227-mcss-althengstett-e-v-2026-09-06-myrcm-event-95137",
     "venueId": "myrcm-12227-mcss-althengstett-e-v",
     "venueName": "MCSS Althengstett e.V.",
     "venueLocation": "Althengstett",
@@ -2609,7 +2649,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-09-06-7-lauf-zur-vereinsmeisterschaft-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-09-06-myrcm-event-94343",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -2624,7 +2664,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-2047-ets-2026-09-10-cayote-euro-touring-series-round-3-andernach-ger",
+    "id": "myrcm-2047-ets-2026-09-10-myrcm-event-97811",
     "venueId": "myrcm-2047-ets",
     "venueName": "ETS",
     "venueLocation": "Andernach",
@@ -2639,7 +2679,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-09-11-dm-ore2wd-und-ore2wdst",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-09-11-myrcm-event-97492",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -2654,7 +2694,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-09-12-5-clubrennen-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-09-12-myrcm-event-95125",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -2669,7 +2709,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-20622-mac-hamburg-e-v-2026-09-13-hamburger-rc-cup-lauf-5-2026",
+    "id": "myrcm-20622-mac-hamburg-e-v-2026-09-13-myrcm-event-97561",
     "venueId": "myrcm-20622-mac-hamburg-e-v",
     "venueName": "MAC Hamburg e.V.",
     "venueLocation": "Hamburg",
@@ -2684,7 +2724,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-43367-emc-marktoberdorf-2026-09-13-vereinsmeisterschaft-onroad-2026-lauf-4",
+    "id": "myrcm-43367-emc-marktoberdorf-2026-09-13-myrcm-event-93363",
     "venueId": "myrcm-43367-emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
     "venueLocation": "Marktoberdorf",
@@ -2705,7 +2745,7 @@
     ]
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-09-18-efra-gp-1-5-tc-f1-leipzig",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-09-18-myrcm-event-97575",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -2725,7 +2765,7 @@
     ]
   },
   {
-    "id": "myrcm-66454-msc-ober-morlen-e-v-2026-09-19-4-lauf-ecm-msc-ober-morlen",
+    "id": "myrcm-66454-msc-ober-morlen-e-v-2026-09-19-myrcm-event-97459",
     "venueId": "myrcm-66454-msc-ober-morlen-e-v",
     "venueName": "MSC Ober-Mörlen e.V.",
     "venueLocation": "Weiterstadt",
@@ -2740,7 +2780,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-09-19-die-12-stunden-von-braunschweig-2026",
+    "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-09-19-myrcm-event-94469",
     "venueId": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
@@ -2758,7 +2798,7 @@
     ]
   },
   {
-    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-09-19-rck-challenge",
+    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-09-19-myrcm-event-97358",
     "venueId": "myrcm-48536-rc-bande-zwickau-e-v",
     "venueName": "RC-Bande Zwickau e.V",
     "venueLocation": "Zwickau",
@@ -2773,7 +2813,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-12564-rc-cars-kongen-e-v-2026-09-19-vereinsmeisterschaft-2026-lauf-3",
+    "id": "myrcm-12564-rc-cars-kongen-e-v-2026-09-19-myrcm-event-95874",
     "venueId": "myrcm-12564-rc-cars-kongen-e-v",
     "venueName": "RC Cars Köngen e.V.",
     "venueLocation": "Stuttgart",
@@ -2790,7 +2830,7 @@
     ]
   },
   {
-    "id": "myrcm-573-ormc-konigsbrunn-2026-09-20-6-lauf-zum-konigspokal-2026",
+    "id": "myrcm-573-ormc-konigsbrunn-2026-09-20-myrcm-event-96029",
     "venueId": "myrcm-573-ormc-konigsbrunn",
     "venueName": "ORMC Königsbrunn",
     "venueLocation": "Augsburg",
@@ -2805,7 +2845,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-39587-mrsc-amberg-e-v-2026-09-20-mrsc-cup-2026-lauf-2-und-vm",
+    "id": "myrcm-39587-mrsc-amberg-e-v-2026-09-20-myrcm-event-95177",
     "venueId": "myrcm-39587-mrsc-amberg-e-v",
     "venueName": "MRSC Amberg e.V.",
     "venueLocation": "Amberg",
@@ -2820,7 +2860,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-47444-rc-racers-toys-shop-2026-09-20-nordbayern-cup-4-2026-lauf-6-bamberg",
+    "id": "myrcm-47444-rc-racers-toys-shop-2026-09-20-myrcm-event-95029",
     "venueId": "myrcm-47444-rc-racers-toys-shop",
     "venueName": "RC Racers + Toys Shop",
     "venueLocation": "Bad Berneck",
@@ -2835,7 +2875,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-25939-rt-fichtenberg-e-v-2026-09-20-offenes-freundschaftsrennen-vm-26-lauf-3-4",
+    "id": "myrcm-25939-rt-fichtenberg-e-v-2026-09-20-myrcm-event-95844",
     "venueId": "myrcm-25939-rt-fichtenberg-e-v",
     "venueName": "RT-Fichtenberg e.V.",
     "venueLocation": "Fichtenberg",
@@ -2854,7 +2894,7 @@
     ]
   },
   {
-    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-09-20-ssc-september-race-r6",
+    "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-09-20-myrcm-event-96830",
     "venueId": "myrcm-66122-schweriner-sc-breitensport-e-v",
     "venueName": "Schweriner SC Breitensport e.V.",
     "venueLocation": "Schwerin",
@@ -2869,7 +2909,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-17507-lost-place-racers-e-v-2026-09-25-40-worlds-offroad-mechernich-ger",
+    "id": "myrcm-17507-lost-place-racers-e-v-2026-09-25-myrcm-event-97027",
     "venueId": "myrcm-17507-lost-place-racers-e-v",
     "venueName": "Lost-Place-Racers e.V.",
     "venueLocation": "Prüm",
@@ -2887,7 +2927,7 @@
     ]
   },
   {
-    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-09-26-4-freundschaftsrennen",
+    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-09-26-myrcm-event-93314",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
     "venueLocation": "Tüttendorf",
@@ -2911,7 +2951,7 @@
     ]
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-09-26-6-clubrennen-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-09-26-myrcm-event-95126",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -2926,7 +2966,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-65042-mc-furstenwalde-e-v-2026-09-26-tamico-offroad-cup-2026",
+    "id": "myrcm-65042-mc-furstenwalde-e-v-2026-09-26-myrcm-event-96330",
     "venueId": "myrcm-65042-mc-furstenwalde-e-v",
     "venueName": "MC-Fürstenwalde e.V.",
     "venueLocation": "Fürstenwalde",
@@ -2948,7 +2988,7 @@
     ]
   },
   {
-    "id": "myrcm-10490-ig-racing-team-hamm-2026-09-27-vereinsmeisterschaft-2026-lauf-6",
+    "id": "myrcm-10490-ig-racing-team-hamm-2026-09-27-myrcm-event-96447",
     "venueId": "myrcm-10490-ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
     "venueLocation": "Lippstadt",
@@ -2966,7 +3006,7 @@
     ]
   },
   {
-    "id": "myrcm-60453-slottis-supreme-masters-2026-10-01-standortmeldung-keine-fahrer-carrera-explorer-cup-saison-3",
+    "id": "myrcm-60453-slottis-supreme-masters-2026-10-01-myrcm-event-97611",
     "venueId": "myrcm-60453-slottis-supreme-masters",
     "venueName": "Slottis Supreme Masters",
     "venueLocation": "Sinntal",
@@ -2981,7 +3021,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-10-02-messecup-leipzig",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-10-02-myrcm-event-94060",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -3004,7 +3044,7 @@
     ]
   },
   {
-    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-10-03-555-runden-team-rennen",
+    "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-10-03-myrcm-event-97355",
     "venueId": "myrcm-48536-rc-bande-zwickau-e-v",
     "venueName": "RC-Bande Zwickau e.V",
     "venueLocation": "Zwickau",
@@ -3021,7 +3061,7 @@
     ]
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-04-6-vereinsrennen-2026",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-04-myrcm-event-94275",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -3036,7 +3076,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-10-04-8-lauf-zur-vereinsmeisterschaft-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-10-04-myrcm-event-94344",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -3051,7 +3091,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-10-10-1-ausweichtermin-clubrennen-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-10-10-myrcm-event-95128",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -3066,7 +3106,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-10-10-5-freundschaftsrennen",
+    "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-10-10-myrcm-event-93315",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
     "venueLocation": "Tüttendorf",
@@ -3090,7 +3130,7 @@
     ]
   },
   {
-    "id": "myrcm-20891-rccr-munzig-e-v-2026-10-10-sachsencup-6-lauf-endlauf",
+    "id": "myrcm-20891-rccr-munzig-e-v-2026-10-10-myrcm-event-95043",
     "venueId": "myrcm-20891-rccr-munzig-e-v",
     "venueName": "RCCR Munzig e.V.",
     "venueLocation": "Klipphausen OT Munzig",
@@ -3110,7 +3150,7 @@
     ]
   },
   {
-    "id": "myrcm-9640-rc-glashaus-e-v-2026-10-10-tamico-offroad-cup-2026-rc-glashaus-e-v",
+    "id": "myrcm-9640-rc-glashaus-e-v-2026-10-10-myrcm-event-93468",
     "venueId": "myrcm-9640-rc-glashaus-e-v",
     "venueName": "RC-Glashaus e.V.",
     "venueLocation": "Quickborn",
@@ -3132,7 +3172,7 @@
     ]
   },
   {
-    "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-11-2-ersatztermin-2026",
+    "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-11-myrcm-event-94278",
     "venueId": "myrcm-9976-mac-nurnberg-e-v",
     "venueName": "MAC Nürnberg e.V",
     "venueLocation": "Nürnberg",
@@ -3147,7 +3187,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-10-11-7-lauf-zur-clubmeisterschaft-2026",
+    "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-10-11-myrcm-event-94317",
     "venueId": "myrcm-879-modellrenngemeinschaft-dogern-e-v",
     "venueName": "Modellrenngemeinschaft Dogern e.V.",
     "venueLocation": "Wutöschingen - Horheim",
@@ -3166,7 +3206,7 @@
     ]
   },
   {
-    "id": "myrcm-713-mrc-leipzig-e-v-2026-10-17-ostmasters-endlauf",
+    "id": "myrcm-713-mrc-leipzig-e-v-2026-10-17-myrcm-event-94122",
     "venueId": "myrcm-713-mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
     "venueLocation": "Zwenkau",
@@ -3187,7 +3227,7 @@
     ]
   },
   {
-    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-10-18-3-lauf-fcts-2026",
+    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-10-18-myrcm-event-96271",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
     "venueLocation": "Ainring",
@@ -3202,7 +3242,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-10490-ig-racing-team-hamm-2026-10-18-vereinsmeisterschaft-2026-lauf-7",
+    "id": "myrcm-10490-ig-racing-team-hamm-2026-10-18-myrcm-event-96448",
     "venueId": "myrcm-10490-ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
     "venueLocation": "Lippstadt",
@@ -3220,7 +3260,7 @@
     ]
   },
   {
-    "id": "myrcm-51971-smc-stuttgart-e-v-2026-10-23-eurocup-2026-imbra-league",
+    "id": "myrcm-51971-smc-stuttgart-e-v-2026-10-23-myrcm-event-97024",
     "venueId": "myrcm-51971-smc-stuttgart-e-v",
     "venueName": "SMC Stuttgart e.V.",
     "venueLocation": "Stuttgart",
@@ -3235,7 +3275,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2026-10-24-2-ausweichtermin-clubrennen-2026",
+    "id": "myrcm-16961-rcsf-singen-e-v-2026-10-24-myrcm-event-95130",
     "venueId": "myrcm-16961-rcsf-singen-e-v",
     "venueName": "RCSF-Singen e.V.",
     "venueLocation": "Singen",
@@ -3250,7 +3290,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-47444-rc-racers-toys-shop-2026-10-25-nordbayern-cup-4-2026-lauf-7-estenfeld-indoor",
+    "id": "myrcm-47444-rc-racers-toys-shop-2026-10-25-myrcm-event-95030",
     "venueId": "myrcm-47444-rc-racers-toys-shop",
     "venueName": "RC Racers + Toys Shop",
     "venueLocation": "Bad Berneck",
@@ -3265,7 +3305,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-11-08-9-lauf-zur-vereinsmeisterschaft-2026",
+    "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-11-08-myrcm-event-94345",
     "venueId": "myrcm-52121-mcc-ludenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
@@ -3280,7 +3320,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-11-15-4-lauf-fcts-2026",
+    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-11-15-myrcm-event-96272",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
     "venueLocation": "Ainring",
@@ -3295,7 +3335,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-47444-rc-racers-toys-shop-2026-11-28-nordbayern-cup-4-2026-lauf-8-marktredwitz-saisonfinale-indoor",
+    "id": "myrcm-47444-rc-racers-toys-shop-2026-11-28-myrcm-event-95031",
     "venueId": "myrcm-47444-rc-racers-toys-shop",
     "venueName": "RC Racers + Toys Shop",
     "venueLocation": "Bad Berneck",
@@ -3310,7 +3350,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-12-13-5-lauf-fcts-2026",
+    "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-12-13-myrcm-event-96273",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
     "venueLocation": "Ainring",
@@ -3325,7 +3365,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-01-17-6-lauf-fcts-2027",
+    "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-01-17-myrcm-event-96274",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
     "venueLocation": "Ainring",
@@ -3340,7 +3380,7 @@
     "classes": []
   },
   {
-    "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-02-21-7-lauf-fcts-2027",
+    "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-02-21-myrcm-event-96275",
     "venueId": "myrcm-37520-rc-race-team-munchen-e-v",
     "venueName": "RC Race Team München e.V",
     "venueLocation": "Ainring",
