@@ -11,7 +11,6 @@ const retryCount = 1;
 const trainingTerms = [
   "training",
   "trainings",
-  "gastfahrertag",
   "practice"
 ];
 
@@ -63,6 +62,11 @@ function parseDate(value) {
 
 function hasTrainingName(name) {
   const lower = name.toLowerCase();
+
+  if (/\bgastfahrer/i.test(lower)) return false;
+  if (/\bgastfahrertag/i.test(lower)) return false;
+  if (/\bgastklasse/i.test(lower)) return false;
+
   return trainingTerms.some(term => lower.includes(term));
 }
 
@@ -364,6 +368,10 @@ async function parseEvents(html, host) {
     if (hasTrainingName(name)) continue;
     if (isExcludedEvent(name)) continue;
 
+    const registrationRequiresLogin = cells.some(text =>
+      /sign up to this event/i.test(text)
+    );
+
     races.push({
       id: eventId(venueId, name, from),
       venueId,
@@ -374,7 +382,11 @@ async function parseEvents(html, host) {
       to,
       series: detectSeries(name),
       source: "myrcm",
-      url
+      url,
+      registrationRequiresLogin,
+      note: registrationRequiresLogin
+        ? "Anmeldung bei MyRCM nur nach Login sichtbar."
+        : null
     });
   }
 
