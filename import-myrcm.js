@@ -16,20 +16,45 @@ const trainingTerms = [
 ];
 
 const excludedHostTerms = [
+  "kart",
+  "karts",
   "kartbahn",
   "kart bahn",
   "kart-center",
   "kartcenter",
   "karting",
+  "kartracing",
+  "kart racing",
+  "kartrennen",
+  "kart rennen",
   "go-kart",
   "gokart",
+  "kartodrom",
+  "kart-o-drom",
+  "kartarena",
+  "kart arena",
   "motodrom"
 ];
 
 const excludedEventTerms = [
+  "kart",
+  "karts",
   "kartbahn",
   "kart bahn",
+  "kart-center",
+  "kartcenter",
   "karting",
+  "kartracing",
+  "kart racing",
+  "kartrennen",
+  "kart rennen",
+  "go-kart",
+  "gokart",
+  "kartodrom",
+  "kart-o-drom",
+  "kartarena",
+  "kart arena",
+  "motodrom",
   "standby"
 ];
 
@@ -37,7 +62,9 @@ const invalidEventNames = [
   "sign up to this event",
   "registration",
   "book in",
-  "login"
+  "login",
+  "log in",
+  "online"
 ];
 
 function normalizeText(text = "") {
@@ -45,7 +72,18 @@ function normalizeText(text = "") {
 }
 
 function isExcludedHost(host) {
-  const text = `${host.name} ${host.location}`.toLowerCase();
+  const text = [
+    host.name,
+    host.location,
+    host.city,
+    host.url,
+    host.website,
+    host.web
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
   return excludedHostTerms.some(term => text.includes(term));
 }
 
@@ -364,6 +402,16 @@ function shouldSkipRace(race) {
   if (isInvalidEventName(race.name)) return true;
   if (isExcludedEvent(race.name)) return true;
   if (hasTrainingName(race.name)) return true;
+
+  const venueText = `${race.venueName || ""} ${race.venueLocation || ""}`.toLowerCase();
+  if (excludedHostTerms.some(term => venueText.includes(term))) return true;
+
+  if (
+    race.classes?.length === 1 &&
+    isInvalidEventName(race.classes[0])
+  ) {
+    return true;
+  }
 
   if (!race.from || !race.to) return true;
 
