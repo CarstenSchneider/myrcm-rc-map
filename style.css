@@ -173,10 +173,14 @@ input {
   text-align: left;
 }
 
-.race-card:hover,
+.race-card.is-clickable:hover,
 .race-card.active {
   border-color: var(--text);
   box-shadow: var(--shadow);
+}
+
+.race-card:not(.is-clickable) {
+  cursor: default;
 }
 
 .race-date {
