@@ -5,8 +5,9 @@ const hostListFile = "myrcm-hosts-germany.json";
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear, currentYear + 1];
 
-const requestTimeoutMs = 10000;
+const requestTimeoutMs = 8000;
 const retryCount = 1;
+const detailConcurrency = 5;
 
 const trainingTerms = [
   "training",
@@ -92,17 +93,6 @@ function eventIdFromUrl(url) {
   }
 }
 
-function orgIdFromUrl(url) {
-  if (!url) return null;
-
-  try {
-    const parsed = new URL(url, "https://www.myrcm.ch");
-    return parsed.searchParams.get("dId[O]");
-  } catch {
-    return null;
-  }
-}
-
 function registrationUrl(eventId) {
   if (!eventId) return "";
 
@@ -115,12 +105,10 @@ function registrationUrl(eventId) {
 }
 
 function orgEventDetailUrl(host, eventId) {
-  const orgId = host.orgId;
-
-  if (!eventId || !orgId) return null;
+  if (!eventId || !host.orgId) return null;
 
   const target = new URL("https://www.myrcm.ch/myrcm/main");
-  target.searchParams.set("dId[O]", orgId);
+  target.searchParams.set("dId[O]", host.orgId);
   target.searchParams.set("pLa", "en");
   target.searchParams.set("dId[E]", eventId);
   target.searchParams.set("tId", "E");
@@ -202,7 +190,7 @@ function detectSeries(name) {
   return Array.from(new Set(series));
 }
 
-function eventId(venueId, from, myrcmEventId, name) {
+function raceId(venueId, from, myrcmEventId, name) {
   const suffix = myrcmEventId ? `myrcm-event-${myrcmEventId}` : slugify(name);
   return `${venueId}-${from}-${suffix}`;
 }
@@ -259,33 +247,19 @@ function extractClassesFromDetailPage($) {
   $("p").each((_, paragraph) => {
     const labelText = normalizeText($(paragraph).find(".label").first().text()).toLowerCase();
 
-    if (!labelText.startsWith("sections")) {
-      return;
-    }
+    if (!labelText.startsWith("sections")) return;
 
     $(paragraph)
       .find("a")
       .each((_, link) => {
-        const label = normalizeText($(link).text());
+        const label = normalizeText($(link).text()).replace(/^→\s*/, "");
 
         if (!label) return;
         if (label === "?") return;
 
-        classes.push(label.replace(/^→\s*/, ""));
+        classes.push(label);
       });
   });
-
-  if (!classes.length) {
-    $("a").each((_, link) => {
-      const href = $(link).attr("href") || "";
-      const label = normalizeText($(link).text());
-
-      if (!label) return;
-      if (!/dId\[S\]|dId%5BS%5D|section|Section/i.test(href)) return;
-
-      classes.push(label.replace(/^→\s*/, ""));
-    });
-  }
 
   return Array.from(new Set(classes));
 }
@@ -296,16 +270,9 @@ function parseDateRangeFromLabels(labels) {
     return `${match[3]}-${match[2]}-${match[1]}`;
   });
 
-  if (!dates.length) {
-    return {
-      from: null,
-      to: null
-    };
-  }
-
   return {
-    from: dates[0],
-    to: dates[1] || dates[0]
+    from: dates[0] || null,
+    to: dates[1] || dates[0] || null
   };
 }
 
@@ -315,6 +282,7 @@ function extractEventDetail(html, host, eventId, listFallback = {}) {
   const dateRange = parseDateRangeFromLabels(labels);
   const heading = firstUsefulHeading($, host);
   const classes = extractClassesFromDetailPage($);
+  const fullText = normalizeText($.text());
 
   const name =
     heading ||
@@ -331,24 +299,14 @@ function extractEventDetail(html, host, eventId, listFallback = {}) {
     listFallback.to ||
     from;
 
-  const hostName =
-    labels.host ||
-    host.name ||
-    listFallback.venueName ||
-    "";
-
-  const country =
-    labels.country ||
-    host.country ||
-    "";
+  const registrationRequiresLogin = /sign up to this event/i.test(fullText);
 
   return {
     name,
     from,
     to,
-    hostName,
-    country,
-    classes
+    classes,
+    registrationRequiresLogin
   };
 }
 
@@ -382,8 +340,7 @@ function extractEventLinksFromHostPage(html, host) {
         url,
         fallbackName,
         fallbackFrom: dates[0] || null,
-        fallbackTo: dates[1] || dates[0] || null,
-        rowText
+        fallbackTo: dates[1] || dates[0] || null
       });
     } else {
       const existing = events.get(eventId);
@@ -396,25 +353,10 @@ function extractEventLinksFromHostPage(html, host) {
         existing.fallbackFrom = dates[0];
         existing.fallbackTo = dates[1] || dates[0];
       }
-
-      if (/hId%5B1%5D=org|hId\[1\]=org|tId=E/i.test(url)) {
-        existing.url = url;
-      }
     }
   });
 
   return [...events.values()];
-}
-
-async function registrationRequiresLogin(regUrl) {
-  if (!regUrl) return false;
-
-  try {
-    const html = await fetchText(regUrl);
-    return /sign up to this event/i.test(html);
-  } catch {
-    return false;
-  }
 }
 
 function shouldSkipRace(race) {
@@ -425,9 +367,7 @@ function shouldSkipRace(race) {
 
   if (!race.from || !race.to) return true;
 
-  if (race.to < race.from) {
-    return true;
-  }
+  if (race.to < race.from) return true;
 
   const today = new Date().toISOString().slice(0, 10);
   if (race.to < today) return true;
@@ -438,43 +378,44 @@ function shouldSkipRace(race) {
   return false;
 }
 
-async function parseEvents(html, host) {
-  const races = [];
-  const venueId = host.venueId || hostToVenueId(host);
-  const eventLinks = extractEventLinksFromHostPage(html, host);
+async function runLimited(items, limit, worker) {
+  const results = [];
+  let index = 0;
 
-  for (const eventLink of eventLinks) {
-    const detailUrl = orgEventDetailUrl(host, eventLink.eventId);
-
-    if (!detailUrl) continue;
-
-    let detail;
-
-    try {
-      const detailHtml = await fetchText(detailUrl);
-      detail = extractEventDetail(detailHtml, host, eventLink.eventId, {
-        name: eventLink.fallbackName,
-        from: eventLink.fallbackFrom,
-        to: eventLink.fallbackTo,
-        venueName: host.name
-      });
-    } catch (error) {
-      console.warn(`  Event-Detail konnte nicht geladen werden: ${detailUrl}`);
-      detail = {
-        name: eventLink.fallbackName || `MyRCM Event ${eventLink.eventId}`,
-        from: eventLink.fallbackFrom,
-        to: eventLink.fallbackTo || eventLink.fallbackFrom,
-        hostName: host.name,
-        country: host.country,
-        classes: []
-      };
+  async function next() {
+    while (index < items.length) {
+      const currentIndex = index;
+      index += 1;
+      results[currentIndex] = await worker(items[currentIndex], currentIndex);
     }
+  }
 
-    const regUrl = registrationUrl(eventLink.eventId);
-    const needsLogin = await registrationRequiresLogin(regUrl);
+  const workers = Array.from(
+    { length: Math.min(limit, items.length) },
+    () => next()
+  );
+
+  await Promise.all(workers);
+
+  return results;
+}
+
+async function parseSingleEvent(eventLink, host, venueId, total, index) {
+  const detailUrl = orgEventDetailUrl(host, eventLink.eventId);
+  const regUrl = registrationUrl(eventLink.eventId);
+
+  if (!detailUrl) return null;
+
+  try {
+    const detailHtml = await fetchText(detailUrl);
+    const detail = extractEventDetail(detailHtml, host, eventLink.eventId, {
+      name: eventLink.fallbackName,
+      from: eventLink.fallbackFrom,
+      to: eventLink.fallbackTo
+    });
 
     const race = {
-      id: eventId(venueId, detail.from, eventLink.eventId, detail.name),
+      id: raceId(venueId, detail.from, eventLink.eventId, detail.name),
       venueId,
       venueName: host.name,
       venueLocation: host.location,
@@ -485,27 +426,40 @@ async function parseEvents(html, host) {
       source: "myrcm",
       url: regUrl || detailUrl,
       detailUrl,
-      registrationRequiresLogin: needsLogin,
-      note: needsLogin
+      registrationRequiresLogin: detail.registrationRequiresLogin,
+      note: detail.registrationRequiresLogin
         ? "Anmeldung bei MyRCM nur nach Login sichtbar."
         : null,
       classes: detail.classes
     };
 
-    if (shouldSkipRace(race)) {
-      if (race.to && race.from && race.to < race.from) {
-        console.warn(`WARN: Enddatum liegt vor Startdatum (${host.name})`);
-        console.warn(`      Event: ${race.name}`);
-        console.warn(`      from=${race.from}, to=${race.to}`);
-      }
+    if (shouldSkipRace(race)) return null;
 
-      continue;
+    if ((index + 1) % 10 === 0 || index + 1 === total) {
+      console.log(`    ${index + 1}/${total} Event-Details verarbeitet`);
     }
 
-    races.push(race);
+    return race;
+  } catch (error) {
+    console.warn(`  Event-Detail konnte nicht geladen werden: ${detailUrl}`);
+    console.warn(`    ${error.message}`);
+    return null;
   }
+}
 
-  return races;
+async function parseEvents(html, host) {
+  const venueId = host.venueId || hostToVenueId(host);
+  const eventLinks = extractEventLinksFromHostPage(html, host);
+
+  console.log(`  ${eventLinks.length} Event-IDs gefunden`);
+
+  const races = await runLimited(
+    eventLinks,
+    detailConcurrency,
+    (eventLink, index) => parseSingleEvent(eventLink, host, venueId, eventLinks.length, index)
+  );
+
+  return races.filter(Boolean);
 }
 
 async function loadHosts() {
