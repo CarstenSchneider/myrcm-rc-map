@@ -608,11 +608,21 @@ function updateMarkers(list) {
 
     if (!venueRaces.length) return;
 
-    const marker = L.marker([venue.lat, venue.lng]).addTo(map);
+    const markerClass = hasActiveRegistration(venueRaces)
+      ? "map-marker-open"
+      : "map-marker-closed";
 
-    if (!hasActiveRegistration(venueRaces)) {
-      marker.setOpacity(0.45);
-    }
+    const marker = L.marker(
+      [venue.lat, venue.lng],
+      {
+        icon: L.divIcon({
+          className: "",
+          html: `<div class="${markerClass}"></div>`,
+          iconSize: [24, 24],
+          iconAnchor: [12, 12]
+        })
+      }
+    ).addTo(map);
 
     marker.bindPopup(buildPopup(venue, venueRaces));
 
