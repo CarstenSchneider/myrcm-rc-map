@@ -534,6 +534,14 @@ function buildPopup(venue, venueRaces) {
   `;
 }
 
+function resetVenueSelection() {
+  if (!activeVenueId && !activeRaceId) return;
+
+  activeVenueId = null;
+  activeRaceId = null;
+  renderList(filteredRaces());
+}
+
 function updateMarkers(list) {
   markers.forEach(marker => marker.remove());
   markers.clear();
@@ -556,7 +564,7 @@ function updateMarkers(list) {
     marker.on("popupclose", () => {
       if (isSwitchingMarkerPopup) return;
 
-      activeRaceId = null;
+      resetVenueSelection();
     });
     
     marker.on("click", event => {
@@ -573,7 +581,7 @@ function updateMarkers(list) {
       });
 
       activeVenueId = venue.id;
-      activeRaceId = venueRaces[0]?.id || null;
+      activeRaceId = null;
       renderList(venueRaces);
       resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
 
@@ -640,14 +648,13 @@ function focusRace(race) {
   if (!venue) return;
 
   activeVenueId = venue.id;
-  activeRaceId = race.id;
+  activeRaceId = null;
 
   const baseList = filteredRaces();
   const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
 
   renderList(venueList);
   resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-  scrollToRaceCard(race.id);
 
   map.setView([venue.lat, venue.lng], 12);
 
@@ -746,6 +753,7 @@ function render() {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
 
     if (venueList.length) {
+      activeRaceId = null;
       renderList(venueList);
       resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
     } else {
@@ -754,6 +762,7 @@ function render() {
       renderList(list);
     }
   } else {
+    activeRaceId = null;
     renderList(list);
   }
 
@@ -798,6 +807,10 @@ searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
   render();
+});
+
+map.on("click", () => {
+  resetVenueSelection();
 });
 
 if (mapWideButton && listWideButton) {
