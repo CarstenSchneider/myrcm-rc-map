@@ -5,6 +5,9 @@ const hostListFile = "myrcm-hosts-germany.json";
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear, currentYear + 1];
 
+const requestTimeoutMs = 10000;
+const retryCount = 1;
+
 const trainingTerms = [
   "training",
   "trainings",
@@ -30,6 +33,13 @@ const excludedEventTerms = [
   "standby"
 ];
 
+const invalidEventNames = [
+  "sign up to this event",
+  "registration",
+  "book in",
+  "login"
+];
+
 function isExcludedHost(host) {
   const text = `${host.name} ${host.location}`.toLowerCase();
   return excludedHostTerms.some(term => text.includes(term));
@@ -40,22 +50,9 @@ function isExcludedEvent(name) {
   return excludedEventTerms.some(term => lower.includes(term));
 }
 
-function normalizeText(text) {
+function normalizeText(text = "") {
   return text.replace(/\s+/g, " ").trim();
 }
-
-const invalidEventNames = [
-  "sign up to this event",
-  "registration",
-  "book in",
-  "login"
-];
-
-function isInvalidEventName(text) {
-  const lower = normalizeText(text).toLowerCase();
-  return invalidEventNames.includes(lower);
-}
-
 
 function parseDate(value) {
   const text = normalizeText(value);
@@ -69,14 +66,29 @@ function hasTrainingName(name) {
   return trainingTerms.some(term => lower.includes(term));
 }
 
+function isInvalidEventName(text) {
+  const lower = normalizeText(text).toLowerCase();
+  return invalidEventNames.includes(lower);
+}
+
 function absoluteUrl(href) {
   if (!href) return "";
   return new URL(href, "https://www.myrcm.ch").toString();
 }
 
+function eventIdFromUrl(url) {
+  if (!url) return null;
+
+  try {
+    const parsed = new URL(url, "https://www.myrcm.ch");
+    return parsed.searchParams.get("dId[E]");
+  } catch {
+    return null;
+  }
+}
+
 function registrationUrl(url) {
-  const parsed = new URL(url, "https://www.myrcm.ch");
-  const eventId = parsed.searchParams.get("dId[E]");
+  const eventId = eventIdFromUrl(url);
 
   if (!eventId) return url;
 
@@ -88,21 +100,144 @@ function registrationUrl(url) {
   return target.toString();
 }
 
+function searchUrlForEvent(eventUrl) {
+  const eventId = eventIdFromUrl(eventUrl);
+
+  if (!eventId) return null;
+
+  const target = new URL("https://www.myrcm.ch/myrcm/main");
+  target.searchParams.set("hId[1]", "search");
+  target.searchParams.set("dId[E]", eventId);
+  target.searchParams.set("pLa", "en");
+
+  return target.toString();
+}
+
+async function fetchText(url, attempt = 0) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
+
+  try {
+    const response = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    return await response.text();
+  } catch (error) {
+    if (attempt < retryCount) {
+      return fetchText(url, attempt + 1);
+    }
+
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function cleanEventNameCandidate(text, host) {
+  const normalized = normalizeText(text);
+
+  if (!normalized) return "";
+  if (parseDate(normalized)) return "";
+  if (/^(deu|ger|germany|deutschland)$/i.test(normalized)) return "";
+  if (/^\d+$/.test(normalized)) return "";
+  if (normalized.toLowerCase().includes("registration")) return "";
+  if (isInvalidEventName(normalized)) return "";
+  if (normalized === host.name) return "";
+  if (normalized === host.location) return "";
+  if (normalized === host.country) return "";
+
+  return normalized;
+}
+
+function chooseEventNameFromCells(cells, host) {
+  for (const text of cells) {
+    const candidate = cleanEventNameCandidate(text, host);
+    if (candidate) return candidate;
+  }
+
+  return "";
+}
+
+function extractEventNameFromSearchPage(html, eventId, host) {
+  const $ = cheerio.load(html);
+
+  let bestCandidate = "";
+
+  $("tr").each((_, row) => {
+    if (bestCandidate) return;
+
+    const rowHtml = $.html(row);
+    if (!rowHtml.includes(`dId[E]=${eventId}`) && !rowHtml.includes(`dId%5BE%5D=${eventId}`)) {
+      return;
+    }
+
+    const cells = $(row)
+      .find("td")
+      .toArray()
+      .map(cell => normalizeText($(cell).text()));
+
+    bestCandidate = chooseEventNameFromCells(cells, host);
+  });
+
+  if (bestCandidate) return bestCandidate;
+
+  const title = normalizeText($("title").text());
+  const titleCandidate = cleanEventNameCandidate(title.replace(/^MyRCM\s*[-–]\s*/i, ""), host);
+
+  if (titleCandidate) return titleCandidate;
+
+  return "";
+}
+
+async function resolveEventName(originalName, eventUrl, host, cells) {
+  if (originalName && !isInvalidEventName(originalName)) {
+    return originalName;
+  }
+
+  const eventId = eventIdFromUrl(eventUrl);
+  const fallbackUrl = searchUrlForEvent(eventUrl);
+
+  if (!eventId || !fallbackUrl) {
+    console.warn(`WARN: Eventname nicht auflösbar (${host.name})`);
+    console.warn(`      Zellen: ${JSON.stringify(cells)}`);
+    return "";
+  }
+
+  try {
+    const html = await fetchText(fallbackUrl);
+    const resolvedName = extractEventNameFromSearchPage(html, eventId, host);
+
+    if (resolvedName) {
+      console.warn(`INFO: Eventname per Search-Fallback gelesen: ${resolvedName} (${host.name})`);
+      return resolvedName;
+    }
+
+    console.warn(`WARN: Search-Fallback ohne Eventname (${host.name}, dId[E]=${eventId})`);
+    console.warn(`      URL: ${fallbackUrl}`);
+    console.warn(`      Zellen: ${JSON.stringify(cells)}`);
+    return "";
+  } catch (error) {
+    console.warn(`WARN: Search-Fallback fehlgeschlagen (${host.name}, dId[E]=${eventId}): ${error.message}`);
+    console.warn(`      URL: ${fallbackUrl}`);
+    return "";
+  }
+}
+
 async function loadEventClasses(url) {
   if (!url) return [];
 
   const classUrl = registrationUrl(url);
 
   try {
-    const response = await fetch(classUrl, {
-      headers: {
-        "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
-      }
-    });
-
-    if (!response.ok) return [];
-
-    const html = await response.text();
+    const html = await fetchText(classUrl);
     const $ = cheerio.load(html);
 
     const sectionClasses = [];
@@ -178,21 +313,24 @@ function hostToVenueId(host) {
   return `myrcm-${host.orgId}-${slugify(host.name)}`;
 }
 
-function parseEvents(html, host) {
+async function parseEvents(html, host) {
   const $ = cheerio.load(html);
   const races = [];
   const venueId = host.venueId || hostToVenueId(host);
 
-  $("tr").each((_, row) => {
+  const rows = $("tr").toArray();
+
+  for (const row of rows) {
     const cells = $(row)
       .find("td")
       .toArray()
       .map(cell => normalizeText($(cell).text()));
 
-    if (cells.length < 4) return;
+    if (cells.length < 4) continue;
 
     const links = $(row).find("a").toArray();
     const href = links.length ? $(links[links.length - 1]).attr("href") : "";
+    const url = absoluteUrl(href) || host.url;
 
     const dateCells = cells.map(parseDate);
 
@@ -200,49 +338,32 @@ function parseEvents(html, host) {
       .map((date, index) => (date ? index : -1))
       .filter(index => index >= 0);
 
-    if (!validDateIndexes.length) return;
+    if (!validDateIndexes.length) continue;
 
     const from = dateCells[validDateIndexes[0]];
     const to = dateCells[validDateIndexes[1]] || from;
 
+    if (to < from) {
+      console.warn(`WARN: Enddatum liegt vor Startdatum (${host.name})`);
+      console.warn(`      from=${from}, to=${to}`);
+      console.warn(`      Zellen: ${JSON.stringify(cells)}`);
+      continue;
+    }
+
     const today = new Date().toISOString().slice(0, 10);
 
-    if (to < today) return;
+    if (to < today) continue;
 
     const raceYear = Number(from.slice(0, 4));
-    if (!allowedYears.includes(raceYear)) return;
+    if (!allowedYears.includes(raceYear)) continue;
 
-    let name = "";
+    const rawName = chooseEventNameFromCells(cells, host);
+    const name = await resolveEventName(rawName, url, host, cells);
 
-    for (const text of cells) {
-      if (!text) continue;
-      if (parseDate(text)) continue;
-      if (/^(deu|ger|germany|deutschland)$/i.test(text)) continue;
-      if (/^\d+$/.test(text)) continue;
-      if (text.toLowerCase().includes("registration")) continue;
-      if (isInvalidEventName(text)) continue;
-      if (text === host.name) continue;
-      if (text === host.location) continue;
-      if (text === host.country) continue;
+    if (!name) continue;
+    if (hasTrainingName(name)) continue;
+    if (isExcludedEvent(name)) continue;
 
-      name = text;
-      break;
-    }
-
-    if (!name) {
-      console.warn(`WARN: Kein Eventname gefunden (${host.name})`);
-      console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-      return;
-    }
-
-    if (isInvalidEventName(name)) {
-      console.warn(`WARN: Ungültiger Eventname "${name}" (${host.name})`);
-      console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-      return;
-    }
-    if (hasTrainingName(name)) return;
-    if (isExcludedEvent(name)) return;    
-    
     races.push({
       id: eventId(venueId, name, from),
       venueId,
@@ -253,13 +374,12 @@ function parseEvents(html, host) {
       to,
       series: detectSeries(name),
       source: "myrcm",
-      url: absoluteUrl(href) || host.url
+      url
     });
-  });
+  }
 
   return races;
 }
-
 
 async function enrichRacesWithClasses(races) {
   const enriched = [];
@@ -301,32 +421,21 @@ async function main() {
   for (const host of hosts) {
     console.log(`Lade MyRCM: ${host.name} (${host.orgId})`);
 
-let response;
+    let html;
 
-try {
-  response = await fetch(host.url, {
-    headers: {
-      "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
-    }
-  });
-} catch (error) {
-  console.warn(`  Übersprungen wegen Netzwerkfehler: ${host.name}`);
-  continue;
-}
-
-    if (!response.ok) {
-      console.warn(`  Fehler bei ${host.name}: ${response.status}`);
+    try {
+      html = await fetchText(host.url);
+    } catch (error) {
+      console.warn(`  Übersprungen wegen Netzwerkfehler: ${host.name}`);
       continue;
     }
 
-    const html = await response.text();
-    const races = parseEvents(html, host);
+    const races = await parseEvents(html, host);
     const enrichedRaces = await enrichRacesWithClasses(races);
 
     console.log(`  ${enrichedRaces.length} Rennen gefunden`);
 
     allRaces.push(...enrichedRaces);
-
   }
 
   const unique = Array.from(
