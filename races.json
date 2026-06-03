@@ -1,5 +1,41 @@
 [
   {
+    "id": "myrcm-30220-kartodrom-asbach-2026-06-03-myrcm-event-97972",
+    "venueId": "myrcm-30220-kartodrom-asbach",
+    "venueName": "Kartodrom Asbach",
+    "venueLocation": "Asbach",
+    "name": "Log in",
+    "from": "2026-06-03",
+    "to": "2026-06-03",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97972&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30220&pLa=en&dId%5BE%5D=97972&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Online"
+    ]
+  },
+  {
+    "id": "myrcm-24785-kartodrom-elles-2026-06-03-myrcm-event-97973",
+    "venueId": "myrcm-24785-kartodrom-elles",
+    "venueName": "Kartodrom Elles",
+    "venueLocation": "Buchholz",
+    "name": "Log in",
+    "from": "2026-06-03",
+    "to": "2026-06-03",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97973&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24785&pLa=en&dId%5BE%5D=97973&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Online"
+    ]
+  },
+  {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-myrcm-event-93311",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
@@ -11,9 +47,10 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93311&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93311&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93311&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter Kids",
       "Tamiya Euro Cup Stock",
@@ -37,9 +74,10 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96388&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96388&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=96388&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "1:10 Formel 1-E Alpencup",
       "1:8 GT-E Alpencup",
@@ -57,10 +95,12 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97390&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97390&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33838&pLa=en&dId%5BE%5D=97390&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
+      "NRW-Cup Hobby + Top",
       "NRW-Cup Hobby",
       "NRW-Cup Top",
       "NRW-Cup OR8E",
@@ -77,25 +117,32 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95841&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95841&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=25939&pLa=en&dId%5BE%5D=95841&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "KW-C EG1:8(EG8GT/GT3)",
+      "KW-C V+EG1:5 TW/GT"
+    ]
   },
   {
     "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-06-myrcm-event-96662",
     "venueId": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v",
     "venueName": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
     "venueLocation": "Worms",
-    "name": "MyRCM Event 96662",
+    "name": "Offroad Gastfahrertag 06.06.2026",
     "from": "2026-06-06",
     "to": "2026-06-06",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96662&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96662&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=96662&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Freies Training Offroad"
+    ]
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-06-myrcm-event-94474",
@@ -109,10 +156,17 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94474&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94474&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12564&pLa=en&dId%5BE%5D=94474&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "2WD Buggy",
+      "2WD Buggy Standard",
+      "4WD Buggy",
+      "4WD Buggy Standard",
+      "Truggy 2WD"
+    ]
   },
   {
     "id": "myrcm-48023-mac-siersburg-e-v-2026-06-06-myrcm-event-96502",
@@ -126,9 +180,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96502&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96502&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48023&pLa=en&dId%5BE%5D=96502&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "SRS- 13,5 TW (EGTWSP) GASTKLASSE",
       "SRS Porsche",
@@ -149,9 +204,10 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97213&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97213&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6266&pLa=en&dId%5BE%5D=97213&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "2WD Retro",
       "2WD Truck Vintage",
@@ -171,9 +227,10 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96774&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96774&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=82&pLa=en&dId%5BE%5D=96774&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "VG5",
       "EG8GT / EG8GT3"
@@ -189,9 +246,10 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94313&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94313&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=879&pLa=en&dId%5BE%5D=94313&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -208,9 +266,10 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94270&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94270&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94270&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
@@ -226,10 +285,17 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94340&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94340&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94340&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "MCC - 17.5 Stock fixed",
+      "MCC - Formel",
+      "MCC - MCC Challenge",
+      "MCC - Tamiya Fighter",
+      "MCC - Tamiya TT"
+    ]
   },
   {
     "id": "myrcm-15091-rcrt-duisburg-e-v-2026-06-07-myrcm-event-97478",
@@ -241,10 +307,14 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97478&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97478&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=15091&pLa=en&dId%5BE%5D=97478&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Crawler",
+      "Rennstrecke"
+    ]
   },
   {
     "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-07-myrcm-event-96633",
@@ -256,10 +326,19 @@
     "to": "2026-06-07",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96633&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96633&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=96633&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "SPC_Kids",
+      "SPC_Einsteigerklasse Buggy LRP",
+      "SPC_ORE2WDST",
+      "SPC_ORE2WD",
+      "SPC:ORE4WDST",
+      "SPC_ORE4WD",
+      "SPC_ORE_TR2"
+    ]
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-06-12-myrcm-event-95070",
@@ -271,9 +350,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95070&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95070&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95070&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Bike1zu8",
       "Crossbike",
@@ -292,9 +372,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97208&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97208&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58267&pLa=en&dId%5BE%5D=97208&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "EG Tamiya Truck",
       "EG10TWSP(Sfb)",
@@ -312,9 +393,10 @@
     "to": "2026-06-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97722&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97722&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=233&pLa=en&dId%5BE%5D=97722&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "3LC GT/E8 Porsche Cup",
       "3LC GT/E8 Stock"
@@ -330,9 +412,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95507&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95507&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95507&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "OR 8 Hobby",
       "OR8 Expert",
@@ -352,10 +435,12 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97831&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97831&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33489&pLa=en&dId%5BE%5D=97831&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
+      "VG8K1+VG8Kl2+VG10",
       "VG8 - Klasse 1",
       "VG8 - Klasse 2",
       "VG10",
@@ -375,9 +460,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96918&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96918&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96918&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "ORE8"
     ]
@@ -394,9 +480,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97007&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97007&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=44699&pLa=en&dId%5BE%5D=97007&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "OR8 Expert",
       "OR8 Hobby",
@@ -417,9 +504,10 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94701&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94701&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=94701&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro-TW",
       "Tamiya Fighter-Kids",
@@ -442,10 +530,15 @@
     "to": "2026-06-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96082&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96082&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=36&pLa=en&dId%5BE%5D=96082&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "AMSC Porsche Cup",
+      "EG8",
+      "ETS ProStock"
+    ]
   },
   {
     "id": "myrcm-891-mac-mettenheim-e-v-2026-06-13-myrcm-event-96696",
@@ -457,9 +550,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96696&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96696&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=891&pLa=en&dId%5BE%5D=96696&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Kids Academy",
       "Fun Cup TTS",
@@ -482,9 +576,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97556&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97556&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42064&pLa=en&dId%5BE%5D=97556&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Einsteiger",
       "Fighter-Klasse",
@@ -507,9 +602,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95443&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95443&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95443&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "ORE2WD",
       "ORE2WDST",
@@ -531,9 +627,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94649&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94649&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=94649&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "BTM Formel 1 + EGF1",
       "BTM Fun 21,5 + EGTWFUN",
@@ -557,10 +654,19 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97212&dLt=reg&pLa=en&lType=wList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97212&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6266&pLa=en&dId%5BE%5D=97212&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "ORE 2WD",
+      "ORE 2WD STD",
+      "ORE 4WD",
+      "ORE 4WD STD",
+      "ORE Fun",
+      "ORE SC 2WD",
+      "ORE Truck"
+    ]
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-06-13-myrcm-event-94707",
@@ -574,9 +680,10 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94707&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94707&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=94707&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Stock",
       "Tamiya Top-Stock",
@@ -600,9 +707,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96259&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96259&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24531&pLa=en&dId%5BE%5D=96259&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "TOS Fun 21.5",
       "Tamiya Fighter-Cup Senior",
@@ -620,10 +728,16 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97594&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97594&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=27203&pLa=en&dId%5BE%5D=97594&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "EFRA 1/8 Offroad",
+      "OR6/2WD",
+      "OR6/4WD",
+      "OR6/4WDSC"
+    ]
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-14-myrcm-event-94276",
@@ -635,10 +749,14 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94276&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94276&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94276&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MACN GT Masters",
+      "MACN F1 Masters"
+    ]
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-06-14-myrcm-event-95132",
@@ -650,10 +768,17 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95132&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95132&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95132&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "\"Open Fun\" Klasse",
+      "2WD Buggy",
+      "2WD Monster",
+      "2WD Pro Stock (\"blinky modus\")",
+      "4WD Buggy"
+    ]
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-06-14-myrcm-event-95423",
@@ -667,9 +792,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95423&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95423&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=95423&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
       "MAC-Challenge Youngtimer",
@@ -687,9 +813,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97526&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97526&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=97526&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "1:10 Elektro Fun Cup",
       "EG8 (Pancar)",
@@ -709,9 +836,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95026&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95026&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47444&pLa=en&dId%5BE%5D=95026&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Nordbayern Cup Club Cup",
       "Nordbayern Cup M-Chassis",
@@ -729,9 +857,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97927&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97927&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61583&pLa=en&dId%5BE%5D=97927&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "GT-LMH Cup",
       "TW17.5T",
@@ -751,10 +880,17 @@
       "RCK Kleinserie"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=991&pLa=en&pId[O]=24&dId[E]=97571&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97571&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=991&pLa=en&dId%5BE%5D=97571&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ]
   },
   {
     "id": "myrcm-678-mac-burgdorf-e-v-2026-06-14-myrcm-event-96508",
@@ -768,9 +904,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96508&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96508&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=678&pLa=en&dId%5BE%5D=96508&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "2WD Buggy Standard",
       "2WD Buggy",
@@ -799,10 +936,16 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96827&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96827&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66122&pLa=en&dId%5BE%5D=96827&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "10,5T - 4WD",
+      "13,5T - 2WD",
+      "SCT - 2WD",
+      "ToTu - 2WD"
+    ]
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-14-myrcm-event-97850",
@@ -816,10 +959,20 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97850&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97850&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=97850&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "TC - Euro TW",
+      "TC - Fighter Kids",
+      "TC - Formel E",
+      "TC - Gentleman",
+      "TC - M-Chassis",
+      "TC - Race Truck",
+      "TC - Stock",
+      "TC - Top Stock"
+    ]
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-06-14-myrcm-event-96444",
@@ -831,9 +984,10 @@
     "to": "2026-06-14",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96444&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96444&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=10490&pLa=en&dId%5BE%5D=96444&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -849,10 +1003,13 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94598&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94598&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94598&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Carrera Explorer Cup"
+    ]
   },
   {
     "id": "myrcm-53667-mac-uetersen-e-v-2026-06-19-myrcm-event-95561",
@@ -864,9 +1021,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95561&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95561&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53667&pLa=en&dId%5BE%5D=95561&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "DM Elektro-Offroad Truggy",
       "DM Verbrenner-Offroad Truggy"
@@ -882,9 +1040,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95439&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95439&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6025&pLa=en&dId%5BE%5D=95439&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "2WD Race Classic 17.5",
       "2WD Vintage Racing 13.5",
@@ -907,10 +1066,15 @@
     "to": "2026-06-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97145&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97145&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=97145&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "TW 1/10 Stock 13,5",
+      "TW 1/10 Stock Kids",
+      "Tamiya Stock"
+    ]
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-20-myrcm-event-95671",
@@ -922,9 +1086,10 @@
     "to": "2026-06-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95671&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95671&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95671&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Kinder/ Jugend Tag"
     ]
@@ -939,9 +1104,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97948&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97948&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7103&pLa=en&dId%5BE%5D=97948&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "DMC-VG5F1",
       "DMC-VG5SP",
@@ -959,9 +1125,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94463&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94463&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=94463&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Gruppe C",
       "Gastklasse Tamiya Top Stock",
@@ -986,9 +1153,10 @@
       "Ostmasters"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=91316&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91316&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=91316&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "VG5F1",
       "VG5TW",
@@ -1007,9 +1175,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97434&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97434&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17008&pLa=en&dId%5BE%5D=97434&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "EG8GT",
       "EG8GT3",
@@ -1026,9 +1195,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97760&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97760&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16149&pLa=en&dId%5BE%5D=97760&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "SMW Verbrenner-Glattbahn 1:8 Klasse 1",
       "SMW Verbrenner-Glattbahn 1:8 Klasse 2",
@@ -1038,7 +1208,8 @@
       "SMW Elektro-Glattbahn 1:8",
       "Elektro-Glattbahn Tourenwagen 1:10 Hobby 17.5T",
       "SMW Elektro-Glattbahn 1:8 GT3 Cup",
-      "SMW Verbrenner-Glattbahn 1:8 GT"
+      "SMW Verbrenner-Glattbahn 1:8 GT",
+      "SMW Verbrenner-Glattbahn 1:8 GT + Elektro-Glattbahn 1:8 GT3 Cup"
     ]
   },
   {
@@ -1051,9 +1222,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95989&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95989&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24531&pLa=en&dId%5BE%5D=95989&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "TOS F1(EGF1)",
       "TOS Fun 17.5(EGTWHO)",
@@ -1072,10 +1244,16 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96026&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96026&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=573&pLa=en&dId%5BE%5D=96026&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "M-Chassis",
+      "Porsche Cup (KP)",
+      "Tamiya Race-Truck",
+      "Tamiya Stock (KP)"
+    ]
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-06-21-myrcm-event-95134",
@@ -1087,10 +1265,17 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95134&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95134&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12227&pLa=en&dId%5BE%5D=95134&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "MCSS TW 17,5T",
+      "MCSS LMH 21,5T",
+      "MCSS FWD",
+      "MCSS 911er-Cup",
+      "MCSS Langstrecken-Cup"
+    ]
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-06-21-myrcm-event-97558",
@@ -1102,10 +1287,23 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97558&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97558&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20622&pLa=en&dId%5BE%5D=97558&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "HRCC GT8",
+      "Strecke säubern",
+      "EG8e",
+      "HRCC PRO10",
+      "HRCC Formel 1",
+      "HRCC EG10 Stock",
+      "HRCC EG10 Fronti",
+      "HRCC EG10 Plastic Cars",
+      "VG8",
+      "HRCC 1/8 GT",
+      "HRCC 1/8 GT3"
+    ]
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-21-myrcm-event-96168",
@@ -1117,9 +1315,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96168&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96168&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=96168&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "M-Chassis",
       "Hobby-GT",
@@ -1140,10 +1339,17 @@
       "RCK Challenge"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=9976&pLa=en&pId[O]=10&dId[E]=94279&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94279&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94279&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "M-Chassis",
+      "RCK Clubman Challenge",
+      "RCK FWD Challenge",
+      "RCK GT Challenge",
+      "RCK Stock Challenge"
+    ]
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-21-myrcm-event-95865",
@@ -1155,9 +1361,10 @@
     "to": "2026-06-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95865&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95865&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12564&pLa=en&dId%5BE%5D=95865&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Vereinsmeisterschaft"
     ]
@@ -1172,9 +1379,10 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94607&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94607&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=134&pLa=en&dId%5BE%5D=94607&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Club Racer",
       "F1",
@@ -1195,9 +1403,10 @@
     "to": "2026-06-27",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96270&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96270&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=65042&pLa=en&dId%5BE%5D=96270&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Buggy 2WD Stock",
       "Fighter",
@@ -1215,9 +1424,10 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93312&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93312&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93312&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -1241,9 +1451,10 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96385&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96385&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=96385&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1256,9 +1467,10 @@
     "to": "2026-06-27",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96344&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96344&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53665&pLa=en&dId%5BE%5D=96344&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "FCOS 1:8",
       "FCOS 2WD",
@@ -1275,9 +1487,10 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97707&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97707&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=283&pLa=en&dId%5BE%5D=97707&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "JumpstartRC Trophy Elektro-Glattbahn GT-E 1:8",
       "JumpstartRC Trophy Elektro-Glattbahn 1:8",
@@ -1295,9 +1508,10 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95506&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95506&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46202&pLa=en&dId%5BE%5D=95506&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Fun Klasse",
       "Short Course",
@@ -1317,9 +1531,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94651&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94651&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=94651&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "BBX",
       "Fighter-Klasse",
@@ -1340,9 +1555,10 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95007&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95007&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=116&pLa=en&dId%5BE%5D=95007&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "TOC BBX",
       "TOC Fighter-Klasse",
@@ -1364,9 +1580,10 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96247&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96247&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60576&pLa=en&dId%5BE%5D=96247&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Stock",
       "Tamiya Fighter-Kids",
@@ -1388,7 +1605,8 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=4483&pLa=en&pId[O]=15&dId[E]=96386&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96386&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=96386&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
     "classes": []
@@ -1405,9 +1623,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97665&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97665&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26821&pLa=en&dId%5BE%5D=97665&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "ORE2WDST",
       "ORE2WD",
@@ -1431,9 +1650,10 @@
     "to": "2026-06-28",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93361&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93361&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=43367&pLa=en&dId%5BE%5D=93361&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "RCK VintageTransAm",
       "RCK GT2 Porsche",
@@ -1452,10 +1672,16 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95739&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95739&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95739&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "ENS 1:8 SPORT",
+      "ENS 1:10 onroad",
+      "ENS-1:8 +40",
+      "ENS 1:8 onroad"
+    ]
   },
   {
     "id": "myrcm-49540-fs-timing-2026-07-04-myrcm-event-95508",
@@ -1467,9 +1693,10 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95508&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95508&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95508&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "OR 8 Hobby",
       "OR8 Expert (1:8 Nitro Offroad Buggy)",
@@ -1487,10 +1714,14 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96916&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96916&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96916&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "ORE8",
+      "ORE8T"
+    ]
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-04-myrcm-event-94464",
@@ -1502,9 +1733,10 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94464&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94464&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=94464&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "WRC 2WD",
       "WRC 4WD",
@@ -1521,9 +1753,10 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94314&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94314&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=879&pLa=en&dId%5BE%5D=94314&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -1540,10 +1773,17 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94341&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94341&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94341&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCC - 17.5 Stock fixed",
+      "MCC - Formel",
+      "MCC - MCC Challenge",
+      "MCC - Tamiya Fighter",
+      "MCC - Tamiya TT"
+    ]
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-07-05-myrcm-event-97559",
@@ -1555,10 +1795,23 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97559&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97559&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20622&pLa=en&dId%5BE%5D=97559&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "HRCC GT8",
+      "Strecke säubern",
+      "EG8e",
+      "HRCC PRO10",
+      "HRCC Formel 1",
+      "HRCC EG10 Stock",
+      "HRCC EG10 Fronti",
+      "HRCC EG10 Plastic Cars",
+      "VG8",
+      "HRCC 1/8 GT",
+      "HRCC 1/8 GT3"
+    ]
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-07-05-myrcm-event-95146",
@@ -1570,9 +1823,10 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95146&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95146&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95146&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
@@ -1595,9 +1849,10 @@
     "to": "2026-07-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97527&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97527&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=97527&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "1:10 Elektro Fun Cup",
       "EG8 (Pancar)",
@@ -1617,10 +1872,18 @@
     "to": "2026-07-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95123&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95123&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95123&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Clubrennen EGTFR (TW Fronti)",
+      "Clubrennen EGTWSP (TW Sport)",
+      "Clubrennen ORE2WD (Buggy 2WD)",
+      "Clubrennen ORE4WD (Buggy 4WD)",
+      "Clubrennen RCSF-Cup",
+      "Clubrennnen ORETR2 (Monster 2WD)"
+    ]
   },
   {
     "id": "myrcm-53667-mac-uetersen-e-v-2026-07-11-myrcm-event-97962",
@@ -1634,10 +1897,14 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97962&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97962&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53667&pLa=en&dId%5BE%5D=97962&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "SMN Offroad-Elektro1:8",
+      "SMN Offroad-Verbrenner 1:8"
+    ]
   },
   {
     "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-07-11-myrcm-event-97691",
@@ -1649,10 +1916,13 @@
     "to": "2026-07-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97691&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97691&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37613&pLa=en&dId%5BE%5D=97691&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "OR8 (1:8 Nitro Offroad Buggy)"
+    ]
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-07-11-myrcm-event-97758",
@@ -1664,9 +1934,10 @@
     "to": "2026-07-12",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97758&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97758&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=97758&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "1:4 Funbike Super-Moto",
       "1:8 Funbike",
@@ -1687,10 +1958,19 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97801&dLt=reg&pLa=en&lType=wList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97801&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=15091&pLa=en&dId%5BE%5D=97801&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Elektro-Offroad 1:10 4WD",
+      "Elektro-Offroad 1:10 4WD Standard",
+      "Elektro-Offroad 1:10 Truggy 2WD",
+      "ORE2WD",
+      "ORE2WD Standard",
+      "RCRT Fun",
+      "Short Course 2WD"
+    ]
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-11-myrcm-event-94506",
@@ -1704,9 +1984,10 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94506&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94506&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=94506&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
       "Tamiya Euro Cup Formula E",
@@ -1729,10 +2010,14 @@
     "to": "2026-07-12",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94273&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94273&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94273&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MACN GT Masters",
+      "MACN F1 Masters"
+    ]
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-07-12-myrcm-event-92877",
@@ -1744,10 +2029,15 @@
     "to": "2026-07-12",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=92877&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92877&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37520&pLa=en&dId%5BE%5D=92877&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "FCTS Kids Academy",
+      "FCTS TT+",
+      "FCTS TTS"
+    ]
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-07-12-myrcm-event-95028",
@@ -1759,10 +2049,18 @@
     "to": "2026-07-12",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95028&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95028&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47444&pLa=en&dId%5BE%5D=95028&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Nordbayern Cup Club Cup",
+      "Nordbayern Cup M-Chassis",
+      "Nordbayern Cup GT / LMH 17.5T",
+      "Nordbayern Cup TW 17.5T",
+      "TW Modified",
+      "TT01 MRSC Cup"
+    ]
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-07-12-myrcm-event-96828",
@@ -1774,10 +2072,16 @@
     "to": "2026-07-12",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96828&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96828&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66122&pLa=en&dId%5BE%5D=96828&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "10,5T - 4WD",
+      "13,5T - 2WD",
+      "SCT - 2WD",
+      "ToTu - 2WD"
+    ]
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-18-myrcm-event-96919",
@@ -1789,10 +2093,13 @@
     "to": "2026-07-18",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96919&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96919&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96919&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "ORE8"
+    ]
   },
   {
     "id": "myrcm-35606-edc-kinzigtal-e-v-2026-07-18-myrcm-event-97756",
@@ -1806,10 +2113,18 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97756&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97756&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=35606&pLa=en&dId%5BE%5D=97756&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "FighterBuggy Jugendrennen",
+      "Monster Truck Modified",
+      "2WD Buggy Standard",
+      "2WD Buggy",
+      "4WD Buggy Standard",
+      "4WD Buggy"
+    ]
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-18-myrcm-event-96139",
@@ -1823,10 +2138,19 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96139&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96139&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=96139&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "EG8e",
+      "EG8GT",
+      "VG10S",
+      "VG8S",
+      "VG10",
+      "VG8KL2",
+      "VG8KL1"
+    ]
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-18-myrcm-event-94465",
@@ -1840,7 +2164,8 @@
       "RCK Challenge"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=95&pLa=en&pId[O]=14&dId[E]=94465&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94465&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=94465&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
     "classes": []
@@ -1857,10 +2182,16 @@
       "RCK Challenge"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=891&pLa=en&pId[O]=10&dId[E]=96695&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96695&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=891&pLa=en&dId%5BE%5D=96695&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Clubman Challenge",
+      "FWD Challenge",
+      "GT Challenge",
+      "Stock Challenge"
+    ]
   },
   {
     "id": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v-2026-07-19-myrcm-event-97409",
@@ -1872,10 +2203,13 @@
     "to": "2026-07-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97409&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97409&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=64649&pLa=en&dId%5BE%5D=97409&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Rallycross"
+    ]
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-19-myrcm-event-95135",
@@ -1887,10 +2221,17 @@
     "to": "2026-07-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95135&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95135&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12227&pLa=en&dId%5BE%5D=95135&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCSS TW 17,5T",
+      "MCSS LMH 21,5T",
+      "MCSS FWD",
+      "MCSS 911er-Cup",
+      "MCSS Langstrecken-Cup"
+    ]
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-07-19-myrcm-event-95430",
@@ -1902,9 +2243,10 @@
     "to": "2026-07-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95430&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95430&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=95430&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
       "MAC-Challenge Youngtimer",
@@ -1917,14 +2259,17 @@
     "venueId": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim",
     "venueName": "Turnerschaft 1860 e.V. Großauheim",
     "venueLocation": "Hanau Grossauheim",
-    "name": "MyRCM Event 97884",
+    "name": "TAMIYA Eurocup + LMH 17.5T / GT3 21.5T Gastklasse 19.07.2026 - VfR Rüsselsheim Outdoor",
     "from": "2026-07-19",
     "to": "2026-07-19",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97884&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97884&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=97884&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Gastklasse LMH 17.5T / GT3 21.5T",
       "TEC Euro TW",
@@ -1947,9 +2292,10 @@
     "to": "2026-07-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96445&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96445&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=10490&pLa=en&dId%5BE%5D=96445&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -1965,10 +2311,18 @@
     "to": "2026-07-26",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97810&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97810&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=97810&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FlySky Frontwheel",
+      "Hobbywing 21.5 Stock",
+      "1up Racing 40+",
+      "Matrix Formula",
+      "Awesomatix Pro Stock",
+      "Cayote Modified"
+    ]
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-07-25-myrcm-event-97146",
@@ -1980,10 +2334,15 @@
     "to": "2026-07-25",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97146&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97146&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=97146&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Tamiya Stock",
+      "TW 1/10 Stock 13,5",
+      "TW 1/10 Stock Kids"
+    ]
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-07-25-myrcm-event-95124",
@@ -1995,10 +2354,18 @@
     "to": "2026-07-25",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95124&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95124&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95124&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Clubrennen EGTFR (TW Fronti)",
+      "Clubrennen EGTWSP (TW Sport)",
+      "Clubrennen ORE2WD (Buggy 2WD)",
+      "Clubrennen ORE4WD (Buggy 4WD)",
+      "Clubrennen RCSF-Cup",
+      "Clubrennnen ORETR2 (Monster 2WD)"
+    ]
   },
   {
     "id": "myrcm-49540-fs-timing-2026-07-25-myrcm-event-96171",
@@ -2010,10 +2377,16 @@
     "to": "2026-07-26",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96171&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96171&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=96171&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "OR 8 Hobby",
+      "OR8 Expert",
+      "OR8E",
+      "Hessencup Kids"
+    ]
   },
   {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-07-25-myrcm-event-95178",
@@ -2027,10 +2400,13 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95178&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95178&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=39587&pLa=en&dId%5BE%5D=95178&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Tamiya TT01"
+    ]
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-25-myrcm-event-95464",
@@ -2042,10 +2418,13 @@
     "to": "2026-07-25",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95464&dLt=reg&pLa=en&lType=wList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95464&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12227&pLa=en&dId%5BE%5D=95464&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "MCSS 6 Stunden Langstreckenrennen"
+    ]
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-25-myrcm-event-94466",
@@ -2059,7 +2438,8 @@
       "RCK Kleinserie"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=95&pLa=en&pId[O]=14&dId[E]=94466&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94466&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=94466&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
     "classes": []
@@ -2074,10 +2454,16 @@
     "to": "2026-07-26",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96027&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96027&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=573&pLa=en&dId%5BE%5D=96027&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "M-Chassis",
+      "Porsche Cup (KP)",
+      "Tamiya Race-Truck",
+      "Tamiya Stock (KP)"
+    ]
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-07-26-myrcm-event-96345",
@@ -2089,9 +2475,10 @@
     "to": "2026-07-26",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96345&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96345&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53665&pLa=en&dId%5BE%5D=96345&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "FCOS 2WD",
       "FCOS Rally",
@@ -2108,9 +2495,10 @@
     "to": "2026-07-26",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93362&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93362&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=43367&pLa=en&dId%5BE%5D=93362&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "RCK GT2 Porsche",
       "RCK VintageTransAm",
@@ -2131,9 +2519,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97433&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97433&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17008&pLa=en&dId%5BE%5D=97433&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "EG8",
       "VG10 Scale",
@@ -2152,9 +2541,10 @@
     "to": "2026-08-02",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95353&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95353&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26596&pLa=en&dId%5BE%5D=95353&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamico BBX",
       "Tamico Fighter-Klasse",
@@ -2178,10 +2568,17 @@
     "to": "2026-08-02",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94342&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94342&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94342&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCC - 17.5 Stock fixed",
+      "MCC - Formel",
+      "MCC - MCC Challenge",
+      "MCC - Tamiya Fighter",
+      "MCC - Tamiya TT"
+    ]
   },
   {
     "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93401",
@@ -2195,10 +2592,13 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=59129&pLa=en&pId[O]=24&dId[E]=93401&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93401&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=93401&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "2,4h Truck"
+    ]
   },
   {
     "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93402",
@@ -2212,10 +2612,20 @@
       "TEC"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=59129&pLa=en&pId[O]=24&dId[E]=93402&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93402&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=93402&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Tamiya Euro-TW",
+      "Tamiya Fighter-Kids",
+      "Tamiya Formel E",
+      "Tamiya Gentlemen",
+      "Tamiya M-Chassis",
+      "Tamiya Race-Truck",
+      "Tamiya Stock",
+      "Tamiya Top-Stock"
+    ]
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-08-myrcm-event-96346",
@@ -2227,9 +2637,10 @@
     "to": "2026-08-08",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96346&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96346&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53665&pLa=en&dId%5BE%5D=96346&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "FCOS 1:8",
       "FCOS 2WD",
@@ -2246,9 +2657,10 @@
     "to": "2026-08-09",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94315&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94315&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=879&pLa=en&dId%5BE%5D=94315&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -2265,10 +2677,17 @@
     "to": "2026-08-09",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95136&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95136&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12227&pLa=en&dId%5BE%5D=95136&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCSS TW 17,5T",
+      "MCSS LMH 21,5T",
+      "MCSS FWD",
+      "MCSS 911er-Cup",
+      "MCSS Langstrecken-Cup"
+    ]
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-08-09-myrcm-event-97560",
@@ -2280,10 +2699,19 @@
     "to": "2026-08-09",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97560&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97560&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20622&pLa=en&dId%5BE%5D=97560&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Strecke säubern",
+      "EG8e",
+      "HRCC PRO10",
+      "HRCC EG10 Stock",
+      "HRCC Formel 1",
+      "HRCC EG10 Plastic Cars",
+      "VG8"
+    ]
   },
   {
     "id": "myrcm-2047-ets-2026-08-13-myrcm-event-95740",
@@ -2295,10 +2723,16 @@
     "to": "2026-08-16",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95740&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95740&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95740&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "ENS 1:8 SPORT",
+      "ENS 1:10 onroad",
+      "ENS-1:8 +40",
+      "ENS 1:8 onroad"
+    ]
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-08-15-myrcm-event-97914",
@@ -2313,10 +2747,16 @@
       "Ostmasters"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97914&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97914&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58267&pLa=en&dId%5BE%5D=97914&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "VG5F1",
+      "Ostmasters",
+      "VG5SP",
+      "VG5TW"
+    ]
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-15-myrcm-event-94712",
@@ -2330,9 +2770,10 @@
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94712&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94712&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=94712&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "ORE8",
       "OR8",
@@ -2351,10 +2792,16 @@
     "to": "2026-08-16",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96028&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96028&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=573&pLa=en&dId%5BE%5D=96028&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "M-Chassis",
+      "Porsche Cup (KP)",
+      "Tamiya Race-Truck",
+      "Tamiya Stock (KP)"
+    ]
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-08-16-myrcm-event-96446",
@@ -2366,9 +2813,10 @@
     "to": "2026-08-16",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96446&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96446&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=10490&pLa=en&dId%5BE%5D=96446&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -2384,10 +2832,15 @@
     "to": "2026-08-22",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97147&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97147&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=97147&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Tamiya Stock",
+      "TW 1/10 Stock 13,5",
+      "TW 1/10 Stock Kids"
+    ]
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-08-22-myrcm-event-95455",
@@ -2399,9 +2852,10 @@
     "to": "2026-08-23",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95455&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95455&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95455&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "EG8GT3_LE",
       "EG8GT_LE",
@@ -2420,10 +2874,20 @@
     "to": "2026-08-23",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=48536&pLa=en&pId[O]=20&dId[E]=97359&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97359&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=97359&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "LMH",
+      "GT-Sport",
+      "M-Chassis",
+      "Porsche Cup",
+      "VTA",
+      "FWD Challenge",
+      "TT02 Fun Cup",
+      "Einsteiger - Chassis frei (1:10)"
+    ]
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-08-23-myrcm-event-95431",
@@ -2435,9 +2899,10 @@
     "to": "2026-08-23",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95431&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95431&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=95431&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
       "MAC-Challenge Youngtimer",
@@ -2455,9 +2920,10 @@
     "to": "2026-08-23",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96347&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96347&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53665&pLa=en&dId%5BE%5D=96347&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "FCOS 2WD",
       "FCOS Rally",
@@ -2474,10 +2940,16 @@
     "to": "2026-08-23",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96829&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96829&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66122&pLa=en&dId%5BE%5D=96829&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "10,5T - 4WD",
+      "13,5T - 2WD",
+      "SCT - 2WD",
+      "ToTu - 2WD"
+    ]
   },
   {
     "id": "myrcm-4441-tsv-kleinburgwedel-2026-08-23-myrcm-event-96206",
@@ -2489,9 +2961,10 @@
     "to": "2026-08-23",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96206&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96206&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4441&pLa=en&dId%5BE%5D=96206&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "BBX",
       "Fighter-Klasse",
@@ -2511,9 +2984,10 @@
     "to": "2026-08-30",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93313&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93313&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93313&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -2535,10 +3009,21 @@
     "to": "2026-08-30",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94653&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94653&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=94653&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
+    ]
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-08-30-myrcm-event-96917",
@@ -2550,10 +3035,13 @@
     "to": "2026-08-30",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96917&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96917&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96917&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "ORE8"
+    ]
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-08-30-myrcm-event-95147",
@@ -2565,9 +3053,10 @@
     "to": "2026-08-30",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95147&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95147&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95147&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
@@ -2590,9 +3079,10 @@
     "to": "2026-09-05",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96348&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96348&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53665&pLa=en&dId%5BE%5D=96348&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "FCOS 1:8",
       "FCOS 2WD",
@@ -2609,10 +3099,14 @@
     "to": "2026-09-06",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94274&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94274&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94274&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MACN GT Masters",
+      "MACN F1 Masters"
+    ]
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-09-06-myrcm-event-94316",
@@ -2624,9 +3118,10 @@
     "to": "2026-09-06",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94316&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94316&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=879&pLa=en&dId%5BE%5D=94316&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -2643,10 +3138,17 @@
     "to": "2026-09-06",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95137&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95137&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12227&pLa=en&dId%5BE%5D=95137&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCSS TW 17,5T",
+      "MCSS LMH 21,5T",
+      "MCSS FWD",
+      "MCSS 911er-Cup",
+      "MCSS Langstrecken-Cup"
+    ]
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-09-06-myrcm-event-94343",
@@ -2658,10 +3160,17 @@
     "to": "2026-09-06",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94343&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94343&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94343&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCC - 17.5 Stock fixed",
+      "MCC - Formel",
+      "MCC - MCC Challenge",
+      "MCC - Tamiya Fighter",
+      "MCC - Tamiya TT"
+    ]
   },
   {
     "id": "myrcm-2047-ets-2026-09-10-myrcm-event-97811",
@@ -2673,10 +3182,18 @@
     "to": "2026-09-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97811&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97811&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=97811&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FlySky Frontwheel",
+      "Hobbywing 21.5 Stock",
+      "1up Racing 40+",
+      "Matrix Formula",
+      "Awesomatix Pro Stock",
+      "Cayote Modified"
+    ]
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-09-11-myrcm-event-97492",
@@ -2688,10 +3205,14 @@
     "to": "2026-09-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97492&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97492&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=97492&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "ORE2WD",
+      "ORE2WDST"
+    ]
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-09-12-myrcm-event-95125",
@@ -2703,10 +3224,18 @@
     "to": "2026-09-12",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95125&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95125&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95125&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Clubrennen EGTFR (TW Fronti)",
+      "Clubrennen EGTWSP (TW Sport)",
+      "Clubrennen ORE2WD (Buggy 2WD)",
+      "Clubrennen ORE4WD (Buggy 4WD)",
+      "Clubrennen RCSF-Cup",
+      "Clubrennnen ORETR2 (Monster 2WD)"
+    ]
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-09-13-myrcm-event-97561",
@@ -2718,10 +3247,19 @@
     "to": "2026-09-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97561&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97561&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20622&pLa=en&dId%5BE%5D=97561&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Strecke säubern",
+      "EG8e",
+      "HRCC PRO10",
+      "HRCC EG10 Stock",
+      "HRCC Formel 1",
+      "HRCC EG10 Plastic Cars",
+      "VG8"
+    ]
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-09-13-myrcm-event-93363",
@@ -2733,9 +3271,10 @@
     "to": "2026-09-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93363&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93363&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=43367&pLa=en&dId%5BE%5D=93363&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "RCK GT2 Porsche",
       "RCK VintageTransAm",
@@ -2754,9 +3293,10 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97575&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97575&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=97575&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "EFRA 1/5 TC Open",
       "EFRA 1/5 TC Open Gentleman",
@@ -2774,10 +3314,13 @@
     "to": "2026-09-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97459&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97459&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66454&pLa=en&dId%5BE%5D=97459&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "OR8E"
+    ]
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-09-19-myrcm-event-94469",
@@ -2789,9 +3332,10 @@
     "to": "2026-09-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94469&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94469&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=94469&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Porsche-Cup+/GT3",
       "Lemans-Hyper-Car LMH"
@@ -2807,10 +3351,18 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?dId[O]=48536&pLa=en&pId[O]=20&dId[E]=97358&tId=E&hId[1]=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97358&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=97358&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FWD Challenge",
+      "GT Challenge",
+      "Stock Challenge",
+      "Clubman Challenge",
+      "TT02 Fun Cup",
+      "Einsteiger - Chassis frei (1:10)"
+    ]
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-09-19-myrcm-event-95874",
@@ -2822,9 +3374,10 @@
     "to": "2026-09-19",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95874&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95874&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=12564&pLa=en&dId%5BE%5D=95874&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Vereinsmeisterschaft"
     ]
@@ -2839,10 +3392,16 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96029&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96029&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=573&pLa=en&dId%5BE%5D=96029&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "M-Chassis",
+      "Porsche Cup (KP)",
+      "Tamiya Race-Truck",
+      "Tamiya Stock (KP)"
+    ]
   },
   {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-09-20-myrcm-event-95177",
@@ -2854,10 +3413,20 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95177&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95177&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=39587&pLa=en&dId%5BE%5D=95177&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "EG 8 GT",
+      "Tamiya TT01 Jugend MRSC",
+      "Tamiya TT01 MRSC",
+      "Elektro 1:10 13.5T",
+      "Elektro offen MRSC",
+      "VG10 MRSC",
+      "VG 1:8 MRSC",
+      "VG 1:5 MRSC"
+    ]
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-09-20-myrcm-event-95029",
@@ -2869,10 +3438,16 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95029&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95029&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47444&pLa=en&dId%5BE%5D=95029&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Nordbayern Cup Club Cup",
+      "Nordbayern Cup M-Chassis",
+      "Nordbayern Cup GT / LMH 17.5T",
+      "Nordbayern Cup TW 17.5T"
+    ]
   },
   {
     "id": "myrcm-25939-rt-fichtenberg-e-v-2026-09-20-myrcm-event-95844",
@@ -2884,9 +3459,10 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95844&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95844&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=25939&pLa=en&dId%5BE%5D=95844&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Vereinsmeisterschaft Klasse 1/5",
       "Vereinsmeisterschaft Klasse 1/5 Rookie",
@@ -2903,10 +3479,16 @@
     "to": "2026-09-20",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96830&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96830&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66122&pLa=en&dId%5BE%5D=96830&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "10,5T - 4WD",
+      "13,5T - 2WD",
+      "SCT - 2WD",
+      "ToTu - 2WD"
+    ]
   },
   {
     "id": "myrcm-17507-lost-place-racers-e-v-2026-09-25-myrcm-event-97027",
@@ -2918,12 +3500,37 @@
     "to": "2026-09-27",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97027&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97027&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17507&pLa=en&dId%5BE%5D=97027&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "+40 2WD Buggy",
       "+40 4WD Buggy"
+    ]
+  },
+  {
+    "id": "myrcm-29586-time4fun-2026-09-25-myrcm-event-94320",
+    "venueId": "myrcm-29586-time4fun",
+    "venueName": "Time4Fun",
+    "venueLocation": "Idar-Oberstein",
+    "name": "RC Vintage Cup Gevenich 25.-27.09.2026, 4WD & 2WD bis Release 2005, sowie Tamiya Wheelie",
+    "from": "2026-09-25",
+    "to": "2026-09-27",
+    "series": [
+      "TEC"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94320&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=29586&pLa=en&dId%5BE%5D=94320&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Vintage 2 WD",
+      "Vintage 4 WD",
+      "Vintage Tamiya Wheelie",
+      "Vintage Kidsklasse",
+      "Fighter Tamiya"
     ]
   },
   {
@@ -2936,9 +3543,10 @@
     "to": "2026-09-27",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93314&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93314&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93314&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -2960,10 +3568,18 @@
     "to": "2026-09-26",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95126&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95126&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95126&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Clubrennen EGTFR (TW Fronti)",
+      "Clubrennen EGTWSP (TW Sport)",
+      "Clubrennen ORE2WD (Buggy 2WD)",
+      "Clubrennen ORE4WD (Buggy 4WD)",
+      "Clubrennen RCSF-Cup",
+      "Clubrennnen ORETR2 (Monster 2WD)"
+    ]
   },
   {
     "id": "myrcm-65042-mc-furstenwalde-e-v-2026-09-26-myrcm-event-96330",
@@ -2975,9 +3591,10 @@
     "to": "2026-09-27",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96330&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96330&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=65042&pLa=en&dId%5BE%5D=96330&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "TOC BBX",
       "TOC Fighter Klasse",
@@ -2997,9 +3614,10 @@
     "to": "2026-09-27",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96447&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96447&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=10490&pLa=en&dId%5BE%5D=96447&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -3015,10 +3633,13 @@
     "to": "2026-10-01",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97611&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97611&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=97611&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Carrera Explorer Cup"
+    ]
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-10-02-myrcm-event-94060",
@@ -3030,9 +3651,10 @@
     "to": "2026-10-04",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94060&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94060&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=94060&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Fun",
       "ORE2WD",
@@ -3053,9 +3675,10 @@
     "to": "2026-10-03",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97355&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97355&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=97355&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "TT02 Fun Cup"
     ]
@@ -3070,10 +3693,14 @@
     "to": "2026-10-04",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94275&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94275&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94275&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MACN GT Masters",
+      "MACN F1 Masters"
+    ]
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-10-04-myrcm-event-94344",
@@ -3085,10 +3712,17 @@
     "to": "2026-10-04",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94344&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94344&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94344&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCC - 17.5 Stock fixed",
+      "MCC - Formel",
+      "MCC - MCC Challenge",
+      "MCC - Tamiya Fighter",
+      "MCC - Tamiya TT"
+    ]
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-10-10-myrcm-event-95128",
@@ -3100,10 +3734,18 @@
     "to": "2026-10-10",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95128&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95128&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95128&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Clubrennen EGTFR (TW Fronti)",
+      "Clubrennen EGTWSP (TW Sport)",
+      "Clubrennen ORE2WD (Buggy 2WD)",
+      "Clubrennen ORE4WD (Buggy 4WD)",
+      "Clubrennen RCSF-Cup",
+      "Clubrennnen ORETR2 (Monster 2WD)"
+    ]
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-10-10-myrcm-event-93315",
@@ -3115,9 +3757,10 @@
     "to": "2026-10-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93315&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93315&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93315&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -3139,9 +3782,10 @@
     "to": "2026-10-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95043&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95043&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20891&pLa=en&dId%5BE%5D=95043&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "OR8",
       "ORE8",
@@ -3159,9 +3803,10 @@
     "to": "2026-10-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93468&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93468&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9640&pLa=en&dId%5BE%5D=93468&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Tamico-Cup BBX",
       "Tamico-Cup Fighter-Klasse",
@@ -3181,10 +3826,14 @@
     "to": "2026-10-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94278&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94278&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94278&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MACN GT Masters",
+      "MACN F1 Masters"
+    ]
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-10-11-myrcm-event-94317",
@@ -3196,9 +3845,10 @@
     "to": "2026-10-11",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94317&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94317&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=879&pLa=en&dId%5BE%5D=94317&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -3217,9 +3867,10 @@
       "Ostmasters"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94122&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94122&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=94122&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "Formel",
       "VG5TW",
@@ -3236,10 +3887,15 @@
     "to": "2026-10-18",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96271&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96271&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37520&pLa=en&dId%5BE%5D=96271&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FCTS Kids Academy",
+      "FCTS TT+",
+      "FCTS TTS"
+    ]
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-10-18-myrcm-event-96448",
@@ -3251,9 +3907,10 @@
     "to": "2026-10-18",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96448&pLa=en",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96448&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=10490&pLa=en&dId%5BE%5D=96448&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -3269,10 +3926,17 @@
     "to": "2026-10-25",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97024&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97024&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=51971&pLa=en&dId%5BE%5D=97024&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FSR-V 15",
+      "FSR-V 26 Standard",
+      "FSR-V 27",
+      "FSR-V 3.5",
+      "FSR-V 7.5"
+    ]
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-10-24-myrcm-event-95130",
@@ -3284,10 +3948,18 @@
     "to": "2026-10-24",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95130&dLt=reg&pLa=en&lType=rList",
-    "registrationRequiresLogin": true,
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": []
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95130&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95130&tId=E&hId%5B1%5D=org",
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "Clubrennen EGTFR (TW Fronti)",
+      "Clubrennen EGTWSP (TW Sport)",
+      "Clubrennen ORE2WD (Buggy 2WD)",
+      "Clubrennen ORE4WD (Buggy 4WD)",
+      "Clubrennen RCSF-Cup",
+      "Clubrennnen ORETR2 (Monster 2WD)"
+    ]
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-10-25-myrcm-event-95030",
@@ -3299,10 +3971,16 @@
     "to": "2026-10-25",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95030&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95030&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47444&pLa=en&dId%5BE%5D=95030&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Nordbayern Cup Club Cup",
+      "Nordbayern Cup GT / LMH 17.5T",
+      "Nordbayern Cup M-Chassis",
+      "Nordbayern Cup TW 17.5T"
+    ]
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-11-08-myrcm-event-94345",
@@ -3314,10 +3992,17 @@
     "to": "2026-11-08",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94345&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94345&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94345&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "MCC - 17.5 Stock fixed",
+      "MCC - Formel",
+      "MCC - MCC Challenge",
+      "MCC - Tamiya TT",
+      "MCC Porsche nach Kleinserie Reglement"
+    ]
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-11-15-myrcm-event-96272",
@@ -3329,10 +4014,15 @@
     "to": "2026-11-15",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96272&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96272&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37520&pLa=en&dId%5BE%5D=96272&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FCTS Kids Academy",
+      "FCTS TT+",
+      "FCTS TTS"
+    ]
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-11-28-myrcm-event-95031",
@@ -3344,10 +4034,16 @@
     "to": "2026-11-29",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95031&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95031&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47444&pLa=en&dId%5BE%5D=95031&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "Nordbayern Cup Club Cup",
+      "Nordbayern Cup GT / LMH 17.5T",
+      "Nordbayern Cup M-Chassis",
+      "Nordbayern Cup TW 17.5T"
+    ]
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-12-13-myrcm-event-96273",
@@ -3359,10 +4055,15 @@
     "to": "2026-12-13",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96273&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96273&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37520&pLa=en&dId%5BE%5D=96273&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FCTS Kids Academy",
+      "FCTS TT+",
+      "FCTS TTS"
+    ]
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-01-17-myrcm-event-96274",
@@ -3374,10 +4075,15 @@
     "to": "2027-01-17",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96274&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96274&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37520&pLa=en&dId%5BE%5D=96274&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FCTS Kids Academy",
+      "FCTS TT+",
+      "FCTS TTS"
+    ]
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-02-21-myrcm-event-96275",
@@ -3389,9 +4095,14 @@
     "to": "2027-02-21",
     "series": [],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96275&dLt=reg&pLa=en&lType=wList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96275&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=37520&pLa=en&dId%5BE%5D=96275&tId=E&hId%5B1%5D=org",
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [
+      "FCTS Kids Academy",
+      "FCTS TT+",
+      "FCTS TTS"
+    ]
   }
 ]
