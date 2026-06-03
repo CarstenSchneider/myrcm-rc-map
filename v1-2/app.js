@@ -31,6 +31,11 @@ let isSwitchingMarkerPopup = false;
 let selectedRange = "4";
 let selectedSeries = "all";
 
+function updateAppModeClass() {
+  app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
+}
+
+
 const verifiedVenueAliases = {
   "myrcm-18244": "tsv-mariendorf",
   "myrcm-45925": "bernau",
@@ -539,6 +544,7 @@ function resetVenueSelection() {
 
   activeVenueId = null;
   activeRaceId = null;
+  updateAppModeClass();
   renderList(filteredRaces());
 }
 
@@ -582,6 +588,7 @@ function updateMarkers(list) {
 
       activeVenueId = venue.id;
       activeRaceId = null;
+      updateAppModeClass();
       renderList(venueRaces);
       resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
 
@@ -649,6 +656,7 @@ function focusRace(race) {
 
   activeVenueId = venue.id;
   activeRaceId = null;
+  updateAppModeClass();
 
   const baseList = filteredRaces();
   const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
@@ -746,6 +754,7 @@ function populateSeries() {
 }
 
 function render() {
+  updateAppModeClass();
   const list = filteredRaces();
   updateMarkers(list);
 
@@ -759,10 +768,12 @@ function render() {
     } else {
       activeVenueId = null;
       activeRaceId = null;
+      updateAppModeClass();
       renderList(list);
     }
   } else {
     activeRaceId = null;
+    updateAppModeClass();
     renderList(list);
   }
 
@@ -788,6 +799,7 @@ rangeFilter.addEventListener("click", event => {
   selectedRange = button.dataset.range;
   activeVenueId = null;
   activeRaceId = null;
+  updateAppModeClass();
 
   rangeFilter
     .querySelectorAll("button")
@@ -800,12 +812,14 @@ seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
   activeVenueId = null;
   activeRaceId = null;
+  updateAppModeClass();
   render();
 });
 
 searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
+  updateAppModeClass();
   render();
 });
 
