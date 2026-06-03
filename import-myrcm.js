@@ -39,6 +39,10 @@ const invalidEventNames = [
   "login"
 ];
 
+function normalizeText(text = "") {
+  return text.replace(/\s+/g, " ").trim();
+}
+
 function isExcludedHost(host) {
   const text = `${host.name} ${host.location}`.toLowerCase();
   return excludedHostTerms.some(term => text.includes(term));
@@ -47,10 +51,6 @@ function isExcludedHost(host) {
 function isExcludedEvent(name) {
   const lower = name.toLowerCase();
   return excludedEventTerms.some(term => lower.includes(term));
-}
-
-function normalizeText(text = "") {
-  return text.replace(/\s+/g, " ").trim();
 }
 
 function parseDate(value) {
@@ -92,10 +92,19 @@ function eventIdFromUrl(url) {
   }
 }
 
-function registrationUrl(url) {
-  const eventId = eventIdFromUrl(url);
+function orgIdFromUrl(url) {
+  if (!url) return null;
 
-  if (!eventId) return url;
+  try {
+    const parsed = new URL(url, "https://www.myrcm.ch");
+    return parsed.searchParams.get("dId[O]");
+  } catch {
+    return null;
+  }
+}
+
+function registrationUrl(eventId) {
+  if (!eventId) return "";
 
   const target = new URL("https://www.myrcm.ch/myrcm/main");
   target.searchParams.set("hId[1]", "bkg");
@@ -105,31 +114,19 @@ function registrationUrl(url) {
   return target.toString();
 }
 
-function searchUrlsForEvent(eventUrl, host) {
-  const eventId = eventIdFromUrl(eventUrl);
-  if (!eventId) return [];
+function orgEventDetailUrl(host, eventId) {
+  const orgId = host.orgId;
 
-  const dFiCandidates = [
-    host.location,
-    host.name,
-    host.name?.replace(/\be\.?\s*v\.?\b/gi, ""),
-    ""
-  ]
-    .map(value => normalizeText(value || ""))
-    .filter((value, index, list) => list.indexOf(value) === index);
+  if (!eventId || !orgId) return null;
 
-  return dFiCandidates.map(dFi => {
-    const target = new URL("https://www.myrcm.ch/myrcm/main");
-    target.searchParams.set("hId[1]", "search");
-    target.searchParams.set("dId[E]", eventId);
-    target.searchParams.set("pLa", "en");
+  const target = new URL("https://www.myrcm.ch/myrcm/main");
+  target.searchParams.set("dId[O]", orgId);
+  target.searchParams.set("pLa", "en");
+  target.searchParams.set("dId[E]", eventId);
+  target.searchParams.set("tId", "E");
+  target.searchParams.set("hId[1]", "org");
 
-    if (dFi) {
-      target.searchParams.set("dFi", dFi);
-    }
-
-    return target.toString();
-  });
+  return target.toString();
 }
 
 async function fetchText(url, attempt = 0) {
@@ -157,163 +154,6 @@ async function fetchText(url, attempt = 0) {
     throw error;
   } finally {
     clearTimeout(timeout);
-  }
-}
-
-function cleanEventNameCandidate(text, host) {
-  const normalized = normalizeText(text);
-
-  if (!normalized) return "";
-  if (parseDate(normalized)) return "";
-  if (/^(deu|ger|germany|deutschland)$/i.test(normalized)) return "";
-  if (/^\d+$/.test(normalized)) return "";
-  if (normalized.toLowerCase().includes("registration")) return "";
-  if (isInvalidEventName(normalized)) return "";
-  if (normalized === host.name) return "";
-  if (normalized === host.location) return "";
-  if (normalized === host.country) return "";
-
-  return normalized;
-}
-
-function chooseEventNameFromCells(cells, host) {
-  for (const text of cells) {
-    const candidate = cleanEventNameCandidate(text, host);
-    if (candidate) return candidate;
-  }
-
-  return "";
-}
-
-function chooseEventNameFromLinks($, row, host, eventId) {
-  const candidates = [];
-
-  $(row).find("a").each((_, link) => {
-    const href = $(link).attr("href") || "";
-    const text = normalizeText($(link).text());
-
-    if (!href.includes(`dId[E]=${eventId}`) && !href.includes(`dId%5BE%5D=${eventId}`)) {
-      return;
-    }
-
-    const candidate = cleanEventNameCandidate(text, host);
-    if (candidate) candidates.push(candidate);
-  });
-
-  return candidates[0] || "";
-}
-
-function extractEventNameFromSearchPage(html, eventId, host) {
-  const $ = cheerio.load(html);
-
-  let bestCandidate = "";
-
-  $("tr").each((_, row) => {
-    if (bestCandidate) return;
-
-    const rowHtml = $.html(row);
-    if (!rowHtml.includes(`dId[E]=${eventId}`) && !rowHtml.includes(`dId%5BE%5D=${eventId}`)) {
-      return;
-    }
-
-    const linkCandidate = chooseEventNameFromLinks($, row, host, eventId);
-    if (linkCandidate) {
-      bestCandidate = linkCandidate;
-      return;
-    }
-
-    const cells = $(row)
-      .find("td")
-      .toArray()
-      .map(cell => normalizeText($(cell).text()));
-
-    bestCandidate = chooseEventNameFromCells(cells, host);
-  });
-
-  if (bestCandidate) return bestCandidate;
-
-  const title = normalizeText($("title").text());
-  const titleCandidate = cleanEventNameCandidate(title.replace(/^MyRCM\s*[-–]\s*/i, ""), host);
-
-  if (titleCandidate) return titleCandidate;
-
-  return "";
-}
-
-async function resolveEventName(originalName, eventUrl, host, cells) {
-  if (originalName && !isInvalidEventName(originalName)) {
-    return {
-      name: originalName,
-      nameRequiresLogin: false
-    };
-  }
-
-  const eventId = eventIdFromUrl(eventUrl);
-  const fallbackUrls = searchUrlsForEvent(eventUrl, host);
-
-  if (!eventId || !fallbackUrls.length) {
-    console.warn(`WARN: Eventname nicht auflösbar (${host.name})`);
-    console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-
-    return {
-      name: `MyRCM Event ${eventId || "ohne ID"}`,
-      nameRequiresLogin: true
-    };
-  }
-
-  for (const fallbackUrl of fallbackUrls) {
-    try {
-      const html = await fetchText(fallbackUrl);
-      const resolvedName = extractEventNameFromSearchPage(html, eventId, host);
-
-      if (resolvedName) {
-        console.warn(`INFO: Eventname per Search-Fallback gelesen: ${resolvedName} (${host.name})`);
-        return {
-          name: resolvedName,
-          nameRequiresLogin: false
-        };
-      }
-    } catch (error) {
-      console.warn(`WARN: Search-Fallback fehlgeschlagen (${host.name}, dId[E]=${eventId}): ${error.message}`);
-      console.warn(`      URL: ${fallbackUrl}`);
-    }
-  }
-
-  console.warn(`WARN: Login-pflichtiger Event ohne öffentlich lesbaren Namen (${host.name}, dId[E]=${eventId})`);
-  console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-
-  return {
-    name: `MyRCM Event ${eventId}`,
-    nameRequiresLogin: true
-  };
-}
-
-async function loadEventClasses(url) {
-  if (!url) return [];
-
-  const classUrl = registrationUrl(url);
-
-  try {
-    const html = await fetchText(classUrl);
-    const $ = cheerio.load(html);
-
-    const sectionClasses = [];
-
-    $('select[name="Section"] option').each((_, option) => {
-      const value = $(option).attr("value");
-      const label = normalizeText($(option).text());
-
-      if (!value) return;
-      if (!label) return;
-      if (label === "?") return;
-
-      sectionClasses.push(label);
-    });
-
-    return Array.from(new Set(sectionClasses));
-  } catch (error) {
-    console.warn(`  Klassen konnten nicht geladen werden: ${classUrl}`);
-    return [];
   }
 }
 
@@ -362,8 +202,7 @@ function detectSeries(name) {
   return Array.from(new Set(series));
 }
 
-function eventId(venueId, name, from, eventUrl) {
-  const myrcmEventId = eventIdFromUrl(eventUrl);
+function eventId(venueId, from, myrcmEventId, name) {
   const suffix = myrcmEventId ? `myrcm-event-${myrcmEventId}` : slugify(name);
   return `${venueId}-${from}-${suffix}`;
 }
@@ -372,99 +211,301 @@ function hostToVenueId(host) {
   return `myrcm-${host.orgId}-${slugify(host.name)}`;
 }
 
-async function parseEvents(html, host) {
-  const $ = cheerio.load(html);
-  const races = [];
-  const venueId = host.venueId || hostToVenueId(host);
+function labelValueMap($) {
+  const labels = {};
 
-  const rows = $("tr").toArray();
+  $("p").each((_, paragraph) => {
+    const paragraphText = normalizeText($(paragraph).text());
 
-  for (const row of rows) {
-    const cells = $(row)
-      .find("td")
-      .toArray()
-      .map(cell => normalizeText($(cell).text()));
+    $(paragraph)
+      .find(".label")
+      .each((_, labelElement) => {
+        const label = normalizeText($(labelElement).text()).replace(/:$/, "");
+        const valueElement = $(labelElement).next(".value");
+        const value = valueElement.length
+          ? normalizeText(valueElement.text())
+          : normalizeText(paragraphText.replace(`${label}:`, ""));
 
-    if (cells.length < 4) continue;
+        if (label) {
+          labels[label.toLowerCase()] = value;
+        }
+      });
+  });
 
-    const links = $(row).find("a").toArray();
-    const href = links.length ? $(links[links.length - 1]).attr("href") : "";
-    const url = absoluteUrl(href) || host.url;
+  return labels;
+}
 
-    const myrcmEventId = eventIdFromUrl(url);
-    if (!myrcmEventId) continue;
+function firstUsefulHeading($, host) {
+  const hostName = normalizeText(host.name);
+  const headings = $("h1, h2, h3")
+    .toArray()
+    .map(heading => normalizeText($(heading).text()))
+    .filter(Boolean);
 
-    const dateCells = cells.map(parseDate);
+  return (
+    headings.find(heading => {
+      if (heading === hostName) return false;
+      if (heading === host.location) return false;
+      if (/^myrcm/i.test(heading)) return false;
+      if (isInvalidEventName(heading)) return false;
+      return true;
+    }) || ""
+  );
+}
 
-    const validDateIndexes = dateCells
-      .map((date, index) => (date ? index : -1))
-      .filter(index => index >= 0);
+function extractClassesFromDetailPage($) {
+  const classes = [];
 
-    if (!validDateIndexes.length) continue;
+  $("p").each((_, paragraph) => {
+    const labelText = normalizeText($(paragraph).find(".label").first().text()).toLowerCase();
 
-    const from = dateCells[validDateIndexes[0]];
-    const to = dateCells[validDateIndexes[1]] || from;
-
-    if (to < from) {
-      console.warn(`WARN: Enddatum liegt vor Startdatum (${host.name})`);
-      console.warn(`      from=${from}, to=${to}`);
-      console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-      continue;
+    if (!labelText.startsWith("sections")) {
+      return;
     }
 
-    const today = new Date().toISOString().slice(0, 10);
+    $(paragraph)
+      .find("a")
+      .each((_, link) => {
+        const label = normalizeText($(link).text());
 
-    if (to < today) continue;
+        if (!label) return;
+        if (label === "?") return;
 
-    const raceYear = Number(from.slice(0, 4));
-    if (!allowedYears.includes(raceYear)) continue;
+        classes.push(label.replace(/^→\s*/, ""));
+      });
+  });
 
-    const rawName = chooseEventNameFromCells(cells, host);
-    const resolved = await resolveEventName(rawName, url, host, cells);
-    const name = resolved.name;
+  if (!classes.length) {
+    $("a").each((_, link) => {
+      const href = $(link).attr("href") || "";
+      const label = normalizeText($(link).text());
 
-    if (!name) continue;
-    if (hasTrainingName(name)) continue;
-    if (isExcludedEvent(name)) continue;
+      if (!label) return;
+      if (!/dId\[S\]|dId%5BS%5D|section|Section/i.test(href)) return;
 
-    const registrationRequiresLogin =
-      resolved.nameRequiresLogin ||
-      cells.some(text => /sign up to this event/i.test(text));
+      classes.push(label.replace(/^→\s*/, ""));
+    });
+  }
 
-    races.push({
-      id: eventId(venueId, name, from, url),
+  return Array.from(new Set(classes));
+}
+
+function parseDateRangeFromLabels(labels) {
+  const data = labels.data || labels.date || "";
+  const dates = [...data.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)].map(match => {
+    return `${match[3]}-${match[2]}-${match[1]}`;
+  });
+
+  if (!dates.length) {
+    return {
+      from: null,
+      to: null
+    };
+  }
+
+  return {
+    from: dates[0],
+    to: dates[1] || dates[0]
+  };
+}
+
+function extractEventDetail(html, host, eventId, listFallback = {}) {
+  const $ = cheerio.load(html);
+  const labels = labelValueMap($);
+  const dateRange = parseDateRangeFromLabels(labels);
+  const heading = firstUsefulHeading($, host);
+  const classes = extractClassesFromDetailPage($);
+
+  const name =
+    heading ||
+    listFallback.name ||
+    `MyRCM Event ${eventId}`;
+
+  const from =
+    dateRange.from ||
+    listFallback.from ||
+    null;
+
+  const to =
+    dateRange.to ||
+    listFallback.to ||
+    from;
+
+  const hostName =
+    labels.host ||
+    host.name ||
+    listFallback.venueName ||
+    "";
+
+  const country =
+    labels.country ||
+    host.country ||
+    "";
+
+  return {
+    name,
+    from,
+    to,
+    hostName,
+    country,
+    classes
+  };
+}
+
+function extractEventLinksFromHostPage(html, host) {
+  const $ = cheerio.load(html);
+  const events = new Map();
+
+  $("a").each((_, link) => {
+    const href = $(link).attr("href") || "";
+    const url = absoluteUrl(href);
+    const eventId = eventIdFromUrl(url);
+
+    if (!eventId) return;
+
+    const row = $(link).closest("tr");
+    const rowText = normalizeText(row.text());
+    const linkText = normalizeText($(link).text());
+
+    const dates = [...rowText.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)].map(match => {
+      return `${match[3]}-${match[2]}-${match[1]}`;
+    });
+
+    const fallbackName =
+      !isInvalidEventName(linkText) && !parseDate(linkText)
+        ? linkText
+        : "";
+
+    if (!events.has(eventId)) {
+      events.set(eventId, {
+        eventId,
+        url,
+        fallbackName,
+        fallbackFrom: dates[0] || null,
+        fallbackTo: dates[1] || dates[0] || null,
+        rowText
+      });
+    } else {
+      const existing = events.get(eventId);
+
+      if (!existing.fallbackName && fallbackName) {
+        existing.fallbackName = fallbackName;
+      }
+
+      if (!existing.fallbackFrom && dates[0]) {
+        existing.fallbackFrom = dates[0];
+        existing.fallbackTo = dates[1] || dates[0];
+      }
+
+      if (/hId%5B1%5D=org|hId\[1\]=org|tId=E/i.test(url)) {
+        existing.url = url;
+      }
+    }
+  });
+
+  return [...events.values()];
+}
+
+async function registrationRequiresLogin(regUrl) {
+  if (!regUrl) return false;
+
+  try {
+    const html = await fetchText(regUrl);
+    return /sign up to this event/i.test(html);
+  } catch {
+    return false;
+  }
+}
+
+function shouldSkipRace(race) {
+  if (!race.name) return true;
+  if (isInvalidEventName(race.name)) return true;
+  if (isExcludedEvent(race.name)) return true;
+  if (hasTrainingName(race.name)) return true;
+
+  if (!race.from || !race.to) return true;
+
+  if (race.to < race.from) {
+    return true;
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  if (race.to < today) return true;
+
+  const raceYear = Number(race.from.slice(0, 4));
+  if (!allowedYears.includes(raceYear)) return true;
+
+  return false;
+}
+
+async function parseEvents(html, host) {
+  const races = [];
+  const venueId = host.venueId || hostToVenueId(host);
+  const eventLinks = extractEventLinksFromHostPage(html, host);
+
+  for (const eventLink of eventLinks) {
+    const detailUrl = orgEventDetailUrl(host, eventLink.eventId);
+
+    if (!detailUrl) continue;
+
+    let detail;
+
+    try {
+      const detailHtml = await fetchText(detailUrl);
+      detail = extractEventDetail(detailHtml, host, eventLink.eventId, {
+        name: eventLink.fallbackName,
+        from: eventLink.fallbackFrom,
+        to: eventLink.fallbackTo,
+        venueName: host.name
+      });
+    } catch (error) {
+      console.warn(`  Event-Detail konnte nicht geladen werden: ${detailUrl}`);
+      detail = {
+        name: eventLink.fallbackName || `MyRCM Event ${eventLink.eventId}`,
+        from: eventLink.fallbackFrom,
+        to: eventLink.fallbackTo || eventLink.fallbackFrom,
+        hostName: host.name,
+        country: host.country,
+        classes: []
+      };
+    }
+
+    const regUrl = registrationUrl(eventLink.eventId);
+    const needsLogin = await registrationRequiresLogin(regUrl);
+
+    const race = {
+      id: eventId(venueId, detail.from, eventLink.eventId, detail.name),
       venueId,
       venueName: host.name,
       venueLocation: host.location,
-      name,
-      from,
-      to,
-      series: detectSeries(name),
+      name: detail.name,
+      from: detail.from,
+      to: detail.to,
+      series: detectSeries(detail.name),
       source: "myrcm",
-      url,
-      registrationRequiresLogin,
-      note: registrationRequiresLogin
+      url: regUrl || detailUrl,
+      detailUrl,
+      registrationRequiresLogin: needsLogin,
+      note: needsLogin
         ? "Anmeldung bei MyRCM nur nach Login sichtbar."
-        : null
-    });
+        : null,
+      classes: detail.classes
+    };
+
+    if (shouldSkipRace(race)) {
+      if (race.to && race.from && race.to < race.from) {
+        console.warn(`WARN: Enddatum liegt vor Startdatum (${host.name})`);
+        console.warn(`      Event: ${race.name}`);
+        console.warn(`      from=${race.from}, to=${race.to}`);
+      }
+
+      continue;
+    }
+
+    races.push(race);
   }
 
   return races;
-}
-
-async function enrichRacesWithClasses(races) {
-  const enriched = [];
-
-  for (const race of races) {
-    const classes = await loadEventClasses(race.url);
-
-    enriched.push({
-      ...race,
-      classes
-    });
-  }
-
-  return enriched;
 }
 
 async function loadHosts() {
@@ -502,11 +543,10 @@ async function main() {
     }
 
     const races = await parseEvents(html, host);
-    const enrichedRaces = await enrichRacesWithClasses(races);
 
-    console.log(`  ${enrichedRaces.length} Rennen gefunden`);
+    console.log(`  ${races.length} Rennen gefunden`);
 
-    allRaces.push(...enrichedRaces);
+    allRaces.push(...races);
   }
 
   const unique = Array.from(
