@@ -279,33 +279,6 @@ function ensureRegistrationStatusStyles() {
       padding: 8px 0;
     }
 
-    .popup-race-button {
-      display: block;
-      width: 100%;
-      margin: 0;
-      padding: 8px 9px;
-      border: 0;
-      border-radius: 8px;
-      background: transparent;
-      color: inherit;
-      font: inherit;
-      text-align: left;
-      cursor: pointer;
-      transition: background 0.16s ease, color 0.16s ease;
-    }
-
-    .popup-race-button:hover,
-    .popup-race-button:focus-visible {
-      background: rgba(31, 29, 26, 0.07);
-      outline: none;
-    }
-
-    .popup-race-button.active {
-      background: rgba(31, 29, 26, 0.1);
-      font-weight: 700;
-      cursor: default;
-    }
-
     .popup-race-date {
       display: block;
       font-weight: 700;
@@ -536,13 +509,10 @@ function filteredRaces() {
 }
 
 function buildPopup(venue, venueRaces) {
-  const visibleRaces = venueRaces.slice(0, 8);
-  const hasMultipleRaces = visibleRaces.length > 1;
-
-  const items = visibleRaces
-    .map(race => {
-      const isActive = hasMultipleRaces && race.id === activeRaceId;
-      const content = `
+  const items = venueRaces
+    .slice(0, 8)
+    .map(race => `
+      <div class="popup-race popup-race-static">
         <span class="popup-race-date">${formatDateRange(race.from, race.to)}</span>
         <span class="popup-race-name">${race.name}</span>
         ${
@@ -550,26 +520,8 @@ function buildPopup(venue, venueRaces) {
             ? `<span class="popup-registration-status">${registrationLabel(race)}</span>`
             : ""
         }
-      `;
-
-      if (!hasMultipleRaces) {
-        return `
-          <div class="popup-race popup-race-static">
-            ${content}
-          </div>
-        `;
-      }
-
-      return `
-        <button
-          type="button"
-          class="popup-race popup-race-button${isActive ? " active" : ""}"
-          data-popup-race-id="${race.id}"
-        >
-          ${content}
-        </button>
-      `;
-    })
+      </div>
+    `)
     .join("");
 
   return `
@@ -596,21 +548,6 @@ function updateMarkers(list) {
     }
 
     marker.bindPopup(buildPopup(venue, venueRaces));
-
-    marker.on("popupopen", event => {
-      const popupElement = event.popup.getElement();
-      if (!popupElement) return;
-
-      popupElement
-        .querySelectorAll("[data-popup-race-id]")
-        .forEach(button => {
-          button.addEventListener("click", clickEvent => {
-            clickEvent.preventDefault();
-            clickEvent.stopPropagation();
-            selectRaceFromPopup(button.dataset.popupRaceId);
-          });
-        });
-    });
 
     marker.on("popupclose", () => {
       if (isSwitchingMarkerPopup) return;
