@@ -26,6 +26,7 @@ let hosts = [];
 let hostsByOrgId = new Map();
 let markers = new Map();
 let activeRaceId = null;
+let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "4";
 let selectedSeries = "all";
@@ -560,7 +561,6 @@ function updateMarkers(list) {
       if (isSwitchingMarkerPopup) return;
 
       activeRaceId = null;
-      renderList(filteredRaces());
     });
     
     marker.on("click", event => {
@@ -576,9 +576,10 @@ function updateMarkers(list) {
         }
       });
 
+      activeVenueId = venue.id;
       activeRaceId = venueRaces[0]?.id || null;
       renderList(venueRaces);
-      resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
+      resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
 
       marker.setPopupContent(buildPopup(venue, venueRaces));
       marker.openPopup();
@@ -624,8 +625,18 @@ function selectRaceFromPopup(raceId) {
 
   const venue = venueById(race.venueId);
 
+  activeVenueId = venue?.id || null;
   activeRaceId = race.id;
-  renderList(filteredRaces());
+
+  const baseList = filteredRaces();
+  const displayList = activeVenueId
+    ? baseList.filter(item => isRaceAtVenue(item, activeVenueId))
+    : baseList;
+
+  renderList(displayList);
+  if (activeVenueId) {
+    resultLine.textContent = `${displayList.length} ${displayList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  }
   scrollToRaceCard(race.id);
 
   if (!venue) return;
@@ -642,8 +653,18 @@ function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
 
+  activeVenueId = venue?.id || null;
   activeRaceId = race.id;
-  renderList(filteredRaces());
+
+  const baseList = filteredRaces();
+  const displayList = activeVenueId
+    ? baseList.filter(item => isRaceAtVenue(item, activeVenueId))
+    : baseList;
+
+  renderList(displayList);
+  if (activeVenueId) {
+    resultLine.textContent = `${displayList.length} ${displayList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  }
   scrollToRaceCard(race.id);
 
   map.setView([venue.lat, venue.lng], 12);
@@ -740,7 +761,22 @@ function populateSeries() {
 function render() {
   const list = filteredRaces();
   updateMarkers(list);
-  renderList(list);
+
+  if (activeVenueId) {
+    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+
+    if (venueList.length) {
+      renderList(venueList);
+      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    } else {
+      activeVenueId = null;
+      activeRaceId = null;
+      renderList(list);
+    }
+  } else {
+    renderList(list);
+  }
+
   setTimeout(() => map.invalidateSize(), 0);
 }
 
@@ -761,6 +797,8 @@ rangeFilter.addEventListener("click", event => {
   if (!button) return;
 
   selectedRange = button.dataset.range;
+  activeVenueId = null;
+  activeRaceId = null;
 
   rangeFilter
     .querySelectorAll("button")
@@ -771,10 +809,16 @@ rangeFilter.addEventListener("click", event => {
 
 seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
+  activeVenueId = null;
+  activeRaceId = null;
   render();
 });
 
-searchInput.addEventListener("input", render);
+searchInput.addEventListener("input", () => {
+  activeVenueId = null;
+  activeRaceId = null;
+  render();
+});
 
 if (mapWideButton && listWideButton) {
   mapWideButton.addEventListener("click", () => setLayout("map"));
@@ -808,6 +852,7 @@ async function init() {
   );
 
   populateSeries();
+
   if (mapWideButton && listWideButton) {
     setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
   }

@@ -362,8 +362,8 @@ input {
 
 
 /* v1.2 layout prototype
-   Keeps the v1.1 visual language, changes only the spatial hierarchy:
-   fullscreen map, floating filters, floating race list.
+   Keeps the v1.1 visual language, changes spatial hierarchy:
+   fullscreen map, compact floating filters, floating race list.
 */
 
 .app.layout-prototype,
@@ -389,20 +389,48 @@ input {
   top: 24px;
   left: 24px;
   z-index: 1000;
-  width: 360px;
+  width: 300px;
   max-width: calc(100vw - 48px);
 }
 
 .layout-prototype .filters {
   margin: 0;
   grid-template-columns: 1fr;
-  gap: 14px;
-  padding: 16px;
+  gap: 10px;
+  padding: 12px;
   background: rgba(255, 250, 243, 0.94);
   border: 1px solid rgba(222, 214, 202, 0.92);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(31, 29, 26, 0.12);
   backdrop-filter: blur(14px);
+}
+
+.layout-prototype .filter-group,
+.layout-prototype .filter-field {
+  gap: 5px;
+}
+
+.layout-prototype .filter-label {
+  font-size: 11px;
+}
+
+.layout-prototype select,
+.layout-prototype input {
+  min-height: 42px;
+  padding: 8px 11px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.layout-prototype .segmented {
+  width: 100%;
+}
+
+.layout-prototype .segmented button {
+  flex: 1 1 auto;
+  padding: 7px 9px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 .layout-prototype .filter-field-search {
