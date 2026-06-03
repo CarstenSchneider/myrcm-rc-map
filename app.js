@@ -111,14 +111,58 @@ function registrationLabel(race) {
   return "Nennung möglich";
 }
 
+function registrationDotHtml(race) {
+  const status = registrationStatus(race);
+
+  if (status === "closed") {
+    return `<span class="registration-dot registration-dot-closed" aria-hidden="true"></span>`;
+  }
+
+  if (status === "upcoming") {
+    return `<span class="registration-dot registration-dot-upcoming" aria-hidden="true"></span>`;
+  }
+
+  if (status === "login_required") {
+    return `<span class="registration-dot registration-dot-login_required" aria-hidden="true"></span>`;
+  }
+
+  return `<span class="registration-dot registration-dot-open" aria-hidden="true"></span>`;
+}
+
+function registrationLinkHtml(race) {
+  const status = registrationStatus(race);
+
+  if (!race.url) return "";
+
+  if (status === "closed") return "";
+
+  return `<a class="race-link race-link-with-status registration-${status}" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${registrationDotHtml(race)}MyRCM öffnen ↗</a>`;
+}
+
 function registrationStatusHtml(race) {
   const status = registrationStatus(race);
 
   if (status === "open") return "";
 
-  return `<div class="registration-status registration-status-${status}">
-    ${registrationLabel(race)}
-  </div>`;
+  if (status === "closed") {
+    return `<div class="registration-status registration-status-closed">
+      ${registrationDotHtml(race)}Nennung geschlossen
+    </div>`;
+  }
+
+  if (status === "upcoming") {
+    return `<div class="registration-status registration-status-upcoming">
+      Nennung ab ${race.registrationOpens ? formatDate(race.registrationOpens) : "noch nicht geöffnet"}
+    </div>`;
+  }
+
+  if (status === "login_required") {
+    return `<div class="registration-status registration-status-login_required">
+      Anmeldung nur nach MyRCM-Login sichtbar
+    </div>`;
+  }
+
+  return "";
 }
 
 function hasActiveRegistration(venueRaces) {
@@ -131,43 +175,69 @@ function ensureRegistrationStatusStyles() {
   const style = document.createElement("style");
   style.id = "registration-status-styles";
   style.textContent = `
-    .race-card.registration-upcoming,
-    .race-card.registration-closed {
-      opacity: 0.56;
+    .race-card.registration-upcoming {
+      background: rgba(247, 243, 236, 0.96);
+      border-color: rgba(222, 214, 202, 0.75);
     }
 
-    .race-card.registration-upcoming.active,
-    .race-card.registration-closed.active {
-      opacity: 0.78;
+    .race-card.registration-closed {
+      background: rgba(244, 240, 233, 0.94);
+      border-color: rgba(222, 214, 202, 0.7);
+    }
+
+    .race-card.registration-closed .race-date,
+    .race-card.registration-closed .race-name,
+    .race-card.registration-closed .race-venue,
+    .race-card.registration-closed .tag {
+      color: rgba(31, 29, 26, 0.58);
+    }
+
+    .race-link-with-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .registration-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      flex: 0 0 auto;
+      background: #77716a;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+    }
+
+    .registration-dot-open {
+      background: #2f8f46;
+    }
+
+    .registration-dot-upcoming {
+      background: #d9a441;
+    }
+
+    .registration-dot-login_required {
+      background: #d9a441;
+    }
+
+    .registration-dot-closed {
+      background: #4f4a44;
     }
 
     .registration-status {
       display: inline-flex;
       align-items: center;
+      gap: 7px;
       width: fit-content;
-      margin-top: 10px;
-      padding: 6px 10px;
-      border: 1px solid rgba(222, 214, 202, 0.9);
-      border-radius: 999px;
+      margin-top: 6px;
       font-size: 13px;
-      line-height: 1.2;
+      line-height: 1.25;
       color: var(--muted, #6f6a62);
-      background: rgba(246, 241, 233, 0.75);
     }
 
-    .registration-status-upcoming::before {
-      content: "○";
-      margin-right: 6px;
-    }
-
-    .registration-status-closed::before {
-      content: "●";
-      margin-right: 6px;
-    }
-
-    .registration-status-login_required::before {
-      content: "●";
-      margin-right: 6px;
+    .registration-status-closed {
+      color: #4f4a44;
+      font-weight: 700;
     }
 
     .popup-registration-status {
@@ -506,7 +576,7 @@ function renderList(list) {
 
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
-          ${race.url && race.registrationStatus !== "closed" ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
+          ${registrationLinkHtml(race)}
           ${registrationStatusHtml(race)}
         </div>
       </div>
