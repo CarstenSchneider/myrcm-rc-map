@@ -871,3 +871,24 @@ input {
     display: flex;
   }
 }
+
+
+/* v1.3.3 polish */
+
+.layout-prototype .active-filter-chips {
+  margin-top: 10px;
+}
+
+.layout-prototype select {
+  background-position: right 18px center;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype select {
+    background-position: right 16px center;
+  }
+
+  .layout-prototype .active-filter-chips {
+    margin-top: 12px;
+  }
+}
