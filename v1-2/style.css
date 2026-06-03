@@ -522,3 +522,19 @@ input {
     margin-bottom: 12px;
   }
 }
+
+
+/* v1.2: no selected-card border while a venue/pin is active.
+   The right panel is already filtered to the selected venue, so an additional
+   active card frame is redundant.
+*/
+
+.layout-prototype .race-card.active {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+.layout-prototype .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
