@@ -618,8 +618,8 @@ function updateMarkers(list) {
         icon: L.divIcon({
           className: "",
           html: `<div class="${markerClass}"></div>`,
-          iconSize: [24, 24],
-          iconAnchor: [12, 12]
+          iconSize: [26, 34],
+          iconAnchor: [13, 34]
         })
       }
     ).addTo(map);
