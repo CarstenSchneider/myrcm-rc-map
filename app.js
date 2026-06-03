@@ -68,6 +68,119 @@ function formatDateRange(from, to) {
   return `${fmt.format(start)}–${fmt.format(end)}`;
 }
 
+function formatDate(dateString) {
+  if (!dateString) return "";
+
+  const date = parseDate(dateString);
+
+  return new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }).format(date);
+}
+
+function registrationStatus(race) {
+  if (race.registrationStatus) return race.registrationStatus;
+  if (race.registrationRequiresLogin) return "login_required";
+  return "open";
+}
+
+function isRegistrationActive(race) {
+  const status = registrationStatus(race);
+  return status === "open" || status === "login_required";
+}
+
+function registrationLabel(race) {
+  const status = registrationStatus(race);
+
+  if (status === "login_required") {
+    return "Anmeldung nur nach MyRCM-Login sichtbar";
+  }
+
+  if (status === "upcoming") {
+    return race.registrationOpens
+      ? `Nennung ab ${formatDate(race.registrationOpens)}`
+      : "Nennung noch nicht geöffnet";
+  }
+
+  if (status === "closed") {
+    return "Nennung geschlossen";
+  }
+
+  return "Nennung möglich";
+}
+
+function registrationStatusHtml(race) {
+  const status = registrationStatus(race);
+
+  if (status === "open") return "";
+
+  return `<div class="registration-status registration-status-${status}">
+    ${registrationLabel(race)}
+  </div>`;
+}
+
+function hasActiveRegistration(venueRaces) {
+  return venueRaces.some(isRegistrationActive);
+}
+
+function ensureRegistrationStatusStyles() {
+  if (document.getElementById("registration-status-styles")) return;
+
+  const style = document.createElement("style");
+  style.id = "registration-status-styles";
+  style.textContent = `
+    .race-card.registration-upcoming,
+    .race-card.registration-closed {
+      opacity: 0.56;
+    }
+
+    .race-card.registration-upcoming.active,
+    .race-card.registration-closed.active {
+      opacity: 0.78;
+    }
+
+    .registration-status {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border: 1px solid rgba(222, 214, 202, 0.9);
+      border-radius: 999px;
+      font-size: 13px;
+      line-height: 1.2;
+      color: var(--muted, #6f6a62);
+      background: rgba(246, 241, 233, 0.75);
+    }
+
+    .registration-status-upcoming::before {
+      content: "○";
+      margin-right: 6px;
+    }
+
+    .registration-status-closed::before {
+      content: "●";
+      margin-right: 6px;
+    }
+
+    .registration-status-login_required::before {
+      content: "●";
+      margin-right: 6px;
+    }
+
+    .popup-registration-status {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--muted, #6f6a62);
+    }
+  `;
+
+  document.head.appendChild(style);
+}
+
+
 function detectSeries(name) {
   const rules = [
     { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
@@ -285,6 +398,11 @@ function buildPopup(venue, venueRaces) {
         <div class="popup-race">
           <strong>${formatDateRange(race.from, race.to)}</strong><br>
           ${race.name}
+          ${
+            registrationStatus(race) !== "open"
+              ? `<div class="popup-registration-status">${registrationLabel(race)}</div>`
+              : ""
+          }
         </div>
       `;
     })
@@ -308,6 +426,10 @@ function updateMarkers(list) {
     if (!venueRaces.length) return;
 
     const marker = L.marker([venue.lat, venue.lng]).addTo(map);
+
+    if (!hasActiveRegistration(venueRaces)) {
+      marker.setOpacity(0.45);
+    }
 
     marker.bindPopup(buildPopup(venue, venueRaces));
 
@@ -362,7 +484,7 @@ function renderList(list) {
     const series = raceSeries(race);
     const card = document.createElement("article");
 
-    card.className = `race-card${race.id === activeRaceId ? " active" : ""}`;
+    card.className = `race-card registration-${registrationStatus(race)}${race.id === activeRaceId ? " active" : ""}`;
     card.dataset.raceId = race.id;
     card.tabIndex = 0;
 
@@ -385,6 +507,7 @@ function renderList(list) {
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
           ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
+          ${registrationStatusHtml(race)}
         </div>
       </div>
 
@@ -470,6 +593,8 @@ mapWideButton.addEventListener("click", () => setLayout("map"));
 listWideButton.addEventListener("click", () => setLayout("list"));
 
 async function init() {
+  ensureRegistrationStatusStyles();
+
   const cacheBuster = Date.now();
 
   const [venuesResponse, racesResponse, hostsResponse] = await Promise.all([

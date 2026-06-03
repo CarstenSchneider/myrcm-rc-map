@@ -99,6 +99,99 @@ function parseDate(value) {
   return `${match[3]}-${match[2]}-${match[1]}`;
 }
 
+function parseDateTime(value) {
+  const text = normalizeText(value);
+  const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})(?:\s+(\d{2}):(\d{2}))?/);
+  if (!match) return null;
+
+  return {
+    date: `${match[3]}-${match[2]}-${match[1]}`,
+    time: `${match[4] || "00"}:${match[5] || "00"}`
+  };
+}
+
+function registrationInfoFromText(text) {
+  const normalized = normalizeText(text);
+  const lower = normalized.toLowerCase();
+
+  if (!normalized) {
+    return {
+      registrationStatus: "open",
+      registrationOpens: null
+    };
+  }
+
+  if (lower.includes("sign up to this event")) {
+    return {
+      registrationStatus: "login_required",
+      registrationOpens: null
+    };
+  }
+
+  if (
+    lower.includes("booking not possible") ||
+    lower.includes("will be activated")
+  ) {
+    const parsed = parseDateTime(normalized);
+
+    return {
+      registrationStatus: parsed ? "upcoming" : "closed",
+      registrationOpens: parsed?.date || null
+    };
+  }
+
+  if (
+    lower.includes("registration closed") ||
+    lower.includes("booking closed") ||
+    lower.includes("closed")
+  ) {
+    return {
+      registrationStatus: "closed",
+      registrationOpens: null
+    };
+  }
+
+  const parsed = parseDateTime(normalized);
+
+  if (parsed) {
+    const today = new Date().toISOString().slice(0, 10);
+
+    if (parsed.date > today) {
+      return {
+        registrationStatus: "upcoming",
+        registrationOpens: parsed.date
+      };
+    }
+
+    return {
+      registrationStatus: "closed",
+      registrationOpens: null
+    };
+  }
+
+  return {
+    registrationStatus: "open",
+    registrationOpens: null
+  };
+}
+
+function registrationNote(info) {
+  if (info.registrationStatus === "login_required") {
+    return "Anmeldung bei MyRCM nur nach Login sichtbar.";
+  }
+
+  if (info.registrationStatus === "upcoming" && info.registrationOpens) {
+    return `Nennung ab ${info.registrationOpens.split("-").reverse().join(".")}`;
+  }
+
+  if (info.registrationStatus === "closed") {
+    return "Nennung geschlossen.";
+  }
+
+  return null;
+}
+
+
 function hasTrainingName(name) {
   const lower = name.toLowerCase();
 
@@ -348,6 +441,27 @@ function extractEventDetail(html, host, eventId, listFallback = {}) {
   };
 }
 
+function registrationTextFromRow($, row) {
+  const cells = $(row)
+    .find("td")
+    .toArray()
+    .map(cell => normalizeText($(cell).text()));
+
+  if (!cells.length) return "";
+
+  const explicit = cells.find(cell =>
+    /sign up to this event|booking not possible|will be activated|registration closed|booking closed/i.test(cell)
+  );
+
+  if (explicit) return explicit;
+
+  const dateTimeCell = cells.find(cell =>
+    /\d{2}\.\d{2}\.\d{4}\s+\d{2}:\d{2}/.test(cell)
+  );
+
+  return dateTimeCell || "";
+}
+
 function extractEventLinksFromHostPage(html, host) {
   const $ = cheerio.load(html);
   const events = new Map();
@@ -362,6 +476,7 @@ function extractEventLinksFromHostPage(html, host) {
     const row = $(link).closest("tr");
     const rowText = normalizeText(row.text());
     const linkText = normalizeText($(link).text());
+    const registrationText = registrationTextFromRow($, row);
 
     const dates = [...rowText.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)].map(match => {
       return `${match[3]}-${match[2]}-${match[1]}`;
@@ -378,7 +493,8 @@ function extractEventLinksFromHostPage(html, host) {
         url,
         fallbackName,
         fallbackFrom: dates[0] || null,
-        fallbackTo: dates[1] || dates[0] || null
+        fallbackTo: dates[1] || dates[0] || null,
+        registrationText
       });
     } else {
       const existing = events.get(eventId);
@@ -390,6 +506,10 @@ function extractEventLinksFromHostPage(html, host) {
       if (!existing.fallbackFrom && dates[0]) {
         existing.fallbackFrom = dates[0];
         existing.fallbackTo = dates[1] || dates[0];
+      }
+
+      if (!existing.registrationText && registrationText) {
+        existing.registrationText = registrationText;
       }
     }
   });
@@ -462,6 +582,17 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       to: eventLink.fallbackTo
     });
 
+    const registrationInfo = registrationInfoFromText(eventLink.registrationText);
+    const registrationStatus =
+      detail.registrationRequiresLogin && registrationInfo.registrationStatus === "open"
+        ? "login_required"
+        : registrationInfo.registrationStatus;
+
+    const finalRegistrationInfo = {
+      registrationStatus,
+      registrationOpens: registrationInfo.registrationOpens
+    };
+
     const race = {
       id: raceId(venueId, detail.from, eventLink.eventId, detail.name),
       venueId,
@@ -474,10 +605,10 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       source: "myrcm",
       url: regUrl || detailUrl,
       detailUrl,
-      registrationRequiresLogin: detail.registrationRequiresLogin,
-      note: detail.registrationRequiresLogin
-        ? "Anmeldung bei MyRCM nur nach Login sichtbar."
-        : null,
+      registrationStatus,
+      registrationOpens: registrationInfo.registrationOpens,
+      registrationRequiresLogin: registrationStatus === "login_required",
+      note: registrationNote(finalRegistrationInfo),
       classes: detail.classes
     };
 
