@@ -65,6 +65,7 @@ function hasTrainingName(name) {
 
   if (/\bgastfahrer/i.test(lower)) return false;
   if (/\bgastfahrertag/i.test(lower)) return false;
+  if (/\bgastfahrtag/i.test(lower)) return false;
   if (/\bgastklasse/i.test(lower)) return false;
 
   return trainingTerms.some(term => lower.includes(term));
@@ -104,17 +105,31 @@ function registrationUrl(url) {
   return target.toString();
 }
 
-function searchUrlForEvent(eventUrl) {
+function searchUrlsForEvent(eventUrl, host) {
   const eventId = eventIdFromUrl(eventUrl);
+  if (!eventId) return [];
 
-  if (!eventId) return null;
+  const dFiCandidates = [
+    host.location,
+    host.name,
+    host.name?.replace(/\be\.?\s*v\.?\b/gi, ""),
+    ""
+  ]
+    .map(value => normalizeText(value || ""))
+    .filter((value, index, list) => list.indexOf(value) === index);
 
-  const target = new URL("https://www.myrcm.ch/myrcm/main");
-  target.searchParams.set("hId[1]", "search");
-  target.searchParams.set("dId[E]", eventId);
-  target.searchParams.set("pLa", "en");
+  return dFiCandidates.map(dFi => {
+    const target = new URL("https://www.myrcm.ch/myrcm/main");
+    target.searchParams.set("hId[1]", "search");
+    target.searchParams.set("dId[E]", eventId);
+    target.searchParams.set("pLa", "en");
 
-  return target.toString();
+    if (dFi) {
+      target.searchParams.set("dFi", dFi);
+    }
+
+    return target.toString();
+  });
 }
 
 async function fetchText(url, attempt = 0) {
@@ -170,6 +185,24 @@ function chooseEventNameFromCells(cells, host) {
   return "";
 }
 
+function chooseEventNameFromLinks($, row, host, eventId) {
+  const candidates = [];
+
+  $(row).find("a").each((_, link) => {
+    const href = $(link).attr("href") || "";
+    const text = normalizeText($(link).text());
+
+    if (!href.includes(`dId[E]=${eventId}`) && !href.includes(`dId%5BE%5D=${eventId}`)) {
+      return;
+    }
+
+    const candidate = cleanEventNameCandidate(text, host);
+    if (candidate) candidates.push(candidate);
+  });
+
+  return candidates[0] || "";
+}
+
 function extractEventNameFromSearchPage(html, eventId, host) {
   const $ = cheerio.load(html);
 
@@ -180,6 +213,12 @@ function extractEventNameFromSearchPage(html, eventId, host) {
 
     const rowHtml = $.html(row);
     if (!rowHtml.includes(`dId[E]=${eventId}`) && !rowHtml.includes(`dId%5BE%5D=${eventId}`)) {
+      return;
+    }
+
+    const linkCandidate = chooseEventNameFromLinks($, row, host, eventId);
+    if (linkCandidate) {
+      bestCandidate = linkCandidate;
       return;
     }
 
@@ -203,36 +242,50 @@ function extractEventNameFromSearchPage(html, eventId, host) {
 
 async function resolveEventName(originalName, eventUrl, host, cells) {
   if (originalName && !isInvalidEventName(originalName)) {
-    return originalName;
+    return {
+      name: originalName,
+      nameRequiresLogin: false
+    };
   }
 
   const eventId = eventIdFromUrl(eventUrl);
-  const fallbackUrl = searchUrlForEvent(eventUrl);
+  const fallbackUrls = searchUrlsForEvent(eventUrl, host);
 
-  if (!eventId || !fallbackUrl) {
+  if (!eventId || !fallbackUrls.length) {
     console.warn(`WARN: Eventname nicht auflösbar (${host.name})`);
     console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-    return "";
+
+    return {
+      name: `MyRCM Event ${eventId || "ohne ID"}`,
+      nameRequiresLogin: true
+    };
   }
 
-  try {
-    const html = await fetchText(fallbackUrl);
-    const resolvedName = extractEventNameFromSearchPage(html, eventId, host);
+  for (const fallbackUrl of fallbackUrls) {
+    try {
+      const html = await fetchText(fallbackUrl);
+      const resolvedName = extractEventNameFromSearchPage(html, eventId, host);
 
-    if (resolvedName) {
-      console.warn(`INFO: Eventname per Search-Fallback gelesen: ${resolvedName} (${host.name})`);
-      return resolvedName;
+      if (resolvedName) {
+        console.warn(`INFO: Eventname per Search-Fallback gelesen: ${resolvedName} (${host.name})`);
+        return {
+          name: resolvedName,
+          nameRequiresLogin: false
+        };
+      }
+    } catch (error) {
+      console.warn(`WARN: Search-Fallback fehlgeschlagen (${host.name}, dId[E]=${eventId}): ${error.message}`);
+      console.warn(`      URL: ${fallbackUrl}`);
     }
-
-    console.warn(`WARN: Search-Fallback ohne Eventname (${host.name}, dId[E]=${eventId})`);
-    console.warn(`      URL: ${fallbackUrl}`);
-    console.warn(`      Zellen: ${JSON.stringify(cells)}`);
-    return "";
-  } catch (error) {
-    console.warn(`WARN: Search-Fallback fehlgeschlagen (${host.name}, dId[E]=${eventId}): ${error.message}`);
-    console.warn(`      URL: ${fallbackUrl}`);
-    return "";
   }
+
+  console.warn(`WARN: Login-pflichtiger Event ohne öffentlich lesbaren Namen (${host.name}, dId[E]=${eventId})`);
+  console.warn(`      Zellen: ${JSON.stringify(cells)}`);
+
+  return {
+    name: `MyRCM Event ${eventId}`,
+    nameRequiresLogin: true
+  };
 }
 
 async function loadEventClasses(url) {
@@ -309,8 +362,10 @@ function detectSeries(name) {
   return Array.from(new Set(series));
 }
 
-function eventId(venueId, name, from) {
-  return `${venueId}-${from}-${slugify(name)}`;
+function eventId(venueId, name, from, eventUrl) {
+  const myrcmEventId = eventIdFromUrl(eventUrl);
+  const suffix = myrcmEventId ? `myrcm-event-${myrcmEventId}` : slugify(name);
+  return `${venueId}-${from}-${suffix}`;
 }
 
 function hostToVenueId(host) {
@@ -335,6 +390,9 @@ async function parseEvents(html, host) {
     const links = $(row).find("a").toArray();
     const href = links.length ? $(links[links.length - 1]).attr("href") : "";
     const url = absoluteUrl(href) || host.url;
+
+    const myrcmEventId = eventIdFromUrl(url);
+    if (!myrcmEventId) continue;
 
     const dateCells = cells.map(parseDate);
 
@@ -362,18 +420,19 @@ async function parseEvents(html, host) {
     if (!allowedYears.includes(raceYear)) continue;
 
     const rawName = chooseEventNameFromCells(cells, host);
-    const name = await resolveEventName(rawName, url, host, cells);
+    const resolved = await resolveEventName(rawName, url, host, cells);
+    const name = resolved.name;
 
     if (!name) continue;
     if (hasTrainingName(name)) continue;
     if (isExcludedEvent(name)) continue;
 
-    const registrationRequiresLogin = cells.some(text =>
-      /sign up to this event/i.test(text)
-    );
+    const registrationRequiresLogin =
+      resolved.nameRequiresLogin ||
+      cells.some(text => /sign up to this event/i.test(text));
 
     races.push({
-      id: eventId(venueId, name, from),
+      id: eventId(venueId, name, from, url),
       venueId,
       venueName: host.name,
       venueLocation: host.location,
