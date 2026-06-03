@@ -7,7 +7,14 @@ const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 
-const map = L.map("map", { scrollWheelZoom: true }).setView([52.52, 13.405], 9);
+const map = L.map("map", {
+  scrollWheelZoom: true,
+  zoomControl: false
+}).setView([52.52, 13.405], 9);
+
+L.control.zoom({
+  position: "bottomleft"
+}).addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap"
@@ -769,8 +776,10 @@ seriesFilter.addEventListener("change", () => {
 
 searchInput.addEventListener("input", render);
 
-mapWideButton.addEventListener("click", () => setLayout("map"));
-listWideButton.addEventListener("click", () => setLayout("list"));
+if (mapWideButton && listWideButton) {
+  mapWideButton.addEventListener("click", () => setLayout("map"));
+  listWideButton.addEventListener("click", () => setLayout("list"));
+}
 
 async function init() {
   ensureRegistrationStatusStyles();
@@ -778,9 +787,9 @@ async function init() {
   const cacheBuster = Date.now();
 
   const [venuesResponse, racesResponse, hostsResponse] = await Promise.all([
-    fetch(`venues.json?v=${cacheBuster}`),
-    fetch(`races.json?v=${cacheBuster}`),
-    fetch(`myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
+    fetch(`../venues.json?v=${cacheBuster}`),
+    fetch(`../races.json?v=${cacheBuster}`),
+    fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
   ]);
 
   venues = await venuesResponse.json();
@@ -799,7 +808,10 @@ async function init() {
   );
 
   populateSeries();
-  setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
+  if (mapWideButton && listWideButton) {
+    setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
+  }
+
   render();
 }
 
