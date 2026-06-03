@@ -892,3 +892,48 @@ input {
     margin-top: 12px;
   }
 }
+
+
+/* v1.3.4 mobile viewport refinement
+   iPhone/Safari: use dynamic viewport height, respect safe areas,
+   hide Leaflet zoom controls, and raise the event list to roughly half screen.
+*/
+
+@supports (height: 100dvh) {
+  @media (max-width: 860px) {
+    .app.layout-prototype,
+    .app.layout-prototype.layout-map,
+    .app.layout-prototype.layout-list {
+      height: 100dvh;
+      min-height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filters-panel {
+    top: calc(10px + env(safe-area-inset-top));
+    left: 10px;
+    right: 10px;
+  }
+
+  .layout-prototype .race-panel {
+    left: 10px;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    height: 50vh;
+    max-height: calc(100dvh - 104px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  .layout-prototype .leaflet-control-zoom {
+    display: none !important;
+  }
+}
+
+@supports (height: 100dvh) {
+  @media (max-width: 860px) {
+    .layout-prototype .race-panel {
+      height: 50dvh;
+    }
+  }
+}
