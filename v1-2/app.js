@@ -765,12 +765,12 @@ function renderList(list) {
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
               ${
-                (expandedClassRaceIds.has(race.id) ? race.classes : race.classes.slice(0, 4))
+                (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
                   .map(item => `<span class="tag tag-class">${item}</span>`)
                   .join("")
               }
               ${
-                race.classes.length > 4
+                race.classes.length > 6
                   ? `<button class="tag tag-class tag-class-toggle"
                       type="button"
                       data-class-toggle="${race.id}"
