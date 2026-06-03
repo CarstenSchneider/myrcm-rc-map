@@ -192,6 +192,20 @@ function ensureRegistrationStatusStyles() {
       color: rgba(31, 29, 26, 0.58);
     }
 
+    .race-link,
+    .popup-title a {
+      transition: color 0.16s ease, text-decoration-color 0.16s ease, background 0.16s ease;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .race-link:hover,
+    .race-link:focus-visible,
+    .popup-title a:hover,
+    .popup-title a:focus-visible {
+      text-decoration: underline;
+    }
+
     .race-link-with-status {
       display: inline-flex;
       align-items: center;
@@ -238,6 +252,67 @@ function ensureRegistrationStatusStyles() {
     .registration-status-closed {
       color: #4f4a44;
       font-weight: 700;
+    }
+
+
+    .race-card.flash {
+      animation: race-card-flash 1.2s ease;
+    }
+
+    @keyframes race-card-flash {
+      0% {
+        box-shadow: 0 0 0 0 rgba(217, 164, 65, 0.0);
+      }
+
+      25% {
+        box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.35);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(217, 164, 65, 0.0);
+      }
+    }
+
+    .popup-race-button {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 8px 9px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.16s ease, color 0.16s ease;
+    }
+
+    .popup-race-button:hover,
+    .popup-race-button:focus-visible {
+      background: rgba(31, 29, 26, 0.07);
+      outline: none;
+    }
+
+    .popup-race-button.active {
+      background: rgba(31, 29, 26, 0.1);
+      font-weight: 700;
+      cursor: default;
+    }
+
+    .popup-race-button.active::before {
+      content: "›";
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .popup-race-date {
+      display: block;
+      font-weight: 700;
+    }
+
+    .popup-race-name {
+      display: block;
     }
 
     .popup-registration-status {
@@ -464,16 +539,22 @@ function buildPopup(venue, venueRaces) {
   const items = venueRaces
     .slice(0, 8)
     .map(race => {
+      const isActive = race.id === activeRaceId;
+
       return `
-        <div class="popup-race">
-          <strong>${formatDateRange(race.from, race.to)}</strong><br>
-          ${race.name}
+        <button
+          type="button"
+          class="popup-race popup-race-button${isActive ? " active" : ""}"
+          data-popup-race-id="${race.id}"
+        >
+          <span class="popup-race-date">${formatDateRange(race.from, race.to)}</span>
+          <span class="popup-race-name">${race.name}</span>
           ${
             registrationStatus(race) !== "open"
-              ? `<div class="popup-registration-status">${registrationLabel(race)}</div>`
+              ? `<span class="popup-registration-status">${registrationLabel(race)}</span>`
               : ""
           }
-        </div>
+        </button>
       `;
     })
     .join("");
@@ -503,6 +584,21 @@ function updateMarkers(list) {
 
     marker.bindPopup(buildPopup(venue, venueRaces));
 
+    marker.on("popupopen", event => {
+      const popupElement = event.popup.getElement();
+      if (!popupElement) return;
+
+      popupElement
+        .querySelectorAll("[data-popup-race-id]")
+        .forEach(button => {
+          button.addEventListener("click", clickEvent => {
+            clickEvent.preventDefault();
+            clickEvent.stopPropagation();
+            selectRaceFromPopup(button.dataset.popupRaceId);
+          });
+        });
+    });
+
     marker.on("popupclose", () => {
       activeRaceId = null;
      render();
@@ -528,17 +624,48 @@ function updateMarkers(list) {
   }
 }
 
+
+function scrollToRaceCard(raceId) {
+  const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
+  if (!card) return;
+
+  card.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  card.classList.add("flash");
+
+  window.setTimeout(() => {
+    card.classList.remove("flash");
+  }, 1200);
+}
+
+function selectRaceFromPopup(raceId) {
+  const race = races.find(item => item.id === raceId);
+  if (!race) return;
+
+  activeRaceId = race.id;
+  renderList(filteredRaces());
+  scrollToRaceCard(race.id);
+}
+
 function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
 
   activeRaceId = race.id;
   renderList(filteredRaces());
+  scrollToRaceCard(race.id);
 
   map.setView([venue.lat, venue.lng], 12);
 
   const marker = markers.get(venue.id);
-  if (marker) marker.openPopup();
+  if (marker) {
+    const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
+    marker.setPopupContent(buildPopup(venue, venueRaces));
+    marker.openPopup();
+  }
 }
 
 function renderList(list) {
