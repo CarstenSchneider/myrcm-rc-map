@@ -721,94 +721,87 @@
     "lng": 8.270931149938278
   },
   {
-    "id": "manual-mrt-rosenheim",
+    "id": "myrcm-4483",
     "name": "MRT Rosenheim e.V.",
     "city": "Hoehenkirchen-Siegertsbrunn",
-    "lat": 47.82379063927218,
-    "lng": 12.023004504673036
+    "lat": 47.82428097247406,
+    "lng": 12.014572325960318
   },
   {
-    "id": "manual-ig-racing-team-hamm",
+    "id": "myrcm-10490",
     "name": "IG Racing Team Hamm",
     "city": "Lippstadt",
     "lat": 51.71999468117557,
     "lng": 7.852665250099724
   },
   {
-    "id": "manual-rc-modellbaufreunde",
-    "name": "RC Modellbaufreunde e.V.",
-    "city": "Attaching",
-    "lat": 48.358129,
-    "lng": 11.752654
-  },
-  {
-    "id": "manual-ets",
+    "id": "myrcm-2047",
     "name": "ETS",
     "city": "Andernach",
     "lat": 50.42578112868089,
     "lng": 7.42448821061315
   },
   {
-    "id": "manual-ormc-koenigsbrunn",
+    "id": "myrcm-1044",
+    "name": "RC Modellbaufreunde e.V.",
+    "city": "Attaching",
+    "lat": 48.358129,
+    "lng": 11.752654
+  },
+  {
+    "id": "myrcm-991-ormc",
     "name": "ORMC Königsbrunn",
     "city": "Augsburg",
     "lat": 48.35816192334434,
     "lng": 10.889086918531008
   },
   {
-    "id": "manual-rc-speedracer",
-    "name": "RC Speedracer e.V.",
-    "city": "Bernau",
-    "lat": 52.69765237818473,
-    "lng": 13.621709882362893
-  },
-  {
-    "id": "manual-rc-racer-hochsauerland",
-    "name": "Rc Racer Hochsauerland e.V.",
-    "city": "Bestwig",
-    "lat": 51.37666018667409,
-    "lng": 8.401464090702264
-  },
-  {
-    "id": "manual-rc-cars-koengen",
+    "id": "myrcm-12564",
     "name": "RC Cars Köngen e.V.",
     "city": "Stuttgart",
-    "lat": 48.679910758147294,
-    "lng": 9.353300444489655
+    "lat": 48.67988951659691,
+    "lng": 9.353290385431542
   },
   {
-    "id": "manual-mrsc-amberg",
+    "id": "myrcm-39587",
     "name": "MRSC Amberg e.V.",
     "city": "Amberg",
     "lat": 49.43483963804977,
     "lng": 11.799300928927023
   },
   {
-    "id": "manual-msc-kirchhain",
+    "id": "myrcm-17008",
     "name": "MSC Kirchhain e.V.",
     "city": "Marburg",
     "lat": 50.82902158585686,
     "lng": 8.907859995424538
   },
   {
-    "id": "manual-msc-ober-moerlen",
+    "id": "myrcm-36612",
     "name": "MSC Ober-Mörlen e.V.",
     "city": "Weiterstadt",
     "lat": 50.36373992635159,
     "lng": 8.703558862143346
   },
   {
-    "id": "manual-msc-hansa-heilbronn",
-    "name": "MSC-Hansa Heilbronn e.V.",
-    "city": "Heilbronn",
-    "lat": 49.13754364519003,
-    "lng": 9.202841192776413
+    "id": "myrcm-45781",
+    "name": "Rc Racer Hochsauerland e.V.",
+    "city": "Bestwig",
+    "lat": 51.37053213149134,
+    "lng": 8.441252309460289
   },
   {
-    "id": "manual-rallye-club-haltern",
+    "id": "myrcm-16149",
     "name": "Rallye-Club Haltern e.V. im ADAC",
     "city": "Haltern am See",
-    "lat": 51.7250245259876,
-    "lng": 7.168157370535211
+    "lat": 51.725119776742986,
+    "lng": 7.168832313964929
+  },
+  {
+    "id": "myrcm-116",
+    "name": "MSC Hansa Heilbronn e.V.",
+    "city": "Heilbronn",
+    "lat": 49.13750899088235,
+    "lng": 9.203139990809714
   }
 ]
