@@ -1004,3 +1004,23 @@ input {
 .race-series-tags .tag {
   font-size: 10px;
 }
+
+
+/* Marker Cleanup v1.3.6 */
+
+.map-marker-open,
+.map-marker-closed {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.map-marker-open {
+  background: #4F8A57;
+}
+
+.map-marker-closed {
+  background: rgba(31, 29, 26, 0.5);
+}
