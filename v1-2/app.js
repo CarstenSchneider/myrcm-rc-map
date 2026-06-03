@@ -33,6 +33,7 @@ let isSwitchingMarkerPopup = false;
 let selectedRange = "4";
 let selectedSeries = "all";
 let isFilterPanelOpen = false;
+const expandedClassRaceIds = new Set();
 
 function updateAppModeClass() {
   app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
@@ -763,10 +764,23 @@ function renderList(list) {
       ${
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
-              ${race.classes.slice(0, 4).map(item => `<span class="tag tag-class">${item}</span>`).join("")}
+              ${
+                (expandedClassRaceIds.has(race.id) ? race.classes : race.classes.slice(0, 4))
+                  .map(item => `<span class="tag tag-class">${item}</span>`)
+                  .join("")
+              }
               ${
                 race.classes.length > 4
-                  ? `<span class="tag tag-class tag-class-more">+${race.classes.length - 4} weitere</span>`
+                  ? `<button class="tag tag-class tag-class-toggle"
+                      type="button"
+                      data-class-toggle="${race.id}"
+                      aria-expanded="${expandedClassRaceIds.has(race.id) ? "true" : "false"}">
+                      ${
+                        expandedClassRaceIds.has(race.id)
+                          ? "weniger anzeigen"
+                          : `+${race.classes.length - 4} weitere`
+                      }
+                    </button>`
                   : ""
               }
             </div>`
@@ -775,7 +789,10 @@ function renderList(list) {
     `;
 
     if (hasVerifiedVenue(race)) {
-      card.addEventListener("click", () => focusRace(race));
+      card.addEventListener("click", event => {
+        if (event.target.closest("[data-class-toggle]")) return;
+        focusRace(race);
+      });
 
       card.addEventListener("keydown", event => {
         if (event.key === "Enter" || event.key === " ") {
@@ -788,6 +805,33 @@ function renderList(list) {
     raceList.appendChild(card);
   }
 }
+
+function toggleClassList(raceId) {
+  if (expandedClassRaceIds.has(raceId)) {
+    expandedClassRaceIds.delete(raceId);
+  } else {
+    expandedClassRaceIds.add(raceId);
+  }
+
+  if (activeVenueId) {
+    const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
+    renderList(venueList);
+    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    return;
+  }
+
+  renderList(filteredRaces());
+}
+
+raceList.addEventListener("click", event => {
+  const button = event.target.closest("[data-class-toggle]");
+  if (!button) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  toggleClassList(button.dataset.classToggle);
+});
 
 function populateSeries() {
   const allSeries = new Set();

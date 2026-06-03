@@ -734,3 +734,34 @@ input {
     padding: 12px;
   }
 }
+
+
+/* v1.3: expandable class chips */
+
+.tag-class-toggle {
+  appearance: none;
+  border: 1px solid rgba(31, 29, 26, 0.22);
+  background: #eee7dc;
+  color: var(--text);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tag-class-toggle:hover,
+.tag-class-toggle:focus-visible {
+  border-color: var(--text);
+  background: #e6ded1;
+  outline: none;
+}
+
+.layout-prototype.is-venue-mode .tag-class-toggle {
+  cursor: pointer;
+}
+
+.layout-prototype.is-venue-mode .tag-class-toggle:hover,
+.layout-prototype.is-venue-mode .tag-class-toggle:focus-visible {
+  border-color: var(--text);
+  box-shadow: none;
+}
