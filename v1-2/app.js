@@ -6,6 +6,8 @@ const seriesFilter = document.getElementById("seriesFilter");
 const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
+const filterToggleButton = document.getElementById("filterToggleButton");
+const activeFilterChips = document.getElementById("activeFilterChips");
 
 const map = L.map("map", {
   scrollWheelZoom: true,
@@ -30,9 +32,55 @@ let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "4";
 let selectedSeries = "all";
+let isFilterPanelOpen = false;
 
 function updateAppModeClass() {
   app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
+}
+
+function updateFilterPanelState() {
+  app.classList.toggle("is-filter-panel-open", isFilterPanelOpen);
+
+  if (!filterToggleButton) return;
+
+  filterToggleButton.setAttribute("aria-expanded", String(isFilterPanelOpen));
+  filterToggleButton.setAttribute(
+    "aria-label",
+    isFilterPanelOpen
+      ? "Suche und Serienfilter schließen"
+      : "Suche und Serienfilter öffnen"
+  );
+}
+
+function renderActiveFilterChips() {
+  if (!activeFilterChips) return;
+
+  const chips = [];
+  const query = searchInput.value.trim();
+
+  if (query) {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="search">
+        ${query}<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
+  if (selectedSeries !== "all") {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="series">
+        ${selectedSeries}<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
+  activeFilterChips.innerHTML = chips.join("");
+  activeFilterChips.classList.toggle("is-empty", chips.length === 0);
+}
+
+function syncFilterUi() {
+  updateFilterPanelState();
+  renderActiveFilterChips();
 }
 
 
@@ -715,7 +763,12 @@ function renderList(list) {
       ${
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
-              ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
+              ${race.classes.slice(0, 4).map(item => `<span class="tag tag-class">${item}</span>`).join("")}
+              ${
+                race.classes.length > 4
+                  ? `<span class="tag tag-class tag-class-more">+${race.classes.length - 4} weitere</span>`
+                  : ""
+              }
             </div>`
           : ""
       }
@@ -755,6 +808,7 @@ function populateSeries() {
 
 function render() {
   updateAppModeClass();
+  syncFilterUi();
   const list = filteredRaces();
   updateMarkers(list);
 
@@ -823,6 +877,34 @@ searchInput.addEventListener("input", () => {
   render();
 });
 
+if (filterToggleButton) {
+  filterToggleButton.addEventListener("click", () => {
+    isFilterPanelOpen = !isFilterPanelOpen;
+    updateFilterPanelState();
+  });
+}
+
+if (activeFilterChips) {
+  activeFilterChips.addEventListener("click", event => {
+    const button = event.target.closest("button[data-clear-filter]");
+    if (!button) return;
+
+    if (button.dataset.clearFilter === "search") {
+      searchInput.value = "";
+    }
+
+    if (button.dataset.clearFilter === "series") {
+      selectedSeries = "all";
+      seriesFilter.value = "all";
+    }
+
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    render();
+  });
+}
+
 map.on("click", () => {
   resetVenueSelection();
 });
@@ -864,6 +946,7 @@ async function init() {
     setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
   }
 
+  syncFilterUi();
   render();
 }
 

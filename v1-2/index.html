@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RC Race Map – Layout-Prototyp v1.2</title>
+  <title>RC Race Map – Layout-Prototyp v1.3</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,25 +15,36 @@
 
     <section class="filters-panel" aria-label="Filter">
       <section class="filters" aria-label="Filter">
-        <label class="filter-field filter-field-search">
-          <span class="filter-label">Suche</span>
-          <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
-        </label>
-
-        <label class="filter-field">
-          <span class="filter-label">Serie</span>
-          <select id="seriesFilter">
-            <option value="all">Alle Serien</option>
-          </select>
-        </label>
-
-        <div class="filter-group">
-          <span class="filter-label">Zeitraum</span>
-          <div class="segmented" id="rangeFilter">
-            <button class="active" type="button" data-range="4">4 Wochen</button>
-            <button type="button" data-range="8">8 Wochen</button>
-            <button type="button" data-range="all">Alle</button>
+        <div class="mobile-filter-topline">
+          <div class="filter-group filter-group-range">
+            <span class="filter-label">Zeitraum</span>
+            <div class="segmented" id="rangeFilter">
+              <button class="active" type="button" data-range="4">4 Wochen</button>
+              <button type="button" data-range="8">8 Wochen</button>
+              <button type="button" data-range="all">Alle</button>
+            </div>
           </div>
+
+          <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
+            <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">⌕</span>
+            <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="active-filter-chips" id="activeFilterChips" aria-live="polite"></div>
+
+        <div class="advanced-filters" id="advancedFilters">
+          <label class="filter-field filter-field-search">
+            <span class="filter-label">Suche</span>
+            <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
+          </label>
+
+          <label class="filter-field">
+            <span class="filter-label">Serie</span>
+            <select id="seriesFilter">
+              <option value="all">Alle Serien</option>
+            </select>
+          </label>
         </div>
       </section>
     </section>

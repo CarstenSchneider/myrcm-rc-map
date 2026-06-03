@@ -578,3 +578,159 @@ input {
   border-color: var(--line);
   box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
 }
+
+
+/* v1.3 mobile filter and compact class chips */
+
+.filter-toggle-button {
+  display: none;
+}
+
+.mobile-filter-topline {
+  display: contents;
+}
+
+.advanced-filters {
+  display: grid;
+  gap: 14px;
+}
+
+.active-filter-chips {
+  display: none;
+}
+
+.tag-class {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.tag-class-more {
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filters-panel {
+    width: auto;
+  }
+
+  .layout-prototype .filters {
+    gap: 8px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .layout-prototype .mobile-filter-topline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px;
+    gap: 8px;
+    align-items: end;
+  }
+
+  .layout-prototype .filter-group-range {
+    min-width: 0;
+  }
+
+  .layout-prototype .filter-group-range .filter-label {
+    display: none;
+  }
+
+  .layout-prototype .segmented {
+    width: 100%;
+  }
+
+  .layout-prototype .segmented button {
+    min-height: 34px;
+    padding: 6px 7px;
+    font-size: 12px;
+  }
+
+  .layout-prototype .filter-toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    font-size: 23px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  }
+
+  .layout-prototype .filter-toggle-icon-close {
+    display: none;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+    display: none;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+    display: inline;
+  }
+
+  .layout-prototype .advanced-filters {
+    display: none;
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .layout-prototype.is-filter-panel-open .advanced-filters {
+    display: grid;
+  }
+
+  .layout-prototype .active-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .layout-prototype .active-filter-chips.is-empty {
+    display: none;
+  }
+
+  .layout-prototype .active-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 100%;
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #faf7f2;
+    color: var(--muted);
+    font: inherit;
+    font-size: 11px;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+
+  .layout-prototype .active-filter-chip span {
+    color: var(--text);
+    font-weight: 800;
+  }
+
+  .layout-prototype .race-class-tags {
+    row-gap: 5px;
+    column-gap: 5px;
+    padding-top: 8px;
+  }
+
+  .layout-prototype .tag-class {
+    height: 20px;
+    padding: 0 7px;
+    font-size: 10px;
+  }
+
+  .layout-prototype .race-card {
+    padding: 12px;
+  }
+}
