@@ -937,3 +937,70 @@ input {
     }
   }
 }
+
+
+/* RC Racing Map v1.3.5
+   Card typography cleanup
+*/
+
+.race-series-tags .tag {
+  height: 20px;
+  padding: 0 7px;
+  font-size: 10px;
+  font-weight: 500;
+  background: #e9e2d7;
+}
+
+.tag-class-toggle {
+  font-weight: 400;
+}
+
+.race-name {
+  font-size: 15px;
+}
+
+.race-date,
+.race-venue,
+.race-link,
+.registration-status {
+  font-size: 13px;
+}
+
+.tag,
+.tag-class,
+.race-series-tags .tag {
+  font-size: 10px;
+}
+
+/* RC Racing Map v1.3.5
+   Card typography cleanup
+*/
+
+.race-series-tags .tag {
+  height: 20px;
+  padding: 0 7px;
+  font-size: 10px;
+  font-weight: 500;
+  background: #e9e2d7;
+}
+
+.tag-class-toggle {
+  font-weight: 400;
+}
+
+.race-name {
+  font-size: 15px;
+}
+
+.race-date,
+.race-venue,
+.race-link,
+.registration-status {
+  font-size: 13px;
+}
+
+.tag,
+.tag-class,
+.race-series-tags .tag {
+  font-size: 10px;
+}
