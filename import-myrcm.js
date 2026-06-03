@@ -44,6 +44,19 @@ function normalizeText(text) {
   return text.replace(/\s+/g, " ").trim();
 }
 
+const invalidEventNames = [
+  "sign up to this event",
+  "registration",
+  "book in",
+  "login"
+];
+
+function isInvalidEventName(text) {
+  const lower = normalizeText(text).toLowerCase();
+  return invalidEventNames.includes(lower);
+}
+
+
 function parseDate(value) {
   const text = normalizeText(value);
   const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
@@ -207,6 +220,7 @@ function parseEvents(html, host) {
       if (/^(deu|ger|germany|deutschland)$/i.test(text)) continue;
       if (/^\d+$/.test(text)) continue;
       if (text.toLowerCase().includes("registration")) continue;
+      if (isInvalidEventName(text)) continue;
       if (text === host.name) continue;
       if (text === host.location) continue;
       if (text === host.country) continue;
@@ -215,7 +229,17 @@ function parseEvents(html, host) {
       break;
     }
 
-    if (!name) return;
+    if (!name) {
+      console.warn(`WARN: Kein Eventname gefunden (${host.name})`);
+      console.warn(`      Zellen: ${JSON.stringify(cells)}`);
+      return;
+    }
+
+    if (isInvalidEventName(name)) {
+      console.warn(`WARN: Ungültiger Eventname "${name}" (${host.name})`);
+      console.warn(`      Zellen: ${JSON.stringify(cells)}`);
+      return;
+    }
     if (hasTrainingName(name)) return;
     if (isExcludedEvent(name)) return;    
     
