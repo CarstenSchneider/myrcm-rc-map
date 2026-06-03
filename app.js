@@ -718,7 +718,7 @@ function renderList(list) {
             ${series.map(item => `<span class="tag">${item}</span>`).join("")}
             ${
               !hasVerifiedVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort wird ergänzt</span>`
+                ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
                 : ""
             }
           </div>
