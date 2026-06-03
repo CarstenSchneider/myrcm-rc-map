@@ -258,11 +258,22 @@ input {
   text-decoration: underline;
 }
 
+
 .tag-missing-location {
   background: #f2f2f2;
   color: #666;
   border: 1px solid #ddd;
+  cursor: default;
+  pointer-events: none;
 }
+
+.race-card:hover .tag-missing-location,
+.race-card.active .tag-missing-location {
+  border-color: #ddd;
+  background: #f2f2f2;
+  color: #666;
+}
+
 
 @media (max-width: 860px) {
   .app,
