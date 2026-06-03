@@ -506,7 +506,7 @@ function renderList(list) {
 
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
-          ${race.url ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
+          ${race.url && race.registrationStatus !== "closed" ? `<a class="race-link" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">MyRCM öffnen ↗</a>` : ""}
           ${registrationStatusHtml(race)}
         </div>
       </div>
