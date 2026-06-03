@@ -7,7 +7,14 @@ const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 
-const map = L.map("map", { scrollWheelZoom: true }).setView([52.52, 13.405], 9);
+const map = L.map("map", {
+  scrollWheelZoom: true,
+  zoomControl: false
+}).setView([52.52, 13.405], 9);
+
+L.control.zoom({
+  position: "bottomleft"
+}).addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap"
@@ -19,6 +26,7 @@ let hosts = [];
 let hostsByOrgId = new Map();
 let markers = new Map();
 let activeRaceId = null;
+let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "4";
 let selectedSeries = "all";
@@ -508,7 +516,6 @@ function filteredRaces() {
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
 
-
 function googleMapsRouteUrl(venue) {
   return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
 }
@@ -520,9 +527,7 @@ function buildPopup(venue, venueRaces) {
       ${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}
     </div>
     <div class="popup-race">
-      <a href="${googleMapsRouteUrl(venue)}"
-         target="_blank"
-         rel="noreferrer">
+      <a href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer">
         Route planen ↗
       </a>
     </div>
@@ -552,7 +557,6 @@ function updateMarkers(list) {
       if (isSwitchingMarkerPopup) return;
 
       activeRaceId = null;
-      renderList(filteredRaces());
     });
     
     marker.on("click", event => {
@@ -568,9 +572,10 @@ function updateMarkers(list) {
         }
       });
 
+      activeVenueId = venue.id;
       activeRaceId = venueRaces[0]?.id || null;
       renderList(venueRaces);
-      resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
+      resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
 
       marker.setPopupContent(buildPopup(venue, venueRaces));
       marker.openPopup();
@@ -634,20 +639,24 @@ function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
 
+  activeVenueId = venue.id;
   activeRaceId = race.id;
-  renderList(filteredRaces());
+
+  const baseList = filteredRaces();
+  const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
+
+  renderList(venueList);
+  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
   scrollToRaceCard(race.id);
 
   map.setView([venue.lat, venue.lng], 12);
 
   const marker = markers.get(venue.id);
   if (marker) {
-    const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
-    marker.setPopupContent(buildPopup(venue, venueRaces));
+    marker.setPopupContent(buildPopup(venue, venueList));
     marker.openPopup();
   }
 }
-
 function renderList(list) {
   resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
@@ -732,7 +741,22 @@ function populateSeries() {
 function render() {
   const list = filteredRaces();
   updateMarkers(list);
-  renderList(list);
+
+  if (activeVenueId) {
+    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+
+    if (venueList.length) {
+      renderList(venueList);
+      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    } else {
+      activeVenueId = null;
+      activeRaceId = null;
+      renderList(list);
+    }
+  } else {
+    renderList(list);
+  }
+
   setTimeout(() => map.invalidateSize(), 0);
 }
 
@@ -753,6 +777,8 @@ rangeFilter.addEventListener("click", event => {
   if (!button) return;
 
   selectedRange = button.dataset.range;
+  activeVenueId = null;
+  activeRaceId = null;
 
   rangeFilter
     .querySelectorAll("button")
@@ -763,13 +789,21 @@ rangeFilter.addEventListener("click", event => {
 
 seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
+  activeVenueId = null;
+  activeRaceId = null;
   render();
 });
 
-searchInput.addEventListener("input", render);
+searchInput.addEventListener("input", () => {
+  activeVenueId = null;
+  activeRaceId = null;
+  render();
+});
 
-mapWideButton.addEventListener("click", () => setLayout("map"));
-listWideButton.addEventListener("click", () => setLayout("list"));
+if (mapWideButton && listWideButton) {
+  mapWideButton.addEventListener("click", () => setLayout("map"));
+  listWideButton.addEventListener("click", () => setLayout("list"));
+}
 
 async function init() {
   ensureRegistrationStatusStyles();
@@ -777,9 +811,9 @@ async function init() {
   const cacheBuster = Date.now();
 
   const [venuesResponse, racesResponse, hostsResponse] = await Promise.all([
-    fetch(`venues.json?v=${cacheBuster}`),
-    fetch(`races.json?v=${cacheBuster}`),
-    fetch(`myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
+    fetch(`../venues.json?v=${cacheBuster}`),
+    fetch(`../races.json?v=${cacheBuster}`),
+    fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
   ]);
 
   venues = await venuesResponse.json();
@@ -798,7 +832,11 @@ async function init() {
   );
 
   populateSeries();
-  setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
+
+  if (mapWideButton && listWideButton) {
+    setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
+  }
+
   render();
 }
 
