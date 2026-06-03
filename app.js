@@ -616,12 +616,16 @@ function updateMarkers(list) {
      render();
    });
     
-    marker.on("click", () => {
-      activeRaceId = venueRaces[0]?.id || null;
-      renderList(venueRaces);
-      resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-      marker.openPopup();
-    });
+   marker.on("click", event => {
+    if (event.originalEvent) {
+       L.DomEvent.stopPropagation(event.originalEvent);
+     }
+
+     activeRaceId = venueRaces[0]?.id || null;
+     renderList(venueRaces);
+     resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
+     marker.openPopup();
+   });
 
     markers.set(venue.id, marker);
     bounds.push([venue.lat, venue.lng]);
