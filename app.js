@@ -300,12 +300,6 @@ function ensureRegistrationStatusStyles() {
       cursor: default;
     }
 
-    .popup-race-button.active::before {
-      content: "›";
-      display: inline-block;
-      margin-right: 5px;
-    }
-
     .popup-race-date {
       display: block;
       font-weight: 700;
@@ -645,9 +639,20 @@ function selectRaceFromPopup(raceId) {
   const race = races.find(item => item.id === raceId);
   if (!race) return;
 
+  const venue = venueById(race.venueId);
+
   activeRaceId = race.id;
   renderList(filteredRaces());
   scrollToRaceCard(race.id);
+
+  if (!venue) return;
+
+  const marker = markers.get(venue.id);
+  if (!marker) return;
+
+  const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
+  marker.setPopupContent(buildPopup(venue, venueRaces));
+  marker.openPopup();
 }
 
 function focusRace(race) {
