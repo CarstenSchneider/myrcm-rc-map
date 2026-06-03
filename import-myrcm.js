@@ -123,7 +123,7 @@ function registrationInfoFromText(text) {
 
   if (lower.includes("sign up to this event")) {
     return {
-      registrationStatus: "login_required",
+      registrationStatus: "open",
       registrationOpens: null
     };
   }
@@ -583,10 +583,7 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
     });
 
     const registrationInfo = registrationInfoFromText(eventLink.registrationText);
-    const registrationStatus =
-      detail.registrationRequiresLogin && registrationInfo.registrationStatus === "open"
-        ? "login_required"
-        : registrationInfo.registrationStatus;
+    const registrationStatus = registrationInfo.registrationStatus;
 
     const finalRegistrationInfo = {
       registrationStatus,
