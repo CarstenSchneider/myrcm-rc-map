@@ -794,3 +794,80 @@ input {
 .layout-prototype .filter-toggle-button svg {
   display:block;
 }
+
+
+/* v1.3.2 filter icon correction
+   The search/close toggle is mobile-only. Desktop keeps the full filter panel
+   and must not show the round icon button.
+*/
+
+.layout-prototype .filter-toggle-button {
+  display: none;
+}
+
+.layout-prototype .filter-toggle-icon {
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  line-height: 0;
+}
+
+.layout-prototype .filter-toggle-icon svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.layout-prototype .filter-toggle-icon-search svg {
+  width: 22px;
+  height: 22px;
+}
+
+.layout-prototype .filter-toggle-icon-close svg {
+  width: 17px;
+  height: 17px;
+}
+
+.layout-prototype .filter-toggle-icon-close {
+  display: none;
+}
+
+.layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+  display: none;
+}
+
+.layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+  display: flex;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filter-toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  }
+
+  .layout-prototype .filter-toggle-icon-search {
+    display: flex;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+    display: none;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+    display: flex;
+  }
+}
