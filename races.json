@@ -113,19 +113,6 @@
     ]
   },
   {
-    "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-06-sign-up-to-this-event",
-    "venueId": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v",
-    "venueName": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
-    "venueLocation": "Worms",
-    "name": "Sign up to this event",
-    "from": "2026-06-06",
-    "to": "2026-06-06",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96662&dLt=reg&pLa=en&lType=rList",
-    "classes": []
-  },
-  {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-06-tamico-off-road-cup-beim-mc-dortmund",
     "venueId": "myrcm-6266-minicar-club-dortmund-e-v",
     "venueName": "Minicar Club Dortmund e.V.",
@@ -1715,29 +1702,6 @@
     ]
   },
   {
-    "id": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim-2026-07-19-sign-up-to-this-event",
-    "venueId": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim",
-    "venueName": "Turnerschaft 1860 e.V. Großauheim",
-    "venueLocation": "Hanau Grossauheim",
-    "name": "Sign up to this event",
-    "from": "2026-07-19",
-    "to": "2026-07-19",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97884&pLa=en",
-    "classes": [
-      "Gastklasse LMH 17.5T / GT3 21.5T",
-      "TEC Euro TW",
-      "TEC Fighter Kids",
-      "TEC Formel-E",
-      "TEC Gentleman",
-      "TEC M-Chassis",
-      "TEC Race-Truck",
-      "TEC Stock",
-      "TEC Top Stock"
-    ]
-  },
-  {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-07-19-vereinsmeisterschaft-2026-lauf-4",
     "venueId": "myrcm-10490-ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
@@ -2665,25 +2629,6 @@
       "TOC Retro 4WD",
       "TOC Truck",
       "TOC Wheelie"
-    ]
-  },
-  {
-    "id": "myrcm-29586-time4fun-2026-09-27-sign-up-to-this-event",
-    "venueId": "myrcm-29586-time4fun",
-    "venueName": "Time4Fun",
-    "venueLocation": "Idar-Oberstein",
-    "name": "Sign up to this event",
-    "from": "2026-09-27",
-    "to": "2026-09-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94320&pLa=en",
-    "classes": [
-      "Vintage 2 WD",
-      "Vintage 4 WD",
-      "Vintage Tamiya Wheelie",
-      "Vintage Kidsklasse",
-      "Fighter Tamiya"
     ]
   },
   {
