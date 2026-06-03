@@ -12,6 +12,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93311&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Fighter Kids",
       "Tamiya Euro Cup Stock",
@@ -36,6 +38,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96388&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "1:10 Formel 1-E Alpencup",
       "1:8 GT-E Alpencup",
@@ -54,6 +58,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97390&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "NRW-Cup Hobby",
       "NRW-Cup Top",
@@ -72,6 +78,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95841&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -87,6 +95,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94474&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -102,6 +112,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96502&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "SRS- 13,5 TW (EGTWSP) GASTKLASSE",
       "SRS Porsche",
@@ -123,6 +135,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97213&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "2WD Retro",
       "2WD Truck Vintage",
@@ -143,6 +157,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96774&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG5",
       "EG8GT / EG8GT3"
@@ -159,6 +175,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94313&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -176,6 +194,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94270&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
@@ -192,6 +212,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94340&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -205,6 +227,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97478&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -218,6 +242,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96633&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -231,6 +257,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95070&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Bike1zu8",
       "Crossbike",
@@ -250,6 +278,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97208&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EG Tamiya Truck",
       "EG10TWSP(Sfb)",
@@ -268,6 +298,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97722&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "3LC GT/E8 Porsche Cup",
       "3LC GT/E8 Stock"
@@ -284,6 +316,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95507&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "OR 8 Hobby",
       "OR8 Expert",
@@ -304,6 +338,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97831&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG8 - Klasse 1",
       "VG8 - Klasse 2",
@@ -325,6 +361,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96918&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "ORE8"
     ]
@@ -342,6 +380,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97007&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "OR8 Expert",
       "OR8 Hobby",
@@ -363,6 +403,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94701&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro-TW",
       "Tamiya Fighter-Kids",
@@ -386,6 +428,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96082&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -399,6 +443,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96696&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kids Academy",
       "Fun Cup TTS",
@@ -422,6 +468,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97556&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Einsteiger",
       "Fighter-Klasse",
@@ -445,6 +493,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95443&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "ORE2WD",
       "ORE2WDST",
@@ -467,6 +517,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94649&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "BTM Formel 1 + EGF1",
       "BTM Fun 21,5 + EGTWFUN",
@@ -491,6 +543,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97212&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -506,6 +560,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94707&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Stock",
       "Tamiya Top-Stock",
@@ -530,6 +586,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96259&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "TOS Fun 21.5",
       "Tamiya Fighter-Cup Senior",
@@ -548,6 +606,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97594&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -561,6 +621,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94276&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -574,6 +636,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95132&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -589,6 +653,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95423&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
       "MAC-Challenge Youngtimer",
@@ -607,6 +673,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97526&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "1:10 Elektro Fun Cup",
       "EG8 (Pancar)",
@@ -627,6 +695,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95026&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Nordbayern Cup Club Cup",
       "Nordbayern Cup M-Chassis",
@@ -645,6 +715,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97927&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "GT-LMH Cup",
       "TW17.5T",
@@ -665,6 +737,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=991&pLa=en&pId[O]=24&dId[E]=97571&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -680,6 +754,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96508&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "2WD Buggy Standard",
       "2WD Buggy",
@@ -709,6 +785,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96827&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -724,6 +802,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97850&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -737,6 +817,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96444&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -753,6 +835,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94598&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -766,6 +850,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95561&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "DM Elektro-Offroad Truggy",
       "DM Verbrenner-Offroad Truggy"
@@ -782,6 +868,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95439&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "2WD Race Classic 17.5",
       "2WD Vintage Racing 13.5",
@@ -805,6 +893,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97145&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -818,6 +908,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95671&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kinder/ Jugend Tag"
     ]
@@ -833,6 +925,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97948&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "DMC-VG5F1",
       "DMC-VG5SP",
@@ -851,6 +945,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94463&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Gruppe C",
       "Gastklasse Tamiya Top Stock",
@@ -876,6 +972,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=91316&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG5F1",
       "VG5TW",
@@ -895,6 +993,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97434&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EG8GT",
       "EG8GT3",
@@ -912,6 +1012,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97760&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "SMW Verbrenner-Glattbahn 1:8 Klasse 1",
       "SMW Verbrenner-Glattbahn 1:8 Klasse 2",
@@ -935,6 +1037,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95989&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "TOS F1(EGF1)",
       "TOS Fun 17.5(EGTWHO)",
@@ -954,6 +1058,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96026&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -967,6 +1073,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95134&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -980,6 +1088,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97558&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -993,6 +1103,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96168&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "M-Chassis",
       "Hobby-GT",
@@ -1014,6 +1126,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=9976&pLa=en&pId[O]=10&dId[E]=94279&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1027,6 +1141,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95865&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Vereinsmeisterschaft"
     ]
@@ -1042,6 +1158,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94607&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Club Racer",
       "F1",
@@ -1063,6 +1181,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96270&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Buggy 2WD Stock",
       "Fighter",
@@ -1081,6 +1201,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93312&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -1105,6 +1227,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96385&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1118,6 +1242,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96344&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCOS 1:8",
       "FCOS 2WD",
@@ -1135,6 +1261,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97707&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "JumpstartRC Trophy Elektro-Glattbahn GT-E 1:8",
       "JumpstartRC Trophy Elektro-Glattbahn 1:8",
@@ -1153,6 +1281,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95506&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fun Klasse",
       "Short Course",
@@ -1173,6 +1303,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94651&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "BBX",
       "Fighter-Klasse",
@@ -1194,6 +1326,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95007&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "TOC BBX",
       "TOC Fighter-Klasse",
@@ -1216,6 +1350,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96247&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Stock",
       "Tamiya Fighter-Kids",
@@ -1238,6 +1374,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=4483&pLa=en&pId[O]=15&dId[E]=96386&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1253,6 +1391,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97665&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "ORE2WDST",
       "ORE2WD",
@@ -1277,6 +1417,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93361&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "RCK VintageTransAm",
       "RCK GT2 Porsche",
@@ -1296,6 +1438,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95739&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1309,6 +1453,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95508&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "OR 8 Hobby",
       "OR8 Expert (1:8 Nitro Offroad Buggy)",
@@ -1327,6 +1473,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96916&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1340,6 +1488,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94464&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "WRC 2WD",
       "WRC 4WD",
@@ -1357,6 +1507,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94314&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -1374,6 +1526,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94341&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1387,6 +1541,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97559&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1400,6 +1556,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95146&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
@@ -1423,6 +1581,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97527&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "1:10 Elektro Fun Cup",
       "EG8 (Pancar)",
@@ -1443,6 +1603,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95123&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1458,6 +1620,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97962&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1471,6 +1635,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97691&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1484,6 +1650,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97758&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "1:4 Funbike Super-Moto",
       "1:8 Funbike",
@@ -1505,6 +1673,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97801&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1520,6 +1690,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94506&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
       "Tamiya Euro Cup Formula E",
@@ -1543,6 +1715,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94273&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1556,6 +1730,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=92877&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1569,6 +1745,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95028&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1582,6 +1760,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96828&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1595,6 +1775,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96919&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1610,6 +1792,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97756&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1625,6 +1809,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96139&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1640,6 +1826,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=95&pLa=en&pId[O]=14&dId[E]=94465&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1655,6 +1843,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=891&pLa=en&pId[O]=10&dId[E]=96695&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1668,6 +1858,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97409&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1681,6 +1873,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95135&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1694,6 +1888,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95430&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
       "MAC-Challenge Youngtimer",
@@ -1712,6 +1908,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96445&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -1728,6 +1926,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97810&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1741,6 +1941,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97146&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1754,6 +1956,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95124&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1767,6 +1971,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96171&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1782,6 +1988,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95178&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1795,6 +2003,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95464&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -1810,6 +2020,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=95&pLa=en&pId[O]=14&dId[E]=94466&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1823,6 +2035,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96027&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1836,6 +2050,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96345&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCOS 2WD",
       "FCOS Rally",
@@ -1853,6 +2069,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93362&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "RCK GT2 Porsche",
       "RCK VintageTransAm",
@@ -1874,6 +2092,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97433&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EG8",
       "VG10 Scale",
@@ -1893,6 +2113,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95353&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamico BBX",
       "Tamico Fighter-Klasse",
@@ -1917,6 +2139,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94342&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1932,6 +2156,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=59129&pLa=en&pId[O]=24&dId[E]=93401&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1947,6 +2173,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=59129&pLa=en&pId[O]=24&dId[E]=93402&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -1960,6 +2188,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96346&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCOS 1:8",
       "FCOS 2WD",
@@ -1977,6 +2207,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94315&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -1994,6 +2226,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95136&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2007,6 +2241,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97560&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2020,6 +2256,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95740&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2036,6 +2274,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97914&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2051,6 +2291,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94712&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "ORE8",
       "OR8",
@@ -2070,6 +2312,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96028&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2083,6 +2327,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96446&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -2099,6 +2345,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97147&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2112,6 +2360,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95455&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EG8GT3_LE",
       "EG8GT_LE",
@@ -2131,6 +2381,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=48536&pLa=en&pId[O]=20&dId[E]=97359&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2144,6 +2396,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95431&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
       "MAC-Challenge Youngtimer",
@@ -2162,6 +2416,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96347&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCOS 2WD",
       "FCOS Rally",
@@ -2179,6 +2435,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96829&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2192,6 +2450,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96206&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "BBX",
       "Fighter-Klasse",
@@ -2212,6 +2472,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93313&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -2234,6 +2496,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94653&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2247,6 +2511,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96917&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2260,6 +2526,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95147&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
@@ -2283,6 +2551,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96348&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCOS 1:8",
       "FCOS 2WD",
@@ -2300,6 +2570,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94274&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2313,6 +2585,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94316&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -2330,6 +2604,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95137&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2343,6 +2619,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94343&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2356,6 +2634,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97811&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2369,6 +2649,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97492&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2382,6 +2664,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95125&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2395,6 +2679,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97561&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2408,6 +2694,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93363&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "RCK GT2 Porsche",
       "RCK VintageTransAm",
@@ -2427,6 +2715,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97575&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EFRA 1/5 TC Open",
       "EFRA 1/5 TC Open Gentleman",
@@ -2445,6 +2735,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97459&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2458,6 +2750,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94469&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Porsche-Cup+/GT3",
       "Lemans-Hyper-Car LMH"
@@ -2474,6 +2768,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?dId[O]=48536&pLa=en&pId[O]=20&dId[E]=97358&tId=E&hId[1]=org",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2487,6 +2783,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95874&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Vereinsmeisterschaft"
     ]
@@ -2502,6 +2800,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96029&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2515,6 +2815,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95177&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2528,6 +2830,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95029&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2541,6 +2845,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95844&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Vereinsmeisterschaft Klasse 1/5",
       "Vereinsmeisterschaft Klasse 1/5 Rookie",
@@ -2558,6 +2864,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96830&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2571,6 +2879,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97027&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "+40 2WD Buggy",
       "+40 4WD Buggy"
@@ -2587,6 +2897,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93314&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -2609,6 +2921,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95126&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2622,6 +2936,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96330&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "TOC BBX",
       "TOC Fighter Klasse",
@@ -2642,6 +2958,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96447&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -2658,6 +2976,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97611&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2671,6 +2991,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94060&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fun",
       "ORE2WD",
@@ -2692,6 +3014,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=97355&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "TT02 Fun Cup"
     ]
@@ -2707,6 +3031,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94275&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2720,6 +3046,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94344&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2733,6 +3061,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95128&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2746,6 +3076,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93315&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Stock",
       "Tamiya Euro Cup Top Stock",
@@ -2768,6 +3100,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=95043&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "OR8",
       "ORE8",
@@ -2786,6 +3120,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=93468&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamico-Cup BBX",
       "Tamico-Cup Fighter-Klasse",
@@ -2806,6 +3142,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94278&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2819,6 +3157,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94317&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
@@ -2838,6 +3178,8 @@
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=94122&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Formel",
       "VG5TW",
@@ -2855,6 +3197,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96271&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2868,6 +3212,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId[1]=bkg&dId[E]=96448&pLa=en",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -2884,6 +3230,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=97024&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2897,6 +3245,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95130&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": true,
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": []
   },
   {
@@ -2910,6 +3260,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95030&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2923,6 +3275,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=94345&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2936,6 +3290,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96272&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2949,6 +3305,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=95031&dLt=reg&pLa=en&lType=rList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2962,6 +3320,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96273&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2975,6 +3335,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96274&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   },
   {
@@ -2988,6 +3350,8 @@
     "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/?hId[1]=bkg&dId[E]=96275&dLt=reg&pLa=en&lType=wList",
+    "registrationRequiresLogin": false,
+    "note": null,
     "classes": []
   }
 ]
