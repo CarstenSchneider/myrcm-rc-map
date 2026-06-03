@@ -1006,15 +1006,33 @@ input {
 }
 
 
-/* Marker Cleanup v1.3.6 */
+
+/* Marker Cleanup v1.3.7 – flat pins */
 
 .map-marker-open,
 .map-marker-closed {
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
+  position: relative;
+  width: 26px;
+  height: 26px;
   border: 2px solid #ffffff;
+  border-radius: 999px 999px 999px 0;
   box-sizing: border-box;
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  box-shadow: none;
+}
+
+.map-marker-open::after,
+.map-marker-closed::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
 }
 
 .map-marker-open {
@@ -1024,3 +1042,4 @@ input {
 .map-marker-closed {
   background: rgba(31, 29, 26, 0.5);
 }
+
