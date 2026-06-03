@@ -19,6 +19,7 @@ let hosts = [];
 let hostsByOrgId = new Map();
 let markers = new Map();
 let activeRaceId = null;
+let isSwitchingMarkerPopup = false;
 let selectedRange = "4";
 let selectedSeries = "all";
 
@@ -612,20 +613,36 @@ function updateMarkers(list) {
     });
 
     marker.on("popupclose", () => {
-      activeRaceId = null;
-     render();
-   });
-    
-   marker.on("click", event => {
-    if (event.originalEvent) {
-       L.DomEvent.stopPropagation(event.originalEvent);
-     }
+      if (isSwitchingMarkerPopup) return;
 
-     activeRaceId = venueRaces[0]?.id || null;
-     renderList(venueRaces);
-     resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
-     marker.openPopup();
-   });
+      activeRaceId = null;
+      renderList(filteredRaces());
+    });
+    
+    marker.on("click", event => {
+      if (event.originalEvent) {
+        L.DomEvent.stopPropagation(event.originalEvent);
+      }
+
+      isSwitchingMarkerPopup = true;
+
+      markers.forEach(otherMarker => {
+        if (otherMarker !== marker) {
+          otherMarker.closePopup();
+        }
+      });
+
+      activeRaceId = venueRaces[0]?.id || null;
+      renderList(venueRaces);
+      resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
+
+      marker.setPopupContent(buildPopup(venue, venueRaces));
+      marker.openPopup();
+
+      window.setTimeout(() => {
+        isSwitchingMarkerPopup = false;
+      }, 0);
+    });
 
     markers.set(venue.id, marker);
     bounds.push([venue.lat, venue.lng]);
