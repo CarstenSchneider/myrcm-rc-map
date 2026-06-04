@@ -269,6 +269,51 @@ function hasActiveRegistration(venueRaces) {
   return venueRaces.some(isRegistrationActive);
 }
 
+function registrationCount(race) {
+  const candidates = [
+    race.registrationCount,
+    race.registrationsCount,
+    race.registrations,
+    race.entryCount,
+    race.entries,
+    race.participantCount,
+    race.participants,
+    race.nominationCount,
+    race.nominations,
+    race.count
+  ];
+
+  for (const candidate of candidates) {
+    if (candidate === null || candidate === undefined || candidate === "") continue;
+
+    if (typeof candidate === "number" && Number.isFinite(candidate)) {
+      return Math.max(0, candidate);
+    }
+
+    if (typeof candidate === "string") {
+      const match = candidate.replace(/\./g, "").match(/\d+/);
+      if (match) return Math.max(0, Number(match[0]));
+    }
+
+    if (Array.isArray(candidate)) {
+      return candidate.length;
+    }
+  }
+
+  return 0;
+}
+
+function venueRegistrationCount(venueRaces) {
+  return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
+}
+
+function markerScaleForRegistrationCount(count) {
+  if (!count) return 1;
+
+  const clamped = Math.min(count, 140);
+  return 1 + Math.sqrt(clamped) / Math.sqrt(140) * 0.85;
+}
+
 function ensureRegistrationStatusStyles() {
   if (document.getElementById("registration-status-styles")) return;
 
@@ -776,14 +821,19 @@ function updateMarkers(list) {
       ? "map-marker-open"
       : "map-marker-closed";
 
+    const registrationTotal = venueRegistrationCount(venueRaces);
+    const markerScale = markerScaleForRegistrationCount(registrationTotal);
+    const markerWidth = Math.round(26 * markerScale);
+    const markerHeight = Math.round(34 * markerScale);
+
     const marker = L.marker(
       [venue.lat, venue.lng],
       {
         icon: L.divIcon({
           className: "",
-          html: `<div class="${markerClass}"></div>`,
-          iconSize: [26, 34],
-          iconAnchor: [13, 34]
+          html: `<div class="${markerClass}" style="transform: scale(${markerScale.toFixed(2)}); transform-origin: center bottom;"></div>`,
+          iconSize: [markerWidth, markerHeight],
+          iconAnchor: [Math.round(markerWidth / 2), markerHeight]
         })
       }
     ).addTo(map);
