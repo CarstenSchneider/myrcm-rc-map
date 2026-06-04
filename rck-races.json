@@ -1,0 +1,2377 @@
+[
+  {
+    "id": "myrcm-39587-2026-06-07-rck-kleinserie-sud-bamberg",
+    "venueId": "myrcm-39587",
+    "venueName": "MRSC Amberg e.V.",
+    "venueLocation": "Amberg",
+    "name": "RCK Kleinserie Süd - Bamberg",
+    "from": "2026-06-07",
+    "to": "2026-06-07",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270607KlSeS",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
+    "rckGroup": "Süd",
+    "rckLocation": "Bamberg",
+    "classes": [
+      "MBC Bamberg 6233048 Porsche Cup",
+      "7312715 VTA",
+      "Sebastian E MCC Marktredwitz 7833820 LMH",
+      "7312715 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bamberg Bamberg symbol/auschreibung.png",
+        "fileName": "202520270607KlSeS260201 1218.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270607KlSeS260201%201218.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-27211-2026-06-14-rck-kleinserie-mitte-wachtersbach",
+    "venueId": "myrcm-27211",
+    "venueName": "MBSC Wächtersbach",
+    "venueLocation": "Wächtersbach",
+    "name": "RCK Kleinserie Mitte - Wächtersbach",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270614KlSeM",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 39,
+    "registrationDisplay": "39",
+    "rckGroup": "Mitte",
+    "rckLocation": "Wächtersbach",
+    "classes": [
+      "Holger E 3649629 Porsche Cup",
+      "Stefan E Willy Go Racing 8748212 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Lars E Team SMI Siegen 7770786 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Wächtersbach Wächtersbach symbol/auschreibung.png",
+        "fileName": "202520270614KlSeM260404 1055.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeM260404%201055.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-991-ormc-2026-06-14-rck-kleinserie-sud-augsburg",
+    "venueId": "myrcm-991-ormc",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
+    "name": "RCK Kleinserie Süd - Augsburg",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270614KlSeS",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
+    "rckGroup": "Süd",
+    "rckLocation": "Augsburg",
+    "classes": [
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor Porsche Cup",
+      "7078529 VTA",
+      "AMC Sonthofen 7137419 LMH",
+      "8943326 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Augsburg Augsburg symbol/auschreibung.png",
+        "fileName": "202520270614KlSeS20260602 1716.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeS20260602%201716.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-salzbergen-2026-06-21-rck-kleinserie-nord-salzbergen",
+    "venueId": "rck-unmatched-salzbergen",
+    "venueName": "Salzbergen",
+    "venueLocation": "Salzbergen",
+    "name": "RCK Kleinserie Nord - Salzbergen",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270621KlSeG",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 76,
+    "registrationDisplay": "76",
+    "rckGroup": "Nord",
+    "rckLocation": "Salzbergen",
+    "classes": [
+      "8727635 Porsche Cup",
+      "Richard E MC Dortmund 6014966 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Hendrik E 7838267 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Salzbergen Salzbergen symbol/auschreibung.png",
+        "fileName": "202520270621KlSeG20260531 0212.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270621KlSeG20260531%200212.pdf"
+      }
+    ]
+  },
+  {
+    "id": "tsv-mariendorf-2026-06-21-rck-kleinserie-ost-berlin",
+    "venueId": "tsv-mariendorf",
+    "venueName": "TSV Mariendorf RC Racing",
+    "venueLocation": "Berlin",
+    "name": "RCK Kleinserie Ost - Berlin",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270517KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
+    "rckGroup": "Ost",
+    "rckLocation": "Berlin",
+    "classes": [
+      "4766434 Porsche Cup",
+      "4766434 LMH",
+      "Elster Racing Works Team 9420114 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Berlin Berlin symbol/auschreibung.png",
+        "fileName": "202520270517KlSeO20251005 1449.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270517KlSeO20251005%201449.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-salzbergen-2026-06-21-rck-kleinserie-west-salzbergen",
+    "venueId": "rck-unmatched-salzbergen",
+    "venueName": "Salzbergen",
+    "venueLocation": "Salzbergen",
+    "name": "RCK Kleinserie West - Salzbergen",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270621KlSeG",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 76,
+    "registrationDisplay": "76",
+    "rckGroup": "West",
+    "rckLocation": "Salzbergen",
+    "classes": [
+      "8727635 Porsche Cup",
+      "Richard E MC Dortmund 6014966 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Hendrik E 7838267 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Salzbergen Salzbergen symbol/auschreibung.png",
+        "fileName": "202520270621KlSeG20260531 0212.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270621KlSeG20260531%200212.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-39671-2026-06-28-rck-kleinserie-mitte-mannheim",
+    "venueId": "myrcm-39671",
+    "venueName": "MRC Mannheim e.V.",
+    "venueLocation": "Mannheim",
+    "name": "RCK Kleinserie Mitte - Mannheim",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270628KlSeC",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 41,
+    "registrationDisplay": "41",
+    "rckGroup": "Mitte",
+    "rckLocation": "Mannheim",
+    "classes": [
+      "Martin E MCSS Althengstett 8123230 Porsche Cup",
+      "Martin E MCSS Althengstett 8123230 VTA",
+      "Sebastian E MCC Fellbach 9638253 LMH",
+      "Lars E Team SMI Siegen 7770786 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Mannheim Mannheim symbol/auschreibung.png",
+        "fileName": "202520270628KlSeM20260318 0835.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270628KlSeM20260318%200835.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-39671-2026-06-28-rck-kleinserie-sud-mannheim",
+    "venueId": "myrcm-39671",
+    "venueName": "MRC Mannheim e.V.",
+    "venueLocation": "Mannheim",
+    "name": "RCK Kleinserie Süd - Mannheim",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270628KlSeC",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 41,
+    "registrationDisplay": "41",
+    "rckGroup": "Süd",
+    "rckLocation": "Mannheim",
+    "classes": [
+      "Martin E MCSS Althengstett 8123230 Porsche Cup",
+      "Martin E MCSS Althengstett 8123230 VTA",
+      "Sebastian E MCC Fellbach 9638253 LMH",
+      "Lars E Team SMI Siegen 7770786 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Mannheim Mannheim symbol/auschreibung.png",
+        "fileName": "202520270628KlSeM20260318 0835.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270628KlSeM20260318%200835.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-134-2026-07-12-rck-kleinserie-mitte-hann-munden-nachtrennen",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Mitte - Hann.Münden Nachtrennen",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270712KlSeR",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
+    "rckGroup": "Mitte",
+    "rckLocation": "Hann.Münden Nachtrennen",
+    "classes": [
+      "9687259 Porsche Cup",
+      "9687259 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Kevin E RCCT Münden 9323807 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hann.Münden Nachtrennen Hann.Münden Nachtrennen symbol/auschreibung.png",
+        "fileName": "202520270712KlSeR20260121 2219.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-134-2026-07-12-rck-kleinserie-nord-hann-munden-nachtrennen",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Nord - Hann.Münden Nachtrennen",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270712KlSeR",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
+    "rckGroup": "Nord",
+    "rckLocation": "Hann.Münden Nachtrennen",
+    "classes": [
+      "9687259 Porsche Cup",
+      "9687259 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Kevin E RCCT Münden 9323807 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hann.Münden Nachtrennen Hann.Münden Nachtrennen symbol/auschreibung.png",
+        "fileName": "202520270712KlSeR20260121 2219.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-134-2026-07-12-rck-kleinserie-ost-hann-munden-nachtrennen",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Ost - Hann.Münden Nachtrennen",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270712KlSeR",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
+    "rckGroup": "Ost",
+    "rckLocation": "Hann.Münden Nachtrennen",
+    "classes": [
+      "9687259 Porsche Cup",
+      "9687259 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Kevin E RCCT Münden 9323807 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hann.Münden Nachtrennen Hann.Münden Nachtrennen symbol/auschreibung.png",
+        "fileName": "202520270712KlSeR20260121 2219.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-134-2026-07-12-rck-kleinserie-west-hann-munden-nachtrennen",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie West - Hann.Münden Nachtrennen",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270712KlSeR",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
+    "rckGroup": "West",
+    "rckLocation": "Hann.Münden Nachtrennen",
+    "classes": [
+      "9687259 Porsche Cup",
+      "9687259 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Kevin E RCCT Münden 9323807 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hann.Münden Nachtrennen Hann.Münden Nachtrennen symbol/auschreibung.png",
+        "fileName": "202520270712KlSeR20260121 2219.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-95-2026-07-26-rck-kleinserie-nord-braunschweig",
+    "venueId": "myrcm-95",
+    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "venueLocation": "Braunschweig",
+    "name": "RCK Kleinserie Nord - Braunschweig",
+    "from": "2026-07-26",
+    "to": "2026-07-26",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270726KlSeN",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
+    "rckGroup": "Nord",
+    "rckLocation": "Braunschweig",
+    "classes": [
+      "Eike E MSC der Polizei Braunschweig 6590468 Porsche Cup",
+      "6069649 LMH",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Braunschweig Braunschweig symbol/auschreibung.png",
+        "fileName": "202520270726KlSeN20260314 1326.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270726KlSeN20260314%201326.pdf"
+      }
+    ]
+  },
+  {
+    "id": "tsv-mariendorf-2026-07-26-rck-kleinserie-ost-berlin",
+    "venueId": "tsv-mariendorf",
+    "venueName": "TSV Mariendorf RC Racing",
+    "venueLocation": "Berlin",
+    "name": "RCK Kleinserie Ost - Berlin",
+    "from": "2026-07-26",
+    "to": "2026-07-26",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270705KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
+    "rckGroup": "Ost",
+    "rckLocation": "Berlin",
+    "classes": [
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor Porsche Cup",
+      "Timo E TSV Mariendorf 8361908 LMH",
+      "Timo E TSV Mariendorf 8361908 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Berlin Berlin symbol/auschreibung.png",
+        "fileName": "202520270705KlSeO20251005 1452.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270705KlSeO20251005%201452.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-24531-2026-08-02-rck-kleinserie-mitte-andernach",
+    "venueId": "myrcm-24531",
+    "venueName": "ToniSport GmbH",
+    "venueLocation": "Andernach",
+    "name": "RCK Kleinserie Mitte - Andernach",
+    "from": "2026-08-02",
+    "to": "2026-08-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270802KlSeD",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 122,
+    "registrationDisplay": "122",
+    "rckGroup": "Mitte",
+    "rckLocation": "Andernach",
+    "classes": [
+      "8727635 Porsche Cup",
+      "Martin E DJK Andernach 4926372 LMH",
+      "Martin E DJK Andernach 4926372 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Andernach Andernach symbol/auschreibung.png",
+        "fileName": "202520270802KlSeD20260203 1535.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270802KlSeD20260203%201535.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-24531-2026-08-02-rck-kleinserie-west-andernach",
+    "venueId": "myrcm-24531",
+    "venueName": "ToniSport GmbH",
+    "venueLocation": "Andernach",
+    "name": "RCK Kleinserie West - Andernach",
+    "from": "2026-08-02",
+    "to": "2026-08-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270802KlSeD",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 122,
+    "registrationDisplay": "122",
+    "rckGroup": "West",
+    "rckLocation": "Andernach",
+    "classes": [
+      "8727635 Porsche Cup",
+      "Martin E DJK Andernach 4926372 LMH",
+      "Martin E DJK Andernach 4926372 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Andernach Andernach symbol/auschreibung.png",
+        "fileName": "202520270802KlSeD20260203 1535.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270802KlSeD20260203%201535.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-33489-2026-08-09-rck-kleinserie-nord-bremen",
+    "venueId": "myrcm-33489",
+    "venueName": "MC Munster e.V.",
+    "venueLocation": "Bremen",
+    "name": "RCK Kleinserie Nord - Bremen",
+    "from": "2026-08-09",
+    "to": "2026-08-09",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270809KlSeN",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
+    "rckGroup": "Nord",
+    "rckLocation": "Bremen",
+    "classes": [
+      "Kevin E RCCT Münden 9323807 Porsche Cup",
+      "Meikel E VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Kevin E RCCT Münden 9323807 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bremen Bremen symbol/auschreibung.png",
+        "fileName": "202520270809KlSeN260505 2307.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270809KlSeN260505%202307.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-27211-2026-08-16-rck-kleinserie-mitte-coming-soonwachtersbach",
+    "venueId": "myrcm-27211",
+    "venueName": "MBSC Wächtersbach",
+    "venueLocation": "Wächtersbach",
+    "name": "RCK Kleinserie Mitte - coming soonWächtersbach",
+    "from": "2026-08-16",
+    "to": "2026-08-16",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Mitte",
+    "rckLocation": "coming soonWächtersbach",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-hennef-2026-08-16-rck-kleinserie-west-hennef",
+    "venueId": "rck-unmatched-hennef",
+    "venueName": "Hennef",
+    "venueLocation": "Hennef",
+    "name": "RCK Kleinserie West - Hennef",
+    "from": "2026-08-16",
+    "to": "2026-08-16",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270816KlSeW",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
+    "rckGroup": "West",
+    "rckLocation": "Hennef",
+    "classes": [
+      "4414449 Porsche Cup",
+      "4414449 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Sven E IGR RacingTeam Runkel 9059271 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hennef Hennef symbol/auschreibung.png",
+        "fileName": "202520270816KlSeW260206 1440.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270816KlSeW260206%201440.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-coming-soonmunster-2026-08-23-rck-kleinserie-nord-coming-soonmunster",
+    "venueId": "rck-unmatched-coming-soonmunster",
+    "venueName": "coming soonMunster",
+    "venueLocation": "coming soonMunster",
+    "name": "RCK Kleinserie Nord - coming soonMunster",
+    "from": "2026-08-23",
+    "to": "2026-08-23",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonMunster",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-48536-2026-08-23-rck-kleinserie-ost-coming-soonzwickau",
+    "venueId": "myrcm-48536",
+    "venueName": "RC-Bande Zwickau e.V",
+    "venueLocation": "Zwickau",
+    "name": "RCK Kleinserie Ost - coming soonZwickau",
+    "from": "2026-08-23",
+    "to": "2026-08-23",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonZwickau",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-48536-2026-08-23-rck-kleinserie-sud-coming-soonzwickau",
+    "venueId": "myrcm-48536",
+    "venueName": "RC-Bande Zwickau e.V",
+    "venueLocation": "Zwickau",
+    "name": "RCK Kleinserie Süd - coming soonZwickau",
+    "from": "2026-08-23",
+    "to": "2026-08-23",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Süd",
+    "rckLocation": "coming soonZwickau",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonmarktredwitz-2026-09-05-rck-kleinserie-sud-coming-soonmarktredwitz",
+    "venueId": "rck-unmatched-coming-soonmarktredwitz",
+    "venueName": "coming soonMarktredwitz",
+    "venueLocation": "coming soonMarktredwitz",
+    "name": "RCK Kleinserie Süd - coming soonMarktredwitz",
+    "from": "2026-09-05",
+    "to": "2026-09-05",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Süd",
+    "rckLocation": "coming soonMarktredwitz",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonrheda-wiedenbruck-2026-09-06-rck-kleinserie-nord-coming-soonrheda-wiedenbruck",
+    "venueId": "rck-unmatched-coming-soonrheda-wiedenbruck",
+    "venueName": "coming soonRheda Wiedenbrück",
+    "venueLocation": "coming soonRheda Wiedenbrück",
+    "name": "RCK Kleinserie Nord - coming soonRheda Wiedenbrück",
+    "from": "2026-09-06",
+    "to": "2026-09-06",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonRheda Wiedenbrück",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonrudolstadt-2026-09-06-rck-kleinserie-ost-coming-soonrudolstadt",
+    "venueId": "rck-unmatched-coming-soonrudolstadt",
+    "venueName": "coming soonRudolstadt",
+    "venueLocation": "coming soonRudolstadt",
+    "name": "RCK Kleinserie Ost - coming soonRudolstadt",
+    "from": "2026-09-06",
+    "to": "2026-09-06",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonRudolstadt",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonrheda-wiedenbruck-2026-09-06-rck-kleinserie-west-coming-soonrheda-wiedenbruck",
+    "venueId": "rck-unmatched-coming-soonrheda-wiedenbruck",
+    "venueName": "coming soonRheda Wiedenbrück",
+    "venueLocation": "coming soonRheda Wiedenbrück",
+    "name": "RCK Kleinserie West - coming soonRheda Wiedenbrück",
+    "from": "2026-09-06",
+    "to": "2026-09-06",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonRheda Wiedenbrück",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-283-2026-09-20-rck-kleinserie-mitte-bad-breisig",
+    "venueId": "myrcm-283",
+    "venueName": "MCC Rhein Ahr e.V.",
+    "venueLocation": "Bad Breisig",
+    "name": "RCK Kleinserie Mitte - Bad Breisig",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270920KlSeD",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
+    "rckGroup": "Mitte",
+    "rckLocation": "Bad Breisig",
+    "classes": [
+      "4414449 Porsche Cup",
+      "Martin E DJK Andernach 4926372 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Martin E DJK Andernach 4926372 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bad Breisig Bad Breisig symbol/auschreibung.png",
+        "fileName": "202520270920KlSeD20260106 2047.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270920KlSeD20260106%202047.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-coming-soonwagenfeld-2026-09-20-rck-kleinserie-nord-coming-soonwagenfeld",
+    "venueId": "rck-unmatched-coming-soonwagenfeld",
+    "venueName": "coming soonWagenfeld",
+    "venueLocation": "coming soonWagenfeld",
+    "name": "RCK Kleinserie Nord - coming soonWagenfeld",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonWagenfeld",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-283-2026-09-20-rck-kleinserie-west-bad-breisig",
+    "venueId": "myrcm-283",
+    "venueName": "MCC Rhein Ahr e.V.",
+    "venueLocation": "Bad Breisig",
+    "name": "RCK Kleinserie West - Bad Breisig",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270920KlSeD",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
+    "rckGroup": "West",
+    "rckLocation": "Bad Breisig",
+    "classes": [
+      "4414449 Porsche Cup",
+      "Martin E DJK Andernach 4926372 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Martin E DJK Andernach 4926372 M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bad Breisig Bad Breisig symbol/auschreibung.png",
+        "fileName": "202520270920KlSeD20260106 2047.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270920KlSeD20260106%202047.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-coming-soongoldenstedt-2026-10-04-rck-kleinserie-nord-coming-soongoldenstedt",
+    "venueId": "rck-unmatched-coming-soongoldenstedt",
+    "venueName": "coming soonGoldenstedt",
+    "venueLocation": "coming soonGoldenstedt",
+    "name": "RCK Kleinserie Nord - coming soonGoldenstedt",
+    "from": "2026-10-04",
+    "to": "2026-10-04",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonGoldenstedt",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-57549-2026-10-11-rck-kleinserie-ost-neubrandenburg",
+    "venueId": "myrcm-57549",
+    "venueName": "MCC-Marktredwitz e.V.",
+    "venueLocation": "Brand",
+    "name": "RCK Kleinserie Ost - Neubrandenburg",
+    "from": "2026-10-11",
+    "to": "2026-10-11",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271011KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
+    "rckGroup": "Ost",
+    "rckLocation": "Neubrandenburg",
+    "classes": [
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor Porsche Cup",
+      "Michael E 5944465 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor M-Chassis",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor DTM Retro Serie"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neubrandenburg Neubrandenburg symbol/auschreibung.png",
+        "fileName": "202520271011KlSeO20260413 2012.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271011KlSeO20260413%202012.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-mitte-coming-soonwm-warmup",
+    "venueId": "rck-unmatched-coming-soonwm-warmup",
+    "venueName": "coming soonWM Warmup",
+    "venueLocation": "coming soonWM Warmup",
+    "name": "RCK Kleinserie Mitte - coming soonWM Warmup",
+    "from": "2026-10-18",
+    "to": "2026-10-18",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Mitte",
+    "rckLocation": "coming soonWM Warmup",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-nord-coming-soonwm-warmup",
+    "venueId": "rck-unmatched-coming-soonwm-warmup",
+    "venueName": "coming soonWM Warmup",
+    "venueLocation": "coming soonWM Warmup",
+    "name": "RCK Kleinserie Nord - coming soonWM Warmup",
+    "from": "2026-10-18",
+    "to": "2026-10-18",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonWM Warmup",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-ost-coming-soonwm-warmup",
+    "venueId": "rck-unmatched-coming-soonwm-warmup",
+    "venueName": "coming soonWM Warmup",
+    "venueLocation": "coming soonWM Warmup",
+    "name": "RCK Kleinserie Ost - coming soonWM Warmup",
+    "from": "2026-10-18",
+    "to": "2026-10-18",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonWM Warmup",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-sud-coming-soonwm-warmup",
+    "venueId": "rck-unmatched-coming-soonwm-warmup",
+    "venueName": "coming soonWM Warmup",
+    "venueLocation": "coming soonWM Warmup",
+    "name": "RCK Kleinserie Süd - coming soonWM Warmup",
+    "from": "2026-10-18",
+    "to": "2026-10-18",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Süd",
+    "rckLocation": "coming soonWM Warmup",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-west-coming-soonwm-warmup",
+    "venueId": "rck-unmatched-coming-soonwm-warmup",
+    "venueName": "coming soonWM Warmup",
+    "venueLocation": "coming soonWM Warmup",
+    "name": "RCK Kleinserie West - coming soonWM Warmup",
+    "from": "2026-10-18",
+    "to": "2026-10-18",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonWM Warmup",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonrudolstadt-2026-10-25-rck-kleinserie-ost-coming-soonrudolstadt",
+    "venueId": "rck-unmatched-coming-soonrudolstadt",
+    "venueName": "coming soonRudolstadt",
+    "venueLocation": "coming soonRudolstadt",
+    "name": "RCK Kleinserie Ost - coming soonRudolstadt",
+    "from": "2026-10-25",
+    "to": "2026-10-25",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonRudolstadt",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonwillingshausen-2026-11-01-rck-kleinserie-mitte-coming-soonwillingshausen",
+    "venueId": "rck-unmatched-coming-soonwillingshausen",
+    "venueName": "coming soonWillingshausen",
+    "venueLocation": "coming soonWillingshausen",
+    "name": "RCK Kleinserie Mitte - coming soonWillingshausen",
+    "from": "2026-11-01",
+    "to": "2026-11-01",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Mitte",
+    "rckLocation": "coming soonWillingshausen",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonhalle-2026-11-01-rck-kleinserie-ost-coming-soonhalle",
+    "venueId": "rck-unmatched-coming-soonhalle",
+    "venueName": "coming soonHalle",
+    "venueLocation": "coming soonHalle",
+    "name": "RCK Kleinserie Ost - coming soonHalle",
+    "from": "2026-11-01",
+    "to": "2026-11-01",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonHalle",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-horstel-riesenbeck-2026-11-08-rck-kleinserie-nord-horstel-riesenbeck",
+    "venueId": "rck-unmatched-horstel-riesenbeck",
+    "venueName": "Hörstel-Riesenbeck",
+    "venueLocation": "Hörstel-Riesenbeck",
+    "name": "RCK Kleinserie Nord - Hörstel-Riesenbeck",
+    "from": "2026-11-08",
+    "to": "2026-11-08",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271108KlSeG",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
+    "rckGroup": "Nord",
+    "rckLocation": "Hörstel-Riesenbeck",
+    "classes": [
+      "Kevin E RCCT Münden 9323807 Porsche Cup",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hörstel-Riesenbeck Hörstel-Riesenbeck symbol/auschreibung.png",
+        "fileName": "202520271108KlSeG20260602 2123.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271108KlSeG20260602%202123.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rck-unmatched-horstel-riesenbeck-2026-11-08-rck-kleinserie-west-horstel-riesenbeck",
+    "venueId": "rck-unmatched-horstel-riesenbeck",
+    "venueName": "Hörstel-Riesenbeck",
+    "venueLocation": "Hörstel-Riesenbeck",
+    "name": "RCK Kleinserie West - Hörstel-Riesenbeck",
+    "from": "2026-11-08",
+    "to": "2026-11-08",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271108KlSeG",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
+    "rckGroup": "West",
+    "rckLocation": "Hörstel-Riesenbeck",
+    "classes": [
+      "Kevin E RCCT Münden 9323807 Porsche Cup",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor M-Chassis"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hörstel-Riesenbeck Hörstel-Riesenbeck symbol/auschreibung.png",
+        "fileName": "202520271108KlSeG20260602 2123.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271108KlSeG20260602%202123.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-26821-2026-11-29-rck-kleinserie-nord-coming-sooncelle",
+    "venueId": "myrcm-26821",
+    "venueName": "ASC Celle e.V.",
+    "venueLocation": "Celle",
+    "name": "RCK Kleinserie Nord - coming soonCelle",
+    "from": "2026-11-29",
+    "to": "2026-11-29",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonCelle",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-48425-2026-11-29-rck-kleinserie-west-coming-soondortmund",
+    "venueId": "myrcm-48425",
+    "venueName": "RC-Offroad Dortmund e.V.",
+    "venueLocation": "Dortmund",
+    "name": "RCK Kleinserie West - coming soonDortmund",
+    "from": "2026-11-29",
+    "to": "2026-11-29",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonDortmund",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-57549-2026-12-06-rck-kleinserie-ost-neubrandenburg",
+    "venueId": "myrcm-57549",
+    "venueName": "MCC-Marktredwitz e.V.",
+    "venueLocation": "Brand",
+    "name": "RCK Kleinserie Ost - Neubrandenburg",
+    "from": "2026-12-06",
+    "to": "2026-12-06",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271206KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
+    "rckGroup": "Ost",
+    "rckLocation": "Neubrandenburg",
+    "classes": [
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor Porsche Cup",
+      "Michael E 5944465 VTA",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor LMH",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor M-Chassis",
+      "Verein Transponder Fahrzeug Sender Akku es liegen noch keine Nennungen vor DTM Retro Serie"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neubrandenburg Neubrandenburg symbol/auschreibung.png",
+        "fileName": "202520271206KlSeO20260429 2051.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf"
+      }
+    ]
+  },
+  {
+    "id": "myrcm-32408-2026-12-13-rck-kleinserie-nord-coming-soonhasloh",
+    "venueId": "myrcm-32408",
+    "venueName": "Megadrom RC Team Nord",
+    "venueLocation": "Hasloh",
+    "name": "RCK Kleinserie Nord - coming soonHasloh",
+    "from": "2026-12-13",
+    "to": "2026-12-13",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonHasloh",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonbeindersheim-2026-12-20-rck-kleinserie-mitte-coming-soonbeindersheim",
+    "venueId": "rck-unmatched-coming-soonbeindersheim",
+    "venueName": "coming soonBeindersheim",
+    "venueLocation": "coming soonBeindersheim",
+    "name": "RCK Kleinserie Mitte - coming soonBeindersheim",
+    "from": "2026-12-20",
+    "to": "2026-12-20",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Mitte",
+    "rckLocation": "coming soonBeindersheim",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-15091-2026-12-20-rck-kleinserie-west-coming-soonessen",
+    "venueId": "myrcm-15091",
+    "venueName": "RCRT Duisburg e.V.",
+    "venueLocation": "Essen",
+    "name": "RCK Kleinserie West - coming soonEssen",
+    "from": "2026-12-20",
+    "to": "2026-12-20",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonEssen",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonrudolstadt-2027-01-17-rck-kleinserie-ost-coming-soonrudolstadt",
+    "venueId": "rck-unmatched-coming-soonrudolstadt",
+    "venueName": "coming soonRudolstadt",
+    "venueLocation": "coming soonRudolstadt",
+    "name": "RCK Kleinserie Ost - coming soonRudolstadt",
+    "from": "2027-01-17",
+    "to": "2027-01-17",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonRudolstadt",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-48425-2027-01-17-rck-kleinserie-west-coming-soondortmund",
+    "venueId": "myrcm-48425",
+    "venueName": "RC-Offroad Dortmund e.V.",
+    "venueLocation": "Dortmund",
+    "name": "RCK Kleinserie West - coming soonDortmund",
+    "from": "2027-01-17",
+    "to": "2027-01-17",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonDortmund",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonmarktredwitz-2027-02-13-rck-kleinserie-ost-coming-soonmarktredwitz",
+    "venueId": "rck-unmatched-coming-soonmarktredwitz",
+    "venueName": "coming soonMarktredwitz",
+    "venueLocation": "coming soonMarktredwitz",
+    "name": "RCK Kleinserie Ost - coming soonMarktredwitz",
+    "from": "2027-02-13",
+    "to": "2027-02-13",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonMarktredwitz",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonmarktredwitz-2027-02-13-rck-kleinserie-sud-coming-soonmarktredwitz",
+    "venueId": "rck-unmatched-coming-soonmarktredwitz",
+    "venueName": "coming soonMarktredwitz",
+    "venueLocation": "coming soonMarktredwitz",
+    "name": "RCK Kleinserie Süd - coming soonMarktredwitz",
+    "from": "2027-02-13",
+    "to": "2027-02-13",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Süd",
+    "rckLocation": "coming soonMarktredwitz",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonibbenburen-2027-02-21-rck-kleinserie-nord-coming-soonibbenburen",
+    "venueId": "rck-unmatched-coming-soonibbenburen",
+    "venueName": "coming soonIbbenbüren",
+    "venueLocation": "coming soonIbbenbüren",
+    "name": "RCK Kleinserie Nord - coming soonIbbenbüren",
+    "from": "2027-02-21",
+    "to": "2027-02-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonIbbenbüren",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soonibbenburen-2027-02-21-rck-kleinserie-west-coming-soonibbenburen",
+    "venueId": "rck-unmatched-coming-soonibbenburen",
+    "venueName": "coming soonIbbenbüren",
+    "venueLocation": "coming soonIbbenbüren",
+    "name": "RCK Kleinserie West - coming soonIbbenbüren",
+    "from": "2027-02-21",
+    "to": "2027-02-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonIbbenbüren",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-03-07-rck-kleinserie-mitte-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Mitte - coming soonHann. Münden",
+    "from": "2027-03-07",
+    "to": "2027-03-07",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Mitte",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-03-07-rck-kleinserie-nord-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Nord - coming soonHann. Münden",
+    "from": "2027-03-07",
+    "to": "2027-03-07",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-03-07-rck-kleinserie-ost-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Ost - coming soonHann. Münden",
+    "from": "2027-03-07",
+    "to": "2027-03-07",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-03-07-rck-kleinserie-west-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie West - coming soonHann. Münden",
+    "from": "2027-03-07",
+    "to": "2027-03-07",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "rck-unmatched-coming-soongeesthacht-2027-03-21-rck-kleinserie-nord-coming-soongeesthacht",
+    "venueId": "rck-unmatched-coming-soongeesthacht",
+    "venueName": "coming soonGeesthacht",
+    "venueLocation": "coming soonGeesthacht",
+    "name": "RCK Kleinserie Nord - coming soonGeesthacht",
+    "from": "2027-03-21",
+    "to": "2027-03-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonGeesthacht",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-15091-2027-03-21-rck-kleinserie-west-coming-soonessen",
+    "venueId": "myrcm-15091",
+    "venueName": "RCRT Duisburg e.V.",
+    "venueLocation": "Essen",
+    "name": "RCK Kleinserie West - coming soonEssen",
+    "from": "2027-03-21",
+    "to": "2027-03-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonEssen",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-05-02-rck-kleinserie-mitte-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Mitte - coming soonHann. Münden",
+    "from": "2027-05-02",
+    "to": "2027-05-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Mitte",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-05-02-rck-kleinserie-nord-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Nord - coming soonHann. Münden",
+    "from": "2027-05-02",
+    "to": "2027-05-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-05-02-rck-kleinserie-ost-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie Ost - coming soonHann. Münden",
+    "from": "2027-05-02",
+    "to": "2027-05-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Ost",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-134-2027-05-02-rck-kleinserie-west-coming-soonhann-munden",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "name": "RCK Kleinserie West - coming soonHann. Münden",
+    "from": "2027-05-02",
+    "to": "2027-05-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "West",
+    "rckLocation": "coming soonHann. Münden",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-678-2027-05-16-rck-kleinserie-nord-coming-soonburgdorf",
+    "venueId": "myrcm-678",
+    "venueName": "MAC Burgdorf e.V.",
+    "venueLocation": "Burgdorf",
+    "name": "RCK Kleinserie Nord - coming soonBurgdorf",
+    "from": "2027-05-16",
+    "to": "2027-05-16",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonBurgdorf",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  },
+  {
+    "id": "myrcm-678-2027-07-18-rck-kleinserie-nord-coming-soonburgdorf-nachtrennen",
+    "venueId": "myrcm-678",
+    "venueName": "MAC Burgdorf e.V.",
+    "venueLocation": "Burgdorf",
+    "name": "RCK Kleinserie Nord - coming soonBurgdorf Nachtrennen",
+    "from": "2027-07-18",
+    "to": "2027-07-18",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "external",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "rckGroup": "Nord",
+    "rckLocation": "coming soonBurgdorf Nachtrennen",
+    "classes": [
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK Porsche-Cup",
+      "RCK VTA",
+      "RCK M-Chassis"
+    ],
+    "documents": []
+  }
+]
