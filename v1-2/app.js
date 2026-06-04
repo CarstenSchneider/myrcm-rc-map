@@ -6,17 +6,8 @@ const seriesFilter = document.getElementById("seriesFilter");
 const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
-const filterToggleButton = document.getElementById("filterToggleButton");
-const activeFilterChips = document.getElementById("activeFilterChips");
 
-const map = L.map("map", {
-  scrollWheelZoom: true,
-  zoomControl: false
-}).setView([52.52, 13.405], 9);
-
-L.control.zoom({
-  position: "bottomleft"
-}).addTo(map);
+const map = L.map("map", { scrollWheelZoom: true }).setView([52.52, 13.405], 9);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap"
@@ -28,62 +19,9 @@ let hosts = [];
 let hostsByOrgId = new Map();
 let markers = new Map();
 let activeRaceId = null;
-let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
-let selectedRange = "2";
+let selectedRange = "4";
 let selectedSeries = "all";
-let isFilterPanelOpen = false;
-const expandedClassRaceIds = new Set();
-
-function updateAppModeClass() {
-  app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
-}
-
-function updateFilterPanelState() {
-  app.classList.toggle("is-filter-panel-open", isFilterPanelOpen);
-
-  if (!filterToggleButton) return;
-
-  filterToggleButton.setAttribute("aria-expanded", String(isFilterPanelOpen));
-  filterToggleButton.setAttribute(
-    "aria-label",
-    isFilterPanelOpen
-      ? "Suche und Serienfilter schließen"
-      : "Suche und Serienfilter öffnen"
-  );
-}
-
-function renderActiveFilterChips() {
-  if (!activeFilterChips) return;
-
-  const chips = [];
-  const query = searchInput.value.trim();
-
-  if (query) {
-    chips.push(`
-      <button class="active-filter-chip" type="button" data-clear-filter="search">
-        ${query}<span aria-hidden="true">×</span>
-      </button>
-    `);
-  }
-
-  if (selectedSeries !== "all") {
-    chips.push(`
-      <button class="active-filter-chip" type="button" data-clear-filter="series">
-        ${selectedSeries}<span aria-hidden="true">×</span>
-      </button>
-    `);
-  }
-
-  activeFilterChips.innerHTML = chips.join("");
-  activeFilterChips.classList.toggle("is-empty", chips.length === 0);
-}
-
-function syncFilterUi() {
-  updateFilterPanelState();
-  renderActiveFilterChips();
-}
-
 
 const verifiedVenueAliases = {
   "myrcm-18244": "tsv-mariendorf",
@@ -202,6 +140,33 @@ function registrationLinkHtml(race) {
   return `<a class="race-link race-link-with-status registration-${status}" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${registrationDotHtml(race)}MyRCM öffnen ↗</a>`;
 }
 
+function documentLabel(document) {
+  if (!document) return "PDF";
+
+  if (document.type === "announcement") return "Ausschreibung";
+  if (document.type === "rules") return "Reglement";
+  if (document.type === "schedule") return "Zeitplan";
+
+  return document.label && document.label !== "PDF" ? document.label : "PDF";
+}
+
+function documentLinksHtml(race) {
+  if (!Array.isArray(race.documents) || !race.documents.length) {
+    return "";
+  }
+
+  const links = race.documents
+    .filter(document => document && document.url)
+    .map(document => {
+      const label = documentLabel(document);
+      return `<a class="race-document-link" href="${document.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">📄 ${label}</a>`;
+    });
+
+  if (!links.length) return "";
+
+  return `<div class="race-documents">${links.join('<span class="race-document-separator">·</span>')}</div>`;
+}
+
 function registrationStatusHtml(race) {
   const status = registrationStatus(race);
 
@@ -299,6 +264,37 @@ function ensureRegistrationStatusStyles() {
 
     .registration-dot-closed {
       background: #4f4a44;
+    }
+
+    .race-documents {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px;
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .race-document-link {
+      color: var(--link, #006fae);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .race-document-link:hover,
+    .race-document-link:focus-visible {
+      text-decoration: underline;
+    }
+
+    .race-document-separator {
+      color: var(--muted, #6f6a62);
+    }
+
+    .race-card.registration-closed .race-documents,
+    .race-card.registration-closed .race-document-link,
+    .race-card.registration-closed .race-document-separator {
+      color: rgba(31, 29, 26, 0.58);
     }
 
     .registration-status {
@@ -570,31 +566,26 @@ function filteredRaces() {
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
 
-function googleMapsRouteUrl(venue) {
-  return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
-}
-
 function buildPopup(venue, venueRaces) {
+  const items = venueRaces
+    .slice(0, 8)
+    .map(race => `
+      <div class="popup-race popup-race-static">
+        <span class="popup-race-date">${formatDateRange(race.from, race.to)}</span>
+        <span class="popup-race-name">${race.name}</span>
+        ${
+          registrationStatus(race) !== "open"
+            ? `<span class="popup-registration-status">${registrationLabel(race)}</span>`
+            : ""
+        }
+      </div>
+    `)
+    .join("");
+
   return `
     <div class="popup-title">${venueNameHtml(venue)}</div>
-    <div class="popup-race">
-      ${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}
-    </div>
-    <div class="popup-race">
-      <a href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer">
-        Route planen ↗
-      </a>
-    </div>
+    ${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}
   `;
-}
-
-function resetVenueSelection() {
-  if (!activeVenueId && !activeRaceId) return;
-
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
-  renderList(filteredRaces());
 }
 
 function updateMarkers(list) {
@@ -608,28 +599,19 @@ function updateMarkers(list) {
 
     if (!venueRaces.length) return;
 
-    const markerClass = hasActiveRegistration(venueRaces)
-      ? "map-marker-open"
-      : "map-marker-closed";
+    const marker = L.marker([venue.lat, venue.lng]).addTo(map);
 
-    const marker = L.marker(
-      [venue.lat, venue.lng],
-      {
-        icon: L.divIcon({
-          className: "",
-          html: `<div class="${markerClass}"></div>`,
-          iconSize: [26, 34],
-          iconAnchor: [13, 34]
-        })
-      }
-    ).addTo(map);
+    if (!hasActiveRegistration(venueRaces)) {
+      marker.setOpacity(0.45);
+    }
 
     marker.bindPopup(buildPopup(venue, venueRaces));
 
     marker.on("popupclose", () => {
       if (isSwitchingMarkerPopup) return;
 
-      resetVenueSelection();
+      activeRaceId = null;
+      renderList(filteredRaces());
     });
     
     marker.on("click", event => {
@@ -645,11 +627,9 @@ function updateMarkers(list) {
         }
       });
 
-      activeVenueId = venue.id;
-      activeRaceId = null;
-      updateAppModeClass();
+      activeRaceId = venueRaces[0]?.id || null;
       renderList(venueRaces);
-      resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+      resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
 
       marker.setPopupContent(buildPopup(venue, venueRaces));
       marker.openPopup();
@@ -713,24 +693,20 @@ function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
 
-  activeVenueId = venue.id;
-  activeRaceId = null;
-  updateAppModeClass();
-
-  const baseList = filteredRaces();
-  const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
-
-  renderList(venueList);
-  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  activeRaceId = race.id;
+  renderList(filteredRaces());
+  scrollToRaceCard(race.id);
 
   map.setView([venue.lat, venue.lng], 12);
 
   const marker = markers.get(venue.id);
   if (marker) {
-    marker.setPopupContent(buildPopup(venue, venueList));
+    const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
+    marker.setPopupContent(buildPopup(venue, venueRaces));
     marker.openPopup();
   }
 }
+
 function renderList(list) {
   resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
@@ -767,6 +743,7 @@ function renderList(list) {
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
           ${registrationLinkHtml(race)}
+          ${documentLinksHtml(race)}
           ${registrationStatusHtml(race)}
         </div>
       </div>
@@ -774,35 +751,14 @@ function renderList(list) {
       ${
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
-              ${
-                (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
-                  .map(item => `<span class="tag tag-class">${item}</span>`)
-                  .join("")
-              }
-              ${
-                race.classes.length > 6
-                  ? `<button class="tag tag-class tag-class-toggle"
-                      type="button"
-                      data-class-toggle="${race.id}"
-                      aria-expanded="${expandedClassRaceIds.has(race.id) ? "true" : "false"}">
-                      ${
-                        expandedClassRaceIds.has(race.id)
-                          ? "weniger anzeigen"
-                          : `+${race.classes.length - 4} weitere`
-                      }
-                    </button>`
-                  : ""
-              }
+              ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
             </div>`
           : ""
       }
     `;
 
     if (hasVerifiedVenue(race)) {
-      card.addEventListener("click", event => {
-        if (event.target.closest("[data-class-toggle]")) return;
-        focusRace(race);
-      });
+      card.addEventListener("click", () => focusRace(race));
 
       card.addEventListener("keydown", event => {
         if (event.key === "Enter" || event.key === " ") {
@@ -815,33 +771,6 @@ function renderList(list) {
     raceList.appendChild(card);
   }
 }
-
-function toggleClassList(raceId) {
-  if (expandedClassRaceIds.has(raceId)) {
-    expandedClassRaceIds.delete(raceId);
-  } else {
-    expandedClassRaceIds.add(raceId);
-  }
-
-  if (activeVenueId) {
-    const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
-    renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-    return;
-  }
-
-  renderList(filteredRaces());
-}
-
-raceList.addEventListener("click", event => {
-  const button = event.target.closest("[data-class-toggle]");
-  if (!button) return;
-
-  event.preventDefault();
-  event.stopPropagation();
-
-  toggleClassList(button.dataset.classToggle);
-});
 
 function populateSeries() {
   const allSeries = new Set();
@@ -861,30 +790,9 @@ function populateSeries() {
 }
 
 function render() {
-  updateAppModeClass();
-  syncFilterUi();
   const list = filteredRaces();
   updateMarkers(list);
-
-  if (activeVenueId) {
-    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
-
-    if (venueList.length) {
-      activeRaceId = null;
-      renderList(venueList);
-      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-    } else {
-      activeVenueId = null;
-      activeRaceId = null;
-      updateAppModeClass();
-      renderList(list);
-    }
-  } else {
-    activeRaceId = null;
-    updateAppModeClass();
-    renderList(list);
-  }
-
+  renderList(list);
   setTimeout(() => map.invalidateSize(), 0);
 }
 
@@ -905,9 +813,6 @@ rangeFilter.addEventListener("click", event => {
   if (!button) return;
 
   selectedRange = button.dataset.range;
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
 
   rangeFilter
     .querySelectorAll("button")
@@ -918,55 +823,13 @@ rangeFilter.addEventListener("click", event => {
 
 seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
   render();
 });
 
-searchInput.addEventListener("input", () => {
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
-  render();
-});
+searchInput.addEventListener("input", render);
 
-if (filterToggleButton) {
-  filterToggleButton.addEventListener("click", () => {
-    isFilterPanelOpen = !isFilterPanelOpen;
-    updateFilterPanelState();
-  });
-}
-
-if (activeFilterChips) {
-  activeFilterChips.addEventListener("click", event => {
-    const button = event.target.closest("button[data-clear-filter]");
-    if (!button) return;
-
-    if (button.dataset.clearFilter === "search") {
-      searchInput.value = "";
-    }
-
-    if (button.dataset.clearFilter === "series") {
-      selectedSeries = "all";
-      seriesFilter.value = "all";
-    }
-
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    render();
-  });
-}
-
-map.on("click", () => {
-  resetVenueSelection();
-});
-
-if (mapWideButton && listWideButton) {
-  mapWideButton.addEventListener("click", () => setLayout("map"));
-  listWideButton.addEventListener("click", () => setLayout("list"));
-}
+mapWideButton.addEventListener("click", () => setLayout("map"));
+listWideButton.addEventListener("click", () => setLayout("list"));
 
 async function init() {
   ensureRegistrationStatusStyles();
@@ -974,9 +837,9 @@ async function init() {
   const cacheBuster = Date.now();
 
   const [venuesResponse, racesResponse, hostsResponse] = await Promise.all([
-    fetch(`../venues.json?v=${cacheBuster}`),
-    fetch(`../races.json?v=${cacheBuster}`),
-    fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
+    fetch(`venues.json?v=${cacheBuster}`),
+    fetch(`races.json?v=${cacheBuster}`),
+    fetch(`myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
   ]);
 
   venues = await venuesResponse.json();
@@ -995,12 +858,7 @@ async function init() {
   );
 
   populateSeries();
-
-  if (mapWideButton && listWideButton) {
-    setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
-  }
-
-  syncFilterUi();
+  setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
   render();
 }
 
