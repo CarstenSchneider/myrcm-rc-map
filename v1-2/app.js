@@ -556,13 +556,37 @@ function documentRole(document = {}, index = 0, documents = []) {
     return "schedule";
   }
 
+  const unknownDocuments = documents.filter(item => {
+    const itemText = [item.type, item.label, item.sourceLabel, item.fileName, item.url]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    return !itemText.includes("ausschreibung") &&
+      !itemText.includes("announcement") &&
+      !itemText.includes("invitation") &&
+      !itemText.includes("tender") &&
+      !itemText.includes("reglement") &&
+      !itemText.includes("regel") &&
+      !itemText.includes("rules") &&
+      !itemText.includes("rule") &&
+      !itemText.includes("technical");
+  });
+
   /*
     Some MyRCM PDFs arrive only as type "document" with label "PDF".
-    For the race-card link row we still need useful German labels.
-    Heuristic:
-    - event-specific PDFs with date/lauf/cup in the filename are usually Ausschreibungen
-    - if there are multiple unknown PDFs, the remaining one is shown as Reglement
+    MyRCM often lists these as:
+    Rule first, Tender second.
+    For those ambiguous pairs we keep both links by mapping:
+    first unknown PDF  -> Reglement
+    second unknown PDF -> Ausschreibung
   */
+  if (unknownDocuments.length > 1) {
+    const unknownIndex = unknownDocuments.indexOf(document);
+    if (unknownIndex === 0) return "rules";
+    if (unknownIndex === 1) return "announcement";
+  }
+
   if (
     text.includes("lauf") ||
     text.includes("cup") ||
@@ -572,19 +596,6 @@ function documentRole(document = {}, index = 0, documents = []) {
   ) {
     return "announcement";
   }
-
-  const unknownDocuments = documents.filter(item => {
-    const itemText = [item.type, item.label, item.fileName, item.url].filter(Boolean).join(" ").toLowerCase();
-    return !itemText.includes("ausschreibung") &&
-      !itemText.includes("announcement") &&
-      !itemText.includes("invitation") &&
-      !itemText.includes("reglement") &&
-      !itemText.includes("regel") &&
-      !itemText.includes("rules") &&
-      !itemText.includes("technical");
-  });
-
-  if (unknownDocuments.length > 1 && index > 0) return "rules";
 
   return "announcement";
 }

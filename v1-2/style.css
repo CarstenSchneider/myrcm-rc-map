@@ -1158,3 +1158,26 @@ input {
   font-size: 11px;
   color: var(--muted);
 }
+
+
+/* v1.3.13 compact document row */
+
+.race-document-links {
+  gap: 8px !important;
+}
+
+.race-document-links .race-link-item {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.race-document-dot {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+@media (min-width: 861px) {
+  .race-document-links {
+    flex-wrap: nowrap !important;
+  }
+}
