@@ -1020,12 +1020,14 @@ input {
 }
 
 .map-marker-open {
-  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%234F8A57' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%234F8A57' stroke='%23F4F1EC' stroke-width='1'/%3E%3C/svg%3E");
 }
 
 .map-marker-closed {
-  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='rgba(31,29,26,0.5)' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%231F1D1A' stroke='%23F4F1EC' stroke-width='1'/%3E%3C/svg%3E");
 }
+
 
 
 /* v1.3.8 document links in race cards */
@@ -1121,6 +1123,26 @@ input {
 
 .race-document-dot-closed {
   background: rgba(31, 29, 26, 0.5);
+}
+
+.race-document-dot-upcoming {
+  background: #d9a441;
+}
+
+.race-document-links .race-link-item-status-upcoming {
+  color: #b17d1b;
+}
+
+.race-document-links .race-link-item-status-closed,
+.race-document-links .race-link-item-status-upcoming {
+  cursor: default;
+}
+
+.race-document-links .race-link-item-status-closed:hover,
+.race-document-links .race-link-item-status-closed:focus-visible,
+.race-document-links .race-link-item-status-upcoming:hover,
+.race-document-links .race-link-item-status-upcoming:focus-visible {
+  text-decoration: none;
 }
 
 .race-card.registration-closed .race-document-links .race-link-item-status {
