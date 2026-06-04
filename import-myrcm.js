@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { readFile, writeFile } from "node:fs/promises";
+import { access, readFile, writeFile } from "node:fs/promises";
 
 const hostListFile = "myrcm-hosts-germany.json";
 const currentYear = new Date().getFullYear();
@@ -568,6 +568,58 @@ function mergeDocuments(...documentLists) {
 }
 
 
+async function loadPreviousRaces(fileName = "races.json") {
+  try {
+    await access(fileName);
+    const raw = await readFile(fileName, "utf8");
+    const races = JSON.parse(raw);
+
+    return Array.isArray(races) ? races : [];
+  } catch {
+    return [];
+  }
+}
+
+function raceSignature(race) {
+  return [
+    race.venueId,
+    race.name,
+    race.from,
+    race.to
+  ]
+    .filter(Boolean)
+    .join("|")
+    .toLowerCase();
+}
+
+function applyFirstSeen(races, previousRaces, today = new Date().toISOString().slice(0, 10)) {
+  const previousById = new Map();
+  const previousBySignature = new Map();
+
+  for (const race of previousRaces || []) {
+    if (race?.id) {
+      previousById.set(race.id, race);
+    }
+
+    const signature = raceSignature(race);
+    if (signature) {
+      previousBySignature.set(signature, race);
+    }
+  }
+
+  return races.map(race => {
+    const previous =
+      previousById.get(race.id) ||
+      previousBySignature.get(raceSignature(race));
+
+    return {
+      ...race,
+      firstSeen: previous?.firstSeen || today
+    };
+  });
+}
+
+
 function registrationTextFromRow($, row) {
   const cells = $(row)
     .find("td")
@@ -841,6 +893,7 @@ async function loadHosts() {
 
 async function main() {
   const hosts = await loadHosts();
+  const previousRaces = await loadPreviousRaces();
   const allRaces = [];
 
   console.log(`${hosts.length} deutsche Hosts mit Events geladen`);
@@ -864,11 +917,13 @@ async function main() {
     allRaces.push(...races);
   }
 
-  const unique = Array.from(
+  let unique = Array.from(
     new Map(allRaces.map(race => [race.id, race])).values()
   ).sort((a, b) => {
     return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
   });
+
+  unique = applyFirstSeen(unique, previousRaces);
 
   await writeFile(
     "races.json",
