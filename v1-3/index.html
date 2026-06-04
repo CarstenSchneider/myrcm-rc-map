@@ -1,1 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RC Race Map – Layout-Prototyp v1.3</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app layout-map layout-prototype" id="app">
+    <section class="map-panel" aria-label="Karte">
+      <div id="map"></div>
+    </section>
 
+    <section class="filters-panel" aria-label="Filter">
+      <section class="filters" aria-label="Filter">
+        <div class="mobile-filter-topline">
+          <div class="filter-group filter-group-range">
+            <span class="filter-label">Zeitraum</span>
+            <div class="segmented" id="rangeFilter">
+              <button class="active" type="button" data-range="2">2 Wochen</button>
+              <button type="button" data-range="4">4 Wochen</button>
+              <button type="button" data-range="all">Alle</button>
+            </div>
+          </div>
+
+          <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
+            <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="10.5" cy="10.5" r="5.5"></circle>
+                <path d="M15 15 L20 20"></path>
+              </svg>
+            </span>
+            <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8 L16 16"></path>
+                <path d="M16 8 L8 16"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="advanced-filters" id="advancedFilters">
+          <label class="filter-field filter-field-search">
+            <span class="filter-label">Suche</span>
+            <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
+          </label>
+
+          <label class="filter-field">
+            <span class="filter-label">Serie</span>
+            <select id="seriesFilter">
+              <option value="all">Alle Serien</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="active-filter-chips" id="activeFilterChips" aria-live="polite"></div>
+      </section>
+    </section>
+
+    <aside class="race-panel" aria-label="Rennen">
+      <header class="panel-header">
+        <div>
+          <h1>Kommende Rennen</h1>
+          <p class="intro">Rennen in der Region, sortiert nach Datum.</p>
+        </div>
+      </header>
+
+      <div class="result-line" id="resultLine">Lade Rennen …</div>
+      <section class="race-grid" id="raceList" aria-live="polite"></section>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
