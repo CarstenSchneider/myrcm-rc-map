@@ -1,5 +1,45 @@
 [
   {
+    "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-03-myrcm-event-97989",
+    "venueId": "myrcm-2245-mrc-mehrum-e-v",
+    "venueName": "MRC Mehrum e.V.",
+    "venueLocation": "Peine",
+    "name": "ECN Lauf 2026",
+    "from": "2026-06-03",
+    "to": "2026-06-09",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97989&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2245&pLa=en&dId%5BE%5D=97989&tId=E&hId%5B1%5D=org",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "ORE8 Buggy"
+    ]
+  },
+  {
+    "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-03-myrcm-event-97990",
+    "venueId": "myrcm-2245-mrc-mehrum-e-v",
+    "venueName": "MRC Mehrum e.V.",
+    "venueLocation": "Peine",
+    "name": "ECN Lauf2026",
+    "from": "2026-06-03",
+    "to": "2026-06-09",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97990&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2245&pLa=en&dId%5BE%5D=97990&tId=E&hId%5B1%5D=org",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "note": "Nennung geschlossen.",
+    "classes": [
+      "ORE8 Buggy"
+    ]
+  },
+  {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-myrcm-event-93311",
     "venueId": "myrcm-19290-mcv-danischer-wohld-e-v",
     "venueName": "MCV Dänischer Wohld e.V.",
@@ -42,10 +82,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96388&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=96388&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "1:10 Formel 1-E Alpencup",
       "1:8 GT-E Alpencup",
@@ -65,10 +105,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97390&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33838&pLa=en&dId%5BE%5D=97390&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "NRW-Cup Hobby + Top",
       "NRW-Cup Hobby",
@@ -110,10 +150,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96662&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=96662&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "Freies Training Offroad"
     ]
@@ -158,17 +198,17 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96502&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48023&pLa=en&dId%5BE%5D=96502&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
+      "SRS-M-Chassi",
       "SRS- 13,5 TW (EGTWSP) GASTKLASSE",
-      "SRS Porsche",
       "SRS-17.5 TW (EGTWHO)",
       "SRS-21,5 TW (EGTWFUN)",
+      "SRS Porsche",
       "SRS-Fronti (EGTWFR)",
-      "SRS-M-Chassi",
       "SRS-Rookies"
     ]
   },
@@ -184,10 +224,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97213&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6266&pLa=en&dId%5BE%5D=97213&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "2WD Retro",
       "2WD Truck Vintage",
@@ -209,10 +249,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96774&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=82&pLa=en&dId%5BE%5D=96774&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "VG5",
       "EG8GT / EG8GT3"
@@ -318,10 +358,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96633&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=96633&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "SPC_Kids",
       "SPC_Einsteigerklasse Buggy LRP",
@@ -412,10 +452,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95507&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95507&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "OR 8 Hobby",
       "OR8 Expert",
@@ -1039,6 +1079,28 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
+    ]
+  },
+  {
+    "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-14-myrcm-event-97988",
+    "venueId": "myrcm-2245-mrc-mehrum-e-v",
+    "venueName": "MRC Mehrum e.V.",
+    "venueLocation": "Peine",
+    "name": "VM2",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97988&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2245&pLa=en&dId%5BE%5D=97988&tId=E&hId%5B1%5D=org",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "note": null,
+    "classes": [
+      "DT03",
+      "ORE10 Buggy 2WD/4WD",
+      "ORE8"
     ]
   },
   {
