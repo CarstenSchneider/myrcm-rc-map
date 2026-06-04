@@ -441,6 +441,97 @@ function extractEventDetail(html, host, eventId, listFallback = {}) {
   };
 }
 
+function documentTypeFromText(value = "") {
+  const lower = value.toLowerCase();
+
+  if (
+    lower.includes("ausschreibung") ||
+    lower.includes("invitation") ||
+    lower.includes("announcement") ||
+    lower.includes("notice")
+  ) {
+    return "announcement";
+  }
+
+  if (
+    lower.includes("reglement") ||
+    lower.includes("regel") ||
+    lower.includes("rules") ||
+    lower.includes("regulations") ||
+    lower.includes("technical")
+  ) {
+    return "rules";
+  }
+
+  if (
+    lower.includes("zeitplan") ||
+    lower.includes("timetable") ||
+    lower.includes("schedule") ||
+    lower.includes("ablauf")
+  ) {
+    return "schedule";
+  }
+
+  return "document";
+}
+
+function documentLabelFromType(type) {
+  if (type === "announcement") return "Ausschreibung";
+  if (type === "rules") return "Reglement";
+  if (type === "schedule") return "Zeitplan";
+  return "PDF";
+}
+
+function extractDocumentsFromHtml(html, pageUrl) {
+  const $ = cheerio.load(html);
+  const documents = [];
+
+  $("a").each((_, link) => {
+    const href = $(link).attr("href") || "";
+    const linkText = normalizeText($(link).text());
+    const titleText = normalizeText($(link).attr("title") || "");
+    const hrefText = decodeURIComponent(href).replace(/[+_-]+/g, " ");
+    const combinedText = normalizeText(`${linkText} ${titleText} ${hrefText}`);
+
+    if (!href || !href.toLowerCase().includes(".pdf")) return;
+
+    const url = new URL(href, pageUrl || "https://www.myrcm.ch").toString();
+    const type = documentTypeFromText(combinedText);
+    const label = linkText || documentLabelFromType(type);
+
+    documents.push({
+      type,
+      label,
+      url
+    });
+  });
+
+  return documents;
+}
+
+function mergeDocuments(...documentLists) {
+  const documents = new Map();
+
+  for (const list of documentLists) {
+    for (const document of list || []) {
+      if (!document?.url) continue;
+      documents.set(document.url, document);
+    }
+  }
+
+  return Array.from(documents.values()).sort((a, b) => {
+    const order = {
+      announcement: 1,
+      rules: 2,
+      schedule: 3,
+      document: 4
+    };
+
+    return (order[a.type] || 99) - (order[b.type] || 99) || a.label.localeCompare(b.label);
+  });
+}
+
+
 function registrationTextFromRow($, row) {
   const cells = $(row)
     .find("td")
@@ -582,6 +673,21 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       to: eventLink.fallbackTo
     });
 
+    const detailDocuments = extractDocumentsFromHtml(detailHtml, detailUrl);
+    let registrationDocuments = [];
+
+    if (regUrl) {
+      try {
+        const registrationHtml = await fetchText(regUrl);
+        registrationDocuments = extractDocumentsFromHtml(registrationHtml, regUrl);
+      } catch (error) {
+        console.warn(`  Nennseite konnte nicht nach PDFs geprüft werden: ${regUrl}`);
+        console.warn(`    ${error.message}`);
+      }
+    }
+
+    const documents = mergeDocuments(detailDocuments, registrationDocuments);
+
     const registrationInfo = registrationInfoFromText(eventLink.registrationText);
     const registrationStatus = registrationInfo.registrationStatus;
 
@@ -606,7 +712,8 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       registrationOpens: registrationInfo.registrationOpens,
       registrationRequiresLogin: registrationStatus === "login_required",
       note: registrationNote(finalRegistrationInfo),
-      classes: detail.classes
+      classes: detail.classes,
+      documents
     };
 
     if (shouldSkipRace(race)) return null;
@@ -691,7 +798,26 @@ async function main() {
     "utf8"
   );
 
+  const racesWithDocuments = unique.filter(race => race.documents?.length);
+  const venuesWithDocuments = new Set(racesWithDocuments.map(race => race.venueId));
+  const documentTypeCounts = unique.reduce((counts, race) => {
+    for (const document of race.documents || []) {
+      counts[document.type] = (counts[document.type] || 0) + 1;
+    }
+
+    return counts;
+  }, {});
+  const totalDocuments = Object.values(documentTypeCounts).reduce((sum, count) => sum + count, 0);
+
   console.log(`races.json geschrieben: ${unique.length} Rennen`);
+  console.log("PDF-Statistik:");
+  console.log(`  PDF-Dokumente insgesamt: ${totalDocuments}`);
+  console.log(`  Rennen mit PDFs: ${racesWithDocuments.length}`);
+  console.log(`  Vereine mit PDFs: ${venuesWithDocuments.size}`);
+  console.log(`  Ausschreibungen: ${documentTypeCounts.announcement || 0}`);
+  console.log(`  Reglements: ${documentTypeCounts.rules || 0}`);
+  console.log(`  Zeitplaene: ${documentTypeCounts.schedule || 0}`);
+  console.log(`  Sonstige PDFs: ${documentTypeCounts.document || 0}`);
 }
 
 main().catch(error => {
