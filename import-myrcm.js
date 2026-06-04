@@ -445,6 +445,7 @@ function documentTypeFromText(value = "") {
   const lower = value.toLowerCase();
 
   if (
+    /\btender\b/.test(lower) ||
     lower.includes("ausschreibung") ||
     lower.includes("invitation") ||
     lower.includes("announcement") ||
@@ -454,6 +455,7 @@ function documentTypeFromText(value = "") {
   }
 
   if (
+    /\brule\b/.test(lower) ||
     lower.includes("reglement") ||
     lower.includes("regel") ||
     lower.includes("rules") ||
@@ -482,6 +484,36 @@ function documentLabelFromType(type) {
   return "PDF";
 }
 
+function documentSourceLabelFromLink($, link) {
+  const linkText = normalizeText($(link).text());
+  const row = $(link).closest("tr");
+
+  if (row.length) {
+    const cells = row.find("td, th").toArray();
+    const linkCellIndex = cells.findIndex(cell => $(cell).find(link).length > 0);
+
+    if (linkCellIndex > 0) {
+      const beforeCells = cells.slice(0, linkCellIndex).map(cell => normalizeText($(cell).text()));
+      const beforeText = normalizeText(beforeCells.join(" ")).replace(/:$/, "");
+
+      if (beforeText) return beforeText;
+    }
+  }
+
+  const parentText = normalizeText($(link).parent().text());
+  const beforeLinkText = normalizeText(parentText.replace(linkText, "")).replace(/:$/, "");
+
+  if (/^(rule|tender|rules|documents?|reglement|ausschreibung)$/i.test(beforeLinkText)) {
+    return beforeLinkText;
+  }
+
+  const previousText = normalizeText($(link).prev().text()).replace(/:$/, "");
+
+  if (previousText) return previousText;
+
+  return "";
+}
+
 function extractDocumentsFromHtml(html, pageUrl) {
   const $ = cheerio.load(html);
   const documents = [];
@@ -490,18 +522,22 @@ function extractDocumentsFromHtml(html, pageUrl) {
     const href = $(link).attr("href") || "";
     const linkText = normalizeText($(link).text());
     const titleText = normalizeText($(link).attr("title") || "");
+    const sourceLabel = documentSourceLabelFromLink($, link);
     const hrefText = decodeURIComponent(href).replace(/[+_-]+/g, " ");
-    const combinedText = normalizeText(`${linkText} ${titleText} ${hrefText}`);
+    const combinedText = normalizeText(`${sourceLabel} ${linkText} ${titleText} ${hrefText}`);
 
-    if (!href || !href.toLowerCase().includes(".pdf")) return;
+    if (!href || !combinedText.toLowerCase().includes(".pdf")) return;
 
     const url = new URL(href, pageUrl || "https://www.myrcm.ch").toString();
     const type = documentTypeFromText(combinedText);
-    const label = linkText || documentLabelFromType(type);
+    const label = documentLabelFromType(type);
+    const fileName = linkText || href.split("/").pop() || label;
 
     documents.push({
       type,
       label,
+      sourceLabel: sourceLabel || null,
+      fileName,
       url
     });
   });
@@ -556,6 +592,10 @@ function registrationTextFromRow($, row) {
 function extractEventLinksFromHostPage(html, host) {
   const $ = cheerio.load(html);
   const events = new Map();
+  const today = new Date().toISOString().slice(0, 10);
+  let totalEventIds = 0;
+  let skippedPastEvents = 0;
+  let skippedWrongYearEvents = 0;
 
   $("a").each((_, link) => {
     const href = $(link).attr("href") || "";
@@ -563,6 +603,8 @@ function extractEventLinksFromHostPage(html, host) {
     const eventId = eventIdFromUrl(url);
 
     if (!eventId) return;
+
+    totalEventIds += 1;
 
     const row = $(link).closest("tr");
     const rowText = normalizeText(row.text());
@@ -572,6 +614,23 @@ function extractEventLinksFromHostPage(html, host) {
     const dates = [...rowText.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)].map(match => {
       return `${match[3]}-${match[2]}-${match[1]}`;
     });
+
+    const fallbackFrom = dates[0] || null;
+    const fallbackTo = dates[1] || dates[0] || null;
+
+    if (fallbackTo && fallbackTo < today) {
+      skippedPastEvents += 1;
+      return;
+    }
+
+    if (fallbackFrom) {
+      const fallbackYear = Number(fallbackFrom.slice(0, 4));
+
+      if (!allowedYears.includes(fallbackYear)) {
+        skippedWrongYearEvents += 1;
+        return;
+      }
+    }
 
     const fallbackName =
       !isInvalidEventName(linkText) && !parseDate(linkText)
@@ -583,8 +642,8 @@ function extractEventLinksFromHostPage(html, host) {
         eventId,
         url,
         fallbackName,
-        fallbackFrom: dates[0] || null,
-        fallbackTo: dates[1] || dates[0] || null,
+        fallbackFrom,
+        fallbackTo,
         registrationText
       });
     } else {
@@ -594,9 +653,9 @@ function extractEventLinksFromHostPage(html, host) {
         existing.fallbackName = fallbackName;
       }
 
-      if (!existing.fallbackFrom && dates[0]) {
-        existing.fallbackFrom = dates[0];
-        existing.fallbackTo = dates[1] || dates[0];
+      if (!existing.fallbackFrom && fallbackFrom) {
+        existing.fallbackFrom = fallbackFrom;
+        existing.fallbackTo = fallbackTo;
       }
 
       if (!existing.registrationText && registrationText) {
@@ -605,7 +664,12 @@ function extractEventLinksFromHostPage(html, host) {
     }
   });
 
-  return [...events.values()];
+  return {
+    events: [...events.values()],
+    totalEventIds,
+    skippedPastEvents,
+    skippedWrongYearEvents
+  };
 }
 
 function shouldSkipRace(race) {
@@ -732,9 +796,23 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
 
 async function parseEvents(html, host) {
   const venueId = host.venueId || hostToVenueId(host);
-  const eventLinks = extractEventLinksFromHostPage(html, host);
+  const eventLinkResult = extractEventLinksFromHostPage(html, host);
+  const eventLinks = eventLinkResult.events;
 
-  console.log(`  ${eventLinks.length} Event-IDs gefunden`);
+  console.log(`  ${eventLinkResult.totalEventIds} Event-IDs gefunden`);
+
+  if (eventLinkResult.skippedPastEvents || eventLinkResult.skippedWrongYearEvents) {
+    console.log(
+      `  ${eventLinkResult.skippedPastEvents} alte Events und ${eventLinkResult.skippedWrongYearEvents} Events ausserhalb ${allowedYears.join("/")} uebersprungen`
+    );
+  }
+
+  if (!eventLinks.length) {
+    console.log("  Keine aktuellen Events fuer Detailprüfung");
+    return [];
+  }
+
+  console.log(`  ${eventLinks.length} aktuelle Event-Details werden geprueft`);
 
   const races = await runLimited(
     eventLinks,
