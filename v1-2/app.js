@@ -766,8 +766,10 @@ function renderList(list) {
   resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
 
+  const footerHtml = `<div class="myrcm-note">Renndaten und Dokumente von MyRCM.</div>`;
+
   if (!list.length) {
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
+    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>${footerHtml}`;
     return;
   }
 
@@ -846,6 +848,8 @@ function renderList(list) {
 
     raceList.appendChild(card);
   }
+
+  raceList.insertAdjacentHTML("beforeend", footerHtml);
 }
 
 function toggleClassList(raceId) {
