@@ -258,11 +258,7 @@ function registrationStatusHtml(race) {
 
 
 function statusDetailsHtml(race) {
-  const status = registrationStatus(race);
-
-  if (status === "open" || status === "closed") return "";
-
-  return registrationStatusHtml(race);
+  return "";
 }
 
 function hasActiveRegistration(venueRaces) {
@@ -685,17 +681,25 @@ function documentLinksHtml(race) {
   );
 
   const status = registrationStatus(race);
-  const isClosed = status === "closed";
 
-  const registrationItem = isClosed || !race.url
-    ? `<span class="race-link-item race-link-item-status">
+  let registrationItem = "";
+
+  if (status === "closed") {
+    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
         <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
         Nennung geschlossen
-      </span>`
-    : `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
+      </span>`;
+  } else if (status === "upcoming") {
+    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
+        <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
+        Nennung ab ${race.registrationOpens ? formatDate(race.registrationOpens) : "noch nicht geöffnet"}
+      </span>`;
+  } else if (race.url) {
+    registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
         Nennung ↗
       </a>`;
+  }
 
   const documentItems = [];
 
