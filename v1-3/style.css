@@ -1218,3 +1218,67 @@ input {
 .race-card:has(.race-new-badge) .race-date {
   padding-right: 72px;
 }
+
+
+/* v1.4 registration count in race cards */
+
+.race-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.race-name-row .race-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.race-registration-count {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.race-registration-count svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.race-name {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .race-name-row {
+    gap: 10px;
+  }
+
+  .race-registration-count {
+    font-size: 17px;
+  }
+
+  .race-registration-count svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .race-name {
+    font-size: 17px;
+  }
+}
