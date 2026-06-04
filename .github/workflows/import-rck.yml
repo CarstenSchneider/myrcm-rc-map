@@ -1,0 +1,32 @@
+name: Import RCK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-rck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run RCK importer
+        run: node import-rck.js
+
+      - name: Commit generated RCK files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update RCK race data
+          file_pattern: rck-races.json rck-duplicates.json rck-unmatched-venues.json
