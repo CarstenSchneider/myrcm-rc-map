@@ -518,11 +518,87 @@ function escapeHtml(value = "") {
     .replace(/"/g, "&quot;");
 }
 
+function documentRole(document = {}, index = 0, documents = []) {
+  const text = [
+    document.type,
+    document.label,
+    document.sourceLabel,
+    document.fileName,
+    document.url
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  if (
+    document.type === "announcement" ||
+    text.includes("ausschreibung") ||
+    text.includes("announcement") ||
+    text.includes("invitation")
+  ) {
+    return "announcement";
+  }
+
+  if (
+    document.type === "rules" ||
+    text.includes("reglement") ||
+    text.includes("regel") ||
+    text.includes("rules") ||
+    text.includes("technical")
+  ) {
+    return "rules";
+  }
+
+  if (
+    document.type === "schedule" ||
+    text.includes("zeitplan") ||
+    text.includes("schedule") ||
+    text.includes("timetable") ||
+    text.includes("ablauf")
+  ) {
+    return "schedule";
+  }
+
+  /*
+    Some MyRCM PDFs arrive only as type "document" with label "PDF".
+    For the race-card link row we still need useful German labels.
+    Heuristic:
+    - event-specific PDFs with date/lauf/cup in the filename are usually Ausschreibungen
+    - if there are multiple unknown PDFs, the remaining one is shown as Reglement
+  */
+  if (
+    text.includes("lauf") ||
+    text.includes("cup") ||
+    text.includes("rennen") ||
+    /\d{2}\.\d{2}\.\d{4}/.test(text) ||
+    /\d{4}-\d{2}-\d{2}/.test(text)
+  ) {
+    return "announcement";
+  }
+
+  const unknownDocuments = documents.filter(item => {
+    const itemText = [item.type, item.label, item.fileName, item.url].filter(Boolean).join(" ").toLowerCase();
+    return !itemText.includes("ausschreibung") &&
+      !itemText.includes("announcement") &&
+      !itemText.includes("invitation") &&
+      !itemText.includes("reglement") &&
+      !itemText.includes("regel") &&
+      !itemText.includes("rules") &&
+      !itemText.includes("technical");
+  });
+
+  if (unknownDocuments.length > 1 && index > 0) return "rules";
+
+  return "announcement";
+}
+
 function documentLinksHtml(race) {
   const documents = Array.isArray(race.documents) ? race.documents : [];
 
-  const announcement = documents.find(document => document?.type === "announcement");
-  const rules = documents.find(document => document?.type === "rules");
+  const announcement = documents.find((document, index) =>
+    document?.url && documentRole(document, index, documents) === "announcement"
+  );
+
+  const rules = documents.find((document, index) =>
+    document?.url && documentRole(document, index, documents) === "rules"
+  );
 
   const status = registrationStatus(race);
   const isClosed = status === "closed";
@@ -543,7 +619,7 @@ function documentLinksHtml(race) {
     documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Ausschreibung ↗</a>`);
   }
 
-  if (rules?.url) {
+  if (rules?.url && rules.url !== announcement?.url) {
     documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
   }
 
