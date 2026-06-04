@@ -641,21 +641,45 @@ function registrationTextFromRow($, row) {
   return dateTimeCell || "";
 }
 
-function parseRegistrationCount(value) {
+function parseRegistrationCountInfo(value) {
   const text = normalizeText(value);
 
-  if (!/^\d+$/.test(text)) return null;
+  if (!text) {
+    return {
+      registrationCount: null,
+      registrationDisplay: null
+    };
+  }
 
-  const count = Number(text);
-  return Number.isFinite(count) ? count : null;
+  const numberMatches = text.match(/\d+/g);
+
+  if (!numberMatches?.length) {
+    return {
+      registrationCount: null,
+      registrationDisplay: null
+    };
+  }
+
+  const registrationCount = Number(numberMatches[0]);
+  const registrationDisplay = text.replace(/\s*\/\s*/g, "/").replace(/\s+/g, " ");
+
+  return {
+    registrationCount: Number.isFinite(registrationCount) ? registrationCount : null,
+    registrationDisplay
+  };
 }
 
-function registrationCountFromRow($, row) {
+function registrationCountInfoFromRow($, row) {
   const cells = $(row)
     .find("td")
     .toArray();
 
-  if (!cells.length) return null;
+  if (!cells.length) {
+    return {
+      registrationCount: null,
+      registrationDisplay: null
+    };
+  }
 
   const table = $(row).closest("table");
   const headers = table
@@ -670,10 +694,13 @@ function registrationCountFromRow($, row) {
   });
 
   if (countIndex >= 0 && countIndex < cells.length) {
-    return parseRegistrationCount($(cells[countIndex]).text());
+    return parseRegistrationCountInfo($(cells[countIndex]).text());
   }
 
-  return null;
+  return {
+    registrationCount: null,
+    registrationDisplay: null
+  };
 }
 
 function extractEventLinksFromHostPage(html, host) {
@@ -697,7 +724,7 @@ function extractEventLinksFromHostPage(html, host) {
     const rowText = normalizeText(row.text());
     const linkText = normalizeText($(link).text());
     const registrationText = registrationTextFromRow($, row);
-    const registrationCount = registrationCountFromRow($, row);
+    const registrationCountInfo = registrationCountInfoFromRow($, row);
 
     const dates = [...rowText.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)].map(match => {
       return `${match[3]}-${match[2]}-${match[1]}`;
@@ -733,7 +760,8 @@ function extractEventLinksFromHostPage(html, host) {
         fallbackFrom,
         fallbackTo,
         registrationText,
-        registrationCount
+        registrationCount: registrationCountInfo.registrationCount,
+        registrationDisplay: registrationCountInfo.registrationDisplay
       });
     } else {
       const existing = events.get(eventId);
@@ -751,8 +779,12 @@ function extractEventLinksFromHostPage(html, host) {
         existing.registrationText = registrationText;
       }
 
-      if (existing.registrationCount === null && registrationCount !== null) {
-        existing.registrationCount = registrationCount;
+      if (existing.registrationCount === null && registrationCountInfo.registrationCount !== null) {
+        existing.registrationCount = registrationCountInfo.registrationCount;
+      }
+
+      if (!existing.registrationDisplay && registrationCountInfo.registrationDisplay) {
+        existing.registrationDisplay = registrationCountInfo.registrationDisplay;
       }
     }
   });
@@ -869,6 +901,7 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       registrationOpens: registrationInfo.registrationOpens,
       registrationRequiresLogin: registrationStatus === "login_required",
       registrationCount: eventLink.registrationCount,
+      registrationDisplay: eventLink.registrationDisplay,
       note: registrationNote(finalRegistrationInfo),
       classes: detail.classes,
       documents
