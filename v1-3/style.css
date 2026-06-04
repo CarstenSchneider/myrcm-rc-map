@@ -1007,32 +1007,20 @@ input {
 
 
 
-/* Marker Cleanup v1.3.7 – flat pins */
-
 .map-marker-open,
 .map-marker-closed {
   position: relative;
   width: 26px;
-  height: 26px;
+  height: 34px;
   border: 2px solid #ffffff;
-  border-radius: 999px 999px 999px 0;
+  border-radius: 50% 50% 50% 50% / 40% 40% 70% 70%;
   box-sizing: border-box;
-  transform: rotate(-45deg);
-  transform-origin: 50% 50%;
   box-shadow: none;
 }
 
 .map-marker-open::after,
 .map-marker-closed::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #ffffff;
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .map-marker-open {
@@ -1042,7 +1030,6 @@ input {
 .map-marker-closed {
   background: rgba(31, 29, 26, 0.5);
 }
-
 
 
 /* v1.3.8 document links in race cards */
