@@ -641,6 +641,41 @@ function registrationTextFromRow($, row) {
   return dateTimeCell || "";
 }
 
+function parseRegistrationCount(value) {
+  const text = normalizeText(value);
+
+  if (!/^\d+$/.test(text)) return null;
+
+  const count = Number(text);
+  return Number.isFinite(count) ? count : null;
+}
+
+function registrationCountFromRow($, row) {
+  const cells = $(row)
+    .find("td")
+    .toArray();
+
+  if (!cells.length) return null;
+
+  const table = $(row).closest("table");
+  const headers = table
+    .find("tr")
+    .first()
+    .find("th, td")
+    .toArray()
+    .map(cell => normalizeText($(cell).text()).toLowerCase());
+
+  const countIndex = headers.findIndex(header => {
+    return header === "count" || header === "entries" || header === "nennungen";
+  });
+
+  if (countIndex >= 0 && countIndex < cells.length) {
+    return parseRegistrationCount($(cells[countIndex]).text());
+  }
+
+  return null;
+}
+
 function extractEventLinksFromHostPage(html, host) {
   const $ = cheerio.load(html);
   const events = new Map();
@@ -662,6 +697,7 @@ function extractEventLinksFromHostPage(html, host) {
     const rowText = normalizeText(row.text());
     const linkText = normalizeText($(link).text());
     const registrationText = registrationTextFromRow($, row);
+    const registrationCount = registrationCountFromRow($, row);
 
     const dates = [...rowText.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)].map(match => {
       return `${match[3]}-${match[2]}-${match[1]}`;
@@ -696,7 +732,8 @@ function extractEventLinksFromHostPage(html, host) {
         fallbackName,
         fallbackFrom,
         fallbackTo,
-        registrationText
+        registrationText,
+        registrationCount
       });
     } else {
       const existing = events.get(eventId);
@@ -712,6 +749,10 @@ function extractEventLinksFromHostPage(html, host) {
 
       if (!existing.registrationText && registrationText) {
         existing.registrationText = registrationText;
+      }
+
+      if (existing.registrationCount === null && registrationCount !== null) {
+        existing.registrationCount = registrationCount;
       }
     }
   });
@@ -827,6 +868,7 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       registrationStatus,
       registrationOpens: registrationInfo.registrationOpens,
       registrationRequiresLogin: registrationStatus === "login_required",
+      registrationCount: eventLink.registrationCount,
       note: registrationNote(finalRegistrationInfo),
       classes: detail.classes,
       documents
