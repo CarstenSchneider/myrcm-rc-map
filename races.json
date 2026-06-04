@@ -18,7 +18,8 @@
     "classes": [
       "ORE8 Buggy"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-03-myrcm-event-97990",
@@ -39,7 +40,8 @@
     "classes": [
       "ORE8 Buggy"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-myrcm-event-93311",
@@ -71,7 +73,8 @@
       "Tamiya Euro Cup TRF 17,5T",
       "TEC 500 Runden Teamrennen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-06-myrcm-event-96388",
@@ -95,7 +98,8 @@
       "VG10 scale Alpencup",
       "VG8 Alpencup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-33838-md-timing-2026-06-06-myrcm-event-97390",
@@ -120,7 +124,8 @@
       "NRW-Cup OR8E",
       "NRW-Cup ORT / ORET"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-25939-rt-fichtenberg-e-v-2026-06-06-myrcm-event-95841",
@@ -142,7 +147,8 @@
       "KW-C EG1:8(EG8GT/GT3)",
       "KW-C V+EG1:5 TW/GT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-06-myrcm-event-96662",
@@ -163,7 +169,8 @@
     "classes": [
       "Freies Training Offroad"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-06-myrcm-event-94474",
@@ -190,7 +197,8 @@
       "4WD Buggy Standard",
       "Truggy 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-48023-mac-siersburg-e-v-2026-06-06-myrcm-event-96502",
@@ -219,7 +227,8 @@
       "SRS-Fronti (EGTWFR)",
       "SRS-Rookies"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-06-myrcm-event-97213",
@@ -233,10 +242,10 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97213&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6266&pLa=en&dId%5BE%5D=97213&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "closed",
+    "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "note": "Nennung geschlossen.",
+    "note": null,
     "classes": [
       "2WD Retro",
       "2WD Truck Vintage",
@@ -245,7 +254,8 @@
       "Wheelie Klasse",
       "Tamico BBX"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-82-amc-muhlau-e-v-2026-06-06-myrcm-event-96774",
@@ -267,7 +277,8 @@
       "VG5",
       "EG8GT / EG8GT3"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-06-07-myrcm-event-94313",
@@ -290,7 +301,8 @@
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-07-myrcm-event-94270",
@@ -312,7 +324,8 @@
       "MACN GT Masters",
       "MACN F1 Masters"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-07-myrcm-event-94340",
@@ -337,7 +350,8 @@
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-15091-rcrt-duisburg-e-v-2026-06-07-myrcm-event-97478",
@@ -359,7 +373,8 @@
       "Crawler",
       "Rennstrecke"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-07-myrcm-event-96633",
@@ -382,7 +397,8 @@
       "SPC_ORE2WDST",
       "SPC:ORE4WDST"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-06-12-myrcm-event-95070",
@@ -407,7 +423,8 @@
       "Stock Bike",
       "Super-Bike"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-06-13-myrcm-event-97208",
@@ -453,7 +470,8 @@
         "fileName": "2026_TAMIYA-EuroCup_Reglement.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0C8BFCF0-473F-42F9-ACA2-0711F1BA52AA"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-233-mac-saar-e-v-2026-06-13-myrcm-event-97722",
@@ -475,7 +493,8 @@
       "3LC GT/E8 Porsche Cup",
       "3LC GT/E8 Stock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-13-myrcm-event-95507",
@@ -499,7 +518,8 @@
       "OR8E",
       "Hessencup Kids"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-33489-mc-munster-e-v-2026-06-13-myrcm-event-97831",
@@ -544,7 +564,8 @@
         "fileName": "reglement_heidecup_2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=C752CBB9-BFBF-42B6-8FA5-ED2E95314575"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-06-13-myrcm-event-96918",
@@ -573,7 +594,8 @@
         "fileName": "Ausschreibung SK-Lauf RC Racer Hochsauerland e.V. 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D3C40B19-8EC8-427D-987A-C88BCCD791F0"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-44699-mc-welden-e-v-2026-06-13-myrcm-event-97007",
@@ -608,7 +630,8 @@
         "fileName": "Ausschreibung 6. SK-Lauf OR8 Sued 2026 + 4. Lauf SDC 2026 MC Welden e.V.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=53C21FC3-8E29-4581-9488-83B3CD6C359C"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-42405-modellclub-flensburg-e-v-2026-06-13-myrcm-event-94701",
@@ -639,7 +662,8 @@
       "Tamiya Top-Stock",
       "Tamiya TRF 17.5 / Gastklasse MCV Stock 17.5"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-36-amsc-augsburg-e-v-2026-06-13-myrcm-event-96082",
@@ -662,7 +686,8 @@
       "EG8",
       "ETS ProStock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-891-mac-mettenheim-e-v-2026-06-13-myrcm-event-96696",
@@ -689,7 +714,8 @@
       "TW Stock 17.5",
       "TW Modified"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-42064-mac-solms-e-v-2026-06-13-myrcm-event-97556",
@@ -718,7 +744,8 @@
       "ORE 4WD Standard",
       "ORETR2"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-06-13-myrcm-event-95443",
@@ -745,7 +772,8 @@
       "ORE4WDST",
       "ORETR2"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-13-myrcm-event-94649",
@@ -791,7 +819,8 @@
         "fileName": "13.-14.06.2026 SK-Lauf und BTM.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4AF82CF0-E4C4-4A1C-BC07-3998398B10BA"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-13-myrcm-event-97212",
@@ -820,7 +849,8 @@
       "ORE SC 2WD",
       "ORE Truck"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-06-13-myrcm-event-94707",
@@ -852,7 +882,8 @@
       "FWD Challenge",
       "Einsteiger - Chassis frei (1:10), Buechs"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-24531-tonisport-gmbh-2026-06-13-myrcm-event-96259",
@@ -876,7 +907,8 @@
       "Tamiya TRF 17,5",
       "Gastklasse MCV FWD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-27203-mc-orc-e-v-2026-06-13-myrcm-event-97594",
@@ -900,7 +932,8 @@
       "OR6/4WD",
       "OR6/4WDSC"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-14-myrcm-event-94276",
@@ -922,7 +955,8 @@
       "MACN GT Masters",
       "MACN F1 Masters"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-06-14-myrcm-event-95132",
@@ -947,7 +981,8 @@
       "2WD Pro Stock (\"blinky modus\")",
       "4WD Buggy"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-06-14-myrcm-event-95423",
@@ -973,7 +1008,8 @@
       "MAC-Stock Challenge 17,5 [EGTWHO]",
       "MAC-Challenge M-Chassis"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-06-14-myrcm-event-97526",
@@ -1007,7 +1043,8 @@
         "fileName": "AMC Hamm Freundschaftsrennen 1 - Ausschreibung 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D9FB4CFB-8BD8-42EB-9BCB-59513D7237E5"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-06-14-myrcm-event-95026",
@@ -1031,7 +1068,8 @@
       "Nordbayern Cup GT / LMH 17.5T",
       "Nordbayern Cup TW 17.5T"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-61583-rc-msc-greuthof-e-v-2026-06-14-myrcm-event-97927",
@@ -1063,7 +1101,8 @@
         "fileName": "Ausschreibung_SommerCup_2026_v1.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=12072451-BAEE-4353-AE15-62A57CD3CD98"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-myrcm-event-97571",
@@ -1090,7 +1129,8 @@
       "RCK VTA",
       "RCK M-Chassis"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-678-mac-burgdorf-e-v-2026-06-14-myrcm-event-96508",
@@ -1127,7 +1167,8 @@
       "Freundsch. 4WD",
       "Freundsch. Truggy 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-06-14-myrcm-event-96827",
@@ -1151,7 +1192,8 @@
       "SCT - 2WD",
       "ToTu - 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-14-myrcm-event-97850",
@@ -1181,7 +1223,8 @@
       "TC - Stock",
       "TC - Top Stock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-06-14-myrcm-event-96444",
@@ -1203,7 +1246,8 @@
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-14-myrcm-event-97988",
@@ -1226,7 +1270,8 @@
       "ORE10 Buggy 2WD/4WD",
       "ORE8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-60453-slottis-supreme-masters-2026-06-19-myrcm-event-94598",
@@ -1247,7 +1292,8 @@
     "classes": [
       "Carrera Explorer Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-53667-mac-uetersen-e-v-2026-06-19-myrcm-event-95561",
@@ -1277,7 +1323,8 @@
         "fileName": "260621 Uetersen DM Truggy - Ausschreibung V2.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=59021ED0-10E1-49BE-9CE8-50E0C2832B2D"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-6025-amc-langenfeld-e-v-2026-06-19-myrcm-event-95439",
@@ -1306,7 +1353,8 @@
       "Youngtimer Modified",
       "2WD/4WD ToTu Klasse"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-20-myrcm-event-97145",
@@ -1329,7 +1377,8 @@
       "TW 1/10 Stock Kids",
       "Tamiya Stock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-20-myrcm-event-95671",
@@ -1350,7 +1399,8 @@
     "classes": [
       "Kinder/ Jugend Tag"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-7103-amc-saarbrucken-e-v-2026-06-20-myrcm-event-97948",
@@ -1374,7 +1424,8 @@
       "DMC-VG5TW",
       "Gastfahrer"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-06-20-myrcm-event-94463",
@@ -1403,7 +1454,8 @@
       "Löwen Master Cup 13.5t Stock",
       "Löwen-Master-Cup Modified"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-20-myrcm-event-91316",
@@ -1443,7 +1495,8 @@
         "fileName": "20.-21.06.2026 Ostmasters+ SK-Lauf.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=3AD0CD13-AFC3-4F0E-9FA4-3B57662F53FE"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-17008-msc-kirchhain-e-v-2026-06-20-myrcm-event-97434",
@@ -1468,7 +1521,8 @@
       "EG8GT3",
       "VG8GT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16149-rallye-club-haltern-e-v-im-adac-2026-06-20-myrcm-event-97760",
@@ -1506,7 +1560,8 @@
         "fileName": "2606212 Haltern SMW3 VG - Ausschreibung V2.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4EAB0D6C-9CAB-47B3-B1B0-6CE77CBA5B24"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-24531-tonisport-gmbh-2026-06-20-myrcm-event-95989",
@@ -1539,7 +1594,8 @@
         "fileName": "Ausschreibung TOS West 2026-2027 RD2 Andernach - ohne DMC.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=ECE595E2-32E8-4ED2-B968-694E41E361F6"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-06-21-myrcm-event-96026",
@@ -1563,7 +1619,8 @@
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-06-21-myrcm-event-95134",
@@ -1588,7 +1645,8 @@
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-06-21-myrcm-event-97558",
@@ -1619,7 +1677,8 @@
       "HRCC 1/8 GT",
       "HRCC 1/8 GT3"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-21-myrcm-event-96168",
@@ -1644,7 +1703,8 @@
       "Porsche Cup",
       "Modified"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-21-myrcm-event-94279",
@@ -1671,7 +1731,8 @@
       "RCK GT Challenge",
       "RCK Stock Challenge"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-21-myrcm-event-95865",
@@ -1692,7 +1753,8 @@
     "classes": [
       "Vereinsmeisterschaft"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-134-rcct-munden-e-v-2026-06-26-myrcm-event-94607",
@@ -1719,7 +1781,8 @@
       "Rookies",
       "Stock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-65042-mc-furstenwalde-e-v-2026-06-27-myrcm-event-96270",
@@ -1751,7 +1814,8 @@
         "fileName": "Ausschreibung + Reglement.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=741670B6-7344-4824-89D3-F73D90D1620F"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-27-myrcm-event-93312",
@@ -1779,7 +1843,8 @@
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-27-myrcm-event-96385",
@@ -1800,7 +1865,8 @@
     "registrationRequiresLogin": false,
     "note": null,
     "classes": [],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-06-27-myrcm-event-96344",
@@ -1823,7 +1889,8 @@
       "FCOS 2WD",
       "FCOS TT 02B"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-283-mcc-rhein-ahr-e-v-2026-06-27-myrcm-event-97707",
@@ -1855,7 +1922,8 @@
         "fileName": "260628 Bad Breisig - JumpstartRC Trophy Ausschreibung V2.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=1D0A3744-0967-496B-AC2F-358545A64D40"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-46202-msg-niesky-e-v-2026-06-27-myrcm-event-95506",
@@ -1887,7 +1955,8 @@
         "fileName": "Nachtrennen MSG Niesky Ausschreibung 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=97137073-491D-43E0-BA66-A5A1695A0BF9"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-27-myrcm-event-94651",
@@ -1924,7 +1993,8 @@
         "fileName": "27.-28.06.2026 Tamico Offroad.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9EB353D5-00B9-4C42-928F-557ED7971ABA"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-116-msc-hansa-heilbronn-e-v-2026-06-27-myrcm-event-95007",
@@ -1950,7 +2020,8 @@
       "TOC Truck",
       "TOC Wheelie"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-60576-modellsportzentrum-zwonitz-e-v-2026-06-27-myrcm-event-96247",
@@ -1980,7 +2051,8 @@
       "Tamiya Euro-TW",
       "Tamiya Formel E"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-28-myrcm-event-96386",
@@ -1999,7 +2071,8 @@
     "registrationRequiresLogin": false,
     "note": null,
     "classes": [],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-26821-asc-celle-e-v-2026-06-28-myrcm-event-97665",
@@ -2031,7 +2104,8 @@
       "4WD Freundschaftsrennen",
       "Truggy Modified Freundschaftsrennen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-06-28-myrcm-event-93361",
@@ -2056,7 +2130,8 @@
       "EGTWSP",
       "EGTWFR"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-2047-ets-2026-07-02-myrcm-event-95739",
@@ -2080,7 +2155,8 @@
       "ENS-1:8 +40",
       "ENS 1:8 onroad"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49540-fs-timing-2026-07-04-myrcm-event-95508",
@@ -2104,7 +2180,8 @@
       "OR8E",
       "Hessencup Kids"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-04-myrcm-event-96916",
@@ -2126,7 +2203,8 @@
       "ORE8",
       "ORE8T"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-04-myrcm-event-94464",
@@ -2157,7 +2235,8 @@
         "fileName": "Ausschreibung_LÃ¶wen Rally_2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=E72A8C47-213D-40C3-8037-E442884E0795"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-07-05-myrcm-event-94314",
@@ -2180,7 +2259,8 @@
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-07-05-myrcm-event-94341",
@@ -2205,7 +2285,8 @@
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-07-05-myrcm-event-97559",
@@ -2236,7 +2317,8 @@
       "HRCC 1/8 GT",
       "HRCC 1/8 GT3"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-07-05-myrcm-event-95146",
@@ -2280,7 +2362,8 @@
         "fileName": "Reglement LE-Trophy Offroad 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0BBE869B-DE81-4239-917A-F21B888283C8"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-07-05-myrcm-event-97527",
@@ -2314,7 +2397,8 @@
         "fileName": "AMC Hamm Freundschaftsrennen 2 - Ausschreibung 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=2A012FBC-2C93-4DBF-B268-43FB18F53698"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-07-11-myrcm-event-95123",
@@ -2340,31 +2424,37 @@
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
-    "id": "myrcm-53667-mac-uetersen-e-v-2026-07-11-myrcm-event-97962",
+    "id": "myrcm-53667-mac-uetersen-e-v-2026-07-11-myrcm-event-98009",
     "venueId": "myrcm-53667-mac-uetersen-e-v",
     "venueName": "MAC Uetersen e.V.",
     "venueLocation": "Uetersen",
-    "name": "5.SK Lauf Nord",
+    "name": "5.SK Lauf + Freunschaftsrennen",
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [
       "SK"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97962&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53667&pLa=en&dId%5BE%5D=97962&tId=E&hId%5B1%5D=org",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98009&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53667&pLa=en&dId%5BE%5D=98009&tId=E&hId%5B1%5D=org",
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-06-06",
     "registrationRequiresLogin": false,
     "note": "Nennung ab 06.06.2026",
     "classes": [
+      "Kombi Offroad-Elektro ORE8",
       "SMN Offroad-Elektro1:8",
+      "MAC Offroad-Elektro 1:8",
+      "Kombi Offroad-Verbrenner OR8",
+      "MAC Offroad-Verbrenner 1:8",
       "SMN Offroad-Verbrenner 1:8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-07-11-myrcm-event-97691",
@@ -2385,7 +2475,8 @@
     "classes": [
       "OR8 (1:8 Nitro Offroad Buggy)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-07-11-myrcm-event-97758",
@@ -2418,7 +2509,8 @@
         "fileName": "Ausschreibung offene Motorrad DM.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9A06E715-ED28-4F8D-802D-F9699236961B"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-15091-rcrt-duisburg-e-v-2026-07-11-myrcm-event-97801",
@@ -2447,7 +2539,8 @@
       "RCRT Fun",
       "Short Course 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-11-myrcm-event-94506",
@@ -2486,7 +2579,8 @@
         "fileName": "Ausschreibung Tamiya Euro Cup 12.07.2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=ABD151FD-1D06-4D21-802E-385011CFBC52"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-12-myrcm-event-94273",
@@ -2508,7 +2602,8 @@
       "MACN GT Masters",
       "MACN F1 Masters"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-07-12-myrcm-event-92877",
@@ -2531,7 +2626,8 @@
       "FCTS TT+",
       "FCTS TTS"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-07-12-myrcm-event-95028",
@@ -2557,7 +2653,8 @@
       "TW Modified",
       "TT01 MRSC Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-07-12-myrcm-event-96828",
@@ -2581,7 +2678,8 @@
       "SCT - 2WD",
       "ToTu - 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-18-myrcm-event-96919",
@@ -2602,7 +2700,8 @@
     "classes": [
       "ORE8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-35606-edc-kinzigtal-e-v-2026-07-18-myrcm-event-97756",
@@ -2630,7 +2729,8 @@
       "4WD Buggy Standard",
       "4WD Buggy"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-18-myrcm-event-96139",
@@ -2659,7 +2759,8 @@
       "VG8KL2",
       "VG8KL1"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-18-myrcm-event-94465",
@@ -2680,7 +2781,8 @@
     "registrationRequiresLogin": false,
     "note": null,
     "classes": [],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-891-mac-mettenheim-e-v-2026-07-18-myrcm-event-96695",
@@ -2706,7 +2808,8 @@
       "GT Challenge",
       "Stock Challenge"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v-2026-07-19-myrcm-event-97409",
@@ -2727,7 +2830,8 @@
     "classes": [
       "Rallycross"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-19-myrcm-event-95135",
@@ -2752,7 +2856,8 @@
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-07-19-myrcm-event-95430",
@@ -2776,7 +2881,8 @@
       "MAC-Stock Challenge 17,5 [EGTWHO]",
       "MAC-Challenge M-Chassis"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim-2026-07-19-myrcm-event-97884",
@@ -2807,7 +2913,8 @@
       "TEC Stock",
       "TEC Top Stock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-07-19-myrcm-event-96445",
@@ -2829,7 +2936,8 @@
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-2047-ets-2026-07-23-myrcm-event-97810",
@@ -2855,7 +2963,8 @@
       "Awesomatix Pro Stock",
       "Cayote Modified"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-07-25-myrcm-event-97146",
@@ -2878,7 +2987,8 @@
       "TW 1/10 Stock 13,5",
       "TW 1/10 Stock Kids"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-07-25-myrcm-event-95124",
@@ -2904,7 +3014,8 @@
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49540-fs-timing-2026-07-25-myrcm-event-96171",
@@ -2928,7 +3039,8 @@
       "OR8E",
       "Hessencup Kids"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-07-25-myrcm-event-95178",
@@ -2951,7 +3063,8 @@
     "classes": [
       "Tamiya TT01"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-25-myrcm-event-95464",
@@ -2972,7 +3085,8 @@
     "classes": [
       "MCSS 6 Stunden Langstreckenrennen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-25-myrcm-event-94466",
@@ -2993,7 +3107,8 @@
     "registrationRequiresLogin": false,
     "note": null,
     "classes": [],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-07-26-myrcm-event-96027",
@@ -3017,7 +3132,8 @@
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-07-26-myrcm-event-96345",
@@ -3040,7 +3156,8 @@
       "FCOS Rally",
       "FCOS TT 02B"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-07-26-myrcm-event-93362",
@@ -3065,7 +3182,8 @@
       "EGTWSP",
       "EGTWFR"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-17008-msc-kirchhain-e-v-2026-08-01-myrcm-event-97433",
@@ -3092,7 +3210,8 @@
       "VG8 Klasse 2",
       "VG8-S"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-26596-asc-potsdam-e-v-2026-08-01-myrcm-event-95353",
@@ -3122,7 +3241,8 @@
       "Vintage 4WD offen",
       "Vintage Truck offen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-08-02-myrcm-event-94342",
@@ -3147,7 +3267,8 @@
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93401",
@@ -3170,7 +3291,8 @@
     "classes": [
       "2,4h Truck"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93402",
@@ -3200,7 +3322,8 @@
       "Tamiya Stock",
       "Tamiya Top-Stock"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-08-myrcm-event-96346",
@@ -3223,7 +3346,8 @@
       "FCOS 2WD",
       "FCOS TT 02B"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-08-09-myrcm-event-94315",
@@ -3246,7 +3370,8 @@
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-08-09-myrcm-event-95136",
@@ -3271,7 +3396,8 @@
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-08-09-myrcm-event-97560",
@@ -3298,7 +3424,8 @@
       "HRCC EG10 Plastic Cars",
       "VG8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-2047-ets-2026-08-13-myrcm-event-95740",
@@ -3322,7 +3449,8 @@
       "ENS-1:8 +40",
       "ENS 1:8 onroad"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-08-15-myrcm-event-97914",
@@ -3349,7 +3477,8 @@
       "VG5SP",
       "VG5TW"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-15-myrcm-event-94712",
@@ -3384,7 +3513,8 @@
         "fileName": "Ausschreibung SK+Sachsencup 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4EB3D888-8295-46FA-A111-8F1B9E94507F"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-08-16-myrcm-event-96028",
@@ -3408,7 +3538,8 @@
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-08-16-myrcm-event-96446",
@@ -3430,7 +3561,8 @@
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-08-22-myrcm-event-97147",
@@ -3453,7 +3585,8 @@
       "TW 1/10 Stock 13,5",
       "TW 1/10 Stock Kids"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-08-22-myrcm-event-95455",
@@ -3478,7 +3611,8 @@
       "VG5 Sport LE Trophy",
       "VG5TW_LETrophy"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-22-myrcm-event-97359",
@@ -3506,7 +3640,8 @@
       "TT02 Fun Cup",
       "Einsteiger - Chassis frei (1:10)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-08-23-myrcm-event-95431",
@@ -3530,7 +3665,8 @@
       "MAC-Stock Challenge 17,5 [EGTWHO]",
       "MAC-Challenge M-Chassis"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-23-myrcm-event-96347",
@@ -3553,7 +3689,8 @@
       "FCOS Rally",
       "FCOS TT 02B"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-08-23-myrcm-event-96829",
@@ -3577,7 +3714,8 @@
       "SCT - 2WD",
       "ToTu - 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-4441-tsv-kleinburgwedel-2026-08-23-myrcm-event-96206",
@@ -3611,7 +3749,8 @@
         "fileName": "Ausschreibung Tamico 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=BA4C15F1-662B-4985-8022-D7991F639007"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-08-29-myrcm-event-93313",
@@ -3639,7 +3778,8 @@
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-08-29-myrcm-event-94653",
@@ -3668,7 +3808,8 @@
       "ORET",
       "ORT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-08-30-myrcm-event-96917",
@@ -3689,7 +3830,8 @@
     "classes": [
       "ORE8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-08-30-myrcm-event-95147",
@@ -3733,7 +3875,8 @@
         "fileName": "Reglement LE-Trophy Offroad 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=8B3256CD-111B-4AEB-8ED8-6CAAB05BE86A"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-09-05-myrcm-event-96348",
@@ -3756,7 +3899,8 @@
       "FCOS 2WD",
       "FCOS TT 02B"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-09-06-myrcm-event-94274",
@@ -3778,7 +3922,8 @@
       "MACN GT Masters",
       "MACN F1 Masters"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-09-06-myrcm-event-94316",
@@ -3801,7 +3946,8 @@
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-09-06-myrcm-event-95137",
@@ -3826,7 +3972,8 @@
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-09-06-myrcm-event-94343",
@@ -3851,7 +3998,8 @@
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-2047-ets-2026-09-10-myrcm-event-97811",
@@ -3877,7 +4025,8 @@
       "Awesomatix Pro Stock",
       "Cayote Modified"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-09-11-myrcm-event-97492",
@@ -3899,7 +4048,8 @@
       "ORE2WD",
       "ORE2WDST"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-09-12-myrcm-event-95125",
@@ -3925,7 +4075,8 @@
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-09-13-myrcm-event-97561",
@@ -3952,7 +4103,8 @@
       "HRCC EG10 Plastic Cars",
       "VG8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-09-13-myrcm-event-93363",
@@ -3977,7 +4129,8 @@
       "EGTWSP",
       "EGTWFR"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-09-18-myrcm-event-97575",
@@ -4001,7 +4154,8 @@
       "EFRA 1/5 TC Sport",
       "EFRA Large Scale F1"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-66454-msc-ober-morlen-e-v-2026-09-19-myrcm-event-97459",
@@ -4022,7 +4176,8 @@
     "classes": [
       "OR8E"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-09-19-myrcm-event-94469",
@@ -4052,7 +4207,8 @@
         "fileName": "Ausschreibung & Reglement Die 12 Stunden von Braunschweig 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4B44F789-8987-44EA-AE4D-7B46F24C5A35"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-09-19-myrcm-event-97358",
@@ -4078,7 +4234,8 @@
       "TT02 Fun Cup",
       "Einsteiger - Chassis frei (1:10)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-09-19-myrcm-event-95874",
@@ -4099,7 +4256,8 @@
     "classes": [
       "Vereinsmeisterschaft"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-09-20-myrcm-event-96029",
@@ -4123,7 +4281,8 @@
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-09-20-myrcm-event-95177",
@@ -4151,7 +4310,8 @@
       "VG 1:8 MRSC",
       "VG 1:5 MRSC"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-09-20-myrcm-event-95029",
@@ -4175,7 +4335,8 @@
       "Nordbayern Cup GT / LMH 17.5T",
       "Nordbayern Cup TW 17.5T"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-25939-rt-fichtenberg-e-v-2026-09-20-myrcm-event-95844",
@@ -4198,7 +4359,8 @@
       "Vereinsmeisterschaft Klasse 1/5 Rookie",
       "Vereinsmeisterschaft Klasse 1/8"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-09-20-myrcm-event-96830",
@@ -4222,7 +4384,8 @@
       "SCT - 2WD",
       "ToTu - 2WD"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-17507-lost-place-racers-e-v-2026-09-25-myrcm-event-97027",
@@ -4244,7 +4407,8 @@
       "+40 2WD Buggy",
       "+40 4WD Buggy"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-29586-time4fun-2026-09-25-myrcm-event-94320",
@@ -4279,7 +4443,8 @@
         "fileName": "Aussschreibung Vintage Cup 2026.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=36BCE78D-68B6-4B0B-86FD-7300D5661419"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-09-26-myrcm-event-93314",
@@ -4307,7 +4472,8 @@
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-09-26-myrcm-event-95126",
@@ -4333,7 +4499,8 @@
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-65042-mc-furstenwalde-e-v-2026-09-26-myrcm-event-96330",
@@ -4367,7 +4534,8 @@
         "fileName": "TOC Ausschreibung.pdf",
         "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=DA423FB5-FC0F-4F08-B21A-A26A14BEDC27"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-09-27-myrcm-event-96447",
@@ -4389,7 +4557,8 @@
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-60453-slottis-supreme-masters-2026-10-01-myrcm-event-97611",
@@ -4410,7 +4579,8 @@
     "classes": [
       "Carrera Explorer Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-10-02-myrcm-event-94060",
@@ -4437,7 +4607,8 @@
       "ORE8",
       "ORETR2"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-10-03-myrcm-event-97355",
@@ -4458,7 +4629,8 @@
     "classes": [
       "TT02 Fun Cup"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-04-myrcm-event-94275",
@@ -4480,7 +4652,8 @@
       "MACN GT Masters",
       "MACN F1 Masters"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-10-04-myrcm-event-94344",
@@ -4505,7 +4678,8 @@
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-10-10-myrcm-event-95128",
@@ -4531,7 +4705,8 @@
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-10-10-myrcm-event-93315",
@@ -4559,7 +4734,8 @@
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-20891-rccr-munzig-e-v-2026-10-10-myrcm-event-95043",
@@ -4583,7 +4759,8 @@
       "ORET",
       "ORT"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9640-rc-glashaus-e-v-2026-10-10-myrcm-event-93468",
@@ -4609,7 +4786,8 @@
       "Tamico-Cup Truck",
       "Tamico-Cup Wheelie"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-11-myrcm-event-94278",
@@ -4631,7 +4809,8 @@
       "MACN GT Masters",
       "MACN F1 Masters"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-10-11-myrcm-event-94317",
@@ -4654,7 +4833,8 @@
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-10-17-myrcm-event-94122",
@@ -4679,7 +4859,8 @@
       "VG5TW",
       "VG5Sport"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-10-18-myrcm-event-96271",
@@ -4702,7 +4883,8 @@
       "FCTS TT+",
       "FCTS TTS"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-10-18-myrcm-event-96448",
@@ -4724,7 +4906,8 @@
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-51971-smc-stuttgart-e-v-2026-10-23-myrcm-event-97024",
@@ -4749,7 +4932,8 @@
       "FSR-V 3.5",
       "FSR-V 7.5"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-10-24-myrcm-event-95130",
@@ -4775,7 +4959,8 @@
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-10-25-myrcm-event-95030",
@@ -4799,7 +4984,8 @@
       "Nordbayern Cup M-Chassis",
       "Nordbayern Cup TW 17.5T"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-11-08-myrcm-event-94345",
@@ -4824,7 +5010,8 @@
       "MCC - Tamiya TT",
       "MCC Porsche nach Kleinserie Reglement"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-11-15-myrcm-event-96272",
@@ -4847,7 +5034,8 @@
       "FCTS TT+",
       "FCTS TTS"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-11-28-myrcm-event-95031",
@@ -4871,7 +5059,8 @@
       "Nordbayern Cup M-Chassis",
       "Nordbayern Cup TW 17.5T"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-12-13-myrcm-event-96273",
@@ -4894,7 +5083,8 @@
       "FCTS TT+",
       "FCTS TTS"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-01-17-myrcm-event-96274",
@@ -4917,7 +5107,8 @@
       "FCTS TT+",
       "FCTS TTS"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-02-21-myrcm-event-96275",
@@ -4940,6 +5131,7 @@
       "FCTS TT+",
       "FCTS TTS"
     ],
-    "documents": []
+    "documents": [],
+    "firstSeen": "2026-06-04"
   }
 ]
