@@ -1043,3 +1043,42 @@ input {
   background: rgba(31, 29, 26, 0.5);
 }
 
+
+
+/* v1.3.8 document links in race cards */
+
+.race-document-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.race-document-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f4ef;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.race-document-link:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.race-document-announcement {
+  background: #f1eadf;
+}
+
+.race-document-rules {
+  background: #ece7de;
+}

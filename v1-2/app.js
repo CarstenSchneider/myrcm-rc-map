@@ -501,6 +501,37 @@ function raceVenueNameHtml(race) {
   return `<a href="${website}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`;
 }
 
+function escapeHtml(value = "") {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function documentLinksHtml(race) {
+  if (!Array.isArray(race.documents) || !race.documents.length) return "";
+
+  const links = race.documents
+    .filter(document => document && document.url)
+    .map(document => {
+      const label = document.label || "PDF";
+      const fileName = document.fileName || label;
+      const title = fileName && fileName !== label ? ` title="${escapeHtml(fileName)}"` : "";
+
+      return `<a class="race-document-link race-document-${escapeHtml(document.type || "document")}"
+        href="${escapeHtml(document.url)}"
+        target="_blank"
+        rel="noreferrer"
+        onclick="event.stopPropagation()"${title}>${escapeHtml(label)} ↗</a>`;
+    })
+    .join("");
+
+  if (!links) return "";
+
+  return `<div class="race-document-links" aria-label="Dokumente">${links}</div>`;
+}
+
 function hasVerifiedVenue(race) {
   return Boolean(venueById(race.venueId));
 }
@@ -767,6 +798,7 @@ function renderList(list) {
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
           ${registrationLinkHtml(race)}
+          ${documentLinksHtml(race)}
           ${registrationStatusHtml(race)}
         </div>
       </div>
