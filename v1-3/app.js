@@ -343,10 +343,15 @@ function venueRegistrationCount(venueRaces) {
 }
 
 function markerScaleForRegistrationCount(count) {
-  if (!count) return 1;
+  if (!count) return 0.8;
 
-  const clamped = Math.min(count, 140);
-  return 1 + Math.sqrt(clamped) / Math.sqrt(140) * 0.85;
+  const maxCount = 600; // ETS / große Events
+
+  const ratio =
+    Math.log(count + 1) /
+    Math.log(maxCount + 1);
+
+  return 0.8 + ratio * 1.4;
 }
 
 function ensureRegistrationStatusStyles() {
