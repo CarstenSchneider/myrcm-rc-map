@@ -1,22 +1,25 @@
 [
   {
     "venueId": "rck-unmatched-salzbergen",
+    "rckSeries": "kleinserie",
     "rckLocation": "Salzbergen",
     "venueName": "Salzbergen",
     "raceId": "rck-unmatched-salzbergen-2026-06-21-rck-kleinserie-nord-salzbergen",
-    "raceName": "RCK Kleinserie Nord - Salzbergen",
+    "raceName": "RCK Kleinserie Nord/West - Salzbergen",
     "from": "2026-06-21"
   },
   {
-    "venueId": "rck-unmatched-salzbergen",
-    "rckLocation": "Salzbergen",
-    "venueName": "Salzbergen",
-    "raceId": "rck-unmatched-salzbergen-2026-06-21-rck-kleinserie-west-salzbergen",
-    "raceName": "RCK Kleinserie West - Salzbergen",
-    "from": "2026-06-21"
+    "venueId": "rck-unmatched-neustadt-b-coburg",
+    "rckSeries": "challenge",
+    "rckLocation": "Neustadt b. Coburg",
+    "venueName": "Neustadt b. Coburg",
+    "raceId": "rck-unmatched-neustadt-b-coburg-2026-07-05-rck-challenge-sud-neustadt-b-coburg",
+    "raceName": "RCK Challenge Süd/Ost - Neustadt b. Coburg",
+    "from": "2026-07-05"
   },
   {
     "venueId": "rck-unmatched-hennef",
+    "rckSeries": "kleinserie",
     "rckLocation": "Hennef",
     "venueName": "Hennef",
     "raceId": "rck-unmatched-hennef-2026-08-16-rck-kleinserie-west-hennef",
@@ -24,195 +27,156 @@
     "from": "2026-08-16"
   },
   {
-    "venueId": "rck-unmatched-coming-soonmunster",
-    "rckLocation": "coming soonMunster",
-    "venueName": "coming soonMunster",
-    "raceId": "rck-unmatched-coming-soonmunster-2026-08-23-rck-kleinserie-nord-coming-soonmunster",
-    "raceName": "RCK Kleinserie Nord - coming soonMunster",
-    "from": "2026-08-23"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonmarktredwitz",
-    "rckLocation": "coming soonMarktredwitz",
-    "venueName": "coming soonMarktredwitz",
-    "raceId": "rck-unmatched-coming-soonmarktredwitz-2026-09-05-rck-kleinserie-sud-coming-soonmarktredwitz",
-    "raceName": "RCK Kleinserie Süd - coming soonMarktredwitz",
-    "from": "2026-09-05"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonrheda-wiedenbruck",
-    "rckLocation": "coming soonRheda Wiedenbrück",
-    "venueName": "coming soonRheda Wiedenbrück",
-    "raceId": "rck-unmatched-coming-soonrheda-wiedenbruck-2026-09-06-rck-kleinserie-nord-coming-soonrheda-wiedenbruck",
-    "raceName": "RCK Kleinserie Nord - coming soonRheda Wiedenbrück",
+    "venueId": "rck-unmatched-rudolstadt",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Rudolstadt",
+    "venueName": "Rudolstadt",
+    "raceId": "rck-unmatched-rudolstadt-2026-09-06-rck-kleinserie-ost-rudolstadt",
+    "raceName": "RCK Kleinserie Ost - Rudolstadt",
     "from": "2026-09-06"
   },
   {
-    "venueId": "rck-unmatched-coming-soonrudolstadt",
-    "rckLocation": "coming soonRudolstadt",
-    "venueName": "coming soonRudolstadt",
-    "raceId": "rck-unmatched-coming-soonrudolstadt-2026-09-06-rck-kleinserie-ost-coming-soonrudolstadt",
-    "raceName": "RCK Kleinserie Ost - coming soonRudolstadt",
-    "from": "2026-09-06"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonrheda-wiedenbruck",
-    "rckLocation": "coming soonRheda Wiedenbrück",
-    "venueName": "coming soonRheda Wiedenbrück",
-    "raceId": "rck-unmatched-coming-soonrheda-wiedenbruck-2026-09-06-rck-kleinserie-west-coming-soonrheda-wiedenbruck",
-    "raceName": "RCK Kleinserie West - coming soonRheda Wiedenbrück",
-    "from": "2026-09-06"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonwagenfeld",
-    "rckLocation": "coming soonWagenfeld",
-    "venueName": "coming soonWagenfeld",
-    "raceId": "rck-unmatched-coming-soonwagenfeld-2026-09-20-rck-kleinserie-nord-coming-soonwagenfeld",
-    "raceName": "RCK Kleinserie Nord - coming soonWagenfeld",
+    "venueId": "rck-unmatched-wagenfeld",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Wagenfeld",
+    "venueName": "Wagenfeld",
+    "raceId": "rck-unmatched-wagenfeld-2026-09-20-rck-kleinserie-nord-wagenfeld",
+    "raceName": "RCK Kleinserie Nord - Wagenfeld",
     "from": "2026-09-20"
   },
   {
-    "venueId": "rck-unmatched-coming-soongoldenstedt",
-    "rckLocation": "coming soonGoldenstedt",
-    "venueName": "coming soonGoldenstedt",
-    "raceId": "rck-unmatched-coming-soongoldenstedt-2026-10-04-rck-kleinserie-nord-coming-soongoldenstedt",
-    "raceName": "RCK Kleinserie Nord - coming soonGoldenstedt",
+    "venueId": "rck-unmatched-goldenstedt",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Goldenstedt",
+    "venueName": "Goldenstedt",
+    "raceId": "rck-unmatched-goldenstedt-2026-10-04-rck-kleinserie-nord-goldenstedt",
+    "raceName": "RCK Kleinserie Nord - Goldenstedt",
     "from": "2026-10-04"
   },
   {
-    "venueId": "rck-unmatched-coming-soonwm-warmup",
-    "rckLocation": "coming soonWM Warmup",
-    "venueName": "coming soonWM Warmup",
-    "raceId": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-mitte-coming-soonwm-warmup",
-    "raceName": "RCK Kleinserie Mitte - coming soonWM Warmup",
+    "venueId": "rck-unmatched-wm-warmup",
+    "rckSeries": "kleinserie",
+    "rckLocation": "WM Warmup",
+    "venueName": "WM Warmup",
+    "raceId": "rck-unmatched-wm-warmup-2026-10-18-rck-kleinserie-mitte-wm-warmup",
+    "raceName": "RCK Kleinserie Mitte/Nord/West/Süd/Ost - WM Warmup",
     "from": "2026-10-18"
   },
   {
-    "venueId": "rck-unmatched-coming-soonwm-warmup",
-    "rckLocation": "coming soonWM Warmup",
-    "venueName": "coming soonWM Warmup",
-    "raceId": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-nord-coming-soonwm-warmup",
-    "raceName": "RCK Kleinserie Nord - coming soonWM Warmup",
-    "from": "2026-10-18"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonwm-warmup",
-    "rckLocation": "coming soonWM Warmup",
-    "venueName": "coming soonWM Warmup",
-    "raceId": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-ost-coming-soonwm-warmup",
-    "raceName": "RCK Kleinserie Ost - coming soonWM Warmup",
-    "from": "2026-10-18"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonwm-warmup",
-    "rckLocation": "coming soonWM Warmup",
-    "venueName": "coming soonWM Warmup",
-    "raceId": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-sud-coming-soonwm-warmup",
-    "raceName": "RCK Kleinserie Süd - coming soonWM Warmup",
-    "from": "2026-10-18"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonwm-warmup",
-    "rckLocation": "coming soonWM Warmup",
-    "venueName": "coming soonWM Warmup",
-    "raceId": "rck-unmatched-coming-soonwm-warmup-2026-10-18-rck-kleinserie-west-coming-soonwm-warmup",
-    "raceName": "RCK Kleinserie West - coming soonWM Warmup",
-    "from": "2026-10-18"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonrudolstadt",
-    "rckLocation": "coming soonRudolstadt",
-    "venueName": "coming soonRudolstadt",
-    "raceId": "rck-unmatched-coming-soonrudolstadt-2026-10-25-rck-kleinserie-ost-coming-soonrudolstadt",
-    "raceName": "RCK Kleinserie Ost - coming soonRudolstadt",
+    "venueId": "rck-unmatched-rudolstadt",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Rudolstadt",
+    "venueName": "Rudolstadt",
+    "raceId": "rck-unmatched-rudolstadt-2026-10-25-rck-kleinserie-ost-rudolstadt",
+    "raceName": "RCK Kleinserie Ost - Rudolstadt",
     "from": "2026-10-25"
   },
   {
-    "venueId": "rck-unmatched-coming-soonwillingshausen",
-    "rckLocation": "coming soonWillingshausen",
-    "venueName": "coming soonWillingshausen",
-    "raceId": "rck-unmatched-coming-soonwillingshausen-2026-11-01-rck-kleinserie-mitte-coming-soonwillingshausen",
-    "raceName": "RCK Kleinserie Mitte - coming soonWillingshausen",
+    "venueId": "rck-unmatched-willingshausen",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Willingshausen",
+    "venueName": "Willingshausen",
+    "raceId": "rck-unmatched-willingshausen-2026-11-01-rck-kleinserie-mitte-willingshausen",
+    "raceName": "RCK Kleinserie Mitte - Willingshausen",
     "from": "2026-11-01"
   },
   {
-    "venueId": "rck-unmatched-coming-soonhalle",
-    "rckLocation": "coming soonHalle",
-    "venueName": "coming soonHalle",
-    "raceId": "rck-unmatched-coming-soonhalle-2026-11-01-rck-kleinserie-ost-coming-soonhalle",
-    "raceName": "RCK Kleinserie Ost - coming soonHalle",
+    "venueId": "rck-unmatched-halle",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Halle",
+    "venueName": "Halle",
+    "raceId": "rck-unmatched-halle-2026-11-01-rck-kleinserie-ost-halle",
+    "raceName": "RCK Kleinserie Ost - Halle",
     "from": "2026-11-01"
   },
   {
     "venueId": "rck-unmatched-horstel-riesenbeck",
+    "rckSeries": "kleinserie",
     "rckLocation": "Hörstel-Riesenbeck",
     "venueName": "Hörstel-Riesenbeck",
     "raceId": "rck-unmatched-horstel-riesenbeck-2026-11-08-rck-kleinserie-nord-horstel-riesenbeck",
-    "raceName": "RCK Kleinserie Nord - Hörstel-Riesenbeck",
+    "raceName": "RCK Kleinserie Nord/West - Hörstel-Riesenbeck",
     "from": "2026-11-08"
   },
   {
-    "venueId": "rck-unmatched-horstel-riesenbeck",
-    "rckLocation": "Hörstel-Riesenbeck",
-    "venueName": "Hörstel-Riesenbeck",
-    "raceId": "rck-unmatched-horstel-riesenbeck-2026-11-08-rck-kleinserie-west-horstel-riesenbeck",
-    "raceName": "RCK Kleinserie West - Hörstel-Riesenbeck",
-    "from": "2026-11-08"
+    "venueId": "rck-unmatched-herrenhaide",
+    "rckSeries": "challenge",
+    "rckLocation": "Herrenhaide",
+    "venueName": "Herrenhaide",
+    "raceId": "rck-unmatched-herrenhaide-2026-11-15-rck-challenge-ost-herrenhaide",
+    "raceName": "RCK Challenge Ost - Herrenhaide",
+    "from": "2026-11-15"
   },
   {
-    "venueId": "rck-unmatched-coming-soonbeindersheim",
-    "rckLocation": "coming soonBeindersheim",
-    "venueName": "coming soonBeindersheim",
-    "raceId": "rck-unmatched-coming-soonbeindersheim-2026-12-20-rck-kleinserie-mitte-coming-soonbeindersheim",
-    "raceName": "RCK Kleinserie Mitte - coming soonBeindersheim",
+    "venueId": "rck-unmatched-gelenau",
+    "rckSeries": "challenge",
+    "rckLocation": "Gelenau",
+    "venueName": "Gelenau",
+    "raceId": "rck-unmatched-gelenau-2026-11-29-rck-challenge-ost-gelenau",
+    "raceName": "RCK Challenge Ost - Gelenau",
+    "from": "2026-11-29"
+  },
+  {
+    "venueId": "rck-unmatched-rudolstadt",
+    "rckSeries": "challenge",
+    "rckLocation": "Rudolstadt",
+    "venueName": "Rudolstadt",
+    "raceId": "rck-unmatched-rudolstadt-2026-12-06-rck-challenge-ost-rudolstadt",
+    "raceName": "RCK Challenge Ost - Rudolstadt",
+    "from": "2026-12-06"
+  },
+  {
+    "venueId": "rck-unmatched-beindersheim",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Beindersheim",
+    "venueName": "Beindersheim",
+    "raceId": "rck-unmatched-beindersheim-2026-12-20-rck-kleinserie-mitte-beindersheim",
+    "raceName": "RCK Kleinserie Mitte - Beindersheim",
     "from": "2026-12-20"
   },
   {
-    "venueId": "rck-unmatched-coming-soonrudolstadt",
-    "rckLocation": "coming soonRudolstadt",
-    "venueName": "coming soonRudolstadt",
-    "raceId": "rck-unmatched-coming-soonrudolstadt-2027-01-17-rck-kleinserie-ost-coming-soonrudolstadt",
-    "raceName": "RCK Kleinserie Ost - coming soonRudolstadt",
+    "venueId": "rck-unmatched-rudolstadt",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Rudolstadt",
+    "venueName": "Rudolstadt",
+    "raceId": "rck-unmatched-rudolstadt-2027-01-17-rck-kleinserie-ost-rudolstadt",
+    "raceName": "RCK Kleinserie Ost - Rudolstadt",
     "from": "2027-01-17"
   },
   {
-    "venueId": "rck-unmatched-coming-soonmarktredwitz",
-    "rckLocation": "coming soonMarktredwitz",
-    "venueName": "coming soonMarktredwitz",
-    "raceId": "rck-unmatched-coming-soonmarktredwitz-2027-02-13-rck-kleinserie-ost-coming-soonmarktredwitz",
-    "raceName": "RCK Kleinserie Ost - coming soonMarktredwitz",
-    "from": "2027-02-13"
+    "venueId": "rck-unmatched-plauen",
+    "rckSeries": "challenge",
+    "rckLocation": "Plauen",
+    "venueName": "Plauen",
+    "raceId": "rck-unmatched-plauen-2027-01-24-rck-challenge-sud-plauen",
+    "raceName": "RCK Challenge Süd/Ost - Plauen",
+    "from": "2027-01-24"
   },
   {
-    "venueId": "rck-unmatched-coming-soonmarktredwitz",
-    "rckLocation": "coming soonMarktredwitz",
-    "venueName": "coming soonMarktredwitz",
-    "raceId": "rck-unmatched-coming-soonmarktredwitz-2027-02-13-rck-kleinserie-sud-coming-soonmarktredwitz",
-    "raceName": "RCK Kleinserie Süd - coming soonMarktredwitz",
-    "from": "2027-02-13"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soonibbenburen",
-    "rckLocation": "coming soonIbbenbüren",
-    "venueName": "coming soonIbbenbüren",
-    "raceId": "rck-unmatched-coming-soonibbenburen-2027-02-21-rck-kleinserie-nord-coming-soonibbenburen",
-    "raceName": "RCK Kleinserie Nord - coming soonIbbenbüren",
+    "venueId": "rck-unmatched-ibbenburen",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Ibbenbüren",
+    "venueName": "Ibbenbüren",
+    "raceId": "rck-unmatched-ibbenburen-2027-02-21-rck-kleinserie-nord-ibbenburen",
+    "raceName": "RCK Kleinserie Nord/West - Ibbenbüren",
     "from": "2027-02-21"
   },
   {
-    "venueId": "rck-unmatched-coming-soonibbenburen",
-    "rckLocation": "coming soonIbbenbüren",
-    "venueName": "coming soonIbbenbüren",
-    "raceId": "rck-unmatched-coming-soonibbenburen-2027-02-21-rck-kleinserie-west-coming-soonibbenburen",
-    "raceName": "RCK Kleinserie West - coming soonIbbenbüren",
-    "from": "2027-02-21"
-  },
-  {
-    "venueId": "rck-unmatched-coming-soongeesthacht",
-    "rckLocation": "coming soonGeesthacht",
-    "venueName": "coming soonGeesthacht",
-    "raceId": "rck-unmatched-coming-soongeesthacht-2027-03-21-rck-kleinserie-nord-coming-soongeesthacht",
-    "raceName": "RCK Kleinserie Nord - coming soonGeesthacht",
+    "venueId": "rck-unmatched-geesthacht",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Geesthacht",
+    "venueName": "Geesthacht",
+    "raceId": "rck-unmatched-geesthacht-2027-03-21-rck-kleinserie-nord-geesthacht",
+    "raceName": "RCK Kleinserie Nord - Geesthacht",
     "from": "2027-03-21"
+  },
+  {
+    "venueId": "rck-unmatched-hockendorf",
+    "rckSeries": "challenge",
+    "rckLocation": "Höckendorf",
+    "venueName": "Höckendorf",
+    "raceId": "rck-unmatched-hockendorf-2027-07-04-rck-challenge-ost-hockendorf",
+    "raceName": "RCK Challenge Ost - Höckendorf",
+    "from": "2027-07-04"
   }
 ]
