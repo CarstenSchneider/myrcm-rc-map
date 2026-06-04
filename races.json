@@ -15,6 +15,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "ORE8 Buggy"
@@ -38,6 +39,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung geschlossen.",
     "classes": [
       "ORE8 Buggy"
@@ -63,6 +65,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 63,
+    "registrationDisplay": "63",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter Kids",
@@ -95,6 +98,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Nennung geschlossen.",
     "classes": [
       "1:10 Formel 1-E Alpencup",
@@ -121,6 +125,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 83,
+    "registrationDisplay": "83",
     "note": "Nennung geschlossen.",
     "classes": [
       "NRW-Cup Hobby + Top",
@@ -147,7 +152,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 22,
+    "registrationDisplay": "22/0",
     "note": "Nennung geschlossen.",
     "classes": [
       "KW-C EG1:8(EG8GT/GT3)",
@@ -172,6 +178,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Nennung geschlossen.",
     "classes": [
       "Freies Training Offroad"
@@ -196,7 +203,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 119,
+    "registrationDisplay": "119/1",
     "note": "Nennung geschlossen.",
     "classes": [
       "2WD Buggy",
@@ -226,6 +234,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": "Nennung geschlossen.",
     "classes": [
       "SRS-M-Chassi",
@@ -254,7 +263,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 70,
+    "registrationDisplay": "70/6",
     "note": null,
     "classes": [
       "2WD Retro",
@@ -283,6 +293,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Nennung geschlossen.",
     "classes": [
       "VG5",
@@ -306,7 +317,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -331,7 +343,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "MACN GT Masters",
@@ -356,6 +369,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -382,7 +396,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 60,
+    "registrationDisplay": "60/0",
     "note": "Nennung geschlossen.",
     "classes": [
       "Crawler",
@@ -407,6 +422,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": "Nennung geschlossen.",
     "classes": [
       "SPC_Einsteigerklasse Buggy LRP",
@@ -432,6 +448,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       "Bike1zu8",
@@ -459,6 +476,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "EG Tamiya Truck",
@@ -507,6 +525,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       "3LC GT/E8 Porsche Cup",
@@ -531,6 +550,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 99,
+    "registrationDisplay": "99",
     "note": "Nennung geschlossen.",
     "classes": [
       "OR 8 Hobby",
@@ -559,6 +579,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": null,
     "classes": [
       "VG8K1+VG8Kl2+VG10",
@@ -603,7 +624,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 17,
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       "ORE8"
@@ -637,6 +659,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 62,
+    "registrationDisplay": "62",
     "note": null,
     "classes": [
       "OR8 Expert",
@@ -674,6 +697,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "Tamiya Euro-TW",
@@ -705,6 +729,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "AMSC Porsche Cup",
@@ -730,6 +755,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 54,
+    "registrationDisplay": "54",
     "note": null,
     "classes": [
       "Kids Academy",
@@ -760,7 +786,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 12,
+    "registrationDisplay": "12/0",
     "note": null,
     "classes": [
       "Einsteiger",
@@ -792,6 +819,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 40,
+    "registrationDisplay": "40",
     "note": null,
     "classes": [
       "ORE2WD",
@@ -822,6 +850,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": null,
     "classes": [
       "BTM Formel 1 + EGF1",
@@ -868,7 +897,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 8,
+    "registrationDisplay": "8/11",
     "note": null,
     "classes": [
       "ORE 2WD",
@@ -900,6 +930,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       "Tamiya Stock",
@@ -931,7 +962,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": null,
     "classes": [
       "TOS Fun 21.5",
@@ -958,6 +990,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": null,
     "classes": [
       "EFRA 1/8 Offroad",
@@ -984,6 +1017,7 @@
     "registrationOpens": "2026-06-08",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 08.06.2026",
     "classes": [
       "MACN GT Masters",
@@ -1008,6 +1042,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       "\"Open Fun\" Klasse",
@@ -1036,7 +1071,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
@@ -1063,6 +1099,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "1:10 Elektro Fun Cup",
@@ -1099,6 +1136,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       "Nordbayern Cup Club Cup",
@@ -1125,6 +1163,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "GT-LMH Cup",
@@ -1161,6 +1200,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "RCK GT-Sport",
@@ -1190,6 +1230,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       "2WD Buggy Standard",
@@ -1227,6 +1268,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung geschlossen.",
     "classes": [
       "10,5T - 4WD",
@@ -1255,6 +1297,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       "TC - Euro TW",
@@ -1285,6 +1328,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
@@ -1309,6 +1353,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "DT03",
@@ -1333,7 +1378,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 129,
+    "registrationDisplay": "129/1",
     "note": "Nennung geschlossen.",
     "classes": [
       "Carrera Explorer Cup"
@@ -1357,6 +1403,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 44,
+    "registrationDisplay": "44",
     "note": null,
     "classes": [
       "DM Elektro-Offroad Truggy",
@@ -1389,6 +1436,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 69,
+    "registrationDisplay": "69",
     "note": null,
     "classes": [
       "2WD Race Classic 17.5",
@@ -1420,6 +1468,7 @@
     "registrationOpens": "2026-06-05",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 05.06.2026",
     "classes": [
       "TW 1/10 Stock 13,5",
@@ -1445,6 +1494,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "Kinder/ Jugend Tag"
@@ -1468,6 +1518,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "DMC-VG5F1",
@@ -1494,6 +1545,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "Tamiya Gruppe C",
@@ -1527,6 +1579,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       "VG5F1",
@@ -1569,6 +1622,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       "EG8GT",
@@ -1594,6 +1648,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       "SMW Verbrenner-Glattbahn 1:8 Klasse 1",
@@ -1633,7 +1688,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 100,
+    "registrationDisplay": "100/12",
     "note": null,
     "classes": [
       "TOS F1(EGF1)",
@@ -1669,6 +1725,7 @@
     "registrationOpens": "2026-06-06",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 06.06.2026",
     "classes": [
       "M-Chassis",
@@ -1695,6 +1752,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": null,
     "classes": [
       "MCSS TW 17,5T",
@@ -1722,6 +1780,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       "HRCC GT8",
@@ -1755,6 +1814,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       "M-Chassis",
@@ -1784,6 +1844,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "M-Chassis",
@@ -1811,6 +1872,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "Vereinsmeisterschaft"
@@ -1833,7 +1895,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 151,
+    "registrationDisplay": "151/0",
     "note": null,
     "classes": [
       "Club Racer",
@@ -1863,6 +1926,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": null,
     "classes": [
       "Buggy 2WD Stock",
@@ -1897,6 +1961,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
@@ -1928,7 +1993,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": null,
     "classes": [],
     "documents": [],
@@ -1950,6 +2016,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       "FCOS 1:8",
@@ -1975,6 +2042,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "JumpstartRC Trophy Elektro-Glattbahn GT-E 1:8",
@@ -2009,6 +2077,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       "Fun Klasse",
@@ -2045,6 +2114,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": null,
     "classes": [
       "BBX",
@@ -2081,7 +2151,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 53,
+    "registrationDisplay": "53/0",
     "note": null,
     "classes": [
       "TOC BBX",
@@ -2112,6 +2183,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
       "Tamiya Stock",
@@ -2142,6 +2214,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [],
     "documents": [],
@@ -2165,6 +2238,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "ORE2WDST",
@@ -2197,6 +2271,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "RCK VintageTransAm",
@@ -2223,7 +2298,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 160,
+    "registrationDisplay": "160/0",
     "note": null,
     "classes": [
       "ENS 1:8 SPORT",
@@ -2250,6 +2326,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 32,
+    "registrationDisplay": "32",
     "note": null,
     "classes": [
       "OR 8 Hobby",
@@ -2276,6 +2353,7 @@
     "registrationOpens": "2026-06-17",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 17.06.2026",
     "classes": [
       "ORE8",
@@ -2299,7 +2377,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 69,
+    "registrationDisplay": "69/0",
     "note": null,
     "classes": [
       "WRC 2WD",
@@ -2333,6 +2412,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -2358,6 +2438,7 @@
     "registrationOpens": "2026-06-20",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 20.06.2026",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -2385,6 +2466,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "HRCC GT8",
@@ -2418,6 +2500,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "Fighter Buggy",
@@ -2464,6 +2547,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "1:10 Elektro Fun Cup",
@@ -2500,6 +2584,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -2530,6 +2615,7 @@
     "registrationOpens": "2026-06-06",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 06.06.2026",
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -2558,6 +2644,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "OR8 (1:8 Nitro Offroad Buggy)"
@@ -2581,6 +2668,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": null,
     "classes": [
       "1:4 Funbike Super-Moto",
@@ -2617,7 +2705,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 7,
+    "registrationDisplay": "7/6",
     "note": null,
     "classes": [
       "Elektro-Offroad 1:10 4WD",
@@ -2649,6 +2738,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
@@ -2688,6 +2778,7 @@
     "registrationOpens": "2026-07-06",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 06.07.2026",
     "classes": [
       "MACN GT Masters",
@@ -2712,6 +2803,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "FCTS Kids Academy",
@@ -2737,6 +2829,7 @@
     "registrationOpens": "2026-06-14",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 14.06.2026",
     "classes": [
       "Nordbayern Cup Club Cup",
@@ -2765,6 +2858,7 @@
     "registrationOpens": "2026-06-27",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 27.06.2026",
     "classes": [
       "10,5T - 4WD",
@@ -2791,6 +2885,7 @@
     "registrationOpens": "2026-07-06",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 06.07.2026",
     "classes": [
       "ORE8"
@@ -2815,7 +2910,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 83,
+    "registrationDisplay": "83/2",
     "note": null,
     "classes": [
       "FighterBuggy Jugendrennen",
@@ -2846,6 +2942,7 @@
     "registrationOpens": "2026-06-22",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 22.06.2026",
     "classes": [
       "EG8e",
@@ -2873,18 +2970,27 @@
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98015&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9269&pLa=en&dId%5BE%5D=98015&tId=E&hId%5B1%5D=org",
-    "registrationStatus": "closed",
+    "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
-    "note": "Nennung geschlossen.",
+    "registrationDisplay": "0",
+    "note": null,
     "classes": [
       "RCS GT Klasse",
       "RCS Formel 1",
       "RCS XR5 Klasse",
       "VG5TW Open"
     ],
-    "documents": [],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung RCS + SK Dormagen 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=3EF0EEB9-053A-433E-B1A1-F9AE73C92E35"
+      }
+    ],
     "firstSeen": "2026-06-04"
   },
   {
@@ -2905,6 +3011,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [],
     "documents": [],
@@ -2928,6 +3035,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "Clubman Challenge",
@@ -2954,6 +3062,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "Rallycross"
@@ -2977,6 +3086,7 @@
     "registrationOpens": "2026-06-21",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 21.06.2026",
     "classes": [
       "MCSS TW 17,5T",
@@ -3004,6 +3114,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
@@ -3032,6 +3143,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       "Gastklasse LMH 17.5T / GT3 21.5T",
@@ -3063,6 +3175,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
@@ -3086,7 +3199,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 251,
+    "registrationDisplay": "251/86",
     "note": "Nennung geschlossen.",
     "classes": [
       "FlySky Frontwheel",
@@ -3115,6 +3229,7 @@
     "registrationOpens": "2026-07-10",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 10.07.2026",
     "classes": [
       "Tamiya Stock",
@@ -3140,6 +3255,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -3168,6 +3284,7 @@
     "registrationOpens": "2026-06-26",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 26.06.2026",
     "classes": [
       "OR 8 Hobby",
@@ -3196,6 +3313,7 @@
     "registrationOpens": "2026-06-21",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 21.06.2026",
     "classes": [
       "Tamiya TT01"
@@ -3218,7 +3336,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 3,
+    "registrationDisplay": "3/0",
     "note": null,
     "classes": [
       "MCSS 6 Stunden Langstreckenrennen"
@@ -3244,6 +3363,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [],
     "documents": [],
@@ -3265,6 +3385,7 @@
     "registrationOpens": "2026-07-11",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 11.07.2026",
     "classes": [
       "M-Chassis",
@@ -3291,6 +3412,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
       "FCOS 2WD",
@@ -3316,6 +3438,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "RCK GT2 Porsche",
@@ -3345,6 +3468,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "EG8",
@@ -3372,6 +3496,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       "Tamico BBX",
@@ -3404,6 +3529,7 @@
     "registrationOpens": "2026-07-18",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 18.07.2026",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -3433,6 +3559,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "2,4h Truck"
@@ -3458,6 +3585,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "Tamiya Euro-TW",
@@ -3488,6 +3616,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "FCOS 1:8",
@@ -3513,6 +3642,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -3538,6 +3668,7 @@
     "registrationOpens": "2026-07-19",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 19.07.2026",
     "classes": [
       "MCSS TW 17,5T",
@@ -3565,6 +3696,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Strecke säubern",
@@ -3593,7 +3725,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-07-29",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 29.07.2026",
     "classes": [
       "ENS 1:8 SPORT",
@@ -3622,7 +3755,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-07-20",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 20.07.2026",
     "classes": [
       "VG5F1",
@@ -3651,6 +3785,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": null,
     "classes": [
       "ORE8",
@@ -3686,6 +3821,7 @@
     "registrationOpens": "2026-08-01",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 01.08.2026",
     "classes": [
       "M-Chassis",
@@ -3712,6 +3848,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
@@ -3736,6 +3873,7 @@
     "registrationOpens": "2026-08-07",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 07.08.2026",
     "classes": [
       "Tamiya Stock",
@@ -3761,6 +3899,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       "EG8GT3_LE",
@@ -3788,6 +3927,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "LMH",
@@ -3818,6 +3958,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       "MAC-Challenge FWD 17,5 [EGTWFR]",
@@ -3844,6 +3985,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
       "FCOS 2WD",
@@ -3869,6 +4011,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "10,5T - 4WD",
@@ -3895,6 +4038,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       "BBX",
@@ -3931,6 +4075,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
@@ -3961,6 +4106,7 @@
     "registrationOpens": "2026-08-03",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 03.08.2026",
     "classes": [
       "ORE2WD",
@@ -3992,6 +4138,7 @@
     "registrationOpens": "2026-08-05",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 05.08.2026",
     "classes": [
       "ORE8"
@@ -4015,6 +4162,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "Fighter Buggy",
@@ -4061,6 +4209,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "FCOS 1:8",
@@ -4086,6 +4235,7 @@
     "registrationOpens": "2026-08-31",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 31.08.2026",
     "classes": [
       "MACN GT Masters",
@@ -4110,6 +4260,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -4135,6 +4286,7 @@
     "registrationOpens": "2026-08-09",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 09.08.2026",
     "classes": [
       "MCSS TW 17,5T",
@@ -4162,6 +4314,7 @@
     "registrationOpens": "2026-08-22",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 22.08.2026",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -4188,7 +4341,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-08-26",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 26.08.2026",
     "classes": [
       "FlySky Frontwheel",
@@ -4216,7 +4370,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-07-10",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 10.07.2026",
     "classes": [
       "ORE2WD",
@@ -4241,6 +4396,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -4269,6 +4425,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Strecke säubern",
@@ -4298,6 +4455,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       "RCK GT2 Porsche",
@@ -4324,7 +4482,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 12,
+    "registrationDisplay": "12/0",
     "note": null,
     "classes": [
       "EFRA 1/5 TC Open",
@@ -4350,7 +4509,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-08-19",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 19.08.2026",
     "classes": [
       "OR8E"
@@ -4373,7 +4533,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 18,
+    "registrationDisplay": "18/0",
     "note": null,
     "classes": [
       "Porsche-Cup+/GT3",
@@ -4406,6 +4567,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": null,
+    "registrationDisplay": null,
     "note": null,
     "classes": [
       "FWD Challenge",
@@ -4434,6 +4596,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "Vereinsmeisterschaft"
@@ -4457,6 +4620,7 @@
     "registrationOpens": "2026-09-05",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 05.09.2026",
     "classes": [
       "M-Chassis",
@@ -4483,6 +4647,7 @@
     "registrationOpens": "2026-08-01",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 01.08.2026",
     "classes": [
       "EG 8 GT",
@@ -4513,6 +4678,7 @@
     "registrationOpens": "2026-08-23",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 23.08.2026",
     "classes": [
       "Nordbayern Cup Club Cup",
@@ -4539,6 +4705,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
       "Vereinsmeisterschaft Klasse 1/5",
@@ -4564,6 +4731,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "10,5T - 4WD",
@@ -4589,7 +4757,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 26,
+    "registrationDisplay": "26/64",
     "note": null,
     "classes": [
       "+40 2WD Buggy",
@@ -4616,6 +4785,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       "Vintage 2 WD",
@@ -4651,6 +4821,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
@@ -4681,6 +4852,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -4709,6 +4881,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       "TOC BBX",
@@ -4745,6 +4918,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
@@ -4769,6 +4943,7 @@
     "registrationOpens": "2026-07-09",
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Nennung ab 09.07.2026",
     "classes": [
       "Carrera Explorer Cup"
@@ -4791,7 +4966,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 86,
+    "registrationDisplay": "86/0",
     "note": null,
     "classes": [
       "Fun",
@@ -4821,6 +4997,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "TT02 Fun Cup"
@@ -4844,6 +5021,7 @@
     "registrationOpens": "2026-09-28",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 28.09.2026",
     "classes": [
       "MACN GT Masters",
@@ -4868,6 +5046,7 @@
     "registrationOpens": "2026-09-19",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 19.09.2026",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -4895,6 +5074,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -4923,6 +5103,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
@@ -4953,6 +5134,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "OR8",
@@ -4979,6 +5161,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 34,
+    "registrationDisplay": "34",
     "note": null,
     "classes": [
       "Tamico-Cup BBX",
@@ -5007,6 +5190,7 @@
     "registrationOpens": "2026-10-05",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 05.10.2026",
     "classes": [
       "MACN GT Masters",
@@ -5031,6 +5215,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -5058,6 +5243,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
       "Formel",
@@ -5082,7 +5268,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-09-18",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 18.09.2026",
     "classes": [
       "FCTS Kids Academy",
@@ -5108,6 +5295,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
@@ -5131,7 +5319,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-08-01",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 01.08.2026",
     "classes": [
       "FSR-V 15",
@@ -5159,6 +5348,7 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -5187,6 +5377,7 @@
     "registrationOpens": "2026-09-27",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 27.09.2026",
     "classes": [
       "Nordbayern Cup Club Cup",
@@ -5212,7 +5403,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-10-24",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 24.10.2026",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -5239,7 +5431,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-10-19",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 19.10.2026",
     "classes": [
       "FCTS Kids Academy",
@@ -5265,6 +5458,7 @@
     "registrationOpens": "2026-11-01",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung ab 01.11.2026",
     "classes": [
       "Nordbayern Cup Club Cup",
@@ -5290,7 +5484,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-11-16",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 16.11.2026",
     "classes": [
       "FCTS Kids Academy",
@@ -5315,7 +5510,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-12-14",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 14.12.2026",
     "classes": [
       "FCTS Kids Academy",
@@ -5340,7 +5536,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2027-01-18",
     "registrationRequiresLogin": false,
-    "registrationCount": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
     "note": "Nennung ab 18.01.2027",
     "classes": [
       "FCTS Kids Academy",
