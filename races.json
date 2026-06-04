@@ -17,7 +17,8 @@
     "note": null,
     "classes": [
       "ORE8 Buggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-03-myrcm-event-97990",
@@ -37,7 +38,8 @@
     "note": "Nennung geschlossen.",
     "classes": [
       "ORE8 Buggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-04-myrcm-event-93311",
@@ -68,7 +70,8 @@
       "Tamiya Euro Cup Euro TW",
       "Tamiya Euro Cup TRF 17,5T",
       "TEC 500 Runden Teamrennen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-06-myrcm-event-96388",
@@ -91,7 +94,8 @@
       "1:8 GT-E Alpencup",
       "VG10 scale Alpencup",
       "VG8 Alpencup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-33838-md-timing-2026-06-06-myrcm-event-97390",
@@ -115,7 +119,8 @@
       "NRW-Cup Top",
       "NRW-Cup OR8E",
       "NRW-Cup ORT / ORET"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-25939-rt-fichtenberg-e-v-2026-06-06-myrcm-event-95841",
@@ -136,7 +141,8 @@
     "classes": [
       "KW-C EG1:8(EG8GT/GT3)",
       "KW-C V+EG1:5 TW/GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-06-myrcm-event-96662",
@@ -156,7 +162,8 @@
     "note": "Nennung geschlossen.",
     "classes": [
       "Freies Training Offroad"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-06-myrcm-event-94474",
@@ -182,7 +189,8 @@
       "4WD Buggy",
       "4WD Buggy Standard",
       "Truggy 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-48023-mac-siersburg-e-v-2026-06-06-myrcm-event-96502",
@@ -210,7 +218,8 @@
       "SRS Porsche",
       "SRS-Fronti (EGTWFR)",
       "SRS-Rookies"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-06-myrcm-event-97213",
@@ -235,7 +244,8 @@
       "Figther Klasse",
       "Wheelie Klasse",
       "Tamico BBX"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-82-amc-muhlau-e-v-2026-06-06-myrcm-event-96774",
@@ -256,7 +266,8 @@
     "classes": [
       "VG5",
       "EG8GT / EG8GT3"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-06-07-myrcm-event-94313",
@@ -278,7 +289,8 @@
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-07-myrcm-event-94270",
@@ -299,7 +311,8 @@
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-07-myrcm-event-94340",
@@ -323,7 +336,8 @@
       "MCC - MCC Challenge",
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-15091-rcrt-duisburg-e-v-2026-06-07-myrcm-event-97478",
@@ -344,7 +358,8 @@
     "classes": [
       "Crawler",
       "Rennstrecke"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-30759-mfr-morschheim-rheinhessen-pfalz-e-v-2026-06-07-myrcm-event-96633",
@@ -363,14 +378,11 @@
     "registrationRequiresLogin": false,
     "note": "Nennung geschlossen.",
     "classes": [
-      "SPC_Kids",
       "SPC_Einsteigerklasse Buggy LRP",
       "SPC_ORE2WDST",
-      "SPC_ORE2WD",
-      "SPC:ORE4WDST",
-      "SPC_ORE4WD",
-      "SPC_ORE_TR2"
-    ]
+      "SPC:ORE4WDST"
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-06-12-myrcm-event-95070",
@@ -394,7 +406,8 @@
       "Nitro-Bike",
       "Stock Bike",
       "Super-Bike"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-06-13-myrcm-event-97208",
@@ -417,7 +430,8 @@
       "EG10TWSP(Sfb)",
       "VG5 Modified (VG5TW) - VM Sfb.",
       "VG5 Standard (VG5SP) - VM Sfb."
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-233-mac-saar-e-v-2026-06-13-myrcm-event-97722",
@@ -438,7 +452,8 @@
     "classes": [
       "3LC GT/E8 Porsche Cup",
       "3LC GT/E8 Stock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-13-myrcm-event-95507",
@@ -461,7 +476,8 @@
       "OR8 Expert",
       "OR8E",
       "Hessencup Kids"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-33489-mc-munster-e-v-2026-06-13-myrcm-event-97831",
@@ -490,7 +506,8 @@
       "EG8e",
       "EG10 Stock",
       "RCK-Porsche"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-06-13-myrcm-event-96918",
@@ -510,7 +527,8 @@
     "note": null,
     "classes": [
       "ORE8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-44699-mc-welden-e-v-2026-06-13-myrcm-event-97007",
@@ -536,7 +554,8 @@
       "ORE8",
       "ORT",
       "ORET"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-42405-modellclub-flensburg-e-v-2026-06-13-myrcm-event-94701",
@@ -566,7 +585,8 @@
       "Tamiya Stock",
       "Tamiya Top-Stock",
       "Tamiya TRF 17.5 / Gastklasse MCV Stock 17.5"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-36-amsc-augsburg-e-v-2026-06-13-myrcm-event-96082",
@@ -588,7 +608,8 @@
       "AMSC Porsche Cup",
       "EG8",
       "ETS ProStock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-891-mac-mettenheim-e-v-2026-06-13-myrcm-event-96696",
@@ -614,7 +635,8 @@
       "TW Stock 21.5",
       "TW Stock 17.5",
       "TW Modified"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-42064-mac-solms-e-v-2026-06-13-myrcm-event-97556",
@@ -642,7 +664,8 @@
       "ORE 4WD Modified",
       "ORE 4WD Standard",
       "ORETR2"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-06-13-myrcm-event-95443",
@@ -668,7 +691,8 @@
       "ORE4WD",
       "ORE4WDST",
       "ORETR2"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-13-myrcm-event-94649",
@@ -698,7 +722,8 @@
       "BTM ToniSport17.5 + EGTWHO",
       "EGTWMO",
       "EGTWSP"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-13-myrcm-event-97212",
@@ -726,7 +751,8 @@
       "ORE Fun",
       "ORE SC 2WD",
       "ORE Truck"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-06-13-myrcm-event-94707",
@@ -757,7 +783,8 @@
       "TW 17,5t Stock",
       "FWD Challenge",
       "Einsteiger - Chassis frei (1:10), Buechs"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-24531-tonisport-gmbh-2026-06-13-myrcm-event-96259",
@@ -780,7 +807,8 @@
       "Tamiya Fighter-Cup Senior",
       "Tamiya TRF 17,5",
       "Gastklasse MCV FWD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-27203-mc-orc-e-v-2026-06-13-myrcm-event-97594",
@@ -803,7 +831,8 @@
       "OR6/2WD",
       "OR6/4WD",
       "OR6/4WDSC"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-14-myrcm-event-94276",
@@ -824,7 +853,8 @@
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-06-14-myrcm-event-95132",
@@ -848,7 +878,8 @@
       "2WD Monster",
       "2WD Pro Stock (\"blinky modus\")",
       "4WD Buggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-06-14-myrcm-event-95423",
@@ -873,7 +904,8 @@
       "MAC-Challenge Youngtimer",
       "MAC-Stock Challenge 17,5 [EGTWHO]",
       "MAC-Challenge M-Chassis"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-06-14-myrcm-event-97526",
@@ -898,7 +930,8 @@
       "VG10 Tourenwagen",
       "VG8",
       "VG8 GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-06-14-myrcm-event-95026",
@@ -921,7 +954,8 @@
       "Nordbayern Cup M-Chassis",
       "Nordbayern Cup GT / LMH 17.5T",
       "Nordbayern Cup TW 17.5T"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-61583-rc-msc-greuthof-e-v-2026-06-14-myrcm-event-97927",
@@ -944,7 +978,8 @@
       "TW17.5T",
       "1:8GT",
       "FWD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-myrcm-event-97571",
@@ -970,7 +1005,8 @@
       "RCK Porsche-Cup",
       "RCK VTA",
       "RCK M-Chassis"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-678-mac-burgdorf-e-v-2026-06-14-myrcm-event-96508",
@@ -1006,7 +1042,8 @@
       "Freundsch. 4WD 10.5T",
       "Freundsch. 4WD",
       "Freundsch. Truggy 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-06-14-myrcm-event-96827",
@@ -1029,7 +1066,8 @@
       "13,5T - 2WD",
       "SCT - 2WD",
       "ToTu - 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-06-14-myrcm-event-97850",
@@ -1058,7 +1096,8 @@
       "TC - Race Truck",
       "TC - Stock",
       "TC - Top Stock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-06-14-myrcm-event-96444",
@@ -1079,7 +1118,8 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-2245-mrc-mehrum-e-v-2026-06-14-myrcm-event-97988",
@@ -1101,7 +1141,8 @@
       "DT03",
       "ORE10 Buggy 2WD/4WD",
       "ORE8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-60453-slottis-supreme-masters-2026-06-19-myrcm-event-94598",
@@ -1121,7 +1162,8 @@
     "note": "Nennung geschlossen.",
     "classes": [
       "Carrera Explorer Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-53667-mac-uetersen-e-v-2026-06-19-myrcm-event-95561",
@@ -1142,7 +1184,8 @@
     "classes": [
       "DM Elektro-Offroad Truggy",
       "DM Verbrenner-Offroad Truggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-6025-amc-langenfeld-e-v-2026-06-19-myrcm-event-95439",
@@ -1170,7 +1213,8 @@
       "4WD Vintage Racing 13.5",
       "Youngtimer Modified",
       "2WD/4WD ToTu Klasse"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-20-myrcm-event-97145",
@@ -1192,7 +1236,8 @@
       "TW 1/10 Stock 13,5",
       "TW 1/10 Stock Kids",
       "Tamiya Stock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-20-myrcm-event-95671",
@@ -1212,7 +1257,8 @@
     "note": null,
     "classes": [
       "Kinder/ Jugend Tag"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-7103-amc-saarbrucken-e-v-2026-06-20-myrcm-event-97948",
@@ -1235,7 +1281,8 @@
       "DMC-VG5SP",
       "DMC-VG5TW",
       "Gastfahrer"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-06-20-myrcm-event-94463",
@@ -1263,7 +1310,8 @@
       "Löwen-Master-Cup 17.5T ProStock",
       "Löwen Master Cup 13.5t Stock",
       "Löwen-Master-Cup Modified"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-20-myrcm-event-91316",
@@ -1287,7 +1335,8 @@
       "VG5F1",
       "VG5TW",
       "VG5SP"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-17008-msc-kirchhain-e-v-2026-06-20-myrcm-event-97434",
@@ -1311,7 +1360,8 @@
       "EG8GT",
       "EG8GT3",
       "VG8GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16149-rallye-club-haltern-e-v-im-adac-2026-06-20-myrcm-event-97760",
@@ -1340,7 +1390,8 @@
       "SMW Elektro-Glattbahn 1:8 GT3 Cup",
       "SMW Verbrenner-Glattbahn 1:8 GT",
       "SMW Verbrenner-Glattbahn 1:8 GT + Elektro-Glattbahn 1:8 GT3 Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-24531-tonisport-gmbh-2026-06-20-myrcm-event-95989",
@@ -1364,7 +1415,8 @@
       "TOS Fun 21.5",
       "TOS FWD 17.5(EGTWFR)",
       "TOS Modified(EGTWMOD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-06-21-myrcm-event-96026",
@@ -1387,7 +1439,8 @@
       "Porsche Cup (KP)",
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-06-21-myrcm-event-95134",
@@ -1411,7 +1464,8 @@
       "MCSS FWD",
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-06-21-myrcm-event-97558",
@@ -1441,7 +1495,8 @@
       "VG8",
       "HRCC 1/8 GT",
       "HRCC 1/8 GT3"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49540-fs-timing-2026-06-21-myrcm-event-96168",
@@ -1465,7 +1520,8 @@
       "Expert-Stock",
       "Porsche Cup",
       "Modified"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-06-21-myrcm-event-94279",
@@ -1491,7 +1547,8 @@
       "RCK FWD Challenge",
       "RCK GT Challenge",
       "RCK Stock Challenge"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-06-21-myrcm-event-95865",
@@ -1511,7 +1568,8 @@
     "note": null,
     "classes": [
       "Vereinsmeisterschaft"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-134-rcct-munden-e-v-2026-06-26-myrcm-event-94607",
@@ -1537,7 +1595,8 @@
       "Modified",
       "Rookies",
       "Stock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-65042-mc-furstenwalde-e-v-2026-06-27-myrcm-event-96270",
@@ -1560,7 +1619,8 @@
       "Fighter",
       "Wheelie",
       "Buggy ORE8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-27-myrcm-event-93312",
@@ -1587,7 +1647,8 @@
       "VM 1/10 Front Wheel Drive",
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-27-myrcm-event-96385",
@@ -1607,7 +1668,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [],
+    "documents": []
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-06-27-myrcm-event-96344",
@@ -1629,7 +1691,8 @@
       "FCOS 1:8",
       "FCOS 2WD",
       "FCOS TT 02B"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-283-mcc-rhein-ahr-e-v-2026-06-27-myrcm-event-97707",
@@ -1652,7 +1715,8 @@
       "JumpstartRC Trophy Elektro-Glattbahn 1:8",
       "JumpstartRC Trophy Verbrenner-Glattbahn 1:10",
       "JumpstartRC Trophy Verbrenner-Glattbahn 1:8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-46202-msg-niesky-e-v-2026-06-27-myrcm-event-95506",
@@ -1675,7 +1739,8 @@
       "Short Course",
       "ORE8 Elo Buggy",
       "OR8 Nitro Buggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-27-myrcm-event-94651",
@@ -1703,7 +1768,8 @@
       "Truck",
       "Wheelie",
       "ORE 2WD ST"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-116-msc-hansa-heilbronn-e-v-2026-06-27-myrcm-event-95007",
@@ -1728,7 +1794,8 @@
       "TOC Retro 4WD",
       "TOC Truck",
       "TOC Wheelie"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-60576-modellsportzentrum-zwonitz-e-v-2026-06-27-myrcm-event-96247",
@@ -1757,7 +1824,8 @@
       "Tamiya Race-Truck",
       "Tamiya Euro-TW",
       "Tamiya Formel E"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-06-28-myrcm-event-96386",
@@ -1775,7 +1843,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [],
+    "documents": []
   },
   {
     "id": "myrcm-26821-asc-celle-e-v-2026-06-28-myrcm-event-97665",
@@ -1806,7 +1875,8 @@
       "4WD 10.5T Freundschaftsrennen",
       "4WD Freundschaftsrennen",
       "Truggy Modified Freundschaftsrennen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-06-28-myrcm-event-93361",
@@ -1830,7 +1900,8 @@
       "EGTWHO",
       "EGTWSP",
       "EGTWFR"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-2047-ets-2026-07-02-myrcm-event-95739",
@@ -1853,7 +1924,8 @@
       "ENS 1:10 onroad",
       "ENS-1:8 +40",
       "ENS 1:8 onroad"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49540-fs-timing-2026-07-04-myrcm-event-95508",
@@ -1876,7 +1948,8 @@
       "OR8 Expert (1:8 Nitro Offroad Buggy)",
       "OR8E",
       "Hessencup Kids"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-04-myrcm-event-96916",
@@ -1897,7 +1970,8 @@
     "classes": [
       "ORE8",
       "ORE8T"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-04-myrcm-event-94464",
@@ -1919,7 +1993,8 @@
       "WRC 2WD",
       "WRC 4WD",
       "WRC Rookie"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-07-05-myrcm-event-94314",
@@ -1941,7 +2016,8 @@
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-07-05-myrcm-event-94341",
@@ -1965,7 +2041,8 @@
       "MCC - MCC Challenge",
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-07-05-myrcm-event-97559",
@@ -1995,7 +2072,8 @@
       "VG8",
       "HRCC 1/8 GT",
       "HRCC 1/8 GT3"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-07-05-myrcm-event-95146",
@@ -2023,7 +2101,8 @@
       "ORESC2",
       "ORE8",
       "Fun"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-07-05-myrcm-event-97527",
@@ -2048,7 +2127,8 @@
       "VG10 Tourenwagen",
       "VG8",
       "VG8 GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-07-11-myrcm-event-95123",
@@ -2073,7 +2153,8 @@
       "Clubrennen ORE4WD (Buggy 4WD)",
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-53667-mac-uetersen-e-v-2026-07-11-myrcm-event-97962",
@@ -2096,7 +2177,8 @@
     "classes": [
       "SMN Offroad-Elektro1:8",
       "SMN Offroad-Verbrenner 1:8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37613-esv-blau-gold-bischofsheim-1958-e-v-2026-07-11-myrcm-event-97691",
@@ -2116,7 +2198,8 @@
     "note": null,
     "classes": [
       "OR8 (1:8 Nitro Offroad Buggy)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-07-11-myrcm-event-97758",
@@ -2140,7 +2223,8 @@
       "DMC 1:5 Elektro Superbike",
       "DMC 1:5 Stockbike Elektro",
       "DMC 1:5 Verbrenner Bike"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-15091-rcrt-duisburg-e-v-2026-07-11-myrcm-event-97801",
@@ -2168,7 +2252,8 @@
       "ORE2WD Standard",
       "RCRT Fun",
       "Short Course 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-11-myrcm-event-94506",
@@ -2198,7 +2283,8 @@
       "Tamiya Euro Cup Gentlemen 4WD",
       "Tamiya Euro Cup Euro-TW 2WD/4WD",
       "Tamiya TRF"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-12-myrcm-event-94273",
@@ -2219,7 +2305,8 @@
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-07-12-myrcm-event-92877",
@@ -2241,7 +2328,8 @@
       "FCTS Kids Academy",
       "FCTS TT+",
       "FCTS TTS"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-07-12-myrcm-event-95028",
@@ -2266,7 +2354,8 @@
       "Nordbayern Cup TW 17.5T",
       "TW Modified",
       "TT01 MRSC Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-07-12-myrcm-event-96828",
@@ -2289,7 +2378,8 @@
       "13,5T - 2WD",
       "SCT - 2WD",
       "ToTu - 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-07-18-myrcm-event-96919",
@@ -2309,7 +2399,8 @@
     "note": "Nennung ab 06.07.2026",
     "classes": [
       "ORE8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-35606-edc-kinzigtal-e-v-2026-07-18-myrcm-event-97756",
@@ -2336,7 +2427,8 @@
       "2WD Buggy",
       "4WD Buggy Standard",
       "4WD Buggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-18-myrcm-event-96139",
@@ -2364,7 +2456,8 @@
       "VG10",
       "VG8KL2",
       "VG8KL1"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-18-myrcm-event-94465",
@@ -2384,7 +2477,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [],
+    "documents": []
   },
   {
     "id": "myrcm-891-mac-mettenheim-e-v-2026-07-18-myrcm-event-96695",
@@ -2409,7 +2503,8 @@
       "FWD Challenge",
       "GT Challenge",
       "Stock Challenge"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-64649-breitenfelder-sportverein-von-1924-e-v-2026-07-19-myrcm-event-97409",
@@ -2429,7 +2524,8 @@
     "note": null,
     "classes": [
       "Rallycross"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-19-myrcm-event-95135",
@@ -2453,7 +2549,8 @@
       "MCSS FWD",
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-07-19-myrcm-event-95430",
@@ -2476,7 +2573,8 @@
       "MAC-Challenge Youngtimer",
       "MAC-Stock Challenge 17,5 [EGTWHO]",
       "MAC-Challenge M-Chassis"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-22897-turnerschaft-1860-e-v-gro-auheim-2026-07-19-myrcm-event-97884",
@@ -2506,7 +2604,8 @@
       "TEC Race-Truck",
       "TEC Stock",
       "TEC Top Stock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-07-19-myrcm-event-96445",
@@ -2527,7 +2626,8 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-2047-ets-2026-07-23-myrcm-event-97810",
@@ -2552,7 +2652,8 @@
       "Matrix Formula",
       "Awesomatix Pro Stock",
       "Cayote Modified"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-07-25-myrcm-event-97146",
@@ -2574,7 +2675,8 @@
       "Tamiya Stock",
       "TW 1/10 Stock 13,5",
       "TW 1/10 Stock Kids"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-07-25-myrcm-event-95124",
@@ -2599,7 +2701,8 @@
       "Clubrennen ORE4WD (Buggy 4WD)",
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49540-fs-timing-2026-07-25-myrcm-event-96171",
@@ -2622,7 +2725,8 @@
       "OR8 Expert",
       "OR8E",
       "Hessencup Kids"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-07-25-myrcm-event-95178",
@@ -2644,7 +2748,8 @@
     "note": "Nennung ab 21.06.2026",
     "classes": [
       "Tamiya TT01"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-07-25-myrcm-event-95464",
@@ -2664,7 +2769,8 @@
     "note": null,
     "classes": [
       "MCSS 6 Stunden Langstreckenrennen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-25-myrcm-event-94466",
@@ -2684,7 +2790,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "note": null,
-    "classes": []
+    "classes": [],
+    "documents": []
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-07-26-myrcm-event-96027",
@@ -2707,7 +2814,8 @@
       "Porsche Cup (KP)",
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-07-26-myrcm-event-96345",
@@ -2729,7 +2837,8 @@
       "FCOS 2WD",
       "FCOS Rally",
       "FCOS TT 02B"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-07-26-myrcm-event-93362",
@@ -2753,7 +2862,8 @@
       "EGTWHO",
       "EGTWSP",
       "EGTWFR"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-17008-msc-kirchhain-e-v-2026-08-01-myrcm-event-97433",
@@ -2779,7 +2889,8 @@
       "VG8 Klasse 1",
       "VG8 Klasse 2",
       "VG8-S"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-26596-asc-potsdam-e-v-2026-08-01-myrcm-event-95353",
@@ -2808,7 +2919,8 @@
       "Vintage 2WD offen",
       "Vintage 4WD offen",
       "Vintage Truck offen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-08-02-myrcm-event-94342",
@@ -2832,7 +2944,8 @@
       "MCC - MCC Challenge",
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93401",
@@ -2854,7 +2967,8 @@
     "note": null,
     "classes": [
       "2,4h Truck"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-59129-turngemeinde-1855-neustadt-bei-coburg-e-v-2026-08-07-myrcm-event-93402",
@@ -2883,7 +2997,8 @@
       "Tamiya Race-Truck",
       "Tamiya Stock",
       "Tamiya Top-Stock"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-08-myrcm-event-96346",
@@ -2905,7 +3020,8 @@
       "FCOS 1:8",
       "FCOS 2WD",
       "FCOS TT 02B"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-08-09-myrcm-event-94315",
@@ -2927,7 +3043,8 @@
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-08-09-myrcm-event-95136",
@@ -2951,7 +3068,8 @@
       "MCSS FWD",
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-08-09-myrcm-event-97560",
@@ -2977,7 +3095,8 @@
       "HRCC Formel 1",
       "HRCC EG10 Plastic Cars",
       "VG8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-2047-ets-2026-08-13-myrcm-event-95740",
@@ -3000,7 +3119,8 @@
       "ENS 1:10 onroad",
       "ENS-1:8 +40",
       "ENS 1:8 onroad"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-58267-amc-senftenberg-e-v-2026-08-15-myrcm-event-97914",
@@ -3026,7 +3146,8 @@
       "Ostmasters",
       "VG5SP",
       "VG5TW"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-15-myrcm-event-94712",
@@ -3052,7 +3173,8 @@
       "ORET",
       "ORT",
       "Sachsencup Fun"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-08-16-myrcm-event-96028",
@@ -3075,7 +3197,8 @@
       "Porsche Cup (KP)",
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-08-16-myrcm-event-96446",
@@ -3096,7 +3219,8 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4483-mrt-rosenheim-e-v-2026-08-22-myrcm-event-97147",
@@ -3118,7 +3242,8 @@
       "Tamiya Stock",
       "TW 1/10 Stock 13,5",
       "TW 1/10 Stock Kids"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-08-22-myrcm-event-95455",
@@ -3142,7 +3267,8 @@
       "EG8_LE",
       "VG5 Sport LE Trophy",
       "VG5TW_LETrophy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-08-22-myrcm-event-97359",
@@ -3169,7 +3295,8 @@
       "FWD Challenge",
       "TT02 Fun Cup",
       "Einsteiger - Chassis frei (1:10)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-49037-mac-meckenheim-e-v-2026-08-23-myrcm-event-95431",
@@ -3192,7 +3319,8 @@
       "MAC-Challenge Youngtimer",
       "MAC-Stock Challenge 17,5 [EGTWHO]",
       "MAC-Challenge M-Chassis"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-08-23-myrcm-event-96347",
@@ -3214,7 +3342,8 @@
       "FCOS 2WD",
       "FCOS Rally",
       "FCOS TT 02B"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-08-23-myrcm-event-96829",
@@ -3237,7 +3366,8 @@
       "13,5T - 2WD",
       "SCT - 2WD",
       "ToTu - 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-4441-tsv-kleinburgwedel-2026-08-23-myrcm-event-96206",
@@ -3262,7 +3392,8 @@
       "Retro 4WD",
       "Truck",
       "Wheelie"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-08-29-myrcm-event-93313",
@@ -3289,7 +3420,8 @@
       "VM 1/10 Front Wheel Drive",
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-08-29-myrcm-event-94653",
@@ -3317,7 +3449,8 @@
       "ORE8",
       "ORET",
       "ORT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-08-30-myrcm-event-96917",
@@ -3337,7 +3470,8 @@
     "note": "Nennung ab 05.08.2026",
     "classes": [
       "ORE8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-08-30-myrcm-event-95147",
@@ -3365,7 +3499,8 @@
       "ORESC2",
       "ORE8",
       "Fun"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-09-05-myrcm-event-96348",
@@ -3387,7 +3522,8 @@
       "FCOS 1:8",
       "FCOS 2WD",
       "FCOS TT 02B"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-09-06-myrcm-event-94274",
@@ -3408,7 +3544,8 @@
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-09-06-myrcm-event-94316",
@@ -3430,7 +3567,8 @@
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12227-mcss-althengstett-e-v-2026-09-06-myrcm-event-95137",
@@ -3454,7 +3592,8 @@
       "MCSS FWD",
       "MCSS 911er-Cup",
       "MCSS Langstrecken-Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-09-06-myrcm-event-94343",
@@ -3478,7 +3617,8 @@
       "MCC - MCC Challenge",
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-2047-ets-2026-09-10-myrcm-event-97811",
@@ -3503,7 +3643,8 @@
       "Matrix Formula",
       "Awesomatix Pro Stock",
       "Cayote Modified"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-09-11-myrcm-event-97492",
@@ -3524,7 +3665,8 @@
     "classes": [
       "ORE2WD",
       "ORE2WDST"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-09-12-myrcm-event-95125",
@@ -3549,7 +3691,8 @@
       "Clubrennen ORE4WD (Buggy 4WD)",
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-20622-mac-hamburg-e-v-2026-09-13-myrcm-event-97561",
@@ -3575,7 +3718,8 @@
       "HRCC Formel 1",
       "HRCC EG10 Plastic Cars",
       "VG8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-43367-emc-marktoberdorf-2026-09-13-myrcm-event-93363",
@@ -3599,7 +3743,8 @@
       "EGTWHO",
       "EGTWSP",
       "EGTWFR"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-09-18-myrcm-event-97575",
@@ -3622,7 +3767,8 @@
       "EFRA 1/5 TC Open Gentleman",
       "EFRA 1/5 TC Sport",
       "EFRA Large Scale F1"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-66454-msc-ober-morlen-e-v-2026-09-19-myrcm-event-97459",
@@ -3642,7 +3788,8 @@
     "note": "Nennung ab 19.08.2026",
     "classes": [
       "OR8E"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-95-motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-09-19-myrcm-event-94469",
@@ -3663,7 +3810,8 @@
     "classes": [
       "Porsche-Cup+/GT3",
       "Lemans-Hyper-Car LMH"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-09-19-myrcm-event-97358",
@@ -3688,7 +3836,8 @@
       "Clubman Challenge",
       "TT02 Fun Cup",
       "Einsteiger - Chassis frei (1:10)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-12564-rc-cars-kongen-e-v-2026-09-19-myrcm-event-95874",
@@ -3708,7 +3857,8 @@
     "note": null,
     "classes": [
       "Vereinsmeisterschaft"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-09-20-myrcm-event-96029",
@@ -3731,7 +3881,8 @@
       "Porsche Cup (KP)",
       "Tamiya Race-Truck",
       "Tamiya Stock (KP)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-39587-mrsc-amberg-e-v-2026-09-20-myrcm-event-95177",
@@ -3758,7 +3909,8 @@
       "VG10 MRSC",
       "VG 1:8 MRSC",
       "VG 1:5 MRSC"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-09-20-myrcm-event-95029",
@@ -3781,7 +3933,8 @@
       "Nordbayern Cup M-Chassis",
       "Nordbayern Cup GT / LMH 17.5T",
       "Nordbayern Cup TW 17.5T"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-25939-rt-fichtenberg-e-v-2026-09-20-myrcm-event-95844",
@@ -3803,7 +3956,8 @@
       "Vereinsmeisterschaft Klasse 1/5",
       "Vereinsmeisterschaft Klasse 1/5 Rookie",
       "Vereinsmeisterschaft Klasse 1/8"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-66122-schweriner-sc-breitensport-e-v-2026-09-20-myrcm-event-96830",
@@ -3826,7 +3980,8 @@
       "13,5T - 2WD",
       "SCT - 2WD",
       "ToTu - 2WD"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-17507-lost-place-racers-e-v-2026-09-25-myrcm-event-97027",
@@ -3847,7 +4002,8 @@
     "classes": [
       "+40 2WD Buggy",
       "+40 4WD Buggy"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-29586-time4fun-2026-09-25-myrcm-event-94320",
@@ -3873,7 +4029,8 @@
       "Vintage Tamiya Wheelie",
       "Vintage Kidsklasse",
       "Fighter Tamiya"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-09-26-myrcm-event-93314",
@@ -3900,7 +4057,8 @@
       "VM 1/10 Front Wheel Drive",
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-09-26-myrcm-event-95126",
@@ -3925,7 +4083,8 @@
       "Clubrennen ORE4WD (Buggy 4WD)",
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-65042-mc-furstenwalde-e-v-2026-09-26-myrcm-event-96330",
@@ -3950,7 +4109,8 @@
       "TOC Retro 4WD",
       "TOC Truck",
       "TOC Wheelie"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-09-27-myrcm-event-96447",
@@ -3971,7 +4131,8 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-60453-slottis-supreme-masters-2026-10-01-myrcm-event-97611",
@@ -3991,7 +4152,8 @@
     "note": "Nennung ab 09.07.2026",
     "classes": [
       "Carrera Explorer Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-10-02-myrcm-event-94060",
@@ -4017,7 +4179,8 @@
       "ORE4WDST",
       "ORE8",
       "ORETR2"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-10-03-myrcm-event-97355",
@@ -4037,7 +4200,8 @@
     "note": null,
     "classes": [
       "TT02 Fun Cup"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-04-myrcm-event-94275",
@@ -4058,7 +4222,8 @@
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-10-04-myrcm-event-94344",
@@ -4082,7 +4247,8 @@
       "MCC - MCC Challenge",
       "MCC - Tamiya Fighter",
       "MCC - Tamiya TT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-10-10-myrcm-event-95128",
@@ -4107,7 +4273,8 @@
       "Clubrennen ORE4WD (Buggy 4WD)",
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-10-10-myrcm-event-93315",
@@ -4134,7 +4301,8 @@
       "VM 1/10 Front Wheel Drive",
       "VM 1/10 Stock 17,5T",
       "VM 1/8 GT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-20891-rccr-munzig-e-v-2026-10-10-myrcm-event-95043",
@@ -4157,7 +4325,8 @@
       "ORE8",
       "ORET",
       "ORT"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9640-rc-glashaus-e-v-2026-10-10-myrcm-event-93468",
@@ -4182,7 +4351,8 @@
       "Tamico-Cup Retro 4WD",
       "Tamico-Cup Truck",
       "Tamico-Cup Wheelie"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-10-11-myrcm-event-94278",
@@ -4203,7 +4373,8 @@
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-10-11-myrcm-event-94317",
@@ -4225,7 +4396,8 @@
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
       "FWD \"Tourenwagen 1/10 Fronti\"",
       "Verbrenner Glattbahn 1:10 Scale"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-713-mrc-leipzig-e-v-2026-10-17-myrcm-event-94122",
@@ -4249,7 +4421,8 @@
       "Formel",
       "VG5TW",
       "VG5Sport"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-10-18-myrcm-event-96271",
@@ -4271,7 +4444,8 @@
       "FCTS Kids Academy",
       "FCTS TT+",
       "FCTS TTS"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-10-18-myrcm-event-96448",
@@ -4292,7 +4466,8 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-51971-smc-stuttgart-e-v-2026-10-23-myrcm-event-97024",
@@ -4316,7 +4491,8 @@
       "FSR-V 27",
       "FSR-V 3.5",
       "FSR-V 7.5"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-10-24-myrcm-event-95130",
@@ -4341,7 +4517,8 @@
       "Clubrennen ORE4WD (Buggy 4WD)",
       "Clubrennen RCSF-Cup",
       "Clubrennnen ORETR2 (Monster 2WD)"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-10-25-myrcm-event-95030",
@@ -4364,7 +4541,8 @@
       "Nordbayern Cup GT / LMH 17.5T",
       "Nordbayern Cup M-Chassis",
       "Nordbayern Cup TW 17.5T"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-52121-mcc-ludenscheid-e-v-2026-11-08-myrcm-event-94345",
@@ -4388,7 +4566,8 @@
       "MCC - MCC Challenge",
       "MCC - Tamiya TT",
       "MCC Porsche nach Kleinserie Reglement"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-11-15-myrcm-event-96272",
@@ -4410,7 +4589,8 @@
       "FCTS Kids Academy",
       "FCTS TT+",
       "FCTS TTS"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-11-28-myrcm-event-95031",
@@ -4433,7 +4613,8 @@
       "Nordbayern Cup GT / LMH 17.5T",
       "Nordbayern Cup M-Chassis",
       "Nordbayern Cup TW 17.5T"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2026-12-13-myrcm-event-96273",
@@ -4455,7 +4636,8 @@
       "FCTS Kids Academy",
       "FCTS TT+",
       "FCTS TTS"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-01-17-myrcm-event-96274",
@@ -4477,7 +4659,8 @@
       "FCTS Kids Academy",
       "FCTS TT+",
       "FCTS TTS"
-    ]
+    ],
+    "documents": []
   },
   {
     "id": "myrcm-37520-rc-race-team-munchen-e-v-2027-02-21-myrcm-event-96275",
@@ -4499,6 +4682,7 @@
       "FCTS Kids Academy",
       "FCTS TT+",
       "FCTS TTS"
-    ]
+    ],
+    "documents": []
   }
 ]
