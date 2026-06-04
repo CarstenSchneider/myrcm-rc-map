@@ -1181,3 +1181,30 @@ input {
     flex-wrap: nowrap !important;
   }
 }
+
+
+/* v1.3.14 new race badge */
+
+.race-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.race-new-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  border-radius: 0 18px 0 10px;
+  background: #4F8A57;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.race-card:has(.race-new-badge) .race-date {
+  padding-right: 72px;
+}

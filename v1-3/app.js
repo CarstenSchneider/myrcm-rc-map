@@ -143,6 +143,34 @@ function formatDate(dateString) {
   }).format(date);
 }
 
+function formatShortDate(dateString) {
+  if (!dateString) return "";
+
+  const date = parseDate(dateString);
+
+  return new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit"
+  }).format(date);
+}
+
+function isNewRace(race) {
+  if (!race.firstSeen) return false;
+
+  const firstSeen = parseDate(race.firstSeen);
+  const today = todayStart();
+  const ageInDays = Math.floor((today - firstSeen) / 86400000);
+
+  return ageInDays >= 0 && ageInDays <= 7;
+}
+
+function newRaceBadgeHtml(race) {
+  if (!isNewRace(race)) return "";
+
+  return `<div class="race-new-badge">NEU ${formatShortDate(race.firstSeen)}</div>`;
+}
+
 function registrationStatus(race) {
   if (race.registrationStatus) return race.registrationStatus;
   if (race.registrationRequiresLogin) return "login_required";
@@ -887,6 +915,7 @@ function renderList(list) {
     card.tabIndex = 0;
 
     card.innerHTML = `
+      ${newRaceBadgeHtml(race)}
       <div class="race-card-main">
         <div class="race-card-header">
           <div class="race-date">${formatDateRange(race.from, race.to)}</div>
