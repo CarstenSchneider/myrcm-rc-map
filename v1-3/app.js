@@ -299,6 +299,41 @@ function registrationCount(race) {
   return 0;
 }
 
+function hasRegistrationCount(race) {
+  const candidates = [
+    race.registrationCount,
+    race.registrationsCount,
+    race.registrations,
+    race.entryCount,
+    race.entries,
+    race.participantCount,
+    race.participants,
+    race.nominationCount,
+    race.nominations,
+    race.count
+  ];
+
+  return candidates.some(candidate => {
+    if (candidate === null || candidate === undefined || candidate === "") return false;
+    if (typeof candidate === "number") return Number.isFinite(candidate);
+    if (typeof candidate === "string") return /\d+/.test(candidate);
+    if (Array.isArray(candidate)) return true;
+    return false;
+  });
+}
+
+function registrationCountHtml(race) {
+  if (!hasRegistrationCount(race)) return "";
+
+  return `<div class="race-registration-count" aria-label="${registrationCount(race)} Nennungen">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="7.4" r="4.1"></circle>
+      <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
+    </svg>
+    <span>${registrationCount(race)}</span>
+  </div>`;
+}
+
 function venueRegistrationCount(venueRaces) {
   return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
 }
@@ -973,7 +1008,10 @@ function renderList(list) {
       <div class="race-card-main">
         <div class="race-card-header">
           <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name">${race.name}</div>
+          <div class="race-name-row">
+            <div class="race-name">${race.name}</div>
+            ${registrationCountHtml(race)}
+          </div>
 
           <div class="race-tags race-series-tags">
             ${series.map(item => `<span class="tag">${item}</span>`).join("")}
