@@ -431,7 +431,29 @@
       "VG5 Modified (VG5TW) - VM Sfb.",
       "VG5 Standard (VG5SP) - VM Sfb."
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung_2026-06-14_VM.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D8BEFED4-7471-4D02-A6E7-F02586A3651F"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "Reglement EGTWSP(SFB)_ab2025.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=7FCC0A30-C225-49E0-BEDD-3393ED283C80"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "2026_TAMIYA-EuroCup_Reglement.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0C8BFCF0-473F-42F9-ACA2-0711F1BA52AA"
+      }
+    ]
   },
   {
     "id": "myrcm-233-mac-saar-e-v-2026-06-13-myrcm-event-97722",
@@ -507,7 +529,22 @@
       "EG10 Stock",
       "RCK-Porsche"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "ausschreibung_3_heidecup_2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4A705988-F616-49E5-B8E4-9E5F6BD0AED9"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "reglement_heidecup_2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=C752CBB9-BFBF-42B6-8FA5-ED2E95314575"
+      }
+    ]
   },
   {
     "id": "myrcm-45781-rc-racer-hochsauerland-e-v-2026-06-13-myrcm-event-96918",
@@ -528,7 +565,15 @@
     "classes": [
       "ORE8"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung SK-Lauf RC Racer Hochsauerland e.V. 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D3C40B19-8EC8-427D-987A-C88BCCD791F0"
+      }
+    ]
   },
   {
     "id": "myrcm-44699-mc-welden-e-v-2026-06-13-myrcm-event-97007",
@@ -555,7 +600,15 @@
       "ORT",
       "ORET"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung 6. SK-Lauf OR8 Sued 2026 + 4. Lauf SDC 2026 MC Welden e.V.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=53C21FC3-8E29-4581-9488-83B3CD6C359C"
+      }
+    ]
   },
   {
     "id": "myrcm-42405-modellclub-flensburg-e-v-2026-06-13-myrcm-event-94701",
@@ -723,7 +776,22 @@
       "EGTWMO",
       "EGTWSP"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "berlin-touring-masters-tsvmariendorf-btm-2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=AE764E3D-DCBF-4D43-8F81-00E5FBFEAC3D"
+      },
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "13.-14.06.2026 SK-Lauf und BTM.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4AF82CF0-E4C4-4A1C-BC07-3998398B10BA"
+      }
+    ]
   },
   {
     "id": "myrcm-6266-minicar-club-dortmund-e-v-2026-06-13-myrcm-event-97212",
@@ -931,7 +999,15 @@
       "VG8",
       "VG8 GT"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "AMC Hamm Freundschaftsrennen 1 - Ausschreibung 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D9FB4CFB-8BD8-42EB-9BCB-59513D7237E5"
+      }
+    ]
   },
   {
     "id": "myrcm-47444-rc-racers-toys-shop-2026-06-14-myrcm-event-95026",
@@ -979,7 +1055,15 @@
       "1:8GT",
       "FWD"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung_SommerCup_2026_v1.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=12072451-BAEE-4353-AE15-62A57CD3CD98"
+      }
+    ]
   },
   {
     "id": "myrcm-991-tsv-1871-augsburg-e-v-2026-06-14-myrcm-event-97571",
@@ -1185,7 +1269,15 @@
       "DM Elektro-Offroad Truggy",
       "DM Verbrenner-Offroad Truggy"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "260621 Uetersen DM Truggy - Ausschreibung V2.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=59021ED0-10E1-49BE-9CE8-50E0C2832B2D"
+      }
+    ]
   },
   {
     "id": "myrcm-6025-amc-langenfeld-e-v-2026-06-19-myrcm-event-95439",
@@ -1336,7 +1428,22 @@
       "VG5TW",
       "VG5SP"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "Reglement Ostmasters 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=01A91664-217D-4918-A2AA-06B20E2CD58C"
+      },
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "20.-21.06.2026 Ostmasters+ SK-Lauf.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=3AD0CD13-AFC3-4F0E-9FA4-3B57662F53FE"
+      }
+    ]
   },
   {
     "id": "myrcm-17008-msc-kirchhain-e-v-2026-06-20-myrcm-event-97434",
@@ -1391,7 +1498,15 @@
       "SMW Verbrenner-Glattbahn 1:8 GT",
       "SMW Verbrenner-Glattbahn 1:8 GT + Elektro-Glattbahn 1:8 GT3 Cup"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "2606212 Haltern SMW3 VG - Ausschreibung V2.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4EAB0D6C-9CAB-47B3-B1B0-6CE77CBA5B24"
+      }
+    ]
   },
   {
     "id": "myrcm-24531-tonisport-gmbh-2026-06-20-myrcm-event-95989",
@@ -1416,7 +1531,15 @@
       "TOS FWD 17.5(EGTWFR)",
       "TOS Modified(EGTWMOD)"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung TOS West 2026-2027 RD2 Andernach - ohne DMC.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=ECE595E2-32E8-4ED2-B968-694E41E361F6"
+      }
+    ]
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-06-21-myrcm-event-96026",
@@ -1620,7 +1743,15 @@
       "Wheelie",
       "Buggy ORE8"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung + Reglement.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=741670B6-7344-4824-89D3-F73D90D1620F"
+      }
+    ]
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-06-27-myrcm-event-93312",
@@ -1716,7 +1847,15 @@
       "JumpstartRC Trophy Verbrenner-Glattbahn 1:10",
       "JumpstartRC Trophy Verbrenner-Glattbahn 1:8"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "260628 Bad Breisig - JumpstartRC Trophy Ausschreibung V2.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=1D0A3744-0967-496B-AC2F-358545A64D40"
+      }
+    ]
   },
   {
     "id": "myrcm-46202-msg-niesky-e-v-2026-06-27-myrcm-event-95506",
@@ -1740,7 +1879,15 @@
       "ORE8 Elo Buggy",
       "OR8 Nitro Buggy"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Nachtrennen MSG Niesky Ausschreibung 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=97137073-491D-43E0-BA66-A5A1695A0BF9"
+      }
+    ]
   },
   {
     "id": "myrcm-45925-rc-speedracer-e-v-2026-06-27-myrcm-event-94651",
@@ -1769,7 +1916,15 @@
       "Wheelie",
       "ORE 2WD ST"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "27.-28.06.2026 Tamico Offroad.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9EB353D5-00B9-4C42-928F-557ED7971ABA"
+      }
+    ]
   },
   {
     "id": "myrcm-116-msc-hansa-heilbronn-e-v-2026-06-27-myrcm-event-95007",
@@ -1994,7 +2149,15 @@
       "WRC 4WD",
       "WRC Rookie"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung_LÃ¶wen Rally_2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=E72A8C47-213D-40C3-8037-E442884E0795"
+      }
+    ]
   },
   {
     "id": "myrcm-879-modellrenngemeinschaft-dogern-e-v-2026-07-05-myrcm-event-94314",
@@ -2102,7 +2265,22 @@
       "ORE8",
       "Fun"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "2026-07_05_Ausschreibung_LE-Trophy-Offroad_Lauf-2_OV61.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=A700902B-8D01-4FAE-AD33-CA0E2754921B"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "Reglement LE-Trophy Offroad 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0BBE869B-DE81-4239-917A-F21B888283C8"
+      }
+    ]
   },
   {
     "id": "myrcm-7771-amc-hamm-e-v-2026-07-05-myrcm-event-97527",
@@ -2128,7 +2306,15 @@
       "VG8",
       "VG8 GT"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "AMC Hamm Freundschaftsrennen 2 - Ausschreibung 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=2A012FBC-2C93-4DBF-B268-43FB18F53698"
+      }
+    ]
   },
   {
     "id": "myrcm-16961-rcsf-singen-e-v-2026-07-11-myrcm-event-95123",
@@ -2224,7 +2410,15 @@
       "DMC 1:5 Stockbike Elektro",
       "DMC 1:5 Verbrenner Bike"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung offene Motorrad DM.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9A06E715-ED28-4F8D-802D-F9699236961B"
+      }
+    ]
   },
   {
     "id": "myrcm-15091-rcrt-duisburg-e-v-2026-07-11-myrcm-event-97801",
@@ -2284,7 +2478,15 @@
       "Tamiya Euro Cup Euro-TW 2WD/4WD",
       "Tamiya TRF"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung Tamiya Euro Cup 12.07.2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=ABD151FD-1D06-4D21-802E-385011CFBC52"
+      }
+    ]
   },
   {
     "id": "myrcm-9976-mac-nurnberg-e-v-2026-07-12-myrcm-event-94273",
@@ -3174,7 +3376,15 @@
       "ORT",
       "Sachsencup Fun"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung SK+Sachsencup 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4EB3D888-8295-46FA-A111-8F1B9E94507F"
+      }
+    ]
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-08-16-myrcm-event-96028",
@@ -3393,7 +3603,15 @@
       "Truck",
       "Wheelie"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung Tamico 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=BA4C15F1-662B-4985-8022-D7991F639007"
+      }
+    ]
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-08-29-myrcm-event-93313",
@@ -3500,7 +3718,22 @@
       "ORE8",
       "Fun"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "2026-08_30_Ausschreibung_LE-Trophy-Offroad_Lauf-3_OV61.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4B1C1CE6-8104-495F-A3CE-B79DF0325BD3"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "Reglement LE-Trophy Offroad 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=8B3256CD-111B-4AEB-8ED8-6CAAB05BE86A"
+      }
+    ]
   },
   {
     "id": "myrcm-53665-rc-modellbaufreunde-e-v-2026-09-05-myrcm-event-96348",
@@ -3811,7 +4044,15 @@
       "Porsche-Cup+/GT3",
       "Lemans-Hyper-Car LMH"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung & Reglement Die 12 Stunden von Braunschweig 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4B44F789-8987-44EA-AE4D-7B46F24C5A35"
+      }
+    ]
   },
   {
     "id": "myrcm-48536-rc-bande-zwickau-e-v-2026-09-19-myrcm-event-97358",
@@ -4030,7 +4271,15 @@
       "Vintage Kidsklasse",
       "Fighter Tamiya"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "Aussschreibung Vintage Cup 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=36BCE78D-68B6-4B0B-86FD-7300D5661419"
+      }
+    ]
   },
   {
     "id": "myrcm-19290-mcv-danischer-wohld-e-v-2026-09-26-myrcm-event-93314",
@@ -4110,7 +4359,15 @@
       "TOC Truck",
       "TOC Wheelie"
     ],
-    "documents": []
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "TOC Ausschreibung.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=DA423FB5-FC0F-4F08-B21A-A26A14BEDC27"
+      }
+    ]
   },
   {
     "id": "myrcm-10490-ig-racing-team-hamm-2026-09-27-myrcm-event-96447",
