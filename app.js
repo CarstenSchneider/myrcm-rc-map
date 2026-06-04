@@ -140,6 +140,33 @@ function registrationLinkHtml(race) {
   return `<a class="race-link race-link-with-status registration-${status}" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${registrationDotHtml(race)}MyRCM öffnen ↗</a>`;
 }
 
+function documentLabel(document) {
+  if (!document) return "PDF";
+
+  if (document.type === "announcement") return "Ausschreibung";
+  if (document.type === "rules") return "Reglement";
+  if (document.type === "schedule") return "Zeitplan";
+
+  return document.label && document.label !== "PDF" ? document.label : "PDF";
+}
+
+function documentLinksHtml(race) {
+  if (!Array.isArray(race.documents) || !race.documents.length) {
+    return "";
+  }
+
+  const links = race.documents
+    .filter(document => document && document.url)
+    .map(document => {
+      const label = documentLabel(document);
+      return `<a class="race-document-link" href="${document.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">📄 ${label}</a>`;
+    });
+
+  if (!links.length) return "";
+
+  return `<div class="race-documents">${links.join('<span class="race-document-separator">·</span>')}</div>`;
+}
+
 function registrationStatusHtml(race) {
   const status = registrationStatus(race);
 
@@ -237,6 +264,37 @@ function ensureRegistrationStatusStyles() {
 
     .registration-dot-closed {
       background: #4f4a44;
+    }
+
+    .race-documents {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px;
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .race-document-link {
+      color: var(--link, #006fae);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .race-document-link:hover,
+    .race-document-link:focus-visible {
+      text-decoration: underline;
+    }
+
+    .race-document-separator {
+      color: var(--muted, #6f6a62);
+    }
+
+    .race-card.registration-closed .race-documents,
+    .race-card.registration-closed .race-document-link,
+    .race-card.registration-closed .race-document-separator {
+      color: rgba(31, 29, 26, 0.58);
     }
 
     .registration-status {
@@ -685,6 +743,7 @@ function renderList(list) {
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
           ${registrationLinkHtml(race)}
+          ${documentLinksHtml(race)}
           ${registrationStatusHtml(race)}
         </div>
       </div>
