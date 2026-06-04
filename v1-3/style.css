@@ -1139,9 +1139,14 @@ input {
 }
 
 .race-document-links .race-link-item-status-closed:hover,
-.race-document-links .race-link-item-status-closed:focus-visible,
+.race-document-links .race-link-item-status-closed:focus-visible {
+  color: rgba(31, 29, 26, 0.58);
+  text-decoration: none;
+}
+
 .race-document-links .race-link-item-status-upcoming:hover,
 .race-document-links .race-link-item-status-upcoming:focus-visible {
+  color: #b17d1b;
   text-decoration: none;
 }
 
