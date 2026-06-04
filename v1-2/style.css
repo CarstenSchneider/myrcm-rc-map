@@ -1084,10 +1084,77 @@ input {
 }
 
 
-.myrcm-note{
-  margin-top:16px;
-  padding-top:12px;
-  border-top:1px solid rgba(222,214,202,.7);
-  font-size:11px;
-  color:var(--muted);
+/* v1.3.10 document link row */
+
+.race-document-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 22px;
+  row-gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.race-document-links .race-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.race-document-links .race-link-item:hover,
+.race-document-links .race-link-item:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.race-document-links .race-link-item-status {
+  gap: 8px;
+}
+
+.race-document-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.race-document-dot-open {
+  background: #4F8A57;
+}
+
+.race-document-dot-closed {
+  background: rgba(31, 29, 26, 0.5);
+}
+
+.race-card.registration-closed .race-document-links .race-link-item-status {
+  color: rgba(31, 29, 26, 0.58);
+}
+
+@media (max-width: 860px) {
+  .race-document-links {
+    column-gap: 16px;
+  }
+}
+
+
+.myrcm-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
+  font-size: 11px;
+  color: var(--muted);
 }

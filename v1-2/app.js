@@ -228,6 +228,15 @@ function registrationStatusHtml(race) {
   return "";
 }
 
+
+function statusDetailsHtml(race) {
+  const status = registrationStatus(race);
+
+  if (status === "open" || status === "closed") return "";
+
+  return registrationStatusHtml(race);
+}
+
 function hasActiveRegistration(venueRaces) {
   return venueRaces.some(isRegistrationActive);
 }
@@ -510,26 +519,35 @@ function escapeHtml(value = "") {
 }
 
 function documentLinksHtml(race) {
-  if (!Array.isArray(race.documents) || !race.documents.length) return "";
+  const documents = Array.isArray(race.documents) ? race.documents : [];
 
-  const links = race.documents
-    .filter(document => document && document.url)
-    .map(document => {
-      const label = document.label || "PDF";
-      const fileName = document.fileName || label;
-      const title = fileName && fileName !== label ? ` title="${escapeHtml(fileName)}"` : "";
+  const announcement = documents.find(document => document?.type === "announcement");
+  const rules = documents.find(document => document?.type === "rules");
 
-      return `<a class="race-document-link race-document-${escapeHtml(document.type || "document")}"
-        href="${escapeHtml(document.url)}"
-        target="_blank"
-        rel="noreferrer"
-        onclick="event.stopPropagation()"${title}>${escapeHtml(label)} ↗</a>`;
-    })
-    .join("");
+  const status = registrationStatus(race);
+  const isClosed = status === "closed";
 
-  if (!links) return "";
+  const registrationItem = isClosed || !race.url
+    ? `<span class="race-link-item race-link-item-status">
+        <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
+        Nennung geschlossen
+      </span>`
+    : `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
+        <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
+        Nennung ↗
+      </a>`;
 
-  return `<div class="race-document-links" aria-label="Dokumente">${links}</div>`;
+  const documentItems = [];
+
+  if (announcement?.url) {
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Ausschreibung ↗</a>`);
+  }
+
+  if (rules?.url) {
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
+  }
+
+  return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
 }
 
 function hasVerifiedVenue(race) {
@@ -799,9 +817,8 @@ function renderList(list) {
 
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
-          ${registrationLinkHtml(race)}
           ${documentLinksHtml(race)}
-          ${registrationStatusHtml(race)}
+          ${statusDetailsHtml(race)}
         </div>
       </div>
 
