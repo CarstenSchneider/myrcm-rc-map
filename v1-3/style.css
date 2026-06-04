@@ -1007,28 +1007,24 @@ input {
 
 
 
+/* Marker v1.4 – SVG pins */
+
 .map-marker-open,
 .map-marker-closed {
-  position: relative;
   width: 26px;
   height: 34px;
-  border: 2px solid #ffffff;
-  border-radius: 50% 50% 50% 50% / 40% 40% 70% 70%;
-  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
   box-shadow: none;
 }
 
-.map-marker-open::after,
-.map-marker-closed::after {
-  display: none;
-}
-
 .map-marker-open {
-  background: #4F8A57;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%234F8A57' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 .map-marker-closed {
-  background: rgba(31, 29, 26, 0.5);
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='rgba(31,29,26,0.5)' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
 }
 
 
