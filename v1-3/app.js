@@ -323,14 +323,18 @@ function hasRegistrationCount(race) {
 }
 
 function registrationCountHtml(race) {
-  if (!hasRegistrationCount(race)) return "";
+  const display =
+    race.registrationDisplay ||
+    (hasRegistrationCount(race) ? String(registrationCount(race)) : null);
 
-  return `<div class="race-registration-count" aria-label="${registrationCount(race)} Nennungen">
+  if (!display) return "";
+
+  return `<div class="race-registration-count" aria-label="${display} Nennungen">
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <circle cx="12" cy="7.4" r="4.1"></circle>
       <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
     </svg>
-    <span>${registrationCount(race)}</span>
+    <span>${display}</span>
   </div>`;
 }
 
