@@ -539,6 +539,20 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
+    .map-marker-switcher {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .map-marker-switcher .map-marker-open,
+    .map-marker-switcher .map-marker-closed {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
     .map-marker-open,
     .map-marker-closed,
     .map-marker-venue-inactive {
@@ -548,40 +562,33 @@ function ensureRegistrationStatusStyles() {
 
     .map-marker-open *,
     .map-marker-closed *,
-    .map-marker-venue-inactive *,
-    .map-marker-active-dot {
+    .map-marker-venue-inactive * {
       pointer-events: none;
     }
 
-    .map-marker-active-dot {
+    .map-marker-active-replacement {
       display: none;
       position: absolute;
       left: 50%;
-      bottom: -6px;
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-sizing: border-box;
-      transform: translateX(-50%);
-      box-shadow: none;
+      top: 100%;
+      transform: translate(-50%, -50%);
       z-index: 2;
     }
 
-    .map-marker-active-dot-open {
-      background: #5f8f5f;
+    .map-marker-active-replacement-open {
+      background: #5f8f5f !important;
     }
 
-    .map-marker-active-dot-closed {
-      background: rgba(31, 29, 26, 0.45);
+    .map-marker-active-replacement-closed {
+      background: rgba(31, 29, 26, 0.45) !important;
     }
 
-    .marker-popup-active .map-marker-open,
-    .marker-popup-active .map-marker-closed {
+    .marker-popup-active .map-marker-switcher .map-marker-open,
+    .marker-popup-active .map-marker-switcher .map-marker-closed {
       opacity: 0;
     }
 
-    .marker-popup-active .map-marker-active-dot {
+    .marker-popup-active .map-marker-active-replacement {
       display: block;
     }
 
@@ -1054,12 +1061,12 @@ function updateMarkers(list) {
       ? [Math.round(markerWidth / 2), markerHeight]
       : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
 
-    const activeDotClass = hasActiveRegistration(venueRaces)
-      ? "map-marker-active-dot-open"
-      : "map-marker-active-dot-closed";
+    const replacementClass = hasActiveRegistration(venueRaces)
+      ? "map-marker-active-replacement-open"
+      : "map-marker-active-replacement-closed";
 
     const markerHtml = hasUpcomingRaces
-      ? `<div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px;"></div><div class="map-marker-active-dot ${activeDotClass}"></div>`
+      ? `<div class="map-marker-switcher" style="width: ${markerWidth}px; height: ${markerHeight}px;"><div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px;"></div><div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}"></div></div>`
       : `<div class="${markerClass}"></div>`;
 
     const marker = L.marker(
