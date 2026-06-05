@@ -1372,3 +1372,64 @@ input {
 .race-panel::-webkit-scrollbar-thumb:hover {
   background: rgba(31,29,26,.30);
 }
+
+/* v1.5 registration visibility toggle */
+
+.layout-prototype .panel-header {
+  margin-bottom: 12px;
+}
+
+.race-visibility-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f1e8;
+}
+
+.race-visibility-toggle button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.race-visibility-toggle button.active {
+  background: #4F8A57;
+  color: #fff;
+}
+
+.race-visibility-toggle button:not(.active):hover,
+.race-visibility-toggle button:not(.active):focus-visible {
+  background: rgba(31, 29, 26, 0.06);
+  color: var(--text);
+  outline: none;
+}
+
+.race-visibility-toggle .race-document-dot {
+  width: 8px !important;
+  height: 8px !important;
+  background: currentColor;
+}
+
+.race-visibility-toggle button.active .race-document-dot {
+  background: #fff;
+}
+
+.layout-prototype .result-line {
+  margin-bottom: 16px;
+}
