@@ -24,7 +24,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const raceCalendarAttribution = document.createElement("div");
 raceCalendarAttribution.className = "race-calendar-attribution";
-raceCalendarAttribution.innerHTML = 'Rennkalender: <a href="https://www.myrcm.ch/" target="_blank" rel="noreferrer">MyRCM</a> · <a href="https://www.rck-solutions.de/" target="_blank" rel="noreferrer">RCK</a>';
+raceCalendarAttribution.innerHTML = 'Datenquelle: <a href="https://www.myrcm.ch/" target="_blank" rel="noreferrer">MyRCM</a> · <a href="https://www.rck-solutions.de/" target="_blank" rel="noreferrer">RCK</a>';
 document.querySelector(".map-panel")?.appendChild(raceCalendarAttribution);
 
 let venues = [];
