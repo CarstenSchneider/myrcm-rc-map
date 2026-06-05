@@ -539,11 +539,11 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
-    .map-marker-venue-inactive {
-      width: 18px;
-      height: 18px;
+     .map-marker-venue-inactive {
+      width: 12px;
+      height: 12px;
       border-radius: 999px;
-      background: rgba(31, 29, 26, 0.5);
+      background: rgba(31, 29, 26, 0.35);
       border: 1px solid rgba(255, 255, 255, 0.9);
       box-sizing: border-box;
       box-shadow: none;
@@ -996,8 +996,8 @@ function updateMarkers(list) {
       ? markerScaleForRegistrationCount(registrationTotal)
       : 1;
 
-    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 18;
-    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 18;
+    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 12;
+    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 12;
 
     const markerAnchor = hasUpcomingRaces
       ? [Math.round(markerWidth / 2), markerHeight]
@@ -1019,10 +1019,36 @@ function updateMarkers(list) {
       }
     ).addTo(map);
 
+    let hoverTimer = null;
+    let isPopupPinned = false;
+    
     marker.bindPopup(buildPopup(venue, venueRaces, latestPastRace));
 
+    marker.on("mouseover", () => {
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+
+  clearTimeout(hoverTimer);
+
+  hoverTimer = window.setTimeout(() => {
+    if (!isPopupPinned) {
+      marker.openPopup();
+    }
+  }, 180);
+});
+
+marker.on("mouseout", () => {
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+
+  clearTimeout(hoverTimer);
+
+  if (!isPopupPinned) {
+    marker.closePopup();
+  }
+});
+    
     marker.on("popupclose", () => {
       if (isSwitchingMarkerPopup) return;
+      isPopupPinned = false;
       resetVenueSelection();
     });
 
@@ -1032,7 +1058,7 @@ function updateMarkers(list) {
       }
 
       isSwitchingMarkerPopup = true;
-
+      isPopupPinned = true;
       markers.forEach(otherMarker => {
         if (otherMarker !== marker) {
           otherMarker.closePopup();
