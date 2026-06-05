@@ -539,7 +539,7 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
-     .map-marker-open,
+    .map-marker-open,
     .map-marker-closed,
     .map-marker-venue-inactive {
       cursor: pointer;
@@ -560,6 +560,10 @@ function ensureRegistrationStatusStyles() {
       border: 1px solid rgba(255, 255, 255, 0.9);
       box-sizing: border-box;
       box-shadow: none;
+    }
+
+    .leaflet-popup-tip-container {
+      display: none;
     }
 
     .popup-last-race {
@@ -1036,8 +1040,8 @@ function updateMarkers(list) {
     let isPopupPinned = false;
     
     const popupOffset = hasUpcomingRaces
-      ? [0, -22]
-      : [0, 0];
+      ? [0, -18]
+      : [0, -8];
 
     marker.bindPopup(
       buildPopup(venue, venueRaces, latestPastRace),
