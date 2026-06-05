@@ -539,8 +539,23 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
-     .map-marker-open,
-    .map-marker-closed,
+    .marker-popup-active .map-marker-open,
+.marker-popup-active .map-marker-closed {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 999px !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+
+.marker-popup-active .map-marker-open {
+  background: #5f8f5f !important;
+}
+
+.marker-popup-active .map-marker-closed {
+  background: rgba(31, 29, 26, 0.45) !important;
+}
+
     .map-marker-venue-inactive {
       cursor: pointer;
       pointer-events: auto;
@@ -1069,6 +1084,9 @@ const popupOffset = hasUpcomingRaces
     });
 
     marker.on("popupopen", () => {
+
+      marker.getElement()?.classList.add("marker-popup-active");
+      
       const popupElement = marker.getPopup()?.getElement();
       if (!popupElement) return;
 
