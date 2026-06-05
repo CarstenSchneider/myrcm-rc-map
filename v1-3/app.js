@@ -1296,11 +1296,18 @@ const popupOffset = hasUpcomingRaces
   }
 
 if (bounds.length > 1) {
-  map.fitBounds(bounds, {
-    paddingTopLeft: [40, 40],
-    paddingBottomRight: [180, 40]
-  });
-}
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+
+  map.fitBounds(bounds, isMobile
+    ? {
+        paddingTopLeft: [32, 120],
+        paddingBottomRight: [32, 360]
+      }
+    : {
+        paddingTopLeft: [40, 40],
+        paddingBottomRight: [180, 40]
+      }
+  );
 }
 
 function scrollToRaceCard(raceId) {
