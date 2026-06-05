@@ -19,9 +19,15 @@ L.control.zoom({
   position: "bottomleft"
 }).addTo(map);
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  attribution: '&copy; OpenStreetMap &copy; <a href="https://carto.com/">CARTO</a>'
-}).addTo(map);
+L.tileLayer(
+  'https://api.thunderforest.com/landscape/{z}/{x}/{y}{r}.png?apikey=DEIN_API_KEY',
+  {
+    attribution:
+      '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, ' +
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 22
+  }
+).addTo(map);
 
 const raceCalendarAttribution = document.createElement("div");
 raceCalendarAttribution.className = "race-calendar-attribution";
