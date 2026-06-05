@@ -1298,7 +1298,7 @@ const popupOffset = hasUpcomingRaces
 if (bounds.length > 1) {
   map.fitBounds(bounds, {
     paddingTopLeft: [40, 40],
-    paddingBottomRight: [220, 40]
+    paddingBottomRight: [180, 40]
   });
 }
 }
