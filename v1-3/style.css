@@ -1,32 +1,1411 @@
-/* compact open/all filter */
+:root {
+  --bg: #f4f1ec;
+  --panel: #fffaf3;
+  --text: #1f1d1a;
+  --muted: #6f6961;
+  --line: #ded6ca;
+  --accent: #1f1d1a;
+  --card: #ffffff;
+  --shadow: 0 12px 30px rgba(31, 29, 26, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  height: 100vh;
+  display: grid;
+  gap: 0;
+  transition: grid-template-columns 180ms ease;
+}
+
+.app.layout-map { grid-template-columns: minmax(0, 68fr) minmax(360px, 32fr); }
+.app.layout-list { grid-template-columns: minmax(360px, 34fr) minmax(0, 66fr); }
+
+.map-panel {
+  min-width: 0;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.race-panel {
+  min-width: 0;
+  overflow: auto;
+  padding: 24px;
+  padding-right: 14px;
+  background: var(--panel);
+  border-left: 1px solid var(--line);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(31,29,26,.18) transparent;
+}
+
+.panel-header {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.view-toggle {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #eee7dc;
+  flex-shrink: 0;
+}
+
+.toggle-button,
+.segmented button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 11px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.toggle-button.active,
+.segmented button.active {
+  background: var(--text);
+  color: #fff;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.layout-list .filters {
+  grid-template-columns: 1.2fr 0.8fr 1.1fr;
+  align-items: end;
+}
+
+.filter-group,
+.filter-field {
+  display: grid;
+  gap: 7px;
+}
+
+.filter-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.segmented {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f1e8;
+  width: fit-content;
+}
+
+select,
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.result-line {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.race-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.layout-list .race-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.race-card {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  cursor: pointer;
+  text-align: left;
+}
+
+.race-card.is-clickable:hover,
+.race-card.active {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.race-card:not(.is-clickable) {
+  cursor: default;
+}
+
+.race-date {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.race-name {
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.race-venue {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.race-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: var(--muted);
+  background: #faf7f2;
+}
+
+.race-link {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.empty-state {
+  padding: 22px;
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.45);
+}
+
+.leaflet-popup-content {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.popup-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.popup-race {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.popup-race-button {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.popup-race-button:hover {
+  text-decoration: underline;
+}
+
+
+.tag-missing-location {
+  background: #f2f2f2;
+  color: #666;
+  border: 1px solid #ddd;
+  cursor: default;
+  pointer-events: none;
+}
+
+.race-card:hover .tag-missing-location,
+.race-card.active .tag-missing-location {
+  border-color: #ddd;
+  background: #f2f2f2;
+  color: #666;
+}
+
+
+@media (max-width: 860px) {
+  .app,
+  .app.layout-map,
+  .app.layout-list {
+    height: auto;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .map-panel { height: 45vh; }
+  .race-panel { border-left: 0; border-top: 1px solid var(--line); }
+  .panel-header { flex-direction: column; }
+  .layout-list .filters { grid-template-columns: 1fr; }
+  .layout-list .race-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Race card rhythm */
+
+.race-card {
+  gap: 8px;
+}
+
+.race-date {
+  margin-bottom: 4px;
+}
+
+.race-name {
+  margin-bottom: 2px;
+}
+
+.race-series-tags {
+  margin-bottom: 8px;
+}
+
+.race-venue {
+  margin-top: 0;
+}
+
+.race-location {
+  margin-top: -2px;
+  margin-bottom: 4px;
+}
+
+.race-link {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.race-class-tags {
+  margin-top: 2px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
+}
+
+.tag-class {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  height: 26px;
+  padding: 0 10px;
+  background: #f7f4ef;
+  color: var(--muted);
+  max-width: 100%;
+}
+
+
+
+/* class tag alignment fix */
+
+.race-class-tags {
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 8px;
+}
+
+.race-class-tags .tag-class {
+  flex: 0 0 auto;
+}
+
+
+/* v1.2 layout prototype
+   Keeps the v1.1 visual language, changes spatial hierarchy:
+   fullscreen map, compact floating filters, floating race list.
+*/
+
+.app.layout-prototype,
+.app.layout-prototype.layout-map,
+.app.layout-prototype.layout-list {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+.layout-prototype .map-panel,
+.layout-prototype #map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-prototype .filters-panel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  width: 300px;
+  max-width: calc(100vw - 48px);
+}
+
+.layout-prototype .filters {
+  margin: 0;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 250, 243, 0.94);
+  border: 1px solid rgba(222, 214, 202, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(31, 29, 26, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.layout-prototype .filter-group,
+.layout-prototype .filter-field {
+  gap: 5px;
+}
+
+.layout-prototype .filter-label {
+  font-size: 11px;
+}
+
+.layout-prototype select,
+.layout-prototype input {
+  min-height: 42px;
+  padding: 8px 11px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.layout-prototype .segmented {
+  width: 100%;
+}
+
+.layout-prototype .segmented button {
+  flex: 1 1 auto;
+  padding: 7px 9px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.layout-prototype .filter-field-search {
+  order: -1;
+}
+
+.layout-prototype .race-panel {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  width: 390px;
+  max-width: calc(100vw - 48px);
+  min-width: 0;
+  overflow: auto;
+  padding: 22px;
+  background: rgba(255, 250, 243, 0.96);
+  border: 1px solid rgba(222, 214, 202, 0.92);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.layout-prototype .panel-header {
+  margin-bottom: 18px;
+}
+
+.layout-prototype .view-toggle {
+  display: none;
+}
+
+.layout-prototype .race-grid,
+.layout-prototype.layout-list .race-grid {
+  grid-template-columns: 1fr;
+}
+
+.layout-prototype.layout-list .filters {
+  grid-template-columns: 1fr;
+}
+
+.layout-prototype .leaflet-control-zoom {
+  margin-left: 24px !important;
+  margin-bottom: 24px !important;
+  border: 0 !important;
+  box-shadow: 0 12px 30px rgba(31, 29, 26, 0.10) !important;
+}
+
+.layout-prototype .leaflet-control-zoom a {
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+}
+
+@media (max-width: 860px) {
+  .app.layout-prototype,
+  .app.layout-prototype.layout-map,
+  .app.layout-prototype.layout-list {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .layout-prototype .filters-panel {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+  }
+
+  .layout-prototype .filters {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .layout-prototype .race-panel {
+    top: auto;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-width: none;
+    height: 42vh;
+    padding: 14px;
+    border-radius: 20px;
+    border-top: 1px solid rgba(222, 214, 202, 0.92);
+  }
+
+  .layout-prototype .panel-header {
+    margin-bottom: 12px;
+  }
+}
+
+
+/* v1.2: no selected-card border while a venue/pin is active.
+   The right panel is already filtered to the selected venue, so an additional
+   active card frame is redundant.
+*/
+
+.layout-prototype .race-card.active {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+.layout-prototype .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+
+/* v1.2: neutralize card hover/active border in the floating list.
+   In venue mode the list is already scoped to the selected pin, so the black
+   card frame suggests a selection state that is no longer useful.
+*/
+
+.layout-prototype .race-card.is-clickable:hover,
+.layout-prototype .race-card.active,
+.layout-prototype .race-card.is-clickable.active,
+.layout-prototype .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+
+/* v1.2: card interaction states
+   Normal mode: race cards keep the original hover state.
+   Venue mode: the right list is scoped to the selected pin, so cards behave
+   like static result cards.
+*/
+
+.layout-prototype:not(.is-venue-mode) .race-card.is-clickable:hover,
+.layout-prototype:not(.is-venue-mode) .race-card.active {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.layout-prototype.is-venue-mode .race-card,
+.layout-prototype.is-venue-mode .race-card.is-clickable {
+  cursor: default;
+}
+
+.layout-prototype.is-venue-mode .race-card.is-clickable:hover,
+.layout-prototype.is-venue-mode .race-card.active,
+.layout-prototype.is-venue-mode .race-card.is-clickable.active,
+.layout-prototype.is-venue-mode .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+
+/* v1.3 mobile filter and compact class chips */
+
+.filter-toggle-button {
+  display: none;
+}
+
+.mobile-filter-topline {
+  display: contents;
+}
+
+.advanced-filters {
+  display: grid;
+  gap: 14px;
+}
+
+.active-filter-chips {
+  display: none;
+}
+
+.tag-class {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.tag-class-more {
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filters-panel {
+    width: auto;
+  }
+
+  .layout-prototype .filters {
+    gap: 8px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .layout-prototype .mobile-filter-topline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px;
+    gap: 8px;
+    align-items: end;
+  }
+
+  .layout-prototype .filter-group-range {
+    min-width: 0;
+  }
+
+  .layout-prototype .filter-group-range .filter-label {
+    display: none;
+  }
+
+  .layout-prototype .segmented {
+    width: 100%;
+  }
+
+  .layout-prototype .segmented button {
+    min-height: 34px;
+    padding: 6px 7px;
+    font-size: 12px;
+  }
+
+  .layout-prototype .filter-toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    font-size: 23px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  }
+
+  .layout-prototype .filter-toggle-icon-close {
+    display: none;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+    display: none;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+    display: inline;
+  }
+
+  .layout-prototype .advanced-filters {
+    display: none;
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .layout-prototype.is-filter-panel-open .advanced-filters {
+    display: grid;
+  }
+
+  .layout-prototype .active-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .layout-prototype .active-filter-chips.is-empty {
+    display: none;
+  }
+
+  .layout-prototype .active-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 100%;
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #faf7f2;
+    color: var(--muted);
+    font: inherit;
+    font-size: 11px;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+
+  .layout-prototype .active-filter-chip span {
+    color: var(--text);
+    font-weight: 800;
+  }
+
+  .layout-prototype .race-class-tags {
+    row-gap: 5px;
+    column-gap: 5px;
+    padding-top: 8px;
+  }
+
+  .layout-prototype .tag-class {
+    height: 20px;
+    padding: 0 7px;
+    font-size: 10px;
+  }
+
+  .layout-prototype .race-card {
+    padding: 12px;
+  }
+}
+
+
+/* v1.3: expandable class chips */
+
+.tag-class-toggle {
+  appearance: none;
+  border: 1px solid rgba(31, 29, 26, 0.22);
+  background: #eee7dc;
+  color: var(--text);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tag-class-toggle:hover,
+.tag-class-toggle:focus-visible {
+  border-color: var(--text);
+  background: #e6ded1;
+  outline: none;
+}
+
+.layout-prototype.is-venue-mode .tag-class-toggle {
+  cursor: pointer;
+}
+
+.layout-prototype.is-venue-mode .tag-class-toggle:hover,
+.layout-prototype.is-venue-mode .tag-class-toggle:focus-visible {
+  border-color: var(--text);
+  box-shadow: none;
+}
+
+
+/* v1.3.1 filter button icon refinement */
+
+.filter-toggle-icon {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.filter-toggle-icon-search svg {
+  width:20px;
+  height:20px;
+}
+
+.filter-toggle-icon-close svg {
+  width:16px;
+  height:16px;
+}
+
+.layout-prototype .filter-toggle-button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.layout-prototype .filter-toggle-button svg {
+  display:block;
+}
+
+
+/* v1.3.2 filter icon correction
+   The search/close toggle is mobile-only. Desktop keeps the full filter panel
+   and must not show the round icon button.
+*/
+
+.layout-prototype .filter-toggle-button {
+  display: none;
+}
+
+.layout-prototype .filter-toggle-icon {
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  line-height: 0;
+}
+
+.layout-prototype .filter-toggle-icon svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.layout-prototype .filter-toggle-icon-search svg {
+  width: 22px;
+  height: 22px;
+}
+
+.layout-prototype .filter-toggle-icon-close svg {
+  width: 17px;
+  height: 17px;
+}
+
+.layout-prototype .filter-toggle-icon-close {
+  display: none;
+}
+
+.layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+  display: none;
+}
+
+.layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+  display: flex;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filter-toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  }
+
+  .layout-prototype .filter-toggle-icon-search {
+    display: flex;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+    display: none;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+    display: flex;
+  }
+}
+
+
+/* v1.3.3 polish */
+
+.layout-prototype .active-filter-chips {
+  margin-top: 10px;
+}
+
+.layout-prototype select {
+  background-position: right 18px center;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype select {
+    background-position: right 16px center;
+  }
+
+  .layout-prototype .active-filter-chips {
+    margin-top: 12px;
+  }
+}
+
+
+/* v1.3.4 mobile viewport refinement
+   iPhone/Safari: use dynamic viewport height, respect safe areas,
+   hide Leaflet zoom controls, and raise the event list to roughly half screen.
+*/
+
+@supports (height: 100dvh) {
+  @media (max-width: 860px) {
+    .app.layout-prototype,
+    .app.layout-prototype.layout-map,
+    .app.layout-prototype.layout-list {
+      height: 100dvh;
+      min-height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filters-panel {
+    top: calc(10px + env(safe-area-inset-top));
+    left: 10px;
+    right: 10px;
+  }
+
+  .layout-prototype .race-panel {
+    left: 10px;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    height: 50vh;
+    max-height: calc(100dvh - 104px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  .layout-prototype .leaflet-control-zoom {
+    display: none !important;
+  }
+}
+
+@supports (height: 100dvh) {
+  @media (max-width: 860px) {
+    .layout-prototype .race-panel {
+      height: 50dvh;
+    }
+  }
+}
+
+
+/* RC Racing Map v1.3.5
+   Card typography cleanup
+*/
+
+.race-series-tags .tag {
+  height: 20px;
+  padding: 0 7px;
+  font-size: 10px;
+  font-weight: 500;
+  background: #e9e2d7;
+}
+
+.tag-class-toggle {
+  font-weight: 400;
+}
+
+.race-name {
+  font-size: 15px;
+}
+
+.race-date,
+.race-venue,
+.race-link,
+.registration-status {
+  font-size: 13px;
+}
+
+.tag,
+.tag-class,
+.race-series-tags .tag {
+  font-size: 10px;
+}
+
+/* RC Racing Map v1.3.5
+   Card typography cleanup
+*/
+
+.race-series-tags .tag {
+  height: 20px;
+  padding: 0 7px;
+  font-size: 10px;
+  font-weight: 500;
+  background: #e9e2d7;
+}
+
+.tag-class-toggle {
+  font-weight: 400;
+}
+
+.race-name {
+  font-size: 15px;
+}
+
+.race-date,
+.race-venue,
+.race-link,
+.registration-status {
+  font-size: 13px;
+}
+
+.tag,
+.tag-class,
+.race-series-tags .tag {
+  font-size: 10px;
+}
+
+
+
+/* Marker v1.4 – SVG pins */
+
+.map-marker-open,
+.map-marker-closed {
+  width: 26px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  box-shadow: none;
+}
+
+.map-marker-open {
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%234F8A57' stroke='%23F4F1EC' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.map-marker-closed {
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%231F1D1A' stroke='%23F4F1EC' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+
+
+/* v1.3.8 document links in race cards */
+
+.race-document-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.race-document-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f4ef;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.race-document-link:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.race-document-announcement {
+  background: #f1eadf;
+}
+
+.race-document-rules {
+  background: #ece7de;
+}
+
+
+/* v1.3.10 document link row */
+
+.race-document-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 22px;
+  row-gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.race-document-links .race-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.race-document-links .race-link-item:hover,
+.race-document-links .race-link-item:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.race-document-links .race-link-item-status {
+  gap: 8px;
+}
+
+.race-document-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.race-document-dot-open {
+  background: #4F8A57;
+}
+
+.race-document-dot-closed {
+  background: rgba(31, 29, 26, 0.5);
+}
+
+.race-document-dot-upcoming {
+  background: #d9a441;
+}
+
+.race-document-links .race-link-item-status-upcoming {
+  color: #b17d1b;
+}
+
+.race-document-links .race-link-item-status-closed,
+.race-document-links .race-link-item-status-upcoming {
+  cursor: default;
+}
+
+.race-document-links .race-link-item-status-closed:hover,
+.race-document-links .race-link-item-status-closed:focus-visible {
+  color: rgba(31, 29, 26, 0.58);
+  text-decoration: none;
+}
+
+.race-document-links .race-link-item-status-upcoming:hover,
+.race-document-links .race-link-item-status-upcoming:focus-visible {
+  color: #b17d1b;
+  text-decoration: none;
+}
+
+.race-card.registration-closed .race-document-links .race-link-item-status {
+  color: rgba(31, 29, 26, 0.58);
+}
+
+@media (max-width: 860px) {
+  .race-document-links {
+    column-gap: 16px;
+  }
+}
+
+
+.myrcm-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+
+/* v1.3.13 compact document row */
+
+.race-document-links {
+  gap: 8px !important;
+}
+
+.race-document-links .race-link-item {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.race-document-dot {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+@media (min-width: 861px) {
+  .race-document-links {
+    flex-wrap: nowrap !important;
+  }
+}
+
+
+/* v1.3.14 new race badge */
+
+.race-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.race-new-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  border-radius: 0 18px 0 10px;
+  background: #4F8A57;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.race-card:has(.race-new-badge) .race-date {
+  padding-right: 72px;
+}
+
+
+/* v1.4 registration count in race cards */
+
+.race-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.race-name-row .race-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.race-registration-count {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.race-registration-count svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.race-name {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .race-name-row {
+    gap: 10px;
+  }
+
+  .race-registration-count {
+    font-size: 17px;
+  }
+
+  .race-registration-count svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .race-name {
+    font-size: 17px;
+  }
+}
+
+/* RC Racing Map attribution for external calendar data */
+
+.race-calendar-attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 4px 8px;
+  border: 1px solid rgba(222, 214, 202, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.88);
+  color: rgba(31, 29, 26, 0.72);
+  font-size: 11px;
+  line-height: 1.2;
+  box-shadow: 0 4px 14px rgba(31, 29, 26, 0.10);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.race-calendar-attribution a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.race-calendar-attribution a:hover,
+.race-calendar-attribution a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .race-calendar-attribution {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    max-width: calc(100vw - 24px);
+    white-space: nowrap;
+  }
+}
+
+/* Softer pressed hover state for race cards */
+
+.race-card {
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.race-card.is-clickable:hover,
+.race-card.is-clickable:focus-visible {
+  transform: scale(0.985);
+  border-color: rgba(222, 214, 202, 0.95) !important;
+  box-shadow:
+    0 18px 34px rgba(31, 29, 26, 0.16),
+    0 4px 10px rgba(31, 29, 26, 0.10);
+  outline: none;
+}
+
+.race-card.is-clickable:active {
+  transform: scale(0.972);
+  box-shadow:
+    0 10px 22px rgba(31, 29, 26, 0.18),
+    0 2px 7px rgba(31, 29, 26, 0.12);
+}
+
+
+
+.race-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.race-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.race-panel::-webkit-scrollbar-thumb {
+  background: rgba(31,29,26,.18);
+  border-radius: 999px;
+}
+
+.race-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(31,29,26,.30);
+}
+
+/* v1.5 compact registration filter */
 
 .results-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.layout-prototype .result-line {
+  margin: 0;
 }
 
 .race-visibility-toggle {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-left: 12px;
 }
 
 .race-visibility-toggle button {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  height: 24px;
-  padding: 0 10px;
+  height: 22px;
+  padding: 0 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: var(--panel);
+  background: #faf7f2;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -39,7 +1418,7 @@
 .race-visibility-toggle .race-document-dot {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: 999px;
   background: #4F8A57;
 }
 
