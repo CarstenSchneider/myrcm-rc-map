@@ -546,9 +546,9 @@ function ensureRegistrationStatusStyles() {
       pointer-events: auto;
     }
 
-    .map-marker-open svg,
-    .map-marker-closed svg,
-    .map-marker-venue-inactive svg {
+    .map-marker-open *,
+    .map-marker-closed *,
+    .map-marker-venue-inactive * {
       pointer-events: none;
     }
 
@@ -1039,31 +1039,31 @@ function updateMarkers(list) {
 
     marker.on("add", () => {
       const element = marker.getElement();
-      if (element) {
-        element.style.cursor = "pointer";
-      }
-    });
+      if (!element) return;
 
-    marker.on("mouseenter", () => {
-      if (window.matchMedia("(pointer: coarse)").matches) return;
+      element.style.cursor = "pointer";
 
-      clearTimeout(hoverTimer);
+      element.addEventListener("mouseenter", () => {
+        if (window.matchMedia("(pointer: coarse)").matches) return;
 
-      hoverTimer = window.setTimeout(() => {
+        clearTimeout(hoverTimer);
+
+        hoverTimer = window.setTimeout(() => {
+          if (!isPopupPinned) {
+            marker.openPopup();
+          }
+        }, 180);
+      });
+
+      element.addEventListener("mouseleave", () => {
+        if (window.matchMedia("(pointer: coarse)").matches) return;
+
+        clearTimeout(hoverTimer);
+
         if (!isPopupPinned) {
-          marker.openPopup();
+          marker.closePopup();
         }
-      }, 180);
-    });
-
-    marker.on("mouseleave", () => {
-      if (window.matchMedia("(pointer: coarse)").matches) return;
-
-      clearTimeout(hoverTimer);
-
-      if (!isPopupPinned) {
-        marker.closePopup();
-      }
+      });
     });
     
     marker.on("popupclose", () => {
