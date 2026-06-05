@@ -42,8 +42,12 @@ body {
   min-width: 0;
   overflow: auto;
   padding: 24px;
+  padding-right: 14px;
   background: var(--panel);
   border-left: 1px solid var(--line);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(31,29,26,.18) transparent;
 }
 
 .panel-header {
@@ -1350,46 +1354,21 @@ input {
     0 2px 7px rgba(31, 29, 26, 0.12);
 }
 
-/* Custom scrollbars */
 
-:root {
-  scrollbar-color: rgba(31, 29, 26, 0.30) transparent;
-  scrollbar-width: thin;
+
+.race-panel::-webkit-scrollbar {
+  width: 4px;
 }
 
-.layout-prototype .race-panel,
-.layout-prototype .filters-panel {
-  scrollbar-color: rgba(31, 29, 26, 0.30) transparent;
-  scrollbar-width: thin;
-  scrollbar-gutter: auto;
-}
-
-.layout-prototype .race-panel::-webkit-scrollbar,
-.layout-prototype .filters-panel::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.layout-prototype .race-panel::-webkit-scrollbar-track,
-.layout-prototype .filters-panel::-webkit-scrollbar-track {
+.race-panel::-webkit-scrollbar-track {
   background: transparent;
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 
-.layout-prototype .race-panel::-webkit-scrollbar-thumb,
-.layout-prototype .filters-panel::-webkit-scrollbar-thumb {
-  background: rgba(31, 29, 26, 0.26);
-  border: 0;
+.race-panel::-webkit-scrollbar-thumb {
+  background: rgba(31,29,26,.18);
   border-radius: 999px;
 }
 
-.layout-prototype .race-panel::-webkit-scrollbar-thumb:hover,
-.layout-prototype .filters-panel::-webkit-scrollbar-thumb:hover {
-  background: rgba(31, 29, 26, 0.42);
-}
-
-.layout-prototype .race-panel::-webkit-scrollbar-corner,
-.layout-prototype .filters-panel::-webkit-scrollbar-corner {
-  background: transparent;
+.race-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(31,29,26,.30);
 }
