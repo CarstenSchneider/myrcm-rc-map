@@ -733,7 +733,11 @@ function extractEventLinksFromHostPage(html, host) {
     const fallbackFrom = dates[0] || null;
     const fallbackTo = dates[1] || dates[0] || null;
 
-    if (fallbackTo && fallbackTo < today) {
+    const oneYearAgo = new Date();
+    oneYearAgo.setDate(oneYearAgo.getDate() - 365);
+    const oneYearAgoString = oneYearAgo.toISOString().slice(0, 10);
+
+    if (fallbackTo && fallbackTo < oneYearAgoString) {
       skippedPastEvents += 1;
       return;
     }
@@ -817,8 +821,11 @@ function shouldSkipRace(race) {
 
   if (race.to < race.from) return true;
 
-  const today = new Date().toISOString().slice(0, 10);
-  if (race.to < today) return true;
+  const oneYearAgo = new Date();
+  oneYearAgo.setDate(oneYearAgo.getDate() - 365);
+  const oneYearAgoString = oneYearAgo.toISOString().slice(0, 10);
+
+  if (race.to < oneYearAgoString) return true;
 
   const raceYear = Number(race.from.slice(0, 4));
   if (!allowedYears.includes(raceYear)) return true;
