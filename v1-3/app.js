@@ -8,6 +8,7 @@ const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
 const activeFilterChips = document.getElementById("activeFilterChips");
+const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
 
 const map = L.map("map", {
   scrollWheelZoom: true,
@@ -37,6 +38,7 @@ let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
 let selectedSeries = "all";
+let showOpenOnly = true;
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
@@ -316,6 +318,11 @@ function registrationStatus(race) {
 function isRegistrationActive(race) {
   const status = registrationStatus(race);
   return status === "open" || status === "login_required";
+}
+
+function matchesRegistrationVisibility(race) {
+  if (!showOpenOnly) return true;
+  return isRegistrationActive(race);
 }
 
 function registrationLabel(race) {
@@ -1057,6 +1064,7 @@ function filteredRaces() {
   return races
     .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
+    .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
@@ -1556,6 +1564,25 @@ rangeFilter.addEventListener("click", event => {
 
   render();
 });
+
+
+if (registrationVisibilityFilter) {
+  registrationVisibilityFilter.addEventListener("click", event => {
+    const button = event.target.closest("button[data-registration-visibility]");
+    if (!button) return;
+
+    showOpenOnly = button.dataset.registrationVisibility === "open";
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+
+    registrationVisibilityFilter
+      .querySelectorAll("button")
+      .forEach(item => item.classList.toggle("active", item === button));
+
+    render();
+  });
+}
 
 seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
