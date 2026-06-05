@@ -27,11 +27,6 @@ L.tileLayer(
   }
 ).addTo(map);
 
-const raceCalendarAttribution = document.createElement("div");
-raceCalendarAttribution.className = "race-calendar-attribution";
-raceCalendarAttribution.innerHTML = 'Datenquelle: <a href="https://www.myrcm.ch/" target="_blank" rel="noreferrer">MyRCM</a> · <a href="https://www.rck-solutions.de/" target="_blank" rel="noreferrer">RCK</a>';
-document.querySelector(".map-panel")?.appendChild(raceCalendarAttribution);
-
 let venues = [];
 let races = [];
 let hosts = [];

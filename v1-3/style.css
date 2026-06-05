@@ -1289,7 +1289,8 @@ input {
 
 /* RC Racing Map attribution for external calendar data */
 
-.race-calendar-attribution {
+.race-calendar-attribution,
+.map-disclaimer {
   position: absolute;
   left: 50%;
   bottom: 10px;
@@ -1307,20 +1308,24 @@ input {
   pointer-events: auto;
 }
 
-.race-calendar-attribution a {
+.race-calendar-attribution a,
+.map-disclaimer a {
   color: inherit;
   font-weight: 700;
   text-decoration: none;
 }
 
 .race-calendar-attribution a:hover,
-.race-calendar-attribution a:focus-visible {
+.race-calendar-attribution a:focus-visible,
+.map-disclaimer a:hover,
+.map-disclaimer a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 @media (max-width: 860px) {
-  .race-calendar-attribution {
+  .race-calendar-attribution,
+  .map-disclaimer {
     bottom: calc(8px + env(safe-area-inset-bottom));
     max-width: calc(100vw - 24px);
     white-space: nowrap;
