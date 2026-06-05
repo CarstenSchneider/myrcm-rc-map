@@ -3,11 +3,17 @@ import { access, readFile, writeFile } from "node:fs/promises";
 
 const hostListFile = "myrcm-hosts-germany.json";
 const currentYear = new Date().getFullYear();
-const allowedYears = [currentYear, currentYear + 1];
+const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
 
 const requestTimeoutMs = 8000;
 const retryCount = 1;
 const detailConcurrency = 5;
+
+function oneYearAgoString() {
+  const oneYearAgo = new Date();
+  oneYearAgo.setDate(oneYearAgo.getDate() - 365);
+  return oneYearAgo.toISOString().slice(0, 10);
+}
 
 const trainingTerms = [
   "training",
@@ -290,20 +296,16 @@ function detectSeries(name) {
   const lower = name.toLowerCase();
   const series = [];
 
-  if (lower.includes("berlin touring masters") || lower.includes("btm")) {
+  if (lower.includes("berlin touring masters") || /\bbtm\b/i.test(name)) {
     series.push("BTM");
   }
 
-  if (lower.includes("tamiya euro cup") || lower.includes("tamiya")) {
-    series.push("TEC");
+  if (lower.includes("euro touring series") || /\bets\b/i.test(name)) {
+    series.push("ETS");
   }
 
-  if (lower.includes("sk-lauf") || lower.includes("sk lauf")) {
-    series.push("SK");
-  }
-
-  if (lower.includes("speed masters")) {
-    series.push("Speed Masters");
+  if (lower.includes("ostmasters")) {
+    series.push("Ostmasters");
   }
 
   if (lower.includes("rck kleinserie")) {
@@ -314,8 +316,20 @@ function detectSeries(name) {
     series.push("RCK Challenge");
   }
 
-  if (lower.includes("ostmasters")) {
-    series.push("Ostmasters");
+  if (lower.includes("sk-lauf") || lower.includes("sk lauf") || lower.includes("sportkreis")) {
+    series.push("SK");
+  }
+
+  if (lower.includes("tamico offroad cup") || lower.includes("tamico")) {
+    series.push("Tamico Offroad Cup");
+  }
+
+  if (lower.includes("tamiya euro cup") || /\btec\b/i.test(name)) {
+    series.push("TEC");
+  }
+
+  if (lower.includes("tonisport onroad series") || /\btos\b/i.test(name)) {
+    series.push("TOS");
   }
 
   return Array.from(new Set(series));
@@ -733,11 +747,7 @@ function extractEventLinksFromHostPage(html, host) {
     const fallbackFrom = dates[0] || null;
     const fallbackTo = dates[1] || dates[0] || null;
 
-    const oneYearAgo = new Date();
-    oneYearAgo.setDate(oneYearAgo.getDate() - 365);
-    const oneYearAgoString = oneYearAgo.toISOString().slice(0, 10);
-
-    if (fallbackTo && fallbackTo < oneYearAgoString) {
+    if (fallbackTo && fallbackTo < oneYearAgoString()) {
       skippedPastEvents += 1;
       return;
     }
@@ -821,11 +831,7 @@ function shouldSkipRace(race) {
 
   if (race.to < race.from) return true;
 
-  const oneYearAgo = new Date();
-  oneYearAgo.setDate(oneYearAgo.getDate() - 365);
-  const oneYearAgoString = oneYearAgo.toISOString().slice(0, 10);
-
-  if (race.to < oneYearAgoString) return true;
+  if (race.to < oneYearAgoString()) return true;
 
   const raceYear = Number(race.from.slice(0, 4));
   if (!allowedYears.includes(raceYear)) return true;
