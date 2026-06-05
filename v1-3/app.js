@@ -4,6 +4,7 @@ const resultLine = document.getElementById("resultLine");
 const searchInput = document.getElementById("searchInput");
 const seriesFilter = document.getElementById("seriesFilter");
 const rangeFilter = document.getElementById("rangeFilter");
+const dataSourceFilter = document.getElementById("dataSourceFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
@@ -32,6 +33,7 @@ let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
 let selectedSeries = "all";
+let selectedDataSource = "all";
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
@@ -71,6 +73,14 @@ function renderActiveFilterChips() {
     chips.push(`
       <button class="active-filter-chip" type="button" data-clear-filter="series">
         ${seriesDisplayName(selectedSeries)}<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
+  if (selectedDataSource !== "all") {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="dataSource">
+        ${dataSourceDisplayName(selectedDataSource)}<span aria-hidden="true">×</span>
       </button>
     `);
   }
@@ -116,6 +126,45 @@ const preferredSeriesOrder = [
   "TOS"
 ];
 
+const dataSourceDisplayNames = {
+  all: "Alle Quellen",
+  myrcm: "MyRCM",
+  rck: "RCK"
+};
+
+function dataSourceDisplayName(source) {
+  return dataSourceDisplayNames[source] || source;
+}
+
+function raceDataSource(race) {
+  if (race?.dataSource) return race.dataSource;
+  if (race?.source === "rck" || String(race?.source || "").startsWith("rck-")) return "rck";
+  if (Array.isArray(race?.sources) && race.sources.some(source => String(source).startsWith("rck-"))) return "rck";
+  if (race?.rckSeries) return "rck";
+  return "myrcm";
+}
+
+function isRckRace(race) {
+  return raceDataSource(race) === "rck";
+}
+
+function hasPdfDocument(race) {
+  return Array.isArray(race?.documents) && race.documents.some(document => document?.url);
+}
+
+function isUsefulRckRace(race) {
+  if (!isRckRace(race)) return true;
+  return hasPdfDocument(race);
+}
+
+function hasLatLng(venue) {
+  return Number.isFinite(Number(venue?.lat)) && Number.isFinite(Number(venue?.lng));
+}
+
+function isUnverifiedVenue(venue) {
+  return venue?.verified === false || venue?.verificationStatus === "standort nicht verifiziert";
+}
+
 function seriesDisplayName(series) {
   return seriesDisplayNames[series] || series;
 }
@@ -155,6 +204,10 @@ function matchesSelectedSeries(race) {
   return selectedSeries === "all" || raceSeries(race).includes(selectedSeries);
 }
 
+function matchesSelectedDataSource(race) {
+  return selectedDataSource === "all" || raceDataSource(race) === selectedDataSource;
+}
+
 function matchesSearchQuery(race) {
   const query = searchInput.value.trim().toLowerCase();
   return !query || raceSearchText(race).includes(query);
@@ -165,6 +218,7 @@ function recentPastRacesForVenue(venue) {
     .filter(race => isRaceAtVenue(race, venue.id))
     .filter(isPastRaceWithinLastYear)
     .filter(matchesSelectedSeries)
+    .filter(matchesSelectedDataSource)
     .filter(matchesSearchQuery)
     .sort((a, b) => raceEndDate(b) - raceEndDate(a));
 }
@@ -877,6 +931,10 @@ function documentRole(document = {}, index = 0, documents = []) {
   return "announcement";
 }
 
+function rckEntryListUrl(race) {
+  return race.entryListUrl || race.nennlisteUrl || race.nominationListUrl || race.registrationListUrl || null;
+}
+
 function documentLinksHtml(race) {
   const documents = Array.isArray(race.documents) ? race.documents : [];
 
@@ -919,11 +977,22 @@ function documentLinksHtml(race) {
     documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
   }
 
+  const entryListUrl = rckEntryListUrl(race);
+  if (entryListUrl && entryListUrl !== race.url) {
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(entryListUrl)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Nennliste ↗</a>`);
+  }
+
   return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
 }
 
+function hasMappableVenue(race) {
+  const venue = venueById(race.venueId);
+  return Boolean(venue && hasLatLng(venue));
+}
+
 function hasVerifiedVenue(race) {
-  return Boolean(venueById(race.venueId));
+  const venue = venueById(race.venueId);
+  return Boolean(venue && hasLatLng(venue) && !isUnverifiedVenue(venue));
 }
 
 function venueDisplayName(race) {
@@ -985,8 +1054,10 @@ function filteredRaces() {
   const query = searchInput.value.trim().toLowerCase();
 
   return races
+    .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
     .filter(matchesSelectedSeries)
+    .filter(matchesSelectedDataSource)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
@@ -1039,6 +1110,8 @@ function updateMarkers(list) {
   const bounds = [];
 
   venues.forEach(venue => {
+    if (!hasLatLng(venue)) return;
+
     const venueRaces = list.filter(race => isRaceAtVenue(race, venue.id));
     const latestPastRace = latestPastRaceForVenue(venue);
 
@@ -1282,7 +1355,7 @@ function renderList(list) {
   resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
 
-  const footerHtml = `<div class="myrcm-note">Renndaten und Dokumente von MyRCM.</div>`;
+  const footerHtml = `<div class="myrcm-note">Renndaten und Dokumente von MyRCM und RCK.</div>`;
 
   if (!list.length) {
     raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>${footerHtml}`;
@@ -1293,7 +1366,7 @@ function renderList(list) {
     const series = raceSeries(race);
     const card = document.createElement("article");
 
-    card.className = `race-card registration-${registrationStatus(race)}${hasVerifiedVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
+    card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${hasMappableVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
     card.dataset.raceId = race.id;
     card.tabIndex = 0;
 
@@ -1310,9 +1383,11 @@ function renderList(list) {
           <div class="race-tags race-series-tags">
             ${series.map(item => `<span class="tag">${item}</span>`).join("")}
             ${
-              !hasVerifiedVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
-                : ""
+              !hasMappableVenue(race)
+                ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
+                : !hasVerifiedVenue(race)
+                  ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
+                  : ""
             }
           </div>
         </div>
@@ -1351,7 +1426,7 @@ function renderList(list) {
       }
     `;
 
-    if (hasVerifiedVenue(race)) {
+    if (hasMappableVenue(race)) {
       card.addEventListener("click", event => {
         if (event.target.closest("[data-class-toggle]")) return;
         focusRace(race);
@@ -1493,6 +1568,24 @@ seriesFilter.addEventListener("change", () => {
   render();
 });
 
+if (dataSourceFilter) {
+  dataSourceFilter.addEventListener("click", event => {
+    const button = event.target.closest("button[data-source]");
+    if (!button) return;
+
+    selectedDataSource = button.dataset.source;
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+
+    dataSourceFilter
+      .querySelectorAll("button")
+      .forEach(item => item.classList.toggle("active", item === button));
+
+    render();
+  });
+}
+
 searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
@@ -1521,6 +1614,13 @@ if (activeFilterChips) {
       seriesFilter.value = "all";
     }
 
+    if (button.dataset.clearFilter === "dataSource") {
+      selectedDataSource = "all";
+      dataSourceFilter
+        ?.querySelectorAll("button")
+        .forEach(item => item.classList.toggle("active", item.dataset.source === "all"));
+    }
+
     activeVenueId = null;
     activeRaceId = null;
     updateAppModeClass();
@@ -1537,19 +1637,65 @@ if (mapWideButton && listWideButton) {
   listWideButton.addEventListener("click", () => setLayout("list"));
 }
 
+async function fetchJsonOrFallback(url, fallback) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return fallback;
+    return await response.json();
+  } catch {
+    return fallback;
+  }
+}
+
+function normalizeRaceFromSource(race, dataSource) {
+  return {
+    ...race,
+    dataSource
+  };
+}
+
+function mergeVenues(baseVenues, candidateVenues) {
+  const byId = new Map();
+
+  for (const venue of baseVenues) {
+    if (!venue?.id) continue;
+    byId.set(venue.id, venue);
+  }
+
+  for (const venue of candidateVenues) {
+    if (!venue?.id || !hasLatLng(venue) || !venue.addressVerifiedFromPdf) continue;
+    if (byId.has(venue.id)) continue;
+    byId.set(venue.id, venue);
+  }
+
+  return Array.from(byId.values());
+}
+
 async function init() {
   ensureRegistrationStatusStyles();
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, hostsResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
     fetch(`../venues.json?v=${cacheBuster}`),
     fetch(`../races.json?v=${cacheBuster}`),
+    fetchJsonOrFallback(`../rck-races.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`../rck-venue-candidates.json?v=${cacheBuster}`, []),
     fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
   ]);
 
-  venues = await venuesResponse.json();
-  races = await racesResponse.json();
+  const baseVenues = await venuesResponse.json();
+  const myrcmRaces = await racesResponse.json();
+  const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
+  const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
+
+  venues = mergeVenues(baseVenues, rckVenueCandidates);
+  races = [
+    ...myrcmRaces.map(race => normalizeRaceFromSource(race, "myrcm")),
+    ...rckRaces
+      .filter(isUsefulRckRace)
+      .map(race => normalizeRaceFromSource(race, "rck"))
+  ];
 
   if (hostsResponse?.ok) {
     hosts = await hostsResponse.json();
