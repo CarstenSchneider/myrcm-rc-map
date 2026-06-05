@@ -144,6 +144,24 @@ function isUsefulRckRace(race) {
   return hasPdfDocument(race);
 }
 
+
+function isRckEventFromMyRcm(race) {
+  const series = raceSeries(race);
+  const text = [
+    race.name,
+    race.title,
+    race.eventName,
+    race.venueName,
+    ...(Array.isArray(race.series) ? race.series : [])
+  ].filter(Boolean).join(" ");
+
+  return (
+    series.includes("RCK Challenge") ||
+    series.includes("RCK Kleinserie") ||
+    /\brck\b/i.test(text)
+  );
+}
+
 function hasLatLng(venue) {
   return Number.isFinite(Number(venue?.lat)) && Number.isFinite(Number(venue?.lng));
 }
@@ -1646,7 +1664,9 @@ async function init() {
 
   venues = mergeVenues(baseVenues, rckVenueCandidates);
   races = [
-    ...myrcmRaces.map(race => normalizeRaceFromSource(race, "myrcm")),
+    ...myrcmRaces
+      .filter(race => !isRckEventFromMyRcm(race))
+      .map(race => normalizeRaceFromSource(race, "myrcm")),
     ...rckRaces
       .filter(isUsefulRckRace)
       .map(race => normalizeRaceFromSource(race, "rck"))
