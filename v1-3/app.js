@@ -70,7 +70,7 @@ function renderActiveFilterChips() {
   if (selectedSeries !== "all") {
     chips.push(`
       <button class="active-filter-chip" type="button" data-clear-filter="series">
-        ${selectedSeries}<span aria-hidden="true">×</span>
+        ${seriesDisplayName(selectedSeries)}<span aria-hidden="true">×</span>
       </button>
     `);
   }
@@ -91,6 +91,87 @@ const verifiedVenueAliases = {
   "myrcm-41404": "marzahn",
   "myrcm-52898": "blankenfelde"
 };
+
+const seriesDisplayNames = {
+  "BTM": "BTM – Berlin Touring Masters",
+  "ETS": "ETS – Euro Touring Series",
+  "Ostmasters": "Ostmasters",
+  "RCK Challenge": "RCK Challenge",
+  "RCK Kleinserie": "RCK Kleinserie",
+  "SK": "SK – Sportkreis",
+  "Tamico Offroad Cup": "Tamico Offroad Cup",
+  "TEC": "TEC – Tamiya Euro Cup",
+  "TOS": "TOS – ToniSport Onroad Series"
+};
+
+const preferredSeriesOrder = [
+  "BTM",
+  "ETS",
+  "Ostmasters",
+  "RCK Challenge",
+  "RCK Kleinserie",
+  "SK",
+  "Tamico Offroad Cup",
+  "TEC",
+  "TOS"
+];
+
+function seriesDisplayName(series) {
+  return seriesDisplayNames[series] || series;
+}
+
+function classNameFromRaceClass(item) {
+  if (!item) return "";
+  if (typeof item === "string") return item;
+  if (typeof item === "object") return item.name || item.label || "";
+  return String(item);
+}
+
+function classTagLabel(item) {
+  if (!item) return "";
+  if (typeof item === "object" && item.name) {
+    if (Number.isFinite(item.entries)) return `${item.name} (${item.entries})`;
+    return item.name;
+  }
+  return String(item);
+}
+
+function raceEndDate(race) {
+  return parseDate(race.to || race.from);
+}
+
+function daysBetween(a, b) {
+  return Math.floor((a - b) / 86400000);
+}
+
+function isPastRaceWithinLastYear(race) {
+  const today = todayStart();
+  const end = raceEndDate(race);
+  const ageInDays = daysBetween(today, end);
+  return ageInDays >= 1 && ageInDays <= 365;
+}
+
+function matchesSelectedSeries(race) {
+  return selectedSeries === "all" || raceSeries(race).includes(selectedSeries);
+}
+
+function matchesSearchQuery(race) {
+  const query = searchInput.value.trim().toLowerCase();
+  return !query || raceSearchText(race).includes(query);
+}
+
+function recentPastRacesForVenue(venue) {
+  return races
+    .filter(race => isRaceAtVenue(race, venue.id))
+    .filter(isPastRaceWithinLastYear)
+    .filter(matchesSelectedSeries)
+    .filter(matchesSearchQuery)
+    .sort((a, b) => raceEndDate(b) - raceEndDate(a));
+}
+
+function latestPastRaceForVenue(venue) {
+  return recentPastRacesForVenue(venue)[0] || null;
+}
 
 function parseDate(dateString) {
   return new Date(`${dateString}T00:00:00`);
@@ -258,11 +339,7 @@ function registrationStatusHtml(race) {
 
 
 function statusDetailsHtml(race) {
-  const status = registrationStatus(race);
-
-  if (status === "open" || status === "closed") return "";
-
-  return registrationStatusHtml(race);
+  return "";
 }
 
 function hasActiveRegistration(venueRaces) {
@@ -303,15 +380,59 @@ function registrationCount(race) {
   return 0;
 }
 
+function hasRegistrationCount(race) {
+  const candidates = [
+    race.registrationCount,
+    race.registrationsCount,
+    race.registrations,
+    race.entryCount,
+    race.entries,
+    race.participantCount,
+    race.participants,
+    race.nominationCount,
+    race.nominations,
+    race.count
+  ];
+
+  return candidates.some(candidate => {
+    if (candidate === null || candidate === undefined || candidate === "") return false;
+    if (typeof candidate === "number") return Number.isFinite(candidate);
+    if (typeof candidate === "string") return /\d+/.test(candidate);
+    if (Array.isArray(candidate)) return true;
+    return false;
+  });
+}
+
+function registrationCountHtml(race) {
+  const display =
+    race.registrationDisplay ||
+    (hasRegistrationCount(race) ? String(registrationCount(race)) : null);
+
+  if (!display) return "";
+
+  return `<div class="race-registration-count" aria-label="${display} Nennungen">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="7.4" r="4.1"></circle>
+      <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
+    </svg>
+    <span>${display}</span>
+  </div>`;
+}
+
 function venueRegistrationCount(venueRaces) {
   return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
 }
 
 function markerScaleForRegistrationCount(count) {
-  if (!count) return 1;
+  if (!count) return 0.8;
 
-  const clamped = Math.min(count, 140);
-  return 1 + Math.sqrt(clamped) / Math.sqrt(140) * 0.85;
+  const maxCount = 600; // ETS / große Events
+
+  const ratio =
+    Math.log(count + 1) /
+    Math.log(maxCount + 1);
+
+  return 0.8 + ratio * 1.4;
 }
 
 function ensureRegistrationStatusStyles() {
@@ -418,6 +539,28 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
+    .map-marker-venue-inactive {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(31, 29, 26, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
+    .popup-last-race {
+      margin-top: 8px;
+      color: var(--muted, #6f6a62);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .popup-last-race strong {
+      color: var(--ink, #1f1d1a);
+      font-weight: 700;
+    }
+
     .popup-race-static {
       display: block;
       padding: 8px 0;
@@ -446,11 +589,14 @@ function ensureRegistrationStatusStyles() {
 function detectSeries(name) {
   const rules = [
     { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
+    { label: "ETS", re: /euro touring series|\bets\b/i },
+    { label: "Ostmasters", re: /ostmasters/i },
+    { label: "RCK Challenge", re: /rck challenge/i },
+    { label: "RCK Kleinserie", re: /rck kleinserie/i },
+    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf|sportkreis/i },
+    { label: "Tamico Offroad Cup", re: /tamico offroad cup|tamico/i },
     { label: "TEC", re: /tamiya euro cup|\btec\b/i },
-    { label: "Speed Masters", re: /speed masters/i },
-    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf/i },
-    { label: "Tamico", re: /tamico/i },
-    { label: "Ostmasters", re: /ostmasters/i }
+    { label: "TOS", re: /tonisport onroad series|\btos\b/i }
   ];
 
   return rules
@@ -685,17 +831,25 @@ function documentLinksHtml(race) {
   );
 
   const status = registrationStatus(race);
-  const isClosed = status === "closed";
 
-  const registrationItem = isClosed || !race.url
-    ? `<span class="race-link-item race-link-item-status">
+  let registrationItem = "";
+
+  if (status === "closed") {
+    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
         <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
         Nennung geschlossen
-      </span>`
-    : `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
+      </span>`;
+  } else if (status === "upcoming") {
+    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
+        <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
+        ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
+      </span>`;
+  } else if (race.url) {
+    registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
         Nennung ↗
       </a>`;
+  }
 
   const documentItems = [];
 
@@ -738,7 +892,7 @@ function raceSearchText(race) {
     venue?.city,
     venue?.location,
     ...(raceSeries(race) || []),
-    ...(Array.isArray(race.classes) ? race.classes : [])
+    ...(Array.isArray(race.classes) ? race.classes.map(classNameFromRaceClass) : [])
   ]
     .filter(Boolean)
     .join(" ")
@@ -774,7 +928,7 @@ function filteredRaces() {
 
   return races
     .filter(isInSelectedRange)
-    .filter(race => selectedSeries === "all" || raceSeries(race).includes(selectedSeries))
+    .filter(matchesSelectedSeries)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
@@ -783,12 +937,26 @@ function googleMapsRouteUrl(venue) {
   return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
 }
 
-function buildPopup(venue, venueRaces) {
+function buildPopup(venue, venueRaces, latestPastRace = null) {
+  const raceLine = venueRaces.length
+    ? `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}`
+    : "Keine kommenden Rennen";
+
+  const lastRaceHtml =
+    !venueRaces.length && latestPastRace
+      ? `<div class="popup-last-race">
+          Zuletzt:<br>
+          <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong><br>
+          ${escapeHtml(latestPastRace.name)}
+        </div>`
+      : "";
+
   return `
     <div class="popup-title">${venueNameHtml(venue)}</div>
     <div class="popup-race">
-      ${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}
+      ${raceLine}
     </div>
+    ${lastRaceHtml}
     <div class="popup-race">
       <a href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer">
         Route planen ↗
@@ -814,38 +982,50 @@ function updateMarkers(list) {
 
   venues.forEach(venue => {
     const venueRaces = list.filter(race => isRaceAtVenue(race, venue.id));
+    const latestPastRace = latestPastRaceForVenue(venue);
 
-    if (!venueRaces.length) return;
+    if (!venueRaces.length && !latestPastRace) return;
 
-    const markerClass = hasActiveRegistration(venueRaces)
-      ? "map-marker-open"
-      : "map-marker-closed";
+    const hasUpcomingRaces = venueRaces.length > 0;
+    const markerClass = hasUpcomingRaces
+      ? (hasActiveRegistration(venueRaces) ? "map-marker-open" : "map-marker-closed")
+      : "map-marker-venue-inactive";
 
     const registrationTotal = venueRegistrationCount(venueRaces);
-    const markerScale = markerScaleForRegistrationCount(registrationTotal);
-    const markerWidth = Math.round(26 * markerScale);
-    const markerHeight = Math.round(34 * markerScale);
+    const markerScale = hasUpcomingRaces
+      ? markerScaleForRegistrationCount(registrationTotal)
+      : 1;
+
+    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 18;
+    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 18;
+
+    const markerAnchor = hasUpcomingRaces
+      ? [Math.round(markerWidth / 2), markerHeight]
+      : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
+
+    const markerHtml = hasUpcomingRaces
+      ? `<div class="${markerClass}" style="transform: scale(${markerScale.toFixed(2)}); transform-origin: center bottom;"></div>`
+      : `<div class="${markerClass}"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
       {
         icon: L.divIcon({
           className: "",
-          html: `<div class="${markerClass}" style="transform: scale(${markerScale.toFixed(2)}); transform-origin: center bottom;"></div>`,
+          html: markerHtml,
           iconSize: [markerWidth, markerHeight],
-          iconAnchor: [Math.round(markerWidth / 2), markerHeight]
+          iconAnchor: markerAnchor
         })
       }
     ).addTo(map);
 
-    marker.bindPopup(buildPopup(venue, venueRaces));
+    marker.bindPopup(buildPopup(venue, venueRaces, latestPastRace));
 
     marker.on("popupclose", () => {
       if (isSwitchingMarkerPopup) return;
-
       resetVenueSelection();
     });
-    
+
     marker.on("click", event => {
       if (event.originalEvent) {
         L.DomEvent.stopPropagation(event.originalEvent);
@@ -862,10 +1042,16 @@ function updateMarkers(list) {
       activeVenueId = venue.id;
       activeRaceId = null;
       updateAppModeClass();
-      renderList(venueRaces);
-      resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
 
-      marker.setPopupContent(buildPopup(venue, venueRaces));
+      if (hasUpcomingRaces) {
+        renderList(venueRaces);
+        resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+      } else {
+        renderList([]);
+        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+      }
+
+      marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
       marker.openPopup();
 
       window.setTimeout(() => {
@@ -885,7 +1071,6 @@ function updateMarkers(list) {
     map.fitBounds(bounds, { padding: [40, 40] });
   }
 }
-
 
 function scrollToRaceCard(raceId) {
   const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
@@ -919,7 +1104,7 @@ function selectRaceFromPopup(raceId) {
   if (!marker) return;
 
   const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
-  marker.setPopupContent(buildPopup(venue, venueRaces));
+  marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRaceForVenue(venue)));
   marker.openPopup();
 }
 
@@ -941,7 +1126,7 @@ function focusRace(race) {
 
   const marker = markers.get(venue.id);
   if (marker) {
-    marker.setPopupContent(buildPopup(venue, venueList));
+    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
     marker.openPopup();
   }
 }
@@ -969,7 +1154,10 @@ function renderList(list) {
       <div class="race-card-main">
         <div class="race-card-header">
           <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name">${race.name}</div>
+          <div class="race-name-row">
+            <div class="race-name">${race.name}</div>
+            ${registrationCountHtml(race)}
+          </div>
 
           <div class="race-tags race-series-tags">
             ${series.map(item => `<span class="tag">${item}</span>`).join("")}
@@ -993,7 +1181,7 @@ function renderList(list) {
           ? `<div class="race-tags race-class-tags">
               ${
                 (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
-                  .map(item => `<span class="tag tag-class">${item}</span>`)
+                  .map(item => `<span class="tag tag-class">${escapeHtml(classTagLabel(item))}</span>`)
                   .join("")
               }
               ${
@@ -1071,10 +1259,15 @@ function populateSeries() {
 
   seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
 
-  [...allSeries].sort().forEach(series => {
+  const orderedSeries = [
+    ...preferredSeriesOrder.filter(series => allSeries.has(series)),
+    ...[...allSeries].filter(series => !preferredSeriesOrder.includes(series)).sort()
+  ];
+
+  orderedSeries.forEach(series => {
     const option = document.createElement("option");
     option.value = series;
-    option.textContent = series;
+    option.textContent = seriesDisplayName(series);
     seriesFilter.appendChild(option);
   });
 }
@@ -1093,10 +1286,19 @@ function render() {
       renderList(venueList);
       resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
     } else {
-      activeVenueId = null;
-      activeRaceId = null;
-      updateAppModeClass();
-      renderList(list);
+      const venue = venues.find(item => item.id === activeVenueId);
+      const latestPastRace = venue ? latestPastRaceForVenue(venue) : null;
+
+      if (latestPastRace) {
+        activeRaceId = null;
+        renderList([]);
+        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+      } else {
+        activeVenueId = null;
+        activeRaceId = null;
+        updateAppModeClass();
+        renderList(list);
+      }
     }
   } else {
     activeRaceId = null;
