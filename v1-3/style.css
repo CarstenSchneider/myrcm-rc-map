@@ -1353,46 +1353,43 @@ input {
 /* Custom scrollbars */
 
 :root {
-  scrollbar-color: rgba(31, 29, 26, 0.28) transparent;
+  scrollbar-color: rgba(31, 29, 26, 0.30) transparent;
   scrollbar-width: thin;
 }
 
-.race-panel,
-.race-grid,
-.filters-panel {
-  scrollbar-color: rgba(31, 29, 26, 0.28) transparent;
+.layout-prototype .race-panel,
+.layout-prototype .filters-panel {
+  scrollbar-color: rgba(31, 29, 26, 0.30) transparent;
   scrollbar-width: thin;
+  scrollbar-gutter: auto;
 }
 
-.race-panel::-webkit-scrollbar,
-.race-grid::-webkit-scrollbar,
-.filters-panel::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.layout-prototype .race-panel::-webkit-scrollbar,
+.layout-prototype .filters-panel::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-.race-panel::-webkit-scrollbar-track,
-.race-grid::-webkit-scrollbar-track,
-.filters-panel::-webkit-scrollbar-track {
+.layout-prototype .race-panel::-webkit-scrollbar-track,
+.layout-prototype .filters-panel::-webkit-scrollbar-track {
   background: transparent;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
-.race-panel::-webkit-scrollbar-thumb,
-.race-grid::-webkit-scrollbar-thumb,
-.filters-panel::-webkit-scrollbar-thumb {
-  background: rgba(31, 29, 26, 0.24);
-  border: 2px solid rgba(255, 250, 243, 0.72);
+.layout-prototype .race-panel::-webkit-scrollbar-thumb,
+.layout-prototype .filters-panel::-webkit-scrollbar-thumb {
+  background: rgba(31, 29, 26, 0.26);
+  border: 0;
   border-radius: 999px;
 }
 
-.race-panel::-webkit-scrollbar-thumb:hover,
-.race-grid::-webkit-scrollbar-thumb:hover,
-.filters-panel::-webkit-scrollbar-thumb:hover {
-  background: rgba(31, 29, 26, 0.38);
+.layout-prototype .race-panel::-webkit-scrollbar-thumb:hover,
+.layout-prototype .filters-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 29, 26, 0.42);
 }
 
-.race-panel::-webkit-scrollbar-corner,
-.race-grid::-webkit-scrollbar-corner,
-.filters-panel::-webkit-scrollbar-corner {
+.layout-prototype .race-panel::-webkit-scrollbar-corner,
+.layout-prototype .filters-panel::-webkit-scrollbar-corner {
   background: transparent;
 }
