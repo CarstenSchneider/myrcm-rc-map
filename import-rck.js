@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v5-pdf-venues-geocoding";
+const importerVersion = "import-rck-v6-firstseen-pdf-only";
 
 const sources = [
   {
@@ -21,7 +21,6 @@ const sources = [
 ];
 
 const venuesFile = "venues.json";
-const existingRacesFile = "races.json";
 
 const outputFile = "rck-races.json";
 const unmatchedVenuesFile = "rck-unmatched-venues.json";
@@ -906,6 +905,8 @@ function mergeRckRace(a, b) {
   return {
     ...a,
     importerVersion,
+    firstSeen: a.firstSeen || b.firstSeen || null,
+    lastSeen: a.lastSeen || b.lastSeen || null,
     name: rckGroups.length > 1 ? mergedRckName(a, rckGroups) : a.name,
     sources: uniqueArray([...(a.sources || [a.source]), ...(b.sources || [b.source])]),
     url: preferredUrl,
@@ -954,9 +955,32 @@ function stripTransientRaceFields(race) {
   return cleanRace;
 }
 
+function hasPdfDocument(race) {
+  return Array.isArray(race.documents) && race.documents.some(document => document?.url);
+}
+
+function applySeenDates(races, existingRckRaces) {
+  const today = new Date().toISOString().slice(0, 10);
+  const existingById = new Map(
+    existingRckRaces
+      .filter(race => race?.id)
+      .map(race => [race.id, race])
+  );
+
+  return races.map(race => {
+    const existing = existingById.get(race.id);
+
+    return {
+      ...stripTransientRaceFields(race),
+      firstSeen: existing?.firstSeen || today,
+      lastSeen: today
+    };
+  });
+}
+
 async function main() {
   const venues = await readJsonIfExists(venuesFile, []);
-  const existingRaces = await readJsonIfExists(existingRacesFile, []);
+  const existingRckRaces = await readJsonIfExists(outputFile, []);
 
   const importedRaces = [];
 
@@ -973,9 +997,12 @@ async function main() {
       continue;
     }
 
-    const races = extractRacesFromTable(html, source, venues);
+    const rawRaces = extractRacesFromTable(html, source, venues);
+    const races = rawRaces.filter(hasPdfDocument);
 
-    console.log(`  ${races.length} RCK-Termine gefunden`);
+    console.log(`  ${rawRaces.length} RCK-Termine gefunden`);
+    console.log(`  ${races.length} RCK-Termine mit PDF-Ausschreibung werden importiert`);
+    console.log(`  ${rawRaces.length - races.length} RCK-Termine ohne PDF werden ignoriert`);
 
     for (let index = 0; index < races.length; index += 1) {
       if ((index + 1) % 5 === 0 || index + 1 === races.length) {
@@ -993,7 +1020,7 @@ async function main() {
 
   const venueCandidates = await buildVenueCandidates(internallyMerged, venues);
 
-  const cleanedRaces = internallyMerged.map(stripTransientRaceFields);
+  const cleanedRaces = applySeenDates(internallyMerged, existingRckRaces);
 
   const unmatchedVenues = cleanedRaces
     .filter(race => race.venueStatus === "standort nicht verifiziert")
@@ -1010,6 +1037,8 @@ async function main() {
       raceId: race.id,
       raceName: race.name,
       from: race.from,
+      firstSeen: race.firstSeen || null,
+      lastSeen: race.lastSeen || null,
       documents: race.documents || []
     }));
 
@@ -1021,15 +1050,11 @@ async function main() {
   console.log(`RCK Rennen geschrieben: ${cleanedRaces.length} -> ${outputFile}`);
   console.log(`RCK Venue-Kandidaten geschrieben: ${venueCandidates.length} -> ${venueCandidatesFile}`);
   console.log(`RCK ungematchte Venues geschrieben: ${unmatchedVenues.length} -> ${unmatchedVenuesFile}`);
-  console.log(`RCK rohe Termine: ${importedRaces.length}`);
+  console.log(`RCK rohe Termine mit PDF: ${importedRaces.length}`);
   console.log(`RCK intern zusammengeführt: ${internallyMerged.length}`);
   console.log(`Geocoding: ${geocodeEnabled ? "aktiv" : "deaktiviert"}`);
-
-  if (existingRaces.length) {
-    console.log("Hinweis: races.json wurde nur zum Kontext gelesen. RCK bleibt getrennt in rck-races.json.");
-  }
+  console.log(`Bestehende RCK-Rennen gelesen: ${existingRckRaces.length}`);
 }
-
 main().catch(error => {
   console.error(error);
   process.exit(1);
