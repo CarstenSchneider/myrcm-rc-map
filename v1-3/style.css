@@ -1282,3 +1282,71 @@ input {
     font-size: 17px;
   }
 }
+
+
+/* v1.4.1 RCK source integration */
+
+.layout-prototype .mobile-filter-topline {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr) 42px;
+}
+
+.layout-prototype .filter-group-source .segmented,
+.layout-prototype .filter-group-source .source-filter {
+  width: 100%;
+}
+
+.layout-prototype .filter-group-source .segmented button {
+  min-width: 0;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.race-card-rck {
+  background: #f7fbf4;
+  border-color: #d7e5d1;
+}
+
+.race-card-rck.registration-upcoming {
+  background: #f2f8ef;
+  border-color: #d7e5d1;
+}
+
+.race-card-rck .race-series-tags .tag {
+  background: #e6efdf;
+  border-color: #d2e0ca;
+  color: #5f6d58;
+}
+
+.race-card-rck .race-class-tags {
+  border-top-color: rgba(198, 216, 189, 0.8);
+}
+
+.race-card-rck .tag-class {
+  background: #f4f8f0;
+  border-color: #d7e5d1;
+}
+
+.race-card-rck .race-new-badge {
+  background: #4F8A57;
+}
+
+.race-card-rck.is-clickable:hover,
+.race-card-rck.active,
+.layout-prototype:not(.is-venue-mode) .race-card-rck.is-clickable:hover,
+.layout-prototype:not(.is-venue-mode) .race-card-rck.active {
+  border-color: #4F8A57;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .mobile-filter-topline {
+    grid-template-columns: minmax(0, 1fr) 42px;
+  }
+
+  .layout-prototype .filter-group-source {
+    grid-column: 1 / -1;
+  }
+
+  .layout-prototype .filter-group-source .filter-label {
+    display: none;
+  }
+}
