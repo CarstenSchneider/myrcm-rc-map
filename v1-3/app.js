@@ -1036,7 +1036,7 @@ function updateMarkers(list) {
     let isPopupPinned = false;
     
     const popupOffset = hasUpcomingRaces
-      ? [0, Math.round(markerHeight * 0.45)]
+      ? [0, -22]
       : [0, 0];
 
     marker.bindPopup(
