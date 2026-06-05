@@ -66,15 +66,20 @@
         </div>
       </header>
 
-      <div class="race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-        <button class="active" type="button" data-registration-visibility="open">
-          <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-          Nennung offen
-        </button>
-        <button type="button" data-registration-visibility="all">Alle</button>
-      </div>
+      <div class="results-toolbar">
+        <div class="result-line" id="resultLine">Lade Rennen …</div>
 
-      <div class="result-line" id="resultLine">Lade Rennen …</div>
+        <div class="race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+          <button class="active" type="button" data-registration-visibility="open">
+            <span class="race-document-dot" aria-hidden="true"></span>
+            Offen
+          </button>
+
+          <button type="button" data-registration-visibility="all">
+            Alle
+          </button>
+        </div>
+      </div>
       <section class="race-grid" id="raceList" aria-live="polite"></section>
     </aside>
   </main>
