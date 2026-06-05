@@ -20,12 +20,10 @@ L.control.zoom({
 }).addTo(map);
 
 L.tileLayer(
-  'https://api.thunderforest.com/landscape/{z}/{x}/{y}{r}.png?apikey=DEIN_API_KEY',
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   {
-    attribution:
-      '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, ' +
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 22
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
   }
 ).addTo(map);
 
