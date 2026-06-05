@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v4-classes-groups-upcoming";
+const importerVersion = "import-rck-v5-pdf-venues-geocoding";
 
 const sources = [
   {
@@ -24,15 +24,25 @@ const venuesFile = "venues.json";
 const existingRacesFile = "races.json";
 
 const outputFile = "rck-races.json";
-const duplicatesFile = "rck-duplicates.json";
 const unmatchedVenuesFile = "rck-unmatched-venues.json";
+const venueCandidatesFile = "rck-venue-candidates.json";
 
-const requestTimeoutMs = 8000;
+const requestTimeoutMs = 12000;
 const retryCount = 1;
+const geocodeDelayMs = 1100;
+const geocodeEnabled = process.env.RCK_GEOCODE !== "0";
 
 const groupLabels = ["mitte", "nord", "west", "süd", "sued", "ost"];
 
 function normalizeText(text = "") {
+  return String(text)
+    .replace(/\u00a0/g, " ")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\s*\n\s*/g, "\n")
+    .trim();
+}
+
+function normalizeInlineText(text = "") {
   return String(text)
     .replace(/\u00a0/g, " ")
     .replace(/\s+/g, " ")
@@ -40,7 +50,7 @@ function normalizeText(text = "") {
 }
 
 function normalizeKey(value = "") {
-  return normalizeText(value)
+  return normalizeInlineText(value)
     .toLowerCase()
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -56,11 +66,15 @@ function slugify(value = "") {
   return normalizeKey(value)
     .replace(/\s+/g, "-")
     .replace(/^-|-$/g, "")
-    .slice(0, 80);
+    .slice(0, 90);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function parseDate(value) {
-  const match = normalizeText(value).match(/(\d{2})\.(\d{2})\.(\d{4})/);
+  const match = normalizeInlineText(value).match(/(\d{2})\.(\d{2})\.(\d{4})/);
   if (!match) return null;
   return `${match[3]}-${match[2]}-${match[1]}`;
 }
@@ -75,7 +89,7 @@ function absoluteUrl(href, baseUrl) {
   }
 }
 
-async function fetchText(url, attempt = 0) {
+async function fetchResponse(url, attempt = 0) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
 
@@ -83,18 +97,28 @@ async function fetchText(url, attempt = 0) {
     const response = await fetch(url, {
       signal: controller.signal,
       headers: {
-        "user-agent": "Mozilla/5.0 rck-rc-map importer"
+        "user-agent": "Mozilla/5.0 rc-racing-map-rck-importer/5.0 (venue verification workflow)"
       }
     });
 
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return await response.text();
+    return response;
   } catch (error) {
-    if (attempt < retryCount) return fetchText(url, attempt + 1);
+    if (attempt < retryCount) return fetchResponse(url, attempt + 1);
     throw error;
   } finally {
     clearTimeout(timeout);
   }
+}
+
+async function fetchText(url) {
+  const response = await fetchResponse(url);
+  return response.text();
+}
+
+async function fetchBuffer(url) {
+  const response = await fetchResponse(url);
+  return Buffer.from(await response.arrayBuffer());
 }
 
 async function readJsonIfExists(fileName, fallback = []) {
@@ -107,7 +131,7 @@ async function readJsonIfExists(fileName, fallback = []) {
 }
 
 function cleanRckLocation(location = "") {
-  return normalizeText(location)
+  return normalizeInlineText(location)
     .replace(/coming\s*soon/gi, "")
     .replace(/^bitte\s+einloggen.*$/i, "")
     .trim();
@@ -127,7 +151,13 @@ function normalizeRckLocation(location = "") {
     "rheda wiedenbruck": "rheda wiedenbruck",
     "rheda-wiedenbruck": "rheda wiedenbruck",
     "ibbenburen": "ibbenburen",
-    "ibbenbueren": "ibbenburen"
+    "ibbenbueren": "ibbenburen",
+    "neustadt b coburg": "neustadt bei coburg",
+    "neustadt bei coburg": "neustadt bei coburg",
+    "horstel riesenbeck": "hoerstel riesenbeck",
+    "hörstel riesenbeck": "hoerstel riesenbeck",
+    "hockendorf": "hoeckendorf",
+    "höckendorf": "hoeckendorf"
   };
 
   const key = normalizeKey(cleanRckLocation(location));
@@ -141,13 +171,16 @@ function venueSearchText(venue = {}) {
     venue.city,
     venue.location,
     venue.address,
+    venue.postalCode,
     venue.venueName,
-    venue.venueLocation
+    venue.venueLocation,
+    venue.rckLocation,
+    venue.organizerName
   ].filter(Boolean).join(" "));
 }
 
 function cityFromVenue(venue = {}) {
-  return normalizeKey(
+  return normalizeRckLocation(
     venue.city ||
     venue.location ||
     venue.address ||
@@ -171,6 +204,33 @@ function matchVenueByLocation(location, venues) {
     const city = cityFromVenue(venue);
     if (!city) return false;
     return haystack.includes(locationKey) || locationKey.includes(city);
+  }) || null;
+}
+
+function matchVenueByPdfData(pdfData, venues) {
+  if (!pdfData) return null;
+
+  const queryParts = [
+    pdfData.venueName,
+    pdfData.city,
+    pdfData.postalCode,
+    pdfData.address
+  ].filter(Boolean);
+
+  const queryKey = normalizeKey(queryParts.join(" "));
+  if (!queryKey) return null;
+
+  return venues.find(venue => {
+    const haystack = venueSearchText(venue);
+    if (!haystack) return false;
+
+    if (pdfData.venueName && normalizeKey(venue.name) === normalizeKey(pdfData.venueName)) return true;
+    if (pdfData.postalCode && String(venue.postalCode || "") === String(pdfData.postalCode)) return true;
+
+    const cityKey = normalizeKey(pdfData.city || "");
+    if (cityKey && cityFromVenue(venue) === cityKey) return true;
+
+    return haystack.includes(queryKey) || queryKey.includes(haystack);
   }) || null;
 }
 
@@ -223,7 +283,7 @@ function documentSourceText($, link) {
     textParts.push($(img).attr("src"));
   });
 
-  return normalizeText(textParts.filter(Boolean).join(" "));
+  return normalizeInlineText(textParts.filter(Boolean).join(" "));
 }
 
 function extractDocumentsFromCell($, cell, baseUrl) {
@@ -303,7 +363,7 @@ function extractLocationText($, cell) {
 
   clone.find("img").remove();
 
-  return normalizeText(clone.text());
+  return normalizeInlineText(clone.text());
 }
 
 function registrationCountFromNennlisteText(text) {
@@ -317,7 +377,7 @@ function registrationCountFromNennlisteText(text) {
 function classesFromNennlisteText(rawText) {
   const lines = String(rawText)
     .split(/\r?\n/)
-    .map(line => normalizeText(line))
+    .map(line => normalizeInlineText(line))
     .filter(Boolean);
 
   const classes = [];
@@ -327,7 +387,7 @@ function classesFromNennlisteText(rawText) {
     const match = line.match(/^(.+?)\s*-\s*Anzahl\s+Fahrer:\s*(\d+)$/i);
     if (!match) continue;
 
-    const name = normalizeText(match[1]);
+    const name = normalizeInlineText(match[1]);
     const entries = Number(match[2]);
 
     if (!name || !Number.isFinite(entries)) continue;
@@ -348,7 +408,7 @@ async function enrichFromRegistrationPage(race) {
   try {
     const html = await fetchText(race.url);
     const $ = cheerio.load(html);
-    const normalizedText = normalizeText($.text());
+    const normalizedText = normalizeInlineText($.text());
     const registrationCount = registrationCountFromNennlisteText(normalizedText);
     const classes = classesFromNennlisteText($.text());
 
@@ -368,6 +428,315 @@ async function enrichFromRegistrationPage(race) {
   }
 }
 
+async function extractPdfText(url) {
+  let pdfParse;
+
+  try {
+    const imported = await import("pdf-parse/lib/pdf-parse.js");
+    pdfParse = imported.default || imported;
+  } catch {
+    try {
+      const imported = await import("pdf-parse");
+      pdfParse = imported.default || imported;
+    } catch {
+      console.warn("  PDF-Parser fehlt. Bitte `pdf-parse` in package.json ergänzen.");
+      return null;
+    }
+  }
+
+  try {
+    const buffer = await fetchBuffer(url);
+    const result = await pdfParse(buffer);
+    return result?.text || null;
+  } catch (error) {
+    console.warn(`  PDF konnte nicht gelesen werden: ${url}`);
+    console.warn(`    ${error.message}`);
+    return null;
+  }
+}
+
+function compactPdfText(rawText = "") {
+  return String(rawText)
+    .replace(/\r/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n{2,}/g, "\n")
+    .trim();
+}
+
+function valueAfterLabel(text, labels) {
+  const escapedLabels = labels.map(label => label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const labelPattern = escapedLabels.join("|");
+
+  const regex = new RegExp(`(?:^|\\n)\\s*(?:${labelPattern})\\s*:?\\s*(.+?)(?=\\n\\s*[A-ZÄÖÜ][A-Za-zÄÖÜäöüß /.-]{2,35}\\s*:|\\n\\s*$|$)`, "i");
+  const match = text.match(regex);
+  return match ? normalizeInlineText(match[1]) : null;
+}
+
+function splitOrganizerAndVenue(value = "") {
+  const cleaned = normalizeInlineText(value);
+  if (!cleaned) return { organizerName: null, venueName: null };
+
+  const separators = [" / ", " | ", " – ", " - "];
+
+  for (const separator of separators) {
+    if (!cleaned.includes(separator)) continue;
+    const parts = cleaned.split(separator).map(part => normalizeInlineText(part)).filter(Boolean);
+    if (parts.length >= 2) {
+      return {
+        organizerName: parts[0] || null,
+        venueName: parts.slice(1).join(separator).trim() || null
+      };
+    }
+  }
+
+  return { organizerName: cleaned, venueName: null };
+}
+
+function parseAddress(value = "") {
+  const cleaned = normalizeInlineText(value)
+    .replace(/^ort\s*:?\s*/i, "")
+    .replace(/^adresse\s*:?\s*/i, "")
+    .trim();
+
+  if (!cleaned) {
+    return { address: null, postalCode: null, city: null, fullAddress: null };
+  }
+
+  const match = cleaned.match(/^(.*?)(?:,\s*)?(\d{5})\s+(.+)$/);
+
+  if (match) {
+    return {
+      address: normalizeInlineText(match[1].replace(/,$/, "")) || null,
+      postalCode: match[2],
+      city: normalizeInlineText(match[3]),
+      fullAddress: cleaned
+    };
+  }
+
+  return {
+    address: cleaned,
+    postalCode: null,
+    city: null,
+    fullAddress: cleaned
+  };
+}
+
+function parsePdfVenueData(rawText, pdfUrl) {
+  const text = compactPdfText(rawText || "");
+  if (!text) return null;
+
+  const organizerVenueLine = valueAfterLabel(text, [
+    "Ausrichter / Strecke",
+    "Ausrichter/Strecke",
+    "Ausrichter / Rennstrecke",
+    "Ausrichter/Rennstrecke",
+    "Strecke / Ausrichter",
+    "Strecke/Ausrichter"
+  ]);
+
+  const split = splitOrganizerAndVenue(organizerVenueLine);
+
+  const organizerName =
+    split.organizerName ||
+    valueAfterLabel(text, ["Ausrichter", "Veranstalter", "Club", "Verein"]);
+
+  const venueName =
+    split.venueName ||
+    valueAfterLabel(text, ["Strecke", "Rennstrecke", "Austragungsort"]);
+
+  const addressLine = valueAfterLabel(text, [
+    "Ort",
+    "Adresse",
+    "Adresse Strecke",
+    "Streckenadresse",
+    "Rennstrecke"
+  ]);
+
+  const parsedAddress = parseAddress(addressLine);
+
+  if (!organizerName && !venueName && !parsedAddress.fullAddress) return null;
+
+  return {
+    organizerName: organizerName || null,
+    venueName: venueName || null,
+    address: parsedAddress.address,
+    postalCode: parsedAddress.postalCode,
+    city: parsedAddress.city,
+    country: "DE",
+    fullAddress: parsedAddress.fullAddress,
+    sourcePdf: pdfUrl,
+    addressVerifiedFromPdf: Boolean(parsedAddress.fullAddress),
+    rawOrganizerVenueLine: organizerVenueLine || null,
+    rawAddressLine: addressLine || null
+  };
+}
+
+async function enrichFromPdf(race) {
+  const announcement = (race.documents || []).find(document => document.type === "announcement") || race.documents?.[0];
+  if (!announcement?.url) return race;
+
+  const text = await extractPdfText(announcement.url);
+  if (!text) return race;
+
+  const pdfVenueData = parsePdfVenueData(text, announcement.url);
+  if (!pdfVenueData) return race;
+
+  return {
+    ...race,
+    pdfVenueData,
+    organizerName: pdfVenueData.organizerName || race.organizerName || null,
+    venueName: pdfVenueData.venueName || race.venueName,
+    venueAddress: pdfVenueData.fullAddress || race.venueAddress || null,
+    venueCity: pdfVenueData.city || race.venueCity || race.venueLocation,
+    venuePostalCode: pdfVenueData.postalCode || race.venuePostalCode || null,
+    addressVerifiedFromPdf: pdfVenueData.addressVerifiedFromPdf
+  };
+}
+
+function geocodeQueryFromVenueData(venueData) {
+  if (!venueData) return null;
+
+  const parts = [
+    venueData.address,
+    [venueData.postalCode, venueData.city].filter(Boolean).join(" "),
+    venueData.country || "DE"
+  ].filter(Boolean);
+
+  const query = normalizeInlineText(parts.join(", "));
+  return query || null;
+}
+
+async function geocodeVenueData(venueData) {
+  const query = geocodeQueryFromVenueData(venueData);
+  if (!geocodeEnabled || !query) return null;
+
+  const url = new URL("https://nominatim.openstreetmap.org/search");
+  url.searchParams.set("format", "jsonv2");
+  url.searchParams.set("limit", "1");
+  url.searchParams.set("countrycodes", "de");
+  url.searchParams.set("q", query);
+
+  try {
+    await sleep(geocodeDelayMs);
+    const response = await fetchResponse(url.toString());
+    const results = await response.json();
+    const result = Array.isArray(results) ? results[0] : null;
+    if (!result?.lat || !result?.lon) return null;
+
+    return {
+      lat: Number(result.lat),
+      lng: Number(result.lon),
+      geocodingSource: "nominatim",
+      geocodingQuery: query,
+      geocodingDisplayName: result.display_name || null,
+      geocodingClass: result.class || null,
+      geocodingType: result.type || null
+    };
+  } catch (error) {
+    console.warn(`  Geocoding fehlgeschlagen: ${query}`);
+    console.warn(`    ${error.message}`);
+    return null;
+  }
+}
+
+function makeUnverifiedVenueCandidate(race) {
+  const pdfData = race.pdfVenueData || {};
+  const location = race.rckLocation || race.venueLocation || race.venueName;
+  const idBase = pdfData.venueName
+    ? `${pdfData.venueName}-${pdfData.city || location}`
+    : location;
+
+  const id = `rck-${slugify(idBase) || slugify(location)}`;
+
+  return {
+    id,
+    name: pdfData.venueName || race.venueName || location,
+    city: pdfData.city || race.venueCity || location,
+    address: pdfData.address || null,
+    postalCode: pdfData.postalCode || null,
+    country: pdfData.country || "DE",
+    lat: null,
+    lng: null,
+    source: "rck",
+    sources: [race.source].filter(Boolean),
+    rckSeries: race.rckSeries || null,
+    rckLocation: location,
+    organizerName: pdfData.organizerName || race.organizerName || null,
+    sourcePdf: pdfData.sourcePdf || null,
+    addressVerifiedFromPdf: Boolean(pdfData.addressVerifiedFromPdf),
+    verified: false,
+    verificationStatus: "standort nicht verifiziert"
+  };
+}
+
+function mergeVenueCandidate(existing, candidate) {
+  const keepExistingVerification = existing?.verified === true;
+
+  return {
+    ...existing,
+    ...candidate,
+    id: existing.id || candidate.id,
+    name: existing.name || candidate.name,
+    city: existing.city || candidate.city,
+    address: existing.address || candidate.address,
+    postalCode: existing.postalCode || candidate.postalCode,
+    country: existing.country || candidate.country || "DE",
+    lat: existing.lat ?? candidate.lat ?? null,
+    lng: existing.lng ?? candidate.lng ?? null,
+    sources: Array.from(new Set([...(existing.sources || []), ...(candidate.sources || [])].filter(Boolean))),
+    verified: keepExistingVerification ? true : false,
+    verificationStatus: keepExistingVerification
+      ? (existing.verificationStatus || "verifiziert")
+      : "standort nicht verifiziert"
+  };
+}
+
+async function buildVenueCandidates(races, venues) {
+  const candidatesById = new Map();
+  const allVenues = [...venues];
+
+  for (const race of races) {
+    const pdfMatch = matchVenueByPdfData(race.pdfVenueData, allVenues);
+    const locationMatch = matchVenueByLocation(race.rckLocation, allVenues);
+    const matched = pdfMatch || locationMatch;
+
+    if (matched) {
+      race.venueId = matched.id;
+      race.venueName = matched.name || race.venueName;
+      race.venueLocation = matched.city || matched.location || race.venueLocation;
+      continue;
+    }
+
+    const candidate = makeUnverifiedVenueCandidate(race);
+    const geocoding = await geocodeVenueData(candidate);
+
+    if (geocoding) {
+      candidate.lat = geocoding.lat;
+      candidate.lng = geocoding.lng;
+      candidate.geocodingSource = geocoding.geocodingSource;
+      candidate.geocodingQuery = geocoding.geocodingQuery;
+      candidate.geocodingDisplayName = geocoding.geocodingDisplayName;
+      candidate.geocodingClass = geocoding.geocodingClass;
+      candidate.geocodingType = geocoding.geocodingType;
+    }
+
+    const existingCandidate = candidatesById.get(candidate.id);
+    const mergedCandidate = existingCandidate
+      ? mergeVenueCandidate(existingCandidate, candidate)
+      : candidate;
+
+    candidatesById.set(candidate.id, mergedCandidate);
+    allVenues.push(mergedCandidate);
+
+    race.venueId = mergedCandidate.id;
+    race.venueName = mergedCandidate.name;
+    race.venueLocation = mergedCandidate.city;
+    race.venueStatus = "standort nicht verifiziert";
+  }
+
+  return Array.from(candidatesById.values()).sort((a, b) => a.id.localeCompare(b.id));
+}
+
 function extractRacesFromTable(html, source, venues) {
   const $ = cheerio.load(html);
   const races = [];
@@ -380,7 +749,7 @@ function extractRacesFromTable(html, source, venues) {
 
     for (const row of rows) {
       const headerCells = $(row).find("th, td").toArray();
-      const possibleHeaders = headerCells.map(cell => normalizeText($(cell).text()).toLowerCase());
+      const possibleHeaders = headerCells.map(cell => normalizeInlineText($(cell).text()).toLowerCase());
 
       if (
         possibleHeaders.includes("datum") &&
@@ -411,7 +780,7 @@ function extractRacesFromTable(html, source, venues) {
         const comingSoon = hasComingSoon(rawLocation) || (!registrationUrl && documents.length === 0);
 
         const venue = matchVenueByLocation(location, venues);
-        const venueId = venue?.id || `rck-unmatched-${slugify(location)}`;
+        const venueId = venue?.id || `rck-${slugify(location)}`;
         const venueName = venue?.name || location;
         const venueLocation = venue?.city || venue?.location || location;
 
@@ -425,6 +794,7 @@ function extractRacesFromTable(html, source, venues) {
           venueId,
           venueName,
           venueLocation,
+          venueStatus: venue ? "matched" : "standort nicht verifiziert",
           name,
           from: date,
           to: date,
@@ -445,6 +815,11 @@ function extractRacesFromTable(html, source, venues) {
           rckGroup: groupLabel,
           rckGroups: [groupLabel],
           rckLocation: location,
+          organizerName: null,
+          venueAddress: null,
+          venueCity: venueLocation,
+          venuePostalCode: null,
+          addressVerifiedFromPdf: false,
           classes: [],
           documents
         });
@@ -541,7 +916,13 @@ function mergeRckRace(a, b) {
     registrationDisplay,
     rckGroups,
     classes,
-    documents
+    documents: documents,
+    organizerName: b.organizerName || a.organizerName || null,
+    venueAddress: b.venueAddress || a.venueAddress || null,
+    venueCity: b.venueCity || a.venueCity || null,
+    venuePostalCode: b.venuePostalCode || a.venuePostalCode || null,
+    addressVerifiedFromPdf: Boolean(a.addressVerifiedFromPdf || b.addressVerifiedFromPdf),
+    pdfVenueData: b.pdfVenueData || a.pdfVenueData || null
   };
 }
 
@@ -568,111 +949,9 @@ function mergeRckInternally(races) {
   return Array.from(grouped.values());
 }
 
-function orgIdFromValue(value) {
-  if (!value || typeof value !== "string") return null;
-
-  const decoded = decodeURIComponent(value);
-
-  let match = decoded.match(/myrcm-(\d+)/i);
-  if (match) return match[1];
-
-  match = decoded.match(/dId\[O\]=(\d+)/i);
-  if (match) return match[1];
-
-  match = decoded.match(/dId%5BO%5D=(\d+)/i);
-  if (match) return match[1];
-
-  return null;
-}
-
-function raceOrgId(race) {
-  return (
-    orgIdFromValue(race?.venueId) ||
-    orgIdFromValue(race?.id) ||
-    orgIdFromValue(race?.detailUrl) ||
-    orgIdFromValue(race?.url) ||
-    null
-  );
-}
-
-function looksLikeSameRckRace(a, b) {
-  if (!a || !b) return false;
-  if (!a.from || !b.from || a.from !== b.from) return false;
-
-  const aOrg = raceOrgId(a);
-  const bOrg = raceOrgId(b);
-
-  if (aOrg && bOrg && aOrg === bOrg) return true;
-  if (a.venueId && b.venueId && a.venueId === b.venueId) return true;
-
-  const aLocation = normalizeKey([
-    a.venueName,
-    a.venueLocation,
-    a.rckLocation
-  ].filter(Boolean).join(" "));
-
-  const bLocation = normalizeKey([
-    b.venueName,
-    b.venueLocation,
-    b.rckLocation
-  ].filter(Boolean).join(" "));
-
-  if (!aLocation || !bLocation) return false;
-
-  const locationMatch =
-    aLocation.includes(bLocation) ||
-    bLocation.includes(aLocation);
-
-  if (!locationMatch) return false;
-
-  const aText = normalizeKey([a.name, ...(a.series || [])].join(" "));
-  const bText = normalizeKey([b.name, ...(b.series || [])].join(" "));
-
-  return aText.includes("rck") || bText.includes("rck");
-}
-
-function mergeDuplicate(existingRace, rckRace) {
-  return {
-    ...existingRace,
-    importerVersion,
-    sources: uniqueArray([
-      ...(existingRace.sources || [existingRace.source].filter(Boolean)),
-      ...(rckRace.sources || [rckRace.source].filter(Boolean))
-    ]),
-    registrationSource: "rck",
-    rckUrl: rckRace.url,
-    url:
-      rckRace.url && rckRace.url !== rckRace.detailUrl
-        ? rckRace.url
-        : existingRace.url,
-    registrationStatus:
-      rckRace.registrationStatus === "open"
-        ? "open"
-        : existingRace.registrationStatus,
-    registrationCount:
-      rckRace.registrationCount !== null && rckRace.registrationCount !== undefined
-        ? rckRace.registrationCount
-        : existingRace.registrationCount,
-    registrationDisplay:
-      rckRace.registrationDisplay || existingRace.registrationDisplay,
-    classes:
-      Array.isArray(existingRace.classes) && existingRace.classes.length
-        ? existingRace.classes
-        : rckRace.classes,
-    documents: mergeDocuments(existingRace.documents, rckRace.documents),
-    rckGroups: uniqueArray([
-      ...(existingRace.rckGroups || []),
-      ...(rckRace.rckGroups || []),
-      rckRace.rckGroup
-    ]),
-    rckMatch: {
-      id: rckRace.id,
-      series: rckRace.rckSeries,
-      group: rckRace.rckGroup,
-      groups: rckRace.rckGroups || [],
-      location: rckRace.rckLocation
-    }
-  };
+function stripTransientRaceFields(race) {
+  const { pdfVenueData, ...cleanRace } = race;
+  return cleanRace;
 }
 
 async function main() {
@@ -699,57 +978,56 @@ async function main() {
     console.log(`  ${races.length} RCK-Termine gefunden`);
 
     for (let index = 0; index < races.length; index += 1) {
-      if ((index + 1) % 10 === 0 || index + 1 === races.length) {
+      if ((index + 1) % 5 === 0 || index + 1 === races.length) {
         console.log(`  ${index + 1}/${races.length} RCK-Termine angereichert`);
       }
 
-      importedRaces.push(await enrichFromRegistrationPage(races[index]));
+      const withRegistration = await enrichFromRegistrationPage(races[index]);
+      const withPdf = await enrichFromPdf(withRegistration);
+      importedRaces.push(withPdf);
     }
   }
 
   const internallyMerged = mergeRckInternally(importedRaces)
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 
-  const duplicates = [];
-  const newRaces = [];
+  const venueCandidates = await buildVenueCandidates(internallyMerged, venues);
 
-  for (const rckRace of internallyMerged) {
-    const existing = existingRaces.find(existingRace => looksLikeSameRckRace(existingRace, rckRace));
+  const cleanedRaces = internallyMerged.map(stripTransientRaceFields);
 
-    if (existing) {
-      duplicates.push({
-        existingRaceId: existing.id,
-        rckRaceId: rckRace.id,
-        merged: mergeDuplicate(existing, rckRace),
-        rck: rckRace
-      });
-    } else {
-      newRaces.push(rckRace);
-    }
-  }
-
-  const unmatchedVenues = internallyMerged
-    .filter(race => race.venueId?.startsWith("rck-unmatched-"))
+  const unmatchedVenues = cleanedRaces
+    .filter(race => race.venueStatus === "standort nicht verifiziert")
     .map(race => ({
       venueId: race.venueId,
       rckSeries: race.rckSeries,
       rckLocation: race.rckLocation,
       venueName: race.venueName,
+      venueAddress: race.venueAddress || null,
+      venueCity: race.venueCity || race.venueLocation || null,
+      venuePostalCode: race.venuePostalCode || null,
+      organizerName: race.organizerName || null,
+      addressVerifiedFromPdf: Boolean(race.addressVerifiedFromPdf),
       raceId: race.id,
       raceName: race.name,
-      from: race.from
+      from: race.from,
+      documents: race.documents || []
     }));
 
-  await writeFile(outputFile, JSON.stringify(newRaces, null, 2) + "\n", "utf8");
-  await writeFile(duplicatesFile, JSON.stringify(duplicates, null, 2) + "\n", "utf8");
+  await writeFile(outputFile, JSON.stringify(cleanedRaces, null, 2) + "\n", "utf8");
   await writeFile(unmatchedVenuesFile, JSON.stringify(unmatchedVenues, null, 2) + "\n", "utf8");
+  await writeFile(venueCandidatesFile, JSON.stringify(venueCandidates, null, 2) + "\n", "utf8");
 
   console.log(`Importer: ${importerVersion}`);
-  console.log(`RCK neue Rennen geschrieben: ${newRaces.length} -> ${outputFile}`);
-  console.log(`RCK Dopplungen geschrieben: ${duplicates.length} -> ${duplicatesFile}`);
+  console.log(`RCK Rennen geschrieben: ${cleanedRaces.length} -> ${outputFile}`);
+  console.log(`RCK Venue-Kandidaten geschrieben: ${venueCandidates.length} -> ${venueCandidatesFile}`);
   console.log(`RCK ungematchte Venues geschrieben: ${unmatchedVenues.length} -> ${unmatchedVenuesFile}`);
   console.log(`RCK rohe Termine: ${importedRaces.length}`);
   console.log(`RCK intern zusammengeführt: ${internallyMerged.length}`);
+  console.log(`Geocoding: ${geocodeEnabled ? "aktiv" : "deaktiviert"}`);
+
+  if (existingRaces.length) {
+    console.log("Hinweis: races.json wurde nur zum Kontext gelesen. RCK bleibt getrennt in rck-races.json.");
+  }
 }
 
 main().catch(error => {
