@@ -1128,6 +1128,9 @@ const popupOffset = hasUpcomingRaces
     });
     
     marker.on("popupclose", () => {
+
+      marker.getElement()?.classList.remove("marker-popup-active");
+      
       if (isSwitchingMarkerPopup) return;
 
       isPopupPinned = false;
