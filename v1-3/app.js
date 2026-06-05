@@ -1037,32 +1037,44 @@ function updateMarkers(list) {
     
     marker.bindPopup(buildPopup(venue, venueRaces, latestPastRace));
 
-    marker.on("add", () => {
-      const element = marker.getElement();
-      if (!element) return;
+    marker.on("mouseover", () => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
 
-      element.style.cursor = "pointer";
+      clearTimeout(hoverTimer);
 
-      element.addEventListener("mouseenter", () => {
-        if (window.matchMedia("(pointer: coarse)").matches) return;
+      if (!isPopupPinned) {
+        marker.openPopup();
+      }
+    });
 
-        clearTimeout(hoverTimer);
+    marker.on("mouseout", () => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
 
-        hoverTimer = window.setTimeout(() => {
-          if (!isPopupPinned) {
-            marker.openPopup();
-          }
-        }, 180);
-      });
+      clearTimeout(hoverTimer);
 
-      element.addEventListener("mouseleave", () => {
-        if (window.matchMedia("(pointer: coarse)").matches) return;
-
-        clearTimeout(hoverTimer);
-
+      hoverTimer = window.setTimeout(() => {
         if (!isPopupPinned) {
           marker.closePopup();
         }
+      }, 350);
+    });
+
+    marker.on("popupopen", () => {
+      const popupElement = marker.getPopup()?.getElement();
+      if (!popupElement) return;
+
+      popupElement.addEventListener("mouseenter", () => {
+        clearTimeout(hoverTimer);
+      });
+
+      popupElement.addEventListener("mouseleave", () => {
+        if (window.matchMedia("(pointer: coarse)").matches) return;
+        if (isPopupPinned) return;
+
+        clearTimeout(hoverTimer);
+        hoverTimer = window.setTimeout(() => {
+          marker.closePopup();
+        }, 150);
       });
     });
     
