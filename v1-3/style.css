@@ -1373,64 +1373,68 @@ input {
   background: rgba(31,29,26,.30);
 }
 
-/* v1.5 registration visibility toggle */
+/* v1.5 registration visibility toggle - final override */
 
 .layout-prototype .panel-header {
-  margin-bottom: 12px;
+  margin-bottom: 10px !important;
 }
 
 .race-visibility-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  width: fit-content;
-  margin: 0 0 14px;
-  padding: 2px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #f7f1e8;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  width: fit-content !important;
+  margin: 0 0 14px !important;
+  padding: 2px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: #f7f1e8 !important;
+  box-shadow: none !important;
 }
 
 .race-visibility-toggle button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 30px;
-  padding: 0 12px;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1;
-  cursor: pointer;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  height: 26px !important;
+  min-height: 0 !important;
+  padding: 0 10px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--muted) !important;
+  font: inherit !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
 }
 
 .race-visibility-toggle button.active {
-  background: #4F8A57;
-  color: #fff;
+  background: #4F8A57 !important;
+  color: #ffffff !important;
 }
 
 .race-visibility-toggle button:not(.active):hover,
 .race-visibility-toggle button:not(.active):focus-visible {
-  background: rgba(31, 29, 26, 0.06);
-  color: var(--text);
-  outline: none;
+  background: rgba(31, 29, 26, 0.06) !important;
+  color: var(--text) !important;
+  outline: none !important;
 }
 
 .race-visibility-toggle .race-document-dot {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 999px;
-  background: #4F8A57;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 999px !important;
+  background: #4F8A57 !important;
+  box-shadow: none !important;
 }
 
 .race-visibility-toggle button.active .race-document-dot {
-  background: #fff;
+  background: #ffffff !important;
 }
 
 .layout-prototype .result-line {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
