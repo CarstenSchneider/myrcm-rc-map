@@ -1035,17 +1035,17 @@ function updateMarkers(list) {
     let hoverTimer = null;
     let isPopupPinned = false;
     
-const popupOffset = hasUpcomingRaces
-  ? [0, -18]
-  : [0, -6];
+    const popupOffset = hasUpcomingRaces
+      ? [0, Math.round(markerHeight * 0.45)]
+      : [0, 0];
 
-marker.bindPopup(
-  buildPopup(venue, venueRaces, latestPastRace),
-  {
-    offset: popupOffset
-  }
-);
-    
+    marker.bindPopup(
+      buildPopup(venue, venueRaces, latestPastRace),
+      {
+        offset: popupOffset
+      }
+    );
+
     marker.on("mouseover", () => {
       if (window.matchMedia("(pointer: coarse)").matches) return;
 
@@ -1084,6 +1084,28 @@ marker.bindPopup(
         hoverTimer = window.setTimeout(() => {
           marker.closePopup();
         }, 150);
+      });
+
+      popupElement.addEventListener("click", event => {
+        if (
+          event.target.closest("a") ||
+          event.target.closest(".leaflet-popup-close-button")
+        ) {
+          return;
+        }
+
+        isPopupPinned = true;
+        activeVenueId = venue.id;
+        activeRaceId = null;
+        updateAppModeClass();
+
+        if (hasUpcomingRaces) {
+          renderList(venueRaces);
+          resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+        } else {
+          renderList([]);
+          resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+        }
       });
     });
     
