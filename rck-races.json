@@ -1,6 +1,6 @@
 [
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-39587-2026-06-07-rck-kleinserie-sud-bamberg",
     "venueId": "myrcm-39587",
     "venueName": "MRSC Amberg e.V.",
@@ -67,10 +67,12 @@
         "fileName": "202520270607KlSeS260201 1218.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270607KlSeS260201%201218.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-27211-2026-06-14-rck-kleinserie-mitte-wachtersbach",
     "venueId": "myrcm-27211",
     "venueName": "MBSC Wächtersbach",
@@ -137,10 +139,12 @@
         "fileName": "202520270614KlSeM260404 1055.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeM260404%201055.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-991-ormc-2026-06-14-rck-kleinserie-sud-augsburg",
     "venueId": "myrcm-991-ormc",
     "venueName": "ORMC Königsbrunn",
@@ -163,8 +167,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -184,7 +188,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 20
+        "entries": 21
       },
       {
         "name": "VTA",
@@ -207,10 +211,12 @@
         "fileName": "202520270614KlSeS20260602 1716.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeS20260602%201716.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-9976-2026-06-21-rck-challenge-sud-nurnberg",
     "venueId": "myrcm-9976",
     "venueName": "MAC Nürnberg e.V",
@@ -277,10 +283,12 @@
         "fileName": "202520260621Son260209 1720.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260621Son260209%201720.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "rck-salzbergen-2026-06-21-rck-kleinserie-nord-salzbergen",
     "venueId": "rck-rc-raceway-holsterfeld-salzbergen",
     "venueName": "RC Raceway Holsterfeld",
@@ -348,10 +356,12 @@
         "fileName": "202520270621KlSeG20260531 0212.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270621KlSeG20260531%200212.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "tsv-mariendorf-2026-06-21-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf",
     "venueName": "TSV Mariendorf RC Racing",
@@ -414,10 +424,12 @@
         "fileName": "202520270517KlSeO20251005 1449.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270517KlSeO20251005%201449.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-52121-2026-06-28-rck-challenge-west-ludenscheid",
     "venueId": "myrcm-52121",
     "venueName": "MCC Lüdenscheid e.V.",
@@ -484,10 +496,12 @@
         "fileName": "202520260628Won20260601 1132.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260628Won20260601%201132.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-39671-2026-06-28-rck-kleinserie-mitte-mannheim",
     "venueId": "myrcm-39671",
     "venueName": "MRC Mannheim e.V.",
@@ -555,10 +569,12 @@
         "fileName": "202520270628KlSeM20260318 0835.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270628KlSeM20260318%200835.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-33489-2026-07-05-rck-challenge-nord-bremen",
     "venueId": "myrcm-33489",
     "venueName": "MC Munster e.V.",
@@ -625,10 +641,12 @@
         "fileName": "202520260705Non20260505 2303.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260705Non20260505%202303.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-59129-2026-07-05-rck-challenge-sud-neustadt-b-coburg",
     "venueId": "myrcm-59129",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
@@ -699,10 +717,12 @@
         "fileName": "202520260605Oon20260430 0837.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260605Oon20260430%200837.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-134-2026-07-12-rck-kleinserie-mitte-hann-munden-nachtrennen",
     "venueId": "myrcm-134",
     "venueName": "RCCT Münden e.V.",
@@ -725,8 +745,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 34,
-    "registrationDisplay": "34",
+    "registrationCount": 37,
+    "registrationDisplay": "37",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -745,11 +765,11 @@
     "classes": [
       {
         "name": "GT-Sport",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "Porsche Cup",
-        "entries": 18
+        "entries": 20
       },
       {
         "name": "VTA",
@@ -772,51 +792,12 @@
         "fileName": "202520270712KlSeR20260121 2219.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-95-2026-07-19-rck-challenge-nord-braunschweig",
-    "venueId": "myrcm-95",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Nord - Braunschweig",
-    "from": "2026-07-19",
-    "to": "2026-07-19",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Braunschweig",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Braunschweig",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-891-2026-07-19-rck-challenge-sud-mettenheim",
     "venueId": "myrcm-891",
     "venueName": "MAC Mettenheim e.V.",
@@ -879,10 +860,12 @@
         "fileName": "202520260719Son20260518 1544.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260719Son20260518%201544.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-95-2026-07-26-rck-kleinserie-nord-braunschweig",
     "venueId": "myrcm-95",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -945,10 +928,12 @@
         "fileName": "202520270726KlSeN20260314 1326.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270726KlSeN20260314%201326.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "tsv-mariendorf-2026-07-26-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf",
     "venueName": "TSV Mariendorf RC Racing",
@@ -1011,51 +996,12 @@
         "fileName": "202520270705KlSeO20251005 1452.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270705KlSeO20251005%201452.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-43367-2026-08-02-rck-challenge-sud-marktoberdorf-dm-warmup",
-    "venueId": "myrcm-43367",
-    "venueName": "EMC-Marktoberdorf",
-    "venueLocation": "Marktoberdorf",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Süd - Marktoberdorf DM WarmUp",
-    "from": "2026-08-02",
-    "to": "2026-08-02",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Süd",
-    "rckGroups": [
-      "Süd"
-    ],
-    "rckLocation": "Marktoberdorf DM WarmUp",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Marktoberdorf",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-24531-2026-08-02-rck-kleinserie-mitte-andernach",
     "venueId": "myrcm-24531",
     "venueName": "ToniSport GmbH",
@@ -1119,10 +1065,12 @@
         "fileName": "202520270802KlSeD20260203 1535.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270802KlSeD20260203%201535.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-33489-2026-08-09-rck-kleinserie-nord-bremen",
     "venueId": "myrcm-33489",
     "venueName": "MC Munster e.V.",
@@ -1189,51 +1137,12 @@
         "fileName": "202520270809KlSeN260505 2307.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270809KlSeN260505%202307.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-27211-2026-08-16-rck-kleinserie-mitte-wachtersbach",
-    "venueId": "myrcm-27211",
-    "venueName": "MBSC Wächtersbach",
-    "venueLocation": "Wächtersbach",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Mitte - Wächtersbach",
-    "from": "2026-08-16",
-    "to": "2026-08-16",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte"
-    ],
-    "rckLocation": "Wächtersbach",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Wächtersbach",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "rck-hennef-2026-08-16-rck-kleinserie-west-hennef",
     "venueId": "rck-ufm-modellbau-aussenstrecke-hennef",
     "venueName": "UFM-Modellbau Aussenstrecke",
@@ -1300,303 +1209,12 @@
         "fileName": "202520270816KlSeW260206 1440.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270816KlSeW260206%201440.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-49037-2026-08-23-rck-kleinserie-nord-munster",
-    "venueId": "myrcm-49037",
-    "venueName": "MAC-Meckenheim e.V.",
-    "venueLocation": "Bad Münstereifel",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Nord - Munster",
-    "from": "2026-08-23",
-    "to": "2026-08-23",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Munster",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Bad Münstereifel",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-48536-2026-08-23-rck-kleinserie-sud-zwickau",
-    "venueId": "myrcm-48536",
-    "venueName": "RC-Bande Zwickau e.V",
-    "venueLocation": "Zwickau",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Süd/Ost - Zwickau",
-    "from": "2026-08-23",
-    "to": "2026-08-23",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Süd",
-    "rckGroups": [
-      "Süd",
-      "Ost"
-    ],
-    "rckLocation": "Zwickau",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Zwickau",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-43367-2026-08-30-rck-challenge-mitte-dm-emc-marktoberdorf",
-    "venueId": "myrcm-43367",
-    "venueName": "EMC-Marktoberdorf",
-    "venueLocation": "Marktoberdorf",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Mitte/Nord/West/Süd/Ost - DM - EMC Marktoberdorf",
-    "from": "2026-08-30",
-    "to": "2026-08-30",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte",
-      "Nord",
-      "West",
-      "Süd",
-      "Ost"
-    ],
-    "rckLocation": "DM - EMC Marktoberdorf",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Marktoberdorf",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-57549-2026-09-05-rck-kleinserie-sud-marktredwitz",
-    "venueId": "myrcm-57549",
-    "venueName": "MCC-Marktredwitz e.V.",
-    "venueLocation": "Brand",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Süd - Marktredwitz",
-    "from": "2026-09-05",
-    "to": "2026-09-05",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Süd",
-    "rckGroups": [
-      "Süd"
-    ],
-    "rckLocation": "Marktredwitz",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Brand",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-49956-2026-09-06-rck-kleinserie-nord-rheda-wiedenbruck",
-    "venueId": "myrcm-49956",
-    "venueName": "MCC Rheda-Wiedenbrück e.V.",
-    "venueLocation": "Gütersloh",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Nord/West - Rheda Wiedenbrück",
-    "from": "2026-09-06",
-    "to": "2026-09-06",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord",
-      "West"
-    ],
-    "rckLocation": "Rheda Wiedenbrück",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Gütersloh",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-rudolstadt-2026-09-06-rck-kleinserie-ost-rudolstadt",
-    "venueId": "rck-rudolstadt",
-    "venueName": "Rudolstadt",
-    "venueLocation": "Rudolstadt",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Ost - Rudolstadt",
-    "from": "2026-09-06",
-    "to": "2026-09-06",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Rudolstadt",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Rudolstadt",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-33-2026-09-13-rck-challenge-nord-hildesheim",
-    "venueId": "myrcm-33",
-    "venueName": "AMC Hildesheim e.V.",
-    "venueLocation": "Hildesheim",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Nord - Hildesheim",
-    "from": "2026-09-13",
-    "to": "2026-09-13",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Hildesheim",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Hildesheim",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-283-2026-09-19-rck-challenge-mitte-bad-breisig",
     "venueId": "myrcm-283",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -1671,10 +1289,12 @@
         "fileName": "202620270919Won251203 2217.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202620270919Won251203%202217.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-48536-2026-09-20-rck-challenge-ost-zwickau",
     "venueId": "myrcm-48536",
     "venueName": "RC-Bande Zwickau e.V",
@@ -1720,10 +1340,12 @@
         "fileName": "202620270920Oon20260330 2211.pdf",
         "url": "https://challenge.rck-solutions.de/ausschreibung/202620270920Oon20260330%202211.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-283-2026-09-20-rck-kleinserie-mitte-bad-breisig",
     "venueId": "myrcm-283",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -1791,256 +1413,12 @@
         "fileName": "202520270920KlSeD20260106 2047.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270920KlSeD20260106%202047.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-wagenfeld-2026-09-20-rck-kleinserie-nord-wagenfeld",
-    "venueId": "rck-wagenfeld",
-    "venueName": "Wagenfeld",
-    "venueLocation": "Wagenfeld",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Nord - Wagenfeld",
-    "from": "2026-09-20",
-    "to": "2026-09-20",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Wagenfeld",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Wagenfeld",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-678-2026-09-27-rck-challenge-nord-burgdorf",
-    "venueId": "myrcm-678",
-    "venueName": "MAC Burgdorf e.V.",
-    "venueLocation": "Burgdorf",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Nord - Burgdorf",
-    "from": "2026-09-27",
-    "to": "2026-09-27",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Burgdorf",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Burgdorf",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-goldenstedt-2026-10-04-rck-kleinserie-nord-goldenstedt",
-    "venueId": "rck-goldenstedt",
-    "venueName": "Goldenstedt",
-    "venueLocation": "Goldenstedt",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Nord - Goldenstedt",
-    "from": "2026-10-04",
-    "to": "2026-10-04",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Goldenstedt",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Goldenstedt",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-134-2026-10-11-rck-challenge-nord-hann-munden",
-    "venueId": "myrcm-134",
-    "venueName": "RCCT Münden e.V.",
-    "venueLocation": "Hann. Münden",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Nord - Hann.Münden",
-    "from": "2026-10-11",
-    "to": "2026-10-11",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Hann.Münden",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Hann. Münden",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-57549-2026-10-11-rck-challenge-sud-marktredwitz",
-    "venueId": "myrcm-57549",
-    "venueName": "MCC-Marktredwitz e.V.",
-    "venueLocation": "Brand",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Süd - Marktredwitz",
-    "from": "2026-10-11",
-    "to": "2026-10-11",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Süd",
-    "rckGroups": [
-      "Süd"
-    ],
-    "rckLocation": "Marktredwitz",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Brand",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-15091-2026-10-11-rck-challenge-west-msc-essen",
-    "venueId": "myrcm-15091",
-    "venueName": "RCRT Duisburg e.V.",
-    "venueLocation": "Essen",
-    "venueStatus": "matched",
-    "name": "RCK Challenge West - MSC Essen",
-    "from": "2026-10-11",
-    "to": "2026-10-11",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "West",
-    "rckGroups": [
-      "West"
-    ],
-    "rckLocation": "MSC Essen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Essen",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-57549-2026-10-11-rck-kleinserie-ost-neubrandenburg",
     "venueId": "myrcm-57549",
     "venueName": "MCC-Marktredwitz e.V.",
@@ -2111,178 +1489,12 @@
         "fileName": "202520271011KlSeO20260413 2012.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271011KlSeO20260413%202012.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-wm-warmup-2026-10-18-rck-kleinserie-mitte-wm-warmup",
-    "venueId": "rck-wm-warmup",
-    "venueName": "WM Warmup",
-    "venueLocation": "WM Warmup",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Mitte/Nord/West/Süd/Ost - WM Warmup",
-    "from": "2026-10-18",
-    "to": "2026-10-18",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte",
-      "Nord",
-      "West",
-      "Süd",
-      "Ost"
-    ],
-    "rckLocation": "WM Warmup",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "WM Warmup",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-rudolstadt-2026-10-25-rck-kleinserie-ost-rudolstadt",
-    "venueId": "rck-rudolstadt",
-    "venueName": "Rudolstadt",
-    "venueLocation": "Rudolstadt",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Ost - Rudolstadt",
-    "from": "2026-10-25",
-    "to": "2026-10-25",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Rudolstadt",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Rudolstadt",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-willingshausen-2026-11-01-rck-kleinserie-mitte-willingshausen",
-    "venueId": "rck-willingshausen",
-    "venueName": "Willingshausen",
-    "venueLocation": "Willingshausen",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Mitte - Willingshausen",
-    "from": "2026-11-01",
-    "to": "2026-11-01",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte"
-    ],
-    "rckLocation": "Willingshausen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Willingshausen",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-halle-2026-11-01-rck-kleinserie-ost-halle",
-    "venueId": "rck-halle",
-    "venueName": "Halle",
-    "venueLocation": "Halle",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Ost - Halle",
-    "from": "2026-11-01",
-    "to": "2026-11-01",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Halle",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Halle",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "rck-horstel-riesenbeck-2026-11-08-rck-kleinserie-nord-horstel-riesenbeck",
     "venueId": "rck-rcmc-ibbenburen-e-v-horstel-riesenbeck",
     "venueName": "RCMC Ibbenbüren e. V.",
@@ -2350,215 +1562,12 @@
         "fileName": "202520271108KlSeG20260602 2123.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271108KlSeG20260602%202123.pdf"
       }
-    ]
+    ],
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   },
   {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-herrenhaide-2026-11-15-rck-challenge-ost-herrenhaide",
-    "venueId": "rck-herrenhaide",
-    "venueName": "Herrenhaide",
-    "venueLocation": "Herrenhaide",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Challenge Ost - Herrenhaide",
-    "from": "2026-11-15",
-    "to": "2026-11-15",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Herrenhaide",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Herrenhaide",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-gelenau-2026-11-29-rck-challenge-ost-gelenau",
-    "venueId": "rck-gelenau",
-    "venueName": "Gelenau",
-    "venueLocation": "Gelenau",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Challenge Ost - Gelenau",
-    "from": "2026-11-29",
-    "to": "2026-11-29",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Gelenau",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Gelenau",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-26821-2026-11-29-rck-kleinserie-nord-celle",
-    "venueId": "myrcm-26821",
-    "venueName": "ASC Celle e.V.",
-    "venueLocation": "Celle",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Nord - Celle",
-    "from": "2026-11-29",
-    "to": "2026-11-29",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Celle",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Celle",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-48425-2026-11-29-rck-kleinserie-west-dortmund",
-    "venueId": "myrcm-48425",
-    "venueName": "RC-Offroad Dortmund e.V.",
-    "venueLocation": "Dortmund",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie West - Dortmund",
-    "from": "2026-11-29",
-    "to": "2026-11-29",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "West",
-    "rckGroups": [
-      "West"
-    ],
-    "rckLocation": "Dortmund",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Dortmund",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-rudolstadt-2026-12-06-rck-challenge-ost-rudolstadt",
-    "venueId": "rck-rudolstadt",
-    "venueName": "Rudolstadt",
-    "venueLocation": "Rudolstadt",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Challenge Ost - Rudolstadt",
-    "from": "2026-12-06",
-    "to": "2026-12-06",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Rudolstadt",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Rudolstadt",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
+    "importerVersion": "import-rck-v6-firstseen-pdf-only",
     "id": "myrcm-57549-2026-12-06-rck-kleinserie-ost-neubrandenburg",
     "venueId": "myrcm-57549",
     "venueName": "MCC-Marktredwitz e.V.",
@@ -2629,712 +1638,8 @@
         "fileName": "202520271206KlSeO20260429 2051.pdf",
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf"
       }
-    ]
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-32408-2026-12-13-rck-kleinserie-nord-hasloh",
-    "venueId": "myrcm-32408",
-    "venueName": "Megadrom RC Team Nord",
-    "venueLocation": "Hasloh",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Nord - Hasloh",
-    "from": "2026-12-13",
-    "to": "2026-12-13",
-    "series": [
-      "RCK Kleinserie"
     ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Hasloh",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Hasloh",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-beindersheim-2026-12-20-rck-kleinserie-mitte-beindersheim",
-    "venueId": "rck-beindersheim",
-    "venueName": "Beindersheim",
-    "venueLocation": "Beindersheim",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Mitte - Beindersheim",
-    "from": "2026-12-20",
-    "to": "2026-12-20",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte"
-    ],
-    "rckLocation": "Beindersheim",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Beindersheim",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-15091-2026-12-20-rck-kleinserie-west-essen",
-    "venueId": "myrcm-15091",
-    "venueName": "RCRT Duisburg e.V.",
-    "venueLocation": "Essen",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie West - Essen",
-    "from": "2026-12-20",
-    "to": "2026-12-20",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "West",
-    "rckGroups": [
-      "West"
-    ],
-    "rckLocation": "Essen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Essen",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-rudolstadt-2027-01-17-rck-kleinserie-ost-rudolstadt",
-    "venueId": "rck-rudolstadt",
-    "venueName": "Rudolstadt",
-    "venueLocation": "Rudolstadt",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Ost - Rudolstadt",
-    "from": "2027-01-17",
-    "to": "2027-01-17",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Rudolstadt",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Rudolstadt",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-48425-2027-01-17-rck-kleinserie-west-dortmund",
-    "venueId": "myrcm-48425",
-    "venueName": "RC-Offroad Dortmund e.V.",
-    "venueLocation": "Dortmund",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie West - Dortmund",
-    "from": "2027-01-17",
-    "to": "2027-01-17",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "West",
-    "rckGroups": [
-      "West"
-    ],
-    "rckLocation": "Dortmund",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Dortmund",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-plauen-2027-01-24-rck-challenge-sud-plauen",
-    "venueId": "rck-plauen",
-    "venueName": "Plauen",
-    "venueLocation": "Plauen",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Challenge Süd/Ost - Plauen",
-    "from": "2027-01-24",
-    "to": "2027-01-24",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Süd",
-    "rckGroups": [
-      "Süd",
-      "Ost"
-    ],
-    "rckLocation": "Plauen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Plauen",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-15091-2027-01-24-rck-challenge-west-msc-essen",
-    "venueId": "myrcm-15091",
-    "venueName": "RCRT Duisburg e.V.",
-    "venueLocation": "Essen",
-    "venueStatus": "matched",
-    "name": "RCK Challenge West - MSC Essen",
-    "from": "2027-01-24",
-    "to": "2027-01-24",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "West",
-    "rckGroups": [
-      "West"
-    ],
-    "rckLocation": "MSC Essen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Essen",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-57549-2027-02-13-rck-kleinserie-sud-marktredwitz",
-    "venueId": "myrcm-57549",
-    "venueName": "MCC-Marktredwitz e.V.",
-    "venueLocation": "Brand",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Süd/Ost - Marktredwitz",
-    "from": "2027-02-13",
-    "to": "2027-02-13",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Süd",
-    "rckGroups": [
-      "Süd",
-      "Ost"
-    ],
-    "rckLocation": "Marktredwitz",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Brand",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-38953-2027-02-14-rck-challenge-ost-chemnitz",
-    "venueId": "myrcm-38953",
-    "venueName": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-    "venueLocation": "Chemnitz",
-    "venueStatus": "matched",
-    "name": "RCK Challenge Ost - Chemnitz",
-    "from": "2027-02-14",
-    "to": "2027-02-14",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Chemnitz",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Chemnitz",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-ibbenburen-2027-02-21-rck-kleinserie-nord-ibbenburen",
-    "venueId": "rck-rcmc-ibbenburen-e-v-horstel-riesenbeck",
-    "venueName": "RCMC Ibbenbüren e. V.",
-    "venueLocation": "Hörstel-Riesenbeck",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Nord/West - Ibbenbüren",
-    "from": "2027-02-21",
-    "to": "2027-02-21",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord",
-      "West"
-    ],
-    "rckLocation": "Ibbenbüren",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Ibbenbüren",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-134-2027-03-07-rck-kleinserie-mitte-hann-munden",
-    "venueId": "myrcm-134",
-    "venueName": "RCCT Münden e.V.",
-    "venueLocation": "Hann. Münden",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Mitte/Nord/West/Ost - Hann. Münden",
-    "from": "2027-03-07",
-    "to": "2027-03-07",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte",
-      "Nord",
-      "West",
-      "Ost"
-    ],
-    "rckLocation": "Hann. Münden",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Hann. Münden",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-geesthacht-2027-03-21-rck-kleinserie-nord-geesthacht",
-    "venueId": "rck-geesthacht",
-    "venueName": "Geesthacht",
-    "venueLocation": "Geesthacht",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Kleinserie Nord - Geesthacht",
-    "from": "2027-03-21",
-    "to": "2027-03-21",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Geesthacht",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Geesthacht",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-15091-2027-03-21-rck-kleinserie-west-essen",
-    "venueId": "myrcm-15091",
-    "venueName": "RCRT Duisburg e.V.",
-    "venueLocation": "Essen",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie West - Essen",
-    "from": "2027-03-21",
-    "to": "2027-03-21",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "West",
-    "rckGroups": [
-      "West"
-    ],
-    "rckLocation": "Essen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Essen",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-134-2027-05-02-rck-kleinserie-mitte-hann-munden",
-    "venueId": "myrcm-134",
-    "venueName": "RCCT Münden e.V.",
-    "venueLocation": "Hann. Münden",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Mitte/Nord/West/Ost - Hann. Münden",
-    "from": "2027-05-02",
-    "to": "2027-05-02",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Mitte",
-    "rckGroups": [
-      "Mitte",
-      "Nord",
-      "West",
-      "Ost"
-    ],
-    "rckLocation": "Hann. Münden",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Hann. Münden",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-678-2027-05-16-rck-kleinserie-nord-burgdorf",
-    "venueId": "myrcm-678",
-    "venueName": "MAC Burgdorf e.V.",
-    "venueLocation": "Burgdorf",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Nord - Burgdorf",
-    "from": "2027-05-16",
-    "to": "2027-05-16",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Burgdorf",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Burgdorf",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "rck-hockendorf-2027-07-04-rck-challenge-ost-hockendorf",
-    "venueId": "rck-hockendorf",
-    "venueName": "Höckendorf",
-    "venueLocation": "Höckendorf",
-    "venueStatus": "standort nicht verifiziert",
-    "name": "RCK Challenge Ost - Höckendorf",
-    "from": "2027-07-04",
-    "to": "2027-07-04",
-    "series": [
-      "RCK Challenge"
-    ],
-    "source": "rck-challenge",
-    "sources": [
-      "rck-challenge"
-    ],
-    "rckSeries": "challenge",
-    "url": "https://challenge.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Ost",
-    "rckGroups": [
-      "Ost"
-    ],
-    "rckLocation": "Höckendorf",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Höckendorf",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
-  },
-  {
-    "importerVersion": "import-rck-v5-pdf-venues-geocoding",
-    "id": "myrcm-678-2027-07-18-rck-kleinserie-nord-burgdorf-nachtrennen",
-    "venueId": "myrcm-678",
-    "venueName": "MAC Burgdorf e.V.",
-    "venueLocation": "Burgdorf",
-    "venueStatus": "matched",
-    "name": "RCK Kleinserie Nord - Burgdorf Nachtrennen",
-    "from": "2027-07-18",
-    "to": "2027-07-18",
-    "series": [
-      "RCK Kleinserie"
-    ],
-    "source": "rck-kleinserie",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "url": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "upcoming",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationSource": "rck",
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "comingSoon": true,
-    "note": "Nennung folgt.",
-    "rckGroup": "Nord",
-    "rckGroups": [
-      "Nord"
-    ],
-    "rckLocation": "Burgdorf Nachtrennen",
-    "organizerName": null,
-    "venueAddress": null,
-    "venueCity": "Burgdorf",
-    "venuePostalCode": null,
-    "addressVerifiedFromPdf": false,
-    "classes": [],
-    "documents": []
+    "firstSeen": "2026-06-05",
+    "lastSeen": "2026-06-05"
   }
 ]
