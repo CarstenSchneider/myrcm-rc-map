@@ -1295,11 +1295,12 @@ const popupOffset = hasUpcomingRaces
     map.setView(bounds[0], 12);
   }
 
-  if (bounds.length > 1) {
-    map.fitBounds(bounds, { padding: [40, 40] });
-  }
+if (bounds.length > 1) {
+  map.fitBounds(bounds, {
+    paddingTopLeft: [40, 40],
+    paddingBottomRight: [430, 40]
+  });
 }
-
 function scrollToRaceCard(raceId) {
   const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
   if (!card) return;
