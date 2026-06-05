@@ -1017,7 +1017,7 @@ function updateMarkers(list) {
       : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
 
     const markerHtml = hasUpcomingRaces
-      ? `<div class="${markerClass}" style="transform: scale(${markerScale.toFixed(2)}); transform-origin: center bottom;"></div>`
+      ? `<div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px;"></div>`
       : `<div class="${markerClass}"></div>`;
 
     const marker = L.marker(
@@ -1036,7 +1036,7 @@ function updateMarkers(list) {
     let isPopupPinned = false;
     
 const popupOffset = hasUpcomingRaces
-  ? [0, -Math.round(markerHeight * 0.25)]
+  ? [0, -8]
   : [0, -4];
 
     marker.bindPopup(
