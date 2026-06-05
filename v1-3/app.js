@@ -258,7 +258,11 @@ function registrationStatusHtml(race) {
 
 
 function statusDetailsHtml(race) {
-  return "";
+  const status = registrationStatus(race);
+
+  if (status === "open" || status === "closed") return "";
+
+  return registrationStatusHtml(race);
 }
 
 function hasActiveRegistration(venueRaces) {
@@ -299,59 +303,15 @@ function registrationCount(race) {
   return 0;
 }
 
-function hasRegistrationCount(race) {
-  const candidates = [
-    race.registrationCount,
-    race.registrationsCount,
-    race.registrations,
-    race.entryCount,
-    race.entries,
-    race.participantCount,
-    race.participants,
-    race.nominationCount,
-    race.nominations,
-    race.count
-  ];
-
-  return candidates.some(candidate => {
-    if (candidate === null || candidate === undefined || candidate === "") return false;
-    if (typeof candidate === "number") return Number.isFinite(candidate);
-    if (typeof candidate === "string") return /\d+/.test(candidate);
-    if (Array.isArray(candidate)) return true;
-    return false;
-  });
-}
-
-function registrationCountHtml(race) {
-  const display =
-    race.registrationDisplay ||
-    (hasRegistrationCount(race) ? String(registrationCount(race)) : null);
-
-  if (!display) return "";
-
-  return `<div class="race-registration-count" aria-label="${display} Nennungen">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="12" cy="7.4" r="4.1"></circle>
-      <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
-    </svg>
-    <span>${display}</span>
-  </div>`;
-}
-
 function venueRegistrationCount(venueRaces) {
   return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
 }
 
 function markerScaleForRegistrationCount(count) {
-  if (!count) return 0.8;
+  if (!count) return 1;
 
-  const maxCount = 600; // ETS / große Events
-
-  const ratio =
-    Math.log(count + 1) /
-    Math.log(maxCount + 1);
-
-  return 0.8 + ratio * 1.4;
+  const clamped = Math.min(count, 140);
+  return 1 + Math.sqrt(clamped) / Math.sqrt(140) * 0.85;
 }
 
 function ensureRegistrationStatusStyles() {
@@ -725,25 +685,17 @@ function documentLinksHtml(race) {
   );
 
   const status = registrationStatus(race);
+  const isClosed = status === "closed";
 
-  let registrationItem = "";
-
-  if (status === "closed") {
-    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
+  const registrationItem = isClosed || !race.url
+    ? `<span class="race-link-item race-link-item-status">
         <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
         Nennung geschlossen
-      </span>`;
-  } else if (status === "upcoming") {
-    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
-        <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
-        Nennung ab ${race.registrationOpens ? formatDate(race.registrationOpens) : "noch nicht geöffnet"}
-      </span>`;
-  } else if (race.url) {
-    registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
+      </span>`
+    : `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
         Nennung ↗
       </a>`;
-  }
 
   const documentItems = [];
 
@@ -1017,10 +969,7 @@ function renderList(list) {
       <div class="race-card-main">
         <div class="race-card-header">
           <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name-row">
-            <div class="race-name">${race.name}</div>
-            ${registrationCountHtml(race)}
-          </div>
+          <div class="race-name">${race.name}</div>
 
           <div class="race-tags race-series-tags">
             ${series.map(item => `<span class="tag">${item}</span>`).join("")}
