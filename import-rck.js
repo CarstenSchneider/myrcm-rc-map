@@ -965,15 +965,13 @@ async function main() {
 
     let html;
 
-try {
-  html = await fetchText(source.url);
-} catch (error) {
-  console.warn(`  RCK-Quelle konnte nicht geladen werden: ${source.url}`);
-  console.warn(error?.message);
-  console.warn(error?.cause);
-  console.warn(error);
-  continue;
-}
+    try {
+      html = await fetchText(source.url);
+    } catch (error) {
+      console.warn(`  RCK-Quelle konnte nicht geladen werden: ${source.url}`);
+      console.warn(`    ${error.message}`);
+      continue;
+    }
 
     const races = extractRacesFromTable(html, source, venues);
 
