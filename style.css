@@ -46,6 +46,28 @@ body {
   border-left: 1px solid var(--line);
 }
 
+.race-panel {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(31,29,26,.22) transparent;
+}
+
+.race-panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.race-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.race-panel::-webkit-scrollbar-thumb {
+  background: rgba(31,29,26,.22);
+  border-radius: 999px;
+}
+
+.race-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(31,29,26,.35);
+}
+
 .panel-header {
   display: flex;
   gap: 16px;
