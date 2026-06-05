@@ -4,7 +4,6 @@ const resultLine = document.getElementById("resultLine");
 const searchInput = document.getElementById("searchInput");
 const seriesFilter = document.getElementById("seriesFilter");
 const rangeFilter = document.getElementById("rangeFilter");
-const dataSourceFilter = document.getElementById("dataSourceFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
@@ -23,6 +22,11 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap"
 }).addTo(map);
 
+const raceCalendarAttribution = document.createElement("div");
+raceCalendarAttribution.className = "race-calendar-attribution";
+raceCalendarAttribution.innerHTML = 'Rennkalender: <a href="https://www.myrcm.ch/" target="_blank" rel="noreferrer">MyRCM</a> · <a href="https://www.rck-solutions.de/" target="_blank" rel="noreferrer">RCK</a>';
+document.querySelector(".map-panel")?.appendChild(raceCalendarAttribution);
+
 let venues = [];
 let races = [];
 let hosts = [];
@@ -33,7 +37,6 @@ let activeVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
 let selectedSeries = "all";
-let selectedDataSource = "all";
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
@@ -77,13 +80,6 @@ function renderActiveFilterChips() {
     `);
   }
 
-  if (selectedDataSource !== "all") {
-    chips.push(`
-      <button class="active-filter-chip" type="button" data-clear-filter="dataSource">
-        ${dataSourceDisplayName(selectedDataSource)}<span aria-hidden="true">×</span>
-      </button>
-    `);
-  }
 
   activeFilterChips.innerHTML = chips.join("");
   activeFilterChips.classList.toggle("is-empty", chips.length === 0);
@@ -126,15 +122,6 @@ const preferredSeriesOrder = [
   "TOS"
 ];
 
-const dataSourceDisplayNames = {
-  all: "Alle Quellen",
-  myrcm: "MyRCM",
-  rck: "RCK"
-};
-
-function dataSourceDisplayName(source) {
-  return dataSourceDisplayNames[source] || source;
-}
 
 function raceDataSource(race) {
   if (race?.dataSource) return race.dataSource;
@@ -204,9 +191,6 @@ function matchesSelectedSeries(race) {
   return selectedSeries === "all" || raceSeries(race).includes(selectedSeries);
 }
 
-function matchesSelectedDataSource(race) {
-  return selectedDataSource === "all" || raceDataSource(race) === selectedDataSource;
-}
 
 function matchesSearchQuery(race) {
   const query = searchInput.value.trim().toLowerCase();
@@ -218,7 +202,6 @@ function recentPastRacesForVenue(venue) {
     .filter(race => isRaceAtVenue(race, venue.id))
     .filter(isPastRaceWithinLastYear)
     .filter(matchesSelectedSeries)
-    .filter(matchesSelectedDataSource)
     .filter(matchesSearchQuery)
     .sort((a, b) => raceEndDate(b) - raceEndDate(a));
 }
@@ -1057,7 +1040,6 @@ function filteredRaces() {
     .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
     .filter(matchesSelectedSeries)
-    .filter(matchesSelectedDataSource)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
@@ -1355,10 +1337,8 @@ function renderList(list) {
   resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
 
-  const footerHtml = `<div class="myrcm-note">Renndaten und Dokumente von MyRCM und RCK.</div>`;
-
   if (!list.length) {
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>${footerHtml}`;
+    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
     return;
   }
 
@@ -1443,7 +1423,6 @@ function renderList(list) {
     raceList.appendChild(card);
   }
 
-  raceList.insertAdjacentHTML("beforeend", footerHtml);
 }
 
 function toggleClassList(raceId) {
@@ -1568,23 +1547,6 @@ seriesFilter.addEventListener("change", () => {
   render();
 });
 
-if (dataSourceFilter) {
-  dataSourceFilter.addEventListener("click", event => {
-    const button = event.target.closest("button[data-source]");
-    if (!button) return;
-
-    selectedDataSource = button.dataset.source;
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-
-    dataSourceFilter
-      .querySelectorAll("button")
-      .forEach(item => item.classList.toggle("active", item === button));
-
-    render();
-  });
-}
 
 searchInput.addEventListener("input", () => {
   activeVenueId = null;
@@ -1612,13 +1574,6 @@ if (activeFilterChips) {
     if (button.dataset.clearFilter === "series") {
       selectedSeries = "all";
       seriesFilter.value = "all";
-    }
-
-    if (button.dataset.clearFilter === "dataSource") {
-      selectedDataSource = "all";
-      dataSourceFilter
-        ?.querySelectorAll("button")
-        .forEach(item => item.classList.toggle("active", item.dataset.source === "all"));
     }
 
     activeVenueId = null;
