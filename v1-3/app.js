@@ -1301,6 +1301,8 @@ if (bounds.length > 1) {
     paddingBottomRight: [430, 40]
   });
 }
+}
+
 function scrollToRaceCard(raceId) {
   const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
   if (!card) return;
