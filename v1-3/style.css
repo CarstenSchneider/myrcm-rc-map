@@ -1349,3 +1349,50 @@ input {
     0 10px 22px rgba(31, 29, 26, 0.18),
     0 2px 7px rgba(31, 29, 26, 0.12);
 }
+
+/* Custom scrollbars */
+
+:root {
+  scrollbar-color: rgba(31, 29, 26, 0.28) transparent;
+  scrollbar-width: thin;
+}
+
+.race-panel,
+.race-grid,
+.filters-panel {
+  scrollbar-color: rgba(31, 29, 26, 0.28) transparent;
+  scrollbar-width: thin;
+}
+
+.race-panel::-webkit-scrollbar,
+.race-grid::-webkit-scrollbar,
+.filters-panel::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.race-panel::-webkit-scrollbar-track,
+.race-grid::-webkit-scrollbar-track,
+.filters-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.race-panel::-webkit-scrollbar-thumb,
+.race-grid::-webkit-scrollbar-thumb,
+.filters-panel::-webkit-scrollbar-thumb {
+  background: rgba(31, 29, 26, 0.24);
+  border: 2px solid rgba(255, 250, 243, 0.72);
+  border-radius: 999px;
+}
+
+.race-panel::-webkit-scrollbar-thumb:hover,
+.race-grid::-webkit-scrollbar-thumb:hover,
+.filters-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 29, 26, 0.38);
+}
+
+.race-panel::-webkit-scrollbar-corner,
+.race-grid::-webkit-scrollbar-corner,
+.filters-panel::-webkit-scrollbar-corner {
+  background: transparent;
+}
