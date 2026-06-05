@@ -1512,3 +1512,70 @@ input {
     font-size: 25px;
   }
 }
+
+
+/* v1.5 footer */
+
+.map-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,250,243,.94);
+  border-top: 1px solid rgba(222,214,202,.9);
+  font-size: 11px;
+  color: var(--muted);
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+}
+
+.map-footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.map-footer a:hover {
+  text-decoration: underline;
+}
+
+.layout-prototype .leaflet-control-zoom {
+  margin-bottom: 36px !important;
+}
+
+@media (max-width: 860px) {
+  .map-footer {
+    font-size: 10px;
+    gap: 4px;
+    padding: 0 8px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+.legal-body {
+  min-height: 100vh;
+  background:
+    url("https://tile.openstreetmap.org/6/34/21.png")
+    center center / cover no-repeat;
+}
+
+.legal-map-background {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(244,241,236,.78),
+      rgba(244,241,236,.78)
+    );
+  z-index: 0;
+}
+
+.legal-page {
+  position: relative;
+  z-index: 1;
+}
