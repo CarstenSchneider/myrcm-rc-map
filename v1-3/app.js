@@ -539,7 +539,20 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
-     .map-marker-venue-inactive {
+     .map-marker-open,
+    .map-marker-closed,
+    .map-marker-venue-inactive {
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .map-marker-open svg,
+    .map-marker-closed svg,
+    .map-marker-venue-inactive svg {
+      pointer-events: none;
+    }
+
+    .map-marker-venue-inactive {
       width: 12px;
       height: 12px;
       border-radius: 999px;
@@ -1024,32 +1037,43 @@ function updateMarkers(list) {
     
     marker.bindPopup(buildPopup(venue, venueRaces, latestPastRace));
 
-    marker.on("mouseover", () => {
-  if (window.matchMedia("(pointer: coarse)").matches) return;
+    marker.on("add", () => {
+      const element = marker.getElement();
+      if (element) {
+        element.style.cursor = "pointer";
+      }
+    });
 
-  clearTimeout(hoverTimer);
+    marker.on("mouseenter", () => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
 
-  hoverTimer = window.setTimeout(() => {
-    if (!isPopupPinned) {
-      marker.openPopup();
-    }
-  }, 180);
-});
+      clearTimeout(hoverTimer);
 
-marker.on("mouseout", () => {
-  if (window.matchMedia("(pointer: coarse)").matches) return;
+      hoverTimer = window.setTimeout(() => {
+        if (!isPopupPinned) {
+          marker.openPopup();
+        }
+      }, 180);
+    });
 
-  clearTimeout(hoverTimer);
+    marker.on("mouseleave", () => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
 
-  if (!isPopupPinned) {
-    marker.closePopup();
-  }
-});
+      clearTimeout(hoverTimer);
+
+      if (!isPopupPinned) {
+        marker.closePopup();
+      }
+    });
     
     marker.on("popupclose", () => {
       if (isSwitchingMarkerPopup) return;
+
       isPopupPinned = false;
-      resetVenueSelection();
+
+      if (activeVenueId === venue.id) {
+        resetVenueSelection();
+      }
     });
 
     marker.on("click", event => {
