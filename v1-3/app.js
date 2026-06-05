@@ -1035,8 +1035,17 @@ function updateMarkers(list) {
     let hoverTimer = null;
     let isPopupPinned = false;
     
-    marker.bindPopup(buildPopup(venue, venueRaces, latestPastRace));
+const popupOffset = hasUpcomingRaces
+  ? [0, -18]
+  : [0, -6];
 
+marker.bindPopup(
+  buildPopup(venue, venueRaces, latestPastRace),
+  {
+    offset: popupOffset
+  }
+);
+    
     marker.on("mouseover", () => {
       if (window.matchMedia("(pointer: coarse)").matches) return;
 
