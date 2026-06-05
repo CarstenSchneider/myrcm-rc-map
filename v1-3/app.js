@@ -571,7 +571,7 @@ function ensureRegistrationStatusStyles() {
       position: absolute;
       left: 50%;
       top: 100%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -80%);
       z-index: 2;
     }
 
