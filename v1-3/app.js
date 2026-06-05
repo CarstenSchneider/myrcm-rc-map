@@ -539,23 +539,8 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
-    .marker-popup-active .map-marker-open,
-.marker-popup-active .map-marker-closed {
-  width: 12px !important;
-  height: 12px !important;
-  border-radius: 999px !important;
-  transform: none !important;
-  clip-path: none !important;
-}
-
-.marker-popup-active .map-marker-open {
-  background: #5f8f5f !important;
-}
-
-.marker-popup-active .map-marker-closed {
-  background: rgba(31, 29, 26, 0.45) !important;
-}
-
+    .map-marker-open,
+    .map-marker-closed,
     .map-marker-venue-inactive {
       cursor: pointer;
       pointer-events: auto;
@@ -563,8 +548,46 @@ function ensureRegistrationStatusStyles() {
 
     .map-marker-open *,
     .map-marker-closed *,
-    .map-marker-venue-inactive * {
+    .map-marker-venue-inactive *,
+    .map-marker-active-dot {
       pointer-events: none;
+    }
+
+    .map-marker-active-dot {
+      display: none;
+      position: absolute;
+      left: 50%;
+      bottom: -6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-sizing: border-box;
+      transform: translateX(-50%);
+      box-shadow: none;
+      z-index: 2;
+    }
+
+    .map-marker-active-dot-open {
+      background: #5f8f5f;
+    }
+
+    .map-marker-active-dot-closed {
+      background: rgba(31, 29, 26, 0.45);
+    }
+
+    .marker-popup-active .map-marker-open,
+    .marker-popup-active .map-marker-closed {
+      opacity: 0;
+    }
+
+    .marker-popup-active .map-marker-active-dot {
+      display: block;
+    }
+
+    .map-marker-venue-inactive {
+      cursor: pointer;
+      pointer-events: auto;
     }
 
     .map-marker-venue-inactive {
@@ -1031,8 +1054,12 @@ function updateMarkers(list) {
       ? [Math.round(markerWidth / 2), markerHeight]
       : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
 
+    const activeDotClass = hasActiveRegistration(venueRaces)
+      ? "map-marker-active-dot-open"
+      : "map-marker-active-dot-closed";
+
     const markerHtml = hasUpcomingRaces
-      ? `<div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px;"></div>`
+      ? `<div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px;"></div><div class="map-marker-active-dot ${activeDotClass}"></div>`
       : `<div class="${markerClass}"></div>`;
 
     const marker = L.marker(
