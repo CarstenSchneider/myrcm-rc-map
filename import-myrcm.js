@@ -8,11 +8,23 @@ const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
 const requestTimeoutMs = 8000;
 const retryCount = 1;
 const detailConcurrency = 5;
+const fullImportAttemptCount = 3;
+const fullImportRetryDelayMs = 30000;
 
 function oneYearAgoString() {
   const oneYearAgo = new Date();
   oneYearAgo.setDate(oneYearAgo.getDate() - 365);
   return oneYearAgo.toISOString().slice(0, 10);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function markRetryable(error, url) {
+  error.retryable = true;
+  error.url = url;
+  return error;
 }
 
 const trainingTerms = [
@@ -291,7 +303,7 @@ async function fetchText(url, attempt = 0) {
       return fetchText(url, attempt + 1);
     }
 
-    throw error;
+    throw markRetryable(error, url);
   } finally {
     clearTimeout(timeout);
   }
@@ -843,6 +855,8 @@ async function enrichFromRegistrationList(eventId, fallback = {}) {
       registrationListUrl: url
     };
   } catch (error) {
+    if (error.retryable) throw error;
+
     console.warn(`  Nennliste konnte nicht gelesen werden: ${url}`);
     console.warn(`    ${error.message}`);
     return fallback;
@@ -1015,6 +1029,8 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
         const registrationHtml = await fetchText(regUrl);
         registrationDocuments = extractDocumentsFromHtml(registrationHtml, regUrl);
       } catch (error) {
+        if (error.retryable) throw error;
+
         console.warn(`  Nennseite konnte nicht nach PDFs geprüft werden: ${regUrl}`);
         console.warn(`    ${error.message}`);
       }
@@ -1069,7 +1085,7 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
   } catch (error) {
     console.warn(`  Event-Detail konnte nicht geladen werden: ${detailUrl}`);
     console.warn(`    ${error.message}`);
-    return null;
+    throw error;
   }
 }
 
@@ -1118,7 +1134,7 @@ async function loadHosts() {
     }));
 }
 
-async function main() {
+async function runImportOnce() {
   const hosts = await loadHosts();
   const previousRaces = await loadPreviousRaces();
   const allRaces = [];
@@ -1133,8 +1149,9 @@ async function main() {
     try {
       html = await fetchText(host.url);
     } catch (error) {
-      console.warn(`  Übersprungen wegen Netzwerkfehler: ${host.name}`);
-      continue;
+      console.warn(`  Netzwerkfehler bei Host: ${host.name}`);
+      console.warn(`    ${error.message}`);
+      throw error;
     }
 
     const races = await parseEvents(html, host);
@@ -1180,7 +1197,31 @@ async function main() {
   console.log(`  Sonstige PDFs: ${documentTypeCounts.document || 0}`);
 }
 
+async function main() {
+  for (let attempt = 1; attempt <= fullImportAttemptCount; attempt += 1) {
+    try {
+      if (attempt > 1) {
+        console.log(`Import-Neustart ${attempt}/${fullImportAttemptCount}`);
+      }
+
+      await runImportOnce();
+      return;
+    } catch (error) {
+      console.error(`Import fehlgeschlagen (${attempt}/${fullImportAttemptCount}).`);
+      console.error(error.message || error);
+
+      if (attempt >= fullImportAttemptCount) {
+        throw error;
+      }
+
+      console.log(`Kompletter Import wird in ${Math.round(fullImportRetryDelayMs / 1000)} Sekunden neu gestartet.`);
+      await sleep(fullImportRetryDelayMs);
+    }
+  }
+}
+
 main().catch(error => {
+  console.error("Import endgültig fehlgeschlagen. races.json wird nicht aktualisiert.");
   console.error(error);
   process.exit(1);
 });
