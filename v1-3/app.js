@@ -41,6 +41,72 @@ let showOpenOnly = true;
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
+const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
+
+function getFavoriteVenueIds() {
+  try {
+    const raw = localStorage.getItem(favoriteVenueStorageKey);
+    const parsed = JSON.parse(raw || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(Boolean).map(String);
+  } catch {
+    return [];
+  }
+}
+
+function saveFavoriteVenueIds(ids) {
+  const uniqueIds = [...new Set((ids || []).filter(Boolean).map(String))];
+  localStorage.setItem(favoriteVenueStorageKey, JSON.stringify(uniqueIds));
+}
+
+function isFavoriteVenueId(venueId) {
+  if (!venueId) return false;
+  return getFavoriteVenueIds().includes(String(venueId));
+}
+
+function toggleFavoriteVenue(venueId) {
+  if (!venueId) return;
+
+  const id = String(venueId);
+  const favoriteIds = getFavoriteVenueIds();
+
+  if (favoriteIds.includes(id)) {
+    saveFavoriteVenueIds(favoriteIds.filter(item => item !== id));
+  } else {
+    saveFavoriteVenueIds([...favoriteIds, id]);
+  }
+}
+
+function favoriteButtonHtml(venueId, label = "Strecke") {
+  if (!venueId) return "";
+
+  const active = isFavoriteVenueId(venueId);
+  const title = active
+    ? `${label} aus Favoriten entfernen`
+    : `${label} als Favorit markieren`;
+
+  return `<button
+    class="venue-favorite-button${active ? " active" : ""}"
+    type="button"
+    data-favorite-venue-id="${escapeHtml(venueId)}"
+    title="${escapeHtml(title)}"
+    aria-label="${escapeHtml(title)}"
+    aria-pressed="${active ? "true" : "false"}"
+    onclick="event.preventDefault(); event.stopPropagation();"
+  >${active ? "★" : "☆"}</button>`;
+}
+
+function raceFavoriteVenueId(race) {
+  const venue = venueById(race?.venueId);
+  return venue?.id || null;
+}
+
+function isFavoriteRaceVenue(race) {
+  return isFavoriteVenueId(raceFavoriteVenueId(race));
+}
+
+
+
 function updateAppModeClass() {
   app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
 }
@@ -524,6 +590,15 @@ function markerColorForRegistrationCount(count) {
   return "#6fa875";
 }
 
+function markerFavoriteColorForRegistrationCount(count) {
+  if (count >= 120) return "#8a5f00";
+  if (count >= 70) return "#a17100";
+  if (count >= 40) return "#b88416";
+  if (count >= 20) return "#c9972b";
+  if (count >= 10) return "#d8aa42";
+  return "#e0b65a";
+}
+
 function ensureRegistrationStatusStyles() {
   if (document.getElementById("registration-status-styles")) return;
 
@@ -861,19 +936,25 @@ function raceWebsite(race) {
 
 function venueNameHtml(venue) {
   const website = venueWebsite(venue);
+  const name = escapeHtml(venue?.name || "Unbekannte Strecke");
+  const favorite = favoriteButtonHtml(venue?.id, venue?.name || "Strecke");
+  const nameHtml = website
+    ? `<a href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
+    : name;
 
-  if (!website) return venue.name;
-
-  return `<a href="${website}" target="_blank" rel="noreferrer">${venue.name}</a>`;
+  return `<span class="venue-name-with-favorite">${nameHtml}${favorite}</span>`;
 }
 
 function raceVenueNameHtml(race) {
-  const name = venueDisplayName(race);
+  const name = escapeHtml(venueDisplayName(race));
   const website = raceWebsite(race);
+  const venueId = raceFavoriteVenueId(race);
+  const favorite = favoriteButtonHtml(venueId, venueDisplayName(race));
+  const nameHtml = website
+    ? `<a href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
+    : name;
 
-  if (!website) return name;
-
-  return `<a href="${website}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`;
+  return `<span class="venue-name-with-favorite">${nameHtml}${favorite}</span>`;
 }
 
 function escapeHtml(value = "") {
@@ -1089,7 +1170,11 @@ function filteredRaces() {
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
     .filter(race => !query || raceSearchText(race).includes(query))
-    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      const favoriteOrder = Number(isFavoriteRaceVenue(b)) - Number(isFavoriteRaceVenue(a));
+      if (favoriteOrder !== 0) return favoriteOrder;
+      return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
+    });
 }
 
 function googleMapsRouteUrl(venue) {
@@ -1168,9 +1253,13 @@ function updateMarkers(list) {
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
-const markerColor = hasActiveRegistration(venueRaces)
-  ? markerColorForRegistrationCount(registrationTotal)
-  : "rgba(31, 29, 26, 0.55)";
+    const isFavoriteVenue = isFavoriteVenueId(venue.id);
+
+const markerColor = isFavoriteVenue
+  ? markerFavoriteColorForRegistrationCount(registrationTotal)
+  : hasActiveRegistration(venueRaces)
+    ? markerColorForRegistrationCount(registrationTotal)
+    : "rgba(31, 29, 26, 0.55)";
 
 const markerSvg = encodeURIComponent(`
   <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
@@ -1181,7 +1270,7 @@ const markerSvg = encodeURIComponent(`
 const markerHtml = hasUpcomingRaces
   ? `<div class="map-marker-switcher" style="width: ${markerWidth}px; height: ${markerHeight}px;">
       <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
-      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}"></div>
+      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
     </div>`
   : `<div class="${markerClass}"></div>`;
 
@@ -1257,6 +1346,7 @@ const popupOffset = hasUpcomingRaces
       popupElement.addEventListener("click", event => {
         if (
           event.target.closest("a") ||
+          event.target.closest("[data-favorite-venue-id]") ||
           event.target.closest(".leaflet-popup-close-button")
         ) {
           return;
@@ -1481,6 +1571,7 @@ function renderList(list) {
     if (hasMappableVenue(race)) {
       card.addEventListener("click", event => {
         if (event.target.closest("[data-class-toggle]")) return;
+        if (event.target.closest("[data-favorite-venue-id]")) return;
         focusRace(race);
       });
 
@@ -1513,6 +1604,17 @@ function toggleClassList(raceId) {
 
   renderList(filteredRaces());
 }
+
+document.addEventListener("click", event => {
+  const favoriteButton = event.target.closest("[data-favorite-venue-id]");
+  if (!favoriteButton) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  toggleFavoriteVenue(favoriteButton.dataset.favoriteVenueId);
+  render();
+});
 
 raceList.addEventListener("click", event => {
   const button = event.target.closest("[data-class-toggle]");
