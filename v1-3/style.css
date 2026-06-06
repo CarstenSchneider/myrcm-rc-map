@@ -1595,3 +1595,55 @@ input {
   position: relative;
   top: -0.05em;
 }
+
+
+/* v1.6 venue favorites */
+
+.venue-name-with-favorite {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  max-width: 100%;
+}
+
+.venue-favorite-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(31, 29, 26, 0.42);
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+.venue-favorite-button:hover,
+.venue-favorite-button:focus-visible {
+  color: #b88416;
+  outline: none;
+}
+
+.venue-favorite-button.active {
+  color: #b88416;
+}
+
+.popup-title .venue-name-with-favorite {
+  align-items: center;
+}
+
+.popup-title .venue-favorite-button {
+  width: 18px;
+  height: 18px;
+  font-size: 17px;
+}
+
+.race-venue .venue-name-with-favorite {
+  vertical-align: baseline;
+}
