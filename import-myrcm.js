@@ -758,6 +758,26 @@ function registrationCountFromRegistrationListText(text) {
   return null;
 }
 
+
+function cleanRegistrationClassName(name, entries = null) {
+  let cleaned = normalizeText(name)
+    .replace(/^section\s*:?\s*/i, "")
+    .replace(/^klasse\s*:?\s*/i, "")
+    .trim();
+
+  const trailingCountMatch = cleaned.match(/\s*\((\d+)\)\s*$/);
+
+  if (trailingCountMatch) {
+    const trailingCount = Number(trailingCountMatch[1]);
+
+    if (entries === null || entries === undefined || trailingCount === Number(entries)) {
+      cleaned = cleaned.replace(/\s*\(\d+\)\s*$/, "").trim();
+    }
+  }
+
+  return cleaned;
+}
+
 function classesFromRegistrationListText(rawText) {
   const lines = String(rawText)
     .split(/\r?\n/)
@@ -786,7 +806,7 @@ function classesFromRegistrationListText(rawText) {
 
     if (!name || !Number.isFinite(entries)) continue;
 
-    name = normalizeText(name);
+    name = cleanRegistrationClassName(name, entries);
     const key = name.toLowerCase();
 
     if (!name || seen.has(key)) continue;
