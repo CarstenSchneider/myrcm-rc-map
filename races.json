@@ -26028,8 +26028,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 33,
-    "registrationDisplay": "33",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
     "note": null,
     "classes": [
       {
@@ -26054,7 +26054,7 @@
       },
       {
         "name": "BTM LMH 21,5",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "EGTWMO",
