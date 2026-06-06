@@ -1309,6 +1309,7 @@ if (bounds.length > 1) {
       }
   );
 }
+}
 
 function scrollToRaceCard(raceId) {
   const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
