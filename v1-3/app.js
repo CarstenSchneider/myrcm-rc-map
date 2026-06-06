@@ -92,7 +92,6 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-    onclick="event.preventDefault(); event.stopPropagation();"
   >${active ? "★" : "☆"}</button>`;
 }
 
@@ -1576,6 +1575,7 @@ function renderList(list) {
       });
 
       card.addEventListener("keydown", event => {
+        if (event.target.closest("[data-favorite-venue-id]")) return;
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           focusRace(race);
