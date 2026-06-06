@@ -471,12 +471,32 @@ function registrationCountHtml(race) {
 
   if (!display) return "";
 
-  return `<div class="race-registration-count" aria-label="${display} Nennungen">
+  const participantUrl =
+    race.registrationListUrl ||
+    race.url;
+
+  const content = `
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <circle cx="12" cy="7.4" r="4.1"></circle>
       <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
     </svg>
-    <span>${display}</span>
+    <span class="registration-count-value">${display}<span class="external-arrow">↗</span></span>
+  `;
+
+  if (participantUrl) {
+    return `<a
+      class="race-registration-count race-registration-count-link"
+      href="${escapeHtml(participantUrl)}"
+      target="_blank"
+      rel="noopener"
+      title="Teilnehmer anzeigen"
+      aria-label="Teilnehmer anzeigen: ${escapeHtml(display)} Nennungen"
+      onclick="event.stopPropagation()"
+    >${content}</a>`;
+  }
+
+  return `<div class="race-registration-count" aria-label="${escapeHtml(display)} Nennungen">
+    ${content}
   </div>`;
 }
 
@@ -485,23 +505,23 @@ function venueRegistrationCount(venueRaces) {
 }
 
 function markerScaleForRegistrationCount(count) {
-  if (!count) return 0.65;
-  if (count < 5) return 0.65;
-  if (count < 10) return 0.8;
-  if (count < 20) return 1.0;
-  if (count < 40) return 1.25;
-  if (count < 70) return 1.55;
-  if (count < 120) return 1.9;
-  return 2.25;
+  if (!count) return 0.6;
+  if (count < 5) return 0.6;
+  if (count < 10) return 0.75;
+  if (count < 20) return 0.95;
+  if (count < 40) return 1.15;
+  if (count < 70) return 1.35;
+  if (count < 120) return 1.55;
+  return 1.75;
 }
 
 function markerColorForRegistrationCount(count) {
   if (count >= 120) return "#1f5f34";
-  if (count >= 70) return "#2f7642";
-  if (count >= 40) return "#4F8A57";
-  if (count >= 20) return "#6FA875";
-  if (count >= 10) return "#8CBE8E";
-  return "#A8CFA6";
+  if (count >= 70) return "#2d7040";
+  if (count >= 40) return "#3f7f49";
+  if (count >= 20) return "#4F8A57";
+  if (count >= 10) return "#5f9664";
+  return "#6fa875";
 }
 
 function ensureRegistrationStatusStyles() {
@@ -990,11 +1010,6 @@ function documentLinksHtml(race) {
 
   if (rules?.url && rules.url !== announcement?.url) {
     documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
-  }
-
-  const entryListUrl = rckEntryListUrl(race);
-  if (entryListUrl && entryListUrl !== race.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(entryListUrl)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Nennliste ↗</a>`);
   }
 
   return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
