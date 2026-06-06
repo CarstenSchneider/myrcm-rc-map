@@ -1446,6 +1446,7 @@ if (bounds.length > 1) {
     map.panBy([220, 0], { animate: false });
   }
 }
+}
 
 function scrollToRaceCard(raceId) {
   const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
