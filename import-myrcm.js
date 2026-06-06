@@ -830,6 +830,35 @@ function classesFromRegistrationListText(rawText) {
   return classes;
 }
 
+function mergeRegistrationClasses(detailClasses = [], registrationClasses = []) {
+  const byKey = new Map();
+
+  for (const item of detailClasses || []) {
+    const name = typeof item === "string" ? item : item?.name;
+    if (!name) continue;
+
+    const cleanedName = cleanRegistrationClassName(name);
+    const key = cleanedName.toLowerCase();
+
+    byKey.set(key, cleanedName);
+  }
+
+  for (const item of registrationClasses || []) {
+    const name = item?.name;
+    if (!name) continue;
+
+    const cleanedName = cleanRegistrationClassName(name, item.entries);
+    const key = cleanedName.toLowerCase();
+
+    byKey.set(key, {
+      name: cleanedName,
+      entries: item.entries
+    });
+  }
+
+  return Array.from(byKey.values());
+}
+
 async function enrichFromRegistrationList(eventId, fallback = {}) {
   const url = registrationListUrl(eventId);
 
@@ -851,7 +880,7 @@ async function enrichFromRegistrationList(eventId, fallback = {}) {
         registrationCount !== null && registrationCount !== undefined
           ? String(registrationCount)
           : fallback.registrationDisplay ?? null,
-      classes: classes.length ? classes : fallback.classes || [],
+      classes: mergeRegistrationClasses(fallback.classes || [], classes),
       registrationListUrl: url
     };
   } catch (error) {
