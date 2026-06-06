@@ -241,6 +241,19 @@ function registrationUrl(eventId) {
   return target.toString();
 }
 
+function registrationListUrl(eventId) {
+  if (!eventId) return "";
+
+  const target = new URL("https://www.myrcm.ch/myrcm/main");
+  target.searchParams.set("hId[1]", "bkg");
+  target.searchParams.set("dId[E]", eventId);
+  target.searchParams.set("dLt", "reg");
+  target.searchParams.set("pLa", "en");
+  target.searchParams.set("lType", "rList");
+
+  return target.toString();
+}
+
 function orgEventDetailUrl(host, eventId) {
   if (!eventId || !host.orgId) return null;
 
@@ -717,6 +730,103 @@ function registrationCountInfoFromRow($, row) {
   };
 }
 
+function registrationCountFromRegistrationListText(text) {
+  const normalized = normalizeText(text);
+
+  if (!normalized) return null;
+
+  const resultMatch = normalized.match(/Results\s+\d+\s*-\s*\d+\s+from\s+(\d+)/i);
+  if (resultMatch) {
+    const count = Number(resultMatch[1]);
+    if (Number.isFinite(count)) return count;
+  }
+
+  const participantMatches = [...normalized.matchAll(/Number\s+of\s+participants\s*:?\s*(\d+)/gi)];
+  if (participantMatches.length) {
+    const total = participantMatches.reduce((sum, match) => sum + Number(match[1] || 0), 0);
+    if (Number.isFinite(total)) return total;
+  }
+
+  const driverMatches = [...normalized.matchAll(/Anzahl\s+Fahrer\s*:?\s*(\d+)/gi)];
+  if (driverMatches.length) {
+    const total = driverMatches.reduce((sum, match) => sum + Number(match[1] || 0), 0);
+    if (Number.isFinite(total)) return total;
+  }
+
+  return null;
+}
+
+function classesFromRegistrationListText(rawText) {
+  const lines = String(rawText)
+    .split(/\r?\n/)
+    .map(line => normalizeText(line))
+    .filter(Boolean);
+
+  const classes = [];
+  const seen = new Set();
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+
+    let name = null;
+    let entries = null;
+
+    const sameLineMatch = line.match(/^(.+?)\s*-\s*(?:Number\s+of\s+participants|Anzahl\s+Fahrer)\s*:?\s*(\d+)$/i);
+    if (sameLineMatch) {
+      name = sameLineMatch[1];
+      entries = Number(sameLineMatch[2]);
+    } else if (/^(?:Number\s+of\s+participants|Anzahl\s+Fahrer)\s*:?\s*\d+$/i.test(lines[index + 1] || "")) {
+      const countMatch = lines[index + 1].match(/(\d+)/);
+      name = line;
+      entries = countMatch ? Number(countMatch[1]) : null;
+      index += 1;
+    }
+
+    if (!name || !Number.isFinite(entries)) continue;
+
+    name = normalizeText(name);
+    const key = name.toLowerCase();
+
+    if (!name || seen.has(key)) continue;
+
+    classes.push({ name, entries });
+    seen.add(key);
+  }
+
+  return classes;
+}
+
+async function enrichFromRegistrationList(eventId, fallback = {}) {
+  const url = registrationListUrl(eventId);
+
+  if (!url) return fallback;
+
+  try {
+    const html = await fetchText(url);
+    const $ = cheerio.load(html);
+    const rawText = $.text();
+    const registrationCount = registrationCountFromRegistrationListText(rawText);
+    const classes = classesFromRegistrationListText(rawText);
+
+    return {
+      registrationCount:
+        registrationCount !== null && registrationCount !== undefined
+          ? registrationCount
+          : fallback.registrationCount ?? null,
+      registrationDisplay:
+        registrationCount !== null && registrationCount !== undefined
+          ? String(registrationCount)
+          : fallback.registrationDisplay ?? null,
+      classes: classes.length ? classes : fallback.classes || [],
+      registrationListUrl: url
+    };
+  } catch (error) {
+    console.warn(`  Nennliste konnte nicht gelesen werden: ${url}`);
+    console.warn(`    ${error.message}`);
+    return fallback;
+  }
+}
+
 function extractEventLinksFromHostPage(html, host) {
   const $ = cheerio.load(html);
   const events = new Map();
@@ -893,6 +1003,12 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
     const registrationInfo = registrationInfoFromText(eventLink.registrationText);
     const registrationStatus = registrationInfo.registrationStatus;
 
+    const registrationListInfo = await enrichFromRegistrationList(eventLink.eventId, {
+      registrationCount: eventLink.registrationCount,
+      registrationDisplay: eventLink.registrationDisplay,
+      classes: detail.classes
+    });
+
     const finalRegistrationInfo = {
       registrationStatus,
       registrationOpens: registrationInfo.registrationOpens
@@ -910,13 +1026,14 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       source: "myrcm",
       url: regUrl || detailUrl,
       detailUrl,
+      registrationListUrl: registrationListInfo.registrationListUrl,
       registrationStatus,
       registrationOpens: registrationInfo.registrationOpens,
       registrationRequiresLogin: registrationStatus === "login_required",
-      registrationCount: eventLink.registrationCount,
-      registrationDisplay: eventLink.registrationDisplay,
+      registrationCount: registrationListInfo.registrationCount,
+      registrationDisplay: registrationListInfo.registrationDisplay,
       note: registrationNote(finalRegistrationInfo),
-      classes: detail.classes,
+      classes: registrationListInfo.classes,
       documents
     };
 
