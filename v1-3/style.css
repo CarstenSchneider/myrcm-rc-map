@@ -1567,3 +1567,19 @@ input {
   position: relative;
   z-index: 1;
 }
+
+.race-registration-count-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.race-registration-count-link:hover span {
+  text-decoration: underline;
+}
+
+.race-registration-count .external-arrow {
+  font-size: 0.75em;
+  line-height: 1;
+  margin-left: 0.18em;
+}
