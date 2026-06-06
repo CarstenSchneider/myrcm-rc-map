@@ -13,14 +13,8 @@ const registrationVisibilityFilter = document.getElementById("registrationVisibi
 const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
-  minZoom: 6,
-  maxBoundsViscosity: 0.75
+  minZoom: 6
 }).setView([52.52, 13.405], 9);
-
-map.setMaxBounds([
-  [44.5, -1.5],  // großzügiger Südwesten
-  [58.0, 22.5]   // großzügiger Nordosten
-]);
 
 L.control.zoom({
   position: "bottomleft"
