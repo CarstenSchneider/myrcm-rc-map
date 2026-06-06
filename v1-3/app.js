@@ -471,34 +471,13 @@ function registrationCountHtml(race) {
 
   if (!display) return "";
 
-  const content = `
+  return `<div class="race-registration-count" aria-label="${display} Nennungen">
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <circle cx="12" cy="7.4" r="4.1"></circle>
       <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
     </svg>
-<span class="registration-count-value">
-  ${display}<span class="external-arrow">↗</span>
-</span>
-  `;
-
-const participantUrl =
-  race.registrationListUrl ||
-  race.url;
-
-if (participantUrl) {
-  return `<a
-    class="race-registration-count race-registration-count-link"
-    href="${participantUrl}"
-    target="_blank"
-    rel="noopener"
-    title="Teilnehmer anzeigen"
-    onclick="event.stopPropagation()"
-  >${content}</a>`;
-}
-
-return `<div class="race-registration-count" aria-label="${display} Nennungen">
-  ${content}
-</div>`;
+    <span>${display}</span>
+  </div>`;
 }
 
 function venueRegistrationCount(venueRaces) {
@@ -1003,6 +982,11 @@ function documentLinksHtml(race) {
 
   if (rules?.url && rules.url !== announcement?.url) {
     documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
+  }
+
+  const entryListUrl = rckEntryListUrl(race);
+  if (entryListUrl && entryListUrl !== race.url) {
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(entryListUrl)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Nennliste ↗</a>`);
   }
 
   return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
