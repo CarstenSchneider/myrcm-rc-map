@@ -499,6 +499,7 @@ if (participantUrl) {
 return `<div class="race-registration-count" aria-label="${display} Nennungen">
   ${content}
 </div>`;
+}
 
 function venueRegistrationCount(venueRaces) {
   return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
