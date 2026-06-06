@@ -1606,6 +1606,14 @@ input {
   max-width: 100%;
 }
 
+.venue-name-with-favorite .venue-link {
+  color: inherit;
+}
+
+.venue-name-with-favorite .venue-link-favorite {
+  color: #b88416 !important;
+}
+
 .venue-favorite-button {
   appearance: none;
   display: inline-flex;
@@ -1621,7 +1629,7 @@ input {
   font-size: 15px;
   line-height: 1;
   cursor: pointer;
-  transform: translateY(-1px);
+  transform: translateY(1px);
 }
 
 .venue-favorite-button:hover,
@@ -1642,8 +1650,23 @@ input {
   width: 18px;
   height: 18px;
   font-size: 17px;
+  transform: translateY(1px);
 }
 
 .race-venue .venue-name-with-favorite {
   vertical-align: baseline;
+}
+
+.race-section-divider {
+  margin: 10px 0 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.race-section-divider-favorites {
+  color: #b88416;
 }
