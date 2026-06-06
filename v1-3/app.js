@@ -12,7 +12,8 @@ const registrationVisibilityFilter = document.getElementById("registrationVisibi
 
 const map = L.map("map", {
   scrollWheelZoom: true,
-  zoomControl: false
+  zoomControl: false,
+  minZoom: 6
 }).setView([52.52, 13.405], 9);
 
 L.control.zoom({
