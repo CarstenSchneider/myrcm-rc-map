@@ -1225,7 +1225,7 @@ function resetVenueSelection() {
   renderList(filteredRaces());
 }
 
-function updateMarkers(list) {
+function updateMarkers(list, shouldFitBounds = true) {
   markers.forEach(marker => marker.remove());
   markers.clear();
 
@@ -1428,7 +1428,7 @@ const popupOffset = hasUpcomingRaces
     map.setView(bounds[0], 12);
   }
 
-if (bounds.length > 1) {
+if (shouldFitBounds && bounds.length > 1) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
 
   map.fitBounds(bounds, isMobile
@@ -1645,7 +1645,18 @@ document.addEventListener("click", event => {
   event.stopPropagation();
 
   toggleFavoriteVenue(favoriteButton.dataset.favoriteVenueId);
-  render();
+
+  const list = filteredRaces();
+  updateMarkers(list, false);
+
+  if (activeVenueId) {
+    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+    renderList(venueList);
+    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  } else {
+    renderList(list);
+    resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+  }
 });
 
 raceList.addEventListener("click", event => {
