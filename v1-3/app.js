@@ -476,25 +476,29 @@ function registrationCountHtml(race) {
       <circle cx="12" cy="7.4" r="4.1"></circle>
       <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
     </svg>
-    <span>${display}</span>
-    ${race.registrationListUrl ? `<span class="external-arrow">↗</span>` : ""}
+<span class="registration-count-value">
+  ${display}<span class="external-arrow">↗</span>
+</span>
   `;
 
-  if (race.registrationListUrl) {
-    return `<a
-      class="race-registration-count race-registration-count-link"
-      href="${race.registrationListUrl}"
-      target="_blank"
-      rel="noopener"
-      title="Nennliste öffnen"
-      onclick="event.stopPropagation()"
-    >${content}</a>`;
-  }
+const participantUrl =
+  race.registrationListUrl ||
+  race.url;
 
-  return `<div class="race-registration-count" aria-label="${display} Nennungen">
-    ${content}
-  </div>`;
+if (participantUrl) {
+  return `<a
+    class="race-registration-count race-registration-count-link"
+    href="${participantUrl}"
+    target="_blank"
+    rel="noopener"
+    title="Teilnehmer anzeigen"
+    onclick="event.stopPropagation()"
+  >${content}</a>`;
 }
+
+return `<div class="race-registration-count" aria-label="${display} Nennungen">
+  ${content}
+</div>`;
 
 function venueRegistrationCount(venueRaces) {
   return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
