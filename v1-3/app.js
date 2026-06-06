@@ -1153,9 +1153,22 @@ function updateMarkers(list) {
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
-    const markerHtml = hasUpcomingRaces
-      ? `<div class="map-marker-switcher" style="width: ${markerWidth}px; height: ${markerHeight}px;"><div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px;"></div><div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}"></div></div>`
-      : `<div class="${markerClass}"></div>`;
+const markerColor = hasActiveRegistration(venueRaces)
+  ? markerColorForRegistrationCount(registrationTotal)
+  : "rgba(31, 29, 26, 0.55)";
+
+const markerSvg = encodeURIComponent(`
+  <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#F4F1EC" stroke-width="1"/>
+  </svg>
+`);
+
+const markerHtml = hasUpcomingRaces
+  ? `<div class="map-marker-switcher" style="width: ${markerWidth}px; height: ${markerHeight}px;">
+      <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
+      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}"></div>
+    </div>`
+  : `<div class="${markerClass}"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
