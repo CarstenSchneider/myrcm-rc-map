@@ -74,7 +74,9 @@ const invalidEventNames = [
 ];
 
 function normalizeText(text = "") {
-  return text.replace(/\s+/g, " ").trim();
+  return String(text ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function isExcludedHost(host) {
