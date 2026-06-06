@@ -16,6 +16,11 @@ const map = L.map("map", {
   minZoom: 6
 }).setView([52.52, 13.405], 9);
 
+map.setMaxBounds([
+  [44.0, -5.0],
+  [59.0, 25.0]
+]);
+
 L.control.zoom({
   position: "bottomleft"
 }).addTo(map);
