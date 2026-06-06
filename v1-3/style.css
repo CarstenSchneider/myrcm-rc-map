@@ -1573,16 +1573,23 @@ input {
   text-decoration: none;
 }
 
-.race-registration-count-link:hover {
+.race-registration-count-link:hover,
+.race-registration-count-link:focus-visible {
   text-decoration: none;
 }
 
 .registration-count-value {
+  text-decoration: none;
+}
+
+.race-registration-count-link:hover .registration-count-value,
+.race-registration-count-link:focus-visible .registration-count-value {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .registration-count-value .external-arrow {
+  text-decoration: none;
   margin-left: 1px;
   font-size: 0.72em;
   position: relative;
