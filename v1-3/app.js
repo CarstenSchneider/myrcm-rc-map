@@ -471,12 +471,28 @@ function registrationCountHtml(race) {
 
   if (!display) return "";
 
-  return `<div class="race-registration-count" aria-label="${display} Nennungen">
+  const content = `
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <circle cx="12" cy="7.4" r="4.1"></circle>
       <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
     </svg>
     <span>${display}</span>
+    ${race.registrationListUrl ? `<span class="external-arrow">↗</span>` : ""}
+  `;
+
+  if (race.registrationListUrl) {
+    return `<a
+      class="race-registration-count race-registration-count-link"
+      href="${race.registrationListUrl}"
+      target="_blank"
+      rel="noopener"
+      title="Nennliste öffnen"
+      onclick="event.stopPropagation()"
+    >${content}</a>`;
+  }
+
+  return `<div class="race-registration-count" aria-label="${display} Nennungen">
+    ${content}
   </div>`;
 }
 
@@ -982,11 +998,6 @@ function documentLinksHtml(race) {
 
   if (rules?.url && rules.url !== announcement?.url) {
     documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
-  }
-
-  const entryListUrl = rckEntryListUrl(race);
-  if (entryListUrl && entryListUrl !== race.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(entryListUrl)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Nennliste ↗</a>`);
   }
 
   return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
