@@ -485,15 +485,23 @@ function venueRegistrationCount(venueRaces) {
 }
 
 function markerScaleForRegistrationCount(count) {
-  if (!count) return 0.8;
+  if (!count) return 0.65;
+  if (count < 5) return 0.65;
+  if (count < 10) return 0.8;
+  if (count < 20) return 1.0;
+  if (count < 40) return 1.25;
+  if (count < 70) return 1.55;
+  if (count < 120) return 1.9;
+  return 2.25;
+}
 
-  const maxCount = 600; // ETS / große Events
-
-  const ratio =
-    Math.log(count + 1) /
-    Math.log(maxCount + 1);
-
-  return 0.8 + ratio * 1.4;
+function markerColorForRegistrationCount(count) {
+  if (count >= 120) return "#1f5f34";
+  if (count >= 70) return "#2f7642";
+  if (count >= 40) return "#4F8A57";
+  if (count >= 20) return "#6FA875";
+  if (count >= 10) return "#8CBE8E";
+  return "#A8CFA6";
 }
 
 function ensureRegistrationStatusStyles() {
