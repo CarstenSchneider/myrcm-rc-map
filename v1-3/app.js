@@ -937,11 +937,12 @@ function venueNameHtml(venue) {
   const website = venueWebsite(venue);
   const name = escapeHtml(venue?.name || "Unbekannte Strecke");
   const favorite = favoriteButtonHtml(venue?.id, venue?.name || "Strecke");
+  const favoriteClass = isFavoriteVenueId(venue?.id) ? " venue-link-favorite" : "";
   const nameHtml = website
-    ? `<a href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
-    : name;
+    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
+    : `<span class="venue-link${favoriteClass}">${name}</span>`;
 
-  return `<span class="venue-name-with-favorite">${nameHtml}${favorite}</span>`;
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
 }
 
 function raceVenueNameHtml(race) {
@@ -949,11 +950,12 @@ function raceVenueNameHtml(race) {
   const website = raceWebsite(race);
   const venueId = raceFavoriteVenueId(race);
   const favorite = favoriteButtonHtml(venueId, venueDisplayName(race));
+  const favoriteClass = isFavoriteVenueId(venueId) ? " venue-link-favorite" : "";
   const nameHtml = website
-    ? `<a href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : name;
+    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
+    : `<span class="venue-link${favoriteClass}">${name}</span>`;
 
-  return `<span class="venue-name-with-favorite">${nameHtml}${favorite}</span>`;
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
 }
 
 function escapeHtml(value = "") {
@@ -1503,11 +1505,35 @@ function renderList(list) {
     return;
   }
 
+  const hasFavoriteRaces = list.some(isFavoriteRaceVenue);
+  const hasNormalRaces = list.some(race => !isFavoriteRaceVenue(race));
+  const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
+  let didRenderFavoriteDivider = false;
+  let didRenderNormalDivider = false;
+
   for (const race of list) {
+    const isFavorite = isFavoriteRaceVenue(race);
+
+    if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
+      const divider = document.createElement("div");
+      divider.className = "race-section-divider race-section-divider-favorites";
+      divider.textContent = "★ Favorisierte Strecken";
+      raceList.appendChild(divider);
+      didRenderFavoriteDivider = true;
+    }
+
+    if (showSectionDividers && !isFavorite && !didRenderNormalDivider) {
+      const divider = document.createElement("div");
+      divider.className = "race-section-divider";
+      divider.textContent = "Weitere Rennen";
+      raceList.appendChild(divider);
+      didRenderNormalDivider = true;
+    }
+
     const series = raceSeries(race);
     const card = document.createElement("article");
 
-    card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${hasMappableVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
+    card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}${hasMappableVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
     card.dataset.raceId = race.id;
     card.tabIndex = 0;
 
