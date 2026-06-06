@@ -1431,16 +1431,16 @@ const popupOffset = hasUpcomingRaces
 if (bounds.length > 1) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
 
-  map.fitBounds(bounds, isMobile
-    ? {
-        paddingTopLeft: [32, 120],
-        paddingBottomRight: [32, 360]
-      }
-    : {
-        paddingTopLeft: [40, 40],
-        paddingBottomRight: [180, 40]
-      }
-  );
+map.fitBounds(bounds, isMobile
+  ? {
+      paddingTopLeft: [32, 120],
+      paddingBottomRight: [32, 360]
+    }
+  : {
+      paddingTopLeft: [40, 40],
+      paddingBottomRight: [620, 40]
+    }
+);
 }
 }
 
