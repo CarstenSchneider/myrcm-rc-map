@@ -4,28 +4,40 @@
     "name": "TSV Mariendorf RC Racing",
     "city": "Berlin",
     "lat": 52.410703,
-    "lng": 13.321052
+    "lng": 13.321052,
+    "aliases": [
+      "tsv-mariendorf"
+    ]
   },
   {
     "id": "myrcm-45925",
     "name": "RC Speedracer Bernau",
     "city": "Bernau",
     "lat": 52.6975418,
-    "lng": 13.6211917
+    "lng": 13.6211917,
+    "aliases": [
+      "bernau"
+    ]
   },
   {
     "id": "myrcm-41404",
     "name": "Marzahner Racing Club e.V.",
     "city": "Berlin-Marzahn",
     "lat": 52.53875196434322,
-    "lng": 13.561567229887286
+    "lng": 13.561567229887286,
+    "aliases": [
+      "marzahn"
+    ]
   },
   {
     "id": "myrcm-52898",
     "name": "Burning Wheels Blankenfelde",
     "city": "Blankenfelde",
     "lat": 52.32099365980667,
-    "lng": 13.40860882307241
+    "lng": 13.40860882307241,
+    "aliases": [
+      "blankenfelde"
+    ]
   },
   {
     "id": "myrcm-39671",
