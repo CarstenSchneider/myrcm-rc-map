@@ -1,6 +1,6 @@
 [
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-39587-2026-06-07-rck-kleinserie-sud-bamberg",
     "venueId": "myrcm-39587",
     "venueName": "MRSC Amberg e.V.",
@@ -69,10 +69,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-27211-2026-06-14-rck-kleinserie-mitte-wachtersbach",
     "venueId": "myrcm-27211",
     "venueName": "MBSC Wächtersbach",
@@ -95,8 +95,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 39,
-    "registrationDisplay": "39",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -112,7 +112,7 @@
     "classes": [
       {
         "name": "GT-Sport",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Porsche Cup",
@@ -141,10 +141,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-991-ormc-2026-06-14-rck-kleinserie-sud-augsburg",
     "venueId": "myrcm-991-ormc",
     "venueName": "ORMC Königsbrunn",
@@ -167,8 +167,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 34,
-    "registrationDisplay": "34",
+    "registrationCount": 39,
+    "registrationDisplay": "39",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -188,7 +188,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 22
+        "entries": 27
       },
       {
         "name": "VTA",
@@ -213,10 +213,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-9976-2026-06-21-rck-challenge-sud-nurnberg",
     "venueId": "myrcm-9976",
     "venueName": "MAC Nürnberg e.V",
@@ -285,15 +285,15 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "rck-salzbergen-2026-06-21-rck-kleinserie-nord-salzbergen",
     "venueId": "rck-rc-raceway-holsterfeld-salzbergen",
     "venueName": "RC Raceway Holsterfeld",
     "venueLocation": "Salzbergen",
-    "venueStatus": "standort nicht verifiziert",
+    "venueStatus": "matched",
     "name": "RCK Kleinserie Nord/West - Salzbergen",
     "from": "2026-06-21",
     "to": "2026-06-21",
@@ -311,8 +311,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 75,
-    "registrationDisplay": "75",
+    "registrationCount": 78,
+    "registrationDisplay": "78",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -337,11 +337,11 @@
       },
       {
         "name": "VTA",
-        "entries": 0
+        "entries": 2
       },
       {
         "name": "LMH",
-        "entries": 21
+        "entries": 22
       },
       {
         "name": "M-Chassis",
@@ -358,10 +358,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "tsv-mariendorf-2026-06-21-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf",
     "venueName": "TSV Mariendorf RC Racing",
@@ -426,10 +426,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-52121-2026-06-28-rck-challenge-west-ludenscheid",
     "venueId": "myrcm-52121",
     "venueName": "MCC Lüdenscheid e.V.",
@@ -498,10 +498,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-39671-2026-06-28-rck-kleinserie-mitte-mannheim",
     "venueId": "myrcm-39671",
     "venueName": "MRC Mannheim e.V.",
@@ -571,10 +571,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-33489-2026-07-05-rck-challenge-nord-bremen",
     "venueId": "myrcm-33489",
     "venueName": "MC Munster e.V.",
@@ -597,8 +597,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -622,7 +622,7 @@
       },
       {
         "name": "Stock Challenge",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Clubman Challenge",
@@ -630,7 +630,7 @@
       },
       {
         "name": "Gastklasse: Porsche Cup nach RCK",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -643,10 +643,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-59129-2026-07-05-rck-challenge-sud-neustadt-b-coburg",
     "venueId": "myrcm-59129",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
@@ -695,7 +695,7 @@
       },
       {
         "name": "Stock Challenge",
-        "entries": 0
+        "entries": 1
       },
       {
         "name": "Clubman Challenge",
@@ -719,10 +719,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-134-2026-07-12-rck-kleinserie-mitte-hann-munden-nachtrennen",
     "venueId": "myrcm-134",
     "venueName": "RCCT Münden e.V.",
@@ -794,10 +794,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-891-2026-07-19-rck-challenge-sud-mettenheim",
     "venueId": "myrcm-891",
     "venueName": "MAC Mettenheim e.V.",
@@ -862,10 +862,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-95-2026-07-26-rck-kleinserie-nord-braunschweig",
     "venueId": "myrcm-95",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -930,10 +930,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "tsv-mariendorf-2026-07-26-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf",
     "venueName": "TSV Mariendorf RC Racing",
@@ -998,10 +998,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-24531-2026-08-02-rck-kleinserie-mitte-andernach",
     "venueId": "myrcm-24531",
     "venueName": "ToniSport GmbH",
@@ -1067,10 +1067,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-33489-2026-08-09-rck-kleinserie-nord-bremen",
     "venueId": "myrcm-33489",
     "venueName": "MC Munster e.V.",
@@ -1139,15 +1139,15 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "rck-hennef-2026-08-16-rck-kleinserie-west-hennef",
     "venueId": "rck-ufm-modellbau-aussenstrecke-hennef",
     "venueName": "UFM-Modellbau Aussenstrecke",
     "venueLocation": "Hennef",
-    "venueStatus": "standort nicht verifiziert",
+    "venueStatus": "matched",
     "name": "RCK Kleinserie West - Hennef",
     "from": "2026-08-16",
     "to": "2026-08-16",
@@ -1211,10 +1211,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-283-2026-09-19-rck-challenge-mitte-bad-breisig",
     "venueId": "myrcm-283",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -1291,10 +1291,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-48536-2026-09-20-rck-challenge-ost-zwickau",
     "venueId": "myrcm-48536",
     "venueName": "RC-Bande Zwickau e.V",
@@ -1342,10 +1342,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-283-2026-09-20-rck-kleinserie-mitte-bad-breisig",
     "venueId": "myrcm-283",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -1415,10 +1415,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-57549-2026-10-11-rck-kleinserie-ost-neubrandenburg",
     "venueId": "myrcm-57549",
     "venueName": "MCC-Marktredwitz e.V.",
@@ -1491,15 +1491,15 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "rck-horstel-riesenbeck-2026-11-08-rck-kleinserie-nord-horstel-riesenbeck",
     "venueId": "rck-rcmc-ibbenburen-e-v-horstel-riesenbeck",
     "venueName": "RCMC Ibbenbüren e. V.",
     "venueLocation": "Hörstel-Riesenbeck",
-    "venueStatus": "standort nicht verifiziert",
+    "venueStatus": "matched",
     "name": "RCK Kleinserie Nord/West - Hörstel-Riesenbeck",
     "from": "2026-11-08",
     "to": "2026-11-08",
@@ -1564,10 +1564,10 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v6-firstseen-pdf-only",
+    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
     "id": "myrcm-57549-2026-12-06-rck-kleinserie-ost-neubrandenburg",
     "venueId": "myrcm-57549",
     "venueName": "MCC-Marktredwitz e.V.",
@@ -1640,6 +1640,6 @@
       }
     ],
     "firstSeen": "2026-06-05",
-    "lastSeen": "2026-06-06"
+    "lastSeen": "2026-06-07"
   }
 ]
