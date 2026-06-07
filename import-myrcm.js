@@ -2,6 +2,7 @@ import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
 const hostListFile = "myrcm-hosts-germany.json";
+const venuesFile = "venues.json";
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
 
@@ -621,6 +622,55 @@ async function loadPreviousRaces(fileName = "races.json") {
   }
 }
 
+
+async function readJsonIfExists(fileName, fallback = []) {
+  try {
+    await access(fileName);
+    return JSON.parse(await readFile(fileName, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+function buildVenueLookup(venues) {
+  const lookup = new Map();
+
+  for (const venue of venues || []) {
+    if (!venue?.id) continue;
+
+    lookup.set(String(venue.id), venue);
+
+    for (const alias of Array.isArray(venue.aliases) ? venue.aliases : []) {
+      if (alias) lookup.set(String(alias), venue);
+    }
+  }
+
+  return lookup;
+}
+
+function venueConfigForId(venueLookup, venueId) {
+  if (!venueId) return null;
+
+  const id = String(venueId);
+
+  if (venueLookup.has(id)) return venueLookup.get(id);
+
+  for (const [matchId, venue] of venueLookup.entries()) {
+    if (id.startsWith(`${matchId}-`)) return venue;
+  }
+
+  return null;
+}
+
+function hostFieldsForMyRcmRace(venueLookup, venueId, fallbackHostName) {
+  const venueConfig = venueConfigForId(venueLookup, venueId);
+
+  return {
+    hostId: venueConfig?.hostId || venueConfig?.id || venueId,
+    hostName: venueConfig?.hostName || fallbackHostName || venueConfig?.name || venueId
+  };
+}
+
 function raceSignature(race) {
   return [
     race.venueId,
@@ -1036,7 +1086,7 @@ async function runLimited(items, limit, worker) {
   return results;
 }
 
-async function parseSingleEvent(eventLink, host, venueId, total, index) {
+async function parseSingleEvent(eventLink, host, venueId, venueLookup, total, index) {
   const detailUrl = orgEventDetailUrl(host, eventLink.eventId);
   const regUrl = registrationUrl(eventLink.eventId);
 
@@ -1081,11 +1131,15 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       registrationOpens: registrationInfo.registrationOpens
     };
 
+    const hostFields = hostFieldsForMyRcmRace(venueLookup, venueId, host.name);
+
     const race = {
       id: raceId(venueId, detail.from, eventLink.eventId, detail.name),
       venueId,
       venueName: host.name,
       venueLocation: host.location,
+      hostId: hostFields.hostId,
+      hostName: hostFields.hostName,
       name: detail.name,
       from: detail.from,
       to: detail.to,
@@ -1118,7 +1172,7 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
   }
 }
 
-async function parseEvents(html, host) {
+async function parseEvents(html, host, venueLookup) {
   const venueId = host.venueId || hostToVenueId(host);
   const eventLinkResult = extractEventLinksFromHostPage(html, host);
   const eventLinks = eventLinkResult.events;
@@ -1141,7 +1195,7 @@ async function parseEvents(html, host) {
   const races = await runLimited(
     eventLinks,
     detailConcurrency,
-    (eventLink, index) => parseSingleEvent(eventLink, host, venueId, eventLinks.length, index)
+    (eventLink, index) => parseSingleEvent(eventLink, host, venueId, venueLookup, eventLinks.length, index)
   );
 
   return races.filter(Boolean);
@@ -1165,6 +1219,8 @@ async function loadHosts() {
 
 async function runImportOnce() {
   const hosts = await loadHosts();
+  const venues = await readJsonIfExists(venuesFile, []);
+  const venueLookup = buildVenueLookup(venues);
   const previousRaces = await loadPreviousRaces();
   const allRaces = [];
 
@@ -1183,7 +1239,7 @@ async function runImportOnce() {
       throw error;
     }
 
-    const races = await parseEvents(html, host);
+    const races = await parseEvents(html, host, venueLookup);
 
     console.log(`  ${races.length} Rennen gefunden`);
 

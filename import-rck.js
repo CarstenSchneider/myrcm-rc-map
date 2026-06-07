@@ -174,7 +174,10 @@ function venueSearchText(venue = {}) {
     venue.venueName,
     venue.venueLocation,
     venue.rckLocation,
-    venue.organizerName
+    venue.organizerName,
+    venue.hostId,
+    venue.hostName,
+    ...(Array.isArray(venue.aliases) ? venue.aliases : [])
   ].filter(Boolean).join(" "));
 }
 
@@ -186,6 +189,14 @@ function cityFromVenue(venue = {}) {
     venue.name ||
     ""
   );
+}
+
+
+function hostFieldsForVenue(venue, fallbackName = null) {
+  return {
+    hostId: venue?.hostId || venue?.id || null,
+    hostName: venue?.hostName || fallbackName || venue?.name || null
+  };
 }
 
 function matchVenueByLocation(location, venues) {
@@ -780,6 +791,8 @@ function makeUnverifiedVenueCandidate(race) {
     rckSeries: race.rckSeries || null,
     rckLocation: location,
     organizerName: pdfData.organizerName || race.organizerName || null,
+    hostId: slugify(pdfData.organizerName || race.organizerName || pdfData.venueName || race.venueName || location),
+    hostName: pdfData.organizerName || race.organizerName || pdfData.venueName || race.venueName || location,
     website: pdfData.website || race.venueWebsite || null,
     sourcePdf: pdfData.sourcePdf || null,
     addressVerifiedFromPdf: Boolean(pdfData.addressVerifiedFromPdf),
@@ -820,9 +833,13 @@ async function buildVenueCandidates(races, venues) {
     const matched = pdfMatch || locationMatch;
 
     if (matched) {
+      const hostFields = hostFieldsForVenue(matched, race.organizerName || matched.name || race.venueName);
+
       race.venueId = matched.id;
       race.venueName = matched.name || race.venueName;
       race.venueLocation = matched.city || matched.location || race.venueLocation;
+      race.hostId = hostFields.hostId || matched.id;
+      race.hostName = hostFields.hostName || race.organizerName || matched.name || race.venueName;
       continue;
     }
 
@@ -849,9 +866,13 @@ async function buildVenueCandidates(races, venues) {
     candidatesById.set(candidate.id, mergedCandidate);
     allVenues.push(mergedCandidate);
 
+    const hostFields = hostFieldsForVenue(mergedCandidate, race.organizerName || mergedCandidate.name);
+
     race.venueId = mergedCandidate.id;
     race.venueName = mergedCandidate.name;
     race.venueLocation = mergedCandidate.city;
+    race.hostId = hostFields.hostId || mergedCandidate.id;
+    race.hostName = hostFields.hostName || race.organizerName || mergedCandidate.name;
     race.venueStatus = mergedCandidate.verified ? "matched" : "standort nicht verifiziert";
   }
 
@@ -904,6 +925,7 @@ function extractRacesFromTable(html, source, venues) {
         const venueId = venue?.id || `rck-${slugify(location)}`;
         const venueName = venue?.name || location;
         const venueLocation = venue?.city || venue?.location || location;
+        const hostFields = hostFieldsForVenue(venue, venueName);
 
         const groupLabel = group === "sued" ? "Süd" : group.charAt(0).toUpperCase() + group.slice(1);
         const name = `${source.titlePrefix} ${groupLabel} - ${location}`;
@@ -915,6 +937,8 @@ function extractRacesFromTable(html, source, venues) {
           venueId,
           venueName,
           venueLocation,
+          hostId: hostFields.hostId || venueId,
+          hostName: hostFields.hostName || venueName,
           venueStatus: venue ? "matched" : "standort nicht verifiziert",
           name,
           from: date,
@@ -1041,6 +1065,8 @@ function mergeRckRace(a, b) {
     classes,
     documents: documents,
     organizerName: b.organizerName || a.organizerName || null,
+    hostId: b.hostId || a.hostId || b.venueId || a.venueId || null,
+    hostName: b.hostName || a.hostName || b.organizerName || a.organizerName || b.venueName || a.venueName || null,
     venueWebsite: b.venueWebsite || a.venueWebsite || null,
     venueAddress: b.venueAddress || a.venueAddress || null,
     venueCity: b.venueCity || a.venueCity || null,
@@ -1093,8 +1119,12 @@ function applySeenDates(races, existingRckRaces) {
   return races.map(race => {
     const existing = existingById.get(race.id);
 
+    const cleanRace = stripTransientRaceFields(race);
+
     return {
-      ...stripTransientRaceFields(race),
+      ...cleanRace,
+      hostId: cleanRace.hostId || cleanRace.venueId,
+      hostName: cleanRace.hostName || cleanRace.organizerName || cleanRace.venueName || cleanRace.venueId,
       firstSeen: existing?.firstSeen || today,
       lastSeen: today
     };
@@ -1152,6 +1182,8 @@ async function main() {
       rckSeries: race.rckSeries,
       rckLocation: race.rckLocation,
       venueName: race.venueName,
+      hostId: race.hostId || null,
+      hostName: race.hostName || null,
       venueAddress: race.venueAddress || null,
       venueCity: race.venueCity || race.venueLocation || null,
       venuePostalCode: race.venuePostalCode || null,
