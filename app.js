@@ -164,13 +164,6 @@ function syncFilterUi() {
 }
 
 
-const verifiedVenueAliases = {
-  "myrcm-18244": "tsv-mariendorf",
-  "myrcm-45925": "bernau",
-  "myrcm-41404": "marzahn",
-  "myrcm-52898": "blankenfelde"
-};
-
 const seriesDisplayNames = {
   "BTM": "BTM – Berlin Touring Masters",
   "ETS": "ETS – Euro Touring Series",
@@ -861,31 +854,12 @@ function raceSeries(race) {
   return detectSeries(race.name);
 }
 
-function venueAliasId(raceVenueId) {
-  if (!raceVenueId) return null;
-
-  for (const prefix of Object.keys(verifiedVenueAliases)) {
-    if (raceVenueId.startsWith(prefix)) {
-      return verifiedVenueAliases[prefix];
-    }
-  }
-
-  return null;
-}
-
 function venueById(id) {
   if (!id) return null;
 
-  const direct = venues.find(venue => {
+  return venues.find(venue => {
     return id === venue.id || id.startsWith(`${venue.id}-`);
-  });
-
-  if (direct) return direct;
-
-  const alias = venueAliasId(id);
-  if (!alias) return null;
-
-  return venues.find(venue => venue.id === alias) || null;
+  }) || null;
 }
 
 function normalizeUrl(url) {
@@ -922,13 +896,6 @@ function orgIdsForVenue(venue) {
     orgIdFromValue(venue.myrcmUrl);
 
   if (directOrgId) ids.add(directOrgId);
-
-  Object.entries(verifiedVenueAliases).forEach(([myrcmId, venueId]) => {
-    if (venue.id === venueId) {
-      const orgId = orgIdFromValue(myrcmId);
-      if (orgId) ids.add(orgId);
-    }
-  });
 
   return [...ids];
 }
@@ -1174,9 +1141,7 @@ function isRaceAtVenue(race, venueId) {
 
   if (race.venueId === venueId) return true;
 
-  if (race.venueId.startsWith(`${venueId}-`)) return true;
-
-  return venueAliasId(race.venueId) === venueId;
+  return race.venueId.startsWith(`${venueId}-`);
 }
 
 function isInSelectedRange(race) {
