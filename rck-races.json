@@ -169,8 +169,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 39,
-    "registrationDisplay": "39",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -202,7 +202,7 @@
       },
       {
         "name": "M-Chassis",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -605,8 +605,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -630,7 +630,7 @@
       },
       {
         "name": "Stock Challenge",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "Clubman Challenge",
@@ -755,8 +755,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 37,
-    "registrationDisplay": "37",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -775,7 +775,7 @@
     "classes": [
       {
         "name": "GT-Sport",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "Porsche Cup",
