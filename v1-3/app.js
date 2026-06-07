@@ -1345,6 +1345,8 @@ const popupOffset = hasUpcomingRaces
     marker.on("mouseover", () => {
       if (window.matchMedia("(pointer: coarse)").matches) return;
 
+      if (pinnedVenueId && pinnedVenueId !== venue.id) return;
+
       clearTimeout(hoverTimer);
 
       if (!isPopupPinned) {
@@ -1354,6 +1356,8 @@ const popupOffset = hasUpcomingRaces
 
     marker.on("mouseout", () => {
       if (window.matchMedia("(pointer: coarse)").matches) return;
+
+      if (pinnedVenueId && pinnedVenueId !== venue.id) return;
 
       clearTimeout(hoverTimer);
 
@@ -1378,6 +1382,7 @@ const popupOffset = hasUpcomingRaces
       popupElement.addEventListener("mouseleave", () => {
         if (window.matchMedia("(pointer: coarse)").matches) return;
         if (isPopupPinned) return;
+        if (pinnedVenueId && pinnedVenueId !== venue.id) return;
 
         clearTimeout(hoverTimer);
         hoverTimer = window.setTimeout(() => {
