@@ -31,6 +31,9 @@ jobs:
         run: |
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
           set sftp:auto-confirm yes
-          mirror -R --verbose .deploy-site ./
+          put -O ./ .deploy-site/index.html
+          put -O ./ .deploy-site/app.js
+          put -O ./ .deploy-site/style.css
+          put -O ./ .deploy-site/impressum-datenschutz.html
           bye
           "
