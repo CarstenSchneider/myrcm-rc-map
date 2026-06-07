@@ -1725,18 +1725,28 @@ function populateSeries() {
 }
 
 function updateMarkerAnimationDelays() {
-  const sortedMarkers = Array.from(markers.values())
+  const markerItems = Array.from(markers.values())
     .map(marker => ({
       marker,
       y: map.latLngToContainerPoint(marker.getLatLng()).y
     }))
-    .sort((a, b) => a.y - b.y);
+    .filter(item => Number.isFinite(item.y));
 
-  sortedMarkers.forEach((item, index) => {
+  if (!markerItems.length) return;
+
+  const minY = Math.min(...markerItems.map(item => item.y));
+  const maxY = Math.max(...markerItems.map(item => item.y));
+  const spanY = Math.max(1, maxY - minY);
+
+  markerItems.forEach(item => {
     const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
     if (!visual) return;
 
-    visual.style.setProperty("--marker-delay", `${Math.min(index * 18, 420)}ms`);
+    const normalizedY = Math.max(0, Math.min(1, (item.y - minY) / spanY));
+    const easedY = Math.pow(normalizedY, 1.35);
+    const delay = Math.round(easedY * 680);
+
+    visual.style.setProperty("--marker-delay", `${delay}ms`);
   });
 }
 
