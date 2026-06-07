@@ -1715,26 +1715,17 @@ input {
   opacity: 1;
 }
 
-/* map startup marker animation */
+/* map startup marker animation removed
+   Initial map fade remains, markers are always visible.
+   Prevents transparency glitches when filters are changed rapidly.
+*/
 #map .map-marker-visual {
-  opacity: 0;
+  opacity: 1;
 }
 
 #map.map-ready .map-marker-visual {
-  animation: mapMarkerFadeIn 140ms ease-out both;
-  animation-delay: 70ms;
+  animation: none;
 }
-
-@keyframes mapMarkerFadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 
 /* v1.6.1 venue link hover states */
 
