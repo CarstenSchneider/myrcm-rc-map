@@ -1724,6 +1724,12 @@ function populateSeries() {
   });
 }
 
+function revealMapWhenReady() {
+  map.once("moveend", () => {
+    document.getElementById("map")?.classList.add("map-ready");
+  });
+}
+
 function render() {
   updateAppModeClass();
   syncFilterUi();
@@ -1944,6 +1950,8 @@ async function init() {
   }
 
   syncFilterUi();
+
+  revealMapWhenReady();
   render();
 }
 
