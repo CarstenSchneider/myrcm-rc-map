@@ -1744,7 +1744,7 @@ function updateMarkerAnimationDelays() {
 
     const normalizedY = Math.max(0, Math.min(1, (item.y - minY) / spanY));
     const easedY = Math.pow(normalizedY, 1.35);
-    const delay = Math.round(easedY * 680);
+    const delay = Math.round(easedY * 1200);
 
     visual.style.setProperty("--marker-delay", `${delay}ms`);
   });
