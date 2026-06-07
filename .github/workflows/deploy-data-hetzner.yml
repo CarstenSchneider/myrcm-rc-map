@@ -1,0 +1,45 @@
+name: Deploy data to Hetzner
+
+on:
+  workflow_run:
+    workflows:
+      - Import MyRCM races
+      - Import RCK
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  deploy-data:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare data files
+        run: |
+          mkdir -p .deploy-data
+          cp venues.json .deploy-data/
+          cp races.json .deploy-data/
+          cp rck-races.json .deploy-data/
+          cp rck-venue-candidates.json .deploy-data/
+          cp rck-unmatched-venues.json .deploy-data/
+          cp myrcm-hosts-germany.json .deploy-data/
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Upload data files
+        env:
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+        run: |
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
+          set sftp:auto-confirm yes
+          mirror -R --verbose .deploy-data ./
+          bye
+          "

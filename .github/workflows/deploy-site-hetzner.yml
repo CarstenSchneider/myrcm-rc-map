@@ -1,0 +1,36 @@
+name: Deploy site to Hetzner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare site files
+        run: |
+          mkdir -p .deploy-site
+          cp index.html .deploy-site/
+          cp app.js .deploy-site/
+          cp style.css .deploy-site/
+          cp impressum-datenschutz.html .deploy-site/
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Upload site files
+        env:
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+        run: |
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
+          set sftp:auto-confirm yes
+          mirror -R --verbose .deploy-site ./
+          bye
+          "
