@@ -1714,3 +1714,31 @@ input {
 #map.map-ready {
   opacity: 1;
 }
+
+/* map startup marker animation */
+#map .map-marker-visual {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+}
+
+#map.map-ready .map-marker-visual {
+  animation: mapMarkerDrop 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(140ms + var(--marker-delay, 0ms));
+}
+
+@keyframes mapMarkerDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(1px) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
