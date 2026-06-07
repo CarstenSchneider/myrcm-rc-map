@@ -1306,14 +1306,12 @@ const inactiveClass = isFavoriteVenue
   ? "map-marker-venue-inactive-favorite"
   : "map-marker-venue-inactive";
 
-const markerDelay = Math.min(bounds.length * 18, 420);
-
 const markerHtml = hasUpcomingRaces
-  ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: ${markerDelay}ms;">
+  ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
       <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
       <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
     </div>`
-  : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: ${markerDelay}ms;"></div>`;
+  : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
@@ -1726,10 +1724,36 @@ function populateSeries() {
   });
 }
 
-function revealMapWhenReady() {
-  map.once("moveend", () => {
-    document.getElementById("map")?.classList.add("map-ready");
+function updateMarkerAnimationDelays() {
+  const sortedMarkers = Array.from(markers.values())
+    .map(marker => ({
+      marker,
+      y: map.latLngToContainerPoint(marker.getLatLng()).y
+    }))
+    .sort((a, b) => a.y - b.y);
+
+  sortedMarkers.forEach((item, index) => {
+    const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
+    if (!visual) return;
+
+    visual.style.setProperty("--marker-delay", `${Math.min(index * 18, 420)}ms`);
   });
+}
+
+function revealMapWhenReady() {
+  const mapElement = document.getElementById("map");
+
+  map.once("moveend", () => {
+    updateMarkerAnimationDelays();
+    mapElement?.classList.add("map-ready");
+  });
+
+  window.setTimeout(() => {
+    if (mapElement?.classList.contains("map-ready")) return;
+
+    updateMarkerAnimationDelays();
+    mapElement?.classList.add("map-ready");
+  }, 500);
 }
 
 function render() {
@@ -1768,6 +1792,7 @@ function render() {
 
   setTimeout(() => {
     map.invalidateSize();
+    updateMarkerAnimationDelays();
   }, 0);
 }
 
