@@ -25673,16 +25673,16 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94270&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94270&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94270&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
-    "note": null,
+    "registrationCount": 11,
+    "registrationDisplay": "11",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "MACN GT Masters",
-        "entries": 5
+        "entries": 7
       },
       {
         "name": "MACN F1 Masters",
@@ -25712,18 +25712,17 @@
     "registrationDisplay": "27",
     "note": "Nennung geschlossen.",
     "classes": [
-      "MCC - 17.5 Stock fixed",
       {
-        "name": "MCC - Formel",
-        "entries": 4
+        "name": "MCC - Tamiya Fighter",
+        "entries": 3
       },
       {
         "name": "MCC - MCC Challenge",
         "entries": 7
       },
       {
-        "name": "MCC - Tamiya Fighter",
-        "entries": 3
+        "name": "MCC - Formel",
+        "entries": 4
       },
       {
         "name": "MCC - Tamiya TT",
@@ -25991,8 +25990,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       "VG8K1+VG8Kl2+VG10",
@@ -26010,7 +26009,7 @@
       },
       {
         "name": "VG5TW",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "EG8e",
@@ -26056,13 +26055,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 20
+        "entries": 22
       }
     ],
     "documents": [
@@ -26146,16 +26145,22 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
-      "Tamiya Euro-TW",
+      {
+        "name": "Tamiya Euro-TW",
+        "entries": 1
+      },
       "Tamiya Fighter-Kids",
       "Tamiya Formula E",
       "Tamiya Gentlemen",
       "Tamiya M-Chassis",
-      "Tamiya Race-Truck",
+      {
+        "name": "Tamiya Race-Truck",
+        "entries": 1
+      },
       {
         "name": "Tamiya Stock",
         "entries": 1
@@ -26212,8 +26217,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 54,
-    "registrationDisplay": "54",
+    "registrationCount": 52,
+    "registrationDisplay": "52",
     "note": null,
     "classes": [
       {
@@ -26222,7 +26227,7 @@
       },
       {
         "name": "Fun Cup TTS",
-        "entries": 19
+        "entries": 18
       },
       {
         "name": "Fun Cup TT+",
@@ -26230,7 +26235,7 @@
       },
       {
         "name": "FWD 17.5",
-        "entries": 10
+        "entries": 9
       },
       {
         "name": "TW Stock 21.5",
@@ -26266,17 +26271,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       {
         "name": "Einsteiger",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Fighter-Klasse",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "ORE 2WD Modified",
@@ -26314,13 +26319,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 45,
-    "registrationDisplay": "45",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
     "note": null,
     "classes": [
       {
         "name": "ORE2WD",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "ORE2WDST",
@@ -26328,7 +26333,7 @@
       },
       {
         "name": "ORE4WD",
-        "entries": 3
+        "entries": 2
       },
       {
         "name": "ORE4WDST",
@@ -26336,7 +26341,7 @@
       },
       {
         "name": "ORETR2",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -26361,8 +26366,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 34,
-    "registrationDisplay": "34",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": null,
     "classes": [
       {
@@ -26375,19 +26380,19 @@
       },
       {
         "name": "BTM FWD + EGTWFR",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "BTM LMH 21,5",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "BTM Rookie",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "BTM ToniSport17.5 + EGTWHO",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "EGTWMO",
@@ -26622,8 +26627,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": null,
     "classes": [
       {
@@ -26632,7 +26637,7 @@
       },
       {
         "name": "2WD Buggy",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "2WD Monster",
@@ -26801,15 +26806,18 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       {
         "name": "GT-LMH Cup",
         "entries": 9
       },
-      "TW17.5T",
+      {
+        "name": "TW17.5T",
+        "entries": 1
+      },
       {
         "name": "1:8GT",
         "entries": 2
@@ -26879,8 +26887,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       {
@@ -26904,7 +26912,7 @@
       "EGTW Fronti",
       {
         "name": "EGTW Hobby",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "EGTW Sport",
@@ -27334,8 +27342,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       {
@@ -27344,7 +27352,7 @@
       },
       {
         "name": "VG5TW",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "VG5SP",
@@ -27804,8 +27812,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       {
@@ -27818,11 +27826,11 @@
       },
       {
         "name": "Wheelie",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Buggy ORE8",
-        "entries": 4
+        "entries": 6
       }
     ],
     "documents": [
@@ -28089,8 +28097,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 53,
-    "registrationDisplay": "53",
+    "registrationCount": 54,
+    "registrationDisplay": "54",
     "note": null,
     "classes": [
       {
@@ -28099,7 +28107,7 @@
       },
       {
         "name": "TOC Fighter-Klasse",
-        "entries": 21
+        "entries": 22
       },
       {
         "name": "TOC Retro 2WD",
@@ -29043,8 +29051,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 85,
-    "registrationDisplay": "85",
+    "registrationCount": 88,
+    "registrationDisplay": "88",
     "note": null,
     "classes": [
       {
@@ -29057,7 +29065,7 @@
       },
       {
         "name": "2WD Buggy Standard",
-        "entries": 34
+        "entries": 37
       },
       {
         "name": "2WD Buggy",
@@ -29323,8 +29331,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": null,
     "classes": [
       {
@@ -29348,11 +29356,11 @@
       },
       {
         "name": "TEC Stock",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "TEC Top Stock",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -29402,13 +29410,13 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 295,
-    "registrationDisplay": "295",
+    "registrationCount": 301,
+    "registrationDisplay": "301",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "FlySky Frontwheel",
-        "entries": 53
+        "entries": 55
       },
       {
         "name": "Hobbywing 21.5 Stock",
@@ -29416,7 +29424,7 @@
       },
       {
         "name": "1up Racing 40+",
-        "entries": 52
+        "entries": 53
       },
       {
         "name": "Matrix Formula",
@@ -29424,11 +29432,11 @@
       },
       {
         "name": "Awesomatix Pro Stock",
-        "entries": 69
+        "entries": 71
       },
       {
         "name": "Cayote Modified",
-        "entries": 54
+        "entries": 55
       }
     ],
     "documents": [],
@@ -29585,12 +29593,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98024&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52798&pLa=en&dId%5BE%5D=98024&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98024&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-06-07",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0/0",
-    "note": "Nennung ab 07.06.2026",
+    "note": "Nennung geschlossen.",
     "classes": [
       "OR8",
       "ORE8",
@@ -31333,8 +31341,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "TOC BBX",
@@ -31348,7 +31356,10 @@
         "entries": 1
       },
       "TOC Truck",
-      "TOC Wheelie"
+      {
+        "name": "TOC Wheelie",
+        "entries": 1
+      }
     ],
     "documents": [
       {
@@ -31431,8 +31442,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 86,
-    "registrationDisplay": "86",
+    "registrationCount": 87,
+    "registrationDisplay": "87",
     "note": null,
     "classes": [
       "Fun",
@@ -31442,7 +31453,7 @@
       },
       {
         "name": "ORE2WDST",
-        "entries": 20
+        "entries": 21
       },
       {
         "name": "ORE4WD",
