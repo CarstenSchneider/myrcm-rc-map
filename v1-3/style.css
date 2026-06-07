@@ -1734,3 +1734,24 @@ input {
     opacity: 1;
   }
 }
+
+
+/* v1.6.1 venue link hover states */
+
+.venue-link {
+  transition: color 120ms ease;
+}
+
+.venue-link:hover,
+.venue-link:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.venue-link-favorite:hover,
+.venue-link-favorite:focus-visible {
+  color: #946600 !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
