@@ -40,6 +40,7 @@ let hostsByOrgId = new Map();
 let markers = new Map();
 let activeRaceId = null;
 let activeVenueId = null;
+let pinnedVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
 let selectedSeries = "all";
@@ -1243,6 +1244,7 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
 function resetVenueSelection() {
   if (!activeVenueId && !activeRaceId) return;
 
+  pinnedVenueId = null;
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
@@ -1393,6 +1395,7 @@ const popupOffset = hasUpcomingRaces
         }
 
         isPopupPinned = true;
+        pinnedVenueId = venue.id;
         activeVenueId = venue.id;
         activeRaceId = null;
         updateAppModeClass();
@@ -1415,7 +1418,7 @@ const popupOffset = hasUpcomingRaces
 
       isPopupPinned = false;
 
-      if (activeVenueId === venue.id) {
+      if (activeVenueId === venue.id && pinnedVenueId !== venue.id) {
         resetVenueSelection();
       }
     });
@@ -1433,6 +1436,7 @@ const popupOffset = hasUpcomingRaces
         }
       });
 
+      pinnedVenueId = venue.id;
       activeVenueId = venue.id;
       activeRaceId = null;
       updateAppModeClass();
