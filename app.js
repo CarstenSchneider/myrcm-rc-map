@@ -1960,11 +1960,11 @@ async function init() {
   const cacheBuster = Date.now();
 
   const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
-    fetch(`../venues.json?v=${cacheBuster}`),
-    fetch(`../races.json?v=${cacheBuster}`),
-    fetchJsonOrFallback(`../rck-races.json?v=${cacheBuster}`, []),
-    fetchJsonOrFallback(`../rck-venue-candidates.json?v=${cacheBuster}`, []),
-    fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
+    fetch(`venues.json?v=${cacheBuster}`),
+    fetch(`races.json?v=${cacheBuster}`),
+    fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
+    fetch(`myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
   ]);
 
   const baseVenues = await venuesResponse.json();
