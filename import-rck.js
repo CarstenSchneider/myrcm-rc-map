@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v6-firstseen-pdf-only";
+const importerVersion = "import-rck-v7-pdf-geocoded-verified";
 
 const sources = [
   {
@@ -638,6 +638,35 @@ async function geocodeVenueData(venueData) {
   }
 }
 
+function isVerifiedRckVenueCandidate(candidate) {
+  return Boolean(
+    candidate?.addressVerifiedFromPdf &&
+    Number.isFinite(Number(candidate.lat)) &&
+    Number.isFinite(Number(candidate.lng))
+  );
+}
+
+function applyRckVenueVerification(candidate) {
+  if (!candidate) return candidate;
+
+  const verified = isVerifiedRckVenueCandidate(candidate);
+
+  if (verified) {
+    return {
+      ...candidate,
+      verified: true,
+      verificationStatus: "verifiziert"
+    };
+  }
+
+  return {
+    ...candidate,
+    verified: false,
+    verificationStatus: "standort nicht verifiziert"
+  };
+}
+
+
 function makeUnverifiedVenueCandidate(race) {
   const pdfData = race.pdfVenueData || {};
   const location = race.rckLocation || race.venueLocation || race.venueName;
@@ -647,7 +676,7 @@ function makeUnverifiedVenueCandidate(race) {
 
   const id = `rck-${slugify(idBase) || slugify(location)}`;
 
-  return {
+  const candidate = {
     id,
     name: pdfData.venueName || race.venueName || location,
     city: pdfData.city || race.venueCity || location,
@@ -666,12 +695,12 @@ function makeUnverifiedVenueCandidate(race) {
     verified: false,
     verificationStatus: "standort nicht verifiziert"
   };
+
+  return applyRckVenueVerification(candidate);
 }
 
 function mergeVenueCandidate(existing, candidate) {
-  const keepExistingVerification = existing?.verified === true;
-
-  return {
+  const merged = {
     ...existing,
     ...candidate,
     id: existing.id || candidate.id,
@@ -683,11 +712,10 @@ function mergeVenueCandidate(existing, candidate) {
     lat: existing.lat ?? candidate.lat ?? null,
     lng: existing.lng ?? candidate.lng ?? null,
     sources: Array.from(new Set([...(existing.sources || []), ...(candidate.sources || [])].filter(Boolean))),
-    verified: keepExistingVerification ? true : false,
-    verificationStatus: keepExistingVerification
-      ? (existing.verificationStatus || "verifiziert")
-      : "standort nicht verifiziert"
+    addressVerifiedFromPdf: Boolean(existing.addressVerifiedFromPdf || candidate.addressVerifiedFromPdf)
   };
+
+  return applyRckVenueVerification(merged);
 }
 
 async function buildVenueCandidates(races, venues) {
@@ -719,10 +747,12 @@ async function buildVenueCandidates(races, venues) {
       candidate.geocodingType = geocoding.geocodingType;
     }
 
-    const existingCandidate = candidatesById.get(candidate.id);
+    const verifiedCandidate = applyRckVenueVerification(candidate);
+
+    const existingCandidate = candidatesById.get(verifiedCandidate.id);
     const mergedCandidate = existingCandidate
-      ? mergeVenueCandidate(existingCandidate, candidate)
-      : candidate;
+      ? mergeVenueCandidate(existingCandidate, verifiedCandidate)
+      : verifiedCandidate;
 
     candidatesById.set(candidate.id, mergedCandidate);
     allVenues.push(mergedCandidate);
@@ -730,7 +760,7 @@ async function buildVenueCandidates(races, venues) {
     race.venueId = mergedCandidate.id;
     race.venueName = mergedCandidate.name;
     race.venueLocation = mergedCandidate.city;
-    race.venueStatus = "standort nicht verifiziert";
+    race.venueStatus = mergedCandidate.verified ? "matched" : "standort nicht verifiziert";
   }
 
   return Array.from(candidatesById.values()).sort((a, b) => a.id.localeCompare(b.id));
