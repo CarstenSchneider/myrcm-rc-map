@@ -1,6 +1,6 @@
 [
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-39587-2026-06-07-rck-kleinserie-sud-bamberg",
     "venueId": "myrcm-39587",
     "venueName": "MRSC Amberg e.V.",
@@ -68,11 +68,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270607KlSeS260201%201218.pdf"
       }
     ],
+    "venueWebsite": "https://mbcbamberg.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-27211-2026-06-14-rck-kleinserie-mitte-wachtersbach",
     "venueId": "myrcm-27211",
     "venueName": "MBSC Wächtersbach",
@@ -140,11 +141,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeM260404%201055.pdf"
       }
     ],
+    "venueWebsite": "https://gmx.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-991-ormc-2026-06-14-rck-kleinserie-sud-augsburg",
     "venueId": "myrcm-991-ormc",
     "venueName": "ORMC Königsbrunn",
@@ -212,11 +214,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeS20260602%201716.pdf"
       }
     ],
+    "venueWebsite": "https://tsv-1871.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-9976-2026-06-21-rck-challenge-sud-nurnberg",
     "venueId": "myrcm-9976",
     "venueName": "MAC Nürnberg e.V",
@@ -284,11 +287,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260621Son260209%201720.pdf"
       }
     ],
+    "venueWebsite": "https://gmail.com",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "rck-salzbergen-2026-06-21-rck-kleinserie-nord-salzbergen",
     "venueId": "rck-rc-raceway-holsterfeld-salzbergen",
     "venueName": "RC Raceway Holsterfeld",
@@ -357,11 +361,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270621KlSeG20260531%200212.pdf"
       }
     ],
+    "venueWebsite": "https://erc-racing.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "tsv-mariendorf-2026-06-21-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf",
     "venueName": "TSV Mariendorf RC Racing",
@@ -425,11 +430,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270517KlSeO20251005%201449.pdf"
       }
     ],
+    "venueWebsite": "https://hotmail.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-52121-2026-06-28-rck-challenge-west-ludenscheid",
     "venueId": "myrcm-52121",
     "venueName": "MCC Lüdenscheid e.V.",
@@ -497,11 +503,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260628Won20260601%201132.pdf"
       }
     ],
+    "venueWebsite": "https://mcc-luedenscheid.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-39671-2026-06-28-rck-kleinserie-mitte-mannheim",
     "venueId": "myrcm-39671",
     "venueName": "MRC Mannheim e.V.",
@@ -570,11 +577,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270628KlSeM20260318%200835.pdf"
       }
     ],
+    "venueWebsite": "https://web.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-33489-2026-07-05-rck-challenge-nord-bremen",
     "venueId": "myrcm-33489",
     "venueName": "MC Munster e.V.",
@@ -642,11 +650,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260705Non20260505%202303.pdf"
       }
     ],
+    "venueWebsite": "https://web.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-59129-2026-07-05-rck-challenge-sud-neustadt-b-coburg",
     "venueId": "myrcm-59129",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
@@ -718,11 +727,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260605Oon20260430%200837.pdf"
       }
     ],
+    "venueWebsite": "https://tg-neustadt.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-134-2026-07-12-rck-kleinserie-mitte-hann-munden-nachtrennen",
     "venueId": "myrcm-134",
     "venueName": "RCCT Münden e.V.",
@@ -793,11 +803,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
       }
     ],
+    "venueWebsite": "https://web.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-891-2026-07-19-rck-challenge-sud-mettenheim",
     "venueId": "myrcm-891",
     "venueName": "MAC Mettenheim e.V.",
@@ -861,11 +872,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202520260719Son20260518%201544.pdf"
       }
     ],
+    "venueWebsite": "https://mac-mettenheim.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-95-2026-07-26-rck-kleinserie-nord-braunschweig",
     "venueId": "myrcm-95",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -929,11 +941,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270726KlSeN20260314%201326.pdf"
       }
     ],
+    "venueWebsite": "https://t-online.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "tsv-mariendorf-2026-07-26-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf",
     "venueName": "TSV Mariendorf RC Racing",
@@ -997,11 +1010,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270705KlSeO20251005%201452.pdf"
       }
     ],
+    "venueWebsite": "https://hotmail.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-24531-2026-08-02-rck-kleinserie-mitte-andernach",
     "venueId": "myrcm-24531",
     "venueName": "ToniSport GmbH",
@@ -1066,11 +1080,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270802KlSeD20260203%201535.pdf"
       }
     ],
+    "venueWebsite": "https://schymaniuk.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-33489-2026-08-09-rck-kleinserie-nord-bremen",
     "venueId": "myrcm-33489",
     "venueName": "MC Munster e.V.",
@@ -1138,11 +1153,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270809KlSeN260505%202307.pdf"
       }
     ],
+    "venueWebsite": "https://web.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "rck-hennef-2026-08-16-rck-kleinserie-west-hennef",
     "venueId": "rck-ufm-modellbau-aussenstrecke-hennef",
     "venueName": "UFM-Modellbau Aussenstrecke",
@@ -1210,11 +1226,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270816KlSeW260206%201440.pdf"
       }
     ],
+    "venueWebsite": "https://ufm-modellbau.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-283-2026-09-19-rck-challenge-mitte-bad-breisig",
     "venueId": "myrcm-283",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -1290,11 +1307,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202620270919Won251203%202217.pdf"
       }
     ],
+    "venueWebsite": "https://email.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-48536-2026-09-20-rck-challenge-ost-zwickau",
     "venueId": "myrcm-48536",
     "venueName": "RC-Bande Zwickau e.V",
@@ -1341,11 +1359,12 @@
         "url": "https://challenge.rck-solutions.de/ausschreibung/202620270920Oon20260330%202211.pdf"
       }
     ],
+    "venueWebsite": "https://gmail.com",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-283-2026-09-20-rck-kleinserie-mitte-bad-breisig",
     "venueId": "myrcm-283",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -1414,11 +1433,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270920KlSeD20260106%202047.pdf"
       }
     ],
+    "venueWebsite": "https://web.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-57549-2026-10-11-rck-kleinserie-ost-neubrandenburg",
     "venueId": "myrcm-57549",
     "venueName": "MCC-Marktredwitz e.V.",
@@ -1490,11 +1510,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271011KlSeO20260413%202012.pdf"
       }
     ],
+    "venueWebsite": "https://gmail.com",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "rck-horstel-riesenbeck-2026-11-08-rck-kleinserie-nord-horstel-riesenbeck",
     "venueId": "rck-rcmc-ibbenburen-e-v-horstel-riesenbeck",
     "venueName": "RCMC Ibbenbüren e. V.",
@@ -1563,11 +1584,12 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271108KlSeG20260602%202123.pdf"
       }
     ],
+    "venueWebsite": "https://rcmc-ibbenbueren.de",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   },
   {
-    "importerVersion": "import-rck-v7-pdf-geocoded-verified",
+    "importerVersion": "import-rck-v8-pdf-website",
     "id": "myrcm-57549-2026-12-06-rck-kleinserie-ost-neubrandenburg",
     "venueId": "myrcm-57549",
     "venueName": "MCC-Marktredwitz e.V.",
@@ -1639,6 +1661,7 @@
         "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf"
       }
     ],
+    "venueWebsite": "https://gmail.com",
     "firstSeen": "2026-06-05",
     "lastSeen": "2026-06-07"
   }
