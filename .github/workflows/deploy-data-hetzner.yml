@@ -40,6 +40,11 @@ jobs:
         run: |
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
           set sftp:auto-confirm yes
-          mirror -R --verbose .deploy-data ./
+          put -O ./ .deploy-data/venues.json
+          put -O ./ .deploy-data/races.json
+          put -O ./ .deploy-data/rck-races.json
+          put -O ./ .deploy-data/rck-venue-candidates.json
+          put -O ./ .deploy-data/rck-unmatched-venues.json
+          put -O ./ .deploy-data/myrcm-hosts-germany.json
           bye
           "
