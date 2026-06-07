@@ -1738,15 +1738,22 @@ function updateMarkerAnimationDelays() {
   const maxY = Math.max(...markerItems.map(item => item.y));
   const spanY = Math.max(1, maxY - minY);
 
-  markerItems.forEach(item => {
+  const shuffledItems = markerItems
+    .map(item => {
+      const normalizedY = Math.max(0, Math.min(1, (item.y - minY) / spanY));
+
+      return {
+        ...item,
+        sortValue: normalizedY + ((Math.random() - 0.5) * 0.55)
+      };
+    })
+    .sort((a, b) => a.sortValue - b.sortValue);
+
+  shuffledItems.forEach((item, index) => {
     const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
     if (!visual) return;
 
-    const normalizedY = Math.max(0, Math.min(1, (item.y - minY) / spanY));
-
-    const band = Math.floor(normalizedY * 8);
-    const jitter = Math.floor(Math.random() * 90);
-    const delay = band * 55 + jitter;
+    const delay = Math.round(index * 11);
 
     visual.style.setProperty("--marker-delay", `${delay}ms`);
   });
