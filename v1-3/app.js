@@ -790,6 +790,16 @@ function ensureRegistrationStatusStyles() {
       box-shadow: none;
     }
 
+    .map-marker-venue-inactive-favorite {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: #b88416;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
     .popup-last-race {
       margin-top: 8px;
       color: var(--muted, #6f6a62);
@@ -1292,12 +1302,16 @@ const markerSvg = encodeURIComponent(`
   </svg>
 `);
 
+const inactiveClass = isFavoriteVenue
+  ? "map-marker-venue-inactive-favorite"
+  : "map-marker-venue-inactive";
+
 const markerHtml = hasUpcomingRaces
   ? `<div class="map-marker-switcher" style="width: ${markerWidth}px; height: ${markerHeight}px;">
       <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
       <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
     </div>`
-  : `<div class="${markerClass}" style="background: ${markerColor};"></div>`;
+  : `<div class="${inactiveClass}"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
@@ -1311,9 +1325,6 @@ const markerHtml = hasUpcomingRaces
       }
     ).addTo(map);
 
-    if (isFavoriteVenue) {
-      marker.setZIndexOffset(1000);
-    }
 
     let hoverTimer = null;
     let isPopupPinned = false;
