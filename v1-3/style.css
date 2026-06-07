@@ -1703,3 +1703,14 @@ input {
   box-sizing: border-box;
   box-shadow: none;
 }
+
+
+/* map startup */
+#map {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+#map.map-ready {
+  opacity: 1;
+}
