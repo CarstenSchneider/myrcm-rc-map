@@ -1743,8 +1743,10 @@ function updateMarkerAnimationDelays() {
     if (!visual) return;
 
     const normalizedY = Math.max(0, Math.min(1, (item.y - minY) / spanY));
-    const easedY = Math.pow(normalizedY, 1.35);
-    const delay = Math.round(easedY * 1200);
+
+    const band = Math.floor(normalizedY * 8);
+    const jitter = Math.floor(Math.random() * 90);
+    const delay = band * 55 + jitter;
 
     visual.style.setProperty("--marker-delay", `${delay}ms`);
   });
