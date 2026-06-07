@@ -1262,11 +1262,15 @@ function updateMarkers(list, shouldFitBounds = true) {
 
     const isFavoriteVenue = isFavoriteVenueId(venue.id);
 
-const markerColor = isFavoriteVenue
+let markerColor = isFavoriteVenue
   ? markerFavoriteColorForRegistrationCount(registrationTotal)
   : hasActiveRegistration(venueRaces)
     ? markerColorForRegistrationCount(registrationTotal)
     : "rgba(31, 29, 26, 0.55)";
+
+if (!hasUpcomingRaces && isFavoriteVenue) {
+  markerColor = "#c7ae80";
+}
 
 const markerSvg = encodeURIComponent(`
   <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
