@@ -25854,8 +25854,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       {
@@ -25864,7 +25864,7 @@
       },
       {
         "name": "EG10TWSP(Sfb)",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "VG5 Modified (VG5TW) - VM Sfb.",
@@ -25872,7 +25872,7 @@
       },
       {
         "name": "VG5 Standard (VG5SP) - VM Sfb.",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [
@@ -25990,8 +25990,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       "VG8K1+VG8Kl2+VG10",
@@ -26001,7 +26001,7 @@
       },
       {
         "name": "VG8 - Klasse 2",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "VG10",
@@ -26013,7 +26013,7 @@
       },
       {
         "name": "EG8e",
-        "entries": 5
+        "entries": 7
       },
       {
         "name": "EG10 Stock",
@@ -26055,13 +26055,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 22
+        "entries": 23
       }
     ],
     "documents": [
@@ -26093,13 +26093,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 66,
-    "registrationDisplay": "66",
+    "registrationCount": 73,
+    "registrationDisplay": "73",
     "note": null,
     "classes": [
       {
         "name": "OR8 Expert",
-        "entries": 28
+        "entries": 30
       },
       {
         "name": "OR8 Hobby",
@@ -26107,11 +26107,11 @@
       },
       {
         "name": "ORE8",
-        "entries": 14
+        "entries": 18
       },
       {
         "name": "ORT",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "ORET",
@@ -26145,8 +26145,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       {
@@ -26154,16 +26154,19 @@
         "entries": 1
       },
       "Tamiya Fighter-Kids",
-      "Tamiya Formula E",
+      {
+        "name": "Tamiya Formula E",
+        "entries": 1
+      },
       "Tamiya Gentlemen",
       "Tamiya M-Chassis",
       {
         "name": "Tamiya Race-Truck",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Tamiya Stock",
-        "entries": 1
+        "entries": 4
       },
       {
         "name": "Tamiya Top-Stock",
@@ -26190,12 +26193,18 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": null,
     "classes": [
-      "AMSC Porsche Cup",
-      "EG8",
+      {
+        "name": "AMSC Porsche Cup",
+        "entries": 5
+      },
+      {
+        "name": "EG8",
+        "entries": 3
+      },
       "ETS ProStock"
     ],
     "documents": [],
@@ -26217,17 +26226,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 52,
-    "registrationDisplay": "52",
+    "registrationCount": 57,
+    "registrationDisplay": "57",
     "note": null,
     "classes": [
       {
         "name": "Kids Academy",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "Fun Cup TTS",
-        "entries": 18
+        "entries": 20
       },
       {
         "name": "Fun Cup TT+",
@@ -26235,7 +26244,7 @@
       },
       {
         "name": "FWD 17.5",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "TW Stock 21.5",
@@ -26271,8 +26280,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       {
@@ -26281,16 +26290,19 @@
       },
       {
         "name": "Fighter-Klasse",
-        "entries": 5
+        "entries": 7
       },
       {
         "name": "ORE 2WD Modified",
         "entries": 2
       },
-      "ORE 2WD Standard",
+      {
+        "name": "ORE 2WD Standard",
+        "entries": 1
+      },
       {
         "name": "ORE 4WD Modified",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "ORE 4WD Standard",
@@ -26319,8 +26331,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 46,
-    "registrationDisplay": "46",
+    "registrationCount": 48,
+    "registrationDisplay": "48",
     "note": null,
     "classes": [
       {
@@ -26329,7 +26341,7 @@
       },
       {
         "name": "ORE2WDST",
-        "entries": 30
+        "entries": 31
       },
       {
         "name": "ORE4WD",
@@ -26341,7 +26353,7 @@
       },
       {
         "name": "ORETR2",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [],
@@ -26366,8 +26378,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 38,
-    "registrationDisplay": "38",
+    "registrationCount": 43,
+    "registrationDisplay": "43",
     "note": null,
     "classes": [
       {
@@ -26376,23 +26388,23 @@
       },
       {
         "name": "BTM Fun 21,5 + EGTWFUN",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "BTM FWD + EGTWFR",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "BTM LMH 21,5",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "BTM Rookie",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "BTM ToniSport17.5 + EGTWHO",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "EGTWMO",
@@ -26484,8 +26496,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       {
@@ -26515,7 +26527,10 @@
         "name": "FWD Challenge",
         "entries": 3
       },
-      "Einsteiger - Chassis frei (1:10), Buechs"
+      {
+        "name": "Einsteiger - Chassis frei (1:10), Buechs",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-04"
@@ -26598,12 +26613,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94276&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=94276&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94276&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-06-08",
+    "registrationStatus": "open",
+    "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": "Nennung ab 08.06.2026",
+    "note": null,
     "classes": [
       "MACN GT Masters",
       "MACN F1 Masters"
@@ -26627,8 +26642,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": null,
     "classes": [
       {
@@ -26637,7 +26652,7 @@
       },
       {
         "name": "2WD Buggy",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "2WD Monster",
@@ -26806,8 +26821,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       {
@@ -26816,7 +26831,7 @@
       },
       {
         "name": "TW17.5T",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "1:8GT",
@@ -26887,13 +26902,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       {
         "name": "2WD Buggy Standard",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "2WD Buggy",
@@ -27401,11 +27416,11 @@
     "classes": [
       {
         "name": "EG8GT",
-        "entries": 3
+        "entries": 2
       },
       {
         "name": "EG8GT3",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "VG8GT",
@@ -27433,8 +27448,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": null,
     "classes": [
       {
@@ -27453,7 +27468,10 @@
         "name": "SMW Verbrenner-Glattbahn 1:10",
         "entries": 1
       },
-      "SMW Verbrenner-Glattbahn 1:10 Sport",
+      {
+        "name": "SMW Verbrenner-Glattbahn 1:10 Sport",
+        "entries": 2
+      },
       {
         "name": "SMW Elektro-Glattbahn 1:8",
         "entries": 2
@@ -27492,8 +27510,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 101,
-    "registrationDisplay": "101",
+    "registrationCount": 100,
+    "registrationDisplay": "100",
     "note": null,
     "classes": [
       {
@@ -27514,7 +27532,7 @@
       },
       {
         "name": "TOS Modified(EGTWMOD)",
-        "entries": 13
+        "entries": 12
       }
     ],
     "documents": [
@@ -27527,6 +27545,40 @@
       }
     ],
     "firstSeen": "2026-06-04"
+  },
+  {
+    "id": "myrcm-52798-la-speedway-racing-club-e-v-2026-06-21-myrcm-event-98120",
+    "venueId": "myrcm-52798-la-speedway-racing-club-e-v",
+    "venueName": "LA Speedway Racing Club e.V.",
+    "venueLocation": "Bruckberg",
+    "name": "1. Lauf Vereinstmeisterschaft 2026",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98120&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52798&pLa=en&dId%5BE%5D=98120&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98120&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 3,
+    "registrationDisplay": "3",
+    "note": null,
+    "classes": [
+      "Offroad Brushless 1:8",
+      {
+        "name": "Offroad Nitro 1:8",
+        "entries": 2
+      },
+      {
+        "name": "ORET",
+        "entries": 1
+      },
+      "ORT"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-07"
   },
   {
     "id": "myrcm-573-ormc-konigsbrunn-2026-06-21-myrcm-event-96026",
@@ -27572,8 +27624,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       {
@@ -27582,7 +27634,7 @@
       },
       {
         "name": "MCSS LMH 21,5T",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "MCSS FWD",
@@ -27616,8 +27668,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       "HRCC GT8",
@@ -27635,10 +27687,13 @@
         "name": "HRCC EG10 Stock",
         "entries": 2
       },
-      "HRCC EG10 Fronti",
+      {
+        "name": "HRCC EG10 Fronti",
+        "entries": 1
+      },
       {
         "name": "HRCC EG10 Plastic Cars",
-        "entries": 1
+        "entries": 2
       },
       "VG8",
       "HRCC 1/8 GT",
@@ -27760,8 +27815,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 150,
-    "registrationDisplay": "150",
+    "registrationCount": 149,
+    "registrationDisplay": "149",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -27770,15 +27825,15 @@
       },
       {
         "name": "F1",
-        "entries": 17
+        "entries": 18
       },
       {
         "name": "FWD",
-        "entries": 19
+        "entries": 18
       },
       {
         "name": "GT Spec",
-        "entries": 39
+        "entries": 38
       },
       {
         "name": "Modified",
@@ -27812,8 +27867,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       {
@@ -27822,7 +27877,7 @@
       },
       {
         "name": "Fighter",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Wheelie",
@@ -28289,13 +28344,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 160,
-    "registrationDisplay": "160",
+    "registrationCount": 159,
+    "registrationDisplay": "159",
     "note": null,
     "classes": [
       {
         "name": "ENS 1:8 SPORT",
-        "entries": 26
+        "entries": 25
       },
       {
         "name": "ENS 1:10 onroad",
@@ -29051,8 +29106,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 88,
-    "registrationDisplay": "88",
+    "registrationCount": 89,
+    "registrationDisplay": "89",
     "note": null,
     "classes": [
       {
@@ -29065,7 +29120,7 @@
       },
       {
         "name": "2WD Buggy Standard",
-        "entries": 37
+        "entries": 38
       },
       {
         "name": "2WD Buggy",
@@ -29593,12 +29648,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98024&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52798&pLa=en&dId%5BE%5D=98024&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98024&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
+    "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0/0",
-    "note": "Nennung geschlossen.",
+    "note": null,
     "classes": [
       "OR8",
       "ORE8",
@@ -31133,13 +31188,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       {
         "name": "Vereinsmeisterschaft Klasse 1/5",
-        "entries": 1
+        "entries": 2
       },
       "Vereinsmeisterschaft Klasse 1/5 Rookie",
       "Vereinsmeisterschaft Klasse 1/8"
@@ -31199,8 +31254,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26/64",
+    "registrationCount": 28,
+    "registrationDisplay": "28/62",
     "note": null,
     "classes": [
       "+40 2WD Buggy",
@@ -31442,8 +31497,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 87,
-    "registrationDisplay": "87",
+    "registrationCount": 89,
+    "registrationDisplay": "89",
     "note": null,
     "classes": [
       "Fun",
@@ -31453,7 +31508,7 @@
       },
       {
         "name": "ORE2WDST",
-        "entries": 21
+        "entries": 22
       },
       {
         "name": "ORE4WD",
@@ -31461,7 +31516,7 @@
       },
       {
         "name": "ORE4WDST",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "ORE8",
