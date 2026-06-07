@@ -1760,11 +1760,6 @@ function render() {
 
   setTimeout(() => {
     map.invalidateSize();
-
-    const isMobile = window.matchMedia("(max-width: 860px)").matches;
-    if (!isMobile) {
-      map.panBy([-220, 0], { animate: false });
-    }
   }, 0);
 }
 
