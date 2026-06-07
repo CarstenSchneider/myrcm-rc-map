@@ -1,2003 +1,1736 @@
-const app = document.getElementById("app");
-const raceList = document.getElementById("raceList");
-const resultLine = document.getElementById("resultLine");
-const searchInput = document.getElementById("searchInput");
-const seriesFilter = document.getElementById("seriesFilter");
-const rangeFilter = document.getElementById("rangeFilter");
-const mapWideButton = document.getElementById("mapWideButton");
-const listWideButton = document.getElementById("listWideButton");
-const filterToggleButton = document.getElementById("filterToggleButton");
-const activeFilterChips = document.getElementById("activeFilterChips");
-const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
-
-const map = L.map("map", {
-  scrollWheelZoom: true,
-  zoomControl: false,
-  minZoom: 6
-}).setView([51.8, 11.8], 6);
-
-map.setMaxBounds([
-  [44.0, -5.0],
-  [59.0, 25.0]
-]);
-
-L.control.zoom({
-  position: "bottomleft"
-}).addTo(map);
-
-L.tileLayer(
-  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-  {
-    attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 19
-  }
-).addTo(map);
-
-let venues = [];
-let races = [];
-let hosts = [];
-let hostsByOrgId = new Map();
-let markers = new Map();
-let activeRaceId = null;
-let activeVenueId = null;
-let isSwitchingMarkerPopup = false;
-let selectedRange = "2";
-let selectedSeries = "all";
-let showOpenOnly = true;
-let isFilterPanelOpen = false;
-const expandedClassRaceIds = new Set();
-
-const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
-
-function getFavoriteVenueIds() {
-  try {
-    const raw = localStorage.getItem(favoriteVenueStorageKey);
-    const parsed = JSON.parse(raw || "[]");
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter(Boolean).map(String);
-  } catch {
-    return [];
-  }
+:root {
+  --bg: #f4f1ec;
+  --panel: #fffaf3;
+  --text: #1f1d1a;
+  --muted: #6f6961;
+  --line: #ded6ca;
+  --accent: #1f1d1a;
+  --card: #ffffff;
+  --shadow: 0 12px 30px rgba(31, 29, 26, 0.10);
 }
 
-function saveFavoriteVenueIds(ids) {
-  const uniqueIds = [...new Set((ids || []).filter(Boolean).map(String))];
-  localStorage.setItem(favoriteVenueStorageKey, JSON.stringify(uniqueIds));
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-function isFavoriteVenueId(venueId) {
-  if (!venueId) return false;
-  return getFavoriteVenueIds().includes(String(venueId));
+.app {
+  height: 100vh;
+  display: grid;
+  gap: 0;
+  transition: grid-template-columns 180ms ease;
 }
 
-function toggleFavoriteVenue(venueId) {
-  if (!venueId) return;
+.app.layout-map { grid-template-columns: minmax(0, 68fr) minmax(360px, 32fr); }
+.app.layout-list { grid-template-columns: minmax(360px, 34fr) minmax(0, 66fr); }
 
-  const id = String(venueId);
-  const favoriteIds = getFavoriteVenueIds();
-
-  if (favoriteIds.includes(id)) {
-    saveFavoriteVenueIds(favoriteIds.filter(item => item !== id));
-  } else {
-    saveFavoriteVenueIds([...favoriteIds, id]);
-  }
+.map-panel {
+  min-width: 0;
+  position: relative;
 }
 
-function favoriteButtonHtml(venueId, label = "Strecke") {
-  if (!venueId) return "";
-
-  const active = isFavoriteVenueId(venueId);
-  const title = active
-    ? `${label} aus Favoriten entfernen`
-    : `${label} als Favorit markieren`;
-
-  return `<button
-    class="venue-favorite-button${active ? " active" : ""}"
-    type="button"
-    data-favorite-venue-id="${escapeHtml(venueId)}"
-    title="${escapeHtml(title)}"
-    aria-label="${escapeHtml(title)}"
-    aria-pressed="${active ? "true" : "false"}"
-  >${active ? "★" : "☆"}</button>`;
+#map {
+  width: 100%;
+  height: 100%;
 }
 
-function raceFavoriteVenueId(race) {
-  const venue = venueById(race?.venueId);
-  return venue?.id || null;
+.race-panel {
+  min-width: 0;
+  overflow: auto;
+  padding: 24px;
+  padding-right: 14px;
+  background: var(--panel);
+  border-left: 1px solid var(--line);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(31,29,26,.18) transparent;
 }
 
-function isFavoriteRaceVenue(race) {
-  return isFavoriteVenueId(raceFavoriteVenueId(race));
+.panel-header {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
 }
 
-
-
-function updateAppModeClass() {
-  app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
+h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  line-height: 1.1;
 }
 
-function updateFilterPanelState() {
-  app.classList.toggle("is-filter-panel-open", isFilterPanelOpen);
-
-  if (!filterToggleButton) return;
-
-  filterToggleButton.setAttribute("aria-expanded", String(isFilterPanelOpen));
-  filterToggleButton.setAttribute(
-    "aria-label",
-    isFilterPanelOpen
-      ? "Suche und Serienfilter schließen"
-      : "Suche und Serienfilter öffnen"
-  );
+.intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
 }
 
-function renderActiveFilterChips() {
-  if (!activeFilterChips) return;
-
-  const chips = [];
-  const query = searchInput.value.trim();
-
-  if (query) {
-    chips.push(`
-      <button class="active-filter-chip" type="button" data-clear-filter="search">
-        ${query}<span aria-hidden="true">×</span>
-      </button>
-    `);
-  }
-
-  if (selectedSeries !== "all") {
-    chips.push(`
-      <button class="active-filter-chip" type="button" data-clear-filter="series">
-        ${seriesDisplayName(selectedSeries)}<span aria-hidden="true">×</span>
-      </button>
-    `);
-  }
-
-
-  activeFilterChips.innerHTML = chips.join("");
-  activeFilterChips.classList.toggle("is-empty", chips.length === 0);
+.view-toggle {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #eee7dc;
+  flex-shrink: 0;
 }
 
-function syncFilterUi() {
-  updateFilterPanelState();
-  renderActiveFilterChips();
+.toggle-button,
+.segmented button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 11px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
 }
 
-
-const verifiedVenueAliases = {
-  "myrcm-18244": "tsv-mariendorf",
-  "myrcm-45925": "bernau",
-  "myrcm-41404": "marzahn",
-  "myrcm-52898": "blankenfelde"
-};
-
-const seriesDisplayNames = {
-  "BTM": "BTM – Berlin Touring Masters",
-  "ETS": "ETS – Euro Touring Series",
-  "Ostmasters": "Ostmasters",
-  "RCK Challenge": "RCK Challenge",
-  "RCK Kleinserie": "RCK Kleinserie",
-  "SK": "SK – Sportkreis",
-  "Tamico Offroad Cup": "Tamico Offroad Cup",
-  "TEC": "TEC – Tamiya Euro Cup",
-  "TOS": "TOS – ToniSport Onroad Series"
-};
-
-const preferredSeriesOrder = [
-  "BTM",
-  "ETS",
-  "Ostmasters",
-  "RCK Challenge",
-  "RCK Kleinserie",
-  "SK",
-  "Tamico Offroad Cup",
-  "TEC",
-  "TOS"
-];
-
-
-function raceDataSource(race) {
-  if (race?.dataSource) return race.dataSource;
-  if (race?.source === "rck" || String(race?.source || "").startsWith("rck-")) return "rck";
-  if (Array.isArray(race?.sources) && race.sources.some(source => String(source).startsWith("rck-"))) return "rck";
-  if (race?.rckSeries) return "rck";
-  return "myrcm";
+.toggle-button.active,
+.segmented button.active {
+  background: var(--text);
+  color: #fff;
 }
 
-function isRckRace(race) {
-  return raceDataSource(race) === "rck";
+.filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
 }
 
-function hasPdfDocument(race) {
-  return Array.isArray(race?.documents) && race.documents.some(document => document?.url);
+.layout-list .filters {
+  grid-template-columns: 1.2fr 0.8fr 1.1fr;
+  align-items: end;
 }
 
-function isUsefulRckRace(race) {
-  if (!isRckRace(race)) return true;
-  return hasPdfDocument(race);
+.filter-group,
+.filter-field {
+  display: grid;
+  gap: 7px;
 }
 
-
-function isRckEventFromMyRcm(race) {
-  const series = raceSeries(race);
-  const text = [
-    race.name,
-    race.title,
-    race.eventName,
-    race.venueName,
-    ...(Array.isArray(race.series) ? race.series : [])
-  ].filter(Boolean).join(" ");
-
-  return (
-    series.includes("RCK Challenge") ||
-    series.includes("RCK Kleinserie") ||
-    /\brck\b/i.test(text)
-  );
+.filter-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-function hasLatLng(venue) {
-  return Number.isFinite(Number(venue?.lat)) && Number.isFinite(Number(venue?.lng));
+.segmented {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f1e8;
+  width: fit-content;
 }
 
-function isUnverifiedVenue(venue) {
-  return venue?.verified === false || venue?.verificationStatus === "standort nicht verifiziert";
+select,
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
 }
 
-function seriesDisplayName(series) {
-  return seriesDisplayNames[series] || series;
+.result-line {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
-function classNameFromRaceClass(item) {
-  if (!item) return "";
-  if (typeof item === "string") return item;
-  if (typeof item === "object") return item.name || item.label || "";
-  return String(item);
+.race-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
-function classTagLabel(item) {
-  if (!item) return "";
-  if (typeof item === "object" && item.name) {
-    if (Number.isFinite(item.entries)) return `${item.name} (${item.entries})`;
-    return item.name;
-  }
-  return String(item);
+.layout-list .race-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
-function raceEndDate(race) {
-  return parseDate(race.to || race.from);
+.race-card {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  cursor: pointer;
+  text-align: left;
 }
 
-function daysBetween(a, b) {
-  return Math.floor((a - b) / 86400000);
+.race-card.is-clickable:hover,
+.race-card.active {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
 }
 
-function isPastRaceWithinLastYear(race) {
-  const today = todayStart();
-  const end = raceEndDate(race);
-  const ageInDays = daysBetween(today, end);
-  return ageInDays >= 1 && ageInDays <= 365;
+.race-card:not(.is-clickable) {
+  cursor: default;
 }
 
-function matchesSelectedSeries(race) {
-  return selectedSeries === "all" || raceSeries(race).includes(selectedSeries);
+.race-date {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.race-name {
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.race-venue {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.race-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: var(--muted);
+  background: #faf7f2;
+}
+
+.race-link {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.empty-state {
+  padding: 22px;
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.45);
+}
+
+.leaflet-popup-content {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.popup-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.popup-race {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.popup-race-button {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.popup-race-button:hover {
+  text-decoration: underline;
 }
 
 
-function matchesSearchQuery(race) {
-  const query = searchInput.value.trim().toLowerCase();
-  return !query || raceSearchText(race).includes(query);
+.tag-missing-location {
+  background: #f2f2f2;
+  color: #666;
+  border: 1px solid #ddd;
+  cursor: default;
+  pointer-events: none;
 }
 
-function recentPastRacesForVenue(venue) {
-  return races
-    .filter(race => isRaceAtVenue(race, venue.id))
-    .filter(isPastRaceWithinLastYear)
-    .filter(matchesSelectedSeries)
-    .filter(matchesSearchQuery)
-    .sort((a, b) => raceEndDate(b) - raceEndDate(a));
+.race-card:hover .tag-missing-location,
+.race-card.active .tag-missing-location {
+  border-color: #ddd;
+  background: #f2f2f2;
+  color: #666;
 }
 
-function latestPastRaceForVenue(venue) {
-  return recentPastRacesForVenue(venue)[0] || null;
-}
 
-function parseDate(dateString) {
-  return new Date(`${dateString}T00:00:00`);
-}
-
-function todayStart() {
-  const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
-}
-
-function addDays(date, days) {
-  const copy = new Date(date);
-  copy.setDate(copy.getDate() + days);
-  return copy;
-}
-
-function formatDateRange(from, to) {
-  const start = parseDate(from);
-  const end = parseDate(to || from);
-
-  const fmt = new Intl.DateTimeFormat("de-DE", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric"
-  });
-
-  const fmtShort = new Intl.DateTimeFormat("de-DE", {
-    day: "2-digit",
-    month: "2-digit"
-  });
-
-  if (from === to || !to) return fmt.format(start);
-
-  if (start.getFullYear() === end.getFullYear()) {
-    return `${fmtShort.format(start)}–${fmt.format(end)}`;
+@media (max-width: 860px) {
+  .app,
+  .app.layout-map,
+  .app.layout-list {
+    height: auto;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
   }
 
-  return `${fmt.format(start)}–${fmt.format(end)}`;
+  .map-panel { height: 45vh; }
+  .race-panel { border-left: 0; border-top: 1px solid var(--line); }
+  .panel-header { flex-direction: column; }
+  .layout-list .filters { grid-template-columns: 1fr; }
+  .layout-list .race-grid { grid-template-columns: 1fr; }
 }
 
-function formatDate(dateString) {
-  if (!dateString) return "";
 
-  const date = parseDate(dateString);
+/* Race card rhythm */
 
-  return new Intl.DateTimeFormat("de-DE", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric"
-  }).format(date);
+.race-card {
+  gap: 8px;
 }
 
-function formatShortDate(dateString) {
-  if (!dateString) return "";
-
-  const date = parseDate(dateString);
-
-  return new Intl.DateTimeFormat("de-DE", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "2-digit"
-  }).format(date);
+.race-date {
+  margin-bottom: 4px;
 }
 
-function isNewRace(race) {
-  if (!race.firstSeen) return false;
-
-  const firstSeen = parseDate(race.firstSeen);
-  const today = todayStart();
-  const ageInDays = Math.floor((today - firstSeen) / 86400000);
-
-  return ageInDays >= 0 && ageInDays <= 7;
+.race-name {
+  margin-bottom: 2px;
 }
 
-function newRaceBadgeHtml(race) {
-  if (!isNewRace(race)) return "";
+.race-series-tags {
+  margin-bottom: 8px;
+}
 
-  const firstSeen = parseDate(race.firstSeen);
-  const today = todayStart();
-  const ageInDays = Math.floor((today - firstSeen) / 86400000);
+.race-venue {
+  margin-top: 0;
+}
 
-  let badgeClass = "race-new-badge-older";
+.race-location {
+  margin-top: -2px;
+  margin-bottom: 4px;
+}
 
-  if (ageInDays === 0) {
-    badgeClass = "race-new-badge-today";
-  } else if (ageInDays === 1) {
-    badgeClass = "race-new-badge-yesterday";
-  } else if (ageInDays === 2) {
-    badgeClass = "race-new-badge-two-days";
+.race-link {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.race-class-tags {
+  margin-top: 2px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
+}
+
+.tag-class {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  height: 26px;
+  padding: 0 10px;
+  background: #f7f4ef;
+  color: var(--muted);
+  max-width: 100%;
+}
+
+
+
+/* class tag alignment fix */
+
+.race-class-tags {
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 8px;
+}
+
+.race-class-tags .tag-class {
+  flex: 0 0 auto;
+}
+
+
+/* v1.2 layout prototype
+   Keeps the v1.1 visual language, changes spatial hierarchy:
+   fullscreen map, compact floating filters, floating race list.
+*/
+
+.app.layout-prototype,
+.app.layout-prototype.layout-map,
+.app.layout-prototype.layout-list {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+.layout-prototype .map-panel,
+.layout-prototype #map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-prototype .filters-panel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  width: 300px;
+  max-width: calc(100vw - 48px);
+}
+
+.layout-prototype .filters {
+  margin: 0;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 250, 243, 0.94);
+  border: 1px solid rgba(222, 214, 202, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(31, 29, 26, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.layout-prototype .filter-group,
+.layout-prototype .filter-field {
+  gap: 5px;
+}
+
+.layout-prototype .filter-label {
+  font-size: 11px;
+}
+
+.layout-prototype select,
+.layout-prototype input {
+  min-height: 42px;
+  padding: 8px 11px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.layout-prototype .segmented {
+  width: 100%;
+}
+
+.layout-prototype .segmented button {
+  flex: 1 1 auto;
+  padding: 7px 9px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.layout-prototype .filter-field-search {
+  order: -1;
+}
+
+.layout-prototype .race-panel {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  bottom: 48px;
+  z-index: 1000;
+  width: 390px;
+  max-width: calc(100vw - 48px);
+  min-width: 0;
+  overflow: auto;
+  padding: 22px;
+  background: rgba(255, 250, 243, 0.96);
+  border: 1px solid rgba(222, 214, 202, 0.92);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.layout-prototype .panel-header {
+  margin-bottom: 18px;
+}
+
+.layout-prototype .view-toggle {
+  display: none;
+}
+
+.layout-prototype .race-grid,
+.layout-prototype.layout-list .race-grid {
+  grid-template-columns: 1fr;
+}
+
+.layout-prototype.layout-list .filters {
+  grid-template-columns: 1fr;
+}
+
+.layout-prototype .leaflet-control-zoom {
+  margin-left: 24px !important;
+  margin-bottom: 24px !important;
+  border: 0 !important;
+  box-shadow: 0 12px 30px rgba(31, 29, 26, 0.10) !important;
+}
+
+.layout-prototype .leaflet-control-zoom a {
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+}
+
+@media (max-width: 860px) {
+  .app.layout-prototype,
+  .app.layout-prototype.layout-map,
+  .app.layout-prototype.layout-list {
+    height: 100vh;
+    min-height: 100vh;
   }
 
-  return `<div class="race-new-badge ${badgeClass}">NEU ${formatShortDate(race.firstSeen)}</div>`;
-}
-
-function registrationStatus(race) {
-  if (race.registrationStatus) return race.registrationStatus;
-  if (race.registrationRequiresLogin) return "login_required";
-  return "open";
-}
-
-function isRegistrationActive(race) {
-  const status = registrationStatus(race);
-  return status === "open" || status === "login_required";
-}
-
-function matchesRegistrationVisibility(race) {
-  if (!showOpenOnly) return true;
-  return isRegistrationActive(race);
-}
-
-function registrationLabel(race) {
-  const status = registrationStatus(race);
-
-  if (status === "login_required") {
-    return "Anmeldung nur nach MyRCM-Login sichtbar";
+  .layout-prototype .filters-panel {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
   }
 
-  if (status === "upcoming") {
-    return race.registrationOpens
-      ? `Nennung ab ${formatDate(race.registrationOpens)}`
-      : "Nennung noch nicht geöffnet";
+  .layout-prototype .filters {
+    padding: 12px;
+    border-radius: 18px;
   }
 
-  if (status === "closed") {
-    return "Nennung geschlossen";
+  .layout-prototype .race-panel {
+    top: auto;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    max-width: none;
+    height: 42vh;
+    padding: 14px;
+    border-radius: 20px;
+    border-top: 1px solid rgba(222, 214, 202, 0.92);
   }
 
-  return "Nennung möglich";
-}
-
-function registrationDotHtml(race) {
-  const status = registrationStatus(race);
-
-  if (status === "closed") {
-    return `<span class="registration-dot registration-dot-closed" aria-hidden="true"></span>`;
-  }
-
-  if (status === "upcoming") {
-    return `<span class="registration-dot registration-dot-upcoming" aria-hidden="true"></span>`;
-  }
-
-  if (status === "login_required") {
-    return `<span class="registration-dot registration-dot-login_required" aria-hidden="true"></span>`;
-  }
-
-  return `<span class="registration-dot registration-dot-open" aria-hidden="true"></span>`;
-}
-
-function registrationLinkHtml(race) {
-  const status = registrationStatus(race);
-
-  if (!race.url) return "";
-
-  if (status === "closed") return "";
-
-  return `<a class="race-link race-link-with-status registration-${status}" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${registrationDotHtml(race)}MyRCM öffnen ↗</a>`;
-}
-
-function registrationStatusHtml(race) {
-  const status = registrationStatus(race);
-
-  if (status === "open") return "";
-
-  if (status === "closed") {
-    return `<div class="registration-status registration-status-closed">
-      ${registrationDotHtml(race)}Nennung geschlossen
-    </div>`;
-  }
-
-  if (status === "upcoming") {
-    return `<div class="registration-status registration-status-upcoming">
-      Nennung ab ${race.registrationOpens ? formatDate(race.registrationOpens) : "noch nicht geöffnet"}
-    </div>`;
-  }
-
-  if (status === "login_required") {
-    return `<div class="registration-status registration-status-login_required">
-      Anmeldung nur nach MyRCM-Login sichtbar
-    </div>`;
-  }
-
-  return "";
-}
-
-
-function statusDetailsHtml(race) {
-  return "";
-}
-
-function hasActiveRegistration(venueRaces) {
-  return venueRaces.some(isRegistrationActive);
-}
-
-function registrationCount(race) {
-  const candidates = [
-    race.registrationCount,
-    race.registrationsCount,
-    race.registrations,
-    race.entryCount,
-    race.entries,
-    race.participantCount,
-    race.participants,
-    race.nominationCount,
-    race.nominations,
-    race.count
-  ];
-
-  for (const candidate of candidates) {
-    if (candidate === null || candidate === undefined || candidate === "") continue;
-
-    if (typeof candidate === "number" && Number.isFinite(candidate)) {
-      return Math.max(0, candidate);
-    }
-
-    if (typeof candidate === "string") {
-      const match = candidate.replace(/\./g, "").match(/\d+/);
-      if (match) return Math.max(0, Number(match[0]));
-    }
-
-    if (Array.isArray(candidate)) {
-      return candidate.length;
-    }
-  }
-
-  return 0;
-}
-
-function hasRegistrationCount(race) {
-  const candidates = [
-    race.registrationCount,
-    race.registrationsCount,
-    race.registrations,
-    race.entryCount,
-    race.entries,
-    race.participantCount,
-    race.participants,
-    race.nominationCount,
-    race.nominations,
-    race.count
-  ];
-
-  return candidates.some(candidate => {
-    if (candidate === null || candidate === undefined || candidate === "") return false;
-    if (typeof candidate === "number") return Number.isFinite(candidate);
-    if (typeof candidate === "string") return /\d+/.test(candidate);
-    if (Array.isArray(candidate)) return true;
-    return false;
-  });
-}
-
-function registrationCountHtml(race) {
-  const display =
-    race.registrationDisplay ||
-    (hasRegistrationCount(race) ? String(registrationCount(race)) : null);
-
-  if (!display) return "";
-
-  const participantUrl =
-    race.registrationListUrl ||
-    race.url;
-
-  const content = `
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="12" cy="7.4" r="4.1"></circle>
-      <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
-    </svg>
-    <span class="registration-count-value">${display}<span class="external-arrow">↗</span></span>
-  `;
-
-  if (participantUrl) {
-    return `<a
-      class="race-registration-count race-registration-count-link"
-      href="${escapeHtml(participantUrl)}"
-      target="_blank"
-      rel="noopener"
-      title="Teilnehmer anzeigen"
-      aria-label="Teilnehmer anzeigen: ${escapeHtml(display)} Nennungen"
-      onclick="event.stopPropagation()"
-    >${content}</a>`;
-  }
-
-  return `<div class="race-registration-count" aria-label="${escapeHtml(display)} Nennungen">
-    ${content}
-  </div>`;
-}
-
-function venueRegistrationCount(venueRaces) {
-  return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
-}
-
-function markerScaleForRegistrationCount(count) {
-  if (!count) return 0.6;
-  if (count < 5) return 0.6;
-  if (count < 10) return 0.75;
-  if (count < 20) return 0.95;
-  if (count < 40) return 1.15;
-  if (count < 70) return 1.35;
-  if (count < 120) return 1.55;
-  return 1.75;
-}
-
-function markerColorForRegistrationCount(count) {
-  if (count >= 120) return "#1f5f34";
-  if (count >= 70) return "#2d7040";
-  if (count >= 40) return "#3f7f49";
-  if (count >= 20) return "#4F8A57";
-  if (count >= 10) return "#5f9664";
-  return "#6fa875";
-}
-
-function markerFavoriteColorForRegistrationCount(count) {
-  if (count >= 120) return "#8a5f00";
-  if (count >= 70) return "#a17100";
-  if (count >= 40) return "#b88416";
-  if (count >= 20) return "#c9972b";
-  if (count >= 10) return "#d8aa42";
-  return "#e0b65a";
-}
-
-function ensureRegistrationStatusStyles() {
-  if (document.getElementById("registration-status-styles")) return;
-
-  const style = document.createElement("style");
-  style.id = "registration-status-styles";
-  style.textContent = `
-    .race-card.registration-upcoming {
-      background: rgba(247, 243, 236, 0.96);
-      border-color: rgba(222, 214, 202, 0.75);
-    }
-
-    .race-card.registration-closed {
-      background: rgba(244, 240, 233, 0.94);
-      border-color: rgba(222, 214, 202, 0.7);
-    }
-
-    .race-card.registration-closed .race-date,
-    .race-card.registration-closed .race-name,
-    .race-card.registration-closed .race-venue,
-    .race-card.registration-closed .tag {
-      color: rgba(31, 29, 26, 0.58);
-    }
-
-    .race-link,
-    .popup-title a {
-      transition: color 0.16s ease, text-decoration-color 0.16s ease, background 0.16s ease;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    .race-link:hover,
-    .race-link:focus-visible,
-    .popup-title a:hover,
-    .popup-title a:focus-visible {
-      text-decoration: underline;
-    }
-
-    .race-link-with-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .registration-dot {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      flex: 0 0 auto;
-      background: #77716a;
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
-    }
-
-    .registration-dot-open {
-      background: #2f8f46;
-    }
-
-    .registration-dot-upcoming {
-      background: #d9a441;
-    }
-
-    .registration-dot-login_required {
-      background: #d9a441;
-    }
-
-    .registration-dot-closed {
-      background: #4f4a44;
-    }
-
-    .registration-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      width: fit-content;
-      margin-top: 6px;
-      font-size: 13px;
-      line-height: 1.25;
-      color: var(--muted, #6f6a62);
-    }
-
-    .registration-status-closed {
-      color: #4f4a44;
-      font-weight: 700;
-    }
-
-
-    .race-card.flash {
-      animation: race-card-flash 1.2s ease;
-    }
-
-    @keyframes race-card-flash {
-      0% {
-        box-shadow: 0 0 0 0 rgba(217, 164, 65, 0.0);
-      }
-
-      25% {
-        box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.35);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(217, 164, 65, 0.0);
-      }
-    }
-
-    .map-marker-switcher {
-      position: relative;
-      display: block;
-      cursor: pointer;
-      pointer-events: auto;
-    }
-
-    .map-marker-switcher .map-marker-open,
-    .map-marker-switcher .map-marker-closed {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    .map-marker-open,
-    .map-marker-closed,
-    .map-marker-venue-inactive {
-      cursor: pointer;
-      pointer-events: auto;
-    }
-
-    .map-marker-open *,
-    .map-marker-closed *,
-    .map-marker-venue-inactive * {
-      pointer-events: none;
-    }
-
-    .map-marker-active-replacement {
-      display: none;
-      position: absolute;
-      left: 50%;
-      top: 100%;
-      transform: translate(-50%, -88%);
-      z-index: 2;
-    }
-
-    .map-marker-active-replacement-open {
-      background: #5f8f5f !important;
-    }
-
-    .map-marker-active-replacement-closed {
-      background: rgba(31, 29, 26, 0.45) !important;
-    }
-
-    .marker-popup-active .map-marker-switcher .map-marker-open,
-    .marker-popup-active .map-marker-switcher .map-marker-closed {
-      opacity: 0;
-    }
-
-    .marker-popup-active .map-marker-active-replacement {
-      display: block;
-    }
-
-    .map-marker-venue-inactive {
-      cursor: pointer;
-      pointer-events: auto;
-    }
-
-    .map-marker-venue-inactive {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: rgba(31, 29, 26, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-sizing: border-box;
-      box-shadow: none;
-    }
-
-    .map-marker-venue-inactive-favorite {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: #b88416;
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-sizing: border-box;
-      box-shadow: none;
-    }
-
-    .popup-last-race {
-      margin-top: 8px;
-      color: var(--muted, #6f6a62);
-      font-size: 12px;
-      line-height: 1.35;
-    }
-
-    .popup-last-race strong {
-      color: var(--ink, #1f1d1a);
-      font-weight: 700;
-    }
-
-    .popup-race-static {
-      display: block;
-      padding: 8px 0;
-    }
-
-    .popup-race-date {
-      display: block;
-      font-weight: 700;
-    }
-
-    .popup-race-name {
-      display: block;
-    }
-
-    .popup-registration-status {
-      margin-top: 4px;
-      font-size: 12px;
-      color: var(--muted, #6f6a62);
-    }
-  `;
-
-  document.head.appendChild(style);
-}
-
-
-function detectSeries(name) {
-  const rules = [
-    { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
-    { label: "ETS", re: /euro touring series|\bets\b/i },
-    { label: "Ostmasters", re: /ostmasters/i },
-    { label: "RCK Challenge", re: /rck challenge/i },
-    { label: "RCK Kleinserie", re: /rck kleinserie/i },
-    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf|sportkreis/i },
-    { label: "Tamico Offroad Cup", re: /tamico offroad cup|tamico/i },
-    { label: "TEC", re: /tamiya euro cup|\btec\b/i },
-    { label: "TOS", re: /tonisport onroad series|\btos\b/i }
-  ];
-
-  return rules
-    .filter(rule => rule.re.test(name))
-    .map(rule => rule.label);
-}
-
-function raceSeries(race) {
-  if (Array.isArray(race.series) && race.series.length) return race.series;
-  return detectSeries(race.name);
-}
-
-function venueAliasId(raceVenueId) {
-  if (!raceVenueId) return null;
-
-  for (const prefix of Object.keys(verifiedVenueAliases)) {
-    if (raceVenueId.startsWith(prefix)) {
-      return verifiedVenueAliases[prefix];
-    }
-  }
-
-  return null;
-}
-
-function venueById(id) {
-  if (!id) return null;
-
-  const direct = venues.find(venue => {
-    return id === venue.id || id.startsWith(`${venue.id}-`);
-  });
-
-  if (direct) return direct;
-
-  const alias = venueAliasId(id);
-  if (!alias) return null;
-
-  return venues.find(venue => venue.id === alias) || null;
-}
-
-function normalizeUrl(url) {
-  if (!url || typeof url !== "string") return null;
-  return url.trim() || null;
-}
-
-function orgIdFromValue(value) {
-  if (!value || typeof value !== "string") return null;
-
-  const decoded = decodeURIComponent(value);
-
-  let match = decoded.match(/myrcm-(\d+)/i);
-  if (match) return match[1];
-
-  match = decoded.match(/dId\[O\]=(\d+)/i);
-  if (match) return match[1];
-
-  match = decoded.match(/dId%5BO%5D=(\d+)/i);
-  if (match) return match[1];
-
-  return null;
-}
-
-function orgIdsForVenue(venue) {
-  if (!venue) return [];
-
-  const ids = new Set();
-
-  const directOrgId =
-    orgIdFromValue(venue.id) ||
-    orgIdFromValue(venue.venueId) ||
-    orgIdFromValue(venue.url) ||
-    orgIdFromValue(venue.myrcmUrl);
-
-  if (directOrgId) ids.add(directOrgId);
-
-  Object.entries(verifiedVenueAliases).forEach(([myrcmId, venueId]) => {
-    if (venue.id === venueId) {
-      const orgId = orgIdFromValue(myrcmId);
-      if (orgId) ids.add(orgId);
-    }
-  });
-
-  return [...ids];
-}
-
-function hostWebsiteByOrgId(orgId) {
-  if (!orgId) return null;
-  return normalizeUrl(hostsByOrgId.get(String(orgId))?.website);
-}
-
-function venueWebsite(venue) {
-  const directWebsite = normalizeUrl(venue?.website);
-  if (directWebsite) return directWebsite;
-
-  for (const orgId of orgIdsForVenue(venue)) {
-    const website = hostWebsiteByOrgId(orgId);
-    if (website) return website;
-  }
-
-  return null;
-}
-
-function raceWebsite(race) {
-  const venue = venueById(race.venueId);
-
-  const venueLink = venueWebsite(venue);
-  if (venueLink) return venueLink;
-
-  const raceOrgId =
-    orgIdFromValue(race.venueId) ||
-    orgIdFromValue(race.url) ||
-    orgIdFromValue(race.myrcmUrl);
-
-  return hostWebsiteByOrgId(raceOrgId);
-}
-
-function venueNameHtml(venue) {
-  const website = venueWebsite(venue);
-  const name = escapeHtml(venue?.name || "Unbekannte Strecke");
-  const favorite = favoriteButtonHtml(venue?.id, venue?.name || "Strecke");
-  const favoriteClass = isFavoriteVenueId(venue?.id) ? " venue-link-favorite" : "";
-  const nameHtml = website
-    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
-    : `<span class="venue-link${favoriteClass}">${name}</span>`;
-
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
-}
-
-function raceVenueNameHtml(race) {
-  const name = escapeHtml(venueDisplayName(race));
-  const website = raceWebsite(race);
-  const venueId = raceFavoriteVenueId(race);
-  const favorite = favoriteButtonHtml(venueId, venueDisplayName(race));
-  const favoriteClass = isFavoriteVenueId(venueId) ? " venue-link-favorite" : "";
-  const nameHtml = website
-    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : `<span class="venue-link${favoriteClass}">${name}</span>`;
-
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
-}
-
-function escapeHtml(value = "") {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-function documentRole(document = {}, index = 0, documents = []) {
-  const text = [
-    document.type,
-    document.label,
-    document.sourceLabel,
-    document.fileName,
-    document.url
-  ].filter(Boolean).join(" ").toLowerCase();
-
-  if (
-    document.type === "announcement" ||
-    text.includes("ausschreibung") ||
-    text.includes("announcement") ||
-    text.includes("invitation")
-  ) {
-    return "announcement";
-  }
-
-  if (
-    document.type === "rules" ||
-    text.includes("reglement") ||
-    text.includes("regel") ||
-    text.includes("rules") ||
-    text.includes("technical")
-  ) {
-    return "rules";
-  }
-
-  if (
-    document.type === "schedule" ||
-    text.includes("zeitplan") ||
-    text.includes("schedule") ||
-    text.includes("timetable") ||
-    text.includes("ablauf")
-  ) {
-    return "schedule";
-  }
-
-  const unknownDocuments = documents.filter(item => {
-    const itemText = [item.type, item.label, item.sourceLabel, item.fileName, item.url]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-
-    return !itemText.includes("ausschreibung") &&
-      !itemText.includes("announcement") &&
-      !itemText.includes("invitation") &&
-      !itemText.includes("tender") &&
-      !itemText.includes("reglement") &&
-      !itemText.includes("regel") &&
-      !itemText.includes("rules") &&
-      !itemText.includes("rule") &&
-      !itemText.includes("technical");
-  });
-
-  /*
-    Some MyRCM PDFs arrive only as type "document" with label "PDF".
-    MyRCM often lists these as:
-    Rule first, Tender second.
-    For those ambiguous pairs we keep both links by mapping:
-    first unknown PDF  -> Reglement
-    second unknown PDF -> Ausschreibung
-  */
-  if (unknownDocuments.length > 1) {
-    const unknownIndex = unknownDocuments.indexOf(document);
-    if (unknownIndex === 0) return "rules";
-    if (unknownIndex === 1) return "announcement";
-  }
-
-  if (
-    text.includes("lauf") ||
-    text.includes("cup") ||
-    text.includes("rennen") ||
-    /\d{2}\.\d{2}\.\d{4}/.test(text) ||
-    /\d{4}-\d{2}-\d{2}/.test(text)
-  ) {
-    return "announcement";
-  }
-
-  return "announcement";
-}
-
-function rckEntryListUrl(race) {
-  return race.entryListUrl || race.nennlisteUrl || race.nominationListUrl || race.registrationListUrl || null;
-}
-
-function documentLinksHtml(race) {
-  const documents = Array.isArray(race.documents) ? race.documents : [];
-
-  const announcement = documents.find((document, index) =>
-    document?.url && documentRole(document, index, documents) === "announcement"
-  );
-
-  const rules = documents.find((document, index) =>
-    document?.url && documentRole(document, index, documents) === "rules"
-  );
-
-  const status = registrationStatus(race);
-
-  let registrationItem = "";
-
-  if (status === "closed") {
-    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
-        <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
-        Nennung geschlossen
-      </span>`;
-  } else if (status === "upcoming") {
-    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
-        <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
-        ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
-      </span>`;
-  } else if (race.url) {
-    registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
-        <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        Nennung ↗
-      </a>`;
-  }
-
-  const documentItems = [];
-
-  if (announcement?.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Ausschreibung ↗</a>`);
-  }
-
-  if (rules?.url && rules.url !== announcement?.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
-  }
-
-  return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
-}
-
-function hasMappableVenue(race) {
-  const venue = venueById(race.venueId);
-  return Boolean(venue && hasLatLng(venue));
-}
-
-function hasVerifiedVenue(race) {
-  const venue = venueById(race.venueId);
-  return Boolean(venue && hasLatLng(venue) && !isUnverifiedVenue(venue));
-}
-
-function venueDisplayName(race) {
-  const venue = venueById(race.venueId);
-
-  return (
-    venue?.name ||
-    race.venueName ||
-    race.venueLocation ||
-    race.venueId ||
-    "Unbekannte Strecke"
-  );
-}
-
-function raceSearchText(race) {
-  const venue = venueById(race.venueId);
-
-  return [
-    race.name,
-    race.venueName,
-    race.venueLocation,
-    race.venueId,
-    venue?.name,
-    venue?.city,
-    venue?.location,
-    ...(raceSeries(race) || []),
-    ...(Array.isArray(race.classes) ? race.classes.map(classNameFromRaceClass) : [])
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-}
-
-function isRaceAtVenue(race, venueId) {
-  if (!race.venueId) return false;
-
-  if (race.venueId === venueId) return true;
-
-  if (race.venueId.startsWith(`${venueId}-`)) return true;
-
-  return venueAliasId(race.venueId) === venueId;
-}
-
-function isInSelectedRange(race) {
-  const start = parseDate(race.from);
-  const today = todayStart();
-
-  if (start < today) return false;
-
-if (selectedRange === "all") {
-  return true;
-}
-
-  const weeks = Number(selectedRange);
-  return start <= addDays(today, weeks * 7);
-}
-
-function filteredRaces() {
-  const query = searchInput.value.trim().toLowerCase();
-
-  return races
-    .filter(isUsefulRckRace)
-    .filter(isInSelectedRange)
-    .filter(matchesRegistrationVisibility)
-    .filter(matchesSelectedSeries)
-    .filter(race => !query || raceSearchText(race).includes(query))
-    .sort((a, b) => {
-      const favoriteOrder = Number(isFavoriteRaceVenue(b)) - Number(isFavoriteRaceVenue(a));
-      if (favoriteOrder !== 0) return favoriteOrder;
-      return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
-    });
-}
-
-function googleMapsRouteUrl(venue) {
-  return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
-}
-
-function buildPopup(venue, venueRaces, latestPastRace = null) {
-  const raceLine = venueRaces.length
-    ? `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}`
-    : "Keine kommenden Rennen";
-
-  const lastRaceHtml =
-    !venueRaces.length && latestPastRace
-      ? `<div class="popup-last-race">
-          Zuletzt:<br>
-          <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong><br>
-          ${escapeHtml(latestPastRace.name)}
-        </div>`
-      : "";
-
-  return `
-    <div class="popup-title">${venueNameHtml(venue)}</div>
-    <div class="popup-race">
-      ${raceLine}
-    </div>
-    ${lastRaceHtml}
-    <div class="popup-race">
-      <a href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer">
-        Route planen ↗
-      </a>
-    </div>
-  `;
-}
-
-function resetVenueSelection() {
-  if (!activeVenueId && !activeRaceId) return;
-
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
-  renderList(filteredRaces());
-}
-
-function updateMarkers(list, shouldFitBounds = true) {
-  markers.forEach(marker => marker.remove());
-  markers.clear();
-
-  const bounds = [];
-
-  venues.forEach(venue => {
-    if (!hasLatLng(venue)) return;
-
-    const venueRaces = list.filter(race => isRaceAtVenue(race, venue.id));
-    const latestPastRace = latestPastRaceForVenue(venue);
-
-    if (!venueRaces.length && !latestPastRace) return;
-
-    const hasUpcomingRaces = venueRaces.length > 0;
-    const markerClass = hasUpcomingRaces
-      ? (hasActiveRegistration(venueRaces) ? "map-marker-open" : "map-marker-closed")
-      : "map-marker-venue-inactive";
-
-    const registrationTotal = venueRegistrationCount(venueRaces);
-    const markerScale = hasUpcomingRaces
-      ? markerScaleForRegistrationCount(registrationTotal)
-      : 1;
-
-    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 12;
-    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 12;
-
-    const markerAnchor = hasUpcomingRaces
-      ? [Math.round(markerWidth / 2), markerHeight]
-      : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
-
-    const replacementClass = hasActiveRegistration(venueRaces)
-      ? "map-marker-active-replacement-open"
-      : "map-marker-active-replacement-closed";
-
-    const isFavoriteVenue = isFavoriteVenueId(venue.id);
-
-let markerColor = isFavoriteVenue
-  ? markerFavoriteColorForRegistrationCount(registrationTotal)
-  : hasActiveRegistration(venueRaces)
-    ? markerColorForRegistrationCount(registrationTotal)
-    : "rgba(31, 29, 26, 0.55)";
-
-if (!hasUpcomingRaces && isFavoriteVenue) {
-  markerColor = "#b88416";
-}
-
-const markerSvg = encodeURIComponent(`
-  <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#F4F1EC" stroke-width="1"/>
-  </svg>
-`);
-
-const inactiveClass = isFavoriteVenue
-  ? "map-marker-venue-inactive-favorite"
-  : "map-marker-venue-inactive";
-
-const markerHtml = hasUpcomingRaces
-  ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
-      <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
-      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
-    </div>`
-  : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
-
-    const marker = L.marker(
-      [venue.lat, venue.lng],
-      {
-        icon: L.divIcon({
-          className: "",
-          html: markerHtml,
-          iconSize: [markerWidth, markerHeight],
-          iconAnchor: markerAnchor
-        })
-      }
-    ).addTo(map);
-
-
-    let hoverTimer = null;
-    let isPopupPinned = false;
-    
-const popupOffset = hasUpcomingRaces
-  ? [0, -8]
-  : [0, -4];
-
-    marker.bindPopup(
-      buildPopup(venue, venueRaces, latestPastRace),
-      {
-        offset: popupOffset
-      }
-    );
-
-    marker.on("mouseover", () => {
-      if (window.matchMedia("(pointer: coarse)").matches) return;
-
-      clearTimeout(hoverTimer);
-
-      if (!isPopupPinned) {
-        marker.openPopup();
-      }
-    });
-
-    marker.on("mouseout", () => {
-      if (window.matchMedia("(pointer: coarse)").matches) return;
-
-      clearTimeout(hoverTimer);
-
-      hoverTimer = window.setTimeout(() => {
-        if (!isPopupPinned) {
-          marker.closePopup();
-        }
-      }, 350);
-    });
-
-    marker.on("popupopen", () => {
-
-      marker.getElement()?.classList.add("marker-popup-active");
-      
-      const popupElement = marker.getPopup()?.getElement();
-      if (!popupElement) return;
-
-      popupElement.addEventListener("mouseenter", () => {
-        clearTimeout(hoverTimer);
-      });
-
-      popupElement.addEventListener("mouseleave", () => {
-        if (window.matchMedia("(pointer: coarse)").matches) return;
-        if (isPopupPinned) return;
-
-        clearTimeout(hoverTimer);
-        hoverTimer = window.setTimeout(() => {
-          marker.closePopup();
-        }, 150);
-      });
-
-      popupElement.addEventListener("click", event => {
-        if (
-          event.target.closest("a") ||
-          event.target.closest("[data-favorite-venue-id]") ||
-          event.target.closest(".leaflet-popup-close-button")
-        ) {
-          return;
-        }
-
-        isPopupPinned = true;
-        activeVenueId = venue.id;
-        activeRaceId = null;
-        updateAppModeClass();
-
-        if (hasUpcomingRaces) {
-          renderList(venueRaces);
-          resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-        } else {
-          renderList([]);
-          resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
-        }
-      });
-    });
-    
-    marker.on("popupclose", () => {
-
-      marker.getElement()?.classList.remove("marker-popup-active");
-      
-      if (isSwitchingMarkerPopup) return;
-
-      isPopupPinned = false;
-
-      if (activeVenueId === venue.id) {
-        resetVenueSelection();
-      }
-    });
-
-    marker.on("click", event => {
-      if (event.originalEvent) {
-        L.DomEvent.stopPropagation(event.originalEvent);
-      }
-
-      isSwitchingMarkerPopup = true;
-      isPopupPinned = true;
-      markers.forEach(otherMarker => {
-        if (otherMarker !== marker) {
-          otherMarker.closePopup();
-        }
-      });
-
-      activeVenueId = venue.id;
-      activeRaceId = null;
-      updateAppModeClass();
-
-      if (hasUpcomingRaces) {
-        renderList(venueRaces);
-        resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-      } else {
-        renderList([]);
-        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
-      }
-
-      marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
-      marker.openPopup();
-
-      window.setTimeout(() => {
-        isSwitchingMarkerPopup = false;
-      }, 0);
-    });
-
-    markers.set(venue.id, marker);
-    bounds.push([venue.lat, venue.lng]);
-  });
-
-  if (bounds.length === 1) {
-    map.setView(bounds[0], 12);
-  }
-
-if (shouldFitBounds && bounds.length > 1) {
-  const isMobile = window.matchMedia("(max-width: 860px)").matches;
-
-  map.fitBounds(bounds, isMobile
-    ? {
-        paddingTopLeft: [32, 120],
-        paddingBottomRight: [32, 360]
-      }
-    : {
-        paddingTopLeft: [40, 40],
-        paddingBottomRight: [180, 40]
-      }
-  );
-}
-}
-
-function scrollToRaceCard(raceId) {
-  const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
-  if (!card) return;
-
-  card.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-
-  card.classList.add("flash");
-
-  window.setTimeout(() => {
-    card.classList.remove("flash");
-  }, 1200);
-}
-
-function selectRaceFromPopup(raceId) {
-  const race = races.find(item => item.id === raceId);
-  if (!race) return;
-
-  const venue = venueById(race.venueId);
-
-  activeRaceId = race.id;
-  renderList(filteredRaces());
-  scrollToRaceCard(race.id);
-
-  if (!venue) return;
-
-  const marker = markers.get(venue.id);
-  if (!marker) return;
-
-  const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
-  marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRaceForVenue(venue)));
-  marker.openPopup();
-}
-
-function focusRace(race) {
-  const venue = venueById(race.venueId);
-  if (!venue) return;
-
-  activeVenueId = venue.id;
-  activeRaceId = null;
-  updateAppModeClass();
-
-  const baseList = filteredRaces();
-  const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
-
-  renderList(venueList);
-  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-
-  map.setView([venue.lat, venue.lng], 12);
-
-  const marker = markers.get(venue.id);
-  if (marker) {
-    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
-    marker.openPopup();
-  }
-}
-function renderList(list) {
-  resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
-  raceList.innerHTML = "";
-
-  if (!list.length) {
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
-    return;
-  }
-
-  const hasFavoriteRaces = list.some(isFavoriteRaceVenue);
-  const hasNormalRaces = list.some(race => !isFavoriteRaceVenue(race));
-  const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
-  let didRenderFavoriteDivider = false;
-  let didRenderNormalDivider = false;
-
-  for (const race of list) {
-    const isFavorite = isFavoriteRaceVenue(race);
-
-    if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
-      const divider = document.createElement("div");
-      divider.className = "race-section-divider race-section-divider-favorites";
-      divider.textContent = "★ Favorisierte Strecken";
-      raceList.appendChild(divider);
-      didRenderFavoriteDivider = true;
-    }
-
-    if (showSectionDividers && !isFavorite && !didRenderNormalDivider) {
-      const divider = document.createElement("div");
-      divider.className = "race-section-divider";
-      divider.textContent = "Weitere Rennen";
-      raceList.appendChild(divider);
-      didRenderNormalDivider = true;
-    }
-
-    const series = raceSeries(race);
-    const card = document.createElement("article");
-
-    card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}${hasMappableVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
-    card.dataset.raceId = race.id;
-    card.tabIndex = 0;
-
-    card.innerHTML = `
-      ${newRaceBadgeHtml(race)}
-      <div class="race-card-main">
-        <div class="race-card-header">
-          <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name-row">
-            <div class="race-name">${race.name}</div>
-            ${registrationCountHtml(race)}
-          </div>
-
-          <div class="race-tags race-series-tags">
-            ${series.map(item => `<span class="tag">${item}</span>`).join("")}
-            ${
-              !hasMappableVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
-                : !hasVerifiedVenue(race)
-                  ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
-                  : ""
-            }
-          </div>
-        </div>
-
-        <div class="race-card-meta">
-          <div class="race-venue">${raceVenueNameHtml(race)}</div>
-          ${documentLinksHtml(race)}
-          ${statusDetailsHtml(race)}
-        </div>
-      </div>
-
-      ${
-        Array.isArray(race.classes) && race.classes.length
-          ? `<div class="race-tags race-class-tags">
-              ${
-                (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
-                  .map(item => `<span class="tag tag-class">${escapeHtml(classTagLabel(item))}</span>`)
-                  .join("")
-              }
-              ${
-                race.classes.length > 6
-                  ? `<button class="tag tag-class tag-class-toggle"
-                      type="button"
-                      data-class-toggle="${race.id}"
-                      aria-expanded="${expandedClassRaceIds.has(race.id) ? "true" : "false"}">
-                      ${
-                        expandedClassRaceIds.has(race.id)
-                          ? "weniger anzeigen"
-                          : `+${race.classes.length - 4} weitere`
-                      }
-                    </button>`
-                  : ""
-              }
-            </div>`
-          : ""
-      }
-    `;
-
-    if (hasMappableVenue(race)) {
-      card.addEventListener("click", event => {
-        if (event.target.closest("[data-class-toggle]")) return;
-        if (event.target.closest("[data-favorite-venue-id]")) return;
-        focusRace(race);
-      });
-
-      card.addEventListener("keydown", event => {
-        if (event.target.closest("[data-favorite-venue-id]")) return;
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          focusRace(race);
-        }
-      });
-    }
-
-    raceList.appendChild(card);
-  }
-
-}
-
-function toggleClassList(raceId) {
-  if (expandedClassRaceIds.has(raceId)) {
-    expandedClassRaceIds.delete(raceId);
-  } else {
-    expandedClassRaceIds.add(raceId);
-  }
-
-  if (activeVenueId) {
-    const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
-    renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-    return;
-  }
-
-  renderList(filteredRaces());
-}
-
-document.addEventListener("click", event => {
-  const favoriteButton = event.target.closest("[data-favorite-venue-id]");
-  if (!favoriteButton) return;
-
-  event.preventDefault();
-  event.stopPropagation();
-
-  toggleFavoriteVenue(favoriteButton.dataset.favoriteVenueId);
-
-  const list = filteredRaces();
-  updateMarkers(list, false);
-
-  if (activeVenueId) {
-    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
-    renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-  } else {
-    renderList(list);
-    resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
-  }
-});
-
-raceList.addEventListener("click", event => {
-  const button = event.target.closest("[data-class-toggle]");
-  if (!button) return;
-
-  event.preventDefault();
-  event.stopPropagation();
-
-  toggleClassList(button.dataset.classToggle);
-});
-
-function populateSeries() {
-  const allSeries = new Set();
-
-  races.forEach(race => {
-    raceSeries(race).forEach(item => allSeries.add(item));
-  });
-
-  seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
-
-  const orderedSeries = [
-    ...preferredSeriesOrder.filter(series => allSeries.has(series)),
-    ...[...allSeries].filter(series => !preferredSeriesOrder.includes(series)).sort()
-  ];
-
-  orderedSeries.forEach(series => {
-    const option = document.createElement("option");
-    option.value = series;
-    option.textContent = seriesDisplayName(series);
-    seriesFilter.appendChild(option);
-  });
-}
-
-function updateMarkerAnimationDelays() {
-  const markerItems = Array.from(markers.values())
-    .map(marker => ({
-      marker,
-      y: map.latLngToContainerPoint(marker.getLatLng()).y
-    }))
-    .filter(item => Number.isFinite(item.y));
-
-  if (!markerItems.length) return;
-
-  const minY = Math.min(...markerItems.map(item => item.y));
-  const maxY = Math.max(...markerItems.map(item => item.y));
-  const spanY = Math.max(1, maxY - minY);
-
-  const shuffledItems = markerItems
-    .map(item => ({
-      ...item,
-      sortValue: Math.random()
-    }))
-    .sort((a, b) => a.sortValue - b.sortValue);
-
-  shuffledItems.forEach((item, index) => {
-    const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
-    if (!visual) return;
-
-    const delay = Math.round(index * 5);
-
-    visual.style.setProperty("--marker-delay", `${delay}ms`);
-  });
-}
-
-function revealMap() {
-  document.getElementById("map")?.classList.add("map-ready");
-}
-
-function revealMapWhenReady() {
-  const mapElement = document.getElementById("map");
-
-  map.once("moveend", () => {
-    revealMap();
-  });
-
-  window.setTimeout(() => {
-    if (mapElement?.classList.contains("map-ready")) return;
-    revealMap();
-  }, 500);
-}
-
-function render() {
-  updateAppModeClass();
-  syncFilterUi();
-  const list = filteredRaces();
-  updateMarkers(list);
-
-  if (activeVenueId) {
-    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
-
-    if (venueList.length) {
-      activeRaceId = null;
-      renderList(venueList);
-      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-    } else {
-      const venue = venues.find(item => item.id === activeVenueId);
-      const latestPastRace = venue ? latestPastRaceForVenue(venue) : null;
-
-      if (latestPastRace) {
-        activeRaceId = null;
-        renderList([]);
-        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
-      } else {
-        activeVenueId = null;
-        activeRaceId = null;
-        updateAppModeClass();
-        renderList(list);
-      }
-    }
-  } else {
-    activeRaceId = null;
-    updateAppModeClass();
-    renderList(list);
-  }
-
-  setTimeout(() => {
-    map.invalidateSize();
-  }, 0);
-}
-
-function setLayout(layout) {
-  app.classList.toggle("layout-map", layout === "map");
-  app.classList.toggle("layout-list", layout === "list");
-
-  mapWideButton.classList.toggle("active", layout === "map");
-  listWideButton.classList.toggle("active", layout === "list");
-
-  localStorage.setItem("rcRaceMapLayout", layout);
-
-  setTimeout(() => map.invalidateSize(), 210);
-}
-
-rangeFilter.addEventListener("click", event => {
-  const button = event.target.closest("button[data-range]");
-  if (!button) return;
-
-  selectedRange = button.dataset.range;
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
-
-  rangeFilter
-    .querySelectorAll("button")
-    .forEach(item => item.classList.toggle("active", item === button));
-
-  render();
-});
-
-
-if (registrationVisibilityFilter) {
-  registrationVisibilityFilter.addEventListener("click", event => {
-    const button = event.target.closest("button[data-registration-visibility]");
-    if (!button) return;
-
-    showOpenOnly = button.dataset.registrationVisibility === "open";
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-
-    registrationVisibilityFilter
-      .querySelectorAll("button")
-      .forEach(item => item.classList.toggle("active", item === button));
-
-    render();
-  });
-}
-
-seriesFilter.addEventListener("change", () => {
-  selectedSeries = seriesFilter.value;
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
-  render();
-});
-
-
-searchInput.addEventListener("input", () => {
-  activeVenueId = null;
-  activeRaceId = null;
-  updateAppModeClass();
-  render();
-});
-
-if (filterToggleButton) {
-  filterToggleButton.addEventListener("click", () => {
-    isFilterPanelOpen = !isFilterPanelOpen;
-    updateFilterPanelState();
-  });
-}
-
-if (activeFilterChips) {
-  activeFilterChips.addEventListener("click", event => {
-    const button = event.target.closest("button[data-clear-filter]");
-    if (!button) return;
-
-    if (button.dataset.clearFilter === "search") {
-      searchInput.value = "";
-    }
-
-    if (button.dataset.clearFilter === "series") {
-      selectedSeries = "all";
-      seriesFilter.value = "all";
-    }
-
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    render();
-  });
-}
-
-map.on("click", () => {
-  resetVenueSelection();
-});
-
-if (mapWideButton && listWideButton) {
-  mapWideButton.addEventListener("click", () => setLayout("map"));
-  listWideButton.addEventListener("click", () => setLayout("list"));
-}
-
-async function fetchJsonOrFallback(url, fallback) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) return fallback;
-    return await response.json();
-  } catch {
-    return fallback;
+  .layout-prototype .panel-header {
+    margin-bottom: 12px;
   }
 }
 
-function normalizeRaceFromSource(race, dataSource) {
-  return {
-    ...race,
-    dataSource
-  };
+
+/* v1.2: no selected-card border while a venue/pin is active.
+   The right panel is already filtered to the selected venue, so an additional
+   active card frame is redundant.
+*/
+
+.layout-prototype .race-card.active {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
 }
 
-function mergeVenues(baseVenues, candidateVenues) {
-  const byId = new Map();
-
-  for (const venue of baseVenues) {
-    if (!venue?.id) continue;
-    byId.set(venue.id, venue);
-  }
-
-  for (const venue of candidateVenues) {
-    if (!venue?.id || !hasLatLng(venue) || !venue.addressVerifiedFromPdf) continue;
-    if (byId.has(venue.id)) continue;
-    byId.set(venue.id, venue);
-  }
-
-  return Array.from(byId.values());
+.layout-prototype .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
 }
 
-async function init() {
-  ensureRegistrationStatusStyles();
 
-  const cacheBuster = Date.now();
+/* v1.2: neutralize card hover/active border in the floating list.
+   In venue mode the list is already scoped to the selected pin, so the black
+   card frame suggests a selection state that is no longer useful.
+*/
 
-  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
-    fetch(`../venues.json?v=${cacheBuster}`),
-    fetch(`../races.json?v=${cacheBuster}`),
-    fetchJsonOrFallback(`../rck-races.json?v=${cacheBuster}`, []),
-    fetchJsonOrFallback(`../rck-venue-candidates.json?v=${cacheBuster}`, []),
-    fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
-  ]);
-
-  const baseVenues = await venuesResponse.json();
-  const myrcmRaces = await racesResponse.json();
-  const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
-  const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
-
-  venues = mergeVenues(baseVenues, rckVenueCandidates);
-  races = [
-    ...myrcmRaces
-      .filter(race => !isRckEventFromMyRcm(race))
-      .map(race => normalizeRaceFromSource(race, "myrcm")),
-    ...rckRaces
-      .filter(isUsefulRckRace)
-      .map(race => normalizeRaceFromSource(race, "rck"))
-  ];
-
-  if (hostsResponse?.ok) {
-    hosts = await hostsResponse.json();
-  } else {
-    hosts = [];
-  }
-
-  hostsByOrgId = new Map(
-    hosts
-      .filter(host => host?.orgId)
-      .map(host => [String(host.orgId), host])
-  );
-
-  populateSeries();
-
-  if (mapWideButton && listWideButton) {
-    setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
-  }
-
-  syncFilterUi();
-
-  revealMapWhenReady();
-  render();
+.layout-prototype .race-card.is-clickable:hover,
+.layout-prototype .race-card.active,
+.layout-prototype .race-card.is-clickable.active,
+.layout-prototype .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
 }
 
-init().catch(error => {
-  console.error(error);
-  resultLine.textContent = "Fehler beim Laden der Daten.";
-});
+
+/* v1.2: card interaction states
+   Normal mode: race cards keep the original hover state.
+   Venue mode: the right list is scoped to the selected pin, so cards behave
+   like static result cards.
+*/
+
+.layout-prototype:not(.is-venue-mode) .race-card.is-clickable:hover,
+.layout-prototype:not(.is-venue-mode) .race-card.active {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.layout-prototype.is-venue-mode .race-card,
+.layout-prototype.is-venue-mode .race-card.is-clickable {
+  cursor: default;
+}
+
+.layout-prototype.is-venue-mode .race-card.is-clickable:hover,
+.layout-prototype.is-venue-mode .race-card.active,
+.layout-prototype.is-venue-mode .race-card.is-clickable.active,
+.layout-prototype.is-venue-mode .race-card.is-clickable.active:hover {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+
+/* v1.3 mobile filter and compact class chips */
+
+.filter-toggle-button {
+  display: none;
+}
+
+.mobile-filter-topline {
+  display: contents;
+}
+
+.advanced-filters {
+  display: grid;
+  gap: 14px;
+}
+
+.active-filter-chips {
+  display: none;
+}
+
+.tag-class {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.tag-class-more {
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filters-panel {
+    width: auto;
+  }
+
+  .layout-prototype .filters {
+    gap: 8px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .layout-prototype .mobile-filter-topline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px;
+    gap: 8px;
+    align-items: end;
+  }
+
+  .layout-prototype .filter-group-range {
+    min-width: 0;
+  }
+
+  .layout-prototype .filter-group-range .filter-label {
+    display: none;
+  }
+
+  .layout-prototype .segmented {
+    width: 100%;
+  }
+
+  .layout-prototype .segmented button {
+    min-height: 34px;
+    padding: 6px 7px;
+    font-size: 12px;
+  }
+
+  .layout-prototype .filter-toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    font-size: 23px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  }
+
+  .layout-prototype .filter-toggle-icon-close {
+    display: none;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+    display: none;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+    display: inline;
+  }
+
+  .layout-prototype .advanced-filters {
+    display: none;
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .layout-prototype.is-filter-panel-open .advanced-filters {
+    display: grid;
+  }
+
+  .layout-prototype .active-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .layout-prototype .active-filter-chips.is-empty {
+    display: none;
+  }
+
+  .layout-prototype .active-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 100%;
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #faf7f2;
+    color: var(--muted);
+    font: inherit;
+    font-size: 11px;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+
+  .layout-prototype .active-filter-chip span {
+    color: var(--text);
+    font-weight: 800;
+  }
+
+  .layout-prototype .race-class-tags {
+    row-gap: 5px;
+    column-gap: 5px;
+    padding-top: 8px;
+  }
+
+  .layout-prototype .tag-class {
+    height: 20px;
+    padding: 0 7px;
+    font-size: 10px;
+  }
+
+  .layout-prototype .race-card {
+    padding: 12px;
+  }
+}
+
+
+/* v1.3: expandable class chips */
+
+.tag-class-toggle {
+  appearance: none;
+  border: 1px solid rgba(31, 29, 26, 0.22);
+  background: #eee7dc;
+  color: var(--text);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tag-class-toggle:hover,
+.tag-class-toggle:focus-visible {
+  border-color: var(--text);
+  background: #e6ded1;
+  outline: none;
+}
+
+.layout-prototype.is-venue-mode .tag-class-toggle {
+  cursor: pointer;
+}
+
+.layout-prototype.is-venue-mode .tag-class-toggle:hover,
+.layout-prototype.is-venue-mode .tag-class-toggle:focus-visible {
+  border-color: var(--text);
+  box-shadow: none;
+}
+
+
+/* v1.3.1 filter button icon refinement */
+
+.filter-toggle-icon {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.filter-toggle-icon-search svg {
+  width:20px;
+  height:20px;
+}
+
+.filter-toggle-icon-close svg {
+  width:16px;
+  height:16px;
+}
+
+.layout-prototype .filter-toggle-button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.layout-prototype .filter-toggle-button svg {
+  display:block;
+}
+
+
+/* v1.3.2 filter icon correction
+   The search/close toggle is mobile-only. Desktop keeps the full filter panel
+   and must not show the round icon button.
+*/
+
+.layout-prototype .filter-toggle-button {
+  display: none;
+}
+
+.layout-prototype .filter-toggle-icon {
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  line-height: 0;
+}
+
+.layout-prototype .filter-toggle-icon svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.layout-prototype .filter-toggle-icon-search svg {
+  width: 22px;
+  height: 22px;
+}
+
+.layout-prototype .filter-toggle-icon-close svg {
+  width: 17px;
+  height: 17px;
+}
+
+.layout-prototype .filter-toggle-icon-close {
+  display: none;
+}
+
+.layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+  display: none;
+}
+
+.layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+  display: flex;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filter-toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+  }
+
+  .layout-prototype .filter-toggle-icon-search {
+    display: flex;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-search {
+    display: none;
+  }
+
+  .layout-prototype.is-filter-panel-open .filter-toggle-icon-close {
+    display: flex;
+  }
+}
+
+
+/* v1.3.3 polish */
+
+.layout-prototype .active-filter-chips {
+  margin-top: 10px;
+}
+
+.layout-prototype select {
+  background-position: right 18px center;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype select {
+    background-position: right 16px center;
+  }
+
+  .layout-prototype .active-filter-chips {
+    margin-top: 12px;
+  }
+}
+
+
+/* v1.3.4 mobile viewport refinement
+   iPhone/Safari: use dynamic viewport height, respect safe areas,
+   hide Leaflet zoom controls, and raise the event list to roughly half screen.
+*/
+
+@supports (height: 100dvh) {
+  @media (max-width: 860px) {
+    .app.layout-prototype,
+    .app.layout-prototype.layout-map,
+    .app.layout-prototype.layout-list {
+      height: 100dvh;
+      min-height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .filters-panel {
+    top: calc(10px + env(safe-area-inset-top));
+    left: 10px;
+    right: 10px;
+  }
+
+  .layout-prototype .race-panel {
+    left: 10px;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    height: 50vh;
+    max-height: calc(100dvh - 104px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+
+  .layout-prototype .leaflet-control-zoom {
+    display: none !important;
+  }
+}
+
+@supports (height: 100dvh) {
+  @media (max-width: 860px) {
+    .layout-prototype .race-panel {
+      height: 50dvh;
+    }
+  }
+}
+
+
+/* RC Racing Map v1.3.5
+   Card typography cleanup
+*/
+
+.race-series-tags .tag {
+  height: 20px;
+  padding: 0 7px;
+  font-size: 10px;
+  font-weight: 500;
+  background: #e9e2d7;
+}
+
+.tag-class-toggle {
+  font-weight: 400;
+}
+
+.race-name {
+  font-size: 15px;
+}
+
+.race-date,
+.race-venue,
+.race-link,
+.registration-status {
+  font-size: 13px;
+}
+
+.tag,
+.tag-class,
+.race-series-tags .tag {
+  font-size: 10px;
+}
+
+/* RC Racing Map v1.3.5
+   Card typography cleanup
+*/
+
+.race-series-tags .tag {
+  height: 20px;
+  padding: 0 7px;
+  font-size: 10px;
+  font-weight: 500;
+  background: #e9e2d7;
+}
+
+.tag-class-toggle {
+  font-weight: 400;
+}
+
+.race-name {
+  font-size: 15px;
+}
+
+.race-date,
+.race-venue,
+.race-link,
+.registration-status {
+  font-size: 13px;
+}
+
+.tag,
+.tag-class,
+.race-series-tags .tag {
+  font-size: 10px;
+}
+
+
+
+/* Marker v1.4 – SVG pins */
+
+.map-marker-open,
+.map-marker-closed {
+  width: 26px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  box-shadow: none;
+}
+
+.map-marker-open {
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%234F8A57' stroke='%23F4F1EC' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.map-marker-closed {
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='34' viewBox='0 0 26 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z' fill='%231F1D1A' stroke='%23F4F1EC' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+
+
+/* v1.3.8 document links in race cards */
+
+.race-document-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.race-document-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f7f4ef;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.race-document-link:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.race-document-announcement {
+  background: #f1eadf;
+}
+
+.race-document-rules {
+  background: #ece7de;
+}
+
+
+/* v1.3.10 document link row */
+
+.race-document-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 22px;
+  row-gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.race-document-links .race-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.race-document-links .race-link-item:hover,
+.race-document-links .race-link-item:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.race-document-links .race-link-item-status {
+  gap: 8px;
+}
+
+.race-document-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.race-document-dot-open {
+  background: #4F8A57;
+}
+
+.race-document-dot-closed {
+  background: rgba(31, 29, 26, 0.5);
+}
+
+.race-document-dot-upcoming {
+  background: #d9a441;
+}
+
+.race-document-links .race-link-item-status-upcoming {
+  color: #b17d1b;
+}
+
+.race-document-links .race-link-item-status-closed,
+.race-document-links .race-link-item-status-upcoming {
+  cursor: default;
+}
+
+.race-document-links .race-link-item-status-closed:hover,
+.race-document-links .race-link-item-status-closed:focus-visible {
+  color: rgba(31, 29, 26, 0.58);
+  text-decoration: none;
+}
+
+.race-document-links .race-link-item-status-upcoming:hover,
+.race-document-links .race-link-item-status-upcoming:focus-visible {
+  color: #b17d1b;
+  text-decoration: none;
+}
+
+.race-card.registration-closed .race-document-links .race-link-item-status {
+  color: rgba(31, 29, 26, 0.58);
+}
+
+@media (max-width: 860px) {
+  .race-document-links {
+    column-gap: 16px;
+  }
+}
+
+
+.myrcm-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+
+/* v1.3.13 compact document row */
+
+.race-document-links {
+  gap: 8px !important;
+}
+
+.race-document-links .race-link-item {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.race-document-dot {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+@media (min-width: 861px) {
+  .race-document-links {
+    flex-wrap: nowrap !important;
+  }
+}
+
+
+/* v1.3.14 new race badge */
+
+.race-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.race-new-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  border-radius: 0 18px 0 10px;
+  color: #5f5648;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.race-new-badge-today {
+  background: #b8aa8d;
+  color: #fffaf3;
+}
+
+.race-new-badge-yesterday {
+  background: #cec1ab;
+  color: #5f5648;
+}
+
+.race-new-badge-two-days {
+  background: #ddd1bc;
+  color: #5f5648;
+}
+
+.race-new-badge-older {
+  background: #e8dfd0;
+  color: #756b5c;
+}
+
+.race-card:has(.race-new-badge) .race-date {
+  padding-right: 72px;
+}
+
+
+/* v1.4 registration count in race cards */
+
+.race-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.race-name-row .race-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.race-registration-count {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.race-registration-count svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.race-name {
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .race-name-row {
+    gap: 10px;
+  }
+
+  .race-registration-count {
+    font-size: 17px;
+  }
+
+  .race-registration-count svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .race-name {
+    font-size: 17px;
+  }
+}
+
+/* RC Racing Map attribution for external calendar data */
+
+.race-calendar-attribution,
+.map-disclaimer {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 4px 8px;
+  border: 1px solid rgba(222, 214, 202, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.88);
+  color: rgba(31, 29, 26, 0.72);
+  font-size: 11px;
+  line-height: 1.2;
+  box-shadow: 0 4px 14px rgba(31, 29, 26, 0.10);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.race-calendar-attribution a,
+.map-disclaimer a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.race-calendar-attribution a:hover,
+.race-calendar-attribution a:focus-visible,
+.map-disclaimer a:hover,
+.map-disclaimer a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .race-calendar-attribution,
+  .map-disclaimer {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    max-width: calc(100vw - 24px);
+    white-space: nowrap;
+  }
+}
+
+/* Softer pressed hover state for race cards */
+
+.race-card {
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.race-card.is-clickable:hover,
+.race-card.is-clickable:focus-visible {
+  transform: scale(0.985);
+  border-color: rgba(222, 214, 202, 0.95) !important;
+  box-shadow:
+    0 18px 34px rgba(31, 29, 26, 0.16),
+    0 4px 10px rgba(31, 29, 26, 0.10);
+  outline: none;
+}
+
+.race-card.is-clickable:active {
+  transform: scale(0.972);
+  box-shadow:
+    0 10px 22px rgba(31, 29, 26, 0.18),
+    0 2px 7px rgba(31, 29, 26, 0.12);
+}
+
+
+
+.race-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.race-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.race-panel::-webkit-scrollbar-thumb {
+  background: rgba(31,29,26,.18);
+  border-radius: 999px;
+}
+
+.race-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(31,29,26,.30);
+}
+
+/* v1.5 compact registration filter */
+
+.results-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.results-toolbar .result-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.race-visibility-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.race-visibility-toggle button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #faf7f2;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.race-visibility-toggle button.active {
+  border-color: #4F8A57;
+  background: #eef6ee;
+  color: #4F8A57;
+}
+
+.race-visibility-toggle .race-document-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #4F8A57;
+}
+
+.race-visibility-toggle button.active .race-document-dot {
+  background: #4F8A57;
+}
+
+
+/* Legal page */
+
+.legal-page {
+  width: min(760px, calc(100vw - 32px));
+  margin: 40px auto;
+  padding: 32px;
+  border: 1px solid rgba(222, 214, 202, 0.92);
+  border-radius: 24px;
+  background: rgba(255, 250, 243, 0.96);
+  box-shadow: var(--shadow);
+}
+
+.legal-page h1 {
+  margin: 0 0 28px;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.legal-page h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.legal-page p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.legal-page a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.legal-page a:hover,
+.legal-page a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-section {
+  padding-top: 22px;
+  margin-top: 22px;
+  border-top: 1px solid rgba(222, 214, 202, 0.7);
+}
+
+.legal-section:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.legal-back-link {
+  display: inline-flex;
+  margin-bottom: 22px;
+  color: var(--muted) !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .legal-page {
+    width: calc(100vw - 20px);
+    margin: 10px auto;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .legal-page h1 {
+    font-size: 25px;
+  }
+}
+
+
+/* v1.5 footer */
+
+.map-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,250,243,.94);
+  border-top: 1px solid rgba(222,214,202,.9);
+  font-size: 11px;
+  color: var(--muted);
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+}
+
+.map-footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.map-footer a:hover {
+  text-decoration: underline;
+}
+
+.layout-prototype .leaflet-control-zoom {
+  margin-bottom: 36px !important;
+}
+
+@media (max-width: 860px) {
+  .map-footer {
+    font-size: 10px;
+    gap: 4px;
+    padding: 0 8px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+.legal-body {
+  min-height: 100vh;
+  margin: 0;
+  background: #edf3f4;
+}
+
+.legal-page {
+  position: relative;
+  z-index: 1;
+}
+
+.race-registration-count-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.race-registration-count-link:hover,
+.race-registration-count-link:focus-visible {
+  text-decoration: none;
+}
+
+.registration-count-value {
+  text-decoration: none;
+}
+
+.race-registration-count-link:hover .registration-count-value,
+.race-registration-count-link:focus-visible .registration-count-value {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.registration-count-value .external-arrow {
+  text-decoration: none;
+  margin-left: 1px;
+  font-size: 0.72em;
+  position: relative;
+  top: -0.05em;
+}
+
+
+/* v1.6 venue favorites */
+
+.venue-name-with-favorite {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  max-width: 100%;
+}
+
+.venue-name-with-favorite .venue-link {
+  color: inherit;
+}
+
+.venue-name-with-favorite .venue-link-favorite {
+  color: #b88416 !important;
+}
+
+.venue-favorite-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(31, 29, 26, 0.42);
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(1px);
+}
+
+.venue-favorite-button:hover,
+.venue-favorite-button:focus-visible {
+  color: #b88416;
+  outline: none;
+}
+
+.venue-favorite-button.active {
+  color: #b88416;
+}
+
+.popup-title .venue-name-with-favorite {
+  align-items: center;
+}
+
+.popup-title .venue-favorite-button {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  font-size: 17px;
+  transform: translateY(1px);
+}
+
+.race-venue .venue-name-with-favorite {
+  vertical-align: baseline;
+}
+
+.race-section-divider {
+  margin: 10px 0 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.race-section-divider-favorites {
+  color: #b88416;
+}
+
+/* v1.6 favorite inactive venue marker */
+
+.map-marker-venue-inactive-favorite {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #b88416;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+
+/* map startup */
+#map {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+#map.map-ready {
+  opacity: 1;
+}
+
+/* map startup marker animation */
+#map .map-marker-visual {
+  opacity: 0;
+}
+
+#map.map-ready .map-marker-visual {
+  animation: mapMarkerFadeIn 140ms ease-out both;
+  animation-delay: 70ms;
+}
+
+@keyframes mapMarkerFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
