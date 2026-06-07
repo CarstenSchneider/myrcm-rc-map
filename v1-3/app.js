@@ -1749,7 +1749,7 @@ function updateMarkerAnimationDelays() {
     const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
     if (!visual) return;
 
-    const delay = Math.round(index * 18);
+    const delay = Math.round(index * 5);
 
     visual.style.setProperty("--marker-delay", `${delay}ms`);
   });
