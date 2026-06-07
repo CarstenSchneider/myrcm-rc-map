@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v7-pdf-geocoded-verified";
+const importerVersion = "import-rck-v8-pdf-website";
 
 const sources = [
   {
@@ -520,6 +520,93 @@ function parseAddress(value = "") {
   };
 }
 
+function normalizeWebsiteUrl(value = "") {
+  const cleaned = normalizeInlineText(value)
+    .replace(/[),.;:]+$/g, "")
+    .trim();
+
+  if (!cleaned) return null;
+
+  const withProtocol = /^https?:\/\//i.test(cleaned)
+    ? cleaned
+    : `https://${cleaned}`;
+
+  try {
+    const url = new URL(withProtocol);
+    if (!url.hostname.includes(".")) return null;
+    return url.toString().replace(/\/$/, "");
+  } catch {
+    return null;
+  }
+}
+
+function isIgnoredWebsite(url = "") {
+  const host = (() => {
+    try {
+      return new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+    } catch {
+      return "";
+    }
+  })();
+
+  if (!host) return true;
+
+  return [
+    "rck-solutions.de",
+    "kleinserie.rck-solutions.de",
+    "challenge.rck-solutions.de",
+    "myrcm.ch",
+    "myrcm.de",
+    "dmc-online.com"
+  ].some(domain => host === domain || host.endsWith(`.${domain}`));
+}
+
+function extractWebsiteCandidates(text = "") {
+  const matches = String(text).match(/\b(?:https?:\/\/)?(?:www\.)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(?:\/[^\s]*)?/gi) || [];
+
+  return matches
+    .map(normalizeWebsiteUrl)
+    .filter(Boolean)
+    .filter(url => !isIgnoredWebsite(url));
+}
+
+function extractEmailDomains(text = "") {
+  const matches = String(text).match(/\b[A-Z0-9._%+-]+@([A-Z0-9.-]+\.[A-Z]{2,})\b/gi) || [];
+
+  return matches
+    .map(email => {
+      const domain = email.split("@").pop();
+      return domain ? domain.toLowerCase().replace(/^www\./, "") : null;
+    })
+    .filter(Boolean);
+}
+
+function extractVenueWebsite(text = "") {
+  const compact = compactPdfText(text || "");
+  if (!compact) return null;
+
+  const websiteCandidates = extractWebsiteCandidates(compact);
+  if (!websiteCandidates.length) return null;
+
+  const emailDomains = extractEmailDomains(compact);
+
+  const byEmailDomain = websiteCandidates.find(url => {
+    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+    return emailDomains.some(domain => host === domain || host.endsWith(`.${domain}`));
+  });
+
+  if (byEmailDomain) return byEmailDomain;
+
+  const contactBlockMatch = compact.match(/(?:kontakt|e-mail|email|internet|webseite|website)\s*:?([\s\S]{0,450})/i);
+  if (contactBlockMatch) {
+    const contactCandidate = extractWebsiteCandidates(contactBlockMatch[1])[0];
+    if (contactCandidate) return contactCandidate;
+  }
+
+  return websiteCandidates[0] || null;
+}
+
+
 function parsePdfVenueData(rawText, pdfUrl) {
   const text = compactPdfText(rawText || "");
   if (!text) return null;
@@ -552,8 +639,9 @@ function parsePdfVenueData(rawText, pdfUrl) {
   ]);
 
   const parsedAddress = parseAddress(addressLine);
+  const website = extractVenueWebsite(text);
 
-  if (!organizerName && !venueName && !parsedAddress.fullAddress) return null;
+  if (!organizerName && !venueName && !parsedAddress.fullAddress && !website) return null;
 
   return {
     organizerName: organizerName || null,
@@ -563,6 +651,7 @@ function parsePdfVenueData(rawText, pdfUrl) {
     city: parsedAddress.city,
     country: "DE",
     fullAddress: parsedAddress.fullAddress,
+    website,
     sourcePdf: pdfUrl,
     addressVerifiedFromPdf: Boolean(parsedAddress.fullAddress),
     rawOrganizerVenueLine: organizerVenueLine || null,
@@ -588,6 +677,7 @@ async function enrichFromPdf(race) {
     venueAddress: pdfVenueData.fullAddress || race.venueAddress || null,
     venueCity: pdfVenueData.city || race.venueCity || race.venueLocation,
     venuePostalCode: pdfVenueData.postalCode || race.venuePostalCode || null,
+    venueWebsite: pdfVenueData.website || race.venueWebsite || null,
     addressVerifiedFromPdf: pdfVenueData.addressVerifiedFromPdf
   };
 }
@@ -690,6 +780,7 @@ function makeUnverifiedVenueCandidate(race) {
     rckSeries: race.rckSeries || null,
     rckLocation: location,
     organizerName: pdfData.organizerName || race.organizerName || null,
+    website: pdfData.website || race.venueWebsite || null,
     sourcePdf: pdfData.sourcePdf || null,
     addressVerifiedFromPdf: Boolean(pdfData.addressVerifiedFromPdf),
     verified: false,
@@ -709,6 +800,7 @@ function mergeVenueCandidate(existing, candidate) {
     address: existing.address || candidate.address,
     postalCode: existing.postalCode || candidate.postalCode,
     country: existing.country || candidate.country || "DE",
+    website: existing.website || candidate.website || null,
     lat: existing.lat ?? candidate.lat ?? null,
     lng: existing.lng ?? candidate.lng ?? null,
     sources: Array.from(new Set([...(existing.sources || []), ...(candidate.sources || [])].filter(Boolean))),
@@ -949,6 +1041,7 @@ function mergeRckRace(a, b) {
     classes,
     documents: documents,
     organizerName: b.organizerName || a.organizerName || null,
+    venueWebsite: b.venueWebsite || a.venueWebsite || null,
     venueAddress: b.venueAddress || a.venueAddress || null,
     venueCity: b.venueCity || a.venueCity || null,
     venuePostalCode: b.venuePostalCode || a.venuePostalCode || null,
@@ -1063,6 +1156,7 @@ async function main() {
       venueCity: race.venueCity || race.venueLocation || null,
       venuePostalCode: race.venuePostalCode || null,
       organizerName: race.organizerName || null,
+      venueWebsite: race.venueWebsite || null,
       addressVerifiedFromPdf: Boolean(race.addressVerifiedFromPdf),
       raceId: race.id,
       raceName: race.name,
