@@ -1722,7 +1722,7 @@ input {
 }
 
 #map.map-ready .map-marker-visual {
-  animation: mapMarkerDrop 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: mapMarkerDrop 180ms cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: calc(120ms + var(--marker-delay, 0ms));
 }
 
