@@ -45,7 +45,6 @@ let selectedRange = "2";
 let selectedSeries = "all";
 let showOpenOnly = true;
 let isFilterPanelOpen = false;
-let hasPlayedInitialMarkerAnimation = false;
 const expandedClassRaceIds = new Set();
 
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
@@ -1756,24 +1755,20 @@ function updateMarkerAnimationDelays() {
   });
 }
 
-function playInitialMarkerAnimation() {
-  if (hasPlayedInitialMarkerAnimation) return;
-
-  updateMarkerAnimationDelays();
+function revealMap() {
   document.getElementById("map")?.classList.add("map-ready");
-  hasPlayedInitialMarkerAnimation = true;
 }
 
 function revealMapWhenReady() {
   const mapElement = document.getElementById("map");
 
   map.once("moveend", () => {
-    playInitialMarkerAnimation();
+    revealMap();
   });
 
   window.setTimeout(() => {
     if (mapElement?.classList.contains("map-ready")) return;
-    playInitialMarkerAnimation();
+    revealMap();
   }, 500);
 }
 
