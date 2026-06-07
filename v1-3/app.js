@@ -376,7 +376,21 @@ function isNewRace(race) {
 function newRaceBadgeHtml(race) {
   if (!isNewRace(race)) return "";
 
-  return `<div class="race-new-badge">NEU ${formatShortDate(race.firstSeen)}</div>`;
+  const firstSeen = parseDate(race.firstSeen);
+  const today = todayStart();
+  const ageInDays = Math.floor((today - firstSeen) / 86400000);
+
+  let badgeClass = "race-new-badge-older";
+
+  if (ageInDays === 0) {
+    badgeClass = "race-new-badge-today";
+  } else if (ageInDays === 1) {
+    badgeClass = "race-new-badge-yesterday";
+  } else if (ageInDays === 2) {
+    badgeClass = "race-new-badge-two-days";
+  }
+
+  return `<div class="race-new-badge ${badgeClass}">NEU ${formatShortDate(race.firstSeen)}</div>`;
 }
 
 function registrationStatus(race) {
@@ -1283,7 +1297,7 @@ const markerHtml = hasUpcomingRaces
       <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
       <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
     </div>`
-  : `<div class="${markerClass}"></div>`;
+  : `<div class="${markerClass}" style="background: ${markerColor};"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
