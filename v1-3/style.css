@@ -1691,3 +1691,15 @@ input {
 .race-section-divider-favorites {
   color: #b88416;
 }
+
+/* v1.6 favorite inactive venue marker */
+
+.map-marker-venue-inactive-favorite {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #b88416;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  box-shadow: none;
+}
