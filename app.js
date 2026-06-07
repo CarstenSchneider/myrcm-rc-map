@@ -6,12 +6,32 @@ const seriesFilter = document.getElementById("seriesFilter");
 const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
+const filterToggleButton = document.getElementById("filterToggleButton");
+const activeFilterChips = document.getElementById("activeFilterChips");
+const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
 
-const map = L.map("map", { scrollWheelZoom: true }).setView([52.52, 13.405], 9);
+const map = L.map("map", {
+  scrollWheelZoom: true,
+  zoomControl: false,
+  minZoom: 6
+}).setView([51.8, 11.8], 6);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "&copy; OpenStreetMap"
+map.setMaxBounds([
+  [44.0, -5.0],
+  [59.0, 25.0]
+]);
+
+L.control.zoom({
+  position: "bottomleft"
 }).addTo(map);
+
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19
+  }
+).addTo(map);
 
 let venues = [];
 let races = [];
@@ -19,9 +39,130 @@ let hosts = [];
 let hostsByOrgId = new Map();
 let markers = new Map();
 let activeRaceId = null;
+let activeVenueId = null;
+let pinnedVenueId = null;
 let isSwitchingMarkerPopup = false;
-let selectedRange = "4";
+let selectedRange = "2";
 let selectedSeries = "all";
+let showOpenOnly = true;
+let isFilterPanelOpen = false;
+const expandedClassRaceIds = new Set();
+
+const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
+
+function getFavoriteVenueIds() {
+  try {
+    const raw = localStorage.getItem(favoriteVenueStorageKey);
+    const parsed = JSON.parse(raw || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(Boolean).map(String);
+  } catch {
+    return [];
+  }
+}
+
+function saveFavoriteVenueIds(ids) {
+  const uniqueIds = [...new Set((ids || []).filter(Boolean).map(String))];
+  localStorage.setItem(favoriteVenueStorageKey, JSON.stringify(uniqueIds));
+}
+
+function isFavoriteVenueId(venueId) {
+  if (!venueId) return false;
+  return getFavoriteVenueIds().includes(String(venueId));
+}
+
+function toggleFavoriteVenue(venueId) {
+  if (!venueId) return;
+
+  const id = String(venueId);
+  const favoriteIds = getFavoriteVenueIds();
+
+  if (favoriteIds.includes(id)) {
+    saveFavoriteVenueIds(favoriteIds.filter(item => item !== id));
+  } else {
+    saveFavoriteVenueIds([...favoriteIds, id]);
+  }
+}
+
+function favoriteButtonHtml(venueId, label = "Strecke") {
+  if (!venueId) return "";
+
+  const active = isFavoriteVenueId(venueId);
+  const title = active
+    ? `${label} aus Favoriten entfernen`
+    : `${label} als Favorit markieren`;
+
+  return `<button
+    class="venue-favorite-button${active ? " active" : ""}"
+    type="button"
+    data-favorite-venue-id="${escapeHtml(venueId)}"
+    title="${escapeHtml(title)}"
+    aria-label="${escapeHtml(title)}"
+    aria-pressed="${active ? "true" : "false"}"
+  >${active ? "★" : "☆"}</button>`;
+}
+
+function raceFavoriteVenueId(race) {
+  const venue = venueById(race?.venueId);
+  return venue?.id || null;
+}
+
+function isFavoriteRaceVenue(race) {
+  return isFavoriteVenueId(raceFavoriteVenueId(race));
+}
+
+
+
+function updateAppModeClass() {
+  app.classList.toggle("is-venue-mode", Boolean(activeVenueId));
+}
+
+function updateFilterPanelState() {
+  app.classList.toggle("is-filter-panel-open", isFilterPanelOpen);
+
+  if (!filterToggleButton) return;
+
+  filterToggleButton.setAttribute("aria-expanded", String(isFilterPanelOpen));
+  filterToggleButton.setAttribute(
+    "aria-label",
+    isFilterPanelOpen
+      ? "Suche und Serienfilter schließen"
+      : "Suche und Serienfilter öffnen"
+  );
+}
+
+function renderActiveFilterChips() {
+  if (!activeFilterChips) return;
+
+  const chips = [];
+  const query = searchInput.value.trim();
+
+  if (query) {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="search">
+        ${query}<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
+  if (selectedSeries !== "all") {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="series">
+        ${seriesDisplayName(selectedSeries)}<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
+
+  activeFilterChips.innerHTML = chips.join("");
+  activeFilterChips.classList.toggle("is-empty", chips.length === 0);
+}
+
+function syncFilterUi() {
+  updateFilterPanelState();
+  renderActiveFilterChips();
+}
+
 
 const verifiedVenueAliases = {
   "myrcm-18244": "tsv-mariendorf",
@@ -29,6 +170,136 @@ const verifiedVenueAliases = {
   "myrcm-41404": "marzahn",
   "myrcm-52898": "blankenfelde"
 };
+
+const seriesDisplayNames = {
+  "BTM": "BTM – Berlin Touring Masters",
+  "ETS": "ETS – Euro Touring Series",
+  "Ostmasters": "Ostmasters",
+  "RCK Challenge": "RCK Challenge",
+  "RCK Kleinserie": "RCK Kleinserie",
+  "SK": "SK – Sportkreis",
+  "Tamico Offroad Cup": "Tamico Offroad Cup",
+  "TEC": "TEC – Tamiya Euro Cup",
+  "TOS": "TOS – ToniSport Onroad Series"
+};
+
+const preferredSeriesOrder = [
+  "BTM",
+  "ETS",
+  "Ostmasters",
+  "RCK Challenge",
+  "RCK Kleinserie",
+  "SK",
+  "Tamico Offroad Cup",
+  "TEC",
+  "TOS"
+];
+
+
+function raceDataSource(race) {
+  if (race?.dataSource) return race.dataSource;
+  if (race?.source === "rck" || String(race?.source || "").startsWith("rck-")) return "rck";
+  if (Array.isArray(race?.sources) && race.sources.some(source => String(source).startsWith("rck-"))) return "rck";
+  if (race?.rckSeries) return "rck";
+  return "myrcm";
+}
+
+function isRckRace(race) {
+  return raceDataSource(race) === "rck";
+}
+
+function hasPdfDocument(race) {
+  return Array.isArray(race?.documents) && race.documents.some(document => document?.url);
+}
+
+function isUsefulRckRace(race) {
+  if (!isRckRace(race)) return true;
+  return hasPdfDocument(race);
+}
+
+
+function isRckEventFromMyRcm(race) {
+  const series = raceSeries(race);
+  const text = [
+    race.name,
+    race.title,
+    race.eventName,
+    race.venueName,
+    ...(Array.isArray(race.series) ? race.series : [])
+  ].filter(Boolean).join(" ");
+
+  return (
+    series.includes("RCK Challenge") ||
+    series.includes("RCK Kleinserie") ||
+    /\brck\b/i.test(text)
+  );
+}
+
+function hasLatLng(venue) {
+  return Number.isFinite(Number(venue?.lat)) && Number.isFinite(Number(venue?.lng));
+}
+
+function isUnverifiedVenue(venue) {
+  return venue?.verified === false || venue?.verificationStatus === "standort nicht verifiziert";
+}
+
+function seriesDisplayName(series) {
+  return seriesDisplayNames[series] || series;
+}
+
+function classNameFromRaceClass(item) {
+  if (!item) return "";
+  if (typeof item === "string") return item;
+  if (typeof item === "object") return item.name || item.label || "";
+  return String(item);
+}
+
+function classTagLabel(item) {
+  if (!item) return "";
+  if (typeof item === "object" && item.name) {
+    if (Number.isFinite(item.entries)) return `${item.name} (${item.entries})`;
+    return item.name;
+  }
+  return String(item);
+}
+
+function raceEndDate(race) {
+  return parseDate(race.to || race.from);
+}
+
+function daysBetween(a, b) {
+  return Math.floor((a - b) / 86400000);
+}
+
+function isPastRaceWithinLastYear(race) {
+  const today = todayStart();
+  const end = raceEndDate(race);
+  const ageInDays = daysBetween(today, end);
+  return ageInDays >= 1 && ageInDays <= 365;
+}
+
+function matchesSelectedSeries(race) {
+  return selectedSeries === "all" || raceSeries(race).includes(selectedSeries);
+}
+
+
+function matchesSearchQuery(race) {
+  const query = searchInput.value.trim().toLowerCase();
+  return !query || raceSearchText(race).includes(query);
+}
+
+function recentPastRacesForVenue(venue) {
+  return races
+    .filter(race => isRaceAtVenue(race, venue.id))
+    .filter(isPastRaceWithinLastYear)
+    .filter(matchesSelectedSeries)
+    .filter(matchesSearchQuery)
+    .sort((a, b) => raceEndDate(b) - raceEndDate(a));
+}
+
+function latestPastRaceForVenue(venue) {
+  return recentPastRacesForVenue(venue)[0] || null;
+}
 
 function parseDate(dateString) {
   return new Date(`${dateString}T00:00:00`);
@@ -81,6 +352,48 @@ function formatDate(dateString) {
   }).format(date);
 }
 
+function formatShortDate(dateString) {
+  if (!dateString) return "";
+
+  const date = parseDate(dateString);
+
+  return new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit"
+  }).format(date);
+}
+
+function isNewRace(race) {
+  if (!race.firstSeen) return false;
+
+  const firstSeen = parseDate(race.firstSeen);
+  const today = todayStart();
+  const ageInDays = Math.floor((today - firstSeen) / 86400000);
+
+  return ageInDays >= 0 && ageInDays <= 7;
+}
+
+function newRaceBadgeHtml(race) {
+  if (!isNewRace(race)) return "";
+
+  const firstSeen = parseDate(race.firstSeen);
+  const today = todayStart();
+  const ageInDays = Math.floor((today - firstSeen) / 86400000);
+
+  let badgeClass = "race-new-badge-older";
+
+  if (ageInDays === 0) {
+    badgeClass = "race-new-badge-today";
+  } else if (ageInDays === 1) {
+    badgeClass = "race-new-badge-yesterday";
+  } else if (ageInDays === 2) {
+    badgeClass = "race-new-badge-two-days";
+  }
+
+  return `<div class="race-new-badge ${badgeClass}">NEU ${formatShortDate(race.firstSeen)}</div>`;
+}
+
 function registrationStatus(race) {
   if (race.registrationStatus) return race.registrationStatus;
   if (race.registrationRequiresLogin) return "login_required";
@@ -90,6 +403,11 @@ function registrationStatus(race) {
 function isRegistrationActive(race) {
   const status = registrationStatus(race);
   return status === "open" || status === "login_required";
+}
+
+function matchesRegistrationVisibility(race) {
+  if (!showOpenOnly) return true;
+  return isRegistrationActive(race);
 }
 
 function registrationLabel(race) {
@@ -140,33 +458,6 @@ function registrationLinkHtml(race) {
   return `<a class="race-link race-link-with-status registration-${status}" href="${race.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${registrationDotHtml(race)}MyRCM öffnen ↗</a>`;
 }
 
-function documentLabel(document) {
-  if (!document) return "PDF";
-
-  if (document.type === "announcement") return "Ausschreibung";
-  if (document.type === "rules") return "Reglement";
-  if (document.type === "schedule") return "Zeitplan";
-
-  return document.label && document.label !== "PDF" ? document.label : "PDF";
-}
-
-function documentLinksHtml(race) {
-  if (!Array.isArray(race.documents) || !race.documents.length) {
-    return "";
-  }
-
-  const links = race.documents
-    .filter(document => document && document.url)
-    .map(document => {
-      const label = documentLabel(document);
-      return `<a class="race-document-link" href="${document.url}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">📄 ${label}</a>`;
-    });
-
-  if (!links.length) return "";
-
-  return `<div class="race-documents">${links.join('<span class="race-document-separator">·</span>')}</div>`;
-}
-
 function registrationStatusHtml(race) {
   const status = registrationStatus(race);
 
@@ -193,8 +484,139 @@ function registrationStatusHtml(race) {
   return "";
 }
 
+
+function statusDetailsHtml(race) {
+  return "";
+}
+
 function hasActiveRegistration(venueRaces) {
   return venueRaces.some(isRegistrationActive);
+}
+
+function registrationCount(race) {
+  const candidates = [
+    race.registrationCount,
+    race.registrationsCount,
+    race.registrations,
+    race.entryCount,
+    race.entries,
+    race.participantCount,
+    race.participants,
+    race.nominationCount,
+    race.nominations,
+    race.count
+  ];
+
+  for (const candidate of candidates) {
+    if (candidate === null || candidate === undefined || candidate === "") continue;
+
+    if (typeof candidate === "number" && Number.isFinite(candidate)) {
+      return Math.max(0, candidate);
+    }
+
+    if (typeof candidate === "string") {
+      const match = candidate.replace(/\./g, "").match(/\d+/);
+      if (match) return Math.max(0, Number(match[0]));
+    }
+
+    if (Array.isArray(candidate)) {
+      return candidate.length;
+    }
+  }
+
+  return 0;
+}
+
+function hasRegistrationCount(race) {
+  const candidates = [
+    race.registrationCount,
+    race.registrationsCount,
+    race.registrations,
+    race.entryCount,
+    race.entries,
+    race.participantCount,
+    race.participants,
+    race.nominationCount,
+    race.nominations,
+    race.count
+  ];
+
+  return candidates.some(candidate => {
+    if (candidate === null || candidate === undefined || candidate === "") return false;
+    if (typeof candidate === "number") return Number.isFinite(candidate);
+    if (typeof candidate === "string") return /\d+/.test(candidate);
+    if (Array.isArray(candidate)) return true;
+    return false;
+  });
+}
+
+function registrationCountHtml(race) {
+  const display =
+    race.registrationDisplay ||
+    (hasRegistrationCount(race) ? String(registrationCount(race)) : null);
+
+  if (!display) return "";
+
+  const participantUrl =
+    race.registrationListUrl ||
+    race.url;
+
+  const content = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="7.4" r="4.1"></circle>
+      <path d="M4.5 21c0-4.4 3.2-7.5 7.5-7.5s7.5 3.1 7.5 7.5"></path>
+    </svg>
+    <span class="registration-count-value">${display}<span class="external-arrow">↗</span></span>
+  `;
+
+  if (participantUrl) {
+    return `<a
+      class="race-registration-count race-registration-count-link"
+      href="${escapeHtml(participantUrl)}"
+      target="_blank"
+      rel="noopener"
+      title="Teilnehmer anzeigen"
+      aria-label="Teilnehmer anzeigen: ${escapeHtml(display)} Nennungen"
+      onclick="event.stopPropagation()"
+    >${content}</a>`;
+  }
+
+  return `<div class="race-registration-count" aria-label="${escapeHtml(display)} Nennungen">
+    ${content}
+  </div>`;
+}
+
+function venueRegistrationCount(venueRaces) {
+  return venueRaces.reduce((sum, race) => sum + registrationCount(race), 0);
+}
+
+function markerScaleForRegistrationCount(count) {
+  if (!count) return 0.6;
+  if (count < 5) return 0.6;
+  if (count < 10) return 0.75;
+  if (count < 20) return 0.95;
+  if (count < 40) return 1.15;
+  if (count < 70) return 1.35;
+  if (count < 120) return 1.55;
+  return 1.75;
+}
+
+function markerColorForRegistrationCount(count) {
+  if (count >= 120) return "#1f5f34";
+  if (count >= 70) return "#2d7040";
+  if (count >= 40) return "#3f7f49";
+  if (count >= 20) return "#4F8A57";
+  if (count >= 10) return "#5f9664";
+  return "#6fa875";
+}
+
+function markerFavoriteColorForRegistrationCount(count) {
+  if (count >= 120) return "#8a5f00";
+  if (count >= 70) return "#a17100";
+  if (count >= 40) return "#b88416";
+  if (count >= 20) return "#c9972b";
+  if (count >= 10) return "#d8aa42";
+  return "#e0b65a";
 }
 
 function ensureRegistrationStatusStyles() {
@@ -266,37 +688,6 @@ function ensureRegistrationStatusStyles() {
       background: #4f4a44;
     }
 
-    .race-documents {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 5px;
-      margin-top: 4px;
-      font-size: 14px;
-      line-height: 1.35;
-    }
-
-    .race-document-link {
-      color: var(--link, #006fae);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    .race-document-link:hover,
-    .race-document-link:focus-visible {
-      text-decoration: underline;
-    }
-
-    .race-document-separator {
-      color: var(--muted, #6f6a62);
-    }
-
-    .race-card.registration-closed .race-documents,
-    .race-card.registration-closed .race-document-link,
-    .race-card.registration-closed .race-document-separator {
-      color: rgba(31, 29, 26, 0.58);
-    }
-
     .registration-status {
       display: inline-flex;
       align-items: center;
@@ -332,6 +723,96 @@ function ensureRegistrationStatusStyles() {
       }
     }
 
+    .map-marker-switcher {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .map-marker-switcher .map-marker-open,
+    .map-marker-switcher .map-marker-closed {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .map-marker-open,
+    .map-marker-closed,
+    .map-marker-venue-inactive {
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .map-marker-open *,
+    .map-marker-closed *,
+    .map-marker-venue-inactive * {
+      pointer-events: none;
+    }
+
+    .map-marker-active-replacement {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -88%);
+      z-index: 2;
+    }
+
+    .map-marker-active-replacement-open {
+      background: #5f8f5f !important;
+    }
+
+    .map-marker-active-replacement-closed {
+      background: rgba(31, 29, 26, 0.45) !important;
+    }
+
+    .marker-popup-active .map-marker-switcher .map-marker-open,
+    .marker-popup-active .map-marker-switcher .map-marker-closed {
+      opacity: 0;
+    }
+
+    .marker-popup-active .map-marker-active-replacement {
+      display: block;
+    }
+
+    .map-marker-venue-inactive {
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .map-marker-venue-inactive {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(31, 29, 26, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
+    .map-marker-venue-inactive-favorite {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: #b88416;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
+    .popup-last-race {
+      margin-top: 8px;
+      color: var(--muted, #6f6a62);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .popup-last-race strong {
+      color: var(--ink, #1f1d1a);
+      font-weight: 700;
+    }
+
     .popup-race-static {
       display: block;
       padding: 8px 0;
@@ -360,11 +841,14 @@ function ensureRegistrationStatusStyles() {
 function detectSeries(name) {
   const rules = [
     { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
+    { label: "ETS", re: /euro touring series|\bets\b/i },
+    { label: "Ostmasters", re: /ostmasters/i },
+    { label: "RCK Challenge", re: /rck challenge/i },
+    { label: "RCK Kleinserie", re: /rck kleinserie/i },
+    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf|sportkreis/i },
+    { label: "Tamico Offroad Cup", re: /tamico offroad cup|tamico/i },
     { label: "TEC", re: /tamiya euro cup|\btec\b/i },
-    { label: "Speed Masters", re: /speed masters/i },
-    { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf/i },
-    { label: "Tamico", re: /tamico/i },
-    { label: "Ostmasters", re: /ostmasters/i }
+    { label: "TOS", re: /tonisport onroad series|\btos\b/i }
   ];
 
   return rules
@@ -482,23 +966,176 @@ function raceWebsite(race) {
 
 function venueNameHtml(venue) {
   const website = venueWebsite(venue);
+  const name = escapeHtml(venue?.name || "Unbekannte Strecke");
+  const favorite = favoriteButtonHtml(venue?.id, venue?.name || "Strecke");
+  const favoriteClass = isFavoriteVenueId(venue?.id) ? " venue-link-favorite" : "";
+  const nameHtml = website
+    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
+    : `<span class="venue-link${favoriteClass}">${name}</span>`;
 
-  if (!website) return venue.name;
-
-  return `<a href="${website}" target="_blank" rel="noreferrer">${venue.name}</a>`;
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
 }
 
 function raceVenueNameHtml(race) {
-  const name = venueDisplayName(race);
+  const name = escapeHtml(venueDisplayName(race));
   const website = raceWebsite(race);
+  const venueId = raceFavoriteVenueId(race);
+  const favorite = favoriteButtonHtml(venueId, venueDisplayName(race));
+  const favoriteClass = isFavoriteVenueId(venueId) ? " venue-link-favorite" : "";
+  const nameHtml = website
+    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
+    : `<span class="venue-link${favoriteClass}">${name}</span>`;
 
-  if (!website) return name;
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
+}
 
-  return `<a href="${website}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`;
+function escapeHtml(value = "") {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function documentRole(document = {}, index = 0, documents = []) {
+  const text = [
+    document.type,
+    document.label,
+    document.sourceLabel,
+    document.fileName,
+    document.url
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  if (
+    document.type === "announcement" ||
+    text.includes("ausschreibung") ||
+    text.includes("announcement") ||
+    text.includes("invitation")
+  ) {
+    return "announcement";
+  }
+
+  if (
+    document.type === "rules" ||
+    text.includes("reglement") ||
+    text.includes("regel") ||
+    text.includes("rules") ||
+    text.includes("technical")
+  ) {
+    return "rules";
+  }
+
+  if (
+    document.type === "schedule" ||
+    text.includes("zeitplan") ||
+    text.includes("schedule") ||
+    text.includes("timetable") ||
+    text.includes("ablauf")
+  ) {
+    return "schedule";
+  }
+
+  const unknownDocuments = documents.filter(item => {
+    const itemText = [item.type, item.label, item.sourceLabel, item.fileName, item.url]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    return !itemText.includes("ausschreibung") &&
+      !itemText.includes("announcement") &&
+      !itemText.includes("invitation") &&
+      !itemText.includes("tender") &&
+      !itemText.includes("reglement") &&
+      !itemText.includes("regel") &&
+      !itemText.includes("rules") &&
+      !itemText.includes("rule") &&
+      !itemText.includes("technical");
+  });
+
+  /*
+    Some MyRCM PDFs arrive only as type "document" with label "PDF".
+    MyRCM often lists these as:
+    Rule first, Tender second.
+    For those ambiguous pairs we keep both links by mapping:
+    first unknown PDF  -> Reglement
+    second unknown PDF -> Ausschreibung
+  */
+  if (unknownDocuments.length > 1) {
+    const unknownIndex = unknownDocuments.indexOf(document);
+    if (unknownIndex === 0) return "rules";
+    if (unknownIndex === 1) return "announcement";
+  }
+
+  if (
+    text.includes("lauf") ||
+    text.includes("cup") ||
+    text.includes("rennen") ||
+    /\d{2}\.\d{2}\.\d{4}/.test(text) ||
+    /\d{4}-\d{2}-\d{2}/.test(text)
+  ) {
+    return "announcement";
+  }
+
+  return "announcement";
+}
+
+function rckEntryListUrl(race) {
+  return race.entryListUrl || race.nennlisteUrl || race.nominationListUrl || race.registrationListUrl || null;
+}
+
+function documentLinksHtml(race) {
+  const documents = Array.isArray(race.documents) ? race.documents : [];
+
+  const announcement = documents.find((document, index) =>
+    document?.url && documentRole(document, index, documents) === "announcement"
+  );
+
+  const rules = documents.find((document, index) =>
+    document?.url && documentRole(document, index, documents) === "rules"
+  );
+
+  const status = registrationStatus(race);
+
+  let registrationItem = "";
+
+  if (status === "closed") {
+    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
+        <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
+        Nennung geschlossen
+      </span>`;
+  } else if (status === "upcoming") {
+    registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
+        <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
+        ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
+      </span>`;
+  } else if (race.url) {
+    registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
+        <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
+        Nennung ↗
+      </a>`;
+  }
+
+  const documentItems = [];
+
+  if (announcement?.url) {
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Ausschreibung ↗</a>`);
+  }
+
+  if (rules?.url && rules.url !== announcement?.url) {
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
+  }
+
+  return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
+}
+
+function hasMappableVenue(race) {
+  const venue = venueById(race.venueId);
+  return Boolean(venue && hasLatLng(venue));
 }
 
 function hasVerifiedVenue(race) {
-  return Boolean(venueById(race.venueId));
+  const venue = venueById(race.venueId);
+  return Boolean(venue && hasLatLng(venue) && !isUnverifiedVenue(venue));
 }
 
 function venueDisplayName(race) {
@@ -525,7 +1162,7 @@ function raceSearchText(race) {
     venue?.city,
     venue?.location,
     ...(raceSeries(race) || []),
-    ...(Array.isArray(race.classes) ? race.classes : [])
+    ...(Array.isArray(race.classes) ? race.classes.map(classNameFromRaceClass) : [])
   ]
     .filter(Boolean)
     .join(" ")
@@ -560,78 +1197,264 @@ function filteredRaces() {
   const query = searchInput.value.trim().toLowerCase();
 
   return races
+    .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
-    .filter(race => selectedSeries === "all" || raceSeries(race).includes(selectedSeries))
+    .filter(matchesRegistrationVisibility)
+    .filter(matchesSelectedSeries)
     .filter(race => !query || raceSearchText(race).includes(query))
-    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      const favoriteOrder = Number(isFavoriteRaceVenue(b)) - Number(isFavoriteRaceVenue(a));
+      if (favoriteOrder !== 0) return favoriteOrder;
+      return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
+    });
 }
 
-function buildPopup(venue, venueRaces) {
-  const items = venueRaces
-    .slice(0, 8)
-    .map(race => `
-      <div class="popup-race popup-race-static">
-        <span class="popup-race-date">${formatDateRange(race.from, race.to)}</span>
-        <span class="popup-race-name">${race.name}</span>
-        ${
-          registrationStatus(race) !== "open"
-            ? `<span class="popup-registration-status">${registrationLabel(race)}</span>`
-            : ""
-        }
-      </div>
-    `)
-    .join("");
+function googleMapsRouteUrl(venue) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
+}
+
+function buildPopup(venue, venueRaces, latestPastRace = null) {
+  const raceLine = venueRaces.length
+    ? `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}`
+    : "Keine kommenden Rennen";
+
+  const lastRaceHtml =
+    !venueRaces.length && latestPastRace
+      ? `<div class="popup-last-race">
+          Zuletzt:<br>
+          <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong><br>
+          ${escapeHtml(latestPastRace.name)}
+        </div>`
+      : "";
 
   return `
     <div class="popup-title">${venueNameHtml(venue)}</div>
-    ${items || "<div class='popup-race'>Keine Rennen im aktuellen Filter.</div>"}
+    <div class="popup-race">
+      ${raceLine}
+    </div>
+    ${lastRaceHtml}
+    <div class="popup-race">
+      <a href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer">
+        Route planen ↗
+      </a>
+    </div>
   `;
 }
 
-function updateMarkers(list) {
+function resetVenueSelection() {
+  if (!activeVenueId && !activeRaceId) return;
+
+  pinnedVenueId = null;
+  activeVenueId = null;
+  activeRaceId = null;
+  updateAppModeClass();
+  renderList(filteredRaces());
+}
+
+function updateMarkers(list, shouldFitBounds = true) {
   markers.forEach(marker => marker.remove());
   markers.clear();
 
   const bounds = [];
 
   venues.forEach(venue => {
+    if (!hasLatLng(venue)) return;
+
     const venueRaces = list.filter(race => isRaceAtVenue(race, venue.id));
+    const latestPastRace = latestPastRaceForVenue(venue);
 
-    if (!venueRaces.length) return;
+    if (!venueRaces.length && !latestPastRace) return;
 
-    const marker = L.marker([venue.lat, venue.lng]).addTo(map);
+    const hasUpcomingRaces = venueRaces.length > 0;
+    const markerClass = hasUpcomingRaces
+      ? (hasActiveRegistration(venueRaces) ? "map-marker-open" : "map-marker-closed")
+      : "map-marker-venue-inactive";
 
-    if (!hasActiveRegistration(venueRaces)) {
-      marker.setOpacity(0.45);
-    }
+    const registrationTotal = venueRegistrationCount(venueRaces);
+    const markerScale = hasUpcomingRaces
+      ? markerScaleForRegistrationCount(registrationTotal)
+      : 1;
 
-    marker.bindPopup(buildPopup(venue, venueRaces));
+    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 12;
+    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 12;
 
-    marker.on("popupclose", () => {
-      if (isSwitchingMarkerPopup) return;
+    const markerAnchor = hasUpcomingRaces
+      ? [Math.round(markerWidth / 2), markerHeight]
+      : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
 
-      activeRaceId = null;
-      renderList(filteredRaces());
+    const replacementClass = hasActiveRegistration(venueRaces)
+      ? "map-marker-active-replacement-open"
+      : "map-marker-active-replacement-closed";
+
+    const isFavoriteVenue = isFavoriteVenueId(venue.id);
+
+let markerColor = isFavoriteVenue
+  ? markerFavoriteColorForRegistrationCount(registrationTotal)
+  : hasActiveRegistration(venueRaces)
+    ? markerColorForRegistrationCount(registrationTotal)
+    : "rgba(31, 29, 26, 0.55)";
+
+if (!hasUpcomingRaces && isFavoriteVenue) {
+  markerColor = "#b88416";
+}
+
+const markerSvg = encodeURIComponent(`
+  <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#F4F1EC" stroke-width="1"/>
+  </svg>
+`);
+
+const inactiveClass = isFavoriteVenue
+  ? "map-marker-venue-inactive-favorite"
+  : "map-marker-venue-inactive";
+
+const markerHtml = hasUpcomingRaces
+  ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
+      <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
+      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
+    </div>`
+  : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
+
+    const marker = L.marker(
+      [venue.lat, venue.lng],
+      {
+        icon: L.divIcon({
+          className: "",
+          html: markerHtml,
+          iconSize: [markerWidth, markerHeight],
+          iconAnchor: markerAnchor
+        })
+      }
+    ).addTo(map);
+
+
+    let hoverTimer = null;
+    let isPopupPinned = false;
+    
+const popupOffset = hasUpcomingRaces
+  ? [0, -8]
+  : [0, -4];
+
+    marker.bindPopup(
+      buildPopup(venue, venueRaces, latestPastRace),
+      {
+        offset: popupOffset
+      }
+    );
+
+    marker.on("mouseover", () => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
+
+      if (pinnedVenueId && pinnedVenueId !== venue.id) return;
+
+      clearTimeout(hoverTimer);
+
+      if (!isPopupPinned) {
+        marker.openPopup();
+      }
+    });
+
+    marker.on("mouseout", () => {
+      if (window.matchMedia("(pointer: coarse)").matches) return;
+
+      if (pinnedVenueId && pinnedVenueId !== venue.id) return;
+
+      clearTimeout(hoverTimer);
+
+      hoverTimer = window.setTimeout(() => {
+        if (!isPopupPinned) {
+          marker.closePopup();
+        }
+      }, 350);
+    });
+
+    marker.on("popupopen", () => {
+
+      marker.getElement()?.classList.add("marker-popup-active");
+      
+      const popupElement = marker.getPopup()?.getElement();
+      if (!popupElement) return;
+
+      popupElement.addEventListener("mouseenter", () => {
+        clearTimeout(hoverTimer);
+      });
+
+      popupElement.addEventListener("mouseleave", () => {
+        if (window.matchMedia("(pointer: coarse)").matches) return;
+        if (isPopupPinned) return;
+        if (pinnedVenueId && pinnedVenueId !== venue.id) return;
+
+        clearTimeout(hoverTimer);
+        hoverTimer = window.setTimeout(() => {
+          marker.closePopup();
+        }, 150);
+      });
+
+      popupElement.addEventListener("click", event => {
+        if (
+          event.target.closest("a") ||
+          event.target.closest("[data-favorite-venue-id]") ||
+          event.target.closest(".leaflet-popup-close-button")
+        ) {
+          return;
+        }
+
+        isPopupPinned = true;
+        pinnedVenueId = venue.id;
+        activeVenueId = venue.id;
+        activeRaceId = null;
+        updateAppModeClass();
+
+        if (hasUpcomingRaces) {
+          renderList(venueRaces);
+          resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+        } else {
+          renderList([]);
+          resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+        }
+      });
     });
     
+    marker.on("popupclose", () => {
+
+      marker.getElement()?.classList.remove("marker-popup-active");
+      
+      if (isSwitchingMarkerPopup) return;
+
+      isPopupPinned = false;
+
+      if (activeVenueId === venue.id && pinnedVenueId !== venue.id) {
+        resetVenueSelection();
+      }
+    });
+
     marker.on("click", event => {
       if (event.originalEvent) {
         L.DomEvent.stopPropagation(event.originalEvent);
       }
 
       isSwitchingMarkerPopup = true;
-
+      isPopupPinned = true;
       markers.forEach(otherMarker => {
         if (otherMarker !== marker) {
           otherMarker.closePopup();
         }
       });
 
-      activeRaceId = venueRaces[0]?.id || null;
-      renderList(venueRaces);
-      resultLine.textContent = `${venueRaces.length} Rennen an dieser Strecke`;
+      pinnedVenueId = venue.id;
+      activeVenueId = venue.id;
+      activeRaceId = null;
+      updateAppModeClass();
 
-      marker.setPopupContent(buildPopup(venue, venueRaces));
+      if (hasUpcomingRaces) {
+        renderList(venueRaces);
+        resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+      } else {
+        renderList([]);
+        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+      }
+
+      marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
       marker.openPopup();
 
       window.setTimeout(() => {
@@ -647,11 +1470,21 @@ function updateMarkers(list) {
     map.setView(bounds[0], 12);
   }
 
-  if (bounds.length > 1) {
-    map.fitBounds(bounds, { padding: [40, 40] });
-  }
-}
+if (shouldFitBounds && bounds.length > 1) {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
 
+  map.fitBounds(bounds, isMobile
+    ? {
+        paddingTopLeft: [32, 120],
+        paddingBottomRight: [32, 360]
+      }
+    : {
+        paddingTopLeft: [40, 40],
+        paddingBottomRight: [180, 40]
+      }
+  );
+}
+}
 
 function scrollToRaceCard(raceId) {
   const card = raceList.querySelector(`[data-race-id="${CSS.escape(raceId)}"]`);
@@ -685,7 +1518,7 @@ function selectRaceFromPopup(raceId) {
   if (!marker) return;
 
   const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
-  marker.setPopupContent(buildPopup(venue, venueRaces));
+  marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRaceForVenue(venue)));
   marker.openPopup();
 }
 
@@ -693,20 +1526,24 @@ function focusRace(race) {
   const venue = venueById(race.venueId);
   if (!venue) return;
 
-  activeRaceId = race.id;
-  renderList(filteredRaces());
-  scrollToRaceCard(race.id);
+  activeVenueId = venue.id;
+  activeRaceId = null;
+  updateAppModeClass();
+
+  const baseList = filteredRaces();
+  const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
+
+  renderList(venueList);
+  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
 
   map.setView([venue.lat, venue.lng], 12);
 
   const marker = markers.get(venue.id);
   if (marker) {
-    const venueRaces = filteredRaces().filter(item => isRaceAtVenue(item, venue.id));
-    marker.setPopupContent(buildPopup(venue, venueRaces));
+    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
     marker.openPopup();
   }
 }
-
 function renderList(list) {
   resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
   raceList.innerHTML = "";
@@ -716,51 +1553,103 @@ function renderList(list) {
     return;
   }
 
+  const hasFavoriteRaces = list.some(isFavoriteRaceVenue);
+  const hasNormalRaces = list.some(race => !isFavoriteRaceVenue(race));
+  const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
+  let didRenderFavoriteDivider = false;
+  let didRenderNormalDivider = false;
+
   for (const race of list) {
+    const isFavorite = isFavoriteRaceVenue(race);
+
+    if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
+      const divider = document.createElement("div");
+      divider.className = "race-section-divider race-section-divider-favorites";
+      divider.textContent = "★ Favorisierte Strecken";
+      raceList.appendChild(divider);
+      didRenderFavoriteDivider = true;
+    }
+
+    if (showSectionDividers && !isFavorite && !didRenderNormalDivider) {
+      const divider = document.createElement("div");
+      divider.className = "race-section-divider";
+      divider.textContent = "Weitere Rennen";
+      raceList.appendChild(divider);
+      didRenderNormalDivider = true;
+    }
+
     const series = raceSeries(race);
     const card = document.createElement("article");
 
-    card.className = `race-card registration-${registrationStatus(race)}${hasVerifiedVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
+    card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}${hasMappableVenue(race) ? " is-clickable" : ""}${race.id === activeRaceId ? " active" : ""}`;
     card.dataset.raceId = race.id;
     card.tabIndex = 0;
 
     card.innerHTML = `
+      ${newRaceBadgeHtml(race)}
       <div class="race-card-main">
         <div class="race-card-header">
           <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name">${race.name}</div>
+          <div class="race-name-row">
+            <div class="race-name">${race.name}</div>
+            ${registrationCountHtml(race)}
+          </div>
 
           <div class="race-tags race-series-tags">
             ${series.map(item => `<span class="tag">${item}</span>`).join("")}
             ${
-              !hasVerifiedVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
-                : ""
+              !hasMappableVenue(race)
+                ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
+                : !hasVerifiedVenue(race)
+                  ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
+                  : ""
             }
           </div>
         </div>
 
         <div class="race-card-meta">
           <div class="race-venue">${raceVenueNameHtml(race)}</div>
-          ${registrationLinkHtml(race)}
           ${documentLinksHtml(race)}
-          ${registrationStatusHtml(race)}
+          ${statusDetailsHtml(race)}
         </div>
       </div>
 
       ${
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
-              ${race.classes.map(item => `<span class="tag tag-class">${item}</span>`).join("")}
+              ${
+                (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
+                  .map(item => `<span class="tag tag-class">${escapeHtml(classTagLabel(item))}</span>`)
+                  .join("")
+              }
+              ${
+                race.classes.length > 6
+                  ? `<button class="tag tag-class tag-class-toggle"
+                      type="button"
+                      data-class-toggle="${race.id}"
+                      aria-expanded="${expandedClassRaceIds.has(race.id) ? "true" : "false"}">
+                      ${
+                        expandedClassRaceIds.has(race.id)
+                          ? "weniger anzeigen"
+                          : `+${race.classes.length - 4} weitere`
+                      }
+                    </button>`
+                  : ""
+              }
             </div>`
           : ""
       }
     `;
 
-    if (hasVerifiedVenue(race)) {
-      card.addEventListener("click", () => focusRace(race));
+    if (hasMappableVenue(race)) {
+      card.addEventListener("click", event => {
+        if (event.target.closest("[data-class-toggle]")) return;
+        if (event.target.closest("[data-favorite-venue-id]")) return;
+        focusRace(race);
+      });
 
       card.addEventListener("keydown", event => {
+        if (event.target.closest("[data-favorite-venue-id]")) return;
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           focusRace(race);
@@ -770,7 +1659,57 @@ function renderList(list) {
 
     raceList.appendChild(card);
   }
+
 }
+
+function toggleClassList(raceId) {
+  if (expandedClassRaceIds.has(raceId)) {
+    expandedClassRaceIds.delete(raceId);
+  } else {
+    expandedClassRaceIds.add(raceId);
+  }
+
+  if (activeVenueId) {
+    const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
+    renderList(venueList);
+    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    return;
+  }
+
+  renderList(filteredRaces());
+}
+
+document.addEventListener("click", event => {
+  const favoriteButton = event.target.closest("[data-favorite-venue-id]");
+  if (!favoriteButton) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  toggleFavoriteVenue(favoriteButton.dataset.favoriteVenueId);
+
+  const list = filteredRaces();
+  updateMarkers(list, false);
+
+  if (activeVenueId) {
+    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+    renderList(venueList);
+    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  } else {
+    renderList(list);
+    resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+  }
+});
+
+raceList.addEventListener("click", event => {
+  const button = event.target.closest("[data-class-toggle]");
+  if (!button) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  toggleClassList(button.dataset.classToggle);
+});
 
 function populateSeries() {
   const allSeries = new Set();
@@ -781,19 +1720,104 @@ function populateSeries() {
 
   seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
 
-  [...allSeries].sort().forEach(series => {
+  const orderedSeries = [
+    ...preferredSeriesOrder.filter(series => allSeries.has(series)),
+    ...[...allSeries].filter(series => !preferredSeriesOrder.includes(series)).sort()
+  ];
+
+  orderedSeries.forEach(series => {
     const option = document.createElement("option");
     option.value = series;
-    option.textContent = series;
+    option.textContent = seriesDisplayName(series);
     seriesFilter.appendChild(option);
   });
 }
 
+function updateMarkerAnimationDelays() {
+  const markerItems = Array.from(markers.values())
+    .map(marker => ({
+      marker,
+      y: map.latLngToContainerPoint(marker.getLatLng()).y
+    }))
+    .filter(item => Number.isFinite(item.y));
+
+  if (!markerItems.length) return;
+
+  const minY = Math.min(...markerItems.map(item => item.y));
+  const maxY = Math.max(...markerItems.map(item => item.y));
+  const spanY = Math.max(1, maxY - minY);
+
+  const shuffledItems = markerItems
+    .map(item => ({
+      ...item,
+      sortValue: Math.random()
+    }))
+    .sort((a, b) => a.sortValue - b.sortValue);
+
+  shuffledItems.forEach((item, index) => {
+    const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
+    if (!visual) return;
+
+    const delay = Math.round(index * 5);
+
+    visual.style.setProperty("--marker-delay", `${delay}ms`);
+  });
+}
+
+function revealMap() {
+  document.getElementById("map")?.classList.add("map-ready");
+}
+
+function revealMapWhenReady() {
+  const mapElement = document.getElementById("map");
+
+  map.once("moveend", () => {
+    revealMap();
+  });
+
+  window.setTimeout(() => {
+    if (mapElement?.classList.contains("map-ready")) return;
+    revealMap();
+  }, 500);
+}
+
 function render() {
+  updateAppModeClass();
+  syncFilterUi();
   const list = filteredRaces();
   updateMarkers(list);
-  renderList(list);
-  setTimeout(() => map.invalidateSize(), 0);
+
+  if (activeVenueId) {
+    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+
+    if (venueList.length) {
+      activeRaceId = null;
+      renderList(venueList);
+      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    } else {
+      const venue = venues.find(item => item.id === activeVenueId);
+      const latestPastRace = venue ? latestPastRaceForVenue(venue) : null;
+
+      if (latestPastRace) {
+        activeRaceId = null;
+        renderList([]);
+        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+      } else {
+        activeVenueId = null;
+        activeRaceId = null;
+        updateAppModeClass();
+        renderList(list);
+      }
+    }
+  } else {
+    activeRaceId = null;
+    updateAppModeClass();
+    renderList(list);
+  }
+
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 0);
 }
 
 function setLayout(layout) {
@@ -813,6 +1837,9 @@ rangeFilter.addEventListener("click", event => {
   if (!button) return;
 
   selectedRange = button.dataset.range;
+  activeVenueId = null;
+  activeRaceId = null;
+  updateAppModeClass();
 
   rangeFilter
     .querySelectorAll("button")
@@ -821,29 +1848,139 @@ rangeFilter.addEventListener("click", event => {
   render();
 });
 
+
+if (registrationVisibilityFilter) {
+  registrationVisibilityFilter.addEventListener("click", event => {
+    const button = event.target.closest("button[data-registration-visibility]");
+    if (!button) return;
+
+    showOpenOnly = button.dataset.registrationVisibility === "open";
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+
+    registrationVisibilityFilter
+      .querySelectorAll("button")
+      .forEach(item => item.classList.toggle("active", item === button));
+
+    render();
+  });
+}
+
 seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
+  activeVenueId = null;
+  activeRaceId = null;
+  updateAppModeClass();
   render();
 });
 
-searchInput.addEventListener("input", render);
 
-mapWideButton.addEventListener("click", () => setLayout("map"));
-listWideButton.addEventListener("click", () => setLayout("list"));
+searchInput.addEventListener("input", () => {
+  activeVenueId = null;
+  activeRaceId = null;
+  updateAppModeClass();
+  render();
+});
+
+if (filterToggleButton) {
+  filterToggleButton.addEventListener("click", () => {
+    isFilterPanelOpen = !isFilterPanelOpen;
+    updateFilterPanelState();
+  });
+}
+
+if (activeFilterChips) {
+  activeFilterChips.addEventListener("click", event => {
+    const button = event.target.closest("button[data-clear-filter]");
+    if (!button) return;
+
+    if (button.dataset.clearFilter === "search") {
+      searchInput.value = "";
+    }
+
+    if (button.dataset.clearFilter === "series") {
+      selectedSeries = "all";
+      seriesFilter.value = "all";
+    }
+
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    render();
+  });
+}
+
+map.on("click", () => {
+  resetVenueSelection();
+});
+
+if (mapWideButton && listWideButton) {
+  mapWideButton.addEventListener("click", () => setLayout("map"));
+  listWideButton.addEventListener("click", () => setLayout("list"));
+}
+
+async function fetchJsonOrFallback(url, fallback) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return fallback;
+    return await response.json();
+  } catch {
+    return fallback;
+  }
+}
+
+function normalizeRaceFromSource(race, dataSource) {
+  return {
+    ...race,
+    dataSource
+  };
+}
+
+function mergeVenues(baseVenues, candidateVenues) {
+  const byId = new Map();
+
+  for (const venue of baseVenues) {
+    if (!venue?.id) continue;
+    byId.set(venue.id, venue);
+  }
+
+  for (const venue of candidateVenues) {
+    if (!venue?.id || !hasLatLng(venue) || !venue.addressVerifiedFromPdf) continue;
+    if (byId.has(venue.id)) continue;
+    byId.set(venue.id, venue);
+  }
+
+  return Array.from(byId.values());
+}
 
 async function init() {
   ensureRegistrationStatusStyles();
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, hostsResponse] = await Promise.all([
-    fetch(`venues.json?v=${cacheBuster}`),
-    fetch(`races.json?v=${cacheBuster}`),
-    fetch(`myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
+  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
+    fetch(`../venues.json?v=${cacheBuster}`),
+    fetch(`../races.json?v=${cacheBuster}`),
+    fetchJsonOrFallback(`../rck-races.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`../rck-venue-candidates.json?v=${cacheBuster}`, []),
+    fetch(`../myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
   ]);
 
-  venues = await venuesResponse.json();
-  races = await racesResponse.json();
+  const baseVenues = await venuesResponse.json();
+  const myrcmRaces = await racesResponse.json();
+  const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
+  const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
+
+  venues = mergeVenues(baseVenues, rckVenueCandidates);
+  races = [
+    ...myrcmRaces
+      .filter(race => !isRckEventFromMyRcm(race))
+      .map(race => normalizeRaceFromSource(race, "myrcm")),
+    ...rckRaces
+      .filter(isUsefulRckRace)
+      .map(race => normalizeRaceFromSource(race, "rck"))
+  ];
 
   if (hostsResponse?.ok) {
     hosts = await hostsResponse.json();
@@ -858,7 +1995,14 @@ async function init() {
   );
 
   populateSeries();
-  setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
+
+  if (mapWideButton && listWideButton) {
+    setLayout(localStorage.getItem("rcRaceMapLayout") || "map");
+  }
+
+  syncFilterUi();
+
+  revealMapWhenReady();
   render();
 }
 
