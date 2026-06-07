@@ -1283,7 +1283,7 @@ let markerColor = isFavoriteVenue
     : "rgba(31, 29, 26, 0.55)";
 
 if (!hasUpcomingRaces && isFavoriteVenue) {
-  markerColor = "#c7ae80";
+  markerColor = "#b88416";
 }
 
 const markerSvg = encodeURIComponent(`
@@ -1310,6 +1310,10 @@ const markerHtml = hasUpcomingRaces
         })
       }
     ).addTo(map);
+
+    if (isFavoriteVenue) {
+      marker.setZIndexOffset(1000);
+    }
 
     let hoverTimer = null;
     let isPopupPinned = false;
