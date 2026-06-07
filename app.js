@@ -854,11 +854,24 @@ function raceSeries(race) {
   return detectSeries(race.name);
 }
 
+function venueIdsForMatching(venue) {
+  return [
+    venue?.id,
+    ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
+  ]
+    .filter(Boolean)
+    .map(String);
+}
+
 function venueById(id) {
   if (!id) return null;
 
+  const lookupId = String(id);
+
   return venues.find(venue => {
-    return id === venue.id || id.startsWith(`${venue.id}-`);
+    return venueIdsForMatching(venue).some(matchId =>
+      lookupId === matchId || lookupId.startsWith(`${matchId}-`)
+    );
   }) || null;
 }
 
@@ -1137,11 +1150,16 @@ function raceSearchText(race) {
 }
 
 function isRaceAtVenue(race, venueId) {
-  if (!race.venueId) return false;
+  if (!race.venueId || !venueId) return false;
 
-  if (race.venueId === venueId) return true;
+  const venue = venueById(venueId);
+  if (!venue) return false;
 
-  return race.venueId.startsWith(`${venueId}-`);
+  const raceVenueId = String(race.venueId);
+
+  return venueIdsForMatching(venue).some(matchId =>
+    raceVenueId === matchId || raceVenueId.startsWith(`${matchId}-`)
+  );
 }
 
 function isInSelectedRange(race) {
