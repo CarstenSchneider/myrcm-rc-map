@@ -31,4 +31,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update races from MyRCM
-          file_pattern: races.json
+          file_pattern: |
+          races.json
+          hosts.json
+          venue-unmatched.json
