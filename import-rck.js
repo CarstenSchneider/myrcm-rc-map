@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v10-stable-host-venue-website";
+const importerVersion = "import-rck-v11-pdf-venue-address-priority";
 
 const sources = [
   {
@@ -329,10 +329,43 @@ function matchVenueByLocation(location, venues) {
   return null;
 }
 
+function hasConcretePdfVenueData(pdfData = {}) {
+  return Boolean(
+    pdfData?.venueName &&
+    pdfData?.addressVerifiedFromPdf &&
+    (pdfData?.address || pdfData?.postalCode || pdfData?.city)
+  );
+}
+
+function hasExactAddressMatch(pdfData = {}, venue = {}) {
+  const pdfAddress = normalizeKey(pdfData.address || "");
+  const venueAddress = normalizeKey(venue.address || venue.venueAddress || "");
+
+  if (!pdfAddress || !venueAddress) return false;
+
+  return venueAddress.includes(pdfAddress) || pdfAddress.includes(venueAddress);
+}
+
+function isConfidentConcretePdfVenueMatch(pdfData = {}, venue = {}) {
+  if (!hasConcretePdfVenueData(pdfData) || !venue) return false;
+
+  if (hasExactPostalCodeMatch(pdfData, venue) && hasExactAddressMatch(pdfData, venue)) return true;
+
+  if (hasExactCityMatch(pdfData, venue) && hasExactAddressMatch(pdfData, venue)) return true;
+
+  if (hasExactPostalCodeMatch(pdfData, venue) && hasExactVenueNameMatch(pdfData, venue)) return true;
+
+  return false;
+}
+
 function matchVenueByPdfData(pdfData, venues) {
   if (!pdfData) return null;
 
-  const strictMatches = venues.filter(venue => isConfidentPdfVenueMatch(pdfData, venue));
+  const strictMatches = venues.filter(venue =>
+    hasConcretePdfVenueData(pdfData)
+      ? isConfidentConcretePdfVenueMatch(pdfData, venue)
+      : isConfidentPdfVenueMatch(pdfData, venue)
+  );
 
   if (strictMatches.length === 1) return strictMatches[0];
 
@@ -340,11 +373,18 @@ function matchVenueByPdfData(pdfData, venues) {
     const exactName = strictMatches.find(venue => hasExactVenueNameMatch(pdfData, venue));
     if (exactName) return exactName;
 
+    const exactAddress = strictMatches.find(venue => hasExactAddressMatch(pdfData, venue));
+    if (exactAddress) return exactAddress;
+
     const exactCity = strictMatches.find(venue => hasExactCityMatch(pdfData, venue));
     if (exactCity) return exactCity;
   }
 
   return null;
+}
+
+function shouldUseLocationMatch(race = {}) {
+  return !hasConcretePdfVenueData(race.pdfVenueData);
 }
 
 function documentTypeFromText(value = "") {
@@ -979,7 +1019,9 @@ async function buildVenueCandidates(races, venues) {
 
   for (const race of races) {
     const pdfMatch = matchVenueByPdfData(race.pdfVenueData, allVenues);
-    const locationMatch = matchVenueByLocation(race.rckLocation, allVenues);
+    const locationMatch = shouldUseLocationMatch(race)
+      ? matchVenueByLocation(race.rckLocation, allVenues)
+      : null;
     const matched = pdfMatch || locationMatch;
 
     if (matched) {
