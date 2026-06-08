@@ -1,38 +1,314 @@
 [
   {
-    "id": "myrcm-18244",
+    "id": "tsv-mariendorf-rc-racing",
     "name": "TSV Mariendorf RC Racing",
     "city": "Berlin",
     "lat": 52.410703,
     "lng": 13.321052,
-    "hostIds": ["tsv-mariendorf"],
-    "source": "legacy-confirmed"
+    "hostIds": [
+      "tsv-mariendorf"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "18244",
+    "aliases": [
+      "tsv-mariendorf"
+    ]
   },
   {
-    "id": "myrcm-45925",
+    "id": "rc-speedracer-bernau",
     "name": "RC Speedracer Bernau",
     "city": "Bernau",
     "lat": 52.6975418,
     "lng": 13.6211917,
-    "hostIds": ["rc-speedracer-bernau"],
-    "source": "legacy-confirmed"
+    "hostIds": [
+      "rc-speedracer-bernau"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "45925",
+    "aliases": [
+      "bernau"
+    ]
   },
   {
-    "id": "myrcm-41404",
+    "id": "marzahner-racing-club-e-v",
     "name": "Marzahner Racing Club e.V.",
     "city": "Berlin-Marzahn",
     "lat": 52.53875196434322,
     "lng": 13.561567229887286,
-    "hostIds": ["marzahner-racing-club"],
-    "source": "legacy-confirmed"
+    "hostIds": [
+      "marzahner-racing-club"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "41404",
+    "aliases": [
+      "marzahn"
+    ]
   },
   {
-    "id": "myrcm-52898",
+    "id": "burning-wheels-blankenfelde",
     "name": "Burning Wheels Blankenfelde",
     "city": "Blankenfelde",
     "lat": 52.32099365980667,
     "lng": 13.40860882307241,
-    "hostIds": ["burning-wheels-blankenfelde"],
-    "source": "legacy-confirmed"
+    "hostIds": [
+      "burning-wheels-blankenfelde"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "52898",
+    "aliases": [
+      "blankenfelde"
+    ]
+  },
+  {
+    "id": "mrc-mannheim-e-v",
+    "name": "MRC Mannheim e.V.",
+    "city": "Mannheim",
+    "lat": 49.48747754217388,
+    "lng": 8.504221524425674,
+    "hostIds": [
+      "myrcm-39671"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "39671"
+  },
+  {
+    "id": "amc-hildesheim-e-v",
+    "name": "AMC Hildesheim e.V.",
+    "city": "Hildesheim",
+    "lat": 52.15720104253146,
+    "lng": 9.930734865467414,
+    "hostIds": [
+      "amc-hildesheim-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "33"
+  },
+  {
+    "id": "amc-lahntal-e-v",
+    "name": "AMC Lahntal e.V.",
+    "city": "Solms",
+    "lat": 50.57298785101659,
+    "lng": 8.539485269537407,
+    "hostIds": [
+      "amc-lahntal-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "19597"
+  },
+  {
+    "id": "amc-langenfeld-e-v",
+    "name": "AMC Langenfeld e.V.",
+    "city": "Solingen",
+    "lat": 51.11124440703488,
+    "lng": 6.9254506669797475,
+    "hostIds": [
+      "amc-langenfeld-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "6025"
+  },
+  {
+    "id": "amc-magdeburg-e-v",
+    "name": "AMC Magdeburg e.V.",
+    "city": "Magdeburg",
+    "lat": 52.089630528745495,
+    "lng": 11.557263291516346,
+    "hostIds": [
+      "amc-magdeburg-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "44208"
+  },
+  {
+    "id": "amc-saarbruecken-e-v",
+    "name": "AMC Saarbrücken e.V.",
+    "city": "Saarbrücken",
+    "lat": 49.25494432605648,
+    "lng": 7.001039730657222,
+    "hostIds": [
+      "amc-saarbrucken-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "7103"
+  },
+  {
+    "id": "amc-senftenberg-e-v",
+    "name": "AMC Senftenberg e.V.",
+    "city": "Senftenberg",
+    "lat": 51.513511017262914,
+    "lng": 13.997624485710512,
+    "hostIds": [
+      "amc-senftenberg-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "58267"
+  },
+  {
+    "id": "amc-sonthofen-e-v",
+    "name": "AMC Sonthofen e.V.",
+    "city": "Immenstadt",
+    "lat": 47.56238610077959,
+    "lng": 10.21998396888581,
+    "hostIds": [
+      "amc-sonthofen-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "4006"
+  },
+  {
+    "id": "amc-hamm-e-v",
+    "name": "amc-Hamm e.V.",
+    "city": "Bönen",
+    "lat": 51.682030657927996,
+    "lng": 7.9324199858423805,
+    "hostIds": [
+      "amc-hamm-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "7771"
+  },
+  {
+    "id": "amc-muehlau-e-v",
+    "name": "AMC-Mühlau e.V.",
+    "city": "Mühlau",
+    "lat": 50.90067043142882,
+    "lng": 12.768212160800493,
+    "hostIds": [
+      "amc-muhlau-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "82"
+  },
+  {
+    "id": "amsc-augsburg-e-v",
+    "name": "AMSC Augsburg e. V.",
+    "city": "Dasing",
+    "lat": 48.403917527342564,
+    "lng": 11.077982831882666,
+    "hostIds": [
+      "amsc-augsburg-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "36"
+  },
+  {
+    "id": "amsc-herne-e-v",
+    "name": "AMSC-Herne e.V.",
+    "city": "Bochum",
+    "lat": 51.51452313992984,
+    "lng": 7.169385692502446,
+    "hostIds": [
+      "amsc-herne-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "29065"
+  },
+  {
+    "id": "asc-celle-e-v",
+    "name": "ASC Celle e.V.",
+    "city": "Celle",
+    "lat": 52.597671730560705,
+    "lng": 10.051027925236115,
+    "hostIds": [
+      "asc-celle-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "26821"
+  },
+  {
+    "id": "asc-potsdam-e-v",
+    "name": "ASC Potsdam e.V.",
+    "city": "Potsdam",
+    "lat": 52.309760094922,
+    "lng": 13.447708353987874,
+    "hostIds": [
+      "asc-potsdam-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "26596"
+  },
+  {
+    "id": "automodellclub-meissen-e-v",
+    "name": "Automodellclub Meißen e.V.",
+    "city": "Nossen",
+    "lat": 51.183209912703695,
+    "lng": 13.494275375841397,
+    "hostIds": [
+      "automodellclub-mei-en-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "861"
+  },
+  {
+    "id": "breitenfelder-sportverein-von-1924-e-v",
+    "name": "Breitenfelder Sportverein von 1924 e.V.",
+    "city": "Breitenfelde",
+    "lat": 53.606169364621394,
+    "lng": 10.628400444902876,
+    "hostIds": [
+      "breitenfelder-sportverein-von-1924-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "64649"
+  },
+  {
+    "id": "djk-ssc-lackenhaeuser-e-v",
+    "name": "DJK-SSC Lackenhäuser e.V.",
+    "city": "Neureichenau",
+    "lat": 48.735561100310875,
+    "lng": 13.798475640900763,
+    "hostIds": [
+      "djk-ssc-lackenhauser-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "50568"
+  },
+  {
+    "id": "edc-kinzigtal-e-v",
+    "name": "EDC Kinzigtal e.V.",
+    "city": "Gengenbach",
+    "lat": 48.424259010683336,
+    "lng": 8.017786070319858,
+    "hostIds": [
+      "edc-kinzigtal-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "35606"
+  },
+  {
+    "id": "emc-marktoberdorf",
+    "name": "EMC-Marktoberdorf",
+    "city": "Marktoberdorf",
+    "lat": 47.77353559344614,
+    "lng": 10.596636348538459,
+    "hostIds": [
+      "emc-marktoberdorf"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "43367"
+  },
+  {
+    "id": "equipe-rc-nohn",
+    "name": "Equipe RC Nohn",
+    "city": "Nohn",
+    "lat": 48.37078150268052,
+    "lng": 10.719769403703232,
+    "hostIds": [
+      "equipe-rc-nohn"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "10117"
+  },
+  {
+    "id": "esv-blau-gold-bischofsheim-1958-e-v",
+    "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
+    "city": "Bischofsheim",
+    "lat": 49.97763075091446,
+    "lng": 8.387647129236486,
+    "hostIds": [
+      "esv-blau-gold-bischofsheim-1958-e-v"
+    ],
+    "source": "verified-existing-list",
+    "myrcmOrgId": "37613"
   }
 ]
