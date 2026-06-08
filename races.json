@@ -47,54 +47,6 @@
     "firstSeen": "2026-06-05"
   },
   {
-    "id": "myrcm-16961-rcsf-singen-e-v-2025-06-07-myrcm-event-85888",
-    "venueId": "myrcm-16961-rcsf-singen-e-v",
-    "venueName": "RCSF-Singen e.V.",
-    "venueLocation": "Singen",
-    "name": "3. Clubrennen 2025",
-    "from": "2025-06-07",
-    "to": "2025-06-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85888&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=85888&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85888&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Clubrennen EGTFR (TW Fronti)",
-        "entries": 4
-      },
-      {
-        "name": "Clubrennen EGTWSP (TW Sport)",
-        "entries": 2
-      },
-      {
-        "name": "Clubrennen ORE2WD (Buggy 2WD)",
-        "entries": 4
-      },
-      {
-        "name": "Clubrennen ORE4WD (Buggy 4WD)",
-        "entries": 2
-      },
-      {
-        "name": "Clubrennen RCSF-Cup",
-        "entries": 7
-      },
-      {
-        "name": "Clubrennnen ORETR2 (Monster 2WD)",
-        "entries": 7
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-05"
-  },
-  {
     "id": "myrcm-82-amc-muhlau-e-v-2025-06-07-myrcm-event-87905",
     "venueId": "myrcm-82-amc-muhlau-e-v",
     "venueName": "AMC-Mühlau e.V.",
@@ -336,58 +288,6 @@
       {
         "name": "BTM LMH 21,5",
         "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-05"
-  },
-  {
-    "id": "myrcm-39587-mrsc-amberg-e-v-2025-06-07-myrcm-event-85221",
-    "venueId": "myrcm-39587-mrsc-amberg-e-v",
-    "venueName": "MRSC Amberg e.V.",
-    "venueLocation": "Amberg",
-    "name": "SK Lauf Süd VG 8 & VG 10 am 07./08.06.2025",
-    "from": "2025-06-07",
-    "to": "2025-06-08",
-    "series": [
-      "SK"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85221&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=39587&pLa=en&dId%5BE%5D=85221&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85221&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 33,
-    "registrationDisplay": "33",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "VG 1/8 Klasse 1",
-        "entries": 9
-      },
-      {
-        "name": "VG 1:8 Klasse 2",
-        "entries": 9
-      },
-      {
-        "name": "VG 1:10 Scale",
-        "entries": 9
-      },
-      {
-        "name": "VG 1:8 S",
-        "entries": 4
-      },
-      {
-        "name": "VG 1:10S",
-        "entries": 1
-      },
-      "Jugend Tamiya TT01",
-      "Tamiya TT01 2022",
-      {
-        "name": "EG 8",
-        "entries": 1
       }
     ],
     "documents": [],
@@ -26280,8 +26180,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       {
@@ -26290,7 +26190,7 @@
       },
       {
         "name": "Fighter-Klasse",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "ORE 2WD Modified",
@@ -26331,8 +26231,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 48,
-    "registrationDisplay": "48",
+    "registrationCount": 49,
+    "registrationDisplay": "49",
     "note": null,
     "classes": [
       {
@@ -26341,7 +26241,7 @@
       },
       {
         "name": "ORE2WDST",
-        "entries": 31
+        "entries": 32
       },
       {
         "name": "ORE4WD",
@@ -26378,17 +26278,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 43,
-    "registrationDisplay": "43",
+    "registrationCount": 45,
+    "registrationDisplay": "45",
     "note": null,
     "classes": [
       {
         "name": "BTM Formel 1 + EGF1",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "BTM Fun 21,5 + EGTWFUN",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "BTM FWD + EGTWFR",
@@ -26781,13 +26681,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       {
         "name": "Nordbayern Cup Club Cup",
-        "entries": 5
+        "entries": 8
       },
       {
         "name": "Nordbayern Cup M-Chassis",
@@ -27164,8 +27064,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 70,
-    "registrationDisplay": "70",
+    "registrationCount": 71,
+    "registrationDisplay": "71",
     "note": null,
     "classes": [
       {
@@ -27202,7 +27102,7 @@
       },
       {
         "name": "2WD/4WD ToTu Klasse",
-        "entries": 16
+        "entries": 17
       }
     ],
     "documents": [],
@@ -27562,11 +27462,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
-      "Offroad Brushless 1:8",
+      {
+        "name": "Offroad Brushless 1:8",
+        "entries": 1
+      },
       {
         "name": "Offroad Nitro 1:8",
         "entries": 2
@@ -28303,13 +28206,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": null,
     "classes": [
       {
         "name": "RCK VintageTransAm",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "RCK GT2 Porsche",
@@ -29189,8 +29092,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
       {
@@ -29205,7 +29108,10 @@
         "name": "RCS XR5 Klasse",
         "entries": 1
       },
-      "VG5TW Open"
+      {
+        "name": "VG5TW Open",
+        "entries": 1
+      }
     ],
     "documents": [
       {
