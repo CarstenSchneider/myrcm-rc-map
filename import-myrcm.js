@@ -6,6 +6,7 @@ const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
 const venueSeedsFile = "venue-seeds.json";
 const venueUnmatchedFile = "venue-unmatched.json";
+const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
 
@@ -1346,7 +1347,7 @@ async function loadHosts() {
   const raw = await readFile(hostListFile, "utf8");
   const hosts = JSON.parse(raw);
 
-  return hosts
+  const filteredHosts = hosts
     .filter(host => host.orgId && host.name)
     .filter(host => Number(host.eventCount || 0) > 0)
     .filter(host => !isExcludedHost(host))
@@ -1356,6 +1357,16 @@ async function loadHosts() {
         host.url ||
         `https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${host.orgId}&pLa=en`
     }));
+
+  if (hostLimit > 0) {
+    console.log(
+      `Host-Limit aktiv: ${Math.min(hostLimit, filteredHosts.length)} von ${filteredHosts.length} Hosts`
+    );
+
+    return filteredHosts.slice(0, hostLimit);
+  }
+
+  return filteredHosts;
 }
 
 async function runImportOnce() {
