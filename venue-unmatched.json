@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "hostId": "1-mrc-mannheim-e-v",
+    "hostName": "1. MRC Mannheim e.V.",
+    "source": "myrcm",
+    "myrcmOrgId": "39671",
+    "possibleVenue": "Mannheim",
+    "reason": "no confirmed venue seed for MyRCM host"
+  },
+  {
+    "hostId": "amc-hildesheim-e-v",
+    "hostName": "AMC Hildesheim e.V.",
+    "source": "myrcm",
+    "myrcmOrgId": "33",
+    "possibleVenue": "Hildesheim",
+    "reason": "no confirmed venue seed for MyRCM host"
+  },
+  {
+    "hostId": "amc-lahntal-e-v",
+    "hostName": "AMC Lahntal e.V.",
+    "source": "myrcm",
+    "myrcmOrgId": "19597",
+    "possibleVenue": "Solms",
+    "reason": "no confirmed venue seed for MyRCM host"
+  },
+  {
+    "hostId": "amc-langenfeld-e-v",
+    "hostName": "AMC Langenfeld e.V.",
+    "source": "myrcm",
+    "myrcmOrgId": "6025",
+    "possibleVenue": "Solingen",
+    "reason": "no confirmed venue seed for MyRCM host"
+  }
+]
