@@ -1,4 +1,3 @@
-```yaml
 name: Import MyRCM races
 
 on:
@@ -36,4 +35,3 @@ jobs:
             races.json
             hosts.json
             venue-unmatched.json
-```
