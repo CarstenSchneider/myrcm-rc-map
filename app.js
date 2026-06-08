@@ -1963,7 +1963,10 @@ async function init() {
     ...rckRaces
       .filter(isUsefulRckRace)
       .map(race => normalizeRaceFromSource(race, "rck"))
-  ];
+  ].filter(race => {
+    const venue = venueById(race.venueId);
+    return venue && hasLatLng(venue);
+  });
 
   if (hostsResponse?.ok) {
     hosts = await hostsResponse.json();
