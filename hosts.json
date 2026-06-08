@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "tsv-mariendorf",
+    "name": "TSV Mariendorf 1897 Berlin RCCR",
+    "website": "",
+    "myrcmOrgId": "18244"
+  },
+  {
+    "id": "rc-speedracer-bernau",
+    "name": "RC Speedracer e.V.",
+    "website": "",
+    "myrcmOrgId": "45925"
+  },
+  {
+    "id": "marzahner-racing-club",
+    "name": "Marzahner Racing Club e.V.",
+    "website": "",
+    "myrcmOrgId": "41404"
+  },
+  {
+    "id": "burning-wheels-blankenfelde",
+    "name": "Burning Wheels Blankenfelde",
+    "website": "",
+    "myrcmOrgId": "52898"
+  },
+  {
+    "id": "myrcm-39671",
+    "name": "MRC Mannheim e.V.",
+    "website": "",
+    "myrcmOrgId": "39671"
+  }
+]
