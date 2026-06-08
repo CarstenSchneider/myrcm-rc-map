@@ -630,7 +630,19 @@ function isIgnoredWebsite(url = "") {
     "challenge.rck-solutions.de",
     "myrcm.ch",
     "myrcm.de",
-    "dmc-online.com"
+    "dmc-online.com",
+    "gmail.com",
+    "gmail.de",
+    "hotmail.com",
+    "hotmail.de",
+    "outlook.com",
+    "outlook.de",
+    "web.de",
+    "gmx.de",
+    "yahoo.com",
+    "yahoo.de",
+    "icloud.com",
+    "t-online.de"
   ].some(domain => host === domain || host.endsWith(`.${domain}`));
 }
 
@@ -902,8 +914,8 @@ async function buildVenueCandidates(races, venues) {
       race.venueId = matched.id;
       race.venueName = matched.name || race.venueName;
       race.venueLocation = matched.city || matched.location || race.venueLocation;
-      race.hostId = hostFields.hostId || matched.hostId || matched.id;
-      race.hostName = hostFields.hostName || matched.hostName || matched.name || race.venueName;
+      race.hostId = matched.hostId || hostFields.hostId || matched.id;
+      race.hostName = matched.hostName || hostFields.hostName || matched.name || race.venueName;
       continue;
     }
 
