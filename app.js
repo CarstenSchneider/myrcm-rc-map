@@ -229,7 +229,25 @@ function isRckEventFromMyRcm(race) {
 }
 
 function hasLatLng(venue) {
-  return Number.isFinite(Number(venue?.lat)) && Number.isFinite(Number(venue?.lng));
+  if (!venue) return false;
+
+  const lat = venue.lat;
+  const lng = venue.lng;
+
+  if (lat === null || lat === undefined || lat === "") return false;
+  if (lng === null || lng === undefined || lng === "") return false;
+
+  const latNumber = Number(lat);
+  const lngNumber = Number(lng);
+
+  return (
+    Number.isFinite(latNumber) &&
+    Number.isFinite(lngNumber) &&
+    latNumber >= 44 &&
+    latNumber <= 59 &&
+    lngNumber >= -5 &&
+    lngNumber <= 25
+  );
 }
 
 function isUnverifiedVenue(venue) {
@@ -1193,7 +1211,8 @@ function filteredRaces() {
 }
 
 function googleMapsRouteUrl(venue) {
-  return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
+  if (!hasLatLng(venue)) return "#";
+  return `https://www.google.com/maps/dir/?api=1&destination=${Number(venue.lat)},${Number(venue.lng)}`;
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
