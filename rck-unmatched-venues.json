@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "venueId": "rck-neubrandenburg-city-circuit-neubrandenburg",
+    "rckSeries": "kleinserie",
+    "rckLocation": "Neubrandenburg",
+    "venueName": "Neubrandenburg City Circuit",
+    "hostId": "modellsportverein-neubrandenburg-e-v",
+    "hostName": "Modellsportverein Neubrandenburg e. V.",
+    "venueAddress": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg",
+    "venueCity": "Neubrandenburg",
+    "venuePostalCode": "17036",
+    "organizerName": "Modellsportverein Neubrandenburg e. V.",
+    "venueWebsite": "https://gmail.com",
+    "addressVerifiedFromPdf": true,
+    "raceId": "rck-neubrandenburg-2026-12-06-rck-kleinserie-ost-neubrandenburg",
+    "raceName": "RCK Kleinserie Ost - Neubrandenburg",
+    "from": "2026-12-06",
+    "firstSeen": "2026-06-08",
+    "lastSeen": "2026-06-08",
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neubrandenburg Neubrandenburg symbol/auschreibung.png",
+        "fileName": "202520271206KlSeO20260429 2051.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf"
+      }
+    ]
+  }
+]
