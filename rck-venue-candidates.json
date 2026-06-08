@@ -30,8 +30,8 @@
     "address": "Juri-Gagarin-Ring 1",
     "postalCode": "17036",
     "country": "DE",
-    "lat": 53.5557196,
-    "lng": 13.2928946,
+    "lat": 53.5546251,
+    "lng": 13.2931112,
     "source": "rck",
     "sources": [
       "rck-kleinserie"
@@ -41,16 +41,16 @@
     "organizerName": "Modellsportverein Neubrandenburg e. V.",
     "hostId": "modellsportverein-neubrandenburg-e-v",
     "hostName": "Modellsportverein Neubrandenburg e. V.",
-    "website": "https://gmail.com",
+    "website": null,
     "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520271011KlSeO20260413%202012.pdf",
     "addressVerifiedFromPdf": true,
     "verified": true,
     "verificationStatus": "verifiziert",
     "geocodingSource": "nominatim",
     "geocodingQuery": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg, DE",
-    "geocodingDisplayName": "Lindetal Grill, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
+    "geocodingDisplayName": "Lindetalcenter, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
     "geocodingClass": null,
-    "geocodingType": "fast_food"
+    "geocodingType": "mall"
   },
   {
     "id": "rck-rc-raceway-holsterfeld-salzbergen",
