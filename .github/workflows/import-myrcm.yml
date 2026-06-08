@@ -11,6 +11,8 @@ permissions:
 jobs:
   import:
     runs-on: ubuntu-latest
+    env:
+      MYRCM_HOST_LIMIT: 5
 
     steps:
       - name: Checkout repository
