@@ -993,8 +993,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -1010,15 +1010,15 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 0
+        "entries": 1
       },
       {
         "name": "GT Challenge",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "Stock Challenge",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Clubman Challenge",
@@ -1026,7 +1026,7 @@
       },
       {
         "name": "RCK Porsche",
-        "entries": 0
+        "entries": 1
       }
     ],
     "documents": [
