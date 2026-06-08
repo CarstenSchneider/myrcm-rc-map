@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v11-pdf-venue-address-priority";
+const importerVersion = "import-rck-v12-coordinate-venue-match";
 
 const sources = [
   {
@@ -356,6 +356,70 @@ function isConfidentConcretePdfVenueMatch(pdfData = {}, venue = {}) {
   if (hasExactPostalCodeMatch(pdfData, venue) && hasExactVenueNameMatch(pdfData, venue)) return true;
 
   return false;
+}
+
+function distanceInMeters(aLat, aLng, bLat, bLng) {
+  const lat1 = Number(aLat);
+  const lng1 = Number(aLng);
+  const lat2 = Number(bLat);
+  const lng2 = Number(bLng);
+
+  if (![lat1, lng1, lat2, lng2].every(Number.isFinite)) return null;
+
+  const earthRadius = 6371000;
+  const toRadians = degrees => degrees * Math.PI / 180;
+  const dLat = toRadians(lat2 - lat1);
+  const dLng = toRadians(lng2 - lng1);
+
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(toRadians(lat1)) *
+      Math.cos(toRadians(lat2)) *
+      Math.sin(dLng / 2) *
+      Math.sin(dLng / 2);
+
+  return 2 * earthRadius * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function hasUsableCoordinates(venue = {}) {
+  return Number.isFinite(Number(venue.lat)) && Number.isFinite(Number(venue.lng));
+}
+
+function coordinateMatchesVenue(candidate = {}, venue = {}, maxDistanceMeters = 500) {
+  if (!hasUsableCoordinates(candidate) || !hasUsableCoordinates(venue)) return false;
+
+  const distance = distanceInMeters(candidate.lat, candidate.lng, venue.lat, venue.lng);
+  return distance !== null && distance <= maxDistanceMeters;
+}
+
+function cityOrAliasMatchesPdfData(pdfData = {}, venue = {}) {
+  const pdfCity = normalizeRckLocation(pdfData.city || "");
+  if (!pdfCity) return false;
+
+  const venueCity = normalizeRckLocation(venue.city || venue.location || venue.venueLocation || "");
+  if (venueCity && venueCity === pdfCity) return true;
+
+  const aliases = Array.isArray(venue.aliases) ? venue.aliases : [];
+  return aliases.some(alias => normalizeRckLocation(alias) === pdfCity);
+}
+
+function bestCoordinateVenueMatch(candidate = {}, venues = []) {
+  if (!hasUsableCoordinates(candidate)) return null;
+
+  const matches = venues
+    .filter(venue => hasUsableCoordinates(venue))
+    .filter(venue => {
+      if (!cityOrAliasMatchesPdfData(candidate, venue)) return false;
+      return coordinateMatchesVenue(candidate, venue, 500);
+    })
+    .map(venue => ({
+      venue,
+      distance: distanceInMeters(candidate.lat, candidate.lng, venue.lat, venue.lng)
+    }))
+    .filter(item => item.distance !== null)
+    .sort((a, b) => a.distance - b.distance);
+
+  return matches[0]?.venue || null;
 }
 
 function matchVenueByPdfData(pdfData, venues) {
@@ -1051,7 +1115,8 @@ async function buildVenueCandidates(races, venues) {
 
     const verifiedCandidate = applyRckVenueVerification(candidate);
 
-    const existingVenue = findExistingVenueByCandidate(verifiedCandidate, allVenues);
+    const coordinateVenue = bestCoordinateVenueMatch(verifiedCandidate, allVenues);
+    const existingVenue = coordinateVenue || findExistingVenueByCandidate(verifiedCandidate, allVenues);
     const existingCandidate = existingVenue || candidatesById.get(verifiedCandidate.id);
 
     const mergedCandidate = existingCandidate
@@ -1062,6 +1127,18 @@ async function buildVenueCandidates(races, venues) {
 
     if (!existingVenue) {
       allVenues.push(mergedCandidate);
+    }
+
+    if (coordinateVenue) {
+      const hostFields = hostFieldsForMatchedVenue(coordinateVenue, race);
+
+      race.venueId = coordinateVenue.id;
+      race.venueName = coordinateVenue.name || race.venueName;
+      race.venueLocation = coordinateVenue.city || coordinateVenue.location || race.venueLocation;
+      race.hostId = hostFields.hostId || coordinateVenue.id;
+      race.hostName = hostFields.hostName || coordinateVenue.name || race.venueName;
+      race.venueStatus = "matched";
+      continue;
     }
 
     const hostFields = hostFieldsForCandidate(mergedCandidate, race);
