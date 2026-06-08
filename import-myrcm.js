@@ -703,28 +703,77 @@ function venueFromSeed(seed) {
   };
 }
 
+function preferredHostId(previous = {}, next = {}) {
+  const previousId = String(previous.id || "");
+  const nextId = String(next.id || "");
+
+  if (!previousId) return nextId;
+  if (!nextId) return previousId;
+
+  if (previousId.startsWith("myrcm-") && !nextId.startsWith("myrcm-")) {
+    return nextId;
+  }
+
+  return previousId;
+}
+
+function preferredHostName(previous = {}, next = {}) {
+  const previousName = String(previous.name || "").trim();
+  const nextName = String(next.name || "").trim();
+
+  if (!previousName) return nextName;
+  if (!nextName) return previousName;
+
+  if (/^myrcm\s+\d+$/i.test(previousName)) return nextName;
+  if (previous.id && String(previous.id).startsWith("myrcm-") && next.id && !String(next.id).startsWith("myrcm-")) {
+    return nextName;
+  }
+
+  return previousName;
+}
+
+function mergeHostRecord(previous = {}, next = {}) {
+  return {
+    ...previous,
+    ...next,
+    id: preferredHostId(previous, next),
+    name: preferredHostName(previous, next),
+    website: previous.website || next.website || "",
+    myrcmOrgId: previous.myrcmOrgId || next.myrcmOrgId || ""
+  };
+}
+
+function hostMergeKey(host) {
+  if (host?.myrcmOrgId) return `myrcm:${host.myrcmOrgId}`;
+  if (host?.id) return `id:${host.id}`;
+  return null;
+}
+
 function mergeHosts(existingHosts = [], importedHosts = []) {
-  const byId = new Map();
+  const byKey = new Map();
 
-  for (const host of existingHosts || []) {
-    if (host?.id) byId.set(String(host.id), host);
+  for (const host of [...(existingHosts || []), ...(importedHosts || [])]) {
+    const key = hostMergeKey(host);
+    if (!key) continue;
+
+    const previous = byKey.get(key) || {};
+    byKey.set(key, mergeHostRecord(previous, host));
   }
 
-  for (const host of importedHosts || []) {
-    if (!host?.id) continue;
-
-    const previous = byId.get(String(host.id)) || {};
-    byId.set(String(host.id), {
-      ...previous,
-      ...host,
-      website: previous.website || host.website || "",
-      myrcmOrgId: previous.myrcmOrgId || host.myrcmOrgId || ""
-    });
-  }
-
-  return Array.from(byId.values()).sort((a, b) => {
+  return Array.from(byKey.values()).sort((a, b) => {
     return String(a.name || a.id).localeCompare(String(b.name || b.id));
   });
+}
+
+function existingHostForMyRcmHost(existingHosts = [], host) {
+  const orgId = myRcmOrgIdFromHost(host);
+  if (!orgId) return null;
+
+  const matches = (existingHosts || []).filter(existingHost => String(existingHost?.myrcmOrgId || "") === orgId);
+
+  if (!matches.length) return null;
+
+  return matches.find(existingHost => !String(existingHost.id || "").startsWith("myrcm-")) || matches[0];
 }
 
 function unmatchedRecordForMyRcmHost(host, hostRecord, reason) {
@@ -790,13 +839,17 @@ function myRcmOrgIdFromHost(host) {
   return host.orgId ? String(host.orgId) : "";
 }
 
-function hostRecordFromMyRcmHost(host, venueSeed = null) {
-  return {
+function hostRecordFromMyRcmHost(host, venueSeed = null, existingHost = null) {
+  const importedHost = {
     id: hostIdFromMyRcmHost(host, venueSeed),
     name: hostNameFromMyRcmHost(host),
     website: host.website || host.web || "",
     myrcmOrgId: myRcmOrgIdFromHost(host)
   };
+
+  if (!existingHost) return importedHost;
+
+  return mergeHostRecord(existingHost, importedHost);
 }
 
 function hostFieldsForMyRcmRace(host, venueSeed = null) {
@@ -1384,7 +1437,8 @@ async function runImportOnce() {
 
   for (const host of hosts) {
     const venueSeed = venueSeedForMyRcmHost(venueSeedLookup, host);
-    const hostRecord = hostRecordFromMyRcmHost(host, venueSeed);
+    const existingHost = existingHostForMyRcmHost(existingHosts, host);
+    const hostRecord = hostRecordFromMyRcmHost(host, venueSeed, existingHost);
 
     importedHosts.push(hostRecord);
 
