@@ -2,6 +2,11 @@ import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
 const hostListFile = "myrcm-hosts-germany.json";
+const hostsFile = "hosts.json";
+const venuesFile = "venues.json";
+const venueSeedsFile = "venue-seeds.json";
+const venueUnmatchedFile = "venue-unmatched.json";
+const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
 
@@ -621,6 +626,188 @@ async function loadPreviousRaces(fileName = "races.json") {
   }
 }
 
+
+async function readJsonIfExists(fileName, fallback = []) {
+  try {
+    await access(fileName);
+    return JSON.parse(await readFile(fileName, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+function buildVenueLookup(venues) {
+  const lookup = new Map();
+
+  for (const venue of venues || []) {
+    if (!venue?.id) continue;
+
+    lookup.set(String(venue.id), venue);
+
+    for (const alias of Array.isArray(venue.aliases) ? venue.aliases : []) {
+      if (alias) lookup.set(String(alias), venue);
+    }
+  }
+
+  return lookup;
+}
+
+function buildVenueSeedLookup(venueSeeds = []) {
+  const lookup = new Map();
+
+  for (const seed of venueSeeds || []) {
+    if (!seed?.id) continue;
+
+    lookup.set(String(seed.id), seed);
+
+    if (seed.myrcmOrgId) {
+      lookup.set(`myrcm-${seed.myrcmOrgId}`, seed);
+    }
+
+    for (const hostId of Array.isArray(seed.hostIds) ? seed.hostIds : []) {
+      if (hostId) lookup.set(`host:${hostId}`, seed);
+    }
+
+    for (const alias of Array.isArray(seed.aliases) ? seed.aliases : []) {
+      if (alias) lookup.set(String(alias), seed);
+    }
+  }
+
+  return lookup;
+}
+
+function venueSeedForMyRcmHost(venueSeedLookup, host) {
+  if (!host?.orgId) return null;
+
+  const myRcmKey = `myrcm-${host.orgId}`;
+
+  return (
+    venueSeedLookup.get(myRcmKey) ||
+    venueSeedLookup.get(String(host.venueId || "")) ||
+    null
+  );
+}
+
+function venueFromSeed(seed) {
+  if (!seed?.id) return null;
+
+  return {
+    id: seed.id,
+    name: seed.name || seed.id,
+    city: seed.city || "",
+    lat: seed.lat ?? null,
+    lng: seed.lng ?? null,
+    aliases: Array.isArray(seed.aliases) ? seed.aliases : [],
+    hostIds: Array.isArray(seed.hostIds) ? seed.hostIds : [],
+    source: seed.source || "venue-seeds"
+  };
+}
+
+function mergeHosts(existingHosts = [], importedHosts = []) {
+  const byId = new Map();
+
+  for (const host of existingHosts || []) {
+    if (host?.id) byId.set(String(host.id), host);
+  }
+
+  for (const host of importedHosts || []) {
+    if (!host?.id) continue;
+
+    const previous = byId.get(String(host.id)) || {};
+    byId.set(String(host.id), {
+      ...previous,
+      ...host,
+      website: previous.website || host.website || "",
+      myrcmOrgId: previous.myrcmOrgId || host.myrcmOrgId || ""
+    });
+  }
+
+  return Array.from(byId.values()).sort((a, b) => {
+    return String(a.name || a.id).localeCompare(String(b.name || b.id));
+  });
+}
+
+function unmatchedRecordForMyRcmHost(host, hostRecord, reason) {
+  return {
+    hostId: hostRecord.id,
+    hostName: hostRecord.name,
+    source: "myrcm",
+    myrcmOrgId: myRcmOrgIdFromHost(host),
+    possibleVenue: normalizeText(host.location || host.city || ""),
+    reason
+  };
+}
+
+function mergeUnmatched(existing = [], imported = []) {
+  const byKey = new Map();
+
+  for (const item of existing || []) {
+    const key = `${item.source || ""}|${item.hostId || ""}|${item.myrcmOrgId || ""}|${item.possibleVenue || ""}`;
+    byKey.set(key, item);
+  }
+
+  for (const item of imported || []) {
+    const key = `${item.source || ""}|${item.hostId || ""}|${item.myrcmOrgId || ""}|${item.possibleVenue || ""}`;
+    byKey.set(key, item);
+  }
+
+  return Array.from(byKey.values()).sort((a, b) => {
+    return String(a.hostName || a.hostId).localeCompare(String(b.hostName || b.hostId));
+  });
+}
+
+function venueConfigForId(venueLookup, venueId) {
+  if (!venueId) return null;
+
+  const id = String(venueId);
+
+  if (venueLookup.has(id)) return venueLookup.get(id);
+
+  for (const [matchId, venue] of venueLookup.entries()) {
+    if (id.startsWith(`${matchId}-`)) return venue;
+  }
+
+  return null;
+}
+
+function hostIdFromMyRcmHost(host, venueSeed = null) {
+  if (host.hostId) return String(host.hostId);
+
+  const seedHostId = Array.isArray(venueSeed?.hostIds)
+    ? venueSeed.hostIds.find(Boolean)
+    : null;
+
+  if (seedHostId) return String(seedHostId);
+
+  return slugify(host.name || `myrcm-${host.orgId}`);
+}
+
+function hostNameFromMyRcmHost(host) {
+  return normalizeText(host.hostName || host.name || `MyRCM ${host.orgId}`);
+}
+
+function myRcmOrgIdFromHost(host) {
+  return host.orgId ? String(host.orgId) : "";
+}
+
+function hostRecordFromMyRcmHost(host, venueSeed = null) {
+  return {
+    id: hostIdFromMyRcmHost(host, venueSeed),
+    name: hostNameFromMyRcmHost(host),
+    website: host.website || host.web || "",
+    myrcmOrgId: myRcmOrgIdFromHost(host)
+  };
+}
+
+function hostFieldsForMyRcmRace(host, venueSeed = null) {
+  const hostRecord = hostRecordFromMyRcmHost(host, venueSeed);
+
+  return {
+    hostId: hostRecord.id,
+    hostName: hostRecord.name
+  };
+}
+
 function raceSignature(race) {
   return [
     race.venueId,
@@ -1036,7 +1223,9 @@ async function runLimited(items, limit, worker) {
   return results;
 }
 
-async function parseSingleEvent(eventLink, host, venueId, total, index) {
+async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, total, index) {
+  const venue = venueFromSeed(venueSeed);
+  const venueId = venue?.id || null;
   const detailUrl = orgEventDetailUrl(host, eventLink.eventId);
   const regUrl = registrationUrl(eventLink.eventId);
 
@@ -1081,11 +1270,19 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
       registrationOpens: registrationInfo.registrationOpens
     };
 
+    const hostFields = {
+      hostId: hostRecord.id,
+      hostName: hostRecord.name
+    };
+    const raceLocationKey = venueId || hostFields.hostId;
+
     const race = {
-      id: raceId(venueId, detail.from, eventLink.eventId, detail.name),
+      id: raceId(raceLocationKey, detail.from, eventLink.eventId, detail.name),
       venueId,
-      venueName: host.name,
-      venueLocation: host.location,
+      venueName: venue?.name || null,
+      venueLocation: venue?.city || null,
+      hostId: hostFields.hostId,
+      hostName: hostFields.hostName,
       name: detail.name,
       from: detail.from,
       to: detail.to,
@@ -1118,8 +1315,7 @@ async function parseSingleEvent(eventLink, host, venueId, total, index) {
   }
 }
 
-async function parseEvents(html, host) {
-  const venueId = host.venueId || hostToVenueId(host);
+async function parseEvents(html, host, hostRecord, venueSeed) {
   const eventLinkResult = extractEventLinksFromHostPage(html, host);
   const eventLinks = eventLinkResult.events;
 
@@ -1141,7 +1337,7 @@ async function parseEvents(html, host) {
   const races = await runLimited(
     eventLinks,
     detailConcurrency,
-    (eventLink, index) => parseSingleEvent(eventLink, host, venueId, eventLinks.length, index)
+    (eventLink, index) => parseSingleEvent(eventLink, host, hostRecord, venueSeed, eventLinks.length, index)
   );
 
   return races.filter(Boolean);
@@ -1151,7 +1347,7 @@ async function loadHosts() {
   const raw = await readFile(hostListFile, "utf8");
   const hosts = JSON.parse(raw);
 
-  return hosts
+  const filteredHosts = hosts
     .filter(host => host.orgId && host.name)
     .filter(host => Number(host.eventCount || 0) > 0)
     .filter(host => !isExcludedHost(host))
@@ -1161,16 +1357,47 @@ async function loadHosts() {
         host.url ||
         `https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${host.orgId}&pLa=en`
     }));
+
+  if (hostLimit > 0) {
+    console.log(
+      `Host-Limit aktiv: ${Math.min(hostLimit, filteredHosts.length)} von ${filteredHosts.length} Hosts`
+    );
+
+    return filteredHosts.slice(0, hostLimit);
+  }
+
+  return filteredHosts;
 }
 
 async function runImportOnce() {
   const hosts = await loadHosts();
+  const existingHosts = await readJsonIfExists(hostsFile, []);
+  const venueSeeds = await readJsonIfExists(venueSeedsFile, []);
+  const existingUnmatched = await readJsonIfExists(venueUnmatchedFile, []);
+  const venueSeedLookup = buildVenueSeedLookup(venueSeeds);
   const previousRaces = await loadPreviousRaces();
   const allRaces = [];
+  const importedHosts = [];
+  const importedUnmatched = [];
 
   console.log(`${hosts.length} deutsche Hosts mit Events geladen`);
 
   for (const host of hosts) {
+    const venueSeed = venueSeedForMyRcmHost(venueSeedLookup, host);
+    const hostRecord = hostRecordFromMyRcmHost(host, venueSeed);
+
+    importedHosts.push(hostRecord);
+
+    if (!venueSeed) {
+      importedUnmatched.push(
+        unmatchedRecordForMyRcmHost(
+          host,
+          hostRecord,
+          "no confirmed venue seed for MyRCM host"
+        )
+      );
+    }
+
     console.log(`Lade MyRCM: ${host.name} (${host.orgId})`);
 
     let html;
@@ -1183,7 +1410,7 @@ async function runImportOnce() {
       throw error;
     }
 
-    const races = await parseEvents(html, host);
+    const races = await parseEvents(html, host, hostRecord, venueSeed);
 
     console.log(`  ${races.length} Rennen gefunden`);
 
@@ -1197,6 +1424,21 @@ async function runImportOnce() {
   });
 
   unique = applyFirstSeen(unique, previousRaces);
+
+  const mergedHosts = mergeHosts(existingHosts, importedHosts);
+  const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
+
+  await writeFile(
+    hostsFile,
+    JSON.stringify(mergedHosts, null, 2) + "\n",
+    "utf8"
+  );
+
+  await writeFile(
+    venueUnmatchedFile,
+    JSON.stringify(mergedUnmatched, null, 2) + "\n",
+    "utf8"
+  );
 
   await writeFile(
     "races.json",
@@ -1215,6 +1457,8 @@ async function runImportOnce() {
   }, {});
   const totalDocuments = Object.values(documentTypeCounts).reduce((sum, count) => sum + count, 0);
 
+  console.log(`hosts.json geschrieben: ${mergedHosts.length} Hosts`);
+  console.log(`venue-unmatched.json geschrieben: ${mergedUnmatched.length} offene Venue-Zuordnungen`);
   console.log(`races.json geschrieben: ${unique.length} Rennen`);
   console.log("PDF-Statistik:");
   console.log(`  PDF-Dokumente insgesamt: ${totalDocuments}`);
