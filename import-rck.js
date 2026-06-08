@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v9-host-model-strict-venue-match";
+const importerVersion = "import-rck-v10-stable-host-venue-website";
 
 const sources = [
   {
@@ -212,6 +212,47 @@ function hostFieldsForRckRace(race = {}) {
     hostId: hostName ? slugify(hostName) : race.venueId || null,
     hostName
   };
+}
+
+function hostFieldsForMatchedVenue(venue, fallbackRace = {}) {
+  const raceHost = hostFieldsForRckRace(fallbackRace);
+
+  return {
+    hostId: venue?.hostId || raceHost.hostId || venue?.id || null,
+    hostName: venue?.hostName || raceHost.hostName || venue?.name || null
+  };
+}
+
+function hostFieldsForCandidate(candidate, fallbackRace = {}) {
+  const raceHost = hostFieldsForRckRace(fallbackRace);
+
+  return {
+    hostId: candidate?.hostId || raceHost.hostId || candidate?.id || null,
+    hostName: candidate?.hostName || raceHost.hostName || candidate?.name || null
+  };
+}
+
+function findExistingVenueByCandidate(candidate, venues) {
+  if (!candidate || !Array.isArray(venues)) return null;
+
+  if (candidate.id) {
+    const byId = venues.find(venue => venue?.id === candidate.id);
+    if (byId) return byId;
+  }
+
+  const candidatePostal = String(candidate.postalCode || "");
+  const candidateCity = normalizeRckLocation(candidate.city || candidate.rckLocation || "");
+  const candidateAddress = normalizeKey(candidate.address || "");
+  const candidateName = normalizeKey(candidate.name || "");
+
+  return venues.find(venue => {
+    const samePostal = candidatePostal && String(venue.postalCode || "") === candidatePostal;
+    const sameCity = candidateCity && normalizeRckLocation(venue.city || venue.location || venue.rckLocation || "") === candidateCity;
+    const sameAddress = candidateAddress && normalizeKey(venue.address || "").includes(candidateAddress);
+    const sameName = candidateName && normalizeKey(venue.name || "").includes(candidateName);
+
+    return (samePostal && sameCity) || (sameCity && sameAddress) || (sameCity && sameName);
+  }) || null;
 }
 
 function hasExactPostalCodeMatch(pdfData = {}, venue = {}) {
@@ -646,13 +687,52 @@ function isIgnoredWebsite(url = "") {
   ].some(domain => host === domain || host.endsWith(`.${domain}`));
 }
 
+function isLikelyPersonalEmailDomain(url = "") {
+  let host = "";
+
+  try {
+    host = new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return true;
+  }
+
+  const parts = host.split(".").filter(Boolean);
+  if (parts.length < 2) return true;
+
+  const tld = parts[parts.length - 1];
+  const domain = parts[parts.length - 2];
+
+  if (!["de", "com", "org", "net", "eu"].includes(tld)) return true;
+  if (parts.length === 2 && domain.length <= 3) return true;
+
+  const personalFragments = [
+    "holger",
+    "florian",
+    "schymaniuk",
+    "email",
+    "blauer",
+    "renner",
+    "funke"
+  ];
+
+  if (personalFragments.some(fragment => host.includes(fragment))) return true;
+  if (/^[a-z]+\.[a-z]+$/.test(host)) return true;
+  if (/^[0-9]+\.[a-z]+$/.test(host)) return true;
+
+  return false;
+}
+
+function isAcceptedWebsite(url = "") {
+  return Boolean(url) && !isIgnoredWebsite(url) && !isLikelyPersonalEmailDomain(url);
+}
+
 function extractWebsiteCandidates(text = "") {
   const matches = String(text).match(/\b(?:https?:\/\/)?(?:www\.)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(?:\/[^\s]*)?/gi) || [];
 
   return matches
     .map(normalizeWebsiteUrl)
     .filter(Boolean)
-    .filter(url => !isIgnoredWebsite(url));
+    .filter(isAcceptedWebsite);
 }
 
 function extractEmailDomains(text = "") {
@@ -670,25 +750,19 @@ function extractVenueWebsite(text = "") {
   const compact = compactPdfText(text || "");
   if (!compact) return null;
 
-  const websiteCandidates = extractWebsiteCandidates(compact);
-  if (!websiteCandidates.length) return null;
+  const explicitUrlMatch = compact.match(/\bhttps?:\/\/[^\s)]+|\bwww\.[^\s)]+/i);
+  if (explicitUrlMatch) {
+    const explicitUrl = normalizeWebsiteUrl(explicitUrlMatch[0]);
+    if (isAcceptedWebsite(explicitUrl)) return explicitUrl;
+  }
 
-  const emailDomains = extractEmailDomains(compact);
-
-  const byEmailDomain = websiteCandidates.find(url => {
-    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, "");
-    return emailDomains.some(domain => host === domain || host.endsWith(`.${domain}`));
-  });
-
-  if (byEmailDomain) return byEmailDomain;
-
-  const contactBlockMatch = compact.match(/(?:kontakt|e-mail|email|internet|webseite|website)\s*:?([\s\S]{0,450})/i);
+  const contactBlockMatch = compact.match(/(?:internet|webseite|website|homepage|www\.)\s*:?([\s\S]{0,450})/i);
   if (contactBlockMatch) {
     const contactCandidate = extractWebsiteCandidates(contactBlockMatch[1])[0];
     if (contactCandidate) return contactCandidate;
   }
 
-  return websiteCandidates[0] || null;
+  return null;
 }
 
 
@@ -909,13 +983,14 @@ async function buildVenueCandidates(races, venues) {
     const matched = pdfMatch || locationMatch;
 
     if (matched) {
-      const hostFields = hostFieldsForRckRace(race);
+      const hostFields = hostFieldsForMatchedVenue(matched, race);
 
       race.venueId = matched.id;
       race.venueName = matched.name || race.venueName;
       race.venueLocation = matched.city || matched.location || race.venueLocation;
-      race.hostId = matched.hostId || hostFields.hostId || matched.id;
-      race.hostName = matched.hostName || hostFields.hostName || matched.name || race.venueName;
+      race.hostId = hostFields.hostId || matched.id;
+      race.hostName = hostFields.hostName || matched.name || race.venueName;
+      race.venueStatus = "matched";
       continue;
     }
 
@@ -934,21 +1009,26 @@ async function buildVenueCandidates(races, venues) {
 
     const verifiedCandidate = applyRckVenueVerification(candidate);
 
-    const existingCandidate = candidatesById.get(verifiedCandidate.id);
+    const existingVenue = findExistingVenueByCandidate(verifiedCandidate, allVenues);
+    const existingCandidate = existingVenue || candidatesById.get(verifiedCandidate.id);
+
     const mergedCandidate = existingCandidate
       ? mergeVenueCandidate(existingCandidate, verifiedCandidate)
       : verifiedCandidate;
 
-    candidatesById.set(candidate.id, mergedCandidate);
-    allVenues.push(mergedCandidate);
+    candidatesById.set(mergedCandidate.id, mergedCandidate);
 
-    const hostFields = hostFieldsForRckRace(race);
+    if (!existingVenue) {
+      allVenues.push(mergedCandidate);
+    }
+
+    const hostFields = hostFieldsForCandidate(mergedCandidate, race);
 
     race.venueId = mergedCandidate.id;
     race.venueName = mergedCandidate.name;
     race.venueLocation = mergedCandidate.city;
-    race.hostId = hostFields.hostId || mergedCandidate.hostId || mergedCandidate.id;
-    race.hostName = hostFields.hostName || mergedCandidate.hostName || mergedCandidate.name;
+    race.hostId = hostFields.hostId || mergedCandidate.id;
+    race.hostName = hostFields.hostName || mergedCandidate.name;
     race.venueStatus = mergedCandidate.verified ? "matched" : "standort nicht verifiziert";
   }
 
@@ -1141,8 +1221,8 @@ function mergeRckRace(a, b) {
     classes,
     documents: documents,
     organizerName: b.organizerName || a.organizerName || null,
-    hostId: b.hostId || a.hostId || b.venueId || a.venueId || null,
-    hostName: b.hostName || a.hostName || b.organizerName || a.organizerName || b.venueName || a.venueName || null,
+    hostId: a.hostId || b.hostId || a.venueId || b.venueId || null,
+    hostName: a.hostName || b.hostName || a.organizerName || b.organizerName || a.venueName || b.venueName || null,
     venueWebsite: b.venueWebsite || a.venueWebsite || null,
     venueAddress: b.venueAddress || a.venueAddress || null,
     venueCity: b.venueCity || a.venueCity || null,
@@ -1201,8 +1281,8 @@ function applySeenDates(races, existingRckRaces) {
 
     return {
       ...cleanRace,
-      hostId: hostFields.hostId || cleanRace.hostId || cleanRace.venueId,
-      hostName: hostFields.hostName || cleanRace.hostName || cleanRace.venueName || cleanRace.venueId,
+      hostId: cleanRace.hostId || hostFields.hostId || cleanRace.venueId,
+      hostName: cleanRace.hostName || hostFields.hostName || cleanRace.venueName || cleanRace.venueId,
       firstSeen: existing?.firstSeen || today,
       lastSeen: today
     };
