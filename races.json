@@ -27357,8 +27357,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 76,
-    "registrationDisplay": "76",
+    "registrationCount": 78,
+    "registrationDisplay": "78",
     "note": null,
     "classes": [
       {
@@ -27367,7 +27367,7 @@
       },
       {
         "name": "OR8 Hobby",
-        "entries": 15
+        "entries": 16
       },
       {
         "name": "ORE8",
@@ -27375,7 +27375,7 @@
       },
       {
         "name": "ORT",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "ORET",
