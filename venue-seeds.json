@@ -628,6 +628,23 @@
     ]
   },
   {
+    "id": "mac-siersburg-e-v",
+    "name": "MAC Siersburg e.V.",
+    "city": "Dillingen",
+    "lat": 49.237385520887244,
+    "lng": 7.19838986976351,
+    "hostIds": [
+      "mac-siersburg-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "48023",
+    "aliases": [
+      "MAC Siersburg e.V.",
+      "Dillingen",
+      "myrcm-48023"
+    ]
+  },
+  {
     "id": "mac-uetersen-e-v",
     "name": "MAC Uetersen e.V.",
     "city": "Uetersen",
@@ -1020,6 +1037,24 @@
     ]
   },
   {
+    "id": "mcrt-schaafheim-e-v",
+    "name": "MCRT-Schaafheim e.V.",
+    "city": "Großostheim",
+    "lat": 49.930293448626585,
+    "lng": 9.015560283086872,
+    "hostIds": [
+      "mcrt-schaafheim-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "50727",
+    "aliases": [
+      "MCRT-Schaafheim e.V.",
+      "Großostheim",
+      "Grossostheim",
+      "myrcm-50727"
+    ]
+  },
+  {
     "id": "mcss-althengstett-e-v",
     "name": "MCSS Althengstett e.V.",
     "city": "Althengstett",
@@ -1358,6 +1393,23 @@
     ]
   },
   {
+    "id": "msc-halle-e-v",
+    "name": "MSC Halle e.V.",
+    "city": "Halle",
+    "lat": 51.48612424954888,
+    "lng": 11.949340000084984,
+    "hostIds": [
+      "msc-halle-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "44811",
+    "aliases": [
+      "MSC Halle e.V.",
+      "Halle",
+      "myrcm-44811"
+    ]
+  },
+  {
     "id": "msc-hansa-heilbronn-e-v",
     "name": "MSC Hansa Heilbronn e.V.",
     "city": "Heilbronn",
@@ -1373,6 +1425,42 @@
       "MSC Hansa Heilbronn e.V.",
       "MSC-Hansa Heilbronn e.V.",
       "Heilbronn"
+    ]
+  },
+  {
+    "id": "msc-herrenhaide",
+    "name": "MSC Herrenhaide",
+    "city": "Burgstädt",
+    "lat": 50.89413478350779,
+    "lng": 12.826840095339774,
+    "hostIds": [
+      "msc-herrenhaide"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "64487",
+    "aliases": [
+      "MSC Herrenhaide",
+      "Burgstädt",
+      "Burgstaedt",
+      "myrcm-64487"
+    ]
+  },
+  {
+    "id": "msc-hockendorf-e-v",
+    "name": "MSC Höckendorf e.V.",
+    "city": "Klingenberg",
+    "lat": 50.90685773749509,
+    "lng": 13.601278369350881,
+    "hostIds": [
+      "msc-hockendorf-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "56487",
+    "aliases": [
+      "MSC Höckendorf e.V.",
+      "MSC Hoeckendorf e.V.",
+      "Klingenberg",
+      "myrcm-56487"
     ]
   },
   {
@@ -1405,6 +1493,117 @@
     "myrcmOrgId": "36612"
   },
   {
+    "id": "msc-osterhofen-e-v",
+    "name": "MSC Osterhofen e.V.",
+    "city": "Osterhofen",
+    "lat": 48.706499782853214,
+    "lng": 13.037501093869494,
+    "hostIds": [
+      "msc-osterhofen-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "50019",
+    "aliases": [
+      "MSC Osterhofen e.V.",
+      "Osterhofen",
+      "myrcm-50019"
+    ]
+  },
+  {
+    "id": "msg-niesky-e-v",
+    "name": "MSG Niesky e.V.",
+    "city": "Rothenburg/Oberlausitz",
+    "lat": 51.305665983798235,
+    "lng": 14.816813302747354,
+    "hostIds": [
+      "msg-niesky-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "46202",
+    "aliases": [
+      "MSG Niesky e.V.",
+      "Rothenburg/Oberlausitz",
+      "Rothenburg Oberlausitz",
+      "myrcm-46202"
+    ]
+  },
+  {
+    "id": "mss-am-saegewerk",
+    "name": "MSS Am Sägewerk",
+    "city": "Seifhennersdorf",
+    "lat": 50.939800366011546,
+    "lng": 14.617924104218886,
+    "hostIds": [
+      "mss-am-sagewerk"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "49105",
+    "aliases": [
+      "MSS Am Sägewerk",
+      "MSS Am Saegewerk",
+      "MSS \"Am Sägewerk\"",
+      "Seifhennersdorf",
+      "myrcm-49105"
+    ]
+  },
+  {
+    "id": "msv-hurtgenwald-e-v",
+    "name": "MSV Hürtgenwald e.V.",
+    "city": "Hürtgenwald",
+    "lat": 50.70835291116781,
+    "lng": 6.399507234037498,
+    "hostIds": [
+      "msv-hurtgenwald-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "15511",
+    "aliases": [
+      "MSV Hürtgenwald e.V.",
+      "MSV Huertgenwald e.V.",
+      "Hürtgenwald",
+      "Huertgenwald",
+      "myrcm-15511"
+    ]
+  },
+  {
+    "id": "nitromaniacs-e-v",
+    "name": "NitroManiacs e.V.",
+    "city": "Mönchengladbach",
+    "lat": 51.230821840297466,
+    "lng": 6.493511337705921,
+    "hostIds": [
+      "nitromaniacs-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "15092",
+    "aliases": [
+      "NitroManiacs e.V.",
+      "NitroManiacs",
+      "Mönchengladbach",
+      "Moenchengladbach",
+      "myrcm-15092"
+    ]
+  },
+  {
+    "id": "orc-b-gottingen-e-v",
+    "name": "ORC-B Göttingen e.V.",
+    "city": "Göttingen",
+    "lat": 51.47056407637097,
+    "lng": 9.974981654302782,
+    "hostIds": [
+      "orc-b-gottingen-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "36113",
+    "aliases": [
+      "ORC-B Göttingen e.V.",
+      "ORC-B Goettingen e.V.",
+      "Göttingen",
+      "Goettingen",
+      "myrcm-36113"
+    ]
+  },
+  {
     "id": "ormc-koenigsbrunn",
     "name": "ORMC Königsbrunn",
     "city": "Augsburg",
@@ -1434,6 +1633,41 @@
     ]
   },
   {
+    "id": "rc-car-club-hilter-e-v",
+    "name": "RC Car Club Hilter e.V.",
+    "city": "Hilter",
+    "lat": 52.144740547507574,
+    "lng": 8.157176571156995,
+    "hostIds": [
+      "rc-car-club-hilter-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "",
+    "aliases": [
+      "RC Car Club Hilter e.V.",
+      "RC Car Club Hilter",
+      "Hilter"
+    ]
+  },
+  {
+    "id": "rc-car-freunde-emsdetten-e-v",
+    "name": "RC Car Freunde Emsdetten e.V.",
+    "city": "Emsdetten",
+    "lat": 52.15750387724352,
+    "lng": 7.5584260408228445,
+    "hostIds": [
+      "rc-car-freunde-emsdetten-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "55427",
+    "aliases": [
+      "RC Car Freunde Emsdetten e.V.",
+      "RC Car Freunde Emsdetten",
+      "Emsdetten",
+      "myrcm-55427"
+    ]
+  },
+  {
     "id": "rc-cars-koengen-e-v",
     "name": "RC Cars Köngen e.V.",
     "city": "Stuttgart",
@@ -1448,6 +1682,24 @@
       "myrcm-12564",
       "RC Cars Köngen e.V.",
       "Stuttgart"
+    ]
+  },
+  {
+    "id": "rc-fun-racer-e-v",
+    "name": "RC Fun Racer e.V.",
+    "city": "Velbert",
+    "lat": 51.335030109170006,
+    "lng": 7.050631454628135,
+    "hostIds": [
+      "rc-fun-racer-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "44059",
+    "aliases": [
+      "RC Fun Racer e.V.",
+      "RC Fun Racer",
+      "Velbert",
+      "myrcm-44059"
     ]
   },
   {
@@ -1739,6 +1991,24 @@
       "Weserpark, 34346 Hann.Münden",
       "myrcm-134",
       "Hann.Münden"
+    ]
+  },
+  {
+    "id": "rco-ottendorf-okrilla-e-v",
+    "name": "RCO Ottendorf-Okrilla e.V.",
+    "city": "Ottendorf-Okrilla",
+    "lat": 51.20863402751061,
+    "lng": 13.836483534425412,
+    "hostIds": [
+      "rco-ottendorf-okrilla-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "45728",
+    "aliases": [
+      "RCO Ottendorf-Okrilla e.V.",
+      "RCO Ottendorf Okrilla e.V.",
+      "Ottendorf-Okrilla",
+      "myrcm-45728"
     ]
   },
   {
