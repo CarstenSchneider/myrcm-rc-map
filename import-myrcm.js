@@ -6,6 +6,7 @@ const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
 const venueSeedsFile = "venue-seeds.json";
 const venueUnmatchedFile = "venue-unmatched.json";
+const seriesFile = "series.json";
 const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
@@ -389,8 +390,80 @@ function slugify(value) {
     .slice(0, 70);
 }
 
-function detectSeries(name) {
-  const lower = name.toLowerCase();
+function normalizedSeriesMatchText(value = "") {
+  return String(value ?? "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function seriesLabel(seriesDefinition = {}) {
+  return (
+    seriesDefinition.displayName ||
+    (seriesDefinition.shortName
+      ? `${seriesDefinition.name} (${seriesDefinition.shortName})`
+      : seriesDefinition.name) ||
+    seriesDefinition.id
+  );
+}
+
+function seriesAliases(seriesDefinition = {}) {
+  return Array.from(new Set([
+    seriesDefinition.name,
+    seriesDefinition.shortName,
+    seriesDefinition.displayName,
+    ...(Array.isArray(seriesDefinition.aliases) ? seriesDefinition.aliases : [])
+  ].filter(Boolean)));
+}
+
+function regexEscape(value = "") {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function hasSeriesAliasMatch(text, alias) {
+  const normalizedText = normalizedSeriesMatchText(text);
+  const normalizedAlias = normalizedSeriesMatchText(alias);
+
+  if (!normalizedText || !normalizedAlias) return false;
+
+  const pattern = new RegExp(`(^|\\s)${regexEscape(normalizedAlias)}(\\s|$)`, "i");
+  return pattern.test(normalizedText);
+}
+
+function detectSeries(name, classes = [], seriesCatalog = []) {
+  const textParts = [
+    name,
+    ...(Array.isArray(classes)
+      ? classes.map(item => typeof item === "string" ? item : item?.name)
+      : [])
+  ].filter(Boolean);
+
+  const combinedText = textParts.join(" | ");
+
+  if (Array.isArray(seriesCatalog) && seriesCatalog.length) {
+    const detected = [];
+
+    for (const seriesDefinition of seriesCatalog) {
+      if (!seriesDefinition?.id && !seriesDefinition?.name) continue;
+
+      const matched = seriesAliases(seriesDefinition).some(alias => hasSeriesAliasMatch(combinedText, alias));
+      if (!matched) continue;
+
+      detected.push(seriesLabel(seriesDefinition));
+    }
+
+    return Array.from(new Set(detected));
+  }
+
+  // Fallback for old repositories without series.json.
+  const lower = String(name || "").toLowerCase();
   const series = [];
 
   if (lower.includes("berlin touring masters") || /\bbtm\b/i.test(name)) {
@@ -409,7 +482,7 @@ function detectSeries(name) {
     series.push("RCK Kleinserie");
   }
 
-  if (lower.includes("rck challenge")) {
+  if (lower.includes("rck challenge") || lower.includes("rck-challenge")) {
     series.push("RCK Challenge");
   }
 
@@ -417,11 +490,11 @@ function detectSeries(name) {
     series.push("SK");
   }
 
-  if (lower.includes("tamico offroad cup") || lower.includes("tamico")) {
+  if (lower.includes("tamico offroad cup") || lower.includes("tamico-offroad-cup")) {
     series.push("Tamico Offroad Cup");
   }
 
-  if (lower.includes("tamiya euro cup") || /\btec\b/i.test(name)) {
+  if (lower.includes("tamiya euro cup") || lower.includes("tamiya euro-cup") || /\btec\b/i.test(name)) {
     series.push("TEC");
   }
 
@@ -1531,7 +1604,7 @@ async function runLimited(items, limit, worker) {
   return results;
 }
 
-async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSeeds, total, index) {
+async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSeeds, seriesCatalog, total, index) {
   const detailUrl = orgEventDetailUrl(host, eventLink.eventId);
   const regUrl = registrationUrl(eventLink.eventId);
 
@@ -1603,7 +1676,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       name: detail.name,
       from: detail.from,
       to: detail.to,
-      series: detectSeries(detail.name),
+      series: detectSeries(detail.name, registrationListInfo.classes, seriesCatalog),
       source: "myrcm",
       url: regUrl || detailUrl,
       detailUrl,
@@ -1632,7 +1705,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
   }
 }
 
-async function parseEvents(html, host, hostRecord, venueSeed, venueSeeds) {
+async function parseEvents(html, host, hostRecord, venueSeed, venueSeeds, seriesCatalog = []) {
   const eventLinkResult = extractEventLinksFromHostPage(html, host);
   const eventLinks = eventLinkResult.events;
 
@@ -1654,7 +1727,7 @@ async function parseEvents(html, host, hostRecord, venueSeed, venueSeeds) {
   const races = await runLimited(
     eventLinks,
     detailConcurrency,
-    (eventLink, index) => parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSeeds, eventLinks.length, index)
+    (eventLink, index) => parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSeeds, seriesCatalog, eventLinks.length, index)
   );
 
   return races.filter(Boolean);
@@ -1691,6 +1764,7 @@ async function runImportOnce() {
   const existingHosts = await readJsonIfExists(hostsFile, []);
   const existingVenues = await readJsonIfExists(venuesFile, []);
   const venueSeeds = await readJsonIfExists(venueSeedsFile, []);
+  const seriesCatalog = await readJsonIfExists(seriesFile, []);
   const existingUnmatched = await readJsonIfExists(venueUnmatchedFile, []);
   const venueSeedLookup = buildVenueSeedLookup(venueSeeds);
   const previousRaces = await loadPreviousRaces();
@@ -1699,6 +1773,7 @@ async function runImportOnce() {
   const importedUnmatched = [];
 
   console.log(`${hosts.length} deutsche Hosts mit Events geladen`);
+  console.log(`${Array.isArray(seriesCatalog) ? seriesCatalog.length : 0} kuratierte Serien geladen`);
 
   for (const host of hosts) {
     const existingHost = existingHostForMyRcmHost(existingHosts, host);
@@ -1718,7 +1793,7 @@ async function runImportOnce() {
       throw error;
     }
 
-    const races = await parseEvents(html, host, hostRecord, venueSeed, venueSeeds);
+    const races = await parseEvents(html, host, hostRecord, venueSeed, venueSeeds, seriesCatalog);
 
     if (!races.length) {
       console.log("  Host wird uebersprungen, weil kein Rennen im aktuellen Importzeitraum gefunden wurde");
