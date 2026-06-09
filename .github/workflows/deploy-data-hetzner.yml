@@ -40,11 +40,12 @@ jobs:
         run: |
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
           set sftp:auto-confirm yes
-          put -O ./ .deploy-data/venues.json
-          put -O ./ .deploy-data/races.json
-          put -O ./ .deploy-data/rck-races.json
-          put -O ./ .deploy-data/rck-venue-candidates.json
-          put -O ./ .deploy-data/rck-unmatched-venues.json
-          put -O ./ .deploy-data/myrcm-hosts-germany.json
+          mkdir -p rcracemap-dev || true
+          put -O ./rcracemap-dev .deploy-data/venues.json
+          put -O ./rcracemap-dev .deploy-data/races.json
+          put -O ./rcracemap-dev .deploy-data/rck-races.json
+          put -O ./rcracemap-dev .deploy-data/rck-venue-candidates.json
+          put -O ./rcracemap-dev .deploy-data/rck-unmatched-venues.json
+          put -O ./rcracemap-dev .deploy-data/myrcm-hosts-germany.json
           bye
           "
