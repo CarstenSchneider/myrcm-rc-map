@@ -1463,7 +1463,7 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
-    const isFavoriteVenue = isFavoriteVenueId(venue.id);
+    const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
 let markerColor = isFavoriteVenue
   ? markerFavoriteColorForRegistrationCount(registrationTotal)
