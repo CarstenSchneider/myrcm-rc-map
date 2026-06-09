@@ -40,7 +40,8 @@ jobs:
         run: |
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
           set sftp:auto-confirm yes
-          mkdir -p rcracemap-dev || true
+          set cmd:fail-exit no
+          mkdir rcracemap-dev
           put -O ./rcracemap-dev .deploy-data/venues.json
           put -O ./rcracemap-dev .deploy-data/races.json
           put -O ./rcracemap-dev .deploy-data/rck-races.json
