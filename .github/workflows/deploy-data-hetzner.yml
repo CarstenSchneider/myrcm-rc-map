@@ -5,7 +5,6 @@ on:
 
 jobs:
   deploy-data:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +21,7 @@ jobs:
           cp rck-unmatched-venues.json .deploy-data/
           cp myrcm-hosts-germany.json .deploy-data/
           cp hosts.json .deploy-data/
+          cp series.json .deploy-data/
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
@@ -33,14 +33,8 @@ jobs:
           HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
           HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
-          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
-          put -O ./ .deploy-data/venues.json
-          put -O ./ .deploy-data/races.json
-          put -O ./ .deploy-data/rck-races.json
-          put -O ./ .deploy-data/rck-venue-candidates.json
-          put -O ./ .deploy-data/rck-unmatched-venues.json
-          put -O ./ .deploy-data/myrcm-hosts-germany.json
-          put -O ./ .deploy-data/hosts.json
+          mirror -R .deploy-data ./ --verbose
           bye
-          "
+          EOF
