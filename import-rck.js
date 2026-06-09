@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const importerVersion = "import-rck-v12-coordinate-venue-match";
+const importerVersion = "import-rck-v13-seed-first-venue-match";
 
 const sources = [
   {
@@ -21,6 +21,7 @@ const sources = [
 ];
 
 const venuesFile = "venues.json";
+const venueSeedsFile = "venue-seeds.json";
 
 const outputFile = "rck-races.json";
 const unmatchedVenuesFile = "rck-unmatched-venues.json";
@@ -1077,15 +1078,22 @@ function mergeVenueCandidate(existing, candidate) {
   return applyRckVenueVerification(merged);
 }
 
-async function buildVenueCandidates(races, venues) {
+async function buildVenueCandidates(races, venues, venueSeeds = []) {
   const candidatesById = new Map();
-  const allVenues = [...venues];
+  const allVenues = [...venueSeeds, ...venues];
 
   for (const race of races) {
-    const pdfMatch = matchVenueByPdfData(race.pdfVenueData, allVenues);
+    const pdfMatch =
+      matchVenueByPdfData(race.pdfVenueData, venueSeeds) ||
+      matchVenueByPdfData(race.pdfVenueData, venues);
+
     const locationMatch = shouldUseLocationMatch(race)
-      ? matchVenueByLocation(race.rckLocation, allVenues)
+      ? (
+          matchVenueByLocation(race.rckLocation, venueSeeds) ||
+          matchVenueByLocation(race.rckLocation, venues)
+        )
       : null;
+
     const matched = pdfMatch || locationMatch;
 
     if (matched) {
@@ -1410,6 +1418,7 @@ function applySeenDates(races, existingRckRaces) {
 
 async function main() {
   const venues = await readJsonIfExists(venuesFile, []);
+  const venueSeeds = await readJsonIfExists(venueSeedsFile, []);
   const existingRckRaces = await readJsonIfExists(outputFile, []);
 
   const importedRaces = [];
@@ -1427,7 +1436,7 @@ async function main() {
       continue;
     }
 
-    const rawRaces = extractRacesFromTable(html, source, venues);
+    const rawRaces = extractRacesFromTable(html, source, [...venueSeeds, ...venues]);
     const races = rawRaces.filter(hasPdfDocument);
 
     console.log(`  ${rawRaces.length} RCK-Termine gefunden`);
@@ -1448,7 +1457,7 @@ async function main() {
   const internallyMerged = mergeRckInternally(importedRaces)
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 
-  const venueCandidates = await buildVenueCandidates(internallyMerged, venues);
+  const venueCandidates = await buildVenueCandidates(internallyMerged, venues, venueSeeds);
 
   const cleanedRaces = applySeenDates(internallyMerged, existingRckRaces);
 
