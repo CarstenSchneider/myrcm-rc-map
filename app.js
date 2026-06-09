@@ -966,13 +966,7 @@ function slugifyMatchValue(value = "") {
 function venueIdsForMatching(venue) {
   return [
     venue?.id,
-    venue?.name,
-    venue?.city,
-    venue?.location,
-    venue?.address,
-    venue?.venueName,
-    venue?.venueLocation,
-    venue?.rckLocation,
+    venue?.venueId,
     venue?.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
     ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
   ]
@@ -1016,14 +1010,73 @@ function venueById(id) {
   );
 }
 
+function compactAddressValue(value = "") {
+  return slugifyMatchValue(
+    String(value)
+      .replace(/strasse/gi, "str")
+      .replace(/straße/gi, "str")
+      .replace(/\./g, "")
+  );
+}
+
+function venueMatchesRaceAddress(venue, race) {
+  const raceAddress = compactAddressValue(race?.venueAddress || "");
+  if (!raceAddress) return false;
+
+  const venueAddress = compactAddressValue(venue?.address || venue?.venueAddress || "");
+  if (!venueAddress) return false;
+
+  const racePostalCode = String(race?.venuePostalCode || "").trim();
+  const venuePostalCode = String(venue?.postalCode || venue?.venuePostalCode || "").trim();
+
+  if (racePostalCode && venuePostalCode && racePostalCode !== venuePostalCode) return false;
+
+  return venueAddress.includes(raceAddress) || raceAddress.includes(venueAddress);
+}
+
+function venueMatchesRaceNameAndCity(venue, race) {
+  const raceVenueName = slugifyMatchValue(race?.venueName || "");
+  const venueName = slugifyMatchValue(venue?.name || venue?.venueName || "");
+  if (!raceVenueName || !venueName || raceVenueName !== venueName) return false;
+
+  const raceCity = slugifyMatchValue(
+    race?.venueCity ||
+    race?.venueLocation ||
+    race?.rckLocation ||
+    ""
+  );
+
+  if (!raceCity) return true;
+
+  const venueCities = [
+    venue?.city,
+    venue?.location,
+    venue?.venueLocation,
+    venue?.rckLocation
+  ]
+    .filter(Boolean)
+    .map(slugifyMatchValue);
+
+  return venueCities.length === 0 || venueCities.includes(raceCity);
+}
+
+function venueByRaceAddress(race) {
+  if (!race?.venueAddress) return null;
+  return venues.find(venue => venueMatchesRaceAddress(venue, race)) || null;
+}
+
+function venueByRaceNameAndCity(race) {
+  if (!race?.venueName) return null;
+  return venues.find(venue => venueMatchesRaceNameAndCity(venue, race)) || null;
+}
+
 function venueForRace(race) {
   if (!race) return null;
 
   return (
     venueById(race.venueId) ||
-    venueById(race.venueName) ||
-    venueById(race.venueAddress) ||
-    venueById(race.venueLocation) ||
+    venueByRaceAddress(race) ||
+    venueByRaceNameAndCity(race) ||
     null
   );
 }
@@ -1122,8 +1175,8 @@ function raceHostAndVenueAreSame(race) {
 
   const venue = venueForRace(race);
   const venueValues = [
-    race.venueName,
-    race.venueId,
+    race?.venueName,
+    race?.venueId,
     venue?.name,
     venue?.id
   ].filter(Boolean).map(normalizedDisplayText);
@@ -1313,11 +1366,10 @@ function venueDisplayName(race) {
   const venue = venueForRace(race);
 
   return (
+    race?.venueName ||
     venue?.name ||
-    race.venueName ||
-    race.venueLocation ||
-    race.venueId ||
-    race.hostId ||
+    race?.venueLocation ||
+    race?.venueId ||
     "Unbekannte Strecke"
   );
 }
@@ -2122,8 +2174,9 @@ function normalizeRaceFromSource(race, dataSource) {
   };
 }
 
-function mergeVenues(baseVenues, candidateVenues) {
+function mergeVenues(baseVenues, candidateVenues, options = {}) {
   const byId = new Map();
+  const requireVerifiedAddress = options.requireVerifiedAddress !== false;
 
   for (const venue of baseVenues) {
     if (!venue?.id) continue;
@@ -2131,7 +2184,8 @@ function mergeVenues(baseVenues, candidateVenues) {
   }
 
   for (const venue of candidateVenues) {
-    if (!venue?.id || !hasLatLng(venue) || !venue.addressVerifiedFromPdf) continue;
+    if (!venue?.id || !hasLatLng(venue)) continue;
+    if (requireVerifiedAddress && !venue.addressVerifiedFromPdf) continue;
     if (byId.has(venue.id)) continue;
     byId.set(venue.id, venue);
   }
@@ -2159,7 +2213,11 @@ async function init() {
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
 
-  venues = mergeVenues(mergeVenues(baseVenues, venueSeeds), rckVenueCandidates);
+  venues = mergeVenues(
+    mergeVenues(baseVenues, venueSeeds, { requireVerifiedAddress: false }),
+    rckVenueCandidates,
+    { requireVerifiedAddress: true }
+  );
   buildVenueLookup();
 
   races = [
