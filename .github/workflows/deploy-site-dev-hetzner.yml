@@ -1,6 +1,7 @@
 name: Deploy DEV site to Hetzner
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - dev
@@ -12,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: dev
 
       - name: Prepare site files
         run: |
@@ -31,12 +34,8 @@ jobs:
           HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
           HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
-          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
-          mkdir -p rcracemap-dev
-          put -O ./rcracemap-dev .deploy-site/index.html
-          put -O ./rcracemap-dev .deploy-site/app.js
-          put -O ./rcracemap-dev .deploy-site/style.css
-          put -O ./rcracemap-dev .deploy-site/impressum-datenschutz.html
+          mirror -R .deploy-site ./rcracemap-dev --verbose
           bye
-          "
+          EOF
