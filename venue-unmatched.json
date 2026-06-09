@@ -1,53 +1,5 @@
 [
   {
-    "hostId": "c-hub-racing-gbr",
-    "hostName": "C-HUB Racing GBR",
-    "source": "myrcm",
-    "myrcmOrgId": "9496",
-    "possibleVenue": "Weil der Stadt",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "cc-racing",
-    "hostName": "CC-Racing",
-    "source": "myrcm",
-    "myrcmOrgId": "1152",
-    "possibleVenue": "Hamburg",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "fun-center-ch-gmbh-jestetten",
-    "hostName": "fun-center.ch GmbH Jestetten",
-    "source": "myrcm",
-    "myrcmOrgId": "17182",
-    "possibleVenue": "Jestetten",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "grunewald-motorsport",
-    "hostName": "Grünewald Motorsport",
-    "source": "myrcm",
-    "myrcmOrgId": "52767",
-    "possibleVenue": "Sonneberg",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "mac-berlin-e-v",
-    "hostName": "MAC Berlin e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "168",
-    "possibleVenue": "Berlin",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "mac-idar-oberstein",
-    "hostName": "MAC Idar-Oberstein",
-    "source": "myrcm",
-    "myrcmOrgId": "258",
-    "possibleVenue": "Idar-Oberstein",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "source": "myrcm",
@@ -56,36 +8,12 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "mcc-kastellaun-e-v",
-    "hostName": "MCC Kastellaun e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "4141",
-    "possibleVenue": "Wüschheim",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "mcc-konstanz",
-    "hostName": "MCC Konstanz",
-    "source": "myrcm",
-    "myrcmOrgId": "5505",
-    "possibleVenue": "Überllingen",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "source": "myrcm",
     "myrcmOrgId": "50727",
     "possibleVenue": "Großostheim",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "mfk-kurten-e-v",
-    "hostName": "MFK Kürten e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "53092",
-    "possibleVenue": "Köln",
-    "reason": "no confirmed venue seed for MyRCM host"
   },
   {
     "hostId": "modellclub-flensburg-e-v",
@@ -120,36 +48,12 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "msc-ober-morlen-e-v",
-    "hostName": "MSC Ober-Mörlen e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "66454",
-    "possibleVenue": "Weiterstadt",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "msc-osterhofen-e-v",
     "hostName": "MSC Osterhofen e.V.",
     "source": "myrcm",
     "myrcmOrgId": "50019",
     "possibleVenue": "Osterhofen",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
-    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
-    "source": "myrcm",
-    "myrcmOrgId": "72",
-    "possibleVenue": "Braunschweig",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "msc-ulm-e-v",
-    "hostName": "MSC Ulm e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "42113",
-    "possibleVenue": "Senden",
-    "reason": "no confirmed venue seed for MyRCM host"
   },
   {
     "hostId": "msg-niesky-e-v",
@@ -184,68 +88,12 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "offroad-minicar-crew-e-v",
-    "hostName": "Offroad Minicar Crew e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "35380",
-    "possibleVenue": "Heroldsberg",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "source": "myrcm",
     "myrcmOrgId": "36113",
     "possibleVenue": "Göttingen",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "ormc-konigsbrunn",
-    "hostName": "ORMC Königsbrunn",
-    "source": "myrcm",
-    "myrcmOrgId": "573",
-    "possibleVenue": "Augsburg",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "ostseeracer-rc-modellbau-e-v",
-    "hostName": "OstseeRacer RC Modellbau e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "26381",
-    "possibleVenue": "Broderstorf",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "pmc-paderborn-e-v",
-    "hostName": "PMC Paderborn e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "13247",
-    "possibleVenue": "Paderborn",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "racers-paradise-modellsport",
-    "hostName": "RACERS PARADISE MODELLSPORT",
-    "source": "myrcm",
-    "myrcmOrgId": "30490",
-    "possibleVenue": "Erftstadt",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rasenracer-e-v",
-    "hostName": "Rasenracer e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "37610",
-    "possibleVenue": "Alpen",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rc-car-chemnitz",
-    "hostName": "RC Car Chemnitz",
-    "source": "myrcm",
-    "myrcmOrgId": "51129",
-    "possibleVenue": "Chemnitz",
-    "reason": "no confirmed venue seed for MyRCM host"
   },
   {
     "hostId": "rc-car-freunde-emsdetten-e-v",
@@ -256,68 +104,12 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-car-indoor-minidrom-owl",
-    "hostName": "RC Car Indoor Minidrom OWL",
-    "source": "myrcm",
-    "myrcmOrgId": "30429",
-    "possibleVenue": "Bielefeld",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rc-cars-drift-st-wendel",
-    "hostName": "RC Cars & Drift St. Wendel",
-    "source": "myrcm",
-    "myrcmOrgId": "37209",
-    "possibleVenue": "St. Wendel",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rc-cars-wernigerode-e-v",
-    "hostName": "RC Cars Wernigerode e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "43490",
-    "possibleVenue": "Wernigerode",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rc-drecksloch-e-v",
-    "hostName": "RC Drecksloch e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "33778",
-    "possibleVenue": "Oberhausen",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "rc-fun-racer-e-v",
     "hostName": "RC Fun Racer e.V",
     "source": "myrcm",
     "myrcmOrgId": "44059",
     "possibleVenue": "Velbert",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rc-halle-e-v",
-    "hostName": "RC Halle e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "42085",
-    "possibleVenue": "Halle",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rc-modellbaufreunde-e-v",
-    "hostName": "RC Modellbaufreunde e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "53665",
-    "possibleVenue": "Attaching",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "rc-offroad-staaken",
-    "hostName": "RC Offroad Staaken",
-    "source": "myrcm",
-    "myrcmOrgId": "55317",
-    "possibleVenue": "Berlin",
-    "reason": "no confirmed venue seed for MyRCM host"
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
@@ -352,27 +144,11 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "smc-stuttgart-e-v",
-    "hostName": "SMC Stuttgart e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "51971",
-    "possibleVenue": "Stuttgart",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "tsv-gelenau-e-v",
     "hostName": "TSV Gelenau e.V.",
     "source": "myrcm",
     "myrcmOrgId": "30389",
     "possibleVenue": "Gelenau/Erzgebirge",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "vfl-goldstein-1953-e-v",
-    "hostName": "VfL Goldstein 1953 e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "54871",
-    "possibleVenue": "Frankfurt",
-    "reason": "no confirmed venue seed for MyRCM host"
   }
 ]

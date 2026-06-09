@@ -28126,8 +28126,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
       {
@@ -28140,7 +28140,7 @@
       },
       {
         "name": "VG5SP",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [
