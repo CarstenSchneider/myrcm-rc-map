@@ -37,6 +37,7 @@ let venues = [];
 let races = [];
 let hosts = [];
 let hostsByOrgId = new Map();
+let venueLookup = new Map();
 let markers = new Map();
 let activeRaceId = null;
 let activeVenueId = null;
@@ -891,15 +892,35 @@ function venueIdsForMatching(venue) {
     venue?.hostId,
     venue?.hostName,
     venue?.name,
-    slugifyMatchValue(venue?.name),
-    slugifyMatchValue(venue?.hostName),
     venue?.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
     ...(Array.isArray(venue?.hostIds) ? venue.hostIds : []),
-    ...(Array.isArray(venue?.aliases) ? venue.aliases : []),
-    ...(Array.isArray(venue?.aliases) ? venue.aliases.map(slugifyMatchValue) : [])
+    ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
   ]
     .filter(Boolean)
     .map(String);
+}
+
+function addVenueLookupValue(value, venue) {
+  if (!value || !venue) return;
+
+  const raw = String(value);
+  const slug = slugifyMatchValue(raw);
+
+  if (raw && !venueLookup.has(raw)) {
+    venueLookup.set(raw, venue);
+  }
+
+  if (slug && !venueLookup.has(slug)) {
+    venueLookup.set(slug, venue);
+  }
+}
+
+function buildVenueLookup() {
+  venueLookup = new Map();
+
+  venues.forEach(venue => {
+    venueIdsForMatching(venue).forEach(value => addVenueLookupValue(value, venue));
+  });
 }
 
 function venueById(id) {
@@ -908,19 +929,11 @@ function venueById(id) {
   const lookupId = String(id);
   const lookupSlug = slugifyMatchValue(lookupId);
 
-  return venues.find(venue => {
-    return venueIdsForMatching(venue).some(matchId => {
-      const match = String(matchId);
-      const matchSlug = slugifyMatchValue(match);
-
-      return (
-        lookupId === match ||
-        lookupId.startsWith(`${match}-`) ||
-        (lookupSlug && lookupSlug === matchSlug) ||
-        (lookupSlug && matchSlug && lookupSlug.startsWith(`${matchSlug}-`))
-      );
-    });
-  }) || null;
+  return (
+    venueLookup.get(lookupId) ||
+    venueLookup.get(lookupSlug) ||
+    null
+  );
 }
 
 function venueForRace(race) {
@@ -1184,6 +1197,7 @@ function venueDisplayName(race) {
     race.venueName ||
     race.venueLocation ||
     race.venueId ||
+    race.hostId ||
     "Unbekannte Strecke"
   );
 }
@@ -1196,6 +1210,8 @@ function raceSearchText(race) {
     race.venueName,
     race.venueLocation,
     race.venueId,
+    race.hostId,
+    race.hostName,
     venue?.name,
     venue?.city,
     venue?.location,
@@ -1214,18 +1230,7 @@ function isRaceAtVenue(race, venueId) {
   if (!venue) return false;
 
   const raceVenue = venueForRace(race);
-  if (raceVenue?.id === venue.id) return true;
-
-  const raceIds = [
-    race.venueId,
-    race.hostId
-  ].filter(Boolean).map(String);
-
-  return raceIds.some(raceId =>
-    venueIdsForMatching(venue).some(matchId =>
-      raceId === matchId || raceId.startsWith(`${matchId}-`)
-    )
-  );
+  return Boolean(raceVenue && raceVenue.id === venue.id);
 }
 
 function isInSelectedRange(race) {
@@ -2022,6 +2027,8 @@ async function init() {
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
 
   venues = mergeVenues(baseVenues, rckVenueCandidates);
+  buildVenueLookup();
+
   races = [
     ...myrcmRaces
       .filter(race => !isRckEventFromMyRcm(race))
