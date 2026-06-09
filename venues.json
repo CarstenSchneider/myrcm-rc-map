@@ -234,8 +234,8 @@
     "id": "arena33-andernach",
     "name": "Arena33",
     "city": "Andernach",
-    "lat": 50.42467638260954,
-    "lng": 7.424522960340918,
+    "lat": 50.4254599,
+    "lng": 7.4244081,
     "address": "Stadionstr. 90, 56626 Andernach",
     "postalCode": "56626",
     "website": "",
@@ -254,7 +254,7 @@
       "djk-andernach-e-v"
     ],
     "myrcmOrgId": "1288",
-    "source": "verified-existing-geolocation-list-plus-rck-pdf-address",
+    "source": "manual-corrected-arena33-stadionstrasse-90",
     "verified": true
   },
   {
