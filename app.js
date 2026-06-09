@@ -37,6 +37,7 @@ let venues = [];
 let races = [];
 let hosts = [];
 let hostsByOrgId = new Map();
+let venueLookup = new Map();
 let markers = new Map();
 let activeRaceId = null;
 let activeVenueId = null;
@@ -48,7 +49,61 @@ let showOpenOnly = true;
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
+const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
+
+function getFavoriteHostIds() {
+  try {
+    const raw = localStorage.getItem(favoriteHostStorageKey);
+    const parsed = JSON.parse(raw || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(Boolean).map(String);
+  } catch {
+    return [];
+  }
+}
+
+function saveFavoriteHostIds(ids) {
+  const uniqueIds = [...new Set((ids || []).filter(Boolean).map(String))];
+  localStorage.setItem(favoriteHostStorageKey, JSON.stringify(uniqueIds));
+}
+
+function isFavoriteHostId(hostId) {
+  if (!hostId) return false;
+  return getFavoriteHostIds().includes(String(hostId));
+}
+
+function toggleFavoriteHost(hostId) {
+  if (!hostId) return;
+
+  const id = String(hostId);
+  const favoriteIds = getFavoriteHostIds();
+
+  if (favoriteIds.includes(id)) {
+    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
+  } else {
+    saveFavoriteHostIds([...favoriteIds, id]);
+  }
+}
+
+function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
+  if (!hostId) return "";
+
+  const active = isFavoriteHostId(hostId);
+  const title = active
+    ? `${label} aus Favoriten entfernen`
+    : `${label} als Favorit markieren`;
+
+  return `<button
+    class="venue-favorite-button${active ? " active" : ""}"
+    type="button"
+    data-favorite-host-id="${escapeHtml(hostId)}"
+    title="${escapeHtml(title)}"
+    aria-label="${escapeHtml(title)}"
+    aria-pressed="${active ? "true" : "false"}"
+  >${active ? "★" : "☆"}</button>`;
+}
+
 
 function getFavoriteVenueIds() {
   try {
@@ -103,12 +158,35 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
 }
 
 function raceFavoriteVenueId(race) {
-  const venue = venueById(race?.venueId);
+  const venue = venueForRace(race);
   return venue?.id || null;
 }
 
-function isFavoriteRaceVenue(race) {
-  return isFavoriteVenueId(raceFavoriteVenueId(race));
+function raceHostId(race) {
+  if (race?.hostId) return String(race.hostId);
+  if (race?.hostName) return slugifyMatchValue(race.hostName);
+
+  const venue = venueForRace(race);
+  if (venue?.hostId) return String(venue.hostId);
+  if (venue?.hostName) return slugifyMatchValue(venue.hostName);
+
+  return null;
+}
+
+function raceHostName(race) {
+  return (
+    race?.hostName ||
+    race?.organizerName ||
+    race?.organiserName ||
+    race?.organizer ||
+    race?.organiser ||
+    raceHostId(race) ||
+    "Unbekannter Ausrichter"
+  );
+}
+
+function isFavoriteRaceHost(race) {
+  return isFavoriteHostId(raceHostId(race));
 }
 
 
@@ -163,13 +241,6 @@ function syncFilterUi() {
   renderActiveFilterChips();
 }
 
-
-const verifiedVenueAliases = {
-  "myrcm-18244": "tsv-mariendorf",
-  "myrcm-45925": "bernau",
-  "myrcm-41404": "marzahn",
-  "myrcm-52898": "blankenfelde"
-};
 
 const seriesDisplayNames = {
   "BTM": "BTM – Berlin Touring Masters",
@@ -236,7 +307,25 @@ function isRckEventFromMyRcm(race) {
 }
 
 function hasLatLng(venue) {
-  return Number.isFinite(Number(venue?.lat)) && Number.isFinite(Number(venue?.lng));
+  if (!venue) return false;
+
+  const lat = venue.lat;
+  const lng = venue.lng;
+
+  if (lat === null || lat === undefined || lat === "") return false;
+  if (lng === null || lng === undefined || lng === "") return false;
+
+  const latNumber = Number(lat);
+  const lngNumber = Number(lng);
+
+  return (
+    Number.isFinite(latNumber) &&
+    Number.isFinite(lngNumber) &&
+    latNumber >= 44 &&
+    latNumber <= 59 &&
+    lngNumber >= -5 &&
+    lngNumber <= 25
+  );
 }
 
 function isUnverifiedVenue(venue) {
@@ -861,31 +950,135 @@ function raceSeries(race) {
   return detectSeries(race.name);
 }
 
-function venueAliasId(raceVenueId) {
-  if (!raceVenueId) return null;
+function slugifyMatchValue(value = "") {
+  return String(value ?? "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
-  for (const prefix of Object.keys(verifiedVenueAliases)) {
-    if (raceVenueId.startsWith(prefix)) {
-      return verifiedVenueAliases[prefix];
-    }
+function venueIdsForMatching(venue) {
+  return [
+    venue?.id,
+    venue?.venueId,
+    venue?.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
+    ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
+  ]
+    .filter(Boolean)
+    .map(String);
+}
+
+function addVenueLookupValue(value, venue) {
+  if (!value || !venue) return;
+
+  const raw = String(value);
+  const slug = slugifyMatchValue(raw);
+
+  if (raw && !venueLookup.has(raw)) {
+    venueLookup.set(raw, venue);
   }
 
-  return null;
+  if (slug && !venueLookup.has(slug)) {
+    venueLookup.set(slug, venue);
+  }
+}
+
+function buildVenueLookup() {
+  venueLookup = new Map();
+
+  venues.forEach(venue => {
+    venueIdsForMatching(venue).forEach(value => addVenueLookupValue(value, venue));
+  });
 }
 
 function venueById(id) {
   if (!id) return null;
 
-  const direct = venues.find(venue => {
-    return id === venue.id || id.startsWith(`${venue.id}-`);
-  });
+  const lookupId = String(id);
+  const lookupSlug = slugifyMatchValue(lookupId);
 
-  if (direct) return direct;
+  return (
+    venueLookup.get(lookupId) ||
+    venueLookup.get(lookupSlug) ||
+    null
+  );
+}
 
-  const alias = venueAliasId(id);
-  if (!alias) return null;
+function compactAddressValue(value = "") {
+  return slugifyMatchValue(
+    String(value)
+      .replace(/strasse/gi, "str")
+      .replace(/straße/gi, "str")
+      .replace(/\./g, "")
+  );
+}
 
-  return venues.find(venue => venue.id === alias) || null;
+function venueMatchesRaceAddress(venue, race) {
+  const raceAddress = compactAddressValue(race?.venueAddress || "");
+  if (!raceAddress) return false;
+
+  const venueAddress = compactAddressValue(venue?.address || venue?.venueAddress || "");
+  if (!venueAddress) return false;
+
+  const racePostalCode = String(race?.venuePostalCode || "").trim();
+  const venuePostalCode = String(venue?.postalCode || venue?.venuePostalCode || "").trim();
+
+  if (racePostalCode && venuePostalCode && racePostalCode !== venuePostalCode) return false;
+
+  return venueAddress.includes(raceAddress) || raceAddress.includes(venueAddress);
+}
+
+function venueMatchesRaceNameAndCity(venue, race) {
+  const raceVenueName = slugifyMatchValue(race?.venueName || "");
+  const venueName = slugifyMatchValue(venue?.name || venue?.venueName || "");
+  if (!raceVenueName || !venueName || raceVenueName !== venueName) return false;
+
+  const raceCity = slugifyMatchValue(
+    race?.venueCity ||
+    race?.venueLocation ||
+    race?.rckLocation ||
+    ""
+  );
+
+  if (!raceCity) return true;
+
+  const venueCities = [
+    venue?.city,
+    venue?.location,
+    venue?.venueLocation,
+    venue?.rckLocation
+  ]
+    .filter(Boolean)
+    .map(slugifyMatchValue);
+
+  return venueCities.length === 0 || venueCities.includes(raceCity);
+}
+
+function venueByRaceAddress(race) {
+  if (!race?.venueAddress) return null;
+  return venues.find(venue => venueMatchesRaceAddress(venue, race)) || null;
+}
+
+function venueByRaceNameAndCity(race) {
+  if (!race?.venueName) return null;
+  return venues.find(venue => venueMatchesRaceNameAndCity(venue, race)) || null;
+}
+
+function venueForRace(race) {
+  if (!race) return null;
+
+  return (
+    venueById(race.venueId) ||
+    venueByRaceAddress(race) ||
+    venueByRaceNameAndCity(race) ||
+    null
+  );
 }
 
 function normalizeUrl(url) {
@@ -923,13 +1116,6 @@ function orgIdsForVenue(venue) {
 
   if (directOrgId) ids.add(directOrgId);
 
-  Object.entries(verifiedVenueAliases).forEach(([myrcmId, venueId]) => {
-    if (venue.id === venueId) {
-      const orgId = orgIdFromValue(myrcmId);
-      if (orgId) ids.add(orgId);
-    }
-  });
-
   return [...ids];
 }
 
@@ -951,7 +1137,10 @@ function venueWebsite(venue) {
 }
 
 function raceWebsite(race) {
-  const venue = venueById(race.venueId);
+  const directVenueWebsite = normalizeUrl(race?.venueWebsite);
+  if (directVenueWebsite) return directVenueWebsite;
+
+  const venue = venueForRace(race);
 
   const venueLink = venueWebsite(venue);
   if (venueLink) return venueLink;
@@ -967,27 +1156,62 @@ function raceWebsite(race) {
 function venueNameHtml(venue) {
   const website = venueWebsite(venue);
   const name = escapeHtml(venue?.name || "Unbekannte Strecke");
-  const favorite = favoriteButtonHtml(venue?.id, venue?.name || "Strecke");
-  const favoriteClass = isFavoriteVenueId(venue?.id) ? " venue-link-favorite" : "";
   const nameHtml = website
-    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
-    : `<span class="venue-link${favoriteClass}">${name}</span>`;
+    ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
+    : `<span class="venue-link">${name}</span>`;
 
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
+  return `<span class="venue-name">${nameHtml}</span>`;
+}
+
+function normalizedDisplayText(value = "") {
+  return slugifyMatchValue(value);
+}
+
+function raceHostAndVenueAreSame(race) {
+  const hostValues = [
+    raceHostName(race),
+    raceHostId(race)
+  ].filter(Boolean).map(normalizedDisplayText);
+
+  const venue = venueForRace(race);
+  const venueValues = [
+    race?.venueName,
+    race?.venueId,
+    venue?.name,
+    venue?.id
+  ].filter(Boolean).map(normalizedDisplayText);
+
+  return hostValues.some(hostValue =>
+    venueValues.some(venueValue => hostValue && venueValue && hostValue === venueValue)
+  );
+}
+
+function raceVenueMetaHtml(race) {
+  if (!hasMappableVenue(race)) return "";
+  if (raceHostAndVenueAreSame(race)) return "";
+
+  return `<div class="race-venue">📍 ${raceVenueNameHtml(race)}</div>`;
+}
+
+function raceHostNameHtml(race) {
+  const hostId = raceHostId(race);
+  const hostName = raceHostName(race);
+  const favorite = favoriteHostButtonHtml(hostId, hostName);
+  const favoriteClass = isFavoriteHostId(hostId) ? " venue-link-favorite" : "";
+
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}<span class="venue-link${favoriteClass}">${escapeHtml(hostName)}</span></span>`;
 }
 
 function raceVenueNameHtml(race) {
   const name = escapeHtml(venueDisplayName(race));
   const website = raceWebsite(race);
-  const venueId = raceFavoriteVenueId(race);
-  const favorite = favoriteButtonHtml(venueId, venueDisplayName(race));
-  const favoriteClass = isFavoriteVenueId(venueId) ? " venue-link-favorite" : "";
   const nameHtml = website
-    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : `<span class="venue-link${favoriteClass}">${name}</span>`;
+    ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
+    : `<span class="venue-link">${name}</span>`;
 
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
+  return `<span class="venue-name">${nameHtml}</span>`;
 }
+
 
 function escapeHtml(value = "") {
   return String(value)
@@ -1129,35 +1353,38 @@ function documentLinksHtml(race) {
 }
 
 function hasMappableVenue(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
   return Boolean(venue && hasLatLng(venue));
 }
 
 function hasVerifiedVenue(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
   return Boolean(venue && hasLatLng(venue) && !isUnverifiedVenue(venue));
 }
 
 function venueDisplayName(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   return (
+    race?.venueName ||
     venue?.name ||
-    race.venueName ||
-    race.venueLocation ||
-    race.venueId ||
+    race?.venueLocation ||
+    race?.venueId ||
     "Unbekannte Strecke"
   );
 }
 
 function raceSearchText(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   return [
     race.name,
     race.venueName,
     race.venueLocation,
     race.venueId,
+    race.hostId,
+    race.hostName,
+    raceHostName(race),
     venue?.name,
     venue?.city,
     venue?.location,
@@ -1170,13 +1397,13 @@ function raceSearchText(race) {
 }
 
 function isRaceAtVenue(race, venueId) {
-  if (!race.venueId) return false;
+  if (!race || !venueId) return false;
 
-  if (race.venueId === venueId) return true;
+  const venue = venueById(venueId);
+  if (!venue) return false;
 
-  if (race.venueId.startsWith(`${venueId}-`)) return true;
-
-  return venueAliasId(race.venueId) === venueId;
+  const raceVenue = venueForRace(race);
+  return Boolean(raceVenue && raceVenue.id === venue.id);
 }
 
 function isInSelectedRange(race) {
@@ -1203,14 +1430,15 @@ function filteredRaces() {
     .filter(matchesSelectedSeries)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => {
-      const favoriteOrder = Number(isFavoriteRaceVenue(b)) - Number(isFavoriteRaceVenue(a));
+      const favoriteOrder = Number(isFavoriteRaceHost(b)) - Number(isFavoriteRaceHost(a));
       if (favoriteOrder !== 0) return favoriteOrder;
       return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
     });
 }
 
 function googleMapsRouteUrl(venue) {
-  return `https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`;
+  if (!hasLatLng(venue)) return "#";
+  return `https://www.google.com/maps/dir/?api=1&destination=${Number(venue.lat)},${Number(venue.lng)}`;
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
@@ -1286,7 +1514,7 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
-    const isFavoriteVenue = isFavoriteVenueId(venue.id);
+    const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
 let markerColor = isFavoriteVenue
   ? markerFavoriteColorForRegistrationCount(registrationTotal)
@@ -1393,7 +1621,6 @@ const popupOffset = hasUpcomingRaces
       popupElement.addEventListener("click", event => {
         if (
           event.target.closest("a") ||
-          event.target.closest("[data-favorite-venue-id]") ||
           event.target.closest(".leaflet-popup-close-button")
         ) {
           return;
@@ -1506,7 +1733,7 @@ function selectRaceFromPopup(raceId) {
   const race = races.find(item => item.id === raceId);
   if (!race) return;
 
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   activeRaceId = race.id;
   renderList(filteredRaces());
@@ -1523,7 +1750,7 @@ function selectRaceFromPopup(raceId) {
 }
 
 function focusRace(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
   if (!venue) return;
 
   activeVenueId = venue.id;
@@ -1553,19 +1780,19 @@ function renderList(list) {
     return;
   }
 
-  const hasFavoriteRaces = list.some(isFavoriteRaceVenue);
-  const hasNormalRaces = list.some(race => !isFavoriteRaceVenue(race));
+  const hasFavoriteRaces = list.some(isFavoriteRaceHost);
+  const hasNormalRaces = list.some(race => !isFavoriteRaceHost(race));
   const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
   let didRenderFavoriteDivider = false;
   let didRenderNormalDivider = false;
 
   for (const race of list) {
-    const isFavorite = isFavoriteRaceVenue(race);
+    const isFavorite = isFavoriteRaceHost(race);
 
     if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
       const divider = document.createElement("div");
       divider.className = "race-section-divider race-section-divider-favorites";
-      divider.textContent = "★ Favorisierte Strecken";
+      divider.textContent = "★ Favorisierte Ausrichter";
       raceList.appendChild(divider);
       didRenderFavoriteDivider = true;
     }
@@ -1608,7 +1835,8 @@ function renderList(list) {
         </div>
 
         <div class="race-card-meta">
-          <div class="race-venue">${raceVenueNameHtml(race)}</div>
+          <div class="race-host">${raceHostNameHtml(race)}</div>
+          ${raceVenueMetaHtml(race)}
           ${documentLinksHtml(race)}
           ${statusDetailsHtml(race)}
         </div>
@@ -1645,11 +1873,13 @@ function renderList(list) {
       card.addEventListener("click", event => {
         if (event.target.closest("[data-class-toggle]")) return;
         if (event.target.closest("[data-favorite-venue-id]")) return;
+        if (event.target.closest("[data-favorite-host-id]")) return;
         focusRace(race);
       });
 
       card.addEventListener("keydown", event => {
         if (event.target.closest("[data-favorite-venue-id]")) return;
+        if (event.target.closest("[data-favorite-host-id]")) return;
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           focusRace(race);
@@ -1680,13 +1910,20 @@ function toggleClassList(raceId) {
 }
 
 document.addEventListener("click", event => {
-  const favoriteButton = event.target.closest("[data-favorite-venue-id]");
+  const favoriteVenueButton = event.target.closest("[data-favorite-venue-id]");
+  const favoriteHostButton = event.target.closest("[data-favorite-host-id]");
+  const favoriteButton = favoriteVenueButton || favoriteHostButton;
+
   if (!favoriteButton) return;
 
   event.preventDefault();
   event.stopPropagation();
 
-  toggleFavoriteVenue(favoriteButton.dataset.favoriteVenueId);
+  if (favoriteHostButton) {
+    toggleFavoriteHost(favoriteHostButton.dataset.favoriteHostId);
+  } else if (favoriteVenueButton) {
+    toggleFavoriteVenue(favoriteVenueButton.dataset.favoriteVenueId);
+  }
 
   const list = filteredRaces();
   updateMarkers(list, false);
@@ -1937,8 +2174,9 @@ function normalizeRaceFromSource(race, dataSource) {
   };
 }
 
-function mergeVenues(baseVenues, candidateVenues) {
+function mergeVenues(baseVenues, candidateVenues, options = {}) {
   const byId = new Map();
+  const requireVerifiedAddress = options.requireVerifiedAddress !== false;
 
   for (const venue of baseVenues) {
     if (!venue?.id) continue;
@@ -1946,7 +2184,8 @@ function mergeVenues(baseVenues, candidateVenues) {
   }
 
   for (const venue of candidateVenues) {
-    if (!venue?.id || !hasLatLng(venue) || !venue.addressVerifiedFromPdf) continue;
+    if (!venue?.id || !hasLatLng(venue)) continue;
+    if (requireVerifiedAddress && !venue.addressVerifiedFromPdf) continue;
     if (byId.has(venue.id)) continue;
     byId.set(venue.id, venue);
   }
@@ -1972,7 +2211,13 @@ async function init() {
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
 
-  venues = mergeVenues(baseVenues, rckVenueCandidates);
+  venues = mergeVenues(
+    baseVenues,
+    rckVenueCandidates,
+    { requireVerifiedAddress: true }
+  );
+  buildVenueLookup();
+
   races = [
     ...myrcmRaces
       .filter(race => !isRckEventFromMyRcm(race))
