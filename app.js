@@ -1105,6 +1105,42 @@ function venueNameHtml(venue) {
   return `<span class="venue-name">${nameHtml}</span>`;
 }
 
+function normalizedDisplayText(value = "") {
+  return slugifyMatchValue(value);
+}
+
+function raceHostAndVenueAreSame(race) {
+  const hostName = raceHostName(race);
+  const hostId = raceHostId(race);
+  const venue = venueForRace(race);
+  const venueName = venueDisplayName(race);
+
+  const hostValues = [
+    hostName,
+    hostId
+  ].filter(Boolean).map(normalizedDisplayText);
+
+  const venueValues = [
+    venueName,
+    venue?.name,
+    venue?.hostName,
+    venue?.hostId,
+    venue?.id,
+    ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
+  ].filter(Boolean).map(normalizedDisplayText);
+
+  return hostValues.some(hostValue =>
+    venueValues.some(venueValue => hostValue && venueValue && hostValue === venueValue)
+  );
+}
+
+function raceVenueMetaHtml(race) {
+  if (!hasMappableVenue(race)) return "";
+  if (raceHostAndVenueAreSame(race)) return "";
+
+  return `<div class="race-venue">📍 ${raceVenueNameHtml(race)}</div>`;
+}
+
 function raceHostNameHtml(race) {
   const hostId = raceHostId(race);
   const hostName = raceHostName(race);
@@ -1123,6 +1159,7 @@ function raceVenueNameHtml(race) {
 
   return `<span class="venue-name">${nameHtml}</span>`;
 }
+
 
 function escapeHtml(value = "") {
   return String(value)
@@ -1748,7 +1785,7 @@ function renderList(list) {
 
         <div class="race-card-meta">
           <div class="race-host">${raceHostNameHtml(race)}</div>
-          <div class="race-venue">📍 ${raceVenueNameHtml(race)}</div>
+          ${raceVenueMetaHtml(race)}
           ${documentLinksHtml(race)}
           ${statusDetailsHtml(race)}
         </div>
@@ -1784,12 +1821,14 @@ function renderList(list) {
     if (hasMappableVenue(race)) {
       card.addEventListener("click", event => {
         if (event.target.closest("[data-class-toggle]")) return;
-        if ((event.target.closest("[data-favorite-venue-id]") || event.target.closest("[data-favorite-host-id]"))) return;
+        if (event.target.closest("[data-favorite-venue-id]")) return;
+        if (event.target.closest("[data-favorite-host-id]")) return;
         focusRace(race);
       });
 
       card.addEventListener("keydown", event => {
-        if ((event.target.closest("[data-favorite-venue-id]") || event.target.closest("[data-favorite-host-id]"))) return;
+        if (event.target.closest("[data-favorite-venue-id]")) return;
+        if (event.target.closest("[data-favorite-host-id]")) return;
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           focusRace(race);
@@ -1820,7 +1859,10 @@ function toggleClassList(raceId) {
 }
 
 document.addEventListener("click", event => {
-  const favoriteButton = (event.target.closest("[data-favorite-venue-id]") || event.target.closest("[data-favorite-host-id]"));
+  const favoriteVenueButton = event.target.closest("[data-favorite-venue-id]");
+  const favoriteHostButton = event.target.closest("[data-favorite-host-id]");
+  const favoriteButton = favoriteVenueButton || favoriteHostButton;
+
   if (!favoriteButton) return;
 
   event.preventDefault();
