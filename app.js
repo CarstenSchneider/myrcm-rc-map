@@ -1199,7 +1199,29 @@ function raceHostNameHtml(race) {
   const favorite = favoriteHostButtonHtml(hostId, hostName);
   const favoriteClass = isFavoriteHostId(hostId) ? " venue-link-favorite" : "";
 
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}<span class="venue-link${favoriteClass}">${escapeHtml(hostName)}</span></span>`;
+  const host = hosts.find(h =>
+    String(h.id || "") === String(hostId || "") ||
+    String(h.orgId || "") === String(hostId || "")
+  );
+
+  const website = host?.website || "";
+
+  const hostHtml = website
+    ? `<a
+         class="venue-link${favoriteClass}"
+         href="${escapeHtml(website)}"
+         target="_blank"
+         rel="noopener"
+         onclick="event.stopPropagation()"
+       >${escapeHtml(hostName)}</a>`
+    : `<span class="venue-link${favoriteClass}">
+         ${escapeHtml(hostName)}
+       </span>`;
+
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">
+    ${favorite}
+    ${hostHtml}
+  </span>`;
 }
 
 function raceVenueNameHtml(race) {
