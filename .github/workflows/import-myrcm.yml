@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 1 * * *"
-    
+
 permissions:
   contents: write
 
@@ -27,11 +27,11 @@ jobs:
       - name: Import races from MyRCM
         run: npm run import
 
-      - name: Commit updated races.json
+      - name: Commit updated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update races from MyRCM
-file_pattern: |
-  races.json
-  hosts.json
-  venue-unmatched.json
+          file_pattern: |
+            races.json
+            hosts.json
+            venue-unmatched.json
