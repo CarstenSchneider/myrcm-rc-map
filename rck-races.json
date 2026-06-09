@@ -100,8 +100,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 45,
-    "registrationDisplay": "45",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -125,7 +125,7 @@
       },
       {
         "name": "VTA",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "LMH",
@@ -304,7 +304,7 @@
     "importerVersion": "import-rck-v13-seed-first-venue-match",
     "id": "tsv-mariendorf-rc-racing-2026-06-21-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
+    "venueName": "TSV Mariendorf 1897 RCCR",
     "venueLocation": "Berlin",
     "hostId": "tsv-mariendorf-97-berlin-rccr",
     "hostName": "TSV Mariendorf 97 Berlin RCCR",
@@ -900,7 +900,7 @@
     "importerVersion": "import-rck-v13-seed-first-venue-match",
     "id": "tsv-mariendorf-rc-racing-2026-07-26-rck-kleinserie-ost-berlin",
     "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
+    "venueName": "TSV Mariendorf 1897 RCCR",
     "venueLocation": "Berlin",
     "hostId": "tsv-mariendorf-97-berlin-rccr",
     "hostName": "TSV Mariendorf 97 Berlin RCCR",
@@ -993,8 +993,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 34,
-    "registrationDisplay": "34",
+    "registrationCount": 36,
+    "registrationDisplay": "36",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -1022,11 +1022,11 @@
       },
       {
         "name": "Clubman Challenge",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "RCK Porsche",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [
