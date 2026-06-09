@@ -27,6 +27,7 @@ jobs:
           cp rck-venue-candidates.json .deploy-data/
           cp rck-unmatched-venues.json .deploy-data/
           cp myrcm-hosts-germany.json .deploy-data/
+          cp hosts.json .deploy-data/
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
@@ -40,13 +41,12 @@ jobs:
         run: |
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
           set sftp:auto-confirm yes
-          set cmd:fail-exit no
-          mkdir rcracemap-dev
-          put -O ./rcracemap-dev .deploy-data/venues.json
-          put -O ./rcracemap-dev .deploy-data/races.json
-          put -O ./rcracemap-dev .deploy-data/rck-races.json
-          put -O ./rcracemap-dev .deploy-data/rck-venue-candidates.json
-          put -O ./rcracemap-dev .deploy-data/rck-unmatched-venues.json
-          put -O ./rcracemap-dev .deploy-data/myrcm-hosts-germany.json
+          put -O ./ .deploy-data/venues.json
+          put -O ./ .deploy-data/races.json
+          put -O ./ .deploy-data/rck-races.json
+          put -O ./ .deploy-data/rck-venue-candidates.json
+          put -O ./ .deploy-data/rck-unmatched-venues.json
+          put -O ./ .deploy-data/myrcm-hosts-germany.json
+          put -O ./ .deploy-data/hosts.json
           bye
           "
