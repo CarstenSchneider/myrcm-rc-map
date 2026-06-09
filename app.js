@@ -872,13 +872,31 @@ function raceSeries(race) {
   return detectSeries(race.name);
 }
 
+function slugifyMatchValue(value = "") {
+  return String(value ?? "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 function venueIdsForMatching(venue) {
   return [
     venue?.id,
     venue?.hostId,
+    venue?.hostName,
+    venue?.name,
+    slugifyMatchValue(venue?.name),
+    slugifyMatchValue(venue?.hostName),
     venue?.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
     ...(Array.isArray(venue?.hostIds) ? venue.hostIds : []),
-    ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
+    ...(Array.isArray(venue?.aliases) ? venue.aliases : []),
+    ...(Array.isArray(venue?.aliases) ? venue.aliases.map(slugifyMatchValue) : [])
   ]
     .filter(Boolean)
     .map(String);
@@ -888,11 +906,20 @@ function venueById(id) {
   if (!id) return null;
 
   const lookupId = String(id);
+  const lookupSlug = slugifyMatchValue(lookupId);
 
   return venues.find(venue => {
-    return venueIdsForMatching(venue).some(matchId =>
-      lookupId === matchId || lookupId.startsWith(`${matchId}-`)
-    );
+    return venueIdsForMatching(venue).some(matchId => {
+      const match = String(matchId);
+      const matchSlug = slugifyMatchValue(match);
+
+      return (
+        lookupId === match ||
+        lookupId.startsWith(`${match}-`) ||
+        (lookupSlug && lookupSlug === matchSlug) ||
+        (lookupSlug && matchSlug && lookupSlug.startsWith(`${matchSlug}-`))
+      );
+    });
   }) || null;
 }
 
@@ -902,6 +929,8 @@ function venueForRace(race) {
   return (
     venueById(race.venueId) ||
     venueById(race.hostId) ||
+    venueById(race.venueName) ||
+    venueById(race.hostName) ||
     null
   );
 }
