@@ -1993,10 +1993,11 @@
     "postalCode": "",
     "website": "",
     "aliases": [
+      "myrcm-44059",
       "RC Fun Racer",
+      "RC Fun Racer e.V",
       "RC Fun Racer e.V.",
-      "Velbert",
-      "myrcm-44059"
+      "Velbert"
     ],
     "hostIds": [
       "rc-fun-racer-e-v"
@@ -2045,7 +2046,7 @@
   },
   {
     "id": "rc-speedracer-bernau",
-    "name": "RC Speedracer Bernau",
+    "name": "RC Speedracer e.V.",
     "city": "Bernau",
     "lat": 52.6975418,
     "lng": 13.6211917,
@@ -2053,7 +2054,10 @@
     "postalCode": "",
     "website": "",
     "aliases": [
-      "bernau"
+      "bernau",
+      "Bernau",
+      "RC Speedracer Bernau",
+      "RC Speedracer e.V."
     ],
     "hostIds": [
       "rc-speedracer-bernau"
@@ -2352,10 +2356,10 @@
     "postalCode": "",
     "website": "",
     "aliases": [
+      "myrcm-45728",
       "Ottendorf-Okrilla",
       "RCO Ottendorf Okrilla e.V.",
-      "RCO Ottendorf-Okrilla e.V.",
-      "myrcm-45728"
+      "RCO Ottendorf-Okrilla e.V."
     ],
     "hostIds": [
       "rco-ottendorf-okrilla-e-v"
@@ -2631,7 +2635,7 @@
   },
   {
     "id": "tsv-mariendorf-rc-racing",
-    "name": "TSV Mariendorf RC Racing",
+    "name": "TSV Mariendorf 1897 RCCR",
     "city": "Berlin",
     "lat": 52.410703,
     "lng": 13.321052,
@@ -2641,7 +2645,9 @@
     "aliases": [
       "Berlin",
       "Osdorferstr. 53, 12207 Berlin",
+      "TSV M97 Berlin RCCR",
       "TSV Mariendorf 1897 Berlin RCCR",
+      "TSV Mariendorf 1897 RCCR",
       "TSV Mariendorf 97 Berlin RCCR",
       "TSV Mariendorf RC Racing",
       "tsv-mariendorf"
