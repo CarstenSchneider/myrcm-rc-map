@@ -1,12 +1,6 @@
 name: Deploy data to Hetzner
 
 on:
-  workflow_run:
-    workflows:
-      - Import MyRCM races
-      - Import RCK
-    types:
-      - completed
   workflow_dispatch:
 
 jobs:
