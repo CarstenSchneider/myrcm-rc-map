@@ -1,1 +1,1668 @@
-[]
+[
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-27211-2026-06-14-rck-kleinserie-mitte-wachtersbach",
+    "venueId": "myrcm-27211",
+    "venueName": "MBSC Wächtersbach",
+    "venueLocation": "Wächtersbach",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Mitte - Wächtersbach",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270614KlSeM",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Mitte",
+    "rckGroups": [
+      "Mitte"
+    ],
+    "rckLocation": "Wächtersbach",
+    "organizerName": "TS-Grossauheim",
+    "venueAddress": "Industriestr. 1, 63607 Wächtersbach",
+    "venueCity": "Wächtersbach",
+    "venuePostalCode": "63607",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 3
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 17
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 8
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 12
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Wächtersbach Wächtersbach symbol/auschreibung.png",
+        "fileName": "202520270614KlSeM260404 1055.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeM260404%201055.pdf"
+      }
+    ],
+    "venueWebsite": "https://gmx.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-991-ormc-2026-06-14-rck-kleinserie-sud-augsburg",
+    "venueId": "myrcm-991-ormc",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Süd - Augsburg",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270614KlSeS",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Süd",
+    "rckGroups": [
+      "Süd"
+    ],
+    "rckLocation": "Augsburg",
+    "organizerName": "TSV 1871 Augsburg e.V.",
+    "venueAddress": "Meierweg 16, 86154 Augsburg",
+    "venueCity": "Augsburg",
+    "venuePostalCode": "86154",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 2
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 28
+      },
+      {
+        "name": "VTA",
+        "entries": 5
+      },
+      {
+        "name": "LMH",
+        "entries": 8
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 3
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Augsburg Augsburg symbol/auschreibung.png",
+        "fileName": "202520270614KlSeS20260608 1225.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270614KlSeS20260608%201225.pdf"
+      }
+    ],
+    "venueWebsite": "https://tsv-1871.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-9976-2026-06-21-rck-challenge-sud-nurnberg",
+    "venueId": "myrcm-9976",
+    "venueName": "MAC Nürnberg e.V",
+    "venueLocation": "Nürnberg",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Süd - Nürnberg",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260621Son",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Süd",
+    "rckGroups": [
+      "Süd"
+    ],
+    "rckLocation": "Nürnberg",
+    "organizerName": "MAC Nürnberg e.V.",
+    "venueAddress": "Am Zollhaus, 90471 Nürnberg",
+    "venueCity": "Nürnberg",
+    "venuePostalCode": "90471",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 8
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 1
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 2
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 1
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Nürnberg Nürnberg symbol/auschreibung.png",
+        "fileName": "202520260621Son260209 1720.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260621Son260209%201720.pdf"
+      }
+    ],
+    "venueWebsite": "https://gmail.com",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "rck-salzbergen-2026-06-21-rck-kleinserie-nord-salzbergen",
+    "venueId": "rck-rc-raceway-holsterfeld-salzbergen",
+    "venueName": "RC Raceway Holsterfeld",
+    "venueLocation": "Salzbergen",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Nord/West - Salzbergen",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270621KlSeG",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 78,
+    "registrationDisplay": "78",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Nord",
+    "rckGroups": [
+      "Nord",
+      "West"
+    ],
+    "rckLocation": "Salzbergen",
+    "organizerName": "ERC-Racing e.V.",
+    "venueAddress": "Feldstraße 27, 48499 Salzbergen",
+    "venueCity": "Salzbergen",
+    "venuePostalCode": "48499",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 14
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 37
+      },
+      {
+        "name": "VTA",
+        "entries": 2
+      },
+      {
+        "name": "LMH",
+        "entries": 22
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 3
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Salzbergen Salzbergen symbol/auschreibung.png",
+        "fileName": "202520270621KlSeG20260531 0212.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270621KlSeG20260531%200212.pdf"
+      }
+    ],
+    "venueWebsite": "https://erc-racing.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "tsv-mariendorf-2026-06-21-rck-kleinserie-ost-berlin",
+    "venueId": "tsv-mariendorf",
+    "venueName": "TSV Mariendorf RC Racing",
+    "venueLocation": "Berlin",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Ost - Berlin",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270517KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Ost",
+    "rckGroups": [
+      "Ost"
+    ],
+    "rckLocation": "Berlin",
+    "organizerName": "TSV Mariendorf 97 Berlin RCCR",
+    "venueAddress": "Osdorferstr. 53, 12207 Berlin",
+    "venueCity": "Berlin",
+    "venuePostalCode": "12207",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 4
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 10
+      },
+      {
+        "name": "LMH",
+        "entries": 2
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 4
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Berlin Berlin symbol/auschreibung.png",
+        "fileName": "202520270517KlSeO20251005 1449.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270517KlSeO20251005%201449.pdf"
+      }
+    ],
+    "venueWebsite": "https://hotmail.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-52121-2026-06-28-rck-challenge-west-ludenscheid",
+    "venueId": "myrcm-52121",
+    "venueName": "MCC Lüdenscheid e.V.",
+    "venueLocation": "Lüdenscheid",
+    "venueStatus": "matched",
+    "name": "RCK Challenge West - Lüdenscheid",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260628Won",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "West",
+    "rckGroups": [
+      "West"
+    ],
+    "rckLocation": "Lüdenscheid",
+    "organizerName": "MCC Lüdenscheid",
+    "venueAddress": "Höher Weg 42, 58511 Lüdenscheid",
+    "venueCity": "Lüdenscheid",
+    "venuePostalCode": "58511",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 3
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 1
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 0
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 0
+      },
+      {
+        "name": "Tamiya TT",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Lüdenscheid Lüdenscheid symbol/auschreibung.png",
+        "fileName": "202520260628Won20260601 1132.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260628Won20260601%201132.pdf"
+      }
+    ],
+    "venueWebsite": "https://mcc-luedenscheid.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-39671-2026-06-28-rck-kleinserie-mitte-mannheim",
+    "venueId": "myrcm-39671",
+    "venueName": "MRC Mannheim e.V.",
+    "venueLocation": "Mannheim",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Mitte/Süd - Mannheim",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270628KlSeC",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 41,
+    "registrationDisplay": "41",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Mitte",
+    "rckGroups": [
+      "Mitte",
+      "Süd"
+    ],
+    "rckLocation": "Mannheim",
+    "organizerName": "1.MRC-Mannheim e.v.",
+    "venueAddress": "Im Pfeifertswörth 30, 68167 Mannheim",
+    "venueCity": "Mannheim",
+    "venuePostalCode": "68167",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 6
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 17
+      },
+      {
+        "name": "VTA",
+        "entries": 1
+      },
+      {
+        "name": "LMH",
+        "entries": 7
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 10
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Mannheim Mannheim symbol/auschreibung.png",
+        "fileName": "202520270628KlSeM20260318 0835.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270628KlSeM20260318%200835.pdf"
+      }
+    ],
+    "venueWebsite": "https://web.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-33489-2026-07-05-rck-challenge-nord-bremen",
+    "venueId": "myrcm-33489",
+    "venueName": "MC Munster e.V.",
+    "venueLocation": "Bremen",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Nord - Bremen",
+    "from": "2026-07-05",
+    "to": "2026-07-05",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260705Non",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Nord",
+    "rckGroups": [
+      "Nord"
+    ],
+    "rckLocation": "Bremen",
+    "organizerName": "Rc World-OHZ/HB e.V.",
+    "venueAddress": "Senator-Apelt-Strasse, 28197 Bremen",
+    "venueCity": "Bremen",
+    "venuePostalCode": "28197",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 0
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 7
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 8
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 0
+      },
+      {
+        "name": "Gastklasse: Porsche Cup nach RCK",
+        "entries": 3
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bremen Bremen symbol/auschreibung.png",
+        "fileName": "202520260705Non20260505 2303.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260705Non20260505%202303.pdf"
+      }
+    ],
+    "venueWebsite": "https://web.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-59129-2026-07-05-rck-challenge-sud-neustadt-b-coburg",
+    "venueId": "myrcm-59129",
+    "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+    "venueLocation": "Neustadt bei Coburg",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Süd/Ost - Neustadt b. Coburg",
+    "from": "2026-07-05",
+    "to": "2026-07-05",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260605Oon",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Süd",
+    "rckGroups": [
+      "Süd",
+      "Ost"
+    ],
+    "rckLocation": "Neustadt b. Coburg",
+    "organizerName": "TG-Neustadt 1855 e.V.",
+    "venueAddress": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "venueCity": "Neustadt b. Coburg",
+    "venuePostalCode": "96465",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 1
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 1
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 1
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neustadt b. Coburg Neustadt b. Coburg symbol/auschreibung.png",
+        "fileName": "202520260705Son20260429 1335.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260705Son20260429%201335.pdf"
+      },
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neustadt b. Coburg Neustadt b. Coburg symbol/auschreibung.png",
+        "fileName": "202520260605Oon20260430 0837.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260605Oon20260430%200837.pdf"
+      }
+    ],
+    "venueWebsite": "https://tg-neustadt.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-134-2026-07-12-rck-kleinserie-mitte-hann-munden-nachtrennen",
+    "venueId": "myrcm-134",
+    "venueName": "RCCT Münden e.V.",
+    "venueLocation": "Hann. Münden",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Mitte/Nord/West/Ost - Hann.Münden Nachtrennen",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270712KlSeR",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Mitte",
+    "rckGroups": [
+      "Mitte",
+      "Nord",
+      "West",
+      "Ost"
+    ],
+    "rckLocation": "Hann.Münden Nachtrennen",
+    "organizerName": "RC-CAR -TEAM Münden eV.",
+    "venueAddress": "Weserpark, 34346 Hann.Münden",
+    "venueCity": "Hann.Münden",
+    "venuePostalCode": "34346",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 9
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 20
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 5
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 4
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hann.Münden Nachtrennen Hann.Münden Nachtrennen symbol/auschreibung.png",
+        "fileName": "202520270712KlSeR20260121 2219.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270712KlSeR20260121%202219.pdf"
+      }
+    ],
+    "venueWebsite": "https://web.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-891-2026-07-19-rck-challenge-sud-mettenheim",
+    "venueId": "myrcm-891",
+    "venueName": "MAC Mettenheim e.V.",
+    "venueLocation": "Vaterstetten",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Süd - Mettenheim",
+    "from": "2026-07-19",
+    "to": "2026-07-19",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260719Son",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Süd",
+    "rckGroups": [
+      "Süd"
+    ],
+    "rckLocation": "Mettenheim",
+    "organizerName": "MAC Mettenheim e.V.",
+    "venueAddress": "MiniDrom, Wimmer Kiesgrube, 84562 Mettenheim",
+    "venueCity": "Mettenheim",
+    "venuePostalCode": "84562",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 4
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 2
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 7
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 2
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Mettenheim Mettenheim symbol/auschreibung.png",
+        "fileName": "202520260719Son20260518 1544.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260719Son20260518%201544.pdf"
+      }
+    ],
+    "venueWebsite": "https://mac-mettenheim.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-95-2026-07-26-rck-kleinserie-nord-braunschweig",
+    "venueId": "myrcm-95",
+    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "venueLocation": "Braunschweig",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Nord - Braunschweig",
+    "from": "2026-07-26",
+    "to": "2026-07-26",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270726KlSeN",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Nord",
+    "rckGroups": [
+      "Nord"
+    ],
+    "rckLocation": "Braunschweig",
+    "organizerName": "MSC Polizei Braunschweig",
+    "venueAddress": "Bienroder Weg 70, 38106 Braunschweig",
+    "venueCity": "Braunschweig",
+    "venuePostalCode": "38106",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 1
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 9
+      },
+      {
+        "name": "LMH",
+        "entries": 0
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Braunschweig Braunschweig symbol/auschreibung.png",
+        "fileName": "202520270726KlSeN20260314 1326.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270726KlSeN20260314%201326.pdf"
+      }
+    ],
+    "venueWebsite": "https://t-online.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "tsv-mariendorf-2026-07-26-rck-kleinserie-ost-berlin",
+    "venueId": "tsv-mariendorf",
+    "venueName": "TSV Mariendorf RC Racing",
+    "venueLocation": "Berlin",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Ost - Berlin",
+    "from": "2026-07-26",
+    "to": "2026-07-26",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270705KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Ost",
+    "rckGroups": [
+      "Ost"
+    ],
+    "rckLocation": "Berlin",
+    "organizerName": "TSV Mariendorf 97 Berlin RCCR",
+    "venueAddress": "Osdorferstr. 53, 12207 Berlin",
+    "venueCity": "Berlin",
+    "venuePostalCode": "12207",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 0
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 4
+      },
+      {
+        "name": "LMH",
+        "entries": 1
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 1
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Berlin Berlin symbol/auschreibung.png",
+        "fileName": "202520270705KlSeO20251005 1452.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270705KlSeO20251005%201452.pdf"
+      }
+    ],
+    "venueWebsite": "https://hotmail.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-43367-2026-08-02-rck-challenge-sud-marktoberdorf",
+    "venueId": "myrcm-43367",
+    "venueName": "EMC-Marktoberdorf",
+    "venueLocation": "Marktoberdorf",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Süd - Marktoberdorf",
+    "from": "2026-08-02",
+    "to": "2026-08-02",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260802Son",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Süd",
+    "rckGroups": [
+      "Süd"
+    ],
+    "rckLocation": "Marktoberdorf",
+    "organizerName": "EMC-Marktoberdorf e.V.",
+    "venueAddress": "Gartenweg 6 , 87616 Marktoberdorf",
+    "venueCity": "Marktoberdorf",
+    "venuePostalCode": "87616",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 7
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 7
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 14
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 6
+      },
+      {
+        "name": "RCK Porsche",
+        "entries": 6
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Marktoberdorf Marktoberdorf symbol/auschreibung.png",
+        "fileName": "202520260802Son260608 1038.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260802Son260608%201038.pdf"
+      }
+    ],
+    "venueWebsite": "https://posteo.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-24531-2026-08-02-rck-kleinserie-mitte-andernach",
+    "venueId": "myrcm-24531",
+    "venueName": "ToniSport GmbH",
+    "venueLocation": "Andernach",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Mitte/West - Andernach",
+    "from": "2026-08-02",
+    "to": "2026-08-02",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270802KlSeD",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 121,
+    "registrationDisplay": "121",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Mitte",
+    "rckGroups": [
+      "Mitte",
+      "West"
+    ],
+    "rckLocation": "Andernach",
+    "organizerName": "DjK Andernach",
+    "venueAddress": "Stadionstr. 90, 56626 Andernach",
+    "venueCity": "Andernach",
+    "venuePostalCode": "56626",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 20
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 40
+      },
+      {
+        "name": "LMH",
+        "entries": 30
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 20
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Andernach Andernach symbol/auschreibung.png",
+        "fileName": "202520270802KlSeD20260203 1535.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270802KlSeD20260203%201535.pdf"
+      }
+    ],
+    "venueWebsite": "https://schymaniuk.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-33489-2026-08-09-rck-kleinserie-nord-bremen",
+    "venueId": "myrcm-33489",
+    "venueName": "MC Munster e.V.",
+    "venueLocation": "Bremen",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Nord - Bremen",
+    "from": "2026-08-09",
+    "to": "2026-08-09",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270809KlSeN",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Nord",
+    "rckGroups": [
+      "Nord"
+    ],
+    "rckLocation": "Bremen",
+    "organizerName": "Rc World-OHZ/HB e.V.",
+    "venueAddress": "Senator-Apelt-Strasse, 28197 Bremen",
+    "venueCity": "Bremen",
+    "venuePostalCode": "28197",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 5
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 9
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 4
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bremen Bremen symbol/auschreibung.png",
+        "fileName": "202520270809KlSeN260505 2307.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270809KlSeN260505%202307.pdf"
+      }
+    ],
+    "venueWebsite": "https://web.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "rck-hennef-2026-08-16-rck-kleinserie-west-hennef",
+    "venueId": "rck-ufm-modellbau-aussenstrecke-hennef",
+    "venueName": "UFM-Modellbau Aussenstrecke",
+    "venueLocation": "Hennef",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie West - Hennef",
+    "from": "2026-08-16",
+    "to": "2026-08-16",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270816KlSeW",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "West",
+    "rckGroups": [
+      "West"
+    ],
+    "rckLocation": "Hennef",
+    "organizerName": "UFM-Modellbau",
+    "venueAddress": "Löhestr. 47, 53773 Hennef",
+    "venueCity": "Hennef",
+    "venuePostalCode": "53773",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 9
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 23
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 10
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 4
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hennef Hennef symbol/auschreibung.png",
+        "fileName": "202520270816KlSeW260206 1440.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270816KlSeW260206%201440.pdf"
+      }
+    ],
+    "venueWebsite": "https://ufm-modellbau.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-283-2026-09-19-rck-challenge-mitte-bad-breisig",
+    "venueId": "myrcm-283",
+    "venueName": "MCC Rhein Ahr e.V.",
+    "venueLocation": "Bad Breisig",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Mitte/West - Bad Breisig",
+    "from": "2026-09-19",
+    "to": "2026-09-19",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202620270919Won",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Mitte",
+    "rckGroups": [
+      "Mitte",
+      "West"
+    ],
+    "rckLocation": "Bad Breisig",
+    "organizerName": "MCC Rhein Ahr",
+    "venueAddress": "An der alten Glasfabrik, 53498 Bad Breisig",
+    "venueCity": "Bad Breisig",
+    "venuePostalCode": "53498",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 0
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 1
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 2
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 3
+      },
+      {
+        "name": "RCK Porsche Cup",
+        "entries": 1
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bad Breisig Bad Breisig symbol/auschreibung.png",
+        "fileName": "202620270919Mon251203 2225.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202620270919Mon251203%202225.pdf"
+      },
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bad Breisig Bad Breisig symbol/auschreibung.png",
+        "fileName": "202620270919Won251203 2217.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202620270919Won251203%202217.pdf"
+      }
+    ],
+    "venueWebsite": "https://email.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-48536-2026-09-20-rck-challenge-ost-zwickau",
+    "venueId": "myrcm-48536",
+    "venueName": "RC-Bande Zwickau e.V",
+    "venueLocation": "Zwickau",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Ost - Zwickau",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202620270920Oon",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Ost",
+    "rckGroups": [
+      "Ost"
+    ],
+    "rckLocation": "Zwickau",
+    "organizerName": "RC Bande Zwickau e.V.",
+    "venueAddress": "Reichenbacher Str. 125, 08056 Zwickau",
+    "venueCity": "Zwickau",
+    "venuePostalCode": "08056",
+    "addressVerifiedFromPdf": true,
+    "classes": [],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Zwickau Zwickau symbol/auschreibung.png",
+        "fileName": "202620270920Oon20260330 2211.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202620270920Oon20260330%202211.pdf"
+      }
+    ],
+    "venueWebsite": "https://gmail.com",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-283-2026-09-20-rck-kleinserie-mitte-bad-breisig",
+    "venueId": "myrcm-283",
+    "venueName": "MCC Rhein Ahr e.V.",
+    "venueLocation": "Bad Breisig",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Mitte/West - Bad Breisig",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270920KlSeD",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 57,
+    "registrationDisplay": "57",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Mitte",
+    "rckGroups": [
+      "Mitte",
+      "West"
+    ],
+    "rckLocation": "Bad Breisig",
+    "organizerName": "MCC Rhein Ahr",
+    "venueAddress": "An der alten Glasfabrik, 53498 Bad Breisig",
+    "venueCity": "Bad Breisig",
+    "venuePostalCode": "53498",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 12
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 26
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 12
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 7
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Bad Breisig Bad Breisig symbol/auschreibung.png",
+        "fileName": "202520270920KlSeD20260106 2047.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520270920KlSeD20260106%202047.pdf"
+      }
+    ],
+    "venueWebsite": "https://web.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-57549-2026-10-11-rck-kleinserie-ost-neubrandenburg",
+    "venueId": "myrcm-57549",
+    "venueName": "MCC-Marktredwitz e.V.",
+    "venueLocation": "Brand",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Ost - Neubrandenburg",
+    "from": "2026-10-11",
+    "to": "2026-10-11",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271011KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Ost",
+    "rckGroups": [
+      "Ost"
+    ],
+    "rckLocation": "Neubrandenburg",
+    "organizerName": "Modellsportverein Neubrandenburg e. V.",
+    "venueAddress": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg",
+    "venueCity": "Neubrandenburg",
+    "venuePostalCode": "17036",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 0
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 2
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 0
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 0
+      },
+      {
+        "name": "DTM Retro Serie",
+        "entries": 1
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neubrandenburg Neubrandenburg symbol/auschreibung.png",
+        "fileName": "202520271011KlSeO20260413 2012.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271011KlSeO20260413%202012.pdf"
+      }
+    ],
+    "venueWebsite": "https://gmail.com",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "rck-horstel-riesenbeck-2026-11-08-rck-kleinserie-nord-horstel-riesenbeck",
+    "venueId": "rck-rcmc-ibbenburen-e-v-horstel-riesenbeck",
+    "venueName": "RCMC Ibbenbüren e. V.",
+    "venueLocation": "Hörstel-Riesenbeck",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Nord/West - Hörstel-Riesenbeck",
+    "from": "2026-11-08",
+    "to": "2026-11-08",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271108KlSeG",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Nord",
+    "rckGroups": [
+      "Nord",
+      "West"
+    ],
+    "rckLocation": "Hörstel-Riesenbeck",
+    "organizerName": "RCMC Ibbenbüren e. V.",
+    "venueAddress": "Lager Wall 27, 48477 Hörstel-Riesenbeck",
+    "venueCity": "Hörstel-Riesenbeck",
+    "venuePostalCode": "48477",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 1
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 2
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 0
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Hörstel-Riesenbeck Hörstel-Riesenbeck symbol/auschreibung.png",
+        "fileName": "202520271108KlSeG20260602 2123.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271108KlSeG20260602%202123.pdf"
+      }
+    ],
+    "venueWebsite": "https://rcmc-ibbenbueren.de",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  },
+  {
+    "importerVersion": "import-rck-v8-pdf-website",
+    "id": "myrcm-57549-2026-12-06-rck-kleinserie-ost-neubrandenburg",
+    "venueId": "myrcm-57549",
+    "venueName": "MCC-Marktredwitz e.V.",
+    "venueLocation": "Brand",
+    "venueStatus": "matched",
+    "name": "RCK Kleinserie Ost - Neubrandenburg",
+    "from": "2026-12-06",
+    "to": "2026-12-06",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "rck-kleinserie",
+    "sources": [
+      "rck-kleinserie"
+    ],
+    "rckSeries": "kleinserie",
+    "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520271206KlSeO",
+    "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Ost",
+    "rckGroups": [
+      "Ost"
+    ],
+    "rckLocation": "Neubrandenburg",
+    "organizerName": "Modellsportverein Neubrandenburg e. V.",
+    "venueAddress": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg",
+    "venueCity": "Neubrandenburg",
+    "venuePostalCode": "17036",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "GT-Sport",
+        "entries": 0
+      },
+      {
+        "name": "Porsche Cup",
+        "entries": 1
+      },
+      {
+        "name": "VTA",
+        "entries": 0
+      },
+      {
+        "name": "LMH",
+        "entries": 0
+      },
+      {
+        "name": "M-Chassis",
+        "entries": 0
+      },
+      {
+        "name": "DTM Retro Serie",
+        "entries": 0
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Neubrandenburg Neubrandenburg symbol/auschreibung.png",
+        "fileName": "202520271206KlSeO20260429 2051.pdf",
+        "url": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf"
+      }
+    ],
+    "venueWebsite": "https://gmail.com",
+    "firstSeen": "2026-06-09",
+    "lastSeen": "2026-06-09"
+  }
+]
