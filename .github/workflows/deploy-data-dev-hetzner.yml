@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy-data-dev:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository (DEV branch)
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: dev
@@ -23,21 +23,20 @@ jobs:
           cp rck-unmatched-venues.json .deploy-data/
           cp myrcm-hosts-germany.json .deploy-data/
           cp hosts.json .deploy-data/
+          cp series.json .deploy-data/
 
       - name: Install lftp
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
 
       - name: Upload data files to DEV
         env:
-          FTP_HOST: ${{ secrets.HETZNER_HOST }}
-          FTP_USER: ${{ secrets.HETZNER_USER }}
-          FTP_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
-          FTP_PORT: ${{ secrets.HETZNER_PORT }}
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
-          lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<EOF
-          set ssl:verify-certificate no
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
+          set sftp:auto-confirm yes
           mirror -R .deploy-data ./rcracemap-dev --verbose
           bye
           EOF
