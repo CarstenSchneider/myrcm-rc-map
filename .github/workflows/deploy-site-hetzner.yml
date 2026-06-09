@@ -17,6 +17,7 @@ jobs:
           cp index.html .deploy-site/
           cp app.js .deploy-site/
           cp style.css .deploy-site/
+          cp series.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
 
       - name: Install lftp
@@ -29,11 +30,8 @@ jobs:
           HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
           HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
-          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
-          put -O ./ .deploy-site/index.html
-          put -O ./ .deploy-site/app.js
-          put -O ./ .deploy-site/style.css
-          put -O ./ .deploy-site/impressum-datenschutz.html
+          mirror -R .deploy-site ./ --verbose
           bye
-          "
+          EOF
