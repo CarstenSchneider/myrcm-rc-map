@@ -180,7 +180,6 @@ function raceHostName(race) {
     race?.organiserName ||
     race?.organizer ||
     race?.organiser ||
-    venueForRace(race)?.hostName ||
     raceHostId(race) ||
     "Unbekannter Ausrichter"
   );
@@ -967,11 +966,14 @@ function slugifyMatchValue(value = "") {
 function venueIdsForMatching(venue) {
   return [
     venue?.id,
-    venue?.hostId,
-    venue?.hostName,
     venue?.name,
+    venue?.city,
+    venue?.location,
+    venue?.address,
+    venue?.venueName,
+    venue?.venueLocation,
+    venue?.rckLocation,
     venue?.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
-    ...(Array.isArray(venue?.hostIds) ? venue.hostIds : []),
     ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
   ]
     .filter(Boolean)
@@ -1020,8 +1022,8 @@ function venueForRace(race) {
   return (
     venueById(race.venueId) ||
     venueById(race.venueName) ||
+    venueById(race.venueAddress) ||
     venueById(race.venueLocation) ||
-    venueById(race.hostId) ||
     null
   );
 }
@@ -1082,6 +1084,9 @@ function venueWebsite(venue) {
 }
 
 function raceWebsite(race) {
+  const directVenueWebsite = normalizeUrl(race?.venueWebsite);
+  if (directVenueWebsite) return directVenueWebsite;
+
   const venue = venueForRace(race);
 
   const venueLink = venueWebsite(venue);
@@ -1110,23 +1115,17 @@ function normalizedDisplayText(value = "") {
 }
 
 function raceHostAndVenueAreSame(race) {
-  const hostName = raceHostName(race);
-  const hostId = raceHostId(race);
-  const venue = venueForRace(race);
-  const venueName = venueDisplayName(race);
-
   const hostValues = [
-    hostName,
-    hostId
+    raceHostName(race),
+    raceHostId(race)
   ].filter(Boolean).map(normalizedDisplayText);
 
+  const venue = venueForRace(race);
   const venueValues = [
-    venueName,
+    race.venueName,
+    race.venueId,
     venue?.name,
-    venue?.hostName,
-    venue?.hostId,
-    venue?.id,
-    ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
+    venue?.id
   ].filter(Boolean).map(normalizedDisplayText);
 
   return hostValues.some(hostValue =>
@@ -2145,8 +2144,9 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
+  const [venuesResponse, venueSeedsResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
+    fetchJsonOrFallback(`venue-seeds.json?v=${cacheBuster}`, []),
     fetch(`races.json?v=${cacheBuster}`),
     fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
@@ -2154,11 +2154,12 @@ async function init() {
   ]);
 
   const baseVenues = await venuesResponse.json();
+  const venueSeeds = Array.isArray(venueSeedsResponse) ? venueSeedsResponse : [];
   const myrcmRaces = await racesResponse.json();
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
 
-  venues = mergeVenues(baseVenues, rckVenueCandidates);
+  venues = mergeVenues(mergeVenues(baseVenues, venueSeeds), rckVenueCandidates);
   buildVenueLookup();
 
   races = [
