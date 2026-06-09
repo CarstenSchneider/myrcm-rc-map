@@ -1756,3 +1756,10 @@ input {
   transform: none !important;
   animation: none !important;
 }
+
+
+.venue-name-text {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
