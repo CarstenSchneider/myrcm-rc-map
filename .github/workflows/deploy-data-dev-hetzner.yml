@@ -31,9 +31,10 @@ jobs:
 
       - name: Upload data files to DEV
         env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ secrets.HETZNER_HOST }}
+          FTP_USER: ${{ secrets.HETZNER_USER }}
+          FTP_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          FTP_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
           lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<EOF
           set ssl:verify-certificate no
