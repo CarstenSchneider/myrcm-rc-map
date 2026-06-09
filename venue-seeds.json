@@ -1421,10 +1421,10 @@
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
     "myrcmOrgId": "116",
     "aliases": [
-      "myrcm-116",
+      "Heilbronn",
       "MSC Hansa Heilbronn e.V.",
       "MSC-Hansa Heilbronn e.V.",
-      "Heilbronn"
+      "myrcm-116"
     ]
   },
   {
@@ -1696,10 +1696,11 @@
     "source": "manual-verified-geolocation",
     "myrcmOrgId": "44059",
     "aliases": [
-      "RC Fun Racer e.V.",
+      "myrcm-44059",
       "RC Fun Racer",
-      "Velbert",
-      "myrcm-44059"
+      "RC Fun Racer e.V",
+      "RC Fun Racer e.V.",
+      "Velbert"
     ]
   },
   {
@@ -1733,7 +1734,7 @@
   },
   {
     "id": "rc-speedracer-bernau",
-    "name": "RC Speedracer Bernau",
+    "name": "RC Speedracer e.V.",
     "city": "Bernau",
     "lat": 52.6975418,
     "lng": 13.6211917,
@@ -1743,7 +1744,10 @@
     "source": "verified-existing-geolocation-list",
     "myrcmOrgId": "45925",
     "aliases": [
-      "bernau"
+      "bernau",
+      "Bernau",
+      "RC Speedracer Bernau",
+      "RC Speedracer e.V."
     ]
   },
   {
@@ -2005,10 +2009,10 @@
     "source": "manual-verified-geolocation",
     "myrcmOrgId": "45728",
     "aliases": [
-      "RCO Ottendorf-Okrilla e.V.",
-      "RCO Ottendorf Okrilla e.V.",
+      "myrcm-45728",
       "Ottendorf-Okrilla",
-      "myrcm-45728"
+      "RCO Ottendorf Okrilla e.V.",
+      "RCO Ottendorf-Okrilla e.V."
     ]
   },
   {
@@ -2231,7 +2235,7 @@
   },
   {
     "id": "tsv-mariendorf-rc-racing",
-    "name": "TSV Mariendorf RC Racing",
+    "name": "TSV Mariendorf 1897 RCCR",
     "city": "Berlin",
     "lat": 52.410703,
     "lng": 13.321052,
@@ -2241,12 +2245,14 @@
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address",
     "myrcmOrgId": "18244",
     "aliases": [
-      "tsv-mariendorf",
-      "TSV Mariendorf RC Racing",
       "Berlin",
-      "TSV Mariendorf 97 Berlin RCCR",
       "Osdorferstr. 53, 12207 Berlin",
-      "TSV Mariendorf 1897 Berlin RCCR"
+      "TSV M97 Berlin RCCR",
+      "TSV Mariendorf 1897 Berlin RCCR",
+      "TSV Mariendorf 1897 RCCR",
+      "TSV Mariendorf 97 Berlin RCCR",
+      "TSV Mariendorf RC Racing",
+      "tsv-mariendorf"
     ],
     "address": "Osdorferstr. 53, 12207 Berlin",
     "postalCode": "12207",
