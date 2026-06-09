@@ -26920,8 +26920,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 58,
-    "registrationDisplay": "58",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
     "note": null,
     "classes": [
       {
@@ -26934,11 +26934,11 @@
       },
       {
         "name": "Fun Cup TT+",
-        "entries": 7
+        "entries": 6
       },
       {
         "name": "FWD 17.5",
-        "entries": 11
+        "entries": 10
       },
       {
         "name": "TW Stock 21.5",
@@ -28609,29 +28609,29 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 149,
-    "registrationDisplay": "149",
+    "registrationCount": 145,
+    "registrationDisplay": "145",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "Club Racer",
-        "entries": 10
+        "entries": 9
       },
       {
         "name": "F1",
-        "entries": 18
+        "entries": 16
       },
       {
         "name": "FWD",
-        "entries": 18
+        "entries": 19
       },
       {
         "name": "GT Spec",
-        "entries": 38
+        "entries": 35
       },
       {
         "name": "Modified",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Rookies",
