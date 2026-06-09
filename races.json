@@ -608,9 +608,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2025-06-20-myrcm-event-88055",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2025-06-20-myrcm-event-88055",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -1734,10 +1734,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2025-06-29-myrcm-event-86788",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2025-06-29-myrcm-event-86788",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "3.RCS-CUP",
@@ -1819,10 +1819,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2025-06-29-myrcm-event-85420",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-speedracer-bernau-2025-06-29-myrcm-event-85420",
+    "venueId": "rc-speedracer-bernau",
+    "venueName": "RC Speedracer Bernau",
+    "venueLocation": "Bernau",
     "hostId": "rc-speedracer-bernau",
     "hostName": "RC Speedracer e.V.",
     "name": "Berlin Touring Masters 2025 Lauf 4 + SK-Lauf",
@@ -2075,9 +2075,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2025-07-05-myrcm-event-88596",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2025-07-05-myrcm-event-88596",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -2247,10 +2247,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-07-06-myrcm-event-85960",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
+    "id": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158-2025-07-06-myrcm-event-85960",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
     "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
     "name": "4. MSC Löwenring Cup 2025",
@@ -2354,9 +2354,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2025-07-06-myrcm-event-88500",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS Lauf 2",
@@ -2717,9 +2717,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-alstaden-oberhausen-e-v-2025-07-12-myrcm-event-89273",
-    "venueId": "mrc-alstaden-oberhausen-e-v",
-    "venueName": "MRC Alstaden Oberhausen e.V.",
+    "id": "stoppelhopser-oberhausen-e-v-2025-07-12-myrcm-event-89273",
+    "venueId": "stoppelhopser-oberhausen-e-v",
+    "venueName": "Stoppelhopser Oberhausen e.V.",
     "venueLocation": "Oberhausen",
     "hostId": "stoppelhopser-oberhausen-e-v",
     "hostName": "Stoppelhopser Oberhausen e.V.",
@@ -2836,10 +2836,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "minicar-club-dortmund-e-v-2025-07-12-myrcm-event-85344",
-    "venueId": "minicar-club-dortmund-e-v",
-    "venueName": "Minicar Club Dortmund e.V.",
-    "venueLocation": "Hamm",
+    "id": "amc-hamm-e-v-2025-07-12-myrcm-event-85344",
+    "venueId": "amc-hamm-e-v",
+    "venueName": "amc-Hamm e.V.",
+    "venueLocation": "Bönen",
     "hostId": "amc-hamm-e-v",
     "hostName": "amc-Hamm e.V.",
     "name": "JumpstartRC Trophy 2025 #4 + SMW EG8GT3 @ Hamm",
@@ -3160,9 +3160,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2025-07-13-myrcm-event-86327",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS Lauf 3",
@@ -3262,10 +3262,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-07-17-myrcm-event-88236",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2025-07-17-myrcm-event-88236",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 2 AIGEN / AT",
@@ -3494,10 +3494,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "minicar-club-dortmund-e-v-2025-07-19-myrcm-event-85345",
-    "venueId": "minicar-club-dortmund-e-v",
-    "venueName": "Minicar Club Dortmund e.V.",
-    "venueLocation": "Hamm",
+    "id": "amc-hamm-e-v-2025-07-19-myrcm-event-85345",
+    "venueId": "amc-hamm-e-v",
+    "venueName": "amc-Hamm e.V.",
+    "venueLocation": "Bönen",
     "hostId": "amc-hamm-e-v",
     "hostName": "amc-Hamm e.V.",
     "name": "Sportkreis-Meisterschaft West VG #5 + EG8e @ Hamm",
@@ -3623,10 +3623,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2025-07-20-myrcm-event-86789",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2025-07-20-myrcm-event-86789",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "4.RCS-CUP",
@@ -3658,10 +3658,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "mac-nuernberg-e-v-2025-07-20-myrcm-event-84505",
-    "venueId": "mac-nuernberg-e-v",
-    "venueName": "MAC Nürnberg e.V",
-    "venueLocation": "Nürnberg",
+    "id": "rc-racers-toys-shop-2025-07-20-myrcm-event-84505",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-racers-toys-shop",
     "hostName": "RC Racers + Toys Shop",
     "name": "Nordbayern Cup #3 2025 Lauf 5 Nürnberg",
@@ -3810,10 +3810,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-07-24-myrcm-event-87693",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2025-07-24-myrcm-event-87693",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 2 Aigen/ AT",
@@ -5190,10 +5190,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroad-dortmund-e-v-2025-08-10-myrcm-event-89001",
-    "venueId": "rc-offroad-dortmund-e-v",
-    "venueName": "RC-Offroad Dortmund e.V.",
-    "venueLocation": "Dortmund",
+    "id": "minicar-club-dortmund-e-v-2025-08-10-myrcm-event-89001",
+    "venueId": "minicar-club-dortmund-e-v",
+    "venueName": "Minicar Club Dortmund e.V.",
+    "venueLocation": "Hamm",
     "hostId": "minicar-club-dortmund-e-v",
     "hostName": "Minicar Club Dortmund e.V.",
     "name": "MC Dortmund Summer Champs",
@@ -5330,10 +5330,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-08-16-myrcm-event-89983",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "mac-siersburg-e-v-2025-08-16-myrcm-event-89983",
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Euro 24 Race Andernach",
@@ -6200,10 +6200,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-08-28-myrcm-event-89374",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2025-08-28-myrcm-event-89374",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
@@ -6754,9 +6754,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2025-08-31-myrcm-event-86329",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS Lauf 4",
@@ -6791,10 +6791,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-09-04-myrcm-event-88595",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2025-09-04-myrcm-event-88595",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 3 LUXEMBOURG / LUX",
@@ -6915,10 +6915,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-09-06-myrcm-event-85961",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
+    "id": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158-2025-09-06-myrcm-event-85961",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
     "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
     "name": "5. MSC Löwenring Cup 2025",
@@ -7709,10 +7709,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-mannheim-e-v-2025-09-13-myrcm-event-90578",
-    "venueId": "mrc-mannheim-e-v",
-    "venueName": "MRC Mannheim e.V.",
-    "venueLocation": "Mannheim",
+    "id": "mfr-morschheim-rheinhessen-pfalz-e-v-2025-09-13-myrcm-event-90578",
+    "venueId": "mfr-morschheim-rheinhessen-pfalz-e-v",
+    "venueName": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
+    "venueLocation": "Worms",
     "hostId": "mfr-morschheim-rheinhessen-pfalz-e-v",
     "hostName": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
     "name": "6h Teamrennen Mannheim (Speed Masters)",
@@ -7802,9 +7802,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2025-09-14-myrcm-event-86353",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS Lauf 5",
@@ -8177,10 +8177,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-alstaden-oberhausen-e-v-2025-09-20-myrcm-event-90784",
-    "venueId": "mrc-alstaden-oberhausen-e-v",
-    "venueName": "MRC Alstaden Oberhausen e.V.",
-    "venueLocation": "Oberhausen",
+    "id": "rc-drecksloch-e-v-2025-09-20-myrcm-event-90784",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "name": "ERS Freundschaftsrennen 2025 Lauf 4",
@@ -8669,9 +8669,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2025-09-21-myrcm-event-89509",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS Lauf 6",
@@ -9022,10 +9022,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mac-hamburg-e-v-2025-09-27-myrcm-event-89408",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
+    "id": "slottis-supreme-masters-2025-09-27-myrcm-event-89408",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "slottis-supreme-masters",
     "hostName": "Slottis Supreme Masters",
     "name": "Carrera Explorer Cup in 22419 Hamburg, Weg Nummer 396 2B",
@@ -9643,10 +9643,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2025-10-03-myrcm-event-88685",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2025-10-03-myrcm-event-88685",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "Deutsche Meisterschaft OR6",
@@ -9876,9 +9876,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2025-10-04-myrcm-event-90469",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2025-10-04-myrcm-event-90469",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -10238,10 +10238,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-10-09-myrcm-event-89911",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2025-10-09-myrcm-event-89911",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 4 LENTIAI / IT",
@@ -10683,10 +10683,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-10-12-myrcm-event-85962",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
+    "id": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158-2025-10-12-myrcm-event-85962",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
     "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
     "name": "6. MSC Löwenring Cup 2025",
@@ -10993,9 +10993,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2025-10-18-myrcm-event-91646",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2025-10-18-myrcm-event-91646",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -11020,10 +11020,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "mac-or-huetschenhausen-e-v-2025-10-18-myrcm-event-90174",
-    "venueId": "mac-or-huetschenhausen-e-v",
-    "venueName": "MAC OR Hütschenhausen e.V.",
-    "venueLocation": "Hütschenhausen",
+    "id": "fs-timing-2025-10-18-myrcm-event-90174",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "fs-timing",
     "hostName": "FS-Timing",
     "name": "DMC Kinder und Jugend Tag beim MAC Hütschenhausen e.V",
@@ -11050,10 +11050,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "rc-cars-koengen-e-v-2025-10-18-myrcm-event-87729",
-    "venueId": "rc-cars-koengen-e-v",
-    "venueName": "RC Cars Köngen e.V.",
-    "venueLocation": "Stuttgart",
+    "id": "smc-stuttgart-e-v-2025-10-18-myrcm-event-87729",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "name": "Eurocup 2025 (iMBRA League)",
@@ -11275,10 +11275,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-senden-e-v-2025-10-19-myrcm-event-91629",
-    "venueId": "mrc-senden-e-v",
-    "venueName": "MRC Senden e.V.",
-    "venueLocation": "Senden",
+    "id": "msc-ulm-e-v-2025-10-19-myrcm-event-91629",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "name": "RCK-Challenge",
@@ -12997,10 +12997,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ig-racing-team-hamm-2025-11-22-myrcm-event-91409",
-    "venueId": "ig-racing-team-hamm",
-    "venueName": "IG Racing Team Hamm",
-    "venueLocation": "Lippstadt",
+    "id": "slottis-supreme-masters-2025-11-22-myrcm-event-91409",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "slottis-supreme-masters",
     "hostName": "Slottis Supreme Masters",
     "name": "Carrera Eplorer Cup in 59556 Lippstadt Eickelborn",
@@ -13027,9 +13027,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2025-11-22-myrcm-event-91757",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2025-11-22-myrcm-event-91757",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -13197,10 +13197,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe-2025-11-29-myrcm-event-92519",
-    "venueId": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe",
-    "venueName": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-    "venueLocation": "Chemnitz",
+    "id": "rc-car-chemnitz-2025-11-29-myrcm-event-92519",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "name": "EGC Season 9 Race 2 of 6",
@@ -14398,9 +14398,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2025-12-27-myrcm-event-92441",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2025-12-27-myrcm-event-92441",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -15172,10 +15172,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-senden-e-v-2026-01-11-myrcm-event-93023",
-    "venueId": "mrc-senden-e-v",
-    "venueName": "MRC Senden e.V.",
-    "venueLocation": "Senden",
+    "id": "msc-ulm-e-v-2026-01-11-myrcm-event-93023",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "name": "SK Lauf Süd 1:12",
@@ -15673,10 +15673,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-senden-e-v-2026-01-18-myrcm-event-93548",
-    "venueId": "mrc-senden-e-v",
-    "venueName": "MRC Senden e.V.",
-    "venueLocation": "Senden",
+    "id": "msc-ulm-e-v-2026-01-18-myrcm-event-93548",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "name": "RCK Kleinserie Süd",
@@ -15705,10 +15705,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "arena33-andernach-2026-01-22-myrcm-event-91510",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-01-22-myrcm-event-91510",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro Offroad Series Daun / GER",
@@ -15751,10 +15751,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe-2026-01-23-myrcm-event-91157",
-    "venueId": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe",
-    "venueName": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-    "venueLocation": "Chemnitz",
+    "id": "rc-car-chemnitz-2026-01-23-myrcm-event-91157",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "name": "2. Chemnitzer Messecup with the East German Championship",
@@ -16011,10 +16011,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroad-dortmund-e-v-2026-01-25-myrcm-event-92760",
-    "venueId": "rc-offroad-dortmund-e-v",
-    "venueName": "RC-Offroad Dortmund e.V.",
-    "venueLocation": "Dortmund",
+    "id": "minicar-club-dortmund-e-v-2026-01-25-myrcm-event-92760",
+    "venueId": "minicar-club-dortmund-e-v",
+    "venueName": "Minicar Club Dortmund e.V.",
+    "venueLocation": "Hamm",
     "hostId": "minicar-club-dortmund-e-v",
     "hostName": "Minicar Club Dortmund e.V.",
     "name": "Indoor Cup MC Dortmund",
@@ -16158,10 +16158,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-01-29-myrcm-event-90956",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-01-29-myrcm-event-90956",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series Round 4 DAUN/ GER",
@@ -16280,9 +16280,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2026-01-31-myrcm-event-93219",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2026-01-31-myrcm-event-93219",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -16490,10 +16490,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe-2026-02-07-myrcm-event-94153",
-    "venueId": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe",
-    "venueName": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-    "venueLocation": "Chemnitz",
+    "id": "rc-car-chemnitz-2026-02-07-myrcm-event-94153",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "name": "RCK-Challenge",
@@ -16673,10 +16673,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-02-14-myrcm-event-93308",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
+    "id": "slottis-supreme-masters-2026-02-14-myrcm-event-93308",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "slottis-supreme-masters",
     "hostName": "Slottis Supreme Masters",
     "name": "Carrera Explorer Cup in 38106 Braunschweig",
@@ -17623,9 +17623,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2026-02-28-myrcm-event-94061",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2026-02-28-myrcm-event-94061",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -17973,10 +17973,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-senden-e-v-2026-03-01-myrcm-event-94821",
-    "venueId": "mrc-senden-e-v",
-    "venueName": "MRC Senden e.V.",
-    "venueLocation": "Senden",
+    "id": "msc-ulm-e-v-2026-03-01-myrcm-event-94821",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "name": "RCK Challenge SÜD",
@@ -18803,10 +18803,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-senden-e-v-2026-03-15-myrcm-event-94421",
-    "venueId": "mrc-senden-e-v",
-    "venueName": "MRC Senden e.V.",
-    "venueLocation": "Senden",
+    "id": "msc-ulm-e-v-2026-03-15-myrcm-event-94421",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "name": "Tamico Offroad Cup",
@@ -18935,10 +18935,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-03-19-myrcm-event-92736",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-03-19-myrcm-event-92736",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series Round 5 VIENNA/ AT",
@@ -19105,10 +19105,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe-2026-03-22-myrcm-event-95572",
-    "venueId": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe",
-    "venueName": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-    "venueLocation": "Chemnitz",
+    "id": "rc-car-chemnitz-2026-03-22-myrcm-event-95572",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "name": "6 H",
@@ -19556,9 +19556,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2026-03-28-myrcm-event-95013",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2026-03-28-myrcm-event-95013",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -20330,10 +20330,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-04-16-myrcm-event-92891",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-04-16-myrcm-event-92891",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro Offroad Series Round 2 Trencin / SK",
@@ -21815,10 +21815,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mac-nuernberg-e-v-2026-04-26-myrcm-event-95025",
-    "venueId": "mac-nuernberg-e-v",
-    "venueName": "MAC Nürnberg e.V",
-    "venueLocation": "Nürnberg",
+    "id": "rc-racers-toys-shop-2026-04-26-myrcm-event-95025",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-racers-toys-shop",
     "hostName": "RC Racers + Toys Shop",
     "name": "Nordbayern Cup #4 2026 Lauf 3 Nürnberg",
@@ -21896,9 +21896,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-05-01-myrcm-event-90910",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "6 Std SC Team Rennen",
@@ -22453,10 +22453,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2026-05-03-myrcm-event-97143",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2026-05-03-myrcm-event-97143",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "1.RCS-Cup 2026",
@@ -22625,9 +22625,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-05-03-myrcm-event-96342",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS 2026 Lauf 1",
@@ -22690,10 +22690,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2026-05-03-myrcm-event-97849",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2026-05-03-myrcm-event-97849",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "Kopie von \"1.RCS-Cup 2026\"",
@@ -22806,10 +22806,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-05-03-myrcm-event-97155",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-05-03-myrcm-event-97155",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Participation PIT Challenge Ettlingen",
@@ -22918,10 +22918,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-05-07-myrcm-event-95738",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-05-07-myrcm-event-95738",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 1 ETTLINGEN / GER",
@@ -23114,10 +23114,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "esv-blau-gold-bischofsheim-1958-e-v-2026-05-09-myrcm-event-93757",
-    "venueId": "esv-blau-gold-bischofsheim-1958-e-v",
-    "venueName": "ESV Blau-Gold Bischofsheim 1958 e.V.",
-    "venueLocation": "Bischofsheim",
+    "id": "fs-timing-2026-05-09-myrcm-event-93757",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "fs-timing",
     "hostName": "FS-Timing",
     "name": "2. Hessencup Lauf 2026 Bischofsheim",
@@ -23705,9 +23705,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2026-05-16-myrcm-event-96506",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2026-05-16-myrcm-event-96506",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -23968,10 +23968,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-05-16-myrcm-event-95251",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
+    "id": "slottis-supreme-masters-2026-05-16-myrcm-event-95251",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "slottis-supreme-masters",
     "hostName": "Slottis Supreme Masters",
     "name": "Regionsfinale Braunschweig Bienroder Weg 70 38106 -",
@@ -24253,10 +24253,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mbsc-waechtersbach-2026-05-17-myrcm-event-97464",
-    "venueId": "mbsc-waechtersbach",
-    "venueName": "MBSC Wächtersbach",
-    "venueLocation": "Wächtersbach",
+    "id": "fs-timing-2026-05-17-myrcm-event-97464",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "fs-timing",
     "hostName": "FS-Timing",
     "name": "MBSC Sunday League Round 1 Wächtersbach",
@@ -24567,10 +24567,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mck-e-v-dormagen-2026-05-23-myrcm-event-97638",
-    "venueId": "mck-e-v-dormagen",
-    "venueName": "MCK e.V. Dormagen",
-    "venueLocation": "Köln",
+    "id": "mfk-kurten-e-v-2026-05-23-myrcm-event-97638",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "name": "42. Pfingstrennen auf dem Entenring - 1. NRW-Cup 2026",
@@ -24967,10 +24967,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-05-28-myrcm-event-96256",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-05-28-myrcm-event-96256",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
@@ -25157,10 +25157,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-alstaden-oberhausen-e-v-2026-05-30-myrcm-event-97413",
-    "venueId": "mrc-alstaden-oberhausen-e-v",
-    "venueName": "MRC Alstaden Oberhausen e.V.",
-    "venueLocation": "Oberhausen",
+    "id": "rc-drecksloch-e-v-2026-05-30-myrcm-event-97413",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "name": "Freundschaftsrennen 2026",
@@ -25283,10 +25283,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2026-05-30-myrcm-event-94210",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-speedracer-bernau-2026-05-30-myrcm-event-94210",
+    "venueId": "rc-speedracer-bernau",
+    "venueName": "RC Speedracer Bernau",
+    "venueLocation": "Bernau",
     "hostId": "rc-speedracer-bernau",
     "hostName": "RC Speedracer e.V.",
     "name": "SK-Lauf Ost + Berlin Touring Masters Lauf 3",
@@ -25471,10 +25471,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2026-05-31-myrcm-event-97902",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2026-05-31-myrcm-event-97902",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "2.Rcs-Cup 2026",
@@ -25498,10 +25498,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2026-05-31-myrcm-event-96611",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-offroad-staaken-2026-05-31-myrcm-event-96611",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "name": "2.RCS-CUP 2026",
@@ -26146,10 +26146,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-mannheim-e-v-2026-06-06-myrcm-event-96502",
-    "venueId": "mrc-mannheim-e-v",
-    "venueName": "MRC Mannheim e.V.",
-    "venueLocation": "Mannheim",
+    "id": "mac-siersburg-e-v-2026-06-06-myrcm-event-96502",
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Saar Racing Series #2 + SK Lauf in Mannheim",
@@ -26202,10 +26202,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "rc-offroad-dortmund-e-v-2026-06-06-myrcm-event-97213",
-    "venueId": "rc-offroad-dortmund-e-v",
-    "venueName": "RC-Offroad Dortmund e.V.",
-    "venueLocation": "Dortmund",
+    "id": "minicar-club-dortmund-e-v-2026-06-06-myrcm-event-97213",
+    "venueId": "minicar-club-dortmund-e-v",
+    "venueName": "Minicar Club Dortmund e.V.",
+    "venueLocation": "Hamm",
     "hostId": "minicar-club-dortmund-e-v",
     "hostName": "Minicar Club Dortmund e.V.",
     "name": "Tamico Off-Road Cup beim MC Dortmund",
@@ -27058,10 +27058,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-mariendorf-rc-racing-2026-06-13-myrcm-event-94649",
-    "venueId": "tsv-mariendorf-rc-racing",
-    "venueName": "TSV Mariendorf RC Racing",
-    "venueLocation": "Berlin",
+    "id": "rc-speedracer-bernau-2026-06-13-myrcm-event-94649",
+    "venueId": "rc-speedracer-bernau",
+    "venueName": "RC Speedracer Bernau",
+    "venueLocation": "Bernau",
     "hostId": "rc-speedracer-bernau",
     "hostName": "RC Speedracer e.V.",
     "name": "SK-Lauf Ost + Berlin Touring Masters Lauf 4",
@@ -27131,10 +27131,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "rc-offroad-dortmund-e-v-2026-06-13-myrcm-event-97212",
-    "venueId": "rc-offroad-dortmund-e-v",
-    "venueName": "RC-Offroad Dortmund e.V.",
-    "venueLocation": "Dortmund",
+    "id": "minicar-club-dortmund-e-v-2026-06-13-myrcm-event-97212",
+    "venueId": "minicar-club-dortmund-e-v",
+    "venueName": "Minicar Club Dortmund e.V.",
+    "venueLocation": "Hamm",
     "hostId": "minicar-club-dortmund-e-v",
     "hostName": "Minicar Club Dortmund e.V.",
     "name": "SK-Lauf und NORC beim MC Dortmund",
@@ -27900,9 +27900,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-offroadcrew-langenfeld-e-v-2026-06-19-myrcm-event-95439",
-    "venueId": "rc-offroadcrew-langenfeld-e-v",
-    "venueName": "RC-OffroadCrew Langenfeld e.V.",
+    "id": "amc-langenfeld-e-v-2026-06-19-myrcm-event-95439",
+    "venueId": "amc-langenfeld-e-v",
+    "venueName": "AMC Langenfeld e.V.",
     "venueLocation": "Solingen",
     "hostId": "amc-langenfeld-e-v",
     "hostName": "AMC Langenfeld e.V.",
@@ -27997,10 +27997,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mac-or-huetschenhausen-e-v-2026-06-20-myrcm-event-95671",
-    "venueId": "mac-or-huetschenhausen-e-v",
-    "venueName": "MAC OR Hütschenhausen e.V.",
-    "venueLocation": "Hütschenhausen",
+    "id": "fs-timing-2026-06-20-myrcm-event-95671",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "fs-timing",
     "hostName": "FS-Timing",
     "name": "DMC Kinder und Jugend Tag beim MAC Hütschenhausen e.V 2026",
@@ -28489,10 +28489,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mbsc-waechtersbach-2026-06-21-myrcm-event-96168",
-    "venueId": "mbsc-waechtersbach",
-    "venueName": "MBSC Wächtersbach",
-    "venueLocation": "Wächtersbach",
+    "id": "fs-timing-2026-06-21-myrcm-event-96168",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "fs-timing",
     "hostName": "FS-Timing",
     "name": "MBSC Sunday League Round 2 Wächtersbach",
@@ -28759,9 +28759,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-06-27-myrcm-event-96344",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS 2026 Lauf 2",
@@ -29124,8 +29124,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       "SPC-Kids",
@@ -29140,7 +29140,7 @@
       },
       {
         "name": "SPC-TW 1:10 -Fun 17,5",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "SPC-Rally",
@@ -29197,10 +29197,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-07-02-myrcm-event-95739",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-07-02-myrcm-event-95739",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 2 RUCPHEN / NL",
@@ -29913,10 +29913,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrsc-amberg-e-v-2026-07-12-myrcm-event-95028",
-    "venueId": "mrsc-amberg-e-v",
-    "venueName": "MRSC Amberg e.V.",
-    "venueLocation": "Amberg",
+    "id": "rc-racers-toys-shop-2026-07-12-myrcm-event-95028",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-racers-toys-shop",
     "hostName": "RC Racers + Toys Shop",
     "name": "Nordbayern Cup #4 2026 Lauf 5 Amberg",
@@ -30384,10 +30384,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-07-23-myrcm-event-97810",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-07-23-myrcm-event-97810",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 2 TRENCIN SK",
@@ -30707,9 +30707,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-07-26-myrcm-event-96345",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS 2026 Lauf 3",
@@ -30957,9 +30957,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-08-08-myrcm-event-96346",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS 2026 Lauf 4",
@@ -31087,10 +31087,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-08-13-myrcm-event-95740",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-08-13-myrcm-event-95740",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 3 AIGEN / AT",
@@ -31395,9 +31395,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-08-23-myrcm-event-96347",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS 2026 Lauf 5",
@@ -31672,9 +31672,9 @@
   },
   {
     "id": "rc-modellbaufreunde-e-v-2026-09-05-myrcm-event-96348",
-    "venueId": "rc-modellbaufreunde-e-v",
-    "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": "Attaching",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "name": "FCOS 2026 Lauf 6",
@@ -31828,10 +31828,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-09-10-myrcm-event-97811",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-2026-09-10-myrcm-event-97811",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series Round 3 ANDERNACH / GER",
@@ -32031,10 +32031,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "msc-ober-moerlen-e-v-2026-09-19-myrcm-event-97459",
-    "venueId": "msc-ober-moerlen-e-v",
-    "venueName": "MSC Ober-Mörlen e.V.",
-    "venueLocation": "Weiterstadt",
+    "id": "msc-ober-morlen-e-v-2026-09-19-myrcm-event-97459",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "msc-ober-morlen-e-v",
     "hostName": "MSC Ober-Mörlen e.V.",
     "name": "4 Lauf ECM MSC Ober Mörlen",
@@ -33025,10 +33025,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-cars-koengen-e-v-2026-10-23-myrcm-event-97024",
-    "venueId": "rc-cars-koengen-e-v",
-    "venueName": "RC Cars Köngen e.V.",
-    "venueLocation": "Stuttgart",
+    "id": "smc-stuttgart-e-v-2026-10-23-myrcm-event-97024",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "name": "Eurocup 2026 (iMBRA League)",
