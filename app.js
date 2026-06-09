@@ -1359,21 +1359,15 @@ function normalizedDisplayText(value = "") {
 }
 
 function raceHostAndVenueAreSame(race) {
-  const hostValues = [
-    raceHostName(race),
-    raceHostId(race)
-  ].filter(Boolean).map(normalizedDisplayText);
-
   const venue = venueForRace(race);
-  const venueValues = [
-    race?.venueName,
-    race?.venueId,
-    venue?.name,
-    venue?.id
-  ].filter(Boolean).map(normalizedDisplayText);
+  if (!venue) return false;
 
-  return hostValues.some(hostValue =>
-    venueValues.some(venueValue => hostValue && venueValue && hostValue === venueValue)
+  const hostId = raceHostId(race);
+  if (!hostId) return false;
+
+  return (
+    venue.hostId === hostId ||
+    (Array.isArray(venue.hostIds) && venue.hostIds.includes(hostId))
   );
 }
 
