@@ -190,12 +190,12 @@
     "id": "arena33-andernach",
     "name": "Arena33",
     "city": "Andernach",
-    "lat": 50.42467638260954,
-    "lng": 7.424522960340918,
+    "lat": 50.4254599,
+    "lng": 7.4244081,
     "hostIds": [
       "djk-andernach-e-v"
     ],
-    "source": "verified-existing-geolocation-list-plus-rck-pdf-address",
+    "source": "manual-corrected-arena33-stadionstrasse-90",
     "myrcmOrgId": "1288",
     "aliases": [
       "arena33",
