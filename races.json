@@ -26826,8 +26826,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       {
@@ -26848,7 +26848,7 @@
       },
       {
         "name": "Tamiya M-Chassis",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Tamiya Race-Truck",
@@ -27078,8 +27078,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 47,
-    "registrationDisplay": "47",
+    "registrationCount": 48,
+    "registrationDisplay": "48",
     "note": null,
     "classes": [
       {
@@ -27104,7 +27104,7 @@
       },
       {
         "name": "BTM ToniSport17.5 + EGTWHO",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "EGTWMO",
