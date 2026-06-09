@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "marzahner-racing-club",
+    "name": "1. Marzahner Racing Club e.V.",
+    "website": "https://www.mrc-berlin.org/",
+    "myrcmOrgId": "41404"
+  },
+  {
+    "id": "1-mrc-mannheim-e-v",
+    "name": "1. MRC Mannheim e.V.",
+    "website": "https://www.mrc-mannheim.de/",
+    "myrcmOrgId": "39671"
+  },
+  {
+    "id": "amc-hildesheim-e-v",
+    "name": "AMC Hildesheim e.V.",
+    "website": "https://amc-hildesheim.eu/",
+    "myrcmOrgId": "33"
+  },
+  {
+    "id": "amc-lahntal-e-v",
+    "name": "AMC Lahntal e.V.",
+    "website": "http://www.amc-lahntal.de/",
+    "myrcmOrgId": "19597"
+  },
+  {
+    "id": "amc-langenfeld-e-v",
+    "name": "AMC Langenfeld e.V.",
+    "website": "https://amc-langenfeld.blogspot.com/",
+    "myrcmOrgId": "6025"
+  },
+  {
+    "id": "amc-magdeburg-e-v",
+    "name": "AMC Magdeburg e.V.",
+    "website": "http://www.amc-magdeburg.de/",
+    "myrcmOrgId": "44208"
+  },
+  {
+    "id": "amc-saarbrucken-e-v",
+    "name": "AMC Saarbrücken e.V.",
+    "website": "http://www.amc-saarbruecken.de/",
+    "myrcmOrgId": "7103"
+  },
+  {
+    "id": "amc-senftenberg-e-v",
+    "name": "AMC Senftenberg e.V.",
+    "website": "http://www.amc-senftenberg.de/",
+    "myrcmOrgId": "58267"
+  },
+  {
+    "id": "amc-sonthofen-e-v",
+    "name": "AMC Sonthofen e.V.",
+    "website": "http://www.amc-sonthofen.de/",
+    "myrcmOrgId": "4006"
+  },
+  {
+    "id": "amc-hamm-e-v",
+    "name": "amc-Hamm e.V.",
+    "website": "https://sites.google.com/view/ahev-startseite",
+    "myrcmOrgId": "7771"
+  },
+  {
+    "id": "amc-muhlau-e-v",
+    "name": "AMC-Mühlau e.V.",
+    "website": "https://www.amc-muehlau.de/",
+    "myrcmOrgId": "82"
+  },
+  {
+    "id": "amsc-augsburg-e-v",
+    "name": "AMSC Augsburg e. V.",
+    "website": "http://www.amsc-augsburg.de/",
+    "myrcmOrgId": "36"
+  },
+  {
+    "id": "amsc-herne-e-v",
+    "name": "AMSC-Herne e.V.",
+    "website": "http://www.amsc-herne.de/",
+    "myrcmOrgId": "29065"
+  },
+  {
+    "id": "asc-celle-e-v",
+    "name": "ASC Celle e.V.",
+    "website": "http://www.asccelle.com/",
+    "myrcmOrgId": "26821"
+  },
+  {
+    "id": "asc-potsdam-e-v",
+    "name": "ASC Potsdam e.V.",
+    "website": "http://www.asc-potsdam.de/",
+    "myrcmOrgId": "26596"
+  },
+  {
+    "id": "automodellclub-mei-en-e-v",
+    "name": "Automodellclub Meißen e.V.",
+    "website": "https://www.automodellclub-meissen.de/",
+    "myrcmOrgId": "861"
+  },
+  {
+    "id": "breitenfelder-sportverein-von-1924-e-v",
+    "name": "Breitenfelder Sportverein von 1924 e.V.",
+    "website": "https://www.bsv-rc-modellsport.de/",
+    "myrcmOrgId": "64649"
+  },
+  {
+    "id": "burning-wheels-blankenfelde",
+    "name": "Burning Wheels Blankenfelde",
+    "website": "https://www.burningwheels.de/",
+    "myrcmOrgId": "52898"
+  },
+  {
+    "id": "c-hub-racing-gbr",
+    "name": "C-HUB Racing GBR",
+    "website": "http://www.c-hub-racing.de/",
+    "myrcmOrgId": "9496"
+  },
+  {
+    "id": "catz-sports-gmbh",
+    "name": "Catz-Sports GmbH",
+    "website": "http://www.catz-sports.de/",
+    "myrcmOrgId": "62"
+  },
+  {
+    "id": "cc-racing",
+    "name": "CC-Racing",
+    "website": "",
+    "myrcmOrgId": "1152"
+  },
+  {
+    "id": "conrad-electronic-se",
+    "name": "Conrad Electronic SE",
+    "website": "http://www.conrad.de/",
+    "myrcmOrgId": "13506"
+  },
+  {
+    "id": "dershoemaker-racing-events",
+    "name": "DerShoemaker Racing Events",
+    "website": "",
+    "myrcmOrgId": "17465"
+  },
+  {
+    "id": "djk-andernach-e-v",
+    "name": "DJK Andernach e.V.",
+    "website": "http://www.djk-andernach.de/",
+    "myrcmOrgId": "1288"
+  },
+  {
+    "id": "djk-ssc-lackenhauser-e-v",
+    "name": "DJK-SSC Lackenhäuser e.V.",
+    "website": "",
+    "myrcmOrgId": "50568"
+  },
+  {
+    "id": "edc-kinzigtal-e-v",
+    "name": "EDC Kinzigtal e.V.",
+    "website": "http://www.edc-kinzigtal.de/",
+    "myrcmOrgId": "35606"
+  },
+  {
+    "id": "emc-marktoberdorf",
+    "name": "EMC-Marktoberdorf",
+    "website": "https://www.emc-marktoberdorf.info/",
+    "myrcmOrgId": "43367"
+  },
+  {
+    "id": "equipe-rc-nohn",
+    "name": "Equipe RC Nohn",
+    "website": "http://rc-nohn.npage.de/",
+    "myrcmOrgId": "10117"
+  },
+  {
+    "id": "esv-blau-gold-bischofsheim-1958-e-v",
+    "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
+    "website": "https://www.rhein-main-circuit.de/",
+    "myrcmOrgId": "37613"
+  },
+  {
+    "id": "ets",
+    "name": "ETS",
+    "website": "http://www.eurorcseries.com/",
+    "myrcmOrgId": "2047"
+  },
+  {
+    "id": "fs-timing",
+    "name": "FS-Timing",
+    "website": "",
+    "myrcmOrgId": "49540"
+  },
+  {
+    "id": "fun-center-ch-gmbh-jestetten",
+    "name": "fun-center.ch GmbH Jestetten",
+    "website": "",
+    "myrcmOrgId": "17182"
+  },
+  {
+    "id": "greenhouse-racer-e-v",
+    "name": "Greenhouse RaCer e.V.",
+    "website": "https://www.mrs-funcup.de/greenhouse-racer",
+    "myrcmOrgId": "56473"
+  },
+  {
+    "id": "grunewald-motorsport",
+    "name": "Grünewald Motorsport",
+    "website": "http://www.gruenewald-motorsport.de/",
+    "myrcmOrgId": "52767"
+  },
+  {
+    "id": "heiner-martin",
+    "name": "Heiner Martin",
+    "website": "",
+    "myrcmOrgId": "458"
+  },
+  {
+    "id": "ig-racing-team-hamm",
+    "name": "IG Racing Team Hamm",
+    "website": "",
+    "myrcmOrgId": "10490"
+  },
+  {
+    "id": "kloft-timing",
+    "name": "KLOFT-TIMING",
+    "website": "http://www.kloft-timing.de/",
+    "myrcmOrgId": "17649"
+  },
+  {
+    "id": "la-speedway-racing-club-e-v",
+    "name": "LA Speedway Racing Club e.V.",
+    "website": "https://laspeedway.de/",
+    "myrcmOrgId": "52798"
+  },
+  {
+    "id": "lost-place-racers-e-v",
+    "name": "Lost-Place-Racers e.V.",
+    "website": "http://www.lostplaceracers.de/",
+    "myrcmOrgId": "17507"
+  },
+  {
+    "id": "lrp-electronic-gmbh",
+    "name": "LRP electronic GmbH",
+    "website": "http://www.lrp.cc/",
+    "myrcmOrgId": "892"
+  },
+  {
+    "id": "lts-bremerhaven-racing-team",
+    "name": "LTS Bremerhaven Racing Team",
+    "website": "",
+    "myrcmOrgId": "19204"
+  },
+  {
+    "id": "mac-adenau",
+    "name": "MAC Adenau",
+    "website": "http://www.mac-adenau.de/",
+    "myrcmOrgId": "4602"
+  },
+  {
+    "id": "mac-berlin-e-v",
+    "name": "MAC Berlin e.V.",
+    "website": "http://www.mac-speedway.de/",
+    "myrcmOrgId": "168"
+  },
+  {
+    "id": "mac-burgdorf-e-v",
+    "name": "MAC Burgdorf e.V.",
+    "website": "https://www.mac-burgdorf.de/",
+    "myrcmOrgId": "678"
+  },
+  {
+    "id": "mac-hamburg-e-v",
+    "name": "MAC Hamburg e.V.",
+    "website": "http://www.mach-ev.de/",
+    "myrcmOrgId": "20622"
+  },
+  {
+    "id": "mac-idar-oberstein",
+    "name": "MAC Idar-Oberstein",
+    "website": "http://www.mac-idar-oberstein.de/",
+    "myrcmOrgId": "258"
+  },
+  {
+    "id": "mac-mettenheim-e-v",
+    "name": "MAC Mettenheim e.V.",
+    "website": "https://www.mac-mettenheim.de/",
+    "myrcmOrgId": "891"
+  },
+  {
+    "id": "mac-nurnberg-e-v",
+    "name": "MAC Nürnberg e.V",
+    "website": "https://www.macn.de/",
+    "myrcmOrgId": "9976"
+  },
+  {
+    "id": "mac-or-hutschenhausen-e-v",
+    "name": "MAC OR Hütschenhausen e.V.",
+    "website": "http://www.mac-huetschenhausen.de/",
+    "myrcmOrgId": "30735"
+  },
+  {
+    "id": "mac-saar-e-v",
+    "name": "MAC Saar e.V.",
+    "website": "https://www.macsaar.de/",
+    "myrcmOrgId": "233"
+  },
+  {
+    "id": "mac-siersburg-e-v",
+    "name": "MAC Siersburg e.V.",
+    "website": "",
+    "myrcmOrgId": "48023"
+  },
+  {
+    "id": "mac-uetersen-e-v",
+    "name": "MAC Uetersen e.V.",
+    "website": "https://www.macuetersen.com/",
+    "myrcmOrgId": "53667"
+  },
+  {
+    "id": "mac-meckenheim-e-v",
+    "name": "MAC-Meckenheim e.V.",
+    "website": "https://www.mac-meckenheim.de/",
+    "myrcmOrgId": "49037"
+  },
+  {
+    "id": "mac-solms-e-v",
+    "name": "MAC-Solms e.V.",
+    "website": "https://www.mac-solms.de/",
+    "myrcmOrgId": "42064"
+  },
+  {
+    "id": "mbc-goldstein-e-v",
+    "name": "MBC Goldstein e.V.",
+    "website": "http://www.mbcgoldstein.de/",
+    "myrcmOrgId": "24873"
+  },
+  {
+    "id": "mbsc-wachtersbach",
+    "name": "MBSC Wächtersbach",
+    "website": "http://www.mbsc-waechtersbach.de/",
+    "myrcmOrgId": "27211"
+  },
+  {
+    "id": "mc-ettlingen-e-v",
+    "name": "MC Ettlingen e.V.",
+    "website": "http://www.mc-ettlingen.de/",
+    "myrcmOrgId": "121"
+  },
+  {
+    "id": "mc-munster-e-v",
+    "name": "MC Munster e.V.",
+    "website": "http://www.mcmunster.de/",
+    "myrcmOrgId": "33489"
+  },
+  {
+    "id": "mc-welden-e-v",
+    "name": "MC Welden e.V.",
+    "website": "https://mcwelden.de/",
+    "myrcmOrgId": "44699"
+  },
+  {
+    "id": "mc-furstenwalde-e-v",
+    "name": "MC-Fürstenwalde e.V.",
+    "website": "https://www.mc-fuerstenwalde.de/",
+    "myrcmOrgId": "65042"
+  },
+  {
+    "id": "mc-orc-e-v",
+    "name": "MC-ORC .e.V.",
+    "website": "http://www.mcorc.de/",
+    "myrcmOrgId": "27203"
+  },
+  {
+    "id": "mcc-bad-kissingen-e-v",
+    "name": "MCC Bad Kissingen e. V.",
+    "website": "http://mcc-kg.de.tl/",
+    "myrcmOrgId": "21299"
+  },
+  {
+    "id": "mcc-borgholzhausen",
+    "name": "MCC Borgholzhausen",
+    "website": "https://www.mcc-borgholzhausen.de/",
+    "myrcmOrgId": "20747"
+  },
+  {
+    "id": "mcc-fellbach-e-v",
+    "name": "MCC Fellbach e.V.",
+    "website": "http://www.mcc-fellbach.de/",
+    "myrcmOrgId": "38659"
+  },
+  {
+    "id": "mcc-kastellaun-e-v",
+    "name": "MCC Kastellaun e.V.",
+    "website": "http://www.minidrom.de/",
+    "myrcmOrgId": "4141"
+  },
+  {
+    "id": "mcc-konstanz",
+    "name": "MCC Konstanz",
+    "website": "http://www.mcc-konstanz.de/",
+    "myrcmOrgId": "5505"
+  },
+  {
+    "id": "mcc-ludenscheid-e-v",
+    "name": "MCC Lüdenscheid e.V.",
+    "website": "http://www.mcc-luedenscheid.de/",
+    "myrcmOrgId": "52121"
+  },
+  {
+    "id": "mcc-rheda-wiedenbruck-e-v",
+    "name": "MCC Rheda-Wiedenbrück e.V.",
+    "website": "https://de-de.facebook.com/mcc.rhedawiedenbruckev/",
+    "myrcmOrgId": "49956"
+  },
+  {
+    "id": "mcc-rhein-ahr-e-v",
+    "name": "MCC Rhein Ahr e.V.",
+    "website": "https://mcc-rhein-ahr.de/",
+    "myrcmOrgId": "283"
+  },
+  {
+    "id": "mcc-turkheim-e-v",
+    "name": "MCC Türkheim e.V.",
+    "website": "https://www.mcc-tuerkheim.de/",
+    "myrcmOrgId": "47"
+  },
+  {
+    "id": "mcc-hocheifel-e-v",
+    "name": "MCC-Hocheifel e.V.",
+    "website": "http://www.mcc-hocheifel.eu/",
+    "myrcmOrgId": "269"
+  },
+  {
+    "id": "mcc-marktredwitz-e-v",
+    "name": "MCC-Marktredwitz e.V.",
+    "website": "https://mcc-marktredwitz.de/",
+    "myrcmOrgId": "57549"
+  },
+  {
+    "id": "mck-e-v-dormagen",
+    "name": "MCK e.V. Dormagen",
+    "website": "https://www.mckdormagen.de/",
+    "myrcmOrgId": "9269"
+  },
+  {
+    "id": "mcrt-schaafheim-e-v",
+    "name": "MCRT-Schaafheim e.V.",
+    "website": "https://www.mcrt-schaafheim.de/",
+    "myrcmOrgId": "50727"
+  },
+  {
+    "id": "mcss-althengstett-e-v",
+    "name": "MCSS Althengstett e.V.",
+    "website": "https://www.mcss.de/",
+    "myrcmOrgId": "12227"
+  },
+  {
+    "id": "mcv-danischer-wohld-e-v",
+    "name": "MCV Dänischer Wohld e.V.",
+    "website": "http://mcv-daenischer-wohld.de/",
+    "myrcmOrgId": "19290"
+  },
+  {
+    "id": "md-timing",
+    "name": "MD-Timing",
+    "website": "",
+    "myrcmOrgId": "33838"
+  },
+  {
+    "id": "megadrom-rc-team-nord",
+    "name": "Megadrom RC Team Nord",
+    "website": "http://www.rcteamnord.de/",
+    "myrcmOrgId": "32408"
+  },
+  {
+    "id": "mfk-kurten-e-v",
+    "name": "MFK Kürten e.V.",
+    "website": "http://modellfreunde-kuerten.de/",
+    "myrcmOrgId": "53092"
+  },
+  {
+    "id": "mfr-morschheim-rheinhessen-pfalz-e-v",
+    "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
+    "website": "http://www.mfr-morschheim.de/",
+    "myrcmOrgId": "30759"
+  },
+  {
+    "id": "mini-car-club-crailsheim-e-v",
+    "name": "Mini Car Club Crailsheim e.V.",
+    "website": "http://www.mcc-crailsheim.de/",
+    "myrcmOrgId": "158"
+  },
+  {
+    "id": "miniatutenpark-elsterwerda",
+    "name": "Miniatutenpark Elsterwerda",
+    "website": "https://miniaturenpark-elsterwerda.de/modellauto-rennstrecke.html",
+    "myrcmOrgId": "65451"
+  },
+  {
+    "id": "minicar-club-dortmund-e-v",
+    "name": "Minicar Club Dortmund e.V.",
+    "website": "http://www.mcdortmund.net/",
+    "myrcmOrgId": "6266"
+  },
+  {
+    "id": "modellbaufreunde-felsberg-e-v",
+    "name": "Modellbaufreunde Felsberg e.V.",
+    "website": "https://modellbaufreunde-felsberg.de/",
+    "myrcmOrgId": "38488"
+  },
+  {
+    "id": "modellclub-flensburg-e-v",
+    "name": "Modellclub Flensburg e.V",
+    "website": "https://www.mc-flensburg.de/",
+    "myrcmOrgId": "42405"
+  },
+  {
+    "id": "modellrenngemeinschaft-dogern-e-v",
+    "name": "Modellrenngemeinschaft Dogern e.V.",
+    "website": "http://www.mrg-dogern.com/",
+    "myrcmOrgId": "879"
+  },
+  {
+    "id": "modellsportzentrum-zwonitz-e-v",
+    "name": "Modellsportzentrum Zwönitz e.V.",
+    "website": "https://www.modellsportzentrum-zwoenitz.com/",
+    "myrcmOrgId": "60576"
+  },
+  {
+    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
+    "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "website": "https://msc-polizei-bs.de/",
+    "myrcmOrgId": "95"
+  },
+  {
+    "id": "motorsportvereinigung-zittauer-land-e-v",
+    "name": "Motorsportvereinigung Zittauer Land e.V.",
+    "website": "",
+    "myrcmOrgId": "64572"
+  },
+  {
+    "id": "mrc-alstaden-oberhausen-e-v",
+    "name": "MRC Alstaden Oberhausen e.V.",
+    "website": "https://www.mrc-oberhausen.de/",
+    "myrcmOrgId": "64"
+  },
+  {
+    "id": "mrc-leipzig-e-v",
+    "name": "MRC Leipzig e.V",
+    "website": "http://www.mrc-leipzig.de/",
+    "myrcmOrgId": "713"
+  },
+  {
+    "id": "mrc-mehrum-e-v",
+    "name": "MRC Mehrum e.V.",
+    "website": "https://www.mrc-mehrum.de/",
+    "myrcmOrgId": "2245"
+  },
+  {
+    "id": "mrc-senden-e-v",
+    "name": "MRC Senden e.V.",
+    "website": "https://www.mrc-senden.de/",
+    "myrcmOrgId": "61183"
+  },
+  {
+    "id": "mrsc-amberg-e-v",
+    "name": "MRSC Amberg e.V.",
+    "website": "https://www.mrsc-amberg.de/",
+    "myrcmOrgId": "39587"
+  },
+  {
+    "id": "mrt-rosenheim-e-v",
+    "name": "MRT Rosenheim e.V.",
+    "website": "https://www.mrt-rosenheim.de/",
+    "myrcmOrgId": "4483"
+  },
+  {
+    "id": "msc-halle-e-v",
+    "name": "MSC Halle e.V.",
+    "website": "https://msc-halle.de/",
+    "myrcmOrgId": "44811"
+  },
+  {
+    "id": "msc-hansa-heilbronn-e-v",
+    "name": "MSC Hansa Heilbronn e.V.",
+    "website": "https://www.msc-hansa.de/",
+    "myrcmOrgId": "116"
+  },
+  {
+    "id": "msc-herrenhaide",
+    "name": "MSC Herrenhaide",
+    "website": "http://www.msc-herrenhaide.de/",
+    "myrcmOrgId": "64487"
+  },
+  {
+    "id": "msc-hockendorf-e-v",
+    "name": "MSC Höckendorf e.V.",
+    "website": "https://www.msc-hoeckendorf.de/",
+    "myrcmOrgId": "56487"
+  },
+  {
+    "id": "msc-kirchhain-e-v",
+    "name": "MSC Kirchhain e.V.",
+    "website": "http://www.msc-kirchhain.de/",
+    "myrcmOrgId": "17008"
+  },
+  {
+    "id": "msc-ober-morlen-e-v",
+    "name": "MSC Ober-Mörlen e.V.",
+    "website": "https://www.msc-obermoerlen.de/",
+    "myrcmOrgId": "66454"
+  },
+  {
+    "id": "msc-osterhofen-e-v",
+    "name": "MSC Osterhofen e.V.",
+    "website": "",
+    "myrcmOrgId": "50019"
+  },
+  {
+    "id": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
+    "name": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
+    "website": "https://msc-polizei-bs.de/",
+    "myrcmOrgId": "72"
+  },
+  {
+    "id": "msc-ulm-e-v",
+    "name": "MSC Ulm e.V.",
+    "website": "",
+    "myrcmOrgId": "42113"
+  },
+  {
+    "id": "msg-niesky-e-v",
+    "name": "MSG Niesky e.V.",
+    "website": "http://www.msg-niesky.de/",
+    "myrcmOrgId": "46202"
+  },
+  {
+    "id": "mss-am-sagewerk",
+    "name": "MSS \"Am Sägewerk\"",
+    "website": "",
+    "myrcmOrgId": "49105"
+  },
+  {
+    "id": "msv-hurtgenwald-e-v",
+    "name": "MSV Hürtgenwald e.V.",
+    "website": "https://auto.msv-huertgenwald.de/",
+    "myrcmOrgId": "15511"
+  },
+  {
+    "id": "nitro-sud",
+    "name": "Nitro Süd",
+    "website": "http://www.xn--nitro-sd-d6a.de/",
+    "myrcmOrgId": "34185"
+  },
+  {
+    "id": "nitromaniacs-e-v",
+    "name": "NitroManiacs e.V.",
+    "website": "https://www.nitromaniacs.de/",
+    "myrcmOrgId": "15092"
+  },
+  {
+    "id": "offroad-minicar-crew-e-v",
+    "name": "Offroad Minicar Crew e.V.",
+    "website": "https://omconline.de/",
+    "myrcmOrgId": "35380"
+  },
+  {
+    "id": "orc-b-gottingen-e-v",
+    "name": "ORC-B Göttingen e.V.",
+    "website": "http://www.orc-b-goettingen.de/",
+    "myrcmOrgId": "36113"
+  },
+  {
+    "id": "ormc-konigsbrunn",
+    "name": "ORMC Königsbrunn",
+    "website": "http://www.ormck.de/",
+    "myrcmOrgId": "573"
+  },
+  {
+    "id": "ostseeracer-rc-modellbau-e-v",
+    "name": "OstseeRacer RC Modellbau e.V.",
+    "website": "http://www.ostseeracer.com/",
+    "myrcmOrgId": "26381"
+  },
+  {
+    "id": "pmc-paderborn-e-v",
+    "name": "PMC Paderborn e.V.",
+    "website": "http://www.paderborner-mc.de/",
+    "myrcmOrgId": "13247"
+  },
+  {
+    "id": "racers-paradise-modellsport",
+    "name": "RACERS PARADISE MODELLSPORT",
+    "website": "http://www.racersparadise.de/",
+    "myrcmOrgId": "30490"
+  },
+  {
+    "id": "rallye-club-haltern-e-v-im-adac",
+    "name": "Rallye-Club Haltern e.V. im ADAC",
+    "website": "",
+    "myrcmOrgId": "16149"
+  },
+  {
+    "id": "rasenracer-e-v",
+    "name": "Rasenracer e.V.",
+    "website": "http://www.rasenracer.de/",
+    "myrcmOrgId": "37610"
+  },
+  {
+    "id": "rc-car-chemnitz",
+    "name": "RC Car Chemnitz",
+    "website": "",
+    "myrcmOrgId": "51129"
+  },
+  {
+    "id": "rc-car-freunde-emsdetten-e-v",
+    "name": "RC Car Freunde Emsdetten e.V.",
+    "website": "https://www.rcc-emsdetten.de/",
+    "myrcmOrgId": "55427"
+  },
+  {
+    "id": "rc-car-indoor-minidrom-owl",
+    "name": "RC Car Indoor Minidrom OWL",
+    "website": "http://rc-car-indoor-minidrom-owl.de.tl/Startseite.htm",
+    "myrcmOrgId": "30429"
+  },
+  {
+    "id": "rc-cars-drift-st-wendel",
+    "name": "RC Cars & Drift St. Wendel",
+    "website": "https://www.rc-wnd.de/",
+    "myrcmOrgId": "37209"
+  },
+  {
+    "id": "rc-cars-kongen-e-v",
+    "name": "RC Cars Köngen e.V.",
+    "website": "http://www.rc-cars-koengen.de/",
+    "myrcmOrgId": "12564"
+  },
+  {
+    "id": "rc-cars-wernigerode-e-v",
+    "name": "RC Cars Wernigerode e.V.",
+    "website": "https://rc-car-wr.de/",
+    "myrcmOrgId": "43490"
+  },
+  {
+    "id": "rc-drecksloch-e-v",
+    "name": "RC Drecksloch e.V.",
+    "website": "",
+    "myrcmOrgId": "33778"
+  },
+  {
+    "id": "rc-fun-racer-e-v",
+    "name": "RC Fun Racer e.V.",
+    "website": "https://rc-fun-racer.de/",
+    "myrcmOrgId": "44059"
+  },
+  {
+    "id": "rc-halle-e-v",
+    "name": "RC Halle e.V.",
+    "website": "https://www.rchalle.de/",
+    "myrcmOrgId": "42085"
+  },
+  {
+    "id": "rc-modellbaufreunde-e-v",
+    "name": "RC Modellbaufreunde e.V.",
+    "website": "https://rc-modellbaufreunde.de/",
+    "myrcmOrgId": "53665"
+  },
+  {
+    "id": "rc-offroad-staaken",
+    "name": "RC Offroad Staaken",
+    "website": "https://www.rcs-offroad.de/",
+    "myrcmOrgId": "55317"
+  },
+  {
+    "id": "rc-race-team-munchen-e-v",
+    "name": "RC Race Team München e.V",
+    "website": "",
+    "myrcmOrgId": "37520"
+  },
+  {
+    "id": "rc-racer-hochsauerland-e-v",
+    "name": "Rc Racer Hochsauerland e.V.",
+    "website": "https://rc-racer-hochsauerland.de/",
+    "myrcmOrgId": "45781"
+  },
+  {
+    "id": "rc-racers-toys-shop",
+    "name": "RC Racers + Toys Shop",
+    "website": "https://nordbayerncup.de/",
+    "myrcmOrgId": "47444"
+  },
+  {
+    "id": "rc-speedracer-bernau",
+    "name": "RC Speedracer e.V.",
+    "website": "https://www.rcspeedracer.de/",
+    "myrcmOrgId": "45925"
+  },
+  {
+    "id": "rc-team-sauerland-e-v",
+    "name": "RC Team Sauerland e.V.",
+    "website": "",
+    "myrcmOrgId": "35303"
+  },
+  {
+    "id": "rc-bande-zwickau-e-v",
+    "name": "RC-Bande Zwickau e.V",
+    "website": "https://www.modellsport-zwickau.de/",
+    "myrcmOrgId": "48536"
+  },
+  {
+    "id": "rc-car-shop-racecrew",
+    "name": "RC-Car Shop RaceCrew",
+    "website": "http://www.der-rc-car-shop.de/",
+    "myrcmOrgId": "175"
+  },
+  {
+    "id": "rc-glashaus-e-v",
+    "name": "RC-Glashaus e.V.",
+    "website": "https://www.rc-glashaus.de/",
+    "myrcmOrgId": "9640"
+  },
+  {
+    "id": "rc-msc-greuthof-e-v",
+    "name": "RC-MSC Greuthof e.V.",
+    "website": "https://www.rcmsc.de/",
+    "myrcmOrgId": "61583"
+  },
+  {
+    "id": "rc-offroad-dortmund-e-v",
+    "name": "RC-Offroad Dortmund e.V.",
+    "website": "https://www.rc-offroad-dortmund-ev.de/",
+    "myrcmOrgId": "48425"
+  },
+  {
+    "id": "rc-offroad-wattenscheid-e-v",
+    "name": "RC-Offroad Wattenscheid e.V.",
+    "website": "https://rc-offroad-wattenscheid.eu/",
+    "myrcmOrgId": "34102"
+  },
+  {
+    "id": "rc-offroadcrew-langenfeld-e-v",
+    "name": "RC-OffroadCrew Langenfeld e.V.",
+    "website": "http://www.rc-offroadcrew-langenfeld.de/",
+    "myrcmOrgId": "20813"
+  },
+  {
+    "id": "rc-schwalmracer-e-v",
+    "name": "RC-Schwalmracer e.V.",
+    "website": "http://www.rc-schwalmracer.de/",
+    "myrcmOrgId": "1516"
+  },
+  {
+    "id": "rc-sonntagsfahrer-e-v",
+    "name": "RC-Sonntagsfahrer e.V.",
+    "website": "https://www.rc-sonntagsfahrer.de/",
+    "myrcmOrgId": "50693"
+  },
+  {
+    "id": "rcc-reken-e-v",
+    "name": "RCC Reken e.V.",
+    "website": "",
+    "myrcmOrgId": "33796"
+  },
+  {
+    "id": "rcc-steinlach-e-v",
+    "name": "RCC-Steinlach e.V.",
+    "website": "http://www.rcc-steinlach.de/",
+    "myrcmOrgId": "25565"
+  },
+  {
+    "id": "rccars-bergisch-born-e-v",
+    "name": "RCCars Bergisch-Born e.V.",
+    "website": "https://www.rccars-bergischborn.de/",
+    "myrcmOrgId": "6492"
+  },
+  {
+    "id": "rccr-munzig-e-v",
+    "name": "RCCR Munzig e.V.",
+    "website": "https://rccr-munzig.com/",
+    "myrcmOrgId": "20891"
+  },
+  {
+    "id": "rcct-munden-e-v",
+    "name": "RCCT Münden e.V.",
+    "website": "",
+    "myrcmOrgId": "134"
+  },
+  {
+    "id": "rco-ottendorf-okrilla-e-v",
+    "name": "RCO Ottendorf-Okrilla e.V.",
+    "website": "https://www.rco-ottendorf-okrilla.de/",
+    "myrcmOrgId": "45728"
+  },
+  {
+    "id": "rcrt-duisburg-e-v",
+    "name": "RCRT Duisburg e.V.",
+    "website": "https://www.rcrt-duisburg.de/",
+    "myrcmOrgId": "15091"
+  },
+  {
+    "id": "rcsf-singen-e-v",
+    "name": "RCSF-Singen e.V.",
+    "website": "https://www.rcsf-singen.de/",
+    "myrcmOrgId": "16961"
+  },
+  {
+    "id": "rgmc-teck-e-v",
+    "name": "RGMC Teck e.V.",
+    "website": "https://www.rgmc-teck.de/",
+    "myrcmOrgId": "60396"
+  },
+  {
+    "id": "rmc-duren-e-v",
+    "name": "RMC Düren e.V.",
+    "website": "http://www.rmcdueren.de/",
+    "myrcmOrgId": "26406"
+  },
+  {
+    "id": "rt-fichtenberg-e-v",
+    "name": "RT-Fichtenberg e.V.",
+    "website": "https://www.rt-fichtenberg.de/",
+    "myrcmOrgId": "25939"
+  },
+  {
+    "id": "sator-events",
+    "name": "Sator Events",
+    "website": "https://www.sator-events.de/",
+    "myrcmOrgId": "43682"
+  },
+  {
+    "id": "schneider-timing-service",
+    "name": "Schneider-Timing-Service",
+    "website": "http://www.schneider-timing-service.de/",
+    "myrcmOrgId": "83"
+  },
+  {
+    "id": "schweriner-sc-breitensport-e-v",
+    "name": "Schweriner SC Breitensport e.V.",
+    "website": "https://www.ssc-breitensport.de/",
+    "myrcmOrgId": "66122"
+  },
+  {
+    "id": "simbacher-buggyracer-e-v",
+    "name": "Simbacher Buggyracer e.V.",
+    "website": "",
+    "myrcmOrgId": "62851"
+  },
+  {
+    "id": "slottis-supreme-masters",
+    "name": "Slottis Supreme Masters",
+    "website": "",
+    "myrcmOrgId": "60453"
+  },
+  {
+    "id": "slr-ingoldstadt-06",
+    "name": "SLR Ingoldstadt 06",
+    "website": "",
+    "myrcmOrgId": "490"
+  },
+  {
+    "id": "smc-stuttgart-e-v",
+    "name": "SMC Stuttgart e.V.",
+    "website": "https://www.smc-stuttgart.de/",
+    "myrcmOrgId": "51971"
+  },
+  {
+    "id": "stoppelhopser-oberhausen-e-v",
+    "name": "Stoppelhopser Oberhausen e.V.",
+    "website": "http://www.stoppelhopser-oberhausen.de/",
+    "myrcmOrgId": "21160"
+  },
+  {
+    "id": "suddeutschland-cup",
+    "name": "Süddeutschland-Cup",
+    "website": "https://sueddeutschlandcup.de/",
+    "myrcmOrgId": "60911"
+  },
+  {
+    "id": "team-dabo",
+    "name": "Team Dabo",
+    "website": "",
+    "myrcmOrgId": "36386"
+  },
+  {
+    "id": "technische-universitat-chemnitz-professur-alternative-fahrzeugantriebe",
+    "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
+    "website": "https://www.tu-chemnitz.de/",
+    "myrcmOrgId": "38953"
+  },
+  {
+    "id": "time4fun",
+    "name": "Time4Fun",
+    "website": "",
+    "myrcmOrgId": "29586"
+  },
+  {
+    "id": "tonisport-gmbh",
+    "name": "ToniSport GmbH",
+    "website": "https://www.tonisport.de/",
+    "myrcmOrgId": "24531"
+  },
+  {
+    "id": "trackside",
+    "name": "Trackside",
+    "website": "http://www.trackside.de/",
+    "myrcmOrgId": "36437"
+  },
+  {
+    "id": "tsv-1871-augsburg-e-v",
+    "name": "TSV 1871 Augsburg e.V.",
+    "website": "http://www.tsv-1871.de/",
+    "myrcmOrgId": "991"
+  },
+  {
+    "id": "tsv-gelenau-e-v",
+    "name": "TSV Gelenau e.V.",
+    "website": "http://www.tsv-gelenau.de/",
+    "myrcmOrgId": "30389"
+  },
+  {
+    "id": "tsv-kleinburgwedel",
+    "name": "TSV Kleinburgwedel",
+    "website": "https://www.rc-car-tsvkleinburgwedel.de/",
+    "myrcmOrgId": "4441"
+  },
+  {
+    "id": "tsv-mariendorf",
+    "name": "TSV Mariendorf 1897 RCCR",
+    "website": "http://www.msv06-rccar.de/",
+    "myrcmOrgId": "18244"
+  },
+  {
+    "id": "turnerschaft-1860-e-v-gro-auheim",
+    "name": "Turnerschaft 1860 e.V. Großauheim",
+    "website": "http://www.mrcgrossauheim.de/",
+    "myrcmOrgId": "22897"
+  },
+  {
+    "id": "turngemeinde-1855-neustadt-bei-coburg-e-v",
+    "name": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+    "website": "https://tg-neustadt.de/abteilungen/RC-Motorsport",
+    "myrcmOrgId": "59129"
+  },
+  {
+    "id": "ub-timing",
+    "name": "ub.timing",
+    "website": "",
+    "myrcmOrgId": "18409"
+  },
+  {
+    "id": "vfl-goldstein-1953-e-v",
+    "name": "VfL Goldstein 1953 e.V.",
+    "website": "",
+    "myrcmOrgId": "54871"
+  },
+  {
+    "id": "vfr-russelsheim-e-v",
+    "name": "VFR-Rüsselsheim e.V.",
+    "website": "http://rccar.vfr-ruesselsheim.de/",
+    "myrcmOrgId": "19940"
+  },
+  {
+    "id": "wiesbadener-minicar-club-e-v",
+    "name": "Wiesbadener Minicar Club e.V.",
+    "website": "https://www.wmc-ev.de/",
+    "myrcmOrgId": "11761"
+  }
+]

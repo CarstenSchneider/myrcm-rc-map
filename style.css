@@ -1011,7 +1011,7 @@ input {
 
 
 
-/* Marker v1.4 – SVG pins */
+/* Marker v1.4 â€“ SVG pins */
 
 .map-marker-open,
 .map-marker-closed {
@@ -1745,4 +1745,21 @@ input {
   color: #946600 !important;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+/* v1.6.2 Leaflet marker zoom stability
+   Leaflet positions .leaflet-marker-icon with transform during zoom.
+   Nested marker visuals must not apply their own transform or animation,
+   otherwise markers drift while scroll-wheel zooming.
+*/
+.leaflet-marker-icon .map-marker-visual {
+  transform: none !important;
+  animation: none !important;
+}
+
+
+.venue-name-text {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
 }

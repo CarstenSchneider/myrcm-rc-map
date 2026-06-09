@@ -37,6 +37,7 @@ let venues = [];
 let races = [];
 let hosts = [];
 let hostsByOrgId = new Map();
+let hostsById = new Map();
 let venueLookup = new Map();
 let markers = new Map();
 let activeRaceId = null;
@@ -1124,6 +1125,31 @@ function hostWebsiteByOrgId(orgId) {
   return normalizeUrl(hostsByOrgId.get(String(orgId))?.website);
 }
 
+function hostWebsiteForRace(race) {
+  const hostId = raceHostId(race);
+  const host = hostId ? hostsById.get(String(hostId)) : null;
+
+  if (host?.website) return normalizeUrl(host.website);
+
+  const hostOrgId =
+    orgIdFromValue(race?.detailUrl) ||
+    orgIdFromValue(race?.url) ||
+    orgIdFromValue(race?.myrcmUrl);
+
+  if (hostOrgId) {
+    const website = hostWebsiteByOrgId(hostOrgId);
+    if (website) return website;
+
+    const target = new URL("https://www.myrcm.ch/myrcm/main");
+    target.searchParams.set("hId[1]", "org");
+    target.searchParams.set("dId[O]", hostOrgId);
+    target.searchParams.set("pLa", "en");
+    return target.toString();
+  }
+
+  return null;
+}
+
 function venueWebsite(venue) {
   const directWebsite = normalizeUrl(venue?.website);
   if (directWebsite) return directWebsite;
@@ -1158,7 +1184,7 @@ function venueNameHtml(venue) {
   const name = escapeHtml(venue?.name || "Unbekannte Strecke");
   const nameHtml = website
     ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
-    : `<span class="venue-link">${name}</span>`;
+    : `<span class="venue-name-text">${name}</span>`;
 
   return `<span class="venue-name">${nameHtml}</span>`;
 }
@@ -1198,8 +1224,13 @@ function raceHostNameHtml(race) {
   const hostName = raceHostName(race);
   const favorite = favoriteHostButtonHtml(hostId, hostName);
   const favoriteClass = isFavoriteHostId(hostId) ? " venue-link-favorite" : "";
+  const website = hostWebsiteForRace(race);
 
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}<span class="venue-link${favoriteClass}">${escapeHtml(hostName)}</span></span>`;
+  const hostHtml = website
+    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
+    : `<span class="host-name${favoriteClass}">${escapeHtml(hostName)}</span>`;
+
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${hostHtml}</span>`;
 }
 
 function raceVenueNameHtml(race) {
@@ -1207,7 +1238,7 @@ function raceVenueNameHtml(race) {
   const website = raceWebsite(race);
   const nameHtml = website
     ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : `<span class="venue-link">${name}</span>`;
+    : `<span class="venue-name-text">${name}</span>`;
 
   return `<span class="venue-name">${nameHtml}</span>`;
 }
@@ -2198,12 +2229,13 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
-    fetch(`myrcm-hosts-germany.json?v=${cacheBuster}`).catch(() => null)
+    fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, [])
   ]);
 
   const baseVenues = await venuesResponse.json();
@@ -2227,16 +2259,24 @@ async function init() {
       .map(race => normalizeRaceFromSource(race, "rck"))
   ];
 
-  if (hostsResponse?.ok) {
-    hosts = await hostsResponse.json();
-  } else {
-    hosts = [];
-  }
+  const hostRecords = Array.isArray(hostsResponse) ? hostsResponse : [];
+  const myrcmHostRecords = Array.isArray(myrcmHostsResponse) ? myrcmHostsResponse : [];
+
+  hosts = [
+    ...hostRecords,
+    ...myrcmHostRecords
+  ];
+
+  hostsById = new Map(
+    hosts
+      .filter(host => host?.id)
+      .map(host => [String(host.id), host])
+  );
 
   hostsByOrgId = new Map(
     hosts
-      .filter(host => host?.orgId)
-      .map(host => [String(host.orgId), host])
+      .filter(host => host?.orgId || host?.myrcmOrgId)
+      .map(host => [String(host.orgId || host.myrcmOrgId), host])
   );
 
   populateSeries();

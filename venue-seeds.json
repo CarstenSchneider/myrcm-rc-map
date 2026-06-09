@@ -5,20 +5,16 @@
     "city": "Hildesheim",
     "lat": 52.15720104253146,
     "lng": 9.930734865467414,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Hildesheim e.V.",
-      "Hildesheim",
-      "myrcm-33"
-    ],
     "hostIds": [
       "amc-hildesheim-e-v"
     ],
-    "myrcmOrgId": "33",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "33",
+    "aliases": [
+      "myrcm-33",
+      "AMC Hildesheim e.V.",
+      "Hildesheim"
+    ]
   },
   {
     "id": "amc-lahntal-e-v",
@@ -26,20 +22,16 @@
     "city": "Solms",
     "lat": 50.57298785101659,
     "lng": 8.539485269537407,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Lahntal e.V.",
-      "Solms",
-      "myrcm-19597"
-    ],
     "hostIds": [
       "amc-lahntal-e-v"
     ],
-    "myrcmOrgId": "19597",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "19597",
+    "aliases": [
+      "myrcm-19597",
+      "AMC Lahntal e.V.",
+      "Solms"
+    ]
   },
   {
     "id": "amc-langenfeld-e-v",
@@ -47,20 +39,16 @@
     "city": "Solingen",
     "lat": 51.11124440703488,
     "lng": 6.9254506669797475,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Langenfeld e.V.",
-      "Solingen",
-      "myrcm-6025"
-    ],
     "hostIds": [
       "amc-langenfeld-e-v"
     ],
-    "myrcmOrgId": "6025",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "6025",
+    "aliases": [
+      "myrcm-6025",
+      "AMC Langenfeld e.V.",
+      "Solingen"
+    ]
   },
   {
     "id": "amc-magdeburg-e-v",
@@ -68,20 +56,16 @@
     "city": "Magdeburg",
     "lat": 52.089630528745495,
     "lng": 11.557263291516346,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Magdeburg e.V.",
-      "Magdeburg",
-      "myrcm-44208"
-    ],
     "hostIds": [
       "amc-magdeburg-e-v"
     ],
-    "myrcmOrgId": "44208",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "44208",
+    "aliases": [
+      "myrcm-44208",
+      "AMC Magdeburg e.V.",
+      "Magdeburg"
+    ]
   },
   {
     "id": "amc-saarbruecken-e-v",
@@ -89,20 +73,16 @@
     "city": "Saarbrücken",
     "lat": 49.25494432605648,
     "lng": 7.001039730657222,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Saarbrücken e.V.",
-      "Saarbrücken",
-      "myrcm-7103"
-    ],
     "hostIds": [
       "amc-saarbrucken-e-v"
     ],
-    "myrcmOrgId": "7103",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "7103",
+    "aliases": [
+      "myrcm-7103",
+      "AMC Saarbrücken e.V.",
+      "Saarbrücken"
+    ]
   },
   {
     "id": "amc-senftenberg-e-v",
@@ -110,20 +90,16 @@
     "city": "Senftenberg",
     "lat": 51.513511017262914,
     "lng": 13.997624485710512,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Senftenberg e.V.",
-      "Senftenberg",
-      "myrcm-58267"
-    ],
     "hostIds": [
       "amc-senftenberg-e-v"
     ],
-    "myrcmOrgId": "58267",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "58267",
+    "aliases": [
+      "myrcm-58267",
+      "AMC Senftenberg e.V.",
+      "Senftenberg"
+    ]
   },
   {
     "id": "amc-sonthofen-e-v",
@@ -131,20 +107,16 @@
     "city": "Immenstadt",
     "lat": 47.56238610077959,
     "lng": 10.21998396888581,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC Sonthofen e.V.",
-      "Immenstadt",
-      "myrcm-4006"
-    ],
     "hostIds": [
       "amc-sonthofen-e-v"
     ],
-    "myrcmOrgId": "4006",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "4006",
+    "aliases": [
+      "myrcm-4006",
+      "AMC Sonthofen e.V.",
+      "Immenstadt"
+    ]
   },
   {
     "id": "amc-hamm-e-v",
@@ -152,20 +124,16 @@
     "city": "Bönen",
     "lat": 51.682030657927996,
     "lng": 7.9324199858423805,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bönen",
-      "amc-Hamm e.V.",
-      "myrcm-7771"
-    ],
     "hostIds": [
       "amc-hamm-e-v"
     ],
-    "myrcmOrgId": "7771",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "7771",
+    "aliases": [
+      "myrcm-7771",
+      "amc-Hamm e.V.",
+      "Bönen"
+    ]
   },
   {
     "id": "amc-muehlau-e-v",
@@ -173,20 +141,16 @@
     "city": "Mühlau",
     "lat": 50.90067043142882,
     "lng": 12.768212160800493,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMC-Mühlau e.V.",
-      "Mühlau",
-      "myrcm-82"
-    ],
     "hostIds": [
       "amc-muhlau-e-v"
     ],
-    "myrcmOrgId": "82",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "82",
+    "aliases": [
+      "myrcm-82",
+      "AMC-Mühlau e.V.",
+      "Mühlau"
+    ]
   },
   {
     "id": "amsc-augsburg-e-v",
@@ -194,20 +158,16 @@
     "city": "Dasing",
     "lat": 48.403917527342564,
     "lng": 11.077982831882666,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMSC Augsburg e. V.",
-      "Dasing",
-      "myrcm-36"
-    ],
     "hostIds": [
       "amsc-augsburg-e-v"
     ],
-    "myrcmOrgId": "36",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "36",
+    "aliases": [
+      "myrcm-36",
+      "AMSC Augsburg e. V.",
+      "Dasing"
+    ]
   },
   {
     "id": "amsc-herne-e-v",
@@ -215,20 +175,16 @@
     "city": "Bochum",
     "lat": 51.51452313992984,
     "lng": 7.169385692502446,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "AMSC-Herne e.V.",
-      "Bochum",
-      "myrcm-29065"
-    ],
     "hostIds": [
       "amsc-herne-e-v"
     ],
-    "myrcmOrgId": "29065",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "29065",
+    "aliases": [
+      "myrcm-29065",
+      "AMSC-Herne e.V.",
+      "Bochum"
+    ]
   },
   {
     "id": "arena33-andernach",
@@ -236,26 +192,31 @@
     "city": "Andernach",
     "lat": 50.4254599,
     "lng": 7.4244081,
-    "address": "Stadionstr. 90, 56626 Andernach",
-    "postalCode": "56626",
-    "website": "",
-    "aliases": [
-      "Andernach",
-      "DjK Andernach",
-      "Stadionstr. 90, 56626 Andernach",
-      "ToniSport GmbH",
-      "arena-33",
-      "arena33",
-      "djk-andernach",
-      "myrcm-24531",
-      "stadionstrasse-andernach"
-    ],
     "hostIds": [
       "djk-andernach-e-v"
     ],
-    "myrcmOrgId": "1288",
     "source": "manual-corrected-arena33-stadionstrasse-90",
-    "verified": true
+    "myrcmOrgId": "1288",
+    "aliases": [
+      "arena33",
+      "arena-33",
+      "djk-andernach",
+      "stadionstrasse-andernach",
+      "ToniSport GmbH",
+      "Andernach",
+      "DjK Andernach",
+      "Stadionstr. 90, 56626 Andernach",
+      "myrcm-24531"
+    ],
+    "address": "Stadionstr. 90, 56626 Andernach",
+    "postalCode": "56626",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "ToniSport GmbH",
+    "rckOrganizerName": "DjK Andernach",
+    "rckLocations": [
+      "Andernach"
+    ]
   },
   {
     "id": "asc-celle-e-v",
@@ -263,20 +224,16 @@
     "city": "Celle",
     "lat": 52.597671730560705,
     "lng": 10.051027925236115,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "ASC Celle e.V.",
-      "Celle",
-      "myrcm-26821"
-    ],
     "hostIds": [
       "asc-celle-e-v"
     ],
-    "myrcmOrgId": "26821",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "26821",
+    "aliases": [
+      "myrcm-26821",
+      "ASC Celle e.V.",
+      "Celle"
+    ]
   },
   {
     "id": "asc-potsdam-e-v",
@@ -284,20 +241,16 @@
     "city": "Potsdam",
     "lat": 52.309760094922,
     "lng": 13.447708353987874,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "ASC Potsdam e.V.",
-      "Potsdam",
-      "myrcm-26596"
-    ],
     "hostIds": [
       "asc-potsdam-e-v"
     ],
-    "myrcmOrgId": "26596",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "26596",
+    "aliases": [
+      "myrcm-26596",
+      "ASC Potsdam e.V.",
+      "Potsdam"
+    ]
   },
   {
     "id": "automodellclub-meissen-e-v",
@@ -305,20 +258,16 @@
     "city": "Nossen",
     "lat": 51.183209912703695,
     "lng": 13.494275375841397,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Automodellclub Meißen e.V.",
-      "Nossen",
-      "myrcm-861"
-    ],
     "hostIds": [
       "automodellclub-mei-en-e-v"
     ],
-    "myrcmOrgId": "861",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "861",
+    "aliases": [
+      "myrcm-861",
+      "Automodellclub Meißen e.V.",
+      "Nossen"
+    ]
   },
   {
     "id": "breitenfelder-sportverein-von-1924-e-v",
@@ -326,20 +275,16 @@
     "city": "Breitenfelde",
     "lat": 53.606169364621394,
     "lng": 10.628400444902876,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Breitenfelde",
-      "Breitenfelder Sportverein von 1924 e.V.",
-      "myrcm-64649"
-    ],
     "hostIds": [
       "breitenfelder-sportverein-von-1924-e-v"
     ],
-    "myrcmOrgId": "64649",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "64649",
+    "aliases": [
+      "myrcm-64649",
+      "Breitenfelder Sportverein von 1924 e.V.",
+      "Breitenfelde"
+    ]
   },
   {
     "id": "burning-wheels-blankenfelde",
@@ -347,18 +292,14 @@
     "city": "Blankenfelde",
     "lat": 52.32099365980667,
     "lng": 13.40860882307241,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "blankenfelde"
-    ],
     "hostIds": [
       "burning-wheels-blankenfelde"
     ],
-    "myrcmOrgId": "52898",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "myrcmOrgId": "52898",
+    "aliases": [
+      "blankenfelde"
+    ]
   },
   {
     "id": "djk-ssc-lackenhaeuser-e-v",
@@ -366,20 +307,16 @@
     "city": "Neureichenau",
     "lat": 48.735561100310875,
     "lng": 13.798475640900763,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "DJK-SSC Lackenhäuser e.V.",
-      "Neureichenau",
-      "myrcm-50568"
-    ],
     "hostIds": [
       "djk-ssc-lackenhauser-e-v"
     ],
-    "myrcmOrgId": "50568",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "50568",
+    "aliases": [
+      "myrcm-50568",
+      "DJK-SSC Lackenhäuser e.V.",
+      "Neureichenau"
+    ]
   },
   {
     "id": "edc-kinzigtal-e-v",
@@ -387,20 +324,16 @@
     "city": "Gengenbach",
     "lat": 48.424259010683336,
     "lng": 8.017786070319858,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "EDC Kinzigtal e.V.",
-      "Gengenbach",
-      "myrcm-35606"
-    ],
     "hostIds": [
       "edc-kinzigtal-e-v"
     ],
-    "myrcmOrgId": "35606",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "35606",
+    "aliases": [
+      "myrcm-35606",
+      "EDC Kinzigtal e.V.",
+      "Gengenbach"
+    ]
   },
   {
     "id": "emc-marktoberdorf",
@@ -408,23 +341,28 @@
     "city": "Marktoberdorf",
     "lat": 47.77353559344614,
     "lng": 10.596636348538459,
-    "address": "Gartenweg 6 , 87616 Marktoberdorf",
-    "postalCode": "87616",
-    "website": "",
-    "aliases": [
-      "EMC-Marktoberdorf",
-      "EMC-Marktoberdorf e.V.",
-      "Gartenweg 6 , 87616 Marktoberdorf",
-      "Marktoberdorf",
-      "myrcm-43367"
-    ],
     "hostIds": [
       "emc-marktoberdorf",
       "myrcm-43367"
     ],
-    "myrcmOrgId": "43367",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "43367",
+    "address": "Gartenweg 6 , 87616 Marktoberdorf",
+    "postalCode": "87616",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "EMC-Marktoberdorf",
+    "rckOrganizerName": "EMC-Marktoberdorf e.V.",
+    "rckLocations": [
+      "Marktoberdorf"
+    ],
+    "aliases": [
+      "EMC-Marktoberdorf",
+      "Marktoberdorf",
+      "EMC-Marktoberdorf e.V.",
+      "Gartenweg 6 , 87616 Marktoberdorf",
+      "myrcm-43367"
+    ]
   },
   {
     "id": "equipe-rc-nohn",
@@ -432,20 +370,16 @@
     "city": "Nohn",
     "lat": 48.37078150268052,
     "lng": 10.719769403703232,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Equipe RC Nohn",
-      "Nohn",
-      "myrcm-10117"
-    ],
     "hostIds": [
       "equipe-rc-nohn"
     ],
-    "myrcmOrgId": "10117",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "10117",
+    "aliases": [
+      "myrcm-10117",
+      "Equipe RC Nohn",
+      "Nohn"
+    ]
   },
   {
     "id": "esv-blau-gold-bischofsheim-1958-e-v",
@@ -453,20 +387,16 @@
     "city": "Bischofsheim",
     "lat": 49.97763075091446,
     "lng": 8.387647129236486,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bischofsheim",
-      "ESV Blau-Gold Bischofsheim 1958 e.V.",
-      "myrcm-37613"
-    ],
     "hostIds": [
       "esv-blau-gold-bischofsheim-1958-e-v"
     ],
-    "myrcmOrgId": "37613",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "37613",
+    "aliases": [
+      "myrcm-37613",
+      "ESV Blau-Gold Bischofsheim 1958 e.V.",
+      "Bischofsheim"
+    ]
   },
   {
     "id": "greenhouse-racer-e-v",
@@ -474,20 +404,16 @@
     "city": "Wendelstein",
     "lat": 49.34814240723616,
     "lng": 11.142573203838916,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Greenhouse RaCer e.V.",
-      "Wendelstein",
-      "myrcm-56473"
-    ],
     "hostIds": [
       "greenhouse-racer-e-v"
     ],
-    "myrcmOrgId": "56473",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "56473",
+    "aliases": [
+      "myrcm-56473",
+      "Greenhouse RaCer e.V.",
+      "Wendelstein"
+    ]
   },
   {
     "id": "ig-racing-team-hamm",
@@ -495,20 +421,16 @@
     "city": "Lippstadt",
     "lat": 51.71999468117557,
     "lng": 7.852665250099724,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "IG Racing Team Hamm",
-      "Lippstadt",
-      "myrcm-10490"
-    ],
     "hostIds": [
       "ig-racing-team-hamm"
     ],
-    "myrcmOrgId": "10490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "10490",
+    "aliases": [
+      "myrcm-10490",
+      "IG Racing Team Hamm",
+      "Lippstadt"
+    ]
   },
   {
     "id": "la-speedway-racing-club-e-v",
@@ -516,20 +438,16 @@
     "city": "Bruckberg",
     "lat": 48.5135310265825,
     "lng": 12.044646410956766,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bruckberg",
-      "LA Speedway Racing Club e.V.",
-      "myrcm-52798"
-    ],
     "hostIds": [
       "la-speedway-racing-club-e-v"
     ],
-    "myrcmOrgId": "52798",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "52798",
+    "aliases": [
+      "myrcm-52798",
+      "LA Speedway Racing Club e.V.",
+      "Bruckberg"
+    ]
   },
   {
     "id": "lost-place-racers-e-v",
@@ -537,20 +455,16 @@
     "city": "Prüm",
     "lat": 50.62670012162062,
     "lng": 6.695804823655136,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Lost-Place-Racers e.V.",
-      "Prüm",
-      "myrcm-17507"
-    ],
     "hostIds": [
       "lost-place-racers-e-v"
     ],
-    "myrcmOrgId": "17507",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "17507",
+    "aliases": [
+      "myrcm-17507",
+      "Lost-Place-Racers e.V.",
+      "Prüm"
+    ]
   },
   {
     "id": "lts-bremerhaven-racing-team",
@@ -558,20 +472,16 @@
     "city": "Geestland",
     "lat": 53.588865659093905,
     "lng": 8.58660868179531,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Geestland",
-      "LTS Bremerhaven Racing Team",
-      "myrcm-19204"
-    ],
     "hostIds": [
       "lts-bremerhaven-racing-team"
     ],
-    "myrcmOrgId": "19204",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "19204",
+    "aliases": [
+      "myrcm-19204",
+      "LTS Bremerhaven Racing Team",
+      "Geestland"
+    ]
   },
   {
     "id": "mac-adenau",
@@ -579,20 +489,16 @@
     "city": "Kottenborn",
     "lat": 50.380520238217656,
     "lng": 6.9339287153803975,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Kottenborn",
-      "MAC Adenau",
-      "myrcm-4602"
-    ],
     "hostIds": [
       "mac-adenau"
     ],
-    "myrcmOrgId": "4602",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "4602",
+    "aliases": [
+      "myrcm-4602",
+      "MAC Adenau",
+      "Kottenborn"
+    ]
   },
   {
     "id": "mac-burgdorf-e-v",
@@ -600,20 +506,16 @@
     "city": "Burgdorf",
     "lat": 52.43191612480417,
     "lng": 10.017538646084235,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Burgdorf",
-      "MAC Burgdorf e.V.",
-      "myrcm-678"
-    ],
     "hostIds": [
       "mac-burgdorf-e-v"
     ],
-    "myrcmOrgId": "678",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "678",
+    "aliases": [
+      "myrcm-678",
+      "MAC Burgdorf e.V.",
+      "Burgdorf"
+    ]
   },
   {
     "id": "mac-hamburg-e-v",
@@ -621,20 +523,16 @@
     "city": "Hamburg",
     "lat": 53.52486125519811,
     "lng": 10.134162196790893,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hamburg",
-      "MAC Hamburg e.V.",
-      "myrcm-20622"
-    ],
     "hostIds": [
       "mac-hamburg-e-v"
     ],
-    "myrcmOrgId": "20622",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "20622",
+    "aliases": [
+      "myrcm-20622",
+      "MAC Hamburg e.V.",
+      "Hamburg"
+    ]
   },
   {
     "id": "mac-mettenheim-e-v",
@@ -642,23 +540,29 @@
     "city": "Vaterstetten",
     "lat": 48.25458988422763,
     "lng": 12.455744115925047,
+    "hostIds": [
+      "mac-mettenheim-e-v"
+    ],
+    "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
+    "myrcmOrgId": "891",
     "address": "MiniDrom, Wimmer Kiesgrube, 84562 Mettenheim",
     "postalCode": "84562",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "MAC Mettenheim e.V.",
+    "rckOrganizerName": "MAC Mettenheim e.V.",
+    "rckLocations": [
+      "Mettenheim"
+    ],
     "website": "https://mac-mettenheim.de",
     "aliases": [
       "MAC Mettenheim e.V.",
       "Mettenheim",
       "MiniDrom, Wimmer Kiesgrube, 84562 Mettenheim",
-      "Vaterstetten",
       "mac-mettenheim-e-v",
-      "myrcm-891"
-    ],
-    "hostIds": [
-      "mac-mettenheim-e-v"
-    ],
-    "myrcmOrgId": "891",
-    "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+      "myrcm-891",
+      "Vaterstetten"
+    ]
   },
   {
     "id": "mac-nuernberg-e-v",
@@ -666,23 +570,28 @@
     "city": "Nürnberg",
     "lat": 49.38767201459021,
     "lng": 11.168661334912732,
-    "address": "Am Zollhaus, 90471 Nürnberg",
-    "postalCode": "90471",
-    "website": "",
-    "aliases": [
-      "Am Zollhaus, 90471 Nürnberg",
-      "MAC Nürnberg e.V",
-      "MAC Nürnberg e.V.",
-      "Nürnberg",
-      "myrcm-9976"
-    ],
     "hostIds": [
       "mac-nurnberg-e-v",
       "myrcm-9976"
     ],
-    "myrcmOrgId": "9976",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "9976",
+    "address": "Am Zollhaus, 90471 Nürnberg",
+    "postalCode": "90471",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "MAC Nürnberg e.V",
+    "rckOrganizerName": "MAC Nürnberg e.V.",
+    "rckLocations": [
+      "Nürnberg"
+    ],
+    "aliases": [
+      "MAC Nürnberg e.V",
+      "Nürnberg",
+      "MAC Nürnberg e.V.",
+      "Am Zollhaus, 90471 Nürnberg",
+      "myrcm-9976"
+    ]
   },
   {
     "id": "mac-or-huetschenhausen-e-v",
@@ -690,20 +599,16 @@
     "city": "Hütschenhausen",
     "lat": 49.41803566643476,
     "lng": 7.457597641355012,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hütschenhausen",
-      "MAC OR Hütschenhausen e.V.",
-      "myrcm-30735"
-    ],
     "hostIds": [
       "mac-or-hutschenhausen-e-v"
     ],
-    "myrcmOrgId": "30735",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "30735",
+    "aliases": [
+      "myrcm-30735",
+      "MAC OR Hütschenhausen e.V.",
+      "Hütschenhausen"
+    ]
   },
   {
     "id": "mac-saar-e-v",
@@ -711,20 +616,16 @@
     "city": "Bexbach",
     "lat": 49.23737851350886,
     "lng": 7.197984131866451,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bexbach",
-      "MAC Saar e.V.",
-      "myrcm-233"
-    ],
     "hostIds": [
       "mac-saar-e-v"
     ],
-    "myrcmOrgId": "233",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "233",
+    "aliases": [
+      "myrcm-233",
+      "MAC Saar e.V.",
+      "Bexbach"
+    ]
   },
   {
     "id": "mac-siersburg-e-v",
@@ -732,20 +633,16 @@
     "city": "Dillingen",
     "lat": 49.237385520887244,
     "lng": 7.19838986976351,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Dillingen",
-      "MAC Siersburg e.V.",
-      "myrcm-48023"
-    ],
     "hostIds": [
       "mac-siersburg-e-v"
     ],
-    "myrcmOrgId": "48023",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "48023",
+    "aliases": [
+      "MAC Siersburg e.V.",
+      "Dillingen",
+      "myrcm-48023"
+    ]
   },
   {
     "id": "mac-uetersen-e-v",
@@ -753,20 +650,16 @@
     "city": "Uetersen",
     "lat": 53.67639410403049,
     "lng": 9.70171695639382,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MAC Uetersen e.V.",
-      "Uetersen",
-      "myrcm-53667"
-    ],
     "hostIds": [
       "mac-uetersen-e-v"
     ],
-    "myrcmOrgId": "53667",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "53667",
+    "aliases": [
+      "myrcm-53667",
+      "MAC Uetersen e.V.",
+      "Uetersen"
+    ]
   },
   {
     "id": "mac-meckenheim-e-v",
@@ -774,20 +667,16 @@
     "city": "Bad Münstereifel",
     "lat": 50.623679184080956,
     "lng": 7.043371956119134,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bad Münstereifel",
-      "MAC-Meckenheim e.V.",
-      "myrcm-49037"
-    ],
     "hostIds": [
       "mac-meckenheim-e-v"
     ],
-    "myrcmOrgId": "49037",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "49037",
+    "aliases": [
+      "myrcm-49037",
+      "MAC-Meckenheim e.V.",
+      "Bad Münstereifel"
+    ]
   },
   {
     "id": "mac-solms-e-v",
@@ -795,20 +684,16 @@
     "city": "Ehringshausen",
     "lat": 50.53393592577889,
     "lng": 8.601463866322767,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Ehringshausen",
-      "MAC-Solms e.V.",
-      "myrcm-42064"
-    ],
     "hostIds": [
       "mac-solms-e-v"
     ],
-    "myrcmOrgId": "42064",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "42064",
+    "aliases": [
+      "myrcm-42064",
+      "MAC-Solms e.V.",
+      "Ehringshausen"
+    ]
   },
   {
     "id": "marzahner-racing-club-e-v",
@@ -816,18 +701,14 @@
     "city": "Berlin-Marzahn",
     "lat": 52.53875196434322,
     "lng": 13.561567229887286,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "marzahn"
-    ],
     "hostIds": [
       "marzahner-racing-club"
     ],
-    "myrcmOrgId": "41404",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "myrcmOrgId": "41404",
+    "aliases": [
+      "marzahn"
+    ]
   },
   {
     "id": "mbc-goldstein-e-v",
@@ -835,20 +716,16 @@
     "city": "Frankfurt",
     "lat": 50.07714491151757,
     "lng": 8.613882094074963,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Frankfurt",
-      "MBC Goldstein e.V.",
-      "myrcm-24873"
-    ],
     "hostIds": [
       "mbc-goldstein-e-v"
     ],
-    "myrcmOrgId": "24873",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "24873",
+    "aliases": [
+      "myrcm-24873",
+      "MBC Goldstein e.V.",
+      "Frankfurt"
+    ]
   },
   {
     "id": "mbsc-waechtersbach",
@@ -856,23 +733,28 @@
     "city": "Wächtersbach",
     "lat": 50.246100236848775,
     "lng": 9.291699351520423,
-    "address": "Industriestr. 1, 63607 Wächtersbach",
-    "postalCode": "63607",
-    "website": "",
-    "aliases": [
-      "Industriestr. 1, 63607 Wächtersbach",
-      "MBSC Wächtersbach",
-      "TS-Grossauheim",
-      "Wächtersbach",
-      "myrcm-27211"
-    ],
     "hostIds": [
       "mbsc-wachtersbach",
       "myrcm-27211"
     ],
-    "myrcmOrgId": "27211",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "27211",
+    "address": "Industriestr. 1, 63607 Wächtersbach",
+    "postalCode": "63607",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "MBSC Wächtersbach",
+    "rckOrganizerName": "TS-Grossauheim",
+    "rckLocations": [
+      "Wächtersbach"
+    ],
+    "aliases": [
+      "MBSC Wächtersbach",
+      "Wächtersbach",
+      "TS-Grossauheim",
+      "Industriestr. 1, 63607 Wächtersbach",
+      "myrcm-27211"
+    ]
   },
   {
     "id": "mc-ettlingen-e-v",
@@ -880,20 +762,16 @@
     "city": "Karlsruhe",
     "lat": 48.952957322019095,
     "lng": 8.385964898164925,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Karlsruhe",
-      "MC Ettlingen e.V.",
-      "myrcm-121"
-    ],
     "hostIds": [
       "mc-ettlingen-e-v"
     ],
-    "myrcmOrgId": "121",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "121",
+    "aliases": [
+      "myrcm-121",
+      "MC Ettlingen e.V.",
+      "Karlsruhe"
+    ]
   },
   {
     "id": "mc-munster-e-v",
@@ -901,20 +779,16 @@
     "city": "Bremen",
     "lat": 52.97407659178928,
     "lng": 10.099649590338768,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bremen",
-      "MC Munster e.V.",
-      "myrcm-33489"
-    ],
     "hostIds": [
       "mc-munster-e-v"
     ],
-    "myrcmOrgId": "33489",
     "source": "old-main-venues",
-    "verified": true
+    "myrcmOrgId": "33489",
+    "aliases": [
+      "myrcm-33489",
+      "MC Munster e.V.",
+      "Bremen"
+    ]
   },
   {
     "id": "mc-welden-e-v",
@@ -922,20 +796,16 @@
     "city": "Fuchstal",
     "lat": 47.94302020096075,
     "lng": 10.850811665891346,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Fuchstal",
-      "MC Welden e.V.",
-      "myrcm-44699"
-    ],
     "hostIds": [
       "mc-welden-e-v"
     ],
-    "myrcmOrgId": "44699",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "44699",
+    "aliases": [
+      "myrcm-44699",
+      "MC Welden e.V.",
+      "Fuchstal"
+    ]
   },
   {
     "id": "mc-fuerstenwalde-e-v",
@@ -943,20 +813,16 @@
     "city": "Fürstenwalde",
     "lat": 52.357853903592336,
     "lng": 14.088839478233716,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Fürstenwalde",
-      "MC-Fürstenwalde e.V.",
-      "myrcm-65042"
-    ],
     "hostIds": [
       "mc-furstenwalde-e-v"
     ],
-    "myrcmOrgId": "65042",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "65042",
+    "aliases": [
+      "myrcm-65042",
+      "MC-Fürstenwalde e.V.",
+      "Fürstenwalde"
+    ]
   },
   {
     "id": "mc-orc-e-v",
@@ -964,20 +830,16 @@
     "city": "Haren (EMS)",
     "lat": 52.76850262675131,
     "lng": 7.168133610754698,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Haren (EMS)",
-      "MC-ORC .e.V.",
-      "myrcm-27203"
-    ],
     "hostIds": [
       "mc-orc-e-v"
     ],
-    "myrcmOrgId": "27203",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "27203",
+    "aliases": [
+      "myrcm-27203",
+      "MC-ORC .e.V.",
+      "Haren (EMS)"
+    ]
   },
   {
     "id": "mcc-bad-kissingen-e-v",
@@ -985,20 +847,16 @@
     "city": "Volkershausen",
     "lat": 50.20426740005952,
     "lng": 10.097707772955987,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MCC Bad Kissingen e. V.",
-      "Volkershausen",
-      "myrcm-21299"
-    ],
     "hostIds": [
       "mcc-bad-kissingen-e-v"
     ],
-    "myrcmOrgId": "21299",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "21299",
+    "aliases": [
+      "myrcm-21299",
+      "MCC Bad Kissingen e. V.",
+      "Volkershausen"
+    ]
   },
   {
     "id": "mcc-borgholzhausen",
@@ -1006,20 +864,16 @@
     "city": "Borgholzhausen",
     "lat": 52.08891072518177,
     "lng": 8.276110823386952,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Borgholzhhausen",
-      "MCC Borgholzhausen",
-      "myrcm-20747"
-    ],
     "hostIds": [
       "mcc-borgholzhausen"
     ],
-    "myrcmOrgId": "20747",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "20747",
+    "aliases": [
+      "myrcm-20747",
+      "MCC Borgholzhausen",
+      "Borgholzhhausen"
+    ]
   },
   {
     "id": "mcc-fellbach-e-v",
@@ -1027,20 +881,16 @@
     "city": "Fellbach",
     "lat": 48.816136176250225,
     "lng": 9.280190041832348,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Fellbach",
-      "MCC Fellbach e.V.",
-      "myrcm-38659"
-    ],
     "hostIds": [
       "mcc-fellbach-e-v"
     ],
-    "myrcmOrgId": "38659",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "38659",
+    "aliases": [
+      "myrcm-38659",
+      "MCC Fellbach e.V.",
+      "Fellbach"
+    ]
   },
   {
     "id": "mcc-luedenscheid-e-v",
@@ -1048,23 +898,29 @@
     "city": "Lüdenscheid",
     "lat": 51.20611533323285,
     "lng": 7.645839278803224,
-    "address": "Höher Weg 42, 58511 Lüdenscheid",
-    "postalCode": "58511",
-    "website": "https://mcc-luedenscheid.de",
-    "aliases": [
-      "Höher Weg 42, 58511 Lüdenscheid",
-      "Lüdenscheid",
-      "MCC Lüdenscheid",
-      "MCC Lüdenscheid e.V.",
-      "myrcm-52121"
-    ],
     "hostIds": [
       "mcc-ludenscheid-e-v",
       "myrcm-52121"
     ],
-    "myrcmOrgId": "52121",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "52121",
+    "address": "Höher Weg 42, 58511 Lüdenscheid",
+    "postalCode": "58511",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "MCC Lüdenscheid e.V.",
+    "rckOrganizerName": "MCC Lüdenscheid",
+    "rckLocations": [
+      "Lüdenscheid"
+    ],
+    "website": "https://mcc-luedenscheid.de",
+    "aliases": [
+      "MCC Lüdenscheid e.V.",
+      "Lüdenscheid",
+      "MCC Lüdenscheid",
+      "Höher Weg 42, 58511 Lüdenscheid",
+      "myrcm-52121"
+    ]
   },
   {
     "id": "mcc-rheda-wiedenbrueck-e-v",
@@ -1072,20 +928,16 @@
     "city": "Gütersloh",
     "lat": 51.84430266338534,
     "lng": 8.298642819195084,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Gütersloh",
-      "MCC Rheda-Wiedenbrück e.V.",
-      "myrcm-49956"
-    ],
     "hostIds": [
       "mcc-rheda-wiedenbruck-e-v"
     ],
-    "myrcmOrgId": "49956",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "49956",
+    "aliases": [
+      "myrcm-49956",
+      "MCC Rheda-Wiedenbrück e.V.",
+      "Gütersloh"
+    ]
   },
   {
     "id": "mcc-rhein-ahr-e-v",
@@ -1093,23 +945,28 @@
     "city": "Bad Breisig",
     "lat": 50.53375325899502,
     "lng": 7.273070858102529,
-    "address": "An der alten Glasfabrik, 53498 Bad Breisig",
-    "postalCode": "53498",
-    "website": "",
-    "aliases": [
-      "An der alten Glasfabrik, 53498 Bad Breisig",
-      "Bad Breisig",
-      "MCC Rhein Ahr",
-      "MCC Rhein Ahr e.V.",
-      "myrcm-283"
-    ],
     "hostIds": [
       "mcc-rhein-ahr-e-v",
       "myrcm-283"
     ],
-    "myrcmOrgId": "283",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "283",
+    "address": "An der alten Glasfabrik, 53498 Bad Breisig",
+    "postalCode": "53498",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "MCC Rhein Ahr e.V.",
+    "rckOrganizerName": "MCC Rhein Ahr",
+    "rckLocations": [
+      "Bad Breisig"
+    ],
+    "aliases": [
+      "MCC Rhein Ahr e.V.",
+      "Bad Breisig",
+      "MCC Rhein Ahr",
+      "An der alten Glasfabrik, 53498 Bad Breisig",
+      "myrcm-283"
+    ]
   },
   {
     "id": "mcc-tuerkheim-e-v",
@@ -1117,20 +974,16 @@
     "city": "Weißenhorn",
     "lat": 48.05428273383636,
     "lng": 10.627985640401176,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MCC Türkheim e.V.",
-      "Weißenhorn",
-      "myrcm-47"
-    ],
     "hostIds": [
       "mcc-turkheim-e-v"
     ],
-    "myrcmOrgId": "47",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "47",
+    "aliases": [
+      "myrcm-47",
+      "MCC Türkheim e.V.",
+      "Weißenhorn"
+    ]
   },
   {
     "id": "mcc-hocheifel-e-v",
@@ -1138,20 +991,16 @@
     "city": "Urmitz",
     "lat": 50.22559267105539,
     "lng": 6.484065770376564,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MCC-Hocheifel e.V.",
-      "Urmitz",
-      "myrcm-269"
-    ],
     "hostIds": [
       "mcc-hocheifel-e-v"
     ],
-    "myrcmOrgId": "269",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "269",
+    "aliases": [
+      "myrcm-269",
+      "MCC-Hocheifel e.V.",
+      "Urmitz"
+    ]
   },
   {
     "id": "mcc-marktredwitz-e-v",
@@ -1159,20 +1008,16 @@
     "city": "Brand",
     "lat": 50.00785047216571,
     "lng": 12.082068046250424,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Brand",
-      "MCC-Marktredwitz e.V.",
-      "myrcm-57549"
-    ],
     "hostIds": [
       "mcc-marktredwitz-e-v"
     ],
-    "myrcmOrgId": "57549",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "57549",
+    "aliases": [
+      "myrcm-57549",
+      "MCC-Marktredwitz e.V.",
+      "Brand"
+    ]
   },
   {
     "id": "mck-e-v-dormagen",
@@ -1180,20 +1025,16 @@
     "city": "Köln",
     "lat": 51.05999966648897,
     "lng": 6.832199264013079,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Köln",
-      "MCK e.V. Dormagen",
-      "myrcm-9269"
-    ],
     "hostIds": [
       "mck-e-v-dormagen"
     ],
-    "myrcmOrgId": "9269",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "9269",
+    "aliases": [
+      "myrcm-9269",
+      "MCK e.V. Dormagen",
+      "Köln"
+    ]
   },
   {
     "id": "mcrt-schaafheim-e-v",
@@ -1201,21 +1042,17 @@
     "city": "Großostheim",
     "lat": 49.930293448626585,
     "lng": 9.015560283086872,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Grossostheim",
-      "Großostheim",
-      "MCRT-Schaafheim e.V.",
-      "myrcm-50727"
-    ],
     "hostIds": [
       "mcrt-schaafheim-e-v"
     ],
-    "myrcmOrgId": "50727",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "50727",
+    "aliases": [
+      "MCRT-Schaafheim e.V.",
+      "Großostheim",
+      "Grossostheim",
+      "myrcm-50727"
+    ]
   },
   {
     "id": "mcss-althengstett-e-v",
@@ -1223,20 +1060,16 @@
     "city": "Althengstett",
     "lat": 48.720094200913294,
     "lng": 8.803626191468693,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Althengstett",
-      "MCSS Althengstett e.V.",
-      "myrcm-12227"
-    ],
     "hostIds": [
       "mcss-althengstett-e-v"
     ],
-    "myrcmOrgId": "12227",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "12227",
+    "aliases": [
+      "myrcm-12227",
+      "MCSS Althengstett e.V.",
+      "Althengstett"
+    ]
   },
   {
     "id": "mcv-daenischer-wohld-e-v",
@@ -1244,20 +1077,16 @@
     "city": "Tüttendorf",
     "lat": 54.3770640548488,
     "lng": 10.007107746575903,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MCV Dänischer Wohld e.V.",
-      "Tüttendorf",
-      "myrcm-19290"
-    ],
     "hostIds": [
       "mcv-danischer-wohld-e-v"
     ],
-    "myrcmOrgId": "19290",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "19290",
+    "aliases": [
+      "myrcm-19290",
+      "MCV Dänischer Wohld e.V.",
+      "Tüttendorf"
+    ]
   },
   {
     "id": "megadrom-rc-team-nord",
@@ -1265,20 +1094,16 @@
     "city": "Hasloh",
     "lat": 53.69876892317562,
     "lng": 9.917927109102116,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hasloh",
-      "Megadrom RC Team Nord",
-      "myrcm-32408"
-    ],
     "hostIds": [
       "megadrom-rc-team-nord"
     ],
-    "myrcmOrgId": "32408",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "32408",
+    "aliases": [
+      "myrcm-32408",
+      "Megadrom RC Team Nord",
+      "Hasloh"
+    ]
   },
   {
     "id": "mfr-morschheim-rheinhessen-pfalz-e-v",
@@ -1286,20 +1111,16 @@
     "city": "Worms",
     "lat": 49.699215847904135,
     "lng": 8.03184543726469,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MFR-Morschheim Rheinhessen/Pfalz e.V.",
-      "Worms",
-      "myrcm-30759"
-    ],
     "hostIds": [
       "mfr-morschheim-rheinhessen-pfalz-e-v"
     ],
-    "myrcmOrgId": "30759",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "30759",
+    "aliases": [
+      "myrcm-30759",
+      "MFR-Morschheim Rheinhessen/Pfalz e.V.",
+      "Worms"
+    ]
   },
   {
     "id": "mini-car-club-crailsheim-e-v",
@@ -1307,20 +1128,16 @@
     "city": "Schnelldorf",
     "lat": 49.191647337620566,
     "lng": 10.176380433000764,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Mini Car Club Crailsheim e.V.",
-      "Schnelldorf",
-      "myrcm-158"
-    ],
     "hostIds": [
       "mini-car-club-crailsheim-e-v"
     ],
-    "myrcmOrgId": "158",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "158",
+    "aliases": [
+      "myrcm-158",
+      "Mini Car Club Crailsheim e.V.",
+      "Schnelldorf"
+    ]
   },
   {
     "id": "miniatutenpark-elsterwerda",
@@ -1328,20 +1145,16 @@
     "city": "Röderland",
     "lat": 51.45952611051337,
     "lng": 13.545875275034973,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Miniatutenpark Elsterwerda",
-      "Röderland OT Prösen",
-      "myrcm-65451"
-    ],
     "hostIds": [
       "miniatutenpark-elsterwerda"
     ],
-    "myrcmOrgId": "65451",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "65451",
+    "aliases": [
+      "myrcm-65451",
+      "Miniatutenpark Elsterwerda",
+      "Röderland OT Prösen"
+    ]
   },
   {
     "id": "minicar-club-dortmund-e-v",
@@ -1349,20 +1162,16 @@
     "city": "Hamm",
     "lat": 51.557837999297135,
     "lng": 7.521730598218899,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hamm",
-      "Minicar Club Dortmund e.V.",
-      "myrcm-6266"
-    ],
     "hostIds": [
       "minicar-club-dortmund-e-v"
     ],
-    "myrcmOrgId": "6266",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "6266",
+    "aliases": [
+      "myrcm-6266",
+      "Minicar Club Dortmund e.V.",
+      "Hamm"
+    ]
   },
   {
     "id": "modellbaufreunde-felsberg-e-v",
@@ -1370,20 +1179,16 @@
     "city": "Felsberg",
     "lat": 51.1326578805406,
     "lng": 9.43564739414843,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Felsberg",
-      "Modellbaufreunde Felsberg e.V.",
-      "myrcm-38488"
-    ],
     "hostIds": [
       "modellbaufreunde-felsberg-e-v"
     ],
-    "myrcmOrgId": "38488",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "38488",
+    "aliases": [
+      "myrcm-38488",
+      "Modellbaufreunde Felsberg e.V.",
+      "Felsberg"
+    ]
   },
   {
     "id": "modellrenngemeinschaft-dogern-e-v",
@@ -1391,20 +1196,16 @@
     "city": "Wutöschingen",
     "lat": 47.59951612211713,
     "lng": 8.167520352321992,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Modellrenngemeinschaft Dogern e.V.",
-      "Wutöschingen - Horheim",
-      "myrcm-879"
-    ],
     "hostIds": [
       "modellrenngemeinschaft-dogern-e-v"
     ],
-    "myrcmOrgId": "879",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "879",
+    "aliases": [
+      "myrcm-879",
+      "Modellrenngemeinschaft Dogern e.V.",
+      "Wutöschingen - Horheim"
+    ]
   },
   {
     "id": "modellsportzentrum-zwoenitz-e-v",
@@ -1412,20 +1213,16 @@
     "city": "Zwönitz",
     "lat": 50.629167742978474,
     "lng": 12.82466326392235,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Modellsportzentrum Zwönitz e.V.",
-      "Zwönitz",
-      "myrcm-60576"
-    ],
     "hostIds": [
       "modellsportzentrum-zwonitz-e-v"
     ],
-    "myrcmOrgId": "60576",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "60576",
+    "aliases": [
+      "myrcm-60576",
+      "Modellsportzentrum Zwönitz e.V.",
+      "Zwönitz"
+    ]
   },
   {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
@@ -1433,23 +1230,29 @@
     "city": "Braunschweig",
     "lat": 52.29247586234249,
     "lng": 10.540686972114958,
-    "address": "Bienroder Weg 70, 38106 Braunschweig",
-    "postalCode": "38106",
-    "website": "https://msc-polizei-bs.de",
-    "aliases": [
-      "Bienroder Weg 70, 38106 Braunschweig",
-      "Braunschweig",
-      "MSC Polizei Braunschweig",
-      "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-      "myrcm-95"
-    ],
     "hostIds": [
       "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
       "myrcm-95"
     ],
-    "myrcmOrgId": "95",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "95",
+    "address": "Bienroder Weg 70, 38106 Braunschweig",
+    "postalCode": "38106",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "rckOrganizerName": "MSC Polizei Braunschweig",
+    "rckLocations": [
+      "Braunschweig"
+    ],
+    "website": "https://msc-polizei-bs.de",
+    "aliases": [
+      "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+      "Braunschweig",
+      "MSC Polizei Braunschweig",
+      "Bienroder Weg 70, 38106 Braunschweig",
+      "myrcm-95"
+    ]
   },
   {
     "id": "motorsportvereinigung-zittauer-land-e-v",
@@ -1457,20 +1260,16 @@
     "city": "Heidenau",
     "lat": 50.94277717894951,
     "lng": 14.87861140171235,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Heidenau",
-      "Motorsportvereinigung Zittauer Land e.V.",
-      "myrcm-64572"
-    ],
     "hostIds": [
       "motorsportvereinigung-zittauer-land-e-v"
     ],
-    "myrcmOrgId": "64572",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "64572",
+    "aliases": [
+      "myrcm-64572",
+      "Motorsportvereinigung Zittauer Land e.V.",
+      "Heidenau"
+    ]
   },
   {
     "id": "mrc-alstaden-oberhausen-e-v",
@@ -1478,20 +1277,16 @@
     "city": "Oberhausen",
     "lat": 51.47266693819382,
     "lng": 6.844376917232489,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MRC Alstaden Oberhausen e.V.",
-      "Oberhausen",
-      "myrcm-64"
-    ],
     "hostIds": [
       "mrc-alstaden-oberhausen-e-v"
     ],
-    "myrcmOrgId": "64",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "64",
+    "aliases": [
+      "myrcm-64",
+      "MRC Alstaden Oberhausen e.V.",
+      "Oberhausen"
+    ]
   },
   {
     "id": "mrc-leipzig-e-v",
@@ -1499,20 +1294,16 @@
     "city": "Zwenkau",
     "lat": 51.372005020609464,
     "lng": 12.462392860349764,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MRC Leipzig e.V",
-      "Zwenkau",
-      "myrcm-713"
-    ],
     "hostIds": [
       "mrc-leipzig-e-v"
     ],
-    "myrcmOrgId": "713",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "713",
+    "aliases": [
+      "myrcm-713",
+      "MRC Leipzig e.V",
+      "Zwenkau"
+    ]
   },
   {
     "id": "mrc-mannheim-e-v",
@@ -1520,22 +1311,18 @@
     "city": "Mannheim",
     "lat": 49.48747754217388,
     "lng": 8.504221524425674,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "1. MRC Mannheim e.V.",
-      "MRC Mannheim e.V.",
-      "Mannheim",
-      "myrcm-39671"
-    ],
     "hostIds": [
-      "1-mrc-mannheim-e-v",
-      "myrcm-39671"
+      "myrcm-39671",
+      "1-mrc-mannheim-e-v"
     ],
-    "myrcmOrgId": "39671",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "39671",
+    "aliases": [
+      "myrcm-39671",
+      "MRC Mannheim e.V.",
+      "1. MRC Mannheim e.V.",
+      "Mannheim"
+    ]
   },
   {
     "id": "mrc-mehrum-e-v",
@@ -1543,20 +1330,16 @@
     "city": "Peine",
     "lat": 51.42615108574187,
     "lng": 12.743702396285324,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MRC Mehrum e.V.",
-      "Peine",
-      "myrcm-2245"
-    ],
     "hostIds": [
       "mrc-mehrum-e-v"
     ],
-    "myrcmOrgId": "2245",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "2245",
+    "aliases": [
+      "myrcm-2245",
+      "MRC Mehrum e.V.",
+      "Peine"
+    ]
   },
   {
     "id": "mrc-senden-e-v",
@@ -1564,20 +1347,16 @@
     "city": "Senden",
     "lat": 48.325191394382635,
     "lng": 10.035411116404305,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MRC Senden e.V.",
-      "Senden / Wullenstetten",
-      "myrcm-61183"
-    ],
     "hostIds": [
       "mrc-senden-e-v"
     ],
-    "myrcmOrgId": "61183",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "61183",
+    "aliases": [
+      "myrcm-61183",
+      "MRC Senden e.V.",
+      "Senden / Wullenstetten"
+    ]
   },
   {
     "id": "mrsc-amberg-e-v",
@@ -1585,20 +1364,16 @@
     "city": "Amberg",
     "lat": 49.43483963804977,
     "lng": 11.799300928927023,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Amberg",
-      "MRSC Amberg e.V.",
-      "myrcm-39587"
-    ],
     "hostIds": [
       "mrsc-amberg-e-v"
     ],
-    "myrcmOrgId": "39587",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "39587",
+    "aliases": [
+      "myrcm-39587",
+      "MRSC Amberg e.V.",
+      "Amberg"
+    ]
   },
   {
     "id": "mrt-rosenheim-e-v",
@@ -1606,20 +1381,16 @@
     "city": "Hoehenkirchen-Siegertsbrunn",
     "lat": 47.82428097247406,
     "lng": 12.014572325960318,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hoehenkirchen-Siegertsbrunn",
-      "MRT Rosenheim e.V.",
-      "myrcm-4483"
-    ],
     "hostIds": [
       "mrt-rosenheim-e-v"
     ],
-    "myrcmOrgId": "4483",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "4483",
+    "aliases": [
+      "myrcm-4483",
+      "MRT Rosenheim e.V.",
+      "Hoehenkirchen-Siegertsbrunn"
+    ]
   },
   {
     "id": "msc-halle-e-v",
@@ -1627,20 +1398,16 @@
     "city": "Halle",
     "lat": 51.48612424954888,
     "lng": 11.949340000084984,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Halle",
-      "MSC Halle e.V.",
-      "myrcm-44811"
-    ],
     "hostIds": [
       "msc-halle-e-v"
     ],
-    "myrcmOrgId": "44811",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "44811",
+    "aliases": [
+      "MSC Halle e.V.",
+      "Halle",
+      "myrcm-44811"
+    ]
   },
   {
     "id": "msc-hansa-heilbronn-e-v",
@@ -1648,21 +1415,17 @@
     "city": "Heilbronn",
     "lat": 49.13750899088235,
     "lng": 9.203139990809714,
-    "address": "",
-    "postalCode": "",
-    "website": "",
+    "hostIds": [
+      "msc-hansa-heilbronn-e-v"
+    ],
+    "source": "verified-existing-geolocation-list-plus-old-main-venues",
+    "myrcmOrgId": "116",
     "aliases": [
       "Heilbronn",
       "MSC Hansa Heilbronn e.V.",
       "MSC-Hansa Heilbronn e.V.",
       "myrcm-116"
-    ],
-    "hostIds": [
-      "msc-hansa-heilbronn-e-v"
-    ],
-    "myrcmOrgId": "116",
-    "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    ]
   },
   {
     "id": "msc-herrenhaide",
@@ -1670,21 +1433,17 @@
     "city": "Burgstädt",
     "lat": 50.89413478350779,
     "lng": 12.826840095339774,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Burgstaedt",
-      "Burgstädt",
-      "MSC Herrenhaide",
-      "myrcm-64487"
-    ],
     "hostIds": [
       "msc-herrenhaide"
     ],
-    "myrcmOrgId": "64487",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "64487",
+    "aliases": [
+      "MSC Herrenhaide",
+      "Burgstädt",
+      "Burgstaedt",
+      "myrcm-64487"
+    ]
   },
   {
     "id": "msc-hockendorf-e-v",
@@ -1692,21 +1451,17 @@
     "city": "Klingenberg",
     "lat": 50.90685773749509,
     "lng": 13.601278369350881,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Klingenberg",
-      "MSC Hoeckendorf e.V.",
-      "MSC Höckendorf e.V.",
-      "myrcm-56487"
-    ],
     "hostIds": [
       "msc-hockendorf-e-v"
     ],
-    "myrcmOrgId": "56487",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "56487",
+    "aliases": [
+      "MSC Höckendorf e.V.",
+      "MSC Hoeckendorf e.V.",
+      "Klingenberg",
+      "myrcm-56487"
+    ]
   },
   {
     "id": "msc-kirchhain-e-v",
@@ -1714,20 +1469,16 @@
     "city": "Marburg",
     "lat": 50.82902158585686,
     "lng": 8.907859995424538,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MSC Kirchhain e.V.",
-      "Marburg",
-      "myrcm-17008"
-    ],
     "hostIds": [
       "msc-kirchhain-e-v"
     ],
-    "myrcmOrgId": "17008",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "17008",
+    "aliases": [
+      "myrcm-17008",
+      "MSC Kirchhain e.V.",
+      "Marburg"
+    ]
   },
   {
     "id": "msc-ober-moerlen-e-v",
@@ -1735,16 +1486,11 @@
     "city": "Weiterstadt",
     "lat": 50.36373992635159,
     "lng": 8.703558862143346,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
     "hostIds": [
       "myrcm-36612"
     ],
-    "myrcmOrgId": "36612",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "myrcmOrgId": "36612"
   },
   {
     "id": "msc-osterhofen-e-v",
@@ -1752,20 +1498,16 @@
     "city": "Osterhofen",
     "lat": 48.706499782853214,
     "lng": 13.037501093869494,
-    "address": "",
-    "postalCode": "",
-    "website": "",
+    "hostIds": [
+      "msc-osterhofen-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "50019",
     "aliases": [
       "MSC Osterhofen e.V.",
       "Osterhofen",
       "myrcm-50019"
-    ],
-    "hostIds": [
-      "msc-osterhofen-e-v"
-    ],
-    "myrcmOrgId": "50019",
-    "source": "manual-verified-geolocation",
-    "verified": true
+    ]
   },
   {
     "id": "msg-niesky-e-v",
@@ -1773,21 +1515,17 @@
     "city": "Rothenburg/Oberlausitz",
     "lat": 51.305665983798235,
     "lng": 14.816813302747354,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MSG Niesky e.V.",
-      "Rothenburg Oberlausitz",
-      "Rothenburg/Oberlausitz",
-      "myrcm-46202"
-    ],
     "hostIds": [
       "msg-niesky-e-v"
     ],
-    "myrcmOrgId": "46202",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "46202",
+    "aliases": [
+      "MSG Niesky e.V.",
+      "Rothenburg/Oberlausitz",
+      "Rothenburg Oberlausitz",
+      "myrcm-46202"
+    ]
   },
   {
     "id": "mss-am-saegewerk",
@@ -1795,22 +1533,18 @@
     "city": "Seifhennersdorf",
     "lat": 50.939800366011546,
     "lng": 14.617924104218886,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "MSS \"Am Sägewerk\"",
-      "MSS Am Saegewerk",
-      "MSS Am Sägewerk",
-      "Seifhennersdorf",
-      "myrcm-49105"
-    ],
     "hostIds": [
       "mss-am-sagewerk"
     ],
-    "myrcmOrgId": "49105",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "49105",
+    "aliases": [
+      "MSS Am Sägewerk",
+      "MSS Am Saegewerk",
+      "MSS \"Am Sägewerk\"",
+      "Seifhennersdorf",
+      "myrcm-49105"
+    ]
   },
   {
     "id": "msv-hurtgenwald-e-v",
@@ -1818,22 +1552,18 @@
     "city": "Hürtgenwald",
     "lat": 50.70835291116781,
     "lng": 6.399507234037498,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Huertgenwald",
-      "Hürtgenwald",
-      "MSV Huertgenwald e.V.",
-      "MSV Hürtgenwald e.V.",
-      "myrcm-15511"
-    ],
     "hostIds": [
       "msv-hurtgenwald-e-v"
     ],
-    "myrcmOrgId": "15511",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "15511",
+    "aliases": [
+      "MSV Hürtgenwald e.V.",
+      "MSV Huertgenwald e.V.",
+      "Hürtgenwald",
+      "Huertgenwald",
+      "myrcm-15511"
+    ]
   },
   {
     "id": "nitromaniacs-e-v",
@@ -1841,22 +1571,18 @@
     "city": "Mönchengladbach",
     "lat": 51.230821840297466,
     "lng": 6.493511337705921,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Moenchengladbach",
-      "Mönchengladbach",
-      "NitroManiacs",
-      "NitroManiacs e.V.",
-      "myrcm-15092"
-    ],
     "hostIds": [
       "nitromaniacs-e-v"
     ],
-    "myrcmOrgId": "15092",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "15092",
+    "aliases": [
+      "NitroManiacs e.V.",
+      "NitroManiacs",
+      "Mönchengladbach",
+      "Moenchengladbach",
+      "myrcm-15092"
+    ]
   },
   {
     "id": "orc-b-gottingen-e-v",
@@ -1864,22 +1590,18 @@
     "city": "Göttingen",
     "lat": 51.47056407637097,
     "lng": 9.974981654302782,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Goettingen",
-      "Göttingen",
-      "ORC-B Goettingen e.V.",
-      "ORC-B Göttingen e.V.",
-      "myrcm-36113"
-    ],
     "hostIds": [
       "orc-b-gottingen-e-v"
     ],
-    "myrcmOrgId": "36113",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "36113",
+    "aliases": [
+      "ORC-B Göttingen e.V.",
+      "ORC-B Goettingen e.V.",
+      "Göttingen",
+      "Goettingen",
+      "myrcm-36113"
+    ]
   },
   {
     "id": "ormc-koenigsbrunn",
@@ -1887,16 +1609,11 @@
     "city": "Augsburg",
     "lat": 48.35816192334434,
     "lng": 10.889086918531008,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
     "hostIds": [
       "myrcm-991-ormc"
     ],
-    "myrcmOrgId": "myrcm-991-ormc",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "myrcmOrgId": "myrcm-991-ormc"
   },
   {
     "id": "rallye-club-haltern-e-v-im-adac",
@@ -1904,20 +1621,16 @@
     "city": "Haltern am See",
     "lat": 51.725119776742986,
     "lng": 7.168832313964929,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Haltern am See",
-      "Rallye-Club Haltern e.V. im ADAC",
-      "myrcm-16149"
-    ],
     "hostIds": [
       "rallye-club-haltern-e-v-im-adac"
     ],
-    "myrcmOrgId": "16149",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "16149",
+    "aliases": [
+      "myrcm-16149",
+      "Rallye-Club Haltern e.V. im ADAC",
+      "Haltern am See"
+    ]
   },
   {
     "id": "rc-car-club-hilter-e-v",
@@ -1925,20 +1638,16 @@
     "city": "Hilter",
     "lat": 52.144740547507574,
     "lng": 8.157176571156995,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hilter",
-      "RC Car Club Hilter",
-      "RC Car Club Hilter e.V."
-    ],
     "hostIds": [
       "rc-car-club-hilter-e-v"
     ],
-    "myrcmOrgId": "",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "",
+    "aliases": [
+      "RC Car Club Hilter e.V.",
+      "RC Car Club Hilter",
+      "Hilter"
+    ]
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v",
@@ -1946,21 +1655,17 @@
     "city": "Emsdetten",
     "lat": 52.15750387724352,
     "lng": 7.5584260408228445,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Emsdetten",
-      "RC Car Freunde Emsdetten",
-      "RC Car Freunde Emsdetten e.V.",
-      "myrcm-55427"
-    ],
     "hostIds": [
       "rc-car-freunde-emsdetten-e-v"
     ],
-    "myrcmOrgId": "55427",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "myrcmOrgId": "55427",
+    "aliases": [
+      "RC Car Freunde Emsdetten e.V.",
+      "RC Car Freunde Emsdetten",
+      "Emsdetten",
+      "myrcm-55427"
+    ]
   },
   {
     "id": "rc-cars-koengen-e-v",
@@ -1968,20 +1673,16 @@
     "city": "Stuttgart",
     "lat": 48.67988951659691,
     "lng": 9.353290385431542,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RC Cars Köngen e.V.",
-      "Stuttgart",
-      "myrcm-12564"
-    ],
     "hostIds": [
       "rc-cars-kongen-e-v"
     ],
-    "myrcmOrgId": "12564",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "12564",
+    "aliases": [
+      "myrcm-12564",
+      "RC Cars Köngen e.V.",
+      "Stuttgart"
+    ]
   },
   {
     "id": "rc-fun-racer-e-v",
@@ -1989,22 +1690,18 @@
     "city": "Velbert",
     "lat": 51.335030109170006,
     "lng": 7.050631454628135,
-    "address": "",
-    "postalCode": "",
-    "website": "",
+    "hostIds": [
+      "rc-fun-racer-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "44059",
     "aliases": [
       "myrcm-44059",
       "RC Fun Racer",
       "RC Fun Racer e.V",
       "RC Fun Racer e.V.",
       "Velbert"
-    ],
-    "hostIds": [
-      "rc-fun-racer-e-v"
-    ],
-    "myrcmOrgId": "44059",
-    "source": "manual-verified-geolocation",
-    "verified": true
+    ]
   },
   {
     "id": "rc-modellbaufreunde-e-v",
@@ -2012,16 +1709,11 @@
     "city": "Attaching",
     "lat": 48.358129,
     "lng": 11.752654,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
     "hostIds": [
       "myrcm-1044"
     ],
-    "myrcmOrgId": "1044",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "myrcmOrgId": "1044"
   },
   {
     "id": "rc-racer-hochsauerland-e-v",
@@ -2029,20 +1721,16 @@
     "city": "Bestwig",
     "lat": 51.37053213149134,
     "lng": 8.441252309460289,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bestwig",
-      "Rc Racer Hochsauerland e.V.",
-      "myrcm-45781"
-    ],
     "hostIds": [
       "rc-racer-hochsauerland-e-v"
     ],
-    "myrcmOrgId": "45781",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "45781",
+    "aliases": [
+      "myrcm-45781",
+      "Rc Racer Hochsauerland e.V.",
+      "Bestwig"
+    ]
   },
   {
     "id": "rc-speedracer-bernau",
@@ -2050,21 +1738,17 @@
     "city": "Bernau",
     "lat": 52.6975418,
     "lng": 13.6211917,
-    "address": "",
-    "postalCode": "",
-    "website": "",
+    "hostIds": [
+      "rc-speedracer-bernau"
+    ],
+    "source": "verified-existing-geolocation-list",
+    "myrcmOrgId": "45925",
     "aliases": [
       "bernau",
       "Bernau",
       "RC Speedracer Bernau",
       "RC Speedracer e.V."
-    ],
-    "hostIds": [
-      "rc-speedracer-bernau"
-    ],
-    "myrcmOrgId": "45925",
-    "source": "verified-existing-geolocation-list",
-    "verified": true
+    ]
   },
   {
     "id": "rc-team-sauerland-e-v",
@@ -2072,20 +1756,16 @@
     "city": "Olpe",
     "lat": 51.04612447362069,
     "lng": 7.832926383182863,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Olpe Kirchesohl",
-      "RC Team Sauerland e.V.",
-      "myrcm-35303"
-    ],
     "hostIds": [
       "rc-team-sauerland-e-v"
     ],
-    "myrcmOrgId": "35303",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "35303",
+    "aliases": [
+      "myrcm-35303",
+      "RC Team Sauerland e.V.",
+      "Olpe Kirchesohl"
+    ]
   },
   {
     "id": "rc-bande-zwickau-e-v",
@@ -2093,23 +1773,29 @@
     "city": "Zwickau",
     "lat": 50.705730356507075,
     "lng": 12.459417126095126,
-    "address": "Reichenbacher Str. 125, 08056 Zwickau",
-    "postalCode": "08056",
-    "website": "https://modellsport-zwickau.de",
-    "aliases": [
-      "RC Bande Zwickau e.V.",
-      "RC-Bande Zwickau e.V",
-      "Reichenbacher Str. 125, 08056 Zwickau",
-      "Zwickau",
+    "hostIds": [
+      "rc-bande-zwickau-e-v",
       "myrcm-48536"
     ],
-    "hostIds": [
-      "myrcm-48536",
-      "rc-bande-zwickau-e-v"
-    ],
-    "myrcmOrgId": "48536",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "48536",
+    "address": "Reichenbacher Str. 125, 08056 Zwickau",
+    "postalCode": "08056",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "RC-Bande Zwickau e.V",
+    "rckOrganizerName": "RC Bande Zwickau e.V.",
+    "rckLocations": [
+      "Zwickau"
+    ],
+    "website": "https://modellsport-zwickau.de",
+    "aliases": [
+      "RC-Bande Zwickau e.V",
+      "Zwickau",
+      "RC Bande Zwickau e.V.",
+      "Reichenbacher Str. 125, 08056 Zwickau",
+      "myrcm-48536"
+    ]
   },
   {
     "id": "rc-glashaus-e-v",
@@ -2117,20 +1803,16 @@
     "city": "Quickborn",
     "lat": 53.71544618180866,
     "lng": 9.920860261278003,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Quickborn",
-      "RC-Glashaus e.V.",
-      "myrcm-9640"
-    ],
     "hostIds": [
       "rc-glashaus-e-v"
     ],
-    "myrcmOrgId": "9640",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "9640",
+    "aliases": [
+      "myrcm-9640",
+      "RC-Glashaus e.V.",
+      "Quickborn"
+    ]
   },
   {
     "id": "rc-msc-greuthof-e-v",
@@ -2138,20 +1820,16 @@
     "city": "Wüstenrot",
     "lat": 49.08318410406898,
     "lng": 9.427734276568266,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RC-MSC Greuthof e.V.",
-      "Wüstenrot",
-      "myrcm-61583"
-    ],
     "hostIds": [
       "rc-msc-greuthof-e-v"
     ],
-    "myrcmOrgId": "61583",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "61583",
+    "aliases": [
+      "myrcm-61583",
+      "RC-MSC Greuthof e.V.",
+      "Wüstenrot"
+    ]
   },
   {
     "id": "rc-offroad-dortmund-e-v",
@@ -2159,20 +1837,16 @@
     "city": "Dortmund",
     "lat": 51.53315328716541,
     "lng": 7.429184485991102,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Dortmund",
-      "RC-Offroad Dortmund e.V.",
-      "myrcm-48425"
-    ],
     "hostIds": [
       "rc-offroad-dortmund-e-v"
     ],
-    "myrcmOrgId": "48425",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "48425",
+    "aliases": [
+      "myrcm-48425",
+      "RC-Offroad Dortmund e.V.",
+      "Dortmund"
+    ]
   },
   {
     "id": "rc-offroad-wattenscheid-e-v",
@@ -2180,20 +1854,16 @@
     "city": "Bottrop",
     "lat": 51.485932411521574,
     "lng": 7.185180907695856,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Bottrop",
-      "RC-Offroad Wattenscheid e.V.",
-      "myrcm-34102"
-    ],
     "hostIds": [
       "rc-offroad-wattenscheid-e-v"
     ],
-    "myrcmOrgId": "34102",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "34102",
+    "aliases": [
+      "myrcm-34102",
+      "RC-Offroad Wattenscheid e.V.",
+      "Bottrop"
+    ]
   },
   {
     "id": "rc-offroadcrew-langenfeld-e-v",
@@ -2201,20 +1871,16 @@
     "city": "Solingen",
     "lat": 51.111134379040294,
     "lng": 6.924927855933589,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RC-OffroadCrew Langenfeld e.V.",
-      "Solingen",
-      "myrcm-20813"
-    ],
     "hostIds": [
       "rc-offroadcrew-langenfeld-e-v"
     ],
-    "myrcmOrgId": "20813",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "20813",
+    "aliases": [
+      "myrcm-20813",
+      "RC-OffroadCrew Langenfeld e.V.",
+      "Solingen"
+    ]
   },
   {
     "id": "rc-schwalmracer-e-v",
@@ -2222,20 +1888,16 @@
     "city": "Schrecksbach",
     "lat": 50.85060797497859,
     "lng": 9.193003534843882,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RC-Schwalmracer e.V.",
-      "Schrecksbach",
-      "myrcm-1516"
-    ],
     "hostIds": [
       "rc-schwalmracer-e-v"
     ],
-    "myrcmOrgId": "1516",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "1516",
+    "aliases": [
+      "myrcm-1516",
+      "RC-Schwalmracer e.V.",
+      "Schrecksbach"
+    ]
   },
   {
     "id": "rc-sonntagsfahrer-e-v",
@@ -2243,20 +1905,16 @@
     "city": "Mainhausen",
     "lat": 50.080933888749676,
     "lng": 8.926478330328004,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Mainhausen",
-      "RC-Sonntagsfahrer e.V.",
-      "myrcm-50693"
-    ],
     "hostIds": [
       "rc-sonntagsfahrer-e-v"
     ],
-    "myrcmOrgId": "50693",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "50693",
+    "aliases": [
+      "myrcm-50693",
+      "RC-Sonntagsfahrer e.V.",
+      "Mainhausen"
+    ]
   },
   {
     "id": "rcc-reken-e-v",
@@ -2264,20 +1922,16 @@
     "city": "Reken",
     "lat": 51.82705102888375,
     "lng": 7.056527374774144,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RCC Reken e.V.",
-      "Reken",
-      "myrcm-33796"
-    ],
     "hostIds": [
       "rcc-reken-e-v"
     ],
-    "myrcmOrgId": "33796",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "33796",
+    "aliases": [
+      "myrcm-33796",
+      "RCC Reken e.V.",
+      "Reken"
+    ]
   },
   {
     "id": "rcc-steinlach-e-v",
@@ -2285,20 +1939,16 @@
     "city": "Reutlingen",
     "lat": 48.43851764334929,
     "lng": 9.149233435298548,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RCC-Steinlach e.V.",
-      "Reutlingen",
-      "myrcm-25565"
-    ],
     "hostIds": [
       "rcc-steinlach-e-v"
     ],
-    "myrcmOrgId": "25565",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "25565",
+    "aliases": [
+      "myrcm-25565",
+      "RCC-Steinlach e.V.",
+      "Reutlingen"
+    ]
   },
   {
     "id": "rccr-munzig-e-v",
@@ -2306,20 +1956,16 @@
     "city": "Klipphausen",
     "lat": 51.09476179296404,
     "lng": 13.415717268770793,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Klipphausen OT Munzig",
-      "RCCR Munzig e.V.",
-      "myrcm-20891"
-    ],
     "hostIds": [
       "rccr-munzig-e-v"
     ],
-    "myrcmOrgId": "20891",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "20891",
+    "aliases": [
+      "myrcm-20891",
+      "RCCR Munzig e.V.",
+      "Klipphausen OT Munzig"
+    ]
   },
   {
     "id": "rcct-muenden-e-v",
@@ -2327,24 +1973,29 @@
     "city": "Hann. Münden",
     "lat": 51.42880541931611,
     "lng": 9.640719622471616,
-    "address": "Weserpark, 34346 Hann.Münden",
-    "postalCode": "34346",
-    "website": "",
-    "aliases": [
-      "Hann. Münden",
-      "Hann.Münden",
-      "RC-CAR -TEAM Münden eV.",
-      "RCCT Münden e.V.",
-      "Weserpark, 34346 Hann.Münden",
+    "hostIds": [
+      "rcct-munden-e-v",
       "myrcm-134"
     ],
-    "hostIds": [
-      "myrcm-134",
-      "rcct-munden-e-v"
-    ],
-    "myrcmOrgId": "134",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "134",
+    "address": "Weserpark, 34346 Hann.Münden",
+    "postalCode": "34346",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "RCCT Münden e.V.",
+    "rckOrganizerName": "RC-CAR -TEAM Münden eV.",
+    "rckLocations": [
+      "Hann.Münden Nachtrennen"
+    ],
+    "aliases": [
+      "RCCT Münden e.V.",
+      "Hann. Münden",
+      "RC-CAR -TEAM Münden eV.",
+      "Weserpark, 34346 Hann.Münden",
+      "myrcm-134",
+      "Hann.Münden"
+    ]
   },
   {
     "id": "rco-ottendorf-okrilla-e-v",
@@ -2352,21 +2003,17 @@
     "city": "Ottendorf-Okrilla",
     "lat": 51.20863402751061,
     "lng": 13.836483534425412,
-    "address": "",
-    "postalCode": "",
-    "website": "",
+    "hostIds": [
+      "rco-ottendorf-okrilla-e-v"
+    ],
+    "source": "manual-verified-geolocation",
+    "myrcmOrgId": "45728",
     "aliases": [
       "myrcm-45728",
       "Ottendorf-Okrilla",
       "RCO Ottendorf Okrilla e.V.",
       "RCO Ottendorf-Okrilla e.V."
-    ],
-    "hostIds": [
-      "rco-ottendorf-okrilla-e-v"
-    ],
-    "myrcmOrgId": "45728",
-    "source": "manual-verified-geolocation",
-    "verified": true
+    ]
   },
   {
     "id": "rcrt-duisburg-e-v",
@@ -2374,20 +2021,16 @@
     "city": "Essen",
     "lat": 51.361656230637536,
     "lng": 6.770822736777177,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Essen",
-      "RCRT Duisburg e.V.",
-      "myrcm-15091"
-    ],
     "hostIds": [
       "rcrt-duisburg-e-v"
     ],
-    "myrcmOrgId": "15091",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "15091",
+    "aliases": [
+      "myrcm-15091",
+      "RCRT Duisburg e.V.",
+      "Essen"
+    ]
   },
   {
     "id": "rcsf-singen-e-v",
@@ -2395,20 +2038,16 @@
     "city": "Singen",
     "lat": 47.78020669194865,
     "lng": 8.849791234760545,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "RCSF-Singen e.V.",
-      "Singen",
-      "myrcm-16961"
-    ],
     "hostIds": [
       "rcsf-singen-e-v"
     ],
-    "myrcmOrgId": "16961",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "16961",
+    "aliases": [
+      "myrcm-16961",
+      "RCSF-Singen e.V.",
+      "Singen"
+    ]
   },
   {
     "id": "rgmc-teck-e-v",
@@ -2416,20 +2055,16 @@
     "city": "Holzmaden",
     "lat": 48.62598798609776,
     "lng": 9.518260788056162,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Holzmaden",
-      "RGMC Teck e.V.",
-      "myrcm-60396"
-    ],
     "hostIds": [
       "rgmc-teck-e-v"
     ],
-    "myrcmOrgId": "60396",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "60396",
+    "aliases": [
+      "myrcm-60396",
+      "RGMC Teck e.V.",
+      "Holzmaden"
+    ]
   },
   {
     "id": "rmc-dueren-e-v",
@@ -2437,20 +2072,16 @@
     "city": "Niederzier",
     "lat": 50.87690658983461,
     "lng": 6.4702874893032805,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Niederzier",
-      "RMC Düren e.V.",
-      "myrcm-26406"
-    ],
     "hostIds": [
       "rmc-duren-e-v"
     ],
-    "myrcmOrgId": "26406",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "26406",
+    "aliases": [
+      "myrcm-26406",
+      "RMC Düren e.V.",
+      "Niederzier"
+    ]
   },
   {
     "id": "rt-fichtenberg-e-v",
@@ -2458,29 +2089,16 @@
     "city": "Fichtenberg",
     "lat": 48.98885967809185,
     "lng": 9.726732166292482,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Fichtenberg",
-      "RT-Fichtenberg e.V.",
-      "myrcm-25939"
-    ],
     "hostIds": [
       "rt-fichtenberg-e-v"
     ],
-    "myrcmOrgId": "25939",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
-  },
-  {
-    "id": "myrcm-43682",
-    "name": "Sator Events",
-    "city": "Bühl",
-    "lat": 48.73220943514712,
-    "lng": 8.142894965747722,
-    "hostId": "myrcm-43682",
-    "hostName": "Sator Events"
+    "myrcmOrgId": "25939",
+    "aliases": [
+      "myrcm-25939",
+      "RT-Fichtenberg e.V.",
+      "Fichtenberg"
+    ]
   },
   {
     "id": "schweriner-sc-breitensport-e-v",
@@ -2488,20 +2106,16 @@
     "city": "Schwerin",
     "lat": 53.62627171614289,
     "lng": 11.39820952345775,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Schwerin",
-      "Schweriner SC Breitensport e.V.",
-      "myrcm-66122"
-    ],
     "hostIds": [
       "schweriner-sc-breitensport-e-v"
     ],
-    "myrcmOrgId": "66122",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "66122",
+    "aliases": [
+      "myrcm-66122",
+      "Schweriner SC Breitensport e.V.",
+      "Schwerin"
+    ]
   },
   {
     "id": "simbacher-buggyracer-e-v",
@@ -2509,20 +2123,16 @@
     "city": "Simbach am Inn",
     "lat": 48.27496711710726,
     "lng": 13.02909415498107,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Simbach am Inn",
-      "Simbacher Buggyracer e.V.",
-      "myrcm-62851"
-    ],
     "hostIds": [
       "simbacher-buggyracer-e-v"
     ],
-    "myrcmOrgId": "62851",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "62851",
+    "aliases": [
+      "myrcm-62851",
+      "Simbacher Buggyracer e.V.",
+      "Simbach am Inn"
+    ]
   },
   {
     "id": "slr-ingoldstadt-06",
@@ -2530,20 +2140,16 @@
     "city": "Ingolstadt",
     "lat": 48.74738246710119,
     "lng": 11.434346147401346,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Ingolstadt",
-      "SLR Ingoldstadt 06",
-      "myrcm-490"
-    ],
     "hostIds": [
       "slr-ingoldstadt-06"
     ],
-    "myrcmOrgId": "490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "490",
+    "aliases": [
+      "myrcm-490",
+      "SLR Ingoldstadt 06",
+      "Ingolstadt"
+    ]
   },
   {
     "id": "stoppelhopser-oberhausen-e-v",
@@ -2551,20 +2157,16 @@
     "city": "Oberhausen",
     "lat": 51.47263317681391,
     "lng": 6.820629520111565,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Oberhausen",
-      "Stoppelhopser Oberhausen e.V.",
-      "myrcm-21160"
-    ],
     "hostIds": [
       "stoppelhopser-oberhausen-e-v"
     ],
-    "myrcmOrgId": "21160",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "21160",
+    "aliases": [
+      "myrcm-21160",
+      "Stoppelhopser Oberhausen e.V.",
+      "Oberhausen"
+    ]
   },
   {
     "id": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe",
@@ -2572,20 +2174,16 @@
     "city": "Chemnitz",
     "lat": 50.81598314538974,
     "lng": 12.929561027171806,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Chemnitz",
-      "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
-      "myrcm-38953"
-    ],
     "hostIds": [
       "technische-universitat-chemnitz-professur-alternative-fahrzeugantriebe"
     ],
-    "myrcmOrgId": "38953",
     "source": "old-main-venues",
-    "verified": true
+    "myrcmOrgId": "38953",
+    "aliases": [
+      "myrcm-38953",
+      "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
+      "Chemnitz"
+    ]
   },
   {
     "id": "tsv-1871-augsburg-e-v",
@@ -2593,24 +2191,30 @@
     "city": "Königsbrunn",
     "lat": 48.39507365944548,
     "lng": 10.875577200544573,
-    "address": "Meierweg 16, 86154 Augsburg",
-    "postalCode": "86154",
-    "website": "https://tsv-1871.de",
-    "aliases": [
-      "Augsburg",
-      "Königsbrunn",
-      "Meierweg 16, 86154 Augsburg",
-      "Outdoor",
-      "TSV 1871 Augsburg e.V.",
-      "myrcm-991",
-      "tsv-1871-augsburg-e-v"
-    ],
     "hostIds": [
       "tsv-1871-augsburg-e-v"
     ],
-    "myrcmOrgId": "991",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "991",
+    "address": "Meierweg 16, 86154 Augsburg",
+    "postalCode": "86154",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "Outdoor",
+    "rckOrganizerName": "TSV 1871 Augsburg e.V.",
+    "rckLocations": [
+      "Augsburg"
+    ],
+    "website": "https://tsv-1871.de",
+    "aliases": [
+      "Outdoor",
+      "Augsburg",
+      "TSV 1871 Augsburg e.V.",
+      "Meierweg 16, 86154 Augsburg",
+      "tsv-1871-augsburg-e-v",
+      "myrcm-991",
+      "Königsbrunn"
+    ]
   },
   {
     "id": "tsv-kleinburgwedel",
@@ -2618,20 +2222,16 @@
     "city": "Burgwedel",
     "lat": 52.51562561199805,
     "lng": 9.871714247709363,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Burgwedel",
-      "TSV Kleinburgwedel",
-      "myrcm-4441"
-    ],
     "hostIds": [
       "tsv-kleinburgwedel"
     ],
-    "myrcmOrgId": "4441",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "4441",
+    "aliases": [
+      "myrcm-4441",
+      "TSV Kleinburgwedel",
+      "Burgwedel"
+    ]
   },
   {
     "id": "tsv-mariendorf-rc-racing",
@@ -2639,9 +2239,11 @@
     "city": "Berlin",
     "lat": 52.410703,
     "lng": 13.321052,
-    "address": "Osdorferstr. 53, 12207 Berlin",
-    "postalCode": "12207",
-    "website": "https://tsvm-racing.de",
+    "hostIds": [
+      "tsv-mariendorf"
+    ],
+    "source": "verified-existing-geolocation-list-plus-rck-pdf-address",
+    "myrcmOrgId": "18244",
     "aliases": [
       "Berlin",
       "Osdorferstr. 53, 12207 Berlin",
@@ -2652,12 +2254,16 @@
       "TSV Mariendorf RC Racing",
       "tsv-mariendorf"
     ],
-    "hostIds": [
-      "tsv-mariendorf"
+    "address": "Osdorferstr. 53, 12207 Berlin",
+    "postalCode": "12207",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "TSV Mariendorf RC Racing",
+    "rckOrganizerName": "TSV Mariendorf 97 Berlin RCCR",
+    "rckLocations": [
+      "Berlin"
     ],
-    "myrcmOrgId": "18244",
-    "source": "verified-existing-geolocation-list-plus-rck-pdf-address",
-    "verified": true
+    "website": "https://tsvm-racing.de"
   },
   {
     "id": "turnerschaft-1860-e-v-grossauheim",
@@ -2665,20 +2271,16 @@
     "city": "Hanau",
     "lat": 50.1040494790181,
     "lng": 8.951445664843742,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Hanau Grossauheim",
-      "Turnerschaft 1860 e.V. Großauheim",
-      "myrcm-22897"
-    ],
     "hostIds": [
       "turnerschaft-1860-e-v-gro-auheim"
     ],
-    "myrcmOrgId": "22897",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "22897",
+    "aliases": [
+      "myrcm-22897",
+      "Turnerschaft 1860 e.V. Großauheim",
+      "Hanau Grossauheim"
+    ]
   },
   {
     "id": "turngemeinde-1855-neustadt-bei-coburg-e-v",
@@ -2686,23 +2288,28 @@
     "city": "Neustadt bei Coburg",
     "lat": 50.31849908386169,
     "lng": 11.122178706131624,
-    "address": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
-    "postalCode": "96465",
-    "website": "",
-    "aliases": [
-      "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
-      "Neustadt bei Coburg",
-      "TG-Neustadt 1855 e.V.",
-      "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+    "hostIds": [
+      "turngemeinde-1855-neustadt-bei-coburg-e-v",
       "myrcm-59129"
     ],
-    "hostIds": [
-      "myrcm-59129",
-      "turngemeinde-1855-neustadt-bei-coburg-e-v"
-    ],
-    "myrcmOrgId": "59129",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "59129",
+    "address": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "postalCode": "96465",
+    "addressSource": "rck-pdf",
+    "addressVerifiedFromPdf": true,
+    "rckVenueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+    "rckOrganizerName": "TG-Neustadt 1855 e.V.",
+    "rckLocations": [
+      "Neustadt b. Coburg"
+    ],
+    "aliases": [
+      "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+      "Neustadt bei Coburg",
+      "TG-Neustadt 1855 e.V.",
+      "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+      "myrcm-59129"
+    ]
   },
   {
     "id": "vfr-ruesselsheim-e-v",
@@ -2710,20 +2317,16 @@
     "city": "Rüsselsheim",
     "lat": 49.980321844011186,
     "lng": 8.395484362108544,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Rüsselsheim",
-      "VFR-Rüsselsheim e.V.",
-      "myrcm-19940"
-    ],
     "hostIds": [
       "vfr-russelsheim-e-v"
     ],
-    "myrcmOrgId": "19940",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "19940",
+    "aliases": [
+      "myrcm-19940",
+      "VFR-Rüsselsheim e.V.",
+      "Rüsselsheim"
+    ]
   },
   {
     "id": "wiesbadener-minicar-club-e-v",
@@ -2731,19 +2334,15 @@
     "city": "Eppstein",
     "lat": 50.032270421899874,
     "lng": 8.270931149938278,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "Eppstein",
-      "Wiesbadener Minicar Club e.V.",
-      "myrcm-11761"
-    ],
     "hostIds": [
       "wiesbadener-minicar-club-e-v"
     ],
-    "myrcmOrgId": "11761",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "myrcmOrgId": "11761",
+    "aliases": [
+      "myrcm-11761",
+      "Wiesbadener Minicar Club e.V.",
+      "Eppstein"
+    ]
   }
 ]
