@@ -37,7 +37,7 @@
     "source": "myrcm",
     "myrcmOrgId": "17465",
     "possibleVenue": "Hörstel",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "ets",
@@ -53,7 +53,7 @@
     "source": "myrcm",
     "myrcmOrgId": "49540",
     "possibleVenue": "Trebur",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "fun-center-ch-gmbh-jestetten",
@@ -117,7 +117,7 @@
     "source": "myrcm",
     "myrcmOrgId": "48023",
     "possibleVenue": "Dillingen",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "mcc-kastellaun-e-v",
@@ -141,7 +141,7 @@
     "source": "myrcm",
     "myrcmOrgId": "50727",
     "possibleVenue": "Großostheim",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "md-timing",
@@ -149,7 +149,7 @@
     "source": "myrcm",
     "myrcmOrgId": "33838",
     "possibleVenue": "Niederkrüchten",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "mfk-kurten-e-v",
@@ -165,7 +165,7 @@
     "source": "myrcm",
     "myrcmOrgId": "42405",
     "possibleVenue": "Flensburg",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "msc-halle-e-v",
@@ -173,7 +173,7 @@
     "source": "myrcm",
     "myrcmOrgId": "44811",
     "possibleVenue": "Halle",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "msc-herrenhaide",
@@ -181,7 +181,7 @@
     "source": "myrcm",
     "myrcmOrgId": "64487",
     "possibleVenue": "Burgstädt",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "msc-hockendorf-e-v",
@@ -189,7 +189,7 @@
     "source": "myrcm",
     "myrcmOrgId": "56487",
     "possibleVenue": "Klingenberg",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "msc-ober-morlen-e-v",
@@ -205,7 +205,7 @@
     "source": "myrcm",
     "myrcmOrgId": "50019",
     "possibleVenue": "Osterhofen",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
@@ -229,7 +229,7 @@
     "source": "myrcm",
     "myrcmOrgId": "46202",
     "possibleVenue": "Rothenburg/Oberlausitz",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "mss-am-sagewerk",
@@ -237,7 +237,7 @@
     "source": "myrcm",
     "myrcmOrgId": "49105",
     "possibleVenue": "Seifhennersdorf",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "msv-hurtgenwald-e-v",
@@ -245,7 +245,7 @@
     "source": "myrcm",
     "myrcmOrgId": "15511",
     "possibleVenue": "Hürtgenwald",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "nitro-sud",
@@ -261,7 +261,7 @@
     "source": "myrcm",
     "myrcmOrgId": "15092",
     "possibleVenue": "Mönchengladbach",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "offroad-minicar-crew-e-v",
@@ -277,7 +277,7 @@
     "source": "myrcm",
     "myrcmOrgId": "36113",
     "possibleVenue": "Göttingen",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "ormc-konigsbrunn",
@@ -333,7 +333,7 @@
     "source": "myrcm",
     "myrcmOrgId": "55427",
     "possibleVenue": "Emsdetten",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "rc-car-indoor-minidrom-owl",
@@ -373,7 +373,7 @@
     "source": "myrcm",
     "myrcmOrgId": "44059",
     "possibleVenue": "Velbert",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "rc-halle-e-v",
@@ -405,7 +405,7 @@
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "rc-racers-toys-shop",
@@ -413,7 +413,7 @@
     "source": "myrcm",
     "myrcmOrgId": "47444",
     "possibleVenue": "Bad Berneck",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "rc-car-shop-racecrew",
@@ -429,7 +429,7 @@
     "source": "myrcm",
     "myrcmOrgId": "6492",
     "possibleVenue": "Remscheid",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "rco-ottendorf-okrilla-e-v",
@@ -437,7 +437,7 @@
     "source": "myrcm",
     "myrcmOrgId": "45728",
     "possibleVenue": "Ottendorf-Okrilla",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "sator-events",
@@ -461,7 +461,7 @@
     "source": "myrcm",
     "myrcmOrgId": "60453",
     "possibleVenue": "Sinntal",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "smc-stuttgart-e-v",
@@ -477,7 +477,7 @@
     "source": "myrcm",
     "myrcmOrgId": "60911",
     "possibleVenue": "Windach",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "team-dabo",
@@ -493,7 +493,7 @@
     "source": "myrcm",
     "myrcmOrgId": "29586",
     "possibleVenue": "Idar-Oberstein",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "tonisport-gmbh",
@@ -517,7 +517,7 @@
     "source": "myrcm",
     "myrcmOrgId": "30389",
     "possibleVenue": "Gelenau/Erzgebirge",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "ub-timing",
@@ -525,7 +525,7 @@
     "source": "myrcm",
     "myrcmOrgId": "18409",
     "possibleVenue": "Adenau",
-    "reason": "no confirmed venue seed for MyRCM host"
+    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "vfl-goldstein-1953-e-v",
