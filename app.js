@@ -875,6 +875,9 @@ function raceSeries(race) {
 function venueIdsForMatching(venue) {
   return [
     venue?.id,
+    venue?.hostId,
+    venue?.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
+    ...(Array.isArray(venue?.hostIds) ? venue.hostIds : []),
     ...(Array.isArray(venue?.aliases) ? venue.aliases : [])
   ]
     .filter(Boolean)
