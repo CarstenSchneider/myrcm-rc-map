@@ -1184,7 +1184,7 @@ function venueNameHtml(venue) {
   const name = escapeHtml(venue?.name || "Unbekannte Strecke");
   const nameHtml = website
     ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
-    : `<span class="venue-link">${name}</span>`;
+    : `<span class="venue-name-text">${name}</span>`;
 
   return `<span class="venue-name">${nameHtml}</span>`;
 }
@@ -1238,7 +1238,7 @@ function raceVenueNameHtml(race) {
   const website = raceWebsite(race);
   const nameHtml = website
     ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : `<span class="venue-link">${name}</span>`;
+    : `<span class="venue-name-text">${name}</span>`;
 
   return `<span class="venue-name">${nameHtml}</span>`;
 }
