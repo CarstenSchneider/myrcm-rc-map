@@ -2198,9 +2198,8 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, venueSeedsResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
-    fetchJsonOrFallback(`venue-seeds.json?v=${cacheBuster}`, []),
     fetch(`races.json?v=${cacheBuster}`),
     fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
@@ -2208,13 +2207,12 @@ async function init() {
   ]);
 
   const baseVenues = await venuesResponse.json();
-  const venueSeeds = Array.isArray(venueSeedsResponse) ? venueSeedsResponse : [];
   const myrcmRaces = await racesResponse.json();
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
 
   venues = mergeVenues(
-    mergeVenues(baseVenues, venueSeeds, { requireVerifiedAddress: false }),
+    baseVenues,
     rckVenueCandidates,
     { requireVerifiedAddress: true }
   );
