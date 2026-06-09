@@ -954,8 +954,10 @@ function unmatchedRecordForMyRcmHost(host, hostRecord, reason) {
 function mergeUnmatched(existing = [], imported = []) {
   const byKey = new Map();
 
+  // MyRCM unmatched entries are rebuilt from the current import on every run.
+  // This prevents stale venue-unmatched records from surviving after a host/venue match was fixed.
   for (const item of existing || []) {
-    if (item?.source === "myrcm" && isIgnoredUnmatchedHost(item)) continue;
+    if (item?.source === "myrcm") continue;
 
     const key = `${item.source || ""}|${item.hostId || ""}|${item.myrcmOrgId || ""}|${item.possibleVenue || ""}`;
     byKey.set(key, item);
