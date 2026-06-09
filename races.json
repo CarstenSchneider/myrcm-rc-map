@@ -890,7 +890,9 @@
     "name": "Tamiya Euro-Cup Qualifikation",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86744&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60576&pLa=en&dId%5BE%5D=86744&tId=E&hId%5B1%5D=org",
@@ -1070,7 +1072,9 @@
     "name": "9. Lauf TAMIYA EURO-CUP MC Flensburg 2024/25",
     "from": "2025-06-22",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86586&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=86586&tId=E&hId%5B1%5D=org",
@@ -1176,7 +1180,9 @@
     "name": "RCK-Challenge 2025",
     "from": "2025-06-22",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88898&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=88898&tId=E&hId%5B1%5D=org",
@@ -1206,7 +1212,9 @@
     "name": "RCK-Challenge BS",
     "from": "2025-06-22",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88876&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=88876&tId=E&hId%5B1%5D=org",
@@ -1645,7 +1653,9 @@
     "name": "TAMIYA EURO-CUP 2025 - ABGESAGT",
     "from": "2025-06-28",
     "to": "2025-06-29",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86505&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=86505&tId=E&hId%5B1%5D=org",
@@ -1959,7 +1969,9 @@
     "name": "TAMIYA EURO-CUP",
     "from": "2025-06-29",
     "to": "2025-06-29",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87871&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=678&pLa=en&dId%5BE%5D=87871&tId=E&hId%5B1%5D=org",
@@ -4294,7 +4306,9 @@
     "name": "Tamiya Euro-Cup Deutschland Finale 2025",
     "from": "2025-07-31",
     "to": "2025-08-03",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85184&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=85184&tId=E&hId%5B1%5D=org",
@@ -4352,7 +4366,9 @@
     "name": "Tamiya Euro-Cup 2,4h Truck Rennen 2025",
     "from": "2025-08-01",
     "to": "2025-08-01",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85186&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=85186&tId=E&hId%5B1%5D=org",
@@ -7574,7 +7590,9 @@
     "name": "10. Lauf TAMIYA EURO-CUP MC Flensburg 2024/25",
     "from": "2025-09-13",
     "to": "2025-09-14",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89727&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=89727&tId=E&hId%5B1%5D=org",
@@ -8407,7 +8425,9 @@
     "name": "RCK-Challenge",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90830&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=90830&tId=E&hId%5B1%5D=org",
@@ -10529,7 +10549,9 @@
     "name": "Tamiya Euro-Cup Augsburg-Göggingen 2025",
     "from": "2025-10-11",
     "to": "2025-10-12",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90690&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=573&pLa=en&dId%5BE%5D=90690&tId=E&hId%5B1%5D=org",
@@ -11284,7 +11306,9 @@
     "name": "RCK-Challenge",
     "from": "2025-10-19",
     "to": "2025-10-19",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91629&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42113&pLa=en&dId%5BE%5D=91629&tId=E&hId%5B1%5D=org",
@@ -11736,7 +11760,9 @@
     "name": "Tamiya Euro-Cup",
     "from": "2025-10-26",
     "to": "2025-10-26",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91578&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30389&pLa=en&dId%5BE%5D=91578&tId=E&hId%5B1%5D=org",
@@ -11878,7 +11904,9 @@
     "name": "TAMIYA Eurocup + RCK-Challenge 01.11.2025 - Hanau-Grossauheim Rochushalle",
     "from": "2025-11-01",
     "to": "2025-11-01",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91156&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=91156&tId=E&hId%5B1%5D=org",
@@ -12277,7 +12305,9 @@
     "name": "GFC Tamiya Euro-Cup",
     "from": "2025-11-08",
     "to": "2025-11-09",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91053&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=991&pLa=en&dId%5BE%5D=91053&tId=E&hId%5B1%5D=org",
@@ -12607,7 +12637,9 @@
     "name": "1. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2025-11-15",
     "to": "2025-11-16",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91317&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=91317&tId=E&hId%5B1%5D=org",
@@ -13078,7 +13110,9 @@
     "name": "TAMIYA EURO-CUP 2025",
     "from": "2025-11-23",
     "to": "2025-11-23",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91659&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4441&pLa=en&dId%5BE%5D=91659&tId=E&hId%5B1%5D=org",
@@ -14012,7 +14046,9 @@
     "name": "RCK-Challenge Kleinburgwedel",
     "from": "2025-12-14",
     "to": "2025-12-14",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92846&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4441&pLa=en&dId%5BE%5D=92846&tId=E&hId%5B1%5D=org",
@@ -14043,7 +14079,9 @@
     "name": "2. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2025-12-20",
     "to": "2025-12-21",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91318&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=91318&tId=E&hId%5B1%5D=org",
@@ -14753,7 +14791,9 @@
     "name": "TAMIYA Eurocup + RCK-Challenge 03.01.2026 - Hanau-Grossauheim Rochushalle",
     "from": "2026-01-03",
     "to": "2026-01-03",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91983&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=91983&tId=E&hId%5B1%5D=org",
@@ -14867,7 +14907,9 @@
     "name": "Tamiya Euro-Cup Qualifikationslauf",
     "from": "2026-01-04",
     "to": "2026-01-04",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93274&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=56487&pLa=en&dId%5BE%5D=93274&tId=E&hId%5B1%5D=org",
@@ -15814,7 +15856,9 @@
     "name": "3. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2026-01-24",
     "to": "2026-01-25",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93104&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=93104&tId=E&hId%5B1%5D=org",
@@ -16499,7 +16543,9 @@
     "name": "RCK-Challenge",
     "from": "2026-02-07",
     "to": "2026-02-08",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94153&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=51129&pLa=en&dId%5BE%5D=94153&tId=E&hId%5B1%5D=org",
@@ -16906,7 +16952,9 @@
     "name": "4. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2026-02-21",
     "to": "2026-02-22",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93201&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=93201&tId=E&hId%5B1%5D=org",
@@ -17353,9 +17401,7 @@
     "name": "Tamico Offroad-Cup Megadrom Hasloh",
     "from": "2026-02-22",
     "to": "2026-02-22",
-    "series": [
-      "Tamico Offroad Cup"
-    ],
+    "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93584&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=32408&pLa=en&dId%5BE%5D=93584&tId=E&hId%5B1%5D=org",
@@ -18726,7 +18772,9 @@
     "name": "RCK-Challenge 2025/2026",
     "from": "2026-03-15",
     "to": "2026-03-15",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95388&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=134&pLa=en&dId%5BE%5D=95388&tId=E&hId%5B1%5D=org",
@@ -19447,7 +19495,9 @@
     "name": "5. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2026-03-28",
     "to": "2026-03-29",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93202&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=93202&tId=E&hId%5B1%5D=org",
@@ -20287,9 +20337,7 @@
     "name": "TAMICO CUP @ MCC Fellbach",
     "from": "2026-04-12",
     "to": "2026-04-12",
-    "series": [
-      "Tamico Offroad Cup"
-    ],
+    "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95228&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38659&pLa=en&dId%5BE%5D=95228&tId=E&hId%5B1%5D=org",
@@ -20805,7 +20853,9 @@
     "name": "Tamiya Euro-Cup Qualifikationslauf",
     "from": "2026-04-18",
     "to": "2026-04-19",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96246&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60576&pLa=en&dId%5BE%5D=96246&tId=E&hId%5B1%5D=org",
@@ -21146,7 +21196,9 @@
     "name": "6. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93203&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=93203&tId=E&hId%5B1%5D=org",
@@ -23574,7 +23626,9 @@
     "name": "Tamiya Euro-Cup Qualifikationslauf",
     "from": "2026-05-10",
     "to": "2026-05-10",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97253&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=56487&pLa=en&dId%5BE%5D=97253&tId=E&hId%5B1%5D=org",
@@ -23945,7 +23999,9 @@
     "name": "RCK-Challenge",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97360&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=97360&tId=E&hId%5B1%5D=org",
@@ -24607,7 +24663,9 @@
     "name": "7. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2026-05-23",
     "to": "2026-05-24",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94700&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=94700&tId=E&hId%5B1%5D=org",
@@ -26211,9 +26269,7 @@
     "name": "Tamico Off-Road Cup beim MC Dortmund",
     "from": "2026-06-06",
     "to": "2026-06-07",
-    "series": [
-      "Tamico Offroad Cup"
-    ],
+    "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97213&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6266&pLa=en&dId%5BE%5D=97213&tId=E&hId%5B1%5D=org",
@@ -26595,8 +26651,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       {
@@ -26605,7 +26661,7 @@
       },
       {
         "name": "3LC GT/E8 Stock",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -26654,6 +26710,36 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "fs-timing-2026-06-13-myrcm-event-98166",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "hostId": "fs-timing",
+    "hostName": "FS-Timing",
+    "name": "3. Hessencup Lauf 2026 Heiligenstadt",
+    "from": "2026-06-13",
+    "to": "2026-06-14",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98166&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=98166&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98166&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "note": null,
+    "classes": [
+      "OR 8 Hobby",
+      "OR8 Expert",
+      "OR8E",
+      "Hessencup Kids"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-08"
+  },
+  {
     "id": "mc-munster-e-v-2026-06-13-myrcm-event-97831",
     "venueId": "mc-munster-e-v",
     "venueName": "MC Munster e.V.",
@@ -26673,8 +26759,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": null,
     "classes": [
       "VG8K1+VG8Kl2+VG10",
@@ -26700,7 +26786,7 @@
       },
       {
         "name": "EG10 Stock",
-        "entries": 4
+        "entries": 5
       },
       "RCK-Porsche"
     ],
@@ -26740,13 +26826,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 24
+        "entries": 25
       }
     ],
     "documents": [
@@ -26780,26 +26866,26 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 80,
-    "registrationDisplay": "80",
+    "registrationCount": 79,
+    "registrationDisplay": "79",
     "note": "Nennung geschlossen.",
     "classes": [
-      {
-        "name": "OR8 Expert",
-        "entries": 34
-      },
       {
         "name": "OR8 Hobby",
         "entries": 16
       },
       {
-        "name": "ORE8",
-        "entries": 19
+        "name": "OR8 Expert",
+        "entries": 34
       },
       "ORT / ORET",
       {
+        "name": "ORE8",
+        "entries": 19
+      },
+      {
         "name": "ORT",
-        "entries": 7
+        "entries": 6
       },
       {
         "name": "ORET",
@@ -26820,7 +26906,9 @@
     "name": "8. Lauf TAMIYA EURO-CUP MC Flensburg 2025/26",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94701&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42405&pLa=en&dId%5BE%5D=94701&tId=E&hId%5B1%5D=org",
@@ -26978,8 +27066,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": null,
     "classes": [
       {
@@ -26988,7 +27076,7 @@
       },
       {
         "name": "Fighter-Klasse",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "ORE 2WD Modified",
@@ -27031,8 +27119,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 51,
-    "registrationDisplay": "51",
+    "registrationCount": 52,
+    "registrationDisplay": "52",
     "note": null,
     "classes": [
       {
@@ -27041,7 +27129,7 @@
       },
       {
         "name": "ORE2WDST",
-        "entries": 32
+        "entries": 33
       },
       {
         "name": "ORE4WD",
@@ -27340,8 +27428,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 33,
-    "registrationDisplay": "33",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
     "note": null,
     "classes": [
       {
@@ -27354,7 +27442,7 @@
       },
       {
         "name": "2WD Monster",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "2WD Pro Stock (\"blinky modus\")",
@@ -27485,13 +27573,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": null,
     "classes": [
       {
         "name": "Nordbayern Cup Club Cup",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "Nordbayern Cup M-Chassis",
@@ -27499,7 +27587,7 @@
       },
       {
         "name": "Nordbayern Cup GT / LMH 17.5T",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
@@ -27804,14 +27892,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "DT03",
       {
         "name": "ORE10 Buggy 2WD/4WD",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "ORE8",
@@ -28394,8 +28482,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       {
@@ -28404,7 +28492,7 @@
       },
       {
         "name": "MCSS LMH 21,5T",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "MCSS FWD",
@@ -28412,7 +28500,7 @@
       },
       {
         "name": "MCSS 911er-Cup",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "MCSS Langstrecken-Cup",
@@ -28421,6 +28509,33 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
+  },
+  {
+    "id": "rc-offroad-staaken-2026-06-21-myrcm-event-98165",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "hostId": "rc-offroad-staaken",
+    "hostName": "RC Offroad Staaken",
+    "name": "3.Rcs-Cup 2026",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98165&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=55317&pLa=en&dId%5BE%5D=98165&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98165&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": null,
+    "classes": [
+      "1:8 Fun"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-09"
   },
   {
     "id": "mac-hamburg-e-v-2026-06-21-myrcm-event-97558",
@@ -28896,14 +29011,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "BBX",
       {
         "name": "Fighter-Klasse",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Retro 2WD",
@@ -28917,7 +29032,7 @@
       "Wheelie",
       {
         "name": "ORE 2WD ST",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -28951,8 +29066,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 54,
-    "registrationDisplay": "54",
+    "registrationCount": 55,
+    "registrationDisplay": "55",
     "note": null,
     "classes": [
       {
@@ -28961,7 +29076,7 @@
       },
       {
         "name": "TOC Fighter-Klasse",
-        "entries": 22
+        "entries": 23
       },
       {
         "name": "TOC Retro 2WD",
@@ -28993,7 +29108,9 @@
     "name": "Tamiya Euro-Cup Qualifikation",
     "from": "2026-06-27",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96247&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60576&pLa=en&dId%5BE%5D=96247&tId=E&hId%5B1%5D=org",
@@ -29380,7 +29497,9 @@
     "name": "RCK-Challenge",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98161&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=98161&tId=E&hId%5B1%5D=org",
@@ -30484,13 +30603,13 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 319,
-    "registrationDisplay": "319",
+    "registrationCount": 321,
+    "registrationDisplay": "321",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "FlySky Frontwheel",
-        "entries": 58
+        "entries": 59
       },
       {
         "name": "Hobbywing 21.5 Stock",
@@ -30506,7 +30625,7 @@
       },
       {
         "name": "Awesomatix Pro Stock",
-        "entries": 76
+        "entries": 77
       },
       {
         "name": "Cayote Modified",
@@ -30985,7 +31104,9 @@
     "name": "Tamiya Euro-Cup 2,4h Truck Rennen 2026",
     "from": "2026-08-07",
     "to": "2026-08-07",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93401&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=93401&tId=E&hId%5B1%5D=org",
@@ -31012,7 +31133,9 @@
     "name": "Tamiya Euro-Cup Deutschland Finale 2026",
     "from": "2026-08-07",
     "to": "2026-08-09",
-    "series": [],
+    "series": [
+      "TEC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93402&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=59129&pLa=en&dId%5BE%5D=93402&tId=E&hId%5B1%5D=org",
@@ -32227,7 +32350,9 @@
     "name": "RCK-Challenge",
     "from": "2026-09-19",
     "to": "2026-09-20",
-    "series": [],
+    "series": [
+      "RCK Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97358&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=97358&tId=E&hId%5B1%5D=org",
