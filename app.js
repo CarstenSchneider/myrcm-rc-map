@@ -103,7 +103,7 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
 }
 
 function raceFavoriteVenueId(race) {
-  const venue = venueById(race?.venueId);
+  const venue = venueForRace(race);
   return venue?.id || null;
 }
 
@@ -896,6 +896,16 @@ function venueById(id) {
   }) || null;
 }
 
+function venueForRace(race) {
+  if (!race) return null;
+
+  return (
+    venueById(race.venueId) ||
+    venueById(race.hostId) ||
+    null
+  );
+}
+
 function normalizeUrl(url) {
   if (!url || typeof url !== "string") return null;
   return url.trim() || null;
@@ -952,7 +962,7 @@ function venueWebsite(venue) {
 }
 
 function raceWebsite(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   const venueLink = venueWebsite(venue);
   if (venueLink) return venueLink;
@@ -1128,17 +1138,17 @@ function documentLinksHtml(race) {
 }
 
 function hasMappableVenue(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
   return Boolean(venue && hasLatLng(venue));
 }
 
 function hasVerifiedVenue(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
   return Boolean(venue && hasLatLng(venue) && !isUnverifiedVenue(venue));
 }
 
 function venueDisplayName(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   return (
     venue?.name ||
@@ -1150,7 +1160,7 @@ function venueDisplayName(race) {
 }
 
 function raceSearchText(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   return [
     race.name,
@@ -1169,15 +1179,23 @@ function raceSearchText(race) {
 }
 
 function isRaceAtVenue(race, venueId) {
-  if (!race.venueId || !venueId) return false;
+  if (!race || !venueId) return false;
 
   const venue = venueById(venueId);
   if (!venue) return false;
 
-  const raceVenueId = String(race.venueId);
+  const raceVenue = venueForRace(race);
+  if (raceVenue?.id === venue.id) return true;
 
-  return venueIdsForMatching(venue).some(matchId =>
-    raceVenueId === matchId || raceVenueId.startsWith(`${matchId}-`)
+  const raceIds = [
+    race.venueId,
+    race.hostId
+  ].filter(Boolean).map(String);
+
+  return raceIds.some(raceId =>
+    venueIdsForMatching(venue).some(matchId =>
+      raceId === matchId || raceId.startsWith(`${matchId}-`)
+    )
   );
 }
 
@@ -1508,7 +1526,7 @@ function selectRaceFromPopup(raceId) {
   const race = races.find(item => item.id === raceId);
   if (!race) return;
 
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
 
   activeRaceId = race.id;
   renderList(filteredRaces());
@@ -1525,7 +1543,7 @@ function selectRaceFromPopup(raceId) {
 }
 
 function focusRace(race) {
-  const venue = venueById(race.venueId);
+  const venue = venueForRace(race);
   if (!venue) return;
 
   activeVenueId = venue.id;
