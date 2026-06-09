@@ -741,14 +741,21 @@ function buildVenueSeedLookup(venueSeeds = []) {
   return lookup;
 }
 
-function venueSeedForMyRcmHost(venueSeedLookup, host) {
-  if (!host?.orgId) return null;
+// Match a MyRCM host to a default venue seed only when the seed explicitly references the host.
+// This uses myrcmOrgId, hostIds and direct venue ids. Race-name based venue detection still has priority per race.
+function venueSeedForMyRcmHost(venueSeedLookup, host, hostRecord = null) {
+  if (!host) return null;
 
-  const myRcmKey = `myrcm-${host.orgId}`;
+  const myRcmKey = host.orgId ? `myrcm-${host.orgId}` : null;
+  const hostRecordKey = hostRecord?.id ? `host:${hostRecord.id}` : null;
+  const directVenueId = host.venueId ? String(host.venueId) : null;
+  const directVenueKey = directVenueId ? `host:${directVenueId}` : null;
 
   return (
-    venueSeedLookup.get(myRcmKey) ||
-    venueSeedLookup.get(String(host.venueId || "")) ||
+    (myRcmKey && venueSeedLookup.get(myRcmKey)) ||
+    (hostRecordKey && venueSeedLookup.get(hostRecordKey)) ||
+    (directVenueId && venueSeedLookup.get(directVenueId)) ||
+    (directVenueKey && venueSeedLookup.get(directVenueKey)) ||
     null
   );
 }
@@ -1606,8 +1613,9 @@ async function runImportOnce() {
   console.log(`${hosts.length} deutsche Hosts mit Events geladen`);
 
   for (const host of hosts) {
-    const venueSeed = venueSeedForMyRcmHost(venueSeedLookup, host);
     const existingHost = existingHostForMyRcmHost(existingHosts, host);
+    const preliminaryHostRecord = hostRecordFromMyRcmHost(host, null, existingHost);
+    const venueSeed = venueSeedForMyRcmHost(venueSeedLookup, host, preliminaryHostRecord);
     const hostRecord = hostRecordFromMyRcmHost(host, venueSeed, existingHost);
 
     console.log(`Lade MyRCM: ${host.name} (${host.orgId})`);
