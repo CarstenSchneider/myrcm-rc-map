@@ -965,13 +965,11 @@ function raceWebsite(race) {
 function venueNameHtml(venue) {
   const website = venueWebsite(venue);
   const name = escapeHtml(venue?.name || "Unbekannte Strecke");
-  const favorite = favoriteButtonHtml(venue?.id, venue?.name || "Strecke");
-  const favoriteClass = isFavoriteVenueId(venue?.id) ? " venue-link-favorite" : "";
   const nameHtml = website
-    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
-    : `<span class="venue-link${favoriteClass}">${name}</span>`;
+    ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
+    : `<span class="venue-link">${name}</span>`;
 
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
+  return `<span class="venue-name">${nameHtml}</span>`;
 }
 
 function raceVenueNameHtml(race) {
@@ -1395,7 +1393,6 @@ const popupOffset = hasUpcomingRaces
       popupElement.addEventListener("click", event => {
         if (
           event.target.closest("a") ||
-          event.target.closest("[data-favorite-venue-id]") ||
           event.target.closest(".leaflet-popup-close-button")
         ) {
           return;
