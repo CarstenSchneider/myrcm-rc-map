@@ -775,6 +775,89 @@ function venueFromSeed(seed) {
   };
 }
 
+function venueRecordFromSeed(seed) {
+  if (!seed?.id) return null;
+
+  return {
+    id: seed.id,
+    name: seed.name || seed.id,
+    city: seed.city || "",
+    lat: seed.lat ?? null,
+    lng: seed.lng ?? null,
+    address: seed.address || "",
+    postalCode: seed.postalCode || "",
+    website: seed.website || "",
+    aliases: Array.isArray(seed.aliases) ? seed.aliases : [],
+    hostIds: Array.isArray(seed.hostIds) ? seed.hostIds : [],
+    myrcmOrgId: seed.myrcmOrgId || "",
+    source: seed.source || "venue-seeds",
+    verified: seed.verified !== false
+  };
+}
+
+function hasValidCoordinates(venue) {
+  if (!venue) return false;
+
+  const lat = Number(venue.lat);
+  const lng = Number(venue.lng);
+
+  return (
+    Number.isFinite(lat) &&
+    Number.isFinite(lng) &&
+    lat >= 44 &&
+    lat <= 59 &&
+    lng >= -5 &&
+    lng <= 25
+  );
+}
+
+function mergeVenueRecords(previous = {}, next = {}) {
+  return {
+    ...previous,
+    ...next,
+    id: previous.id || next.id,
+    name: next.name || previous.name || next.id || previous.id,
+    city: next.city || previous.city || "",
+    lat: next.lat ?? previous.lat ?? null,
+    lng: next.lng ?? previous.lng ?? null,
+    address: next.address || previous.address || "",
+    postalCode: next.postalCode || previous.postalCode || "",
+    website: next.website || previous.website || "",
+    aliases: Array.from(new Set([
+      ...(Array.isArray(previous.aliases) ? previous.aliases : []),
+      ...(Array.isArray(next.aliases) ? next.aliases : [])
+    ].filter(Boolean))),
+    hostIds: Array.from(new Set([
+      ...(Array.isArray(previous.hostIds) ? previous.hostIds : []),
+      ...(Array.isArray(next.hostIds) ? next.hostIds : [])
+    ].filter(Boolean))),
+    myrcmOrgId: next.myrcmOrgId || previous.myrcmOrgId || "",
+    source: next.source || previous.source || "venues",
+    verified: next.verified !== false && previous.verified !== false
+  };
+}
+
+function mergeVenueSeedsIntoVenues(existingVenues = [], venueSeeds = []) {
+  const byId = new Map();
+
+  for (const venue of existingVenues || []) {
+    if (!venue?.id) continue;
+    byId.set(String(venue.id), venue);
+  }
+
+  for (const seed of venueSeeds || []) {
+    const venue = venueRecordFromSeed(seed);
+    if (!venue?.id || !hasValidCoordinates(venue)) continue;
+
+    const id = String(venue.id);
+    byId.set(id, mergeVenueRecords(byId.get(id) || {}, venue));
+  }
+
+  return Array.from(byId.values()).sort((a, b) => {
+    return String(a.name || a.id).localeCompare(String(b.name || b.id));
+  });
+}
+
 function normalizedVenueMatchText(value = "") {
   return normalizeText(value)
     .toLowerCase()
@@ -1604,6 +1687,7 @@ async function loadHosts() {
 async function runImportOnce() {
   const hosts = await loadHosts();
   const existingHosts = await readJsonIfExists(hostsFile, []);
+  const existingVenues = await readJsonIfExists(venuesFile, []);
   const venueSeeds = await readJsonIfExists(venueSeedsFile, []);
   const existingUnmatched = await readJsonIfExists(venueUnmatchedFile, []);
   const venueSeedLookup = buildVenueSeedLookup(venueSeeds);
@@ -1665,11 +1749,18 @@ async function runImportOnce() {
   unique = applyFirstSeen(unique, previousRaces);
 
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
+  const mergedVenues = mergeVenueSeedsIntoVenues(existingVenues, venueSeeds);
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
 
   await writeFile(
     hostsFile,
     JSON.stringify(mergedHosts, null, 2) + "\n",
+    "utf8"
+  );
+
+  await writeFile(
+    venuesFile,
+    JSON.stringify(mergedVenues, null, 2) + "\n",
     "utf8"
   );
 
@@ -1697,6 +1788,7 @@ async function runImportOnce() {
   const totalDocuments = Object.values(documentTypeCounts).reduce((sum, count) => sum + count, 0);
 
   console.log(`hosts.json geschrieben: ${mergedHosts.length} Hosts`);
+  console.log(`venues.json geschrieben: ${mergedVenues.length} Strecken`);
   console.log(`venue-unmatched.json geschrieben: ${mergedUnmatched.length} offene Venue-Zuordnungen`);
   console.log(`races.json geschrieben: ${unique.length} Rennen`);
   console.log("PDF-Statistik:");
