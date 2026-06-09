@@ -17,6 +17,8 @@ const fullImportAttemptCount = 3;
 const fullImportRetryDelayMs = 30000;
 
 function oneYearAgoString() {
+  // Import window: races older than 365 days are ignored.
+  // Hosts with no races left after this filter are skipped entirely.
   const oneYearAgo = new Date();
   oneYearAgo.setDate(oneYearAgo.getDate() - 365);
   return oneYearAgo.toISOString().slice(0, 10);
@@ -1440,18 +1442,6 @@ async function runImportOnce() {
     const existingHost = existingHostForMyRcmHost(existingHosts, host);
     const hostRecord = hostRecordFromMyRcmHost(host, venueSeed, existingHost);
 
-    importedHosts.push(hostRecord);
-
-    if (!venueSeed) {
-      importedUnmatched.push(
-        unmatchedRecordForMyRcmHost(
-          host,
-          hostRecord,
-          "no confirmed venue seed for MyRCM host"
-        )
-      );
-    }
-
     console.log(`Lade MyRCM: ${host.name} (${host.orgId})`);
 
     let html;
@@ -1465,6 +1455,23 @@ async function runImportOnce() {
     }
 
     const races = await parseEvents(html, host, hostRecord, venueSeed);
+
+    if (!races.length) {
+      console.log("  Host wird uebersprungen, weil kein Rennen im aktuellen Importzeitraum gefunden wurde");
+      continue;
+    }
+
+    importedHosts.push(hostRecord);
+
+    if (!venueSeed) {
+      importedUnmatched.push(
+        unmatchedRecordForMyRcmHost(
+          host,
+          hostRecord,
+          "no confirmed venue seed for MyRCM host"
+        )
+      );
+    }
 
     console.log(`  ${races.length} Rennen gefunden`);
 
