@@ -49,7 +49,61 @@ let showOpenOnly = true;
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
+const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
+
+function getFavoriteHostIds() {
+  try {
+    const raw = localStorage.getItem(favoriteHostStorageKey);
+    const parsed = JSON.parse(raw || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(Boolean).map(String);
+  } catch {
+    return [];
+  }
+}
+
+function saveFavoriteHostIds(ids) {
+  const uniqueIds = [...new Set((ids || []).filter(Boolean).map(String))];
+  localStorage.setItem(favoriteHostStorageKey, JSON.stringify(uniqueIds));
+}
+
+function isFavoriteHostId(hostId) {
+  if (!hostId) return false;
+  return getFavoriteHostIds().includes(String(hostId));
+}
+
+function toggleFavoriteHost(hostId) {
+  if (!hostId) return;
+
+  const id = String(hostId);
+  const favoriteIds = getFavoriteHostIds();
+
+  if (favoriteIds.includes(id)) {
+    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
+  } else {
+    saveFavoriteHostIds([...favoriteIds, id]);
+  }
+}
+
+function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
+  if (!hostId) return "";
+
+  const active = isFavoriteHostId(hostId);
+  const title = active
+    ? `${label} aus Favoriten entfernen`
+    : `${label} als Favorit markieren`;
+
+  return `<button
+    class="venue-favorite-button${active ? " active" : ""}"
+    type="button"
+    data-favorite-host-id="${escapeHtml(hostId)}"
+    title="${escapeHtml(title)}"
+    aria-label="${escapeHtml(title)}"
+    aria-pressed="${active ? "true" : "false"}"
+  >${active ? "★" : "☆"}</button>`;
+}
+
 
 function getFavoriteVenueIds() {
   try {
@@ -108,8 +162,32 @@ function raceFavoriteVenueId(race) {
   return venue?.id || null;
 }
 
-function isFavoriteRaceVenue(race) {
-  return isFavoriteVenueId(raceFavoriteVenueId(race));
+function raceHostId(race) {
+  if (race?.hostId) return String(race.hostId);
+  if (race?.hostName) return slugifyMatchValue(race.hostName);
+
+  const venue = venueForRace(race);
+  if (venue?.hostId) return String(venue.hostId);
+  if (venue?.hostName) return slugifyMatchValue(venue.hostName);
+
+  return null;
+}
+
+function raceHostName(race) {
+  return (
+    race?.hostName ||
+    race?.organizerName ||
+    race?.organiserName ||
+    race?.organizer ||
+    race?.organiser ||
+    venueForRace(race)?.hostName ||
+    raceHostId(race) ||
+    "Unbekannter Ausrichter"
+  );
+}
+
+function isFavoriteRaceHost(race) {
+  return isFavoriteHostId(raceHostId(race));
 }
 
 
@@ -941,9 +1019,9 @@ function venueForRace(race) {
 
   return (
     venueById(race.venueId) ||
-    venueById(race.hostId) ||
     venueById(race.venueName) ||
-    venueById(race.hostName) ||
+    venueById(race.venueLocation) ||
+    venueById(race.hostId) ||
     null
   );
 }
@@ -1027,17 +1105,23 @@ function venueNameHtml(venue) {
   return `<span class="venue-name">${nameHtml}</span>`;
 }
 
+function raceHostNameHtml(race) {
+  const hostId = raceHostId(race);
+  const hostName = raceHostName(race);
+  const favorite = favoriteHostButtonHtml(hostId, hostName);
+  const favoriteClass = isFavoriteHostId(hostId) ? " venue-link-favorite" : "";
+
+  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}<span class="venue-link${favoriteClass}">${escapeHtml(hostName)}</span></span>`;
+}
+
 function raceVenueNameHtml(race) {
   const name = escapeHtml(venueDisplayName(race));
   const website = raceWebsite(race);
-  const venueId = raceFavoriteVenueId(race);
-  const favorite = favoriteButtonHtml(venueId, venueDisplayName(race));
-  const favoriteClass = isFavoriteVenueId(venueId) ? " venue-link-favorite" : "";
   const nameHtml = website
-    ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : `<span class="venue-link${favoriteClass}">${name}</span>`;
+    ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
+    : `<span class="venue-link">${name}</span>`;
 
-  return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${favorite}${nameHtml}</span>`;
+  return `<span class="venue-name">${nameHtml}</span>`;
 }
 
 function escapeHtml(value = "") {
@@ -1212,6 +1296,7 @@ function raceSearchText(race) {
     race.venueId,
     race.hostId,
     race.hostName,
+    raceHostName(race),
     venue?.name,
     venue?.city,
     venue?.location,
@@ -1607,19 +1692,19 @@ function renderList(list) {
     return;
   }
 
-  const hasFavoriteRaces = list.some(isFavoriteRaceVenue);
-  const hasNormalRaces = list.some(race => !isFavoriteRaceVenue(race));
+  const hasFavoriteRaces = list.some(isFavoriteRaceHost);
+  const hasNormalRaces = list.some(race => !isFavoriteRaceHost(race));
   const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
   let didRenderFavoriteDivider = false;
   let didRenderNormalDivider = false;
 
   for (const race of list) {
-    const isFavorite = isFavoriteRaceVenue(race);
+    const isFavorite = isFavoriteRaceHost(race);
 
     if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
       const divider = document.createElement("div");
       divider.className = "race-section-divider race-section-divider-favorites";
-      divider.textContent = "★ Favorisierte Strecken";
+      divider.textContent = "★ Favorisierte Ausrichter";
       raceList.appendChild(divider);
       didRenderFavoriteDivider = true;
     }
@@ -1662,7 +1747,8 @@ function renderList(list) {
         </div>
 
         <div class="race-card-meta">
-          <div class="race-venue">${raceVenueNameHtml(race)}</div>
+          <div class="race-host">${raceHostNameHtml(race)}</div>
+          <div class="race-venue">📍 ${raceVenueNameHtml(race)}</div>
           ${documentLinksHtml(race)}
           ${statusDetailsHtml(race)}
         </div>
@@ -1698,12 +1784,12 @@ function renderList(list) {
     if (hasMappableVenue(race)) {
       card.addEventListener("click", event => {
         if (event.target.closest("[data-class-toggle]")) return;
-        if (event.target.closest("[data-favorite-venue-id]")) return;
+        if ((event.target.closest("[data-favorite-venue-id]") || event.target.closest("[data-favorite-host-id]"))) return;
         focusRace(race);
       });
 
       card.addEventListener("keydown", event => {
-        if (event.target.closest("[data-favorite-venue-id]")) return;
+        if ((event.target.closest("[data-favorite-venue-id]") || event.target.closest("[data-favorite-host-id]"))) return;
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           focusRace(race);
@@ -1734,13 +1820,17 @@ function toggleClassList(raceId) {
 }
 
 document.addEventListener("click", event => {
-  const favoriteButton = event.target.closest("[data-favorite-venue-id]");
+  const favoriteButton = (event.target.closest("[data-favorite-venue-id]") || event.target.closest("[data-favorite-host-id]"));
   if (!favoriteButton) return;
 
   event.preventDefault();
   event.stopPropagation();
 
-  toggleFavoriteVenue(favoriteButton.dataset.favoriteVenueId);
+  if (favoriteHostButton) {
+    toggleFavoriteHost(favoriteHostButton.dataset.favoriteHostId);
+  } else if (favoriteVenueButton) {
+    toggleFavoriteVenue(favoriteVenueButton.dataset.favoriteVenueId);
+  }
 
   const list = filteredRaces();
   updateMarkers(list, false);
