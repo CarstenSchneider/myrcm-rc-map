@@ -1,0 +1,297 @@
+[
+  {
+    "id": "sk",
+    "name": "Sportkreis",
+    "shortName": "SK",
+    "displayName": "Sportkreis (SK)",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "SK",
+      "SK Lauf",
+      "SK-Lauf",
+      "DMC SK Lauf",
+      "DMC SK-Lauf",
+      "Sportkreis",
+      "Sportkreis Meisterschaft",
+      "Sportkreis-Meisterschaft"
+    ]
+  },
+  {
+    "id": "tec",
+    "name": "Tamiya Euro Cup",
+    "shortName": "TEC",
+    "displayName": "Tamiya Euro Cup (TEC)",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "TEC",
+      "Tamiya Euro Cup",
+      "Tamiya Euro-Cup",
+      "TAMIYA EURO-CUP",
+      "Tamiya Eurocup",
+      "Tamiya Euro Cup Qualifikation"
+    ]
+  },
+  {
+    "id": "tos",
+    "name": "ToniSport Onroad Series",
+    "shortName": "TOS",
+    "displayName": "ToniSport Onroad Series (TOS)",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "TOS",
+      "Tonisport Onroad Series",
+      "ToniSport Onroad Series",
+      "Tonisport Onroard Serie",
+      "ToniSport Onroard Serie",
+      "TOS & DMC SK",
+      "TOS Fun",
+      "TOS FWD",
+      "TOS Stock",
+      "TOS Modified",
+      "TOS F1"
+    ]
+  },
+  {
+    "id": "ets",
+    "name": "Euro Touring Series",
+    "shortName": "ETS",
+    "displayName": "Euro Touring Series (ETS)",
+    "scope": "international",
+    "source": "curated",
+    "aliases": [
+      "ETS",
+      "Euro Touring Series",
+      "Cayote Euro Touring Series"
+    ]
+  },
+  {
+    "id": "ens",
+    "name": "Euro Nitro Series",
+    "shortName": "ENS",
+    "displayName": "Euro Nitro Series (ENS)",
+    "scope": "international",
+    "source": "curated",
+    "aliases": [
+      "ENS",
+      "Euro Nitro Series",
+      "Euro NITRO Series",
+      "Euro NITRO Series Onroad"
+    ]
+  },
+  {
+    "id": "eos",
+    "name": "Euro Offroad Series",
+    "shortName": "EOS",
+    "displayName": "Euro Offroad Series (EOS)",
+    "scope": "international",
+    "source": "curated",
+    "aliases": [
+      "EOS",
+      "Euro Offroad Series"
+    ]
+  },
+  {
+    "id": "btm",
+    "name": "Berlin Touring Masters",
+    "shortName": "BTM",
+    "displayName": "Berlin Touring Masters (BTM)",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "BTM",
+      "BTM Lauf",
+      "Berlin Touring Masters"
+    ]
+  },
+  {
+    "id": "ostmasters",
+    "name": "Ostmasters",
+    "displayName": "Ostmasters",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Ostmasters",
+      "OstMasters",
+      "Ostmasterslauf",
+      "OstMasters Lauf",
+      "SK Lauf Ost + OstMasters"
+    ]
+  },
+  {
+    "id": "rck-challenge",
+    "name": "RCK Challenge",
+    "displayName": "RCK Challenge",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "RCK Challenge",
+      "RCK-Challenge",
+      "RCK Challenge Süd",
+      "RCK Challenge SÜD",
+      "RCK-Challenge BS"
+    ]
+  },
+  {
+    "id": "rck-kleinserie",
+    "name": "RCK Kleinserie",
+    "displayName": "RCK Kleinserie",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "RCK Kleinserie",
+      "RCK-Kleinserie",
+      "RCK KleinSerie",
+      "RCK-KleinSerie",
+      "RCKleinserie",
+      "Kleinserie GT-Sport",
+      "Kleinserie Porsche Cup",
+      "KleinSerie LMH"
+    ]
+  },
+  {
+    "id": "tamico-offroad-cup",
+    "name": "Tamico Offroad Cup",
+    "displayName": "Tamico Offroad Cup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Tamico Offroad Cup",
+      "TAMICO Offroad Cup",
+      "TAMICO-Offroad-Cup",
+      "TAMICO-OFFROAD-CUP"
+    ]
+  },
+  {
+    "id": "alpencup",
+    "name": "Alpencup",
+    "displayName": "Alpencup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Alpencup",
+      "Alpencuplauf",
+      "Alpencup Wertungslauf",
+      "Formel Alpencup",
+      "GTE 1/8 Alpencup",
+      "VG8 Alpencup",
+      "VG10 scale Alpencup",
+      "Alpencup VG 10"
+    ]
+  },
+  {
+    "id": "nrw-cup",
+    "name": "NRW-Cup",
+    "displayName": "NRW-Cup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "NRW-Cup",
+      "NRW Cup",
+      "NRW Offroad Cup",
+      "NRW Off-Road-Cup",
+      "NRW-Cup OR8",
+      "NRW-Cup ORE8",
+      "NRW-Cup ORT",
+      "NRW-Cup ORET"
+    ]
+  },
+  {
+    "id": "hessencup",
+    "name": "Hessencup",
+    "displayName": "Hessencup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Hessencup",
+      "Hessencup Lauf",
+      "Hessencup-Lauf",
+      "Hessencup Kids"
+    ]
+  },
+  {
+    "id": "sueddeutschlandcup",
+    "name": "Süddeutschlandcup",
+    "shortName": "SDC",
+    "displayName": "Süddeutschlandcup (SDC)",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Süddeutschlandcup",
+      "Süddeutschland-Cup",
+      "SDC",
+      "SDC Offroad"
+    ]
+  },
+  {
+    "id": "le-trophy",
+    "name": "LE-Trophy",
+    "displayName": "LE-Trophy",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "LE-Trophy",
+      "LE Trophy",
+      "LE-Trophy ON-ROAD",
+      "LE-Trophy Offroad"
+    ]
+  },
+  {
+    "id": "mac-challenge",
+    "name": "MAC-Challenge",
+    "displayName": "MAC-Challenge",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "MAC-Challenge",
+      "MAC Challenge",
+      "Lauf MAC-Challenge"
+    ]
+  },
+  {
+    "id": "jumpstartrc-trophy",
+    "name": "JumpstartRC Trophy",
+    "displayName": "JumpstartRC Trophy",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "JumpstartRC Trophy"
+    ]
+  },
+  {
+    "id": "speed-masters",
+    "name": "Speed Masters",
+    "displayName": "Speed Masters",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Speed Masters",
+      "Speed Masters Lauf",
+      "Speed Masters Runde"
+    ]
+  },
+  {
+    "id": "lrp-offroad-challenge",
+    "name": "LRP Offroad Challenge",
+    "displayName": "LRP Offroad Challenge",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "LRP Offroad Challenge",
+      "LRP Challenge"
+    ]
+  },
+  {
+    "id": "carrera-explorer-cup",
+    "name": "Carrera Explorer Cup",
+    "displayName": "Carrera Explorer Cup",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "Carrera Explorer Cup",
+      "Carrea Explorer Cup"
+    ]
+  }
+]
