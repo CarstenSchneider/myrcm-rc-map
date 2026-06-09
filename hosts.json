@@ -576,6 +576,12 @@
     "myrcmOrgId": "44811"
   },
   {
+    "id": "msc-hansa-heilbronn-e-v",
+    "name": "MSC Hansa Heilbronn e.V.",
+    "website": "https://www.msc-hansa.de/",
+    "myrcmOrgId": "116"
+  },
+  {
     "id": "msc-herrenhaide",
     "name": "MSC Herrenhaide",
     "website": "http://www.msc-herrenhaide.de/",
@@ -616,12 +622,6 @@
     "name": "MSC Ulm e.V.",
     "website": "",
     "myrcmOrgId": "42113"
-  },
-  {
-    "id": "msc-hansa-heilbronn-e-v",
-    "name": "MSC Hansa Heilbronn e.V.",
-    "website": "https://www.msc-hansa.de/",
-    "myrcmOrgId": "116"
   },
   {
     "id": "msg-niesky-e-v",
