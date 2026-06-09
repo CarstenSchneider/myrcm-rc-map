@@ -1,114 +1,10 @@
 [
   {
-    "hostId": "mac-siersburg-e-v",
-    "hostName": "MAC Siersburg e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "48023",
-    "possibleVenue": "Dillingen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "mcrt-schaafheim-e-v",
-    "hostName": "MCRT-Schaafheim e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "50727",
-    "possibleVenue": "Großostheim",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "modellclub-flensburg-e-v",
     "hostName": "Modellclub Flensburg e.V",
     "source": "myrcm",
     "myrcmOrgId": "42405",
     "possibleVenue": "Flensburg",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msc-halle-e-v",
-    "hostName": "MSC Halle e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "44811",
-    "possibleVenue": "Halle",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msc-herrenhaide",
-    "hostName": "MSC Herrenhaide",
-    "source": "myrcm",
-    "myrcmOrgId": "64487",
-    "possibleVenue": "Burgstädt",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msc-hockendorf-e-v",
-    "hostName": "MSC Höckendorf e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "56487",
-    "possibleVenue": "Klingenberg",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msc-osterhofen-e-v",
-    "hostName": "MSC Osterhofen e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "50019",
-    "possibleVenue": "Osterhofen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msg-niesky-e-v",
-    "hostName": "MSG Niesky e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "46202",
-    "possibleVenue": "Rothenburg/Oberlausitz",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "mss-am-sagewerk",
-    "hostName": "MSS \"Am Sägewerk\"",
-    "source": "myrcm",
-    "myrcmOrgId": "49105",
-    "possibleVenue": "Seifhennersdorf",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "msv-hurtgenwald-e-v",
-    "hostName": "MSV Hürtgenwald e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "15511",
-    "possibleVenue": "Hürtgenwald",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "nitromaniacs-e-v",
-    "hostName": "NitroManiacs e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "15092",
-    "possibleVenue": "Mönchengladbach",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "orc-b-gottingen-e-v",
-    "hostName": "ORC-B Göttingen e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "36113",
-    "possibleVenue": "Göttingen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rc-car-freunde-emsdetten-e-v",
-    "hostName": "RC Car Freunde Emsdetten e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "55427",
-    "possibleVenue": "Emsdetten",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rc-fun-racer-e-v",
-    "hostName": "RC Fun Racer e.V",
-    "source": "myrcm",
-    "myrcmOrgId": "44059",
-    "possibleVenue": "Velbert",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
@@ -125,14 +21,6 @@
     "source": "myrcm",
     "myrcmOrgId": "6492",
     "possibleVenue": "Remscheid",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rco-ottendorf-okrilla-e-v",
-    "hostName": "RCO Ottendorf Okrilla e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "45728",
-    "possibleVenue": "Ottendorf-Okrilla",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {

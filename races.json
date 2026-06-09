@@ -259,9 +259,9 @@
   },
   {
     "id": "msc-halle-e-v-2025-06-14-myrcm-event-88598",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-halle-e-v",
+    "venueName": "MSC Halle e.V.",
+    "venueLocation": "Halle",
     "hostId": "msc-halle-e-v",
     "hostName": "MSC Halle e.V.",
     "name": "SK Lauf und Sachsencup 2025",
@@ -299,9 +299,9 @@
   },
   {
     "id": "orc-b-gottingen-e-v-2025-06-14-myrcm-event-87892",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "orc-b-gottingen-e-v",
+    "venueName": "ORC-B Göttingen e.V.",
+    "venueLocation": "Göttingen",
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "name": "SK-Lauf ORE Sportkreis Nord - Warmup DM 4WD/TR2",
@@ -2034,9 +2034,9 @@
   },
   {
     "id": "msg-niesky-e-v-2025-07-05-myrcm-event-87882",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msg-niesky-e-v",
+    "venueName": "MSG Niesky e.V.",
+    "venueLocation": "Rothenburg/Oberlausitz",
     "hostId": "msg-niesky-e-v",
     "hostName": "MSG Niesky e.V.",
     "name": "MSG Nachtrennen Night Race 2025",
@@ -4224,9 +4224,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2025-07-27-myrcm-event-89557",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "RCK Challange",
@@ -5243,9 +5243,9 @@
   },
   {
     "id": "orc-b-gottingen-e-v-2025-08-15-myrcm-event-88281",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "orc-b-gottingen-e-v",
+    "venueName": "ORC-B Göttingen e.V.",
+    "venueLocation": "Göttingen",
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "name": "Deutsche Meisterschaft 2025 ORE4WD, ORE4WDST & ORETR2",
@@ -6281,9 +6281,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2025-08-29-myrcm-event-90154",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "RCK Challenge Deutsche Meisterschaft",
@@ -6948,9 +6948,9 @@
   },
   {
     "id": "nitromaniacs-e-v-2025-09-06-myrcm-event-90382",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "nitromaniacs-e-v",
+    "venueName": "NitroManiacs e.V.",
+    "venueLocation": "Mönchengladbach",
     "hostId": "nitromaniacs-e-v",
     "hostName": "NitroManiacs e.V.",
     "name": "5. NRW-Cup 2025",
@@ -7237,9 +7237,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2025-09-07-myrcm-event-90383",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "GP von Höckendorf - Sommer-Cup",
@@ -7671,9 +7671,9 @@
   },
   {
     "id": "rco-ottendorf-okrilla-e-v-2025-09-13-myrcm-event-89667",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rco-ottendorf-okrilla-e-v",
+    "venueName": "RCO Ottendorf-Okrilla e.V.",
+    "venueLocation": "Ottendorf-Okrilla",
     "hostId": "rco-ottendorf-okrilla-e-v",
     "hostName": "RCO Ottendorf Okrilla e.V.",
     "name": "6.Lauf Sachsencup 2025",
@@ -8950,9 +8950,9 @@
   },
   {
     "id": "msv-hurtgenwald-e-v-2025-09-27-myrcm-event-91098",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msv-hurtgenwald-e-v",
+    "venueName": "MSV Hürtgenwald e.V.",
+    "venueLocation": "Hürtgenwald",
     "hostId": "msv-hurtgenwald-e-v",
     "hostName": "MSV Hürtgenwald e.V.",
     "name": "5. NRW-Cup 2025",
@@ -10209,9 +10209,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-10-05-myrcm-event-90545",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "Green Hell Winter Cup 25/26 I",
@@ -10567,9 +10567,9 @@
   },
   {
     "id": "orc-b-gottingen-e-v-2025-10-11-myrcm-event-90149",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "orc-b-gottingen-e-v",
+    "venueName": "ORC-B Göttingen e.V.",
+    "venueLocation": "Göttingen",
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "name": "Warm-Up Oldschool RC Euro Masters 2026",
@@ -10751,9 +10751,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-10-12-myrcm-event-90544",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "EmsTrophy 2025 IV",
@@ -10797,9 +10797,9 @@
   },
   {
     "id": "mac-siersburg-e-v-2025-10-12-myrcm-event-90700",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Saar Racing Series #2",
@@ -11337,9 +11337,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-10-19-myrcm-event-90553",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "Töftes Cup 25/26 I",
@@ -11814,9 +11814,9 @@
   },
   {
     "id": "mac-siersburg-e-v-2025-11-01-myrcm-event-91167",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Saar Racing Series #3 SK-Lauf",
@@ -12323,9 +12323,9 @@
   },
   {
     "id": "msv-hurtgenwald-e-v-2025-11-09-myrcm-event-91397",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msv-hurtgenwald-e-v",
+    "venueName": "MSV Hürtgenwald e.V.",
+    "venueLocation": "Hürtgenwald",
     "hostId": "msv-hurtgenwald-e-v",
     "hostName": "MSV Hürtgenwald e.V.",
     "name": "1. HK-Cup 2025/2026",
@@ -12446,9 +12446,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-11-09-myrcm-event-90546",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "Green Hell Winter Cup 25/26 II",
@@ -12965,9 +12965,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2025-11-16-myrcm-event-93367",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "GP von Höckendorf - Herbst-Cup",
@@ -13126,9 +13126,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-11-23-myrcm-event-90552",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "Töftes Cup 25/26 II",
@@ -13534,9 +13534,9 @@
   },
   {
     "id": "orc-b-gottingen-e-v-2025-12-06-myrcm-event-91682",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "orc-b-gottingen-e-v",
+    "venueName": "ORC-B Göttingen e.V.",
+    "venueLocation": "Göttingen",
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "name": "SK-Lauf ORE Sportkreis Nord und Freundschaftsrennen",
@@ -13586,9 +13586,9 @@
   },
   {
     "id": "msv-hurtgenwald-e-v-2025-12-07-myrcm-event-92141",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msv-hurtgenwald-e-v",
+    "venueName": "MSV Hürtgenwald e.V.",
+    "venueLocation": "Hürtgenwald",
     "hostId": "msv-hurtgenwald-e-v",
     "hostName": "MSV Hürtgenwald e.V.",
     "name": "2. HK-Cup 2025/2026",
@@ -13685,9 +13685,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-12-07-myrcm-event-90550",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "Green Hell Winter Cup 25/26 III",
@@ -13715,9 +13715,9 @@
   },
   {
     "id": "mac-siersburg-e-v-2025-12-07-myrcm-event-92072",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Saar Racing Series #4 Finale",
@@ -14323,9 +14323,9 @@
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-12-21-myrcm-event-90554",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-car-freunde-emsdetten-e-v",
+    "venueName": "RC Car Freunde Emsdetten e.V.",
+    "venueLocation": "Emsdetten",
     "hostId": "rc-car-freunde-emsdetten-e-v",
     "hostName": "RC Car Freunde Emsdetten e.V.",
     "name": "Töftes Cup 25/26 III",
@@ -14859,9 +14859,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2026-01-04-myrcm-event-93274",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "Tamiya Euro-Cup Qualifikationslauf",
@@ -14922,9 +14922,9 @@
   },
   {
     "id": "msc-herrenhaide-2026-01-10-myrcm-event-92595",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-herrenhaide",
+    "venueName": "MSC Herrenhaide",
+    "venueLocation": "Burgstädt",
     "hostId": "msc-herrenhaide",
     "hostName": "MSC Herrenhaide",
     "name": "EGC Race 4 of 6 -- Season 9",
@@ -15010,9 +15010,9 @@
   },
   {
     "id": "orc-b-gottingen-e-v-2026-01-10-myrcm-event-92784",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "orc-b-gottingen-e-v",
+    "venueName": "ORC-B Göttingen e.V.",
+    "venueLocation": "Göttingen",
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "name": "New Year Race 2026",
@@ -15092,9 +15092,9 @@
   },
   {
     "id": "msv-hurtgenwald-e-v-2026-01-11-myrcm-event-92739",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msv-hurtgenwald-e-v",
+    "venueName": "MSV Hürtgenwald e.V.",
+    "venueLocation": "Hürtgenwald",
     "hostId": "msv-hurtgenwald-e-v",
     "hostName": "MSV Hürtgenwald e.V.",
     "name": "3. HK-Cup 2025/2026",
@@ -16051,9 +16051,9 @@
   },
   {
     "id": "rc-fun-racer-e-v-2026-01-25-myrcm-event-93060",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-fun-racer-e-v",
+    "venueName": "RC Fun Racer e.V.",
+    "venueLocation": "Velbert",
     "hostId": "rc-fun-racer-e-v",
     "hostName": "RC Fun Racer e.V",
     "name": "RC Fun Racer - 12 Liga by Mobgums / SK Lauf West",
@@ -16211,9 +16211,9 @@
   },
   {
     "id": "rc-fun-racer-e-v-2026-01-30-myrcm-event-93059",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-fun-racer-e-v",
+    "venueName": "RC Fun Racer e.V.",
+    "venueLocation": "Velbert",
     "hostId": "rc-fun-racer-e-v",
     "hostName": "RC Fun Racer e.V",
     "name": "Friday Night Race by RC Fun Racer Start 19:00 Uhr",
@@ -16523,9 +16523,9 @@
   },
   {
     "id": "msv-hurtgenwald-e-v-2026-02-08-myrcm-event-93537",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msv-hurtgenwald-e-v",
+    "venueName": "MSV Hürtgenwald e.V.",
+    "venueLocation": "Hürtgenwald",
     "hostId": "msv-hurtgenwald-e-v",
     "hostName": "MSV Hürtgenwald e.V.",
     "name": "4. HK-Cup 2025/2026",
@@ -16597,9 +16597,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-02-08-myrcm-event-94214",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "RCK Kleinserie Schaafheim 2026-02-08",
@@ -17057,9 +17057,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-02-21-myrcm-event-94515",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "MCRT Wintercup 2026-02-21",
@@ -17098,9 +17098,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-02-21-myrcm-event-94624",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "MCRT Wintercup 2026-02-21",
@@ -17221,9 +17221,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2026-02-22-myrcm-event-94484",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "GP von Höckendorf - Winter Cup",
@@ -17510,9 +17510,9 @@
   },
   {
     "id": "rc-fun-racer-e-v-2026-02-27-myrcm-event-94059",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-fun-racer-e-v",
+    "venueName": "RC Fun Racer e.V.",
+    "venueLocation": "Velbert",
     "hostId": "rc-fun-racer-e-v",
     "hostName": "RC Fun Racer e.V",
     "name": "Friday Night Race by RC Fun Racer Start 19:00 Uhr",
@@ -17899,9 +17899,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-03-01-myrcm-event-92026",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "Hudy Racing Series Schaafheim",
@@ -17944,9 +17944,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-03-01-myrcm-event-94867",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "Hudy Racing Series Schaafheim",
@@ -18045,9 +18045,9 @@
   },
   {
     "id": "msc-herrenhaide-2026-03-02-myrcm-event-94710",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-herrenhaide",
+    "venueName": "MSC Herrenhaide",
+    "venueLocation": "Burgstädt",
     "hostId": "msc-herrenhaide",
     "hostName": "MSC Herrenhaide",
     "name": "Test",
@@ -18295,9 +18295,9 @@
   },
   {
     "id": "mac-siersburg-e-v-2026-03-07-myrcm-event-94379",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Speed Masters & DMC SK Lauf Mitte",
@@ -18856,9 +18856,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-03-15-myrcm-event-92045",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "Tamiya Eurocup Schaafheim",
@@ -18905,9 +18905,9 @@
   },
   {
     "id": "mcrt-schaafheim-e-v-2026-03-15-myrcm-event-95405",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mcrt-schaafheim-e-v",
+    "venueName": "MCRT-Schaafheim e.V.",
+    "venueLocation": "Großostheim",
     "hostId": "mcrt-schaafheim-e-v",
     "hostName": "MCRT-Schaafheim e.V.",
     "name": "Tamiya Eurocup Schaafheim",
@@ -19340,9 +19340,9 @@
   },
   {
     "id": "rc-fun-racer-e-v-2026-03-27-myrcm-event-94921",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rc-fun-racer-e-v",
+    "venueName": "RC Fun Racer e.V.",
+    "venueLocation": "Velbert",
     "hostId": "rc-fun-racer-e-v",
     "hostName": "RC Fun Racer e.V",
     "name": "Friday Night Race by RC Fun Racer Start 19:00 Uhr",
@@ -20045,9 +20045,9 @@
   },
   {
     "id": "mac-siersburg-e-v-2026-04-11-myrcm-event-95268",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "mac-siersburg-e-v",
+    "venueName": "MAC Siersburg e.V.",
+    "venueLocation": "Dillingen",
     "hostId": "mac-siersburg-e-v",
     "hostName": "MAC Siersburg e.V.",
     "name": "Saar Racing Series #1 + SK Wertung",
@@ -20593,9 +20593,9 @@
   },
   {
     "id": "msc-osterhofen-e-v-2026-04-18-myrcm-event-95666",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-osterhofen-e-v",
+    "venueName": "MSC Osterhofen e.V.",
+    "venueLocation": "Osterhofen",
     "hostId": "msc-osterhofen-e-v",
     "hostName": "MSC Osterhofen e.V.",
     "name": "3. SK-Lauf OR8/ ORE8 Sportkreis Süd 2026 und 1. Lauf zum SdC 2026",
@@ -21436,9 +21436,9 @@
   },
   {
     "id": "orc-b-gottingen-e-v-2026-04-25-myrcm-event-91920",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "orc-b-gottingen-e-v",
+    "venueName": "ORC-B Göttingen e.V.",
+    "venueLocation": "Göttingen",
     "hostId": "orc-b-gottingen-e-v",
     "hostName": "ORC-B Göttingen e.V.",
     "name": "Oldschool RC Euro Masters 2026",
@@ -22135,9 +22135,9 @@
   },
   {
     "id": "msg-niesky-e-v-2026-05-02-myrcm-event-94811",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msg-niesky-e-v",
+    "venueName": "MSG Niesky e.V.",
+    "venueLocation": "Rothenburg/Oberlausitz",
     "hostId": "msg-niesky-e-v",
     "hostName": "MSG Niesky e.V.",
     "name": "2. SK-Lauf Ost / Sachsencup bei der MSG Niesky",
@@ -23158,9 +23158,9 @@
   },
   {
     "id": "nitromaniacs-e-v-2026-05-09-myrcm-event-97269",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "nitromaniacs-e-v",
+    "venueName": "NitroManiacs e.V.",
+    "venueLocation": "Mönchengladbach",
     "hostId": "nitromaniacs-e-v",
     "hostName": "NitroManiacs e.V.",
     "name": "Anglühen 2026",
@@ -23566,9 +23566,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2026-05-10-myrcm-event-97253",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "Tamiya Euro-Cup Qualifikationslauf",
@@ -25020,9 +25020,9 @@
   },
   {
     "id": "rco-ottendorf-okrilla-e-v-2026-05-30-myrcm-event-96786",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "rco-ottendorf-okrilla-e-v",
+    "venueName": "RCO Ottendorf-Okrilla e.V.",
+    "venueLocation": "Ottendorf-Okrilla",
     "hostId": "rco-ottendorf-okrilla-e-v",
     "hostName": "RCO Ottendorf Okrilla e.V.",
     "name": "3. SK Lauf Ost / Sachsencup 2026",
@@ -25232,9 +25232,9 @@
   },
   {
     "id": "msv-hurtgenwald-e-v-2026-05-30-myrcm-event-96787",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msv-hurtgenwald-e-v",
+    "venueName": "MSV Hürtgenwald e.V.",
+    "venueLocation": "Hürtgenwald",
     "hostId": "msv-hurtgenwald-e-v",
     "hostName": "MSV Hürtgenwald e.V.",
     "name": "SK-Lauf + NORC 2026",
@@ -25390,10 +25390,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mss-am-sagewerk-2026-05-31-myrcm-event-96700",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "mss-am-saegewerk-2026-05-31-myrcm-event-96700",
+    "venueId": "mss-am-saegewerk",
+    "venueName": "MSS Am Sägewerk",
+    "venueLocation": "Seifhennersdorf",
     "hostId": "mss-am-sagewerk",
     "hostName": "MSS \"Am Sägewerk\"",
     "name": "2. Lauf Oberlausitzcup 2026",
@@ -25429,7 +25429,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-08"
+    "firstSeen": "2026-06-09"
   },
   {
     "id": "tsv-1871-augsburg-e-v-2026-05-31-myrcm-event-96025",
@@ -25531,9 +25531,9 @@
   },
   {
     "id": "msc-hockendorf-e-v-2026-05-31-myrcm-event-97808",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msc-hockendorf-e-v",
+    "venueName": "MSC Höckendorf e.V.",
+    "venueLocation": "Klingenberg",
     "hostId": "msc-hockendorf-e-v",
     "hostName": "MSC Höckendorf e.V.",
     "name": "GP von Höckendorf - Frühjahres-Cup",
@@ -26826,8 +26826,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": null,
     "classes": [
       {
@@ -26852,7 +26852,7 @@
       },
       {
         "name": "Tamiya Race-Truck",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Tamiya Stock",
@@ -26860,7 +26860,7 @@
       },
       {
         "name": "Tamiya Top-Stock",
-        "entries": 3
+        "entries": 4
       },
       "Tamiya TRF 17.5 / Gastklasse MCV Stock 17.5"
     ],
@@ -27354,8 +27354,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 28,
-    "registrationDisplay": "28",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": null,
     "classes": [
       {
@@ -27368,11 +27368,11 @@
       },
       {
         "name": "2WD Monster",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "2WD Pro Stock (\"blinky modus\")",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "4WD Buggy",
@@ -28126,8 +28126,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       {
@@ -28136,7 +28136,7 @@
       },
       {
         "name": "VG5TW",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "VG5SP",
@@ -28841,9 +28841,9 @@
   },
   {
     "id": "msg-niesky-e-v-2026-06-27-myrcm-event-95506",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "venueId": "msg-niesky-e-v",
+    "venueName": "MSG Niesky e.V.",
+    "venueLocation": "Rothenburg/Oberlausitz",
     "hostId": "msg-niesky-e-v",
     "hostName": "MSG Niesky e.V.",
     "name": "Nachtrennen MSG Niesky, OLC Lauf",
@@ -29124,17 +29124,20 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "SPC-Kids",
       {
         "name": "SPC-Porsche",
-        "entries": 3
+        "entries": 5
       },
       "SPC-Fronti",
-      "SPC-M-Chassis 4WD",
+      {
+        "name": "SPC-M-Chassis 4WD",
+        "entries": 1
+      },
       {
         "name": "SPC-TW 1:10 -Fun 17,5",
         "entries": 2
@@ -29165,8 +29168,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": null,
     "classes": [
       {
@@ -29179,15 +29182,15 @@
       },
       {
         "name": "EGTWHO",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "EGTWSP",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "EGTWFR",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -29809,8 +29812,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
@@ -29829,7 +29832,7 @@
       },
       {
         "name": "Tamiya Euro Cup Top Stock 4WD",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Tamiya Euro Cup Gentlemen 4WD",
@@ -29838,7 +29841,7 @@
       "Tamiya Euro Cup Euro-TW 2WD/4WD",
       {
         "name": "Tamiya TRF",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -30018,8 +30021,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 89,
-    "registrationDisplay": "89",
+    "registrationCount": 90,
+    "registrationDisplay": "90",
     "note": null,
     "classes": [
       {
@@ -30032,7 +30035,7 @@
       },
       {
         "name": "2WD Buggy Standard",
-        "entries": 38
+        "entries": 39
       },
       {
         "name": "2WD Buggy",
@@ -30400,13 +30403,13 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 313,
-    "registrationDisplay": "313",
+    "registrationCount": 315,
+    "registrationDisplay": "315",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "FlySky Frontwheel",
-        "entries": 57
+        "entries": 58
       },
       {
         "name": "Hobbywing 21.5 Stock",
@@ -30414,7 +30417,7 @@
       },
       {
         "name": "1up Racing 40+",
-        "entries": 54
+        "entries": 55
       },
       {
         "name": "Matrix Formula",
@@ -30641,6 +30644,36 @@
     "classes": [],
     "documents": [],
     "firstSeen": "2026-06-08"
+  },
+  {
+    "id": "schweriner-sc-breitensport-e-v-2026-07-25-myrcm-event-98152",
+    "venueId": "schweriner-sc-breitensport-e-v",
+    "venueName": "Schweriner SC Breitensport e.V.",
+    "venueLocation": "Schwerin",
+    "hostId": "schweriner-sc-breitensport-e-v",
+    "hostName": "Schweriner SC Breitensport e.V.",
+    "name": "Vintage Race 2026 / Schwerin",
+    "from": "2026-07-25",
+    "to": "2026-07-26",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98152&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66122&pLa=en&dId%5BE%5D=98152&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98152&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": null,
+    "classes": [
+      "Vintage 2WD - bis 2004",
+      "Vintage 4WD - bis 2004",
+      "Vintage Truggy - bis 2004",
+      "ToTu - 2WD"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-09"
   },
   {
     "id": "tsv-1871-augsburg-e-v-2026-07-26-myrcm-event-96027",
