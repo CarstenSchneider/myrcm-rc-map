@@ -619,7 +619,7 @@
   },
   {
     "id": "msc-hansa-heilbronn-e-v",
-    "name": "MSC-Hansa Heilbronn e.V.",
+    "name": "MSC Hansa Heilbronn e.V.",
     "website": "https://www.msc-hansa.de/",
     "myrcmOrgId": "116"
   },
@@ -745,7 +745,7 @@
   },
   {
     "id": "rc-fun-racer-e-v",
-    "name": "RC Fun Racer e.V",
+    "name": "RC Fun Racer e.V.",
     "website": "https://rc-fun-racer.de/",
     "myrcmOrgId": "44059"
   },
@@ -883,7 +883,7 @@
   },
   {
     "id": "rco-ottendorf-okrilla-e-v",
-    "name": "RCO Ottendorf Okrilla e.V.",
+    "name": "RCO Ottendorf-Okrilla e.V.",
     "website": "https://www.rco-ottendorf-okrilla.de/",
     "myrcmOrgId": "45728"
   },
@@ -1021,7 +1021,7 @@
   },
   {
     "id": "tsv-mariendorf",
-    "name": "TSV M97 Berlin RCCR",
+    "name": "TSV Mariendorf 1897 RCCR",
     "website": "http://www.msv06-rccar.de/",
     "myrcmOrgId": "18244"
   },
