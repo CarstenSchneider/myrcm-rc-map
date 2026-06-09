@@ -1,52 +1,44 @@
-name: Deploy data to Hetzner DEV
+name: Deploy Data DEV to Hetzner
 
 on:
-  workflow_run:
-    workflows:
-      - Import MyRCM races
-      - Import RCK
-    types:
-      - completed
-  workflow_dispatch:
+workflow_dispatch:
 
 jobs:
-  deploy-data-dev:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
+deploy:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+```
+steps:
+  - name: Checkout repository (DEV branch)
+    uses: actions/checkout@v4
+    with:
+      ref: dev
 
-      - name: Prepare data files
-        run: |
-          mkdir -p .deploy-data
-          cp venues.json .deploy-data/
-          cp races.json .deploy-data/
-          cp rck-races.json .deploy-data/
-          cp rck-venue-candidates.json .deploy-data/
-          cp rck-unmatched-venues.json .deploy-data/
-          cp myrcm-hosts-germany.json .deploy-data/
-          cp hosts.json .deploy-data/
+  - name: Prepare data files
+    run: |
+      mkdir -p .deploy-data
+      cp venues.json .deploy-data/
+      cp races.json .deploy-data/
+      cp rck-races.json .deploy-data/
+      cp rck-venue-candidates.json .deploy-data/
+      cp rck-unmatched-venues.json .deploy-data/
+      cp myrcm-hosts-germany.json .deploy-data/
+      cp hosts.json .deploy-data/
 
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
+  - name: Install lftp
+    run: |
+      sudo apt-get update
+      sudo apt-get install -y lftp
 
-      - name: Upload data files to DEV
-        env:
-          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
-          HETZNER_USER: ${{ secrets.HETZNER_USER }}
-          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
-          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
-        run: |
-          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" -e "
-          set sftp:auto-confirm yes
-          put -O ./rcracemap-dev .deploy-data/venues.json
-          put -O ./rcracemap-dev .deploy-data/races.json
-          put -O ./rcracemap-dev .deploy-data/rck-races.json
-          put -O ./rcracemap-dev .deploy-data/rck-venue-candidates.json
-          put -O ./rcracemap-dev .deploy-data/rck-unmatched-venues.json
-          put -O ./rcracemap-dev .deploy-data/myrcm-hosts-germany.json
-          put -O ./rcracemap-dev .deploy-data/hosts.json
-          bye
-          "
+  - name: Upload data to Hetzner DEV
+    env:
+      FTP_HOST: ${{ secrets.FTP_HOST }}
+      FTP_USER: ${{ secrets.FTP_USER }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    run: |
+      lftp -u "$FTP_USER","$FTP_PASSWORD" "$FTP_HOST" <<EOF
+      set ssl:verify-certificate no
+      mirror -R .deploy-data ./rcracemap-dev --verbose
+      bye
+      EOF
+```
