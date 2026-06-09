@@ -81,6 +81,14 @@ const excludedEventTerms = [
   "kartarena",
   "kart arena",
   "motodrom",
+
+  "slotcar",
+  "slot car",
+  "slotcars",
+  "slot cars",
+  "carrera explorer cup",
+  "slottis supreme masters",
+
   "standby"
 ];
 
