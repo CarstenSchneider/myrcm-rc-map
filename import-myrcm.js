@@ -875,11 +875,13 @@ function venueSearchTerms(seed = {}) {
   const terms = [
     seed.name,
     seed.id,
-    seed.city,
-    seed.location,
     seed.address,
-    seed.postalCode,
-    ...(Array.isArray(seed.aliases) ? seed.aliases : [])
+    ...(Array.isArray(seed.aliases)
+      ? seed.aliases.filter(alias => {
+          const value = normalizedVenueMatchText(alias);
+          return value.length >= 4 && value !== normalizedVenueMatchText(seed.city || "");
+        })
+      : [])
   ]
     .filter(Boolean)
     .map(normalizedVenueMatchText)
