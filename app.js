@@ -1342,7 +1342,7 @@ function filteredRaces() {
     .filter(matchesSelectedSeries)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => {
-      const favoriteOrder = Number(isFavoriteRaceVenue(b)) - Number(isFavoriteRaceVenue(a));
+      const favoriteOrder = Number(isFavoriteRaceHost(b)) - Number(isFavoriteRaceHost(a));
       if (favoriteOrder !== 0) return favoriteOrder;
       return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
     });
