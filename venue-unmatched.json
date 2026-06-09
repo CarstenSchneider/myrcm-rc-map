@@ -8,52 +8,12 @@
     "reason": "no confirmed venue seed for MyRCM host"
   },
   {
-    "hostId": "catz-sports-gmbh",
-    "hostName": "Catz-Sports GmbH",
-    "source": "myrcm",
-    "myrcmOrgId": "62",
-    "possibleVenue": "Stapelfeld",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "cc-racing",
     "hostName": "CC-Racing",
     "source": "myrcm",
     "myrcmOrgId": "1152",
     "possibleVenue": "Hamburg",
     "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "conrad-electronic-se",
-    "hostName": "Conrad Electronic SE",
-    "source": "myrcm",
-    "myrcmOrgId": "13506",
-    "possibleVenue": "Hirschau",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "dershoemaker-racing-events",
-    "hostName": "DerShoemaker Racing Events",
-    "source": "myrcm",
-    "myrcmOrgId": "17465",
-    "possibleVenue": "Hörstel",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "ets",
-    "hostName": "ETS",
-    "source": "myrcm",
-    "myrcmOrgId": "2047",
-    "possibleVenue": "Andernach",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "fs-timing",
-    "hostName": "FS-Timing",
-    "source": "myrcm",
-    "myrcmOrgId": "49540",
-    "possibleVenue": "Trebur",
-    "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
     "hostId": "fun-center-ch-gmbh-jestetten",
@@ -69,30 +29,6 @@
     "source": "myrcm",
     "myrcmOrgId": "52767",
     "possibleVenue": "Sonneberg",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "heiner-martin",
-    "hostName": "Heiner Martin",
-    "source": "myrcm",
-    "myrcmOrgId": "458",
-    "possibleVenue": "Ulm",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "kloft-timing",
-    "hostName": "KLOFT-TIMING",
-    "source": "myrcm",
-    "myrcmOrgId": "17649",
-    "possibleVenue": "Reutlingen - Sondelfingen",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "lrp-electronic-gmbh",
-    "hostName": "LRP electronic GmbH",
-    "source": "myrcm",
-    "myrcmOrgId": "892",
-    "possibleVenue": "Schorndorf",
     "reason": "no confirmed venue seed for MyRCM host"
   },
   {
@@ -141,14 +77,6 @@
     "source": "myrcm",
     "myrcmOrgId": "50727",
     "possibleVenue": "Großostheim",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "md-timing",
-    "hostName": "MD-Timing",
-    "source": "myrcm",
-    "myrcmOrgId": "33838",
-    "possibleVenue": "Niederkrüchten",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
@@ -246,14 +174,6 @@
     "myrcmOrgId": "15511",
     "possibleVenue": "Hürtgenwald",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "nitro-sud",
-    "hostName": "Nitro Süd",
-    "source": "myrcm",
-    "myrcmOrgId": "34185",
-    "possibleVenue": "",
-    "reason": "no confirmed venue seed for MyRCM host"
   },
   {
     "hostId": "nitromaniacs-e-v",
@@ -408,22 +328,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-racers-toys-shop",
-    "hostName": "RC Racers + Toys Shop",
-    "source": "myrcm",
-    "myrcmOrgId": "47444",
-    "possibleVenue": "Bad Berneck",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rc-car-shop-racecrew",
-    "hostName": "RC-Car Shop RaceCrew",
-    "source": "myrcm",
-    "myrcmOrgId": "175",
-    "possibleVenue": "Erftstadt",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "rccars-bergisch-born-e-v",
     "hostName": "RCCars Bergisch-Born e.V.",
     "source": "myrcm",
@@ -438,22 +342,6 @@
     "myrcmOrgId": "45728",
     "possibleVenue": "Ottendorf-Okrilla",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "sator-events",
-    "hostName": "Sator Events",
-    "source": "myrcm",
-    "myrcmOrgId": "43682",
-    "possibleVenue": "Bühl",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "schneider-timing-service",
-    "hostName": "Schneider-Timing-Service",
-    "source": "myrcm",
-    "myrcmOrgId": "83",
-    "possibleVenue": "Lauchheim",
-    "reason": "no confirmed venue seed for MyRCM host"
   },
   {
     "hostId": "slottis-supreme-masters",
@@ -472,59 +360,11 @@
     "reason": "no confirmed venue seed for MyRCM host"
   },
   {
-    "hostId": "suddeutschland-cup",
-    "hostName": "Süddeutschland-Cup",
-    "source": "myrcm",
-    "myrcmOrgId": "60911",
-    "possibleVenue": "Windach",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "team-dabo",
-    "hostName": "Team Dabo",
-    "source": "myrcm",
-    "myrcmOrgId": "36386",
-    "possibleVenue": "Warendorf",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "time4fun",
-    "hostName": "Time4Fun",
-    "source": "myrcm",
-    "myrcmOrgId": "29586",
-    "possibleVenue": "Idar-Oberstein",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "tonisport-gmbh",
-    "hostName": "ToniSport GmbH",
-    "source": "myrcm",
-    "myrcmOrgId": "24531",
-    "possibleVenue": "Andernach",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
-    "hostId": "trackside",
-    "hostName": "Trackside",
-    "source": "myrcm",
-    "myrcmOrgId": "36437",
-    "possibleVenue": "Erlangen",
-    "reason": "no confirmed venue seed for MyRCM host"
-  },
-  {
     "hostId": "tsv-gelenau-e-v",
     "hostName": "TSV Gelenau e.V.",
     "source": "myrcm",
     "myrcmOrgId": "30389",
     "possibleVenue": "Gelenau/Erzgebirge",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "ub-timing",
-    "hostName": "ub.timing",
-    "source": "myrcm",
-    "myrcmOrgId": "18409",
-    "possibleVenue": "Adenau",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
