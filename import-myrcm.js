@@ -83,6 +83,40 @@ const excludedEventTerms = [
   "standby"
 ];
 
+const ignoredUnmatchedHostTerms = [
+  "ets",
+  "euro touring series",
+  "fs-timing",
+  "md-timing",
+  "ub.timing",
+  "ub timing",
+  "kloft-timing",
+  "kloft timing",
+  "schneider-timing",
+  "schneider timing",
+  "time4fun",
+  "trackside",
+  "tonisport",
+  "toni sport",
+  "sator events",
+  "süddeutschland-cup",
+  "suddeutschland-cup",
+  "nitro süd",
+  "nitro sud",
+  "conrad electronic",
+  "lrp electronic",
+  "dershoemaker",
+  "der shoemaker",
+  "catz-sports",
+  "catz sports",
+  "team dabo",
+  "rc racers + toys shop",
+  "rc racers toys shop",
+  "rc-car shop racecrew",
+  "rc car shop racecrew",
+  "heiner martin"
+];
+
 const invalidEventNames = [
   "sign up to this event",
   "registration",
@@ -117,6 +151,35 @@ function isExcludedHost(host) {
 function isExcludedEvent(name) {
   const lower = name.toLowerCase();
   return excludedEventTerms.some(term => lower.includes(term));
+}
+
+function normalizedIgnoredHostText(value = "") {
+  return String(value ?? "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/[^a-z0-9+.-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isIgnoredUnmatchedHost(hostOrRecord = {}) {
+  const text = normalizedIgnoredHostText([
+    hostOrRecord.hostName,
+    hostOrRecord.name,
+    hostOrRecord.hostId,
+    hostOrRecord.id,
+    hostOrRecord.possibleVenue
+  ].filter(Boolean).join(" "));
+
+  return ignoredUnmatchedHostTerms.some(term => {
+    const normalizedTerm = normalizedIgnoredHostText(term);
+    return normalizedTerm && text.includes(normalizedTerm);
+  });
 }
 
 function parseDate(value) {
@@ -885,11 +948,15 @@ function mergeUnmatched(existing = [], imported = []) {
   const byKey = new Map();
 
   for (const item of existing || []) {
+    if (item?.source === "myrcm" && isIgnoredUnmatchedHost(item)) continue;
+
     const key = `${item.source || ""}|${item.hostId || ""}|${item.myrcmOrgId || ""}|${item.possibleVenue || ""}`;
     byKey.set(key, item);
   }
 
   for (const item of imported || []) {
+    if (item?.source === "myrcm" && isIgnoredUnmatchedHost(item)) continue;
+
     const key = `${item.source || ""}|${item.hostId || ""}|${item.myrcmOrgId || ""}|${item.possibleVenue || ""}`;
     byKey.set(key, item);
   }
@@ -1564,7 +1631,7 @@ async function runImportOnce() {
 
     importedHosts.push(hostRecord);
 
-    if (races.some(race => !race.venueId)) {
+    if (races.some(race => !race.venueId) && !isIgnoredUnmatchedHost(hostRecord)) {
       importedUnmatched.push(
         unmatchedRecordForMyRcmHost(
           host,
