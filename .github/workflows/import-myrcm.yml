@@ -1,0 +1,36 @@
+name: Import MyRCM races
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Import races from MyRCM
+        run: npm run import
+
+      - name: Commit updated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update races from MyRCM
+          file_pattern: |
+            races.json
+            hosts.json
+            venues.json
+            venue-unmatched.json
