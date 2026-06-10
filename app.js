@@ -1358,17 +1358,46 @@ function normalizedDisplayText(value = "") {
   return slugifyMatchValue(value);
 }
 
+function normalizedRelationId(value = "") {
+  return slugifyMatchValue(String(value ?? ""));
+}
+
+function relationIdsFromValues(values = []) {
+  return new Set(
+    values
+      .filter(value => value !== null && value !== undefined && value !== "")
+      .map(normalizedRelationId)
+      .filter(Boolean)
+  );
+}
+
 function raceHostAndVenueAreSame(race) {
   const venue = venueForRace(race);
   if (!venue) return false;
 
-  const hostId = raceHostId(race);
-  if (!hostId) return false;
+  const hostIds = relationIdsFromValues([
+    race?.hostId,
+    raceHostId(race),
+    race?.hostName,
+    raceHostName(race)
+  ]);
 
-  return (
-    venue.hostId === hostId ||
-    (Array.isArray(venue.hostIds) && venue.hostIds.includes(hostId))
-  );
+  if (!hostIds.size) return false;
+
+  const venueHostIds = relationIdsFromValues([
+    venue.hostId,
+    ...(Array.isArray(venue.hostIds) ? venue.hostIds : []),
+    venue.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null
+  ]);
+
+  for (const hostId of hostIds) {
+    if (venueHostIds.has(hostId)) return true;
+  }
+
+  const hostName = normalizedDisplayText(raceHostName(race));
+  const venueName = normalizedDisplayText(venue?.name || race?.venueName || "");
+
+  return Boolean(hostName && venueName && hostName === venueName);
 }
 
 function raceVenueMetaHtml(race) {
