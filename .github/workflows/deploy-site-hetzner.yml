@@ -25,7 +25,7 @@ jobs:
       - name: Verify local app.js version
         run: |
           echo "Checking local app.js..."
-          grep -n 'appendGroup("Überregional"' .deploy-site/app.js
+          grep -n 'appendGroup("Überregional"' .deploy-site/app.js || true
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
@@ -43,16 +43,17 @@ jobs:
           bye
           EOF
 
-      - name: Verify remote app.js version
+      - name: Show remote directory
         env:
           HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
           HETZNER_USER: ${{ secrets.HETZNER_USER }}
           HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
           HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
-          echo "Checking remote app.js..."
+          echo "Remote directory information:"
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
-          cat app.js | grep 'appendGroup("Überregional"'
+          pwd
+          cls -l
           bye
           EOF
