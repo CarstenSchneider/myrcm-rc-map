@@ -30,6 +30,22 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
+      - name: Show remote status before upload
+        env:
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+        run: |
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
+          set sftp:auto-confirm yes
+          pwd
+          cls -l
+          echo ".deploy-site contents:"
+          cls -l .deploy-site
+          bye
+          EOF
+
       - name: Upload site files
         env:
           HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
@@ -37,23 +53,26 @@ jobs:
           HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
           HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
+          cd .deploy-site
+
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
-          mirror -R .deploy-site ./ --verbose
+          mirror -R . ./ --verbose
           bye
           EOF
 
-      - name: Show remote directory
+      - name: Show remote status after upload
         env:
           HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
           HETZNER_USER: ${{ secrets.HETZNER_USER }}
           HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
           HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
         run: |
-          echo "Remote directory information:"
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
           pwd
           cls -l
+          echo ".deploy-site contents:"
+          cls -l .deploy-site
           bye
           EOF
