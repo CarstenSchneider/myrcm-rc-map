@@ -84,6 +84,16 @@ const excludedEventTerms = [
   "standby"
 ];
 
+const slotcarSignalTerms = [
+  "slotcar",
+  "slot car",
+  "slotcars",
+  "slot cars",
+  "carrera explorer cup",
+  "carrea explorer cup",
+  "ssm-deutschland.de"
+];
+
 const ignoredUnmatchedHostTerms = [
   "ets",
   "euro touring series",
@@ -152,6 +162,41 @@ function isExcludedHost(host) {
 function isExcludedEvent(name) {
   const lower = name.toLowerCase();
   return excludedEventTerms.some(term => lower.includes(term));
+}
+
+function textIncludesAnyTerm(text = "", terms = []) {
+  const lower = String(text ?? "").toLowerCase();
+  return terms.some(term => lower.includes(term));
+}
+
+function raceTextForSlotcarDetection(race = {}) {
+  const classesText = Array.isArray(race.classes)
+    ? race.classes.map(item => typeof item === "string" ? item : [item?.name, item?.entries].filter(Boolean).join(" ")).join(" ")
+    : "";
+
+  const documentsText = Array.isArray(race.documents)
+    ? race.documents.map(document => [
+        document?.type,
+        document?.label,
+        document?.sourceLabel,
+        document?.fileName,
+        document?.url
+      ].filter(Boolean).join(" ")).join(" ")
+    : "";
+
+  return [
+    race.name,
+    race.series,
+    classesText,
+    documentsText,
+    race.url,
+    race.detailUrl,
+    race.registrationListUrl
+  ].filter(Boolean).join(" ");
+}
+
+function hasSlotcarSignal(race = {}) {
+  return textIncludesAnyTerm(raceTextForSlotcarDetection(race), slotcarSignalTerms);
 }
 
 function normalizedIgnoredHostText(value = "") {
@@ -1797,6 +1842,13 @@ async function runImportOnce() {
 
     if (!races.length) {
       console.log("  Host wird uebersprungen, weil kein Rennen im aktuellen Importzeitraum gefunden wurde");
+      continue;
+    }
+
+    const slotcarSignalRace = races.find(hasSlotcarSignal);
+
+    if (slotcarSignalRace) {
+      console.log(`  Host wird fuer diesen Importlauf uebersprungen, weil Slotcar-Signal gefunden wurde: ${slotcarSignalRace.name}`);
       continue;
     }
 

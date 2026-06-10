@@ -35,6 +35,7 @@ L.tileLayer(
 
 let venues = [];
 let races = [];
+let seriesCatalog = [];
 let hosts = [];
 let hostsByOrgId = new Map();
 let hostsById = new Map();
@@ -243,29 +244,169 @@ function syncFilterUi() {
 }
 
 
-const seriesDisplayNames = {
-  "BTM": "BTM – Berlin Touring Masters",
-  "ETS": "ETS – Euro Touring Series",
-  "Ostmasters": "Ostmasters",
-  "RCK Challenge": "RCK Challenge",
-  "RCK Kleinserie": "RCK Kleinserie",
-  "SK": "SK – Sportkreis",
-  "Tamico Offroad Cup": "Tamico Offroad Cup",
-  "TEC": "TEC – Tamiya Euro Cup",
-  "TOS": "TOS – ToniSport Onroad Series"
-};
-
-const preferredSeriesOrder = [
-  "BTM",
-  "ETS",
-  "Ostmasters",
-  "RCK Challenge",
-  "RCK Kleinserie",
-  "SK",
-  "Tamico Offroad Cup",
-  "TEC",
-  "TOS"
+const fallbackSeriesCatalog = [
+  {
+    id: "ets",
+    name: "Euro Touring Series",
+    shortName: "ETS",
+    scope: "international",
+    aliases: ["ETS", "Euro Touring Series"]
+  },
+  {
+    id: "tos",
+    name: "ToniSport Onroad Series",
+    shortName: "TOS",
+    scope: "national",
+    aliases: ["TOS", "ToniSport Onroad Series", "Tonisport Onroad Series"]
+  },
+  {
+    id: "tec",
+    name: "Tamiya Euro Cup",
+    shortName: "TEC",
+    scope: "national",
+    aliases: ["TEC", "Tamiya Euro Cup", "Tamiya Euro-Cup", "TAMIYA EURO-CUP"]
+  },
+  {
+    id: "sk",
+    name: "Sportkreis",
+    shortName: "SK",
+    scope: "national",
+    aliases: ["SK", "SK Lauf", "SK-Lauf", "Sportkreis", "Sportkreis-Meisterschaft"]
+  },
+  {
+    id: "rck-challenge",
+    name: "RCK Challenge",
+    scope: "national",
+    aliases: ["RCK Challenge", "RCK-Challenge", "RCK Challenge Süd", "RCK Challenge Nord"]
+  },
+  {
+    id: "rck-kleinserie",
+    name: "RCK Kleinserie",
+    scope: "national",
+    aliases: ["RCK Kleinserie", "RCK-Kleinserie", "RCK KleinSerie"]
+  },
+  {
+    id: "btm",
+    name: "Berlin Touring Masters",
+    shortName: "BTM",
+    scope: "regional",
+    aliases: ["BTM", "Berlin Touring Masters"]
+  },
+  {
+    id: "ostmasters",
+    name: "Ostmasters",
+    scope: "regional",
+    aliases: ["Ostmasters"]
+  },
+  {
+    id: "tamico-offroad-cup",
+    name: "Tamico Offroad Cup",
+    scope: "regional",
+    aliases: ["Tamico Offroad Cup", "TAMICO Offroad Cup"]
+  }
 ];
+
+function normalizeSeriesText(value = "") {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/[–—]/g, "-")
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function seriesKeyFromValue(value = "") {
+  return normalizeSeriesText(value).replace(/\s+/g, "-");
+}
+
+function seriesCatalogDisplayName(item) {
+  if (!item) return "";
+  if (item.displayName) return item.displayName;
+  if (item.shortName && item.name && !String(item.name).includes(String(item.shortName))) {
+    return `${item.name} (${item.shortName})`;
+  }
+  return item.name || item.shortName || item.id || "";
+}
+
+function normalizeSeriesCatalog(items) {
+  const input = Array.isArray(items) && items.length ? items : fallbackSeriesCatalog;
+
+  return input
+    .filter(item => item && (item.name || item.shortName || item.id))
+    .map(item => {
+      const name = String(item.name || item.displayName || item.shortName || item.id).trim();
+      const shortName = item.shortName ? String(item.shortName).trim() : "";
+      const id = String(item.id || seriesKeyFromValue(shortName || name)).trim();
+      const aliases = [
+        id,
+        name,
+        shortName,
+        item.displayName,
+        ...(Array.isArray(item.aliases) ? item.aliases : [])
+      ]
+        .filter(Boolean)
+        .map(value => String(value).trim())
+        .filter(Boolean);
+
+      return {
+        ...item,
+        id,
+        name,
+        shortName,
+        key: id,
+        displayName: seriesCatalogDisplayName({ ...item, id, name, shortName }),
+        aliases: [...new Set(aliases)],
+        matchValues: [...new Set(aliases.map(normalizeSeriesText).filter(Boolean))]
+      };
+    });
+}
+
+function seriesCatalogItemForValue(value) {
+  const normalized = normalizeSeriesText(value);
+  if (!normalized) return null;
+
+  return seriesCatalog.find(item =>
+    item.matchValues?.includes(normalized) ||
+    normalizeSeriesText(item.key) === normalized
+  ) || null;
+}
+
+function seriesCatalogItemForKey(key) {
+  const normalized = normalizeSeriesText(key);
+  if (!normalized) return null;
+
+  return seriesCatalog.find(item =>
+    normalizeSeriesText(item.key) === normalized ||
+    item.matchValues?.includes(normalized)
+  ) || null;
+}
+
+function seriesFilterValue(series) {
+  const item = seriesCatalogItemForValue(series);
+  return item?.key || series;
+}
+
+function seriesScopeGroup(item) {
+  const scope = normalizeSeriesText(item?.scope || item?.level || "");
+
+  if (
+    scope === "international" ||
+    scope === "national" ||
+    scope === "ueberregional" ||
+    scope === "uberregional" ||
+    scope === "overregional"
+  ) {
+    return "overregional";
+  }
+
+  if (scope === "regional" || scope === "local" || scope === "lokal") {
+    return "regional";
+  }
+
+  return "regional";
+}
 
 
 function raceDataSource(race) {
@@ -334,7 +475,8 @@ function isUnverifiedVenue(venue) {
 }
 
 function seriesDisplayName(series) {
-  return seriesDisplayNames[series] || series;
+  const item = seriesCatalogItemForKey(series) || seriesCatalogItemForValue(series);
+  return item?.displayName || String(series || "");
 }
 
 function classNameFromRaceClass(item) {
@@ -369,7 +511,8 @@ function isPastRaceWithinLastYear(race) {
 }
 
 function matchesSelectedSeries(race) {
-  return selectedSeries === "all" || raceSeries(race).includes(selectedSeries);
+  return selectedSeries === "all" ||
+    raceSeries(race).some(series => seriesFilterValue(series) === selectedSeries);
 }
 
 
@@ -929,15 +1072,37 @@ function ensureRegistrationStatusStyles() {
 
 
 function detectSeries(name) {
+  const text = normalizeSeriesText(name);
+
+  if (!text) return [];
+
+  const matches = [];
+
+  for (const item of seriesCatalog) {
+    const matched = item.matchValues?.some(alias => {
+      if (!alias) return false;
+
+      if (alias.length <= 3) {
+        return new RegExp(`(^|[^a-z0-9])${alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z0-9]|$)`, "i").test(text);
+      }
+
+      return text.includes(alias);
+    });
+
+    if (matched) matches.push(item.shortName || item.name || item.key);
+  }
+
+  if (matches.length) return [...new Set(matches)];
+
   const rules = [
     { label: "BTM", re: /berlin touring masters|\bbtm\b/i },
     { label: "ETS", re: /euro touring series|\bets\b/i },
     { label: "Ostmasters", re: /ostmasters/i },
-    { label: "RCK Challenge", re: /rck challenge/i },
-    { label: "RCK Kleinserie", re: /rck kleinserie/i },
+    { label: "RCK Challenge", re: /rck[ -]?challenge/i },
+    { label: "RCK Kleinserie", re: /rck[ -]?kleinserie/i },
     { label: "SK", re: /\bsk[- ]?lauf\b|sk lauf|sportkreis/i },
     { label: "Tamico Offroad Cup", re: /tamico offroad cup|tamico/i },
-    { label: "TEC", re: /tamiya euro cup|\btec\b/i },
+    { label: "TEC", re: /tamiya euro[- ]?cup|\btec\b/i },
     { label: "TOS", re: /tonisport onroad series|\btos\b/i }
   ];
 
@@ -1193,23 +1358,46 @@ function normalizedDisplayText(value = "") {
   return slugifyMatchValue(value);
 }
 
-function raceHostAndVenueAreSame(race) {
-  const hostValues = [
-    raceHostName(race),
-    raceHostId(race)
-  ].filter(Boolean).map(normalizedDisplayText);
+function normalizedRelationId(value = "") {
+  return slugifyMatchValue(String(value ?? ""));
+}
 
-  const venue = venueForRace(race);
-  const venueValues = [
-    race?.venueName,
-    race?.venueId,
-    venue?.name,
-    venue?.id
-  ].filter(Boolean).map(normalizedDisplayText);
-
-  return hostValues.some(hostValue =>
-    venueValues.some(venueValue => hostValue && venueValue && hostValue === venueValue)
+function relationIdsFromValues(values = []) {
+  return new Set(
+    values
+      .filter(value => value !== null && value !== undefined && value !== "")
+      .map(normalizedRelationId)
+      .filter(Boolean)
   );
+}
+
+function raceHostAndVenueAreSame(race) {
+  const venue = venueForRace(race);
+  if (!venue) return false;
+
+  const hostIds = relationIdsFromValues([
+    race?.hostId,
+    raceHostId(race),
+    race?.hostName,
+    raceHostName(race)
+  ]);
+
+  if (!hostIds.size) return false;
+
+  const venueHostIds = relationIdsFromValues([
+    venue.hostId,
+    ...(Array.isArray(venue.hostIds) ? venue.hostIds : []),
+    venue.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null
+  ]);
+
+  for (const hostId of hostIds) {
+    if (venueHostIds.has(hostId)) return true;
+  }
+
+  const hostName = normalizedDisplayText(raceHostName(race));
+  const venueName = normalizedDisplayText(venue?.name || race?.venueName || "");
+
+  return Boolean(hostName && venueName && hostName === venueName);
 }
 
 function raceVenueMetaHtml(race) {
@@ -1854,7 +2042,7 @@ function renderList(list) {
           </div>
 
           <div class="race-tags race-series-tags">
-            ${series.map(item => `<span class="tag">${item}</span>`).join("")}
+            ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
             ${
               !hasMappableVenue(race)
                 ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
@@ -1980,25 +2168,73 @@ raceList.addEventListener("click", event => {
 });
 
 function populateSeries() {
-  const allSeries = new Set();
+  const seriesByKey = new Map();
 
   races.forEach(race => {
-    raceSeries(race).forEach(item => allSeries.add(item));
+    raceSeries(race).forEach(rawSeries => {
+      const key = seriesFilterValue(rawSeries);
+      if (!key) return;
+
+      const item = seriesCatalogItemForKey(key) || seriesCatalogItemForValue(rawSeries) || {
+        key,
+        name: String(rawSeries),
+        displayName: String(rawSeries),
+        scope: "regional"
+      };
+
+      if (!seriesByKey.has(key)) {
+        seriesByKey.set(key, item);
+      }
+    });
   });
 
   seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
 
-  const orderedSeries = [
-    ...preferredSeriesOrder.filter(series => allSeries.has(series)),
-    ...[...allSeries].filter(series => !preferredSeriesOrder.includes(series)).sort()
-  ];
+  const groups = {
+    overregional: [],
+    regional: [],
+    other: []
+  };
 
-  orderedSeries.forEach(series => {
-    const option = document.createElement("option");
-    option.value = series;
-    option.textContent = seriesDisplayName(series);
-    seriesFilter.appendChild(option);
-  });
+  for (const item of seriesByKey.values()) {
+    const group = seriesScopeGroup(item);
+    if (group === "overregional") {
+      groups.overregional.push(item);
+    } else if (group === "regional") {
+      groups.regional.push(item);
+    } else {
+      groups.other.push(item);
+    }
+  }
+
+  const sortByDisplayName = (a, b) =>
+    seriesDisplayName(a.key).localeCompare(seriesDisplayName(b.key), "de", {
+      sensitivity: "base"
+    });
+
+  groups.overregional.sort(sortByDisplayName);
+  groups.regional.sort(sortByDisplayName);
+  groups.other.sort(sortByDisplayName);
+
+  const appendGroup = (label, items) => {
+    if (!items.length) return;
+
+    const group = document.createElement("optgroup");
+    group.label = label;
+
+    items.forEach(item => {
+      const option = document.createElement("option");
+      option.value = item.key;
+      option.textContent = seriesDisplayName(item.key);
+      group.appendChild(option);
+    });
+
+    seriesFilter.appendChild(group);
+  };
+
+  appendGroup("Überregional", groups.overregional);
+  appendGroup("Regional", groups.regional);
+  appendGroup("Weitere Serien", groups.other);
 }
 
 function updateMarkerAnimationDelays() {
@@ -2229,19 +2465,21 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
-    fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, [])
+    fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog)
   ]);
 
   const baseVenues = await venuesResponse.json();
   const myrcmRaces = await racesResponse.json();
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
+  seriesCatalog = normalizeSeriesCatalog(seriesCatalogResponse);
 
   venues = mergeVenues(
     baseVenues,

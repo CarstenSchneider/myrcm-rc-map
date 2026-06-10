@@ -5,7 +5,7 @@
     "venueId": "mbsc-waechtersbach",
     "venueName": "MBSC Wächtersbach",
     "venueLocation": "Wächtersbach",
-    "hostId": "ts-grossauheim",
+    "hostId": "mbsc-wachtersbach",
     "hostName": "TS-Grossauheim",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte - Wächtersbach",
@@ -100,8 +100,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 46,
-    "registrationDisplay": "46",
+    "registrationCount": 47,
+    "registrationDisplay": "47",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -129,7 +129,7 @@
       },
       {
         "name": "LMH",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "M-Chassis",
@@ -306,7 +306,7 @@
     "venueId": "tsv-mariendorf-rc-racing",
     "venueName": "TSV Mariendorf 1897 RCCR",
     "venueLocation": "Berlin",
-    "hostId": "tsv-mariendorf-97-berlin-rccr",
+    "hostId": "tsv-mariendorf",
     "hostName": "TSV Mariendorf 97 Berlin RCCR",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Ost - Berlin",
@@ -326,8 +326,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Ost",
@@ -347,7 +347,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "LMH",
@@ -377,7 +377,7 @@
     "venueId": "mcc-luedenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
-    "hostId": "mcc-ludenscheid",
+    "hostId": "mcc-ludenscheid-e-v",
     "hostName": "MCC Lüdenscheid",
     "venueStatus": "matched",
     "name": "RCK Challenge West - Lüdenscheid",
@@ -603,7 +603,7 @@
     "venueId": "turngemeinde-1855-neustadt-bei-coburg-e-v",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
     "venueLocation": "Neustadt bei Coburg",
-    "hostId": "tg-neustadt-1855-e-v",
+    "hostId": "turngemeinde-1855-neustadt-bei-coburg-e-v",
     "hostName": "TG-Neustadt 1855 e.V.",
     "venueStatus": "matched",
     "name": "RCK Challenge Süd/Ost - Neustadt b. Coburg",
@@ -682,7 +682,7 @@
     "venueId": "rcct-muenden-e-v",
     "venueName": "RCCT Münden e.V.",
     "venueLocation": "Hann. Münden",
-    "hostId": "rc-car-team-munden-ev",
+    "hostId": "rcct-munden-e-v",
     "hostName": "RC-CAR -TEAM Münden eV.",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte/Nord/West/Ost - Hann.Münden Nachtrennen",
@@ -831,7 +831,7 @@
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
-    "hostId": "msc-polizei-braunschweig",
+    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "hostName": "MSC Polizei Braunschweig",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Nord - Braunschweig",
@@ -902,7 +902,7 @@
     "venueId": "tsv-mariendorf-rc-racing",
     "venueName": "TSV Mariendorf 1897 RCCR",
     "venueLocation": "Berlin",
-    "hostId": "tsv-mariendorf-97-berlin-rccr",
+    "hostId": "tsv-mariendorf",
     "hostName": "TSV Mariendorf 97 Berlin RCCR",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Ost - Berlin",
@@ -973,7 +973,7 @@
     "venueId": "emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
     "venueLocation": "Marktoberdorf",
-    "hostId": "emc-marktoberdorf-e-v",
+    "hostId": "emc-marktoberdorf",
     "hostName": "EMC-Marktoberdorf e.V.",
     "venueStatus": "matched",
     "name": "RCK Challenge Süd - Marktoberdorf",
@@ -993,8 +993,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 40,
-    "registrationDisplay": "40",
+    "registrationCount": 45,
+    "registrationDisplay": "45",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -1010,15 +1010,15 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "GT Challenge",
-        "entries": 7
+        "entries": 9
       },
       {
         "name": "Stock Challenge",
-        "entries": 14
+        "entries": 16
       },
       {
         "name": "Clubman Challenge",
@@ -1048,7 +1048,7 @@
     "venueId": "arena33-andernach",
     "venueName": "Arena33",
     "venueLocation": "Andernach",
-    "hostId": "djk-andernach",
+    "hostId": "djk-andernach-e-v",
     "hostName": "DjK Andernach",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte/West - Andernach",
@@ -1270,7 +1270,7 @@
     "venueId": "mcc-rhein-ahr-e-v",
     "venueName": "MCC Rhein Ahr e.V.",
     "venueLocation": "Bad Breisig",
-    "hostId": "mcc-rhein-ahr",
+    "hostId": "mcc-rhein-ahr-e-v",
     "hostName": "MCC Rhein Ahr",
     "venueStatus": "matched",
     "name": "RCK Challenge Mitte/West - Bad Breisig",
@@ -1407,7 +1407,7 @@
     "venueId": "mcc-rhein-ahr-e-v",
     "venueName": "MCC Rhein Ahr e.V.",
     "venueLocation": "Bad Breisig",
-    "hostId": "mcc-rhein-ahr",
+    "hostId": "mcc-rhein-ahr-e-v",
     "hostName": "MCC Rhein Ahr",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte/West - Bad Breisig",

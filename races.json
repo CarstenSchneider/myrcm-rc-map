@@ -9,7 +9,9 @@
     "name": "3. Alpencup Wertungslauf 2025",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "Alpencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85896&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=85896&tId=E&hId%5B1%5D=org",
@@ -58,7 +60,8 @@
     "from": "2025-06-14",
     "to": "2025-06-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87515&pLa=en",
@@ -106,7 +109,9 @@
     "name": "5. Hessencup Lauf 2025 Ober-Mörlen",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87780&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=87780&tId=E&hId%5B1%5D=org",
@@ -148,7 +153,9 @@
     "name": "JumpstartRC Trophy 2025 #3 @ Bad Breisig",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "JumpstartRC Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85240&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=283&pLa=en&dId%5BE%5D=85240&tId=E&hId%5B1%5D=org",
@@ -191,7 +198,9 @@
     "name": "LRP Offroad Challenge 25/06",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "LRP Offroad Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88137&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=116&pLa=en&dId%5BE%5D=88137&tId=E&hId%5B1%5D=org",
@@ -225,7 +234,9 @@
     "name": "RCK-Kleinserie",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87499&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=87499&tId=E&hId%5B1%5D=org",
@@ -268,7 +279,7 @@
     "from": "2025-06-14",
     "to": "2025-06-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88598&pLa=en",
@@ -308,7 +319,7 @@
     "from": "2025-06-14",
     "to": "2025-06-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87892&pLa=en",
@@ -357,7 +368,8 @@
     "from": "2025-06-15",
     "to": "2025-06-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "MAC-Challenge"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86605&pLa=en",
@@ -708,7 +720,7 @@
     "from": "2025-06-21",
     "to": "2025-06-22",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87297&pLa=en",
@@ -744,7 +756,8 @@
     "from": "2025-06-21",
     "to": "2025-06-22",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "NRW-Cup"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88079&pLa=en",
@@ -891,7 +904,7 @@
     "from": "2025-06-21",
     "to": "2025-06-22",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86744&pLa=en",
@@ -945,7 +958,8 @@
     "from": "2025-06-21",
     "to": "2025-06-22",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87963&pLa=en",
@@ -1073,7 +1087,7 @@
     "from": "2025-06-22",
     "to": "2025-06-22",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86586&pLa=en",
@@ -1337,7 +1351,7 @@
     "from": "2025-06-28",
     "to": "2025-06-28",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89016&pLa=en",
@@ -1373,7 +1387,9 @@
     "name": "3. NRW-Cup OR8 / ORE8 / ORT / ORET Mechernich",
     "from": "2025-06-28",
     "to": "2025-06-29",
-    "series": [],
+    "series": [
+      "NRW-Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88600&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33838&pLa=en&dId%5BE%5D=88600&tId=E&hId%5B1%5D=org",
@@ -1404,7 +1420,9 @@
     "name": "AMSC Cup 2025: Lauf 2",
     "from": "2025-06-28",
     "to": "2025-06-28",
-    "series": [],
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87801&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=36&pLa=en&dId%5BE%5D=87801&tId=E&hId%5B1%5D=org",
@@ -1548,7 +1566,9 @@
     "name": "LE Trophy Offroad Lauf 2",
     "from": "2025-06-28",
     "to": "2025-06-29",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88466&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=88466&tId=E&hId%5B1%5D=org",
@@ -1654,7 +1674,7 @@
     "from": "2025-06-28",
     "to": "2025-06-29",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86505&pLa=en",
@@ -1839,8 +1859,8 @@
     "from": "2025-06-29",
     "to": "2025-06-29",
     "series": [
-      "BTM",
-      "SK"
+      "Sportkreis (SK)",
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85420&pLa=en",
@@ -1970,7 +1990,7 @@
     "from": "2025-06-29",
     "to": "2025-06-29",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87871&pLa=en",
@@ -2097,7 +2117,8 @@
     "from": "2025-07-05",
     "to": "2025-07-06",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "NRW-Cup"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88596&pLa=en",
@@ -2158,7 +2179,8 @@
     "from": "2025-07-05",
     "to": "2025-07-06",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87949&pLa=en",
@@ -2237,7 +2259,8 @@
     "from": "2025-07-06",
     "to": "2025-07-06",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "MAC-Challenge"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86606&pLa=en",
@@ -2632,7 +2655,7 @@
     "from": "2025-07-06",
     "to": "2025-07-06",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88293&pLa=en",
@@ -2738,7 +2761,9 @@
     "name": "4. NRW-Cup 2025",
     "from": "2025-07-12",
     "to": "2025-07-13",
-    "series": [],
+    "series": [
+      "NRW-Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89273&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=21160&pLa=en&dId%5BE%5D=89273&tId=E&hId%5B1%5D=org",
@@ -2770,7 +2795,7 @@
     "from": "2025-07-12",
     "to": "2025-07-13",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88122&pLa=en",
@@ -2815,7 +2840,9 @@
     "name": "6. Hessencup Lauf 2025 ORT-Fulda",
     "from": "2025-07-12",
     "to": "2025-07-13",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88518&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=88518&tId=E&hId%5B1%5D=org",
@@ -2857,7 +2884,9 @@
     "name": "JumpstartRC Trophy 2025 #4 + SMW EG8GT3 @ Hamm",
     "from": "2025-07-12",
     "to": "2025-07-13",
-    "series": [],
+    "series": [
+      "JumpstartRC Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85344&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=85344&tId=E&hId%5B1%5D=org",
@@ -2910,8 +2939,9 @@
     "from": "2025-07-12",
     "to": "2025-07-13",
     "series": [
-      "SK",
-      "TEC"
+      "Sportkreis (SK)",
+      "Tamiya Euro Cup (TEC)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85421&pLa=en",
@@ -2968,7 +2998,7 @@
     "from": "2025-07-12",
     "to": "2025-07-13",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86739&pLa=en",
@@ -3017,7 +3047,7 @@
     "from": "2025-07-12",
     "to": "2025-07-12",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88413&pLa=en",
@@ -3283,7 +3313,9 @@
     "name": "Euro NITRO Series Onroad Round 2 AIGEN / AT",
     "from": "2025-07-17",
     "to": "2025-07-20",
-    "series": [],
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88236&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=88236&tId=E&hId%5B1%5D=org",
@@ -3395,7 +3427,7 @@
     "from": "2025-07-19",
     "to": "2025-07-20",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87806&pLa=en",
@@ -3516,7 +3548,7 @@
     "from": "2025-07-19",
     "to": "2025-07-20",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85345&pLa=en",
@@ -3749,7 +3781,8 @@
     "from": "2025-07-20",
     "to": "2025-07-20",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Speed Masters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88355&pLa=en",
@@ -3832,7 +3865,7 @@
     "from": "2025-07-24",
     "to": "2025-07-27",
     "series": [
-      "ETS"
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87693&pLa=en",
@@ -3951,7 +3984,9 @@
     "name": "7. Hessencup Lauf 2025 Kassel",
     "from": "2025-07-26",
     "to": "2025-07-27",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89043&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=89043&tId=E&hId%5B1%5D=org",
@@ -4132,9 +4167,7 @@
     "name": "Sportkreismeisterschaft Süd VG8 / VG10, Gastklasse EG 1:8 GT",
     "from": "2025-07-26",
     "to": "2025-07-27",
-    "series": [
-      "SK"
-    ],
+    "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86799&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=86799&tId=E&hId%5B1%5D=org",
@@ -4307,7 +4340,7 @@
     "from": "2025-07-31",
     "to": "2025-08-03",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85184&pLa=en",
@@ -4367,7 +4400,7 @@
     "from": "2025-08-01",
     "to": "2025-08-01",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85186&pLa=en",
@@ -4463,7 +4496,7 @@
     "from": "2025-08-02",
     "to": "2025-08-03",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88414&pLa=en",
@@ -4680,7 +4713,7 @@
     "from": "2025-08-03",
     "to": "2025-08-03",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88104&pLa=en",
@@ -5124,7 +5157,9 @@
     "name": "4.Lauf MAC-Challenge",
     "from": "2025-08-10",
     "to": "2025-08-10",
-    "series": [],
+    "series": [
+      "MAC-Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86607&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=86607&tId=E&hId%5B1%5D=org",
@@ -5456,7 +5491,9 @@
     "name": "RCK-Kleinserie",
     "from": "2025-08-16",
     "to": "2025-08-16",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87500&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=87500&tId=E&hId%5B1%5D=org",
@@ -5834,36 +5871,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-08-23-myrcm-event-88599",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "6h Rennen Sinntal - 36391 Sinntal Bahnhofstrasse 5",
-    "from": "2025-08-23",
-    "to": "2025-08-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88599&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=88599&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88599&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Semi-Pro Tour",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-08-23-myrcm-event-89236",
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -5959,7 +5966,8 @@
     "from": "2025-08-23",
     "to": "2025-08-24",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "JumpstartRC Trophy"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85347&pLa=en",
@@ -6225,7 +6233,9 @@
     "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
     "from": "2025-08-28",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89374&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=89374&tId=E&hId%5B1%5D=org",
@@ -6367,7 +6377,10 @@
     "name": "1. SK 2026 & 5. SDC Lauf 2025 OR Süd 2025 beim MCC Laupheim e.V.",
     "from": "2025-08-30",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89235&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60911&pLa=en&dId%5BE%5D=89235&tId=E&hId%5B1%5D=org",
@@ -6440,7 +6453,9 @@
     "name": "7. Hessencup-Lauf Heiligenstadt",
     "from": "2025-08-30",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89716&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=89716&tId=E&hId%5B1%5D=org",
@@ -6580,7 +6595,11 @@
     "name": "Speed Masters Runde 4 Andernach (Arena 33)",
     "from": "2025-08-30",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "ToniSport Onroad Series (TOS)",
+      "Euro Touring Series (ETS)",
+      "Speed Masters"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88365&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=88365&tId=E&hId%5B1%5D=org",
@@ -6706,7 +6725,9 @@
     "name": "5.Lauf MAC-Challenge",
     "from": "2025-08-31",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "MAC-Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86608&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=86608&tId=E&hId%5B1%5D=org",
@@ -6817,7 +6838,7 @@
     "from": "2025-09-04",
     "to": "2025-09-07",
     "series": [
-      "ETS"
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88595&pLa=en",
@@ -6972,7 +6993,9 @@
     "name": "5. NRW-Cup 2025",
     "from": "2025-09-06",
     "to": "2025-09-07",
-    "series": [],
+    "series": [
+      "NRW-Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90382&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=15092&pLa=en&dId%5BE%5D=90382&tId=E&hId%5B1%5D=org",
@@ -7005,7 +7028,7 @@
     "from": "2025-09-06",
     "to": "2025-09-07",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89794&pLa=en",
@@ -7171,7 +7194,9 @@
     "name": "AMSC Cup 2025: Lauf 3",
     "from": "2025-09-07",
     "to": "2025-09-07",
-    "series": [],
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87802&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=36&pLa=en&dId%5BE%5D=87802&tId=E&hId%5B1%5D=org",
@@ -7210,7 +7235,7 @@
     "from": "2025-09-07",
     "to": "2025-09-07",
     "series": [
-      "BTM"
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89826&pLa=en",
@@ -7383,7 +7408,9 @@
     "name": "LE Trophy Offroad Lauf 3",
     "from": "2025-09-07",
     "to": "2025-09-07",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89530&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=89530&tId=E&hId%5B1%5D=org",
@@ -7591,7 +7618,7 @@
     "from": "2025-09-13",
     "to": "2025-09-14",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89727&pLa=en",
@@ -7736,7 +7763,9 @@
     "name": "6h Teamrennen Mannheim (Speed Masters)",
     "from": "2025-09-13",
     "to": "2025-09-13",
-    "series": [],
+    "series": [
+      "Speed Masters"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90578&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=90578&tId=E&hId%5B1%5D=org",
@@ -7752,36 +7781,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-09"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-09-13-myrcm-event-89297",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 42929 Wermelskirchen, Burgerstr. 28",
-    "from": "2025-09-13",
-    "to": "2025-09-13",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89297&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89297&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89297&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 21
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
   },
   {
     "id": "mac-nuernberg-e-v-2025-09-13-myrcm-event-87141",
@@ -7908,7 +7907,9 @@
     "name": "RCK-KleinSerie MBSC Wächtersbach Mitte -14.09.2025",
     "from": "2025-09-14",
     "to": "2025-09-14",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90490&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=90490&tId=E&hId%5B1%5D=org",
@@ -7941,7 +7942,8 @@
     "from": "2025-09-14",
     "to": "2025-09-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85422&pLa=en",
@@ -7992,7 +7994,9 @@
     "name": "Tamiya EUROCUP",
     "from": "2025-09-14",
     "to": "2025-09-14",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89255&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=134&pLa=en&dId%5BE%5D=89255&tId=E&hId%5B1%5D=org",
@@ -8086,7 +8090,10 @@
     "name": "2. SK 2026 & 6. SDC Lauf 2025 OR Süd 2025",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89974&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61183&pLa=en&dId%5BE%5D=89974&tId=E&hId%5B1%5D=org",
@@ -8314,7 +8321,9 @@
     "name": "LRP Offroad Challenge 25/09",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "LRP Offroad Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90705&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=116&pLa=en&dId%5BE%5D=90705&tId=E&hId%5B1%5D=org",
@@ -8460,8 +8469,8 @@
     "from": "2025-09-20",
     "to": "2025-09-21",
     "series": [
-      "Ostmasters",
-      "SK"
+      "Sportkreis (SK)",
+      "Ostmasters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85138&pLa=en",
@@ -8501,8 +8510,8 @@
     "from": "2025-09-20",
     "to": "2025-09-21",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89229&pLa=en",
@@ -8978,7 +8987,9 @@
     "name": "5. NRW-Cup 2025",
     "from": "2025-09-27",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "NRW-Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91098&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=15511&pLa=en&dId%5BE%5D=91098&tId=E&hId%5B1%5D=org",
@@ -9009,7 +9020,9 @@
     "name": "8 Hessencup Lauf 2025 Großheubach",
     "from": "2025-09-27",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90147&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=90147&tId=E&hId%5B1%5D=org",
@@ -9036,66 +9049,6 @@
       {
         "name": "Hessencup Kids",
         "entries": 18
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-09-27-myrcm-event-89408",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 22419 Hamburg, Weg Nummer 396 2B",
-    "from": "2025-09-27",
-    "to": "2025-09-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89408&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89408&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89408&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 22
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-09"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-09-27-myrcm-event-89299",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 89129 Langenau, Tuchmacherstr. 15",
-    "from": "2025-09-27",
-    "to": "2025-09-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89299&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89299&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89299&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 32,
-    "registrationDisplay": "32",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 32
       }
     ],
     "documents": [],
@@ -9192,7 +9145,7 @@
     "from": "2025-09-27",
     "to": "2025-09-28",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85346&pLa=en",
@@ -9254,7 +9207,7 @@
     "from": "2025-09-27",
     "to": "2025-09-27",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90358&pLa=en",
@@ -9378,7 +9331,9 @@
     "name": "6.Lauf MAC-Challenge",
     "from": "2025-09-28",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "MAC-Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90052&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=90052&tId=E&hId%5B1%5D=org",
@@ -9418,7 +9373,7 @@
     "from": "2025-09-28",
     "to": "2025-09-28",
     "series": [
-      "BTM"
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89830&pLa=en",
@@ -9633,36 +9588,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-10-03-myrcm-event-89617",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 46537 Dinslaken, Magdalenenstr. 16",
-    "from": "2025-10-03",
-    "to": "2025-10-03",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89617&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89617&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89617&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "rc-offroad-staaken-2025-10-03-myrcm-event-88685",
     "venueId": null,
     "venueName": null,
@@ -9711,8 +9636,8 @@
     "from": "2025-10-03",
     "to": "2025-10-05",
     "series": [
-      "Ostmasters",
-      "SK"
+      "Sportkreis (SK)",
+      "Ostmasters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87906&pLa=en",
@@ -9752,8 +9677,8 @@
     "from": "2025-10-03",
     "to": "2025-10-05",
     "series": [
-      "Ostmasters",
-      "SK"
+      "Sportkreis (SK)",
+      "Ostmasters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91198&pLa=en",
@@ -9871,7 +9796,9 @@
     "name": "AMSC Cup 2025: Finale",
     "from": "2025-10-04",
     "to": "2025-10-04",
-    "series": [],
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87803&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=36&pLa=en&dId%5BE%5D=87803&tId=E&hId%5B1%5D=org",
@@ -10267,7 +10194,9 @@
     "name": "Euro NITRO Series Onroad Round 4 LENTIAI / IT",
     "from": "2025-10-09",
     "to": "2025-10-12",
-    "series": [],
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89911&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=89911&tId=E&hId%5B1%5D=org",
@@ -10309,7 +10238,9 @@
     "name": "9. Hessencup Lauf 2025 Peterberg",
     "from": "2025-10-11",
     "to": "2025-10-12",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90148&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=90148&tId=E&hId%5B1%5D=org",
@@ -10335,36 +10266,6 @@
       },
       {
         "name": "Hessencup Kids",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-10-11-myrcm-event-90528",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 01257 Dresden",
-    "from": "2025-10-11",
-    "to": "2025-10-11",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90528&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90528&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90528&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
         "entries": 12
       }
     ],
@@ -10550,7 +10451,7 @@
     "from": "2025-10-11",
     "to": "2025-10-12",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90690&pLa=en",
@@ -10886,7 +10787,7 @@
     "from": "2025-10-12",
     "to": "2025-10-12",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91246&pLa=en",
@@ -11338,7 +11239,9 @@
     "name": "RCK-Kleinserie",
     "from": "2025-10-19",
     "to": "2025-10-19",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91650&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1516&pLa=en&dId%5BE%5D=91650&tId=E&hId%5B1%5D=org",
@@ -11434,36 +11337,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-10-25-myrcm-event-89618",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 21641 Apensen, Am alten Teich 2",
-    "from": "2025-10-25",
-    "to": "2025-10-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89618&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89618&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89618&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 24
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "rc-racers-toys-shop-2025-10-25-myrcm-event-84507",
     "venueId": null,
     "venueName": null,
@@ -11520,7 +11393,7 @@
     "from": "2025-10-25",
     "to": "2025-10-26",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86984&pLa=en",
@@ -11632,36 +11505,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-10-26-myrcm-event-89674",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 56630 Kretz, Hauptstrasse 35",
-    "from": "2025-10-26",
-    "to": "2025-10-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89674&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89674&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89674&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 30
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "greenhouse-racer-e-v-2025-10-26-myrcm-event-90517",
     "venueId": "greenhouse-racer-e-v",
     "venueName": "Greenhouse RaCer e.V.",
@@ -11720,7 +11563,7 @@
     "from": "2025-10-26",
     "to": "2025-10-26",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91799&pLa=en",
@@ -11761,7 +11604,7 @@
     "from": "2025-10-26",
     "to": "2025-10-26",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91578&pLa=en",
@@ -11849,7 +11692,7 @@
     "from": "2025-11-01",
     "to": "2025-11-02",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91167&pLa=en",
@@ -11905,6 +11748,7 @@
     "from": "2025-11-01",
     "to": "2025-11-01",
     "series": [
+      "Tamiya Euro Cup (TEC)",
       "RCK Challenge"
     ],
     "source": "myrcm",
@@ -11962,8 +11806,8 @@
     "from": "2025-11-01",
     "to": "2025-11-02",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88071&pLa=en",
@@ -12167,7 +12011,10 @@
     "name": "Speed Masters Rd 5 Grossauheim",
     "from": "2025-11-02",
     "to": "2025-11-02",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)",
+      "Speed Masters"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91514&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=91514&tId=E&hId%5B1%5D=org",
@@ -12236,66 +12083,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-11-08-myrcm-event-89677",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 01159 Dresden, Löbtauer Str.71",
-    "from": "2025-11-08",
-    "to": "2025-11-08",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89677&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89677&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89677&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-11-08-myrcm-event-89675",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 53894 Mechernich, Zum Sportplatz 16",
-    "from": "2025-11-08",
-    "to": "2025-11-08",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89675&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89675&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89675&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 27
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "tsv-1871-augsburg-e-v-2025-11-08-myrcm-event-91053",
     "venueId": "tsv-1871-augsburg-e-v",
     "venueName": "TSV 1871 Augsburg e.V.",
@@ -12306,7 +12093,7 @@
     "from": "2025-11-08",
     "to": "2025-11-09",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91053&pLa=en",
@@ -12445,36 +12232,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-11-09-myrcm-event-90351",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 21762 Otterndorf",
-    "from": "2025-11-09",
-    "to": "2025-11-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90351&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90351&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90351&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 20
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "rc-car-freunde-emsdetten-e-v-2025-11-09-myrcm-event-90546",
     "venueId": "rc-car-freunde-emsdetten-e-v",
     "venueName": "RC Car Freunde Emsdetten e.V.",
@@ -12557,7 +12314,7 @@
     "from": "2025-11-09",
     "to": "2025-11-09",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91658&pLa=en",
@@ -12604,7 +12361,7 @@
     "from": "2025-11-15",
     "to": "2025-11-16",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92197&pLa=en",
@@ -12638,7 +12395,7 @@
     "from": "2025-11-15",
     "to": "2025-11-16",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91317&pLa=en",
@@ -12699,7 +12456,9 @@
     "name": "Abschlussfeier Hessencup Saison 2025",
     "from": "2025-11-15",
     "to": "2025-11-15",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91680&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=91680&tId=E&hId%5B1%5D=org",
@@ -12720,66 +12479,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-11-15-myrcm-event-90519",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 21516 Schulendorf",
-    "from": "2025-11-15",
-    "to": "2025-11-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90519&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90519&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90519&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 24
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-11-15-myrcm-event-90748",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 82490 Farchant",
-    "from": "2025-11-15",
-    "to": "2025-11-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90748&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90748&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90748&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 14
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-11-15-myrcm-event-91275",
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -12790,7 +12489,7 @@
     "from": "2025-11-15",
     "to": "2025-11-16",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91275&pLa=en",
@@ -13029,36 +12728,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-11-22-myrcm-event-91409",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Eplorer Cup in 59556 Lippstadt Eickelborn",
-    "from": "2025-11-22",
-    "to": "2025-11-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91409&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=91409&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91409&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 25
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-09"
-  },
-  {
     "id": "amc-langenfeld-e-v-2025-11-22-myrcm-event-91757",
     "venueId": "amc-langenfeld-e-v",
     "venueName": "AMC Langenfeld e.V.",
@@ -13111,7 +12780,7 @@
     "from": "2025-11-23",
     "to": "2025-11-23",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91659&pLa=en",
@@ -13195,36 +12864,6 @@
       {
         "name": "TöftesCup VTA",
         "entries": 6
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-11-29-myrcm-event-91766",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 68642 Bürstadt , Industriestraße 11",
-    "from": "2025-11-29",
-    "to": "2025-11-29",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91766&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=91766&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91766&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 14
       }
     ],
     "documents": [],
@@ -13317,7 +12956,9 @@
     "name": "Speed Masters R7 Modellfreunde Rheinhessen/Pfalz e.V. / MFR Morschheim",
     "from": "2025-11-29",
     "to": "2025-11-30",
-    "series": [],
+    "series": [
+      "Speed Masters"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91152&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=30759&pLa=en&dId%5BE%5D=91152&tId=E&hId%5B1%5D=org",
@@ -13352,36 +12993,6 @@
       {
         "name": "Modified (EGTWMO)",
         "entries": 4
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-11-30-myrcm-event-91768",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 49832 Freren,Bahnhofstraße 27",
-    "from": "2025-11-30",
-    "to": "2025-11-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91768&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=91768&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91768&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 21
       }
     ],
     "documents": [],
@@ -13519,7 +13130,8 @@
     "from": "2025-12-06",
     "to": "2025-12-07",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91764&pLa=en",
@@ -13577,7 +13189,7 @@
     "from": "2025-12-06",
     "to": "2025-12-07",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91682&pLa=en",
@@ -13802,36 +13414,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-12-12-myrcm-event-90483",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Deutsches Finale der 6h Teams",
-    "from": "2025-12-12",
-    "to": "2025-12-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90483&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90483&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90483&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Semi-Pro Tour",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "modellbaufreunde-felsberg-e-v-2025-12-13-myrcm-event-92063",
     "venueId": "modellbaufreunde-felsberg-e-v",
     "venueName": "Modellbaufreunde Felsberg e.V.",
@@ -13842,7 +13424,7 @@
     "from": "2025-12-13",
     "to": "2025-12-13",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92063&pLa=en",
@@ -14080,7 +13662,7 @@
     "from": "2025-12-20",
     "to": "2025-12-21",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91318&pLa=en",
@@ -14235,7 +13817,9 @@
     "name": "LRP Challenge 21.12.2025",
     "from": "2025-12-20",
     "to": "2025-12-21",
-    "series": [],
+    "series": [
+      "LRP Offroad Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92990&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38659&pLa=en&dId%5BE%5D=92990&tId=E&hId%5B1%5D=org",
@@ -14338,7 +13922,9 @@
     "name": "RCK-Kleinserie Beindersheim TC-Heuchelheim",
     "from": "2025-12-21",
     "to": "2025-12-21",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93014&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=93014&tId=E&hId%5B1%5D=org",
@@ -14667,8 +14253,8 @@
     "from": "2026-01-02",
     "to": "2026-01-04",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88762&pLa=en",
@@ -14792,6 +14378,7 @@
     "from": "2026-01-03",
     "to": "2026-01-03",
     "series": [
+      "Tamiya Euro Cup (TEC)",
       "RCK Challenge"
     ],
     "source": "myrcm",
@@ -14845,7 +14432,9 @@
     "name": "RCK-KleinSerie 4.01.2026",
     "from": "2026-01-04",
     "to": "2026-01-04",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93273&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4441&pLa=en&dId%5BE%5D=93273&tId=E&hId%5B1%5D=org",
@@ -14876,7 +14465,9 @@
     "name": "RCK-KleinSerie Hanau-Grossauheim Mitte - 04.01.2026",
     "from": "2026-01-04",
     "to": "2026-01-04",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92988&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=92988&tId=E&hId%5B1%5D=org",
@@ -14908,7 +14499,7 @@
     "from": "2026-01-04",
     "to": "2026-01-04",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93274&pLa=en",
@@ -15224,7 +14815,7 @@
     "from": "2026-01-11",
     "to": "2026-01-11",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93023&pLa=en",
@@ -15326,96 +14917,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-01-17-myrcm-event-90749",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 08527 Plauen",
-    "from": "2026-01-17",
-    "to": "2026-01-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90749&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90749&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90749&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 17
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-01-17-myrcm-event-92666",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 31079 Sibesse",
-    "from": "2026-01-17",
-    "to": "2026-01-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92666&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=92666&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92666&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 17
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-01-17-myrcm-event-92796",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 91074 Herzogenaurach,Adalbert_Stifter-Str.50",
-    "from": "2026-01-17",
-    "to": "2026-01-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92796&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=92796&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92796&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 26
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "emc-marktoberdorf-2026-01-17-myrcm-event-93260",
     "venueId": "emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
@@ -15494,7 +14995,9 @@
     "name": "RCK-Kleinserie Braunschweig",
     "from": "2026-01-17",
     "to": "2026-01-18",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93617&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=93617&tId=E&hId%5B1%5D=org",
@@ -15525,7 +15028,7 @@
     "from": "2026-01-17",
     "to": "2026-01-18",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92982&pLa=en",
@@ -15756,7 +15259,9 @@
     "name": "Euro Offroad Series Daun / GER",
     "from": "2026-01-22",
     "to": "2026-01-25",
-    "series": [],
+    "series": [
+      "Euro Offroad Series (EOS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91510&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=91510&tId=E&hId%5B1%5D=org",
@@ -15857,7 +15362,7 @@
     "from": "2026-01-24",
     "to": "2026-01-25",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93104&pLa=en",
@@ -15903,36 +15408,6 @@
       {
         "name": "Tamiya TRF 17.5 / Gastklasse MCV Stock 17.5",
         "entries": 6
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-01-24-myrcm-event-92667",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 27404 Weertzen, Schulhof 3",
-    "from": "2026-01-24",
-    "to": "2026-01-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92667&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=92667&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92667&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 21
       }
     ],
     "documents": [],
@@ -16104,7 +15579,7 @@
     "from": "2026-01-25",
     "to": "2026-01-25",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93060&pLa=en",
@@ -16212,7 +15687,7 @@
     "from": "2026-01-29",
     "to": "2026-02-01",
     "series": [
-      "ETS"
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90956&pLa=en",
@@ -16294,36 +15769,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-01-31-myrcm-event-89673",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 85084 Reichertshofen, Gotteshofner Str. 7b",
-    "from": "2026-01-31",
-    "to": "2026-01-31",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89673&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=89673&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89673&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 10
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "amc-langenfeld-e-v-2026-01-31-myrcm-event-93219",
     "venueId": "amc-langenfeld-e-v",
     "venueName": "AMC Langenfeld e.V.",
@@ -16370,36 +15815,6 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "slottis-supreme-masters-2026-02-01-myrcm-event-93193",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 06295 LutherStadt Eisleben",
-    "from": "2026-02-01",
-    "to": "2026-02-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93193&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93193&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93193&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 36,
-    "registrationDisplay": "36",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 36
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "megadrom-rc-team-nord-2026-02-01-myrcm-event-93960",
     "venueId": "megadrom-rc-team-nord",
     "venueName": "Megadrom RC Team Nord",
@@ -16441,7 +15856,9 @@
     "name": "Testrennnen",
     "from": "2026-02-06",
     "to": "2026-02-06",
-    "series": [],
+    "series": [
+      "ToniSport Onroad Series (TOS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94081&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=490&pLa=en&dId%5BE%5D=94081&tId=E&hId%5B1%5D=org",
@@ -16468,66 +15885,6 @@
       {
         "name": "TT02 (SLR intern)",
         "entries": 4
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-02-07-myrcm-event-93348",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 03238 Finsterwalde",
-    "from": "2026-02-07",
-    "to": "2026-02-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93348&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93348&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93348&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 22
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-02-07-myrcm-event-93289",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 59519 Möhnesee",
-    "from": "2026-02-07",
-    "to": "2026-02-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93289&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93289&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93289&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 13
       }
     ],
     "documents": [],
@@ -16684,7 +16041,7 @@
     "from": "2026-02-08",
     "to": "2026-02-08",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93853&pLa=en",
@@ -16719,36 +16076,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-02-14-myrcm-event-93308",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 38106 Braunschweig",
-    "from": "2026-02-14",
-    "to": "2026-02-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93308&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93308&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93308&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 24
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-09"
-  },
-  {
     "id": "burning-wheels-blankenfelde-2026-02-14-myrcm-event-93694",
     "venueId": "burning-wheels-blankenfelde",
     "venueName": "Burning Wheels Blankenfelde",
@@ -16759,7 +16086,7 @@
     "from": "2026-02-14",
     "to": "2026-02-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93694&pLa=en",
@@ -16815,7 +16142,7 @@
     "from": "2026-02-14",
     "to": "2026-02-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92555&pLa=en",
@@ -16905,7 +16232,8 @@
     "from": "2026-02-15",
     "to": "2026-02-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92659&pLa=en",
@@ -16953,7 +16281,7 @@
     "from": "2026-02-21",
     "to": "2026-02-22",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93201&pLa=en",
@@ -16993,36 +16321,6 @@
       {
         "name": "Tamiya TRF 17.5 / Gastklasse MCV Stock 17.5",
         "entries": 6
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-02-21-myrcm-event-93307",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 50170 Kerpen",
-    "from": "2026-02-21",
-    "to": "2026-02-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93307&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93307&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93307&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 28,
-    "registrationDisplay": "28",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 28
       }
     ],
     "documents": [],
@@ -17079,7 +16377,9 @@
     "name": "LRP Challenge MCC Fellbach 21.-22.02.2026",
     "from": "2026-02-21",
     "to": "2026-02-22",
-    "series": [],
+    "series": [
+      "LRP Offroad Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94588&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38659&pLa=en&dId%5BE%5D=94588&tId=E&hId%5B1%5D=org",
@@ -17401,7 +16701,9 @@
     "name": "Tamico Offroad-Cup Megadrom Hasloh",
     "from": "2026-02-22",
     "to": "2026-02-22",
-    "series": [],
+    "series": [
+      "Tamico Offroad Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93584&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=32408&pLa=en&dId%5BE%5D=93584&tId=E&hId%5B1%5D=org",
@@ -17514,7 +16816,7 @@
     "from": "2026-02-22",
     "to": "2026-02-22",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93774&pLa=en",
@@ -17639,36 +16941,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-02-28-myrcm-event-93947",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 28876 Oyten",
-    "from": "2026-02-28",
-    "to": "2026-02-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93947&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93947&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93947&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "amc-langenfeld-e-v-2026-02-28-myrcm-event-94061",
     "venueId": "amc-langenfeld-e-v",
     "venueName": "AMC Langenfeld e.V.",
@@ -17725,7 +16997,8 @@
     "from": "2026-02-28",
     "to": "2026-03-01",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91280&pLa=en",
@@ -17775,8 +17048,8 @@
     "from": "2026-02-28",
     "to": "2026-03-01",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92705&pLa=en",
@@ -17858,36 +17131,6 @@
       {
         "name": "MCC Porsche nach Kleinserie Reglement",
         "entries": 4
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-03-01-myrcm-event-93962",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 39167 Wanzleben-Börde",
-    "from": "2026-03-01",
-    "to": "2026-03-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93962&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93962&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93962&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 24
       }
     ],
     "documents": [],
@@ -18192,66 +17435,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-03-07-myrcm-event-93956",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 45701 Herten",
-    "from": "2026-03-07",
-    "to": "2026-03-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93956&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93956&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93956&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-03-07-myrcm-event-93946",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 49424 Goldenstedt",
-    "from": "2026-03-07",
-    "to": "2026-03-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93946&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=93946&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93946&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "emc-marktoberdorf-2026-03-07-myrcm-event-93646",
     "venueId": "emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
@@ -18300,7 +17483,7 @@
     "from": "2026-03-07",
     "to": "2026-03-08",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94576&pLa=en",
@@ -18350,7 +17533,8 @@
     "from": "2026-03-07",
     "to": "2026-03-08",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Speed Masters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94379&pLa=en",
@@ -18511,36 +17695,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-03-14-myrcm-event-94439",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 65510 Idstein",
-    "from": "2026-03-14",
-    "to": "2026-03-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94439&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94439&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94439&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 9
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-03-14-myrcm-event-91281",
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -18618,36 +17772,6 @@
       {
         "name": "ORETR2",
         "entries": 7
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-03-15-myrcm-event-94514",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 49832 Freren",
-    "from": "2026-03-15",
-    "to": "2026-03-15",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94514&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94514&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94514&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 13
       }
     ],
     "documents": [],
@@ -18804,7 +17928,7 @@
     "from": "2026-03-15",
     "to": "2026-03-15",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94397&pLa=en",
@@ -18912,7 +18036,9 @@
     "name": "Tamiya Eurocup Schaafheim",
     "from": "2026-03-15",
     "to": "2026-03-15",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92045&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=50727&pLa=en&dId%5BE%5D=92045&tId=E&hId%5B1%5D=org",
@@ -18961,7 +18087,9 @@
     "name": "Tamiya Eurocup Schaafheim",
     "from": "2026-03-15",
     "to": "2026-03-15",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95405&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=50727&pLa=en&dId%5BE%5D=95405&tId=E&hId%5B1%5D=org",
@@ -18993,7 +18121,7 @@
     "from": "2026-03-19",
     "to": "2026-03-22",
     "series": [
-      "ETS"
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92736&pLa=en",
@@ -19033,36 +18161,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-09"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-03-21-myrcm-event-94437",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 25474 Bönningstedt",
-    "from": "2026-03-21",
-    "to": "2026-03-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94437&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94437&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94437&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 21
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
   },
   {
     "id": "rcrt-duisburg-e-v-2026-03-21-myrcm-event-95024",
@@ -19109,7 +18207,7 @@
     "from": "2026-03-21",
     "to": "2026-03-22",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91282&pLa=en",
@@ -19313,7 +18411,9 @@
     "name": "RCK-Kleinserie",
     "from": "2026-03-22",
     "to": "2026-03-22",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95434&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24873&pLa=en&dId%5BE%5D=95434&tId=E&hId%5B1%5D=org",
@@ -19438,7 +18538,9 @@
     "name": "TSG Traininng 27.03",
     "from": "2026-03-27",
     "to": "2026-03-27",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95805&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=95805&tId=E&hId%5B1%5D=org",
@@ -19496,7 +18598,7 @@
     "from": "2026-03-28",
     "to": "2026-03-29",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93202&pLa=en",
@@ -19570,36 +18672,6 @@
       {
         "name": "Fighter",
         "entries": 8
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-03-28-myrcm-event-94108",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrea Explorer Cup in 64853 Lengfeld",
-    "from": "2026-03-28",
-    "to": "2026-03-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94108&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94108&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94108&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 24
       }
     ],
     "documents": [],
@@ -19891,36 +18963,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-04-04-myrcm-event-94630",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Explorer Cup in 36391 Sinntal",
-    "from": "2026-04-04",
-    "to": "2026-04-04",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94630&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94630&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94630&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 14
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "mcc-rhein-ahr-e-v-2026-04-04-myrcm-event-95559",
     "venueId": "mcc-rhein-ahr-e-v",
     "venueName": "MCC Rhein Ahr e.V.",
@@ -19961,7 +19003,7 @@
     "from": "2026-04-05",
     "to": "2026-04-05",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94105&pLa=en",
@@ -20061,7 +19103,9 @@
     "name": "1. Hessencup Lauf 2026 Großheubach",
     "from": "2026-04-11",
     "to": "2026-04-12",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93756&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=93756&tId=E&hId%5B1%5D=org",
@@ -20103,7 +19147,9 @@
     "name": "Saar Racing Series #1 + SK Wertung",
     "from": "2026-04-11",
     "to": "2026-04-12",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95268&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48023&pLa=en&dId%5BE%5D=95268&tId=E&hId%5B1%5D=org",
@@ -20162,7 +19208,7 @@
     "from": "2026-04-11",
     "to": "2026-04-12",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95529&pLa=en",
@@ -20222,7 +19268,7 @@
     "from": "2026-04-11",
     "to": "2026-04-12",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96328&pLa=en",
@@ -20387,7 +19433,10 @@
     "name": "Euro Offroad Series Round 2 Trencin / SK",
     "from": "2026-04-16",
     "to": "2026-04-19",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)",
+      "Euro Offroad Series (EOS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92891&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=92891&tId=E&hId%5B1%5D=org",
@@ -20473,7 +19522,7 @@
     "from": "2026-04-17",
     "to": "2026-04-19",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94183&pLa=en",
@@ -20650,7 +19699,8 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95666&pLa=en",
@@ -20700,7 +19750,7 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94242&pLa=en",
@@ -20784,66 +19834,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-04-18-myrcm-event-95246",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Herzogenaurach Adalbert-Stifter -Strasse 50 91074 -",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95246&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95246&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95246&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-04-18-myrcm-event-95248",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Kerpen Hermann Löns Str. 40 50170 -",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95248&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95248&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95248&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 27
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "modellsportzentrum-zwoenitz-e-v-2026-04-18-myrcm-event-96246",
     "venueId": "modellsportzentrum-zwoenitz-e-v",
     "venueName": "Modellsportzentrum Zwönitz e.V.",
@@ -20854,7 +19844,7 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96246&pLa=en",
@@ -21153,7 +20143,7 @@
     "from": "2026-04-24",
     "to": "2026-04-26",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95410&pLa=en",
@@ -21197,7 +20187,7 @@
     "from": "2026-04-25",
     "to": "2026-04-26",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93203&pLa=en",
@@ -21253,7 +20243,7 @@
     "from": "2026-04-25",
     "to": "2026-04-26",
     "series": [
-      "BTM"
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94212&pLa=en",
@@ -21304,7 +20294,9 @@
     "name": "JumpstartRC Trophy 2026 #1/4 @ Ettlingen",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "JumpstartRC Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95669&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=121&pLa=en&dId%5BE%5D=95669&tId=E&hId%5B1%5D=org",
@@ -21342,7 +20334,9 @@
     "name": "LE-Trophy ON-ROAD Lauf 1",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95453&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95453&tId=E&hId%5B1%5D=org",
@@ -21464,7 +20458,9 @@
     "name": "LRP Challenge MCC Fellbach e. V. 25./26.04.2026",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "LRP Offroad Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96872&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38659&pLa=en&dId%5BE%5D=96872&tId=E&hId%5B1%5D=org",
@@ -21561,36 +20557,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-04-25-myrcm-event-95249",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Langenau Tuchmacherstr. 15 89129 -",
-    "from": "2026-04-25",
-    "to": "2026-04-25",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95249&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95249&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95249&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "simbacher-buggyracer-e-v-2026-04-25-myrcm-event-95390",
     "venueId": "simbacher-buggyracer-e-v",
     "venueName": "Simbacher Buggyracer e.V.",
@@ -21632,7 +20598,7 @@
     "from": "2026-04-25",
     "to": "2026-04-25",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94825&pLa=en",
@@ -21747,7 +20713,8 @@
     "from": "2026-04-26",
     "to": "2026-04-26",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "MAC-Challenge"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95427&pLa=en",
@@ -21791,7 +20758,7 @@
     "from": "2026-04-26",
     "to": "2026-04-26",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96314&pLa=en",
@@ -21986,7 +20953,9 @@
     "name": "RCK Klein Serie",
     "from": "2026-05-01",
     "to": "2026-05-01",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97004&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=134&pLa=en&dId%5BE%5D=97004&tId=E&hId%5B1%5D=org",
@@ -22058,8 +21027,8 @@
     "from": "2026-05-01",
     "to": "2026-05-03",
     "series": [
-      "Ostmasters",
-      "SK"
+      "Sportkreis (SK)",
+      "Ostmasters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94937&pLa=en",
@@ -22151,7 +21120,7 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96113&pLa=en",
@@ -22196,7 +21165,7 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94811&pLa=en",
@@ -22930,7 +21899,7 @@
     "from": "2026-05-03",
     "to": "2026-05-03",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96199&pLa=en",
@@ -22979,7 +21948,9 @@
     "name": "Euro NITRO Series Onroad Round 1 ETTLINGEN / GER",
     "from": "2026-05-07",
     "to": "2026-05-10",
-    "series": [],
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95738&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95738&tId=E&hId%5B1%5D=org",
@@ -23051,7 +22022,7 @@
     "from": "2026-05-08",
     "to": "2026-05-10",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93366&pLa=en",
@@ -23175,7 +22146,9 @@
     "name": "2. Hessencup Lauf 2026 Bischofsheim",
     "from": "2026-05-09",
     "to": "2026-05-10",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93757&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=93757&tId=E&hId%5B1%5D=org",
@@ -23247,7 +22220,8 @@
     "from": "2026-05-09",
     "to": "2026-05-10",
     "series": [
-      "BTM"
+      "Sportkreis (SK)",
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94887&pLa=en",
@@ -23330,36 +22304,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-05-09-myrcm-event-95250",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Lutherstadt Eisleben Rothenschirmbach 26/27 06295 -",
-    "from": "2026-05-09",
-    "to": "2026-05-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95250&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95250&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95250&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 14
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "mac-burgdorf-e-v-2026-05-09-myrcm-event-95760",
     "venueId": "mac-burgdorf-e-v",
     "venueName": "MAC Burgdorf e.V.",
@@ -23369,7 +22313,9 @@
     "name": "Tamiya Eurocup",
     "from": "2026-05-09",
     "to": "2026-05-10",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95760&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=678&pLa=en&dId%5BE%5D=95760&tId=E&hId%5B1%5D=org",
@@ -23464,7 +22410,8 @@
     "from": "2026-05-10",
     "to": "2026-05-10",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "MAC-Challenge"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95429&pLa=en",
@@ -23627,7 +22574,7 @@
     "from": "2026-05-10",
     "to": "2026-05-10",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97253&pLa=en",
@@ -23768,7 +22715,9 @@
     "name": "2.Lauf SK-West ORE 1:10 , 2.Lauf NRW OffRoadCup , 1.Lauf SK-West ORE8",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96506&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6025&pLa=en&dId%5BE%5D=96506&tId=E&hId%5B1%5D=org",
@@ -23822,7 +22771,10 @@
     "name": "4. SK & 2. SDC Lauf OR Süd 2026 beim MSC Sand e.V.",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96156&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60911&pLa=en&dId%5BE%5D=96156&tId=E&hId%5B1%5D=org",
@@ -23931,7 +22883,9 @@
     "name": "LRP Offroad Challenge 26/05",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "LRP Offroad Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97513&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=116&pLa=en&dId%5BE%5D=97513&tId=E&hId%5B1%5D=org",
@@ -24024,36 +22978,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-05-16-myrcm-event-95251",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Braunschweig Bienroder Weg 70 38106 -",
-    "from": "2026-05-16",
-    "to": "2026-05-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95251&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95251&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95251&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-09"
-  },
-  {
     "id": "wiesbadener-minicar-club-e-v-2026-05-16-myrcm-event-97538",
     "venueId": "wiesbadener-minicar-club-e-v",
     "venueName": "Wiesbadener Minicar Club e.V.",
@@ -24064,7 +22988,7 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97538&pLa=en",
@@ -24098,7 +23022,7 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93310&pLa=en",
@@ -24147,8 +23071,8 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94462&pLa=en",
@@ -24202,7 +23126,8 @@
     "from": "2026-05-17",
     "to": "2026-05-17",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Alpencup"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94902&pLa=en",
@@ -24267,7 +23192,9 @@
     "name": "LE-Trophy Offroad 2026 Lauf 1/3",
     "from": "2026-05-17",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95145&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95145&tId=E&hId%5B1%5D=org",
@@ -24590,7 +23517,9 @@
     "name": "2.Heidecup + CRS + SK EG8GT3",
     "from": "2026-05-23",
     "to": "2026-05-24",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97127&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33489&pLa=en&dId%5BE%5D=97127&tId=E&hId%5B1%5D=org",
@@ -24632,7 +23561,9 @@
     "name": "42. Pfingstrennen auf dem Entenring - 1. NRW-Cup 2026",
     "from": "2026-05-23",
     "to": "2026-05-24",
-    "series": [],
+    "series": [
+      "NRW-Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97638&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53092&pLa=en&dId%5BE%5D=97638&tId=E&hId%5B1%5D=org",
@@ -24664,7 +23595,7 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94700&pLa=en",
@@ -24718,8 +23649,8 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [
-      "Ostmasters",
-      "SK"
+      "Sportkreis (SK)",
+      "Ostmasters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96501&pLa=en",
@@ -24759,7 +23690,7 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96197&pLa=en",
@@ -25035,7 +23966,7 @@
     "from": "2026-05-28",
     "to": "2026-05-31",
     "series": [
-      "ETS"
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96256&pLa=en",
@@ -25087,7 +24018,7 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96786&pLa=en",
@@ -25139,7 +24070,7 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95667&pLa=en",
@@ -25175,7 +24106,8 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96758&pLa=en",
@@ -25258,7 +24190,9 @@
     "name": "LE-Trophy ON-ROAD Lauf 2",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95454&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95454&tId=E&hId%5B1%5D=org",
@@ -25299,7 +24233,7 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96787&pLa=en",
@@ -25351,8 +24285,8 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [
-      "BTM",
-      "SK"
+      "Sportkreis (SK)",
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94210&pLa=en",
@@ -25406,7 +24340,7 @@
     "from": "2026-05-30",
     "to": "2026-05-30",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94826&pLa=en",
@@ -25783,7 +24717,9 @@
     "name": "RCKleinserie",
     "from": "2026-05-31",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97912&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=97912&tId=E&hId%5B1%5D=org",
@@ -25813,7 +24749,7 @@
     "from": "2026-05-31",
     "to": "2026-05-31",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96962&pLa=en",
@@ -25953,7 +24889,7 @@
     "from": "2026-06-04",
     "to": "2026-06-07",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93311&pLa=en",
@@ -26016,7 +24952,9 @@
     "name": "2. Alpencuplauf MRT-Rosenheim",
     "from": "2026-06-06",
     "to": "2026-06-07",
-    "series": [],
+    "series": [
+      "Alpencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96388&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=96388&tId=E&hId%5B1%5D=org",
@@ -26058,7 +24996,9 @@
     "name": "2. NRW-Cup OR8 / ORE8 / ORT / ORET Mechernich",
     "from": "2026-06-06",
     "to": "2026-06-07",
-    "series": [],
+    "series": [
+      "NRW-Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97390&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33838&pLa=en&dId%5BE%5D=97390&tId=E&hId%5B1%5D=org",
@@ -26166,7 +25106,7 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94474&pLa=en",
@@ -26214,7 +25154,7 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96502&pLa=en",
@@ -26677,7 +25617,9 @@
     "name": "3. Hessencup Lauf 2026 Heiligenstadt",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95507&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95507&tId=E&hId%5B1%5D=org",
@@ -26719,7 +25661,9 @@
     "name": "3. Hessencup Lauf 2026 Heiligenstadt",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98166&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=98166&tId=E&hId%5B1%5D=org",
@@ -26750,7 +25694,7 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97831&pLa=en",
@@ -26759,8 +25703,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": null,
     "classes": [
       "VG8K1+VG8Kl2+VG10",
@@ -26778,7 +25722,7 @@
       },
       {
         "name": "VG5TW",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "EG8e",
@@ -26818,7 +25762,9 @@
     "name": "4. Lauf SK-West OR8E",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96918&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96918&tId=E&hId%5B1%5D=org",
@@ -26857,7 +25803,8 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "Süddeutschlandcup (SDC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97007&pLa=en",
@@ -26907,7 +25854,7 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94701&pLa=en",
@@ -26967,7 +25914,9 @@
     "name": "AMSC Cup 2026: Lauf 2",
     "from": "2026-06-13",
     "to": "2026-06-13",
-    "series": [],
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96082&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=36&pLa=en&dId%5BE%5D=96082&tId=E&hId%5B1%5D=org",
@@ -27010,8 +25959,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 56,
-    "registrationDisplay": "56",
+    "registrationCount": 57,
+    "registrationDisplay": "57",
     "note": null,
     "classes": [
       {
@@ -27024,7 +25973,7 @@
       },
       {
         "name": "Fun Cup TT+",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "FWD 17.5",
@@ -27057,7 +26006,7 @@
     "from": "2026-06-13",
     "to": "2026-06-13",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97556&pLa=en",
@@ -27110,7 +26059,7 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95443&pLa=en",
@@ -27158,8 +26107,8 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "BTM",
-      "SK"
+      "Sportkreis (SK)",
+      "Berlin Touring Masters (BTM)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94649&pLa=en",
@@ -27215,7 +26164,7 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97212&pLa=en",
@@ -27268,7 +26217,7 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94707&pLa=en",
@@ -27326,7 +26275,9 @@
     "name": "Testv3 (Olli)",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "ToniSport Onroad Series (TOS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96259&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24531&pLa=en&dId%5BE%5D=96259&tId=E&hId%5B1%5D=org",
@@ -27423,7 +26374,9 @@
     "name": "2. Alpencup Wertungslauf 2026",
     "from": "2026-06-14",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "Alpencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95132&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95132&tId=E&hId%5B1%5D=org",
@@ -27431,8 +26384,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 41,
+    "registrationDisplay": "41",
     "note": null,
     "classes": [
       {
@@ -27441,7 +26394,7 @@
       },
       {
         "name": "2WD Buggy",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "2WD Monster",
@@ -27449,11 +26402,11 @@
       },
       {
         "name": "2WD Pro Stock (\"blinky modus\")",
-        "entries": 5
+        "entries": 8
       },
       {
         "name": "4WD Buggy",
-        "entries": 7
+        "entries": 9
       }
     ],
     "documents": [],
@@ -27470,7 +26423,8 @@
     "from": "2026-06-14",
     "to": "2026-06-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)",
+      "MAC-Challenge"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95423&pLa=en",
@@ -27576,8 +26530,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": null,
     "classes": [
       {
@@ -27594,7 +26548,7 @@
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -27618,8 +26572,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": null,
     "classes": [
       {
@@ -27632,7 +26586,7 @@
       },
       {
         "name": "1:8GT",
-        "entries": 2
+        "entries": 1
       },
       {
         "name": "FWD",
@@ -27709,7 +26663,7 @@
     "from": "2026-06-14",
     "to": "2026-06-14",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96508&pLa=en",
@@ -27809,7 +26763,7 @@
     "from": "2026-06-14",
     "to": "2026-06-14",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97850&pLa=en",
@@ -27907,36 +26861,6 @@
       {
         "name": "ORE8",
         "entries": 1
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-06-19-myrcm-event-94598",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Deutsche Meisterschaft Kottenheim 19.-21. Juni Schulstrasse 12 56736 Kottenheim",
-    "from": "2026-06-19",
-    "to": "2026-06-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94598&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94598&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94598&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 129,
-    "registrationDisplay": "129",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 129
       }
     ],
     "documents": [],
@@ -28113,7 +27037,9 @@
     "name": "Fun-Event + SK - VG5TW / VG5SP / VG5F1",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97948&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7103&pLa=en&dId%5BE%5D=97948&tId=E&hId%5B1%5D=org",
@@ -28249,7 +27175,7 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97434&pLa=en",
@@ -28258,8 +27184,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 7,
-    "registrationDisplay": "7",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": null,
     "classes": [
       {
@@ -28268,7 +27194,7 @@
       },
       {
         "name": "EG8GT3",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "VG8GT",
@@ -28289,7 +27215,7 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97760&pLa=en",
@@ -28353,7 +27279,7 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [
-      "TOS"
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95989&pLa=en",
@@ -28531,14 +27457,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
-      "1:8 Fun"
+      {
+        "name": "1:8 Fun",
+        "entries": 1
+      }
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-10"
   },
   {
     "id": "mac-hamburg-e-v-2026-06-21-myrcm-event-97558",
@@ -28809,7 +27738,9 @@
     "name": "2. Freundschaftsrennen",
     "from": "2026-06-27",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93312&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93312&tId=E&hId%5B1%5D=org",
@@ -28909,7 +27840,9 @@
     "name": "JumpstartRC Trophy 2026 #2/4 @ Bad Breisig",
     "from": "2026-06-27",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "JumpstartRC Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97707&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=283&pLa=en&dId%5BE%5D=97707&tId=E&hId%5B1%5D=org",
@@ -29004,7 +27937,7 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [
-      "SK",
+      "Sportkreis (SK)",
       "Tamico Offroad Cup"
     ],
     "source": "myrcm",
@@ -29014,8 +27947,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       "BBX",
@@ -29032,7 +27965,10 @@
         "entries": 2
       },
       "Truck",
-      "Wheelie",
+      {
+        "name": "Wheelie",
+        "entries": 1
+      },
       {
         "name": "ORE 2WD ST",
         "entries": 2
@@ -29112,7 +28048,7 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96247&pLa=en",
@@ -29182,7 +28118,7 @@
     "from": "2026-06-28",
     "to": "2026-06-28",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97665&pLa=en",
@@ -29312,7 +28248,9 @@
     "name": "Euro NITRO Series Onroad Round 2 RUCPHEN / NL",
     "from": "2026-07-02",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95739&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95739&tId=E&hId%5B1%5D=org",
@@ -29362,11 +28300,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
-      "MCD Fanatics Cup"
+      {
+        "name": "MCD Fanatics Cup",
+        "entries": 3
+      }
     ],
     "documents": [
       {
@@ -29426,7 +28367,9 @@
     "name": "4. Hessencup-Lauf Linsengericht",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95508&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95508&tId=E&hId%5B1%5D=org",
@@ -29671,7 +28614,9 @@
     "name": "LE-Trophy Offroad 2026 Lauf 2/3",
     "from": "2026-07-05",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95146&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95146&tId=E&hId%5B1%5D=org",
@@ -29818,7 +28763,7 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98009&pLa=en",
@@ -29936,7 +28881,7 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97801&pLa=en",
@@ -29983,7 +28928,7 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94506&pLa=en",
@@ -30046,8 +28991,8 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98164&pLa=en",
@@ -30257,7 +29202,7 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97756&pLa=en",
@@ -30309,7 +29254,7 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96139&pLa=en",
@@ -30344,7 +29289,7 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98015&pLa=en",
@@ -30515,7 +29460,9 @@
     "name": "4.Lauf MAC-Challenge",
     "from": "2026-07-19",
     "to": "2026-07-19",
-    "series": [],
+    "series": [
+      "MAC-Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95430&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=95430&tId=E&hId%5B1%5D=org",
@@ -30557,7 +29504,9 @@
     "name": "TAMIYA Eurocup + LMH 17.5T / GT3 21.5T Gastklasse 19.07.2026 - VfR Rüsselsheim Outdoor",
     "from": "2026-07-19",
     "to": "2026-07-19",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97884&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=97884&tId=E&hId%5B1%5D=org",
@@ -30639,7 +29588,8 @@
     "from": "2026-07-23",
     "to": "2026-07-26",
     "series": [
-      "ETS"
+      "Sportkreis (SK)",
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97810&pLa=en",
@@ -30751,7 +29701,9 @@
     "name": "5. Hessencup Lauf 2026 MSC Ober-Mörlen",
     "from": "2026-07-25",
     "to": "2026-07-26",
-    "series": [],
+    "series": [
+      "Hessencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96171&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=96171&tId=E&hId%5B1%5D=org",
@@ -30908,11 +29860,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": null,
     "classes": [
-      "Vintage 2WD - bis 2004",
+      {
+        "name": "Vintage 2WD - bis 2004",
+        "entries": 1
+      },
       "Vintage 4WD - bis 2004",
       "Vintage Truggy - bis 2004",
       "ToTu - 2WD"
@@ -31033,7 +29988,7 @@
     "from": "2026-08-01",
     "to": "2026-08-02",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97433&pLa=en",
@@ -31150,7 +30105,7 @@
     "from": "2026-08-07",
     "to": "2026-08-07",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93401&pLa=en",
@@ -31179,7 +30134,7 @@
     "from": "2026-08-07",
     "to": "2026-08-09",
     "series": [
-      "TEC"
+      "Tamiya Euro Cup (TEC)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93402&pLa=en",
@@ -31345,7 +30300,9 @@
     "name": "Euro NITRO Series Onroad Round 3 AIGEN / AT",
     "from": "2026-08-13",
     "to": "2026-08-16",
-    "series": [],
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95740&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95740&tId=E&hId%5B1%5D=org",
@@ -31376,8 +30333,8 @@
     "from": "2026-08-15",
     "to": "2026-08-16",
     "series": [
-      "Ostmasters",
-      "SK"
+      "Sportkreis (SK)",
+      "Ostmasters"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97914&pLa=en",
@@ -31409,7 +30366,7 @@
     "from": "2026-08-15",
     "to": "2026-08-16",
     "series": [
-      "SK"
+      "Sportkreis (SK)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94712&pLa=en",
@@ -31542,7 +30499,9 @@
     "name": "LE-Trophy ON-ROAD Lauf 3",
     "from": "2026-08-22",
     "to": "2026-08-23",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95455&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95455&tId=E&hId%5B1%5D=org",
@@ -31576,7 +30535,9 @@
     "name": "RCK-Kleinserie",
     "from": "2026-08-22",
     "to": "2026-08-23",
-    "series": [],
+    "series": [
+      "RCK Kleinserie"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97359&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=97359&tId=E&hId%5B1%5D=org",
@@ -31610,7 +30571,9 @@
     "name": "5.Lauf MAC-Challenge",
     "from": "2026-08-23",
     "to": "2026-08-23",
-    "series": [],
+    "series": [
+      "MAC-Challenge"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95431&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49037&pLa=en&dId%5BE%5D=95431&tId=E&hId%5B1%5D=org",
@@ -31780,7 +30743,9 @@
     "name": "3. Freundschaftsrennen",
     "from": "2026-08-29",
     "to": "2026-08-30",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93313&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93313&tId=E&hId%5B1%5D=org",
@@ -31814,7 +30779,9 @@
     "name": "SK-Ost ORE 1:10 + 1:8",
     "from": "2026-08-29",
     "to": "2026-08-30",
-    "series": [],
+    "series": [
+      "Sportkreis (SK)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94653&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=94653&tId=E&hId%5B1%5D=org",
@@ -31876,7 +30843,9 @@
     "name": "LE-Trophy Offroad 2026 Lauf 3/3",
     "from": "2026-08-30",
     "to": "2026-08-30",
-    "series": [],
+    "series": [
+      "LE-Trophy"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95147&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=95147&tId=E&hId%5B1%5D=org",
@@ -31968,8 +30937,8 @@
     "from": "2026-09-05",
     "to": "2026-09-06",
     "series": [
-      "SK",
-      "TOS"
+      "Sportkreis (SK)",
+      "ToniSport Onroad Series (TOS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98162&pLa=en",
@@ -32124,7 +31093,7 @@
     "from": "2026-09-10",
     "to": "2026-09-13",
     "series": [
-      "ETS"
+      "Euro Touring Series (ETS)"
     ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97811&pLa=en",
@@ -32705,7 +31674,9 @@
     "name": "4. Freundschaftsrennen",
     "from": "2026-09-26",
     "to": "2026-09-27",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93314&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93314&tId=E&hId%5B1%5D=org",
@@ -32836,36 +31807,6 @@
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-10-01-myrcm-event-97611",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Standortmeldung (Keine Fahrer!) Carrera Explorer Cup Saison 3",
-    "from": "2026-10-01",
-    "to": "2026-10-01",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97611&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=97611&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97611&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-07-09",
-    "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
-    "note": "Nennung ab 09.07.2026",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 3
-      }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -33049,7 +31990,9 @@
     "name": "5. Freundschaftsrennen",
     "from": "2026-10-10",
     "to": "2026-10-11",
-    "series": [],
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93315&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19290&pLa=en&dId%5BE%5D=93315&tId=E&hId%5B1%5D=org",

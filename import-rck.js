@@ -193,9 +193,19 @@ function cityFromVenue(venue = {}) {
 }
 
 
+function primaryHostIdForVenue(venue = {}) {
+  const hostIdFromList = Array.isArray(venue?.hostIds)
+    ? venue.hostIds.find(Boolean)
+    : null;
+
+  return hostIdFromList || venue?.hostId || null;
+}
+
 function hostFieldsForVenue(venue, fallbackName = null) {
+  const hostId = primaryHostIdForVenue(venue);
+
   return {
-    hostId: venue?.hostId || venue?.id || null,
+    hostId: hostId || venue?.id || null,
     hostName: venue?.hostName || fallbackName || venue?.name || null
   };
 }
@@ -217,10 +227,11 @@ function hostFieldsForRckRace(race = {}) {
 
 function hostFieldsForMatchedVenue(venue, fallbackRace = {}) {
   const raceHost = hostFieldsForRckRace(fallbackRace);
+  const hostId = primaryHostIdForVenue(venue);
 
   return {
-    hostId: venue?.hostId || raceHost.hostId || venue?.id || null,
-    hostName: venue?.hostName || raceHost.hostName || venue?.name || null
+    hostId: hostId || raceHost.hostId || venue?.id || null,
+    hostName: raceHost.hostName || venue?.hostName || venue?.name || null
   };
 }
 
