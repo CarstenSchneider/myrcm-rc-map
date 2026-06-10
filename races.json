@@ -26651,8 +26651,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       {
@@ -26661,7 +26661,7 @@
       },
       {
         "name": "3LC GT/E8 Stock",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -26826,13 +26826,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 25
+        "entries": 23
       }
     ],
     "documents": [
@@ -27063,12 +27063,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97556&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=42064&pLa=en&dId%5BE%5D=97556&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97556&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 20,
     "registrationDisplay": "20",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "Einsteiger",
@@ -27224,22 +27224,25 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       {
         "name": "ORE 2WD",
+        "entries": 2
+      },
+      {
+        "name": "ORE 2WD STD",
         "entries": 1
       },
-      "ORE 2WD STD",
       {
         "name": "ORE 4WD",
         "entries": 1
       },
       {
         "name": "ORE 4WD STD",
-        "entries": 3
+        "entries": 4
       },
       "ORE Fun",
       {
@@ -27248,7 +27251,7 @@
       },
       {
         "name": "ORE Truck",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -27274,8 +27277,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": null,
     "classes": [
       {
@@ -27299,7 +27302,7 @@
       },
       {
         "name": "TW 17,5t Stock",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "FWD Challenge",
@@ -27428,8 +27431,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 34,
-    "registrationDisplay": "34",
+    "registrationCount": 35,
+    "registrationDisplay": "35",
     "note": null,
     "classes": [
       {
@@ -27446,7 +27449,7 @@
       },
       {
         "name": "2WD Pro Stock (\"blinky modus\")",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "4WD Buggy",
@@ -27815,8 +27818,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": null,
     "classes": [
       "TC - Euro TW",
@@ -27836,7 +27839,7 @@
       },
       {
         "name": "TC - Stock",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "TC - Top Stock",
@@ -29340,6 +29343,48 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-09"
+  },
+  {
+    "id": "mc-munster-e-v-2026-07-03-myrcm-event-98167",
+    "venueId": "mc-munster-e-v",
+    "venueName": "MC Munster e.V.",
+    "venueLocation": "Bremen",
+    "hostId": "mc-munster-e-v",
+    "hostName": "MC Munster e.V.",
+    "name": "1/5 MCD Fanatics Cup",
+    "from": "2026-07-03",
+    "to": "2026-07-04",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98167&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=33489&pLa=en&dId%5BE%5D=98167&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98167&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": null,
+    "classes": [
+      "MCD Fanatics Cup"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "ausschreibung_mcd_fanatics_2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=5EF17DB2-981B-4860-9FC0-6F53553D8649"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "reglement_mcd_fanatics_2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=7198191F-6F20-4EB8-AA9A-C6D98F898B32"
+      }
+    ],
+    "firstSeen": "2026-06-10"
   },
   {
     "id": "amc-senftenberg-e-v-2026-07-04-myrcm-event-98065",
