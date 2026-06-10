@@ -5871,36 +5871,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-08-23-myrcm-event-88599",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "6h Rennen Sinntal - 36391 Sinntal Bahnhofstrasse 5",
-    "from": "2025-08-23",
-    "to": "2025-08-24",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88599&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=88599&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88599&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Semi-Pro Tour",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-08-23-myrcm-event-89236",
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -12758,36 +12728,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2025-11-22-myrcm-event-91409",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrera Eplorer Cup in 59556 Lippstadt Eickelborn",
-    "from": "2025-11-22",
-    "to": "2025-11-22",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91409&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=91409&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91409&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Deutsche Meisterschaft \"Explorer Cup\"",
-        "entries": 25
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-09"
-  },
-  {
     "id": "amc-langenfeld-e-v-2025-11-22-myrcm-event-91757",
     "venueId": "amc-langenfeld-e-v",
     "venueName": "AMC Langenfeld e.V.",
@@ -13468,36 +13408,6 @@
       {
         "name": "SRS-17.5 TW (EGTWHO)",
         "entries": 13
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2025-12-12-myrcm-event-90483",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Deutsches Finale der 6h Teams",
-    "from": "2025-12-12",
-    "to": "2025-12-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90483&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=90483&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90483&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Semi-Pro Tour",
-        "entries": 12
       }
     ],
     "documents": [],
@@ -18768,38 +18678,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-03-28-myrcm-event-94108",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Carrea Explorer Cup in 64853 Lengfeld",
-    "from": "2026-03-28",
-    "to": "2026-03-28",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94108&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94108&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94108&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrea Explorer Cup",
-        "entries": 24
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "amc-langenfeld-e-v-2026-03-28-myrcm-event-95013",
     "venueId": "amc-langenfeld-e-v",
     "venueName": "AMC Langenfeld e.V.",
@@ -19956,70 +19834,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-04-18-myrcm-event-95246",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Herzogenaurach Adalbert-Stifter -Strasse 50 91074 -",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95246&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95246&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95246&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 12
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-04-18-myrcm-event-95248",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Kerpen Hermann Löns Str. 40 50170 -",
-    "from": "2026-04-18",
-    "to": "2026-04-18",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95248&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95248&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95248&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 27
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "modellsportzentrum-zwoenitz-e-v-2026-04-18-myrcm-event-96246",
     "venueId": "modellsportzentrum-zwoenitz-e-v",
     "venueName": "Modellsportzentrum Zwönitz e.V.",
@@ -20737,38 +20551,6 @@
       {
         "name": "Vintage 4WD 1977-1993 Torque-Tuned",
         "entries": 18
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-04-25-myrcm-event-95249",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Langenau Tuchmacherstr. 15 89129 -",
-    "from": "2026-04-25",
-    "to": "2026-04-25",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95249&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95249&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95249&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 12
       }
     ],
     "documents": [],
@@ -22522,38 +22304,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-05-09-myrcm-event-95250",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Lutherstadt Eisleben Rothenschirmbach 26/27 06295 -",
-    "from": "2026-05-09",
-    "to": "2026-05-09",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95250&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95250&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95250&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 14
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "mac-burgdorf-e-v-2026-05-09-myrcm-event-95760",
     "venueId": "mac-burgdorf-e-v",
     "venueName": "MAC Burgdorf e.V.",
@@ -23226,38 +22976,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "slottis-supreme-masters-2026-05-16-myrcm-event-95251",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Regionsfinale Braunschweig Bienroder Weg 70 38106 -",
-    "from": "2026-05-16",
-    "to": "2026-05-16",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95251&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=95251&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95251&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 15
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-09"
   },
   {
     "id": "wiesbadener-minicar-club-e-v-2026-05-16-myrcm-event-97538",
@@ -27149,38 +26867,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "slottis-supreme-masters-2026-06-19-myrcm-event-94598",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "name": "Deutsche Meisterschaft Kottenheim 19.-21. Juni Schulstrasse 12 56736 Kottenheim",
-    "from": "2026-06-19",
-    "to": "2026-06-21",
-    "series": [
-      "Carrera Explorer Cup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94598&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60453&pLa=en&dId%5BE%5D=94598&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94598&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 129,
-    "registrationDisplay": "129",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Carrera Explorer Cup",
-        "entries": 129
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "mac-uetersen-e-v-2026-06-19-myrcm-event-95561",
     "venueId": "mac-uetersen-e-v",
     "venueName": "MAC Uetersen e.V.",
@@ -28261,8 +27947,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       "BBX",
@@ -28279,7 +27965,10 @@
         "entries": 2
       },
       "Truck",
-      "Wheelie",
+      {
+        "name": "Wheelie",
+        "entries": 1
+      },
       {
         "name": "ORE 2WD ST",
         "entries": 2
