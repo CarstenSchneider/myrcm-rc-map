@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main branch
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Prepare site files
         run: |
@@ -19,6 +21,11 @@ jobs:
           cp style.css .deploy-site/
           cp series.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
+
+      - name: Verify app.js version
+        run: |
+          echo "Checking app.js for grouped series logic..."
+          grep -n 'appendGroup("Überregional"' .deploy-site/app.js
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
