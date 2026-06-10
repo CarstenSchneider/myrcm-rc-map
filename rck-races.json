@@ -5,7 +5,7 @@
     "venueId": "mbsc-waechtersbach",
     "venueName": "MBSC Wächtersbach",
     "venueLocation": "Wächtersbach",
-    "hostId": "ts-grossauheim",
+    "hostId": "mbsc-wachtersbach",
     "hostName": "TS-Grossauheim",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte - Wächtersbach",
@@ -72,7 +72,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -100,8 +100,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 46,
-    "registrationDisplay": "46",
+    "registrationCount": 47,
+    "registrationDisplay": "47",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -129,7 +129,7 @@
       },
       {
         "name": "LMH",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "M-Chassis",
@@ -147,7 +147,7 @@
     ],
     "venueWebsite": "https://tsv-1871.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -222,7 +222,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -298,7 +298,7 @@
     ],
     "venueWebsite": "https://erc-racing.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -306,7 +306,7 @@
     "venueId": "tsv-mariendorf-rc-racing",
     "venueName": "TSV Mariendorf 1897 RCCR",
     "venueLocation": "Berlin",
-    "hostId": "tsv-mariendorf-97-berlin-rccr",
+    "hostId": "tsv-mariendorf",
     "hostName": "TSV Mariendorf 97 Berlin RCCR",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Ost - Berlin",
@@ -326,8 +326,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Ost",
@@ -347,7 +347,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "LMH",
@@ -369,7 +369,7 @@
     ],
     "venueWebsite": "https://tsvm-racing.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -377,7 +377,7 @@
     "venueId": "mcc-luedenscheid-e-v",
     "venueName": "MCC Lüdenscheid e.V.",
     "venueLocation": "Lüdenscheid",
-    "hostId": "mcc-ludenscheid",
+    "hostId": "mcc-ludenscheid-e-v",
     "hostName": "MCC Lüdenscheid",
     "venueStatus": "matched",
     "name": "RCK Challenge West - Lüdenscheid",
@@ -444,7 +444,7 @@
     ],
     "venueWebsite": "https://mcc-luedenscheid.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -520,7 +520,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -595,7 +595,7 @@
     ],
     "venueWebsite": "https://rcworld-bremen.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -603,7 +603,7 @@
     "venueId": "turngemeinde-1855-neustadt-bei-coburg-e-v",
     "venueName": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
     "venueLocation": "Neustadt bei Coburg",
-    "hostId": "tg-neustadt-1855-e-v",
+    "hostId": "turngemeinde-1855-neustadt-bei-coburg-e-v",
     "hostName": "TG-Neustadt 1855 e.V.",
     "venueStatus": "matched",
     "name": "RCK Challenge Süd/Ost - Neustadt b. Coburg",
@@ -674,7 +674,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -682,7 +682,7 @@
     "venueId": "rcct-muenden-e-v",
     "venueName": "RCCT Münden e.V.",
     "venueLocation": "Hann. Münden",
-    "hostId": "rc-car-team-munden-ev",
+    "hostId": "rcct-munden-e-v",
     "hostName": "RC-CAR -TEAM Münden eV.",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte/Nord/West/Ost - Hann.Münden Nachtrennen",
@@ -752,7 +752,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -823,7 +823,7 @@
     ],
     "venueWebsite": "https://mac-mettenheim.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -831,7 +831,7 @@
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "venueLocation": "Braunschweig",
-    "hostId": "msc-polizei-braunschweig",
+    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "hostName": "MSC Polizei Braunschweig",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Nord - Braunschweig",
@@ -894,7 +894,7 @@
     ],
     "venueWebsite": "https://msc-polizei-bs.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -902,7 +902,7 @@
     "venueId": "tsv-mariendorf-rc-racing",
     "venueName": "TSV Mariendorf 1897 RCCR",
     "venueLocation": "Berlin",
-    "hostId": "tsv-mariendorf-97-berlin-rccr",
+    "hostId": "tsv-mariendorf",
     "hostName": "TSV Mariendorf 97 Berlin RCCR",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Ost - Berlin",
@@ -965,7 +965,7 @@
     ],
     "venueWebsite": "https://tsvm-racing.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -973,7 +973,7 @@
     "venueId": "emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
     "venueLocation": "Marktoberdorf",
-    "hostId": "emc-marktoberdorf-e-v",
+    "hostId": "emc-marktoberdorf",
     "hostName": "EMC-Marktoberdorf e.V.",
     "venueStatus": "matched",
     "name": "RCK Challenge Süd - Marktoberdorf",
@@ -993,8 +993,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 36,
-    "registrationDisplay": "36",
+    "registrationCount": 45,
+    "registrationDisplay": "45",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -1010,19 +1010,19 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "GT Challenge",
-        "entries": 6
+        "entries": 9
       },
       {
         "name": "Stock Challenge",
-        "entries": 13
+        "entries": 16
       },
       {
         "name": "Clubman Challenge",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "RCK Porsche",
@@ -1040,7 +1040,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1048,7 +1048,7 @@
     "venueId": "arena33-andernach",
     "venueName": "Arena33",
     "venueLocation": "Andernach",
-    "hostId": "djk-andernach",
+    "hostId": "djk-andernach-e-v",
     "hostName": "DjK Andernach",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte/West - Andernach",
@@ -1112,7 +1112,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1187,7 +1187,7 @@
     ],
     "venueWebsite": "https://rcworld-bremen.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1262,7 +1262,7 @@
     ],
     "venueWebsite": "https://ufm-modellbau.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1270,7 +1270,7 @@
     "venueId": "mcc-rhein-ahr-e-v",
     "venueName": "MCC Rhein Ahr e.V.",
     "venueLocation": "Bad Breisig",
-    "hostId": "mcc-rhein-ahr",
+    "hostId": "mcc-rhein-ahr-e-v",
     "hostName": "MCC Rhein Ahr",
     "venueStatus": "matched",
     "name": "RCK Challenge Mitte/West - Bad Breisig",
@@ -1345,7 +1345,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1399,7 +1399,7 @@
     ],
     "venueWebsite": "https://modellsport-zwickau.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1407,7 +1407,7 @@
     "venueId": "mcc-rhein-ahr-e-v",
     "venueName": "MCC Rhein Ahr e.V.",
     "venueLocation": "Bad Breisig",
-    "hostId": "mcc-rhein-ahr",
+    "hostId": "mcc-rhein-ahr-e-v",
     "hostName": "MCC Rhein Ahr",
     "venueStatus": "matched",
     "name": "RCK Kleinserie Mitte/West - Bad Breisig",
@@ -1475,7 +1475,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1554,7 +1554,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1582,8 +1582,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -1604,7 +1604,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "VTA",
@@ -1630,7 +1630,7 @@
     ],
     "venueWebsite": "https://rcmc-ibbenbueren.de",
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1709,6 +1709,6 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-09",
-    "lastSeen": "2026-06-09"
+    "lastSeen": "2026-06-10"
   }
 ]
