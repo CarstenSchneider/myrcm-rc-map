@@ -22,9 +22,9 @@ jobs:
           cp series.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
 
-      - name: Verify app.js version
+      - name: Verify local app.js version
         run: |
-          echo "Checking app.js for grouped series logic..."
+          echo "Checking local app.js..."
           grep -n 'appendGroup("Überregional"' .deploy-site/app.js
 
       - name: Install lftp
@@ -40,5 +40,19 @@ jobs:
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
           mirror -R .deploy-site ./ --verbose
+          bye
+          EOF
+
+      - name: Verify remote app.js version
+        env:
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+        run: |
+          echo "Checking remote app.js..."
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
+          set sftp:auto-confirm yes
+          cat app.js | grep 'appendGroup("Überregional"'
           bye
           EOF
