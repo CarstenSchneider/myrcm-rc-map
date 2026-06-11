@@ -22,6 +22,8 @@ jobs:
           cp series.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
 
+          cp -R favicon_io .deploy-site/
+
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
