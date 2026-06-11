@@ -25524,12 +25524,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97208&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58267&pLa=en&dId%5BE%5D=97208&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97208&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 14,
     "registrationDisplay": "14",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "EG Tamiya Truck",
@@ -25548,29 +25548,7 @@
         "entries": 3
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung_2026-06-14_VM.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D8BEFED4-7471-4D02-A6E7-F02586A3651F"
-      },
-      {
-        "type": "rules",
-        "label": "Reglement",
-        "sourceLabel": null,
-        "fileName": "Reglement EGTWSP(SFB)_ab2025.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=7FCC0A30-C225-49E0-BEDD-3393ED283C80"
-      },
-      {
-        "type": "rules",
-        "label": "Reglement",
-        "sourceLabel": null,
-        "fileName": "2026_TAMIYA-EuroCup_Reglement.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0C8BFCF0-473F-42F9-ACA2-0711F1BA52AA"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -25588,12 +25566,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97722&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=233&pLa=en&dId%5BE%5D=97722&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97722&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": null,
+    "registrationCount": 13,
+    "registrationDisplay": "13",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "3LC GT/E8 Porsche Cup",
@@ -25601,7 +25579,7 @@
       },
       {
         "name": "3LC GT/E8 Stock",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [],
@@ -25731,8 +25709,7 @@
       {
         "name": "EG10 Stock",
         "entries": 5
-      },
-      "RCK-Porsche"
+      }
     ],
     "documents": [
       {
@@ -25769,27 +25746,19 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96918&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96918&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96918&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
-    "note": null,
+    "registrationCount": 24,
+    "registrationDisplay": "24",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "ORE8",
-        "entries": 23
+        "entries": 24
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung SK-Lauf RC Racer Hochsauerland e.V. 2026.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D3C40B19-8EC8-427D-987A-C88BCCD791F0"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -25813,8 +25782,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 79,
-    "registrationDisplay": "79",
+    "registrationCount": 78,
+    "registrationDisplay": "78",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -25823,7 +25792,7 @@
       },
       {
         "name": "OR8 Expert",
-        "entries": 34
+        "entries": 33
       },
       "ORT / ORET",
       {
@@ -25924,13 +25893,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       {
         "name": "AMSC Porsche Cup",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "EG8",
@@ -25956,12 +25925,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96696&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=891&pLa=en&dId%5BE%5D=96696&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96696&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 57,
     "registrationDisplay": "57",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "Kids Academy",
@@ -26043,7 +26012,9 @@
         "name": "ORE 4WD Standard",
         "entries": 1
       },
-      "ORETR2"
+      "ORETR2",
+      "ORE4WD / ORE4WDST",
+      "ORE2WD / ORE2WDST"
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -26117,8 +26088,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 49,
-    "registrationDisplay": "49",
+    "registrationCount": 48,
+    "registrationDisplay": "48",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -26127,7 +26098,7 @@
       },
       {
         "name": "BTM Fun 21,5 + EGTWFUN",
-        "entries": 8
+        "entries": 7
       },
       {
         "name": "BTM LMH 21,5",
@@ -26170,12 +26141,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97212&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=6266&pLa=en&dId%5BE%5D=97212&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97212&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 12,
     "registrationDisplay": "12",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "ORE 2WD",
@@ -26226,19 +26197,22 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": null,
     "classes": [
       {
         "name": "Tamiya Stock",
-        "entries": 2
+        "entries": 6
       },
       {
         "name": "Tamiya Top-Stock",
-        "entries": 1
+        "entries": 2
       },
-      "Race-Truck",
+      {
+        "name": "Race-Truck",
+        "entries": 2
+      },
       "Gentelman",
       "M-Chassis",
       {
@@ -26247,7 +26221,7 @@
       },
       {
         "name": "TT02 Cup",
-        "entries": 6
+        "entries": 10
       },
       {
         "name": "TW 17,5t Stock",
@@ -26315,8 +26289,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": null,
     "classes": [
       {
@@ -26325,7 +26299,7 @@
       },
       {
         "name": "OR6/2WD",
-        "entries": 15
+        "entries": 14
       },
       {
         "name": "OR6/4WD",
@@ -26384,29 +26358,29 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 41,
-    "registrationDisplay": "41",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
     "note": null,
     "classes": [
       {
         "name": "\"Open Fun\" Klasse",
-        "entries": 4
-      },
-      {
-        "name": "2WD Buggy",
-        "entries": 11
-      },
-      {
-        "name": "2WD Monster",
-        "entries": 9
-      },
-      {
-        "name": "2WD Pro Stock (\"blinky modus\")",
         "entries": 8
       },
       {
-        "name": "4WD Buggy",
+        "name": "2WD Buggy",
+        "entries": 17
+      },
+      {
+        "name": "2WD Monster",
+        "entries": 12
+      },
+      {
+        "name": "2WD Pro Stock (\"blinky modus\")",
         "entries": 9
+      },
+      {
+        "name": "4WD Buggy",
+        "entries": 10
       }
     ],
     "documents": [],
@@ -26433,8 +26407,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": null,
     "classes": [
       {
@@ -26443,11 +26417,11 @@
       },
       {
         "name": "MAC-Challenge Youngtimer",
-        "entries": 7
+        "entries": 9
       },
       {
         "name": "MAC-Stock Challenge 17,5 [EGTWHO]",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "MAC-Challenge M-Chassis",
@@ -26472,12 +26446,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97526&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=97526&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97526&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
-    "note": null,
+    "registrationCount": 11,
+    "registrationDisplay": "11",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "1:10 Elektro Fun Cup",
@@ -26485,7 +26459,7 @@
       },
       {
         "name": "EG8 (Pancar)",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "EG8GT3",
@@ -26494,22 +26468,14 @@
       "VG10 Tourenwagen",
       {
         "name": "VG8",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "VG8 GT",
         "entries": 1
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "AMC Hamm Freundschaftsrennen 1 - Ausschreibung 2026.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=D9FB4CFB-8BD8-42EB-9BCB-59513D7237E5"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -26530,17 +26496,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 28,
-    "registrationDisplay": "28",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": null,
     "classes": [
       {
         "name": "Nordbayern Cup Club Cup",
-        "entries": 10
+        "entries": 12
       },
       {
         "name": "Nordbayern Cup M-Chassis",
-        "entries": 5
+        "entries": 4
       },
       {
         "name": "Nordbayern Cup GT / LMH 17.5T",
@@ -26548,7 +26514,7 @@
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -26572,17 +26538,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       {
         "name": "GT-LMH Cup",
-        "entries": 12
+        "entries": 14
       },
       {
         "name": "TW17.5T",
-        "entries": 2
+        "entries": 5
       },
       {
         "name": "1:8GT",
@@ -26624,8 +26590,8 @@
     "registrationStatus": "upcoming",
     "registrationOpens": "2026-06-14",
     "registrationRequiresLogin": false,
-    "registrationCount": 43,
-    "registrationDisplay": "43",
+    "registrationCount": 52,
+    "registrationDisplay": "52",
     "note": "Nennung ab 14.06.2026",
     "classes": [
       {
@@ -26634,19 +26600,19 @@
       },
       {
         "name": "RCK LMH",
-        "entries": 7
+        "entries": 12
       },
       {
         "name": "RCK Porsche-Cup",
-        "entries": 27
+        "entries": 29
       },
       {
         "name": "RCK VTA",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "RCK M-Chassis",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -26669,16 +26635,16 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96508&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=678&pLa=en&dId%5BE%5D=96508&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96508&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
-    "note": null,
+    "registrationCount": 26,
+    "registrationDisplay": "26",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "2WD Buggy Standard",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "2WD Buggy",
@@ -26697,7 +26663,7 @@
       "EGTW Fronti",
       {
         "name": "EGTW Hobby",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "EGTW Sport",
@@ -26705,7 +26671,7 @@
       },
       {
         "name": "EGTW Modified",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Freundsch. 2WD 13.5T",
@@ -26849,18 +26815,18 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": null,
     "classes": [
       "DT03",
       {
         "name": "ORE10 Buggy 2WD/4WD",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "ORE8",
-        "entries": 1
+        "entries": 3
       }
     ],
     "documents": [],
@@ -26918,13 +26884,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 70,
-    "registrationDisplay": "70",
+    "registrationCount": 78,
+    "registrationDisplay": "78",
     "note": null,
     "classes": [
       {
         "name": "2WD Race Classic 17.5",
-        "entries": 11
+        "entries": 13
       },
       {
         "name": "2WD Vintage Racing 13.5",
@@ -26936,7 +26902,7 @@
       },
       {
         "name": "Wheelie",
-        "entries": 8
+        "entries": 10
       },
       {
         "name": "Starrachse",
@@ -26952,11 +26918,11 @@
       },
       {
         "name": "Youngtimer Modified",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "2WD/4WD ToTu Klasse",
-        "entries": 17
+        "entries": 19
       }
     ],
     "documents": [],
@@ -27285,16 +27251,16 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95989&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24531&pLa=en&dId%5BE%5D=95989&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95989&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 100,
-    "registrationDisplay": "100",
-    "note": null,
+    "registrationCount": 108,
+    "registrationDisplay": "108",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "TOS F1(EGF1)",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "TOS Fun 17.5(EGTWHO)",
@@ -27302,26 +27268,18 @@
       },
       {
         "name": "TOS Fun 21.5",
-        "entries": 41
+        "entries": 46
       },
       {
         "name": "TOS FWD 17.5(EGTWFR)",
-        "entries": 19
+        "entries": 18
       },
       {
         "name": "TOS Modified(EGTWMOD)",
-        "entries": 13
+        "entries": 16
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung TOS West 2026-2027 RD2 Andernach - ohne DMC.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=ECE595E2-32E8-4ED2-B968-694E41E361F6"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-09"
   },
   {
@@ -27411,8 +27369,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       {
@@ -27433,7 +27391,7 @@
       },
       {
         "name": "MCSS Langstrecken-Cup",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -27487,8 +27445,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       "HRCC GT8",
@@ -27496,11 +27454,11 @@
       "EG8e",
       {
         "name": "HRCC PRO10",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "HRCC Formel 1",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "HRCC EG10 Stock",
@@ -27715,7 +27673,8 @@
       {
         "name": "Buggy ORE8",
         "entries": 6
-      }
+      },
+      "Truggy ORE8T"
     ],
     "documents": [
       {
@@ -27850,8 +27809,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       "JumpstartRC Trophy Elektro-Glattbahn GT-E 1:8",
@@ -27862,7 +27821,7 @@
       "JumpstartRC Trophy Verbrenner-Glattbahn 1:10",
       {
         "name": "JumpstartRC Trophy Verbrenner-Glattbahn 1:8",
-        "entries": 8
+        "entries": 9
       }
     ],
     "documents": [
@@ -28005,8 +27964,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 55,
-    "registrationDisplay": "55",
+    "registrationCount": 54,
+    "registrationDisplay": "54",
     "note": null,
     "classes": [
       {
@@ -28015,7 +27974,7 @@
       },
       {
         "name": "TOC Fighter-Klasse",
-        "entries": 23
+        "entries": 22
       },
       {
         "name": "TOC Retro 2WD",
@@ -28127,8 +28086,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       {
@@ -28139,7 +28098,10 @@
       "ORE4WDST",
       "ORE4WD",
       "ORETR2",
-      "2WD 13.5T Freundschaftsrennen",
+      {
+        "name": "2WD 13.5T Freundschaftsrennen",
+        "entries": 1
+      },
       "2WD Freundschaftsrennen",
       "4WD 10.5T Freundschaftsrennen",
       "4WD Freundschaftsrennen",
@@ -28210,8 +28172,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       {
@@ -28224,7 +28186,7 @@
       },
       {
         "name": "EGTWHO",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "EGTWSP",
@@ -28232,7 +28194,7 @@
       },
       {
         "name": "EGTWFR",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -28258,25 +28220,25 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 159,
-    "registrationDisplay": "159",
+    "registrationCount": 153,
+    "registrationDisplay": "153",
     "note": null,
     "classes": [
       {
         "name": "ENS 1:8 SPORT",
-        "entries": 25
+        "entries": 24
       },
       {
         "name": "ENS 1:10 onroad",
-        "entries": 36
+        "entries": 34
       },
       {
         "name": "ENS-1:8 +40",
-        "entries": 52
+        "entries": 51
       },
       {
         "name": "ENS 1:8 onroad",
-        "entries": 46
+        "entries": 44
       }
     ],
     "documents": [],
@@ -28300,13 +28262,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       {
         "name": "MCD Fanatics Cup",
-        "entries": 3
+        "entries": 5
       }
     ],
     "documents": [
@@ -28447,8 +28409,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 69,
-    "registrationDisplay": "69",
+    "registrationCount": 70,
+    "registrationDisplay": "70",
     "note": null,
     "classes": [
       {
@@ -28461,7 +28423,7 @@
       },
       {
         "name": "WRC Rookie",
-        "entries": 25
+        "entries": 26
       }
     ],
     "documents": [
@@ -28937,8 +28899,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
@@ -28948,7 +28910,7 @@
       },
       {
         "name": "Tamiya Euro Cup Stock",
-        "entries": 3
+        "entries": 4
       },
       "Tamiya Euro Cup M-Chassis 2WD/4WD",
       {
@@ -29211,8 +29173,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 90,
-    "registrationDisplay": "90",
+    "registrationCount": 93,
+    "registrationDisplay": "93",
     "note": null,
     "classes": [
       {
@@ -29229,7 +29191,7 @@
       },
       {
         "name": "2WD Buggy",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "4WD Buggy Standard",
@@ -29237,7 +29199,7 @@
       },
       {
         "name": "4WD Buggy",
-        "entries": 8
+        "entries": 10
       }
     ],
     "documents": [],
@@ -29598,8 +29560,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 321,
-    "registrationDisplay": "321",
+    "registrationCount": 322,
+    "registrationDisplay": "322",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -29620,7 +29582,7 @@
       },
       {
         "name": "Awesomatix Pro Stock",
-        "entries": 77
+        "entries": 78
       },
       {
         "name": "Cayote Modified",
@@ -29860,19 +29822,47 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       {
         "name": "Vintage 2WD - bis 2004",
+        "entries": 2
+      },
+      {
+        "name": "Vintage 4WD - bis 2004",
         "entries": 1
       },
-      "Vintage 4WD - bis 2004",
       "Vintage Truggy - bis 2004",
-      "ToTu - 2WD"
+      {
+        "name": "ToTu - 2WD",
+        "entries": 2
+      }
     ],
-    "documents": [],
+    "documents": [
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "RC_Vintage_Race_Reglement_06_2026_V3.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=12A384AB-2F01-4C1E-AAB9-091CCD5B7A9A"
+      },
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "Vintage Race 2026 - Schwerin - 25.07.26.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=53638107-7AF8-42A5-A27A-12FB6734B1AA"
+      },
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "Vintage Race 2026 - Schwerin - 26.07.26.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=97DFD215-10C4-4858-A27F-677058227FA0"
+      }
+    ],
     "firstSeen": "2026-06-09"
   },
   {
@@ -30396,8 +30386,8 @@
         "type": "announcement",
         "label": "Ausschreibung",
         "sourceLabel": null,
-        "fileName": "Ausschreibung SK+Sachsencup 2026.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=4EB3D888-8295-46FA-A111-8F1B9E94507F"
+        "fileName": "Ausschreibung SK-Sachsencup 2026.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9C8CB5EF-F386-4172-9260-5AF5BBBDBDF5"
       }
     ],
     "firstSeen": "2026-06-08"
@@ -30925,6 +30915,40 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
+  },
+  {
+    "id": "rcrt-duisburg-e-v-2026-09-05-myrcm-event-98183",
+    "venueId": "rcrt-duisburg-e-v",
+    "venueName": "RCRT Duisburg e.V.",
+    "venueLocation": "Essen",
+    "hostId": "rcrt-duisburg-e-v",
+    "hostName": "RCRT Duisburg e.V.",
+    "name": "Tamico Offroad Cup",
+    "from": "2026-09-05",
+    "to": "2026-09-06",
+    "series": [
+      "Tamico Offroad Cup"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98183&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=15091&pLa=en&dId%5BE%5D=98183&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98183&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "upcoming",
+    "registrationOpens": "2026-06-15",
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
+    "note": "Nennung ab 15.06.2026",
+    "classes": [
+      "BBX",
+      "Retro 2WD",
+      "Retro 4WD",
+      "TAMIYA Fighter Cup",
+      "Truck",
+      "Wheelie"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-11"
   },
   {
     "id": "rc-speedracer-bernau-2026-09-05-myrcm-event-98162",
