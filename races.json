@@ -25708,8 +25708,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 28,
-    "registrationDisplay": "28",
+    "registrationCount": 29,
+    "registrationDisplay": "29",
     "note": null,
     "classes": [
       "VG8K1+VG8Kl2+VG10",
@@ -25735,7 +25735,7 @@
       },
       {
         "name": "EG10 Stock",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [
@@ -26332,13 +26332,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 58,
-    "registrationDisplay": "58",
+    "registrationCount": 57,
+    "registrationDisplay": "57",
     "note": null,
     "classes": [
       {
         "name": "\"Open Fun\" Klasse",
-        "entries": 8
+        "entries": 7
       },
       {
         "name": "2WD Buggy",
@@ -27164,13 +27164,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       {
         "name": "SMW Verbrenner-Glattbahn 1:8 Klasse 1",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "SMW Verbrenner-Glattbahn 1:8 Klasse 2",
@@ -27186,7 +27186,7 @@
       },
       {
         "name": "SMW Verbrenner-Glattbahn 1:10 Sport",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "SMW Elektro-Glattbahn 1:8",
@@ -27684,8 +27684,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
@@ -27699,9 +27699,12 @@
       "VM 1/10 Front Wheel Drive",
       {
         "name": "VM 1/10 Stock 17,5T",
-        "entries": 2
+        "entries": 3
       },
-      "VM 1/8 GT"
+      {
+        "name": "VM 1/8 GT",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -27886,14 +27889,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       "BBX",
       {
         "name": "Fighter-Klasse",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Retro 2WD",
@@ -27944,8 +27947,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 54,
-    "registrationDisplay": "54",
+    "registrationCount": 53,
+    "registrationDisplay": "53",
     "note": null,
     "classes": [
       {
@@ -27954,7 +27957,7 @@
       },
       {
         "name": "TOC Fighter-Klasse",
-        "entries": 22
+        "entries": 21
       },
       {
         "name": "TOC Retro 2WD",
