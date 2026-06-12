@@ -26,10 +26,13 @@ L.control.zoom({
 }).addTo(map);
 
 L.tileLayer(
-  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
   {
-    attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 19
+    attribution:
+      '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
+      '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
+      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
+    maxZoom: 20
   }
 ).addTo(map);
 
