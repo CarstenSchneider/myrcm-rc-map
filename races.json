@@ -25115,8 +25115,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 118,
-    "registrationDisplay": "118",
+    "registrationCount": 117,
+    "registrationDisplay": "117",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -25129,7 +25129,7 @@
       },
       {
         "name": "4WD Buggy",
-        "entries": 26
+        "entries": 25
       },
       {
         "name": "4WD Buggy Standard",
@@ -25613,50 +25613,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "fs-timing-2026-06-13-myrcm-event-95507",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "fs-timing",
-    "hostName": "FS-Timing",
-    "name": "3. Hessencup Lauf 2026 Heiligenstadt",
-    "from": "2026-06-13",
-    "to": "2026-06-14",
-    "series": [
-      "Hessencup"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95507&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=49540&pLa=en&dId%5BE%5D=95507&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95507&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 95,
-    "registrationDisplay": "95",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "OR 8 Hobby",
-        "entries": 35
-      },
-      {
-        "name": "OR8 Expert",
-        "entries": 18
-      },
-      {
-        "name": "OR8E",
-        "entries": 29
-      },
-      {
-        "name": "Hessencup Kids",
-        "entries": 13
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "fs-timing-2026-06-13-myrcm-event-98166",
     "venueId": null,
     "venueName": null,
@@ -25859,20 +25815,12 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Nennung geschlossen.",
     "classes": [
       {
-        "name": "Tamiya Euro-TW",
-        "entries": 1
-      },
-      {
         "name": "Tamiya Fighter-Kids",
-        "entries": 1
-      },
-      {
-        "name": "Tamiya Formula E",
         "entries": 1
       },
       {
@@ -25910,9 +25858,7 @@
     "name": "AMSC Cup 2026: Lauf 2",
     "from": "2026-06-13",
     "to": "2026-06-13",
-    "series": [
-      "Euro Touring Series (ETS)"
-    ],
+    "series": [],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96082&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=36&pLa=en&dId%5BE%5D=96082&tId=E&hId%5B1%5D=org",
@@ -25931,8 +25877,7 @@
       {
         "name": "EG8",
         "entries": 4
-      },
-      "ETS ProStock"
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -26078,17 +26023,18 @@
         "name": "ORE2WDST",
         "entries": 33
       },
+      "ORE4WD/ORE4WDST",
       {
         "name": "ORE4WD",
         "entries": 2
       },
       {
-        "name": "ORE4WDST",
-        "entries": 3
-      },
-      {
         "name": "ORETR2",
         "entries": 6
+      },
+      {
+        "name": "ORE4WDST",
+        "entries": 3
       }
     ],
     "documents": [],
@@ -26168,12 +26114,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94707&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=48536&pLa=en&dId%5BE%5D=94707&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94707&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
-    "note": null,
+    "registrationCount": 34,
+    "registrationDisplay": "34",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "Tamiya Stock",
@@ -26199,7 +26145,7 @@
       },
       {
         "name": "TW 17,5t Stock",
-        "entries": 3
+        "entries": 2
       },
       {
         "name": "FWD Challenge",
@@ -26329,12 +26275,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95132&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16961&pLa=en&dId%5BE%5D=95132&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95132&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 57,
     "registrationDisplay": "57",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "\"Open Fun\" Klasse",
@@ -26509,12 +26455,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97927&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61583&pLa=en&dId%5BE%5D=97927&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97927&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 23,
     "registrationDisplay": "23",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "GT-LMH Cup",
@@ -26533,15 +26479,7 @@
         "entries": 1
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung_SommerCup_2026_v1.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=12072451-BAEE-4353-AE15-62A57CD3CD98"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -26591,6 +26529,38 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
+  },
+  {
+    "id": "mbsc-waechtersbach-2026-06-14-myrcm-event-98238",
+    "venueId": "mbsc-waechtersbach",
+    "venueName": "MBSC Wächtersbach",
+    "venueLocation": "Wächtersbach",
+    "hostId": "turnerschaft-1860-e-v-gro-auheim",
+    "hostName": "Turnerschaft 1860 e.V. Großauheim",
+    "name": "RCK-KleinSerie MBSC Wächtersbach Mitte -14.06.2026",
+    "from": "2026-06-14",
+    "to": "2026-06-14",
+    "series": [
+      "RCK Kleinserie"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98238&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=22897&pLa=en&dId%5BE%5D=98238&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98238&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "note": null,
+    "classes": [
+      "RCK-KleinSerie Porsche Cup",
+      "RCK-KleinSerie M-Chassis",
+      "RCK-KleinSerie GT-Sport",
+      "RCK-KleinSerie LMH"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-13"
   },
   {
     "id": "mac-burgdorf-e-v-2026-06-14-myrcm-event-96508",
@@ -26709,12 +26679,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97850&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=97850&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97850&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 15,
     "registrationDisplay": "15",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "TC - Euro TW",
       "TC - Fighter Kids",
@@ -26758,12 +26728,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96444&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=10490&pLa=en&dId%5BE%5D=96444&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96444&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": null,
+    "note": "Nennung geschlossen.",
     "classes": [
       "IGRTH Vereinsmeisterschaft 2022 - 2WD",
       "IGRTH Vereinsmeisterschaft 2022 - FUN offen"
@@ -26858,8 +26828,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 78,
-    "registrationDisplay": "78",
+    "registrationCount": 79,
+    "registrationDisplay": "79",
     "note": null,
     "classes": [
       {
@@ -26884,7 +26854,7 @@
       },
       {
         "name": "4WD Race Classic 17.5",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "4WD Vintage Racing 13.5",
@@ -27164,8 +27134,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": null,
     "classes": [
       {
@@ -27192,7 +27162,10 @@
         "name": "SMW Elektro-Glattbahn 1:8",
         "entries": 2
       },
-      "Elektro-Glattbahn Tourenwagen 1:10 Hobby 17.5T",
+      {
+        "name": "Elektro-Glattbahn Tourenwagen 1:10 Hobby 17.5T",
+        "entries": 2
+      },
       "SMW Elektro-Glattbahn 1:8 GT3 Cup",
       "SMW Verbrenner-Glattbahn 1:8 GT",
       "SMW Verbrenner-Glattbahn 1:8 GT + Elektro-Glattbahn 1:8 GT3 Cup"
@@ -27225,12 +27198,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95989&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24531&pLa=en&dId%5BE%5D=95989&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95989&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
+    "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 106,
     "registrationDisplay": "106",
-    "note": "Nennung geschlossen.",
+    "note": null,
     "classes": [
       {
         "name": "TOS F1(EGF1)",
@@ -27253,7 +27226,15 @@
         "entries": 16
       }
     ],
-    "documents": [],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung TOS West 2026-2027 RD2 Andernach - ohne DMC.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=ECE595E2-32E8-4ED2-B968-694E41E361F6"
+      }
+    ],
     "firstSeen": "2026-06-09"
   },
   {
@@ -27577,8 +27558,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 143,
-    "registrationDisplay": "143",
+    "registrationCount": 140,
+    "registrationDisplay": "140",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -27591,11 +27572,11 @@
       },
       {
         "name": "FWD",
-        "entries": 19
+        "entries": 18
       },
       {
         "name": "GT Spec",
-        "entries": 34
+        "entries": 33
       },
       {
         "name": "Modified",
@@ -27607,7 +27588,7 @@
       },
       {
         "name": "Stock",
-        "entries": 46
+        "entries": 45
       }
     ],
     "documents": [],
@@ -27684,8 +27665,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Stock",
@@ -27696,7 +27677,10 @@
       "Tamiya Euro Cup M-Chassis",
       "Tamiya Euro Cup Race Truck",
       "VM 1/10 Plastic Cars",
-      "VM 1/10 Front Wheel Drive",
+      {
+        "name": "VM 1/10 Front Wheel Drive",
+        "entries": 1
+      },
       {
         "name": "VM 1/10 Stock 17,5T",
         "entries": 3
@@ -27889,8 +27873,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": null,
     "classes": [
       "BBX",
@@ -27900,7 +27884,7 @@
       },
       {
         "name": "Retro 2WD",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Retro 4WD",
@@ -27909,7 +27893,7 @@
       "Truck",
       {
         "name": "Wheelie",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "ORE 2WD ST",
@@ -27999,18 +27983,27 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": null,
     "classes": [
-      "Tamiya Stock",
-      "Tamiya Fighter-Kids",
+      {
+        "name": "Tamiya Stock",
+        "entries": 1
+      },
+      {
+        "name": "Tamiya Fighter-Kids",
+        "entries": 1
+      },
       "Tamiya Top-Stock",
       {
         "name": "Tamiya Gentlemen",
         "entries": 2
       },
-      "Tamiya M-Chassis",
+      {
+        "name": "Tamiya M-Chassis",
+        "entries": 2
+      },
       {
         "name": "Tamiya Race-Truck",
         "entries": 2
@@ -28155,8 +28148,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       {
@@ -28177,7 +28170,7 @@
       },
       {
         "name": "EGTWFR",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [],
@@ -28392,8 +28385,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 70,
-    "registrationDisplay": "70",
+    "registrationCount": 71,
+    "registrationDisplay": "71",
     "note": null,
     "classes": [
       {
@@ -28406,7 +28399,7 @@
       },
       {
         "name": "WRC Rookie",
-        "entries": 26
+        "entries": 27
       }
     ],
     "documents": [
@@ -28451,6 +28444,44 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-09"
+  },
+  {
+    "id": "tsv-mariendorf-rc-racing-2026-07-04-myrcm-event-98227",
+    "venueId": "tsv-mariendorf-rc-racing",
+    "venueName": "TSV Mariendorf 1897 RCCR",
+    "venueLocation": "Berlin",
+    "hostId": "tsv-mariendorf",
+    "hostName": "TSV Mariendorf 1897 RCCR",
+    "name": "Tamiya Euro Cup",
+    "from": "2026-07-04",
+    "to": "2026-07-05",
+    "series": [
+      "Tamiya Euro Cup (TEC)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98227&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=18244&pLa=en&dId%5BE%5D=98227&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98227&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 1,
+    "registrationDisplay": "1",
+    "note": null,
+    "classes": [
+      {
+        "name": "TEC Stock",
+        "entries": 1
+      },
+      "TEC M-Chassis",
+      "TEC Euro-TW",
+      "TEC-Formel e",
+      "TEC Top Stock",
+      "TEC Gentleman",
+      "TEC Race-Truck"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-13"
   },
   {
     "id": "modellrenngemeinschaft-dogern-e-v-2026-07-05-myrcm-event-94314",
@@ -31271,11 +31302,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": null,
     "classes": [
-      "EFRA 1/5 TC Open",
+      {
+        "name": "EFRA 1/5 TC Open",
+        "entries": 1
+      },
       {
         "name": "EFRA 1/5 TC Open Gentleman",
         "entries": 4
@@ -31537,8 +31571,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       {
@@ -31546,7 +31580,10 @@
         "entries": 2
       },
       "Vereinsmeisterschaft Klasse 1/5 Rookie",
-      "Vereinsmeisterschaft Klasse 1/8"
+      {
+        "name": "Vereinsmeisterschaft Klasse 1/8",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -31759,14 +31796,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": null,
     "classes": [
       "TOC BBX",
       {
         "name": "TOC Fighter Klasse",
-        "entries": 1
+        "entries": 2
       },
       "TOC Retro 2WD",
       {
