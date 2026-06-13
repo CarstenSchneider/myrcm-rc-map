@@ -26,14 +26,89 @@ L.control.zoom({
 }).addTo(map);
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
+const avalonBlue = "#0057B8";
+const avalonGold = "#B88A2A";
 
-L.maplibreGL({
+const baseMapLayer = L.maplibreGL({
   style: `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
   attribution:
     '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
     '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
     '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 }).addTo(map);
+
+function layerLooksLike(layer, tokens = []) {
+  const id = String(layer?.id || "").toLowerCase();
+  const sourceLayer = String(layer?.["source-layer"] || "").toLowerCase();
+  const combined = `${id} ${sourceLayer}`;
+
+  return tokens.some(token => combined.includes(token));
+}
+
+function applyAvalonMapStyle() {
+  const maplibreMap = baseMapLayer.getMaplibreMap?.();
+  if (!maplibreMap?.getStyle) return;
+
+  const style = maplibreMap.getStyle();
+  const layers = Array.isArray(style?.layers) ? style.layers : [];
+
+  layers.forEach(layer => {
+    const id = layer.id;
+    if (!id || !maplibreMap.getLayer(id)) return;
+
+    if (layer.type === "fill" && layerLooksLike(layer, ["water", "ocean", "sea", "lake", "river"])) {
+      maplibreMap.setPaintProperty(id, "fill-color", avalonBlue);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 0.88);
+      return;
+    }
+
+    if (layer.type === "line" && layerLooksLike(layer, ["water", "river", "stream", "canal"])) {
+      maplibreMap.setPaintProperty(id, "line-color", avalonBlue);
+      maplibreMap.setPaintProperty(id, "line-opacity", 0.75);
+      return;
+    }
+
+    if (layer.type === "fill" && layerLooksLike(layer, ["landcover", "landuse", "park", "wood", "forest", "grass"])) {
+      maplibreMap.setPaintProperty(id, "fill-color", "#F7F8FA");
+      maplibreMap.setPaintProperty(id, "fill-opacity", 0.72);
+      return;
+    }
+
+    if (layer.type === "fill" && layerLooksLike(layer, ["building"])) {
+      maplibreMap.setPaintProperty(id, "fill-color", "#E6EAF0");
+      maplibreMap.setPaintProperty(id, "fill-opacity", 0.72);
+      return;
+    }
+
+    if (layer.type === "line" && layerLooksLike(layer, ["road", "street", "motorway", "trunk", "primary", "secondary"])) {
+      maplibreMap.setPaintProperty(id, "line-color", "#D9DEE7");
+      maplibreMap.setPaintProperty(id, "line-opacity", 0.82);
+      return;
+    }
+
+    if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
+      maplibreMap.setPaintProperty(id, "line-color", "#C8D0DB");
+      maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
+      return;
+    }
+
+    if (layer.type === "symbol") {
+      try {
+        maplibreMap.setPaintProperty(id, "text-color", "#354052");
+        maplibreMap.setPaintProperty(id, "text-halo-color", "#FFFFFF");
+        maplibreMap.setPaintProperty(id, "text-halo-width", 1.2);
+      } catch {}
+    }
+  });
+
+  const canvas = maplibreMap.getCanvas?.();
+  if (canvas) {
+    canvas.style.background = "#FFFFFF";
+  }
+}
+
+baseMapLayer.getMaplibreMap?.().on("load", applyAvalonMapStyle);
+baseMapLayer.getMaplibreMap?.().on("styledata", applyAvalonMapStyle);
 
 let venues = [];
 let races = [];
@@ -837,21 +912,11 @@ function markerScaleForRegistrationCount(count) {
 }
 
 function markerColorForRegistrationCount(count) {
-  if (count >= 120) return "#1f5f34";
-  if (count >= 70) return "#2d7040";
-  if (count >= 40) return "#3f7f49";
-  if (count >= 20) return "#4F8A57";
-  if (count >= 10) return "#5f9664";
-  return "#6fa875";
+  return avalonBlue;
 }
 
 function markerFavoriteColorForRegistrationCount(count) {
-  if (count >= 120) return "#8a5f00";
-  if (count >= 70) return "#a17100";
-  if (count >= 40) return "#b88416";
-  if (count >= 20) return "#c9972b";
-  if (count >= 10) return "#d8aa42";
-  return "#e0b65a";
+  return avalonGold;
 }
 
 function ensureRegistrationStatusStyles() {
@@ -1744,12 +1809,12 @@ let markerColor = isFavoriteVenue
     : "rgba(31, 29, 26, 0.55)";
 
 if (!hasUpcomingRaces && isFavoriteVenue) {
-  markerColor = "#b88416";
+  markerColor = avalonGold;
 }
 
 const markerSvg = encodeURIComponent(`
   <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#F4F1EC" stroke-width="1"/>
+    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#FFFFFF" stroke-width="1"/>
   </svg>
 `);
 
