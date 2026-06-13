@@ -4,7 +4,7 @@
   --text: #1f1d1a;
   --muted: #6f6961;
   --line: #D9DEE7;
-  --accent: #0057B8;
+  --accent: #1010E5;
   --card: #ffffff;
   --shadow: 0 12px 30px rgba(31, 29, 26, 0.10);
 }
@@ -1122,7 +1122,7 @@ input {
 }
 
 .race-document-dot-open {
-  background: #0057B8;
+  background: #1010E5;
 }
 
 .race-document-dot-closed {
@@ -1130,7 +1130,7 @@ input {
 }
 
 .race-document-dot-upcoming {
-  background: #B88A2A;
+  background: #B59C7C;
 }
 
 .race-document-links .race-link-item-status-upcoming {
@@ -1439,20 +1439,20 @@ input {
 }
 
 .race-visibility-toggle button.active {
-  border-color: #0057B8;
+  border-color: #1010E5;
   background: #eef6ee;
-  color: #0057B8;
+  color: #1010E5;
 }
 
 .race-visibility-toggle .race-document-dot {
   width: 6px;
   height: 6px;
   border-radius: 999px;
-  background: #0057B8;
+  background: #1010E5;
 }
 
 .race-visibility-toggle button.active .race-document-dot {
-  background: #0057B8;
+  background: #1010E5;
 }
 
 
@@ -1630,7 +1630,7 @@ input {
 }
 
 .venue-name-with-favorite .venue-link-favorite {
-  color: #B88A2A !important;
+  color: #B59C7C !important;
 }
 
 .venue-favorite-button {
@@ -1655,12 +1655,12 @@ input {
 
 .venue-favorite-button:hover,
 .venue-favorite-button:focus-visible {
-  color: #B88A2A;
+  color: #B59C7C;
   outline: none;
 }
 
 .venue-favorite-button.active {
-  color: #B88A2A;
+  color: #B59C7C;
 }
 
 .popup-title .venue-name-with-favorite {
@@ -1689,7 +1689,7 @@ input {
   letter-spacing: 0.04em;
 }
 .race-section-divider-favorites {
-  color: #B88A2A;
+  color: #B59C7C;
 }
 
 /* v1.6 favorite inactive venue marker */
@@ -1698,7 +1698,7 @@ input {
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: #B88A2A;
+  background: #B59C7C;
   border: 1px solid rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   box-shadow: none;
@@ -1767,8 +1767,8 @@ input {
 
 /* Avalon map prototype overrides */
 :root {
-  --avalon-blue: #0057B8;
-  --avalon-gold: #B88A2A;
+  --avalon-blue: #1010E5;
+  --avalon-gold: #B59C7C;
   --status-open: #2F8F46;
 }
 
