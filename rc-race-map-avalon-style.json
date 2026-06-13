@@ -1,0 +1,18 @@
+{
+  "version": 8,
+  "name": "RC Race Map Avalon Prototype",
+  "sources": {},
+  "metadata": {
+    "description": "Prototype color specification for future MapLibre styling"
+  },
+  "rcRaceMapColors": {
+    "water": "#1f22ff",
+    "marker": "#1f22ff",
+    "favorite": "#c7a57a",
+    "land": "#ffffff",
+    "roads": "#e6e6e6",
+    "labels": "#444444",
+    "openRegistration": "#2f8f46",
+    "closed": "#888888"
+  }
+}
