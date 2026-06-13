@@ -26,8 +26,8 @@ L.control.zoom({
 }).addTo(map);
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
-const avalonBlue = "#0057B8";
-const avalonGold = "#B88A2A";
+const avalonBlue = "#1010E5";
+const avalonGold = "#B59C7C";
 
 const baseMapLayer = L.maplibreGL({
   style: `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
