@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RC Race Map Beta</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/favicon_io/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app layout-map layout-prototype" id="app">
+    <section class="map-panel" aria-label="Karte">
+      <div id="map"></div>
+    </section>
+
+    <section class="filters-panel" aria-label="Filter">
+      <section class="filters" aria-label="Filter">
+        <div class="mobile-filter-topline">
+          <div class="filter-group filter-group-range">
+            <span class="filter-label">Zeitraum</span>
+            <div class="segmented" id="rangeFilter">
+              <button class="active" type="button" data-range="2">2 Wochen</button>
+              <button type="button" data-range="4">4 Wochen</button>
+              <button type="button" data-range="all">Alle</button>
+            </div>
+          </div>
+
+          <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
+            <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="10.5" cy="10.5" r="5.5"></circle>
+                <path d="M15 15 L20 20"></path>
+              </svg>
+            </span>
+            <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8 L16 16"></path>
+                <path d="M16 8 L8 16"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="advanced-filters" id="advancedFilters">
+          <label class="filter-field filter-field-search">
+            <span class="filter-label">Suche</span>
+            <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
+          </label>
+
+          <label class="filter-field">
+            <span class="filter-label">Serie</span>
+            <select id="seriesFilter">
+              <option value="all">Alle Serien</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="active-filter-chips" id="activeFilterChips" aria-live="polite"></div>
+      </section>
+    </section>
+
+    <aside class="race-panel" aria-label="Rennen">
+      <header class="panel-header">
+        <div>
+          <h1>Kommende Rennen</h1>
+        </div>
+      </header>
+
+      <div class="results-toolbar">
+        <div class="result-line" id="resultLine">Lade Rennen …</div>
+
+        <div class="race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+          <button class="active" type="button" data-registration-visibility="open">
+            <span class="race-document-dot" aria-hidden="true"></span>
+            Offen
+          </button>
+
+          <button type="button" data-registration-visibility="all">
+            Alle
+          </button>
+        </div>
+      </div>
+      <section class="race-grid" id="raceList" aria-live="polite"></section>
+    </aside>
+  </main>
+
+
+<div class="map-footer">
+  <span>RC Race Map Beta</span>
+  <span>·</span>
+  <a href="mailto:info@rcracemap.com">Feedback</a>
+  <span>·</span>
+  <a href="impressum-datenschutz.html">Impressum &amp; Datenschutz</a>
+  <span>·</span>
+  <span>Datenquelle:</span>
+  <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer">MyRCM</a>
+  <span>·</span>
+  <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>
+</div>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.3/leaflet-maplibre-gl.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
