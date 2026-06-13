@@ -25,16 +25,15 @@ L.control.zoom({
   position: "bottomleft"
 }).addTo(map);
 
-L.tileLayer(
-  'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
-  {
-    attribution:
-      '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
-      '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
-      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
-    maxZoom: 20
-  }
-).addTo(map);
+const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
+
+L.maplibreGL({
+  style: `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
+  attribution:
+    '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
+    '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
+    '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+}).addTo(map);
 
 let venues = [];
 let races = [];
