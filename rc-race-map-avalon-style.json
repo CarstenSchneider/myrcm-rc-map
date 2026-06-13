@@ -1,18 +1,17 @@
 {
-  "version": 8,
   "name": "RC Race Map Avalon Prototype",
-  "sources": {},
-  "metadata": {
-    "description": "Prototype color specification for future MapLibre styling"
-  },
-  "rcRaceMapColors": {
-    "water": "#1f22ff",
-    "marker": "#1f22ff",
-    "favorite": "#c7a57a",
-    "land": "#ffffff",
-    "roads": "#e6e6e6",
-    "labels": "#444444",
-    "openRegistration": "#2f8f46",
-    "closed": "#888888"
+  "note": "The app currently skins the Stadia/MapLibre style at runtime in app.js. These are the editable color tokens.",
+  "colors": {
+    "avalonBlue": "#0057B8",
+    "avalonGold": "#B88A2A",
+    "water": "#0057B8",
+    "marker": "#0057B8",
+    "favorite": "#B88A2A",
+    "land": "#FFFFFF",
+    "landcover": "#F7F8FA",
+    "roads": "#D9DEE7",
+    "labels": "#354052",
+    "statusOpen": "#2F8F46",
+    "closed": "#747B86"
   }
 }
