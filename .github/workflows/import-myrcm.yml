@@ -4,15 +4,32 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 1 * * *"
+    - cron: "20 1 * * *"
+    - cron: "40 1 * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: import-myrcm
+  cancel-in-progress: false
+
 jobs:
   import:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
+      - name: Check MyRCM availability
+        run: |
+          curl --fail --silent --show-error --location \
+            --connect-timeout 10 \
+            --max-time 25 \
+            --retry 2 \
+            --retry-delay 10 \
+            --retry-all-errors \
+            https://www.myrcm.ch/ > /dev/null
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
