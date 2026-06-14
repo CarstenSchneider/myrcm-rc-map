@@ -2,6 +2,9 @@ name: Deploy data to Hetzner
 
 on:
   workflow_dispatch:
+  schedule:
+    # 04:00 Berlin summer time = 02:00 UTC
+    - cron: "0 2 * * *"
 
 jobs:
   deploy-data:
