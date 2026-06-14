@@ -1548,14 +1548,14 @@
     "website": "https://www.rc-car-tsvkleinburgwedel.de/"
   },
   {
-    "orgId": "18244",
-    "name": "TSV M97 Berlin RCCR",
-    "location": "Berlin",
-    "country": "Germany",
-    "eventCount": 56,
-    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&pId[O]=24&hId[1]=org",
-    "website": "http://www.msv06-rccar.de/"
-  },
+  "orgId": "18244",
+  "name": "TSV Mariendorf 1897 RCCR",
+  "location": "Berlin",
+  "country": "Germany",
+  "eventCount": 56,
+  "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&pId[O]=24&hId[1]=org",
+  "website": "https://tsvm-racing.de/"
+},
   {
     "orgId": "22897",
     "name": "Turnerschaft 1860 e.V. Großauheim",
