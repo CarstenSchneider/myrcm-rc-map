@@ -30,8 +30,8 @@
     "address": "Juri-Gagarin-Ring 1",
     "postalCode": "17036",
     "country": "DE",
-    "lat": 53.5557196,
-    "lng": 13.2928946,
+    "lat": 53.5546251,
+    "lng": 13.2931112,
     "source": "rck",
     "sources": [
       "rck-kleinserie"
@@ -48,9 +48,9 @@
     "verificationStatus": "verifiziert",
     "geocodingSource": "nominatim",
     "geocodingQuery": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg, DE",
-    "geocodingDisplayName": "Lindetal Grill, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
+    "geocodingDisplayName": "Lindetalcenter, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
     "geocodingClass": null,
-    "geocodingType": "fast_food"
+    "geocodingType": "mall"
   },
   {
     "id": "rck-pusdorfer-ring-bremen-bremen",
@@ -59,8 +59,8 @@
     "address": "Senator-Apelt-Strasse",
     "postalCode": "28197",
     "country": "DE",
-    "lat": 53.0802908,
-    "lng": 8.7558836,
+    "lat": 53.0802699,
+    "lng": 8.7556773,
     "source": "rck",
     "sources": [
       "rck-challenge",
