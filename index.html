@@ -22,50 +22,69 @@
       <div id="map"></div>
     </section>
 
-    <section class="filters-panel" aria-label="Filter">
-      <section class="filters" aria-label="Filter">
-        <div class="mobile-filter-topline">
-          <div class="filter-group filter-group-range">
-            <span class="filter-label">Zeitraum</span>
-            <div class="segmented" id="rangeFilter">
-              <button class="active" type="button" data-range="2">2 Wochen</button>
-              <button type="button" data-range="4">4 Wochen</button>
-              <button type="button" data-range="all">Alle</button>
-            </div>
-          </div>
+    <section class="filters-panel topbar-panel" aria-label="Filter und Navigation">
+      <header class="topbar" aria-label="Hauptnavigation und Filter">
+        <button class="app-menu-button" id="appMenuButton" type="button" aria-label="Menü öffnen">
+          <span aria-hidden="true">☰</span>
+        </button>
 
-          <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
-            <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <circle cx="10.5" cy="10.5" r="5.5"></circle>
-                <path d="M15 15 L20 20"></path>
-              </svg>
-            </span>
-            <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M8 8 L16 16"></path>
-                <path d="M16 8 L8 16"></path>
-              </svg>
-            </span>
+        <div class="topbar-range filter-group filter-group-range">
+          <span class="filter-label topbar-filter-label">Zeitraum</span>
+          <div class="segmented" id="rangeFilter" aria-label="Zeitraum">
+            <button class="active" type="button" data-range="2">
+              <span class="label-full">2 Wochen</span>
+              <span class="label-short">2W</span>
+            </button>
+            <button type="button" data-range="4">
+              <span class="label-full">4 Wochen</span>
+              <span class="label-short">4W</span>
+            </button>
+            <button type="button" data-range="all">Alle</button>
+          </div>
+        </div>
+
+        <div class="topbar-spacer" aria-hidden="true"></div>
+
+        <label class="topbar-series filter-field">
+          <span class="filter-label topbar-filter-label">Serie</span>
+          <select id="seriesFilter">
+            <option value="all">Alle Serien</option>
+          </select>
+        </label>
+
+        <div class="topbar-registration race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+          <button class="active" type="button" data-registration-visibility="open" aria-label="Nur offene Nennungen anzeigen">
+            <span class="race-document-dot" aria-hidden="true"></span>
+            <span class="toggle-label">Offen</span>
+          </button>
+
+          <button type="button" data-registration-visibility="all" aria-label="Alle Rennen anzeigen">
+            <span class="toggle-label">Alle</span>
           </button>
         </div>
 
-        <div class="advanced-filters" id="advancedFilters">
-          <label class="filter-field filter-field-search">
-            <span class="filter-label">Suche</span>
-            <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
-          </label>
+        <label class="topbar-search filter-field filter-field-search">
+          <span class="filter-label topbar-filter-label">Suche</span>
+          <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
+        </label>
 
-          <label class="filter-field">
-            <span class="filter-label">Serie</span>
-            <select id="seriesFilter">
-              <option value="all">Alle Serien</option>
-            </select>
-          </label>
-        </div>
+        <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
+          <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="10.5" cy="10.5" r="5.5"></circle>
+              <path d="M15 15 L20 20"></path>
+            </svg>
+          </span>
+          <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M8 8 L16 16"></path>
+              <path d="M16 8 L8 16"></path>
+            </svg>
+          </span>
+        </button>
+      </header>
 
-        <div class="active-filter-chips" id="activeFilterChips" aria-live="polite"></div>
-      </section>
+      <div class="active-filter-chips" id="activeFilterChips" aria-live="polite"></div>
     </section>
 
     <aside class="race-panel" aria-label="Rennen">
@@ -77,17 +96,6 @@
 
       <div class="results-toolbar">
         <div class="result-line" id="resultLine">Lade Rennen …</div>
-
-        <div class="race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-          <button class="active" type="button" data-registration-visibility="open">
-            <span class="race-document-dot" aria-hidden="true"></span>
-            Offen
-          </button>
-
-          <button type="button" data-registration-visibility="all">
-            Alle
-          </button>
-        </div>
       </div>
       <section class="race-grid" id="raceList" aria-live="polite"></section>
     </aside>
