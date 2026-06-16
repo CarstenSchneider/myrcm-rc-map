@@ -398,11 +398,12 @@ input {
 
 .layout-prototype .filters-panel {
   position: absolute;
-  top: 24px;
-  left: 24px;
+  top: 16px;
+  left: 16px;
+  right: 16px;
   z-index: 1000;
-  width: 300px;
-  max-width: calc(100vw - 48px);
+  width: auto;
+  max-width: none;
 }
 
 .layout-prototype .filters {
@@ -451,7 +452,7 @@ input {
 
 .layout-prototype .race-panel {
   position: absolute;
-  top: 24px;
+  top: 96px;
   right: 24px;
   bottom: 48px;
   z-index: 1000;
@@ -1770,6 +1771,199 @@ input {
   color: inherit;
   text-decoration: none;
   cursor: default;
+}
+
+/* v1.6.3 horizontal topbar filters */
+
+.layout-prototype .topbar-panel {
+  display: grid;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.layout-prototype .topbar,
+.layout-prototype .topbar-chips {
+  pointer-events: auto;
+}
+
+.layout-prototype .topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 58px;
+  padding: 8px 10px;
+  border: 1px solid rgba(222, 214, 202, 0.92);
+  border-radius: 20px;
+  background: rgba(255, 250, 243, 0.96);
+  box-shadow: 0 12px 30px rgba(31, 29, 26, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.layout-prototype .topbar .app-menu-button {
+  appearance: none;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 5px 16px rgba(31, 29, 26, 0.06);
+}
+
+.layout-prototype .topbar-range,
+.layout-prototype .topbar-series,
+.layout-prototype .topbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.layout-prototype .topbar-range {
+  flex: 0 0 auto;
+}
+
+.layout-prototype .topbar-spacer {
+  flex: 1 1 auto;
+  min-width: 16px;
+}
+
+.layout-prototype .topbar-series {
+  flex: 0 1 220px;
+}
+
+.layout-prototype .topbar-registration {
+  flex: 0 0 auto;
+}
+
+.layout-prototype .topbar-search {
+  flex: 0 1 300px;
+}
+
+.layout-prototype .topbar-filter-label {
+  flex: 0 0 auto;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.layout-prototype .topbar .segmented {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.layout-prototype .topbar .segmented button {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 7px 11px;
+}
+
+.layout-prototype .topbar select,
+.layout-prototype .topbar input {
+  min-height: 38px;
+  height: 38px;
+  padding: 8px 12px;
+}
+
+.layout-prototype .topbar .race-visibility-toggle button {
+  height: 34px;
+  padding: 0 11px;
+  font-size: 12px;
+}
+
+.layout-prototype .topbar .filter-field-search {
+  order: 0;
+}
+
+.layout-prototype .topbar .filter-toggle-button {
+  display: none !important;
+}
+
+.layout-prototype .topbar-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0;
+}
+
+.layout-prototype .topbar-chips.is-empty {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .layout-prototype .topbar-panel {
+    top: calc(10px + env(safe-area-inset-top));
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-width: none;
+  }
+
+  .layout-prototype .topbar {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 8px;
+    min-height: 0;
+    padding: 8px;
+    border-radius: 18px;
+  }
+
+  .layout-prototype .topbar .app-menu-button {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .layout-prototype .topbar-range {
+    flex: 1 1 calc(100% - 48px);
+  }
+
+  .layout-prototype .topbar-spacer {
+    display: none;
+  }
+
+  .layout-prototype .topbar-series {
+    flex: 1 1 160px;
+  }
+
+  .layout-prototype .topbar-registration {
+    flex: 0 0 auto;
+  }
+
+  .layout-prototype .topbar-search {
+    flex: 1 1 100%;
+  }
+
+  .layout-prototype .topbar-filter-label {
+    display: none;
+  }
+
+  .layout-prototype .topbar .segmented {
+    width: 100%;
+  }
+
+  .layout-prototype .topbar .segmented button {
+    flex: 1 1 auto;
+    min-height: 34px;
+    padding: 6px 7px;
+    font-size: 12px;
+  }
+
+  .layout-prototype .topbar select,
+  .layout-prototype .topbar input {
+    min-height: 40px;
+    height: 40px;
+  }
 }
 
 
