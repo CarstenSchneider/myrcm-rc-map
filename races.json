@@ -26650,8 +26650,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 98,
-    "registrationDisplay": "98",
+    "registrationCount": 99,
+    "registrationDisplay": "99",
     "note": null,
     "classes": [
       {
@@ -26664,7 +26664,7 @@
       },
       {
         "name": "TOS Fun 21.5",
-        "entries": 41
+        "entries": 42
       },
       {
         "name": "TOS FWD 17.5(EGTWFR)",
@@ -27062,8 +27062,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": null,
     "classes": [
       {
@@ -27080,7 +27080,7 @@
       },
       {
         "name": "Buggy ORE8",
-        "entries": 6
+        "entries": 7
       },
       "Truggy ORE8T"
     ],
@@ -27668,8 +27668,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": null,
     "classes": [
       {
@@ -27682,7 +27682,7 @@
       },
       {
         "name": "EGTWHO",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "EGTWSP",
@@ -28462,13 +28462,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": null,
     "classes": [
       {
         "name": "Elektro-Offroad 1:10 4WD",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "Elektro-Offroad 1:10 4WD Standard",
@@ -28480,7 +28480,7 @@
       },
       {
         "name": "ORE2WD",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "ORE2WD Standard",
@@ -28781,13 +28781,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 36,
+    "registrationDisplay": "36",
     "note": null,
     "classes": [
       {
         "name": "Crawler",
-        "entries": 29
+        "entries": 30
       },
       {
         "name": "Rennstrecke",
@@ -30659,16 +30659,28 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0/17",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
-      "BBX",
+      {
+        "name": "BBX",
+        "entries": 1
+      },
       "Retro 2WD",
-      "Retro 4WD",
-      "TAMIYA Fighter Cup",
+      {
+        "name": "Retro 4WD",
+        "entries": 1
+      },
+      {
+        "name": "TAMIYA Fighter Cup",
+        "entries": 2
+      },
       "Truck",
-      "Wheelie"
+      {
+        "name": "Wheelie",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-11"
@@ -31018,8 +31030,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       {
@@ -31028,7 +31040,7 @@
       },
       {
         "name": "EFRA 1/5 TC Open Gentleman",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "EFRA 1/5 TC Sport",
