@@ -215,6 +215,13 @@
   background: var(--favorite) !important;
 }
 
+.layout-prototype .topbar .topbar-toggle button:not(.active),
+.layout-prototype .topbar .race-visibility-toggle button:not(.active) {
+  border-color: transparent !important;
+  background: transparent !important;
+  color: var(--accent) !important;
+}
+
 .layout-prototype .topbar select,
 .layout-prototype .topbar input {
   width: 100%;
