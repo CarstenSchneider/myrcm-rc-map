@@ -52,6 +52,17 @@
           </select>
         </label>
 
+        <div class="topbar-favorites topbar-toggle" id="favoriteFilter" aria-label="Favoritenfilter">
+          <button class="active" type="button" data-favorite-filter="all" aria-label="Alle Rennen anzeigen">
+            <span class="toggle-label">Alle</span>
+          </button>
+
+          <button type="button" data-favorite-filter="favorites" aria-label="Nur Favoriten anzeigen">
+            <span class="favorite-toggle-icon" aria-hidden="true">★</span>
+            <span class="toggle-label">Favoriten</span>
+          </button>
+        </div>
+
         <div class="topbar-registration race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
           <button class="active" type="button" data-registration-visibility="open" aria-label="Nur offene Nennungen anzeigen">
             <span class="race-document-dot" aria-hidden="true"></span>
