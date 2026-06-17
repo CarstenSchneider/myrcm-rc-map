@@ -386,6 +386,13 @@ function renderActiveFilterChips() {
     `);
   }
 
+  if (showOpenOnly) {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="registration">
+        Offen<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
 
   activeFilterChips.innerHTML = chips.join("");
   activeFilterChips.classList.toggle("is-empty", chips.length === 0);
@@ -2579,6 +2586,11 @@ if (activeFilterChips) {
     if (button.dataset.clearFilter === "favorites") {
       selectedFavoriteFilter = "all";
       saveFavoriteFilter(selectedFavoriteFilter);
+    }
+
+    if (button.dataset.clearFilter === "registration") {
+      showOpenOnly = false;
+      updateRegistrationVisibilityUi();
     }
 
     activeVenueId = null;
