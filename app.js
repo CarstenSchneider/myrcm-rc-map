@@ -1889,7 +1889,7 @@ function raceVenueMetaHtml(race) {
   if (!hasMappableVenue(race)) return "";
   if (raceHostAndVenueAreSame(race)) return "";
 
-  return `<div class="race-venue">📍 ${raceVenueNameHtml(race)}</div>`;
+  return `<div class="race-venue"><span class="race-venue-pin" aria-hidden="true"></span>${raceVenueNameHtml(race)}</div>`;
 }
 
 function raceHostNameHtml(race) {

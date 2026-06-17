@@ -863,6 +863,9 @@
 
     .layout-prototype .race-venue {
       order: 3;
+      display: flex;
+      align-items: center;
+      gap: 5px;
       margin: 0;
       padding: 0 18px 5px;
       background: #fff;
@@ -870,6 +873,39 @@
       font-size: 11px;
       font-weight: 700;
       line-height: 1.25;
+    }
+
+    .layout-prototype .race-venue-pin {
+      position: relative;
+      display: inline-block;
+      flex: 0 0 9px;
+      width: 9px;
+      height: 12px;
+      transform: translateY(-1px);
+    }
+
+    .layout-prototype .race-venue-pin::before,
+    .layout-prototype .race-venue-pin::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      background: var(--host-blue);
+    }
+
+    .layout-prototype .race-venue-pin::before {
+      top: 0;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      transform: translateX(-50%);
+    }
+
+    .layout-prototype .race-venue-pin::after {
+      top: 7px;
+      width: 4px;
+      height: 4px;
+      border-radius: 0 0 1px 0;
+      transform: translateX(-50%) rotate(45deg);
     }
 
     .layout-prototype .race-venue .venue-link,
