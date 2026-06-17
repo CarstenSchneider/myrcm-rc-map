@@ -330,6 +330,262 @@
         height: 40px;
       }
     }
+
+    /* v1.6.6 compact desktop topbar */
+    .layout-prototype .topbar {
+      --topbar-main-offset: 42px;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 10px 0 0;
+      color: var(--host-blue);
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .layout-prototype .topbar::before {
+      inset: 0 0 0 var(--topbar-main-offset);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 7px 18px rgba(31, 29, 26, 0.08);
+    }
+
+    .layout-prototype .topbar .app-menu-button {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      color: var(--host-blue);
+      box-shadow: 0 6px 16px rgba(31, 29, 26, 0.08);
+    }
+
+    .layout-prototype .topbar .app-menu-button span {
+      width: 16px;
+      height: 12px;
+    }
+
+    .layout-prototype .topbar .app-menu-button span::before {
+      width: 16px;
+      height: 1.5px;
+      box-shadow:
+        0 5.25px 0 currentColor,
+        0 10.5px 0 currentColor;
+    }
+
+    .layout-prototype .topbar-spacer {
+      display: none;
+    }
+
+    .layout-prototype .topbar-series {
+      flex: 0 1 168px;
+    }
+
+    .layout-prototype .topbar-search {
+      flex: 0 1 clamp(220px, 22vw, 320px);
+      max-width: 320px;
+      margin-left: auto;
+    }
+
+    .layout-prototype .topbar .segmented {
+      padding: 2px;
+      background: var(--bg);
+    }
+
+    .layout-prototype .topbar .segmented button {
+      min-width: auto;
+      min-height: 30px;
+      height: 30px;
+      padding: 0 12px;
+      color: var(--host-blue) !important;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .layout-prototype .topbar .segmented button.active {
+      background: var(--host-blue) !important;
+      color: #fff !important;
+      font-weight: 600;
+    }
+
+    .layout-prototype .topbar select,
+    .layout-prototype .topbar input {
+      min-height: 30px;
+      height: 30px;
+      background-color: var(--bg);
+      color: var(--host-blue);
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .layout-prototype .topbar select {
+      padding: 5px 34px 5px 12px;
+    }
+
+    .layout-prototype .topbar input {
+      padding: 5px 38px 5px 13px;
+    }
+
+    .layout-prototype .topbar-search::before {
+      right: 15px;
+      width: 13px;
+      height: 13px;
+      border-width: 1.75px;
+      border-color: var(--host-blue);
+    }
+
+    .layout-prototype .topbar-search::after {
+      right: 11px;
+      top: calc(50% + 6px);
+      width: 10px;
+      height: 1.75px;
+      background: var(--host-blue);
+    }
+
+    .layout-prototype .topbar .topbar-switch-wrap {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .layout-prototype .topbar .topbar-switch-wrap.race-visibility-toggle {
+      padding: 0;
+      background: transparent;
+    }
+
+    .layout-prototype .topbar .topbar-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      height: 30px;
+      min-height: 30px;
+      min-width: 116px;
+      padding: 0 12px 0 8px;
+      border: 0 !important;
+      border-radius: 999px;
+      background: var(--bg) !important;
+      color: var(--host-blue) !important;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: none;
+      cursor: pointer;
+    }
+
+    .layout-prototype .topbar .race-visibility-toggle button.topbar-switch {
+      height: 30px;
+      min-height: 30px;
+      min-width: 116px;
+      padding: 0 12px 0 8px;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .layout-prototype .topbar .race-visibility-toggle button.topbar-switch.active {
+      font-weight: 600;
+    }
+
+    .layout-prototype .topbar .favorite-switch .favorite-toggle-icon {
+      width: 17px;
+      height: 17px;
+      margin: 0;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--favorite);
+      font-size: 11px;
+    }
+
+    .layout-prototype .topbar .registration-switch .race-document-dot {
+      width: 9px !important;
+      height: 9px !important;
+      border-radius: 999px;
+      background: var(--status-open) !important;
+    }
+
+    .layout-prototype .topbar .topbar-switch.active {
+      font-weight: 600;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button.favorite-switch.active {
+      background: var(--favorite) !important;
+      color: var(--host-blue) !important;
+    }
+
+    .layout-prototype .topbar .favorite-switch.active .favorite-toggle-icon {
+      background: rgba(255, 255, 255, 0.42);
+      color: var(--host-blue);
+    }
+
+    .layout-prototype .topbar .topbar-registration .registration-switch.active {
+      background: var(--status-open) !important;
+      color: var(--host-blue) !important;
+    }
+
+    .layout-prototype .topbar .topbar-registration .registration-switch.active .race-document-dot {
+      background: var(--host-blue) !important;
+    }
+
+    .layout-prototype .topbar .topbar-registration.race-visibility-toggle .topbar-switch:not(.active) {
+      background: var(--bg) !important;
+      color: var(--host-blue) !important;
+    }
+
+    @media (min-width: 861px) and (max-width: 1100px) {
+      .layout-prototype .topbar {
+        gap: 6px;
+        padding-right: 8px;
+      }
+
+      .layout-prototype .topbar-series {
+        flex-basis: 136px;
+      }
+
+      .layout-prototype .topbar-search {
+        flex-basis: 184px;
+        max-width: 260px;
+      }
+
+      .layout-prototype .topbar .segmented button {
+        padding: 0 9px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .layout-prototype .topbar {
+        --topbar-main-offset: 0;
+        gap: 6px;
+        padding: 7px;
+      }
+
+      .layout-prototype .topbar .app-menu-button {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+      }
+
+      .layout-prototype .topbar-range {
+        flex: 1 1 calc(100% - 40px);
+      }
+
+      .layout-prototype .topbar-series {
+        flex: 1 1 150px;
+      }
+
+      .layout-prototype .topbar-favorites,
+      .layout-prototype .topbar-registration {
+        flex: 0 0 auto;
+      }
+
+      .layout-prototype .topbar-search {
+        flex: 1 1 100%;
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-switch {
+        min-height: 30px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -341,25 +597,17 @@
     <section class="filters-panel topbar-panel" aria-label="Filter und Navigation">
       <header class="topbar" aria-label="Hauptnavigation und Filter">
         <button class="app-menu-button" id="appMenuButton" type="button" aria-label="Menü öffnen">
-          <span aria-hidden="true">☰</span>
+          <span aria-hidden="true"></span>
         </button>
 
         <div class="topbar-range filter-group filter-group-range">
           <span class="filter-label topbar-filter-label">Zeitraum</span>
           <div class="segmented" id="rangeFilter" aria-label="Zeitraum">
-            <button class="active" type="button" data-range="2">
-              <span class="label-full">2 Wochen</span>
-              <span class="label-short">2W</span>
-            </button>
-            <button type="button" data-range="4">
-              <span class="label-full">4 Wochen</span>
-              <span class="label-short">4W</span>
-            </button>
+            <button class="active" type="button" data-range="2">2 Wochen</button>
+            <button type="button" data-range="4">4 Wochen</button>
             <button type="button" data-range="all">Alle</button>
           </div>
         </div>
-
-        <div class="topbar-spacer" aria-hidden="true"></div>
 
         <label class="topbar-series filter-field">
           <span class="filter-label topbar-filter-label">Serie</span>
@@ -368,25 +616,17 @@
           </select>
         </label>
 
-        <div class="topbar-favorites topbar-toggle" id="favoriteFilter" aria-label="Favoritenfilter">
-          <button class="active" type="button" data-favorite-filter="all" aria-label="Alle Rennen anzeigen">
-            <span class="toggle-label">Alle</span>
-          </button>
-
-          <button type="button" data-favorite-filter="favorites" aria-label="Nur Favoriten anzeigen">
-            <span class="favorite-toggle-icon" aria-hidden="true">★</span>
-            <span class="toggle-label">Favoriten</span>
+        <div class="topbar-favorites topbar-switch-wrap" id="favoriteFilter" aria-label="Favoritenfilter">
+          <button class="topbar-switch favorite-switch" type="button" data-favorite-toggle aria-pressed="false" aria-label="Favoritenfilter: Alle Rennen">
+            <span class="switch-icon favorite-toggle-icon" aria-hidden="true">★</span>
+            <span class="switch-label" data-toggle-label>Alle Rennen</span>
           </button>
         </div>
 
-        <div class="topbar-registration race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-          <button class="active" type="button" data-registration-visibility="open" aria-label="Nur offene Nennungen anzeigen">
-            <span class="race-document-dot" aria-hidden="true"></span>
-            <span class="toggle-label">Offen</span>
-          </button>
-
-          <button type="button" data-registration-visibility="all" aria-label="Alle Rennen anzeigen">
-            <span class="toggle-label">Alle</span>
+        <div class="topbar-registration topbar-switch-wrap race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+          <button class="topbar-switch registration-switch active" type="button" data-registration-toggle aria-pressed="true" aria-label="Nennstatus: Offen">
+            <span class="race-document-dot switch-icon" aria-hidden="true"></span>
+            <span class="switch-label" data-toggle-label>Offen</span>
           </button>
         </div>
 

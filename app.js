@@ -9,6 +9,7 @@ const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
 const activeFilterChips = document.getElementById("activeFilterChips");
 const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
+const favoriteFilter = document.getElementById("favoriteFilter");
 
 const map = L.map("map", {
   scrollWheelZoom: true,
@@ -139,11 +140,36 @@ let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
 let selectedSeries = "all";
 let showOpenOnly = true;
+let selectedFavoriteFilter = "all";
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
 const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
+const favoriteFilterStorageKey = "rcRaceMapFavoriteFilter";
+
+function loadFavoriteFilter() {
+  try {
+    return localStorage.getItem(favoriteFilterStorageKey) === "favorites"
+      ? "favorites"
+      : "all";
+  } catch {
+    return "all";
+  }
+}
+
+function saveFavoriteFilter(value) {
+  try {
+    localStorage.setItem(
+      favoriteFilterStorageKey,
+      value === "favorites" ? "favorites" : "all"
+    );
+  } catch {
+    // Local storage is optional for this UI preference.
+  }
+}
+
+selectedFavoriteFilter = loadFavoriteFilter();
 
 function getFavoriteHostIds() {
   try {
@@ -282,6 +308,10 @@ function isFavoriteRaceHost(race) {
   return isFavoriteHostId(raceHostId(race));
 }
 
+function isFavoriteRace(race) {
+  return isFavoriteRaceHost(race);
+}
+
 
 
 function updateAppModeClass() {
@@ -300,6 +330,61 @@ function updateFilterPanelState() {
       ? "Suche und Serienfilter schließen"
       : "Suche und Serienfilter öffnen"
   );
+}
+
+function updateFavoriteFilterUi() {
+  if (!favoriteFilter) return;
+
+  const toggle = favoriteFilter.querySelector("[data-favorite-toggle]");
+  if (toggle) {
+    const active = selectedFavoriteFilter === "favorites";
+    const label = toggle.querySelector("[data-toggle-label]");
+
+    toggle.classList.toggle("active", active);
+    toggle.setAttribute("aria-pressed", String(active));
+    toggle.setAttribute(
+      "aria-label",
+      active ? "Favoritenfilter: Favoriten" : "Favoritenfilter: Alle Rennen"
+    );
+
+    if (label) label.textContent = active ? "Favoriten" : "Alle Rennen";
+    return;
+  }
+
+  favoriteFilter
+    .querySelectorAll("button[data-favorite-filter]")
+    .forEach(button => {
+      const active = button.dataset.favoriteFilter === selectedFavoriteFilter;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+}
+
+function updateRegistrationVisibilityUi() {
+  if (!registrationVisibilityFilter) return;
+
+  const toggle = registrationVisibilityFilter.querySelector("[data-registration-toggle]");
+  if (toggle) {
+    const label = toggle.querySelector("[data-toggle-label]");
+
+    toggle.classList.toggle("active", showOpenOnly);
+    toggle.setAttribute("aria-pressed", String(showOpenOnly));
+    toggle.setAttribute(
+      "aria-label",
+      showOpenOnly ? "Nennstatus: Offen" : "Nennstatus: Alle Rennen"
+    );
+
+    if (label) label.textContent = showOpenOnly ? "Offen" : "Alle Rennen";
+    return;
+  }
+
+  registrationVisibilityFilter
+    .querySelectorAll("button[data-registration-visibility]")
+    .forEach(button => {
+      const active = button.dataset.registrationVisibility === (showOpenOnly ? "open" : "all");
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
 }
 
 function renderActiveFilterChips() {
@@ -324,6 +409,14 @@ function renderActiveFilterChips() {
     `);
   }
 
+  if (selectedFavoriteFilter === "favorites") {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="favorites">
+        Favoriten<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
 
   activeFilterChips.innerHTML = chips.join("");
   activeFilterChips.classList.toggle("is-empty", chips.length === 0);
@@ -331,6 +424,8 @@ function renderActiveFilterChips() {
 
 function syncFilterUi() {
   updateFilterPanelState();
+  updateFavoriteFilterUi();
+  updateRegistrationVisibilityUi();
   renderActiveFilterChips();
 }
 
@@ -604,6 +699,10 @@ function isPastRaceWithinLastYear(race) {
 function matchesSelectedSeries(race) {
   return selectedSeries === "all" ||
     raceSeries(race).some(series => seriesFilterValue(series) === selectedSeries);
+}
+
+function matchesFavoriteFilter(race) {
+  return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
 
@@ -1728,9 +1827,10 @@ function filteredRaces() {
     .filter(isInSelectedRange)
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
+    .filter(matchesFavoriteFilter)
     .filter(race => !query || raceSearchText(race).includes(query))
     .sort((a, b) => {
-      const favoriteOrder = Number(isFavoriteRaceHost(b)) - Number(isFavoriteRaceHost(a));
+      const favoriteOrder = Number(isFavoriteRace(b)) - Number(isFavoriteRace(a));
       if (favoriteOrder !== 0) return favoriteOrder;
       return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
     });
@@ -2436,6 +2536,17 @@ rangeFilter.addEventListener("click", event => {
 
 if (registrationVisibilityFilter) {
   registrationVisibilityFilter.addEventListener("click", event => {
+    const toggle = event.target.closest("[data-registration-toggle]");
+    if (toggle) {
+      showOpenOnly = !showOpenOnly;
+      activeVenueId = null;
+      activeRaceId = null;
+      updateAppModeClass();
+      updateRegistrationVisibilityUi();
+      render();
+      return;
+    }
+
     const button = event.target.closest("button[data-registration-visibility]");
     if (!button) return;
 
@@ -2447,6 +2558,38 @@ if (registrationVisibilityFilter) {
     registrationVisibilityFilter
       .querySelectorAll("button")
       .forEach(item => item.classList.toggle("active", item === button));
+
+    render();
+  });
+}
+
+if (favoriteFilter) {
+  favoriteFilter.addEventListener("click", event => {
+    const toggle = event.target.closest("[data-favorite-toggle]");
+    if (toggle) {
+      selectedFavoriteFilter = selectedFavoriteFilter === "favorites"
+        ? "all"
+        : "favorites";
+      saveFavoriteFilter(selectedFavoriteFilter);
+      activeVenueId = null;
+      activeRaceId = null;
+      updateAppModeClass();
+      updateFavoriteFilterUi();
+      render();
+      return;
+    }
+
+    const button = event.target.closest("button[data-favorite-filter]");
+    if (!button) return;
+
+    selectedFavoriteFilter = button.dataset.favoriteFilter === "favorites"
+      ? "favorites"
+      : "all";
+    saveFavoriteFilter(selectedFavoriteFilter);
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    updateFavoriteFilterUi();
 
     render();
   });
@@ -2487,6 +2630,11 @@ if (activeFilterChips) {
     if (button.dataset.clearFilter === "series") {
       selectedSeries = "all";
       seriesFilter.value = "all";
+    }
+
+    if (button.dataset.clearFilter === "favorites") {
+      selectedFavoriteFilter = "all";
+      saveFavoriteFilter(selectedFavoriteFilter);
     }
 
     activeVenueId = null;
