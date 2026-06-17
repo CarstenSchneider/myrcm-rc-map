@@ -2203,8 +2203,9 @@ function updateMarkers(list, shouldFitBounds = true) {
     if (!venueRaces.length && !latestPastRace) return;
 
     const hasUpcomingRaces = venueRaces.length > 0;
+    const venueHasActiveRegistration = hasActiveRegistration(venueRaces);
     const markerClass = hasUpcomingRaces
-      ? (hasActiveRegistration(venueRaces) ? "map-marker-open" : "map-marker-closed")
+      ? (venueHasActiveRegistration ? "map-marker-open" : "map-marker-closed")
       : "map-marker-venue-inactive";
 
     const registrationTotal = venueRegistrationCount(venueRaces);
@@ -2219,17 +2220,19 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? [Math.round(markerWidth / 2), markerHeight]
       : [Math.round(markerWidth / 2), markerHeight];
 
-    const replacementClass = hasActiveRegistration(venueRaces)
+    const replacementClass = venueHasActiveRegistration
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
     const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
-    let markerColor = isFavoriteVenue
-      ? markerFavoriteColorForRegistrationCount(registrationTotal)
-      : hasUpcomingRaces
-        ? markerColorForRegistrationCount(registrationTotal)
-        : "rgba(33, 55, 105, 0.58)";
+    let markerColor = hasUpcomingRaces && !venueHasActiveRegistration
+      ? "rgba(31, 29, 26, 0.55)"
+      : isFavoriteVenue
+        ? markerFavoriteColorForRegistrationCount(registrationTotal)
+        : hasUpcomingRaces
+          ? markerColorForRegistrationCount(registrationTotal)
+          : "rgba(33, 55, 105, 0.58)";
 
     if (!hasUpcomingRaces && isFavoriteVenue) {
       markerColor = rcRaceMapColors.favorite;

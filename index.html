@@ -342,9 +342,9 @@
 
     /* v1.6.6 compact desktop topbar */
     .layout-prototype .topbar {
-      --topbar-main-offset: 42px;
-      gap: 10px;
-      min-height: 38px;
+      --topbar-main-offset: 54px;
+      gap: 14px;
+      min-height: 42px;
       padding: 0 10px 0 0;
       background: transparent;
       color: var(--host-blue);
@@ -361,9 +361,9 @@
     }
 
     .layout-prototype .topbar .app-menu-button {
-      flex: 0 0 34px;
-      width: 34px;
-      height: 34px;
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
       background: #fff !important;
       color: var(--host-blue);
       font-weight: 400 !important;
@@ -406,13 +406,13 @@
     .layout-prototype .topbar .topbar-filter-group {
       --pill-color: var(--host-blue);
       --pill-width: 0px;
-      --pill-x: 3px;
+      --pill-x: 5px;
       display: inline-flex;
       align-items: center;
       flex: 0 0 auto;
       width: auto;
       gap: 0;
-      padding: 3px;
+      padding: 5px;
       border: 0;
       border-radius: 999px;
       background: var(--bg);
@@ -425,8 +425,8 @@
     .layout-prototype .topbar .topbar-filter-group::before {
       content: "";
       position: absolute;
-      top: 3px;
-      bottom: 3px;
+      top: 5px;
+      bottom: 5px;
       left: 0;
       z-index: 0;
       width: var(--pill-width);
@@ -455,8 +455,8 @@
       justify-content: center;
       gap: 6px;
       min-width: auto;
-      min-height: 28px;
-      height: 28px;
+      min-height: 30px;
+      height: 30px;
       padding: 0 14px;
       border: 0 !important;
       border-radius: 999px;
@@ -503,8 +503,8 @@
 
     .layout-prototype .topbar select,
     .layout-prototype .topbar input {
-      min-height: 30px;
-      height: 30px;
+      min-height: 40px;
+      height: 40px;
       background-color: var(--bg);
       color: var(--host-blue);
       font-size: 13px;
@@ -610,8 +610,8 @@
 
     @media (min-width: 861px) and (max-width: 1100px) {
       .layout-prototype .topbar {
-        --topbar-main-offset: 40px;
-        gap: 8px;
+        --topbar-main-offset: 52px;
+        gap: 12px;
         padding-right: 8px;
       }
 
@@ -626,7 +626,7 @@
       }
 
       .layout-prototype .topbar-chips {
-        margin-left: 40px;
+        margin-left: 52px;
       }
 
       .layout-prototype .topbar .segmented button,
@@ -638,18 +638,18 @@
     @media (max-width: 860px) {
       .layout-prototype .topbar {
         --topbar-main-offset: 0;
-        gap: 6px;
+        gap: 10px;
         padding: 7px;
       }
 
       .layout-prototype .topbar .app-menu-button {
-        flex-basis: 32px;
-        width: 32px;
-        height: 32px;
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
       }
 
       .layout-prototype .topbar-range {
-        flex: 1 1 calc(100% - 40px);
+        flex: 1 1 calc(100% - 50px);
       }
 
       .layout-prototype .topbar-series {
