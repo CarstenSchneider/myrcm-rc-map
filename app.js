@@ -29,7 +29,7 @@ L.control.zoom({
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
-  water: "#3A4D79",
+  water: "#caceda",
   land: "#F2F3F0",
   landcover: "#F2F3F0",
   building: "#DDDDDD",
@@ -1338,20 +1338,20 @@ function ensureRegistrationStatusStyles() {
   style.id = "registration-status-styles";
   style.textContent = `
     .race-card.registration-upcoming {
-      background: #FAF8F3;
-      border-color: #DDDDDD;
+      background: rgba(247, 243, 236, 0.96);
+      border-color: rgba(222, 214, 202, 0.75);
     }
 
     .race-card.registration-closed {
-      background: #D6D6D6;
-      border-color: #BEBEBE;
+      background: rgba(244, 240, 233, 0.94);
+      border-color: rgba(222, 214, 202, 0.7);
     }
 
     .race-card.registration-closed .race-date,
     .race-card.registration-closed .race-name,
     .race-card.registration-closed .race-venue,
     .race-card.registration-closed .tag {
-      color: #716F6F;
+      color: rgba(31, 29, 26, 0.58);
     }
 
     .race-link,

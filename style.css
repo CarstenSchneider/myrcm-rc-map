@@ -1,16 +1,16 @@
 :root {
-  --map-water: #3A4D79;
+  --map-water: #caceda;
   --map-land: #F2F3F0;
   --host-blue: #213769;
   --favorite: #C8B090;
   --bg: #F5F5F5;
-  --panel: #FAF8F3;
+  --panel: #FFFFFF;
   --text: #1f1d1a;
   --muted: #716F6F;
   --line: #DDDDDD;
   --accent: #213769;
   --map-marker: #213769;
-  --card: #FAF8F3;
+  --card: #FFFFFF;
   --status-open: #73FF60;
   --status-closed: #E51354;
   --status-upcoming: #FFA700;
@@ -151,8 +151,8 @@ input {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 10px 12px;
-  background: var(--bg);
-  color: var(--muted);
+  background: #fff;
+  color: var(--text);
   font: inherit;
   font-size: 14px;
 }
@@ -1808,7 +1808,7 @@ input {
   inset: 0 0 0 var(--topbar-main-offset);
   z-index: 0;
   border-radius: 999px;
-  background: #F5F5F5;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 24px rgba(31, 29, 26, 0.08);
   backdrop-filter: blur(12px);
 }
@@ -1830,7 +1830,7 @@ input {
   padding: 0;
   border: 0;
   border-radius: 999px;
-  background: #F5F5F5;
+  background: rgba(255, 255, 255, 0.98);
   color: var(--accent);
   font: inherit;
   font-size: 25px;
@@ -1895,7 +1895,7 @@ input {
   gap: 0;
   padding: 4px;
   border: 0;
-  background: #DDDDDD;
+  background: rgba(245, 245, 245, 0.96);
 }
 
 .layout-prototype .topbar .segmented button {
@@ -1914,9 +1914,8 @@ input {
   height: 36px;
   border: 0;
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background-color: #F5F5F5;
-  color: var(--muted);
+  background-color: rgba(245, 245, 245, 0.96);
+  color: var(--accent);
   font-size: 14px;
   box-shadow: none;
 }
@@ -1961,8 +1960,8 @@ input {
   min-width: 82px;
   padding: 0 18px;
   border: 0;
-  background: #DDDDDD;
-  color: var(--muted);
+  background: rgba(245, 245, 245, 0.96);
+  color: var(--accent);
   font-size: 14px;
   font-weight: 500;
 }
@@ -2113,8 +2112,8 @@ input {
 
 .layout-prototype .topbar .race-visibility-toggle button:not(.active) {
   border-color: transparent !important;
-  background: #DDDDDD !important;
-  color: var(--muted) !important;
+  background: rgba(245, 245, 245, 0.96) !important;
+  color: var(--accent) !important;
 }
 
 .layout-prototype .topbar .race-visibility-toggle .race-document-dot,
