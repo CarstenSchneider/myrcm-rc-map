@@ -1420,14 +1420,16 @@ function ensureRegistrationStatusStyles() {
 
     .map-marker-open,
     .map-marker-closed,
-    .map-marker-venue-inactive {
+    .map-marker-venue-inactive,
+    .map-marker-venue-inactive-favorite {
       cursor: pointer;
       pointer-events: auto;
     }
 
     .map-marker-open *,
     .map-marker-closed *,
-    .map-marker-venue-inactive * {
+    .map-marker-venue-inactive *,
+    .map-marker-venue-inactive-favorite * {
       pointer-events: none;
     }
 
@@ -1460,26 +1462,61 @@ function ensureRegistrationStatusStyles() {
     .map-marker-venue-inactive {
       cursor: pointer;
       pointer-events: auto;
+      --venue-pin-color: var(--map-marker, #213769);
     }
 
-    .map-marker-venue-inactive {
+    .map-marker-venue-inactive:not(.map-marker-active-replacement),
+    .map-marker-venue-inactive-favorite {
+      position: relative;
+      display: block;
+      width: 18px;
+      height: 22px;
+      border: 0;
+      background: transparent !important;
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
+    .map-marker-venue-inactive:not(.map-marker-active-replacement)::before,
+    .map-marker-venue-inactive-favorite::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 2;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--venue-pin-color, var(--map-marker, #213769));
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.72);
+      transform: translateX(-50%);
+    }
+
+    .map-marker-venue-inactive:not(.map-marker-active-replacement)::after,
+    .map-marker-venue-inactive-favorite::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 13px;
+      z-index: 1;
+      width: 8px;
+      height: 8px;
+      border-radius: 0 0 2px 0;
+      background: var(--venue-pin-color, var(--map-marker, #213769));
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .map-marker-active-replacement.map-marker-venue-inactive {
       width: 12px;
       height: 12px;
       border-radius: 999px;
-      background: rgba(113, 111, 111, 0.45);
       border: 1px solid rgba(255, 255, 255, 0.9);
       box-sizing: border-box;
       box-shadow: none;
     }
 
     .map-marker-venue-inactive-favorite {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: var(--favorite, #C8B090);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-sizing: border-box;
-      box-shadow: none;
+      --venue-pin-color: var(--favorite, #C8B090);
     }
 
     .popup-last-race {
@@ -2171,12 +2208,12 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? markerScaleForRegistrationCount(registrationTotal)
       : 1;
 
-    const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 12;
-    const markerHeight = hasUpcomingRaces ? Math.round(raceMapMarkerBaseHeight * markerScale) : 12;
+    const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 18;
+    const markerHeight = hasUpcomingRaces ? Math.round(raceMapMarkerBaseHeight * markerScale) : 22;
 
     const markerAnchor = hasUpcomingRaces
       ? [Math.round(markerWidth / 2), markerHeight]
-      : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
+      : [Math.round(markerWidth / 2), markerHeight];
 
     const replacementClass = hasActiveRegistration(venueRaces)
       ? "map-marker-active-replacement-open"

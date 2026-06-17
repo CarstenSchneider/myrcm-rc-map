@@ -1699,13 +1699,42 @@ input {
 /* v1.6 favorite inactive venue marker */
 
 .map-marker-venue-inactive-favorite {
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: var(--favorite);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  --venue-pin-color: var(--favorite);
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 22px;
+  border: 0;
+  background: transparent !important;
   box-sizing: border-box;
   box-shadow: none;
+}
+
+.map-marker-venue-inactive-favorite::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--venue-pin-color);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.72);
+  transform: translateX(-50%);
+}
+
+.map-marker-venue-inactive-favorite::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 13px;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 0 0 2px 0;
+  background: var(--venue-pin-color);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 
@@ -2089,7 +2118,7 @@ input {
 }
 
 .map-marker-venue-inactive-favorite {
-  background: var(--favorite) !important;
+  --venue-pin-color: var(--favorite) !important;
 }
 
 .leaflet-container {
