@@ -2,7 +2,7 @@
   "name": "RC Race Map Style",
   "note": "Central editable color tokens for the Stadia/MapLibre runtime skin and UI colors.",
   "colors": {
-    "water": "#3A4D79",
+    "water": "#caceda",
     "land": "#F2F3F0",
     "hostBlue": "#213769",
     "favorite": "#C8B090",
