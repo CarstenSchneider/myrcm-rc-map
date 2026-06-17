@@ -1467,43 +1467,15 @@ function ensureRegistrationStatusStyles() {
 
     .map-marker-venue-inactive:not(.map-marker-active-replacement),
     .map-marker-venue-inactive-favorite {
-      position: relative;
       display: block;
-      width: 18px;
-      height: 22px;
+      width: 10px;
+      height: 12px;
       border: 0;
-      background: transparent !important;
+      background: var(--venue-pin-color, var(--map-marker, #213769)) !important;
+      -webkit-mask: url("map_pin.svg") center / contain no-repeat;
+      mask: url("map_pin.svg") center / contain no-repeat;
       box-sizing: border-box;
       box-shadow: none;
-    }
-
-    .map-marker-venue-inactive:not(.map-marker-active-replacement)::before,
-    .map-marker-venue-inactive-favorite::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 0;
-      z-index: 2;
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: var(--venue-pin-color, var(--map-marker, #213769));
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.72);
-      transform: translateX(-50%);
-    }
-
-    .map-marker-venue-inactive:not(.map-marker-active-replacement)::after,
-    .map-marker-venue-inactive-favorite::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 13px;
-      z-index: 1;
-      width: 8px;
-      height: 8px;
-      border-radius: 0 0 2px 0;
-      background: var(--venue-pin-color, var(--map-marker, #213769));
-      transform: translateX(-50%) rotate(45deg);
     }
 
     .map-marker-active-replacement.map-marker-venue-inactive {
@@ -2208,8 +2180,8 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? markerScaleForRegistrationCount(registrationTotal)
       : 1;
 
-    const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 18;
-    const markerHeight = hasUpcomingRaces ? Math.round(raceMapMarkerBaseHeight * markerScale) : 22;
+    const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 10;
+    const markerHeight = hasUpcomingRaces ? Math.round(raceMapMarkerBaseHeight * markerScale) : 12;
 
     const markerAnchor = hasUpcomingRaces
       ? [Math.round(markerWidth / 2), markerHeight]
