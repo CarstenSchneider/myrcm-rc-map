@@ -960,7 +960,8 @@
     }
 
     .layout-prototype .race-card a.venue-link,
-    .layout-prototype .race-card a.race-link-item,
+    .layout-prototype .race-card a.race-link-item:not(.race-link-item-status),
+    .layout-prototype .race-card a.race-link-item-status .race-link-text,
     .layout-prototype .race-card .race-registration-count-link .registration-count-value {
       text-decoration: none !important;
       background-image: linear-gradient(currentColor, currentColor);
@@ -974,8 +975,10 @@
 
     .layout-prototype .race-card a.venue-link:hover,
     .layout-prototype .race-card a.venue-link:focus-visible,
-    .layout-prototype .race-card a.race-link-item:hover,
-    .layout-prototype .race-card a.race-link-item:focus-visible,
+    .layout-prototype .race-card a.race-link-item:not(.race-link-item-status):hover,
+    .layout-prototype .race-card a.race-link-item:not(.race-link-item-status):focus-visible,
+    .layout-prototype .race-card a.race-link-item-status:hover .race-link-text,
+    .layout-prototype .race-card a.race-link-item-status:focus-visible .race-link-text,
     .layout-prototype .race-card .race-registration-count-link:hover .registration-count-value,
     .layout-prototype .race-card .race-registration-count-link:focus-visible .registration-count-value {
       text-decoration: none !important;
@@ -992,6 +995,14 @@
       background: #d8d8d8;
       color: var(--host-blue);
       cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-card > .race-class-tags .tag-class-toggle:hover,
+    .layout-prototype .race-card > .race-class-tags .tag-class-toggle:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .layout-prototype .race-card.registration-closed {
@@ -1002,23 +1013,29 @@
     .layout-prototype .race-card.registration-closed .race-venue,
     .layout-prototype .race-card.registration-closed .race-document-links,
     .layout-prototype .race-card.registration-closed > .race-class-tags {
-      background: #dfdfdf;
+      background: #DDDDDD;
     }
 
     .layout-prototype .race-card.registration-closed .race-date,
     .layout-prototype .race-card.registration-closed .race-name,
     .layout-prototype .race-card.registration-closed .race-registration-count,
-    .layout-prototype .race-card.registration-closed .race-venue,
-    .layout-prototype .race-card.registration-closed .race-class-tags .tag-class {
-      color: rgba(31, 29, 26, 0.58);
+    .layout-prototype .race-card.registration-closed .race-venue {
+      color: #716F6F;
     }
 
-    .layout-prototype .race-card.registration-closed .race-document-links .race-link-item:not(.race-link-item-status-closed) {
-      color: rgba(31, 29, 26, 0.58);
+    .layout-prototype .race-card.registration-closed .race-document-links .race-link-item,
+    .layout-prototype .race-card.registration-closed .race-venue .venue-link,
+    .layout-prototype .race-card.registration-closed .race-venue .venue-name-text {
+      color: #716F6F;
+    }
+
+    .layout-prototype .race-card.registration-closed .race-document-dot-closed {
+      background: #716F6F !important;
     }
 
     .layout-prototype .race-card.registration-closed > .race-class-tags .tag-class {
-      background: rgba(31, 29, 26, 0.22);
+      background: #716F6F;
+      color: #DDDDDD;
     }
 
     .layout-prototype .race-card.is-clickable:hover,

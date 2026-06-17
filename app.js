@@ -2002,7 +2002,7 @@ function documentLinksHtml(race) {
   } else if (race.url) {
     registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        Nennung ↗
+        <span class="race-link-text">Nennung ↗</span>
       </a>`;
   }
 
