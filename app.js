@@ -30,16 +30,16 @@ L.control.zoom({
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
   water: "#caceda",
-  land: "#F2F3F0",
-  landcover: "#F2F3F0",
+  land: "#F2F2F2",
+  landcover: "#F2F2F2",
   building: "#DDDDDD",
   road: "#DDDDDD",
   boundary: "#DDDDDD",
   label: "#716F6F",
-  labelHalo: "#F2F3F0",
+  labelHalo: "#F2F2F2",
   marker: "#213769",
   markerClosed: "#716F6F",
-  favorite: "#C8B090",
+  favorite: "#BE9E73",
   statusOpen: "#73FF60",
   statusClosed: "#E51354",
   statusUpcoming: "#FFA700"
@@ -588,7 +588,7 @@ function updateRegistrationVisibilityUi() {
 
 function activePillColor(button) {
   return button?.dataset.favoriteFilter === "favorites"
-    ? "#C8B090"
+    ? "#BE9E73"
     : "#213769";
 }
 
@@ -1324,11 +1324,11 @@ function markerColorForRegistrationCount(count) {
 
 function markerFavoriteColorForRegistrationCount(count) {
   if (count >= 120) return rcRaceMapColors.favorite;
-  if (count >= 70) return "#D0BA9C";
-  if (count >= 40) return "#D9C7AE";
-  if (count >= 20) return "#E1D2BF";
-  if (count >= 10) return "#E9DECF";
-  return "#F0E8DD";
+  if (count >= 70) return "#C6AA83";
+  if (count >= 40) return "#CEB794";
+  if (count >= 20) return "#D6C3A7";
+  if (count >= 10) return "#DDCDB8";
+  return "#E3D6C8";
 }
 
 function ensureRegistrationStatusStyles() {
@@ -1520,7 +1520,7 @@ function ensureRegistrationStatusStyles() {
     }
 
     .map-marker-venue-inactive-favorite {
-      --venue-pin-color: var(--favorite, #C8B090);
+      --venue-pin-color: var(--favorite, #BE9E73);
     }
 
     .popup-last-race {
