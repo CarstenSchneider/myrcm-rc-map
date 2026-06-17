@@ -356,6 +356,41 @@ function updateRegistrationVisibilityUi() {
     });
 }
 
+function activePillColor(button) {
+  return button?.dataset.favoriteFilter === "favorites"
+    ? "#C8B090"
+    : "#213769";
+}
+
+function updateSlidingPill(control) {
+  if (!control) return;
+
+  const activeButton = control.querySelector("button.active");
+  if (!activeButton) return;
+
+  control.style.setProperty("--pill-x", `${activeButton.offsetLeft}px`);
+  control.style.setProperty("--pill-width", `${activeButton.offsetWidth}px`);
+  control.style.setProperty("--pill-color", activePillColor(activeButton));
+  control.classList.add("is-pill-ready");
+}
+
+function updateSlidingPills() {
+  [rangeFilter, favoriteFilter, registrationVisibilityFilter].forEach(updateSlidingPill);
+}
+
+let slidingPillFrame = null;
+
+function scheduleSlidingPillUpdate() {
+  if (slidingPillFrame !== null) {
+    cancelAnimationFrame(slidingPillFrame);
+  }
+
+  slidingPillFrame = requestAnimationFrame(() => {
+    slidingPillFrame = null;
+    updateSlidingPills();
+  });
+}
+
 function renderActiveFilterChips() {
   if (!activeFilterChips) return;
 
@@ -402,6 +437,7 @@ function syncFilterUi() {
   updateFilterPanelState();
   updateFavoriteFilterUi();
   updateRegistrationVisibilityUi();
+  updateSlidingPills();
   renderActiveFilterChips();
 }
 
@@ -2598,6 +2634,14 @@ if (activeFilterChips) {
     updateAppModeClass();
     render();
   });
+}
+
+window.addEventListener("resize", scheduleSlidingPillUpdate);
+
+if (document.fonts?.ready) {
+  document.fonts.ready
+    .then(scheduleSlidingPillUpdate)
+    .catch(() => {});
 }
 
 map.on("click", () => {

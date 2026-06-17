@@ -395,6 +395,9 @@
 
     .layout-prototype .topbar .segmented,
     .layout-prototype .topbar .topbar-filter-group {
+      --pill-color: var(--host-blue);
+      --pill-width: 0px;
+      --pill-x: 3px;
       display: inline-flex;
       align-items: center;
       flex: 0 0 auto;
@@ -404,6 +407,35 @@
       border: 0;
       border-radius: 999px;
       background: var(--bg);
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .layout-prototype .topbar .segmented::before,
+    .layout-prototype .topbar .topbar-filter-group::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      left: 0;
+      z-index: 0;
+      width: var(--pill-width);
+      border-radius: 999px;
+      background-color: var(--pill-color);
+      opacity: 0;
+      transform: translateX(var(--pill-x));
+      transition:
+        transform 180ms ease,
+        width 180ms ease,
+        background-color 180ms ease,
+        opacity 120ms ease;
+      will-change: transform, width;
+    }
+
+    .layout-prototype .topbar .segmented.is-pill-ready::before,
+    .layout-prototype .topbar .topbar-filter-group.is-pill-ready::before {
+      opacity: 1;
     }
 
     .layout-prototype .topbar .segmented button,
@@ -425,9 +457,12 @@
       font-size: 13px;
       font-weight: 400 !important;
       line-height: 1;
+      position: relative;
+      z-index: 1;
       white-space: nowrap;
       box-shadow: none;
       cursor: pointer;
+      transition: color 140ms ease;
     }
 
     .layout-prototype .topbar .segmented button.active,
@@ -440,6 +475,21 @@
     .layout-prototype .topbar .topbar-filter-group button[data-favorite-filter="favorites"].active {
       background: var(--favorite) !important;
       color: #fff !important;
+    }
+
+    .layout-prototype .topbar .segmented.is-pill-ready button.active,
+    .layout-prototype .topbar .topbar-filter-group.is-pill-ready button.active,
+    .layout-prototype .topbar .topbar-filter-group.is-pill-ready button[data-favorite-filter="favorites"].active {
+      background: transparent !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .layout-prototype .topbar .segmented::before,
+      .layout-prototype .topbar .topbar-filter-group::before,
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-filter-group button {
+        transition: none;
+      }
     }
 
     .layout-prototype .topbar select,
