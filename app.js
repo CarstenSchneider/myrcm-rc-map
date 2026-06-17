@@ -10,6 +10,7 @@ const filterToggleButton = document.getElementById("filterToggleButton");
 const activeFilterChips = document.getElementById("activeFilterChips");
 const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
 const favoriteFilter = document.getElementById("favoriteFilter");
+let dataLastUpdatedAt = null;
 
 const map = L.map("map", {
   scrollWheelZoom: true,
@@ -428,7 +429,7 @@ function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  >${active ? "★" : "☆"}</button>`;
+  ><span class="favorite-toggle-icon" aria-hidden="true">★</span></button>`;
 }
 
 
@@ -481,7 +482,7 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  >${active ? "★" : "☆"}</button>`;
+  ><span class="favorite-toggle-icon" aria-hidden="true">★</span></button>`;
 }
 
 function raceFavoriteVenueId(race) {
@@ -1005,6 +1006,53 @@ function formatShortDate(dateString) {
     month: "2-digit",
     year: "2-digit"
   }).format(date);
+}
+
+function formatDataUpdateTimestamp(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
+
+  const datePart = new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }).format(date);
+
+  const timePart = new Intl.DateTimeFormat("de-DE", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).format(date);
+
+  return `Stand ${datePart} | ${timePart} Uhr`;
+}
+
+function resultLineText(count, detail = "gefunden") {
+  const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
+  const base = `${count} Rennen ${detail}`;
+
+  return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
+}
+
+function emptyVenueResultLineText() {
+  const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
+  const base = "Keine kommenden Rennen an dieser Strecke";
+
+  return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
+}
+
+function responseLastModifiedDate(response) {
+  const value = response?.headers?.get?.("last-modified");
+  if (!value) return null;
+
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function latestResponseLastModified(responses = []) {
+  return responses
+    .map(responseLastModifiedDate)
+    .filter(Boolean)
+    .sort((a, b) => b - a)[0] || null;
 }
 
 function isNewRace(race) {
@@ -2250,10 +2298,10 @@ const popupOffset = hasUpcomingRaces
 
         if (hasUpcomingRaces) {
           renderList(venueRaces);
-          resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+          resultLine.textContent = resultLineText(venueRaces.length, "an dieser Strecke");
         } else {
           renderList([]);
-          resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+          resultLine.textContent = emptyVenueResultLineText();
         }
       });
     });
@@ -2291,10 +2339,10 @@ const popupOffset = hasUpcomingRaces
 
       if (hasUpcomingRaces) {
         renderList(venueRaces);
-        resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+        resultLine.textContent = resultLineText(venueRaces.length, "an dieser Strecke");
       } else {
         renderList([]);
-        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+        resultLine.textContent = emptyVenueResultLineText();
       }
 
       marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
@@ -2377,7 +2425,7 @@ function focusRace(race) {
   const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
 
   renderList(venueList);
-  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
 
   map.setView([venue.lat, venue.lng], 12);
 
@@ -2388,7 +2436,7 @@ function focusRace(race) {
   }
 }
 function renderList(list) {
-  resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+  resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
   if (!list.length) {
@@ -2518,7 +2566,7 @@ function toggleClassList(raceId) {
   if (activeVenueId) {
     const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
     renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
     return;
   }
 
@@ -2547,10 +2595,10 @@ document.addEventListener("click", event => {
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
     renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
   } else {
     renderList(list);
-    resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+    resultLine.textContent = resultLineText(list.length);
   }
 });
 
@@ -2694,7 +2742,7 @@ function render() {
     if (venueList.length) {
       activeRaceId = null;
       renderList(venueList);
-      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+      resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
     } else {
       const venue = venues.find(item => item.id === activeVenueId);
       const latestPastRace = venue ? latestPastRaceForVenue(venue) : null;
@@ -2702,7 +2750,7 @@ function render() {
       if (latestPastRace) {
         activeRaceId = null;
         renderList([]);
-        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+        resultLine.textContent = emptyVenueResultLineText();
       } else {
         activeVenueId = null;
         activeRaceId = null;
@@ -2867,6 +2915,15 @@ async function fetchJsonOrFallback(url, fallback) {
   }
 }
 
+async function responseJsonOrFallback(response, fallback) {
+  try {
+    if (!response?.ok) return fallback;
+    return await response.json();
+  } catch {
+    return fallback;
+  }
+}
+
 function normalizeRaceFromSource(race, dataSource) {
   return {
     ...race,
@@ -2898,18 +2955,25 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
-    fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
+    fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog)
   ]);
 
+  dataLastUpdatedAt = latestResponseLastModified([
+    venuesResponse,
+    racesResponse,
+    rckRacesRawResponse
+  ]);
+
   const baseVenues = await venuesResponse.json();
   const myrcmRaces = await racesResponse.json();
+  const rckRacesResponse = await responseJsonOrFallback(rckRacesRawResponse, []);
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
   seriesCatalog = normalizeSeriesCatalog(seriesCatalogResponse);
