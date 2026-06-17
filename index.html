@@ -333,11 +333,11 @@
 
     /* v1.6.6 compact desktop topbar */
     .layout-prototype .topbar {
-      --topbar-main-offset: 42px;
-      gap: 8px;
+      --topbar-main-offset: 44px;
+      gap: 10px;
       min-height: 38px;
       padding: 0 10px 0 0;
-      background: #fff;
+      background: transparent;
       color: var(--host-blue);
       font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 13px;
@@ -379,14 +379,18 @@
     }
 
     .layout-prototype .topbar-series {
-      flex: 0 1 168px;
+      flex: 0 0 260px;
+    }
+
+    .layout-prototype .topbar-favorites {
+      margin-left: auto;
     }
 
     .layout-prototype .topbar-search {
-      flex: 0 0 280px;
-      width: 280px;
-      max-width: 280px;
-      margin-left: auto;
+      flex: 0 0 220px;
+      width: 220px;
+      max-width: 220px;
+      margin-left: 0;
     }
 
     .layout-prototype .topbar .segmented,
@@ -504,20 +508,53 @@
       background: var(--status-open) !important;
     }
 
+    .layout-prototype .topbar-chips {
+      margin-left: 44px;
+      gap: 8px;
+    }
+
+    .layout-prototype .topbar-chips .active-filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 24px;
+      padding: 4px 10px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--host-blue);
+      color: #fff;
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1;
+      box-shadow: none;
+      cursor: pointer;
+    }
+
+    .layout-prototype .topbar-chips .active-filter-chip span {
+      color: #fff;
+      font-weight: 400;
+    }
+
     @media (min-width: 861px) and (max-width: 1100px) {
       .layout-prototype .topbar {
-        gap: 6px;
+        --topbar-main-offset: 40px;
+        gap: 8px;
         padding-right: 8px;
       }
 
       .layout-prototype .topbar-series {
-        flex-basis: 136px;
+        flex-basis: 220px;
       }
 
       .layout-prototype .topbar-search {
-        flex-basis: 220px;
-        width: 220px;
-        max-width: 220px;
+        flex-basis: 180px;
+        width: 180px;
+        max-width: 180px;
+      }
+
+      .layout-prototype .topbar-chips {
+        margin-left: 40px;
       }
 
       .layout-prototype .topbar .segmented button,
@@ -552,10 +589,18 @@
         flex: 0 0 auto;
       }
 
+      .layout-prototype .topbar-favorites {
+        margin-left: 0;
+      }
+
       .layout-prototype .topbar-search {
         flex: 1 1 100%;
         width: auto;
         max-width: none;
+        margin-left: 0;
+      }
+
+      .layout-prototype .topbar-chips {
         margin-left: 0;
       }
 
