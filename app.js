@@ -52,12 +52,95 @@ const baseMapLayer = L.maplibreGL({
     '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 }).addTo(map);
 
+const waterLabelLayerIds = new Set([
+  "water_name_line",
+  "water_name_nonocean",
+  "water_name_ocean"
+]);
+
+const majorRoadLayerIds = new Set([
+  "tunnel_motorway_casing",
+  "tunnel_motorway_inner",
+  "highway_major_casing",
+  "highway_major_inner",
+  "highway_major_subtle",
+  "highway_motorway_casing",
+  "highway_motorway_inner",
+  "highway_motorway_subtle",
+  "highway_motorway_bridge_casing",
+  "highway_motorway_bridge_inner"
+]);
+
+const countryRegionLabelLayerIds = new Set([
+  "place_country_other",
+  "place_country_major",
+  "place_state"
+]);
+
+const localizedPlaceLabel = [
+  "coalesce",
+  ["get", "name:de"],
+  ["get", "name_de"],
+  ["get", "name:latin"],
+  ["get", "name"]
+];
+
 function layerLooksLike(layer, tokens = []) {
   const id = String(layer?.id || "").toLowerCase();
   const sourceLayer = String(layer?.["source-layer"] || "").toLowerCase();
   const combined = `${id} ${sourceLayer}`;
 
   return tokens.some(token => combined.includes(token));
+}
+
+function setMapPaint(maplibreMap, layerId, property, value) {
+  try {
+    maplibreMap.setPaintProperty(layerId, property, value);
+  } catch {}
+}
+
+function setMapLayout(maplibreMap, layerId, property, value) {
+  try {
+    maplibreMap.setLayoutProperty(layerId, property, value);
+  } catch {}
+}
+
+function applyMajorRoadStyle(maplibreMap, layerId) {
+  setMapPaint(maplibreMap, layerId, "line-color", rcRaceMapColors.road);
+
+  if (layerId.includes("subtle")) {
+    setMapPaint(maplibreMap, layerId, "line-opacity", layerId.includes("motorway") ? 0.95 : 0.86);
+    setMapPaint(maplibreMap, layerId, "line-width", layerId.includes("motorway") ? 1.35 : 1.15);
+    return;
+  }
+
+  if (layerId.includes("casing")) {
+    setMapPaint(maplibreMap, layerId, "line-opacity", 0.62);
+    return;
+  }
+
+  setMapPaint(maplibreMap, layerId, "line-opacity", 0.9);
+}
+
+function applyCountryRegionLabelStyle(maplibreMap, layerId) {
+  setMapPaint(maplibreMap, layerId, "text-color", rcRaceMapColors.label);
+  setMapPaint(maplibreMap, layerId, "text-opacity", layerId === "place_state" ? 0.34 : 0.42);
+  setMapPaint(maplibreMap, layerId, "text-halo-color", rcRaceMapColors.labelHalo);
+  setMapPaint(maplibreMap, layerId, "text-halo-width", 0.8);
+
+  if (layerId === "place_state") {
+    setMapLayout(maplibreMap, layerId, "text-size", 9);
+    return;
+  }
+
+  setMapLayout(maplibreMap, layerId, "text-size", {
+    base: 1,
+    stops: [
+      [0, 10],
+      [6, 12],
+      [9, 18]
+    ]
+  });
 }
 
 function applyRcRaceMapStyle() {
@@ -70,6 +153,11 @@ function applyRcRaceMapStyle() {
   layers.forEach(layer => {
     const id = layer.id;
     if (!id || !maplibreMap.getLayer(id)) return;
+
+    if (waterLabelLayerIds.has(id)) {
+      setMapLayout(maplibreMap, id, "visibility", "none");
+      return;
+    }
 
     if (layer.type === "fill" && layerLooksLike(layer, ["water", "ocean", "sea", "lake", "river"])) {
       maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.water);
@@ -95,9 +183,8 @@ function applyRcRaceMapStyle() {
       return;
     }
 
-    if (layer.type === "line" && layerLooksLike(layer, ["road", "street", "motorway", "trunk", "primary", "secondary"])) {
-      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.road);
-      maplibreMap.setPaintProperty(id, "line-opacity", 0.82);
+    if (layer.type === "line" && majorRoadLayerIds.has(id)) {
+      applyMajorRoadStyle(maplibreMap, id);
       return;
     }
 
@@ -108,11 +195,19 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "symbol") {
+      if (layer["source-layer"] === "place") {
+        setMapLayout(maplibreMap, id, "text-field", localizedPlaceLabel);
+      }
+
       try {
         maplibreMap.setPaintProperty(id, "text-color", rcRaceMapColors.label);
         maplibreMap.setPaintProperty(id, "text-halo-color", rcRaceMapColors.labelHalo);
         maplibreMap.setPaintProperty(id, "text-halo-width", 1.2);
       } catch {}
+
+      if (countryRegionLabelLayerIds.has(id)) {
+        applyCountryRegionLabelStyle(maplibreMap, id);
+      }
     }
   });
 
