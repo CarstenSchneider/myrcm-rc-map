@@ -226,6 +226,15 @@
       line-height: 1;
     }
 
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"]:not(.active) {
+      color: var(--favorite) !important;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"]:not(.active) .favorite-toggle-icon {
+      background: var(--favorite);
+      color: #fff;
+    }
+
     .layout-prototype .topbar .race-visibility-toggle .race-document-dot,
     .layout-prototype .topbar .race-visibility-toggle button.active .race-document-dot {
       width: 11px !important;
@@ -548,6 +557,15 @@
       color: var(--favorite);
       font-size: 11px;
       line-height: 1;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"]:not(.active) {
+      color: var(--favorite) !important;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"]:not(.active) .favorite-toggle-icon {
+      background: var(--favorite);
+      color: #fff;
     }
 
     .layout-prototype .topbar .race-document-dot {
