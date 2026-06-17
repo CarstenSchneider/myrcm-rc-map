@@ -383,30 +383,59 @@
     }
 
     .layout-prototype .topbar-search {
-      flex: 0 1 clamp(220px, 22vw, 320px);
-      max-width: 320px;
+      flex: 0 0 280px;
+      width: 280px;
+      max-width: 280px;
       margin-left: auto;
     }
 
-    .layout-prototype .topbar .segmented {
+    .layout-prototype .topbar .segmented,
+    .layout-prototype .topbar .topbar-filter-group {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      width: auto;
+      gap: 0;
       padding: 3px;
-      background: #fff;
+      border: 0;
+      border-radius: 999px;
+      background: var(--bg);
     }
 
-    .layout-prototype .topbar .segmented button {
+    .layout-prototype .topbar .segmented button,
+    .layout-prototype .topbar .topbar-filter-group button {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
       min-width: auto;
       min-height: 28px;
       height: 28px;
       padding: 0 13px;
+      border: 0 !important;
+      border-radius: 999px;
+      background: transparent !important;
       color: var(--host-blue) !important;
+      font-family: inherit;
       font-size: 13px;
       font-weight: 400 !important;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: none;
+      cursor: pointer;
     }
 
-    .layout-prototype .topbar .segmented button.active {
+    .layout-prototype .topbar .segmented button.active,
+    .layout-prototype .topbar .topbar-filter-group button.active {
       background: var(--host-blue) !important;
       color: #fff !important;
       font-weight: 400 !important;
+    }
+
+    .layout-prototype .topbar .topbar-filter-group button[data-favorite-filter="favorites"].active {
+      background: var(--favorite) !important;
+      color: #fff !important;
     }
 
     .layout-prototype .topbar select,
@@ -443,93 +472,36 @@
       background: var(--host-blue);
     }
 
-    .layout-prototype .topbar .topbar-switch-wrap {
-      display: inline-flex;
-      align-items: center;
+    .layout-prototype .topbar .topbar-favorites button,
+    .layout-prototype .topbar .topbar-registration button {
+      min-width: 64px;
     }
 
-    .layout-prototype .topbar .topbar-switch-wrap.race-visibility-toggle {
-      padding: 0;
-      background: transparent;
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"],
+    .layout-prototype .topbar .topbar-registration button[data-registration-visibility="open"] {
+      min-width: 94px;
     }
 
-    .layout-prototype .topbar .topbar-switch {
+    .layout-prototype .topbar .favorite-toggle-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
-      height: 30px;
-      min-height: 30px;
-      min-width: 116px;
-      padding: 0 12px 0 8px;
-      border: 0 !important;
-      border-radius: 999px;
-      background: var(--bg) !important;
-      color: var(--host-blue) !important;
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 400 !important;
-      line-height: 1;
-      white-space: nowrap;
-      box-shadow: none;
-      cursor: pointer;
-    }
-
-    .layout-prototype .topbar .race-visibility-toggle button.topbar-switch {
-      height: 30px;
-      min-height: 30px;
-      min-width: 116px;
-      padding: 0 12px 0 8px;
-      font-size: 13px;
-      font-weight: 400 !important;
-    }
-
-    .layout-prototype .topbar .race-visibility-toggle button.topbar-switch.active {
-      font-weight: 400 !important;
-    }
-
-    .layout-prototype .topbar .favorite-switch .favorite-toggle-icon {
-      width: 17px;
-      height: 17px;
+      width: 15px;
+      height: 15px;
       margin: 0;
-      background: rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
       color: var(--favorite);
       font-size: 11px;
+      line-height: 1;
     }
 
-    .layout-prototype .topbar .registration-switch .race-document-dot {
+    .layout-prototype .topbar .race-document-dot {
+      display: inline-block;
       width: 9px !important;
       height: 9px !important;
       border-radius: 999px;
       background: var(--status-open) !important;
-    }
-
-    .layout-prototype .topbar .topbar-switch.active {
-      font-weight: 400 !important;
-    }
-
-    .layout-prototype .topbar .topbar-favorites button.favorite-switch.active {
-      background: var(--favorite) !important;
-      color: var(--host-blue) !important;
-    }
-
-    .layout-prototype .topbar .favorite-switch.active .favorite-toggle-icon {
-      background: rgba(255, 255, 255, 0.42);
-      color: var(--host-blue);
-    }
-
-    .layout-prototype .topbar .topbar-registration .registration-switch.active {
-      background: var(--status-open) !important;
-      color: var(--host-blue) !important;
-    }
-
-    .layout-prototype .topbar .topbar-registration .registration-switch.active .race-document-dot {
-      background: var(--host-blue) !important;
-    }
-
-    .layout-prototype .topbar .topbar-registration.race-visibility-toggle .topbar-switch:not(.active) {
-      background: var(--bg) !important;
-      color: var(--host-blue) !important;
     }
 
     @media (min-width: 861px) and (max-width: 1100px) {
@@ -543,11 +515,13 @@
       }
 
       .layout-prototype .topbar-search {
-        flex-basis: 184px;
-        max-width: 260px;
+        flex-basis: 220px;
+        width: 220px;
+        max-width: 220px;
       }
 
-      .layout-prototype .topbar .segmented button {
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-filter-group button {
         padding: 0 9px;
       }
     }
@@ -580,12 +554,13 @@
 
       .layout-prototype .topbar-search {
         flex: 1 1 100%;
+        width: auto;
         max-width: none;
         margin-left: 0;
       }
 
       .layout-prototype .topbar .segmented button,
-      .layout-prototype .topbar .topbar-switch {
+      .layout-prototype .topbar .topbar-filter-group button {
         min-height: 30px;
         height: 30px;
         font-size: 12px;
@@ -621,17 +596,19 @@
           </select>
         </label>
 
-        <div class="topbar-favorites topbar-switch-wrap" id="favoriteFilter" aria-label="Favoritenfilter">
-          <button class="topbar-switch favorite-switch" type="button" data-favorite-toggle aria-pressed="false" aria-label="Favoritenfilter: Alle Rennen">
-            <span class="switch-icon favorite-toggle-icon" aria-hidden="true">★</span>
-            <span class="switch-label" data-toggle-label>Alle Rennen</span>
+        <div class="topbar-favorites topbar-filter-group" id="favoriteFilter" aria-label="Favoritenfilter">
+          <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
+          <button type="button" data-favorite-filter="favorites" aria-pressed="false">
+            <span class="favorite-toggle-icon" aria-hidden="true">★</span>
+            <span>Favoriten</span>
           </button>
         </div>
 
-        <div class="topbar-registration topbar-switch-wrap race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-          <button class="topbar-switch registration-switch active" type="button" data-registration-toggle aria-pressed="true" aria-label="Nennstatus: Offen">
-            <span class="race-document-dot switch-icon" aria-hidden="true"></span>
-            <span class="switch-label" data-toggle-label>Offen</span>
+        <div class="topbar-registration topbar-filter-group race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+          <button type="button" data-registration-visibility="all" aria-pressed="false">Alle</button>
+          <button class="active" type="button" data-registration-visibility="open" aria-pressed="true">
+            <span class="race-document-dot" aria-hidden="true"></span>
+            <span>Offen</span>
           </button>
         </div>
 

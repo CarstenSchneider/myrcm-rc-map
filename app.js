@@ -335,22 +335,6 @@ function updateFilterPanelState() {
 function updateFavoriteFilterUi() {
   if (!favoriteFilter) return;
 
-  const toggle = favoriteFilter.querySelector("[data-favorite-toggle]");
-  if (toggle) {
-    const active = selectedFavoriteFilter === "favorites";
-    const label = toggle.querySelector("[data-toggle-label]");
-
-    toggle.classList.toggle("active", active);
-    toggle.setAttribute("aria-pressed", String(active));
-    toggle.setAttribute(
-      "aria-label",
-      active ? "Favoritenfilter: Favoriten" : "Favoritenfilter: Alle Rennen"
-    );
-
-    if (label) label.textContent = active ? "Favoriten" : "Alle Rennen";
-    return;
-  }
-
   favoriteFilter
     .querySelectorAll("button[data-favorite-filter]")
     .forEach(button => {
@@ -362,21 +346,6 @@ function updateFavoriteFilterUi() {
 
 function updateRegistrationVisibilityUi() {
   if (!registrationVisibilityFilter) return;
-
-  const toggle = registrationVisibilityFilter.querySelector("[data-registration-toggle]");
-  if (toggle) {
-    const label = toggle.querySelector("[data-toggle-label]");
-
-    toggle.classList.toggle("active", showOpenOnly);
-    toggle.setAttribute("aria-pressed", String(showOpenOnly));
-    toggle.setAttribute(
-      "aria-label",
-      showOpenOnly ? "Nennstatus: Offen" : "Nennstatus: Alle Rennen"
-    );
-
-    if (label) label.textContent = showOpenOnly ? "Offen" : "Alle Rennen";
-    return;
-  }
 
   registrationVisibilityFilter
     .querySelectorAll("button[data-registration-visibility]")
@@ -2536,17 +2505,6 @@ rangeFilter.addEventListener("click", event => {
 
 if (registrationVisibilityFilter) {
   registrationVisibilityFilter.addEventListener("click", event => {
-    const toggle = event.target.closest("[data-registration-toggle]");
-    if (toggle) {
-      showOpenOnly = !showOpenOnly;
-      activeVenueId = null;
-      activeRaceId = null;
-      updateAppModeClass();
-      updateRegistrationVisibilityUi();
-      render();
-      return;
-    }
-
     const button = event.target.closest("button[data-registration-visibility]");
     if (!button) return;
 
@@ -2565,20 +2523,6 @@ if (registrationVisibilityFilter) {
 
 if (favoriteFilter) {
   favoriteFilter.addEventListener("click", event => {
-    const toggle = event.target.closest("[data-favorite-toggle]");
-    if (toggle) {
-      selectedFavoriteFilter = selectedFavoriteFilter === "favorites"
-        ? "all"
-        : "favorites";
-      saveFavoriteFilter(selectedFavoriteFilter);
-      activeVenueId = null;
-      activeRaceId = null;
-      updateAppModeClass();
-      updateFavoriteFilterUi();
-      render();
-      return;
-    }
-
     const button = event.target.closest("button[data-favorite-filter]");
     if (!button) return;
 
