@@ -99,6 +99,21 @@ const majorRoadLayerIds = new Set([
   "highway_motorway_bridge_inner"
 ]);
 
+const roadShieldLayerIds = new Set([
+  "highway_shield_other",
+  "highway_shield_us_other",
+  "highway_shield_us_interstate"
+]);
+
+const roadShieldIconSizes = {
+  1: [14, 14],
+  2: [20, 14],
+  3: [26, 14],
+  4: [31, 14],
+  5: [36, 14],
+  6: [40, 14]
+};
+
 const countryRegionLabelLayerIds = new Set([
   "place_country_other",
   "place_country_major",
@@ -133,6 +148,59 @@ function setMapLayout(maplibreMap, layerId, property, value) {
   } catch {}
 }
 
+function fillRoundedRect(context, x, y, width, height, radius) {
+  const corner = Math.min(radius, width / 2, height / 2);
+
+  context.beginPath();
+  context.moveTo(x + corner, y);
+  context.lineTo(x + width - corner, y);
+  context.quadraticCurveTo(x + width, y, x + width, y + corner);
+  context.lineTo(x + width, y + height - corner);
+  context.quadraticCurveTo(x + width, y + height, x + width - corner, y + height);
+  context.lineTo(x + corner, y + height);
+  context.quadraticCurveTo(x, y + height, x, y + height - corner);
+  context.lineTo(x, y + corner);
+  context.quadraticCurveTo(x, y, x + corner, y);
+  context.closePath();
+  context.fill();
+}
+
+function roadShieldImageData(length) {
+  const [width, height] = roadShieldIconSizes[length];
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  if (!context) return null;
+
+  canvas.width = width;
+  canvas.height = height;
+  context.fillStyle = rcRaceMapColors.road;
+  fillRoundedRect(context, 0, 0, width, height, 2);
+
+  return {
+    width,
+    height,
+    data: context.getImageData(0, 0, width, height).data
+  };
+}
+
+function installRoadShieldImages(maplibreMap) {
+  Object.keys(roadShieldIconSizes).forEach(length => {
+    const imageId = `rc-road-shield-${length}`;
+    const imageData = roadShieldImageData(length);
+
+    if (!imageData) return;
+
+    try {
+      if (maplibreMap.hasImage?.(imageId)) {
+        maplibreMap.updateImage(imageId, imageData);
+      } else {
+        maplibreMap.addImage(imageId, imageData);
+      }
+    } catch {}
+  });
+}
+
 function applyMajorRoadStyle(maplibreMap, layerId) {
   setMapPaint(maplibreMap, layerId, "line-color", rcRaceMapColors.road);
 
@@ -148,6 +216,17 @@ function applyMajorRoadStyle(maplibreMap, layerId) {
   }
 
   setMapPaint(maplibreMap, layerId, "line-opacity", 0.9);
+}
+
+function applyRoadShieldStyle(maplibreMap, layerId) {
+  setMapLayout(maplibreMap, layerId, "icon-image", "rc-road-shield-{ref_length}");
+  setMapPaint(maplibreMap, layerId, "icon-opacity", 1);
+  setMapPaint(maplibreMap, layerId, "icon-halo-width", 0);
+  setMapPaint(maplibreMap, layerId, "icon-halo-blur", 0);
+  setMapPaint(maplibreMap, layerId, "text-color", rcRaceMapColors.label);
+  setMapPaint(maplibreMap, layerId, "text-halo-width", 0);
+  setMapPaint(maplibreMap, layerId, "text-halo-blur", 0);
+  setMapPaint(maplibreMap, layerId, "text-halo-color", rcRaceMapColors.road);
 }
 
 function applyCountryRegionLabelStyle(maplibreMap, layerId) {
@@ -177,6 +256,7 @@ function applyRcRaceMapStyle() {
 
   const style = maplibreMap.getStyle();
   const layers = Array.isArray(style?.layers) ? style.layers : [];
+  installRoadShieldImages(maplibreMap);
 
   layers.forEach(layer => {
     const id = layer.id;
@@ -223,6 +303,11 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "symbol") {
+      if (roadShieldLayerIds.has(id)) {
+        applyRoadShieldStyle(maplibreMap, id);
+        return;
+      }
+
       if (layer["source-layer"] === "place") {
         setMapLayout(maplibreMap, id, "text-field", localizedPlaceLabel);
       }
