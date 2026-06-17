@@ -149,8 +149,8 @@
       gap: 6px;
       height: 36px;
       min-height: 36px;
-      min-width: 82px;
-      padding: 0 18px;
+      min-width: 0;
+      padding: 0 15px;
       border: 0 !important;
       border-radius: 999px;
       background: transparent !important;
@@ -165,11 +165,11 @@
     }
 
     .layout-prototype .topbar .segmented button {
-      min-width: 112px;
+      padding-inline: 17px;
     }
 
     .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"] {
-      min-width: 132px;
+      min-width: 0;
     }
 
     .layout-prototype .topbar .segmented button.active,
@@ -457,7 +457,7 @@
       min-width: auto;
       min-height: 28px;
       height: 28px;
-      padding: 0 13px;
+      padding: 0 14px;
       border: 0 !important;
       border-radius: 999px;
       background: transparent !important;
@@ -537,12 +537,16 @@
 
     .layout-prototype .topbar .topbar-favorites button,
     .layout-prototype .topbar .topbar-registration button {
-      min-width: 64px;
+      min-width: 0;
     }
 
     .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"],
     .layout-prototype .topbar .topbar-registration button[data-registration-visibility="open"] {
-      min-width: 94px;
+      min-width: 0;
+    }
+
+    .layout-prototype .topbar .segmented button {
+      padding-inline: 16px;
     }
 
     .layout-prototype .topbar .favorite-toggle-icon {
