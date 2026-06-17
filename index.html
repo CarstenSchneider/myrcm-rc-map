@@ -683,6 +683,333 @@
         font-size: 12px;
       }
     }
+    /* v1.7 race card redesign */
+    .layout-prototype .race-grid {
+      gap: 16px;
+    }
+
+    .layout-prototype .race-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 24px;
+      background: transparent;
+      color: var(--host-blue);
+      box-shadow: 0 14px 32px rgba(31, 29, 26, 0.10);
+      overflow: hidden;
+    }
+
+    .layout-prototype .race-card-main,
+    .layout-prototype .race-card-meta {
+      display: contents;
+    }
+
+    .layout-prototype .race-card .race-new-badge {
+      z-index: 3;
+      border-radius: 0 24px 0 10px;
+    }
+
+    .layout-prototype .race-host {
+      order: 1;
+      display: flex;
+      align-items: center;
+      min-height: 54px;
+      margin: 0;
+      padding: 13px 18px;
+      border-radius: 24px 24px 0 0;
+      background: var(--host-blue);
+      color: #fff;
+    }
+
+    .layout-prototype .race-host .venue-name-with-favorite {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      color: inherit;
+    }
+
+    .layout-prototype .race-host .venue-favorite-button {
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      font-size: 18px;
+      transform: none;
+    }
+
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
+    .layout-prototype .race-host .venue-favorite-button.active {
+      color: var(--favorite) !important;
+    }
+
+    .layout-prototype .race-host .venue-link,
+    .layout-prototype .race-host .host-name {
+      color: #fff !important;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.15;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .layout-prototype .race-host .venue-link::after {
+      content: "↗";
+      margin-left: 4px;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-card-favorite-venue .race-host .venue-link,
+    .layout-prototype .race-card-favorite-venue .race-host .host-name,
+    .layout-prototype .race-host .venue-link-favorite {
+      color: var(--favorite) !important;
+    }
+
+    .layout-prototype .race-card-header {
+      order: 2;
+      padding: 18px 22px 7px;
+      background: #fff;
+    }
+
+    .layout-prototype .race-date {
+      margin: 0 0 5px;
+      color: var(--host-blue);
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .layout-prototype .race-name-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 14px;
+      margin: 0;
+    }
+
+    .layout-prototype .race-name {
+      margin: 0;
+      color: var(--host-blue);
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .layout-prototype .race-registration-count {
+      margin-top: 1px;
+      color: var(--host-blue);
+      font-size: 20px;
+      font-weight: 400;
+      gap: 4px;
+    }
+
+    .layout-prototype .race-registration-count svg {
+      width: 21px;
+      height: 21px;
+      stroke-width: 1.8;
+    }
+
+    .layout-prototype .race-card-header .race-series-tags {
+      display: none;
+    }
+
+    .layout-prototype .race-venue {
+      order: 3;
+      margin: 0;
+      padding: 0 22px 7px;
+      background: #fff;
+      color: var(--host-blue);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .layout-prototype .race-venue .venue-link,
+    .layout-prototype .race-venue .venue-name-text {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-document-links {
+      order: 4;
+      display: flex;
+      flex-wrap: wrap !important;
+      align-items: center;
+      column-gap: 13px !important;
+      row-gap: 7px;
+      margin: 0;
+      padding: 7px 22px 12px;
+      background: #fff;
+    }
+
+    .layout-prototype .race-document-links .race-link-item {
+      color: var(--host-blue);
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      line-height: 1.2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status {
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status-open,
+    .layout-prototype .race-document-links .race-link-item-status {
+      gap: 5px;
+    }
+
+    .layout-prototype .race-document-dot {
+      width: 9px !important;
+      height: 9px !important;
+    }
+
+    .layout-prototype .race-document-dot-open {
+      background: var(--status-open) !important;
+    }
+
+    .layout-prototype .race-document-dot-closed {
+      background: var(--status-closed) !important;
+    }
+
+    .layout-prototype .race-document-dot-upcoming {
+      background: var(--status-upcoming) !important;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status-closed {
+      color: var(--status-closed);
+      font-weight: 800 !important;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status-upcoming {
+      color: var(--status-upcoming);
+      font-weight: 800 !important;
+    }
+
+    .layout-prototype .race-card > .race-class-tags {
+      order: 5;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0 22px 20px;
+      border-top: 0;
+      border-radius: 0 0 24px 24px;
+      background: #fff;
+    }
+
+    .layout-prototype .race-card > .race-class-tags .tag-class {
+      height: 22px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: #e4e4e4;
+      color: var(--host-blue);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .layout-prototype .race-card > .race-class-tags .tag-class-toggle {
+      background: #d8d8d8;
+      color: var(--host-blue);
+      cursor: pointer;
+    }
+
+    .layout-prototype .race-card.registration-closed {
+      box-shadow: 0 12px 28px rgba(31, 29, 26, 0.08);
+    }
+
+    .layout-prototype .race-card.registration-closed .race-card-header,
+    .layout-prototype .race-card.registration-closed .race-venue,
+    .layout-prototype .race-card.registration-closed .race-document-links,
+    .layout-prototype .race-card.registration-closed > .race-class-tags {
+      background: #dfdfdf;
+    }
+
+    .layout-prototype .race-card.registration-closed .race-date,
+    .layout-prototype .race-card.registration-closed .race-name,
+    .layout-prototype .race-card.registration-closed .race-registration-count,
+    .layout-prototype .race-card.registration-closed .race-venue,
+    .layout-prototype .race-card.registration-closed .race-class-tags .tag-class {
+      color: rgba(31, 29, 26, 0.58);
+    }
+
+    .layout-prototype .race-card.registration-closed .race-document-links .race-link-item:not(.race-link-item-status-closed) {
+      color: rgba(31, 29, 26, 0.58);
+    }
+
+    .layout-prototype .race-card.registration-closed > .race-class-tags .tag-class {
+      background: rgba(31, 29, 26, 0.22);
+    }
+
+    .layout-prototype .race-card.is-clickable:hover,
+    .layout-prototype .race-card.is-clickable:focus-visible,
+    .layout-prototype .race-card.active,
+    .layout-prototype .race-card.is-clickable.active,
+    .layout-prototype .race-card.is-clickable.active:hover {
+      border-color: transparent !important;
+      box-shadow: 0 18px 38px rgba(31, 29, 26, 0.14);
+    }
+
+    .layout-prototype.is-venue-mode .race-card,
+    .layout-prototype.is-venue-mode .race-card.is-clickable {
+      cursor: default;
+    }
+
+    @media (max-width: 860px) {
+      .layout-prototype .race-grid {
+        gap: 12px;
+      }
+
+      .layout-prototype .race-card {
+        border-radius: 20px;
+      }
+
+      .layout-prototype .race-host {
+        min-height: 48px;
+        padding: 12px 16px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .layout-prototype .race-host .venue-link,
+      .layout-prototype .race-host .host-name {
+        font-size: 15px;
+      }
+
+      .layout-prototype .race-card-header {
+        padding: 15px 16px 6px;
+      }
+
+      .layout-prototype .race-date {
+        font-size: 15px;
+      }
+
+      .layout-prototype .race-name {
+        font-size: 18px;
+      }
+
+      .layout-prototype .race-registration-count {
+        font-size: 18px;
+      }
+
+      .layout-prototype .race-venue,
+      .layout-prototype .race-document-links,
+      .layout-prototype .race-card > .race-class-tags {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .layout-prototype .race-card > .race-class-tags {
+        padding-bottom: 16px;
+        border-radius: 0 0 20px 20px;
+      }
+    }
   </style>
 </head>
 <body>
