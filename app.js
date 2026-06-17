@@ -53,6 +53,11 @@ const raceMapMarkerBaseHeight = 34;
 const raceMapMarkerBaseWidth = Math.round(
   raceMapMarkerBaseHeight * raceMapMarkerViewBox.width / raceMapMarkerViewBox.height
 );
+const mapPinViewBox = {
+  width: 129.98,
+  height: 153
+};
+const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,29.66,19.88,54.66,47.04,62.46l17.95,25.56,17.95-25.56c27.16-7.79,47.04-32.79,47.04-62.46Z";
 
 // Based on racemap_icon.svg: the lower white layer stays white, the top colour layer gets the marker state color.
 function raceMapMarkerSvgDataUri(color, width, height) {
@@ -71,6 +76,22 @@ function raceMapMarkerSvgDataUri(color, width, height) {
   `;
 
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
+function mapPinSvg(color, width, height) {
+  return `
+    <svg width="${width}" height="${height}" viewBox="0 0 ${mapPinViewBox.width} ${mapPinViewBox.height}" xmlns="http://www.w3.org/2000/svg">
+      <path fill="${color}" d="${mapPinPath}"/>
+    </svg>
+  `;
+}
+
+function mapPinSvgDataUri(color, width, height) {
+  return `data:image/svg+xml,${encodeURIComponent(mapPinSvg(color, width, height))}`;
+}
+
+function mapPinIconHtml(className) {
+  return `<svg class="${className}" viewBox="0 0 ${mapPinViewBox.width} ${mapPinViewBox.height}" aria-hidden="true" focusable="false"><path fill="currentColor" d="${mapPinPath}"/></svg>`;
 }
 
 const baseMapLayer = L.maplibreGL({
@@ -1293,11 +1314,21 @@ function markerScaleForRegistrationCount(count) {
 }
 
 function markerColorForRegistrationCount(count) {
-  return rcRaceMapColors.marker;
+  if (count >= 120) return rcRaceMapColors.marker;
+  if (count >= 70) return "#2D447C";
+  if (count >= 40) return "#405B94";
+  if (count >= 20) return "#5A73AA";
+  if (count >= 10) return "#788FC0";
+  return "#9AAAD0";
 }
 
 function markerFavoriteColorForRegistrationCount(count) {
-  return rcRaceMapColors.favorite;
+  if (count >= 120) return rcRaceMapColors.favorite;
+  if (count >= 70) return "#D0BA9C";
+  if (count >= 40) return "#D9C7AE";
+  if (count >= 20) return "#E1D2BF";
+  if (count >= 10) return "#E9DECF";
+  return "#F0E8DD";
 }
 
 function ensureRegistrationStatusStyles() {
@@ -1471,9 +1502,10 @@ function ensureRegistrationStatusStyles() {
       width: 10px;
       height: 12px;
       border: 0;
-      background: var(--venue-pin-color, var(--map-marker, #213769)) !important;
-      -webkit-mask: url("map_pin.svg") center / contain no-repeat;
-      mask: url("map_pin.svg") center / contain no-repeat;
+      background-color: transparent !important;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
       box-sizing: border-box;
       box-shadow: none;
     }
@@ -1861,7 +1893,7 @@ function raceVenueMetaHtml(race) {
   if (!hasMappableVenue(race)) return "";
   if (raceHostAndVenueAreSame(race)) return "";
 
-  return `<div class="race-venue"><span class="race-venue-pin" aria-hidden="true"></span>${raceVenueNameHtml(race)}</div>`;
+  return `<div class="race-venue">${mapPinIconHtml("race-venue-pin")}${raceVenueNameHtml(race)}</div>`;
 }
 
 function raceHostNameHtml(race) {
@@ -2195,9 +2227,9 @@ function updateMarkers(list, shouldFitBounds = true) {
 
     let markerColor = isFavoriteVenue
       ? markerFavoriteColorForRegistrationCount(registrationTotal)
-      : hasActiveRegistration(venueRaces)
+      : hasUpcomingRaces
         ? markerColorForRegistrationCount(registrationTotal)
-        : "rgba(31, 29, 26, 0.55)";
+        : rcRaceMapColors.marker;
 
     if (!hasUpcomingRaces && isFavoriteVenue) {
       markerColor = rcRaceMapColors.favorite;
@@ -2208,13 +2240,14 @@ function updateMarkers(list, shouldFitBounds = true) {
     const inactiveClass = isFavoriteVenue
       ? "map-marker-venue-inactive-favorite"
       : "map-marker-venue-inactive";
+    const inactiveMarkerSvg = mapPinSvgDataUri(markerColor, markerWidth, markerHeight);
 
     const markerHtml = hasUpcomingRaces
       ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
           <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('${markerSvg}');"></div>
           <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
         </div>`
-      : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
+      : `<div class="${inactiveClass} map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('${inactiveMarkerSvg}'); --marker-delay: 0ms;"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],

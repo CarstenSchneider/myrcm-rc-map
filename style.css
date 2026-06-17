@@ -1704,9 +1704,10 @@ input {
   width: 10px;
   height: 12px;
   border: 0;
-  background: var(--venue-pin-color) !important;
-  -webkit-mask: url("map_pin.svg") center / contain no-repeat;
-  mask: url("map_pin.svg") center / contain no-repeat;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
   box-sizing: border-box;
   box-shadow: none;
 }
