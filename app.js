@@ -29,7 +29,7 @@ L.control.zoom({
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
-  water: "#caceda",
+  water: "#3A4D79",
   land: "#F2F3F0",
   landcover: "#F2F3F0",
   building: "#DDDDDD",
@@ -1338,20 +1338,20 @@ function ensureRegistrationStatusStyles() {
   style.id = "registration-status-styles";
   style.textContent = `
     .race-card.registration-upcoming {
-      background: rgba(247, 243, 236, 0.96);
-      border-color: rgba(222, 214, 202, 0.75);
+      background: #FAF8F3;
+      border-color: #DDDDDD;
     }
 
     .race-card.registration-closed {
-      background: rgba(244, 240, 233, 0.94);
-      border-color: rgba(222, 214, 202, 0.7);
+      background: #D6D6D6;
+      border-color: #BEBEBE;
     }
 
     .race-card.registration-closed .race-date,
     .race-card.registration-closed .race-name,
     .race-card.registration-closed .race-venue,
     .race-card.registration-closed .tag {
-      color: rgba(31, 29, 26, 0.58);
+      color: #716F6F;
     }
 
     .race-link,
@@ -2229,7 +2229,7 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? markerFavoriteColorForRegistrationCount(registrationTotal)
       : hasUpcomingRaces
         ? markerColorForRegistrationCount(registrationTotal)
-        : rcRaceMapColors.marker;
+        : "rgba(33, 55, 105, 0.58)";
 
     if (!hasUpcomingRaces && isFavoriteVenue) {
       markerColor = rcRaceMapColors.favorite;
