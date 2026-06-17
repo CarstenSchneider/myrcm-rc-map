@@ -44,6 +44,34 @@ const rcRaceMapColors = {
   statusUpcoming: "#FFA700"
 };
 
+const raceMapMarkerViewBox = {
+  width: 477,
+  height: 528.98
+};
+const raceMapMarkerBaseHeight = 34;
+const raceMapMarkerBaseWidth = Math.round(
+  raceMapMarkerBaseHeight * raceMapMarkerViewBox.width / raceMapMarkerViewBox.height
+);
+
+// Based on racemap_icon.svg: the lower white layer stays white, the top colour layer gets the marker state color.
+function raceMapMarkerSvgDataUri(color, width, height) {
+  const svg = `
+    <svg width="${width}" height="${height}" viewBox="0 0 ${raceMapMarkerViewBox.width} ${raceMapMarkerViewBox.height}" xmlns="http://www.w3.org/2000/svg">
+      <g id="white" fill="#fff">
+        <circle cx="238.73" cy="238.59" r="189.45"/>
+      </g>
+      <g id="colour" fill="${color}">
+        <g>
+          <path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/>
+          <path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/>
+        </g>
+      </g>
+    </svg>
+  `;
+
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
 const baseMapLayer = L.maplibreGL({
   style: `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
   attribution:
@@ -2010,8 +2038,8 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? markerScaleForRegistrationCount(registrationTotal)
       : 1;
 
-    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 12;
-    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 12;
+    const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 12;
+    const markerHeight = hasUpcomingRaces ? Math.round(raceMapMarkerBaseHeight * markerScale) : 12;
 
     const markerAnchor = hasUpcomingRaces
       ? [Math.round(markerWidth / 2), markerHeight]
@@ -2023,32 +2051,28 @@ function updateMarkers(list, shouldFitBounds = true) {
 
     const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
-let markerColor = isFavoriteVenue
-  ? markerFavoriteColorForRegistrationCount(registrationTotal)
-  : hasActiveRegistration(venueRaces)
-    ? markerColorForRegistrationCount(registrationTotal)
-    : "rgba(31, 29, 26, 0.55)";
+    let markerColor = isFavoriteVenue
+      ? markerFavoriteColorForRegistrationCount(registrationTotal)
+      : hasActiveRegistration(venueRaces)
+        ? markerColorForRegistrationCount(registrationTotal)
+        : "rgba(31, 29, 26, 0.55)";
 
-if (!hasUpcomingRaces && isFavoriteVenue) {
-  markerColor = rcRaceMapColors.favorite;
-}
+    if (!hasUpcomingRaces && isFavoriteVenue) {
+      markerColor = rcRaceMapColors.favorite;
+    }
 
-const markerSvg = encodeURIComponent(`
-  <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#F5F5F5" stroke-width="1"/>
-  </svg>
-`);
+    const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight);
 
-const inactiveClass = isFavoriteVenue
-  ? "map-marker-venue-inactive-favorite"
-  : "map-marker-venue-inactive";
+    const inactiveClass = isFavoriteVenue
+      ? "map-marker-venue-inactive-favorite"
+      : "map-marker-venue-inactive";
 
-const markerHtml = hasUpcomingRaces
-  ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
-      <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
-      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
-    </div>`
-  : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
+    const markerHtml = hasUpcomingRaces
+      ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
+          <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('${markerSvg}');"></div>
+          <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
+        </div>`
+      : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
