@@ -1561,7 +1561,7 @@ input {
   padding: 4px 12px;
   background: transparent;
   font-size: 11px;
-  color: var(--muted);
+  color: #aaa;
   z-index: 2000;
   white-space: nowrap;
   pointer-events: auto;
@@ -2199,7 +2199,7 @@ input {
   left: auto;
   transform: none;
   z-index: 1200;
-  color: var(--muted);
+  color: #aaa;
   font-size: 11px;
   font-weight: 400;
   white-space: normal;
@@ -2368,12 +2368,12 @@ input {
   gap: 6px;
   padding: 14px 16px calc(env(safe-area-inset-bottom, 0px) + 14px);
   border-top: 1px solid var(--line);
-  color: var(--muted);
+  color: #aaa;
   font-size: 11px;
 }
 
 .mob-drawer-footer a {
-  color: var(--muted);
+  color: #aaa;
   text-decoration: none;
 }
 
