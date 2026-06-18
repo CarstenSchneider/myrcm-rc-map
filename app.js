@@ -3072,7 +3072,7 @@ function setDrawerState(state) {
 }
 
 // ── Drag / swipe (touch-only, mobile breakpoint guard) ────────
-const mobMq = window.matchMedia("(max-width: 767px)");
+const mobMq = window.matchMedia("(max-width: 860px)");
 if (mobDrawer && mobDrawerHandle) {
   let dragStartY = 0;
   let dragStartTime = 0;
@@ -3354,7 +3354,7 @@ function fitClassPills(card) {
 // ── Hook into renderList to sync mobile ───────────────────────
 // Observe desktop raceList for changes and mirror to mobile
 const mobRaceListObserver = new MutationObserver(() => {
-  if (window.matchMedia("(max-width: 767px)").matches) {
+  if (window.matchMedia("(max-width: 860px)").matches) {
     syncMobRaceList();
   }
   syncResultBadge(resultLine.textContent);

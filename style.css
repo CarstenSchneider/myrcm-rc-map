@@ -2146,7 +2146,7 @@ input {
    ============================================================ */
 
 /* Hide desktop elements on mobile */
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .layout-prototype .filters-panel,
   .layout-prototype .race-panel,
   .map-footer {
@@ -2172,7 +2172,7 @@ input {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .mob-menu-btn { display: flex; }
 }
 .mob-menu-btn span {
@@ -2210,7 +2210,7 @@ input {
   pointer-events: none;
   text-shadow: 0 1px 3px rgba(255,255,255,0.8);
 }
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .mob-result-badge { display: block; }
 }
 
@@ -2232,7 +2232,7 @@ input {
   touch-action: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .mob-drawer {
     display: flex;
     flex-direction: column;
@@ -2383,6 +2383,6 @@ input {
 }
 
 /* Prevent overscroll on mobile */
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   body { overflow: hidden; }
 }
