@@ -2199,9 +2199,9 @@ input {
   left: auto;
   transform: none;
   z-index: 1200;
-  color: rgba(33,55,105,0.70);
-  font-size: 12px;
-  font-weight: 500;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
   white-space: normal;
   text-align: right;
   /* don't overlap hamburger: 52px btn + 14px left-margin + 8px gap */
