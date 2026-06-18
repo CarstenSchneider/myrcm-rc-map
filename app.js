@@ -2211,8 +2211,8 @@ function mapPadding() {
 //
 // Mobile collapsed: topbar=80px, drawer handle=64px.
 //   Visible center Y = (80 + H-64)/2 = H/2 + 8  → panBy([0, -8])
-// Desktop: race panel=390px right, topbar=80px.
-//   Visible center X = (W-390)/2 = W/2 - 195    → panBy([195, 0])
+// Desktop: race panel=390px + 24px right margin = 414px total right offset, topbar=80px.
+//   Visible center X = (W-414)/2 = W/2 - 207    → panBy([207, 0])
 //   Visible center Y = (80 + H)/2 = H/2 + 40    → panBy([0, -40])
 function panToVisible(latlng, zoom) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
@@ -2220,7 +2220,7 @@ function panToVisible(latlng, zoom) {
   if (isMobile) {
     map.panBy([0, -8], { animate: false });
   } else {
-    map.panBy([195, -40], { animate: false });
+    map.panBy([207, -40], { animate: false });
   }
 }
 
