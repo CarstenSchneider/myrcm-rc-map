@@ -2190,21 +2190,38 @@ function resetVenueSelection() {
   renderList(filteredRaces());
 }
 
-// Desktop: race panel is 390px wide + 24px right margin = 414px right offset.
-// Topbar floats at top:16px with ~48px height → 80px top padding.
-// Mobile: drawer in half state starts at top:80px + (vh-80)/2 = 40+vh/2.
-// Bottom padding from viewport bottom = vh - (40+vh/2) = vh/2 - 40.
-// Hamburger button: 52px wide + 14px left margin → 66px left padding.
-function fitMapToBounds(bounds, options = {}) {
+// Returns {pl, pr, pt, pb} padding for the currently visible map area.
+// Desktop: right panel 414px, topbar 80px.
+// Mobile collapsed: hamburger 66px left, handle 84px bottom.
+// Mobile half: half-drawer covers lower half of screen.
+function mapPadding() {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (!isMobile) return { pl: 40, pr: 414, pt: 80, pb: 40 };
   const dh = window.innerHeight - 80;
-  const mobilePaddingBottom = drawerState === "collapsed"
-    ? 84  // 64px handle + 20px margin
+  const pb = drawerState === "collapsed"
+    ? 84
     : Math.max(20, Math.round(dh * 0.5 - 20));
-  const padding = isMobile
-    ? { paddingTopLeft: [66, 20], paddingBottomRight: [20, mobilePaddingBottom] }
-    : { paddingTopLeft: [40, 80], paddingBottomRight: [414, 40] };
-  map.fitBounds(bounds, { ...padding, ...options });
+  return { pl: 66, pr: 20, pt: 20, pb };
+}
+
+// Center a single latlng in the visible map area at the given zoom.
+function panToVisible(latlng, zoom) {
+  const { pl, pr, pt, pb } = mapPadding();
+  const offsetX = (pl - pr) / 2;
+  const offsetY = (pt - pb) / 2;
+  const projected = map.project(latlng, zoom);
+  const center = map.unproject(L.point(projected.x - offsetX, projected.y - offsetY), zoom);
+  map.setView(center, zoom, { animate: true });
+}
+
+// Fit multiple latlng bounds in the visible map area.
+function fitMapToBounds(bounds, options = {}) {
+  const { pl, pr, pt, pb } = mapPadding();
+  map.fitBounds(bounds, {
+    paddingTopLeft: [pl, pt],
+    paddingBottomRight: [pr, pb],
+    ...options
+  });
 }
 
 function updateMarkers(list, shouldFitBounds = true) {
@@ -2413,7 +2430,7 @@ const popupOffset = hasUpcomingRaces
       marker.openPopup();
 
       if (window.matchMedia("(max-width: 860px)").matches) {
-        fitMapToBounds([[venue.lat, venue.lng]], { maxZoom: map.getZoom() });
+        panToVisible([venue.lat, venue.lng], map.getZoom());
       }
 
       window.setTimeout(() => {
@@ -2480,7 +2497,8 @@ function focusRace(race) {
   renderList(venueList);
   resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
 
-  fitMapToBounds([[venue.lat, venue.lng]], { maxZoom: 12 });
+  const targetZoom = Math.max(map.getZoom(), 12);
+  panToVisible([venue.lat, venue.lng], targetZoom);
 
   const marker = markers.get(venue.id);
   if (marker) {
