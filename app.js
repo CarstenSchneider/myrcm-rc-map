@@ -2196,7 +2196,7 @@ function resetVenueSelection() {
 // Mobile half: half-drawer covers lower half of screen.
 function mapPadding() {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  if (!isMobile) return { pl: 40, pr: 414, pt: 80, pb: 40 };
+  if (!isMobile) return { pl: 0, pr: 414, pt: 80, pb: 40 };
   const dh = window.innerHeight - 80;
   const pb = drawerState === "collapsed"
     ? 84
