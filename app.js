@@ -3415,6 +3415,25 @@ if (raceList) {
   mobRaceListObserver.observe(raceList, { childList: true });
 }
 
+// ── Theme ─────────────────────────────────────────────────────
+const THEME_KEY = "rcracemap-theme";
+
+function applyTheme(theme) {
+  document.documentElement.classList.remove("theme-light", "theme-dark");
+  if (theme === "light") document.documentElement.classList.add("theme-light");
+  if (theme === "dark")  document.documentElement.classList.add("theme-dark");
+}
+
+function setTheme(theme) {
+  localStorage.setItem(THEME_KEY, theme);
+  applyTheme(theme);
+  document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.theme === theme);
+  });
+}
+
+applyTheme(localStorage.getItem(THEME_KEY) || "auto");
+
 // ── App menu panel ────────────────────────────────────────────
 const appMenuPanel   = document.getElementById("appMenuPanel");
 const appMenuOverlay = document.getElementById("appMenuOverlay");
@@ -3444,10 +3463,22 @@ function closeAppMenu() {
 
 function showMenuHome() {
   if (!appMenuContent) return;
+  const current = localStorage.getItem(THEME_KEY) || "auto";
   appMenuContent.innerHTML = `
+    <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
+      <div class="app-menu-section-label">Darstellung</div>
+      <div class="theme-toggle">
+        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">Tag</button>
+        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">Nacht</button>
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
+      </div>
+    </div>
     <ul class="app-menu-list">
       <li><button type="button" class="app-menu-item" data-menu="impressum">Impressum &amp; Datenschutz</button></li>
     </ul>`;
+  appMenuContent.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+    btn.addEventListener("click", () => setTheme(btn.dataset.theme));
+  });
   appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
     btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
   });
