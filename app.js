@@ -2412,6 +2412,10 @@ const popupOffset = hasUpcomingRaces
       marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
       marker.openPopup();
 
+      if (window.matchMedia("(max-width: 860px)").matches) {
+        fitMapToBounds([[venue.lat, venue.lng]], { maxZoom: map.getZoom() });
+      }
+
       window.setTimeout(() => {
         isSwitchingMarkerPopup = false;
       }, 0);
