@@ -30,10 +30,10 @@ L.control.zoom({
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
   water: "#ffffff",
-  land: "#efefef",
+  land: "#f4f4f4",
   settlement: "#ebebeb",
-  landcover: "#efefef",
-  building: "#efefef",
+  landcover: "#f4f4f4",
+  building: "#f4f4f4",
   road: "#d4d4d4",
   boundary: "#d8d8d8",
   label: "#716F6F",
@@ -2493,31 +2493,8 @@ function renderList(list) {
     return;
   }
 
-  const hasFavoriteRaces = list.some(isFavoriteRaceHost);
-  const hasNormalRaces = list.some(race => !isFavoriteRaceHost(race));
-  const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
-  let didRenderFavoriteDivider = false;
-  let didRenderNormalDivider = false;
-
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
-
-    if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
-      const divider = document.createElement("div");
-      divider.className = "race-section-divider race-section-divider-favorites";
-      divider.textContent = "★ Favorisierte Ausrichter";
-      raceList.appendChild(divider);
-      didRenderFavoriteDivider = true;
-    }
-
-    if (showSectionDividers && !isFavorite && !didRenderNormalDivider) {
-      const divider = document.createElement("div");
-      divider.className = "race-section-divider";
-      divider.textContent = "Weitere Rennen";
-      raceList.appendChild(divider);
-      didRenderNormalDivider = true;
-    }
-
     const series = raceSeries(race);
     const card = document.createElement("article");
 
