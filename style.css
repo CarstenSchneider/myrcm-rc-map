@@ -2516,44 +2516,20 @@ input {
 }
 .footer-menu-link:hover { text-decoration: underline; }
 
-/* Hamburger → X */
-.mob-menu-btn span,
-.layout-prototype .topbar .app-menu-button span {
-  position: relative;
-  display: block;
-  width: 21px;
-  height: 2px;
-  background: currentColor;
-  border-radius: 999px;
-  transition: opacity 200ms ease;
-}
-.mob-menu-btn span::before,
-.mob-menu-btn span::after,
-.layout-prototype .topbar .app-menu-button span::before,
-.layout-prototype .topbar .app-menu-button span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 21px;
-  height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-  transition: transform 280ms ease;
-}
-.mob-menu-btn span::before,
-.layout-prototype .topbar .app-menu-button span::before { top: -6.5px; }
-.mob-menu-btn span::after,
-.layout-prototype .topbar .app-menu-button span::after  { top: 6.5px; }
+/* Hamburger / Close icon toggle */
+.mob-menu-btn .icon-hamburger,
+.layout-prototype .topbar .app-menu-button .icon-hamburger { display: block; }
+.mob-menu-btn .icon-close,
+.layout-prototype .topbar .app-menu-button .icon-close { display: none; }
 
 body.is-menu-open .mob-menu-btn,
 body.is-menu-open .layout-prototype .topbar .app-menu-button {
   background: var(--accent) !important;
   color: #fff !important;
   box-shadow: none !important;
+  z-index: 1600;
 }
-body.is-menu-open .mob-menu-btn span,
-body.is-menu-open .layout-prototype .topbar .app-menu-button span { opacity: 0; }
-body.is-menu-open .mob-menu-btn span::before,
-body.is-menu-open .layout-prototype .topbar .app-menu-button span::before { transform: translateY(6.5px) rotate(45deg); }
-body.is-menu-open .mob-menu-btn span::after,
-body.is-menu-open .layout-prototype .topbar .app-menu-button span::after  { transform: translateY(-6.5px) rotate(-45deg); }
+body.is-menu-open .mob-menu-btn .icon-hamburger,
+body.is-menu-open .layout-prototype .topbar .app-menu-button .icon-hamburger { display: none; }
+body.is-menu-open .mob-menu-btn .icon-close,
+body.is-menu-open .layout-prototype .topbar .app-menu-button .icon-close { display: block; }
