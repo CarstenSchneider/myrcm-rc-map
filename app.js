@@ -2205,23 +2205,20 @@ function mapPadding() {
 }
 
 // Center a single latlng in the visible map area at the given zoom.
-// The map fills the full viewport; topbar and drawer are fixed overlays.
-// setView puts the point at viewport center (W/2, H/2).
-// panBy shifts so the point lands at the center of the unobstructed area.
+// Computes the shifted map center directly so only ONE setView call is needed —
+// avoiding the visible map-shift caused by setView → moveend → revealMap → panBy.
 //
-// Mobile collapsed: topbar=80px, drawer handle=64px.
-//   Visible center Y = (80 + H-64)/2 = H/2 + 8  → panBy([0, -8])
-// Desktop: race panel=390px + 24px right margin = 414px total right offset, topbar=80px.
-//   Visible center X = (W-414)/2 = W/2 - 207    → panBy([207, 0])
-//   Visible center Y = (80 + H)/2 = H/2 + 40    → panBy([0, -40])
+// Mobile collapsed: visible center = (W/2, H/2 + 8)  → shift pixel by (0, +8)
+// Desktop: visible center = (W/2 - 207, H/2 + 40)   → shift pixel by (+207, -40)
+// panBy([dx, dy]) moves the map center by (dx, dy) pixels, so to achieve that
+// offset without panBy: add (dx, dy) to the projected point before unproject.
 function panToVisible(latlng, zoom) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  map.setView(latlng, zoom, { animate: false });
-  if (isMobile) {
-    map.panBy([0, -8], { animate: false });
-  } else {
-    map.panBy([207, -40], { animate: false });
-  }
+  const pt = map.project(latlng, zoom);
+  const shifted = isMobile
+    ? L.point(pt.x, pt.y + 8)
+    : L.point(pt.x + 207, pt.y - 40);
+  map.setView(map.unproject(shifted, zoom), zoom, { animate: false });
 }
 
 // Fit multiple latlng bounds in the visible map area.
