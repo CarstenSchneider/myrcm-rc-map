@@ -3415,6 +3415,99 @@ if (raceList) {
   mobRaceListObserver.observe(raceList, { childList: true });
 }
 
+// ── App menu panel ────────────────────────────────────────────
+const appMenuPanel   = document.getElementById("appMenuPanel");
+const appMenuOverlay = document.getElementById("appMenuOverlay");
+const appMenuContent = document.getElementById("appMenuContent");
+const menuButtons    = [
+  document.getElementById("appMenuButton"),
+  document.getElementById("mobMenuBtn"),
+];
+
+function openAppMenu() {
+  appMenuPanel?.classList.add("is-open");
+  appMenuOverlay?.classList.add("is-open");
+  appMenuPanel?.setAttribute("aria-hidden", "false");
+  document.body.classList.add("is-menu-open");
+  menuButtons.forEach(b => b?.setAttribute("aria-label", "Menü schließen"));
+}
+
+function closeAppMenu() {
+  appMenuPanel?.classList.remove("is-open");
+  appMenuOverlay?.classList.remove("is-open");
+  appMenuPanel?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("is-menu-open");
+  menuButtons.forEach(b => b?.setAttribute("aria-label", "Menü öffnen"));
+  showMenuHome();
+}
+
+function showMenuHome() {
+  if (!appMenuContent) return;
+  appMenuContent.innerHTML = `
+    <ul class="app-menu-list">
+      <li><button type="button" class="app-menu-item" data-menu="impressum">Impressum &amp; Datenschutz</button></li>
+    </ul>`;
+  appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
+    btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
+  });
+}
+
+function showMenuPage(page) {
+  if (!appMenuContent) return;
+  const pages = { impressum: impressumHtml() };
+  appMenuContent.innerHTML = `
+    <button type="button" class="app-menu-back">← Zurück</button>
+    <div class="app-menu-page-content">${pages[page] || ""}</div>`;
+  appMenuContent.querySelector(".app-menu-back")
+    ?.addEventListener("click", showMenuHome);
+}
+
+function impressumHtml() {
+  return `
+    <h2>Impressum &amp; Datenschutz</h2>
+    <section class="app-menu-section">
+      <h3>Angaben gemäß § 5 TMG</h3>
+      <p>Carsten Schneider<br>Stargarder Straße 57<br>10437 Berlin</p>
+      <p>E-Mail: <a href="mailto:info@rcracemap.com">info@rcracemap.com</a></p>
+    </section>
+    <section class="app-menu-section">
+      <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+      <p>Carsten Schneider<br>Stargarder Straße 57<br>10437 Berlin</p>
+    </section>
+    <section class="app-menu-section">
+      <h3>Datenschutz</h3>
+      <p>Beim Besuch dieser Website werden durch den Hostinganbieter Hetzner technisch notwendige Server-Logfiles verarbeitet.</p>
+      <p>Die Verarbeitung erfolgt ausschließlich zum Zweck des sicheren und störungsfreien Betriebs der Website.</p>
+      <p>Zur Darstellung der Karte werden Kartendaten von OpenStreetMap verwendet.</p>
+      <p>Diese Website verwendet derzeit keine Benutzerkonten, keine Newsletter, keine Analyse- oder Tracking-Dienste und keine Marketing-Cookies.</p>
+    </section>
+    <section class="app-menu-section">
+      <h3>Hinweis zu den Renninformationen</h3>
+      <p>RC Race Map ist ein unabhängiges Informationsangebot für RC-Rennveranstaltungen.</p>
+      <p>Die dargestellten Renntermine werden aus öffentlich zugänglichen Quellen (MyRCM, RCK) zusammengetragen. RC Race Map steht in keiner geschäftlichen Verbindung zu diesen Plattformen.</p>
+      <p>Trotz sorgfältiger Verarbeitung kann keine Gewähr für die Aktualität, Vollständigkeit oder Richtigkeit übernommen werden.</p>
+      <p>Hinweise an <a href="mailto:info@rcracemap.com">info@rcracemap.com</a>.</p>
+    </section>`;
+}
+
+menuButtons.forEach(b => b?.addEventListener("click", () => {
+  if (document.body.classList.contains("is-menu-open")) closeAppMenu();
+  else openAppMenu();
+}));
+appMenuOverlay?.addEventListener("click", closeAppMenu);
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeAppMenu(); });
+
+// Handle footer data-menu-open buttons
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-menu-open]");
+  if (btn) {
+    openAppMenu();
+    showMenuPage(btn.dataset.menuOpen);
+  }
+});
+
+showMenuHome();
+
 // ── Init mobile state ──────────────────────────────────────────
 window.addEventListener("load", () => {
   setDrawerState("half");
