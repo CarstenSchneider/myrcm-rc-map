@@ -2347,6 +2347,15 @@ input {
   flex: none;
 }
 
+/* Safari ignores padding-bottom in overflow-scroll flex containers.
+   Pseudo-element acts as a real spacer the scroll engine respects. */
+.mob-drawer-list::after {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  height: 14px;
+}
+
 /* Footer */
 .mob-drawer-footer {
   flex: 0 0 auto;
