@@ -138,7 +138,7 @@
       padding: 0;
       border: 0;
       border-radius: 999px;
-      background: rgba(245, 245, 245, 0.96);
+      background: #ebebeb;
     }
 
     .layout-prototype .topbar .segmented button,
@@ -201,7 +201,7 @@
       min-height: 44px;
       border: 0;
       border-radius: 999px;
-      background-color: rgba(245, 245, 245, 0.96);
+      background-color: #ebebeb;
       color: var(--accent);
       font-family: inherit;
       font-size: 14px;
@@ -419,7 +419,7 @@
       padding: 0;
       border: 0;
       border-radius: 999px;
-      background: var(--bg);
+      background: #ebebeb;
       overflow: hidden;
       position: relative;
       isolation: isolate;
@@ -511,7 +511,7 @@
     .layout-prototype .topbar input {
       min-height: 30px;
       height: 30px;
-      background-color: var(--bg);
+      background-color: #ebebeb;
       color: var(--host-blue);
       font-size: 13px;
       font-weight: 400 !important;
@@ -563,7 +563,7 @@
       height: 15px;
       margin: 0;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.82);
+      background: #fff;
       color: var(--favorite);
       font-size: 11px;
       line-height: 1;
@@ -1127,6 +1127,49 @@
         border-radius: 0 0 20px 20px;
       }
     }
+
+    /* topbar-chips-row: chips + result line on same row */
+    .layout-prototype .topbar-chips-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 24px;
+    }
+
+    .layout-prototype .topbar-chips-row .topbar-chips {
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    .layout-prototype .topbar-chips-row .topbar-chips.is-empty {
+      display: flex;
+    }
+
+    .layout-prototype .topbar-result-line {
+      flex: 0 0 auto;
+      margin-left: auto;
+      padding-left: 12px;
+      color: var(--host-blue);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.25;
+      white-space: nowrap;
+      opacity: 0.65;
+    }
+
+    /* select custom arrow */
+    .layout-prototype .topbar select {
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23213769' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 13px center;
+    }
+
+    /* class chips = #ebebeb */
+    .layout-prototype .race-card > .race-class-tags .tag-class {
+      background: #ebebeb;
+      color: var(--host-blue);
+    }
   </style>
 </head>
 <body>
@@ -1194,13 +1237,13 @@
         </button>
       </header>
 
-      <div class="active-filter-chips topbar-chips" id="activeFilterChips" aria-live="polite"></div>
+      <div class="topbar-chips-row">
+        <div class="active-filter-chips topbar-chips" id="activeFilterChips" aria-live="polite"></div>
+        <div class="result-line topbar-result-line" id="resultLine">Lade Rennen …</div>
+      </div>
     </section>
 
     <aside class="race-panel" aria-label="Rennen">
-      <div class="results-toolbar">
-        <div class="result-line" id="resultLine">Lade Rennen …</div>
-      </div>
       <section class="race-grid" id="raceList" aria-live="polite"></section>
     </aside>
   </main>
