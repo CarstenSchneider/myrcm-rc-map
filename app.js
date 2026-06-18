@@ -31,9 +31,10 @@ const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
   water: "#ffffff",
   land: "#efefef",
+  settlement: "#ebebeb",
   landcover: "#efefef",
   building: "#efefef",
-  road: "#e0e0e0",
+  road: "#d4d4d4",
   boundary: "#d8d8d8",
   label: "#716F6F",
   labelHalo: "#ebebeb",
@@ -304,6 +305,12 @@ function applyRcRaceMapStyle() {
     if (layer.type === "line" && layerLooksLike(layer, ["water", "river", "stream", "canal"])) {
       maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.water);
       maplibreMap.setPaintProperty(id, "line-opacity", 1);
+      return;
+    }
+
+    if (layer.type === "fill" && layerLooksLike(layer, ["residential", "urban", "suburb", "populated"])) {
+      maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.settlement);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
