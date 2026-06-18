@@ -3087,7 +3087,7 @@ if (mobDrawer && mobDrawerHandle) {
     const h = window.innerHeight;
     if (state === "collapsed") return h - 64;
     if (state === "half")      return h * 0.50;
-    return 0;
+    return 80; // Stop below floating menu button (14px top + 52px height + 14px gap)
   }
 
   function onDragStart(clientY) {
@@ -3103,7 +3103,7 @@ if (mobDrawer && mobDrawerHandle) {
   function onDragMove(clientY) {
     if (!isDragging) return;
     const delta = clientY - dragStartY;
-    const newY = Math.max(0, Math.min(window.innerHeight - 64, currentTranslateY + delta));
+    const newY = Math.max(80, Math.min(window.innerHeight - 64, currentTranslateY + delta));
     mobDrawer.style.transform = `translateY(${newY}px)`;
   }
 
@@ -3212,54 +3212,27 @@ if (resultLine) {
   observer.observe(resultLine, { childList: true, characterData: true, subtree: true });
 }
 
-// ── DOM-move: desktop filter elements ↔ mobile drawer ─────────
-// Collect original parents so we can restore on desktop
-const _filterElements = (() => {
-  // Elements to move into drawer (in order)
-  const rangeEl   = rangeFilter?.closest(".topbar-range");
-  const favEl     = document.getElementById("favoriteFilter");
-  const regEl     = document.getElementById("registrationVisibilityFilter");
-  const seriesEl  = seriesFilter?.closest(".topbar-series");
-  const searchEl  = searchInput?.closest(".topbar-search");
-  const all = [rangeEl, favEl, regEl, seriesEl, searchEl].filter(Boolean);
-  return all.map(el => ({
-    el,
-    parent: el.parentNode,
-    next: el.nextSibling,
-  }));
-})();
+// ── DOM-move: entire topbar ↔ mobile drawer ───────────────────
+// Moving the whole <header class="topbar"> preserves all CSS context,
+// including sliding-pill, button styles, and search icon pseudo-elements
+// which are all scoped to ".layout-prototype .topbar .something".
+const _topbarEl     = document.querySelector(".layout-prototype .topbar");
+const _topbarParent = _topbarEl?.parentNode;
+const _topbarNext   = _topbarEl?.nextSibling;
 
 function applyMobileLayout(isMobile) {
-  if (!mobFilterMount) return;
+  if (!mobFilterMount || !_topbarEl) return;
   if (isMobile) {
-    // Build two rows inside mobFilterMount
-    mobFilterMount.innerHTML = "";
-    const row1 = document.createElement("div");
-    row1.className = "mob-filter-row";
-    const row2 = document.createElement("div");
-    row2.className = "mob-filter-row-2";
-    mobFilterMount.append(row1, row2);
-
-    _filterElements.forEach(({ el }) => {
-      if (!el) return;
-      // Range and search → row1; everything else → row2
-      if (el.classList.contains("topbar-range") || el.classList.contains("topbar-search")) {
-        row1.appendChild(el);
-      } else {
-        row2.appendChild(el);
-      }
-    });
+    mobFilterMount.appendChild(_topbarEl);
+    // Recalculate sliding-pill positions after layout shift
+    requestAnimationFrame(updateSlidingPills);
   } else {
-    // Restore each element to its original desktop position
-    _filterElements.forEach(({ el, parent, next }) => {
-      if (!el || !parent) return;
-      if (next && next.parentNode === parent) {
-        parent.insertBefore(el, next);
-      } else {
-        parent.appendChild(el);
-      }
-    });
-    mobFilterMount.innerHTML = "";
+    if (_topbarNext && _topbarNext.parentNode === _topbarParent) {
+      _topbarParent.insertBefore(_topbarEl, _topbarNext);
+    } else if (_topbarParent) {
+      _topbarParent.appendChild(_topbarEl);
+    }
+    requestAnimationFrame(updateSlidingPills);
   }
 }
 

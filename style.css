@@ -2238,7 +2238,8 @@ input {
 /* Snap states — controlled via JS class */
 .mob-drawer--collapsed { transform: translateY(calc(100% - 64px)); }
 .mob-drawer--half      { transform: translateY(50%); }
-.mob-drawer--full      { transform: translateY(0px); }
+/* 80px = button top(14) + height(52) + gap(14) — leaves space below floating button */
+.mob-drawer--full      { transform: translateY(80px); }
 
 /* Disable transition during active drag */
 .mob-drawer--dragging  { transition: none !important; }
@@ -2265,69 +2266,64 @@ input {
 /* Filter mount — wraps moved desktop filter elements */
 .mob-drawer-filters {
   flex: 0 0 auto;
-  padding: 10px 14px 12px;
   border-bottom: 1px solid var(--line);
-  /* Flex column so each filter group stacks */
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
 
-/* When desktop topbar elements live inside the drawer, lay them out
-   as a wrapping flex row and strip topbar-specific positioning */
+/* ── Topbar inside drawer ───────────────────────────────────────
+   The whole <header class="topbar"> is moved here on mobile.
+   All .layout-prototype .topbar .* CSS stays intact — we only
+   override the outer shell to fit the drawer column layout.    */
+.mob-drawer-filters .topbar {
+  flex-wrap: wrap;
+  min-height: auto;
+  padding: 10px 14px 12px;
+  gap: 8px;
+  row-gap: 8px;
+  /* Reset desktop flex-sizing so filters wrap naturally */
+  align-items: flex-start;
+}
+
+/* No glass-pill background in drawer */
+.mob-drawer-filters .topbar::before {
+  display: none;
+}
+
+/* Hide the desktop hamburger — the floating mob-menu-btn replaces it */
+.mob-drawer-filters .topbar .app-menu-button {
+  display: none !important;
+}
+
+/* Remove topbar-spacer from taking space */
+.mob-drawer-filters .topbar .topbar-spacer {
+  display: none;
+}
+
+/* Filter groups: reset desktop order/width so they wrap naturally */
 .mob-drawer-filters .topbar-range,
 .mob-drawer-filters .topbar-series,
 .mob-drawer-filters .topbar-favorites,
 .mob-drawer-filters .topbar-registration,
 .mob-drawer-filters .topbar-search {
   order: unset !important;
-  flex: 0 0 auto;
-  min-width: 0;
 }
 
-/* Row 1: range + search side by side */
-.mob-drawer-filters .topbar-range {
-  display: flex;
-  align-items: center;
-  gap: 0;
+/* Search fills remaining row width */
+.mob-drawer-filters .topbar-search {
+  flex: 1 1 180px !important;
+  min-width: 0 !important;
+  max-width: none !important;
 }
 
-/* Override: in drawer the range + search share one row via a wrapper
-   added by JS. The wrapper gets flex layout. */
-.mob-filter-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Series dropdown fills remaining row width */
+.mob-drawer-filters .topbar-series {
+  flex: 1 1 120px !important;
+  min-width: 0 !important;
+  max-width: none !important;
 }
-.mob-filter-row .topbar-range  { flex: 0 0 auto !important; }
-/* Must beat inline-style clamp() width set on .layout-prototype .topbar-search */
-.mob-filter-row .topbar-search { flex: 1 1 auto !important; min-width: 0 !important; max-width: none !important; }
-/* Make search fill its container */
-.mob-filter-row .topbar-search .filter-field-search,
-.mob-filter-row .topbar-search {
-  width: 100%;
-}
-.mob-filter-row .topbar-search input {
+.mob-drawer-filters .topbar-series select {
   width: 100%;
   box-sizing: border-box;
 }
-
-/* Row 2: favorites + registration + series */
-.mob-filter-row-2 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-/* Must beat inline-style clamp() width set on .layout-prototype .topbar-series */
-.mob-filter-row-2 .topbar-series { flex: 1 1 auto !important; min-width: 80px !important; max-width: none !important; }
-.mob-filter-row-2 .topbar-series select { width: 100%; box-sizing: border-box; }
-
-/* Hide topbar-filter-label inside drawer (no space) */
-.mob-drawer-filters .topbar-filter-label { display: none; }
-
-/* Hide filter-toggle-button (search expand) — not needed in drawer */
-.mob-drawer-filters .filter-toggle-button { display: none !important; }
 
 /* Race list */
 .mob-drawer-list {
@@ -2340,6 +2336,13 @@ input {
   align-content: start;
   /* Same warm background as desktop race-panel so white card sections are visible */
   background: rgba(255, 250, 243, 0.96);
+}
+
+/* Fix: flex containers with overflow:hidden report 0 intrinsic height to the
+   grid track sizing algorithm, causing cards to collapse. align-self:start
+   lets the card determine its own height instead. */
+.mob-drawer-list > .race-card {
+  align-self: start;
 }
 
 /* Footer */
