@@ -2179,21 +2179,6 @@ input {
 @media (max-width: 860px) {
   .mob-menu-btn { display: flex; }
 }
-.mob-menu-btn span {
-  position: relative;
-  display: block;
-  width: 21px;
-  height: 15px;
-}
-.mob-menu-btn span::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0;
-  width: 21px; height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-  box-shadow: 0 6.5px 0 currentColor, 0 13px 0 currentColor;
-}
 
 /* Result badge — two-line, top-right over map */
 .mob-result-badge {
@@ -2403,15 +2388,15 @@ input {
   top: 0; left: 0; bottom: 0;
   width: 390px;
   z-index: 1500;
-  background: rgba(255, 250, 243, 0.98);
-  backdrop-filter: blur(14px);
-  border-right: 1px solid rgba(222, 214, 202, 0.92);
+  background: var(--panel);
+  border-right: 1px solid rgba(31, 29, 26, 0.08);
   box-shadow: 4px 0 32px rgba(31, 29, 26, 0.12);
   transform: translateX(-100%);
   transition: transform 300ms ease;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 80px;
 }
 .app-menu-panel.is-open { transform: translateX(0); }
 
@@ -2422,7 +2407,7 @@ input {
 .app-menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(33, 55, 105, 0.45);
   z-index: 1400;
   opacity: 0;
   pointer-events: none;
@@ -2434,8 +2419,8 @@ input {
 }
 
 .app-menu-header {
-  padding: 24px 24px 20px;
-  border-bottom: 1px solid rgba(222, 214, 202, 0.6);
+  padding: 20px 24px 20px;
+  border-bottom: 1px solid rgba(31, 29, 26, 0.08);
 }
 .app-menu-logo {
   font-size: 17px;
@@ -2462,17 +2447,22 @@ input {
 .app-menu-item {
   display: block;
   width: 100%;
-  padding: 12px 0;
+  padding: 14px 0;
   background: none;
   border: 0;
   text-align: left;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 800;
   color: var(--text);
   cursor: pointer;
-  border-bottom: 1px solid rgba(222, 214, 202, 0.4);
+  border-bottom: 1px solid rgba(31, 29, 26, 0.08);
+  text-decoration: none;
 }
-.app-menu-item:hover { color: var(--accent); }
+.app-menu-item:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--text);
+}
 
 .app-menu-back {
   background: none;
@@ -2502,13 +2492,16 @@ input {
   opacity: 0.5;
 }
 .app-menu-section p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--text);
   margin: 0 0 8px;
-  opacity: 0.75;
+  opacity: 0.8;
 }
-.app-menu-section a { color: var(--accent); }
+.app-menu-section a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
 
 /* Footer menu link button (replaces <a href="impressum..."> in footers) */
 .footer-menu-link {
