@@ -3170,6 +3170,23 @@ if (mobDrawer && mobDrawerHandle) {
     onDragEnd(e.changedTouches[0].clientY);
   }, { passive: true });
 
+  // Mouse drag (for desktop browser narrowed to mobile breakpoint)
+  mobDrawerHandle.addEventListener("mousedown", e => {
+    if (!mobMq.matches) return;
+    e.preventDefault();
+    onDragStart(e.clientY);
+  });
+
+  document.addEventListener("mousemove", e => {
+    if (!isDragging || !mobMq.matches) return;
+    onDragMove(e.clientY);
+  });
+
+  document.addEventListener("mouseup", e => {
+    if (!isDragging || !mobMq.matches) return;
+    onDragEnd(e.clientY);
+  });
+
   // Keyboard accessibility on handle
   mobDrawerHandle.addEventListener("keydown", e => {
     if (e.key === "Enter" || e.key === " ") {

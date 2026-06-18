@@ -2154,21 +2154,20 @@ input {
   }
 }
 
-/* Floating hamburger — mirrors desktop app-menu-button */
+/* Floating hamburger — identical to desktop .app-menu-button */
 .mob-menu-btn {
   display: none;
   position: fixed;
   top: 14px;
   left: 14px;
   z-index: 1200;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
   border: 0;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 7px 18px rgba(31,29,26,0.13);
-  color: var(--host-blue);
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 8px 22px rgba(31,29,26,0.09);
+  color: var(--accent);
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -2263,193 +2262,72 @@ input {
   background: rgba(33,55,105,0.18);
 }
 
-/* ── Shared pill height token ─────────────────────────────── */
-:root { --mob-pill-h: 36px; }
-
-/* Filter section */
+/* Filter mount — wraps moved desktop filter elements */
 .mob-drawer-filters {
   flex: 0 0 auto;
-  padding: 0 14px 12px;
+  padding: 10px 14px 12px;
   border-bottom: 1px solid var(--line);
+  /* Flex column so each filter group stacks */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+/* When desktop topbar elements live inside the drawer, lay them out
+   as a wrapping flex row and strip topbar-specific positioning */
+.mob-drawer-filters .topbar-range,
+.mob-drawer-filters .topbar-series,
+.mob-drawer-filters .topbar-favorites,
+.mob-drawer-filters .topbar-registration,
+.mob-drawer-filters .topbar-search {
+  order: unset !important;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+/* Row 1: range + search side by side */
+.mob-drawer-filters .topbar-range {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Override: in drawer the range + search share one row via a wrapper
+   added by JS. The wrapper gets flex layout. */
 .mob-filter-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
 }
-
-/* Row 1 — range + search fill the row */
-.mob-filter-row-top {
-  flex-wrap: nowrap;
+.mob-filter-row .topbar-range  { flex: 0 0 auto !important; }
+/* Must beat inline-style clamp() width set on .layout-prototype .topbar-search */
+.mob-filter-row .topbar-search { flex: 1 1 auto !important; min-width: 0 !important; max-width: none !important; }
+/* Make search fill its container */
+.mob-filter-row .topbar-search .filter-field-search,
+.mob-filter-row .topbar-search {
+  width: 100%;
 }
-
-/* Range segmented: shared container border, pill shape */
-.mob-filter-range {
-  display: inline-flex;
-  flex: 0 0 auto;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  overflow: hidden;
-  background: var(--pill-bg);
-  height: var(--mob-pill-h);
-}
-
-.mob-filter-range button {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 0 12px;
-  height: 100%;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-  white-space: nowrap;
-}
-
-.mob-filter-range button.active {
-  background: var(--host-blue);
-  color: #fff;
-}
-
-/* Search — grows to fill remaining space */
-.mob-filter-search {
-  flex: 1 1 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.mob-filter-search input {
-  display: block;
+.mob-filter-row .topbar-search input {
   width: 100%;
   box-sizing: border-box;
-  height: var(--mob-pill-h);
-  appearance: none;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--pill-bg);
-  color: var(--text);
-  font: inherit;
-  font-size: 13px;
-  padding: 0 36px 0 14px;
-  outline: none;
 }
 
-.mob-filter-search input:focus {
-  border-color: var(--host-blue);
-}
-
-.mob-search-icon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--muted);
+/* Row 2: favorites + registration + series */
+.mob-filter-row-2 {
   display: flex;
-  align-items: center;
-  pointer-events: none;
-}
-
-/* Row 2 — favorites + registration + series */
-.mob-filter-row-bottom {
   flex-wrap: wrap;
-}
-
-/* Individual pill buttons (favorites / registration) */
-.mob-filter-pills {
-  display: inline-flex;
-  gap: 6px;
-  flex: 0 0 auto;
-}
-
-.mob-filter-pills button {
-  appearance: none;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--pill-bg);
-  color: var(--text);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  height: var(--mob-pill-h);
-  padding: 0 13px;
-  cursor: pointer;
-  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  white-space: nowrap;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  gap: 8px;
 }
+/* Must beat inline-style clamp() width set on .layout-prototype .topbar-series */
+.mob-filter-row-2 .topbar-series { flex: 1 1 auto !important; min-width: 80px !important; max-width: none !important; }
+.mob-filter-row-2 .topbar-series select { width: 100%; box-sizing: border-box; }
 
-/* Default active = blue */
-.mob-filter-pills button.active {
-  background: var(--host-blue);
-  border-color: var(--host-blue);
-  color: #fff;
-}
+/* Hide topbar-filter-label inside drawer (no space) */
+.mob-drawer-filters .topbar-filter-label { display: none; }
 
-/* Favorites active = gold */
-#favoriteFilterMob button[data-favorite-filter="favorites"].active {
-  background: var(--favorite);
-  border-color: var(--favorite);
-  color: #fff;
-}
-
-.mob-filter-pills .favorite-toggle-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background: var(--favorite);
-  color: #fff;
-  font-size: 10px;
-  flex-shrink: 0;
-}
-
-.mob-filter-pills button.active .favorite-toggle-icon {
-  background: rgba(255,255,255,0.3);
-}
-
-.mob-filter-pills .race-document-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--status-open);
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-/* Series select */
-.mob-filter-series {
-  display: inline-flex;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.mob-filter-series select {
-  appearance: none;
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--pill-bg);
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23213769' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  color: var(--text);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  height: var(--mob-pill-h);
-  padding: 0 32px 0 14px;
-  cursor: pointer;
-}
+/* Hide filter-toggle-button (search expand) — not needed in drawer */
+.mob-drawer-filters .filter-toggle-button { display: none !important; }
 
 /* Race list */
 .mob-drawer-list {
@@ -2460,6 +2338,8 @@ input {
   grid-template-columns: 1fr;
   gap: 14px;
   align-content: start;
+  /* Same warm background as desktop race-panel so white card sections are visible */
+  background: rgba(255, 250, 243, 0.96);
 }
 
 /* Footer */
