@@ -2388,7 +2388,7 @@ input {
   top: 0; left: 0; bottom: 0;
   width: 390px;
   z-index: 1500;
-  background: var(--panel);
+  background: #fff;
   border-right: 1px solid rgba(31, 29, 26, 0.08);
   box-shadow: 4px 0 32px rgba(31, 29, 26, 0.12);
   transform: translateX(-100%);
@@ -2453,7 +2453,7 @@ input {
   text-align: left;
   font-size: 18px;
   font-weight: 800;
-  color: var(--text);
+  color: var(--accent);
   cursor: pointer;
   border-bottom: 1px solid rgba(31, 29, 26, 0.08);
   text-decoration: none;
@@ -2461,7 +2461,7 @@ input {
 .app-menu-item:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .app-menu-back {
@@ -2545,6 +2545,12 @@ input {
 .mob-menu-btn span::after,
 .layout-prototype .topbar .app-menu-button span::after  { top: 6.5px; }
 
+body.is-menu-open .mob-menu-btn,
+body.is-menu-open .layout-prototype .topbar .app-menu-button {
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
 body.is-menu-open .mob-menu-btn span,
 body.is-menu-open .layout-prototype .topbar .app-menu-button span { opacity: 0; }
 body.is-menu-open .mob-menu-btn span::before,
