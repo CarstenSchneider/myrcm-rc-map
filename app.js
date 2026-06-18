@@ -289,27 +289,33 @@ function applyRcRaceMapStyle() {
       return;
     }
 
+    if (layer.type === "background") {
+      maplibreMap.setPaintProperty(id, "background-color", rcRaceMapColors.land);
+      maplibreMap.setPaintProperty(id, "background-opacity", 1);
+      return;
+    }
+
     if (layer.type === "fill" && layerLooksLike(layer, ["water", "ocean", "sea", "lake", "river"])) {
       maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.water);
-      maplibreMap.setPaintProperty(id, "fill-opacity", 0.88);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["water", "river", "stream", "canal"])) {
       maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.water);
-      maplibreMap.setPaintProperty(id, "line-opacity", 0.75);
+      maplibreMap.setPaintProperty(id, "line-opacity", 1);
       return;
     }
 
     if (layer.type === "fill" && layerLooksLike(layer, ["landcover", "landuse", "park", "wood", "forest", "grass"])) {
       maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.landcover);
-      maplibreMap.setPaintProperty(id, "fill-opacity", 0.72);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
     if (layer.type === "fill" && layerLooksLike(layer, ["building"])) {
       maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.building);
-      maplibreMap.setPaintProperty(id, "fill-opacity", 0.72);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
@@ -2514,33 +2520,28 @@ function renderList(list) {
 
     card.innerHTML = `
       ${newRaceBadgeHtml(race)}
-      <div class="race-card-main">
-        <div class="race-card-header">
-          <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name-row">
-            <div class="race-name">${race.name}</div>
-            ${registrationCountHtml(race)}
-          </div>
-
-          <div class="race-tags race-series-tags">
-            ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
-            ${
-              !hasMappableVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
-                : !hasVerifiedVenue(race)
-                  ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
-                  : ""
-            }
-          </div>
+      <div class="race-host">${raceHostNameHtml(race)}</div>
+      <div class="race-card-header">
+        <div class="race-date">${formatDateRange(race.from, race.to)}</div>
+        <div class="race-name-row">
+          <div class="race-name">${race.name}</div>
+          ${registrationCountHtml(race)}
         </div>
 
-        <div class="race-card-meta">
-          <div class="race-host">${raceHostNameHtml(race)}</div>
-          ${raceVenueMetaHtml(race)}
-          ${documentLinksHtml(race)}
-          ${statusDetailsHtml(race)}
+        <div class="race-tags race-series-tags">
+          ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
+          ${
+            !hasMappableVenue(race)
+              ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
+              : !hasVerifiedVenue(race)
+                ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
+                : ""
+          }
         </div>
       </div>
+      ${raceVenueMetaHtml(race)}
+      ${documentLinksHtml(race)}
+      ${statusDetailsHtml(race)}
 
       ${
         Array.isArray(race.classes) && race.classes.length
