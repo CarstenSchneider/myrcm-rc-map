@@ -29,17 +29,17 @@ L.control.zoom({
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
-  water: "#caceda",
-  land: "#F2F2F2",
-  landcover: "#F2F2F2",
+  water: "#ffffff",
+  land: "#ebebeb",
+  landcover: "#ebebeb",
   building: "#DDDDDD",
   road: "#DDDDDD",
   boundary: "#DDDDDD",
   label: "#716F6F",
-  labelHalo: "#F2F2F2",
+  labelHalo: "#ebebeb",
   marker: "#213769",
   markerClosed: "#716F6F",
-  favorite: "#BE9E73",
+  favorite: "#C8B090",
   statusOpen: "#73FF60",
   statusClosed: "#E51354",
   statusUpcoming: "#FFA700"
@@ -588,7 +588,7 @@ function updateRegistrationVisibilityUi() {
 
 function activePillColor(button) {
   return button?.dataset.favoriteFilter === "favorites"
-    ? "#BE9E73"
+    ? "#C8B090"
     : "#213769";
 }
 
@@ -1322,14 +1322,6 @@ function markerColorForRegistrationCount(count) {
   return "#9AAAD0";
 }
 
-function markerFavoriteColorForRegistrationCount(count) {
-  if (count >= 120) return rcRaceMapColors.favorite;
-  if (count >= 70) return "#C6AA83";
-  if (count >= 40) return "#CEB794";
-  if (count >= 20) return "#D6C3A7";
-  if (count >= 10) return "#DDCDB8";
-  return "#E3D6C8";
-}
 
 function ensureRegistrationStatusStyles() {
   if (document.getElementById("registration-status-styles")) return;
@@ -2226,16 +2218,15 @@ function updateMarkers(list, shouldFitBounds = true) {
 
     const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
-    let markerColor = hasUpcomingRaces && !venueHasActiveRegistration
-      ? "rgba(31, 29, 26, 0.55)"
-      : isFavoriteVenue
-        ? markerFavoriteColorForRegistrationCount(registrationTotal)
-        : hasUpcomingRaces
-          ? markerColorForRegistrationCount(registrationTotal)
-          : "rgba(33, 55, 105, 0.58)";
-
-    if (!hasUpcomingRaces && isFavoriteVenue) {
+    let markerColor;
+    if (isFavoriteVenue) {
       markerColor = rcRaceMapColors.favorite;
+    } else if (hasUpcomingRaces && !venueHasActiveRegistration) {
+      markerColor = "rgba(31, 29, 26, 0.55)";
+    } else if (hasUpcomingRaces) {
+      markerColor = markerColorForRegistrationCount(registrationTotal);
+    } else {
+      markerColor = "rgba(33, 55, 105, 0.58)";
     }
 
     const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight);
