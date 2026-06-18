@@ -3062,11 +3062,7 @@ const mobDrawerHandle = document.getElementById("mobDrawerHandle");
 const mobRaceList     = document.getElementById("mobRaceList");
 const mobResultBadge  = document.getElementById("mobResultBadge");
 
-const rangeFilterMob               = document.getElementById("rangeFilterMob");
-const seriesFilterMob              = document.getElementById("seriesFilterMob");
-const favoriteFilterMob            = document.getElementById("favoriteFilterMob");
-const registrationVisibilityFilterMob = document.getElementById("registrationVisibilityFilterMob");
-const searchInputMob               = document.getElementById("searchInputMob");
+const mobFilterMount = document.getElementById("mobFilterMount");
 
 // ── Drawer snap state ──────────────────────────────────────────
 const DRAWER_STATES = ["collapsed", "half", "full"];
@@ -3189,8 +3185,6 @@ if (mobDrawer && mobDrawerHandle) {
 }
 
 // ── Sync result badge ──────────────────────────────────────────
-const _origResultLineSetter = Object.getOwnPropertyDescriptor(Node.prototype, "textContent").set;
-
 function syncResultBadge(text) {
   if (mobResultBadge) mobResultBadge.textContent = text;
 }
@@ -3201,112 +3195,66 @@ if (resultLine) {
   observer.observe(resultLine, { childList: true, characterData: true, subtree: true });
 }
 
-// ── Mobile filter state sync ───────────────────────────────────
-function syncMobRangeUi() {
-  if (!rangeFilterMob) return;
-  rangeFilterMob.querySelectorAll("button").forEach(b => {
-    b.classList.toggle("active", b.dataset.range === selectedRange);
-  });
+// ── DOM-move: desktop filter elements ↔ mobile drawer ─────────
+// Collect original parents so we can restore on desktop
+const _filterElements = (() => {
+  // Elements to move into drawer (in order)
+  const rangeEl   = rangeFilter?.closest(".topbar-range");
+  const favEl     = document.getElementById("favoriteFilter");
+  const regEl     = document.getElementById("registrationVisibilityFilter");
+  const seriesEl  = seriesFilter?.closest(".topbar-series");
+  const searchEl  = searchInput?.closest(".topbar-search");
+  const all = [rangeEl, favEl, regEl, seriesEl, searchEl].filter(Boolean);
+  return all.map(el => ({
+    el,
+    parent: el.parentNode,
+    next: el.nextSibling,
+  }));
+})();
+
+function applyMobileLayout(isMobile) {
+  if (!mobFilterMount) return;
+  if (isMobile) {
+    // Build two rows inside mobFilterMount
+    mobFilterMount.innerHTML = "";
+    const row1 = document.createElement("div");
+    row1.className = "mob-filter-row";
+    const row2 = document.createElement("div");
+    row2.className = "mob-filter-row-2";
+    mobFilterMount.append(row1, row2);
+
+    _filterElements.forEach(({ el }) => {
+      if (!el) return;
+      // Range and search → row1; everything else → row2
+      if (el.classList.contains("topbar-range") || el.classList.contains("topbar-search")) {
+        row1.appendChild(el);
+      } else {
+        row2.appendChild(el);
+      }
+    });
+  } else {
+    // Restore each element to its original desktop position
+    _filterElements.forEach(({ el, parent, next }) => {
+      if (!el || !parent) return;
+      if (next && next.parentNode === parent) {
+        parent.insertBefore(el, next);
+      } else {
+        parent.appendChild(el);
+      }
+    });
+    mobFilterMount.innerHTML = "";
+  }
 }
 
-function syncMobFavoriteUi() {
-  if (!favoriteFilterMob) return;
-  favoriteFilterMob.querySelectorAll("button").forEach(b => {
-    const isActive = b.dataset.favoriteFilter === selectedFavoriteFilter;
-    b.classList.toggle("active", isActive);
-    b.setAttribute("aria-pressed", String(isActive));
-  });
-}
+// Handle breakpoint change
+mobMq.addEventListener("change", e => {
+  applyMobileLayout(e.matches);
+  if (e.matches) syncMobRaceList();
+  else render();
+});
 
-function syncMobRegistrationUi() {
-  if (!registrationVisibilityFilterMob) return;
-  const val = showOpenOnly ? "open" : "all";
-  registrationVisibilityFilterMob.querySelectorAll("button").forEach(b => {
-    const isActive = b.dataset.registrationVisibility === val;
-    b.classList.toggle("active", isActive);
-    b.setAttribute("aria-pressed", String(isActive));
-  });
-}
-
-// Call after every state change so mobile UI stays in sync
-const _origUpdateFavoriteFilterUi = updateFavoriteFilterUi;
-
-// Wire up mobile range filter
-if (rangeFilterMob) {
-  rangeFilterMob.addEventListener("click", event => {
-    const button = event.target.closest("button[data-range]");
-    if (!button) return;
-    selectedRange = button.dataset.range;
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    // Sync both UIs
-    rangeFilter.querySelectorAll("button").forEach(b =>
-      b.classList.toggle("active", b.dataset.range === selectedRange));
-    syncMobRangeUi();
-    render();
-  });
-}
-
-// Wire up mobile series filter (also populate it)
-function populateMobSeriesFilter() {
-  if (!seriesFilterMob) return;
-  seriesFilterMob.innerHTML = seriesFilter.innerHTML;
-  seriesFilterMob.value = seriesFilter.value;
-}
-
-if (seriesFilterMob) {
-  seriesFilterMob.addEventListener("change", () => {
-    selectedSeries = seriesFilterMob.value;
-    seriesFilter.value = seriesFilterMob.value;
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    render();
-  });
-}
-
-// Wire up mobile favorite filter
-if (favoriteFilterMob) {
-  favoriteFilterMob.addEventListener("click", event => {
-    const button = event.target.closest("button[data-favorite-filter]");
-    if (!button) return;
-    selectedFavoriteFilter = button.dataset.favoriteFilter === "favorites" ? "favorites" : "all";
-    saveFavoriteFilter(selectedFavoriteFilter);
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    updateFavoriteFilterUi();
-    syncMobFavoriteUi();
-    render();
-  });
-}
-
-// Wire up mobile registration visibility filter
-if (registrationVisibilityFilterMob) {
-  registrationVisibilityFilterMob.addEventListener("click", event => {
-    const button = event.target.closest("button[data-registration-visibility]");
-    if (!button) return;
-    showOpenOnly = button.dataset.registrationVisibility === "open";
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    updateRegistrationVisibilityUi();
-    syncMobRegistrationUi();
-    render();
-  });
-}
-
-// Wire up mobile search
-if (searchInputMob) {
-  searchInputMob.addEventListener("input", () => {
-    searchInput.value = searchInputMob.value;
-    activeVenueId = null;
-    activeRaceId = null;
-    updateAppModeClass();
-    render();
-  });
-}
+// Init
+applyMobileLayout(mobMq.matches);
 
 // ── Mobile race list rendering ─────────────────────────────────
 // renderList renders into desktop raceList. We mirror cards into mobRaceList.
@@ -3413,14 +3361,6 @@ if (raceList) {
 }
 
 // ── Init mobile state ──────────────────────────────────────────
-// After data loads, sync series select options to mobile
-const _origInit = init;
-// Populate series dropdown after page load
 window.addEventListener("load", () => {
-  setTimeout(populateMobSeriesFilter, 500);
-  // Also observe desktop series filter for option changes
-  if (seriesFilter) {
-    new MutationObserver(populateMobSeriesFilter).observe(seriesFilter, { childList: true });
-  }
   setDrawerState("half");
 });
