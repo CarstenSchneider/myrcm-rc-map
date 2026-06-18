@@ -2225,13 +2225,27 @@ function panToVisible(latlng, zoom) {
 }
 
 // Fit multiple latlng bounds in the visible map area.
+// Mobile: use Leaflet fitBounds with padding (works reliably).
+// Desktop: Leaflet fitBounds padding is unreliable with the floating panel overlay.
+//   Instead: calculate correct zoom via getBoundsZoom with symmetric padding
+//   matching the visible area size, then use panToVisible for reliable centering.
 function fitMapToBounds(bounds, options = {}) {
-  const { pl, pr, pt, pb } = mapPadding();
-  map.fitBounds(bounds, {
-    paddingTopLeft: [pl, pt],
-    paddingBottomRight: [pr, pb],
-    ...options
-  });
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (isMobile) {
+    const { pl, pr, pt, pb } = mapPadding();
+    map.fitBounds(bounds, {
+      paddingTopLeft: [pl, pt],
+      paddingBottomRight: [pr, pb],
+      ...options
+    });
+    return;
+  }
+  // Desktop visible area: x=[0, W-414], y=[80, H]. Symmetric padding: (207, 40).
+  const lBounds = L.latLngBounds(bounds);
+  let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
+  if (options.maxZoom !== undefined) zoom = Math.min(zoom, options.maxZoom);
+  zoom = Math.max(zoom, map.getMinZoom() || 0);
+  panToVisible(lBounds.getCenter(), zoom);
 }
 
 function updateMarkers(list, shouldFitBounds = true) {
