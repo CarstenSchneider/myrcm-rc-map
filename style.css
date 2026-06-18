@@ -2244,6 +2244,12 @@ input {
 .mob-drawer--half      { transform: translateY(50%); }
 .mob-drawer--full      { transform: translateY(0); }
 
+/* Hide filters and list when collapsed so nothing peeks above the handle */
+.mob-drawer--collapsed .mob-drawer-filters,
+.mob-drawer--collapsed .mob-drawer-list {
+  visibility: hidden;
+}
+
 /* Disable transition during active drag */
 .mob-drawer--dragging  { transition: none !important; }
 
