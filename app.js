@@ -2143,11 +2143,7 @@ function filteredRaces() {
     .filter(matchesSelectedSeries)
     .filter(matchesFavoriteFilter)
     .filter(race => !query || raceSearchText(race).includes(query))
-    .sort((a, b) => {
-      const favoriteOrder = Number(isFavoriteRace(b)) - Number(isFavoriteRace(a));
-      if (favoriteOrder !== 0) return favoriteOrder;
-      return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
-    });
+    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
 
 function googleMapsRouteUrl(venue) {
@@ -3292,6 +3288,11 @@ function syncMobRaceList() {
       }
     });
   });
+  // Append footer links as last scrollable item
+  const drawerFooterSrc = document.querySelector(".mob-drawer > .mob-drawer-footer");
+  if (drawerFooterSrc) {
+    mobRaceList.appendChild(drawerFooterSrc.cloneNode(true));
+  }
   // Class-pills measurement
   requestAnimationFrame(() => {
     mobRaceList.querySelectorAll(".race-card").forEach(fitClassPills);

@@ -2356,9 +2356,12 @@ input {
   height: 14px;
 }
 
-/* Footer */
+/* Footer — hidden as drawer sibling, cloned into list by JS so it scrolls with cards */
+.mob-drawer > .mob-drawer-footer {
+  display: none;
+}
+
 .mob-drawer-footer {
-  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
