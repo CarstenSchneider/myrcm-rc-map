@@ -2293,7 +2293,8 @@ const popupOffset = hasUpcomingRaces
     marker.bindPopup(
       buildPopup(venue, venueRaces, latestPastRace),
       {
-        offset: popupOffset
+        offset: popupOffset,
+        autoPan: false
       }
     );
 
