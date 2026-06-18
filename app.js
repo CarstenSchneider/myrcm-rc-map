@@ -18,6 +18,9 @@ const map = L.map("map", {
   minZoom: 6
 }).setView([51.8, 11.8], 6);
 
+const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
+map.setMaxBounds(MAX_BOUNDS);
+
 
 L.control.zoom({
   position: "bottomleft"
@@ -2214,7 +2217,9 @@ function panToVisible(latlng, zoom) {
   const shifted = isMobile
     ? L.point(pt.x, pt.y + 8)
     : L.point(pt.x + 207, pt.y - 40);
+  map.setMaxBounds(null);
   map.setView(map.unproject(shifted, zoom), zoom, { animate: false });
+  map.setMaxBounds(MAX_BOUNDS);
 }
 
 // Fit multiple latlng bounds in the visible map area.
@@ -2246,7 +2251,9 @@ function fitMapToBounds(bounds, options = {}) {
   const cPx = nwPx.add(sePx).divideBy(2);
   // Shift: bounds center should appear at (W/2-207, H/2+40) → map center = cPx+(207,-40)
   const newCenterPx = L.point(cPx.x + 207, cPx.y - 40);
+  map.setMaxBounds(null);
   map.setView(map.unproject(newCenterPx, zoom), zoom, { animate: false });
+  map.setMaxBounds(MAX_BOUNDS);
 }
 
 function updateMarkers(list, shouldFitBounds = true) {
