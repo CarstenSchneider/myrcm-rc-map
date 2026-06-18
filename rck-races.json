@@ -72,7 +72,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -148,7 +148,7 @@
     ],
     "venueWebsite": "https://erc-racing.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -219,7 +219,7 @@
     ],
     "venueWebsite": "https://tsvm-racing.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -294,7 +294,7 @@
     ],
     "venueWebsite": "https://mcc-luedenscheid.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -344,7 +344,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 17
+        "entries": 16
       },
       {
         "name": "VTA",
@@ -352,7 +352,7 @@
       },
       {
         "name": "LMH",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "M-Chassis",
@@ -370,7 +370,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -445,7 +445,7 @@
     ],
     "venueWebsite": "https://rcworld-bremen.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -524,7 +524,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -602,7 +602,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -673,7 +673,7 @@
     ],
     "venueWebsite": "https://mac-mettenheim.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -744,7 +744,7 @@
     ],
     "venueWebsite": "https://msc-polizei-bs.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -815,7 +815,7 @@
     ],
     "venueWebsite": "https://tsvm-racing.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -843,8 +843,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 55,
-    "registrationDisplay": "55",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -876,7 +876,7 @@
       },
       {
         "name": "RCK Porsche",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [
@@ -890,7 +890,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -918,8 +918,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 121,
-    "registrationDisplay": "121",
+    "registrationCount": 122,
+    "registrationDisplay": "122",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -962,7 +962,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -990,8 +990,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -1019,7 +1019,7 @@
       },
       {
         "name": "LMH",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "M-Chassis",
@@ -1037,7 +1037,7 @@
     ],
     "venueWebsite": "https://rcworld-bremen.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1065,8 +1065,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 48,
-    "registrationDisplay": "48",
+    "registrationCount": 49,
+    "registrationDisplay": "49",
     "comingSoon": false,
     "note": null,
     "rckGroup": "West",
@@ -1086,7 +1086,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 23
+        "entries": 24
       },
       {
         "name": "VTA",
@@ -1112,7 +1112,7 @@
     ],
     "venueWebsite": "https://ufm-modellbau.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1195,7 +1195,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1249,7 +1249,7 @@
     ],
     "venueWebsite": "https://modellsport-zwickau.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1277,8 +1277,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 58,
-    "registrationDisplay": "58",
+    "registrationCount": 59,
+    "registrationDisplay": "59",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -1307,7 +1307,7 @@
       },
       {
         "name": "LMH",
-        "entries": 12
+        "entries": 13
       },
       {
         "name": "M-Chassis",
@@ -1325,7 +1325,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1404,7 +1404,7 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1480,7 +1480,7 @@
     ],
     "venueWebsite": "https://rcmc-ibbenbueren.de",
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1559,6 +1559,6 @@
     ],
     "venueWebsite": null,
     "firstSeen": "2026-06-13",
-    "lastSeen": "2026-06-17"
+    "lastSeen": "2026-06-18"
   }
 ]
