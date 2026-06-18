@@ -2211,7 +2211,7 @@ function panToVisible(latlng, zoom) {
   const offsetY = (pt - pb) / 2;
   const projected = map.project(latlng, zoom);
   const center = map.unproject(L.point(projected.x - offsetX, projected.y - offsetY), zoom);
-  map.setView(center, zoom, { animate: true });
+  map.setView(center, zoom, { animate: false });
 }
 
 // Fit multiple latlng bounds in the visible map area.
@@ -2497,14 +2497,14 @@ function focusRace(race) {
   renderList(venueList);
   resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
 
-  const targetZoom = Math.max(map.getZoom(), 12);
-  panToVisible([venue.lat, venue.lng], targetZoom);
-
   const marker = markers.get(venue.id);
   if (marker) {
     marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
     marker.openPopup();
   }
+
+  const targetZoom = Math.max(map.getZoom(), 12);
+  panToVisible([venue.lat, venue.lng], targetZoom);
 }
 function renderList(list) {
   resultLine.textContent = resultLineText(list.length);
