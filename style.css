@@ -15,6 +15,7 @@
   --panel: #FFFFFF;
   --panel-rgb: 255, 255, 255;
   --card: #FFFFFF;
+  --card-closed: #e4e4e4;
   --surface: #fffaf3;
   --surface-rgb: 255, 250, 243;
   --surface-warm-1: #eee7dc;   /* view-toggle bg */
@@ -2608,6 +2609,7 @@ body.is-menu-open .app-menu-close {
   --panel: #111c33;
   --panel-rgb: 17, 28, 51;
   --card: #152039;
+  --card-closed: #0d1628;
   --surface: #1a2e50;
   --surface-rgb: 26, 46, 80;
   --surface-warm-1: #1a2a45;
@@ -2653,6 +2655,7 @@ body.is-menu-open .app-menu-close {
     --panel: #111c33;
     --panel-rgb: 17, 28, 51;
     --card: #152039;
+  --card-closed: #0d1628;
     --surface: #1a2e50;
     --surface-rgb: 26, 46, 80;
     --surface-warm-1: #1a2a45;

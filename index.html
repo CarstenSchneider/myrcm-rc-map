@@ -722,8 +722,8 @@
       width: 15px;
       height: 15px;
       border-radius: 999px;
-      background: currentColor;
-      color: #fff;
+      background: #fff;
+      color: var(--host-blue);
       font-size: 11px;
       transform: none;
     }
@@ -736,14 +736,14 @@
       height: 15px;
       border-radius: 999px;
       background: transparent;
-      color: var(--host-blue);
+      color: inherit;
       font-size: 10px;
       line-height: 1;
     }
 
     .layout-prototype .venue-favorite-button:not(.active) .favorite-toggle-icon {
       background: transparent;
-      color: var(--host-blue);
+      color: inherit;
     }
 
     .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
@@ -982,36 +982,37 @@
     }
 
     .layout-prototype .race-card.registration-closed {
-      box-shadow: 0 12px 28px rgba(31, 29, 26, 0.08);
+      background: var(--card-closed);
+      box-shadow: 0 12px 28px rgba(var(--shadow-rgb, 31, 29, 26), 0.08);
     }
 
     .layout-prototype .race-card.registration-closed .race-card-header,
     .layout-prototype .race-card.registration-closed .race-venue,
     .layout-prototype .race-card.registration-closed .race-document-links,
     .layout-prototype .race-card.registration-closed > .race-class-tags {
-      background: var(--line);
+      background: var(--card-closed);
     }
 
     .layout-prototype .race-card.registration-closed .race-date,
     .layout-prototype .race-card.registration-closed .race-name,
     .layout-prototype .race-card.registration-closed .race-registration-count,
     .layout-prototype .race-card.registration-closed .race-venue {
-      color: var(--muted);
+      color: var(--host-blue);
     }
 
     .layout-prototype .race-card.registration-closed .race-document-links .race-link-item,
     .layout-prototype .race-card.registration-closed .race-venue .venue-link,
     .layout-prototype .race-card.registration-closed .race-venue .venue-name-text {
-      color: var(--muted);
+      color: var(--host-blue);
     }
 
     .layout-prototype .race-card.registration-closed .race-document-dot-closed {
-      background: var(--muted) !important;
+      background: var(--host-blue) !important;
     }
 
     .layout-prototype .race-card.registration-closed > .race-class-tags .tag-class {
-      background: var(--muted);
-      color: var(--line);
+      background: var(--host-blue);
+      color: var(--card-closed);
     }
 
     .layout-prototype .race-card.is-clickable:hover,
