@@ -2205,13 +2205,14 @@ function mapPadding() {
 }
 
 // Center a single latlng in the visible map area at the given zoom.
+// Step 1: setView centers the point at the map container center.
+// Step 2: panBy shifts so the point sits at the center of the visible area.
 function panToVisible(latlng, zoom) {
   const { pl, pr, pt, pb } = mapPadding();
-  const offsetX = (pl - pr) / 2;
-  const offsetY = (pt - pb) / 2;
-  const projected = map.project(latlng, zoom);
-  const center = map.unproject(L.point(projected.x - offsetX, projected.y - offsetY), zoom);
-  map.setView(center, zoom, { animate: false });
+  map.setView(latlng, zoom, { animate: false });
+  const dx = Math.round((pl - pr) / 2);  // positive = visible center is right of map center
+  const dy = Math.round((pt - pb) / 2);  // positive = visible center is below map center
+  map.panBy([-dx, -dy], { animate: false });
 }
 
 // Fit multiple latlng bounds in the visible map area.
