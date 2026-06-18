@@ -3419,6 +3419,7 @@ if (raceList) {
 const appMenuPanel   = document.getElementById("appMenuPanel");
 const appMenuOverlay = document.getElementById("appMenuOverlay");
 const appMenuContent = document.getElementById("appMenuContent");
+const appMenuClose   = document.getElementById("appMenuClose");
 const menuButtons    = [
   document.getElementById("appMenuButton"),
   document.getElementById("mobMenuBtn"),
@@ -3495,6 +3496,7 @@ menuButtons.forEach(b => b?.addEventListener("click", () => {
   else openAppMenu();
 }));
 appMenuOverlay?.addEventListener("click", closeAppMenu);
+appMenuClose?.addEventListener("click", closeAppMenu);
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeAppMenu(); });
 
 // Handle footer data-menu-open buttons

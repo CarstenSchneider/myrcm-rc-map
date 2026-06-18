@@ -2522,17 +2522,30 @@ input {
 .mob-menu-btn .icon-close,
 .layout-prototype .topbar .app-menu-button .icon-close { display: none; }
 
-body.is-menu-open .layout-prototype .topbar {
-  z-index: 1600;
-  position: relative;
-}
 body.is-menu-open .mob-menu-btn,
 body.is-menu-open .layout-prototype .topbar .app-menu-button {
   background: var(--accent) !important;
   color: #fff !important;
   box-shadow: none !important;
-  z-index: 1600 !important;
 }
+
+.app-menu-close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.app-menu-close:hover { opacity: 0.85; }
 body.is-menu-open .mob-menu-btn .icon-hamburger,
 body.is-menu-open .layout-prototype .topbar .app-menu-button .icon-hamburger { display: none; }
 body.is-menu-open .mob-menu-btn .icon-close,
