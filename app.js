@@ -2205,14 +2205,23 @@ function mapPadding() {
 }
 
 // Center a single latlng in the visible map area at the given zoom.
-// Step 1: setView centers the point at the map container center.
-// Step 2: panBy shifts so the point sits at the center of the visible area.
+// The map fills the full viewport; topbar and drawer are fixed overlays.
+// setView puts the point at viewport center (W/2, H/2).
+// panBy shifts so the point lands at the center of the unobstructed area.
+//
+// Mobile collapsed: topbar=80px, drawer handle=64px.
+//   Visible center Y = (80 + H-64)/2 = H/2 + 8  → panBy([0, -8])
+// Desktop: race panel=390px right, topbar=80px.
+//   Visible center X = (W-390)/2 = W/2 - 195    → panBy([195, 0])
+//   Visible center Y = (80 + H)/2 = H/2 + 40    → panBy([0, -40])
 function panToVisible(latlng, zoom) {
-  const { pl, pr, pt, pb } = mapPadding();
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
   map.setView(latlng, zoom, { animate: false });
-  const dx = Math.round((pl - pr) / 2);  // positive = visible center is right of map center
-  const dy = Math.round((pt - pb) / 2);  // positive = visible center is below map center
-  map.panBy([-dx, -dy], { animate: false });
+  if (isMobile) {
+    map.panBy([0, -8], { animate: false });
+  } else {
+    map.panBy([195, -40], { animate: false });
+  }
 }
 
 // Fit multiple latlng bounds in the visible map area.
