@@ -27785,12 +27785,15 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": null,
     "classes": [
       "OR8 Expert",
-      "OR8 Hobby",
+      {
+        "name": "OR8 Hobby",
+        "entries": 1
+      },
       {
         "name": "ORE8",
         "entries": 1
