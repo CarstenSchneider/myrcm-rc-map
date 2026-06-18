@@ -2338,10 +2338,14 @@ input {
   background: rgba(255, 250, 243, 0.96);
 }
 
-/* Fix: flex containers with overflow:hidden report 0 intrinsic height to the
-   grid track sizing algorithm, causing cards to collapse. align-self:start
-   lets the card determine its own height instead. */
+/* Fix: .layout-prototype .race-card uses display:flex + overflow:hidden.
+   Flex containers with overflow:hidden report 0 intrinsic height to the
+   grid track sizing algorithm, causing cards to collapse with many items.
+   Switching to display:block gives the card a proper block formatting context
+   so the grid correctly measures its height. overflow:hidden stays for
+   border-radius clipping. align-self:start is kept as a secondary guard. */
 .mob-drawer-list > .race-card {
+  display: block !important;
   align-self: start;
 }
 
