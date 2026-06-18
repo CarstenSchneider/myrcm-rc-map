@@ -1238,6 +1238,62 @@
     </aside>
   </main>
 
+  <!-- Mobile floating elements -->
+  <div class="mob-result-badge" id="mobResultBadge" aria-live="polite"></div>
+
+  <!-- Mobile Bottom Drawer -->
+  <div class="mob-drawer mob-drawer--half" id="mobDrawer" aria-label="Filter und Rennen">
+    <div class="mob-drawer-handle" id="mobDrawerHandle" role="button" aria-label="Schublade öffnen oder schließen" tabindex="0">
+      <div class="mob-drawer-handle-bar"></div>
+    </div>
+
+    <div class="mob-drawer-filters" id="mobDrawerFilters">
+      <div class="mob-filter-row">
+        <div class="mob-filter-range segmented" id="rangeFilterMob" aria-label="Zeitraum">
+          <button class="active" type="button" data-range="2">2 Wo.</button>
+          <button type="button" data-range="4">4 Wo.</button>
+          <button type="button" data-range="all">Alle</button>
+        </div>
+
+        <label class="mob-filter-series">
+          <select id="seriesFilterMob">
+            <option value="all">Alle Serien</option>
+          </select>
+        </label>
+
+        <div class="mob-filter-group" id="favoriteFilterMob" aria-label="Favoritenfilter">
+          <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
+          <button type="button" data-favorite-filter="favorites" aria-pressed="false">
+            <span class="favorite-toggle-icon" aria-hidden="true">★</span>
+            <span>Favoriten</span>
+          </button>
+        </div>
+
+        <div class="mob-filter-group" id="registrationVisibilityFilterMob" aria-label="Nennstatus">
+          <button type="button" data-registration-visibility="all" aria-pressed="false">Alle</button>
+          <button class="active" type="button" data-registration-visibility="open" aria-pressed="true">
+            <span class="race-document-dot" aria-hidden="true"></span>
+            <span>Offen</span>
+          </button>
+        </div>
+      </div>
+
+      <label class="mob-filter-search">
+        <input id="searchInputMob" type="search" placeholder="Suche…" />
+      </label>
+    </div>
+
+    <div class="mob-drawer-list" id="mobRaceList" aria-live="polite"></div>
+
+    <div class="mob-drawer-footer">
+      <a href="impressum-datenschutz.html">Impressum &amp; Datenschutz</a>
+      <span>·</span>
+      <span>Datenquelle:</span>
+      <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer">MyRCM</a>
+      <span>·</span>
+      <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>
+    </div>
+  </div>
 
 <div class="map-footer">
   <a href="impressum-datenschutz.html">Impressum &amp; Datenschutz</a>

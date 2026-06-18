@@ -3051,3 +3051,375 @@ init().catch(error => {
   console.error(error);
   resultLine.textContent = "Fehler beim Laden der Daten.";
 });
+
+
+/* ============================================================
+   Mobile Bottom Drawer
+   ============================================================ */
+
+const mobDrawer       = document.getElementById("mobDrawer");
+const mobDrawerHandle = document.getElementById("mobDrawerHandle");
+const mobRaceList     = document.getElementById("mobRaceList");
+const mobResultBadge  = document.getElementById("mobResultBadge");
+
+const rangeFilterMob               = document.getElementById("rangeFilterMob");
+const seriesFilterMob              = document.getElementById("seriesFilterMob");
+const favoriteFilterMob            = document.getElementById("favoriteFilterMob");
+const registrationVisibilityFilterMob = document.getElementById("registrationVisibilityFilterMob");
+const searchInputMob               = document.getElementById("searchInputMob");
+
+// ── Drawer snap state ──────────────────────────────────────────
+const DRAWER_STATES = ["collapsed", "half", "full"];
+let drawerState = "half";
+
+function setDrawerState(state) {
+  drawerState = state;
+  if (!mobDrawer) return;
+  mobDrawer.classList.remove("mob-drawer--collapsed", "mob-drawer--half", "mob-drawer--full");
+  mobDrawer.classList.add(`mob-drawer--${state}`);
+}
+
+// ── Drag / swipe ───────────────────────────────────────────────
+if (mobDrawer && mobDrawerHandle) {
+  let dragStartY = 0;
+  let dragStartTime = 0;
+  let currentTranslateY = 0;
+  let isDragging = false;
+
+  function getSnapTranslateY(state) {
+    const h = window.innerHeight;
+    if (state === "collapsed") return h - 64;
+    if (state === "half")      return h * 0.50;
+    return 0;
+  }
+
+  function onDragStart(clientY) {
+    isDragging = true;
+    dragStartY = clientY;
+    dragStartTime = Date.now();
+    const transform = getComputedStyle(mobDrawer).transform;
+    const matrix = new DOMMatrix(transform);
+    currentTranslateY = matrix.m42;
+    mobDrawer.classList.add("mob-drawer--dragging");
+  }
+
+  function onDragMove(clientY) {
+    if (!isDragging) return;
+    const delta = clientY - dragStartY;
+    const newY = Math.max(0, Math.min(window.innerHeight - 64, currentTranslateY + delta));
+    mobDrawer.style.transform = `translateY(${newY}px)`;
+  }
+
+  function onDragEnd(clientY) {
+    if (!isDragging) return;
+    isDragging = false;
+    mobDrawer.classList.remove("mob-drawer--dragging");
+    mobDrawer.style.transform = "";
+
+    const delta = clientY - dragStartY;
+    const velocity = delta / Math.max(1, Date.now() - dragStartTime); // px/ms
+    const h = window.innerHeight;
+    const finalY = currentTranslateY + delta;
+
+    // Velocity-based snap: fast swipe → jump state
+    if (Math.abs(velocity) > 0.4) {
+      if (velocity < 0) {
+        // Swipe up → next open state
+        const nextState = drawerState === "collapsed" ? "half"
+                        : drawerState === "half"      ? "full"
+                        : "full";
+        setDrawerState(nextState);
+      } else {
+        // Swipe down → next closed state
+        const nextState = drawerState === "full"      ? "half"
+                        : drawerState === "half"      ? "collapsed"
+                        : "collapsed";
+        setDrawerState(nextState);
+      }
+      return;
+    }
+
+    // Position-based snap
+    const halfY = h * 0.50;
+    const collY = h - 64;
+    if (finalY < halfY * 0.5) {
+      setDrawerState("full");
+    } else if (finalY < (halfY + collY) / 2) {
+      setDrawerState("half");
+    } else {
+      setDrawerState("collapsed");
+    }
+  }
+
+  // Touch events on handle AND drawer header area
+  mobDrawerHandle.addEventListener("touchstart", e => {
+    onDragStart(e.touches[0].clientY);
+  }, { passive: true });
+
+  mobDrawer.addEventListener("touchmove", e => {
+    if (!isDragging) return;
+    // Allow scroll inside list when fully open
+    if (drawerState === "full") {
+      const list = mobRaceList;
+      if (list && list.contains(e.target) && list.scrollTop > 0) return;
+      if (list && list.contains(e.target) && e.touches[0].clientY > dragStartY) return;
+    }
+    e.preventDefault();
+    onDragMove(e.touches[0].clientY);
+  }, { passive: false });
+
+  document.addEventListener("touchend", e => {
+    if (!isDragging) return;
+    onDragEnd(e.changedTouches[0].clientY);
+  }, { passive: true });
+
+  // Keyboard accessibility on handle
+  mobDrawerHandle.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      const next = drawerState === "collapsed" ? "half"
+                 : drawerState === "half"      ? "full"
+                 : "collapsed";
+      setDrawerState(next);
+    }
+    if (e.key === "ArrowUp")   setDrawerState(drawerState === "collapsed" ? "half" : "full");
+    if (e.key === "ArrowDown") setDrawerState(drawerState === "full" ? "half" : "collapsed");
+  });
+}
+
+// ── Sync result badge ──────────────────────────────────────────
+const _origResultLineSetter = Object.getOwnPropertyDescriptor(Node.prototype, "textContent").set;
+
+function syncResultBadge(text) {
+  if (mobResultBadge) mobResultBadge.textContent = text;
+}
+
+// Patch resultLine to mirror text to mobile badge
+if (resultLine) {
+  const observer = new MutationObserver(() => syncResultBadge(resultLine.textContent));
+  observer.observe(resultLine, { childList: true, characterData: true, subtree: true });
+}
+
+// ── Mobile filter state sync ───────────────────────────────────
+function syncMobRangeUi() {
+  if (!rangeFilterMob) return;
+  rangeFilterMob.querySelectorAll("button").forEach(b => {
+    b.classList.toggle("active", b.dataset.range === selectedRange);
+  });
+}
+
+function syncMobFavoriteUi() {
+  if (!favoriteFilterMob) return;
+  favoriteFilterMob.querySelectorAll("button").forEach(b => {
+    const isActive = b.dataset.favoriteFilter === selectedFavoriteFilter;
+    b.classList.toggle("active", isActive);
+    b.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function syncMobRegistrationUi() {
+  if (!registrationVisibilityFilterMob) return;
+  const val = showOpenOnly ? "open" : "all";
+  registrationVisibilityFilterMob.querySelectorAll("button").forEach(b => {
+    const isActive = b.dataset.registrationVisibility === val;
+    b.classList.toggle("active", isActive);
+    b.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+// Call after every state change so mobile UI stays in sync
+const _origUpdateFavoriteFilterUi = updateFavoriteFilterUi;
+
+// Wire up mobile range filter
+if (rangeFilterMob) {
+  rangeFilterMob.addEventListener("click", event => {
+    const button = event.target.closest("button[data-range]");
+    if (!button) return;
+    selectedRange = button.dataset.range;
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    // Sync both UIs
+    rangeFilter.querySelectorAll("button").forEach(b =>
+      b.classList.toggle("active", b.dataset.range === selectedRange));
+    syncMobRangeUi();
+    render();
+  });
+}
+
+// Wire up mobile series filter (also populate it)
+function populateMobSeriesFilter() {
+  if (!seriesFilterMob) return;
+  seriesFilterMob.innerHTML = seriesFilter.innerHTML;
+  seriesFilterMob.value = seriesFilter.value;
+}
+
+if (seriesFilterMob) {
+  seriesFilterMob.addEventListener("change", () => {
+    selectedSeries = seriesFilterMob.value;
+    seriesFilter.value = seriesFilterMob.value;
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    render();
+  });
+}
+
+// Wire up mobile favorite filter
+if (favoriteFilterMob) {
+  favoriteFilterMob.addEventListener("click", event => {
+    const button = event.target.closest("button[data-favorite-filter]");
+    if (!button) return;
+    selectedFavoriteFilter = button.dataset.favoriteFilter === "favorites" ? "favorites" : "all";
+    saveFavoriteFilter(selectedFavoriteFilter);
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    updateFavoriteFilterUi();
+    syncMobFavoriteUi();
+    render();
+  });
+}
+
+// Wire up mobile registration visibility filter
+if (registrationVisibilityFilterMob) {
+  registrationVisibilityFilterMob.addEventListener("click", event => {
+    const button = event.target.closest("button[data-registration-visibility]");
+    if (!button) return;
+    showOpenOnly = button.dataset.registrationVisibility === "open";
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    updateRegistrationVisibilityUi();
+    syncMobRegistrationUi();
+    render();
+  });
+}
+
+// Wire up mobile search
+if (searchInputMob) {
+  searchInputMob.addEventListener("input", () => {
+    searchInput.value = searchInputMob.value;
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    render();
+  });
+}
+
+// ── Mobile race list rendering ─────────────────────────────────
+// renderList renders into desktop raceList. We mirror cards into mobRaceList.
+function syncMobRaceList() {
+  if (!mobRaceList) return;
+  mobRaceList.innerHTML = "";
+  // Clone all children from desktop raceList
+  raceList.childNodes.forEach(node => {
+    mobRaceList.appendChild(node.cloneNode(true));
+  });
+  // Re-attach click/keydown on cloned cards
+  mobRaceList.querySelectorAll(".race-card.is-clickable").forEach(card => {
+    const raceId = card.dataset.raceId;
+    card.addEventListener("click", event => {
+      if (event.target.closest("[data-class-toggle]")) return;
+      if (event.target.closest("[data-favorite-venue-id]")) return;
+      if (event.target.closest("[data-favorite-host-id]")) return;
+      const race = races.find(r => String(r.id) === raceId);
+      if (race) {
+        focusRace(race);
+        setDrawerState("collapsed");
+      }
+    });
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        const race = races.find(r => String(r.id) === raceId);
+        if (race) {
+          focusRace(race);
+          setDrawerState("collapsed");
+        }
+      }
+    });
+  });
+  // Class-pills measurement
+  requestAnimationFrame(() => {
+    mobRaceList.querySelectorAll(".race-card").forEach(fitClassPills);
+  });
+}
+
+// ── Class Pills measurement ────────────────────────────────────
+function fitClassPills(card) {
+  const container = card.querySelector(".race-class-tags");
+  if (!container) return;
+
+  const pills = Array.from(container.querySelectorAll(".tag-class:not(.tag-class-toggle)"));
+  if (!pills.length) return;
+
+  // Remove old overflow button if present
+  const existingMore = container.querySelector(".tag-class-more");
+  if (existingMore) existingMore.remove();
+  pills.forEach(p => { p.style.display = ""; });
+
+  const containerWidth = container.getBoundingClientRect().width;
+  if (!containerWidth) return;
+
+  const gap = 6; // matches CSS gap
+  let usedWidth = 0;
+  let lastVisible = pills.length;
+
+  for (let i = 0; i < pills.length; i++) {
+    const pillWidth = pills[i].getBoundingClientRect().width;
+    if (i > 0) usedWidth += gap;
+    usedWidth += pillWidth;
+
+    // Reserve space for "+N" button if not last pill
+    const remaining = pills.length - i - 1;
+    if (remaining > 0 && usedWidth + gap + 40 > containerWidth) {
+      lastVisible = i;
+      break;
+    }
+  }
+
+  const hiddenCount = pills.length - lastVisible;
+  if (hiddenCount <= 0) return;
+
+  for (let i = lastVisible; i < pills.length; i++) {
+    pills[i].style.display = "none";
+  }
+
+  const moreBtn = document.createElement("button");
+  moreBtn.className = "tag tag-class tag-class-more";
+  moreBtn.type = "button";
+  moreBtn.textContent = `+${hiddenCount} weitere`;
+  moreBtn.addEventListener("click", event => {
+    event.stopPropagation();
+    pills.forEach(p => { p.style.display = ""; });
+    moreBtn.remove();
+  });
+  container.appendChild(moreBtn);
+}
+
+// ── Hook into renderList to sync mobile ───────────────────────
+// Observe desktop raceList for changes and mirror to mobile
+const mobRaceListObserver = new MutationObserver(() => {
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    syncMobRaceList();
+  }
+  syncResultBadge(resultLine.textContent);
+});
+
+if (raceList) {
+  mobRaceListObserver.observe(raceList, { childList: true });
+}
+
+// ── Init mobile state ──────────────────────────────────────────
+// After data loads, sync series select options to mobile
+const _origInit = init;
+// Populate series dropdown after page load
+window.addEventListener("load", () => {
+  setTimeout(populateMobSeriesFilter, 500);
+  // Also observe desktop series filter for option changes
+  if (seriesFilter) {
+    new MutationObserver(populateMobSeriesFilter).observe(seriesFilter, { childList: true });
+  }
+  setDrawerState("half");
+});

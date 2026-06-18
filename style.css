@@ -2139,3 +2139,284 @@ input {
   height: 11px !important;
   background: var(--status-open) !important;
 }
+
+
+/* ============================================================
+   Mobile Bottom Drawer (< 768px)
+   ============================================================ */
+
+/* Hide desktop elements on mobile */
+@media (max-width: 767px) {
+  .layout-prototype .filters-panel,
+  .layout-prototype .race-panel,
+  .map-footer {
+    display: none !important;
+  }
+}
+
+/* Result badge — floats over map top-center */
+.mob-result-badge {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1200;
+  padding: 5px 14px;
+  background: rgba(255,255,255,0.90);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  border: 1px solid rgba(33,55,105,0.12);
+  color: rgba(33,55,105,0.75);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(31,29,26,0.10);
+}
+
+@media (max-width: 767px) {
+  .mob-result-badge {
+    display: block;
+  }
+}
+
+/* Drawer container */
+.mob-drawer {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 24px rgba(31,29,26,0.13);
+  transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+  touch-action: none;
+  /* height covers full viewport when fully open */
+  height: calc(100dvh - 0px);
+}
+
+@media (max-width: 767px) {
+  .mob-drawer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Snap states — controlled via JS class */
+.mob-drawer--collapsed { transform: translateY(calc(100% - 64px)); }
+.mob-drawer--half      { transform: translateY(50%); }
+.mob-drawer--full      { transform: translateY(0px); }
+
+/* Disable transition during active drag */
+.mob-drawer--dragging  { transition: none !important; }
+
+/* Handle */
+.mob-drawer-handle {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  cursor: grab;
+  touch-action: none;
+}
+.mob-drawer-handle:active { cursor: grabbing; }
+
+.mob-drawer-handle-bar {
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(33,55,105,0.18);
+}
+
+/* Filter section */
+.mob-drawer-filters {
+  flex: 0 0 auto;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mob-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Range segmented */
+.mob-filter-range {
+  display: inline-flex;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--pill-bg);
+}
+
+.mob-filter-range button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 11px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.mob-filter-range button.active {
+  background: var(--host-blue);
+  color: #fff;
+}
+
+/* Series select */
+.mob-filter-series {
+  display: inline-flex;
+}
+
+.mob-filter-series select {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23213769' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 32px 6px 14px;
+  cursor: pointer;
+}
+
+/* Favorite / registration toggles */
+.mob-filter-group {
+  display: inline-flex;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--pill-bg);
+}
+
+.mob-filter-group button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 11px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mob-filter-group button.active {
+  background: var(--host-blue);
+  color: #fff;
+}
+
+.mob-filter-group .favorite-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--favorite);
+  color: #fff;
+  font-size: 10px;
+}
+
+.mob-filter-group button.active .favorite-toggle-icon {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+.mob-filter-group .race-document-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--status-open);
+  display: inline-block;
+}
+
+/* Search */
+.mob-filter-search {
+  display: block;
+}
+
+.mob-filter-search input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 16px;
+  outline: none;
+}
+
+.mob-filter-search input:focus {
+  border-color: var(--host-blue);
+}
+
+/* Race list */
+.mob-drawer-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 14px 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  /* Match desktop card grid */
+  align-content: start;
+}
+
+/* Footer */
+.mob-drawer-footer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 14px 16px calc(env(safe-area-inset-bottom, 0px) + 14px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.mob-drawer-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.mob-drawer-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Prevent overscroll on drawer body when fully open */
+@media (max-width: 767px) {
+  body {
+    overflow: hidden;
+  }
+}
