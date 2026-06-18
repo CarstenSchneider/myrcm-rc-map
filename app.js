@@ -1895,9 +1895,10 @@ function raceHostAndVenueAreSame(race) {
 }
 
 function raceVenueMetaHtml(race) {
-  if (!hasMappableVenue(race)) return "";
+  if (!hasMappableVenue(race)) {
+    return `<div class="race-venue race-venue-unknown">${mapPinIconHtml("race-venue-pin")}<span>Ort unbekannt</span></div>`;
+  }
   if (raceHostAndVenueAreSame(race)) return "";
-
   return `<div class="race-venue">${mapPinIconHtml("race-venue-pin")}${raceVenueNameHtml(race)}</div>`;
 }
 
@@ -2189,6 +2190,20 @@ function resetVenueSelection() {
   renderList(filteredRaces());
 }
 
+// Desktop: race panel is 390px wide + 24px right margin = 414px right offset.
+// Topbar floats at top:16px with ~48px height → 80px top padding.
+// Mobile: drawer in half state starts at top:80px + (vh-80)/2 = 40+vh/2.
+// Bottom padding from viewport bottom = vh - (40+vh/2) = vh/2 - 40.
+// Hamburger button: 52px wide + 14px left margin → 66px left padding.
+function fitMapToBounds(bounds, options = {}) {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  const dh = window.innerHeight - 80;
+  const padding = isMobile
+    ? { paddingTopLeft: [66, 20], paddingBottomRight: [20, Math.max(20, Math.round(dh * 0.5 - 20))] }
+    : { paddingTopLeft: [40, 80], paddingBottomRight: [414, 40] };
+  map.fitBounds(bounds, { ...padding, ...options });
+}
+
 function updateMarkers(list, shouldFitBounds = true) {
   markers.forEach(marker => marker.remove());
   markers.clear();
@@ -2402,24 +2417,9 @@ const popupOffset = hasUpcomingRaces
     bounds.push([venue.lat, venue.lng]);
   });
 
-  if (bounds.length === 1) {
-    map.setView(bounds[0], 12);
+  if (shouldFitBounds && bounds.length >= 1) {
+    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined });
   }
-
-if (shouldFitBounds && bounds.length > 1) {
-  const isMobile = window.matchMedia("(max-width: 860px)").matches;
-
-  map.fitBounds(bounds, isMobile
-    ? {
-        paddingTopLeft: [32, 120],
-        paddingBottomRight: [32, 360]
-      }
-    : {
-        paddingTopLeft: [40, 40],
-        paddingBottomRight: [180, 40]
-      }
-  );
-}
 }
 
 function scrollToRaceCard(raceId) {
@@ -2472,7 +2472,7 @@ function focusRace(race) {
   renderList(venueList);
   resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
 
-  map.setView([venue.lat, venue.lng], 12);
+  fitMapToBounds([[venue.lat, venue.lng]], { maxZoom: 12 });
 
   const marker = markers.get(venue.id);
   if (marker) {
@@ -2510,13 +2510,6 @@ function renderList(list) {
 
         <div class="race-tags race-series-tags">
           ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
-          ${
-            !hasMappableVenue(race)
-              ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
-              : !hasVerifiedVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
-                : ""
-          }
         </div>
       </div>
       ${raceVenueMetaHtml(race)}

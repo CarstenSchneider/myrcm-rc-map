@@ -213,6 +213,11 @@ input {
   color: var(--muted);
 }
 
+.race-venue-unknown {
+  color: rgba(31, 29, 26, 0.45);
+  font-size: 13px;
+}
+
 .race-tags {
   display: flex;
   flex-wrap: wrap;
