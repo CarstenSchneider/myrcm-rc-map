@@ -1160,6 +1160,41 @@
       background: #ebebeb;
       color: var(--host-blue);
     }
+
+    /* ── Mobile drawer — higher specificity beats desktop topbar rules ──────
+       .mob-drawer adds a third class, pushing specificity from 0,2,x to 0,3,x
+       so these rules win over all .layout-prototype .topbar overrides above.  */
+    .mob-drawer .mob-drawer-filters .topbar {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 10px 14px 12px;
+      gap: 8px;
+      row-gap: 8px;
+      min-height: 0;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-range,
+    .mob-drawer .mob-drawer-filters .topbar-series,
+    .mob-drawer .mob-drawer-filters .topbar-favorites,
+    .mob-drawer .mob-drawer-filters .topbar-registration,
+    .mob-drawer .mob-drawer-filters .topbar-search,
+    .mob-drawer .mob-drawer-filters .topbar .filter-field-search {
+      order: unset !important;
+      flex: 0 0 auto;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-search {
+      flex: 1 1 180px;
+      min-width: 0;
+      max-width: none;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-series {
+      flex: 1 1 120px;
+      min-width: 0;
+      max-width: none;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-series select {
+      width: 100%;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -1250,49 +1285,8 @@
       <div class="mob-drawer-handle-bar"></div>
     </div>
 
-    <div class="mob-drawer-filters" id="mobDrawerFilters">
-      <!-- Row 1: Range + Search -->
-      <div class="mob-filter-row mob-filter-row-top">
-        <div class="mob-filter-range" id="rangeFilterMob" aria-label="Zeitraum">
-          <button class="active" type="button" data-range="2">2 Wochen</button>
-          <button type="button" data-range="4">4 Wochen</button>
-          <button type="button" data-range="all">Alle</button>
-        </div>
-
-        <label class="mob-filter-search">
-          <input id="searchInputMob" type="search" placeholder="Suche…" />
-          <span class="mob-search-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15 L20 20"/>
-            </svg>
-          </span>
-        </label>
-      </div>
-
-      <!-- Row 2: Favorites + Registration + Series -->
-      <div class="mob-filter-row mob-filter-row-bottom">
-        <div class="mob-filter-pills" id="favoriteFilterMob" aria-label="Favoritenfilter">
-          <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
-          <button type="button" data-favorite-filter="favorites" aria-pressed="false">
-            <span class="favorite-toggle-icon" aria-hidden="true">★</span>
-            <span>Favoriten</span>
-          </button>
-        </div>
-
-        <div class="mob-filter-pills" id="registrationVisibilityFilterMob" aria-label="Nennstatus">
-          <button type="button" data-registration-visibility="all" aria-pressed="false">Alle</button>
-          <button class="active" type="button" data-registration-visibility="open" aria-pressed="true">
-            <span class="race-document-dot" aria-hidden="true"></span>
-            <span>Offen</span>
-          </button>
-        </div>
-
-        <label class="mob-filter-series">
-          <select id="seriesFilterMob">
-            <option value="all">Alle Serien</option>
-          </select>
-        </label>
-      </div>
+    <div class="mob-drawer-filters" id="mobFilterMount">
+      <!-- header.topbar is moved here by JS on mobile (Versuch 3) -->
     </div>
 
     <div class="mob-drawer-list" id="mobRaceList" aria-live="polite"></div>
