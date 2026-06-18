@@ -2237,12 +2237,20 @@ function fitMapToBounds(bounds, options = {}) {
     });
     return;
   }
-  // Desktop visible area: x=[0, W-414], y=[80, H]. Symmetric padding: (207, 40).
+  // Desktop visible area: x=[0, W-414], y=[80, H].
+  // getBoundsZoom with symmetric padding (207,40) matches the visible area size.
+  // Compute bounds pixel center directly (geographic center is wrong in Mercator).
+  // One setView shifts bounds pixel center to visible area center (W/2-207, H/2+40).
   const lBounds = L.latLngBounds(bounds);
   let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
   if (options.maxZoom !== undefined) zoom = Math.min(zoom, options.maxZoom);
   zoom = Math.max(zoom, map.getMinZoom() || 0);
-  panToVisible(lBounds.getCenter(), zoom);
+  const nwPx = map.project(lBounds.getNorthWest(), zoom);
+  const sePx = map.project(lBounds.getSouthEast(), zoom);
+  const cPx = nwPx.add(sePx).divideBy(2);
+  // Shift: bounds center should appear at (W/2-207, H/2+40) → map center = cPx+(207,-40)
+  const newCenterPx = L.point(cPx.x + 207, cPx.y - 40);
+  map.setView(map.unproject(newCenterPx, zoom), zoom, { animate: false });
 }
 
 function updateMarkers(list, shouldFitBounds = true) {
