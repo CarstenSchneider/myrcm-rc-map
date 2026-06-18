@@ -795,10 +795,6 @@ function registrationStatusHtml(race) {
 }
 
 
-function statusDetailsHtml(race) {
-  return "";
-}
-
 function hasActiveRegistration(venueRaces) {
   return venueRaces.some(isRegistrationActive);
 }
@@ -911,13 +907,6 @@ function markerScaleForRegistrationCount(count) {
   return 1.75;
 }
 
-function markerColorForRegistrationCount(count) {
-  return avalonBlue;
-}
-
-function markerFavoriteColorForRegistrationCount(count) {
-  return avalonGold;
-}
 
 function ensureRegistrationStatusStyles() {
   if (document.getElementById("registration-status-styles")) return;
@@ -1729,7 +1718,7 @@ function googleMapsRouteUrl(venue) {
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
   const raceLine = venueRaces.length
-    ? `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}`
+    ? `${venueRaces.length} ${"Rennen"}`
     : "Keine kommenden Rennen";
 
   const lastRaceHtml =
@@ -1803,9 +1792,9 @@ function updateMarkers(list, shouldFitBounds = true) {
     const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
 let markerColor = isFavoriteVenue
-  ? markerFavoriteColorForRegistrationCount(registrationTotal)
+  ? avalonGold
   : hasActiveRegistration(venueRaces)
-    ? markerColorForRegistrationCount(registrationTotal)
+    ? avalonBlue
     : "rgba(31, 29, 26, 0.55)";
 
 if (!hasUpcomingRaces && isFavoriteVenue) {
@@ -1920,7 +1909,7 @@ const popupOffset = hasUpcomingRaces
 
         if (hasUpcomingRaces) {
           renderList(venueRaces);
-          resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+          resultLine.textContent = `${venueRaces.length} ${"Rennen"} an dieser Strecke`;
         } else {
           renderList([]);
           resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
@@ -1961,7 +1950,7 @@ const popupOffset = hasUpcomingRaces
 
       if (hasUpcomingRaces) {
         renderList(venueRaces);
-        resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+        resultLine.textContent = `${venueRaces.length} ${"Rennen"} an dieser Strecke`;
       } else {
         renderList([]);
         resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
@@ -2047,7 +2036,7 @@ function focusRace(race) {
   const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
 
   renderList(venueList);
-  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+  resultLine.textContent = `${venueList.length} ${"Rennen"} an dieser Strecke`;
 
   map.setView([venue.lat, venue.lng], 12);
 
@@ -2058,7 +2047,7 @@ function focusRace(race) {
   }
 }
 function renderList(list) {
-  resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+  resultLine.textContent = `${list.length} ${"Rennen"} gefunden`;
   raceList.innerHTML = "";
 
   if (!list.length) {
@@ -2124,7 +2113,6 @@ function renderList(list) {
           <div class="race-host">${raceHostNameHtml(race)}</div>
           ${raceVenueMetaHtml(race)}
           ${documentLinksHtml(race)}
-          ${statusDetailsHtml(race)}
         </div>
       </div>
 
@@ -2188,7 +2176,7 @@ function toggleClassList(raceId) {
   if (activeVenueId) {
     const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
     renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    resultLine.textContent = `${venueList.length} ${"Rennen"} an dieser Strecke`;
     return;
   }
 
@@ -2217,10 +2205,10 @@ document.addEventListener("click", event => {
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
     renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    resultLine.textContent = `${venueList.length} ${"Rennen"} an dieser Strecke`;
   } else {
     renderList(list);
-    resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+    resultLine.textContent = `${list.length} ${"Rennen"} gefunden`;
   }
 });
 
@@ -2304,37 +2292,6 @@ function populateSeries() {
   appendGroup("Weitere Serien", groups.other);
 }
 
-function updateMarkerAnimationDelays() {
-  const markerItems = Array.from(markers.values())
-    .map(marker => ({
-      marker,
-      y: map.latLngToContainerPoint(marker.getLatLng()).y
-    }))
-    .filter(item => Number.isFinite(item.y));
-
-  if (!markerItems.length) return;
-
-  const minY = Math.min(...markerItems.map(item => item.y));
-  const maxY = Math.max(...markerItems.map(item => item.y));
-  const spanY = Math.max(1, maxY - minY);
-
-  const shuffledItems = markerItems
-    .map(item => ({
-      ...item,
-      sortValue: Math.random()
-    }))
-    .sort((a, b) => a.sortValue - b.sortValue);
-
-  shuffledItems.forEach((item, index) => {
-    const visual = item.marker.getElement()?.querySelector(".map-marker-visual");
-    if (!visual) return;
-
-    const delay = Math.round(index * 5);
-
-    visual.style.setProperty("--marker-delay", `${delay}ms`);
-  });
-}
-
 function revealMap() {
   document.getElementById("map")?.classList.add("map-ready");
 }
@@ -2364,7 +2321,7 @@ function render() {
     if (venueList.length) {
       activeRaceId = null;
       renderList(venueList);
-      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+      resultLine.textContent = `${venueList.length} ${"Rennen"} an dieser Strecke`;
     } else {
       const venue = venues.find(item => item.id === activeVenueId);
       const latestPastRace = venue ? latestPastRaceForVenue(venue) : null;
