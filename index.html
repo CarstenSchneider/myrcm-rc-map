@@ -32,7 +32,7 @@
     }
 
     .layout-prototype .topbar::before {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(var(--panel-rgb), 0.94);
       box-shadow: 0 8px 22px rgba(31, 29, 26, 0.07);
     }
 
@@ -118,7 +118,7 @@
       padding: 0;
       border: 0;
       border-radius: 999px;
-      background: #ebebeb;
+      background: var(--pill-bg);
     }
 
     .layout-prototype .topbar .segmented button,
@@ -181,7 +181,7 @@
       min-height: 44px;
       border: 0;
       border-radius: 999px;
-      background-color: #ebebeb;
+      background-color: var(--pill-bg);
       color: var(--accent);
       font-family: inherit;
       font-size: 14px;
@@ -204,7 +204,7 @@
       width: 18px;
       height: 18px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.86);
+      background: rgba(var(--panel-rgb), 0.86);
       color: var(--favorite);
       font-size: 11px;
       line-height: 1;
@@ -330,7 +330,7 @@
 
     .layout-prototype .topbar::before {
       inset: 0 0 0 var(--topbar-main-offset);
-      background: #fff;
+      background: var(--card);
       box-shadow: 0 7px 18px rgba(31, 29, 26, 0.08);
     }
 
@@ -338,7 +338,7 @@
       flex: 0 0 40px;
       width: 40px;
       height: 40px;
-      background: #fff !important;
+      background: var(--panel) !important;
       color: var(--host-blue);
       font-weight: 400 !important;
       box-shadow: 0 6px 16px rgba(31, 29, 26, 0.08);
@@ -378,7 +378,7 @@
       padding: 0;
       border: 0;
       border-radius: 999px;
-      background: #ebebeb;
+      background: var(--pill-bg);
       overflow: hidden;
       position: relative;
       isolation: isolate;
@@ -470,7 +470,7 @@
     .layout-prototype .topbar input {
       min-height: 30px;
       height: 30px;
-      background-color: #ebebeb;
+      background-color: var(--pill-bg);
       color: var(--host-blue);
       font-size: 13px;
       font-weight: 400 !important;
@@ -522,7 +522,7 @@
       height: 15px;
       margin: 0;
       border-radius: 999px;
-      background: #fff;
+      background: var(--card);
       color: var(--favorite);
       font-size: 11px;
       line-height: 1;
@@ -774,7 +774,7 @@
 
     .layout-prototype .race-card-header {
       padding: 14px 18px 5px;
-      background: #fff;
+      background: var(--card);
     }
 
     .layout-prototype .race-date {
@@ -825,7 +825,7 @@
       gap: 5px;
       margin: 0;
       padding: 0 18px 5px;
-      background: #fff;
+      background: var(--card);
       color: var(--host-blue);
       font-size: 11px;
       font-weight: 700;
@@ -860,7 +860,7 @@
       row-gap: 6px;
       margin: 0;
       padding: 6px 18px 10px;
-      background: #fff;
+      background: var(--card);
     }
 
     .layout-prototype .race-document-links .race-link-item {
@@ -915,7 +915,7 @@
       padding: 0 18px 16px;
       border-top: 0;
       border-radius: 0 0 22px 22px;
-      background: #fff;
+      background: var(--card);
     }
 
     .layout-prototype .race-card > .race-class-tags .tag-class {
@@ -923,7 +923,7 @@
       padding: 0 10px;
       border: 0;
       border-radius: 999px;
-      background: #e4e4e4;
+      background: var(--surface-neutral);
       color: var(--host-blue);
       font-size: 10px;
       font-weight: 400;
@@ -968,7 +968,7 @@
     }
 
     .layout-prototype .race-card > .race-class-tags .tag-class-toggle {
-      background: #d8d8d8;
+      background: var(--surface-neutral);
       color: var(--host-blue);
       cursor: pointer;
       font-weight: 700;
@@ -989,29 +989,29 @@
     .layout-prototype .race-card.registration-closed .race-venue,
     .layout-prototype .race-card.registration-closed .race-document-links,
     .layout-prototype .race-card.registration-closed > .race-class-tags {
-      background: #DDDDDD;
+      background: var(--line);
     }
 
     .layout-prototype .race-card.registration-closed .race-date,
     .layout-prototype .race-card.registration-closed .race-name,
     .layout-prototype .race-card.registration-closed .race-registration-count,
     .layout-prototype .race-card.registration-closed .race-venue {
-      color: #716F6F;
+      color: var(--muted);
     }
 
     .layout-prototype .race-card.registration-closed .race-document-links .race-link-item,
     .layout-prototype .race-card.registration-closed .race-venue .venue-link,
     .layout-prototype .race-card.registration-closed .race-venue .venue-name-text {
-      color: #716F6F;
+      color: var(--muted);
     }
 
     .layout-prototype .race-card.registration-closed .race-document-dot-closed {
-      background: #716F6F !important;
+      background: var(--muted) !important;
     }
 
     .layout-prototype .race-card.registration-closed > .race-class-tags .tag-class {
-      background: #716F6F;
-      color: #DDDDDD;
+      background: var(--muted);
+      color: var(--line);
     }
 
     .layout-prototype .race-card.is-clickable:hover,
@@ -1103,7 +1103,7 @@
       flex: 0 0 auto;
       margin-left: auto;
       padding-left: 12px;
-      color: #aaa;
+      color: var(--muted-light);
       font-size: 11px;
       font-weight: 400;
       line-height: 1.25;
@@ -1119,7 +1119,7 @@
 
     /* class chips = #ebebeb */
     .layout-prototype .race-card > .race-class-tags .tag-class {
-      background: #ebebeb;
+      background: var(--pill-bg);
       color: var(--host-blue);
     }
 

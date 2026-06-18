@@ -27,23 +27,21 @@ L.control.zoom({
 }).addTo(map);
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
-const rcRaceMapColors = {
-  water: "#ffffff",
-  land: "#f4f4f4",
-  settlement: "#ebebeb",
-  landcover: "#f4f4f4",
-  building: "#f4f4f4",
-  road: "#d4d4d4",
-  boundary: "#d8d8d8",
-  label: "#716F6F",
-  labelHalo: "#ebebeb",
-  marker: "#213769",
-  markerClosed: "#716F6F",
-  favorite: "#C8B090",
-  statusOpen: "#73FF60",
-  statusClosed: "#E51354",
-  statusUpcoming: "#FFA700"
+const rcRaceMapColorsLight = {
+  water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",
+  landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4",
+  boundary: "#d8d8d8", label: "#716F6F", labelHalo: "#ebebeb",
+  marker: "#213769", markerClosed: "#716F6F", favorite: "#C8B090",
+  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
 };
+const rcRaceMapColorsDark = {
+  water: "#0c1829", land: "#0f1e35", settlement: "#132442",
+  landcover: "#0e1c32", building: "#132442", road: "#1e3a5f",
+  boundary: "#1e3a5f", label: "#6a9fd8", labelHalo: "#0f1e35",
+  marker: "#5b8fd4", markerClosed: "#4f6180", favorite: "#c8b090",
+  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
+};
+const rcRaceMapColors = { ...rcRaceMapColorsLight };
 
 const raceMapMarkerViewBox = {
   width: 477,
@@ -94,8 +92,18 @@ function mapPinIconHtml(className) {
   return `<svg class="${className}" viewBox="0 0 ${mapPinViewBox.width} ${mapPinViewBox.height}" aria-hidden="true" focusable="false"><path fill="currentColor" d="${mapPinPath}"/></svg>`;
 }
 
+const _initDark = (() => {
+  const s = localStorage.getItem("rcracemap-theme") || "auto";
+  if (s === "dark") return true;
+  if (s === "light") return false;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+})();
+if (_initDark) Object.assign(rcRaceMapColors, rcRaceMapColorsDark);
+
 const baseMapLayer = L.maplibreGL({
-  style: `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
+  style: _initDark
+    ? `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${stadiaApiKey}`
+    : `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
   attribution:
     '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
     '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
@@ -3418,10 +3426,28 @@ if (raceList) {
 // ── Theme ─────────────────────────────────────────────────────
 const THEME_KEY = "rcracemap-theme";
 
+function isDarkActive() {
+  const saved = localStorage.getItem(THEME_KEY) || "auto";
+  if (saved === "dark") return true;
+  if (saved === "light") return false;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
 function applyTheme(theme) {
   document.documentElement.classList.remove("theme-light", "theme-dark");
   if (theme === "light") document.documentElement.classList.add("theme-light");
   if (theme === "dark")  document.documentElement.classList.add("theme-dark");
+
+  const dark = isDarkActive();
+  Object.assign(rcRaceMapColors, dark ? rcRaceMapColorsDark : rcRaceMapColorsLight);
+
+  const mlMap = baseMapLayer?.getMaplibreMap?.();
+  if (mlMap?.isStyleLoaded?.()) {
+    const url = dark
+      ? `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${stadiaApiKey}`
+      : `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`;
+    mlMap.setStyle(url);
+  }
 }
 
 function setTheme(theme) {
