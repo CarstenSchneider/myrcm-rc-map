@@ -3079,7 +3079,8 @@ function setDrawerState(state) {
   mobDrawer.classList.add(`mob-drawer--${state}`);
 }
 
-// ── Drag / swipe ───────────────────────────────────────────────
+// ── Drag / swipe (touch-only, mobile breakpoint guard) ────────
+const mobMq = window.matchMedia("(max-width: 767px)");
 if (mobDrawer && mobDrawerHandle) {
   let dragStartY = 0;
   let dragStartTime = 0;
@@ -3151,14 +3152,14 @@ if (mobDrawer && mobDrawerHandle) {
     }
   }
 
-  // Touch events on handle AND drawer header area
+  // Touch events — only active on mobile breakpoint
   mobDrawerHandle.addEventListener("touchstart", e => {
+    if (!mobMq.matches) return;
     onDragStart(e.touches[0].clientY);
   }, { passive: true });
 
   mobDrawer.addEventListener("touchmove", e => {
-    if (!isDragging) return;
-    // Allow scroll inside list when fully open
+    if (!isDragging || !mobMq.matches) return;
     if (drawerState === "full") {
       const list = mobRaceList;
       if (list && list.contains(e.target) && list.scrollTop > 0) return;
@@ -3169,7 +3170,7 @@ if (mobDrawer && mobDrawerHandle) {
   }, { passive: false });
 
   document.addEventListener("touchend", e => {
-    if (!isDragging) return;
+    if (!isDragging || !mobMq.matches) return;
     onDragEnd(e.changedTouches[0].clientY);
   }, { passive: true });
 

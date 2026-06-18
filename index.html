@@ -1239,29 +1239,39 @@
   </main>
 
   <!-- Mobile floating elements -->
+  <button class="mob-menu-btn" id="mobMenuBtn" type="button" aria-label="Menü öffnen">
+    <span aria-hidden="true"></span>
+  </button>
   <div class="mob-result-badge" id="mobResultBadge" aria-live="polite"></div>
 
-  <!-- Mobile Bottom Drawer -->
-  <div class="mob-drawer mob-drawer--half" id="mobDrawer" aria-label="Filter und Rennen">
+  <!-- Mobile Bottom Drawer (layout-prototype needed for card CSS) -->
+  <div class="mob-drawer mob-drawer--half layout-prototype" id="mobDrawer" aria-label="Filter und Rennen">
     <div class="mob-drawer-handle" id="mobDrawerHandle" role="button" aria-label="Schublade öffnen oder schließen" tabindex="0">
       <div class="mob-drawer-handle-bar"></div>
     </div>
 
     <div class="mob-drawer-filters" id="mobDrawerFilters">
-      <div class="mob-filter-row">
-        <div class="mob-filter-range segmented" id="rangeFilterMob" aria-label="Zeitraum">
-          <button class="active" type="button" data-range="2">2 Wo.</button>
-          <button type="button" data-range="4">4 Wo.</button>
+      <!-- Row 1: Range + Search -->
+      <div class="mob-filter-row mob-filter-row-top">
+        <div class="mob-filter-range" id="rangeFilterMob" aria-label="Zeitraum">
+          <button class="active" type="button" data-range="2">2 Wochen</button>
+          <button type="button" data-range="4">4 Wochen</button>
           <button type="button" data-range="all">Alle</button>
         </div>
 
-        <label class="mob-filter-series">
-          <select id="seriesFilterMob">
-            <option value="all">Alle Serien</option>
-          </select>
+        <label class="mob-filter-search">
+          <input id="searchInputMob" type="search" placeholder="Suche…" />
+          <span class="mob-search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15 L20 20"/>
+            </svg>
+          </span>
         </label>
+      </div>
 
-        <div class="mob-filter-group" id="favoriteFilterMob" aria-label="Favoritenfilter">
+      <!-- Row 2: Favorites + Registration + Series -->
+      <div class="mob-filter-row mob-filter-row-bottom">
+        <div class="mob-filter-pills" id="favoriteFilterMob" aria-label="Favoritenfilter">
           <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
           <button type="button" data-favorite-filter="favorites" aria-pressed="false">
             <span class="favorite-toggle-icon" aria-hidden="true">★</span>
@@ -1269,18 +1279,20 @@
           </button>
         </div>
 
-        <div class="mob-filter-group" id="registrationVisibilityFilterMob" aria-label="Nennstatus">
+        <div class="mob-filter-pills" id="registrationVisibilityFilterMob" aria-label="Nennstatus">
           <button type="button" data-registration-visibility="all" aria-pressed="false">Alle</button>
           <button class="active" type="button" data-registration-visibility="open" aria-pressed="true">
             <span class="race-document-dot" aria-hidden="true"></span>
             <span>Offen</span>
           </button>
         </div>
-      </div>
 
-      <label class="mob-filter-search">
-        <input id="searchInputMob" type="search" placeholder="Suche…" />
-      </label>
+        <label class="mob-filter-series">
+          <select id="seriesFilterMob">
+            <option value="all">Alle Serien</option>
+          </select>
+        </label>
+      </div>
     </div>
 
     <div class="mob-drawer-list" id="mobRaceList" aria-live="polite"></div>
