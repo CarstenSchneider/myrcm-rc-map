@@ -30,9 +30,9 @@ L.control.zoom({
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColors = {
   water: "#ffffff",
-  land: "#ebebeb",
-  landcover: "#ebebeb",
-  building: "#ebebeb",
+  land: "#efefef",
+  landcover: "#efefef",
+  building: "#efefef",
   road: "#e0e0e0",
   boundary: "#d8d8d8",
   label: "#716F6F",

@@ -460,9 +460,7 @@ input {
   width: 390px;
   max-width: calc(100vw - 48px);
   min-width: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
   padding: 22px;
   background: rgba(255, 250, 243, 0.96);
   border: 1px solid rgba(222, 214, 202, 0.92);
@@ -482,9 +480,6 @@ input {
 .layout-prototype .race-grid,
 .layout-prototype.layout-list .race-grid {
   grid-template-columns: 1fr;
-  overflow-y: auto;
-  flex: 1 1 auto;
-  min-height: 0;
 }
 
 .layout-prototype.layout-list .filters {
