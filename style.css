@@ -2220,7 +2220,9 @@ input {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  /* top: 80px so translateY(0) = full-open with button visible above */
+  top: 80px;
+  height: calc(100dvh - 80px);
   z-index: 1100;
   background: #fff;
   border-radius: 20px 20px 0 0;
@@ -2228,8 +2230,6 @@ input {
   transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
   touch-action: none;
-  /* 80px = translateY of full-open state — keeps footer visible */
-  height: calc(100dvh - 80px);
 }
 
 @media (max-width: 767px) {
@@ -2239,11 +2239,11 @@ input {
   }
 }
 
-/* Snap states — controlled via JS class */
+/* Snap states — controlled via JS class.
+   Natural position already at top:80px so full-open = translateY(0). */
 .mob-drawer--collapsed { transform: translateY(calc(100% - 64px)); }
 .mob-drawer--half      { transform: translateY(50%); }
-/* 80px = button top(14) + height(52) + gap(14) — leaves space below floating button */
-.mob-drawer--full      { transform: translateY(80px); }
+.mob-drawer--full      { transform: translateY(0); }
 
 /* Disable transition during active drag */
 .mob-drawer--dragging  { transition: none !important; }

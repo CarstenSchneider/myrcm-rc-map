@@ -3084,10 +3084,10 @@ if (mobDrawer && mobDrawerHandle) {
   let isDragging = false;
 
   function getSnapTranslateY(state) {
-    const h = window.innerHeight;
-    if (state === "collapsed") return h - 64;
-    if (state === "half")      return h * 0.50;
-    return 80; // Stop below floating menu button (14px top + 52px height + 14px gap)
+    const dh = window.innerHeight - 80; // drawer height = 100dvh - 80px (top offset)
+    if (state === "collapsed") return dh - 64;
+    if (state === "half")      return dh * 0.50;
+    return 0; // full-open: drawer already at top:80px, no translation needed
   }
 
   function onDragStart(clientY) {
@@ -3103,7 +3103,8 @@ if (mobDrawer && mobDrawerHandle) {
   function onDragMove(clientY) {
     if (!isDragging) return;
     const delta = clientY - dragStartY;
-    const newY = Math.max(80, Math.min(window.innerHeight - 64, currentTranslateY + delta));
+    const dh = window.innerHeight - 80;
+    const newY = Math.max(0, Math.min(dh - 64, currentTranslateY + delta));
     mobDrawer.style.transform = `translateY(${newY}px)`;
   }
 
@@ -3136,9 +3137,10 @@ if (mobDrawer && mobDrawerHandle) {
       return;
     }
 
-    // Position-based snap
-    const halfY = h * 0.50;
-    const collY = h - 64;
+    // Position-based snap (translateY relative to drawer top, which is already at 80px)
+    const dh2 = h - 80;
+    const halfY = dh2 * 0.50;
+    const collY = dh2 - 64;
     if (finalY < halfY * 0.5) {
       setDrawerState("full");
     } else if (finalY < (halfY + collY) / 2) {
