@@ -2330,23 +2330,18 @@ input {
   flex: 1 1 auto;
   overflow-y: auto;
   padding: 14px 12px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-  align-content: start;
   /* Same warm background as desktop race-panel so white card sections are visible */
   background: rgba(255, 250, 243, 0.96);
 }
 
-/* Fix: .layout-prototype .race-card uses display:flex + overflow:hidden.
-   Flex containers with overflow:hidden report 0 intrinsic height to the
-   grid track sizing algorithm, causing cards to collapse with many items.
-   Switching to display:block gives the card a proper block formatting context
-   so the grid correctly measures its height. overflow:hidden stays for
-   border-radius clipping. align-self:start is kept as a secondary guard. */
+/* Cards must not grow/shrink — let each card size itself from content.
+   flex:none prevents the flex container from stretching cards to fill space,
+   which would trigger the same height-collapse as the grid approach. */
 .mob-drawer-list > .race-card {
-  display: block !important;
-  align-self: start;
+  flex: none;
 }
 
 /* Footer */
