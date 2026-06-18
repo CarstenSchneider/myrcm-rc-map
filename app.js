@@ -2198,8 +2198,11 @@ function resetVenueSelection() {
 function fitMapToBounds(bounds, options = {}) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
   const dh = window.innerHeight - 80;
+  const mobilePaddingBottom = drawerState === "collapsed"
+    ? 84  // 64px handle + 20px margin
+    : Math.max(20, Math.round(dh * 0.5 - 20));
   const padding = isMobile
-    ? { paddingTopLeft: [66, 20], paddingBottomRight: [20, Math.max(20, Math.round(dh * 0.5 - 20))] }
+    ? { paddingTopLeft: [66, 20], paddingBottomRight: [20, mobilePaddingBottom] }
     : { paddingTopLeft: [40, 80], paddingBottomRight: [414, 40] };
   map.fitBounds(bounds, { ...padding, ...options });
 }
@@ -3266,8 +3269,8 @@ function syncMobRaceList() {
       if (event.target.closest("[data-favorite-host-id]")) return;
       const race = races.find(r => String(r.id) === raceId);
       if (race) {
-        focusRace(race);
         setDrawerState("collapsed");
+        focusRace(race);
       }
     });
     card.addEventListener("keydown", event => {
@@ -3275,8 +3278,8 @@ function syncMobRaceList() {
         event.preventDefault();
         const race = races.find(r => String(r.id) === raceId);
         if (race) {
-          focusRace(race);
           setDrawerState("collapsed");
+          focusRace(race);
         }
       }
     });
