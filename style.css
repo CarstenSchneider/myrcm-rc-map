@@ -2516,37 +2516,36 @@ input {
 }
 .footer-menu-link:hover { text-decoration: underline; }
 
-/* Hamburger / Close icon toggle */
-.mob-menu-btn .icon-hamburger,
-.layout-prototype .topbar .app-menu-button .icon-hamburger { display: block; }
-.mob-menu-btn .icon-close,
-.layout-prototype .topbar .app-menu-button .icon-close { display: none; }
-
 body.is-menu-open .mob-menu-btn,
 body.is-menu-open .layout-prototype .topbar .app-menu-button {
-  background: var(--accent) !important;
-  color: #fff !important;
-  box-shadow: none !important;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .app-menu-close {
-  position: absolute;
+  position: fixed;
   top: 14px;
   left: 14px;
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
   border: 0;
   background: var(--accent);
   color: #fff;
   cursor: pointer;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  z-index: 1600;
 }
 .app-menu-close:hover { opacity: 0.85; }
-body.is-menu-open .mob-menu-btn .icon-hamburger,
-body.is-menu-open .layout-prototype .topbar .app-menu-button .icon-hamburger { display: none; }
-body.is-menu-open .mob-menu-btn .icon-close,
-body.is-menu-open .layout-prototype .topbar .app-menu-button .icon-close { display: block; }
+body.is-menu-open .app-menu-close { display: flex; }
+
+@media (min-width: 861px) {
+  .app-menu-close {
+    top: 16px;
+    left: 16px;
+    width: 52px;
+    height: 52px;
+  }
+}
