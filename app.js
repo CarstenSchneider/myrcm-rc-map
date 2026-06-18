@@ -3203,7 +3203,18 @@ if (mobDrawer && mobDrawerHandle) {
 
 // ── Sync result badge ──────────────────────────────────────────
 function syncResultBadge(text) {
-  if (mobResultBadge) mobResultBadge.textContent = text;
+  if (!mobResultBadge) return;
+  const idx = text.indexOf(' | ');
+  if (idx !== -1) {
+    mobResultBadge.innerHTML =
+      escHtml(text.slice(0, idx)) + '<br>' + escHtml(text.slice(idx + 3));
+  } else {
+    mobResultBadge.textContent = text;
+  }
+}
+
+function escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 // Patch resultLine to mirror text to mobile badge

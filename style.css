@@ -2191,18 +2191,22 @@ input {
   box-shadow: 0 6.5px 0 currentColor, 0 13px 0 currentColor;
 }
 
-/* Result badge — plain text, top-center over map */
+/* Result badge — two-line, top-right over map */
 .mob-result-badge {
   display: none;
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 14px;
+  right: 14px;
+  left: auto;
+  transform: none;
   z-index: 1200;
   color: rgba(33,55,105,0.70);
   font-size: 12px;
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: right;
+  /* don't overlap hamburger: 52px btn + 14px left-margin + 8px gap */
+  max-width: calc(100% - 88px);
   pointer-events: none;
   text-shadow: 0 1px 3px rgba(255,255,255,0.8);
 }
@@ -2224,8 +2228,8 @@ input {
   transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
   touch-action: none;
-  /* height covers full viewport when fully open */
-  height: calc(100dvh - 0px);
+  /* 80px = translateY of full-open state — keeps footer visible */
+  height: calc(100dvh - 80px);
 }
 
 @media (max-width: 767px) {
@@ -2333,8 +2337,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  /* Same warm background as desktop race-panel so white card sections are visible */
-  background: rgba(255, 250, 243, 0.96);
+  background: var(--bg);
 }
 
 /* Cards must not grow/shrink — let each card size itself from content.
