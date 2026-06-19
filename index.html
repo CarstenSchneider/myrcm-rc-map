@@ -976,7 +976,17 @@
     }
 
     .layout-prototype .race-card.registration-closed .race-document-dot-closed {
-      background: var(--host-blue) !important;
+      background: #9a9795 !important;
+    }
+
+    :root.theme-dark .layout-prototype .race-card.registration-closed .race-document-dot-closed {
+      background: #3d5380 !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.theme-light) .layout-prototype .race-card.registration-closed .race-document-dot-closed {
+        background: #3d5380 !important;
+      }
     }
 
     .layout-prototype .race-card.registration-closed > .race-class-tags .tag-class {
