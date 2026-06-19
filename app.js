@@ -3235,7 +3235,7 @@ const mobFilterMount = document.getElementById("mobFilterMount");
 
 // ── Drawer snap state ──────────────────────────────────────────
 const DRAWER_STATES = ["collapsed", "half", "full"];
-let drawerState = "half";
+let drawerState = "collapsed";
 
 function setDrawerState(state) {
   drawerState = state;
@@ -3693,5 +3693,5 @@ showMenuHome();
 
 // ── Init mobile state ──────────────────────────────────────────
 window.addEventListener("load", () => {
-  setDrawerState("half");
+  setDrawerState("collapsed");
 });
