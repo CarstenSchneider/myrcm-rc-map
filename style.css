@@ -2651,6 +2651,15 @@ body.is-menu-open .app-menu-close {
 
 :root.theme-dark .layout-prototype .topbar .app-menu-button {
   color: #fff;
+  background: var(--pill-bg) !important;
+}
+
+:root.theme-dark .layout-prototype .topbar input {
+  color: var(--text) !important;
+}
+
+:root.theme-dark .layout-prototype .topbar input::placeholder {
+  color: var(--accent) !important;
 }
 
 :root.theme-dark .layout-prototype .topbar::before {
@@ -2718,6 +2727,15 @@ body.is-menu-open .app-menu-close {
 
   :root:not(.theme-light) .layout-prototype .topbar .app-menu-button {
     color: #fff;
+    background: var(--pill-bg) !important;
+  }
+
+  :root:not(.theme-light) .layout-prototype .topbar input {
+    color: var(--text) !important;
+  }
+
+  :root:not(.theme-light) .layout-prototype .topbar input::placeholder {
+    color: var(--accent) !important;
   }
 
   :root:not(.theme-light) .layout-prototype .topbar::before {
