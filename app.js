@@ -1394,7 +1394,7 @@ function ensureRegistrationStatusStyles() {
 
     .race-card.registration-open .tag-class {
       background: var(--pill-bg) !important;
-      color: var(--muted) !important;
+      color: var(--host-blue) !important;
     }
 
     .race-card.registration-closed .race-date,
