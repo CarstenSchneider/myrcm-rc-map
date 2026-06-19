@@ -2653,6 +2653,23 @@ body.is-menu-open .app-menu-close {
   color: #fff;
 }
 
+:root.theme-dark .layout-prototype .topbar .segmented,
+:root.theme-dark .layout-prototype .topbar .topbar-filter-group {
+  background: var(--accent);
+  --pill-color: var(--pill-bg);
+}
+
+:root.theme-dark .layout-prototype .topbar .segmented button.active,
+:root.theme-dark .layout-prototype .topbar .race-visibility-toggle button.active {
+  background: transparent !important;
+  color: var(--text) !important;
+}
+
+:root.theme-dark .layout-prototype .topbar select,
+:root.theme-dark .layout-prototype .topbar input {
+  background-color: var(--accent) !important;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light) {
@@ -2704,6 +2721,22 @@ body.is-menu-open .app-menu-close {
     color: #fff;
   }
 
+  :root:not(.theme-light) .layout-prototype .topbar .segmented,
+  :root:not(.theme-light) .layout-prototype .topbar .topbar-filter-group {
+    background: var(--accent);
+    --pill-color: var(--pill-bg);
+  }
+
+  :root:not(.theme-light) .layout-prototype .topbar .segmented button.active,
+  :root:not(.theme-light) .layout-prototype .topbar .race-visibility-toggle button.active {
+    background: transparent !important;
+    color: var(--text) !important;
+  }
+
+  :root:not(.theme-light) .layout-prototype .topbar select,
+  :root:not(.theme-light) .layout-prototype .topbar input {
+    background-color: var(--accent) !important;
+  }
 }
 
 .app-menu-section-label {
