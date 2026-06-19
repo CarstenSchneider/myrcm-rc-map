@@ -2181,10 +2181,6 @@ input {
   color: var(--accent) !important;
 }
 
-.layout-prototype .topbar .segmented button.active .favorite-toggle-icon {
-  color: var(--panel);
-  opacity: 1;
-}
 
 .layout-prototype .topbar .race-visibility-toggle .race-document-dot,
 .layout-prototype .topbar .race-visibility-toggle button.active .race-document-dot {

@@ -470,7 +470,7 @@ function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  ><span class="favorite-toggle-icon" aria-hidden="true">★</span></button>`;
+  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg></button>`;
 }
 
 
@@ -523,7 +523,7 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  ><span class="favorite-toggle-icon" aria-hidden="true">★</span></button>`;
+  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg></button>`;
 }
 
 function raceFavoriteVenueId(race) {
