@@ -2341,7 +2341,7 @@ function updateMarkers(list, shouldFitBounds = true) {
       markerColor = rcRaceMapColors.markerClosed;
     }
 
-    const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight, isFavoriteVenue ? "#fff" : "transparent");
+    const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight, (isFavoriteVenue || venueHasActiveRegistration) ? "#fff" : "transparent");
 
     const inactiveClass = isFavoriteVenue
       ? "map-marker-venue-inactive-favorite"
