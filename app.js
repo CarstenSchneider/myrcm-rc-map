@@ -2771,7 +2771,12 @@ document.addEventListener("click", event => {
   }
 
   const list = filteredRaces();
+  const reopenVenueId = favoriteButton.closest(".leaflet-popup") ? pinnedVenueId : null;
   updateMarkers(list, false);
+  if (reopenVenueId) {
+    const m = markers.get(reopenVenueId);
+    if (m) { pinnedVenueId = reopenVenueId; m.openPopup(); }
+  }
 
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));

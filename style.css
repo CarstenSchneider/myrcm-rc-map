@@ -1821,18 +1821,16 @@ input {
   transform: translateY(1px);
 }
 
-/* Stern im Popup: inaktiv = weiß halbtransparent, aktiv = gold */
+/* Stern im Popup: inaktiv = weiß, aktiv = gold */
 .popup-standard .venue-favorite-button {
-  color: rgba(255, 255, 255, 0.55) !important;
+  color: #ffffff !important;
   transition: color 200ms ease;
 }
-.popup-standard .venue-favorite-button:hover,
-.popup-standard .venue-favorite-button:focus-visible,
 .popup-standard .venue-favorite-button.active {
   color: #C8B090 !important;
 }
 .popup-favorite .venue-favorite-button {
-  color: rgba(31, 29, 26, 0.45) !important;
+  color: #1f1d1a !important;
   transition: color 200ms ease;
 }
 .popup-favorite .venue-favorite-button.active {
