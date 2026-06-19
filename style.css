@@ -1031,6 +1031,25 @@ input {
    hide Leaflet zoom controls, and raise the event list to roughly half screen.
 */
 
+/* Force layout-prototype to fullscreen on mobile — app has both layout-map and
+   layout-prototype classes, causing cascade conflicts. !important resolves this. */
+@media (max-width: 860px) {
+  .app.layout-prototype {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+  .layout-prototype .map-panel,
+  .layout-prototype #map {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
 @supports (height: 100dvh) {
   @media (max-width: 860px) {
     .app.layout-prototype,
