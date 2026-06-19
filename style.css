@@ -2653,6 +2653,17 @@ body.is-menu-open .app-menu-close {
   --tag-4-bg: #132240; --tag-4-text: #6a8ec0;
 }
 
+:root.theme-dark .race-card.registration-open .tag-class {
+  background: rgba(var(--accent-rgb), 0.22) !important;
+  color: var(--text) !important;
+}
+
+:root.theme-dark .race-card.registration-closed .tag-class,
+:root.theme-dark .race-card.registration-closed .tag {
+  background: var(--pill-bg) !important;
+  color: var(--muted) !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light) {
     --bg: #0b1120;
@@ -2699,6 +2710,15 @@ body.is-menu-open .app-menu-close {
     --tag-4-bg: #132240; --tag-4-text: #6a8ec0;
   }
 
+  :root:not(.theme-light) .race-card.registration-open .tag-class {
+    background: rgba(var(--accent-rgb), 0.22) !important;
+    color: var(--text) !important;
+  }
+
+  :root:not(.theme-light) .race-card.registration-closed .tag-class,
+  :root:not(.theme-light) .race-card.registration-closed .tag {
+    background: var(--pill-bg) !important;
+    color: var(--muted) !important;
   }
 }
 
