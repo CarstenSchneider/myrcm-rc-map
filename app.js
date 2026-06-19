@@ -1405,7 +1405,14 @@ function ensureRegistrationStatusStyles() {
       color: var(--muted) !important;
     }
 
-    .race-card.registration-closed .race-document-dot-closed {
+    @media not (prefers-color-scheme: dark) {
+      .race-card.registration-closed .race-document-dot-closed {
+        background: #9a9795 !important;
+        box-shadow: none !important;
+      }
+    }
+
+    :root.theme-light .race-card.registration-closed .race-document-dot-closed {
       background: #9a9795 !important;
       box-shadow: none !important;
     }
