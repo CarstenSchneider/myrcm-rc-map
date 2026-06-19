@@ -715,11 +715,6 @@
       color: #fff !important;
     }
 
-    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
-    .layout-prototype .race-host .venue-favorite-button.active {
-      color: var(--favorite) !important;
-    }
-
     .layout-prototype .race-host .venue-link,
     .layout-prototype .race-host .host-name {
       color: #fff !important;
@@ -735,10 +730,18 @@
       text-decoration: none;
     }
 
+    /* Favorite venue: gold bg + dark navy text — mirrors favorite popup */
+    .layout-prototype .race-card-favorite-venue .race-host {
+      background: var(--favorite) !important;
+      color: #213769 !important;
+    }
+
     .layout-prototype .race-card-favorite-venue .race-host .venue-link,
     .layout-prototype .race-card-favorite-venue .race-host .host-name,
-    .layout-prototype .race-host .venue-link-favorite {
-      color: var(--favorite) !important;
+    .layout-prototype .race-host .venue-link-favorite,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
+    .layout-prototype .race-host .venue-favorite-button.active {
+      color: #213769 !important;
     }
 
     .layout-prototype .race-card-header {
