@@ -3584,6 +3584,10 @@ function applyTheme(theme) {
       : `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`;
     mlMap.setStyle(url);
   }
+
+  if (venues?.length) {
+    updateMarkers(filteredRaces(), false);
+  }
 }
 
 function setTheme(theme) {
