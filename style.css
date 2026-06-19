@@ -296,13 +296,30 @@ input {
   background: rgba(var(--panel-rgb), 0.45);
 }
 
+.leaflet-popup-content-wrapper {
+  border-radius: 16px !important;
+}
+
 .leaflet-popup-content {
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 18px 20px !important;
+}
+
+.leaflet-popup-close-button {
+  display: none !important;
 }
 
 @keyframes popup-in {
   from { opacity: 0; transform: scale(0.88) translateY(8px); }
   to   { opacity: 1; transform: scale(1)    translateY(0);   }
+}
+
+/* Farb-Transition beim Favorisieren */
+.popup-standard .leaflet-popup-content-wrapper,
+.popup-favorite .leaflet-popup-content-wrapper,
+.popup-standard .leaflet-popup-tip,
+.popup-favorite .leaflet-popup-tip {
+  transition: background 350ms ease, color 350ms ease;
 }
 
 /* Standard popup — tag dunkelblau, nacht mittelblau */
@@ -1802,6 +1819,24 @@ input {
   height: auto;
   font-size: 17px;
   transform: translateY(1px);
+}
+
+/* Stern im Popup: inaktiv = weiß halbtransparent, aktiv = gold */
+.popup-standard .venue-favorite-button,
+.popup-favorite .venue-favorite-button {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 200ms ease;
+}
+.popup-standard .venue-favorite-button:hover,
+.popup-standard .venue-favorite-button:focus-visible,
+.popup-standard .venue-favorite-button.active {
+  color: var(--favorite);
+}
+.popup-favorite .venue-favorite-button {
+  color: rgba(31, 29, 26, 0.45);
+}
+.popup-favorite .venue-favorite-button.active {
+  color: #1f1d1a;
 }
 
 .race-venue .venue-name-with-favorite {

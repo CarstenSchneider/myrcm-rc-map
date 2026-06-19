@@ -2261,8 +2261,15 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
         </div>`
       : "";
 
+  // Show favorite star only for host-based venues (not venue-only locations)
+  const hostId = venueRaces.length ? raceHostId(venueRaces[0]) : null;
+  const hostName = hostId ? raceHostName(venueRaces[0]) : null;
+  const titleHtml = hostId
+    ? `<span class="venue-name-with-favorite">${favoriteHostButtonHtml(hostId, hostName)}<span class="venue-name-text">${escapeHtml(hostName)}</span></span>`
+    : venueNameHtml(venue);
+
   return `
-    <div class="popup-title">${venueNameHtml(venue)}</div>
+    <div class="popup-title">${titleHtml}</div>
     <div class="popup-race">
       ${raceLine}
     </div>
@@ -2752,6 +2759,15 @@ document.addEventListener("click", event => {
     toggleFavoriteHost(favoriteHostButton.dataset.favoriteHostId);
   } else if (favoriteVenueButton) {
     toggleFavoriteVenue(favoriteVenueButton.dataset.favoriteVenueId);
+  }
+
+  // Update open popup color if the toggled button is inside a popup
+  const popupEl = favoriteButton.closest(".leaflet-popup");
+  if (popupEl) {
+    const hostId = favoriteButton.dataset.favoriteHostId;
+    const isFav = hostId ? isFavoriteHostId(hostId) : isFavoriteVenueId(favoriteButton.dataset.favoriteVenueId);
+    popupEl.classList.toggle("popup-favorite", isFav);
+    popupEl.classList.toggle("popup-standard", !isFav);
   }
 
   const list = filteredRaces();
