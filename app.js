@@ -2775,7 +2775,21 @@ document.addEventListener("click", event => {
   updateMarkers(list, false);
   if (reopenVenueId) {
     const m = markers.get(reopenVenueId);
-    if (m) { pinnedVenueId = reopenVenueId; m.openPopup(); }
+    if (m) {
+      pinnedVenueId = reopenVenueId;
+      m.openPopup();
+      // Ensure popup class matches actual current favorite state,
+      // in case isFavoriteVenue in updateMarkers resolved incorrectly.
+      const hostId = favoriteButton.dataset.favoriteHostId;
+      const isFav = hostId
+        ? isFavoriteHostId(hostId)
+        : isFavoriteVenueId(favoriteButton.dataset.favoriteVenueId);
+      const popupEl = m.getPopup()?.getElement();
+      if (popupEl) {
+        popupEl.classList.toggle("popup-favorite", isFav);
+        popupEl.classList.toggle("popup-standard", !isFav);
+      }
+    }
   }
 
   if (activeVenueId) {
