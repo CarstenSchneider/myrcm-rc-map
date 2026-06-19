@@ -3363,18 +3363,18 @@ function fitClassPills(card) {
   const container = card.querySelector(".race-class-tags");
   if (!container) return;
 
-  const pills = Array.from(container.querySelectorAll(".tag-class:not(.tag-class-toggle)"));
+  // Remove desktop toggle — mobile uses its own measurement-based overflow
+  container.querySelectorAll(".tag-class-toggle, .tag-class-more").forEach(el => el.remove());
+
+  const pills = Array.from(container.querySelectorAll(".tag-class"));
   if (!pills.length) return;
 
-  // Remove old overflow button if present
-  const existingMore = container.querySelector(".tag-class-more");
-  if (existingMore) existingMore.remove();
   pills.forEach(p => { p.style.display = ""; });
 
   const containerWidth = container.getBoundingClientRect().width;
   if (!containerWidth) return;
 
-  const gap = 6; // matches CSS gap
+  const gap = 6;
   let usedWidth = 0;
   let lastVisible = pills.length;
 
@@ -3383,7 +3383,6 @@ function fitClassPills(card) {
     if (i > 0) usedWidth += gap;
     usedWidth += pillWidth;
 
-    // Reserve space for "+N" button if not last pill
     const remaining = pills.length - i - 1;
     if (remaining > 0 && usedWidth + gap + 40 > containerWidth) {
       lastVisible = i;
@@ -3406,6 +3405,17 @@ function fitClassPills(card) {
     event.stopPropagation();
     pills.forEach(p => { p.style.display = ""; });
     moreBtn.remove();
+
+    const lessBtn = document.createElement("button");
+    lessBtn.className = "tag tag-class tag-class-more";
+    lessBtn.type = "button";
+    lessBtn.textContent = "weniger anzeigen";
+    lessBtn.addEventListener("click", ev => {
+      ev.stopPropagation();
+      lessBtn.remove();
+      fitClassPills(card);
+    });
+    container.appendChild(lessBtn);
   });
   container.appendChild(moreBtn);
 }
