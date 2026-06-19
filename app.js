@@ -1399,14 +1399,22 @@ function ensureRegistrationStatusStyles() {
 
     .race-card.registration-closed .race-date,
     .race-card.registration-closed .race-name,
-    .race-card.registration-closed .race-venue {
+    .race-card.registration-closed .race-venue,
+    .race-card.registration-closed .race-registration-count,
+    .race-card.registration-closed .race-link-item-status-closed,
+    .race-card.registration-closed .race-document-dot-closed {
       color: var(--muted) !important;
+    }
+
+    .race-card.registration-closed .race-document-dot-closed {
+      background: var(--muted) !important;
     }
 
     .race-card.registration-closed .tag-class,
     .race-card.registration-closed .tag {
-      background: var(--pill-bg) !important;
-      color: var(--muted-light) !important;
+      background: var(--muted) !important;
+      color: var(--bg) !important;
+      border-color: transparent !important;
     }
 
     :root.theme-dark .race-card.registration-open .tag-class {
