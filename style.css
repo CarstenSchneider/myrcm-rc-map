@@ -1923,13 +1923,15 @@ input {
 
 .popup-route {
   margin-top: 10px;
+  text-align: center;
 }
 
 .popup-route-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 14px 7px 10px;
+  gap: 5px;
+  height: 34px;
+  padding: 0 12px 0 9px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;

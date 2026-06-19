@@ -2273,7 +2273,7 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
     ${lastRaceHtml}
     <div class="popup-route">
       <a class="popup-route-btn" href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()" title="Route planen">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
         </svg>
         Route
