@@ -16,7 +16,7 @@ const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
   minZoom: 6
-}).setView([51.8, 11.8], 6);
+}).setView([51.8, 11.8], 7);
 
 const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
 map.setMaxBounds(MAX_BOUNDS);
@@ -2583,7 +2583,7 @@ const popupOffset = hasUpcomingRaces
   });
 
   if (shouldFitBounds && bounds.length >= 1) {
-    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined, minZoom: bounds.length === 1 ? undefined : 7 });
+    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined });
   }
 }
 
