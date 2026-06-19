@@ -344,6 +344,13 @@ function applyRcRaceMapStyle() {
       return;
     }
 
+    // Railway lines
+    if (layer.type === "line" && layerLooksLike(layer, ["rail", "railway", "transit", "tram", "subway", "metro"])) {
+      setMapPaint(maplibreMap, id, "line-color", rcRaceMapColors.roadMinor);
+      setMapPaint(maplibreMap, id, "line-opacity", 0.7);
+      return;
+    }
+
     // Minor roads (residential, service, track, path, etc.)
     if (layer.type === "line" && layerLooksLike(layer, ["road", "highway", "tunnel", "bridge", "ferry", "aeroway"]) && !majorRoadLayerIds.has(id)) {
       setMapPaint(maplibreMap, id, "line-color", rcRaceMapColors.roadMinor);
