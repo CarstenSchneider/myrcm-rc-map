@@ -26334,13 +26334,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       {
         "name": "Kinder/ Jugend Tag",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -26515,7 +26515,7 @@
     "venueLocation": "Marburg",
     "hostId": "msc-kirchhain-e-v",
     "hostName": "MSC Kirchhain e.V.",
-    "name": "SK-Lauf Gruppe Mitte und DM Warmup EG8GT, EG8GT3 VG8GT",
+    "name": "SK-Lauf Gruppe Mitte und DM Warmup EG8GT, EG8GT3, VG8GT",
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [
@@ -26528,8 +26528,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       {
@@ -26538,7 +26538,7 @@
       },
       {
         "name": "EG8GT3",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "VG8GT",
@@ -26568,13 +26568,13 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 40,
-    "registrationDisplay": "40",
+    "registrationCount": 39,
+    "registrationDisplay": "39",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "SMW Verbrenner-Glattbahn 1:8 Klasse 1",
-        "entries": 10
+        "entries": 9
       },
       {
         "name": "SMW Verbrenner-Glattbahn 1:8 Klasse 2",
@@ -26600,9 +26600,8 @@
         "name": "Elektro-Glattbahn Tourenwagen 1:10 Hobby 17.5T",
         "entries": 4
       },
-      "SMW Elektro-Glattbahn 1:8 GT3 Cup",
-      "SMW Verbrenner-Glattbahn 1:8 GT",
-      "SMW Verbrenner-Glattbahn 1:8 GT + Elektro-Glattbahn 1:8 GT3 Cup"
+      "SMW Verbrenner-Glattbahn 1:8 Klasse 2/Sport",
+      "SMW Verbrenner-Glattbahn VG10/Sport"
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -26745,13 +26744,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 32,
-    "registrationDisplay": "32",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
     "note": null,
     "classes": [
       {
         "name": "MCSS TW 17,5T",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "MCSS LMH 21,5T",
@@ -26791,13 +26790,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       {
         "name": "1:8 Fun",
-        "entries": 8
+        "entries": 10
       }
     ],
     "documents": [],
@@ -26821,8 +26820,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": null,
     "classes": [
       "HRCC GT8",
@@ -26836,15 +26835,15 @@
       "HRCC Plastic/Fronti",
       {
         "name": "HRCC Formel 1",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "HRCC EG10 Stock",
-        "entries": 10
+        "entries": 12
       },
       {
         "name": "HRCC PRO10",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "HRCC EG10 Fronti",
@@ -26852,7 +26851,7 @@
       },
       {
         "name": "HRCC EG10 Plastic Cars",
-        "entries": 4
+        "entries": 5
       },
       "VG8"
     ],
@@ -27034,14 +27033,11 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
-      {
-        "name": "Buggy 2WD Stock",
-        "entries": 1
-      },
+      "Buggy 2WD Stock",
       {
         "name": "Fighter",
         "entries": 5
@@ -27143,6 +27139,44 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "mcc-rhein-ahr-e-v-2026-06-27-myrcm-event-97707",
+    "venueId": "mcc-rhein-ahr-e-v",
+    "venueName": "MCC Rhein Ahr e.V.",
+    "venueLocation": "Bad Breisig",
+    "hostId": "mcc-rhein-ahr-e-v",
+    "hostName": "MCC Rhein Ahr e.V.",
+    "name": "ABGESAGT: JumpstartRC Trophy 2026 #2/4 @ Bad Breisig",
+    "from": "2026-06-27",
+    "to": "2026-06-28",
+    "series": [
+      "JumpstartRC Trophy"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97707&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=283&pLa=en&dId%5BE%5D=97707&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97707&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 13,
+    "registrationDisplay": "13",
+    "note": null,
+    "classes": [
+      "JumpstartRC Trophy Elektro-Glattbahn GT-E 1:8",
+      {
+        "name": "JumpstartRC Trophy Elektro-Glattbahn 1:8",
+        "entries": 3
+      },
+      "JumpstartRC Trophy Verbrenner-Glattbahn 1:10",
+      {
+        "name": "JumpstartRC Trophy Verbrenner-Glattbahn 1:8",
+        "entries": 10
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-08"
+  },
+  {
     "id": "rc-modellbaufreunde-e-v-2026-06-27-myrcm-event-96344",
     "venueId": null,
     "venueName": null,
@@ -27166,7 +27200,7 @@
     "classes": [
       {
         "name": "FCOS 1:8",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "FCOS 2WD",
@@ -27174,7 +27208,7 @@
       },
       {
         "name": "FCOS TT 02B",
-        "entries": 8
+        "entries": 7
       },
       {
         "name": "FCOS Kids",
@@ -27182,52 +27216,6 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "mcc-rhein-ahr-e-v-2026-06-27-myrcm-event-97707",
-    "venueId": "mcc-rhein-ahr-e-v",
-    "venueName": "MCC Rhein Ahr e.V.",
-    "venueLocation": "Bad Breisig",
-    "hostId": "mcc-rhein-ahr-e-v",
-    "hostName": "MCC Rhein Ahr e.V.",
-    "name": "JumpstartRC Trophy 2026 #2/4 @ Bad Breisig",
-    "from": "2026-06-27",
-    "to": "2026-06-28",
-    "series": [
-      "JumpstartRC Trophy"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97707&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=283&pLa=en&dId%5BE%5D=97707&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97707&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": null,
-    "classes": [
-      "JumpstartRC Trophy Elektro-Glattbahn GT-E 1:8",
-      {
-        "name": "JumpstartRC Trophy Elektro-Glattbahn 1:8",
-        "entries": 2
-      },
-      "JumpstartRC Trophy Verbrenner-Glattbahn 1:10",
-      {
-        "name": "JumpstartRC Trophy Verbrenner-Glattbahn 1:8",
-        "entries": 10
-      }
-    ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "260628 Bad Breisig - JumpstartRC Trophy Ausschreibung V2.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=1D0A3744-0967-496B-AC2F-358545A64D40"
-      }
-    ],
     "firstSeen": "2026-06-08"
   },
   {
@@ -27359,13 +27347,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 54,
-    "registrationDisplay": "54",
+    "registrationCount": 57,
+    "registrationDisplay": "57",
     "note": null,
     "classes": [
       {
         "name": "TOC BBX",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "TOC Fighter-Klasse",
@@ -27373,11 +27361,11 @@
       },
       {
         "name": "TOC Retro 2WD",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "TOC Retro 4WD",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "TOC Truck",
@@ -27411,8 +27399,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": null,
     "classes": [
       {
@@ -27440,7 +27428,11 @@
         "name": "Tamiya Euro-TW",
         "entries": 1
       },
-      "Tamiya Formel E"
+      "Tamiya Formel E",
+      {
+        "name": "FUN",
+        "entries": 4
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -27552,13 +27544,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       {
         "name": "ORE2WDST",
-        "entries": 2
+        "entries": 3
       },
       "ORE2WD",
       {
@@ -27647,8 +27639,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": null,
     "classes": [
       {
@@ -27665,7 +27657,7 @@
       },
       {
         "name": "EGTWSP",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "EGTWFR",
@@ -27785,24 +27777,30 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
-      "OR8 Expert",
+      {
+        "name": "OR8 Expert",
+        "entries": 2
+      },
       {
         "name": "OR8 Hobby",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "ORE8",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "ORT",
         "entries": 1
       },
-      "ORET"
+      {
+        "name": "ORET",
+        "entries": 2
+      }
     ],
     "documents": [
       {
@@ -27929,13 +27927,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 1
+        "entries": 2
       },
       "ORE8T"
     ],
@@ -28252,8 +28250,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "1:10 Elektro Fun Cup",
@@ -28263,9 +28261,12 @@
       },
       {
         "name": "EG8GT3",
+        "entries": 2
+      },
+      {
+        "name": "VG10 Tourenwagen",
         "entries": 1
       },
-      "VG10 Tourenwagen",
       {
         "name": "VG8",
         "entries": 1
@@ -28301,8 +28302,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "Clubrennen EGTFR (TW Fronti)",
@@ -28312,7 +28313,7 @@
       },
       {
         "name": "Clubrennen ORE2WD (Buggy 2WD)",
-        "entries": 1
+        "entries": 2
       },
       "Clubrennen ORE4WD (Buggy 4WD)",
       {
@@ -28376,17 +28377,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": null,
     "classes": [
       {
         "name": "NRW-Cup Elektro",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "NRW-Cup Hobby",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "NRW-Cup Top",
@@ -28541,8 +28542,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": null,
     "classes": [
       {
@@ -28551,11 +28552,11 @@
       },
       {
         "name": "Elektro-Offroad 1:10 4WD Standard",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Elektro-Offroad 1:10 Truggy 2WD",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "ORE2WD",
@@ -28594,8 +28595,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
@@ -28605,9 +28606,12 @@
       },
       {
         "name": "Tamiya Euro Cup Stock",
-        "entries": 4
+        "entries": 5
       },
-      "Tamiya Euro Cup M-Chassis 2WD/4WD",
+      {
+        "name": "Tamiya Euro Cup M-Chassis 2WD/4WD",
+        "entries": 1
+      },
       {
         "name": "Tamiya Euro Cup Race-Truck 4WD",
         "entries": 2
@@ -28618,7 +28622,7 @@
       },
       {
         "name": "Tamiya Euro Cup Gentlemen 4WD",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "Tamiya Euro Cup Euro-TW 2WD/4WD",
@@ -28762,8 +28766,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": null,
     "classes": [
       {
@@ -28780,7 +28784,7 @@
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "TW Modified",
@@ -28790,6 +28794,47 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-09"
+  },
+  {
+    "id": "rc-msc-greuthof-e-v-2026-07-12-myrcm-event-98397",
+    "venueId": "rc-msc-greuthof-e-v",
+    "venueName": "RC-MSC Greuthof e.V.",
+    "venueLocation": "Wüstenrot",
+    "hostId": "rc-msc-greuthof-e-v",
+    "hostName": "RC-MSC Greuthof e.V.",
+    "name": "RC-MSC Sommer Cup 2026 - Lauf 3",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98397&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61583&pLa=en&dId%5BE%5D=98397&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98397&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 1,
+    "registrationDisplay": "1",
+    "note": null,
+    "classes": [
+      {
+        "name": "GT-LMH Cup",
+        "entries": 1
+      },
+      "TW17.5T",
+      "FWD",
+      "1:8GT"
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung_SommerCup_2026_v1.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0899AA55-4BDA-4384-BFB7-42B08FC969D4"
+      }
+    ],
+    "firstSeen": "2026-06-19"
   },
   {
     "id": "schweriner-sc-breitensport-e-v-2026-07-12-myrcm-event-96828",
