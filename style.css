@@ -1931,30 +1931,29 @@ input {
   gap: 6px;
   padding: 7px 14px 7px 10px;
   border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 180ms ease, color 180ms ease;
+  transition: background 180ms ease, opacity 180ms ease;
+  /* Blue popup (standard + dark): white button, dark blue text — inverts popup bg */
+  background: #ffffff;
+  color: #213769;
 }
 
 .popup-route-btn:hover,
 .popup-route-btn:focus-visible {
-  background: var(--host-blue);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.82);
   outline: none;
 }
 
-/* Gold popup: dark blue button */
+/* Gold popup: dark navy button, white text — inverts gold bg */
 .popup-favorite .leaflet-popup-content-wrapper .popup-route-btn {
   background: #213769;
-  color: #fff;
+  color: #ffffff;
 }
 .popup-favorite .leaflet-popup-content-wrapper .popup-route-btn:hover,
 .popup-favorite .leaflet-popup-content-wrapper .popup-route-btn:focus-visible {
-  background: #0f2145;
-  color: #fff;
+  background: #2d4a8a;
 }
 
 .race-section-divider {
