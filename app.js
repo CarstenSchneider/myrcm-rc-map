@@ -2439,7 +2439,8 @@ const popupOffset = hasUpcomingRaces
       buildPopup(venue, venueRaces, latestPastRace),
       {
         offset: popupOffset,
-        autoPan: false
+        autoPan: false,
+        className: isFavoriteVenue ? "popup-favorite" : "popup-standard"
       }
     );
 
