@@ -29,14 +29,14 @@ L.control.zoom({
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColorsLight = {
   water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",
-  landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4",
+  landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4", roadMinor: "#cccccc",
   boundary: "#d8d8d8", label: "#716F6F", labelHalo: "#ebebeb",
   marker: "#213769", markerClosed: "#9a9795", favorite: "#C8B090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
 };
 const rcRaceMapColorsDark = {
   water: "#0c1829", land: "#0f1e35", settlement: "#132442",
-  landcover: "#0e1c32", building: "#132442", road: "#1e3a5f",
+  landcover: "#0e1c32", building: "#132442", road: "#1e3a5f", roadMinor: "#1e3a5f",
   boundary: "#1e3a5f", label: "#6a9fd8", labelHalo: "#0f1e35",
   marker: "#4569a5", markerClosed: "#7a9ab8", favorite: "#c8b090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
@@ -297,6 +297,12 @@ function applyRcRaceMapStyle() {
       return;
     }
 
+    // Hide contour/elevation lines
+    if (layerLooksLike(layer, ["contour", "elevation", "hillshade"])) {
+      setMapLayout(maplibreMap, id, "visibility", "none");
+      return;
+    }
+
     if (layer.type === "background") {
       maplibreMap.setPaintProperty(id, "background-color", rcRaceMapColors.land);
       maplibreMap.setPaintProperty(id, "background-opacity", 1);
@@ -338,6 +344,13 @@ function applyRcRaceMapStyle() {
       return;
     }
 
+    // Minor roads (residential, service, track, path, etc.)
+    if (layer.type === "line" && layerLooksLike(layer, ["road", "highway", "tunnel", "bridge", "ferry", "aeroway"]) && !majorRoadLayerIds.has(id)) {
+      setMapPaint(maplibreMap, id, "line-color", rcRaceMapColors.roadMinor);
+      setMapPaint(maplibreMap, id, "line-opacity", 0.85);
+      return;
+    }
+
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
       maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
       maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
@@ -352,6 +365,8 @@ function applyRcRaceMapStyle() {
 
       if (layer["source-layer"] === "place") {
         setMapLayout(maplibreMap, id, "text-field", localizedPlaceLabel);
+        // Hide settlement dot icons (only show text)
+        setMapPaint(maplibreMap, id, "icon-opacity", 0);
 
         if (!countryRegionLabelLayerIds.has(id)) {
           // Delay smaller settlements until higher zoom levels
