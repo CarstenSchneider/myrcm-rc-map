@@ -1401,13 +1401,13 @@ function ensureRegistrationStatusStyles() {
     .race-card.registration-closed .race-name,
     .race-card.registration-closed .race-venue,
     .race-card.registration-closed .race-registration-count,
-    .race-card.registration-closed .race-link-item-status-closed,
-    .race-card.registration-closed .race-document-dot-closed {
+    .race-card.registration-closed .race-link-item-status-closed {
       color: var(--muted) !important;
     }
 
     .race-card.registration-closed .race-document-dot-closed {
       background: var(--muted) !important;
+      box-shadow: none !important;
     }
 
     .race-card.registration-closed .tag-class,
@@ -1422,10 +1422,24 @@ function ensureRegistrationStatusStyles() {
       color: #172037 !important;
     }
 
+    :root.theme-dark .race-card.registration-closed .race-date,
+    :root.theme-dark .race-card.registration-closed .race-name,
+    :root.theme-dark .race-card.registration-closed .race-venue,
+    :root.theme-dark .race-card.registration-closed .race-registration-count,
+    :root.theme-dark .race-card.registration-closed .race-link-item-status-closed {
+      color: #3d5380 !important;
+    }
+
+    :root.theme-dark .race-card.registration-closed .race-document-dot-closed {
+      background: #3d5380 !important;
+      box-shadow: none !important;
+    }
+
     :root.theme-dark .race-card.registration-closed .tag-class,
     :root.theme-dark .race-card.registration-closed .tag {
       background: var(--card) !important;
-      color: #4d68a1 !important;
+      color: #3d5380 !important;
+      border-color: transparent !important;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -1434,10 +1448,24 @@ function ensureRegistrationStatusStyles() {
         color: #172037 !important;
       }
 
+      :root:not(.theme-light) .race-card.registration-closed .race-date,
+      :root:not(.theme-light) .race-card.registration-closed .race-name,
+      :root:not(.theme-light) .race-card.registration-closed .race-venue,
+      :root:not(.theme-light) .race-card.registration-closed .race-registration-count,
+      :root:not(.theme-light) .race-card.registration-closed .race-link-item-status-closed {
+        color: #3d5380 !important;
+      }
+
+      :root:not(.theme-light) .race-card.registration-closed .race-document-dot-closed {
+        background: #3d5380 !important;
+        box-shadow: none !important;
+      }
+
       :root:not(.theme-light) .race-card.registration-closed .tag-class,
       :root:not(.theme-light) .race-card.registration-closed .tag {
         background: var(--card) !important;
-        color: #4d68a1 !important;
+        color: #3d5380 !important;
+        border-color: transparent !important;
       }
     }
 
