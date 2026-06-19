@@ -27639,8 +27639,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 29,
+    "registrationDisplay": "29",
     "note": null,
     "classes": [
       {
@@ -27657,7 +27657,7 @@
       },
       {
         "name": "EGTWSP",
-        "entries": 5
+        "entries": 7
       },
       {
         "name": "EGTWFR",
@@ -27777,8 +27777,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       {
@@ -27787,7 +27787,7 @@
       },
       {
         "name": "OR8 Hobby",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "ORE8",
