@@ -1087,6 +1087,10 @@ input {
   opacity: 0.55;
 }
 
+.map-marker-is-favorite .map-marker-closed {
+  opacity: 1;
+}
+
 
 
 /* v1.3.8 document links in race cards */

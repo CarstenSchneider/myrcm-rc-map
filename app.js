@@ -2323,7 +2323,7 @@ function updateMarkers(list, shouldFitBounds = true) {
     const inactiveMarkerSvg = mapPinSvgDataUri(markerColor, markerWidth, markerHeight);
 
     const markerHtml = hasUpcomingRaces
-      ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
+      ? `<div class="map-marker-switcher map-marker-visual${isFavoriteVenue ? " map-marker-is-favorite" : ""}" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
           <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('${markerSvg}');"></div>
           <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
         </div>`
