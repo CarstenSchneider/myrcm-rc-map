@@ -1031,17 +1031,16 @@ input {
    hide Leaflet zoom controls, and raise the event list to roughly half screen.
 */
 
-/* Force layout-prototype to fullscreen on mobile — app has both layout-map and
-   layout-prototype classes, causing cascade conflicts. !important resolves this. */
+/* On mobile the map-panel is pinned directly to the viewport so it is always
+   fullscreen regardless of the app container's height cascade conflicts. */
 @media (max-width: 860px) {
-  .app.layout-prototype {
+  .layout-prototype .map-panel {
     position: fixed !important;
     inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    z-index: 0;
   }
-  .layout-prototype .map-panel,
   .layout-prototype #map {
     position: absolute !important;
     inset: 0 !important;
@@ -2848,6 +2847,21 @@ body.is-menu-open .app-menu-close {
   background-color: var(--panel) !important;
 }
 
+/* Dark mode: drawer filter area background = topbar background (pill-bg),
+   pills inside get --panel so they're visible against the lighter pill-bg */
+:root.theme-dark .mob-drawer-filters {
+  background: var(--pill-bg) !important;
+}
+:root.theme-dark .mob-drawer-filters .topbar .segmented,
+:root.theme-dark .mob-drawer-filters .topbar .topbar-filter-group,
+:root.theme-dark .mob-drawer-filters .topbar .race-visibility-toggle {
+  background: var(--panel) !important;
+}
+:root.theme-dark .mob-drawer-filters .topbar select,
+:root.theme-dark .mob-drawer-filters .topbar input {
+  background-color: var(--panel) !important;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light) {
@@ -2921,6 +2935,19 @@ body.is-menu-open .app-menu-close {
 
   :root:not(.theme-light) .layout-prototype .topbar select,
   :root:not(.theme-light) .layout-prototype .topbar input {
+    background-color: var(--panel) !important;
+  }
+
+  :root:not(.theme-light) .mob-drawer-filters {
+    background: var(--pill-bg) !important;
+  }
+  :root:not(.theme-light) .mob-drawer-filters .topbar .segmented,
+  :root:not(.theme-light) .mob-drawer-filters .topbar .topbar-filter-group,
+  :root:not(.theme-light) .mob-drawer-filters .topbar .race-visibility-toggle {
+    background: var(--panel) !important;
+  }
+  :root:not(.theme-light) .mob-drawer-filters .topbar select,
+  :root:not(.theme-light) .mob-drawer-filters .topbar input {
     background-color: var(--panel) !important;
   }
 
