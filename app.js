@@ -57,11 +57,11 @@ const mapPinViewBox = {
 };
 const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,29.66,19.88,54.66,47.04,62.46l17.95,25.56,17.95-25.56c27.16-7.79,47.04-32.79,47.04-62.46Z";
 
-// Based on racemap_icon.svg: the lower white layer stays white, the top colour layer gets the marker state color.
-function raceMapMarkerSvgDataUri(color, width, height) {
+// Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
+function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
   const svg = `
     <svg width="${width}" height="${height}" viewBox="0 0 ${raceMapMarkerViewBox.width} ${raceMapMarkerViewBox.height}" xmlns="http://www.w3.org/2000/svg">
-      <g id="white" fill="#fff">
+      <g id="white" fill="${bgColor}">
         <circle cx="238.73" cy="238.59" r="189.45"/>
       </g>
       <g id="colour" fill="${color}">
@@ -2341,7 +2341,7 @@ function updateMarkers(list, shouldFitBounds = true) {
       markerColor = rcRaceMapColors.markerClosed;
     }
 
-    const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight);
+    const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight, isFavoriteVenue ? "#fff" : "transparent");
 
     const inactiveClass = isFavoriteVenue
       ? "map-marker-venue-inactive-favorite"
