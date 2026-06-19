@@ -1829,17 +1829,16 @@ input {
 .popup-standard .venue-favorite-button.active {
   color: #C8B090 !important;
 }
-.popup-favorite .venue-favorite-button {
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button {
   color: #213769 !important;
   transition: color 200ms ease;
   transform: none;
 }
-.popup-favorite .venue-favorite-button:hover,
-.popup-favorite .venue-favorite-button:focus-visible,
-.popup-favorite .venue-favorite-button:not(.active):hover {
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:hover,
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:focus-visible {
   color: #ffffff !important;
 }
-.popup-favorite .venue-favorite-button.active {
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active {
   color: #213769 !important;
 }
 
