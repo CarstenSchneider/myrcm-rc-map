@@ -742,6 +742,33 @@
     .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
     .layout-prototype .race-host .venue-favorite-button.active {
       color: #213769 !important;
+      transition: color 200ms ease;
+    }
+
+    /* Gold header: hover → white (mirrors gold popup) */
+    .layout-prototype .race-card-favorite-venue .race-host .venue-link:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-link:focus-visible,
+    .layout-prototype .race-card-favorite-venue .race-host .host-name:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:focus-visible,
+    .layout-prototype .race-host .venue-favorite-button.active:hover,
+    .layout-prototype .race-host .venue-favorite-button.active:focus-visible {
+      color: #ffffff !important;
+    }
+
+    /* Blue header: star hover → gold (mirrors standard popup) */
+    .layout-prototype .race-host .venue-favorite-button {
+      color: #fff !important;
+      transition: color 200ms ease;
+    }
+    .layout-prototype .race-host .venue-favorite-button:hover,
+    .layout-prototype .race-host .venue-favorite-button:focus-visible {
+      color: var(--favorite) !important;
+    }
+    /* Override: gold header star hover → white (higher specificity via card class) */
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:focus-visible {
+      color: #ffffff !important;
     }
 
     .layout-prototype .race-card-header {
