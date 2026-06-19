@@ -2352,6 +2352,7 @@ function fitMapToBounds(bounds, options = {}) {
   const lBounds = L.latLngBounds(bounds);
   let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
   if (options.maxZoom !== undefined) zoom = Math.min(zoom, options.maxZoom);
+  if (options.minZoom !== undefined) zoom = Math.max(zoom, options.minZoom);
   zoom = Math.max(zoom, map.getMinZoom() || 0);
   const nwPx = map.project(lBounds.getNorthWest(), zoom);
   const sePx = map.project(lBounds.getSouthEast(), zoom);
@@ -2582,7 +2583,7 @@ const popupOffset = hasUpcomingRaces
   });
 
   if (shouldFitBounds && bounds.length >= 1) {
-    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined });
+    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined, minZoom: bounds.length === 1 ? undefined : 7 });
   }
 }
 

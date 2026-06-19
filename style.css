@@ -419,7 +419,7 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .map-panel { height: 45vh; }
+  .map-panel { height: 100vw; max-height: 70vh; }
   .race-panel { border-left: 0; border-top: 1px solid var(--line); }
   .panel-header { flex-direction: column; }
   .layout-list .filters { grid-template-columns: 1fr; }
