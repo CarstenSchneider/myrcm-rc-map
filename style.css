@@ -1834,12 +1834,14 @@ input {
   transition: color 200ms ease;
   transform: none;
 }
-.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:hover,
-.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:focus-visible {
-  color: #ffffff !important;
-}
 .popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active {
   color: #213769 !important;
+}
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:hover,
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:focus-visible,
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active:hover,
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active:focus-visible {
+  color: #ffffff !important;
 }
 
 /* Vereinslink im Popup */
