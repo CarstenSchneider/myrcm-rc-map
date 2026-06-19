@@ -3235,13 +3235,15 @@ const mobFilterMount = document.getElementById("mobFilterMount");
 
 // ── Drawer snap state ──────────────────────────────────────────
 const DRAWER_STATES = ["collapsed", "half", "full"];
-let drawerState = "collapsed";
+let drawerState = "half";
 
 function setDrawerState(state) {
   drawerState = state;
   if (!mobDrawer) return;
   mobDrawer.classList.remove("mob-drawer--collapsed", "mob-drawer--half", "mob-drawer--full");
   mobDrawer.classList.add(`mob-drawer--${state}`);
+  // Let Leaflet know the full map area is available regardless of drawer position
+  if (map) requestAnimationFrame(() => map.invalidateSize());
 }
 
 // ── Drag / swipe (touch-only, mobile breakpoint guard) ────────
@@ -3693,5 +3695,5 @@ showMenuHome();
 
 // ── Init mobile state ──────────────────────────────────────────
 window.addEventListener("load", () => {
-  setDrawerState("collapsed");
+  setDrawerState("half");
 });
