@@ -1359,20 +1359,6 @@ function ensureRegistrationStatusStyles() {
       border-color: rgba(222, 214, 202, 0.7);
     }
 
-    :root.theme-dark .race-card.registration-upcoming,
-    :root.theme-dark .race-card.registration-closed {
-      background: var(--card-closed) !important;
-      border-color: var(--line) !important;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root:not(.theme-light) .race-card.registration-upcoming,
-      :root:not(.theme-light) .race-card.registration-closed {
-        background: var(--card-closed) !important;
-        border-color: var(--line) !important;
-      }
-    }
-
     .race-card.registration-open .tag-class {
       background: var(--pill-bg) !important;
       color: var(--muted) !important;
