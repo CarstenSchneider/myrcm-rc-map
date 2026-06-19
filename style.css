@@ -1188,6 +1188,11 @@ input {
   background: rgba(var(--text-rgb), 0.5);
 }
 
+.race-card.registration-closed .race-document-dot.race-document-dot-closed {
+  background: #9a9795 !important;
+  box-shadow: none !important;
+}
+
 .race-document-dot-upcoming {
   background: var(--favorite);
 }
