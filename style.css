@@ -362,8 +362,8 @@ input {
 
 /* Close-Button, Links, Texte */
 .popup-standard .leaflet-popup-close-button { color: rgba(255,255,255,0.65) !important; }
-.popup-standard a,
-.popup-standard .popup-title a { color: rgba(255,255,255,0.9) !important; }
+.popup-standard .popup-title a,
+.popup-standard .popup-race a { color: rgba(255,255,255,0.9) !important; }
 .popup-standard .popup-race-button { color: #ffffff; }
 
 .popup-favorite .leaflet-popup-close-button { color: rgba(33,55,105,0.4) !important; }
@@ -1905,12 +1905,12 @@ input {
 .popup-favorite .leaflet-popup-content-wrapper {
   color: #213769;
 }
-.popup-favorite .leaflet-popup-content-wrapper a,
+.popup-favorite .leaflet-popup-content-wrapper .popup-title a,
 .popup-favorite .leaflet-popup-content-wrapper .popup-venue-link,
 .popup-favorite .leaflet-popup-content-wrapper .popup-race-button {
   color: #213769 !important;
 }
-.popup-favorite .leaflet-popup-content-wrapper a:hover,
+.popup-favorite .leaflet-popup-content-wrapper .popup-title a:hover,
 .popup-favorite .leaflet-popup-content-wrapper .popup-venue-link:hover,
 .popup-favorite .leaflet-popup-content-wrapper .popup-race-button:hover {
   color: #ffffff !important;
@@ -1933,27 +1933,32 @@ input {
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
-  text-decoration: none;
-  transition: background 180ms ease, opacity 180ms ease;
-  /* Blue popup (standard + dark): white button, dark blue text — inverts popup bg */
-  background: #ffffff;
-  color: #213769;
-}
-
-.popup-route-btn:hover,
-.popup-route-btn:focus-visible {
-  background: rgba(255, 255, 255, 0.82);
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: background 180ms ease;
   outline: none;
 }
 
-/* Gold popup: dark navy button, white text — inverts gold bg */
+/* Standard popup (blau): weißer Button, dunkelblaue Schrift */
+.popup-standard .leaflet-popup-content-wrapper .popup-route-btn {
+  background: #ffffff !important;
+  color: #213769 !important;
+}
+.popup-standard .leaflet-popup-content-wrapper .popup-route-btn:hover,
+.popup-standard .leaflet-popup-content-wrapper .popup-route-btn:focus-visible {
+  background: #dde3ef !important;
+  color: #213769 !important;
+}
+
+/* Gold popup (Favorit): dunkler Button, weiße Schrift */
 .popup-favorite .leaflet-popup-content-wrapper .popup-route-btn {
-  background: #213769;
-  color: #ffffff;
+  background: #213769 !important;
+  color: #ffffff !important;
 }
 .popup-favorite .leaflet-popup-content-wrapper .popup-route-btn:hover,
 .popup-favorite .leaflet-popup-content-wrapper .popup-route-btn:focus-visible {
-  background: #2d4a8a;
+  background: #2d4a8a !important;
+  color: #ffffff !important;
 }
 
 .race-section-divider {
