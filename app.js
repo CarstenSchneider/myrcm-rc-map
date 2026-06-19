@@ -2264,8 +2264,12 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
   // Show favorite star only for host-based venues (not venue-only locations)
   const hostId = venueRaces.length ? raceHostId(venueRaces[0]) : null;
   const hostName = hostId ? raceHostName(venueRaces[0]) : null;
+  const hostWebsite = hostId ? hostWebsiteForRace(venueRaces[0]) : null;
+  const hostNameHtml = hostWebsite
+    ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
+    : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`;
   const titleHtml = hostId
-    ? `<span class="venue-name-with-favorite">${favoriteHostButtonHtml(hostId, hostName)}<span class="venue-name-text">${escapeHtml(hostName)}</span></span>`
+    ? `<span class="venue-name-with-favorite">${favoriteHostButtonHtml(hostId, hostName)}${hostNameHtml}</span>`
     : venueNameHtml(venue);
 
   return `
@@ -2490,8 +2494,7 @@ const popupOffset = hasUpcomingRaces
 
       popupElement.addEventListener("mouseleave", () => {
         if (window.matchMedia("(pointer: coarse)").matches) return;
-        if (isPopupPinned) return;
-        if (pinnedVenueId && pinnedVenueId !== venue.id) return;
+        if (isPopupPinned || pinnedVenueId === venue.id) return;
 
         clearTimeout(hoverTimer);
         hoverTimer = window.setTimeout(() => {
