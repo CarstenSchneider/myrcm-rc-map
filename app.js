@@ -1367,6 +1367,16 @@ function markerScaleForRegistrationCount(count) {
 }
 
 function markerColorForRegistrationCount(count) {
+  if (isDarkActive()) {
+    // Night: large pins lightest (stand out on dark bg)
+    if (count >= 120) return "#9AAAD0";
+    if (count >= 70)  return "#788FC0";
+    if (count >= 40)  return "#5A73AA";
+    if (count >= 20)  return "#405B94";
+    if (count >= 10)  return "#2D447C";
+    return rcRaceMapColors.marker;
+  }
+  // Day: large pins darkest
   if (count >= 120) return rcRaceMapColors.marker;
   if (count >= 70)  return "#2D447C";
   if (count >= 40)  return "#405B94";
