@@ -1405,18 +1405,6 @@ function ensureRegistrationStatusStyles() {
       color: var(--muted) !important;
     }
 
-    @media not (prefers-color-scheme: dark) {
-      .race-card.registration-closed .race-document-dot-closed {
-        background: #9a9795 !important;
-        box-shadow: none !important;
-      }
-    }
-
-    :root.theme-light .race-card.registration-closed .race-document-dot-closed {
-      background: #9a9795 !important;
-      box-shadow: none !important;
-    }
-
     .race-card.registration-closed .tag-class,
     .race-card.registration-closed .tag {
       background: var(--muted) !important;
@@ -1435,11 +1423,6 @@ function ensureRegistrationStatusStyles() {
     :root.theme-dark .race-card.registration-closed .race-registration-count,
     :root.theme-dark .race-card.registration-closed .race-link-item-status-closed {
       color: #3d5380 !important;
-    }
-
-    :root.theme-dark .race-card.registration-closed .race-document-dot-closed {
-      background: #3d5380 !important;
-      box-shadow: none !important;
     }
 
     :root.theme-dark .race-card.registration-closed .tag-class,
@@ -1461,11 +1444,6 @@ function ensureRegistrationStatusStyles() {
       :root:not(.theme-light) .race-card.registration-closed .race-registration-count,
       :root:not(.theme-light) .race-card.registration-closed .race-link-item-status-closed {
         color: #3d5380 !important;
-      }
-
-      :root:not(.theme-light) .race-card.registration-closed .race-document-dot-closed {
-        background: #3d5380 !important;
-        box-shadow: none !important;
       }
 
       :root:not(.theme-light) .race-card.registration-closed .tag-class,
