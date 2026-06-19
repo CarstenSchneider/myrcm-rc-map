@@ -1378,7 +1378,7 @@ function ensureRegistrationStatusStyles() {
     :root.theme-dark .race-card.registration-closed .tag-class,
     :root.theme-dark .race-card.registration-closed .tag {
       background: var(--card) !important;
-      color: var(--muted-alt) !important;
+      color: #4d68a1 !important;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -1390,7 +1390,7 @@ function ensureRegistrationStatusStyles() {
       :root:not(.theme-light) .race-card.registration-closed .tag-class,
       :root:not(.theme-light) .race-card.registration-closed .tag {
         background: var(--card) !important;
-        color: var(--muted-alt) !important;
+        color: #4d68a1 !important;
       }
     }
 
