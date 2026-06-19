@@ -2633,10 +2633,10 @@ body.is-menu-open .app-menu-close {
   --muted-warm: #7a90ae;
   --line: #1e3058;
   --border-rgb: 30, 48, 88;
-  --accent: #5b8fd4;
-  --accent-rgb: 91, 143, 212;
-  --map-marker: #5b8fd4;
-  --host-blue: #5b8fd4;
+  --accent: #4569a5;
+  --accent-rgb: 69, 105, 165;
+  --map-marker: #4569a5;
+  --host-blue: #4569a5;
   --favorite: #c8b090;
   --shadow-rgb: 0, 0, 0;
   --shadow-sm: 0 5px 16px rgba(0, 0, 0, 0.35);
@@ -2647,6 +2647,10 @@ body.is-menu-open .app-menu-close {
   --tag-2-bg: #192d52; --tag-2-text: #8aaad8;
   --tag-3-bg: #162848; --tag-3-text: #7a9ccc;
   --tag-4-bg: #132240; --tag-4-text: #6a8ec0;
+  /* open-registration class pills: subtler than closed */
+}
+:root.theme-dark .race-card.registration-open .tag-class {
+  color: var(--muted-light) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2679,10 +2683,10 @@ body.is-menu-open .app-menu-close {
     --muted-warm: #7a90ae;
     --line: #1e3058;
     --border-rgb: 30, 48, 88;
-    --accent: #5b8fd4;
-    --accent-rgb: 91, 143, 212;
-    --map-marker: #5b8fd4;
-    --host-blue: #5b8fd4;
+    --accent: #4569a5;
+    --accent-rgb: 69, 105, 165;
+    --map-marker: #4569a5;
+    --host-blue: #4569a5;
     --favorite: #c8b090;
     --shadow-rgb: 0, 0, 0;
     --shadow-sm: 0 5px 16px rgba(0, 0, 0, 0.35);
@@ -2693,6 +2697,10 @@ body.is-menu-open .app-menu-close {
     --tag-2-bg: #192d52; --tag-2-text: #8aaad8;
     --tag-3-bg: #162848; --tag-3-text: #7a9ccc;
     --tag-4-bg: #132240; --tag-4-text: #6a8ec0;
+  }
+
+  :root:not(.theme-light) .race-card.registration-open .tag-class {
+    color: var(--muted-light) !important;
   }
 }
 

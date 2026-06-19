@@ -31,14 +31,14 @@ const rcRaceMapColorsLight = {
   water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",
   landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4",
   boundary: "#d8d8d8", label: "#716F6F", labelHalo: "#ebebeb",
-  marker: "#213769", markerClosed: "#716F6F", favorite: "#C8B090",
+  marker: "#213769", markerClosed: "#9a9795", favorite: "#C8B090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
 };
 const rcRaceMapColorsDark = {
   water: "#0c1829", land: "#0f1e35", settlement: "#132442",
   landcover: "#0e1c32", building: "#132442", road: "#1e3a5f",
   boundary: "#1e3a5f", label: "#6a9fd8", labelHalo: "#0f1e35",
-  marker: "#5b8fd4", markerClosed: "#4f6180", favorite: "#c8b090",
+  marker: "#4569a5", markerClosed: "#7a9ab8", favorite: "#c8b090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
 };
 const rcRaceMapColors = { ...rcRaceMapColorsLight };
@@ -1359,11 +1359,8 @@ function ensureRegistrationStatusStyles() {
       border-color: rgba(222, 214, 202, 0.7);
     }
 
-    .race-card.registration-closed .race-date,
-    .race-card.registration-closed .race-name,
-    .race-card.registration-closed .race-venue,
-    .race-card.registration-closed .tag {
-      color: rgba(31, 29, 26, 0.58);
+    .race-card.registration-open .tag-class {
+      color: rgba(31, 29, 26, 0.42);
     }
 
     .race-link,
@@ -2306,11 +2303,11 @@ function updateMarkers(list, shouldFitBounds = true) {
     if (isFavoriteVenue) {
       markerColor = rcRaceMapColors.favorite;
     } else if (hasUpcomingRaces && !venueHasActiveRegistration) {
-      markerColor = "rgba(31, 29, 26, 0.55)";
+      markerColor = rcRaceMapColors.markerClosed;
     } else if (hasUpcomingRaces) {
       markerColor = markerColorForRegistrationCount(registrationTotal);
     } else {
-      markerColor = "rgba(33, 55, 105, 0.58)";
+      markerColor = rcRaceMapColors.markerClosed;
     }
 
     const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight);
