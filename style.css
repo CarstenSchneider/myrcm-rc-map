@@ -2473,12 +2473,13 @@ input {
   width: 40px;
   height: 4px;
   border-radius: 999px;
-  background: rgba(var(--accent-rgb), 0.18);
+  background: rgba(var(--accent-rgb), 0.35);
 }
 
 /* Filter mount — wraps moved desktop filter elements */
 .mob-drawer-filters {
   flex: 0 0 auto;
+  background: rgba(var(--panel-rgb), 0.94);
   border-bottom: 1px solid var(--line);
 }
 
