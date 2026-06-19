@@ -59,8 +59,8 @@
     "address": "Senator-Apelt-Strasse",
     "postalCode": "28197",
     "country": "DE",
-    "lat": 53.0734631,
-    "lng": 8.767315,
+    "lat": 53.0802699,
+    "lng": 8.7556773,
     "source": "rck",
     "sources": [
       "rck-challenge",
@@ -78,7 +78,7 @@
     "verificationStatus": "verifiziert",
     "geocodingSource": "nominatim",
     "geocodingQuery": "Senator-Apelt-Strasse, 28197 Bremen, DE",
-    "geocodingDisplayName": "Senator-Apelt-Straße, Tabakquartier, Woltmershausen, Bremen-Süd, Bremen, 28197, Deutschland",
+    "geocodingDisplayName": "Senator-Apelt-Straße, Neustädter Häfen, Häfen, Bremen-Mitte, Bremen, 28197, Deutschland",
     "geocodingClass": null,
     "geocodingType": "tertiary"
   },
