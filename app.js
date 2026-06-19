@@ -1370,17 +1370,27 @@ function ensureRegistrationStatusStyles() {
       color: var(--muted-light) !important;
     }
 
+    :root.theme-dark .race-card.registration-open .tag-class {
+      background: #4d68a1 !important;
+      color: #172037 !important;
+    }
+
     :root.theme-dark .race-card.registration-closed .tag-class,
     :root.theme-dark .race-card.registration-closed .tag {
-      background: var(--text) !important;
-      color: var(--panel) !important;
+      background: #172037 !important;
+      color: var(--muted) !important;
     }
 
     @media (prefers-color-scheme: dark) {
+      :root:not(.theme-light) .race-card.registration-open .tag-class {
+        background: #4d68a1 !important;
+        color: #172037 !important;
+      }
+
       :root:not(.theme-light) .race-card.registration-closed .tag-class,
       :root:not(.theme-light) .race-card.registration-closed .tag {
-        background: var(--text) !important;
-        color: var(--panel) !important;
+        background: #172037 !important;
+        color: var(--muted) !important;
       }
     }
 
