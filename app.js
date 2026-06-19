@@ -1406,7 +1406,7 @@ function ensureRegistrationStatusStyles() {
     }
 
     .race-card.registration-closed .race-document-dot-closed {
-      background: var(--muted) !important;
+      background: #9a9795 !important;
       box-shadow: none !important;
     }
 
