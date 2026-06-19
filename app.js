@@ -1360,12 +1360,28 @@ function ensureRegistrationStatusStyles() {
     }
 
     .race-card.registration-open .tag-class {
-      color: var(--accent);
+      background: var(--pill-bg) !important;
+      color: var(--muted) !important;
     }
 
     .race-card.registration-closed .tag-class,
     .race-card.registration-closed .tag {
-      color: var(--muted-light);
+      background: var(--pill-bg) !important;
+      color: var(--muted-light) !important;
+    }
+
+    :root.theme-dark .race-card.registration-closed .tag-class,
+    :root.theme-dark .race-card.registration-closed .tag {
+      background: var(--text) !important;
+      color: var(--panel) !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.theme-light) .race-card.registration-closed .tag-class,
+      :root:not(.theme-light) .race-card.registration-closed .tag {
+        background: var(--text) !important;
+        color: var(--panel) !important;
+      }
     }
 
     .race-link,
