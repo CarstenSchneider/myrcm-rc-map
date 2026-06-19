@@ -614,6 +614,17 @@ input {
 .layout-prototype .leaflet-control-zoom a {
   border-color: var(--line) !important;
   color: var(--text) !important;
+  background: var(--panel) !important;
+}
+
+.layout-prototype .leaflet-control-attribution {
+  background: rgba(var(--panel-rgb), 0.82) !important;
+  color: var(--muted) !important;
+  backdrop-filter: blur(6px);
+}
+
+.layout-prototype .leaflet-control-attribution a {
+  color: var(--accent) !important;
 }
 
 @media (max-width: 860px) {
@@ -1046,6 +1057,7 @@ input {
     bottom: 0 !important;
     width: 100% !important;
     height: 100% !important;
+    max-height: none !important;
     z-index: 0;
   }
   .layout-prototype #map {

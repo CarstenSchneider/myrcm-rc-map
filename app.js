@@ -3696,4 +3696,9 @@ showMenuHome();
 // ── Init mobile state ──────────────────────────────────────────
 window.addEventListener("load", () => {
   setDrawerState("half");
+  // Force Leaflet and MapLibre to re-measure after CSS is fully applied
+  requestAnimationFrame(() => {
+    map?.invalidateSize?.();
+    baseMapLayer?.getMaplibreMap?.()?.resize?.();
+  });
 });
