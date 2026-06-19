@@ -1921,6 +1921,42 @@ input {
   vertical-align: baseline;
 }
 
+.popup-route {
+  margin-top: 10px;
+}
+
+.popup-route-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px 7px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.popup-route-btn:hover,
+.popup-route-btn:focus-visible {
+  background: var(--host-blue);
+  color: #fff;
+  outline: none;
+}
+
+/* Gold popup: dark blue button */
+.popup-favorite .leaflet-popup-content-wrapper .popup-route-btn {
+  background: #213769;
+  color: #fff;
+}
+.popup-favorite .leaflet-popup-content-wrapper .popup-route-btn:hover,
+.popup-favorite .leaflet-popup-content-wrapper .popup-route-btn:focus-visible {
+  background: #0f2145;
+  color: #fff;
+}
+
 .race-section-divider {
   margin: 10px 0 4px;
   color: var(--muted);
