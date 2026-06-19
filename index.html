@@ -197,6 +197,14 @@
       padding: 0 52px 0 22px;
     }
 
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"] {
+      --star-color: var(--pill-bg);
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"].active {
+      --star-color: var(--favorite);
+    }
+
     .layout-prototype .topbar .favorite-toggle-icon {
       position: relative;
       display: inline-flex;
@@ -214,7 +222,7 @@
       content: "★";
       position: absolute;
       font-size: 11px;
-      color: var(--panel);
+      color: var(--star-color, var(--panel));
       line-height: 1;
     }
 
@@ -535,7 +543,7 @@
       content: "★";
       position: absolute;
       font-size: 10px;
-      color: var(--panel);
+      color: var(--star-color, var(--panel));
       line-height: 1;
     }
 
@@ -751,7 +759,7 @@
       content: "★";
       position: absolute;
       font-size: 10px;
-      color: var(--card);
+      color: var(--host-blue);
       line-height: 1;
     }
 

@@ -1360,7 +1360,12 @@ function ensureRegistrationStatusStyles() {
     }
 
     .race-card.registration-open .tag-class {
-      color: rgba(31, 29, 26, 0.42);
+      color: var(--accent);
+    }
+
+    .race-card.registration-closed .tag-class,
+    .race-card.registration-closed .tag {
+      color: var(--muted-light);
     }
 
     .race-link,
