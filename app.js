@@ -38,7 +38,7 @@ const rcRaceMapColorsDark = {
   water: "#0c1829", land: "#0f1e35", settlement: "#132442",
   landcover: "#0e1c32", building: "#132442", road: "#1e3a5f", roadMinor: "#1e3a5f",
   boundary: "#1e3a5f", label: "#6a9fd8", labelHalo: "#0f1e35",
-  marker: "#4569a5", markerClosed: "#7a9ab8", favorite: "#c8b090",
+  marker: "#4569a5", markerClosed: "#607080", favorite: "#c8b090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
 };
 const rcRaceMapColors = { ...rcRaceMapColorsLight };
@@ -1394,6 +1394,12 @@ function ensureRegistrationStatusStyles() {
 
     .race-card.registration-open .tag-class {
       background: var(--pill-bg) !important;
+      color: var(--muted) !important;
+    }
+
+    .race-card.registration-closed .race-date,
+    .race-card.registration-closed .race-name,
+    .race-card.registration-closed .race-venue {
       color: var(--muted) !important;
     }
 
