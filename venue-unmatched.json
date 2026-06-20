@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "modellclub-flensburg-e-v",
-    "hostName": "Modellclub Flensburg e.V",
-    "source": "myrcm",
-    "myrcmOrgId": "42405",
-    "possibleVenue": "Flensburg",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "source": "myrcm",
@@ -25,7 +17,7 @@
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team MÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼nchen e.V",
+    "hostName": "RC Race Team MÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼nchen e.V",
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
