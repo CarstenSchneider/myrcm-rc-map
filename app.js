@@ -2469,8 +2469,14 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
+    const venueHostIds = [
+      venue.hostId,
+      ...(Array.isArray(venue.hostIds) ? venue.hostIds : []),
+      venue.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
+      venue.hostName ? slugifyMatchValue(venue.hostName) : null
+    ].filter(Boolean).map(String);
     const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race))
-      || isFavoriteHostId(venue.hostId ? String(venue.hostId) : null);
+      || venueHostIds.some(id => isFavoriteHostId(id));
 
     let markerColor;
     if (isFavoriteVenue) {
