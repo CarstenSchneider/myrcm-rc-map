@@ -2679,17 +2679,15 @@ input {
 .app-menu-panel {
   position: fixed;
   top: 0; left: 0; bottom: 0;
-  width: 390px;
+  width: 340px;
   z-index: 1500;
   background: var(--panel);
-  border-right: 1px solid rgba(var(--text-rgb), 0.08);
+  border-right: 1px solid rgba(var(--text-rgb), 0.06);
   box-shadow: 4px 0 32px rgba(var(--shadow-rgb), 0.12);
   transform: translateX(-100%);
   transition: transform 300ms ease;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
 }
 .app-menu-panel.is-open { transform: translateX(0); }
 
@@ -2712,21 +2710,29 @@ input {
 }
 
 .app-menu-header {
-  padding: 20px 24px 20px;
-  border-bottom: 1px solid rgba(var(--text-rgb), 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 24px;
+  border-bottom: 1px solid rgba(var(--text-rgb), 0.07);
+  flex-shrink: 0;
 }
+.app-menu-logo-pin { width: 36px; height: 40px; margin-top: 48px; display: block; }
 .app-menu-logo {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.01em;
+  margin-top: 8px;
 }
 
 .app-menu-content {
   flex: 1;
-  padding: 16px 24px 24px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 .app-menu-list {
@@ -2737,32 +2743,37 @@ input {
   flex-direction: column;
   gap: 2px;
 }
-.app-menu-item {
-  display: block;
-  width: 100%;
-  padding: 14px 0;
-  background: none;
-  border: 0;
-  text-align: left;
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--accent);
-  cursor: pointer;
-  border-bottom: 1px solid rgba(var(--text-rgb), 0.08);
+/* Menu rows */
+.app-menu-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 0 20px; height: 52px; cursor: pointer;
+  background: none; border: 0; width: 100%; text-align: left; font: inherit; color: var(--text);
   text-decoration: none;
 }
-.app-menu-item:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  color: var(--accent);
-}
+.app-menu-row:hover { background: rgba(var(--text-rgb), 0.04); }
+.app-menu-row-icon { width: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.app-menu-row-icon svg { width: 20px; height: 20px; stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.app-menu-row-label { flex: 1; font-size: 15px; color: var(--text); }
+.app-menu-row-value { font-size: 13px; color: var(--muted); }
+.app-menu-row-chevron { width: 14px; height: 14px; stroke: rgba(var(--text-rgb), 0.2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.app-menu-sep { height: 1px; background: rgba(var(--text-rgb), 0.07); margin: 4px 0; }
+.app-menu-section-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); opacity: 0.6; text-transform: uppercase; padding: 12px 20px 4px; }
+
+/* Auth row */
+.app-menu-item { display: block; width: 100%; padding: 14px 20px; background: none; border: 0; text-align: left; font-size: 15px; color: var(--accent); cursor: pointer; text-decoration: none; }
+.app-menu-item:hover { text-decoration: underline; }
 
 /* Auth */
 .app-menu-auth-user {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  padding: 14px 20px;
 }
+.app-menu-auth-info { flex: 1; display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.app-menu-auth-status { font-size: 11px; color: var(--muted); opacity: 0.7; }
+.app-menu-theme-row { cursor: default; }
+.app-menu-theme-row:hover { background: none; }
 .app-menu-auth-avatar {
   width: 34px;
   height: 34px;
@@ -3176,7 +3187,7 @@ body.is-menu-open .app-menu-close {
 /* Menu footer */
 .app-menu-footer {
   margin-top: auto;
-  padding: 20px 0 24px;
+  padding: 20px 20px 24px;
   border-top: 1px solid rgba(var(--border-rgb), 0.4);
   display: flex;
   flex-direction: column;
@@ -3189,7 +3200,6 @@ body.is-menu-open .app-menu-close {
   text-decoration: none;
   color: var(--muted);
   font-size: 11px;
-  opacity: 0.6;
 }
 .app-menu-footer-logo {
   height: 10px;
@@ -3203,7 +3213,6 @@ body.is-menu-open .app-menu-close {
   gap: 2px;
   font-size: 11px;
   color: var(--muted);
-  opacity: 0.6;
 }
 .app-menu-footer-legal-row {
   display: flex;
