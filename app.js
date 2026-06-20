@@ -2858,6 +2858,11 @@ document.addEventListener("click", event => {
   event.preventDefault();
   event.stopPropagation();
 
+  if (!sbUser) {
+    showLoginPrompt();
+    return;
+  }
+
   if (favoriteHostButton) {
     toggleFavoriteHost(favoriteHostButton.dataset.favoriteHostId);
   } else if (favoriteVenueButton) {
@@ -3874,6 +3879,30 @@ async function adminCommit(payload) {
   });
   if (!res.ok) throw new Error(await res.text());
   return res.json();
+}
+
+function showLoginPrompt() {
+  const existing = document.getElementById("loginPrompt");
+  if (existing) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "loginPrompt";
+  overlay.className = "login-prompt-overlay";
+  overlay.innerHTML = `
+    <div class="login-prompt-card">
+      <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
+      <p class="login-prompt-text">Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.</p>
+      <button type="button" class="login-prompt-btn" id="loginPromptBtn">Anmelden</button>
+    </div>`;
+
+  const close = () => overlay.remove();
+  overlay.addEventListener("click", e => { if (e.target === overlay) close(); });
+  document.body.appendChild(overlay);
+  overlay.querySelector("#loginPromptBtn")?.addEventListener("click", () => {
+    close();
+    openAppMenu();
+    showMenuPage("login");
+  });
 }
 
 function openImpressumPage() {

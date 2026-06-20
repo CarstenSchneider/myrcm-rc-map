@@ -2704,6 +2704,51 @@ input {
   pointer-events: none;
   transition: opacity 300ms ease;
 }
+
+/* Login prompt modal */
+.login-prompt-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: app-menu-close-in 200ms ease both;
+}
+.login-prompt-card {
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  max-width: 320px;
+  width: calc(100% - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.login-prompt-card .app-menu-logo-pin { margin-top: 0; }
+.login-prompt-text {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+}
+.login-prompt-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+.login-prompt-btn:hover { opacity: 0.85; }
 .app-menu-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
