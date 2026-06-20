@@ -2939,8 +2939,8 @@ body.is-menu-open .layout-prototype .topbar .app-menu-button {
   z-index: 10000;
   transition: transform 120ms ease;
 }
-:root.theme-dark .app-menu-close,
-:root.theme-dark .sub-page-close { background: #fff; color: #1a2a4a; }
+.app-menu-close,
+.sub-page-close { color: #fff; }
 .app-menu-close:hover,
 .sub-page-close:hover { transform: scale(1.08); }
 .app-menu-close { display: none; }
@@ -3265,10 +3265,12 @@ body.is-menu-open .app-menu-close {
 /* Admin full-page overlay */
 .admin-page { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: flex; flex-direction: column; overscroll-behavior: none; }
 .admin-page[hidden] { display: none; }
-.admin-page-topbar { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 0 80px; height: 56px; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); background: var(--bg); }
-.admin-page-topbar-title { font-size: 15px; font-weight: 600; }
+.sub-page-header { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding: 20px 20px 24px; border-bottom: 1px solid rgba(var(--text-rgb), 0.07); padding-top: calc(52px + 28px + 20px); }
+.sub-page-title { font-size: 16px; font-weight: 700; color: var(--accent); letter-spacing: -0.01em; }
 .admin-page-inner { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 .admin-page-inner > .admin-page-list { max-width: 640px; margin: 0 auto; padding: 0 20px 48px; }
+.admin-page-list a { color: #6a9fd8; text-decoration: none; }
+.admin-page-list a:hover { text-decoration: underline; opacity: 0.8; }
 .admin-page-list .admin-entry { padding: 16px 0; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); }
 /* Toggle for Ort unbekannt */
 .admin-entry-toggle { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; cursor: pointer; user-select: none; font-size: 13px; color: var(--muted); }
