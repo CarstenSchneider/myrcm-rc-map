@@ -441,14 +441,18 @@ let sbUser = null;
 
 async function sbInit() {
   if (!sbClient) return;
-  const { data: { session } } = await sbClient.auth.getSession();
-  sbUser = session?.user ?? null;
-  sbClient.auth.onAuthStateChange(async (_event, session) => {
+  try {
+    const { data: { session } } = await sbClient.auth.getSession();
     sbUser = session?.user ?? null;
+    sbClient.auth.onAuthStateChange(async (_event, session) => {
+      sbUser = session?.user ?? null;
+      if (sbUser) await sbPullAll();
+      if (typeof showMenuHome === "function") showMenuHome();
+    });
     if (sbUser) await sbPullAll();
-    if (typeof showMenuHome === "function") showMenuHome();
-  });
-  if (sbUser) await sbPullAll();
+  } catch (e) {
+    console.error("Supabase init failed:", e);
+  }
 }
 
 async function sbSendMagicLink(email) {
@@ -470,35 +474,39 @@ async function sbPullAll() {
 }
 
 async function sbPullFavorites() {
-  const { data } = await sbClient.from("user_favorites").select("host_id").eq("user_id", sbUser.id);
-  if (!data) return;
+  const { data, error } = await sbClient.from("user_favorites").select("host_id").eq("user_id", sbUser.id);
+  if (error) { console.error("sbPullFavorites:", error); return; }
   const remoteIds = data.map(r => r.host_id);
   const localIds = getFavoriteHostIds();
   const merged = [...new Set([...localIds, ...remoteIds])];
   saveFavoriteHostIds(merged);
   if (merged.length !== remoteIds.length) {
     const toInsert = merged.filter(id => !remoteIds.includes(id)).map(host_id => ({ user_id: sbUser.id, host_id }));
-    if (toInsert.length) await sbClient.from("user_favorites").upsert(toInsert);
+    if (toInsert.length) {
+      const { error: upsertErr } = await sbClient.from("user_favorites").upsert(toInsert);
+      if (upsertErr) console.error("sbPullFavorites upsert:", upsertErr);
+    }
   }
 }
 
 async function sbPullPreferences() {
-  const { data } = await sbClient.from("user_preferences").select("theme").eq("user_id", sbUser.id).maybeSingle();
+  const { data, error } = await sbClient.from("user_preferences").select("theme").eq("user_id", sbUser.id).maybeSingle();
+  if (error) { console.error("sbPullPreferences:", error); return; }
   if (data?.theme) setTheme(data.theme);
 }
 
 async function sbToggleFavorite(hostId, isNowFavorite) {
   if (!sbClient || !sbUser) return;
-  if (isNowFavorite) {
-    await sbClient.from("user_favorites").upsert({ user_id: sbUser.id, host_id: hostId });
-  } else {
-    await sbClient.from("user_favorites").delete().eq("user_id", sbUser.id).eq("host_id", hostId);
-  }
+  const { error } = isNowFavorite
+    ? await sbClient.from("user_favorites").upsert({ user_id: sbUser.id, host_id: hostId })
+    : await sbClient.from("user_favorites").delete().eq("user_id", sbUser.id).eq("host_id", hostId);
+  if (error) console.error("sbToggleFavorite:", error);
 }
 
 async function sbSaveTheme(theme) {
   if (!sbClient || !sbUser) return;
-  await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, theme, updated_at: new Date().toISOString() });
+  const { error } = await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, theme, updated_at: new Date().toISOString() });
+  if (error) console.error("sbSaveTheme:", error);
 }
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -558,7 +566,7 @@ function toggleFavoriteHost(hostId) {
   } else {
     saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
   }
-  sbToggleFavorite(id, isNowFavorite);
+  sbToggleFavorite(id, isNowFavorite).catch(e => console.error("toggleFavoriteHost sync:", e));
 }
 
 function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
