@@ -3769,6 +3769,7 @@ function showMenuHome() {
         <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
       </div>
     </div>
+    ${sbUser ? `
     <button type="button" class="app-menu-row">
       <span class="app-menu-row-icon">${iconStar}</span>
       <span class="app-menu-row-label">Favoriten</span>
@@ -3778,7 +3779,7 @@ function showMenuHome() {
       <span class="app-menu-row-icon">${iconBell}</span>
       <span class="app-menu-row-label">Benachrichtigungen</span>
       ${chevron}
-    </button>
+    </button>` : ""}
     ${isAdmin() ? `
     <div class="app-menu-sep"></div>
     <button type="button" class="app-menu-row" data-menu="admin">
