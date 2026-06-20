@@ -2171,9 +2171,15 @@ input {
   box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09);
   transition: filter 120ms, transform 120ms;
 }
-.layout-prototype .topbar .app-menu-button:hover {
-  filter: brightness(1.08);
-  transform: scale(1.04);
+.layout-prototype .topbar .app-menu-button:hover,
+.mob-menu-btn:hover {
+  filter: brightness(0.88);
+  transform: scale(1.08);
+}
+:root.theme-dark .layout-prototype .topbar .app-menu-button:hover,
+:root.theme-dark .mob-menu-btn:hover {
+  filter: brightness(1.25);
+  transform: scale(1.08);
 }
 
 .layout-prototype .topbar-range,
@@ -2505,6 +2511,7 @@ input {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  transition: filter 120ms, transform 120ms;
 }
 @media (max-width: 860px) {
   .mob-menu-btn { display: flex; }
