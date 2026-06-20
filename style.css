@@ -2346,14 +2346,6 @@ input {
     display: none;
   }
 
-  .layout-prototype .topbar .label-full {
-    display: none;
-  }
-
-  .layout-prototype .topbar .label-short {
-    display: inline;
-  }
-
   .layout-prototype .topbar .segmented {
     width: 100%;
   }
