@@ -2720,6 +2720,7 @@ input {
   background: var(--panel);
   border-radius: 20px;
   padding: 32px 28px 28px;
+  position: relative;
   max-width: 320px;
   width: calc(100% - 48px);
   display: flex;
@@ -2729,6 +2730,18 @@ input {
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 .login-prompt-card .app-menu-logo-pin { margin-top: 0; }
+.login-prompt-close {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(var(--text-rgb), 0.08);
+  color: var(--muted);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.login-prompt-close:hover { background: rgba(var(--text-rgb), 0.14); }
 .login-prompt-text {
   font-size: 14px;
   color: var(--muted);
