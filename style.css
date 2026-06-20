@@ -3255,6 +3255,10 @@ body.is-menu-open .app-menu-close {
   border-radius: 999px;
   width: fit-content;
 }
+:root.theme-dark .theme-toggle,
+:root:not(.theme-light) .theme-toggle {
+  background: var(--pill-bg);
+}
 .theme-toggle-btn {
   border: 0;
   background: transparent;
