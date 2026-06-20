@@ -3740,9 +3740,6 @@ function showMenuHome() {
     <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
       ${authSection}
     </div>
-    <ul class="app-menu-list">
-      <li><button type="button" class="app-menu-item" data-menu="impressum">Impressum &amp; Datenschutz</button></li>
-    </ul>
     <div class="app-menu-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
         <span>made with</span>
