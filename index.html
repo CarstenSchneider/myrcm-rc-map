@@ -1293,11 +1293,14 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="app.js" type="module"></script>
   <div id="adminPage" class="admin-page" hidden>
+    <div class="admin-page-topbar">
+      <button type="button" class="admin-page-back" id="adminPageBack">
+        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 1L1 6.5L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Karte
+      </button>
+      <span class="admin-page-topbar-title">Ausrichter verorten</span>
+    </div>
     <div class="admin-page-inner">
-      <div class="admin-page-header">
-        <button type="button" class="admin-page-back" id="adminPageBack">← Zurück zur Karte</button>
-        <h1 class="admin-page-title">Admin: Ausrichter verorten</h1>
-      </div>
       <div id="adminPageList" class="admin-page-list"></div>
     </div>
   </div>

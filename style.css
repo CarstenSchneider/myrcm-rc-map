@@ -3247,12 +3247,18 @@ body.is-menu-open .app-menu-close {
 .admin-btn-unknown:hover { background: rgba(var(--text-rgb), 0.18); }
 .admin-entry-status { font-size: 12px; margin: 6px 0 0; min-height: 16px; color: var(--muted); }
 
-/* Admin full-page overlay — sits above everything via z-index 9999 */
-.admin-page { position: fixed; inset: 0; z-index: 9999; background: var(--bg); overflow-y: auto; }
+/* Admin full-page overlay */
+.admin-page { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: flex; flex-direction: column; overscroll-behavior: none; }
 .admin-page[hidden] { display: none; }
-.admin-page-inner { max-width: 640px; margin: 0 auto; padding: 24px 20px 48px; }
-.admin-page-header { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); padding-bottom: 16px; }
-.admin-page-back { appearance: none; border: none; background: none; padding: 0; font: inherit; font-size: 13px; color: var(--accent); cursor: pointer; text-align: left; width: fit-content; }
-.admin-page-back:hover { text-decoration: underline; }
-.admin-page-title { font-size: 20px; font-weight: 700; margin: 0; }
+.admin-page-topbar { flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 16px; height: 56px; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); background: var(--bg); }
+.admin-page-back { appearance: none; border: none; background: none; padding: 4px 8px 4px 0; font: inherit; font-size: 14px; color: var(--accent); cursor: pointer; display: flex; align-items: center; gap: 6px; }
+.admin-page-back:hover { opacity: 0.7; }
+.admin-page-topbar-title { font-size: 15px; font-weight: 600; }
+.admin-page-inner { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
+.admin-page-inner > .admin-page-list { max-width: 640px; margin: 0 auto; padding: 0 20px 48px; }
 .admin-page-list .admin-entry { padding: 16px 0; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); }
+/* Toggle for Ort unbekannt */
+.admin-entry-toggle { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; cursor: pointer; user-select: none; font-size: 13px; color: var(--muted); }
+.admin-entry-toggle input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+.admin-entry-coords { display: flex; gap: 8px; margin-bottom: 8px; }
+.admin-entry-coords[hidden] { display: none; }

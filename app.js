@@ -3863,45 +3863,50 @@ function openAdminPage() {
           <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
         </div>
         ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/show?P_SPORT_ID=1&P_NAV=7&P_ORG_ID=${e.myrcmOrgId}" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-        <div class="admin-entry-fields">
+        <label class="admin-entry-toggle">
+          <input type="checkbox" class="admin-unknown-toggle" />
+          Ort unbekannt
+        </label>
+        <div class="admin-entry-coords">
           <input type="text" class="admin-input" placeholder="Lat (z.B. 51.8)" data-field="lat" />
           <input type="text" class="admin-input" placeholder="Lng (z.B. 11.8)" data-field="lng" />
         </div>
         <div class="admin-entry-actions">
           <button type="button" class="admin-btn admin-btn-save">Speichern</button>
-          <button type="button" class="admin-btn admin-btn-unknown">Ort unbekannt</button>
         </div>
         <p class="admin-entry-status"></p>
       </div>`).join("");
 
-    listEl.addEventListener("click", async ev => {
+    listEl.addEventListener("change", ev => {
+      if (!ev.target.classList.contains("admin-unknown-toggle")) return;
       const entry = ev.target.closest(".admin-entry");
-      if (!entry) return;
+      const coords = entry.querySelector(".admin-entry-coords");
+      coords.hidden = ev.target.checked;
+    });
+
+    listEl.addEventListener("click", async ev => {
+      if (!ev.target.classList.contains("admin-btn-save")) return;
+      const entry = ev.target.closest(".admin-entry");
       const status = entry.querySelector(".admin-entry-status");
       const hostId = entry.dataset.hostId;
       const hostName = entry.dataset.hostName;
       const myrcmOrgId = entry.dataset.myrcmOrgId;
+      const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
 
-      if (ev.target.classList.contains("admin-btn-save")) {
-        const lat = parseFloat(entry.querySelector("[data-field=lat]").value.replace(",", "."));
-        const lng = parseFloat(entry.querySelector("[data-field=lng]").value.replace(",", "."));
-        if (isNaN(lat) || isNaN(lng)) { status.textContent = "Bitte Lat und Lng eingeben."; return; }
-        status.textContent = "Speichern…";
-        try {
-          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
-          entry.classList.add("admin-entry-done");
-          status.textContent = "✓ Gespeichert";
-        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
-      }
-
-      if (ev.target.classList.contains("admin-btn-unknown")) {
-        status.textContent = "Speichern…";
-        try {
+      status.textContent = "Speichern…";
+      try {
+        if (isUnknown) {
           await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
-          entry.classList.add("admin-entry-done");
           status.textContent = "✓ Als unbekannt markiert";
-        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
-      }
+        } else {
+          const lat = parseFloat(entry.querySelector("[data-field=lat]").value.replace(",", "."));
+          const lng = parseFloat(entry.querySelector("[data-field=lng]").value.replace(",", "."));
+          if (isNaN(lat) || isNaN(lng)) { status.textContent = "Bitte Lat und Lng eingeben."; return; }
+          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+          status.textContent = "✓ Gespeichert";
+        }
+        entry.classList.add("admin-entry-done");
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
     });
   }).catch(e => {
     listEl.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`;
