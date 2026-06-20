@@ -88,14 +88,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "source": "myrcm",
-    "myrcmOrgId": "60453",
-    "possibleVenue": "Sinntal",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "source": "myrcm",
