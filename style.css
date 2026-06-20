@@ -2158,6 +2158,7 @@ input {
 .layout-prototype .topbar-range {
   order: 2;
   flex: 0 0 auto;
+  padding-left: 14px;
 }
 
 .layout-prototype .topbar-spacer {
