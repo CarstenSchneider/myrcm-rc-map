@@ -2692,8 +2692,11 @@ function renderList(list) {
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
               ${
-                (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
-                  .map(item => `<span class="tag tag-class">${escapeHtml(classTagLabel(item))}</span>`)
+                race.classes
+                  .map((item, i) => {
+                    const collapsed = !expandedClassRaceIds.has(race.id) && race.classes.length > 6 && i >= 4;
+                    return `<span class="tag tag-class"${collapsed ? ' style="display:none"' : ""}>${escapeHtml(classTagLabel(item))}</span>`;
+                  })
                   .join("")
               }
               ${
