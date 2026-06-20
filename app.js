@@ -4021,7 +4021,7 @@ function showMenuPage(page) {
   if (page === "impressum") { openImpressumPage(); return; }
   const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
-    <button type="button" class="app-menu-back">← Zurück</button>
+    <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Zurück</button>
     <div class="app-menu-page-content">${pages[page] || ""}</div>`;
   appMenuContent.querySelector(".app-menu-back")
     ?.addEventListener("click", showMenuHome);

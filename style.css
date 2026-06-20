@@ -2868,7 +2868,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 4px;
+  padding-top: 16px;
 }
 .app-menu-login-info {
   font-size: 14px;
@@ -2921,14 +2921,33 @@ input {
 }
 
 .app-menu-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: none;
   border: 0;
-  padding: 0 20px 16px;
-  font-size: 14px;
-  color: var(--accent);
+  border-bottom: 1px solid rgba(var(--text-rgb), 0.07);
+  padding: 0 20px;
+  height: 52px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
   cursor: pointer;
   text-align: left;
-  font-weight: 500;
+}
+.app-menu-back:hover {
+  background: rgba(var(--text-rgb), 0.04);
+}
+.app-menu-back svg {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(var(--text-rgb), 0.3);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
 }
 
 .app-menu-page-content {
