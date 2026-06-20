@@ -2248,6 +2248,19 @@ input {
   color: var(--accent);
   font-size: 14px;
   font-weight: 400;
+  transition: filter 120ms, transform 120ms;
+}
+.layout-prototype .topbar .segmented button:not(.active):hover {
+  filter: brightness(0.88);
+  transform: scale(1.05);
+}
+:root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover {
+  filter: brightness(1.25);
+  transform: scale(1.05);
+}
+.layout-prototype .topbar .segmented button.active:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
 }
 
 .layout-prototype .topbar select,
@@ -2260,6 +2273,15 @@ input {
   color: var(--accent);
   font-size: 14px;
   box-shadow: none;
+  transition: filter 120ms, transform 120ms;
+}
+.layout-prototype .topbar select:hover {
+  filter: brightness(0.88);
+  transform: scale(1.03);
+}
+:root.theme-dark .layout-prototype .topbar select:hover {
+  filter: brightness(1.25);
+  transform: scale(1.03);
 }
 
 .layout-prototype .topbar select {
@@ -2310,6 +2332,19 @@ input {
   color: var(--accent);
   font-size: 14px;
   font-weight: 500;
+  transition: filter 120ms, transform 120ms;
+}
+.layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
+  filter: brightness(0.88);
+  transform: scale(1.05);
+}
+:root.theme-dark .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
+  filter: brightness(1.25);
+  transform: scale(1.05);
+}
+.layout-prototype .topbar .race-visibility-toggle button.active:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
 }
 
 .layout-prototype .topbar .filter-field-search {
