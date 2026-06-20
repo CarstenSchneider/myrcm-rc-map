@@ -7,6 +7,11 @@ on:
         description: 'Version folder name (e.g. v1, v2)'
         required: true
         type: string
+      ref:
+        description: 'Git ref to snapshot (branch, tag, or commit SHA). Defaults to main.'
+        required: false
+        default: 'main'
+        type: string
 
 jobs:
   snapshot:
@@ -16,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event.inputs.ref }}
 
       - name: Prepare snapshot files
         run: |
