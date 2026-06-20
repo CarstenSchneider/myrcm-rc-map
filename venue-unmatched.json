@@ -8,14 +8,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "msc-ulm-e-v",
-    "hostName": "MSC Ulm e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "42113",
-    "possibleVenue": "Senden",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "source": "myrcm",
@@ -49,7 +41,7 @@
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team MÃÂÃÂ¼nchen e.V",
+    "hostName": "RC Race Team MÃÂÃÂÃÂÃÂ¼nchen e.V",
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
