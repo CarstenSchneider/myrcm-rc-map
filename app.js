@@ -3875,6 +3875,19 @@ async function adminCommit(payload) {
   return res.json();
 }
 
+function openImpressumPage() {
+  const page = document.getElementById("impressumPage");
+  const content = document.getElementById("impressumPageContent");
+  if (!page || !content) return;
+  closeAppMenu();
+  content.innerHTML = impressumHtml();
+  page.hidden = false;
+  document.getElementById("impressumPageBack")?.addEventListener("click", () => {
+    page.hidden = true;
+    openAppMenu();
+  }, { once: true });
+}
+
 function openAdminPage() {
   const adminPage = document.getElementById("adminPage");
   const listEl = document.getElementById("adminPageList");
@@ -3888,6 +3901,7 @@ function openAdminPage() {
 
   document.getElementById("adminPageBack")?.addEventListener("click", () => {
     adminPage.hidden = true;
+    openAppMenu();
   }, { once: true });
 
   adminLoadUnmatched().then(entries => {
@@ -3957,7 +3971,8 @@ function openAdminPage() {
 function showMenuPage(page) {
   if (!appMenuContent) return;
   if (page === "admin") { openAdminPage(); return; }
-  const pages = { impressum: impressumHtml(), login: loginPageHtml() };
+  if (page === "impressum") { openImpressumPage(); return; }
+  const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
     <button type="button" class="app-menu-back">← Zurück</button>
     <div class="app-menu-page-content">${pages[page] || ""}</div>`;

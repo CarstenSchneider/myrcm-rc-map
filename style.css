@@ -2921,7 +2921,8 @@ body.is-menu-open .layout-prototype .topbar .app-menu-button {
   pointer-events: none;
 }
 
-.app-menu-close {
+.app-menu-close,
+.sub-page-close {
   position: fixed;
   top: 14px;
   left: 14px;
@@ -2932,13 +2933,17 @@ body.is-menu-open .layout-prototype .topbar .app-menu-button {
   background: var(--accent);
   color: var(--panel);
   cursor: pointer;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1600;
+  z-index: 10000;
   transition: transform 120ms ease;
 }
-.app-menu-close:hover { transform: scale(1.08); }
+:root.theme-dark .app-menu-close,
+:root.theme-dark .sub-page-close { background: #fff; color: #1a2a4a; }
+.app-menu-close:hover,
+.sub-page-close:hover { transform: scale(1.08); }
+.app-menu-close { display: none; }
 body.is-menu-open .app-menu-close {
   display: flex;
   animation: app-menu-close-in 160ms 100ms ease both;
@@ -3260,9 +3265,7 @@ body.is-menu-open .app-menu-close {
 /* Admin full-page overlay */
 .admin-page { position: fixed; inset: 0; z-index: 9999; background: var(--bg); display: flex; flex-direction: column; overscroll-behavior: none; }
 .admin-page[hidden] { display: none; }
-.admin-page-topbar { flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 0 16px; height: 56px; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); background: var(--bg); }
-.admin-page-back { appearance: none; border: none; background: none; padding: 4px 8px 4px 0; font: inherit; font-size: 14px; color: var(--accent); cursor: pointer; display: flex; align-items: center; gap: 6px; }
-.admin-page-back:hover { opacity: 0.7; }
+.admin-page-topbar { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 0 80px; height: 56px; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); background: var(--bg); }
 .admin-page-topbar-title { font-size: 15px; font-weight: 600; }
 .admin-page-inner { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 .admin-page-inner > .admin-page-list { max-width: 640px; margin: 0 auto; padding: 0 20px 48px; }
