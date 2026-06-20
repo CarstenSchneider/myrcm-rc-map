@@ -2398,5 +2398,12 @@
     "lat": 48.358257335666345,
     "lng": 11.752698391781367,
     "myrcmOrgId": "53665"
+  },
+  {
+    "hostId": "rc-offroad-staaken",
+    "hostName": "RC Offroad Staaken",
+    "lat": 52.475714353240356,
+    "lng": 13.101632355546334,
+    "myrcmOrgId": "55317"
   }
 ]
