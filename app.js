@@ -3862,7 +3862,7 @@ function openAdminPage() {
           <strong>${escapeHtml(e.hostName)}</strong>
           <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
         </div>
-        ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/show?P_SPORT_ID=1&P_NAV=7&P_ORG_ID=${e.myrcmOrgId}" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
+        ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
         <label class="admin-entry-toggle">
           <input type="checkbox" class="admin-unknown-toggle" />
           Ort unbekannt
