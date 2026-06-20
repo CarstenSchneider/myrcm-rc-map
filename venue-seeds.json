@@ -2426,5 +2426,11 @@
     "lat": 48.720995,
     "lng": 9.343529,
     "myrcmOrgId": "51971"
+  },
+  {
+    "hostId": "tsv-gelenau-e-v",
+    "hostName": "TSV Gelenau e.V.",
+    "locationUnknown": true,
+    "myrcmOrgId": "30389"
   }
 ]
