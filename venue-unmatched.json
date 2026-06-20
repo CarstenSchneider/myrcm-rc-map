@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team München e.V",
-    "source": "myrcm",
-    "myrcmOrgId": "37520",
-    "possibleVenue": "Ainring",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rccars-bergisch-born-e-v",
     "hostName": "RCCars Bergisch-Born e.V.",
     "source": "myrcm",
