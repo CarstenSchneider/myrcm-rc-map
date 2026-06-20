@@ -3820,8 +3820,18 @@ const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
 async function adminLoadUnmatched() {
-  const res = await fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`);
-  return res.json();
+  const [unmatchedRes, seedsRes] = await Promise.all([
+    fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
+    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
+  ]);
+  const unmatched = await unmatchedRes.json();
+  const seeds = await seedsRes.json();
+  const unknownSeeds = seeds
+    .filter(s => s.locationUnknown)
+    .map(s => ({ hostId: s.hostId, hostName: s.hostName, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
+  // Merge: unmatched first, then unknown seeds not already in unmatched
+  const unmatchedIds = new Set(unmatched.map(u => u.hostId));
+  return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
 }
 
 async function adminCommit(payload) {
@@ -3864,10 +3874,10 @@ function openAdminPage() {
         </div>
         ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
         <label class="admin-entry-toggle">
-          <input type="checkbox" class="admin-unknown-toggle" />
+          <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
           Ort unbekannt
         </label>
-        <div class="admin-entry-coords">
+        <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
           <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
         </div>
         <div class="admin-entry-actions">
