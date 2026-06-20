@@ -639,13 +639,13 @@ input {
   border-color: var(--line) !important;
   color: var(--text) !important;
   background: var(--panel) !important;
-  transition: filter 120ms;
+  transition: background 120ms;
 }
 .layout-prototype .leaflet-control-zoom a:hover {
-  filter: brightness(0.88) !important;
+  background: rgba(0, 0, 0, 0.07) !important;
 }
 :root.theme-dark .layout-prototype .leaflet-control-zoom a:hover {
-  filter: brightness(1.25) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .layout-prototype .leaflet-control-attribution {
@@ -2171,15 +2171,15 @@ input {
   line-height: 1;
   cursor: pointer;
   box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09);
-  transition: filter 120ms;
+  transition: background 120ms;
 }
 .layout-prototype .topbar .app-menu-button:hover,
 .mob-menu-btn:hover {
-  filter: brightness(0.88);
+  background: rgba(var(--panel-rgb), 0.80);
 }
 :root.theme-dark .layout-prototype .topbar .app-menu-button:hover,
 :root.theme-dark .mob-menu-btn:hover {
-  filter: brightness(1.25);
+  background: rgba(var(--panel-rgb), 1);
 }
 
 .layout-prototype .topbar-range,
@@ -2252,11 +2252,11 @@ input {
 }
 .layout-prototype .topbar .segmented button:not(.active):hover,
 .layout-prototype .topbar .topbar-filter-group button:not(.active):hover {
-  filter: brightness(0.88);
+  background: rgba(0, 0, 0, 0.07);
 }
 :root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover,
 :root.theme-dark .layout-prototype .topbar .topbar-filter-group button:not(.active):hover {
-  filter: brightness(1.25);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .layout-prototype .topbar select,
@@ -2272,10 +2272,10 @@ input {
   transition: filter 120ms;
 }
 .layout-prototype .topbar select:hover {
-  filter: brightness(0.88);
+  background-color: rgba(0, 0, 0, 0.07) !important;
 }
 :root.theme-dark .layout-prototype .topbar select:hover {
-  filter: brightness(1.25);
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .layout-prototype .topbar select {
@@ -2986,9 +2986,9 @@ body.is-menu-open .layout-prototype .topbar .app-menu-button {
   align-items: center;
   justify-content: center;
   z-index: 1600;
-  transition: filter 120ms;
+  transition: background 120ms;
 }
-.app-menu-close:hover { filter: brightness(1.25); }
+.app-menu-close:hover { background: color-mix(in srgb, var(--accent) 80%, white); }
 body.is-menu-open .app-menu-close {
   display: flex;
   animation: app-menu-close-in 160ms 100ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
@@ -3231,10 +3231,10 @@ body.is-menu-open .app-menu-close {
   transition: background 150ms ease, color 150ms ease, filter 120ms;
 }
 .theme-toggle-btn:not(.active):hover {
-  filter: brightness(0.88);
+  background: rgba(0, 0, 0, 0.07);
 }
 :root.theme-dark .theme-toggle-btn:not(.active):hover {
-  filter: brightness(1.25);
+  background: rgba(255, 255, 255, 0.1);
 }
 .theme-toggle-btn.active {
   background: var(--accent);
