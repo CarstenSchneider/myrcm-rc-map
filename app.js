@@ -3760,7 +3760,6 @@ function showMenuHome() {
   appMenuContent.innerHTML = `
     ${authSection}
     <div class="app-menu-sep"></div>
-    <div class="app-menu-section-label">Einstellungen</div>
     <div class="app-menu-row app-menu-theme-row">
       <span class="app-menu-row-icon">${iconSun}</span>
       <span class="app-menu-row-label">Darstellung</span>
@@ -3782,7 +3781,6 @@ function showMenuHome() {
     </button>
     ${isAdmin() ? `
     <div class="app-menu-sep"></div>
-    <div class="app-menu-section-label">Admin</div>
     <button type="button" class="app-menu-row" data-menu="admin">
       <span class="app-menu-row-icon">${iconPin}</span>
       <span class="app-menu-row-label">Ausrichter verorten</span>
