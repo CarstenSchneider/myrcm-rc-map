@@ -3751,11 +3751,18 @@ function showMenuHome() {
         </svg>
       </a>
       <div class="app-menu-footer-legal">
-        <button type="button" class="app-menu-footer-link" data-menu="impressum">Impressum &amp; Datenschutz</button>
-        <span>·</span>
-        <span>Datenquelle: <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">MyRCM</a>, <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">RCK</a></span>
-        <span>·</span>
-        <span>Karte: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a></span>
+        <div class="app-menu-footer-legal-row">
+          <button type="button" class="app-menu-footer-link" data-menu="impressum">Impressum &amp; Datenschutz</button>
+        </div>
+        <div class="app-menu-footer-legal-row">
+          <span>Daten:</span>
+          <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">MyRCM</a>
+          <span>·</span>
+          <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">RCK</a>
+          <span>·</span>
+          <span>Karte:</span>
+          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a>
+        </div>
       </div>
     </div>`;
 
