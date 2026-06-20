@@ -8,14 +8,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-car-chemnitz",
-    "hostName": "RC Car Chemnitz",
-    "source": "myrcm",
-    "myrcmOrgId": "51129",
-    "possibleVenue": "Chemnitz",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "source": "myrcm",
@@ -41,7 +33,7 @@
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team MÃÂÃÂÃÂÃÂ¼nchen e.V",
+    "hostName": "RC Race Team MÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼nchen e.V",
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
