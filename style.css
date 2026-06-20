@@ -3247,8 +3247,8 @@ body.is-menu-open .app-menu-close {
 .admin-btn-unknown:hover { background: rgba(var(--text-rgb), 0.18); }
 .admin-entry-status { font-size: 12px; margin: 6px 0 0; min-height: 16px; color: var(--muted); }
 
-/* Admin full-page overlay */
-.admin-page { position: fixed; inset: 0; z-index: 900; background: var(--bg); overflow-y: auto; }
+/* Admin full-page overlay — sits above everything via z-index 9999 */
+.admin-page { position: fixed; inset: 0; z-index: 9999; background: var(--bg); overflow-y: auto; }
 .admin-page[hidden] { display: none; }
 .admin-page-inner { max-width: 640px; margin: 0 auto; padding: 24px 20px 48px; }
 .admin-page-header { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); padding-bottom: 16px; }
@@ -3256,8 +3256,3 @@ body.is-menu-open .app-menu-close {
 .admin-page-back:hover { text-decoration: underline; }
 .admin-page-title { font-size: 20px; font-weight: 700; margin: 0; }
 .admin-page-list .admin-entry { padding: 16px 0; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); }
-
-/* Admin page: hide topbar content except menu button */
-.is-admin-open .topbar > *:not(.app-menu-button) { display: none; }
-.is-admin-open .race-panel { display: none; }
-.is-admin-open .mob-drawer { display: none; }
