@@ -425,7 +425,18 @@
       white-space: nowrap;
       box-shadow: none;
       cursor: pointer;
-      transition: color 140ms ease;
+      transition: color 140ms ease, background 120ms ease;
+    }
+
+    .layout-prototype .topbar .segmented button:not(.active):hover,
+    .layout-prototype .topbar .topbar-filter-group button:not(.active):hover,
+    .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
+      background: rgba(0, 0, 0, 0.07) !important;
+    }
+    :root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover,
+    :root.theme-dark .layout-prototype .topbar .topbar-filter-group button:not(.active):hover,
+    :root.theme-dark .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
+      background: rgba(255, 255, 255, 0.1) !important;
     }
 
     .layout-prototype .topbar .segmented button.active,
