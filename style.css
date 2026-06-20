@@ -2158,18 +2158,17 @@ input {
 .layout-prototype .topbar-range {
   order: 2;
   flex: 0 0 auto;
-  padding-left: 8px;
 }
 
 .layout-prototype .topbar-spacer {
   order: 4;
   flex: 1 1 auto;
-  min-width: 24px;
+  min-width: 0;
 }
 
 .layout-prototype .topbar-series {
   order: 3;
-  flex: 0 1 clamp(160px, 15vw, 320px);
+  flex: 0 1 clamp(100px, 12vw, 200px);
 }
 
 .layout-prototype .topbar-registration {
@@ -2180,8 +2179,8 @@ input {
 .layout-prototype .topbar-search {
   order: 6;
   position: relative;
-  flex: 0 1 clamp(180px, 15vw, 320px);
-  max-width: 320px;
+  flex: 0 1 clamp(100px, 12vw, 240px);
+  max-width: 240px;
 }
 
 .layout-prototype .topbar-filter-label {
