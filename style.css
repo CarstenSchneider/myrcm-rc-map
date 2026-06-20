@@ -2718,12 +2718,13 @@ input {
   border-bottom: 1px solid rgba(var(--text-rgb), 0.07);
   flex-shrink: 0;
 }
-.app-menu-logo-pin { width: 36px; height: 40px; margin-top: 48px; display: block; }
+.app-menu-logo-pin { width: 54px; height: 60px; margin-top: 32px; display: block; }
 .app-menu-logo {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: -0.01em;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #C8B090;
   margin-top: 8px;
 }
 
