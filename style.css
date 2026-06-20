@@ -3213,3 +3213,45 @@ body.is-menu-open .app-menu-close {
   background: var(--accent);
   color: #fff;
 }
+
+/* Menu footer */
+.app-menu-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(var(--border-rgb), 0.4);
+}
+.app-menu-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.app-menu-footer-logo {
+  height: 10px;
+  width: auto;
+  fill: currentColor;
+  display: block;
+}
+.app-menu-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.7;
+}
+.app-menu-footer-link {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+.app-menu-footer-link:hover { text-decoration: underline; }
