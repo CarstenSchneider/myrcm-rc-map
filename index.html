@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="style.css?v=17" />
+  <link rel="stylesheet" href="style.css?v=18" />
   <style>
     /* v1.6.5 target topbar polish */
     .layout-prototype .filters-panel {
@@ -323,8 +323,8 @@
       flex: 0 0 40px;
       width: 40px;
       height: 40px;
-      background: var(--panel) !important;
-      color: var(--host-blue);
+      background: rgba(var(--panel-rgb), 0.98) !important;
+      color: var(--accent);
       font-weight: 400 !important;
       box-shadow: 0 6px 16px rgba(31, 29, 26, 0.08);
     }
@@ -336,7 +336,8 @@
     }
 
     .layout-prototype .topbar-series {
-      flex: 0 0 260px;
+      flex: 0 1 260px;
+      min-width: 140px;
     }
 
     .layout-prototype .topbar-favorites {
@@ -344,8 +345,8 @@
     }
 
     .layout-prototype .topbar-search {
-      flex: 0 0 220px;
-      width: 220px;
+      flex: 0 1 220px;
+      min-width: 80px;
       max-width: 220px;
       margin-left: 0;
     }
@@ -550,17 +551,6 @@
       .layout-prototype .topbar {
         padding-right: 8px;
       }
-
-      .layout-prototype .topbar-series {
-        flex-basis: 220px;
-      }
-
-      .layout-prototype .topbar-search {
-        flex-basis: 220px;
-        width: 220px;
-        max-width: 220px;
-      }
-
     }
 
     @media (max-width: 860px) {
