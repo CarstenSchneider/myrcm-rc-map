@@ -2405,5 +2405,12 @@
     "lat": 52.475714353240356,
     "lng": 13.101632355546334,
     "myrcmOrgId": "55317"
+  },
+  {
+    "hostId": "rc-race-team-munchen-e-v",
+    "hostName": "RC Race Team München e.V",
+    "lat": 48.00857029662106,
+    "lng": 11.36000585844325,
+    "myrcmOrgId": "37520"
   }
 ]
