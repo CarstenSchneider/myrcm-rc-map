@@ -3769,9 +3769,9 @@ function showMenuHome() {
       <span class="app-menu-row-icon">${iconSun}</span>
       <span class="app-menu-row-label">Darstellung</span>
       <div class="theme-toggle">
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
         <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">Tag</button>
         <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">Nacht</button>
-        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
       </div>
     </div>
     ${sbUser ? `
