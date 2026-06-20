@@ -3257,7 +3257,7 @@ body.is-menu-open .app-menu-close {
 }
 :root.theme-dark .theme-toggle,
 :root:not(.theme-light) .theme-toggle {
-  background: var(--pill-bg);
+  background: var(--card-closed);
 }
 .theme-toggle-btn {
   border: 0;
