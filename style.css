@@ -3256,3 +3256,8 @@ body.is-menu-open .app-menu-close {
 .admin-page-back:hover { text-decoration: underline; }
 .admin-page-title { font-size: 20px; font-weight: 700; margin: 0; }
 .admin-page-list .admin-entry { padding: 16px 0; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); }
+
+/* Admin page: hide topbar content except menu button */
+.is-admin-open .topbar > *:not(.app-menu-button) { display: none; }
+.is-admin-open .race-panel { display: none; }
+.is-admin-open .mob-drawer { display: none; }

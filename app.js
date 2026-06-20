@@ -3844,10 +3844,12 @@ function openAdminPage() {
   closeAppMenu();
 
   adminPage.hidden = false;
+  app.classList.add("is-admin-open");
   listEl.innerHTML = `<p class="admin-loading">Lade…</p>`;
 
   document.getElementById("adminPageBack")?.addEventListener("click", () => {
     adminPage.hidden = true;
+    app.classList.remove("is-admin-open");
   }, { once: true });
 
   adminLoadUnmatched().then(entries => {
