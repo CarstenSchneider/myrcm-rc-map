@@ -3262,3 +3262,4 @@ body.is-menu-open .app-menu-close {
 .admin-entry-toggle input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
 .admin-entry-coords { display: flex; gap: 8px; margin-bottom: 8px; }
 .admin-entry-coords[hidden] { display: none; }
+.admin-input-coords { width: 100%; }

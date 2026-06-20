@@ -3868,8 +3868,7 @@ function openAdminPage() {
           Ort unbekannt
         </label>
         <div class="admin-entry-coords">
-          <input type="text" class="admin-input" placeholder="Lat (z.B. 51.8)" data-field="lat" />
-          <input type="text" class="admin-input" placeholder="Lng (z.B. 11.8)" data-field="lng" />
+          <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
         </div>
         <div class="admin-entry-actions">
           <button type="button" class="admin-btn admin-btn-save">Speichern</button>
@@ -3899,9 +3898,10 @@ function openAdminPage() {
           await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
           status.textContent = "✓ Als unbekannt markiert";
         } else {
-          const lat = parseFloat(entry.querySelector("[data-field=lat]").value.replace(",", "."));
-          const lng = parseFloat(entry.querySelector("[data-field=lng]").value.replace(",", "."));
-          if (isNaN(lat) || isNaN(lng)) { status.textContent = "Bitte Lat und Lng eingeben."; return; }
+          const coordsRaw = entry.querySelector("[data-field=coords]").value;
+          const parts = coordsRaw.split(",").map(s => parseFloat(s.trim()));
+          const [lat, lng] = parts;
+          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
           await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
           status.textContent = "✓ Gespeichert";
         }
