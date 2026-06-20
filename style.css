@@ -2754,7 +2754,7 @@ input {
 .app-menu-row:hover { background: rgba(var(--text-rgb), 0.04); }
 .app-menu-row-icon { width: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .app-menu-row-icon svg { width: 20px; height: 20px; stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.app-menu-row-label { flex: 1; font-size: 13px; font-weight: 500; color: var(--muted); }
+.app-menu-row-label { flex: 1; font-size: 13px; font-weight: 400; color: var(--muted); }
 .app-menu-row-value { font-size: 13px; color: var(--muted); }
 .app-menu-row-chevron { width: 14px; height: 14px; stroke: rgba(var(--text-rgb), 0.2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 .app-menu-sep { height: 1px; background: rgba(var(--text-rgb), 0.07); margin: 4px 0; }
@@ -2791,7 +2791,7 @@ input {
 .app-menu-auth-email {
   flex: 1;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--muted);
   overflow: hidden;
   text-overflow: ellipsis;
