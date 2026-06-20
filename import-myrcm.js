@@ -1860,7 +1860,7 @@ async function runImportOnce() {
 
     importedHosts.push(hostRecord);
 
-    if (races.some(race => !race.venueId) && !isIgnoredUnmatchedHost(hostRecord)) {
+    if (races.some(race => !race.venueId) && !isIgnoredUnmatchedHost(hostRecord) && !venueSeed?.locationUnknown) {
       importedUnmatched.push(
         unmatchedRecordForMyRcmHost(
           host,
