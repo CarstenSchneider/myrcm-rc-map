@@ -2250,10 +2250,12 @@ input {
   font-weight: 400;
   transition: filter 120ms;
 }
-.layout-prototype .topbar .segmented button:hover {
+.layout-prototype .topbar .segmented button:not(.active):hover,
+.layout-prototype .topbar .topbar-filter-group button:not(.active):hover {
   filter: brightness(0.88);
 }
-:root.theme-dark .layout-prototype .topbar .segmented button:hover {
+:root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover,
+:root.theme-dark .layout-prototype .topbar .topbar-filter-group button:not(.active):hover {
   filter: brightness(1.25);
 }
 
@@ -2325,12 +2327,6 @@ input {
   font-size: 14px;
   font-weight: 500;
   transition: filter 120ms;
-}
-.layout-prototype .topbar .race-visibility-toggle button:hover {
-  filter: brightness(0.88);
-}
-:root.theme-dark .layout-prototype .topbar .race-visibility-toggle button:hover {
-  filter: brightness(1.25);
 }
 
 .layout-prototype .topbar .filter-field-search {
@@ -3234,10 +3230,10 @@ body.is-menu-open .app-menu-close {
   cursor: pointer;
   transition: background 150ms ease, color 150ms ease, filter 120ms;
 }
-.theme-toggle-btn:hover {
+.theme-toggle-btn:not(.active):hover {
   filter: brightness(0.88);
 }
-:root.theme-dark .theme-toggle-btn:hover {
+:root.theme-dark .theme-toggle-btn:not(.active):hover {
   filter: brightness(1.25);
 }
 .theme-toggle-btn.active {
