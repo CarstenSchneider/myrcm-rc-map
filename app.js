@@ -431,6 +431,76 @@ const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
 const favoriteFilterStorageKey = "rcRaceMapFavoriteFilter";
 
+// ── Supabase ──────────────────────────────────────────────────────────────────
+const SUPABASE_URL = "https://ncsqbncxctofkmabmwku.supabase.co";
+const SUPABASE_KEY = "sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P";
+const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+let sbUser = null;
+
+async function sbInit() {
+  if (!sbClient) return;
+  const { data: { session } } = await sbClient.auth.getSession();
+  sbUser = session?.user ?? null;
+  sbClient.auth.onAuthStateChange(async (_event, session) => {
+    sbUser = session?.user ?? null;
+    if (sbUser) await sbPullAll();
+    if (typeof showMenuHome === "function") showMenuHome();
+  });
+  if (sbUser) await sbPullAll();
+}
+
+async function sbSendMagicLink(email) {
+  if (!sbClient) return { error: { message: "Supabase not loaded" } };
+  return sbClient.auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: window.location.origin + window.location.pathname }
+  });
+}
+
+async function sbSignOut() {
+  if (!sbClient) return;
+  await sbClient.auth.signOut();
+}
+
+async function sbPullAll() {
+  if (!sbClient || !sbUser) return;
+  await Promise.all([sbPullFavorites(), sbPullPreferences()]);
+}
+
+async function sbPullFavorites() {
+  const { data } = await sbClient.from("user_favorites").select("host_id").eq("user_id", sbUser.id);
+  if (!data) return;
+  const remoteIds = data.map(r => r.host_id);
+  const localIds = getFavoriteHostIds();
+  const merged = [...new Set([...localIds, ...remoteIds])];
+  saveFavoriteHostIds(merged);
+  if (merged.length !== remoteIds.length) {
+    const toInsert = merged.filter(id => !remoteIds.includes(id)).map(host_id => ({ user_id: sbUser.id, host_id }));
+    if (toInsert.length) await sbClient.from("user_favorites").upsert(toInsert);
+  }
+}
+
+async function sbPullPreferences() {
+  const { data } = await sbClient.from("user_preferences").select("theme").eq("user_id", sbUser.id).maybeSingle();
+  if (data?.theme) setTheme(data.theme);
+}
+
+async function sbToggleFavorite(hostId, isNowFavorite) {
+  if (!sbClient || !sbUser) return;
+  if (isNowFavorite) {
+    await sbClient.from("user_favorites").upsert({ user_id: sbUser.id, host_id: hostId });
+  } else {
+    await sbClient.from("user_favorites").delete().eq("user_id", sbUser.id).eq("host_id", hostId);
+  }
+}
+
+async function sbSaveTheme(theme) {
+  if (!sbClient || !sbUser) return;
+  await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, theme, updated_at: new Date().toISOString() });
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 function loadFavoriteFilter() {
   try {
     return localStorage.getItem(favoriteFilterStorageKey) === "favorites"
@@ -480,12 +550,14 @@ function toggleFavoriteHost(hostId) {
 
   const id = String(hostId);
   const favoriteIds = getFavoriteHostIds();
+  const isNowFavorite = !favoriteIds.includes(id);
 
-  if (favoriteIds.includes(id)) {
-    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
-  } else {
+  if (isNowFavorite) {
     saveFavoriteHostIds([...favoriteIds, id]);
+  } else {
+    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
   }
+  sbToggleFavorite(id, isNowFavorite);
 }
 
 function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
@@ -3610,6 +3682,7 @@ function setTheme(theme) {
   document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.theme === theme);
   });
+  sbSaveTheme(theme);
 }
 
 applyTheme(localStorage.getItem(THEME_KEY) || "auto");
@@ -3644,6 +3717,16 @@ function closeAppMenu() {
 function showMenuHome() {
   if (!appMenuContent) return;
   const current = localStorage.getItem(THEME_KEY) || "auto";
+  const authSection = sbUser
+    ? `<div class="app-menu-auth-user">
+        <span class="app-menu-auth-avatar">${sbUser.email[0].toUpperCase()}</span>
+        <span class="app-menu-auth-email">${escapeHtml(sbUser.email)}</span>
+        <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">Abmelden</button>
+       </div>`
+    : `<button type="button" class="app-menu-item app-menu-login-btn" id="sbLoginBtn">
+        Anmelden &amp; Favoriten synchronisieren
+       </button>`;
+
   appMenuContent.innerHTML = `
     <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
       <div class="app-menu-section-label">Darstellung</div>
@@ -3653,25 +3736,67 @@ function showMenuHome() {
         <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
       </div>
     </div>
+    <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
+      ${authSection}
+    </div>
     <ul class="app-menu-list">
       <li><button type="button" class="app-menu-item" data-menu="impressum">Impressum &amp; Datenschutz</button></li>
     </ul>`;
+
   appMenuContent.querySelectorAll(".theme-toggle-btn").forEach(btn => {
     btn.addEventListener("click", () => setTheme(btn.dataset.theme));
   });
   appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
     btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
   });
+  document.getElementById("sbLoginBtn")?.addEventListener("click", () => showMenuPage("login"));
+  document.getElementById("sbSignOutBtn")?.addEventListener("click", async () => {
+    await sbSignOut();
+    showMenuHome();
+  });
 }
+
+function loginPageHtml() {
+  return `
+    <div class="app-menu-login-form">
+      <p class="app-menu-login-info">Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.</p>
+      <input type="email" id="sbEmailInput" class="app-menu-login-input" placeholder="deine@email.de" autocomplete="email" />
+      <button type="button" class="app-menu-login-submit" id="sbLoginSubmit">Link senden</button>
+      <p class="app-menu-login-hint" id="sbLoginHint"></p>
+    </div>`;
+}
+
 
 function showMenuPage(page) {
   if (!appMenuContent) return;
-  const pages = { impressum: impressumHtml() };
+  const pages = { impressum: impressumHtml(), login: loginPageHtml() };
   appMenuContent.innerHTML = `
     <button type="button" class="app-menu-back">← Zurück</button>
     <div class="app-menu-page-content">${pages[page] || ""}</div>`;
   appMenuContent.querySelector(".app-menu-back")
     ?.addEventListener("click", showMenuHome);
+
+  if (page === "login") {
+    const input = document.getElementById("sbEmailInput");
+    const btn = document.getElementById("sbLoginSubmit");
+    const hint = document.getElementById("sbLoginHint");
+    btn?.addEventListener("click", async () => {
+      const email = input?.value?.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.textContent = "Wird gesendet…";
+      const { error } = await sbSendMagicLink(email);
+      if (error) {
+        hint.textContent = "Fehler: " + error.message;
+        btn.disabled = false;
+        btn.textContent = "Link senden";
+      } else {
+        hint.textContent = "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.";
+        btn.textContent = "Gesendet";
+      }
+    });
+    input?.addEventListener("keydown", e => { if (e.key === "Enter") btn?.click(); });
+  }
 }
 
 function impressumHtml() {
@@ -3730,3 +3855,5 @@ window.addEventListener("load", () => {
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
   });
 });
+
+sbInit();
