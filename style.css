@@ -2096,6 +2096,7 @@ input {
   width: 100%;
   min-height: 52px;
   padding: 0 14px 0 0;
+  overflow: hidden;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -2158,18 +2159,17 @@ input {
 .layout-prototype .topbar-range {
   order: 2;
   flex: 0 0 auto;
-  padding-left: 10px;
 }
 
 .layout-prototype .topbar-spacer {
   order: 4;
   flex: 1 1 auto;
-  min-width: 0;
+  min-width: 24px;
 }
 
 .layout-prototype .topbar-series {
   order: 3;
-  flex: 0 1 clamp(120px, 16vw, 280px);
+  flex: 0 1 clamp(280px, 20vw, 380px);
 }
 
 .layout-prototype .topbar-registration {
@@ -2180,8 +2180,8 @@ input {
 .layout-prototype .topbar-search {
   order: 6;
   position: relative;
-  flex: 0 1 clamp(120px, 16vw, 300px);
-  max-width: 300px;
+  flex: 0 0 clamp(300px, 18vw, 360px);
+  max-width: 360px;
 }
 
 .layout-prototype .topbar-filter-label {
