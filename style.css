@@ -1813,6 +1813,13 @@ input {
   color: var(--favorite) !important;
 }
 
+.venue-favorite-button .favorite-toggle-icon {
+  width: 1em;
+  height: 1em;
+  display: block;
+  flex-shrink: 0;
+}
+
 .venue-favorite-button {
   appearance: none;
   display: inline-flex;
