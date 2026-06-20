@@ -3896,7 +3896,8 @@ function openAdminPage() {
       try {
         if (isUnknown) {
           await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
-          status.textContent = "✓ Als unbekannt markiert";
+          status.textContent = "✓ Gespeichert";
+          return;
         } else {
           const coordsRaw = entry.querySelector("[data-field=coords]").value;
           const parts = coordsRaw.split(",").map(s => parseFloat(s.trim()));
