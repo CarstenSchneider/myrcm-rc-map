@@ -2391,5 +2391,12 @@
     "lat": 51.539601453420495,
     "lng": 7.093322619514601,
     "myrcmOrgId": "33778"
+  },
+  {
+    "hostId": "rc-modellbaufreunde-e-v",
+    "hostName": "RC Modellbaufreunde e.V.",
+    "lat": 48.358257335666345,
+    "lng": 11.752698391781367,
+    "myrcmOrgId": "53665"
   }
 ]
