@@ -2168,7 +2168,7 @@ input {
 
 .layout-prototype .topbar-series {
   order: 3;
-  flex: 0 1 clamp(100px, 12vw, 200px);
+  flex: 0 1 clamp(120px, 16vw, 280px);
 }
 
 .layout-prototype .topbar-registration {
@@ -2179,8 +2179,8 @@ input {
 .layout-prototype .topbar-search {
   order: 6;
   position: relative;
-  flex: 0 1 clamp(100px, 12vw, 240px);
-  max-width: 240px;
+  flex: 0 1 clamp(120px, 16vw, 300px);
+  max-width: 300px;
 }
 
 .layout-prototype .topbar-filter-label {
