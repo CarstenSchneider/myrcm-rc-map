@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "smc-stuttgart-e-v",
-    "hostName": "SMC Stuttgart e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "51971",
-    "possibleVenue": "Stuttgart",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "tsv-gelenau-e-v",
     "hostName": "TSV Gelenau e.V.",
     "source": "myrcm",
