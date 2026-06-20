@@ -639,7 +639,6 @@ input {
   border-color: var(--line) !important;
   color: var(--text) !important;
   background: var(--panel) !important;
-  transition: background 120ms;
 }
 .layout-prototype .leaflet-control-zoom a:hover {
   background: rgba(0, 0, 0, 0.07) !important;
@@ -2171,15 +2170,11 @@ input {
   line-height: 1;
   cursor: pointer;
   box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09);
-  transition: background 120ms;
+  transition: transform 120ms ease;
 }
 .layout-prototype .topbar .app-menu-button:hover,
 .mob-menu-btn:hover {
-  background: rgba(var(--panel-rgb), 0.80);
-}
-:root.theme-dark .layout-prototype .topbar .app-menu-button:hover,
-:root.theme-dark .mob-menu-btn:hover {
-  background: rgba(var(--panel-rgb), 1);
+  transform: scale(1.08);
 }
 
 .layout-prototype .topbar-range,
@@ -2248,15 +2243,6 @@ input {
   color: var(--accent);
   font-size: 14px;
   font-weight: 400;
-  transition: filter 120ms;
-}
-.layout-prototype .topbar .segmented button:not(.active):hover,
-.layout-prototype .topbar .topbar-filter-group button:not(.active):hover {
-  background: rgba(0, 0, 0, 0.07);
-}
-:root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover,
-:root.theme-dark .layout-prototype .topbar .topbar-filter-group button:not(.active):hover {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .layout-prototype .topbar select,
@@ -2269,13 +2255,6 @@ input {
   color: var(--accent);
   font-size: 14px;
   box-shadow: none;
-  transition: filter 120ms;
-}
-.layout-prototype .topbar select:hover {
-  background-color: rgba(0, 0, 0, 0.07) !important;
-}
-:root.theme-dark .layout-prototype .topbar select:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .layout-prototype .topbar select {
@@ -2326,7 +2305,7 @@ input {
   color: var(--accent);
   font-size: 14px;
   font-weight: 500;
-  transition: filter 120ms;
+
 }
 
 .layout-prototype .topbar .filter-field-search {
@@ -2528,7 +2507,7 @@ input {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition: filter 120ms;
+
 }
 @media (max-width: 860px) {
   .mob-menu-btn { display: flex; }
@@ -2986,9 +2965,9 @@ body.is-menu-open .layout-prototype .topbar .app-menu-button {
   align-items: center;
   justify-content: center;
   z-index: 1600;
-  transition: background 120ms;
+  transition: transform 120ms ease;
 }
-.app-menu-close:hover { background: color-mix(in srgb, var(--accent) 80%, white); }
+.app-menu-close:hover { transform: scale(1.08); }
 body.is-menu-open .app-menu-close {
   display: flex;
   animation: app-menu-close-in 160ms 100ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
@@ -3228,13 +3207,7 @@ body.is-menu-open .app-menu-close {
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: background 150ms ease, color 150ms ease, filter 120ms;
-}
-.theme-toggle-btn:not(.active):hover {
-  background: rgba(0, 0, 0, 0.07);
-}
-:root.theme-dark .theme-toggle-btn:not(.active):hover {
-  background: rgba(255, 255, 255, 0.1);
+  transition: background 150ms ease, color 150ms ease;
 }
 .theme-toggle-btn.active {
   background: var(--accent);

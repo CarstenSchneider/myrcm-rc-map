@@ -43,13 +43,6 @@
       font-size: 0;
       font-weight: 400;
       box-shadow: 0 7px 18px rgba(31, 29, 26, 0.08);
-      transition: background 120ms ease;
-    }
-    .layout-prototype .topbar .app-menu-button:hover {
-      background: color-mix(in srgb, var(--pill-bg) 100%, #000 10%) !important;
-    }
-    :root.theme-dark .layout-prototype .topbar .app-menu-button:hover {
-      background: color-mix(in srgb, var(--pill-bg) 100%, #fff 12%) !important;
     }
 
     /* hamburger span rules moved to style.css */
@@ -194,15 +187,6 @@
       font-size: 14px;
       font-weight: 400;
       box-shadow: none;
-      transition: background-color 120ms ease;
-    }
-    .layout-prototype .topbar select:hover,
-    .layout-prototype .topbar input:hover {
-      background-color: color-mix(in srgb, var(--pill-bg) 100%, #000 7%);
-    }
-    :root.theme-dark .layout-prototype .topbar select:hover,
-    :root.theme-dark .layout-prototype .topbar input:hover {
-      background-color: color-mix(in srgb, var(--pill-bg) 100%, #fff 10%);
     }
 
     .layout-prototype .topbar select {
@@ -441,18 +425,7 @@
       white-space: nowrap;
       box-shadow: none;
       cursor: pointer;
-      transition: color 140ms ease, background 120ms ease;
-    }
-
-    .layout-prototype .topbar .segmented button:not(.active):hover,
-    .layout-prototype .topbar .topbar-filter-group button:not(.active):hover,
-    .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
-      background: rgba(0, 0, 0, 0.07) !important;
-    }
-    :root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover,
-    :root.theme-dark .layout-prototype .topbar .topbar-filter-group button:not(.active):hover,
-    :root.theme-dark .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
-      background: rgba(255, 255, 255, 0.1) !important;
+      transition: color 140ms ease;
     }
 
     .layout-prototype .topbar .segmented button.active,
@@ -1191,33 +1164,6 @@
       box-sizing: border-box;
     }
 
-    /* ── Unified hover: subtle background shift on all interactive topbar elements ── */
-    .layout-prototype .topbar .app-menu-button,
-    .layout-prototype .topbar select,
-    .layout-prototype .topbar input,
-    .layout-prototype .topbar .segmented button,
-    .layout-prototype .topbar .topbar-filter-group button,
-    .layout-prototype .topbar .race-visibility-toggle button {
-      transition: background 120ms ease, background-color 120ms ease, color 140ms ease !important;
-    }
-    .layout-prototype .topbar .app-menu-button:hover,
-    .layout-prototype .topbar select:hover,
-    .layout-prototype .topbar input:hover,
-    .layout-prototype .topbar .segmented button:not(.active):hover,
-    .layout-prototype .topbar .topbar-filter-group button:not(.active):hover,
-    .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
-      background: rgba(0, 0, 0, 0.05) !important;
-      background-color: rgba(0, 0, 0, 0.05) !important;
-    }
-    :root.theme-dark .layout-prototype .topbar .app-menu-button:hover,
-    :root.theme-dark .layout-prototype .topbar select:hover,
-    :root.theme-dark .layout-prototype .topbar input:hover,
-    :root.theme-dark .layout-prototype .topbar .segmented button:not(.active):hover,
-    :root.theme-dark .layout-prototype .topbar .topbar-filter-group button:not(.active):hover,
-    :root.theme-dark .layout-prototype .topbar .race-visibility-toggle button:not(.active):hover {
-      background: rgba(var(--text-rgb), 0.08) !important;
-      background-color: rgba(var(--text-rgb), 0.08) !important;
-    }
   </style>
 </head>
 <body>
