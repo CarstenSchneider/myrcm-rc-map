@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "rc-modellbaufreunde-e-v",
-    "hostName": "RC Modellbaufreunde e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "53665",
-    "possibleVenue": "Attaching",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "source": "myrcm",
