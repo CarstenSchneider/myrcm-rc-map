@@ -43,6 +43,13 @@
       font-size: 0;
       font-weight: 400;
       box-shadow: 0 7px 18px rgba(31, 29, 26, 0.08);
+      transition: background 120ms ease;
+    }
+    .layout-prototype .topbar .app-menu-button:hover {
+      background: color-mix(in srgb, var(--pill-bg) 100%, #000 10%) !important;
+    }
+    :root.theme-dark .layout-prototype .topbar .app-menu-button:hover {
+      background: color-mix(in srgb, var(--pill-bg) 100%, #fff 12%) !important;
     }
 
     /* hamburger span rules moved to style.css */
@@ -187,6 +194,15 @@
       font-size: 14px;
       font-weight: 400;
       box-shadow: none;
+      transition: background-color 120ms ease;
+    }
+    .layout-prototype .topbar select:hover,
+    .layout-prototype .topbar input:hover {
+      background-color: color-mix(in srgb, var(--pill-bg) 100%, #000 7%);
+    }
+    :root.theme-dark .layout-prototype .topbar select:hover,
+    :root.theme-dark .layout-prototype .topbar input:hover {
+      background-color: color-mix(in srgb, var(--pill-bg) 100%, #fff 10%);
     }
 
     .layout-prototype .topbar select {
