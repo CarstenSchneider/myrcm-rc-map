@@ -21,8 +21,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref }}
           fetch-depth: 0
+
+      - name: Switch to ref
+        run: git checkout ${{ github.event.inputs.ref }}
 
       - name: Prepare snapshot files
         run: |
