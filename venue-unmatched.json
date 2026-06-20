@@ -8,14 +8,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "msc-ober-morlen-e-v",
-    "hostName": "MSC Ober-MÃ¶rlen e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "66454",
-    "possibleVenue": "Weiterstadt",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
     "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
     "source": "myrcm",
@@ -65,7 +57,7 @@
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team MÃ¼nchen e.V",
+    "hostName": "RC Race Team MÃÂ¼nchen e.V",
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
