@@ -2412,5 +2412,12 @@
     "lat": 48.00857029662106,
     "lng": 11.36000585844325,
     "myrcmOrgId": "37520"
+  },
+  {
+    "hostId": "rccars-bergisch-born-e-v",
+    "hostName": "RCCars Bergisch-Born e.V.",
+    "lat": 51.17808024290368,
+    "lng": 7.223162604471789,
+    "myrcmOrgId": "6492"
   }
 ]
