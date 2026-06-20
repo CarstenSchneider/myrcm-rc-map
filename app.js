@@ -3136,6 +3136,11 @@ if (favoriteFilter) {
     const button = event.target.closest("button[data-favorite-filter]");
     if (!button) return;
 
+    if (!sbUser && button.dataset.favoriteFilter === "favorites") {
+      showLoginPrompt();
+      return;
+    }
+
     selectedFavoriteFilter = button.dataset.favoriteFilter === "favorites"
       ? "favorites"
       : "all";
