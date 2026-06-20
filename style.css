@@ -2970,7 +2970,7 @@ body.is-menu-open .layout-prototype .topbar .app-menu-button {
 .app-menu-close:hover { transform: scale(1.08); }
 body.is-menu-open .app-menu-close {
   display: flex;
-  animation: app-menu-close-in 160ms 100ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation: app-menu-close-in 160ms 100ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 @keyframes app-menu-close-in {
   from { opacity: 0; transform: scale(0.6); }
@@ -2981,8 +2981,8 @@ body.is-menu-open .app-menu-close {
   .app-menu-close {
     top: 16px;
     left: 16px;
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
   }
 }
 
