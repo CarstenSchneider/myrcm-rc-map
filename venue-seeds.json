@@ -69,8 +69,8 @@
   },
   {
     "id": "amc-saarbruecken-e-v",
-    "name": "AMC Saarbrücken e.V.",
-    "city": "Saarbrücken",
+    "name": "AMC SaarbrÃ¼cken e.V.",
+    "city": "SaarbrÃ¼cken",
     "lat": 49.25494432605648,
     "lng": 7.001039730657222,
     "hostIds": [
@@ -80,8 +80,8 @@
     "myrcmOrgId": "7103",
     "aliases": [
       "myrcm-7103",
-      "AMC Saarbrücken e.V.",
-      "Saarbrücken"
+      "AMC SaarbrÃ¼cken e.V.",
+      "SaarbrÃ¼cken"
     ]
   },
   {
@@ -121,7 +121,7 @@
   {
     "id": "amc-hamm-e-v",
     "name": "amc-Hamm e.V.",
-    "city": "Bönen",
+    "city": "BÃ¶nen",
     "lat": 51.682030657927996,
     "lng": 7.9324199858423805,
     "hostIds": [
@@ -132,13 +132,13 @@
     "aliases": [
       "myrcm-7771",
       "amc-Hamm e.V.",
-      "Bönen"
+      "BÃ¶nen"
     ]
   },
   {
     "id": "amc-muehlau-e-v",
-    "name": "AMC-Mühlau e.V.",
-    "city": "Mühlau",
+    "name": "AMC-MÃ¼hlau e.V.",
+    "city": "MÃ¼hlau",
     "lat": 50.90067043142882,
     "lng": 12.768212160800493,
     "hostIds": [
@@ -148,8 +148,8 @@
     "myrcmOrgId": "82",
     "aliases": [
       "myrcm-82",
-      "AMC-Mühlau e.V.",
-      "Mühlau"
+      "AMC-MÃ¼hlau e.V.",
+      "MÃ¼hlau"
     ]
   },
   {
@@ -254,7 +254,7 @@
   },
   {
     "id": "automodellclub-meissen-e-v",
-    "name": "Automodellclub Meißen e.V.",
+    "name": "Automodellclub MeiÃen e.V.",
     "city": "Nossen",
     "lat": 51.183209912703695,
     "lng": 13.494275375841397,
@@ -265,7 +265,7 @@
     "myrcmOrgId": "861",
     "aliases": [
       "myrcm-861",
-      "Automodellclub Meißen e.V.",
+      "Automodellclub MeiÃen e.V.",
       "Nossen"
     ]
   },
@@ -303,7 +303,7 @@
   },
   {
     "id": "djk-ssc-lackenhaeuser-e-v",
-    "name": "DJK-SSC Lackenhäuser e.V.",
+    "name": "DJK-SSC LackenhÃ¤user e.V.",
     "city": "Neureichenau",
     "lat": 48.735561100310875,
     "lng": 13.798475640900763,
@@ -314,7 +314,7 @@
     "myrcmOrgId": "50568",
     "aliases": [
       "myrcm-50568",
-      "DJK-SSC Lackenhäuser e.V.",
+      "DJK-SSC LackenhÃ¤user e.V.",
       "Neureichenau"
     ]
   },
@@ -452,7 +452,7 @@
   {
     "id": "lost-place-racers-e-v",
     "name": "Lost-Place-Racers e.V.",
-    "city": "Prüm",
+    "city": "PrÃ¼m",
     "lat": 50.62670012162062,
     "lng": 6.695804823655136,
     "hostIds": [
@@ -463,7 +463,7 @@
     "aliases": [
       "myrcm-17507",
       "Lost-Place-Racers e.V.",
-      "Prüm"
+      "PrÃ¼m"
     ]
   },
   {
@@ -566,8 +566,8 @@
   },
   {
     "id": "mac-nuernberg-e-v",
-    "name": "MAC Nürnberg e.V",
-    "city": "Nürnberg",
+    "name": "MAC NÃ¼rnberg e.V",
+    "city": "NÃ¼rnberg",
     "lat": 49.38767201459021,
     "lng": 11.168661334912732,
     "hostIds": [
@@ -576,27 +576,27 @@
     ],
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "myrcmOrgId": "9976",
-    "address": "Am Zollhaus, 90471 Nürnberg",
+    "address": "Am Zollhaus, 90471 NÃ¼rnberg",
     "postalCode": "90471",
     "addressSource": "rck-pdf",
     "addressVerifiedFromPdf": true,
-    "rckVenueName": "MAC Nürnberg e.V",
-    "rckOrganizerName": "MAC Nürnberg e.V.",
+    "rckVenueName": "MAC NÃ¼rnberg e.V",
+    "rckOrganizerName": "MAC NÃ¼rnberg e.V.",
     "rckLocations": [
-      "Nürnberg"
+      "NÃ¼rnberg"
     ],
     "aliases": [
-      "MAC Nürnberg e.V",
-      "Nürnberg",
-      "MAC Nürnberg e.V.",
-      "Am Zollhaus, 90471 Nürnberg",
+      "MAC NÃ¼rnberg e.V",
+      "NÃ¼rnberg",
+      "MAC NÃ¼rnberg e.V.",
+      "Am Zollhaus, 90471 NÃ¼rnberg",
       "myrcm-9976"
     ]
   },
   {
     "id": "mac-or-huetschenhausen-e-v",
-    "name": "MAC OR Hütschenhausen e.V.",
-    "city": "Hütschenhausen",
+    "name": "MAC OR HÃ¼tschenhausen e.V.",
+    "city": "HÃ¼tschenhausen",
     "lat": 49.41803566643476,
     "lng": 7.457597641355012,
     "hostIds": [
@@ -606,8 +606,8 @@
     "myrcmOrgId": "30735",
     "aliases": [
       "myrcm-30735",
-      "MAC OR Hütschenhausen e.V.",
-      "Hütschenhausen"
+      "MAC OR HÃ¼tschenhausen e.V.",
+      "HÃ¼tschenhausen"
     ]
   },
   {
@@ -664,7 +664,7 @@
   {
     "id": "mac-meckenheim-e-v",
     "name": "MAC-Meckenheim e.V.",
-    "city": "Bad Münstereifel",
+    "city": "Bad MÃ¼nstereifel",
     "lat": 50.623679184080956,
     "lng": 7.043371956119134,
     "hostIds": [
@@ -675,7 +675,7 @@
     "aliases": [
       "myrcm-49037",
       "MAC-Meckenheim e.V.",
-      "Bad Münstereifel"
+      "Bad MÃ¼nstereifel"
     ]
   },
   {
@@ -729,8 +729,8 @@
   },
   {
     "id": "mbsc-waechtersbach",
-    "name": "MBSC Wächtersbach",
-    "city": "Wächtersbach",
+    "name": "MBSC WÃ¤chtersbach",
+    "city": "WÃ¤chtersbach",
     "lat": 50.246100236848775,
     "lng": 9.291699351520423,
     "hostIds": [
@@ -739,20 +739,20 @@
     ],
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "myrcmOrgId": "27211",
-    "address": "Industriestr. 1, 63607 Wächtersbach",
+    "address": "Industriestr. 1, 63607 WÃ¤chtersbach",
     "postalCode": "63607",
     "addressSource": "rck-pdf",
     "addressVerifiedFromPdf": true,
-    "rckVenueName": "MBSC Wächtersbach",
+    "rckVenueName": "MBSC WÃ¤chtersbach",
     "rckOrganizerName": "TS-Grossauheim",
     "rckLocations": [
-      "Wächtersbach"
+      "WÃ¤chtersbach"
     ],
     "aliases": [
-      "MBSC Wächtersbach",
-      "Wächtersbach",
+      "MBSC WÃ¤chtersbach",
+      "WÃ¤chtersbach",
       "TS-Grossauheim",
-      "Industriestr. 1, 63607 Wächtersbach",
+      "Industriestr. 1, 63607 WÃ¤chtersbach",
       "myrcm-27211"
     ]
   },
@@ -809,8 +809,8 @@
   },
   {
     "id": "mc-fuerstenwalde-e-v",
-    "name": "MC-Fürstenwalde e.V.",
-    "city": "Fürstenwalde",
+    "name": "MC-FÃ¼rstenwalde e.V.",
+    "city": "FÃ¼rstenwalde",
     "lat": 52.357853903592336,
     "lng": 14.088839478233716,
     "hostIds": [
@@ -820,8 +820,8 @@
     "myrcmOrgId": "65042",
     "aliases": [
       "myrcm-65042",
-      "MC-Fürstenwalde e.V.",
-      "Fürstenwalde"
+      "MC-FÃ¼rstenwalde e.V.",
+      "FÃ¼rstenwalde"
     ]
   },
   {
@@ -894,8 +894,8 @@
   },
   {
     "id": "mcc-luedenscheid-e-v",
-    "name": "MCC Lüdenscheid e.V.",
-    "city": "Lüdenscheid",
+    "name": "MCC LÃ¼denscheid e.V.",
+    "city": "LÃ¼denscheid",
     "lat": 51.20611533323285,
     "lng": 7.645839278803224,
     "hostIds": [
@@ -904,28 +904,28 @@
     ],
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "myrcmOrgId": "52121",
-    "address": "Höher Weg 42, 58511 Lüdenscheid",
+    "address": "HÃ¶her Weg 42, 58511 LÃ¼denscheid",
     "postalCode": "58511",
     "addressSource": "rck-pdf",
     "addressVerifiedFromPdf": true,
-    "rckVenueName": "MCC Lüdenscheid e.V.",
-    "rckOrganizerName": "MCC Lüdenscheid",
+    "rckVenueName": "MCC LÃ¼denscheid e.V.",
+    "rckOrganizerName": "MCC LÃ¼denscheid",
     "rckLocations": [
-      "Lüdenscheid"
+      "LÃ¼denscheid"
     ],
     "website": "https://mcc-luedenscheid.de",
     "aliases": [
-      "MCC Lüdenscheid e.V.",
-      "Lüdenscheid",
-      "MCC Lüdenscheid",
-      "Höher Weg 42, 58511 Lüdenscheid",
+      "MCC LÃ¼denscheid e.V.",
+      "LÃ¼denscheid",
+      "MCC LÃ¼denscheid",
+      "HÃ¶her Weg 42, 58511 LÃ¼denscheid",
       "myrcm-52121"
     ]
   },
   {
     "id": "mcc-rheda-wiedenbrueck-e-v",
-    "name": "MCC Rheda-Wiedenbrück e.V.",
-    "city": "Gütersloh",
+    "name": "MCC Rheda-WiedenbrÃ¼ck e.V.",
+    "city": "GÃ¼tersloh",
     "lat": 51.84430266338534,
     "lng": 8.298642819195084,
     "hostIds": [
@@ -935,8 +935,8 @@
     "myrcmOrgId": "49956",
     "aliases": [
       "myrcm-49956",
-      "MCC Rheda-Wiedenbrück e.V.",
-      "Gütersloh"
+      "MCC Rheda-WiedenbrÃ¼ck e.V.",
+      "GÃ¼tersloh"
     ]
   },
   {
@@ -970,8 +970,8 @@
   },
   {
     "id": "mcc-tuerkheim-e-v",
-    "name": "MCC Türkheim e.V.",
-    "city": "Weißenhorn",
+    "name": "MCC TÃ¼rkheim e.V.",
+    "city": "WeiÃenhorn",
     "lat": 48.05428273383636,
     "lng": 10.627985640401176,
     "hostIds": [
@@ -981,8 +981,8 @@
     "myrcmOrgId": "47",
     "aliases": [
       "myrcm-47",
-      "MCC Türkheim e.V.",
-      "Weißenhorn"
+      "MCC TÃ¼rkheim e.V.",
+      "WeiÃenhorn"
     ]
   },
   {
@@ -1022,7 +1022,7 @@
   {
     "id": "mck-e-v-dormagen",
     "name": "MCK e.V. Dormagen",
-    "city": "Köln",
+    "city": "KÃ¶ln",
     "lat": 51.05999966648897,
     "lng": 6.832199264013079,
     "hostIds": [
@@ -1033,13 +1033,13 @@
     "aliases": [
       "myrcm-9269",
       "MCK e.V. Dormagen",
-      "Köln"
+      "KÃ¶ln"
     ]
   },
   {
     "id": "mcrt-schaafheim-e-v",
     "name": "MCRT-Schaafheim e.V.",
-    "city": "Großostheim",
+    "city": "GroÃostheim",
     "lat": 49.930293448626585,
     "lng": 9.015560283086872,
     "hostIds": [
@@ -1049,7 +1049,7 @@
     "myrcmOrgId": "50727",
     "aliases": [
       "MCRT-Schaafheim e.V.",
-      "Großostheim",
+      "GroÃostheim",
       "Grossostheim",
       "myrcm-50727"
     ]
@@ -1073,8 +1073,8 @@
   },
   {
     "id": "mcv-daenischer-wohld-e-v",
-    "name": "MCV Dänischer Wohld e.V.",
-    "city": "Tüttendorf",
+    "name": "MCV DÃ¤nischer Wohld e.V.",
+    "city": "TÃ¼ttendorf",
     "lat": 54.3770640548488,
     "lng": 10.007107746575903,
     "hostIds": [
@@ -1084,8 +1084,8 @@
     "myrcmOrgId": "19290",
     "aliases": [
       "myrcm-19290",
-      "MCV Dänischer Wohld e.V.",
-      "Tüttendorf"
+      "MCV DÃ¤nischer Wohld e.V.",
+      "TÃ¼ttendorf"
     ]
   },
   {
@@ -1142,7 +1142,7 @@
   {
     "id": "miniatutenpark-elsterwerda",
     "name": "Miniatutenpark Elsterwerda",
-    "city": "Röderland",
+    "city": "RÃ¶derland",
     "lat": 51.45952611051337,
     "lng": 13.545875275034973,
     "hostIds": [
@@ -1153,7 +1153,7 @@
     "aliases": [
       "myrcm-65451",
       "Miniatutenpark Elsterwerda",
-      "Röderland OT Prösen"
+      "RÃ¶derland OT PrÃ¶sen"
     ]
   },
   {
@@ -1193,7 +1193,7 @@
   {
     "id": "modellrenngemeinschaft-dogern-e-v",
     "name": "Modellrenngemeinschaft Dogern e.V.",
-    "city": "Wutöschingen",
+    "city": "WutÃ¶schingen",
     "lat": 47.59951612211713,
     "lng": 8.167520352321992,
     "hostIds": [
@@ -1204,13 +1204,13 @@
     "aliases": [
       "myrcm-879",
       "Modellrenngemeinschaft Dogern e.V.",
-      "Wutöschingen - Horheim"
+      "WutÃ¶schingen - Horheim"
     ]
   },
   {
     "id": "modellsportzentrum-zwoenitz-e-v",
-    "name": "Modellsportzentrum Zwönitz e.V.",
-    "city": "Zwönitz",
+    "name": "Modellsportzentrum ZwÃ¶nitz e.V.",
+    "city": "ZwÃ¶nitz",
     "lat": 50.629167742978474,
     "lng": 12.82466326392235,
     "hostIds": [
@@ -1220,8 +1220,8 @@
     "myrcmOrgId": "60576",
     "aliases": [
       "myrcm-60576",
-      "Modellsportzentrum Zwönitz e.V.",
-      "Zwönitz"
+      "Modellsportzentrum ZwÃ¶nitz e.V.",
+      "ZwÃ¶nitz"
     ]
   },
   {
@@ -1430,7 +1430,7 @@
   {
     "id": "msc-herrenhaide",
     "name": "MSC Herrenhaide",
-    "city": "Burgstädt",
+    "city": "BurgstÃ¤dt",
     "lat": 50.89413478350779,
     "lng": 12.826840095339774,
     "hostIds": [
@@ -1440,14 +1440,14 @@
     "myrcmOrgId": "64487",
     "aliases": [
       "MSC Herrenhaide",
-      "Burgstädt",
+      "BurgstÃ¤dt",
       "Burgstaedt",
       "myrcm-64487"
     ]
   },
   {
     "id": "msc-hockendorf-e-v",
-    "name": "MSC Höckendorf e.V.",
+    "name": "MSC HÃ¶ckendorf e.V.",
     "city": "Klingenberg",
     "lat": 50.90685773749509,
     "lng": 13.601278369350881,
@@ -1457,7 +1457,7 @@
     "source": "manual-verified-geolocation",
     "myrcmOrgId": "56487",
     "aliases": [
-      "MSC Höckendorf e.V.",
+      "MSC HÃ¶ckendorf e.V.",
       "MSC Hoeckendorf e.V.",
       "Klingenberg",
       "myrcm-56487"
@@ -1482,7 +1482,7 @@
   },
   {
     "id": "msc-ober-moerlen-e-v",
-    "name": "MSC Ober-Mörlen e.V.",
+    "name": "MSC Ober-MÃ¶rlen e.V.",
     "city": "Weiterstadt",
     "lat": 50.36373992635159,
     "lng": 8.703558862143346,
@@ -1529,7 +1529,7 @@
   },
   {
     "id": "mss-am-saegewerk",
-    "name": "MSS Am Sägewerk",
+    "name": "MSS Am SÃ¤gewerk",
     "city": "Seifhennersdorf",
     "lat": 50.939800366011546,
     "lng": 14.617924104218886,
@@ -1539,17 +1539,17 @@
     "source": "manual-verified-geolocation",
     "myrcmOrgId": "49105",
     "aliases": [
-      "MSS Am Sägewerk",
+      "MSS Am SÃ¤gewerk",
       "MSS Am Saegewerk",
-      "MSS \"Am Sägewerk\"",
+      "MSS \"Am SÃ¤gewerk\"",
       "Seifhennersdorf",
       "myrcm-49105"
     ]
   },
   {
     "id": "msv-hurtgenwald-e-v",
-    "name": "MSV Hürtgenwald e.V.",
-    "city": "Hürtgenwald",
+    "name": "MSV HÃ¼rtgenwald e.V.",
+    "city": "HÃ¼rtgenwald",
     "lat": 50.70835291116781,
     "lng": 6.399507234037498,
     "hostIds": [
@@ -1558,9 +1558,9 @@
     "source": "manual-verified-geolocation",
     "myrcmOrgId": "15511",
     "aliases": [
-      "MSV Hürtgenwald e.V.",
+      "MSV HÃ¼rtgenwald e.V.",
       "MSV Huertgenwald e.V.",
-      "Hürtgenwald",
+      "HÃ¼rtgenwald",
       "Huertgenwald",
       "myrcm-15511"
     ]
@@ -1568,7 +1568,7 @@
   {
     "id": "nitromaniacs-e-v",
     "name": "NitroManiacs e.V.",
-    "city": "Mönchengladbach",
+    "city": "MÃ¶nchengladbach",
     "lat": 51.230821840297466,
     "lng": 6.493511337705921,
     "hostIds": [
@@ -1579,15 +1579,15 @@
     "aliases": [
       "NitroManiacs e.V.",
       "NitroManiacs",
-      "Mönchengladbach",
+      "MÃ¶nchengladbach",
       "Moenchengladbach",
       "myrcm-15092"
     ]
   },
   {
     "id": "orc-b-gottingen-e-v",
-    "name": "ORC-B Göttingen e.V.",
-    "city": "Göttingen",
+    "name": "ORC-B GÃ¶ttingen e.V.",
+    "city": "GÃ¶ttingen",
     "lat": 51.47056407637097,
     "lng": 9.974981654302782,
     "hostIds": [
@@ -1596,16 +1596,16 @@
     "source": "manual-verified-geolocation",
     "myrcmOrgId": "36113",
     "aliases": [
-      "ORC-B Göttingen e.V.",
+      "ORC-B GÃ¶ttingen e.V.",
       "ORC-B Goettingen e.V.",
-      "Göttingen",
+      "GÃ¶ttingen",
       "Goettingen",
       "myrcm-36113"
     ]
   },
   {
     "id": "ormc-koenigsbrunn",
-    "name": "ORMC Königsbrunn",
+    "name": "ORMC KÃ¶nigsbrunn",
     "city": "Augsburg",
     "lat": 48.35816192334434,
     "lng": 10.889086918531008,
@@ -1669,7 +1669,7 @@
   },
   {
     "id": "rc-cars-koengen-e-v",
-    "name": "RC Cars Köngen e.V.",
+    "name": "RC Cars KÃ¶ngen e.V.",
     "city": "Stuttgart",
     "lat": 48.67988951659691,
     "lng": 9.353290385431542,
@@ -1680,7 +1680,7 @@
     "myrcmOrgId": "12564",
     "aliases": [
       "myrcm-12564",
-      "RC Cars Köngen e.V.",
+      "RC Cars KÃ¶ngen e.V.",
       "Stuttgart"
     ]
   },
@@ -1817,7 +1817,7 @@
   {
     "id": "rc-msc-greuthof-e-v",
     "name": "RC-MSC Greuthof e.V.",
-    "city": "Wüstenrot",
+    "city": "WÃ¼stenrot",
     "lat": 49.08318410406898,
     "lng": 9.427734276568266,
     "hostIds": [
@@ -1828,7 +1828,7 @@
     "aliases": [
       "myrcm-61583",
       "RC-MSC Greuthof e.V.",
-      "Wüstenrot"
+      "WÃ¼stenrot"
     ]
   },
   {
@@ -1969,8 +1969,8 @@
   },
   {
     "id": "rcct-muenden-e-v",
-    "name": "RCCT Münden e.V.",
-    "city": "Hann. Münden",
+    "name": "RCCT MÃ¼nden e.V.",
+    "city": "Hann. MÃ¼nden",
     "lat": 51.42880541931611,
     "lng": 9.640719622471616,
     "hostIds": [
@@ -1979,22 +1979,22 @@
     ],
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "myrcmOrgId": "134",
-    "address": "Weserpark, 34346 Hann.Münden",
+    "address": "Weserpark, 34346 Hann.MÃ¼nden",
     "postalCode": "34346",
     "addressSource": "rck-pdf",
     "addressVerifiedFromPdf": true,
-    "rckVenueName": "RCCT Münden e.V.",
-    "rckOrganizerName": "RC-CAR -TEAM Münden eV.",
+    "rckVenueName": "RCCT MÃ¼nden e.V.",
+    "rckOrganizerName": "RC-CAR -TEAM MÃ¼nden eV.",
     "rckLocations": [
-      "Hann.Münden Nachtrennen"
+      "Hann.MÃ¼nden Nachtrennen"
     ],
     "aliases": [
-      "RCCT Münden e.V.",
-      "Hann. Münden",
-      "RC-CAR -TEAM Münden eV.",
-      "Weserpark, 34346 Hann.Münden",
+      "RCCT MÃ¼nden e.V.",
+      "Hann. MÃ¼nden",
+      "RC-CAR -TEAM MÃ¼nden eV.",
+      "Weserpark, 34346 Hann.MÃ¼nden",
       "myrcm-134",
-      "Hann.Münden"
+      "Hann.MÃ¼nden"
     ]
   },
   {
@@ -2068,7 +2068,7 @@
   },
   {
     "id": "rmc-dueren-e-v",
-    "name": "RMC Düren e.V.",
+    "name": "RMC DÃ¼ren e.V.",
     "city": "Niederzier",
     "lat": 50.87690658983461,
     "lng": 6.4702874893032805,
@@ -2079,7 +2079,7 @@
     "myrcmOrgId": "26406",
     "aliases": [
       "myrcm-26406",
-      "RMC Düren e.V.",
+      "RMC DÃ¼ren e.V.",
       "Niederzier"
     ]
   },
@@ -2170,7 +2170,7 @@
   },
   {
     "id": "technische-universitaet-chemnitz-professur-alternative-fahrzeugantriebe",
-    "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
+    "name": "Technische UniversitÃ¤t Chemnitz - Professur Alternative Fahrzeugantriebe",
     "city": "Chemnitz",
     "lat": 50.81598314538974,
     "lng": 12.929561027171806,
@@ -2181,14 +2181,14 @@
     "myrcmOrgId": "38953",
     "aliases": [
       "myrcm-38953",
-      "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
+      "Technische UniversitÃ¤t Chemnitz - Professur Alternative Fahrzeugantriebe",
       "Chemnitz"
     ]
   },
   {
     "id": "tsv-1871-augsburg-e-v",
     "name": "TSV 1871 Augsburg e.V.",
-    "city": "Königsbrunn",
+    "city": "KÃ¶nigsbrunn",
     "lat": 48.39507365944548,
     "lng": 10.875577200544573,
     "hostIds": [
@@ -2213,7 +2213,7 @@
       "Meierweg 16, 86154 Augsburg",
       "tsv-1871-augsburg-e-v",
       "myrcm-991",
-      "Königsbrunn"
+      "KÃ¶nigsbrunn"
     ]
   },
   {
@@ -2267,7 +2267,7 @@
   },
   {
     "id": "turnerschaft-1860-e-v-grossauheim",
-    "name": "Turnerschaft 1860 e.V. Großauheim",
+    "name": "Turnerschaft 1860 e.V. GroÃauheim",
     "city": "Hanau",
     "lat": 50.1040494790181,
     "lng": 8.951445664843742,
@@ -2278,7 +2278,7 @@
     "myrcmOrgId": "22897",
     "aliases": [
       "myrcm-22897",
-      "Turnerschaft 1860 e.V. Großauheim",
+      "Turnerschaft 1860 e.V. GroÃauheim",
       "Hanau Grossauheim"
     ]
   },
@@ -2294,7 +2294,7 @@
     ],
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "myrcmOrgId": "59129",
-    "address": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "address": "Franz-Schneider-StraÃe 2, 96465 Neustadt b. Coburg",
     "postalCode": "96465",
     "addressSource": "rck-pdf",
     "addressVerifiedFromPdf": true,
@@ -2307,14 +2307,14 @@
       "Turngemeinde 1855 Neustadt bei Coburg e.V.",
       "Neustadt bei Coburg",
       "TG-Neustadt 1855 e.V.",
-      "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+      "Franz-Schneider-StraÃe 2, 96465 Neustadt b. Coburg",
       "myrcm-59129"
     ]
   },
   {
     "id": "vfr-ruesselsheim-e-v",
-    "name": "VFR-Rüsselsheim e.V.",
-    "city": "Rüsselsheim",
+    "name": "VFR-RÃ¼sselsheim e.V.",
+    "city": "RÃ¼sselsheim",
     "lat": 49.980321844011186,
     "lng": 8.395484362108544,
     "hostIds": [
@@ -2324,8 +2324,8 @@
     "myrcmOrgId": "19940",
     "aliases": [
       "myrcm-19940",
-      "VFR-Rüsselsheim e.V.",
-      "Rüsselsheim"
+      "VFR-RÃ¼sselsheim e.V.",
+      "RÃ¼sselsheim"
     ]
   },
   {
@@ -2344,5 +2344,12 @@
       "Wiesbadener Minicar Club e.V.",
       "Eppstein"
     ]
+  },
+  {
+    "hostId": "mfk-kurten-e-v",
+    "hostName": "MFK Kürten e.V.",
+    "lat": 51.07755743502219,
+    "lng": 7.288925322171009,
+    "myrcmOrgId": "53092"
   }
 ]
