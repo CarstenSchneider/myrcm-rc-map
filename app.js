@@ -3787,7 +3787,8 @@ function showMenuPage(page) {
       btn.textContent = "Wird gesendet…";
       const { error } = await sbSendMagicLink(email);
       if (error) {
-        hint.textContent = "Fehler: " + error.message;
+        hint.textContent = "Fehler: " + (error.message || JSON.stringify(error));
+        console.error("Supabase magic link error:", error);
         btn.disabled = false;
         btn.textContent = "Link senden";
       } else {
