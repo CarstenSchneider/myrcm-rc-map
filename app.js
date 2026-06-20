@@ -3711,12 +3711,14 @@ function applyTheme(theme) {
 }
 
 function setTheme(theme) {
+  document.documentElement.classList.add("theme-transitioning");
   localStorage.setItem(THEME_KEY, theme);
   applyTheme(theme);
   document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.theme === theme);
   });
   sbSaveTheme(theme);
+  setTimeout(() => document.documentElement.classList.remove("theme-transitioning"), 400);
 }
 
 applyTheme(localStorage.getItem(THEME_KEY) || "auto");

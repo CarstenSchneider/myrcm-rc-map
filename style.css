@@ -72,6 +72,13 @@ body {
   color: var(--text);
 }
 
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: background-color 300ms ease, background 300ms ease, color 250ms ease, border-color 250ms ease !important;
+}
+
 .app {
   height: 100vh;
   display: grid;
