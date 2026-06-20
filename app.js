@@ -448,10 +448,12 @@ async function sbInit() {
       sbUser = session?.user ?? null;
       if (sbUser) await sbPullAll();
       else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
+      document.body.classList.toggle("user-logged-in", !!sbUser);
       if (typeof showMenuHome === "function") showMenuHome();
     });
     if (sbUser) await sbPullAll();
     else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
+    document.body.classList.toggle("user-logged-in", !!sbUser);
   } catch (e) {
     console.error("Supabase init failed:", e);
   }
@@ -472,6 +474,7 @@ async function sbSignOut() {
 
 async function sbPullAll() {
   if (!sbClient || !sbUser) return;
+  selectedFavoriteFilter = loadFavoriteFilter();
   await Promise.all([sbPullFavorites(), sbPullPreferences()]);
 }
 
@@ -534,7 +537,9 @@ function saveFavoriteFilter(value) {
   }
 }
 
-selectedFavoriteFilter = loadFavoriteFilter();
+// Don't load from localStorage here — auth hasn't resolved yet. Reset to "all" at startup,
+// then load from storage in sbPullAll() once we know a user is logged in.
+selectedFavoriteFilter = "all";
 
 function getFavoriteHostIds() {
   try {

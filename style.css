@@ -2607,6 +2607,9 @@ input {
   order: unset !important;
 }
 
+/* Hide favorite filter for logged-out users */
+body:not(.user-logged-in) .topbar-favorites { display: none !important; }
+
 /* Search fills remaining row width */
 .mob-drawer-filters .topbar-search {
   flex: 1 1 180px !important;
