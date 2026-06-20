@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "rc-offroad-staaken",
-    "hostName": "RC Offroad Staaken",
-    "source": "myrcm",
-    "myrcmOrgId": "55317",
-    "possibleVenue": "Berlin",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
     "source": "myrcm",
