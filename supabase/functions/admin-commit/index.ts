@@ -48,13 +48,13 @@ serve(async (req) => {
     const seedsRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}?ref=${BRANCH}`, { headers: ghHeaders });
     const seedsMeta = await seedsRes.json();
     const seedsSha = seedsMeta.sha;
-    const seeds: any[] = JSON.parse(atob(seedsMeta.content.replace(/\n/g, "")));
+    const seeds: any[] = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(seedsMeta.content.replace(/\n/g, "")), c => c.charCodeAt(0))));
 
     // Fetch current venue-unmatched.json
     const unmatchedRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}?ref=${BRANCH}`, { headers: ghHeaders });
     const unmatchedMeta = await unmatchedRes.json();
     const unmatchedSha = unmatchedMeta.sha;
-    const unmatched: any[] = JSON.parse(atob(unmatchedMeta.content.replace(/\n/g, "")));
+    const unmatched: any[] = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(unmatchedMeta.content.replace(/\n/g, "")), c => c.charCodeAt(0))));
 
     // Build new seed entry
     let newEntry: Record<string, any>;
@@ -78,7 +78,7 @@ serve(async (req) => {
     const newUnmatched = unmatched.filter((u: any) => u.hostId !== hostId);
 
     // Commit seeds
-    const seedsContent = btoa(unescape(encodeURIComponent(JSON.stringify(seeds, null, 2) + "\n")));
+    const seedsContent = btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(seeds, null, 2) + "\n")));
     await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
@@ -86,7 +86,7 @@ serve(async (req) => {
     });
 
     // Commit unmatched
-    const unmatchedContent = btoa(unescape(encodeURIComponent(JSON.stringify(newUnmatched, null, 2) + "\n")));
+    const unmatchedContent = btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(newUnmatched, null, 2) + "\n")));
     await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}`, {
       method: "PUT",
       headers: ghHeaders,

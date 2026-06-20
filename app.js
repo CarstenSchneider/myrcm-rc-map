@@ -3813,6 +3813,7 @@ function loginPageHtml() {
 
 
 const ADMIN_EMAILS = ["carsten@lessrain.com", "carsten@lessrain.net"];
+const EXCLUDED_MYRCM_ORG_IDS = new Set(["60453"]); // Slottis Supreme Masters
 function isAdmin() { return sbUser && ADMIN_EMAILS.includes(sbUser.email.toLowerCase()); }
 
 const GITHUB_REPO = "CarstenSchneider/myrcm-rc-map";
@@ -3824,7 +3825,7 @@ async function adminLoadUnmatched() {
     fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
     fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
   ]);
-  const unmatched = await unmatchedRes.json();
+  const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
   const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
