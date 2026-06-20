@@ -296,6 +296,30 @@ input {
   background: rgba(var(--panel-rgb), 0.45);
 }
 
+.venue-last-race {
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(var(--panel-rgb), 0.45);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.venue-last-race-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+.venue-last-race strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+}
+
 .leaflet-popup-content-wrapper {
   border-radius: 16px !important;
 }

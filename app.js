@@ -2258,19 +2258,10 @@ function googleMapsRouteUrl(venue) {
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
-  const lastRaceHtml =
-    !venueRaces.length && latestPastRace
-      ? `<div class="popup-last-race">
-          Zuletzt:<br>
-          <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong><br>
-          ${escapeHtml(latestPastRace.name)}
-        </div>`
-      : "";
-
-  // Show favorite star only for host-based venues (not venue-only locations)
-  const hostId = venueRaces.length ? raceHostId(venueRaces[0]) : null;
-  const hostName = hostId ? raceHostName(venueRaces[0]) : null;
-  const hostWebsite = hostId ? hostWebsiteForRace(venueRaces[0]) : null;
+  const sourceRace = venueRaces[0] || latestPastRace;
+  const hostId = sourceRace ? raceHostId(sourceRace) : null;
+  const hostName = hostId ? raceHostName(sourceRace) : null;
+  const hostWebsite = hostId ? hostWebsiteForRace(sourceRace) : null;
   const hostNameHtml = hostWebsite
     ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
     : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`;
@@ -2280,7 +2271,6 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
 
   return `
     <div class="popup-title">${titleHtml}</div>
-    ${lastRaceHtml}
     <div class="popup-route">
       <a class="popup-route-btn" href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()" title="Route planen">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -2527,16 +2517,15 @@ const popupOffset = hasUpcomingRaces
           renderList(venueRaces);
           resultLine.textContent = resultLineText(venueRaces.length, "an dieser Strecke");
         } else {
-          renderList([]);
-          resultLine.textContent = emptyVenueResultLineText();
+          renderVenueNoRaces(latestPastRace);
         }
       });
     });
-    
+
     marker.on("popupclose", () => {
 
       marker.getElement()?.classList.remove("marker-popup-active");
-      
+
       if (isSwitchingMarkerPopup) return;
 
       isPopupPinned = false;
@@ -2568,8 +2557,7 @@ const popupOffset = hasUpcomingRaces
         renderList(venueRaces);
         resultLine.textContent = resultLineText(venueRaces.length, "an dieser Strecke");
       } else {
-        renderList([]);
-        resultLine.textContent = emptyVenueResultLineText();
+        renderVenueNoRaces(latestPastRace);
       }
 
       marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
@@ -2652,6 +2640,20 @@ function focusRace(race) {
   const targetZoom = Math.max(map.getZoom(), 12);
   panToVisible([venue.lat, venue.lng], targetZoom);
 }
+function renderVenueNoRaces(latestPastRace) {
+  resultLine.textContent = emptyVenueResultLineText();
+  raceList.innerHTML = "";
+  if (latestPastRace) {
+    raceList.innerHTML = `<div class="venue-last-race">
+      <span class="venue-last-race-label">Zuletzt:</span>
+      <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong>
+      ${escapeHtml(latestPastRace.name)}
+    </div>`;
+  } else {
+    raceList.innerHTML = `<div class="empty-state">Keine Rennen an dieser Strecke.</div>`;
+  }
+}
+
 function renderList(list) {
   resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
@@ -2962,8 +2964,7 @@ function render() {
 
       if (latestPastRace) {
         activeRaceId = null;
-        renderList([]);
-        resultLine.textContent = emptyVenueResultLineText();
+        renderVenueNoRaces(latestPastRace);
       } else {
         activeVenueId = null;
         activeRaceId = null;
