@@ -3720,7 +3720,7 @@ function showMenuHome() {
   const authSection = sbUser
     ? `<div class="app-menu-auth-user">
         <span class="app-menu-auth-avatar">${sbUser.email[0].toUpperCase()}</span>
-        <span class="app-menu-auth-email">${escapeHtml(sbUser.email)}</span>
+        <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
         <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">Abmelden</button>
        </div>`
     : `<button type="button" class="app-menu-item app-menu-login-btn" id="sbLoginBtn">
@@ -3754,6 +3754,13 @@ function showMenuHome() {
     await sbSignOut();
     showMenuHome();
   });
+}
+
+function maskEmail(email) {
+  const [local, domain] = email.split("@");
+  const [domName, ...domExt] = domain.split(".");
+  const mask = s => s[0] + "*".repeat(Math.max(1, s.length - 2)) + s[s.length - 1];
+  return `${mask(local)}@${mask(domName)}.${domExt.join(".")}`;
 }
 
 function loginPageHtml() {
