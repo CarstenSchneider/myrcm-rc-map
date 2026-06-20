@@ -24,7 +24,9 @@ jobs:
           fetch-depth: 0
 
       - name: Switch to ref
-        run: git checkout ${{ github.event.inputs.ref }}
+        run: |
+          git fetch origin ${{ github.event.inputs.ref }} || true
+          git checkout ${{ github.event.inputs.ref }}
 
       - name: Prepare snapshot files
         run: |
