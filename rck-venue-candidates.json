@@ -30,8 +30,8 @@
     "address": "Juri-Gagarin-Ring 1",
     "postalCode": "17036",
     "country": "DE",
-    "lat": 53.5546251,
-    "lng": 13.2931112,
+    "lat": 53.5557196,
+    "lng": 13.2928946,
     "source": "rck",
     "sources": [
       "rck-kleinserie"
@@ -48,9 +48,9 @@
     "verificationStatus": "verifiziert",
     "geocodingSource": "nominatim",
     "geocodingQuery": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg, DE",
-    "geocodingDisplayName": "Lindetalcenter, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
+    "geocodingDisplayName": "Lindetal Grill, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
     "geocodingClass": null,
-    "geocodingType": "mall"
+    "geocodingType": "fast_food"
   },
   {
     "id": "rck-pusdorfer-ring-bremen-bremen",
@@ -59,8 +59,8 @@
     "address": "Senator-Apelt-Strasse",
     "postalCode": "28197",
     "country": "DE",
-    "lat": 53.0734631,
-    "lng": 8.767315,
+    "lat": 53.0904968,
+    "lng": 8.7316452,
     "source": "rck",
     "sources": [
       "rck-challenge",
@@ -78,7 +78,7 @@
     "verificationStatus": "verifiziert",
     "geocodingSource": "nominatim",
     "geocodingQuery": "Senator-Apelt-Strasse, 28197 Bremen, DE",
-    "geocodingDisplayName": "Senator-Apelt-Straße, Tabakquartier, Woltmershausen, Bremen-Süd, Bremen, 28197, Deutschland",
+    "geocodingDisplayName": "Senator-Apelt-Straße, Neustädter Häfen, Häfen, Bremen-Mitte, Bremen, 28197, Deutschland",
     "geocodingClass": null,
     "geocodingType": "tertiary"
   },

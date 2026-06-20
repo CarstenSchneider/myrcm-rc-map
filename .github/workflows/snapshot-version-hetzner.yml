@@ -1,0 +1,52 @@
+name: Snapshot version to Hetzner
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version folder name (e.g. v1, v2)'
+        required: true
+        type: string
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Prepare snapshot files
+        run: |
+          mkdir -p .deploy-snapshot
+          cp index.html .deploy-snapshot/
+          cp app.js .deploy-snapshot/
+          cp style.css .deploy-snapshot/
+          cp impressum-datenschutz.html .deploy-snapshot/
+          cp races.json .deploy-snapshot/
+          cp rck-races.json .deploy-snapshot/
+          cp venues.json .deploy-snapshot/
+          cp hosts.json .deploy-snapshot/
+          cp series.json .deploy-snapshot/
+          cp myrcm-hosts-germany.json .deploy-snapshot/
+          cp rck-venue-candidates.json .deploy-snapshot/
+          cp -R favicon_io .deploy-snapshot/
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Upload snapshot to versioned folder
+        env:
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
+          set sftp:auto-confirm yes
+          mirror -R .deploy-snapshot ./$VERSION --verbose
+          bye
+          EOF

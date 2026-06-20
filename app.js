@@ -9,33 +9,154 @@ const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
 const activeFilterChips = document.getElementById("activeFilterChips");
 const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
+const favoriteFilter = document.getElementById("favoriteFilter");
+let dataLastUpdatedAt = null;
 
 const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
   minZoom: 6
-}).setView([51.8, 11.8], 6);
+}).setView([51.8, 11.8], 7);
 
-map.setMaxBounds([
-  [44.0, -5.0],
-  [59.0, 25.0]
-]);
+const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
+map.setMaxBounds(MAX_BOUNDS);
+
 
 L.control.zoom({
   position: "bottomleft"
 }).addTo(map);
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
-const avalonBlue = "#0057B8";
-const avalonGold = "#B88A2A";
+const rcRaceMapColorsLight = {
+  water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",
+  landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4", roadMinor: "#cccccc",
+  boundary: "#d8d8d8", label: "#716F6F", labelHalo: "#ebebeb",
+  marker: "#213769", markerClosed: "#c0bdb8", favorite: "#C8B090",
+  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
+};
+const rcRaceMapColorsDark = {
+  water: "#0c1829", land: "#0f1e35", settlement: "#132442",
+  landcover: "#0e1c32", building: "#132442", road: "#1e3a5f", roadMinor: "#1e3a5f",
+  boundary: "#1e3a5f", label: "#6a9fd8", labelHalo: "#0f1e35",
+  marker: "#4569a5", markerClosed: "#3d6090", favorite: "#c8b090",
+  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
+};
+const rcRaceMapColors = { ...rcRaceMapColorsLight };
+
+const raceMapMarkerViewBox = {
+  width: 477,
+  height: 528.98
+};
+const raceMapMarkerBaseHeight = 34;
+const raceMapMarkerBaseWidth = Math.round(
+  raceMapMarkerBaseHeight * raceMapMarkerViewBox.width / raceMapMarkerViewBox.height
+);
+const mapPinViewBox = {
+  width: 129.98,
+  height: 153
+};
+const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,29.66,19.88,54.66,47.04,62.46l17.95,25.56,17.95-25.56c27.16-7.79,47.04-32.79,47.04-62.46Z";
+
+// Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
+function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
+  const svg = `
+    <svg width="${width}" height="${height}" viewBox="0 0 ${raceMapMarkerViewBox.width} ${raceMapMarkerViewBox.height}" xmlns="http://www.w3.org/2000/svg">
+      <g id="white" fill="${bgColor}">
+        <circle cx="238.73" cy="238.59" r="189.45"/>
+      </g>
+      <g id="colour" fill="${color}">
+        <g>
+          <path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/>
+          <path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/>
+        </g>
+      </g>
+    </svg>
+  `;
+
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
+function mapPinSvg(color, width, height) {
+  return `
+    <svg width="${width}" height="${height}" viewBox="0 0 ${mapPinViewBox.width} ${mapPinViewBox.height}" xmlns="http://www.w3.org/2000/svg">
+      <path fill="${color}" d="${mapPinPath}"/>
+    </svg>
+  `;
+}
+
+function mapPinSvgDataUri(color, width, height) {
+  return `data:image/svg+xml,${encodeURIComponent(mapPinSvg(color, width, height))}`;
+}
+
+function mapPinIconHtml(className) {
+  return `<svg class="${className}" viewBox="0 0 ${mapPinViewBox.width} ${mapPinViewBox.height}" aria-hidden="true" focusable="false"><path fill="currentColor" d="${mapPinPath}"/></svg>`;
+}
+
+const _initDark = (() => {
+  const s = localStorage.getItem("rcracemap-theme") || "auto";
+  if (s === "dark") return true;
+  if (s === "light") return false;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+})();
+if (_initDark) Object.assign(rcRaceMapColors, rcRaceMapColorsDark);
 
 const baseMapLayer = L.maplibreGL({
-  style: `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
+  style: _initDark
+    ? `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${stadiaApiKey}`
+    : `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`,
   attribution:
     '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
     '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
     '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 }).addTo(map);
+
+const waterLabelLayerIds = new Set([
+  "water_name_line",
+  "water_name_nonocean",
+  "water_name_ocean"
+]);
+
+const majorRoadLayerIds = new Set([
+  "tunnel_motorway_casing",
+  "tunnel_motorway_inner",
+  "highway_major_casing",
+  "highway_major_inner",
+  "highway_major_subtle",
+  "highway_motorway_casing",
+  "highway_motorway_inner",
+  "highway_motorway_subtle",
+  "highway_motorway_bridge_casing",
+  "highway_motorway_bridge_inner"
+]);
+
+const roadShieldLayerIds = new Set([
+  "highway_shield_other",
+  "highway_shield_us_other",
+  "highway_shield_us_interstate"
+]);
+
+const roadShieldIconSizes = {
+  1: [14, 14],
+  2: [20, 14],
+  3: [26, 14],
+  4: [31, 14],
+  5: [36, 14],
+  6: [40, 14]
+};
+
+const countryRegionLabelLayerIds = new Set([
+  "place_country_other",
+  "place_country_major",
+  "place_state"
+]);
+
+const localizedPlaceLabel = [
+  "coalesce",
+  ["get", "name:de"],
+  ["get", "name_de"],
+  ["get", "name:latin"],
+  ["get", "name"]
+];
 
 function layerLooksLike(layer, tokens = []) {
   const id = String(layer?.id || "").toLowerCase();
@@ -45,70 +166,247 @@ function layerLooksLike(layer, tokens = []) {
   return tokens.some(token => combined.includes(token));
 }
 
-function applyAvalonMapStyle() {
+function setMapPaint(maplibreMap, layerId, property, value) {
+  try {
+    maplibreMap.setPaintProperty(layerId, property, value);
+  } catch {}
+}
+
+function setMapLayout(maplibreMap, layerId, property, value) {
+  try {
+    maplibreMap.setLayoutProperty(layerId, property, value);
+  } catch {}
+}
+
+function fillRoundedRect(context, x, y, width, height, radius) {
+  const corner = Math.min(radius, width / 2, height / 2);
+
+  context.beginPath();
+  context.moveTo(x + corner, y);
+  context.lineTo(x + width - corner, y);
+  context.quadraticCurveTo(x + width, y, x + width, y + corner);
+  context.lineTo(x + width, y + height - corner);
+  context.quadraticCurveTo(x + width, y + height, x + width - corner, y + height);
+  context.lineTo(x + corner, y + height);
+  context.quadraticCurveTo(x, y + height, x, y + height - corner);
+  context.lineTo(x, y + corner);
+  context.quadraticCurveTo(x, y, x + corner, y);
+  context.closePath();
+  context.fill();
+}
+
+function roadShieldImageData(length) {
+  const [width, height] = roadShieldIconSizes[length];
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  if (!context) return null;
+
+  canvas.width = width;
+  canvas.height = height;
+  context.fillStyle = rcRaceMapColors.road;
+  fillRoundedRect(context, 0, 0, width, height, 2);
+
+  return {
+    width,
+    height,
+    data: context.getImageData(0, 0, width, height).data
+  };
+}
+
+function installRoadShieldImages(maplibreMap) {
+  Object.keys(roadShieldIconSizes).forEach(length => {
+    const imageId = `rc-road-shield-${length}`;
+    const imageData = roadShieldImageData(length);
+
+    if (!imageData) return;
+
+    try {
+      if (maplibreMap.hasImage?.(imageId)) {
+        maplibreMap.updateImage(imageId, imageData);
+      } else {
+        maplibreMap.addImage(imageId, imageData);
+      }
+    } catch {}
+  });
+}
+
+function applyMajorRoadStyle(maplibreMap, layerId) {
+  setMapPaint(maplibreMap, layerId, "line-color", rcRaceMapColors.road);
+
+  if (layerId.includes("subtle")) {
+    setMapPaint(maplibreMap, layerId, "line-opacity", layerId.includes("motorway") ? 0.95 : 0.86);
+    setMapPaint(maplibreMap, layerId, "line-width", layerId.includes("motorway") ? 1.35 : 1.15);
+    return;
+  }
+
+  if (layerId.includes("casing")) {
+    setMapPaint(maplibreMap, layerId, "line-opacity", 0.62);
+    return;
+  }
+
+  setMapPaint(maplibreMap, layerId, "line-opacity", 0.9);
+}
+
+function applyRoadShieldStyle(maplibreMap, layerId) {
+  setMapLayout(maplibreMap, layerId, "icon-image", "rc-road-shield-{ref_length}");
+  setMapPaint(maplibreMap, layerId, "icon-opacity", 1);
+  setMapPaint(maplibreMap, layerId, "icon-halo-width", 0);
+  setMapPaint(maplibreMap, layerId, "icon-halo-blur", 0);
+  setMapPaint(maplibreMap, layerId, "text-color", rcRaceMapColors.label);
+  setMapPaint(maplibreMap, layerId, "text-halo-width", 0);
+  setMapPaint(maplibreMap, layerId, "text-halo-blur", 0);
+  setMapPaint(maplibreMap, layerId, "text-halo-color", rcRaceMapColors.road);
+}
+
+function applyCountryRegionLabelStyle(maplibreMap, layerId) {
+  setMapPaint(maplibreMap, layerId, "text-color", rcRaceMapColors.label);
+  setMapPaint(maplibreMap, layerId, "text-opacity", layerId === "place_state" ? 0.34 : 0.42);
+  setMapPaint(maplibreMap, layerId, "text-halo-color", rcRaceMapColors.labelHalo);
+  setMapPaint(maplibreMap, layerId, "text-halo-width", 0.8);
+
+  if (layerId === "place_state") {
+    setMapLayout(maplibreMap, layerId, "text-size", 9);
+    return;
+  }
+
+  setMapLayout(maplibreMap, layerId, "text-size", {
+    base: 1,
+    stops: [
+      [0, 10],
+      [6, 12],
+      [9, 18]
+    ]
+  });
+}
+
+function applyRcRaceMapStyle() {
   const maplibreMap = baseMapLayer.getMaplibreMap?.();
   if (!maplibreMap?.getStyle) return;
 
   const style = maplibreMap.getStyle();
   const layers = Array.isArray(style?.layers) ? style.layers : [];
+  installRoadShieldImages(maplibreMap);
 
   layers.forEach(layer => {
     const id = layer.id;
     if (!id || !maplibreMap.getLayer(id)) return;
 
+    if (waterLabelLayerIds.has(id)) {
+      setMapLayout(maplibreMap, id, "visibility", "none");
+      return;
+    }
+
+    // Hide contour/elevation lines
+    if (layerLooksLike(layer, ["contour", "elevation", "hillshade"])) {
+      setMapLayout(maplibreMap, id, "visibility", "none");
+      return;
+    }
+
+    if (layer.type === "background") {
+      maplibreMap.setPaintProperty(id, "background-color", rcRaceMapColors.land);
+      maplibreMap.setPaintProperty(id, "background-opacity", 1);
+      return;
+    }
+
     if (layer.type === "fill" && layerLooksLike(layer, ["water", "ocean", "sea", "lake", "river"])) {
-      maplibreMap.setPaintProperty(id, "fill-color", avalonBlue);
-      maplibreMap.setPaintProperty(id, "fill-opacity", 0.88);
+      maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.water);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["water", "river", "stream", "canal"])) {
-      maplibreMap.setPaintProperty(id, "line-color", avalonBlue);
-      maplibreMap.setPaintProperty(id, "line-opacity", 0.75);
+      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.water);
+      maplibreMap.setPaintProperty(id, "line-opacity", 1);
+      return;
+    }
+
+    if (layer.type === "fill" && layerLooksLike(layer, ["residential", "urban", "suburb", "populated"])) {
+      maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.settlement);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
     if (layer.type === "fill" && layerLooksLike(layer, ["landcover", "landuse", "park", "wood", "forest", "grass"])) {
-      maplibreMap.setPaintProperty(id, "fill-color", "#F7F8FA");
-      maplibreMap.setPaintProperty(id, "fill-opacity", 0.72);
+      maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.landcover);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
     if (layer.type === "fill" && layerLooksLike(layer, ["building"])) {
-      maplibreMap.setPaintProperty(id, "fill-color", "#E6EAF0");
-      maplibreMap.setPaintProperty(id, "fill-opacity", 0.72);
+      maplibreMap.setPaintProperty(id, "fill-color", rcRaceMapColors.building);
+      maplibreMap.setPaintProperty(id, "fill-opacity", 1);
       return;
     }
 
-    if (layer.type === "line" && layerLooksLike(layer, ["road", "street", "motorway", "trunk", "primary", "secondary"])) {
-      maplibreMap.setPaintProperty(id, "line-color", "#D9DEE7");
-      maplibreMap.setPaintProperty(id, "line-opacity", 0.82);
+    if (layer.type === "line" && majorRoadLayerIds.has(id)) {
+      applyMajorRoadStyle(maplibreMap, id);
+      return;
+    }
+
+    // Railway lines
+    if (layer.type === "line" && layerLooksLike(layer, ["rail", "railway", "transit", "tram", "subway", "metro"])) {
+      setMapPaint(maplibreMap, id, "line-color", rcRaceMapColors.roadMinor);
+      setMapPaint(maplibreMap, id, "line-opacity", 0.7);
+      return;
+    }
+
+    // Minor roads (residential, service, track, path, etc.)
+    if (layer.type === "line" && layerLooksLike(layer, ["road", "highway", "tunnel", "bridge", "ferry", "aeroway"]) && !majorRoadLayerIds.has(id)) {
+      setMapPaint(maplibreMap, id, "line-color", rcRaceMapColors.roadMinor);
+      setMapPaint(maplibreMap, id, "line-opacity", 0.85);
       return;
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      maplibreMap.setPaintProperty(id, "line-color", "#C8D0DB");
+      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
       maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
       return;
     }
 
     if (layer.type === "symbol") {
+      if (roadShieldLayerIds.has(id)) {
+        applyRoadShieldStyle(maplibreMap, id);
+        return;
+      }
+
+      if (layer["source-layer"] === "place") {
+        setMapLayout(maplibreMap, id, "text-field", localizedPlaceLabel);
+        // Hide settlement dot icons (only show text)
+        setMapPaint(maplibreMap, id, "icon-opacity", 0);
+
+        if (!countryRegionLabelLayerIds.has(id)) {
+          // Delay smaller settlements until higher zoom levels
+          let minZoom = 5;
+          if (id.includes("suburb") || id.includes("neighbourhood") || id.includes("quarter")) minZoom = 12;
+          else if (id.includes("hamlet") || id.includes("locality")) minZoom = 11;
+          else if (id.includes("village")) minZoom = 10;
+          else if (id.includes("town")) minZoom = 8;
+          else if (id.includes("city") || id.includes("capital")) minZoom = 5;
+          setMapPaint(maplibreMap, id, "text-opacity", ["step", ["zoom"], 0, minZoom, 1]);
+        }
+      }
+
       try {
-        maplibreMap.setPaintProperty(id, "text-color", "#354052");
-        maplibreMap.setPaintProperty(id, "text-halo-color", "#FFFFFF");
+        maplibreMap.setPaintProperty(id, "text-color", rcRaceMapColors.label);
+        maplibreMap.setPaintProperty(id, "text-halo-color", rcRaceMapColors.labelHalo);
         maplibreMap.setPaintProperty(id, "text-halo-width", 1.2);
       } catch {}
+
+      if (countryRegionLabelLayerIds.has(id)) {
+        applyCountryRegionLabelStyle(maplibreMap, id);
+      }
     }
   });
 
   const canvas = maplibreMap.getCanvas?.();
   if (canvas) {
-    canvas.style.background = "#FFFFFF";
+    canvas.style.background = rcRaceMapColors.land;
   }
 }
 
-baseMapLayer.getMaplibreMap?.().on("load", applyAvalonMapStyle);
-baseMapLayer.getMaplibreMap?.().on("styledata", applyAvalonMapStyle);
+baseMapLayer.getMaplibreMap?.().on("load", applyRcRaceMapStyle);
+baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
 
 let venues = [];
 let races = [];
@@ -124,12 +422,90 @@ let pinnedVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
 let selectedSeries = "all";
-let showOpenOnly = true;
+let showOpenOnly = false;
+let selectedFavoriteFilter = "all";
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
 const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
+const favoriteFilterStorageKey = "rcRaceMapFavoriteFilter";
+
+function loadFavoriteFilter() {
+  try {
+    return localStorage.getItem(favoriteFilterStorageKey) === "favorites"
+      ? "favorites"
+      : "all";
+  } catch {
+    return "all";
+  }
+}
+
+function saveFavoriteFilter(value) {
+  try {
+    localStorage.setItem(
+      favoriteFilterStorageKey,
+      value === "favorites" ? "favorites" : "all"
+    );
+  } catch {
+    // Local storage is optional for this UI preference.
+  }
+}
+
+selectedFavoriteFilter = loadFavoriteFilter();
+
+function getFavoriteHostIds() {
+  try {
+    const raw = localStorage.getItem(favoriteHostStorageKey);
+    const parsed = JSON.parse(raw || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(Boolean).map(String);
+  } catch {
+    return [];
+  }
+}
+
+function saveFavoriteHostIds(ids) {
+  const uniqueIds = [...new Set((ids || []).filter(Boolean).map(String))];
+  localStorage.setItem(favoriteHostStorageKey, JSON.stringify(uniqueIds));
+}
+
+function isFavoriteHostId(hostId) {
+  if (!hostId) return false;
+  return getFavoriteHostIds().includes(String(hostId));
+}
+
+function toggleFavoriteHost(hostId) {
+  if (!hostId) return;
+
+  const id = String(hostId);
+  const favoriteIds = getFavoriteHostIds();
+
+  if (favoriteIds.includes(id)) {
+    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
+  } else {
+    saveFavoriteHostIds([...favoriteIds, id]);
+  }
+}
+
+function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
+  if (!hostId) return "";
+
+  const active = isFavoriteHostId(hostId);
+  const title = active
+    ? `${label} aus Favoriten entfernen`
+    : `${label} als Favorit markieren`;
+
+  return `<button
+    class="venue-favorite-button${active ? " active" : ""}"
+    type="button"
+    data-favorite-host-id="${escapeHtml(hostId)}"
+    title="${escapeHtml(title)}"
+    aria-label="${escapeHtml(title)}"
+    aria-pressed="${active ? "true" : "false"}"
+  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg></button>`;
+}
+
 
 function getFavoriteHostIds() {
   try {
@@ -233,7 +609,7 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  >${active ? "★" : "☆"}</button>`;
+  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg></button>`;
 }
 
 function raceFavoriteVenueId(race) {
@@ -268,6 +644,10 @@ function isFavoriteRaceHost(race) {
   return isFavoriteHostId(raceHostId(race));
 }
 
+function isFavoriteRace(race) {
+  return isFavoriteRaceHost(race);
+}
+
 
 
 function updateAppModeClass() {
@@ -286,6 +666,65 @@ function updateFilterPanelState() {
       ? "Suche und Serienfilter schließen"
       : "Suche und Serienfilter öffnen"
   );
+}
+
+function updateFavoriteFilterUi() {
+  if (!favoriteFilter) return;
+
+  favoriteFilter
+    .querySelectorAll("button[data-favorite-filter]")
+    .forEach(button => {
+      const active = button.dataset.favoriteFilter === selectedFavoriteFilter;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+}
+
+function updateRegistrationVisibilityUi() {
+  if (!registrationVisibilityFilter) return;
+
+  registrationVisibilityFilter
+    .querySelectorAll("button[data-registration-visibility]")
+    .forEach(button => {
+      const active = button.dataset.registrationVisibility === (showOpenOnly ? "open" : "all");
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+}
+
+function activePillColor(button) {
+  return button?.dataset.favoriteFilter === "favorites"
+    ? "#C8B090"
+    : "#213769";
+}
+
+function updateSlidingPill(control) {
+  if (!control) return;
+
+  const activeButton = control.querySelector("button.active");
+  if (!activeButton) return;
+
+  control.style.setProperty("--pill-x", `${activeButton.offsetLeft}px`);
+  control.style.setProperty("--pill-width", `${activeButton.offsetWidth}px`);
+  control.style.setProperty("--pill-color", activePillColor(activeButton));
+  control.classList.add("is-pill-ready");
+}
+
+function updateSlidingPills() {
+  [rangeFilter, favoriteFilter, registrationVisibilityFilter].forEach(updateSlidingPill);
+}
+
+let slidingPillFrame = null;
+
+function scheduleSlidingPillUpdate() {
+  if (slidingPillFrame !== null) {
+    cancelAnimationFrame(slidingPillFrame);
+  }
+
+  slidingPillFrame = requestAnimationFrame(() => {
+    slidingPillFrame = null;
+    updateSlidingPills();
+  });
 }
 
 function renderActiveFilterChips() {
@@ -310,6 +749,21 @@ function renderActiveFilterChips() {
     `);
   }
 
+  if (selectedFavoriteFilter === "favorites") {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="favorites">
+        Favoriten<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
+
+  if (showOpenOnly) {
+    chips.push(`
+      <button class="active-filter-chip" type="button" data-clear-filter="registration">
+        Offen<span aria-hidden="true">×</span>
+      </button>
+    `);
+  }
 
   activeFilterChips.innerHTML = chips.join("");
   activeFilterChips.classList.toggle("is-empty", chips.length === 0);
@@ -317,6 +771,9 @@ function renderActiveFilterChips() {
 
 function syncFilterUi() {
   updateFilterPanelState();
+  updateFavoriteFilterUi();
+  updateRegistrationVisibilityUi();
+  updateSlidingPills();
   renderActiveFilterChips();
 }
 
@@ -592,6 +1049,10 @@ function matchesSelectedSeries(race) {
     raceSeries(race).some(series => seriesFilterValue(series) === selectedSeries);
 }
 
+function matchesFavoriteFilter(race) {
+  return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
+}
+
 
 function matchesSearchQuery(race) {
   const query = searchInput.value.trim().toLowerCase();
@@ -672,6 +1133,53 @@ function formatShortDate(dateString) {
     month: "2-digit",
     year: "2-digit"
   }).format(date);
+}
+
+function formatDataUpdateTimestamp(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
+
+  const datePart = new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }).format(date);
+
+  const timePart = new Intl.DateTimeFormat("de-DE", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).format(date);
+
+  return `Stand ${datePart} | ${timePart} Uhr`;
+}
+
+function resultLineText(count, detail = "gefunden") {
+  const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
+  const base = `${count} Rennen ${detail}`;
+
+  return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
+}
+
+function emptyVenueResultLineText() {
+  const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
+  const base = "Keine kommenden Rennen an dieser Strecke";
+
+  return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
+}
+
+function responseLastModifiedDate(response) {
+  const value = response?.headers?.get?.("last-modified");
+  if (!value) return null;
+
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function latestResponseLastModified(responses = []) {
+  return responses
+    .map(responseLastModifiedDate)
+    .filter(Boolean)
+    .sort((a, b) => b - a)[0] || null;
 }
 
 function isNewRace(race) {
@@ -912,12 +1420,24 @@ function markerScaleForRegistrationCount(count) {
 }
 
 function markerColorForRegistrationCount(count) {
-  return avalonBlue;
+  if (isDarkActive()) {
+    // Night: large pins lightest (stand out on dark bg)
+    if (count >= 120) return "#9AAAD0";
+    if (count >= 70)  return "#788FC0";
+    if (count >= 40)  return "#5A73AA";
+    if (count >= 20)  return "#405B94";
+    if (count >= 10)  return "#2D447C";
+    return rcRaceMapColors.marker;
+  }
+  // Day: large pins darkest
+  if (count >= 120) return rcRaceMapColors.marker;
+  if (count >= 70)  return "#2D447C";
+  if (count >= 40)  return "#405B94";
+  if (count >= 20)  return "#5A73AA";
+  if (count >= 10)  return "#788FC0";
+  return "#9AAAD0";
 }
 
-function markerFavoriteColorForRegistrationCount(count) {
-  return avalonGold;
-}
 
 function ensureRegistrationStatusStyles() {
   if (document.getElementById("registration-status-styles")) return;
@@ -935,11 +1455,66 @@ function ensureRegistrationStatusStyles() {
       border-color: rgba(222, 214, 202, 0.7);
     }
 
+    .race-card.registration-open .tag-class {
+      background: var(--pill-bg) !important;
+      color: var(--host-blue) !important;
+    }
+
     .race-card.registration-closed .race-date,
     .race-card.registration-closed .race-name,
     .race-card.registration-closed .race-venue,
+    .race-card.registration-closed .race-registration-count,
+    .race-card.registration-closed .race-link-item-status-closed {
+      color: var(--muted) !important;
+    }
+
+    .race-card.registration-closed .tag-class,
     .race-card.registration-closed .tag {
-      color: rgba(31, 29, 26, 0.58);
+      background: var(--muted) !important;
+      color: var(--bg) !important;
+      border-color: transparent !important;
+    }
+
+    :root.theme-dark .race-card.registration-open .tag-class {
+      background: #4d68a1 !important;
+      color: #172037 !important;
+    }
+
+    :root.theme-dark .race-card.registration-closed .race-date,
+    :root.theme-dark .race-card.registration-closed .race-name,
+    :root.theme-dark .race-card.registration-closed .race-venue,
+    :root.theme-dark .race-card.registration-closed .race-registration-count,
+    :root.theme-dark .race-card.registration-closed .race-link-item-status-closed {
+      color: #3d5380 !important;
+    }
+
+    :root.theme-dark .race-card.registration-closed .tag-class,
+    :root.theme-dark .race-card.registration-closed .tag {
+      background: var(--card) !important;
+      color: #3d5380 !important;
+      border-color: transparent !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.theme-light) .race-card.registration-open .tag-class {
+        background: #4d68a1 !important;
+        color: #172037 !important;
+      }
+
+      :root:not(.theme-light) .race-card.registration-closed .race-date,
+      :root:not(.theme-light) .race-card.registration-closed .race-name,
+      :root:not(.theme-light) .race-card.registration-closed .race-venue,
+      :root:not(.theme-light) .race-card.registration-closed .race-registration-count,
+      :root:not(.theme-light) .race-card.registration-closed .race-link-item-status-closed {
+        color: #3d5380 !important;
+      }
+
+      :root:not(.theme-light) .race-card.registration-closed .tag-class,
+      :root:not(.theme-light) .race-card.registration-closed .tag {
+        background: var(--card) !important;
+        color: #3d5380 !important;
+        border-color: transparent !important;
+      }
     }
 
     .race-link,
@@ -973,19 +1548,19 @@ function ensureRegistrationStatusStyles() {
     }
 
     .registration-dot-open {
-      background: #2f8f46;
+      background: var(--status-open, #73FF60);
     }
 
     .registration-dot-upcoming {
-      background: #d9a441;
+      background: var(--status-upcoming, #FFA700);
     }
 
     .registration-dot-login_required {
-      background: #d9a441;
+      background: var(--status-upcoming, #FFA700);
     }
 
     .registration-dot-closed {
-      background: #4f4a44;
+      background: var(--status-closed, #E51354);
     }
 
     .registration-status {
@@ -1000,7 +1575,7 @@ function ensureRegistrationStatusStyles() {
     }
 
     .registration-status-closed {
-      color: #4f4a44;
+      color: var(--status-closed, #E51354);
       font-weight: 700;
     }
 
@@ -1039,14 +1614,16 @@ function ensureRegistrationStatusStyles() {
 
     .map-marker-open,
     .map-marker-closed,
-    .map-marker-venue-inactive {
+    .map-marker-venue-inactive,
+    .map-marker-venue-inactive-favorite {
       cursor: pointer;
       pointer-events: auto;
     }
 
     .map-marker-open *,
     .map-marker-closed *,
-    .map-marker-venue-inactive * {
+    .map-marker-venue-inactive *,
+    .map-marker-venue-inactive-favorite * {
       pointer-events: none;
     }
 
@@ -1060,11 +1637,11 @@ function ensureRegistrationStatusStyles() {
     }
 
     .map-marker-active-replacement-open {
-      background: #5f8f5f !important;
+      background: var(--map-marker, #213769) !important;
     }
 
     .map-marker-active-replacement-closed {
-      background: rgba(31, 29, 26, 0.45) !important;
+      background: var(--status-closed, #E51354) !important;
     }
 
     .marker-popup-active .map-marker-switcher .map-marker-open,
@@ -1079,26 +1656,34 @@ function ensureRegistrationStatusStyles() {
     .map-marker-venue-inactive {
       cursor: pointer;
       pointer-events: auto;
+      --venue-pin-color: var(--map-marker, #213769);
     }
 
-    .map-marker-venue-inactive {
+    .map-marker-venue-inactive:not(.map-marker-active-replacement),
+    .map-marker-venue-inactive-favorite {
+      display: block;
+      width: 10px;
+      height: 12px;
+      border: 0;
+      background-color: transparent !important;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: contain;
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
+    .map-marker-active-replacement.map-marker-venue-inactive {
       width: 12px;
       height: 12px;
       border-radius: 999px;
-      background: rgba(31, 29, 26, 0.35);
       border: 1px solid rgba(255, 255, 255, 0.9);
       box-sizing: border-box;
       box-shadow: none;
     }
 
     .map-marker-venue-inactive-favorite {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: #b88416;
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      box-sizing: border-box;
-      box-shadow: none;
+      --venue-pin-color: var(--favorite, #BE9E73);
     }
 
     .popup-last-race {
@@ -1468,10 +2053,11 @@ function raceHostAndVenueAreSame(race) {
 }
 
 function raceVenueMetaHtml(race) {
-  if (!hasMappableVenue(race)) return "";
+  if (!hasMappableVenue(race)) {
+    return `<div class="race-venue race-venue-unknown">${mapPinIconHtml("race-venue-pin")}<span>Ort unbekannt</span></div>`;
+  }
   if (raceHostAndVenueAreSame(race)) return "";
-
-  return `<div class="race-venue">📍 ${raceVenueNameHtml(race)}</div>`;
+  return `<div class="race-venue">${mapPinIconHtml("race-venue-pin")}${raceVenueNameHtml(race)}</div>`;
 }
 
 function raceHostNameHtml(race) {
@@ -1621,7 +2207,7 @@ function documentLinksHtml(race) {
   } else if (race.url) {
     registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        Nennung ↗
+        <span class="race-link-text">Nennung ↗</span>
       </a>`;
   }
 
@@ -1714,12 +2300,9 @@ function filteredRaces() {
     .filter(isInSelectedRange)
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
+    .filter(matchesFavoriteFilter)
     .filter(race => !query || raceSearchText(race).includes(query))
-    .sort((a, b) => {
-      const favoriteOrder = Number(isFavoriteRaceHost(b)) - Number(isFavoriteRaceHost(a));
-      if (favoriteOrder !== 0) return favoriteOrder;
-      return a.from.localeCompare(b.from) || a.name.localeCompare(b.name);
-    });
+    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
 
 function googleMapsRouteUrl(venue) {
@@ -1728,10 +2311,6 @@ function googleMapsRouteUrl(venue) {
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
-  const raceLine = venueRaces.length
-    ? `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"}`
-    : "Keine kommenden Rennen";
-
   const lastRaceHtml =
     !venueRaces.length && latestPastRace
       ? `<div class="popup-last-race">
@@ -1741,15 +2320,26 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
         </div>`
       : "";
 
+  // Show favorite star only for host-based venues (not venue-only locations)
+  const hostId = venueRaces.length ? raceHostId(venueRaces[0]) : null;
+  const hostName = hostId ? raceHostName(venueRaces[0]) : null;
+  const hostWebsite = hostId ? hostWebsiteForRace(venueRaces[0]) : null;
+  const hostNameHtml = hostWebsite
+    ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
+    : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`;
+  const titleHtml = hostId
+    ? `<span class="venue-name-with-favorite">${favoriteHostButtonHtml(hostId, hostName)}${hostNameHtml}</span>`
+    : venueNameHtml(venue);
+
   return `
-    <div class="popup-title">${venueNameHtml(venue)}</div>
-    <div class="popup-race">
-      ${raceLine}
-    </div>
+    <div class="popup-title">${titleHtml}</div>
     ${lastRaceHtml}
-    <div class="popup-race">
-      <a href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer">
-        Route planen ↗
+    <div class="popup-route">
+      <a class="popup-route-btn" href="${googleMapsRouteUrl(venue)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()" title="Route planen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
+        </svg>
+        Route
       </a>
     </div>
   `;
@@ -1763,6 +2353,74 @@ function resetVenueSelection() {
   activeRaceId = null;
   updateAppModeClass();
   renderList(filteredRaces());
+}
+
+// Returns {pl, pr, pt, pb} padding for the currently visible map area.
+// Desktop: right panel 414px, topbar 80px.
+// Mobile collapsed: hamburger 66px left, handle 84px bottom.
+// Mobile half: half-drawer covers lower half of screen.
+function mapPadding() {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (!isMobile) return { pl: 0, pr: 414, pt: 80, pb: 40 };
+  const dh = window.innerHeight - 80;
+  const pb = drawerState === "collapsed"
+    ? 84
+    : Math.max(20, Math.round(dh * 0.5 - 20));
+  return { pl: 66, pr: 20, pt: 20, pb };
+}
+
+// Center a single latlng in the visible map area at the given zoom.
+// Computes the shifted map center directly so only ONE setView call is needed —
+// avoiding the visible map-shift caused by setView → moveend → revealMap → panBy.
+//
+// Mobile collapsed: visible center = (W/2, H/2 + 8)  → shift pixel by (0, +8)
+// Desktop: visible center = (W/2 - 207, H/2 + 40)   → shift pixel by (+207, -40)
+// panBy([dx, dy]) moves the map center by (dx, dy) pixels, so to achieve that
+// offset without panBy: add (dx, dy) to the projected point before unproject.
+function panToVisible(latlng, zoom) {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  const pt = map.project(latlng, zoom);
+  const shifted = isMobile
+    ? L.point(pt.x, pt.y + 8)
+    : L.point(pt.x + 207, pt.y - 40);
+  map.setMaxBounds(null);
+  map.setView(map.unproject(shifted, zoom), zoom, { animate: false });
+  map.setMaxBounds(MAX_BOUNDS);
+}
+
+// Fit multiple latlng bounds in the visible map area.
+// Mobile: use Leaflet fitBounds with padding (works reliably).
+// Desktop: Leaflet fitBounds padding is unreliable with the floating panel overlay.
+//   Instead: calculate correct zoom via getBoundsZoom with symmetric padding
+//   matching the visible area size, then use panToVisible for reliable centering.
+function fitMapToBounds(bounds, options = {}) {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (isMobile) {
+    const { pl, pr, pt, pb } = mapPadding();
+    map.fitBounds(bounds, {
+      paddingTopLeft: [pl, pt],
+      paddingBottomRight: [pr, pb],
+      ...options
+    });
+    return;
+  }
+  // Desktop visible area: x=[0, W-414], y=[80, H].
+  // getBoundsZoom with symmetric padding (207,40) matches the visible area size.
+  // Compute bounds pixel center directly (geographic center is wrong in Mercator).
+  // One setView shifts bounds pixel center to visible area center (W/2-207, H/2+40).
+  const lBounds = L.latLngBounds(bounds);
+  let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
+  if (options.maxZoom !== undefined) zoom = Math.min(zoom, options.maxZoom);
+  if (options.minZoom !== undefined) zoom = Math.max(zoom, options.minZoom);
+  zoom = Math.max(zoom, map.getMinZoom() || 0);
+  const nwPx = map.project(lBounds.getNorthWest(), zoom);
+  const sePx = map.project(lBounds.getSouthEast(), zoom);
+  const cPx = nwPx.add(sePx).divideBy(2);
+  // Shift: bounds center should appear at (W/2-207, H/2+40) → map center = cPx+(207,-40)
+  const newCenterPx = L.point(cPx.x + 207, cPx.y - 40);
+  map.setMaxBounds(null);
+  map.setView(map.unproject(newCenterPx, zoom), zoom, { animate: false });
+  map.setMaxBounds(MAX_BOUNDS);
 }
 
 function updateMarkers(list, shouldFitBounds = true) {
@@ -1780,8 +2438,9 @@ function updateMarkers(list, shouldFitBounds = true) {
     if (!venueRaces.length && !latestPastRace) return;
 
     const hasUpcomingRaces = venueRaces.length > 0;
+    const venueHasActiveRegistration = hasActiveRegistration(venueRaces);
     const markerClass = hasUpcomingRaces
-      ? (hasActiveRegistration(venueRaces) ? "map-marker-open" : "map-marker-closed")
+      ? (venueHasActiveRegistration ? "map-marker-open" : "map-marker-closed")
       : "map-marker-venue-inactive";
 
     const registrationTotal = venueRegistrationCount(venueRaces);
@@ -1789,45 +2448,43 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? markerScaleForRegistrationCount(registrationTotal)
       : 1;
 
-    const markerWidth = hasUpcomingRaces ? Math.round(26 * markerScale) : 12;
-    const markerHeight = hasUpcomingRaces ? Math.round(34 * markerScale) : 12;
+    const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 10;
+    const markerHeight = hasUpcomingRaces ? Math.round(raceMapMarkerBaseHeight * markerScale) : 12;
 
     const markerAnchor = hasUpcomingRaces
       ? [Math.round(markerWidth / 2), markerHeight]
-      : [Math.round(markerWidth / 2), Math.round(markerHeight / 2)];
+      : [Math.round(markerWidth / 2), markerHeight];
 
-    const replacementClass = hasActiveRegistration(venueRaces)
+    const replacementClass = venueHasActiveRegistration
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
     const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
 
-let markerColor = isFavoriteVenue
-  ? markerFavoriteColorForRegistrationCount(registrationTotal)
-  : hasActiveRegistration(venueRaces)
-    ? markerColorForRegistrationCount(registrationTotal)
-    : "rgba(31, 29, 26, 0.55)";
+    let markerColor;
+    if (isFavoriteVenue) {
+      markerColor = rcRaceMapColors.favorite;
+    } else if (hasUpcomingRaces && !venueHasActiveRegistration) {
+      markerColor = rcRaceMapColors.markerClosed;
+    } else if (hasUpcomingRaces) {
+      markerColor = markerColorForRegistrationCount(registrationTotal);
+    } else {
+      markerColor = rcRaceMapColors.markerClosed;
+    }
 
-if (!hasUpcomingRaces && isFavoriteVenue) {
-  markerColor = avalonGold;
-}
+    const markerSvg = raceMapMarkerSvgDataUri(markerColor, markerWidth, markerHeight, (isFavoriteVenue || venueHasActiveRegistration) ? "#fff" : "transparent");
 
-const markerSvg = encodeURIComponent(`
-  <svg width="${markerWidth}" height="${markerHeight}" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13 33C13 33 25 20.5 25 12.8C25 5.7 19.6 1 13 1C6.4 1 1 5.7 1 12.8C1 20.5 13 33 13 33Z" fill="${markerColor}" stroke="#FFFFFF" stroke-width="1"/>
-  </svg>
-`);
+    const inactiveClass = isFavoriteVenue
+      ? "map-marker-venue-inactive-favorite"
+      : "map-marker-venue-inactive";
+    const inactiveMarkerSvg = mapPinSvgDataUri(markerColor, markerWidth, markerHeight);
 
-const inactiveClass = isFavoriteVenue
-  ? "map-marker-venue-inactive-favorite"
-  : "map-marker-venue-inactive";
-
-const markerHtml = hasUpcomingRaces
-  ? `<div class="map-marker-switcher map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
-      <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('data:image/svg+xml,${markerSvg}');"></div>
-      <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
-    </div>`
-  : `<div class="${inactiveClass} map-marker-visual" style="--marker-delay: 0ms;"></div>`;
+    const markerHtml = hasUpcomingRaces
+      ? `<div class="map-marker-switcher map-marker-visual${isFavoriteVenue ? " map-marker-is-favorite" : ""}" style="width: ${markerWidth}px; height: ${markerHeight}px; --marker-delay: 0ms;">
+          <div class="${markerClass}" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('${markerSvg}');"></div>
+          <div class="map-marker-venue-inactive map-marker-active-replacement ${replacementClass}" style="background: ${markerColor} !important;"></div>
+        </div>`
+      : `<div class="${inactiveClass} map-marker-visual" style="width: ${markerWidth}px; height: ${markerHeight}px; background-image: url('${inactiveMarkerSvg}'); --marker-delay: 0ms;"></div>`;
 
     const marker = L.marker(
       [venue.lat, venue.lng],
@@ -1852,7 +2509,9 @@ const popupOffset = hasUpcomingRaces
     marker.bindPopup(
       buildPopup(venue, venueRaces, latestPastRace),
       {
-        offset: popupOffset
+        offset: popupOffset,
+        autoPan: false,
+        className: isFavoriteVenue ? "popup-favorite" : "popup-standard"
       }
     );
 
@@ -1895,8 +2554,7 @@ const popupOffset = hasUpcomingRaces
 
       popupElement.addEventListener("mouseleave", () => {
         if (window.matchMedia("(pointer: coarse)").matches) return;
-        if (isPopupPinned) return;
-        if (pinnedVenueId && pinnedVenueId !== venue.id) return;
+        if (isPopupPinned || pinnedVenueId === venue.id) return;
 
         clearTimeout(hoverTimer);
         hoverTimer = window.setTimeout(() => {
@@ -1920,10 +2578,10 @@ const popupOffset = hasUpcomingRaces
 
         if (hasUpcomingRaces) {
           renderList(venueRaces);
-          resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+          resultLine.textContent = resultLineText(venueRaces.length, "an dieser Strecke");
         } else {
           renderList([]);
-          resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+          resultLine.textContent = emptyVenueResultLineText();
         }
       });
     });
@@ -1961,14 +2619,18 @@ const popupOffset = hasUpcomingRaces
 
       if (hasUpcomingRaces) {
         renderList(venueRaces);
-        resultLine.textContent = `${venueRaces.length} ${venueRaces.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+        resultLine.textContent = resultLineText(venueRaces.length, "an dieser Strecke");
       } else {
         renderList([]);
-        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+        resultLine.textContent = emptyVenueResultLineText();
       }
 
       marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
       marker.openPopup();
+
+      if (window.matchMedia("(max-width: 860px)").matches) {
+        panToVisible([venue.lat, venue.lng], map.getZoom());
+      }
 
       window.setTimeout(() => {
         isSwitchingMarkerPopup = false;
@@ -1979,24 +2641,9 @@ const popupOffset = hasUpcomingRaces
     bounds.push([venue.lat, venue.lng]);
   });
 
-  if (bounds.length === 1) {
-    map.setView(bounds[0], 12);
+  if (shouldFitBounds && bounds.length >= 1) {
+    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined });
   }
-
-if (shouldFitBounds && bounds.length > 1) {
-  const isMobile = window.matchMedia("(max-width: 860px)").matches;
-
-  map.fitBounds(bounds, isMobile
-    ? {
-        paddingTopLeft: [32, 120],
-        paddingBottomRight: [32, 360]
-      }
-    : {
-        paddingTopLeft: [40, 40],
-        paddingBottomRight: [180, 40]
-      }
-  );
-}
 }
 
 function scrollToRaceCard(raceId) {
@@ -2047,18 +2694,19 @@ function focusRace(race) {
   const venueList = baseList.filter(item => isRaceAtVenue(item, activeVenueId));
 
   renderList(venueList);
-  resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
-
-  map.setView([venue.lat, venue.lng], 12);
+  resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
 
   const marker = markers.get(venue.id);
   if (marker) {
     marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
     marker.openPopup();
   }
+
+  const targetZoom = Math.max(map.getZoom(), 12);
+  panToVisible([venue.lat, venue.lng], targetZoom);
 }
 function renderList(list) {
-  resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+  resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
   if (!list.length) {
@@ -2066,31 +2714,8 @@ function renderList(list) {
     return;
   }
 
-  const hasFavoriteRaces = list.some(isFavoriteRaceHost);
-  const hasNormalRaces = list.some(race => !isFavoriteRaceHost(race));
-  const showSectionDividers = hasFavoriteRaces && hasNormalRaces;
-  let didRenderFavoriteDivider = false;
-  let didRenderNormalDivider = false;
-
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
-
-    if (showSectionDividers && isFavorite && !didRenderFavoriteDivider) {
-      const divider = document.createElement("div");
-      divider.className = "race-section-divider race-section-divider-favorites";
-      divider.textContent = "★ Favorisierte Ausrichter";
-      raceList.appendChild(divider);
-      didRenderFavoriteDivider = true;
-    }
-
-    if (showSectionDividers && !isFavorite && !didRenderNormalDivider) {
-      const divider = document.createElement("div");
-      divider.className = "race-section-divider";
-      divider.textContent = "Weitere Rennen";
-      raceList.appendChild(divider);
-      didRenderNormalDivider = true;
-    }
-
     const series = raceSeries(race);
     const card = document.createElement("article");
 
@@ -2100,40 +2725,31 @@ function renderList(list) {
 
     card.innerHTML = `
       ${newRaceBadgeHtml(race)}
-      <div class="race-card-main">
-        <div class="race-card-header">
-          <div class="race-date">${formatDateRange(race.from, race.to)}</div>
-          <div class="race-name-row">
-            <div class="race-name">${race.name}</div>
-            ${registrationCountHtml(race)}
-          </div>
-
-          <div class="race-tags race-series-tags">
-            ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
-            ${
-              !hasMappableVenue(race)
-                ? `<span class="tag tag-missing-location">📍 Standort fehlt</span>`
-                : !hasVerifiedVenue(race)
-                  ? `<span class="tag tag-missing-location">📍 Standort nicht verifiziert</span>`
-                  : ""
-            }
-          </div>
+      <div class="race-host">${raceHostNameHtml(race)}</div>
+      <div class="race-card-header">
+        <div class="race-date">${formatDateRange(race.from, race.to)}</div>
+        <div class="race-name-row">
+          <div class="race-name">${race.name}</div>
+          ${registrationCountHtml(race)}
         </div>
 
-        <div class="race-card-meta">
-          <div class="race-host">${raceHostNameHtml(race)}</div>
-          ${raceVenueMetaHtml(race)}
-          ${documentLinksHtml(race)}
-          ${statusDetailsHtml(race)}
+        <div class="race-tags race-series-tags">
+          ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
         </div>
       </div>
+      ${raceVenueMetaHtml(race)}
+      ${documentLinksHtml(race)}
+      ${statusDetailsHtml(race)}
 
       ${
         Array.isArray(race.classes) && race.classes.length
           ? `<div class="race-tags race-class-tags">
               ${
-                (expandedClassRaceIds.has(race.id) ? race.classes : (race.classes.length <= 6 ? race.classes : race.classes.slice(0, 4)))
-                  .map(item => `<span class="tag tag-class">${escapeHtml(classTagLabel(item))}</span>`)
+                race.classes
+                  .map((item, i) => {
+                    const collapsed = !expandedClassRaceIds.has(race.id) && race.classes.length > 6 && i >= 4;
+                    return `<span class="tag tag-class"${collapsed ? ' style="display:none"' : ""}>${escapeHtml(classTagLabel(item))}</span>`;
+                  })
                   .join("")
               }
               ${
@@ -2188,7 +2804,7 @@ function toggleClassList(raceId) {
   if (activeVenueId) {
     const venueList = filteredRaces().filter(race => isRaceAtVenue(race, activeVenueId));
     renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
     return;
   }
 
@@ -2211,16 +2827,44 @@ document.addEventListener("click", event => {
     toggleFavoriteVenue(favoriteVenueButton.dataset.favoriteVenueId);
   }
 
+  // Update open popup color if the toggled button is inside a popup
+  const popupEl = favoriteButton.closest(".leaflet-popup");
+  if (popupEl) {
+    const hostId = favoriteButton.dataset.favoriteHostId;
+    const isFav = hostId ? isFavoriteHostId(hostId) : isFavoriteVenueId(favoriteButton.dataset.favoriteVenueId);
+    popupEl.classList.toggle("popup-favorite", isFav);
+    popupEl.classList.toggle("popup-standard", !isFav);
+  }
+
   const list = filteredRaces();
+  const reopenVenueId = favoriteButton.closest(".leaflet-popup") ? pinnedVenueId : null;
   updateMarkers(list, false);
+  if (reopenVenueId) {
+    const m = markers.get(reopenVenueId);
+    if (m) {
+      pinnedVenueId = reopenVenueId;
+      m.openPopup();
+      // Ensure popup class matches actual current favorite state,
+      // in case isFavoriteVenue in updateMarkers resolved incorrectly.
+      const hostId = favoriteButton.dataset.favoriteHostId;
+      const isFav = hostId
+        ? isFavoriteHostId(hostId)
+        : isFavoriteVenueId(favoriteButton.dataset.favoriteVenueId);
+      const popupEl = m.getPopup()?.getElement();
+      if (popupEl) {
+        popupEl.classList.toggle("popup-favorite", isFav);
+        popupEl.classList.toggle("popup-standard", !isFav);
+      }
+    }
+  }
 
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
     renderList(venueList);
-    resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+    resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
   } else {
     renderList(list);
-    resultLine.textContent = `${list.length} ${list.length === 1 ? "Rennen" : "Rennen"} gefunden`;
+    resultLine.textContent = resultLineText(list.length);
   }
 });
 
@@ -2364,7 +3008,7 @@ function render() {
     if (venueList.length) {
       activeRaceId = null;
       renderList(venueList);
-      resultLine.textContent = `${venueList.length} ${venueList.length === 1 ? "Rennen" : "Rennen"} an dieser Strecke`;
+      resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
     } else {
       const venue = venues.find(item => item.id === activeVenueId);
       const latestPastRace = venue ? latestPastRaceForVenue(venue) : null;
@@ -2372,7 +3016,7 @@ function render() {
       if (latestPastRace) {
         activeRaceId = null;
         renderList([]);
-        resultLine.textContent = "Keine kommenden Rennen an dieser Strecke";
+        resultLine.textContent = emptyVenueResultLineText();
       } else {
         activeVenueId = null;
         activeRaceId = null;
@@ -2438,6 +3082,24 @@ if (registrationVisibilityFilter) {
   });
 }
 
+if (favoriteFilter) {
+  favoriteFilter.addEventListener("click", event => {
+    const button = event.target.closest("button[data-favorite-filter]");
+    if (!button) return;
+
+    selectedFavoriteFilter = button.dataset.favoriteFilter === "favorites"
+      ? "favorites"
+      : "all";
+    saveFavoriteFilter(selectedFavoriteFilter);
+    activeVenueId = null;
+    activeRaceId = null;
+    updateAppModeClass();
+    updateFavoriteFilterUi();
+
+    render();
+  });
+}
+
 seriesFilter.addEventListener("change", () => {
   selectedSeries = seriesFilter.value;
   activeVenueId = null;
@@ -2475,11 +3137,29 @@ if (activeFilterChips) {
       seriesFilter.value = "all";
     }
 
+    if (button.dataset.clearFilter === "favorites") {
+      selectedFavoriteFilter = "all";
+      saveFavoriteFilter(selectedFavoriteFilter);
+    }
+
+    if (button.dataset.clearFilter === "registration") {
+      showOpenOnly = false;
+      updateRegistrationVisibilityUi();
+    }
+
     activeVenueId = null;
     activeRaceId = null;
     updateAppModeClass();
     render();
   });
+}
+
+window.addEventListener("resize", scheduleSlidingPillUpdate);
+
+if (document.fonts?.ready) {
+  document.fonts.ready
+    .then(scheduleSlidingPillUpdate)
+    .catch(() => {});
 }
 
 map.on("click", () => {
@@ -2495,6 +3175,15 @@ async function fetchJsonOrFallback(url, fallback) {
   try {
     const response = await fetch(url);
     if (!response.ok) return fallback;
+    return await response.json();
+  } catch {
+    return fallback;
+  }
+}
+
+async function responseJsonOrFallback(response, fallback) {
+  try {
+    if (!response?.ok) return fallback;
     return await response.json();
   } catch {
     return fallback;
@@ -2532,18 +3221,25 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
-    fetchJsonOrFallback(`rck-races.json?v=${cacheBuster}`, []),
+    fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog)
   ]);
 
+  dataLastUpdatedAt = latestResponseLastModified([
+    venuesResponse,
+    racesResponse,
+    rckRacesRawResponse
+  ]);
+
   const baseVenues = await venuesResponse.json();
   const myrcmRaces = await racesResponse.json();
+  const rckRacesResponse = await responseJsonOrFallback(rckRacesRawResponse, []);
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
   seriesCatalog = normalizeSeriesCatalog(seriesCatalogResponse);
@@ -2599,4 +3295,490 @@ async function init() {
 init().catch(error => {
   console.error(error);
   resultLine.textContent = "Fehler beim Laden der Daten.";
+});
+
+
+/* ============================================================
+   Mobile Bottom Drawer
+   ============================================================ */
+
+const mobDrawer       = document.getElementById("mobDrawer");
+const mobDrawerHandle = document.getElementById("mobDrawerHandle");
+const mobRaceList     = document.getElementById("mobRaceList");
+const mobResultBadge  = document.getElementById("mobResultBadge");
+
+const mobFilterMount = document.getElementById("mobFilterMount");
+
+// ── Drawer snap state ──────────────────────────────────────────
+const DRAWER_STATES = ["collapsed", "half", "full"];
+let drawerState = "half";
+
+function setDrawerState(state) {
+  drawerState = state;
+  if (!mobDrawer) return;
+  mobDrawer.classList.remove("mob-drawer--collapsed", "mob-drawer--half", "mob-drawer--full");
+  mobDrawer.classList.add(`mob-drawer--${state}`);
+  // Let Leaflet know the full map area is available regardless of drawer position
+  if (map) requestAnimationFrame(() => map.invalidateSize());
+}
+
+// ── Drag / swipe (touch-only, mobile breakpoint guard) ────────
+const mobMq = window.matchMedia("(max-width: 860px)");
+if (mobDrawer && mobDrawerHandle) {
+  let dragStartY = 0;
+  let dragStartTime = 0;
+  let currentTranslateY = 0;
+  let isDragging = false;
+
+  function getSnapTranslateY(state) {
+    const dh = window.innerHeight - 80; // drawer height = 100dvh - 80px (top offset)
+    if (state === "collapsed") return dh - 64;
+    if (state === "half")      return dh * 0.50;
+    return 0; // full-open: drawer already at top:80px, no translation needed
+  }
+
+  function onDragStart(clientY) {
+    isDragging = true;
+    dragStartY = clientY;
+    dragStartTime = Date.now();
+    const transform = getComputedStyle(mobDrawer).transform;
+    const matrix = new DOMMatrix(transform);
+    currentTranslateY = matrix.m42;
+    mobDrawer.classList.add("mob-drawer--dragging");
+  }
+
+  function onDragMove(clientY) {
+    if (!isDragging) return;
+    const delta = clientY - dragStartY;
+    const dh = window.innerHeight - 80;
+    const newY = Math.max(0, Math.min(dh - 64, currentTranslateY + delta));
+    mobDrawer.style.transform = `translateY(${newY}px)`;
+  }
+
+  function onDragEnd(clientY) {
+    if (!isDragging) return;
+    isDragging = false;
+    mobDrawer.classList.remove("mob-drawer--dragging");
+    mobDrawer.style.transform = "";
+
+    const delta = clientY - dragStartY;
+    const velocity = delta / Math.max(1, Date.now() - dragStartTime); // px/ms
+    const h = window.innerHeight;
+    const finalY = currentTranslateY + delta;
+
+    // Velocity-based snap: fast swipe → jump state
+    if (Math.abs(velocity) > 0.4) {
+      if (velocity < 0) {
+        // Swipe up → next open state
+        const nextState = drawerState === "collapsed" ? "half"
+                        : drawerState === "half"      ? "full"
+                        : "full";
+        setDrawerState(nextState);
+      } else {
+        // Swipe down → next closed state
+        const nextState = drawerState === "full"      ? "half"
+                        : drawerState === "half"      ? "collapsed"
+                        : "collapsed";
+        setDrawerState(nextState);
+      }
+      return;
+    }
+
+    // Position-based snap (translateY relative to drawer top, which is already at 80px)
+    const dh2 = h - 80;
+    const halfY = dh2 * 0.50;
+    const collY = dh2 - 64;
+    if (finalY < halfY * 0.5) {
+      setDrawerState("full");
+    } else if (finalY < (halfY + collY) / 2) {
+      setDrawerState("half");
+    } else {
+      setDrawerState("collapsed");
+    }
+  }
+
+  // Touch events — only active on mobile breakpoint
+  mobDrawerHandle.addEventListener("touchstart", e => {
+    if (!mobMq.matches) return;
+    onDragStart(e.touches[0].clientY);
+  }, { passive: true });
+
+  mobDrawer.addEventListener("touchmove", e => {
+    if (!isDragging || !mobMq.matches) return;
+    if (drawerState === "full") {
+      const list = mobRaceList;
+      if (list && list.contains(e.target) && list.scrollTop > 0) return;
+      if (list && list.contains(e.target) && e.touches[0].clientY > dragStartY) return;
+    }
+    e.preventDefault();
+    onDragMove(e.touches[0].clientY);
+  }, { passive: false });
+
+  document.addEventListener("touchend", e => {
+    if (!isDragging || !mobMq.matches) return;
+    onDragEnd(e.changedTouches[0].clientY);
+  }, { passive: true });
+
+  // Mouse drag (for desktop browser narrowed to mobile breakpoint)
+  mobDrawerHandle.addEventListener("mousedown", e => {
+    if (!mobMq.matches) return;
+    e.preventDefault();
+    onDragStart(e.clientY);
+  });
+
+  document.addEventListener("mousemove", e => {
+    if (!isDragging || !mobMq.matches) return;
+    onDragMove(e.clientY);
+  });
+
+  document.addEventListener("mouseup", e => {
+    if (!isDragging || !mobMq.matches) return;
+    onDragEnd(e.clientY);
+  });
+
+  // Keyboard accessibility on handle
+  mobDrawerHandle.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      const next = drawerState === "collapsed" ? "half"
+                 : drawerState === "half"      ? "full"
+                 : "collapsed";
+      setDrawerState(next);
+    }
+    if (e.key === "ArrowUp")   setDrawerState(drawerState === "collapsed" ? "half" : "full");
+    if (e.key === "ArrowDown") setDrawerState(drawerState === "full" ? "half" : "collapsed");
+  });
+}
+
+// ── Sync result badge ──────────────────────────────────────────
+function syncResultBadge(text) {
+  if (!mobResultBadge) return;
+  const idx = text.indexOf(' | ');
+  if (idx !== -1) {
+    mobResultBadge.innerHTML =
+      escHtml(text.slice(0, idx)) + '<br>' + escHtml(text.slice(idx + 3));
+  } else {
+    mobResultBadge.textContent = text;
+  }
+}
+
+function escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Patch resultLine to mirror text to mobile badge
+if (resultLine) {
+  const observer = new MutationObserver(() => syncResultBadge(resultLine.textContent));
+  observer.observe(resultLine, { childList: true, characterData: true, subtree: true });
+}
+
+// ── DOM-move: entire topbar ↔ mobile drawer ───────────────────
+// Moving the whole <header class="topbar"> preserves all CSS context,
+// including sliding-pill, button styles, and search icon pseudo-elements
+// which are all scoped to ".layout-prototype .topbar .something".
+const _topbarEl     = document.querySelector(".layout-prototype .topbar");
+const _topbarParent = _topbarEl?.parentNode;
+const _topbarNext   = _topbarEl?.nextSibling;
+
+function applyMobileLayout(isMobile) {
+  if (!mobFilterMount || !_topbarEl) return;
+  if (isMobile) {
+    mobFilterMount.appendChild(_topbarEl);
+    // Recalculate sliding-pill positions after layout shift
+    requestAnimationFrame(updateSlidingPills);
+  } else {
+    if (_topbarNext && _topbarNext.parentNode === _topbarParent) {
+      _topbarParent.insertBefore(_topbarEl, _topbarNext);
+    } else if (_topbarParent) {
+      _topbarParent.appendChild(_topbarEl);
+    }
+    requestAnimationFrame(updateSlidingPills);
+  }
+}
+
+// Handle breakpoint change
+mobMq.addEventListener("change", e => {
+  applyMobileLayout(e.matches);
+  if (e.matches) syncMobRaceList();
+  else render();
+});
+
+// Init
+applyMobileLayout(mobMq.matches);
+
+// ── Mobile race list rendering ─────────────────────────────────
+// renderList renders into desktop raceList. We mirror cards into mobRaceList.
+function syncMobRaceList() {
+  if (!mobRaceList) return;
+  mobRaceList.innerHTML = "";
+  // Clone all children from desktop raceList
+  raceList.childNodes.forEach(node => {
+    mobRaceList.appendChild(node.cloneNode(true));
+  });
+  // Re-attach click/keydown on cloned cards
+  mobRaceList.querySelectorAll(".race-card.is-clickable").forEach(card => {
+    const raceId = card.dataset.raceId;
+    card.addEventListener("click", event => {
+      if (event.target.closest("[data-class-toggle]")) return;
+      if (event.target.closest("[data-favorite-venue-id]")) return;
+      if (event.target.closest("[data-favorite-host-id]")) return;
+      const race = races.find(r => String(r.id) === raceId);
+      if (race) {
+        setDrawerState("collapsed");
+        focusRace(race);
+      }
+    });
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        const race = races.find(r => String(r.id) === raceId);
+        if (race) {
+          setDrawerState("collapsed");
+          focusRace(race);
+        }
+      }
+    });
+  });
+  // Append footer links as last scrollable item
+  const drawerFooterSrc = document.querySelector(".mob-drawer > .mob-drawer-footer");
+  if (drawerFooterSrc) {
+    mobRaceList.appendChild(drawerFooterSrc.cloneNode(true));
+  }
+  // Class-pills measurement
+  requestAnimationFrame(() => {
+    mobRaceList.querySelectorAll(".race-card").forEach(fitClassPills);
+  });
+}
+
+// ── Class Pills measurement ────────────────────────────────────
+function fitClassPills(card) {
+  const container = card.querySelector(".race-class-tags");
+  if (!container) return;
+
+  // Remove desktop toggle — mobile uses its own measurement-based overflow
+  container.querySelectorAll(".tag-class-toggle, .tag-class-more").forEach(el => el.remove());
+
+  const pills = Array.from(container.querySelectorAll(".tag-class"));
+  if (!pills.length) return;
+
+  pills.forEach(p => { p.style.display = ""; });
+
+  const containerWidth = container.getBoundingClientRect().width;
+  if (!containerWidth) return;
+
+  const gap = 6;
+  let usedWidth = 0;
+  let lastVisible = pills.length;
+
+  for (let i = 0; i < pills.length; i++) {
+    const pillWidth = pills[i].getBoundingClientRect().width;
+    if (i > 0) usedWidth += gap;
+    usedWidth += pillWidth;
+
+    const remaining = pills.length - i - 1;
+    if (remaining > 0 && usedWidth + gap + 40 > containerWidth) {
+      lastVisible = i;
+      break;
+    }
+  }
+
+  const hiddenCount = pills.length - lastVisible;
+  if (hiddenCount <= 0) return;
+
+  for (let i = lastVisible; i < pills.length; i++) {
+    pills[i].style.display = "none";
+  }
+
+  const moreBtn = document.createElement("button");
+  moreBtn.className = "tag tag-class tag-class-more";
+  moreBtn.type = "button";
+  moreBtn.textContent = `+${hiddenCount} weitere`;
+  moreBtn.addEventListener("click", event => {
+    event.stopPropagation();
+    pills.forEach(p => { p.style.display = ""; });
+    moreBtn.remove();
+
+    const lessBtn = document.createElement("button");
+    lessBtn.className = "tag tag-class tag-class-more";
+    lessBtn.type = "button";
+    lessBtn.textContent = "weniger anzeigen";
+    lessBtn.addEventListener("click", ev => {
+      ev.stopPropagation();
+      lessBtn.remove();
+      fitClassPills(card);
+    });
+    container.appendChild(lessBtn);
+  });
+  container.appendChild(moreBtn);
+}
+
+// ── Hook into renderList to sync mobile ───────────────────────
+// Observe desktop raceList for changes and mirror to mobile
+const mobRaceListObserver = new MutationObserver(() => {
+  if (window.matchMedia("(max-width: 860px)").matches) {
+    syncMobRaceList();
+  }
+  syncResultBadge(resultLine.textContent);
+});
+
+if (raceList) {
+  mobRaceListObserver.observe(raceList, { childList: true });
+}
+
+// ── Theme ─────────────────────────────────────────────────────
+const THEME_KEY = "rcracemap-theme";
+
+function isDarkActive() {
+  const saved = localStorage.getItem(THEME_KEY) || "auto";
+  if (saved === "dark") return true;
+  if (saved === "light") return false;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
+function applyTheme(theme) {
+  document.documentElement.classList.remove("theme-light", "theme-dark");
+  if (theme === "light") document.documentElement.classList.add("theme-light");
+  if (theme === "dark")  document.documentElement.classList.add("theme-dark");
+
+  const dark = isDarkActive();
+  Object.assign(rcRaceMapColors, dark ? rcRaceMapColorsDark : rcRaceMapColorsLight);
+
+  const mlMap = baseMapLayer?.getMaplibreMap?.();
+  if (mlMap?.isStyleLoaded?.()) {
+    const url = dark
+      ? `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${stadiaApiKey}`
+      : `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadiaApiKey}`;
+    mlMap.setStyle(url);
+  }
+
+  if (venues?.length) {
+    updateMarkers(filteredRaces(), false);
+  }
+}
+
+function setTheme(theme) {
+  localStorage.setItem(THEME_KEY, theme);
+  applyTheme(theme);
+  document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.theme === theme);
+  });
+}
+
+applyTheme(localStorage.getItem(THEME_KEY) || "auto");
+
+// ── App menu panel ────────────────────────────────────────────
+const appMenuPanel   = document.getElementById("appMenuPanel");
+const appMenuOverlay = document.getElementById("appMenuOverlay");
+const appMenuContent = document.getElementById("appMenuContent");
+const appMenuClose   = document.getElementById("appMenuClose");
+const menuButtons    = [
+  document.getElementById("appMenuButton"),
+  document.getElementById("mobMenuBtn"),
+];
+
+function openAppMenu() {
+  appMenuPanel?.classList.add("is-open");
+  appMenuOverlay?.classList.add("is-open");
+  appMenuPanel?.setAttribute("aria-hidden", "false");
+  document.body.classList.add("is-menu-open");
+  menuButtons.forEach(b => b?.setAttribute("aria-label", "Menü schließen"));
+}
+
+function closeAppMenu() {
+  appMenuPanel?.classList.remove("is-open");
+  appMenuOverlay?.classList.remove("is-open");
+  appMenuPanel?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("is-menu-open");
+  menuButtons.forEach(b => b?.setAttribute("aria-label", "Menü öffnen"));
+  showMenuHome();
+}
+
+function showMenuHome() {
+  if (!appMenuContent) return;
+  const current = localStorage.getItem(THEME_KEY) || "auto";
+  appMenuContent.innerHTML = `
+    <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
+      <div class="app-menu-section-label">Darstellung</div>
+      <div class="theme-toggle">
+        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">Tag</button>
+        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">Nacht</button>
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
+      </div>
+    </div>
+    <ul class="app-menu-list">
+      <li><button type="button" class="app-menu-item" data-menu="impressum">Impressum &amp; Datenschutz</button></li>
+    </ul>`;
+  appMenuContent.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+    btn.addEventListener("click", () => setTheme(btn.dataset.theme));
+  });
+  appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
+    btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
+  });
+}
+
+function showMenuPage(page) {
+  if (!appMenuContent) return;
+  const pages = { impressum: impressumHtml() };
+  appMenuContent.innerHTML = `
+    <button type="button" class="app-menu-back">← Zurück</button>
+    <div class="app-menu-page-content">${pages[page] || ""}</div>`;
+  appMenuContent.querySelector(".app-menu-back")
+    ?.addEventListener("click", showMenuHome);
+}
+
+function impressumHtml() {
+  return `
+    <h2>Impressum &amp; Datenschutz</h2>
+    <section class="app-menu-section">
+      <h3>Angaben gemäß § 5 TMG</h3>
+      <p>Carsten Schneider<br>Stargarder Straße 57<br>10437 Berlin</p>
+      <p>E-Mail: <a href="mailto:info@rcracemap.com">info@rcracemap.com</a></p>
+    </section>
+    <section class="app-menu-section">
+      <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+      <p>Carsten Schneider<br>Stargarder Straße 57<br>10437 Berlin</p>
+    </section>
+    <section class="app-menu-section">
+      <h3>Datenschutz</h3>
+      <p>Beim Besuch dieser Website werden durch den Hostinganbieter Hetzner technisch notwendige Server-Logfiles verarbeitet.</p>
+      <p>Die Verarbeitung erfolgt ausschließlich zum Zweck des sicheren und störungsfreien Betriebs der Website.</p>
+      <p>Zur Darstellung der Karte werden Kartendaten von OpenStreetMap verwendet.</p>
+      <p>Diese Website verwendet derzeit keine Benutzerkonten, keine Newsletter, keine Analyse- oder Tracking-Dienste und keine Marketing-Cookies.</p>
+    </section>
+    <section class="app-menu-section">
+      <h3>Hinweis zu den Renninformationen</h3>
+      <p>RC Race Map ist ein unabhängiges Informationsangebot für RC-Rennveranstaltungen.</p>
+      <p>Die dargestellten Renntermine werden aus öffentlich zugänglichen Quellen (MyRCM, RCK) zusammengetragen. RC Race Map steht in keiner geschäftlichen Verbindung zu diesen Plattformen.</p>
+      <p>Trotz sorgfältiger Verarbeitung kann keine Gewähr für die Aktualität, Vollständigkeit oder Richtigkeit übernommen werden.</p>
+      <p>Hinweise an <a href="mailto:info@rcracemap.com">info@rcracemap.com</a>.</p>
+    </section>`;
+}
+
+menuButtons.forEach(b => b?.addEventListener("click", () => {
+  if (document.body.classList.contains("is-menu-open")) closeAppMenu();
+  else openAppMenu();
+}));
+appMenuOverlay?.addEventListener("click", closeAppMenu);
+appMenuClose?.addEventListener("click", closeAppMenu);
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeAppMenu(); });
+
+// Handle footer data-menu-open buttons
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-menu-open]");
+  if (btn) {
+    openAppMenu();
+    showMenuPage(btn.dataset.menuOpen);
+  }
+});
+
+showMenuHome();
+
+// ── Init mobile state ──────────────────────────────────────────
+window.addEventListener("load", () => {
+  setDrawerState("half");
+  // Force Leaflet and MapLibre to re-measure after CSS is fully applied
+  requestAnimationFrame(() => {
+    map?.invalidateSize?.();
+    baseMapLayer?.getMaplibreMap?.()?.resize?.();
+  });
 });

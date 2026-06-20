@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RC Race Map Beta</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="/favicon_io/site.webmanifest">
@@ -15,6 +14,1156 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* v1.6.5 target topbar polish */
+    .layout-prototype .filters-panel {
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      width: auto;
+      max-width: none;
+    }
+
+    .layout-prototype .topbar {
+      --topbar-main-offset: 68px;
+      padding: 12px 12px 12px 0;
+      min-height: 0;
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .layout-prototype .topbar::before {
+      background: rgba(var(--panel-rgb), 0.94);
+      box-shadow: 0 8px 22px rgba(31, 29, 26, 0.07);
+    }
+
+    .layout-prototype .topbar .app-menu-button {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      font-size: 0;
+      font-weight: 400;
+      box-shadow: 0 7px 18px rgba(31, 29, 26, 0.08);
+    }
+
+    /* hamburger span rules moved to style.css */
+
+    .layout-prototype .topbar-range,
+    .layout-prototype .topbar-series,
+    .layout-prototype .topbar-favorites,
+    .layout-prototype .topbar-search {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .layout-prototype .topbar-range {
+      order: 2;
+      flex: 0 0 auto;
+    }
+
+    .layout-prototype .topbar-series {
+      order: 3;
+      flex: 0 1 clamp(260px, 20vw, 380px);
+    }
+
+    .layout-prototype .topbar-spacer {
+      order: 4;
+      flex: 1 1 auto;
+      min-width: 24px;
+    }
+
+    .layout-prototype .topbar-favorites {
+      order: 5;
+      flex: 0 0 auto;
+    }
+
+    .layout-prototype .topbar-registration {
+      order: 6;
+      flex: 0 0 auto;
+    }
+
+    .layout-prototype .topbar-search,
+    .layout-prototype .topbar .filter-field-search {
+      order: 7 !important;
+    }
+
+    .layout-prototype .topbar-search {
+      position: relative;
+      flex: 0 0 clamp(280px, 17vw, 320px);
+      max-width: 320px;
+    }
+
+    .layout-prototype .topbar-filter-label {
+      display: none !important;
+    }
+
+    .layout-prototype .topbar .label-short {
+      display: none !important;
+    }
+
+    .layout-prototype .topbar .label-full {
+      display: inline !important;
+    }
+
+    .layout-prototype .topbar .segmented,
+    .layout-prototype .topbar .topbar-toggle,
+    .layout-prototype .topbar .topbar-filter-group,
+    .layout-prototype .topbar .race-visibility-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      flex: 0 0 auto;
+      width: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: var(--pill-bg);
+    }
+
+    .layout-prototype .topbar .segmented button,
+    .layout-prototype .topbar .topbar-toggle button,
+    .layout-prototype .topbar .race-visibility-toggle button {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      height: 44px;
+      min-height: 44px;
+      min-width: 0;
+      padding: 0 15px;
+      border: 0 !important;
+      border-radius: 999px;
+      background: transparent !important;
+      color: var(--accent) !important;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      white-space: nowrap;
+      box-shadow: none;
+      cursor: pointer;
+    }
+
+    .layout-prototype .topbar .segmented button {
+      padding-inline: 17px;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"] {
+      min-width: 0;
+    }
+
+    .layout-prototype .topbar .segmented button.active,
+    .layout-prototype .topbar .topbar-registration button.active,
+    .layout-prototype .topbar .topbar-favorites button.active {
+      background: var(--accent) !important;
+      color: #fff !important;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button.active[data-favorite-filter="favorites"] {
+      background: var(--favorite) !important;
+    }
+
+    .layout-prototype .topbar .topbar-toggle button:not(.active),
+    .layout-prototype .topbar .race-visibility-toggle button:not(.active) {
+      border-color: transparent !important;
+      background: transparent !important;
+      color: var(--accent) !important;
+    }
+
+    .layout-prototype .topbar select,
+    .layout-prototype .topbar input {
+      appearance: none;
+      box-sizing: border-box;
+      width: 100%;
+      height: 44px;
+      min-height: 44px;
+      border: 0;
+      border-radius: 999px;
+      background-color: var(--pill-bg);
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 400;
+      box-shadow: none;
+    }
+
+    .layout-prototype .topbar select {
+      padding: 0 42px 0 18px;
+    }
+
+    .layout-prototype .topbar input {
+      padding: 0 52px 0 22px;
+    }
+
+    .layout-prototype .topbar .favorite-toggle-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"]:not(.active) {
+      color: var(--favorite) !important;
+    }
+
+    .layout-prototype .topbar .race-visibility-toggle .race-document-dot,
+    .layout-prototype .topbar .race-visibility-toggle button.active .race-document-dot {
+      width: 11px !important;
+      height: 11px !important;
+      background: var(--status-open) !important;
+    }
+
+    .layout-prototype .topbar .filter-toggle-button {
+      display: none !important;
+    }
+
+    @media (max-width: 1080px) {
+      .layout-prototype .topbar .label-full {
+        display: none !important;
+      }
+
+      .layout-prototype .topbar .label-short {
+        display: inline !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .layout-prototype .filters-panel {
+        top: calc(10px + env(safe-area-inset-top));
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+      }
+
+      .layout-prototype .topbar {
+        --topbar-main-offset: 0;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 8px;
+        min-height: 0;
+        padding: 8px;
+        border-radius: 18px;
+      }
+
+      .layout-prototype .topbar .app-menu-button {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+      }
+
+      /* hamburger span breakpoint rules moved to style.css */
+
+      .layout-prototype .topbar-range {
+        flex: 1 1 calc(100% - 44px);
+      }
+
+      .layout-prototype .topbar-spacer {
+        display: none;
+      }
+
+      .layout-prototype .topbar-series {
+        flex: 1 1 160px;
+      }
+
+      .layout-prototype .topbar-favorites {
+        flex: 1 1 190px;
+      }
+
+      .layout-prototype .topbar-registration {
+        flex: 0 0 auto;
+      }
+
+      .layout-prototype .topbar-search {
+        flex: 1 1 100%;
+        max-width: none;
+      }
+
+      .layout-prototype .topbar .segmented {
+        width: 100%;
+      }
+
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-toggle button,
+      .layout-prototype .topbar .race-visibility-toggle button {
+        flex: 1 1 auto;
+        min-height: 34px;
+        height: 34px;
+        min-width: 0;
+        padding: 0 10px;
+        font-size: 12px;
+      }
+
+      .layout-prototype .topbar select,
+      .layout-prototype .topbar input {
+        min-height: 40px;
+        height: 40px;
+      }
+    }
+
+    /* v1.6.6 compact desktop topbar */
+    .layout-prototype .topbar {
+      --topbar-main-offset: 48px;
+      gap: 14px;
+      min-height: 42px;
+      padding: 0 6px 0 0;
+      background: transparent;
+      color: var(--host-blue);
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      font-weight: 400 !important;
+      font-synthesis: none;
+    }
+
+    .layout-prototype .topbar::before {
+      inset: 0 0 0 var(--topbar-main-offset);
+      background: var(--card);
+      box-shadow: 0 7px 18px rgba(31, 29, 26, 0.08);
+    }
+
+    .layout-prototype .topbar .app-menu-button {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      background: var(--panel) !important;
+      color: var(--host-blue);
+      font-weight: 400 !important;
+      box-shadow: 0 6px 16px rgba(31, 29, 26, 0.08);
+    }
+
+    /* hamburger span rules in style.css */
+
+    .layout-prototype .topbar-spacer {
+      display: none;
+    }
+
+    .layout-prototype .topbar-series {
+      flex: 0 0 260px;
+    }
+
+    .layout-prototype .topbar-favorites {
+      margin-left: auto;
+    }
+
+    .layout-prototype .topbar-search {
+      flex: 0 0 220px;
+      width: 220px;
+      max-width: 220px;
+      margin-left: 0;
+    }
+
+    .layout-prototype .topbar .segmented,
+    .layout-prototype .topbar .topbar-filter-group {
+      --pill-color: var(--host-blue);
+      --pill-width: 0px;
+      --pill-x: 5px;
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      width: auto;
+      gap: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .layout-prototype .topbar .segmented::before,
+    .layout-prototype .topbar .topbar-filter-group::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      width: var(--pill-width);
+      border-radius: 999px;
+      background-color: var(--pill-color);
+      opacity: 0;
+      transform: translateX(var(--pill-x));
+      transition:
+        transform 180ms ease,
+        width 180ms ease,
+        background-color 180ms ease,
+        opacity 120ms ease;
+      will-change: transform, width;
+    }
+
+    .layout-prototype .topbar .segmented.is-pill-ready::before,
+    .layout-prototype .topbar .topbar-filter-group.is-pill-ready::before {
+      opacity: 1;
+    }
+
+    .layout-prototype .topbar .segmented button,
+    .layout-prototype .topbar .topbar-filter-group button,
+    .layout-prototype .topbar .topbar-toggle button,
+    .layout-prototype .topbar .race-visibility-toggle button {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-width: auto;
+      min-height: 30px;
+      height: 30px;
+      padding: 0 14px;
+      border: 0 !important;
+      border-radius: 999px;
+      background: transparent !important;
+      color: var(--host-blue) !important;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 400 !important;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+      box-shadow: none;
+      cursor: pointer;
+      transition: color 140ms ease;
+    }
+
+    .layout-prototype .topbar .segmented button.active,
+    .layout-prototype .topbar .topbar-filter-group button.active {
+      background: var(--host-blue) !important;
+      color: #fff !important;
+      font-weight: 400 !important;
+    }
+
+    .layout-prototype .topbar .topbar-filter-group button[data-favorite-filter="favorites"].active {
+      background: var(--favorite) !important;
+      color: #fff !important;
+    }
+
+    .layout-prototype .topbar .segmented.is-pill-ready button.active,
+    .layout-prototype .topbar .topbar-filter-group.is-pill-ready button.active,
+    .layout-prototype .topbar .topbar-filter-group.is-pill-ready button[data-favorite-filter="favorites"].active {
+      background: transparent !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .layout-prototype .topbar .segmented::before,
+      .layout-prototype .topbar .topbar-filter-group::before,
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-filter-group button {
+        transition: none;
+      }
+    }
+
+    .layout-prototype .topbar select,
+    .layout-prototype .topbar input {
+      min-height: 30px;
+      height: 30px;
+      background-color: var(--pill-bg);
+      color: var(--host-blue);
+      font-size: 13px;
+      font-weight: 400 !important;
+    }
+
+    .layout-prototype .topbar select {
+      padding: 0 34px 0 12px;
+    }
+
+    .layout-prototype .topbar input {
+      padding: 5px 38px 5px 13px;
+    }
+
+    .layout-prototype .topbar-search::before {
+      right: 15px;
+      width: 13px;
+      height: 13px;
+      border-width: 1.75px;
+      border-color: var(--host-blue);
+    }
+
+    .layout-prototype .topbar-search::after {
+      right: 11px;
+      top: calc(50% + 6px);
+      width: 10px;
+      height: 1.75px;
+      background: var(--host-blue);
+    }
+
+    .layout-prototype .topbar .topbar-favorites button,
+    .layout-prototype .topbar .topbar-registration button {
+      min-width: 0;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"],
+    .layout-prototype .topbar .topbar-registration button[data-registration-visibility="open"] {
+      min-width: 0;
+    }
+
+    .layout-prototype .topbar .segmented button {
+      padding-inline: 16px;
+    }
+
+    .layout-prototype .topbar .favorite-toggle-icon {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    .layout-prototype .topbar .topbar-favorites button[data-favorite-filter="favorites"]:not(.active) {
+      color: var(--favorite) !important;
+    }
+
+    .layout-prototype .topbar .race-document-dot {
+      display: inline-block;
+      width: 9px !important;
+      height: 9px !important;
+      border-radius: 999px;
+      background: var(--status-open) !important;
+    }
+
+    .layout-prototype .topbar-chips {
+      margin-left: 42px;
+      gap: 8px;
+    }
+
+    .layout-prototype .topbar-chips .active-filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 24px;
+      padding: 4px 10px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--host-blue);
+      color: #fff;
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1;
+      box-shadow: none;
+      cursor: pointer;
+    }
+
+    .layout-prototype .topbar-chips .active-filter-chip span {
+      color: #fff;
+      font-weight: 400;
+    }
+
+    @media (min-width: 861px) and (max-width: 1100px) {
+      .layout-prototype .topbar {
+        --topbar-main-offset: 52px;
+        gap: 12px;
+        padding-right: 8px;
+      }
+
+      .layout-prototype .topbar-series {
+        flex-basis: 220px;
+      }
+
+      .layout-prototype .topbar-search {
+        flex-basis: 180px;
+        width: 180px;
+        max-width: 180px;
+      }
+
+      .layout-prototype .topbar-chips {
+        margin-left: 52px;
+      }
+
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-filter-group button {
+        padding: 0 9px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .layout-prototype .topbar {
+        --topbar-main-offset: 0;
+        gap: 10px;
+        padding: 7px;
+      }
+
+      .layout-prototype .topbar .app-menu-button {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .layout-prototype .topbar-range {
+        flex: 1 1 calc(100% - 50px);
+      }
+
+      .layout-prototype .topbar-series {
+        flex: 1 1 150px;
+      }
+
+      .layout-prototype .topbar-favorites,
+      .layout-prototype .topbar-registration {
+        flex: 0 0 auto;
+      }
+
+      .layout-prototype .topbar-favorites {
+        margin-left: 0;
+      }
+
+      .layout-prototype .topbar-search {
+        flex: 1 1 100%;
+        width: auto;
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .layout-prototype .topbar-chips {
+        margin-left: 0;
+      }
+
+      .layout-prototype .topbar .segmented button,
+      .layout-prototype .topbar .topbar-filter-group button {
+        min-height: 30px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+    /* v1.7 race card redesign */
+    .layout-prototype .race-panel {
+      padding: 0 10px 0 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .layout-prototype .panel-header {
+      display: none;
+    }
+
+    .layout-prototype .results-toolbar {
+      margin: 0 0 12px;
+      padding: 0 2px;
+    }
+
+    .layout-prototype .results-toolbar .result-line {
+      color: var(--host-blue);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.25;
+      white-space: normal;
+    }
+
+    .layout-prototype .race-grid {
+      gap: 14px;
+    }
+
+    .layout-prototype .race-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 22px;
+      background: transparent;
+      color: var(--host-blue);
+      box-shadow: 0 12px 28px rgba(31, 29, 26, 0.10);
+      overflow: hidden;
+    }
+
+    .layout-prototype .race-card .race-new-badge {
+      z-index: 3;
+      border-radius: 0 22px 0 10px;
+    }
+
+    .layout-prototype .race-host {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      margin: 0;
+      padding: 10px 16px;
+      border-radius: 22px 22px 0 0;
+      background: var(--host-blue);
+      color: #fff;
+    }
+
+    .layout-prototype .race-host .venue-name-with-favorite {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      color: inherit;
+    }
+
+    .layout-prototype .race-host .venue-favorite-button {
+      justify-content: center;
+      flex: 0 0 15px;
+      width: 15px;
+      height: 15px;
+      border-radius: 999px;
+      background: transparent;
+      font-size: 11px;
+      transform: none;
+    }
+
+    .layout-prototype .venue-favorite-button .favorite-toggle-icon {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    .layout-prototype .race-host .venue-favorite-button {
+      color: #fff !important;
+    }
+
+    .layout-prototype .race-host .venue-link,
+    .layout-prototype .race-host .host-name {
+      color: #fff !important;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.15;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-host .venue-link::after {
+      content: "↗";
+      margin-left: 4px;
+      text-decoration: none;
+    }
+
+    /* Favorite venue: gold bg + dark navy text — mirrors favorite popup */
+    .layout-prototype .race-card-favorite-venue .race-host {
+      background: var(--favorite) !important;
+      color: #213769 !important;
+    }
+
+    .layout-prototype .race-card-favorite-venue .race-host .venue-link,
+    .layout-prototype .race-card-favorite-venue .race-host .host-name,
+    .layout-prototype .race-host .venue-link-favorite,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
+    .layout-prototype .race-host .venue-favorite-button.active {
+      color: #213769 !important;
+      transition: color 200ms ease;
+    }
+
+    /* Gold header: hover → white (mirrors gold popup) */
+    .layout-prototype .race-card-favorite-venue .race-host .venue-link:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-link:focus-visible,
+    .layout-prototype .race-card-favorite-venue .race-host .host-name:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:focus-visible,
+    .layout-prototype .race-host .venue-favorite-button.active:hover,
+    .layout-prototype .race-host .venue-favorite-button.active:focus-visible {
+      color: #ffffff !important;
+    }
+
+    /* Blue header: star hover → gold (mirrors standard popup) */
+    .layout-prototype .race-host .venue-favorite-button {
+      color: #fff !important;
+      transition: color 200ms ease;
+    }
+    .layout-prototype .race-host .venue-favorite-button:hover,
+    .layout-prototype .race-host .venue-favorite-button:focus-visible {
+      color: var(--favorite) !important;
+    }
+    /* Override: gold header star hover → white (higher specificity via card class) */
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:focus-visible {
+      color: #ffffff !important;
+    }
+
+    .layout-prototype .race-card-header {
+      padding: 14px 18px 5px;
+      background: var(--card);
+    }
+
+    .layout-prototype .race-date {
+      margin: 0 0 4px;
+      color: var(--host-blue);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .layout-prototype .race-name-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .layout-prototype .race-name {
+      margin: 0;
+      color: var(--host-blue);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.08;
+    }
+
+    .layout-prototype .race-registration-count {
+      margin-top: 1px;
+      color: var(--host-blue);
+      font-size: 17px;
+      font-weight: 400;
+      gap: 4px;
+    }
+
+    .layout-prototype .race-registration-count svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 1.8;
+    }
+
+    .layout-prototype .race-card-header .race-series-tags {
+      display: none;
+    }
+
+    .layout-prototype .race-venue {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0 18px 5px;
+      background: var(--card);
+      color: var(--host-blue);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .layout-prototype .race-venue-pin {
+      display: block;
+      flex: 0 0 10px;
+      width: 10px;
+      height: 12px;
+      color: currentColor;
+      transform: translateY(-1px);
+    }
+
+    .layout-prototype .race-venue .venue-link,
+    .layout-prototype .race-venue .venue-name-text {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-venue-unknown {
+      color: rgba(31, 29, 26, 0.45) !important;
+    }
+
+    .layout-prototype .race-document-links {
+      display: flex;
+      flex-wrap: wrap !important;
+      align-items: center;
+      column-gap: 12px !important;
+      row-gap: 6px;
+      margin: 0;
+      padding: 6px 18px 10px;
+      background: var(--card);
+    }
+
+    .layout-prototype .race-document-links .race-link-item {
+      color: var(--host-blue);
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status {
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status-open,
+    .layout-prototype .race-document-links .race-link-item-status {
+      gap: 5px;
+    }
+
+    .layout-prototype .race-document-dot {
+      width: 9px !important;
+      height: 9px !important;
+    }
+
+    .layout-prototype .race-document-dot-open {
+      background: var(--status-open) !important;
+    }
+
+    .layout-prototype .race-document-dot-closed {
+      background: #9a9795 !important;
+    }
+
+    :root.theme-dark .layout-prototype .race-document-dot-closed {
+      background: #3d5380 !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.theme-light) .layout-prototype .race-document-dot-closed {
+        background: #3d5380 !important;
+      }
+    }
+
+    .layout-prototype .race-document-dot-upcoming {
+      background: var(--status-upcoming) !important;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status-closed {
+      color: var(--status-closed);
+      font-weight: 800 !important;
+    }
+
+    .layout-prototype .race-document-links .race-link-item-status-upcoming {
+      color: var(--status-upcoming);
+      font-weight: 800 !important;
+    }
+
+    .layout-prototype .race-card > .race-class-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0;
+      padding: 0 18px 16px;
+      border-top: 0;
+      border-radius: 0 0 22px 22px;
+      background: var(--card);
+    }
+
+    .layout-prototype .race-card > .race-class-tags .tag-class {
+      height: 19px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--surface-neutral);
+      color: var(--host-blue);
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .layout-prototype .race-card a.venue-link,
+    .layout-prototype .race-card a.race-link-item:not(.race-link-item-status),
+    .layout-prototype .race-card a.race-link-item-status .race-link-text,
+    .layout-prototype .race-card .race-registration-count-link .registration-count-value {
+      text-decoration: none !important;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 0 1px;
+      transition:
+        color 140ms ease,
+        background-size 140ms ease;
+    }
+
+    .layout-prototype .race-card a.venue-link:hover,
+    .layout-prototype .race-card a.venue-link:focus-visible,
+    .layout-prototype .race-card a.race-link-item:not(.race-link-item-status):hover,
+    .layout-prototype .race-card a.race-link-item:not(.race-link-item-status):focus-visible,
+    .layout-prototype .race-card a.race-link-item-status:hover .race-link-text,
+    .layout-prototype .race-card a.race-link-item-status:focus-visible .race-link-text,
+    .layout-prototype .race-card .race-registration-count-link:hover .registration-count-value,
+    .layout-prototype .race-card .race-registration-count-link:focus-visible .registration-count-value {
+      text-decoration: none !important;
+      background-size: 100% 1px;
+    }
+
+    .layout-prototype .race-card a.race-link-item-status:hover,
+    .layout-prototype .race-card a.race-link-item-status:focus-visible {
+      text-decoration: none !important;
+    }
+
+    .layout-prototype .race-card a.venue-link:focus-visible,
+    .layout-prototype .race-card a.race-link-item:focus-visible,
+    .layout-prototype .race-card .race-registration-count-link:focus-visible {
+      outline: none;
+    }
+
+    .layout-prototype .race-card > .race-class-tags .tag-class-toggle {
+      background: var(--surface-neutral);
+      color: var(--host-blue);
+      cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .layout-prototype .race-card > .race-class-tags .tag-class-toggle:hover,
+    .layout-prototype .race-card > .race-class-tags .tag-class-toggle:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .layout-prototype .race-card.registration-closed {
+      background: var(--card-closed);
+      box-shadow: 0 12px 28px rgba(var(--shadow-rgb, 31, 29, 26), 0.08);
+    }
+
+    .layout-prototype .race-card.registration-closed .race-card-header,
+    .layout-prototype .race-card.registration-closed .race-venue,
+    .layout-prototype .race-card.registration-closed .race-document-links,
+    .layout-prototype .race-card.registration-closed > .race-class-tags {
+      background: var(--card-closed);
+    }
+
+    .layout-prototype .race-card.registration-closed .race-date,
+    .layout-prototype .race-card.registration-closed .race-name,
+    .layout-prototype .race-card.registration-closed .race-registration-count,
+    .layout-prototype .race-card.registration-closed .race-venue {
+      color: var(--host-blue);
+    }
+
+    .layout-prototype .race-card.registration-closed .race-document-links .race-link-item,
+    .layout-prototype .race-card.registration-closed .race-venue .venue-link,
+    .layout-prototype .race-card.registration-closed .race-venue .venue-name-text {
+      color: var(--host-blue);
+    }
+
+    .layout-prototype .race-card.registration-closed > .race-class-tags .tag-class {
+      background: var(--host-blue);
+      color: var(--card-closed);
+    }
+
+    .layout-prototype .race-card.is-clickable:hover,
+    .layout-prototype .race-card.is-clickable:focus-visible,
+    .layout-prototype .race-card.active,
+    .layout-prototype .race-card.is-clickable.active,
+    .layout-prototype .race-card.is-clickable.active:hover {
+      border-color: transparent !important;
+      box-shadow: 0 16px 34px rgba(31, 29, 26, 0.14);
+    }
+
+    .layout-prototype.is-venue-mode .race-card,
+    .layout-prototype.is-venue-mode .race-card.is-clickable {
+      cursor: default;
+    }
+
+    @media (max-width: 860px) {
+      .layout-prototype .race-grid {
+        gap: 12px;
+      }
+
+      .layout-prototype .race-panel {
+        padding: 0 8px 0 0;
+      }
+
+      .layout-prototype .race-card {
+        border-radius: 20px;
+      }
+
+      .layout-prototype .race-host {
+        min-height: 42px;
+        padding: 9px 14px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .layout-prototype .race-host .venue-link,
+      .layout-prototype .race-host .host-name {
+        font-size: 14px;
+      }
+
+      .layout-prototype .race-card-header {
+        padding: 13px 14px 5px;
+      }
+
+      .layout-prototype .race-date {
+        font-size: 13px;
+      }
+
+      .layout-prototype .race-name {
+        font-size: 16px;
+      }
+
+      .layout-prototype .race-registration-count {
+        font-size: 16px;
+      }
+
+      .layout-prototype .race-venue,
+      .layout-prototype .race-document-links,
+      .layout-prototype .race-card > .race-class-tags {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .layout-prototype .race-card > .race-class-tags {
+        padding-bottom: 14px;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+
+    /* topbar-chips-row: chips + result line on same row */
+    .layout-prototype .topbar-chips-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 24px;
+    }
+
+    .layout-prototype .topbar-chips-row .topbar-chips {
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    .layout-prototype .topbar-chips-row .topbar-chips.is-empty {
+      display: flex;
+    }
+
+    .layout-prototype .topbar-result-line {
+      flex: 0 0 auto;
+      margin-left: auto;
+      padding-left: 12px;
+      color: var(--muted-light);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+
+    /* select custom arrow */
+    .layout-prototype .topbar select {
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23213769' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 13px center;
+    }
+
+    /* class chips = #ebebeb */
+    .layout-prototype .race-card > .race-class-tags .tag-class {
+      background: var(--pill-bg);
+      color: var(--host-blue);
+    }
+
+    /* ── Mobile drawer — higher specificity beats desktop topbar rules ──────
+       .mob-drawer adds a third class, pushing specificity from 0,2,x to 0,3,x
+       so these rules win over all .layout-prototype .topbar overrides above.  */
+    .mob-drawer .mob-drawer-filters .topbar {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 10px 14px 12px;
+      gap: 8px;
+      row-gap: 8px;
+      min-height: 0;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-range,
+    .mob-drawer .mob-drawer-filters .topbar-series,
+    .mob-drawer .mob-drawer-filters .topbar-favorites,
+    .mob-drawer .mob-drawer-filters .topbar-registration,
+    .mob-drawer .mob-drawer-filters .topbar-search,
+    .mob-drawer .mob-drawer-filters .topbar .filter-field-search {
+      order: unset !important;
+      flex: 0 0 auto;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-search {
+      flex: 1 1 180px;
+      min-width: 0;
+      max-width: none;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-series {
+      flex: 1 1 120px;
+      min-width: 0;
+      max-width: none;
+    }
+    .mob-drawer .mob-drawer-filters .topbar-series select {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
   <main class="app layout-map layout-prototype" id="app">
@@ -22,84 +1171,114 @@
       <div id="map"></div>
     </section>
 
-    <section class="filters-panel" aria-label="Filter">
-      <section class="filters" aria-label="Filter">
-        <div class="mobile-filter-topline">
-          <div class="filter-group filter-group-range">
-            <span class="filter-label">Zeitraum</span>
-            <div class="segmented" id="rangeFilter">
-              <button class="active" type="button" data-range="2">2 Wochen</button>
-              <button type="button" data-range="4">4 Wochen</button>
-              <button type="button" data-range="all">Alle</button>
-            </div>
-          </div>
+    <section class="filters-panel topbar-panel" aria-label="Filter und Navigation">
+      <header class="topbar" aria-label="Hauptnavigation und Filter">
+        <button class="app-menu-button" id="appMenuButton" type="button" aria-label="Menü öffnen">
+          <svg aria-hidden="true" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="0" y1="6" x2="18" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="0" y1="11" x2="18" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
 
-          <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
-            <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <circle cx="10.5" cy="10.5" r="5.5"></circle>
-                <path d="M15 15 L20 20"></path>
-              </svg>
-            </span>
-            <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M8 8 L16 16"></path>
-                <path d="M16 8 L8 16"></path>
-              </svg>
-            </span>
+        <div class="topbar-range filter-group filter-group-range">
+          <span class="filter-label topbar-filter-label">Zeitraum</span>
+          <div class="segmented" id="rangeFilter" aria-label="Zeitraum">
+            <button class="active" type="button" data-range="2">2 Wochen</button>
+            <button type="button" data-range="4">4 Wochen</button>
+            <button type="button" data-range="all">Alle</button>
+          </div>
+        </div>
+
+        <label class="topbar-series filter-field">
+          <span class="filter-label topbar-filter-label">Serie</span>
+          <select id="seriesFilter">
+            <option value="all">Alle Serien</option>
+          </select>
+        </label>
+
+        <div class="topbar-favorites topbar-filter-group" id="favoriteFilter" aria-label="Favoritenfilter">
+          <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
+          <button type="button" data-favorite-filter="favorites" aria-pressed="false">
+            <svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg>
+            <span>Favoriten</span>
           </button>
         </div>
 
-        <div class="advanced-filters" id="advancedFilters">
-          <label class="filter-field filter-field-search">
-            <span class="filter-label">Suche</span>
-            <input id="searchInput" type="search" placeholder="BTM, Tamiya, Bernau …" />
-          </label>
-
-          <label class="filter-field">
-            <span class="filter-label">Serie</span>
-            <select id="seriesFilter">
-              <option value="all">Alle Serien</option>
-            </select>
-          </label>
+        <div class="topbar-registration topbar-filter-group race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+          <button type="button" data-registration-visibility="all" aria-pressed="false">Alle</button>
+          <button class="active" type="button" data-registration-visibility="open" aria-pressed="true">
+            <span class="race-document-dot" aria-hidden="true"></span>
+            <span>Offen</span>
+          </button>
         </div>
 
-        <div class="active-filter-chips" id="activeFilterChips" aria-live="polite"></div>
-      </section>
+        <label class="topbar-search filter-field filter-field-search">
+          <span class="filter-label topbar-filter-label">Suche</span>
+          <input id="searchInput" type="search" placeholder="Suche" />
+        </label>
+
+        <button class="filter-toggle-button" id="filterToggleButton" type="button" aria-expanded="false" aria-label="Suche und Serienfilter öffnen">
+          <span class="filter-toggle-icon filter-toggle-icon-search" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="10.5" cy="10.5" r="5.5"></circle>
+              <path d="M15 15 L20 20"></path>
+            </svg>
+          </span>
+          <span class="filter-toggle-icon filter-toggle-icon-close" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M8 8 L16 16"></path>
+              <path d="M16 8 L8 16"></path>
+            </svg>
+          </span>
+        </button>
+      </header>
+
+      <div class="topbar-chips-row">
+        <div class="active-filter-chips topbar-chips" id="activeFilterChips" aria-live="polite"></div>
+        <div class="result-line topbar-result-line" id="resultLine">Lade Rennen …</div>
+      </div>
     </section>
 
     <aside class="race-panel" aria-label="Rennen">
-      <header class="panel-header">
-        <div>
-          <h1>Kommende Rennen</h1>
-        </div>
-      </header>
-
-      <div class="results-toolbar">
-        <div class="result-line" id="resultLine">Lade Rennen …</div>
-
-        <div class="race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-          <button class="active" type="button" data-registration-visibility="open">
-            <span class="race-document-dot" aria-hidden="true"></span>
-            Offen
-          </button>
-
-          <button type="button" data-registration-visibility="all">
-            Alle
-          </button>
-        </div>
-      </div>
       <section class="race-grid" id="raceList" aria-live="polite"></section>
     </aside>
   </main>
 
+  <!-- Mobile floating elements -->
+  <button class="mob-menu-btn" id="mobMenuBtn" type="button" aria-label="Menü öffnen">
+    <svg aria-hidden="true" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="6" x2="18" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="11" x2="18" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <div class="mob-result-badge" id="mobResultBadge" aria-live="polite"></div>
+
+  <!-- Mobile Bottom Drawer (layout-prototype needed for card CSS) -->
+  <div class="mob-drawer mob-drawer--half layout-prototype" id="mobDrawer" aria-label="Filter und Rennen">
+    <div class="mob-drawer-handle" id="mobDrawerHandle" role="button" aria-label="Schublade öffnen oder schließen" tabindex="0">
+      <div class="mob-drawer-handle-bar"></div>
+    </div>
+
+    <div class="mob-drawer-filters" id="mobFilterMount">
+      <!-- header.topbar is moved here by JS on mobile (Versuch 3) -->
+    </div>
+
+    <div class="mob-drawer-list" id="mobRaceList" aria-live="polite"></div>
+
+    <div class="mob-drawer-footer">
+      <button type="button" data-menu-open="impressum" class="footer-menu-link">Impressum &amp; Datenschutz</button>
+      <span>·</span>
+      <span>Datenquelle:</span>
+      <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer">MyRCM</a>
+      <span>·</span>
+      <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>
+    </div>
+  </div>
 
 <div class="map-footer">
-  <span>RC Race Map Beta</span>
-  <span>·</span>
-  <a href="mailto:info@rcracemap.com">Feedback</a>
-  <span>·</span>
-  <a href="impressum-datenschutz.html">Impressum &amp; Datenschutz</a>
+  <button type="button" data-menu-open="impressum" class="footer-menu-link">Impressum &amp; Datenschutz</button>
   <span>·</span>
   <span>Datenquelle:</span>
   <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer">MyRCM</a>
@@ -107,6 +1286,21 @@
   <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>
 </div>
 
+
+  <!-- App Menu Panel -->
+  <div id="appMenuPanel" class="app-menu-panel" aria-hidden="true">
+    <div class="app-menu-header">
+      <span class="app-menu-logo">RC Race Map</span>
+    </div>
+    <div id="appMenuContent" class="app-menu-content"></div>
+  </div>
+  <div id="appMenuOverlay" class="app-menu-overlay"></div>
+  <button class="app-menu-close" id="appMenuClose" type="button" aria-label="Menü schließen">
+    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </button>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.js"></script>

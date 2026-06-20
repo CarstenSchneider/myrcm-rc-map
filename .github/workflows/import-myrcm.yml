@@ -2,10 +2,6 @@ name: Import MyRCM races
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 1 * * *"
-    - cron: "20 1 * * *"
-    - cron: "40 1 * * *"
 
 permissions:
   contents: write
@@ -51,4 +47,5 @@ jobs:
           file_pattern: |
             races.json
             hosts.json
+            venues.json
             venue-unmatched.json
