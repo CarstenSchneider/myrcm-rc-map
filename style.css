@@ -3223,3 +3223,26 @@ body.is-menu-open .app-menu-close {
   white-space: nowrap;
 }
 .app-menu-footer-link:hover { text-decoration: underline; }
+
+/* Admin page */
+.app-menu-admin-btn { width: 100%; text-align: left; appearance: none; border: 1px solid rgba(var(--accent-rgb), 0.4); background: rgba(var(--accent-rgb), 0.08); color: var(--accent); border-radius: 8px; padding: 10px 14px; font: inherit; cursor: pointer; }
+.app-menu-admin-btn:hover { background: rgba(var(--accent-rgb), 0.15); }
+.admin-title { font-size: 16px; font-weight: 700; margin: 0 0 16px; }
+.admin-loading, .admin-empty, .admin-error { font-size: 14px; color: var(--muted); }
+.admin-entry { padding: 14px 0; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); }
+.admin-entry-done { opacity: 0.45; pointer-events: none; }
+.admin-entry-header { display: flex; flex-direction: column; gap: 2px; margin-bottom: 6px; }
+.admin-entry-header strong { font-size: 14px; }
+.admin-entry-meta { font-size: 12px; color: var(--muted); }
+.admin-entry-link { font-size: 12px; color: var(--accent); text-decoration: none; display: inline-block; margin-bottom: 8px; }
+.admin-entry-link:hover { text-decoration: underline; }
+.admin-entry-fields { display: flex; gap: 8px; margin-bottom: 8px; }
+.admin-input { flex: 1; background: rgba(var(--text-rgb), 0.06); border: 1px solid rgba(var(--border-rgb), 0.5); border-radius: 6px; padding: 7px 10px; font: inherit; font-size: 13px; color: var(--text); outline: none; }
+.admin-input:focus { border-color: var(--accent); }
+.admin-entry-actions { display: flex; gap: 8px; }
+.admin-btn { appearance: none; border: none; border-radius: 6px; padding: 7px 14px; font: inherit; font-size: 13px; cursor: pointer; }
+.admin-btn-save { background: var(--accent); color: #fff; }
+.admin-btn-save:hover { opacity: 0.85; }
+.admin-btn-unknown { background: rgba(var(--text-rgb), 0.1); color: var(--muted); }
+.admin-btn-unknown:hover { background: rgba(var(--text-rgb), 0.18); }
+.admin-entry-status { font-size: 12px; margin: 6px 0 0; min-height: 16px; color: var(--muted); }

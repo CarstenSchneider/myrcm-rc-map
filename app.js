@@ -3755,6 +3755,9 @@ function showMenuHome() {
     <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
       ${authSection}
     </div>
+    ${isAdmin() ? `<div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
+      <button type="button" class="app-menu-item app-menu-admin-btn" data-menu="admin">Admin: Ausrichter verorten</button>
+    </div>` : ""}
     <div class="app-menu-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
         <span>made with</span>
@@ -3809,8 +3812,100 @@ function loginPageHtml() {
 }
 
 
+const ADMIN_EMAILS = ["carsten@lessrain.com", "carsten@lessrain.net"];
+function isAdmin() { return sbUser && ADMIN_EMAILS.includes(sbUser.email.toLowerCase()); }
+
+const GITHUB_REPO = "CarstenSchneider/myrcm-rc-map";
+const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
+const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
+
+async function adminLoadUnmatched() {
+  const res = await fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`);
+  return res.json();
+}
+
+async function adminCommit(payload) {
+  const { data: { session } } = await sbClient.auth.getSession();
+  const res = await fetch(SB_ADMIN_FN, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+async function showAdminPage() {
+  if (!appMenuContent) return;
+  appMenuContent.innerHTML = `
+    <button type="button" class="app-menu-back">← Zurück</button>
+    <div class="app-menu-page-content">
+      <h2 class="admin-title">Admin: Unbekannte Ausrichter</h2>
+      <div id="adminList"><p class="admin-loading">Lade…</p></div>
+    </div>`;
+  appMenuContent.querySelector(".app-menu-back")?.addEventListener("click", showMenuHome);
+
+  let entries;
+  try { entries = await adminLoadUnmatched(); }
+  catch (e) { document.getElementById("adminList").innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; return; }
+
+  if (!entries.length) {
+    document.getElementById("adminList").innerHTML = `<p class="admin-empty">Alle Ausrichter haben einen Ort.</p>`;
+    return;
+  }
+
+  document.getElementById("adminList").innerHTML = entries.map((e, i) => `
+    <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
+      <div class="admin-entry-header">
+        <strong>${escapeHtml(e.hostName)}</strong>
+        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
+      </div>
+      ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/show?P_SPORT_ID=1&P_NAV=7&P_ORG_ID=${e.myrcmOrgId}" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
+      <div class="admin-entry-fields">
+        <input type="text" class="admin-input" placeholder="Lat (z.B. 51.8)" data-field="lat" />
+        <input type="text" class="admin-input" placeholder="Lng (z.B. 11.8)" data-field="lng" />
+      </div>
+      <div class="admin-entry-actions">
+        <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+        <button type="button" class="admin-btn admin-btn-unknown">Ort unbekannt</button>
+      </div>
+      <p class="admin-entry-status"></p>
+    </div>`).join("");
+
+  document.getElementById("adminList").addEventListener("click", async ev => {
+    const entry = ev.target.closest(".admin-entry");
+    if (!entry) return;
+    const status = entry.querySelector(".admin-entry-status");
+    const hostId = entry.dataset.hostId;
+    const hostName = entry.dataset.hostName;
+    const myrcmOrgId = entry.dataset.myrcmOrgId;
+
+    if (ev.target.classList.contains("admin-btn-save")) {
+      const lat = parseFloat(entry.querySelector("[data-field=lat]").value.replace(",", "."));
+      const lng = parseFloat(entry.querySelector("[data-field=lng]").value.replace(",", "."));
+      if (isNaN(lat) || isNaN(lng)) { status.textContent = "Bitte Lat und Lng eingeben."; return; }
+      status.textContent = "Speichern…";
+      try {
+        await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+        entry.classList.add("admin-entry-done");
+        status.textContent = "✓ Gespeichert";
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+    }
+
+    if (ev.target.classList.contains("admin-btn-unknown")) {
+      status.textContent = "Speichern…";
+      try {
+        await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
+        entry.classList.add("admin-entry-done");
+        status.textContent = "✓ Als unbekannt markiert";
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+    }
+  });
+}
+
 function showMenuPage(page) {
   if (!appMenuContent) return;
+  if (page === "admin") { showAdminPage(); return; }
   const pages = { impressum: impressumHtml(), login: loginPageHtml() };
   appMenuContent.innerHTML = `
     <button type="button" class="app-menu-back">← Zurück</button>
