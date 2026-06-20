@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mfk-kurten-e-v",
-    "hostName": "MFK Kürten e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "53092",
-    "possibleVenue": "Köln",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "modellclub-flensburg-e-v",
     "hostName": "Modellclub Flensburg e.V",
     "source": "myrcm",
@@ -17,7 +9,7 @@
   },
   {
     "hostId": "msc-ober-morlen-e-v",
-    "hostName": "MSC Ober-Mörlen e.V.",
+    "hostName": "MSC Ober-MÃ¶rlen e.V.",
     "source": "myrcm",
     "myrcmOrgId": "66454",
     "possibleVenue": "Weiterstadt",
@@ -73,7 +65,7 @@
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team München e.V",
+    "hostName": "RC Race Team MÃ¼nchen e.V",
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
