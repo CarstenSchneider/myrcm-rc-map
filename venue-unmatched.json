@@ -17,7 +17,7 @@
   },
   {
     "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team MÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼nchen e.V",
+    "hostName": "RC Race Team München e.V",
     "source": "myrcm",
     "myrcmOrgId": "37520",
     "possibleVenue": "Ainring",
@@ -29,14 +29,6 @@
     "source": "myrcm",
     "myrcmOrgId": "6492",
     "possibleVenue": "Remscheid",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "slottis-supreme-masters",
-    "hostName": "Slottis Supreme Masters",
-    "source": "myrcm",
-    "myrcmOrgId": "60453",
-    "possibleVenue": "Sinntal",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
