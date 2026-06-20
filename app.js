@@ -447,9 +447,11 @@ async function sbInit() {
     sbClient.auth.onAuthStateChange(async (_event, session) => {
       sbUser = session?.user ?? null;
       if (sbUser) await sbPullAll();
+      else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
       if (typeof showMenuHome === "function") showMenuHome();
     });
     if (sbUser) await sbPullAll();
+    else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
   } catch (e) {
     console.error("Supabase init failed:", e);
   }
@@ -511,6 +513,7 @@ async function sbSaveTheme(theme) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 function loadFavoriteFilter() {
+  if (!sbUser) return "all";
   try {
     return localStorage.getItem(favoriteFilterStorageKey) === "favorites"
       ? "favorites"
