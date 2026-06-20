@@ -1,6 +1,18 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
+function fromBase64(b64: string): any {
+  const bytes = Uint8Array.from(atob(b64.replace(/\n/g, "")), c => c.charCodeAt(0));
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+
+function toBase64(text: string): string {
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+  return btoa(binary);
+}
+
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, content-type",
@@ -48,13 +60,13 @@ serve(async (req) => {
     const seedsRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}?ref=${BRANCH}`, { headers: ghHeaders });
     const seedsMeta = await seedsRes.json();
     const seedsSha = seedsMeta.sha;
-    const seeds: any[] = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(seedsMeta.content.replace(/\n/g, "")), c => c.charCodeAt(0))));
+    const seeds: any[] = fromBase64(seedsMeta.content);
 
     // Fetch current venue-unmatched.json
     const unmatchedRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}?ref=${BRANCH}`, { headers: ghHeaders });
     const unmatchedMeta = await unmatchedRes.json();
     const unmatchedSha = unmatchedMeta.sha;
-    const unmatched: any[] = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(unmatchedMeta.content.replace(/\n/g, "")), c => c.charCodeAt(0))));
+    const unmatched: any[] = fromBase64(unmatchedMeta.content);
 
     // Build new seed entry
     let newEntry: Record<string, any>;
@@ -78,7 +90,7 @@ serve(async (req) => {
     const newUnmatched = unmatched.filter((u: any) => u.hostId !== hostId);
 
     // Commit seeds
-    const seedsContent = btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(seeds, null, 2) + "\n")));
+    const seedsContent = toBase64(JSON.stringify(seeds, null, 2) + "\n");
     await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
@@ -86,7 +98,7 @@ serve(async (req) => {
     });
 
     // Commit unmatched
-    const unmatchedContent = btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(newUnmatched, null, 2) + "\n")));
+    const unmatchedContent = toBase64(JSON.stringify(newUnmatched, null, 2) + "\n");
     await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
