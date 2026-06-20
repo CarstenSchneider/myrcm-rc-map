@@ -2419,5 +2419,12 @@
     "lat": 51.17808024290368,
     "lng": 7.223162604471789,
     "myrcmOrgId": "6492"
+  },
+  {
+    "hostId": "smc-stuttgart-e-v",
+    "hostName": "SMC Stuttgart e.V.",
+    "lat": 48.720995,
+    "lng": 9.343529,
+    "myrcmOrgId": "51971"
   }
 ]
