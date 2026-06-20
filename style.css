@@ -2087,7 +2087,7 @@ input {
 }
 
 .layout-prototype .topbar {
-  --topbar-main-offset: 78px;
+  --topbar-main-offset: 64px;
   display: flex;
   align-items: center;
   gap: 12px;
