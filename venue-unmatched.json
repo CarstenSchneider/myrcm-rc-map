@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "rccars-bergisch-born-e-v",
-    "hostName": "RCCars Bergisch-Born e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "6492",
-    "possibleVenue": "Remscheid",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "source": "myrcm",
