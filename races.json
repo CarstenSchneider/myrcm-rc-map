@@ -27824,13 +27824,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": null,
     "classes": [
       {
         "name": "MCD Fanatics Cup",
-        "entries": 8
+        "entries": 9
       }
     ],
     "documents": [
@@ -28209,12 +28209,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94341&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=94341&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94341&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-06-20",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": "Nennung ab 20.06.2026",
+    "note": "Nennung geschlossen.",
     "classes": [
       "MCC - 17.5 Stock fixed",
       "MCC - Formel",
