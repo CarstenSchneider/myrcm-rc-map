@@ -3413,3 +3413,8 @@ body.is-menu-open .app-menu-close {
 .admin-entry-coords { display: flex; gap: 8px; margin-bottom: 8px; }
 .admin-entry-coords[hidden] { display: none; }
 .admin-input-coords { width: 100%; }
+
+/* MapLibre GL WebGL canvas: pointer-events none so compositor routes events
+   to elements above it (race panel etc.). Map interaction stays intact because
+   MapLibre attaches its handlers to the canvas *container*, not the canvas itself. */
+.maplibregl-canvas { pointer-events: none !important; }

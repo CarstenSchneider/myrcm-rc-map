@@ -408,14 +408,6 @@ function applyRcRaceMapStyle() {
 
 baseMapLayer.getMaplibreMap?.().on("load", applyRcRaceMapStyle);
 baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
-baseMapLayer.getMaplibreMap?.().on("load", () => {
-  // Scroll race panel 1px then back — forces compositor to rebuild hit-test tree
-  // for the scroll+backdrop-filter compositing layer so CSS :hover works after WebGL init
-  const rp = document.querySelector(".layout-prototype .race-panel");
-  if (!rp) return;
-  rp.scrollTop = 1;
-  requestAnimationFrame(() => { rp.scrollTop = 0; });
-});
 
 let venues = [];
 let races = [];
