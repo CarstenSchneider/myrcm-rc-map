@@ -4144,8 +4144,14 @@ function renderFavoritesPage(query) {
     ? allVenues.filter(v => (v.name + " " + (v.city || "")).toLowerCase().includes(query))
     : allVenues;
 
-  const mine = filtered.filter(v => favIds.has(String(v.id)));
-  const rest  = filtered.filter(v => !favIds.has(String(v.id)));
+  const venueIsFav = v => {
+    if (favIds.has(String(v.id))) return true;
+    if (v.hostId && favIds.has(String(v.hostId))) return true;
+    if (Array.isArray(v.hostIds)) return v.hostIds.some(id => favIds.has(String(id)));
+    return false;
+  };
+  const mine = filtered.filter(v => venueIsFav(v));
+  const rest  = filtered.filter(v => !venueIsFav(v));
 
   // Inactive: bell outline only, no circle
   const _bellSvgOff = `<svg class="fav-bell-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
