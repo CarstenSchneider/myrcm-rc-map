@@ -2610,9 +2610,14 @@ input {
 }
 
 
-/* Search fills remaining row width */
+/* Show full labels (Favoriten / Offen) in drawer — override the <1150px hide */
+.mob-drawer-filters .label-full {
+  display: inline !important;
+}
+
+/* Search: own full-width row */
 .mob-drawer-filters .topbar-search {
-  flex: 1 1 180px !important;
+  flex: 0 0 100% !important;
   min-width: 0 !important;
   max-width: none !important;
 }
