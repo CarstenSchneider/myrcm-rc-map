@@ -3429,5 +3429,5 @@ body.is-menu-open .app-menu-close {
 /* Dark mode: fav page */
 :root.theme-dark .fav-col-title { color: #6a8fd4; }
 :root.theme-dark .fav-tab.active { color: #6a8fd4; border-bottom-color: #6a8fd4; }
-:root.theme-dark .fav-star-btn { color: rgba(var(--text-rgb), 0.35); }
+:root.theme-dark .fav-star-btn:not(.active) { color: rgba(var(--text-rgb), 0.35); }
 :root.theme-dark .fav-star-btn.active:hover { color: rgba(var(--text-rgb), 0.45); }

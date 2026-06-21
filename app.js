@@ -58,9 +58,10 @@ const mapPinViewBox = {
 };
 const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,29.66,19.88,54.66,47.04,62.46l17.95,25.56,17.95-25.56c27.16-7.79,47.04-32.79,47.04-62.46Z";
 
-// Favorite star icon (viewBox 0 0 144 144): circle path + star path with rounded tips
-const _circlePath = `M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0Z`;
-const _starPath   = `M70.6,23.7 Q72,20 73.4,23.7 L84.9,54.2 L117.5,55.7 Q121.5,55.9 118.4,58.4 L92.9,78.8 L101.5,110.2 Q102.6,114.1 99.3,111.9 L72,94 L44.7,111.9 Q41.4,114.1 42.5,110.2 L51.1,78.8 L25.6,58.4 Q22.5,55.9 26.5,55.7 L59.1,54.2 Z`;
+// Favorite star icon (viewBox 0 0 24 24): circle + scaled Feather star as cutout
+const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z`;
+const _favIconSvg  = (cls = "favorite-toggle-icon") =>
+  `<svg class="${cls}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
 // Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
 function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
@@ -596,7 +597,7 @@ function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="${_circlePath}${_starPath}" fill="currentColor" fill-rule="evenodd"/></svg></button>`;
+  >${_favIconSvg()}</button>`;
 }
 
 
@@ -649,7 +650,7 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="${_circlePath}${_starPath}" fill="currentColor" fill-rule="evenodd"/></svg></button>`;
+  >${_favIconSvg()}</button>`;
 }
 
 function raceFavoriteVenueId(race) {
@@ -4019,7 +4020,7 @@ function openAdminPage() {
   });
 }
 
-const _iconStarCircle = `<svg class="fav-star-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z"/></svg>`;
+
 
 let _favPageReady = false;
 let _favResizeObserver = null;
@@ -4105,7 +4106,7 @@ function renderFavoritesPage(query) {
         <div class="fav-row-name">${escapeHtml(v.name)}</div>
         ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
       </div>
-      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_iconStarCircle}</button>
+      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
     </div>`;
 
   listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
