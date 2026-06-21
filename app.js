@@ -2409,11 +2409,32 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
 function resetVenueSelection() {
   if (!activeVenueId && !activeRaceId) return;
 
+  const prevVenueId = activeVenueId;
   pinnedVenueId = null;
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
   renderList(filteredRaces());
+
+  // Scroll the first race card of the previously active venue into view
+  if (prevVenueId) {
+    requestAnimationFrame(() => {
+      const card = raceList.querySelector(`[data-race-id]`);
+      // Find first card whose race belongs to prevVenueId
+      const allCards = raceList.querySelectorAll("[data-race-id]");
+      for (const c of allCards) {
+        const race = filteredRaces().find(r => r.id === c.dataset.raceId);
+        if (race && isRaceAtVenue(race, prevVenueId)) {
+          c.scrollIntoView({ block: "nearest", behavior: "instant" });
+          // Also mirror to mobile drawer
+          const mobCard = document.getElementById("mobRaceList")
+            ?.querySelector(`[data-race-id="${CSS.escape(c.dataset.raceId)}"]`);
+          mobCard?.scrollIntoView({ block: "nearest", behavior: "instant" });
+          break;
+        }
+      }
+    });
+  }
 }
 
 // Returns {pl, pr, pt, pb} padding for the currently visible map area.
