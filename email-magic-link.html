@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" style="color-scheme: light dark;">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RC Race Map – Anmelden</title>
+<title>RC Race Map - Anmelden</title>
 <style>
+  :root { color-scheme: light dark; }
   @media (prefers-color-scheme: dark) {
+    body { background: #0d1628 !important; }
     .email-outer  { background: #0d1628 !important; }
     .email-card   { background: #111c33 !important; }
     .email-header { background: #111c33 !important; }
@@ -16,6 +19,7 @@
     .email-small  { color: #4a5a78 !important; }
     .email-footer { background: #111c33 !important; border-top-color: #1e2f50 !important; }
     .email-footer a { color: #4a5a78 !important; }
+    .email-btn    { background: #2a4a8a !important; color: #ffffff !important; }
   }
 </style>
 </head>
@@ -48,7 +52,7 @@
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td align="center" style="padding: 20px 0 24px;">
-                  <a href="{{ .ConfirmationURL }}" style="display:inline-block; background:#213769; color:#ffffff; text-decoration:none; font-size:15px; font-weight:700; padding:14px 36px; border-radius:999px;">
+                  <a href="{{ .ConfirmationURL }}" class="email-btn" style="display:inline-block; background:#213769; color:#ffffff; text-decoration:none; font-size:15px; font-weight:700; padding:14px 36px; border-radius:999px;">
                     Jetzt anmelden
                   </a>
                 </td>
@@ -60,6 +64,7 @@
           </td>
         </tr>
 
+        <!-- v3 -->
         <!-- Footer -->
         <tr>
           <td class="email-footer" style="border-top:1px solid #e5e7eb; padding:18px 40px; text-align:center; background:#ffffff;">
