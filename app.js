@@ -4209,6 +4209,8 @@ window.addEventListener("load", () => {
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
+    requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
 });
 
