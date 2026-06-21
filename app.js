@@ -1306,6 +1306,9 @@ function newRaceBadgeHtml(race) {
 function registrationStatus(race) {
   if (race.registrationStatus) return race.registrationStatus;
   if (race.registrationRequiresLogin) return "login_required";
+  // For races without explicit status, infer from date
+  const raceEnd = race.to || race.from;
+  if (raceEnd && new Date(raceEnd) < new Date(new Date().toDateString())) return "closed";
   return "open";
 }
 
