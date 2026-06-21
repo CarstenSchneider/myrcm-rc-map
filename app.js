@@ -4057,6 +4057,11 @@ function openFavoritesPage() {
   }
 
   document.getElementById("favSearch").value = "";
+  const isMobile = window.innerWidth <= 860;
+  const body = page.querySelector(".fav-page-body");
+  const tabs = page.querySelector(".fav-tabs");
+  body?.classList.toggle("fav-mobile", isMobile);
+  tabs?.classList.toggle("fav-tabs-visible", isMobile);
   document.getElementById("favColMine")?.classList.add("fav-col-active");
   document.getElementById("favColAll")?.classList.remove("fav-col-active");
   page.querySelectorAll(".fav-tab").forEach((t, i) => t.classList.toggle("active", i === 0));

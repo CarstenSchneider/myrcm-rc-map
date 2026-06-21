@@ -3365,17 +3365,15 @@ body.is-menu-open .app-menu-close {
 .fav-toolbar { flex-shrink: 0; display: flex; gap: 10px; padding: 16px 24px; border-bottom: 1px solid rgba(var(--text-rgb), 0.07); }
 .fav-search { flex: 1; max-width: 360px; height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(var(--text-rgb), 0.15); background: var(--pill-bg); color: var(--text); font-size: 14px; outline: none; }
 .fav-search:focus { border-color: var(--accent); }
-/* Mobile tabs — hidden on desktop */
-.fav-tabs { display: none; }
-@media (max-width: 860px) {
-  .fav-tabs { display: flex; flex-shrink: 0; border-bottom: 1px solid rgba(var(--text-rgb), 0.07); }
-  .fav-tab { flex: 1; padding: 10px 12px; font-size: 13px; font-weight: 500; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; transition: color 120ms, border-color 120ms; }
-  .fav-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
-  .fav-columns { flex-direction: column; }
-  .fav-col { display: none; border-right: none; }
-  .fav-col.fav-col-active { display: flex; flex: 1; }
-  .fav-col-header { display: none; }
-}
+/* Mobile tabs */
+.fav-tabs { display: none; flex-shrink: 0; border-bottom: 1px solid rgba(var(--text-rgb), 0.07); }
+.fav-tabs.fav-tabs-visible { display: flex; }
+.fav-tab { flex: 1; padding: 10px 12px; font-size: 13px; font-weight: 500; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; transition: color 120ms, border-color 120ms; }
+.fav-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+/* JS adds fav-mobile class to fav-page-body when in mobile mode */
+.fav-page-body.fav-mobile .fav-col { display: none; border-right: none; }
+.fav-page-body.fav-mobile .fav-col.fav-col-active { display: flex; flex: 1; }
+.fav-page-body.fav-mobile .fav-col-header { display: none; }
 .fav-columns { flex: 1; display: flex; overflow: hidden; }
 .fav-col { flex: 1; display: flex; flex-direction: column; overflow: hidden; border-right: 1px solid rgba(var(--text-rgb), 0.07); }
 .fav-col:last-child { border-right: none; }
