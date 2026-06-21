@@ -4162,10 +4162,13 @@ function renderFavoritesPage(query) {
   const _bellPath = `M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
   const _bellSvgOn = `<svg class="fav-bell-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z ${_bellPath}" fill="currentColor"/></svg>`;
 
+  const venueCanonicalId = v => String(v.hostId || v.id);
+
   const rowHtml = (v, isFav) => {
-    const notifOn = sbUser && isNotificationEnabled(v.id);
+    const cid = venueCanonicalId(v);
+    const notifOn = sbUser && isNotificationEnabled(cid);
     const bellBtn = sbUser && isFav
-      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${notifOn ? _bellSvgOn : _bellSvgOff}</button>`
+      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${notifOn ? _bellSvgOn : _bellSvgOff}</button>`
       : "";
     return `
     <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
@@ -4175,7 +4178,7 @@ function renderFavoritesPage(query) {
       </div>
       <div class="fav-row-actions">
         ${bellBtn}
-        <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
+        <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
       </div>
     </div>`;
   };
