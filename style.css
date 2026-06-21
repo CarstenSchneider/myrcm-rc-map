@@ -3375,7 +3375,7 @@ body.is-menu-open .app-menu-close {
 .fav-row { display: flex; align-items: center; gap: 10px; padding: 9px 24px; transition: background 120ms; cursor: default; }
 .fav-row:hover { background: rgba(var(--text-rgb), 0.04); }
 .fav-row-info { flex: 1; min-width: 0; }
-.fav-row-name { font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fav-row-name { font-size: 13px; font-weight: 500; color: var(--text); }
 .fav-row-city { font-size: 12px; color: var(--muted); margin-top: 1px; }
 .fav-star-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); transition: background 120ms, color 120ms; }
 .fav-star-btn:hover { background: rgba(var(--text-rgb), 0.08); color: var(--text); }
