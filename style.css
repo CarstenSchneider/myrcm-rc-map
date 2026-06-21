@@ -238,7 +238,7 @@ input {
   text-align: left;
 }
 
-.race-card.is-clickable:hover,
+.race-card.is-clickable:is(:hover, .is-hovered),
 .race-card.active {
   border-color: var(--text);
   box-shadow: var(--shadow);
@@ -434,7 +434,7 @@ input {
   pointer-events: none;
 }
 
-.race-card:hover .tag-missing-location,
+.race-card:is(:hover, .is-hovered) .tag-missing-location,
 .race-card.active .tag-missing-location {
   border-color: var(--line);
   background: var(--surface-neutral);
@@ -741,10 +741,10 @@ input {
    card frame suggests a selection state that is no longer useful.
 */
 
-.layout-prototype .race-card.is-clickable:hover,
+.layout-prototype .race-card.is-clickable:is(:hover, .is-hovered),
 .layout-prototype .race-card.active,
 .layout-prototype .race-card.is-clickable.active,
-.layout-prototype .race-card.is-clickable.active:hover {
+.layout-prototype .race-card.is-clickable.active:is(:hover, .is-hovered) {
   border-color: var(--line);
   box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
 }
@@ -756,7 +756,7 @@ input {
    like static result cards.
 */
 
-.layout-prototype:not(.is-venue-mode) .race-card.is-clickable:hover,
+.layout-prototype:not(.is-venue-mode) .race-card.is-clickable:is(:hover, .is-hovered),
 .layout-prototype:not(.is-venue-mode) .race-card.active {
   border-color: var(--text);
   box-shadow: var(--shadow);
@@ -767,10 +767,10 @@ input {
   cursor: default;
 }
 
-.layout-prototype.is-venue-mode .race-card.is-clickable:hover,
+.layout-prototype.is-venue-mode .race-card.is-clickable:is(:hover, .is-hovered),
 .layout-prototype.is-venue-mode .race-card.active,
 .layout-prototype.is-venue-mode .race-card.is-clickable.active,
-.layout-prototype.is-venue-mode .race-card.is-clickable.active:hover {
+.layout-prototype.is-venue-mode .race-card.is-clickable.active:is(:hover, .is-hovered) {
   border-color: var(--line);
   box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
 }
@@ -1555,7 +1555,7 @@ input {
     background-color 0.16s ease;
 }
 
-.race-card.is-clickable:hover,
+.race-card.is-clickable:is(:hover, .is-hovered),
 .race-card.is-clickable:focus-visible {
   transform: scale(0.985);
   border-color: rgba(var(--border-rgb), 0.95) !important;

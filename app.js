@@ -4203,6 +4203,22 @@ document.addEventListener("click", e => {
 showMenuHome();
 
 // ── Init mobile state ──────────────────────────────────────────
+// JS hover fallback: CSS :hover is unreliable on race cards due to Chrome
+// compositor hit-test desync with the WebGL map canvas. mouseover/mouseout go
+// through the main-thread layout tree (same as elementFromPoint) which is correct.
+{
+  const rp = document.querySelector(".race-panel");
+  if (rp) {
+    rp.addEventListener("mouseover", e => {
+      e.target.closest(".race-card.is-clickable")?.classList.add("is-hovered");
+    });
+    rp.addEventListener("mouseout", e => {
+      const card = e.target.closest(".race-card.is-clickable");
+      if (card && !card.contains(e.relatedTarget)) card.classList.remove("is-hovered");
+    });
+  }
+}
+
 window.addEventListener("load", () => {
   setDrawerState("half");
   // Force Leaflet and MapLibre to re-measure after CSS is fully applied
