@@ -3210,35 +3210,13 @@ if (activeFilterChips) {
 
 window.addEventListener("resize", scheduleSlidingPillUpdate);
 
-// Freeze the map container during resize so Leaflet can't see the size change.
-// After resize ends, update size and reposition in one shot.
-const mapEl = document.getElementById("map");
 let resizeRecenterTimer = null;
-let isFrozen = false;
-
-function freezeMapSize() {
-  if (isFrozen || !mapEl) return;
-  isFrozen = true;
-  const r = mapEl.getBoundingClientRect();
-  mapEl.style.width  = r.width  + "px";
-  mapEl.style.height = r.height + "px";
-}
-
-function unfreezeMapSize() {
-  if (!mapEl) return;
-  isFrozen = false;
-  mapEl.style.width  = "";
-  mapEl.style.height = "";
-}
-
 window.addEventListener("resize", () => {
-  if (window.matchMedia("(max-width: 860px)").matches) return;
-  freezeMapSize();
   clearTimeout(resizeRecenterTimer);
   resizeRecenterTimer = setTimeout(() => {
     resizeRecenterTimer = null;
-    unfreezeMapSize();
     if (!map || !lastVisibleCenter) return;
+    if (window.matchMedia("(max-width: 860px)").matches) return;
     map.invalidateSize({ pan: false });
     panToVisible(lastVisibleCenter, map.getZoom());
   }, 150);
