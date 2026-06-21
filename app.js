@@ -4318,12 +4318,12 @@ function impressumHtml() {
     <h2>Impressum &amp; Datenschutz</h2>
     <section class="app-menu-section">
       <h3>Angaben gemäß § 5 TMG</h3>
-      <p>Less Rain GmbH<br>Stargarder Straße 57<br>10437 Berlin</p>
+      <p>Less Rain GmbH<br>Große Hamburger Straße 17<br>10115 Berlin</p>
       <p>E-Mail: <a href="mailto:info@rcracemap.com">info@rcracemap.com</a></p>
     </section>
     <section class="app-menu-section">
       <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-      <p>Less Rain GmbH<br>Stargarder Straße 57<br>10437 Berlin</p>
+      <p>Less Rain GmbH<br>Große Hamburger Straße 17<br>10115 Berlin</p>
     </section>
     <section class="app-menu-section">
       <h3>Datenschutz</h3>
