@@ -4021,6 +4021,7 @@ const iconStarFilled = `<svg width="16" height="16" viewBox="0 0 24 24" fill="cu
 const iconStarEmpty  = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
 
 let _favPageReady = false;
+let _favResizeObserver = null;
 function openFavoritesPage() {
   const page = document.getElementById("favoritesPage");
   if (!page) return;
@@ -4057,11 +4058,21 @@ function openFavoritesPage() {
   }
 
   document.getElementById("favSearch").value = "";
-  const isMobile = window.innerWidth <= 860;
+
   const body = page.querySelector(".fav-page-body");
   const tabs = page.querySelector(".fav-tabs");
-  body?.classList.toggle("fav-mobile", isMobile);
-  tabs?.classList.toggle("fav-tabs-visible", isMobile);
+  const applyLayout = () => {
+    const isMobile = window.innerWidth <= 860;
+    body?.classList.toggle("fav-mobile", isMobile);
+    tabs?.classList.toggle("fav-tabs-visible", isMobile);
+  };
+  applyLayout();
+
+  if (!_favResizeObserver) {
+    _favResizeObserver = new ResizeObserver(applyLayout);
+  }
+  _favResizeObserver.observe(document.documentElement);
+
   document.getElementById("favColMine")?.classList.add("fav-col-active");
   document.getElementById("favColAll")?.classList.remove("fav-col-active");
   page.querySelectorAll(".fav-tab").forEach((t, i) => t.classList.toggle("active", i === 0));
