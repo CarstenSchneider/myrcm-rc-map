@@ -116,16 +116,7 @@ function formatDate(iso: string): string {
 
 // ── Main handler ───────────────────────────────────────────────────────────
 
-serve(async (req) => {
-  // Allow cron invocation (no auth header) and authenticated calls
-  const authHeader = req.headers.get("Authorization");
-  const isCron = !authHeader;
-
-  if (!isCron) {
-    const { data: { user }, error } = await supabase.auth.getUser(authHeader?.replace("Bearer ", "") ?? "");
-    if (error || !user) return new Response("Unauthorized", { status: 401 });
-  }
-
+serve(async (_req) => {
   // 1. Fetch all notification subscriptions
   const { data: subs, error: subsErr } = await supabase
     .from("venue_notifications")
