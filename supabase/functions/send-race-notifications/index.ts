@@ -38,7 +38,7 @@ function emailHtml(rows: RaceRow[], userId: string): string {
   const items = uniqueRows.map(r => {
     let regLine = "";
     if (r.registrationStatus === "open" && r.registrationUrl) {
-      regLine = `<a href="${r.registrationUrl}" style="color:#213769; text-decoration:none; font-size:13px;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
+      regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
     } else if (r.registrationStatus === "upcoming") {
       const note = r.registrationNote || (r.registrationOpens ? `Nennung ab ${r.registrationOpens}` : "Nennung folgt");
       regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#f59e0b")}"></span>${escHtml(note)}</span>`;
@@ -47,19 +47,19 @@ function emailHtml(rows: RaceRow[], userId: string): string {
     }
 
     const announcementLink = r.announcementUrl
-      ? ` &nbsp;·&nbsp; <a href="${r.announcementUrl}" style="color:#9ca3af; font-size:13px; text-decoration:none;">Ausschreibung ↗</a>`
+      ? ` &nbsp;·&nbsp; <a href="${r.announcementUrl}" style="color:#6b7280; font-size:13px; text-decoration:none;">Ausschreibung ↗</a>`
       : "";
 
     const classTags = r.classes.length
-      ? `<div style="margin-top:6px;">${r.classes.slice(0, 6).map(c => `<span style="display:inline-block;background:#f3f4f6;color:#374151;font-size:11px;padding:2px 8px;border-radius:999px;margin:2px 2px 0 0;">${escHtml(c)}</span>`).join("")}${r.classes.length > 6 ? `<span style="font-size:11px;color:#9ca3af;"> +${r.classes.length - 6}</span>` : ""}</div>`
+      ? `<div style="margin-top:6px;">${r.classes.slice(0, 6).map(c => `<span class="item-pill" style="display:inline-block;background:#f3f4f6;color:#6b7280;font-size:11px;padding:2px 8px;border-radius:999px;margin:2px 2px 0 0;">${escHtml(c)}</span>`).join("")}${r.classes.length > 6 ? `<span style="font-size:11px;color:#9ca3af;"> +${r.classes.length - 6}</span>` : ""}</div>`
       : "";
 
     return `
       <tr>
         <td class="item-sep" style="padding: 14px 0; border-bottom: 1px solid #e5e7eb;">
-          <div style="font-size:14px; font-weight:300; color:#374151; margin-bottom:2px;">${escHtml(r.raceDate)}</div>
-          <div style="font-size:14px; font-weight:700; color:#6b7280; margin-bottom:2px;">${escHtml(r.venueName)}</div>
-          <div class="item-title" style="font-size:14px; font-weight:700; color:#213769; margin-bottom:6px;">${escHtml(r.raceName)}</div>
+          <div style="font-size:14px; font-weight:400; color:#6b7280; margin-bottom:2px;">${escHtml(r.raceDate)}</div>
+          <div style="font-size:14px; font-weight:400; color:#6b7280; margin-bottom:2px;">${escHtml(r.venueName)}</div>
+          <div class="item-title" style="font-size:15px; font-weight:700; color:#213769; margin-bottom:6px;">${escHtml(r.raceName)}</div>
           ${regLine || announcementLink ? `<div style="margin-bottom:4px;">${regLine}${announcementLink}</div>` : ""}
           ${classTags}
         </td>
@@ -88,9 +88,9 @@ function emailHtml(rows: RaceRow[], userId: string): string {
     .email-footer { background: #111c33 !important; border-top-color: #1e2f50 !important; }
     .email-footer a { color: #4a5a78 !important; }
     .item-title   { color: #d8e0f0 !important; }
-    .item-venue   { color: #8a9bb8 !important; }
-    .item-date    { color: #8a9bb8 !important; }
     .item-sep     { border-bottom-color: #1e2f50 !important; }
+    .item-pill    { background: #1e2f50 !important; color: #8a9bb8 !important; }
+    .item-reg     { color: #8a9bb8 !important; }
   }
 </style>
 </head>
