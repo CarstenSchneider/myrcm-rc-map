@@ -15,6 +15,7 @@ let dataLastUpdatedAt = null;
 const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
+  attributionControl: false,
   minZoom: 6
 }).setView([51.8, 11.8], 7);
 
@@ -56,6 +57,11 @@ const mapPinViewBox = {
   height: 153
 };
 const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,29.66,19.88,54.66,47.04,62.46l17.95,25.56,17.95-25.56c27.16-7.79,47.04-32.79,47.04-62.46Z";
+
+// Favorite star icon (viewBox 0 0 24 24): circle + scaled Feather star as cutout
+const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z`;
+const _favIconSvg  = (cls = "favorite-toggle-icon") =>
+  `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
 // Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
 function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
@@ -431,7 +437,91 @@ const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
 const favoriteFilterStorageKey = "rcRaceMapFavoriteFilter";
 
+// ── Supabase ──────────────────────────────────────────────────────────────────
+const SUPABASE_URL = "https://ncsqbncxctofkmabmwku.supabase.co";
+const SUPABASE_KEY = "sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P";
+const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_KEY) ?? null;
+
+let sbUser = null;
+
+async function sbInit() {
+  if (!sbClient) return;
+  try {
+    const { data: { session } } = await sbClient.auth.getSession();
+    sbUser = session?.user ?? null;
+    sbClient.auth.onAuthStateChange(async (_event, session) => {
+      sbUser = session?.user ?? null;
+      if (sbUser) await sbPullAll();
+      else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
+      document.body.classList.toggle("user-logged-in", !!sbUser);
+      if (typeof showMenuHome === "function") showMenuHome();
+    });
+    if (sbUser) await sbPullAll();
+    else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
+    document.body.classList.toggle("user-logged-in", !!sbUser);
+  } catch (e) {
+    console.error("Supabase init failed:", e);
+  }
+}
+
+async function sbSendMagicLink(email) {
+  if (!sbClient) return { error: { message: "Supabase not loaded" } };
+  return sbClient.auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: window.location.origin + window.location.pathname }
+  });
+}
+
+async function sbSignOut() {
+  if (!sbClient) return;
+  await sbClient.auth.signOut();
+}
+
+async function sbPullAll() {
+  if (!sbClient || !sbUser) return;
+  selectedFavoriteFilter = loadFavoriteFilter();
+  await Promise.all([sbPullFavorites(), sbPullPreferences()]);
+}
+
+async function sbPullFavorites() {
+  const { data, error } = await sbClient.from("user_favorites").select("host_id").eq("user_id", sbUser.id);
+  if (error) { console.error("sbPullFavorites:", error); return; }
+  const remoteIds = data.map(r => r.host_id);
+  const localIds = getFavoriteHostIds();
+  const merged = [...new Set([...localIds, ...remoteIds])];
+  saveFavoriteHostIds(merged);
+  if (merged.length !== remoteIds.length) {
+    const toInsert = merged.filter(id => !remoteIds.includes(id)).map(host_id => ({ user_id: sbUser.id, host_id }));
+    if (toInsert.length) {
+      const { error: upsertErr } = await sbClient.from("user_favorites").upsert(toInsert);
+      if (upsertErr) console.error("sbPullFavorites upsert:", upsertErr);
+    }
+  }
+}
+
+async function sbPullPreferences() {
+  const { data, error } = await sbClient.from("user_preferences").select("theme").eq("user_id", sbUser.id).maybeSingle();
+  if (error) { console.error("sbPullPreferences:", error); return; }
+  if (data?.theme) setTheme(data.theme);
+}
+
+async function sbToggleFavorite(hostId, isNowFavorite) {
+  if (!sbClient || !sbUser) return;
+  const { error } = isNowFavorite
+    ? await sbClient.from("user_favorites").upsert({ user_id: sbUser.id, host_id: hostId })
+    : await sbClient.from("user_favorites").delete().eq("user_id", sbUser.id).eq("host_id", hostId);
+  if (error) console.error("sbToggleFavorite:", error);
+}
+
+async function sbSaveTheme(theme) {
+  if (!sbClient || !sbUser) return;
+  const { error } = await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, theme, updated_at: new Date().toISOString() });
+  if (error) console.error("sbSaveTheme:", error);
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 function loadFavoriteFilter() {
+  if (!sbUser) return "all";
   try {
     return localStorage.getItem(favoriteFilterStorageKey) === "favorites"
       ? "favorites"
@@ -452,7 +542,9 @@ function saveFavoriteFilter(value) {
   }
 }
 
-selectedFavoriteFilter = loadFavoriteFilter();
+// Don't load from localStorage here — auth hasn't resolved yet. Reset to "all" at startup,
+// then load from storage in sbPullAll() once we know a user is logged in.
+selectedFavoriteFilter = "all";
 
 function getFavoriteHostIds() {
   try {
@@ -471,7 +563,7 @@ function saveFavoriteHostIds(ids) {
 }
 
 function isFavoriteHostId(hostId) {
-  if (!hostId) return false;
+  if (!hostId || !sbUser) return false;
   return getFavoriteHostIds().includes(String(hostId));
 }
 
@@ -480,12 +572,14 @@ function toggleFavoriteHost(hostId) {
 
   const id = String(hostId);
   const favoriteIds = getFavoriteHostIds();
+  const isNowFavorite = !favoriteIds.includes(id);
 
-  if (favoriteIds.includes(id)) {
-    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
-  } else {
+  if (isNowFavorite) {
     saveFavoriteHostIds([...favoriteIds, id]);
+  } else {
+    saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
   }
+  sbToggleFavorite(id, isNowFavorite).catch(e => console.error("toggleFavoriteHost sync:", e));
 }
 
 function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
@@ -503,7 +597,7 @@ function favoriteHostButtonHtml(hostId, label = "Ausrichter") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg></button>`;
+  >${_favIconSvg()}</button>`;
 }
 
 
@@ -524,7 +618,7 @@ function saveFavoriteVenueIds(ids) {
 }
 
 function isFavoriteVenueId(venueId) {
-  if (!venueId) return false;
+  if (!venueId || !sbUser) return false;
   return getFavoriteVenueIds().includes(String(venueId));
 }
 
@@ -556,7 +650,7 @@ function favoriteButtonHtml(venueId, label = "Strecke") {
     title="${escapeHtml(title)}"
     aria-label="${escapeHtml(title)}"
     aria-pressed="${active ? "true" : "false"}"
-  ><svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg></button>`;
+  >${_favIconSvg()}</button>`;
 }
 
 function raceFavoriteVenueId(race) {
@@ -2396,7 +2490,14 @@ function updateMarkers(list, shouldFitBounds = true) {
       ? "map-marker-active-replacement-open"
       : "map-marker-active-replacement-closed";
 
-    const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race));
+    const venueHostIds = [
+      venue.hostId,
+      ...(Array.isArray(venue.hostIds) ? venue.hostIds : []),
+      venue.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,
+      venue.hostName ? slugifyMatchValue(venue.hostName) : null
+    ].filter(Boolean).map(String);
+    const isFavoriteVenue = venueRaces.some(race => isFavoriteRaceHost(race))
+      || venueHostIds.some(id => isFavoriteHostId(id));
 
     let markerColor;
     if (isFavoriteVenue) {
@@ -2770,6 +2871,11 @@ document.addEventListener("click", event => {
   event.preventDefault();
   event.stopPropagation();
 
+  if (!sbUser) {
+    showLoginPrompt();
+    return;
+  }
+
   if (favoriteHostButton) {
     toggleFavoriteHost(favoriteHostButton.dataset.favoriteHostId);
   } else if (favoriteVenueButton) {
@@ -3034,6 +3140,11 @@ if (favoriteFilter) {
   favoriteFilter.addEventListener("click", event => {
     const button = event.target.closest("button[data-favorite-filter]");
     if (!button) return;
+
+    if (!sbUser && button.dataset.favoriteFilter === "favorites") {
+      showLoginPrompt();
+      return;
+    }
 
     selectedFavoriteFilter = button.dataset.favoriteFilter === "favorites"
       ? "favorites"
@@ -3605,11 +3716,14 @@ function applyTheme(theme) {
 }
 
 function setTheme(theme) {
+  document.documentElement.classList.add("theme-transitioning");
   localStorage.setItem(THEME_KEY, theme);
   applyTheme(theme);
   document.querySelectorAll(".theme-toggle-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.theme === theme);
   });
+  sbSaveTheme(theme);
+  setTimeout(() => document.documentElement.classList.remove("theme-transitioning"), 400);
 }
 
 applyTheme(localStorage.getItem(THEME_KEY) || "auto");
@@ -3638,40 +3752,407 @@ function closeAppMenu() {
   appMenuPanel?.setAttribute("aria-hidden", "true");
   document.body.classList.remove("is-menu-open");
   menuButtons.forEach(b => b?.setAttribute("aria-label", "Menü öffnen"));
+  const fp = document.getElementById("favoritesPage");
+  if (fp) fp.hidden = true;
   showMenuHome();
 }
 
 function showMenuHome() {
   if (!appMenuContent) return;
   const current = localStorage.getItem(THEME_KEY) || "auto";
+  const chevron = `<svg class="app-menu-row-chevron" viewBox="0 0 14 14"><polyline points="5,2 10,7 5,12"/></svg>`;
+  const iconStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
+  const iconBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+  const iconSun = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+  const iconPin = `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
+  const iconInfo = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`;
+  const iconUser = `<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
+  const lessrainSvg = `<svg viewBox="0 0 82.21 14.42" xmlns="http://www.w3.org/2000/svg" class="app-menu-footer-logo" aria-label="Lessrain"><g><path d="M6.11,10.53c0,.36-.02,1.03.08,1.35.22.73,1.13.38,1.13,1.23,0,1.35-2.46,1.25-3.33,1.25s-3.73.1-3.73-1.33c0-.71.87-.44,1.11-1.19.26-.83.26-3.35.26-4.34,0-.79.04-2.3-.14-3.21C1.19,2.8,0,3.33,0,2.18,0,.42,5.24,0,5.53,0,6.21,0,6.37.44,6.37,1.05c0,.46-.26,2.68-.26,5.57v3.91Z"/><path d="M13.41,6.96c0-.73-.44-1.29-1.19-1.29-.67,0-1.21.69-1.21,1.33,0,.73.69.57,1.21.57s1.19.12,1.19-.61M11.66,9.5c-.22,0-.54-.06-.54.28,0,1.01,1.31,1.86,2.26,1.86,1.51,0,2.26-.91,2.68-.91s.79.63.79,1.01c0,1.55-2.84,2.68-4.66,2.68-3.63,0-5.51-2.62-5.51-5.22,0-3.11,2.64-5.37,5.67-5.37,3.43,0,4.94,2.64,4.94,4.16,0,1.33-.6,1.51-1.25,1.51h-4.38Z"/><path d="M22.59,3.95c.36.06.69.14.83.14.2,0,.36-.06.55-.14.18-.06.36-.12.54-.12.93,0,1.86,1.86,1.86,2.68,0,.55-.46.95-.99.95-1.15,0-1.8-1.59-2.68-1.59-.36,0-.73.3-.73.69,0,1.29,4.44,1.53,4.44,4.66,0,1.9-1.84,3.21-3.93,3.21-.4,0-.99-.06-1.49-.14-.5-.06-.95-.12-1.07-.12-.14,0-.26.02-.4.04-.12.02-.24.04-.38.04-.4,0-.6-.06-.89-.38-.5-.56-1.01-1.71-1.01-2.48,0-.52.18-.95.77-.95.89,0,1.69,2,2.82,2,.4,0,.79-.2.79-.64,0-1.19-3.95-1.33-3.95-4.66,0-2.02,1.65-3.29,3.73-3.29.4,0,.83.04,1.21.12"/><path d="M32.29,3.95c.36.06.69.14.83.14.2,0,.36-.06.55-.14.18-.06.36-.12.54-.12.93,0,1.86,1.86,1.86,2.68,0,.55-.46.95-.99.95-1.15,0-1.8-1.59-2.68-1.59-.36,0-.73.3-.73.69,0,1.29,4.44,1.53,4.44,4.66,0,1.9-1.83,3.21-3.93,3.21-.4,0-.99-.06-1.49-.14-.5-.06-.95-.12-1.07-.12-.14,0-.26.02-.4.04-.12.02-.24.04-.38.04-.4,0-.6-.06-.89-.38-.51-.56-1.01-1.71-1.01-2.48,0-.52.18-.95.77-.95.89,0,1.69,2,2.82,2,.4,0,.79-.2.79-.64,0-1.19-3.95-1.33-3.95-4.66,0-2.02,1.65-3.29,3.73-3.29.4,0,.83.04,1.21.12"/><path d="M40.05,8.03c0-1.98-1.25-.87-1.25-2.1,0-1.59,4.72-2.04,4.9-2.04.77,0,.79.2.87.89.02.24,0,.71.34.71.48,0,.79-1.59,2.52-1.59,1.35,0,2.24,1.01,2.24,2.34s-1.15,2.42-2.48,2.42-1.67-1.15-2.2-1.15c-.56,0-.46,1.35-.46,1.71,0,.61.06,1.45.16,2.22.12.89,1.65.34,1.65,1.55s-1.77,1.37-3.99,1.37c-.93,0-3.67.04-3.67-1.35,0-.85.93-.85,1.15-1.55.16-.5.22-1.65.22-2.22v-1.21Z"/><path d="M53.48,11.09c0,.52.28,1.09.87,1.09.77,0,.83-.83.83-1.43,0-.44.02-.95-.54-.95-.69,0-1.15.64-1.15,1.29M59.54,9.32c0,3.55,1.21,1.61,1.21,2.7,0,1.15-1.57,2.4-3.04,2.4-1.59,0-1.63-1.03-2.14-1.03-.24,0-.51.26-.95.5-.44.26-1.05.53-1.98.53-1.67,0-3.35-.89-3.35-2.88,0-1.43,1.37-3.21,4.92-3.21.63,0,.91.04.91-.69,0-.67-.02-2.06-.95-2.06-1.21,0-1.33,2.18-3.13,2.18-.65,0-1.13-.46-1.13-1.11,0-1.71,3.41-2.82,5.32-2.82,1.15,0,4.3.44,4.3,3.47v2.02Z"/><path d="M62.78,3.25c-.85,0-1.75-.38-1.75-1.37C61.03.54,63.69,0,64.72,0c.81,0,1.96.26,1.96,1.27,0,1.57-2.74,1.98-3.89,1.98M66.78,10.41c0,2.38,1.19,1.51,1.19,2.58,0,1.37-2.56,1.37-3.47,1.37-3.47,0-3.61-.79-3.61-1.27,0-.73.83-.77,1.07-1.39.26-.71.3-3.63.08-4.38-.18-.71-1.21-.48-1.21-1.39,0-1.43,5.12-2.04,5.33-2.04.61,0,.62.46.62.89v5.63Z"/><path d="M74.2,10.77c0,1.96.69,1.61.69,2.38,0,1.25-2.68,1.21-3.51,1.21s-2.86,0-2.86-1.21c0-.97.93-.1.99-2.08l.08-3.03c.04-1.49-1.19-1.01-1.19-2.08s4.64-2.08,5.04-2.08c.44,0,.73.38.73.79,0,.12-.02.24-.02.36,0,.24.1.52.4.52.32,0,.5-.42.91-.85.4-.4,1.01-.83,2.16-.83,4.18,0,3.47,4.09,3.67,7.16.1,1.59.93,1.23.93,2.1,0,.36.08,1.21-3.71,1.21-.73,0-2.66.04-2.66-1.09,0-.73.67-.38.77-1.69.1-1.43.67-4.66-1.23-4.66-1.29,0-1.17,1.39-1.17,2.3v1.55Z"/></g></svg>`;
+
+  const authSection = sbUser
+    ? `<div class="app-menu-auth-user">
+        <span class="app-menu-auth-avatar">${sbUser.email[0].toUpperCase()}</span>
+        <div class="app-menu-auth-info">
+          <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
+          <span class="app-menu-auth-status">Angemeldet</span>
+        </div>
+        <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">Abmelden</button>
+      </div>`
+    : `<button type="button" class="app-menu-row" id="sbLoginBtn">
+        <span class="app-menu-row-icon">${iconUser}</span>
+        <span class="app-menu-row-label">Anmelden &amp; Favoriten</span>
+        ${chevron}
+      </button>`;
+
   appMenuContent.innerHTML = `
-    <div class="app-menu-section" style="padding-bottom:16px; border-bottom:1px solid rgba(var(--border-rgb),0.5); margin-bottom:8px;">
-      <div class="app-menu-section-label">Darstellung</div>
+    ${authSection}
+    <div class="app-menu-sep"></div>
+    <div class="app-menu-row app-menu-theme-row">
+      <span class="app-menu-row-icon">${iconSun}</span>
+      <span class="app-menu-row-label">Darstellung</span>
       <div class="theme-toggle">
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
         <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">Tag</button>
         <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">Nacht</button>
-        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
       </div>
     </div>
-    <ul class="app-menu-list">
-      <li><button type="button" class="app-menu-item" data-menu="impressum">Impressum &amp; Datenschutz</button></li>
-    </ul>`;
+    ${sbUser ? `
+    <button type="button" class="app-menu-row" data-menu="favorites">
+      <span class="app-menu-row-icon">${iconStar}</span>
+      <span class="app-menu-row-label">Favoriten</span>
+      ${chevron}
+    </button>
+` : ""}
+    ${isAdmin() ? `
+    <div class="app-menu-sep"></div>
+    <button type="button" class="app-menu-row" data-menu="admin">
+      <span class="app-menu-row-icon">${iconPin}</span>
+      <span class="app-menu-row-label">Ausrichter verorten</span>
+      ${chevron}
+    </button>` : ""}
+    <div class="app-menu-sep"></div>
+    <button type="button" class="app-menu-row" data-menu="impressum">
+      <span class="app-menu-row-icon">${iconInfo}</span>
+      <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
+      ${chevron}
+    </button>
+    <div class="app-menu-footer">
+      <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
+        <span>made with</span>
+        ${lessrainSvg}
+      </a>
+      <div class="app-menu-footer-legal">
+        <div class="app-menu-footer-legal-row">
+          <span>Daten:</span>
+          <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">MyRCM</a>
+          <span>·</span>
+          <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">RCK</a>
+          <span>·</span>
+          <span>Karte:</span>
+          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a>
+        </div>
+      </div>
+    </div>`;
+
   appMenuContent.querySelectorAll(".theme-toggle-btn").forEach(btn => {
     btn.addEventListener("click", () => setTheme(btn.dataset.theme));
   });
   appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
     btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
   });
+  document.getElementById("sbLoginBtn")?.addEventListener("click", () => showMenuPage("login"));
+  document.getElementById("sbSignOutBtn")?.addEventListener("click", async () => {
+    await sbSignOut();
+    showMenuHome();
+  });
+}
+
+function maskEmail(email) {
+  const [local, domain] = email.split("@");
+  const [domName, ...domExt] = domain.split(".");
+  const mask = s => s[0] + "*".repeat(Math.max(1, s.length - 2)) + s[s.length - 1];
+  return `${mask(local)}@${mask(domName)}.${domExt.join(".")}`;
+}
+
+function loginPageHtml() {
+  return `
+    <div class="app-menu-login-form">
+      <p class="app-menu-login-info">Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.</p>
+      <input type="email" id="sbEmailInput" class="app-menu-login-input" placeholder="deine@email.de" autocomplete="email" />
+      <button type="button" class="app-menu-login-submit" id="sbLoginSubmit">Link senden</button>
+      <p class="app-menu-login-hint" id="sbLoginHint"></p>
+    </div>`;
+}
+
+
+const ADMIN_EMAILS = ["carsten@lessrain.com", "carsten@lessrain.net"];
+const EXCLUDED_MYRCM_ORG_IDS = new Set(["60453"]); // Slottis Supreme Masters
+function isAdmin() { return sbUser && ADMIN_EMAILS.includes(sbUser.email.toLowerCase()); }
+
+const GITHUB_REPO = "CarstenSchneider/myrcm-rc-map";
+const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
+const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
+
+async function adminLoadUnmatched() {
+  const [unmatchedRes, seedsRes] = await Promise.all([
+    fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
+    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
+  ]);
+  const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
+  const seeds = await seedsRes.json();
+  const unknownSeeds = seeds
+    .filter(s => s.locationUnknown)
+    .map(s => ({ hostId: s.hostId, hostName: s.hostName, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
+  // Merge: unmatched first, then unknown seeds not already in unmatched
+  const unmatchedIds = new Set(unmatched.map(u => u.hostId));
+  return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+}
+
+async function adminCommit(payload) {
+  const { data: { session } } = await sbClient.auth.getSession();
+  const res = await fetch(SB_ADMIN_FN, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+function showLoginPrompt() {
+  const existing = document.getElementById("loginPrompt");
+  if (existing) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "loginPrompt";
+  overlay.className = "login-prompt-overlay";
+  overlay.innerHTML = `
+    <div class="login-prompt-card">
+      <button type="button" class="login-prompt-close" id="loginPromptClose" aria-label="Schließen">
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
+      <p class="login-prompt-text">Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.</p>
+      <button type="button" class="login-prompt-btn" id="loginPromptBtn">Anmelden</button>
+    </div>`;
+
+  const close = () => overlay.remove();
+  overlay.addEventListener("click", e => { if (e.target === overlay) close(); });
+  document.body.appendChild(overlay);
+  overlay.querySelector("#loginPromptClose")?.addEventListener("click", close);
+  overlay.querySelector("#loginPromptBtn")?.addEventListener("click", () => {
+    close();
+    openAppMenu();
+    showMenuPage("login");
+  });
+}
+
+function openImpressumPage() {
+  const page = document.getElementById("impressumPage");
+  const content = document.getElementById("impressumPageContent");
+  if (!page || !content) return;
+  closeAppMenu();
+  content.innerHTML = impressumHtml();
+  page.hidden = false;
+  document.getElementById("impressumPageBack")?.addEventListener("click", () => {
+    page.hidden = true;
+    openAppMenu();
+  }, { once: true });
+}
+
+function openAdminPage() {
+  const adminPage = document.getElementById("adminPage");
+  const listEl = document.getElementById("adminPageList");
+  if (!adminPage || !listEl) return;
+
+  // Close menu first
+  closeAppMenu();
+
+  adminPage.hidden = false;
+  listEl.innerHTML = `<p class="admin-loading">Lade…</p>`;
+
+  document.getElementById("adminPageBack")?.addEventListener("click", () => {
+    adminPage.hidden = true;
+    openAppMenu();
+  }, { once: true });
+
+  adminLoadUnmatched().then(entries => {
+    if (!entries.length) {
+      listEl.innerHTML = `<p class="admin-empty">Alle Ausrichter haben einen Ort.</p>`;
+      return;
+    }
+
+    listEl.innerHTML = entries.map((e, i) => `
+      <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
+        <div class="admin-entry-header">
+          <strong>${escapeHtml(e.hostName)}</strong>
+          <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
+        </div>
+        ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
+        <label class="admin-entry-toggle">
+          <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
+          Ort unbekannt
+        </label>
+        <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
+          <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
+        </div>
+        <div class="admin-entry-actions">
+          <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+        </div>
+        <p class="admin-entry-status"></p>
+      </div>`).join("");
+
+    listEl.addEventListener("change", ev => {
+      if (!ev.target.classList.contains("admin-unknown-toggle")) return;
+      const entry = ev.target.closest(".admin-entry");
+      const coords = entry.querySelector(".admin-entry-coords");
+      coords.hidden = ev.target.checked;
+    });
+
+    listEl.addEventListener("click", async ev => {
+      if (!ev.target.classList.contains("admin-btn-save")) return;
+      const entry = ev.target.closest(".admin-entry");
+      const status = entry.querySelector(".admin-entry-status");
+      const hostId = entry.dataset.hostId;
+      const hostName = entry.dataset.hostName;
+      const myrcmOrgId = entry.dataset.myrcmOrgId;
+      const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
+
+      status.textContent = "Speichern…";
+      try {
+        if (isUnknown) {
+          await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
+          status.textContent = "✓ Gespeichert";
+          return;
+        } else {
+          const coordsRaw = entry.querySelector("[data-field=coords]").value;
+          const parts = coordsRaw.split(",").map(s => parseFloat(s.trim()));
+          const [lat, lng] = parts;
+          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
+          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+          status.textContent = "✓ Gespeichert";
+        }
+        entry.classList.add("admin-entry-done");
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+    });
+  }).catch(e => {
+    listEl.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`;
+  });
+}
+
+
+
+let _favPageReady = false;
+let _favResizeObserver = null;
+function openFavoritesPage() {
+  const page = document.getElementById("favoritesPage");
+  if (!page) return;
+  page.hidden = false;
+
+  if (!_favPageReady) {
+    _favPageReady = true;
+    document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
+      page.hidden = true;
+      void document.body.offsetHeight;
+    });
+    const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
+    page.addEventListener("click", e => {
+      const tab = e.target.closest(".fav-tab");
+      if (tab) {
+        page.querySelectorAll(".fav-tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        const which = tab.dataset.favTab;
+        document.getElementById("favColMine")?.classList.toggle("fav-col-active", which === "mine");
+        document.getElementById("favColAll")?.classList.toggle("fav-col-active", which === "all");
+        return;
+      }
+      const btn = e.target.closest(".fav-star-btn");
+      if (!btn) return;
+      const venueId = btn.dataset.venueId;
+      if (!venueId) return;
+      toggleFavoriteHost(venueId);
+      renderFavoritesPage(currentQuery());
+    });
+    document.getElementById("favSearch")?.addEventListener("input", e => {
+      renderFavoritesPage(e.target.value.trim().toLowerCase());
+    });
+  }
+
+  document.getElementById("favSearch").value = "";
+
+  const body = page.querySelector(".fav-page-body");
+  const tabs = page.querySelector(".fav-tabs");
+  const applyLayout = () => {
+    const isMobile = window.innerWidth <= 860;
+    body?.classList.toggle("fav-mobile", isMobile);
+    tabs?.classList.toggle("fav-tabs-visible", isMobile);
+  };
+  applyLayout();
+
+  if (!_favResizeObserver) {
+    _favResizeObserver = new ResizeObserver(applyLayout);
+  }
+  _favResizeObserver.observe(document.documentElement);
+
+  document.getElementById("favColMine")?.classList.add("fav-col-active");
+  document.getElementById("favColAll")?.classList.remove("fav-col-active");
+  page.querySelectorAll(".fav-tab").forEach((t, i) => t.classList.toggle("active", i === 0));
+  renderFavoritesPage("");
+}
+
+function renderFavoritesPage(query) {
+  const listMine = document.getElementById("favListMine");
+  const listAll  = document.getElementById("favListAll");
+  const countMine = document.getElementById("favCountMine");
+  const countAll  = document.getElementById("favCountAll");
+  if (!listMine || !listAll) return;
+
+  const favIds = new Set(getFavoriteHostIds());
+
+  const allVenues = venues
+    .filter(v => v.name)
+    .sort((a, b) => a.name.localeCompare(b.name, "de"));
+
+  const filtered = query
+    ? allVenues.filter(v => (v.name + " " + (v.city || "")).toLowerCase().includes(query))
+    : allVenues;
+
+  const mine = filtered.filter(v => favIds.has(String(v.id)));
+  const rest  = filtered.filter(v => !favIds.has(String(v.id)));
+
+  const rowHtml = (v, isFav) => `
+    <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
+      <div class="fav-row-info">
+        <div class="fav-row-name">${escapeHtml(v.name)}</div>
+        ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
+      </div>
+      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
+    </div>`;
+
+  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
+  listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
+  const mineCount = mine.length ? `${mine.length}` : "";
+  const allCount  = rest.length  ? `${rest.length}`  : "";
+  countMine.textContent = mineCount;
+  countAll.textContent  = allCount;
+  document.getElementById("favCountMineDesk").textContent = mineCount;
+  document.getElementById("favCountAllDesk").textContent  = allCount;
 }
 
 function showMenuPage(page) {
   if (!appMenuContent) return;
-  const pages = { impressum: impressumHtml() };
+  if (page === "admin") { openAdminPage(); return; }
+  if (page === "impressum") { openImpressumPage(); return; }
+  if (page === "favorites") { closeAppMenu(); openFavoritesPage(); return; }
+  const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
-    <button type="button" class="app-menu-back">← Zurück</button>
+    <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Zurück</button>
     <div class="app-menu-page-content">${pages[page] || ""}</div>`;
   appMenuContent.querySelector(".app-menu-back")
     ?.addEventListener("click", showMenuHome);
+
+  if (page === "login") {
+    const input = document.getElementById("sbEmailInput");
+    const btn = document.getElementById("sbLoginSubmit");
+    const hint = document.getElementById("sbLoginHint");
+    btn?.addEventListener("click", async () => {
+      const email = input?.value?.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.textContent = "Wird gesendet…";
+      const { error } = await sbSendMagicLink(email);
+      if (error) {
+        hint.textContent = "Fehler: " + (error.message || JSON.stringify(error));
+        console.error("Supabase magic link error:", error);
+        btn.disabled = false;
+        btn.textContent = "Link senden";
+      } else {
+        hint.textContent = "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.";
+        btn.textContent = "Gesendet";
+      }
+    });
+    input?.addEventListener("keydown", e => { if (e.key === "Enter") btn?.click(); });
+  }
 }
 
 function impressumHtml() {
@@ -3722,11 +4203,47 @@ document.addEventListener("click", e => {
 showMenuHome();
 
 // ── Init mobile state ──────────────────────────────────────────
+// Hover fix: Chrome's Viz compositor routes ALL pointer events to the WebGL
+// canvas (which covers the full viewport), so race-panel elements never receive
+// mouseover/mousemove. MapLibre's own mousemove fires for the whole viewport —
+// intercept it, use elementFromPoint (main-thread layout, always correct) to
+// Forward pointer events from the map container to the canvas so MapLibre still works
+// while the canvas has pointer-events:none (needed to fix Chrome compositor hover bug).
+{
+  const glMap = baseMapLayer?.getMaplibreMap?.();
+  if (glMap) {
+    const canvas = glMap.getCanvas();
+    const container = glMap.getContainer();
+    let _fwd = false;
+    const MAP_EVENTS = ["mousedown","mouseup","mousemove","mouseover","mouseout",
+                        "click","dblclick","contextmenu",
+                        "touchstart","touchmove","touchend","touchcancel"];
+    MAP_EVENTS.forEach(type => {
+      container.addEventListener(type, e => {
+        if (_fwd || e.target === canvas) return;
+        _fwd = true;
+        try { canvas.dispatchEvent(new e.constructor(type, e)); } catch(_) {}
+        _fwd = false;
+      });
+    });
+    container.addEventListener("wheel", e => {
+      if (_fwd || e.target === canvas) return;
+      _fwd = true;
+      try { canvas.dispatchEvent(new WheelEvent("wheel", e)); } catch(_) {}
+      _fwd = false;
+    }, { passive: true });
+  }
+}
+
 window.addEventListener("load", () => {
   setDrawerState("half");
   // Force Leaflet and MapLibre to re-measure after CSS is fully applied
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
+    requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
 });
+
+sbInit();

@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=51" />
   <style>
     /* v1.6.5 target topbar polish */
     .layout-prototype .filters-panel {
@@ -219,14 +219,13 @@
       display: none !important;
     }
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1150px) {
       .layout-prototype .topbar .label-full {
         display: none !important;
       }
-
-      .layout-prototype .topbar .label-short {
-        display: inline !important;
-      }
+    }
+    .mob-drawer-filters .topbar .label-full {
+      display: inline !important;
     }
 
     @media (max-width: 860px) {
@@ -327,8 +326,8 @@
       flex: 0 0 40px;
       width: 40px;
       height: 40px;
-      background: var(--panel) !important;
-      color: var(--host-blue);
+      background: rgba(var(--panel-rgb), 0.98) !important;
+      color: var(--accent);
       font-weight: 400 !important;
       box-shadow: 0 6px 16px rgba(31, 29, 26, 0.08);
     }
@@ -340,7 +339,8 @@
     }
 
     .layout-prototype .topbar-series {
-      flex: 0 0 260px;
+      flex: 0 1 260px;
+      min-width: 140px;
     }
 
     .layout-prototype .topbar-favorites {
@@ -348,8 +348,8 @@
     }
 
     .layout-prototype .topbar-search {
-      flex: 0 0 220px;
-      width: 220px;
+      flex: 0 1 220px;
+      min-width: 80px;
       max-width: 220px;
       margin-left: 0;
     }
@@ -552,28 +552,7 @@
 
     @media (min-width: 861px) and (max-width: 1100px) {
       .layout-prototype .topbar {
-        --topbar-main-offset: 52px;
-        gap: 12px;
         padding-right: 8px;
-      }
-
-      .layout-prototype .topbar-series {
-        flex-basis: 220px;
-      }
-
-      .layout-prototype .topbar-search {
-        flex-basis: 180px;
-        width: 180px;
-        max-width: 180px;
-      }
-
-      .layout-prototype .topbar-chips {
-        margin-left: 52px;
-      }
-
-      .layout-prototype .topbar .segmented button,
-      .layout-prototype .topbar .topbar-filter-group button {
-        padding: 0 9px;
       }
     }
 
@@ -1163,6 +1142,7 @@
       width: 100%;
       box-sizing: border-box;
     }
+
   </style>
 </head>
 <body>
@@ -1200,16 +1180,16 @@
         <div class="topbar-favorites topbar-filter-group" id="favoriteFilter" aria-label="Favoritenfilter">
           <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
           <button type="button" data-favorite-filter="favorites" aria-pressed="false">
-            <svg class="favorite-toggle-icon" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M72,0C32.24,0,0,32.24,0,72s32.24,72,72,72,72-32.24,72-72S111.76,0,72,0ZM115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z" fill="currentColor"/></svg>
-            <span>Favoriten</span>
+            <svg class="favorite-toggle-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z" fill="currentColor"/></svg>
+            <span class="label-full">Favoriten</span>
           </button>
         </div>
 
         <div class="topbar-registration topbar-filter-group race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-          <button type="button" data-registration-visibility="all" aria-pressed="false">Alle</button>
-          <button class="active" type="button" data-registration-visibility="open" aria-pressed="true">
+          <button class="active" type="button" data-registration-visibility="all" aria-pressed="true">Alle</button>
+          <button type="button" data-registration-visibility="open" aria-pressed="false">
             <span class="race-document-dot" aria-hidden="true"></span>
-            <span>Offen</span>
+            <span class="label-full">Offen</span>
           </button>
         </div>
 
@@ -1267,30 +1247,20 @@
 
     <div class="mob-drawer-list" id="mobRaceList" aria-live="polite"></div>
 
-    <div class="mob-drawer-footer">
-      <button type="button" data-menu-open="impressum" class="footer-menu-link">Impressum &amp; Datenschutz</button>
-      <span>·</span>
-      <span>Datenquelle:</span>
-      <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer">MyRCM</a>
-      <span>·</span>
-      <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>
-    </div>
+    <div class="mob-drawer-footer"></div>
   </div>
-
-<div class="map-footer">
-  <button type="button" data-menu-open="impressum" class="footer-menu-link">Impressum &amp; Datenschutz</button>
-  <span>·</span>
-  <span>Datenquelle:</span>
-  <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer">MyRCM</a>
-  <span>·</span>
-  <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>
-</div>
 
 
   <!-- App Menu Panel -->
   <div id="appMenuPanel" class="app-menu-panel" aria-hidden="true">
     <div class="app-menu-header">
-      <span class="app-menu-logo">RC Race Map</span>
+      <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="#C8B090">
+          <path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/>
+          <path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/>
+        </g>
+      </svg>
+      <span class="app-menu-logo">RC RaceMap</span>
     </div>
     <div id="appMenuContent" class="app-menu-content"></div>
   </div>
@@ -1305,6 +1275,69 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.js"></script>
   <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.3/leaflet-maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="app.js" type="module"></script>
+  <div id="favoritesPage" class="admin-page" hidden>
+    <button type="button" class="sub-page-close" id="favoritesPageBack" aria-label="Schließen">
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="sub-page-header">
+      <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
+      <span class="app-menu-logo">RC RaceMap</span>
+    </div>
+    <div class="fav-page-body">
+      <div class="fav-toolbar">
+        <div class="fav-search-wrap">
+          <input type="search" id="favSearch" class="fav-search" placeholder="Club suchen…" autocomplete="off" />
+        </div>
+      </div>
+      <div class="fav-tabs">
+        <button type="button" class="fav-tab active" data-fav-tab="mine">Meine Favoriten <span class="fav-col-count" id="favCountMine"></span></button>
+        <button type="button" class="fav-tab" data-fav-tab="all">Alle Clubs <span class="fav-col-count" id="favCountAll"></span></button>
+      </div>
+      <div class="fav-columns">
+        <div class="fav-col" id="favColMine">
+          <div class="fav-col-header">
+            <span class="fav-col-title">Meine Favoriten</span>
+            <span class="fav-col-count-desktop" id="favCountMineDesk"></span>
+          </div>
+          <div class="fav-col-list" id="favListMine"></div>
+        </div>
+        <div class="fav-col" id="favColAll">
+          <div class="fav-col-header">
+            <span class="fav-col-title">Alle Clubs</span>
+            <span class="fav-col-count-desktop" id="favCountAllDesk"></span>
+          </div>
+          <div class="fav-col-list" id="favListAll"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminPage" class="admin-page" hidden>
+    <button type="button" class="sub-page-close" id="adminPageBack" aria-label="Schließen">
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="sub-page-header">
+      <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
+      <span class="app-menu-logo">RC RaceMap</span>
+    </div>
+    <div class="admin-page-inner">
+      <div id="adminPageList" class="admin-page-list"></div>
+    </div>
+  </div>
+
+  <div id="impressumPage" class="admin-page" hidden>
+    <button type="button" class="sub-page-close" id="impressumPageBack" aria-label="Schließen">
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="sub-page-header">
+      <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
+      <span class="app-menu-logo">RC RaceMap</span>
+    </div>
+    <div class="admin-page-inner">
+      <div id="impressumPageContent" class="admin-page-list"></div>
+    </div>
+  </div>
 </body>
 </html>

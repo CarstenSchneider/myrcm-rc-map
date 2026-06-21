@@ -41,6 +41,11 @@ const trainingTerms = [
   "practice"
 ];
 
+// MyRCM org IDs to exclude permanently (e.g. slot car series)
+const excludedMyrcmOrgIds = new Set([
+  "60453", // Slottis Supreme Masters — slot car series
+]);
+
 const excludedHostTerms = [
   "kart",
   "karts",
@@ -1785,6 +1790,7 @@ async function loadHosts() {
   const filteredHosts = hosts
     .filter(host => host.orgId && host.name)
     .filter(host => Number(host.eventCount || 0) > 0)
+    .filter(host => !excludedMyrcmOrgIds.has(String(host.orgId)))
     .filter(host => !isExcludedHost(host))
     .map(host => ({
       ...host,
@@ -1854,7 +1860,7 @@ async function runImportOnce() {
 
     importedHosts.push(hostRecord);
 
-    if (races.some(race => !race.venueId) && !isIgnoredUnmatchedHost(hostRecord)) {
+    if (races.some(race => !race.venueId) && !isIgnoredUnmatchedHost(hostRecord) && !venueSeed?.locationUnknown) {
       importedUnmatched.push(
         unmatchedRecordForMyRcmHost(
           host,
