@@ -4207,24 +4207,31 @@ showMenuHome();
 // canvas (which covers the full viewport), so race-panel elements never receive
 // mouseover/mousemove. MapLibre's own mousemove fires for the whole viewport —
 // intercept it, use elementFromPoint (main-thread layout, always correct) to
-// find the race card under the cursor, and toggle .is-hovered.
+// Forward pointer events from the map container to the canvas so MapLibre still works
+// while the canvas has pointer-events:none (needed to fix Chrome compositor hover bug).
 {
   const glMap = baseMapLayer?.getMaplibreMap?.();
   if (glMap) {
-    let _hoveredCard = null;
-    glMap.on("mousemove", e => {
-      const { clientX, clientY } = e.originalEvent;
-      const el = document.elementFromPoint(clientX, clientY);
-      const card = el?.closest(".race-card.is-clickable") ?? null;
-      if (card === _hoveredCard) return;
-      _hoveredCard?.classList.remove("is-hovered");
-      _hoveredCard = card;
-      card?.classList.add("is-hovered");
+    const canvas = glMap.getCanvas();
+    const container = glMap.getContainer();
+    let _fwd = false;
+    const MAP_EVENTS = ["mousedown","mouseup","mousemove","mouseover","mouseout",
+                        "click","dblclick","contextmenu",
+                        "touchstart","touchmove","touchend","touchcancel"];
+    MAP_EVENTS.forEach(type => {
+      container.addEventListener(type, e => {
+        if (_fwd || e.target === canvas) return;
+        _fwd = true;
+        try { canvas.dispatchEvent(new e.constructor(type, e)); } catch(_) {}
+        _fwd = false;
+      });
     });
-    glMap.on("mouseleave", () => {
-      _hoveredCard?.classList.remove("is-hovered");
-      _hoveredCard = null;
-    });
+    container.addEventListener("wheel", e => {
+      if (_fwd || e.target === canvas) return;
+      _fwd = true;
+      try { canvas.dispatchEvent(new WheelEvent("wheel", e)); } catch(_) {}
+      _fwd = false;
+    }, { passive: true });
   }
 }
 

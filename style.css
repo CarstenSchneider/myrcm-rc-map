@@ -99,6 +99,12 @@ body {
   height: 100%;
 }
 
+/* Chrome compositor routes all pointer events to the WebGL canvas, breaking CSS :hover.
+   Force pointer-events:none so the DOM receives events normally, then forward to canvas via JS. */
+.maplibregl-canvas {
+  pointer-events: none !important;
+}
+
 .race-panel {
   min-width: 0;
   overflow: auto;
