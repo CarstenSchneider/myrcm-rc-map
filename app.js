@@ -413,6 +413,9 @@ function applyRcRaceMapStyle() {
 
 baseMapLayer.getMaplibreMap?.().on("load", applyRcRaceMapStyle);
 baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
+baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
+  requestAnimationFrame(applyRcRaceMapStyle);
+});
 
 let venues = [];
 let races = [];
