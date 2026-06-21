@@ -4128,7 +4128,7 @@ function showMenuPage(page) {
   if (!appMenuContent) return;
   if (page === "admin") { openAdminPage(); return; }
   if (page === "impressum") { openImpressumPage(); return; }
-  if (page === "favorites") { openFavoritesPage(); closeAppMenu(); return; }
+  if (page === "favorites") { closeAppMenu(); openFavoritesPage(); return; }
   const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
     <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Zurück</button>
