@@ -2409,7 +2409,10 @@ function mapPadding() {
 // Desktop: visible center = (W/2 - 207, H/2 + 40)   → shift pixel by (+207, -40)
 // panBy([dx, dy]) moves the map center by (dx, dy) pixels, so to achieve that
 // offset without panBy: add (dx, dy) to the projected point before unproject.
+let lastVisibleCenter = null;
+
 function panToVisible(latlng, zoom) {
+  lastVisibleCenter = latlng;
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
   const pt = map.project(latlng, zoom);
   const shifted = isMobile
@@ -2448,11 +2451,7 @@ function fitMapToBounds(bounds, options = {}) {
   const nwPx = map.project(lBounds.getNorthWest(), zoom);
   const sePx = map.project(lBounds.getSouthEast(), zoom);
   const cPx = nwPx.add(sePx).divideBy(2);
-  // Shift: bounds center should appear at (W/2-207, H/2+40) → map center = cPx+(207,-40)
-  const newCenterPx = L.point(cPx.x + 207, cPx.y - 40);
-  map.setMaxBounds(null);
-  map.setView(map.unproject(newCenterPx, zoom), zoom, { animate: false });
-  map.setMaxBounds(MAX_BOUNDS);
+  panToVisible(map.unproject(cPx, zoom), zoom);
 }
 
 function updateMarkers(list, shouldFitBounds = true) {
@@ -3219,21 +3218,15 @@ if (activeFilterChips) {
 
 window.addEventListener("resize", scheduleSlidingPillUpdate);
 
-// On resize, keep the visible-area center (left of panel) stable.
-// Leaflet's ResizeObserver keeps the full-container center — we correct for the panel offset.
+// On resize, re-apply the last known visible-area center so the panel offset stays correct.
 let resizeRecenterFrame = null;
 window.addEventListener("resize", () => {
   if (resizeRecenterFrame) cancelAnimationFrame(resizeRecenterFrame);
   resizeRecenterFrame = requestAnimationFrame(() => {
     resizeRecenterFrame = null;
-    const isMobile = window.matchMedia("(max-width: 860px)").matches;
-    if (isMobile || !map) return;
-    // Compute lat/lng at current visible-area center (container center minus panel offset).
-    const zoom = map.getZoom();
-    const mapCenterPx = map.project(map.getCenter(), zoom);
-    const visibleCenterPx = mapCenterPx.subtract(L.point(207, -40));
-    const visibleCenter = map.unproject(visibleCenterPx, zoom);
-    panToVisible(visibleCenter, zoom);
+    if (!map || !lastVisibleCenter) return;
+    if (window.matchMedia("(max-width: 860px)").matches) return;
+    panToVisible(lastVisibleCenter, map.getZoom());
   });
 });
 
