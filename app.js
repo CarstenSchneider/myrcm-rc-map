@@ -4264,8 +4264,8 @@ function renderFavoritesPage(query) {
         ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
       </div>
       <div class="fav-row-actions">
-        <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
         ${bellBtn}
+        <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
       </div>
     </div>`;
   };
