@@ -3218,7 +3218,12 @@ window.addEventListener("resize", () => {
     if (!map || !lastVisibleCenter) return;
     if (window.matchMedia("(max-width: 860px)").matches) return;
     map.invalidateSize({ pan: false });
-    panToVisible(lastVisibleCenter, map.getZoom());
+    const zoom = map.getZoom();
+    const pt = map.project(lastVisibleCenter, zoom);
+    const shifted = L.point(pt.x + 207, pt.y - 40);
+    map.setMaxBounds(null);
+    map.setView(map.unproject(shifted, zoom), zoom, { animate: true, duration: 0.15 });
+    map.setMaxBounds(MAX_BOUNDS);
   }, 150);
 });
 
