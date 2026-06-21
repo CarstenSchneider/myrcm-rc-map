@@ -3388,10 +3388,10 @@ body.is-menu-open .app-menu-close {
 .fav-row-name { font-size: 13px; font-weight: 500; color: var(--text); }
 .fav-row-city { font-size: 12px; color: var(--muted); margin-top: 1px; }
 .fav-star-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); transition: background 120ms, color 120ms; }
-.fav-star-btn .fav-star-filled { display: flex; }
-.fav-star-btn .fav-star-outline { display: none; }
-.fav-star-btn:not(.active) .fav-star-filled { display: none; }
-.fav-star-btn:not(.active) .fav-star-outline { display: flex; }
+.fav-star-btn .fav-star-filled { display: none; }
+.fav-star-btn .fav-star-outline { display: flex; }
+.fav-star-btn.active .fav-star-filled { display: flex; }
+.fav-star-btn.active .fav-star-outline { display: none; }
 .fav-star-btn:hover { background: rgba(var(--accent-rgb), 0.12); color: var(--accent); }
 .fav-star-btn.active { color: #C8B090; }
 .fav-star-btn.active:hover { background: rgba(200,176,144,0.18); color: #C8B090; }
