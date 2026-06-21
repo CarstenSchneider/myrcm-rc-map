@@ -1304,9 +1304,12 @@ function newRaceBadgeHtml(race) {
 }
 
 function registrationStatus(race) {
-  if (race.registrationStatus) return race.registrationStatus;
-  if (race.registrationRequiresLogin) return "login_required";
-  return "open";
+  const status = race.registrationStatus;
+  if (race.registrationRequiresLogin && !status) return "login_required";
+  // If race end date is in the past, registration is implicitly closed
+  const raceEnd = race.to || race.from;
+  if (raceEnd && new Date(raceEnd) < new Date(new Date().toDateString())) return "closed";
+  return status || "open";
 }
 
 function isRegistrationActive(race) {
