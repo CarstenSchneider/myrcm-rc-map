@@ -3790,7 +3790,7 @@ function showMenuHome() {
       </div>
     </div>
     ${sbUser ? `
-    <button type="button" class="app-menu-row">
+    <button type="button" class="app-menu-row" data-menu="favorites">
       <span class="app-menu-row-icon">${iconStar}</span>
       <span class="app-menu-row-label">Favoriten</span>
       ${chevron}
@@ -4017,10 +4017,78 @@ function openAdminPage() {
   });
 }
 
+const iconStarFilled = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+const iconStarEmpty  = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+
+function openFavoritesPage() {
+  const page = document.getElementById("favoritesPage");
+  if (!page) return;
+  page.hidden = false;
+
+  document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
+    page.hidden = true;
+    closeAppMenu();
+  }, { once: true });
+
+  const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
+
+  page.addEventListener("click", e => {
+    const btn = e.target.closest(".fav-star-btn");
+    if (!btn) return;
+    const venueId = btn.dataset.venueId;
+    if (!venueId) return;
+    toggleFavoriteHost(venueId);
+    renderFavoritesPage(currentQuery());
+  });
+
+  renderFavoritesPage("");
+  document.getElementById("favSearch")?.addEventListener("input", e => {
+    renderFavoritesPage(e.target.value.trim().toLowerCase());
+  });
+}
+
+function renderFavoritesPage(query) {
+  const listMine = document.getElementById("favListMine");
+  const listAll  = document.getElementById("favListAll");
+  const countMine = document.getElementById("favCountMine");
+  const countAll  = document.getElementById("favCountAll");
+  if (!listMine || !listAll) return;
+
+  const favIds = new Set(getFavoriteHostIds());
+
+  const allVenues = venues
+    .filter(v => v.name)
+    .sort((a, b) => a.name.localeCompare(b.name, "de"));
+
+  const filtered = query
+    ? allVenues.filter(v => (v.name + " " + (v.city || "")).toLowerCase().includes(query))
+    : allVenues;
+
+  const mine = filtered.filter(v => favIds.has(String(v.id)));
+  const rest  = filtered.filter(v => !favIds.has(String(v.id)));
+
+  const rowHtml = (v, isFav) => `
+    <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
+      <div class="fav-row-info">
+        <div class="fav-row-name">${escapeHtml(v.name)}</div>
+        ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
+      </div>
+      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">
+        ${isFav ? iconStarFilled : iconStarEmpty}
+      </button>
+    </div>`;
+
+  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
+  listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
+  countMine.textContent = mine.length ? `${mine.length}` : "";
+  countAll.textContent  = rest.length  ? `${rest.length}`  : "";
+}
+
 function showMenuPage(page) {
   if (!appMenuContent) return;
   if (page === "admin") { openAdminPage(); return; }
   if (page === "impressum") { openImpressumPage(); return; }
+  if (page === "favorites") { openFavoritesPage(); closeAppMenu(); return; }
   const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
     <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Zurück</button>
