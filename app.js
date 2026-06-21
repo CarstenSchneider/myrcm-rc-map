@@ -2416,6 +2416,12 @@ function resetVenueSelection() {
   updateAppModeClass();
   renderList(filteredRaces());
 
+  // Restore drawer state on mobile
+  if (drawerStateBeforeVenue && window.matchMedia("(max-width: 860px)").matches) {
+    setDrawerState(drawerStateBeforeVenue);
+    drawerStateBeforeVenue = null;
+  }
+
   // Scroll the first race card of the previously active venue into view
   if (prevVenueId) {
     requestAnimationFrame(() => {
@@ -3433,6 +3439,7 @@ const mobFilterMount = document.getElementById("mobFilterMount");
 // ── Drawer snap state ──────────────────────────────────────────
 const DRAWER_STATES = ["collapsed", "half", "full"];
 let drawerState = "half";
+let drawerStateBeforeVenue = null;
 
 function setDrawerState(state) {
   drawerState = state;
@@ -3645,6 +3652,7 @@ function syncMobRaceList() {
       if (event.target.closest("[data-favorite-host-id]")) return;
       const race = races.find(r => String(r.id) === raceId);
       if (race) {
+        drawerStateBeforeVenue = drawerState;
         setDrawerState("collapsed");
         focusRace(race);
       }
@@ -3654,6 +3662,7 @@ function syncMobRaceList() {
         event.preventDefault();
         const race = races.find(r => String(r.id) === raceId);
         if (race) {
+          drawerStateBeforeVenue = drawerState;
           setDrawerState("collapsed");
           focusRace(race);
         }
