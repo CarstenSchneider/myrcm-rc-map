@@ -438,6 +438,19 @@ const favoriteHostStorageKey = "rcRaceMapFavoriteHostIds";
 const favoriteVenueStorageKey = "rcRaceMapFavoriteVenueIds";
 const favoriteFilterStorageKey = "rcRaceMapFavoriteFilter";
 
+// Resolve any alias (race hostId, venue hostId, hostIds[]) to the canonical venue.id.
+// Returns the input unchanged if no venue matches (keeps unknown IDs intact).
+function canonicalVenueId(anyId) {
+  if (!anyId) return anyId;
+  const id = String(anyId);
+  const venue = venues.find(v =>
+    String(v.id) === id ||
+    (v.hostId && String(v.hostId) === id) ||
+    (Array.isArray(v.hostIds) && v.hostIds.some(h => String(h) === id))
+  );
+  return venue ? String(venue.id) : id;
+}
+
 // ── Supabase ──────────────────────────────────────────────────────────────────
 const SUPABASE_URL = "https://ncsqbncxctofkmabmwku.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P";
@@ -487,16 +500,16 @@ async function sbPullAll() {
 async function sbPullFavorites() {
   const { data, error } = await sbClient.from("user_favorites").select("host_id").eq("user_id", sbUser.id);
   if (error) { console.error("sbPullFavorites:", error); return; }
-  const remoteIds = data.map(r => r.host_id);
-  const localIds = getFavoriteHostIds();
+  // Normalize all IDs to canonical venue.id
+  const remoteIds = data.map(r => canonicalVenueId(r.host_id));
+  const localIds = getFavoriteHostIds().map(id => canonicalVenueId(id));
   const merged = [...new Set([...localIds, ...remoteIds])];
   saveFavoriteHostIds(merged);
-  if (merged.length !== remoteIds.length) {
-    const toInsert = merged.filter(id => !remoteIds.includes(id)).map(host_id => ({ user_id: sbUser.id, host_id }));
-    if (toInsert.length) {
-      const { error: upsertErr } = await sbClient.from("user_favorites").upsert(toInsert);
-      if (upsertErr) console.error("sbPullFavorites upsert:", upsertErr);
-    }
+  // Sync any new local IDs to Supabase
+  const toInsert = merged.filter(id => !remoteIds.includes(id)).map(host_id => ({ user_id: sbUser.id, host_id }));
+  if (toInsert.length) {
+    const { error: upsertErr } = await sbClient.from("user_favorites").upsert(toInsert);
+    if (upsertErr) console.error("sbPullFavorites upsert:", upsertErr);
   }
 }
 
@@ -594,13 +607,14 @@ function saveFavoriteHostIds(ids) {
 
 function isFavoriteHostId(hostId) {
   if (!hostId || !sbUser) return false;
-  return getFavoriteHostIds().includes(String(hostId));
+  const ids = getFavoriteHostIds();
+  return ids.includes(String(hostId)) || ids.includes(canonicalVenueId(hostId));
 }
 
 function toggleFavoriteHost(hostId) {
   if (!hostId) return;
 
-  const id = String(hostId);
+  const id = canonicalVenueId(hostId);
   const favoriteIds = getFavoriteHostIds();
   const isNowFavorite = !favoriteIds.includes(id);
 
@@ -608,6 +622,10 @@ function toggleFavoriteHost(hostId) {
     saveFavoriteHostIds([...favoriteIds, id]);
   } else {
     saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
+    // Remove notification subscription when unfavoriting
+    if (_notifIds.has(id)) {
+      toggleNotification(id).catch(e => console.error("toggleNotification on unfav:", e));
+    }
   }
   sbToggleFavorite(id, isNowFavorite).catch(e => console.error("toggleFavoriteHost sync:", e));
 }
@@ -712,6 +730,8 @@ function raceHostName(race) {
 }
 
 function isFavoriteRaceHost(race) {
+  const venue = venueForRace(race);
+  if (venue) return isFavoriteHostId(venue.id);
   return isFavoriteHostId(raceHostId(race));
 }
 
@@ -1284,9 +1304,12 @@ function newRaceBadgeHtml(race) {
 }
 
 function registrationStatus(race) {
-  if (race.registrationStatus) return race.registrationStatus;
-  if (race.registrationRequiresLogin) return "login_required";
-  return "open";
+  const status = race.registrationStatus;
+  if (race.registrationRequiresLogin && !status) return "login_required";
+  // If race end date is in the past, registration is implicitly closed
+  const raceEnd = race.to || race.from;
+  if (raceEnd && new Date(raceEnd) < new Date(new Date().toDateString())) return "closed";
+  return status || "open";
 }
 
 function isRegistrationActive(race) {
@@ -2543,6 +2566,7 @@ function updateMarkers(list, shouldFitBounds = true) {
       : "map-marker-active-replacement-closed";
 
     const venueHostIds = [
+      venue.id,
       venue.hostId,
       ...(Array.isArray(venue.hostIds) ? venue.hostIds : []),
       venue.myrcmOrgId ? `myrcm-${venue.myrcmOrgId}` : null,

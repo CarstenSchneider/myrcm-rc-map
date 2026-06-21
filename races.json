@@ -27339,8 +27339,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       "BBX",
@@ -27359,7 +27359,7 @@
       "Truck",
       {
         "name": "Wheelie",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "ORE 2WD ST",
@@ -27449,8 +27449,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       {
@@ -27472,7 +27472,7 @@
       },
       {
         "name": "Tamiya Race-Truck",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Tamiya Euro-TW",
@@ -28210,27 +28210,30 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       "HRCC GT8",
       "Strecke säubern",
       "HRCC 1/8 GT",
       "EG8e",
-      "HRCC 1/8 GT3",
+      {
+        "name": "HRCC 1/8 GT3",
+        "entries": 1
+      },
       "HRCC Plastic/Fronti",
       "HRCC Formel 1",
       {
         "name": "HRCC EG10 Stock",
-        "entries": 1
+        "entries": 2
       },
       "HRCC PRO10",
       "VG8",
       "HRCC EG10 Fronti",
       {
         "name": "HRCC EG10 Plastic Cars",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -28256,15 +28259,15 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 7,
-    "registrationDisplay": "7",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": null,
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
       {
         "name": "ORE2WDST",
-        "entries": 4
+        "entries": 5
       },
       "ORE4WD",
       "ORE4WDST",
@@ -28442,8 +28445,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": null,
     "classes": [
       {
@@ -28452,7 +28455,7 @@
       },
       {
         "name": "NRW-Cup Hobby",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "NRW-Cup Top",
@@ -28727,12 +28730,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98164&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=98164&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98164&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-06-22",
+    "registrationStatus": "open",
+    "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0/0",
-    "note": "Nennung ab 22.06.2026",
+    "note": null,
     "classes": [
       "EG8GT",
       "EGTWSP",
@@ -29077,7 +29080,7 @@
       },
       {
         "name": "2WD Buggy Standard",
-        "entries": 39
+        "entries": 40
       },
       {
         "name": "2WD Buggy",
@@ -29085,7 +29088,7 @@
       },
       {
         "name": "4WD Buggy Standard",
-        "entries": 21
+        "entries": 20
       },
       {
         "name": "4WD Buggy",
@@ -29112,12 +29115,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96139&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9976&pLa=en&dId%5BE%5D=96139&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96139&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-06-22",
+    "registrationStatus": "open",
+    "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": "Nennung ab 22.06.2026",
+    "note": null,
     "classes": [
       "EG8e",
       "EG8GT",
@@ -29327,15 +29330,21 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
       "MCSS TW 17,5T",
       "MCSS LMH 21,5T",
       "MCSS FWD",
-      "MCSS 911er-Cup",
-      "MCSS Langstrecken-Cup"
+      {
+        "name": "MCSS 911er-Cup",
+        "entries": 1
+      },
+      {
+        "name": "MCSS Langstrecken-Cup",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
@@ -29488,8 +29497,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 333,
-    "registrationDisplay": "333",
+    "registrationCount": 336,
+    "registrationDisplay": "336",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -29498,7 +29507,7 @@
       },
       {
         "name": "Hobbywing 21.5 Stock",
-        "entries": 48
+        "entries": 49
       },
       {
         "name": "1up Racing 40+",
@@ -29506,7 +29515,7 @@
       },
       {
         "name": "Matrix Formula",
-        "entries": 27
+        "entries": 29
       },
       {
         "name": "Awesomatix Pro Stock",
@@ -29762,17 +29771,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 38,
-    "registrationDisplay": "38",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
     "note": null,
     "classes": [
       {
         "name": "Monster Truck Modified",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "2WD Buggy",
-        "entries": 24
+        "entries": 25
       },
       {
         "name": "4WD Buggy",

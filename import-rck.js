@@ -916,6 +916,9 @@ function parsePdfVenueData(rawText, pdfUrl) {
   const parsedAddress = parseAddress(addressLine);
   const website = extractVenueWebsite(text);
 
+  const registrationDeadlineRaw = valueAfterLabel(text, ["Nennschluss", "Meldeschluss"]);
+  const registrationDeadline = registrationDeadlineRaw ? parseDate(registrationDeadlineRaw) : null;
+
   if (!organizerName && !venueName && !parsedAddress.fullAddress && !website) return null;
 
   return {
@@ -930,7 +933,8 @@ function parsePdfVenueData(rawText, pdfUrl) {
     sourcePdf: pdfUrl,
     addressVerifiedFromPdf: Boolean(parsedAddress.fullAddress),
     rawOrganizerVenueLine: organizerVenueLine || null,
-    rawAddressLine: addressLine || null
+    rawAddressLine: addressLine || null,
+    registrationDeadline: registrationDeadline || null,
   };
 }
 
@@ -944,6 +948,13 @@ async function enrichFromPdf(race) {
   const pdfVenueData = parsePdfVenueData(text, announcement.url);
   if (!pdfVenueData) return race;
 
+  const registrationDeadline = pdfVenueData.registrationDeadline || null;
+  let registrationStatus = race.registrationStatus;
+  if (registrationDeadline) {
+    const deadlinePast = new Date(registrationDeadline) < new Date(new Date().toDateString());
+    registrationStatus = deadlinePast ? "closed" : "open";
+  }
+
   return {
     ...race,
     pdfVenueData,
@@ -953,7 +964,9 @@ async function enrichFromPdf(race) {
     venueCity: pdfVenueData.city || race.venueCity || race.venueLocation,
     venuePostalCode: pdfVenueData.postalCode || race.venuePostalCode || null,
     venueWebsite: pdfVenueData.website || race.venueWebsite || null,
-    addressVerifiedFromPdf: pdfVenueData.addressVerifiedFromPdf
+    addressVerifiedFromPdf: pdfVenueData.addressVerifiedFromPdf,
+    registrationDeadline,
+    registrationStatus,
   };
 }
 
