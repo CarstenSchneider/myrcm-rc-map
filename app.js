@@ -3422,10 +3422,28 @@ async function init() {
   revealMapWhenReady();
 }
 
-init().catch(error => {
-  console.error(error);
-  resultLine.textContent = "Fehler beim Laden der Daten.";
-});
+const _unsubUserId = new URLSearchParams(window.location.search).get("unsubscribe");
+if (_unsubUserId) {
+  (async () => {
+    try {
+      await fetch(`https://ncsqbncxctofkmabmwku.supabase.co/functions/v1/send-race-notifications?unsubscribe=${encodeURIComponent(_unsubUserId)}`);
+    } catch (e) { /* ignore */ }
+    const overlay = document.createElement("div");
+    overlay.style.cssText = "position:fixed;inset:0;background:var(--bg,#f0f2f5);display:flex;align-items:center;justify-content:center;z-index:99999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;";
+    overlay.innerHTML = `<div style="background:var(--panel,#fff);border-radius:16px;padding:48px 40px;max-width:380px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.1);">
+      <svg width="36" height="40" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:20px;"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
+      <h1 style="color:#213769;font-size:20px;margin:0 0 12px;font-weight:700;">Abgemeldet</h1>
+      <p style="color:#6b7280;font-size:14px;line-height:1.6;margin:0 0 28px;">Du erhältst keine E-Mail-Benachrichtigungen mehr.<br>Du kannst sie jederzeit in deinen Favoriten wieder aktivieren.</p>
+      <a href="/" style="display:inline-block;background:#213769;color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:10px 28px;border-radius:999px;">Zur Karte</a>
+    </div>`;
+    document.body.appendChild(overlay);
+  })();
+} else {
+  init().catch(error => {
+    console.error(error);
+    resultLine.textContent = "Fehler beim Laden der Daten.";
+  });
+}
 
 
 /* ============================================================
