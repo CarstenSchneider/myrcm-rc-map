@@ -3387,21 +3387,14 @@ body.is-menu-open .app-menu-close {
 .fav-row-info { flex: 1; min-width: 0; }
 .fav-row-name { font-size: 13px; font-weight: 500; color: var(--text); }
 .fav-row-city { font-size: 12px; color: var(--muted); margin-top: 1px; }
-.fav-star-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); transition: background 150ms, color 150ms; }
-/* show filled / hide outline by default */
+.fav-star-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); transition: background 120ms, color 120ms; }
 .fav-star-btn .fav-star-filled { display: flex; }
 .fav-star-btn .fav-star-outline { display: none; }
-/* inactive default: outline star only */
 .fav-star-btn:not(.active) .fav-star-filled { display: none; }
 .fav-star-btn:not(.active) .fav-star-outline { display: flex; }
-/* inactive hover: blue circle + outline star */
-.fav-star-btn:not(.active):hover { background: rgba(var(--accent-rgb), 0.12); color: var(--accent); }
-/* active default: gold filled star */
+.fav-star-btn:hover { background: rgba(var(--accent-rgb), 0.12); color: var(--accent); }
 .fav-star-btn.active { color: #C8B090; }
-/* active hover: gold circle + outline star */
-.fav-star-btn.active:hover { background: rgba(200,176,144,0.18); }
-.fav-star-btn.active:hover .fav-star-filled { display: none; }
-.fav-star-btn.active:hover .fav-star-outline { display: flex; }
+.fav-star-btn.active:hover { background: rgba(200,176,144,0.18); color: #C8B090; }
 .fav-empty { padding: 32px 24px; font-size: 13px; color: var(--muted); text-align: center; }
 
 /* Admin full-page overlay */
