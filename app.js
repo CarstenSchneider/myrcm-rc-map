@@ -4077,7 +4077,7 @@ function openFavoritesPage() {
       void document.body.offsetHeight;
     });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
-    page.addEventListener("click", e => {
+    page.addEventListener("click", async e => {
       const tab = e.target.closest(".fav-tab");
       if (tab) {
         page.querySelectorAll(".fav-tab").forEach(t => t.classList.remove("active"));
