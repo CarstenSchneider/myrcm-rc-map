@@ -4203,18 +4203,27 @@ document.addEventListener("click", e => {
 showMenuHome();
 
 // ── Init mobile state ──────────────────────────────────────────
-// JS hover fallback: CSS :hover is unreliable on race cards due to Chrome
-// compositor hit-test desync with the WebGL map canvas. mouseover/mouseout go
-// through the main-thread layout tree (same as elementFromPoint) which is correct.
+// Hover fix: Chrome's Viz compositor routes ALL pointer events to the WebGL
+// canvas (which covers the full viewport), so race-panel elements never receive
+// mouseover/mousemove. MapLibre's own mousemove fires for the whole viewport —
+// intercept it, use elementFromPoint (main-thread layout, always correct) to
+// find the race card under the cursor, and toggle .is-hovered.
 {
-  const rp = document.querySelector(".race-panel");
-  if (rp) {
-    rp.addEventListener("mouseover", e => {
-      e.target.closest(".race-card.is-clickable")?.classList.add("is-hovered");
+  const glMap = baseMapLayer?.getMaplibreMap?.();
+  if (glMap) {
+    let _hoveredCard = null;
+    glMap.on("mousemove", e => {
+      const { clientX, clientY } = e.originalEvent;
+      const el = document.elementFromPoint(clientX, clientY);
+      const card = el?.closest(".race-card.is-clickable") ?? null;
+      if (card === _hoveredCard) return;
+      _hoveredCard?.classList.remove("is-hovered");
+      _hoveredCard = card;
+      card?.classList.add("is-hovered");
     });
-    rp.addEventListener("mouseout", e => {
-      const card = e.target.closest(".race-card.is-clickable");
-      if (card && !card.contains(e.relatedTarget)) card.classList.remove("is-hovered");
+    glMap.on("mouseleave", () => {
+      _hoveredCard?.classList.remove("is-hovered");
+      _hoveredCard = null;
     });
   }
 }
