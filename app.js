@@ -3041,19 +3041,11 @@ function revealMap() {
 function revealMapWhenReady() {
   const mapElement = document.getElementById("map");
 
-  // render() has already called fitMapToBounds (synchronous setView).
-  // Wait one rAF for MapLibre GL's camera to settle, then reveal.
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      if (mapElement?.classList.contains("map-ready")) return;
-      revealMap();
-    });
-  });
-
+  // render() has already called fitMapToBounds. Wait for MapLibre GL's camera to settle.
   window.setTimeout(() => {
     if (mapElement?.classList.contains("map-ready")) return;
     revealMap();
-  }, 500);
+  }, 300);
 }
 
 function render() {
@@ -3219,15 +3211,16 @@ if (activeFilterChips) {
 window.addEventListener("resize", scheduleSlidingPillUpdate);
 
 // On resize, re-apply the last known visible-area center so the panel offset stays correct.
-let resizeRecenterFrame = null;
+let resizeRecenterTimer = null;
 window.addEventListener("resize", () => {
-  if (resizeRecenterFrame) cancelAnimationFrame(resizeRecenterFrame);
-  resizeRecenterFrame = requestAnimationFrame(() => {
-    resizeRecenterFrame = null;
+  clearTimeout(resizeRecenterTimer);
+  resizeRecenterTimer = setTimeout(() => {
+    resizeRecenterTimer = null;
     if (!map || !lastVisibleCenter) return;
     if (window.matchMedia("(max-width: 860px)").matches) return;
+    map.invalidateSize({ pan: false });
     panToVisible(lastVisibleCenter, map.getZoom());
-  });
+  }, 150);
 });
 
 if (document.fonts?.ready) {
