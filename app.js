@@ -4030,13 +4030,11 @@ function openFavoritesPage() {
   if (!page) return;
   page.hidden = false;
 
-  document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
-    page.hidden = true;
-    closeAppMenu();
-  }, { once: true });
-
   if (!_favPageReady) {
     _favPageReady = true;
+    document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
+      page.hidden = true;
+    });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
     page.addEventListener("click", e => {
       const tab = e.target.closest(".fav-tab");
