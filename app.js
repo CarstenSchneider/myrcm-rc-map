@@ -4196,7 +4196,12 @@ function renderFavoritesPage(query) {
   const _bellPath = `M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
   const _bellSvgOn = `<svg class="fav-bell-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z ${_bellPath}" fill="currentColor"/></svg>`;
 
-  const venueCanonicalId = v => String(v.hostId || v.id);
+  // Return the ID actually stored in favorites (or the best candidate for storing)
+  const venueCanonicalId = v => {
+    const candidates = [v.id, v.hostId, ...(Array.isArray(v.hostIds) ? v.hostIds : [])].filter(Boolean).map(String);
+    const stored = candidates.find(id => favIds.has(id));
+    return stored ?? candidates[0];
+  };
 
   const rowHtml = (v, isFav) => {
     const cid = venueCanonicalId(v);
