@@ -2416,22 +2416,24 @@ function resetVenueSelection() {
   updateAppModeClass();
   renderList(filteredRaces());
 
-  // Restore drawer state on mobile
-  if (drawerStateBeforeVenue && window.matchMedia("(max-width: 860px)").matches) {
+  // Restore drawer state on mobile, then scroll after transition completes
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (drawerStateBeforeVenue && isMobile) {
     setDrawerState(drawerStateBeforeVenue);
     drawerStateBeforeVenue = null;
   }
 
   // Restore exact scroll position
   if (listScrollBeforeVenue !== null) {
-    requestAnimationFrame(() => {
-      const isMobile = window.matchMedia("(max-width: 860px)").matches;
+    const savedScroll = listScrollBeforeVenue;
+    listScrollBeforeVenue = null;
+    const delay = isMobile ? 320 : 0;
+    setTimeout(() => {
       const scrollEl = isMobile
         ? document.getElementById("mobRaceList")
         : document.querySelector(".race-panel");
-      if (scrollEl) scrollEl.scrollTop = listScrollBeforeVenue;
-      listScrollBeforeVenue = null;
-    });
+      if (scrollEl) scrollEl.scrollTop = savedScroll;
+    }, delay);
   }
 }
 
