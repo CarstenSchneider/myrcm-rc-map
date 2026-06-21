@@ -4035,6 +4035,15 @@ function openFavoritesPage() {
     _favPageReady = true;
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
     page.addEventListener("click", e => {
+      const tab = e.target.closest(".fav-tab");
+      if (tab) {
+        page.querySelectorAll(".fav-tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        const which = tab.dataset.favTab;
+        document.getElementById("favColMine")?.classList.toggle("fav-col-active", which === "mine");
+        document.getElementById("favColAll")?.classList.toggle("fav-col-active", which === "all");
+        return;
+      }
       const btn = e.target.closest(".fav-star-btn");
       if (!btn) return;
       const venueId = btn.dataset.venueId;
@@ -4048,6 +4057,9 @@ function openFavoritesPage() {
   }
 
   document.getElementById("favSearch").value = "";
+  document.getElementById("favColMine")?.classList.add("fav-col-active");
+  document.getElementById("favColAll")?.classList.remove("fav-col-active");
+  page.querySelectorAll(".fav-tab").forEach((t, i) => t.classList.toggle("active", i === 0));
   renderFavoritesPage("");
 }
 
@@ -4084,8 +4096,12 @@ function renderFavoritesPage(query) {
 
   listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
   listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
-  countMine.textContent = mine.length ? `${mine.length}` : "";
-  countAll.textContent  = rest.length  ? `${rest.length}`  : "";
+  const mineCount = mine.length ? `${mine.length}` : "";
+  const allCount  = rest.length  ? `${rest.length}`  : "";
+  countMine.textContent = mineCount;
+  countAll.textContent  = allCount;
+  document.getElementById("favCountMineDesk").textContent = mineCount;
+  document.getElementById("favCountAllDesk").textContent  = allCount;
 }
 
 function showMenuPage(page) {

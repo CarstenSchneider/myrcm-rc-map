@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="style.css?v=29" />
+  <link rel="stylesheet" href="style.css?v=30" />
   <style>
     /* v1.6.5 target topbar polish */
     .layout-prototype .filters-panel {
@@ -1289,18 +1289,22 @@
       <div class="fav-toolbar">
         <input type="search" id="favSearch" class="fav-search" placeholder="Club suchen…" autocomplete="off" />
       </div>
+      <div class="fav-tabs">
+        <button type="button" class="fav-tab active" data-fav-tab="mine">Meine Favoriten <span class="fav-col-count" id="favCountMine"></span></button>
+        <button type="button" class="fav-tab" data-fav-tab="all">Alle Clubs <span class="fav-col-count" id="favCountAll"></span></button>
+      </div>
       <div class="fav-columns">
         <div class="fav-col" id="favColMine">
           <div class="fav-col-header">
             <span class="fav-col-title">Meine Favoriten</span>
-            <span class="fav-col-count" id="favCountMine"></span>
+            <span class="fav-col-count-desktop" id="favCountMineDesk"></span>
           </div>
           <div class="fav-col-list" id="favListMine"></div>
         </div>
         <div class="fav-col" id="favColAll">
           <div class="fav-col-header">
             <span class="fav-col-title">Alle Clubs</span>
-            <span class="fav-col-count" id="favCountAll"></span>
+            <span class="fav-col-count-desktop" id="favCountAllDesk"></span>
           </div>
           <div class="fav-col-list" id="favListAll"></div>
         </div>
