@@ -2611,7 +2611,7 @@ input {
 
 
 /* Show full labels (Favoriten / Offen) in drawer — override the <1150px hide */
-.mob-drawer-filters .label-full {
+.mob-drawer-filters .layout-prototype .topbar .label-full {
   display: inline !important;
 }
 
