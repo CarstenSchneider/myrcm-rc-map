@@ -3797,11 +3797,7 @@ function showMenuHome() {
       <span class="app-menu-row-label">Favoriten</span>
       ${chevron}
     </button>
-    <button type="button" class="app-menu-row">
-      <span class="app-menu-row-icon">${iconBell}</span>
-      <span class="app-menu-row-label">Benachrichtigungen</span>
-      ${chevron}
-    </button>` : ""}
+` : ""}
     ${isAdmin() ? `
     <div class="app-menu-sep"></div>
     <button type="button" class="app-menu-row" data-menu="admin">
