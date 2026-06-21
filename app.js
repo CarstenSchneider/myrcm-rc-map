@@ -4107,7 +4107,8 @@ function renderFavoritesPage(query) {
         ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
       </div>
       <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">
-        ${isFav ? iconStarFilled : iconStarEmpty}
+        <span class="fav-star-filled">${iconStarFilled}</span>
+        <span class="fav-star-outline">${iconStarEmpty}</span>
       </button>
     </div>`;
 
