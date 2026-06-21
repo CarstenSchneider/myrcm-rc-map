@@ -3754,7 +3754,7 @@ function showMenuHome() {
   if (!appMenuContent) return;
   const current = localStorage.getItem(THEME_KEY) || "auto";
   const chevron = `<svg class="app-menu-row-chevron" viewBox="0 0 14 14"><polyline points="5,2 10,7 5,12"/></svg>`;
-  const iconStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
+  const iconStar = `<svg viewBox="0 0 144 144"><path d="${_starPath}" fill="currentColor"/></svg>`;
   const iconBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
   const iconSun = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
   const iconPin = `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
@@ -4017,8 +4017,9 @@ function openAdminPage() {
   });
 }
 
-const iconStarFilled = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
-const iconStarEmpty  = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+const _starPath = `M115.2,63.74l-22.34,16.23c-.99.72-1.41,2-1.03,3.17l8.53,26.26c.85,2.61-2.14,4.78-4.36,3.17l-22.34-16.23c-.99-.72-2.34-.72-3.33,0l-22.34,16.23c-2.22,1.61-5.21-.56-4.36-3.17l8.53-26.26c.38-1.17-.04-2.45-1.03-3.17l-22.34-16.23c-2.22-1.61-1.08-5.13,1.67-5.13h27.61c1.23,0,2.32-.79,2.7-1.96l8.53-26.26c.85-2.61,4.54-2.61,5.39,0l8.53,26.26c.38,1.17,1.47,1.96,2.7,1.96h27.61c2.75,0,3.89,3.51,1.67,5.13Z`;
+const iconStarFilled = `<svg width="16" height="16" viewBox="0 0 144 144" fill="currentColor" stroke="none"><path d="${_starPath}"/></svg>`;
+const iconStarEmpty  = `<svg width="16" height="16" viewBox="0 0 144 144" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"><path d="${_starPath}"/></svg>`;
 
 let _favPageReady = false;
 let _favResizeObserver = null;
