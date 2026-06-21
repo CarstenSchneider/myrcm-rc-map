@@ -125,6 +125,7 @@ serve(async (_req) => {
   if (subsErr) return new Response(subsErr.message, { status: 500 });
   if (!subs?.length) return new Response("No subscriptions", { status: 200 });
 
+
   // 2. Group host_ids per user
   const userHosts = new Map<string, Set<string>>();
   for (const s of subs) {
@@ -134,19 +135,30 @@ serve(async (_req) => {
 
   // 3. Fetch races data from the public JSON (same source as frontend)
   const [racesRes, venuesRes] = await Promise.all([
-    fetch("https://ncsqbncxctofkmabmwku.supabase.co/storage/v1/object/public/data/races.json").then(r => r.json()).catch(() => []),
-    fetch("https://ncsqbncxctofkmabmwku.supabase.co/storage/v1/object/public/data/venues.json").then(r => r.json()).catch(() => []),
+    fetch("https://rcracemap.com/races.json").then(r => r.json()).catch(() => []),
+    fetch("https://rcracemap.com/venues.json").then(r => r.json()).catch(() => []),
   ]);
 
   const races: any[] = Array.isArray(racesRes) ? racesRes : [];
   const venues: any[] = Array.isArray(venuesRes) ? venuesRes : [];
   const venueById = new Map(venues.map((v: any) => [String(v.id), v]));
 
-  // Only look at races in the next 60 days
+  // Build a map: any hostId alias → canonical venue id
+  // Venues have id + optional hostIds[] array of aliases used in races
+  const hostIdToVenueId = new Map<string, string>();
+  for (const v of venues) {
+    const vid = String(v.id);
+    hostIdToVenueId.set(vid, vid);
+    for (const hid of (v.hostIds ?? [])) {
+      hostIdToVenueId.set(String(hid), vid);
+    }
+  }
+
+  // Only look at races in the next 60 days (races use "from" field)
   const now = new Date();
   const cutoff = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000);
   const upcomingRaces = races.filter((r: any) => {
-    const d = new Date(r.date);
+    const d = new Date(r.from ?? r.date);
     return d >= now && d <= cutoff;
   });
 
@@ -156,8 +168,9 @@ serve(async (_req) => {
 
   for (const [userId, hostIds] of userHosts) {
     const relevant = upcomingRaces.filter((r: any) => {
-      const hid = String(r.hostId ?? r.host_id ?? "");
-      return hostIds.has(hid);
+      const raceHostId = String(r.hostId ?? r.host_id ?? "");
+      const canonicalId = hostIdToVenueId.get(raceHostId) ?? raceHostId;
+      return hostIds.has(raceHostId) || hostIds.has(canonicalId);
     });
     if (!relevant.length) continue;
 
@@ -176,7 +189,7 @@ serve(async (_req) => {
       const venue = venueById.get(String(race.venueId ?? race.venue_id ?? ""));
       const venueName = venue?.name ?? race.organizerName ?? "";
       const raceName = race.name ?? race.title ?? "";
-      const raceDate = formatDate(race.date);
+      const raceDate = formatDate(race.from ?? race.date);
       const raceUrl = `https://rcracemap.com?race=${raceId}`;
 
       if (!seenSet.has(`${raceId}:new_race`)) {
