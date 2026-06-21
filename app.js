@@ -3219,6 +3219,24 @@ if (activeFilterChips) {
 
 window.addEventListener("resize", scheduleSlidingPillUpdate);
 
+// On resize, keep the visible-area center (left of panel) stable.
+// Leaflet's ResizeObserver keeps the full-container center — we correct for the panel offset.
+let resizeRecenterFrame = null;
+window.addEventListener("resize", () => {
+  if (resizeRecenterFrame) cancelAnimationFrame(resizeRecenterFrame);
+  resizeRecenterFrame = requestAnimationFrame(() => {
+    resizeRecenterFrame = null;
+    const isMobile = window.matchMedia("(max-width: 860px)").matches;
+    if (isMobile || !map) return;
+    // Compute lat/lng at current visible-area center (container center minus panel offset).
+    const zoom = map.getZoom();
+    const mapCenterPx = map.project(map.getCenter(), zoom);
+    const visibleCenterPx = mapCenterPx.subtract(L.point(207, -40));
+    const visibleCenter = map.unproject(visibleCenterPx, zoom);
+    panToVisible(visibleCenter, zoom);
+  });
+});
+
 if (document.fonts?.ready) {
   document.fonts.ready
     .then(scheduleSlidingPillUpdate)
