@@ -481,7 +481,7 @@ async function sbSignOut() {
 async function sbPullAll() {
   if (!sbClient || !sbUser) return;
   selectedFavoriteFilter = loadFavoriteFilter();
-  await Promise.all([sbPullFavorites(), sbPullPreferences()]);
+  await Promise.all([sbPullFavorites(), sbPullPreferences(), sbPullNotifications()]);
 }
 
 async function sbPullFavorites() {
@@ -518,6 +518,35 @@ async function sbSaveTheme(theme) {
   if (!sbClient || !sbUser) return;
   const { error } = await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, theme, updated_at: new Date().toISOString() });
   if (error) console.error("sbSaveTheme:", error);
+}
+
+// ── Venue notifications ───────────────────────────────────────────────────
+let _notifIds = new Set();
+
+async function sbPullNotifications() {
+  if (!sbClient || !sbUser) return;
+  const { data, error } = await sbClient.from("venue_notifications").select("host_id").eq("user_id", sbUser.id);
+  if (error) { console.error("sbPullNotifications:", error); return; }
+  _notifIds = new Set((data ?? []).map(r => String(r.host_id)));
+}
+
+function isNotificationEnabled(hostId) {
+  return _notifIds.has(String(hostId));
+}
+
+async function toggleNotification(hostId) {
+  if (!sbClient || !sbUser) return;
+  const id = String(hostId);
+  const enabling = !_notifIds.has(id);
+  if (enabling) {
+    _notifIds.add(id);
+    const { error } = await sbClient.from("venue_notifications").upsert({ user_id: sbUser.id, host_id: id });
+    if (error) { console.error("toggleNotification upsert:", error); _notifIds.delete(id); }
+  } else {
+    _notifIds.delete(id);
+    const { error } = await sbClient.from("venue_notifications").delete().eq("user_id", sbUser.id).eq("host_id", id);
+    if (error) { console.error("toggleNotification delete:", error); _notifIds.add(id); }
+  }
 }
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -4058,6 +4087,12 @@ function openFavoritesPage() {
         document.getElementById("favColAll")?.classList.toggle("fav-col-active", which === "all");
         return;
       }
+      const bellBtn = e.target.closest(".fav-bell-btn");
+      if (bellBtn) {
+        const venueId = bellBtn.dataset.venueId;
+        if (venueId) { await toggleNotification(venueId); renderFavoritesPage(currentQuery()); }
+        return;
+      }
       const btn = e.target.closest(".fav-star-btn");
       if (!btn) return;
       const venueId = btn.dataset.venueId;
@@ -4112,14 +4147,25 @@ function renderFavoritesPage(query) {
   const mine = filtered.filter(v => favIds.has(String(v.id)));
   const rest  = filtered.filter(v => !favIds.has(String(v.id)));
 
-  const rowHtml = (v, isFav) => `
+  const _bellSvg = `<svg class="fav-bell-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+
+  const rowHtml = (v, isFav) => {
+    const notifOn = sbUser && isNotificationEnabled(v.id);
+    const bellBtn = sbUser && isFav
+      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${_bellSvg}</button>`
+      : "";
+    return `
     <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
       <div class="fav-row-info">
         <div class="fav-row-name">${escapeHtml(v.name)}</div>
         ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
       </div>
-      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
+      <div class="fav-row-actions">
+        ${bellBtn}
+        <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_favIconSvg("fav-star-icon")}</button>
+      </div>
     </div>`;
+  };
 
   listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
   listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
