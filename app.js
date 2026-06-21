@@ -622,6 +622,10 @@ function toggleFavoriteHost(hostId) {
     saveFavoriteHostIds([...favoriteIds, id]);
   } else {
     saveFavoriteHostIds(favoriteIds.filter(item => item !== id));
+    // Remove notification subscription when unfavoriting
+    if (_notifIds.has(id)) {
+      toggleNotification(id).catch(e => console.error("toggleNotification on unfav:", e));
+    }
   }
   sbToggleFavorite(id, isNowFavorite).catch(e => console.error("toggleFavoriteHost sync:", e));
 }
