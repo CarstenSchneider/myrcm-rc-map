@@ -435,7 +435,7 @@ const favoriteFilterStorageKey = "rcRaceMapFavoriteFilter";
 // ── Supabase ──────────────────────────────────────────────────────────────────
 const SUPABASE_URL = "https://ncsqbncxctofkmabmwku.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P";
-const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_KEY);
+const sbClient = null; // TEST: disabled to isolate hover bug
 
 let sbUser = null;
 
