@@ -3084,9 +3084,6 @@ function render() {
     renderList(list);
   }
 
-  setTimeout(() => {
-    map.invalidateSize();
-  }, 0);
 }
 
 function setLayout(layout) {
