@@ -272,7 +272,7 @@ input {
 }
 
 .race-venue-unknown {
-  color: rgba(var(--text-rgb), 0.45);
+  color: var(--muted);
   font-size: 13px;
 }
 
