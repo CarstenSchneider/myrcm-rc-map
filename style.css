@@ -613,10 +613,11 @@ input {
   overflow-y: auto;
   padding: 22px;
   background: var(--surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(var(--border-rgb), 0.92);
   border-radius: 24px;
   box-shadow: var(--shadow);
-  transform: translateZ(0);
 }
 
 .layout-prototype .panel-header {
@@ -2697,6 +2698,7 @@ input {
   display: flex;
   flex-direction: column;
 }
+.app-menu-panel:not(.is-open) { pointer-events: none; }
 .app-menu-panel.is-open { transform: translateX(0); }
 
 @media (max-width: 860px) {
