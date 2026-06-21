@@ -3404,6 +3404,7 @@ body.is-menu-open .app-menu-close {
 .fav-row-name { font-size: 13px; font-weight: 500; color: var(--text); }
 .fav-row-city { font-size: 12px; color: var(--muted); margin-top: 1px; }
 .fav-row-actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+.fav-star-btn .fav-star-icon { width: 18px; height: 18px; display: block; flex-shrink: 0; }
 .fav-star-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(var(--text-rgb), 0.22); transition: color 120ms; }
 .fav-star-btn:hover { color: var(--favorite); }
 .fav-star-btn.active { color: var(--favorite); }
