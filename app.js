@@ -4030,6 +4030,7 @@ function openFavoritesPage() {
     _favPageReady = true;
     document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
       page.hidden = true;
+      void document.body.offsetHeight;
     });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
     page.addEventListener("click", e => {
