@@ -3411,7 +3411,7 @@ body.is-menu-open .app-menu-close {
 .fav-bell-btn:hover { color: var(--favorite); }
 .fav-bell-btn.active { color: var(--favorite); }
 .fav-bell-btn.active:hover { color: rgba(var(--text-rgb), 0.35); }
-.fav-bell-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.fav-bell-icon { width: 20px; height: 20px; flex-shrink: 0; pointer-events: none; }
 .fav-empty { padding: 32px 24px; font-size: 13px; color: var(--muted); text-align: center; }
 
 /* Admin full-page overlay */

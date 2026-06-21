@@ -4147,9 +4147,8 @@ function renderFavoritesPage(query) {
   const mine = filtered.filter(v => favIds.has(String(v.id)));
   const rest  = filtered.filter(v => !favIds.has(String(v.id)));
 
-  // Inactive: circle outline + bell outline (stroke)
+  // Inactive: bell outline only, no circle
   const _bellSvgOff = `<svg class="fav-bell-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
     <path d="M12 6.5 C9.8 6.5 8 8.3 8 10.5 L8 14.5 L6.5 15.5 L17.5 15.5 L16 14.5 L16 10.5 C16 8.3 14.2 6.5 12 6.5 Z M10.2 15.5 C10.2 16.6 11 17.5 12 17.5 C13 17.5 13.8 16.6 13.8 15.5 Z M11 6.5 L11 6 C11 5.4 11.4 5 12 5 C12.6 5 13 5.4 13 6 L13 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 
