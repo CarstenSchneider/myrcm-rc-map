@@ -2422,23 +2422,15 @@ function resetVenueSelection() {
     drawerStateBeforeVenue = null;
   }
 
-  // Scroll the first race card of the previously active venue into view
-  if (prevVenueId) {
+  // Restore exact scroll position
+  if (listScrollBeforeVenue !== null) {
     requestAnimationFrame(() => {
-      const card = raceList.querySelector(`[data-race-id]`);
-      // Find first card whose race belongs to prevVenueId
-      const allCards = raceList.querySelectorAll("[data-race-id]");
-      for (const c of allCards) {
-        const race = filteredRaces().find(r => r.id === c.dataset.raceId);
-        if (race && isRaceAtVenue(race, prevVenueId)) {
-          c.scrollIntoView({ block: "nearest", behavior: "instant" });
-          // Also mirror to mobile drawer
-          const mobCard = document.getElementById("mobRaceList")
-            ?.querySelector(`[data-race-id="${CSS.escape(c.dataset.raceId)}"]`);
-          mobCard?.scrollIntoView({ block: "nearest", behavior: "instant" });
-          break;
-        }
-      }
+      const isMobile = window.matchMedia("(max-width: 860px)").matches;
+      const scrollEl = isMobile
+        ? document.getElementById("mobRaceList")
+        : document.querySelector(".race-panel");
+      if (scrollEl) scrollEl.scrollTop = listScrollBeforeVenue;
+      listScrollBeforeVenue = null;
     });
   }
 }
@@ -2777,6 +2769,13 @@ function selectRaceFromPopup(raceId) {
 function focusRace(race) {
   const venue = venueForRace(race);
   if (!venue) return;
+
+  // Save scroll position before switching to venue view
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  const scrollEl = isMobile
+    ? document.getElementById("mobRaceList")
+    : document.querySelector(".race-panel");
+  listScrollBeforeVenue = scrollEl ? scrollEl.scrollTop : null;
 
   activeVenueId = venue.id;
   activeRaceId = null;
@@ -3440,6 +3439,7 @@ const mobFilterMount = document.getElementById("mobFilterMount");
 const DRAWER_STATES = ["collapsed", "half", "full"];
 let drawerState = "half";
 let drawerStateBeforeVenue = null;
+let listScrollBeforeVenue = null;
 
 function setDrawerState(state) {
   drawerState = state;
