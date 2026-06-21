@@ -424,6 +424,7 @@ let venueLookup = new Map();
 let markers = new Map();
 let activeRaceId = null;
 let activeVenueId = null;
+let initialRenderDone = false;
 let pinnedVenueId = null;
 let isSwitchingMarkerPopup = false;
 let selectedRange = "2";
@@ -3055,7 +3056,8 @@ function render() {
   updateAppModeClass();
   syncFilterUi();
   const list = filteredRaces();
-  updateMarkers(list);
+  updateMarkers(list, !initialRenderDone);
+  initialRenderDone = true;
 
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
