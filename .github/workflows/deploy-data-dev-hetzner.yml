@@ -37,6 +37,6 @@ jobs:
         run: |
           lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<EOF
           set sftp:auto-confirm yes
-          mirror -R .deploy-data ./rcracemap-dev --verbose
+          mirror -R .deploy-data ./rcracemap-dev --verbose --transfer-all
           bye
           EOF
