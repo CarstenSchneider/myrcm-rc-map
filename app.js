@@ -4174,7 +4174,10 @@ function renderFavoritesPage(query) {
     </div>`;
   };
 
-  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
+  const bellHint = sbUser && mine.length
+    ? `<p class="fav-bell-hint">Aktiviere ${_bellSvgOff} für E-Mail-Updates bei neuen Rennen</p>`
+    : "";
+  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") + bellHint : `<p class="fav-empty">Keine Favoriten</p>`;
   listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
   const mineCount = mine.length ? `${mine.length}` : "";
   const allCount  = rest.length  ? `${rest.length}`  : "";
