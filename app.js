@@ -4019,8 +4019,7 @@ function openAdminPage() {
   });
 }
 
-const iconStarFilled = `<svg width="16" height="16" viewBox="0 0 144 144" fill="currentColor" stroke="none"><path d="${_starPath}"/></svg>`;
-const iconStarEmpty  = `<svg width="16" height="16" viewBox="0 0 144 144" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"><path d="${_starPath}"/></svg>`;
+const _iconStarCircle = `<svg class="fav-star-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,2 L15.09,8.26 L22,9.27 L17,14.14 L18.18,21.02 L12,17.77 L5.82,21.02 L7,14.14 L2,9.27 L8.91,8.26 Z"/></svg>`;
 
 let _favPageReady = false;
 let _favResizeObserver = null;
@@ -4106,10 +4105,7 @@ function renderFavoritesPage(query) {
         <div class="fav-row-name">${escapeHtml(v.name)}</div>
         ${v.city ? `<div class="fav-row-city">${escapeHtml(v.city)}</div>` : ""}
       </div>
-      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">
-        <span class="fav-star-filled">${iconStarFilled}</span>
-        <span class="fav-star-outline">${iconStarEmpty}</span>
-      </button>
+      <button type="button" class="fav-star-btn${isFav ? " active" : ""}" data-venue-id="${escapeHtml(v.id)}" aria-label="${isFav ? "Aus Favoriten entfernen" : "Zu Favoriten hinzufügen"}">${_iconStarCircle}</button>
     </div>`;
 
   listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") : `<p class="fav-empty">Keine Favoriten</p>`;
