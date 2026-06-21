@@ -3747,7 +3747,8 @@ function closeAppMenu() {
   appMenuPanel?.setAttribute("aria-hidden", "true");
   document.body.classList.remove("is-menu-open");
   menuButtons.forEach(b => b?.setAttribute("aria-label", "Menü öffnen"));
-  document.getElementById("favoritesPage").hidden = true;
+  const fp = document.getElementById("favoritesPage");
+  if (fp) fp.hidden = true;
   showMenuHome();
 }
 
