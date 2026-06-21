@@ -3367,7 +3367,7 @@ body.is-menu-open .app-menu-close {
 .fav-search:focus { border-color: var(--accent); }
 /* Mobile tabs — hidden on desktop */
 .fav-tabs { display: none; }
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .fav-tabs { display: flex; flex-shrink: 0; border-bottom: 1px solid rgba(var(--text-rgb), 0.07); }
   .fav-tab { flex: 1; padding: 10px 12px; font-size: 13px; font-weight: 500; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; transition: color 120ms, border-color 120ms; }
   .fav-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
