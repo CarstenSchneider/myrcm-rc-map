@@ -3042,8 +3042,13 @@ function revealMap() {
 function revealMapWhenReady() {
   const mapElement = document.getElementById("map");
 
-  map.once("moveend", () => {
-    revealMap();
+  // render() has already called fitMapToBounds (synchronous setView).
+  // Wait one rAF for MapLibre GL's camera to settle, then reveal.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if (mapElement?.classList.contains("map-ready")) return;
+      revealMap();
+    });
   });
 
   window.setTimeout(() => {
@@ -3346,8 +3351,8 @@ async function init() {
 
   syncFilterUi();
 
-  revealMapWhenReady();
   render();
+  revealMapWhenReady();
 }
 
 init().catch(error => {
