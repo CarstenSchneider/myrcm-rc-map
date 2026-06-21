@@ -2427,13 +2427,15 @@ function resetVenueSelection() {
   if (listScrollBeforeVenue !== null) {
     const savedScroll = listScrollBeforeVenue;
     listScrollBeforeVenue = null;
-    const delay = isMobile ? 320 : 0;
-    setTimeout(() => {
+    const applyScroll = () => {
       const scrollEl = isMobile
         ? document.getElementById("mobRaceList")
         : document.querySelector(".race-panel");
       if (scrollEl) scrollEl.scrollTop = savedScroll;
-    }, delay);
+    };
+    // Set immediately to avoid visible jump, then re-apply after drawer transition
+    requestAnimationFrame(applyScroll);
+    if (isMobile) setTimeout(applyScroll, 320);
   }
 }
 
