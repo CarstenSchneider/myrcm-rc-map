@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="style.css?v=49" />
+  <link rel="stylesheet" href="style.css?v=50" />
   <style>
     /* v1.6.5 target topbar polish */
     .layout-prototype .filters-panel {
@@ -1287,7 +1287,9 @@
     </div>
     <div class="fav-page-body">
       <div class="fav-toolbar">
-        <input type="search" id="favSearch" class="fav-search" placeholder="Club suchen…" autocomplete="off" />
+        <div class="fav-search-wrap">
+          <input type="search" id="favSearch" class="fav-search" placeholder="Club suchen…" autocomplete="off" />
+        </div>
       </div>
       <div class="fav-tabs">
         <button type="button" class="fav-tab active" data-fav-tab="mine">Meine Favoriten <span class="fav-col-count" id="favCountMine"></span></button>
