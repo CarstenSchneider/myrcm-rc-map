@@ -1442,6 +1442,9 @@ input {
 .race-card:has(.race-new-badge) .race-date {
   padding-right: 72px;
 }
+.race-card:has(.race-new-badge):has(.venue-action-buttons) .race-new-badge {
+  right: 88px;
+}
 
 
 /* v1.4 registration count in race cards */
@@ -1849,96 +1852,44 @@ input {
   color: var(--favorite) !important;
 }
 
-.venue-favorite-button .favorite-toggle-icon {
-  width: 1em;
-  height: 1em;
-  display: block;
-  flex-shrink: 0;
-}
-
-.venue-favorite-button {
-  appearance: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  min-width: 0;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background: transparent;
-  color: rgba(var(--text-rgb), 0.42);
-  font: inherit;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.venue-favorite-button:hover,
-.venue-favorite-button:focus-visible {
-  color: var(--favorite);
-  outline: none;
-}
-
-.venue-favorite-button.active {
-  color: var(--favorite);
-}
-
-.venue-favorite-button.active:hover,
-.venue-favorite-button.active:focus-visible {
-  color: rgba(var(--text-rgb), 0.42);
-}
-
+.venue-favorite-button,
 .venue-notification-button {
   appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  min-width: 0;
-  height: auto;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
   padding: 0;
   margin: 0;
   border: 0;
+  border-radius: 50%;
   background: transparent;
   color: rgba(var(--text-rgb), 0.42);
-  font: inherit;
-  font-size: 20px;
-  line-height: 1;
   cursor: pointer;
+  transition: color 120ms;
 }
 
+.venue-favorite-button .favorite-toggle-icon,
 .venue-notification-button .notification-toggle-icon {
-  width: 1em;
-  height: 1em;
+  width: 28px;
+  height: 28px;
   display: block;
   flex-shrink: 0;
+  pointer-events: none;
 }
 
-.venue-notification-button:hover,
-.venue-notification-button:focus-visible {
-  color: var(--favorite);
-  outline: none;
-}
-
+.venue-favorite-button.active,
 .venue-notification-button.active {
   color: var(--favorite);
 }
 
-.venue-notification-button.active:hover,
-.venue-notification-button.active:focus-visible {
-  color: rgba(var(--text-rgb), 0.42);
-}
-
-@media (max-width: 860px) {
-  .venue-favorite-button,
-  .venue-notification-button {
-    min-width: 40px;
-    min-height: 40px;
-    font-size: 22px;
-    justify-content: center;
-  }
+@media (hover: hover) and (pointer: fine) {
+  .venue-favorite-button:hover,
+  .venue-notification-button:hover { color: var(--favorite); outline: none; }
+  .venue-favorite-button.active:hover,
+  .venue-notification-button.active:hover { color: rgba(var(--text-rgb), 0.42); }
 }
 
 .popup-title .venue-name-with-favorite {
