@@ -1,0 +1,21 @@
+name: Test Hetzner SSH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test SSH + Node.js on Hetzner
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HETZNER_HOST }}
+          username: ${{ secrets.HETZNER_USER }}
+          password: ${{ secrets.HETZNER_PASSWORD }}
+          port: ${{ secrets.HETZNER_PORT }}
+          script: |
+            echo "SSH OK"
+            node --version || echo "Node.js nicht installiert"
+            which npm || echo "npm nicht gefunden"
+            pwd
