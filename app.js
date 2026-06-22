@@ -17,7 +17,7 @@ const map = L.map("map", {
   zoomControl: false,
   attributionControl: false,
   minZoom: 5
-}).setView([51.3, 10.5], 5);
+}).setView([51.3, 10.5], 6);
 
 const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
 map.setMaxBounds(MAX_BOUNDS);
@@ -2820,7 +2820,7 @@ const popupOffset = hasUpcomingRaces
   });
 
   if (shouldFitBounds && bounds.length >= 1) {
-    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : 6 });
+    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined });
   }
 }
 
@@ -4525,13 +4525,6 @@ window.addEventListener("load", () => {
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
-  // Restore default view after all rAFs (incl. setDrawerState's invalidateSize) have settled
-  setTimeout(() => {
-    if (!activeVenueId && !pinnedVenueId) {
-      map?.setView([51.3, 10.5], 5, { animate: false });
-      baseMapLayer?.getMaplibreMap?.()?.resize?.();
-    }
-  }, 50);
 });
 
 sbInit();
