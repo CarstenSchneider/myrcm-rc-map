@@ -590,17 +590,17 @@ async function toggleNotification(hostId) {
   }
 }
 function syncNotificationUi(hostId) {
-  // Rebuild open popup so bell state is fresh
+  const active = isNotificationEnabled(hostId);
+  // Update popup bell button directly if popup is open
   if (pinnedVenueId) {
-    const m = markers.get(pinnedVenueId);
-    const popup = m?.getPopup();
-    if (popup) {
-      const venue = venues.get(pinnedVenueId);
-      if (venue) {
-        const vRaces = filteredRaces().filter(r => isRaceAtVenue(r, pinnedVenueId));
-        const latestPast = latestPastRaceForVenue(venue);
-        popup.setContent(buildPopup(venue, vRaces, latestPast));
-      }
+    const popupEl = markers.get(pinnedVenueId)?.getPopup()?.getElement();
+    if (popupEl) {
+      popupEl.querySelectorAll("[data-notification-host-id]").forEach(btn => {
+        if (btn.dataset.notificationHostId === String(hostId)) {
+          btn.classList.toggle("active", active);
+          btn.setAttribute("aria-pressed", String(active));
+        }
+      });
     }
   }
   // Update favorites page if visible
