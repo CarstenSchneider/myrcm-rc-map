@@ -540,7 +540,7 @@ async function sbPullFavorites() {
 async function sbPullPreferences() {
   const { data, error } = await sbClient.from("user_preferences").select("theme").eq("user_id", sbUser.id).maybeSingle();
   if (error) { console.error("sbPullPreferences:", error); return; }
-  if (data?.theme) setTheme(data.theme);
+  if (data?.theme && data.theme !== (localStorage.getItem(THEME_KEY) || "auto")) setTheme(data.theme);
 }
 
 async function sbToggleFavorite(hostId, isNowFavorite) {
