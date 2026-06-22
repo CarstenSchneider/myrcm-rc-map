@@ -844,9 +844,12 @@ function buildVenueSeedLookup(venueSeeds = []) {
   const lookup = new Map();
 
   for (const seed of venueSeeds || []) {
-    if (!seed?.id) continue;
+    if (!seed) continue;
 
-    lookup.set(String(seed.id), seed);
+    // Seeds created via admin-commit may lack an id — still index by myrcmOrgId
+    if (seed.id) {
+      lookup.set(String(seed.id), seed);
+    }
 
     if (seed.myrcmOrgId) {
       lookup.set(`myrcm-${seed.myrcmOrgId}`, seed);
@@ -883,12 +886,18 @@ function venueSeedForMyRcmHost(venueSeedLookup, host, hostRecord = null) {
   );
 }
 
+function seedId(seed) {
+  // admin-commit entries may lack an id — derive one from myrcmOrgId as fallback
+  return seed?.id || (seed?.myrcmOrgId ? `myrcm-${seed.myrcmOrgId}` : null);
+}
+
 function venueFromSeed(seed) {
-  if (!seed?.id) return null;
+  const id = seedId(seed);
+  if (!id) return null;
 
   return {
-    id: seed.id,
-    name: seed.name || seed.id,
+    id,
+    name: seed.name || seed.hostName || id,
     city: seed.city || "",
     lat: seed.lat ?? null,
     lng: seed.lng ?? null,
@@ -899,11 +908,12 @@ function venueFromSeed(seed) {
 }
 
 function venueRecordFromSeed(seed) {
-  if (!seed?.id) return null;
+  const id = seedId(seed);
+  if (!id) return null;
 
   return {
-    id: seed.id,
-    name: seed.name || seed.id,
+    id,
+    name: seed.name || seed.hostName || id,
     city: seed.city || "",
     lat: seed.lat ?? null,
     lng: seed.lng ?? null,
