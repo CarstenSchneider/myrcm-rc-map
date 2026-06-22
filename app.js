@@ -2727,7 +2727,10 @@ const popupOffset = hasUpcomingRaces
       popupElement.addEventListener("click", event => {
         if (
           event.target.closest("a") ||
-          event.target.closest(".leaflet-popup-close-button")
+          event.target.closest(".leaflet-popup-close-button") ||
+          event.target.closest("[data-notification-host-id]") ||
+          event.target.closest("[data-favorite-host-id]") ||
+          event.target.closest("[data-favorite-venue-id]")
         ) {
           return;
         }
