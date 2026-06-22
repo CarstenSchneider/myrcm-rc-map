@@ -656,9 +656,9 @@
     .layout-prototype .race-host {
       display: flex;
       align-items: center;
-      min-height: 44px;
+      min-height: 52px;
       margin: 0;
-      padding: 10px 16px;
+      padding: 4px 8px 4px 16px;
       border-radius: 22px 22px 0 0;
       background: var(--host-blue);
       color: #fff;
@@ -667,31 +667,13 @@
     .layout-prototype .race-host .venue-name-with-favorite {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 0;
       min-width: 0;
       color: inherit;
     }
-
-    .layout-prototype .race-host .venue-favorite-button {
-      justify-content: center;
-      flex: 0 0 15px;
-      width: 15px;
-      height: 15px;
-      border-radius: 999px;
-      background: transparent;
-      font-size: 11px;
-      transform: none;
-    }
-
-    .layout-prototype .venue-favorite-button .favorite-toggle-icon {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      flex-shrink: 0;
-    }
-
-    .layout-prototype .race-host .venue-favorite-button {
-      color: #fff !important;
+    .layout-prototype .race-host .venue-action-buttons {
+      gap: 0 !important;
+      margin-left: auto;
     }
 
     .layout-prototype .race-host .venue-link,
@@ -709,45 +691,53 @@
       text-decoration: none;
     }
 
-    /* Favorite venue: gold bg + dark navy text — mirrors favorite popup */
+    /* Both buttons same size in race-host */
+    .layout-prototype .race-host .venue-favorite-button,
+    .layout-prototype .race-host .venue-notification-button {
+      width: 36px;
+      height: 36px;
+      color: rgba(255,255,255,0.25) !important;
+      transition: color 200ms ease;
+    }
+    .layout-prototype .race-host .venue-favorite-button .favorite-toggle-icon,
+    .layout-prototype .race-host .venue-notification-button .notification-toggle-icon {
+      width: 28px;
+      height: 28px;
+    }
+    .layout-prototype .race-host .venue-favorite-button.active,
+    .layout-prototype .race-host .venue-notification-button.active {
+      color: #fff !important;
+    }
+
+    /* Favorite venue: gold bg + dark navy text */
     .layout-prototype .race-card-favorite-venue .race-host {
       background: var(--favorite) !important;
       color: #213769 !important;
     }
 
     .layout-prototype .race-card-favorite-venue .race-host .venue-link,
-    .layout-prototype .race-card-favorite-venue .race-host .host-name,
-    .layout-prototype .race-host .venue-link-favorite,
-    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
-    .layout-prototype .race-host .venue-favorite-button.active {
+    .layout-prototype .race-card-favorite-venue .race-host .host-name {
       color: #213769 !important;
       transition: color 200ms ease;
     }
-
-    /* Gold header: hover → white (mirrors gold popup) */
-    .layout-prototype .race-card-favorite-venue .race-host .venue-link:hover,
-    .layout-prototype .race-card-favorite-venue .race-host .venue-link:focus-visible,
-    .layout-prototype .race-card-favorite-venue .race-host .host-name:hover,
-    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
-    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:focus-visible,
-    .layout-prototype .race-host .venue-favorite-button.active:hover,
-    .layout-prototype .race-host .venue-favorite-button.active:focus-visible {
-      color: #ffffff !important;
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button {
+      color: rgba(33,55,105,0.25) !important;
+    }
+    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button.active,
+    .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button.active {
+      color: #213769 !important;
     }
 
-    /* Blue header: star hover → gold (mirrors standard popup) */
-    .layout-prototype .race-host .venue-favorite-button {
-      color: #fff !important;
-      transition: color 200ms ease;
-    }
-    .layout-prototype .race-host .venue-favorite-button:hover,
-    .layout-prototype .race-host .venue-favorite-button:focus-visible {
-      color: var(--favorite) !important;
-    }
-    /* Override: gold header star hover → white (higher specificity via card class) */
-    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
-    .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:focus-visible {
-      color: #ffffff !important;
+    @media (hover: hover) and (pointer: fine) {
+      .layout-prototype .race-host .venue-favorite-button:hover,
+      .layout-prototype .race-host .venue-notification-button:hover,
+      .layout-prototype .race-host .venue-favorite-button.active:hover,
+      .layout-prototype .race-host .venue-notification-button.active:hover { color: #fff !important; }
+      .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
+      .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button.active:hover,
+      .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button.active:hover { color: #fff !important; }
+      .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button:not(.active):hover { color: #213769 !important; }
     }
 
     .layout-prototype .race-card-header {
@@ -972,6 +962,15 @@
     .layout-prototype .race-card.registration-closed {
       background: var(--card-closed);
       box-shadow: 0 12px 28px rgba(var(--shadow-rgb, 31, 29, 26), 0.08);
+    }
+
+    .layout-prototype .race-card > .registration-status {
+      padding: 0 18px 14px;
+      background: var(--card);
+    }
+
+    .layout-prototype .race-card.registration-closed > .registration-status {
+      background: var(--card-closed);
     }
 
     .layout-prototype .race-card.registration-closed .race-card-header,
@@ -1277,7 +1276,7 @@
   <script src="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.js"></script>
   <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.3/leaflet-maplibre-gl.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="app.js?v=52" type="module"></script>
+  <script src="app.js?v=72" type="module"></script>
   <div id="favoritesPage" class="admin-page" hidden>
     <button type="button" class="sub-page-close" id="favoritesPageBack" aria-label="Schließen">
       <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>

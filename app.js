@@ -33,14 +33,14 @@ const rcRaceMapColorsLight = {
   landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4", roadMinor: "#cccccc",
   boundary: "#d8d8d8", label: "#716F6F", labelHalo: "#ebebeb",
   marker: "#213769", markerClosed: "#c0bdb8", favorite: "#C8B090",
-  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
+  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#4A9EE8",
 };
 const rcRaceMapColorsDark = {
   water: "#0c1829", land: "#0f1e35", settlement: "#132442",
   landcover: "#0e1c32", building: "#132442", road: "#1e3a5f", roadMinor: "#1e3a5f",
   boundary: "#1e3a5f", label: "#6a9fd8", labelHalo: "#0f1e35",
   marker: "#4569a5", markerClosed: "#3d6090", favorite: "#c8b090",
-  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#FFA700",
+  statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#4A9EE8",
 };
 const rcRaceMapColors = { ...rcRaceMapColorsLight };
 
@@ -61,7 +61,13 @@ const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,
 // Favorite star icon (viewBox 0 0 24 24): circle + scaled Feather star as cutout
 const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z`;
 const _favIconSvg  = (cls = "favorite-toggle-icon") =>
-  `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
+  `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
+
+// Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
+// Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
+const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
+const _bellIconSvg = (cls = "notification-toggle-icon") =>
+  `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_bellIconPath}" fill="currentColor"/></svg>`;
 
 // Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
 // Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
@@ -587,6 +593,30 @@ async function toggleNotification(hostId) {
     _notifIds.delete(id);
     const { error } = await sbClient.from("venue_notifications").delete().eq("user_id", sbUser.id).eq("host_id", id);
     if (error) { console.error("toggleNotification delete:", error); _notifIds.add(id); }
+  }
+}
+function syncNotificationUi(hostId) {
+  // Update favorites page if visible
+  const fp = document.getElementById("favoritesPage");
+  if (fp && !fp.hidden) {
+    const favQuery = (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
+    renderFavoritesPage(favQuery);
+  }
+  // Update race list (re-renders all cards with correct bell state)
+  const list = filteredRaces();
+  const vid = activeVenueId || pinnedVenueId;
+  if (vid) {
+    const vl = list.filter(r => isRaceAtVenue(r, vid));
+    if (vl.length) {
+      renderList(vl);
+      resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
+    } else {
+      const venue = venues.find(v => v.id === vid);
+      if (venue) renderVenueNoRaces(latestPastRaceForVenue(venue));
+    }
+  } else {
+    renderList(list);
+    resultLine.textContent = resultLineText(list.length);
   }
 }
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1330,7 +1360,7 @@ function isNewRace(race) {
 }
 
 function newRaceBadgeHtml(race) {
-  if (!isNewRace(race)) return "";
+  return "";
 
   const firstSeen = parseDate(race.firstSeen);
   const today = todayStart();
@@ -1692,11 +1722,11 @@ function ensureRegistrationStatusStyles() {
     }
 
     .registration-dot-upcoming {
-      background: var(--status-upcoming, #FFA700);
+      background: var(--status-upcoming, #4A9EE8);
     }
 
     .registration-dot-login_required {
-      background: var(--status-upcoming, #FFA700);
+      background: var(--status-upcoming, #4A9EE8);
     }
 
     .registration-dot-closed {
@@ -2453,15 +2483,12 @@ function googleMapsRouteUrl(venue) {
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
   const sourceRace = venueRaces[0] || latestPastRace;
-  const hostId = sourceRace ? raceHostId(sourceRace) : null;
-  const hostName = hostId ? raceHostName(sourceRace) : null;
-  const hostWebsite = hostId ? hostWebsiteForRace(sourceRace) : null;
-  const hostNameHtml = hostWebsite
-    ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
-    : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`;
-  const isPopupFav = isFavoriteHostId(hostId);
-  const titleHtml = hostId
-    ? `<span class="venue-name-with-favorite">${hostNameHtml}<span class="venue-action-buttons">${isPopupFav ? notificationHostButtonHtml(hostId, hostName) : ""}${favoriteHostButtonHtml(hostId, hostName)}</span></span>`
+  const hostName = sourceRace ? raceHostName(sourceRace) : null;
+  const hostWebsite = sourceRace ? hostWebsiteForRace(sourceRace) : null;
+  const titleHtml = hostName
+    ? (hostWebsite
+        ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
+        : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`)
     : venueNameHtml(venue);
 
   return `
@@ -2725,10 +2752,7 @@ const popupOffset = hasUpcomingRaces
       });
 
       popupElement.addEventListener("click", event => {
-        if (
-          event.target.closest("a") ||
-          event.target.closest(".leaflet-popup-close-button")
-        ) {
+        if (event.target.closest(".leaflet-popup-close-button")) {
           return;
         }
 
@@ -2872,18 +2896,41 @@ function focusRace(race) {
   const targetZoom = Math.max(map.getZoom(), 12);
   panToVisible([venue.lat, venue.lng], targetZoom);
 }
+function buildPastRaceCardEl(race) {
+  const isFavorite = isFavoriteRaceHost(race);
+  const series = raceSeries(race);
+  const label = document.createElement("div");
+  label.className = "venue-last-race-label";
+  label.textContent = "Zuletzt:";
+  const card = document.createElement("article");
+  card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}`;
+  card.dataset.raceId = race.id;
+  card.innerHTML = `
+    <div class="race-host">${raceHostNameHtml(race)}</div>
+    <div class="race-card-header">
+      <div class="race-date">${formatDateRange(race.from, race.to)}</div>
+      <div class="race-name-row">
+        <div class="race-name">${escapeHtml(race.name)}</div>
+        ${registrationCountHtml(race)}
+      </div>
+      <div class="race-tags race-series-tags">
+        ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
+      </div>
+    </div>
+    ${documentLinksHtml(race)}
+    ${statusDetailsHtml(race)}
+  `;
+  return [label, card];
+}
+
 function renderVenueNoRaces(latestPastRace) {
   resultLine.textContent = emptyVenueResultLineText();
   raceList.innerHTML = "";
-  if (latestPastRace) {
-    raceList.innerHTML = `<div class="venue-last-race">
-      <span class="venue-last-race-label">Zuletzt:</span>
-      <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong>
-      ${escapeHtml(latestPastRace.name)}
-    </div>`;
-  } else {
+  if (!latestPastRace) {
     raceList.innerHTML = `<div class="empty-state">Keine Rennen an dieser Strecke.</div>`;
+    return;
   }
+  buildPastRaceCardEl(latestPastRace).forEach(el => raceList.appendChild(el));
 }
 
 function renderList(list) {
@@ -2975,6 +3022,22 @@ function renderList(list) {
     raceList.appendChild(card);
   }
 
+  if (selectedFavoriteFilter === "favorites") {
+    const venueIdsInList = new Set();
+    for (const race of list) {
+      const v = venueForRace(race);
+      if (v) venueIdsInList.add(String(v.id));
+    }
+    for (const venue of venues) {
+      if (venueIdsInList.has(String(venue.id))) continue;
+      if (!isFavoriteHostId(venue.id)) continue;
+      const past = latestPastRaceForVenue(venue);
+      if (!past) continue;
+      const [, card] = buildPastRaceCardEl(past);
+      raceList.appendChild(card);
+    }
+  }
+
 }
 
 function toggleClassList(raceId) {
@@ -3012,23 +3075,7 @@ document.addEventListener("click", event => {
 
   if (notificationHostButton) {
     const hostId = notificationHostButton.dataset.notificationHostId;
-    toggleNotification(hostId).then(() => {
-      const active = isNotificationEnabled(hostId);
-      // Update all matching bell buttons (popup + race cards) simultaneously
-      document.querySelectorAll("[data-notification-host-id]").forEach(btn => {
-        if (btn.dataset.notificationHostId === hostId) {
-          btn.classList.toggle("active", active);
-          btn.setAttribute("aria-pressed", String(active));
-        }
-      });
-      // Re-render race list so newly created cards also show the correct state
-      const list = filteredRaces();
-      if (activeVenueId) {
-        renderList(list.filter(race => isRaceAtVenue(race, activeVenueId)));
-      } else {
-        renderList(list);
-      }
-    }).catch(e => console.error("toggleNotification:", e));
+    toggleNotification(hostId).then(() => syncNotificationUi(hostId)).catch(e => console.error("toggleNotification:", e));
     return;
   }
 
@@ -3071,8 +3118,13 @@ document.addEventListener("click", event => {
 
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
-    renderList(venueList);
-    resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
+    if (venueList.length) {
+      renderList(venueList);
+      resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
+    } else {
+      const venue = venues.find(v => v.id === activeVenueId);
+      if (venue) renderVenueNoRaces(latestPastRaceForVenue(venue));
+    }
   } else {
     renderList(list);
     resultLine.textContent = resultLineText(list.length);
@@ -4237,7 +4289,7 @@ function openFavoritesPage() {
       void document.body.offsetHeight;
     });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
-    page.addEventListener("click", async e => {
+    page.addEventListener("click", e => {
       const tab = e.target.closest(".fav-tab");
       if (tab) {
         page.querySelectorAll(".fav-tab").forEach(t => t.classList.remove("active"));
@@ -4250,7 +4302,7 @@ function openFavoritesPage() {
       const bellBtn = e.target.closest(".fav-bell-btn");
       if (bellBtn) {
         const venueId = bellBtn.dataset.venueId;
-        if (venueId) { await toggleNotification(venueId); renderFavoritesPage(currentQuery()); }
+        if (venueId) toggleNotification(venueId).then(() => syncNotificationUi(venueId));
         return;
       }
       const btn = e.target.closest(".fav-star-btn");
@@ -4476,6 +4528,11 @@ window.addEventListener("load", () => {
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    // Restore default view after invalidateSize re-measures the container
+    // (invalidateSize can shift zoom when the container size was unknown at init time)
+    if (!activeVenueId && !pinnedVenueId) {
+      map?.setView([51.8, 11.8], 7, { animate: false });
+    }
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
