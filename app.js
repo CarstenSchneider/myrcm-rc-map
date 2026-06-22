@@ -64,7 +64,8 @@ const _favIconSvg  = (cls = "favorite-toggle-icon") =>
   `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
 // Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
-const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M18,8 A6,6 0 0,0 6,8 c0,7 -3,9 -3,9 h18 s-3,-2 -3,-9 Z`;
+// Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
+const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
 const _bellIconSvg = (cls = "notification-toggle-icon") =>
   `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_bellIconPath}" fill="currentColor"/></svg>`;
 
@@ -4299,14 +4300,7 @@ function renderFavoritesPage(query) {
   const mine = filtered.filter(v => venueIsFav(v));
   const rest  = filtered.filter(v => !venueIsFav(v));
 
-  // Inactive: bell outline only, no circle
-  const _bellSvgOff = `<svg class="fav-bell-icon" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M12 6.5 C9.8 6.5 8 8.3 8 10.5 L8 14.5 L6.5 15.5 L17.5 15.5 L16 14.5 L16 10.5 C16 8.3 14.2 6.5 12 6.5 Z M10.2 15.5 C10.2 16.6 11 17.5 12 17.5 C13 17.5 13.8 16.6 13.8 15.5 Z M11 6.5 L11 6 C11 5.4 11.4 5 12 5 C12.6 5 13 5.4 13 6 L13 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>`;
-
-  // Active: filled circle with bell as evenodd cutout
-  const _bellPath = `M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
-  const _bellSvgOn = `<svg class="fav-bell-icon" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z ${_bellPath}" fill="currentColor"/></svg>`;
+  const _bellSvgFav = _bellIconSvg("fav-bell-icon");
 
   // Return the ID actually stored in favorites (or the best candidate for storing)
   const venueCanonicalId = v => {
@@ -4319,7 +4313,7 @@ function renderFavoritesPage(query) {
     const cid = venueCanonicalId(v);
     const notifOn = sbUser && isNotificationEnabled(cid);
     const bellBtn = sbUser && isFav
-      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${notifOn ? _bellSvgOn : _bellSvgOff}</button>`
+      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${_bellSvgFav}</button>`
       : "";
     return `
     <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
@@ -4335,7 +4329,7 @@ function renderFavoritesPage(query) {
   };
 
   const bellHint = sbUser && mine.length
-    ? `<p class="fav-bell-hint">Aktiviere ${_bellSvgOff} für E-Mail-Updates bei neuen Rennen</p>`
+    ? `<p class="fav-bell-hint">Aktiviere ${_bellSvgFav} für E-Mail-Updates bei neuen Rennen</p>`
     : "";
   listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") + bellHint : `<p class="fav-empty">Keine Favoriten</p>`;
   listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
