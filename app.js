@@ -592,7 +592,10 @@ async function toggleNotification(hostId) {
 function syncNotificationUi(hostId) {
   // Update favorites page if visible
   const fp = document.getElementById("favoritesPage");
-  if (fp && !fp.hidden) renderFavoritesPage(currentQuery());
+  if (fp && !fp.hidden) {
+    const favQuery = (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
+    renderFavoritesPage(favQuery);
+  }
   // Update race list
   const list = filteredRaces();
   const vid = activeVenueId || pinnedVenueId;
@@ -608,7 +611,7 @@ function syncNotificationUi(hostId) {
   const savedVenueId = pinnedVenueId;
   if (savedVenueId) {
     setTimeout(() => {
-      const venue = venues.get(savedVenueId);
+      const venue = venues.find(v => v.id === savedVenueId);
       const popup = markers.get(savedVenueId)?.getPopup();
       if (venue && popup) {
         const vRaces = filteredRaces().filter(r => isRaceAtVenue(r, savedVenueId));
