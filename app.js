@@ -412,7 +412,11 @@ function applyRcRaceMapStyle() {
 }
 
 baseMapLayer.getMaplibreMap?.().on("load", applyRcRaceMapStyle);
-baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
+let _styleDataTimer = null;
+baseMapLayer.getMaplibreMap?.().on("styledata", () => {
+  clearTimeout(_styleDataTimer);
+  _styleDataTimer = setTimeout(applyRcRaceMapStyle, 80);
+});
 baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
   requestAnimationFrame(applyRcRaceMapStyle);
 });
