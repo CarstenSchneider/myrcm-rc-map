@@ -3016,27 +3016,20 @@ function renderList(list) {
     raceList.appendChild(card);
   }
 
-  // In favorites mode, append "Zuletzt" cards for favorite venues with no upcoming races
   if (selectedFavoriteFilter === "favorites") {
-    const venueIdsInList = new Set(list.map(r => isRaceAtVenue(r, r._venueId) ? r._venueId : null).filter(Boolean));
-    // Simpler: collect all venue IDs that appear in the list
-    const coveredHostIds = new Set();
-    list.forEach(r => {
-      const hid = raceHostId(r);
-      if (hid) coveredHostIds.add(hid);
-    });
-    venues.forEach(venue => {
-      const isVenueFav = isFavoriteHostId(venue.id)
-        || (venue.hostId && isFavoriteHostId(venue.hostId))
-        || (Array.isArray(venue.hostIds) && venue.hostIds.some(id => isFavoriteHostId(id)));
-      if (!isVenueFav) return;
-      // Check if this venue is already represented in the list
-      const venueHostId = venue.hostId ? String(venue.hostId) : venue.id;
-      if (coveredHostIds.has(venueHostId) || coveredHostIds.has(String(venue.id))) return;
-      const latestPast = latestPastRaceForVenue(venue);
-      if (!latestPast) return;
-      buildPastRaceCardEl(latestPast).forEach(el => raceList.appendChild(el));
-    });
+    const venueIdsInList = new Set();
+    for (const race of list) {
+      const v = venueForRace(race);
+      if (v) venueIdsInList.add(String(v.id));
+    }
+    for (const venue of venues) {
+      if (venueIdsInList.has(String(venue.id))) continue;
+      if (!isFavoriteHostId(venue.id)) continue;
+      const past = latestPastRaceForVenue(venue);
+      if (!past) continue;
+      const [, card] = buildPastRaceCardEl(past);
+      raceList.appendChild(card);
+    }
   }
 
 }
