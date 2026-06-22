@@ -17,7 +17,7 @@ const map = L.map("map", {
   zoomControl: false,
   attributionControl: false,
   minZoom: 6
-}).setView([51.8, 11.8], 7);
+}).setView([51.3, 10.5], 6);
 
 const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
 map.setMaxBounds(MAX_BOUNDS);
@@ -3417,19 +3417,20 @@ if (activeFilterChips) {
 window.addEventListener("resize", scheduleSlidingPillUpdate);
 
 let resizeRecenterTimer = null;
+let resizeWasMobile = window.matchMedia("(max-width: 860px)").matches;
 window.addEventListener("resize", () => {
   clearTimeout(resizeRecenterTimer);
   resizeRecenterTimer = setTimeout(() => {
     resizeRecenterTimer = null;
-    if (!map || !lastVisibleCenter) return;
-    if (window.matchMedia("(max-width: 860px)").matches) return;
+    if (!map) return;
+    const isMobile = window.matchMedia("(max-width: 860px)").matches;
+    const crossedBreakpoint = isMobile !== resizeWasMobile;
+    resizeWasMobile = isMobile;
     map.invalidateSize({ pan: false });
+    if (!lastVisibleCenter) return;
+    if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
-    const pt = map.project(lastVisibleCenter, zoom);
-    const shifted = L.point(pt.x + 207, pt.y - 40);
-    map.setMaxBounds(null);
-    map.setView(map.unproject(shifted, zoom), zoom, { animate: true, duration: 0.15 });
-    map.setMaxBounds(MAX_BOUNDS);
+    panToVisible(lastVisibleCenter, zoom);
   }, 150);
 });
 
@@ -4522,16 +4523,12 @@ window.addEventListener("load", () => {
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    if (lastVisibleCenter && !window.matchMedia("(max-width: 860px)").matches) {
+      panToVisible(lastVisibleCenter, map.getZoom());
+    }
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
-  // Restore default view after all rAFs (incl. setDrawerState's invalidateSize) have settled
-  setTimeout(() => {
-    if (!activeVenueId && !pinnedVenueId) {
-      map?.setView([51.8, 11.8], 7, { animate: false });
-      baseMapLayer?.getMaplibreMap?.()?.resize?.();
-    }
-  }, 50);
 });
 
 sbInit();
