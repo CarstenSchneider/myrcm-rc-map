@@ -3265,7 +3265,7 @@ function render() {
   syncFilterUi();
   const list = filteredRaces();
   updateMarkers(list, !initialRenderDone);
-  initialRenderDone = true;
+  if (venues.length > 0) initialRenderDone = true;
 
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
