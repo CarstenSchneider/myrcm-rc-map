@@ -4523,6 +4523,9 @@ window.addEventListener("load", () => {
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    if (lastVisibleCenter && !window.matchMedia("(max-width: 860px)").matches) {
+      panToVisible(lastVisibleCenter, map.getZoom());
+    }
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
