@@ -2340,6 +2340,11 @@ input {
 }
 
 @media (max-width: 860px) {
+  /* center spinner in visible map area (below topbar) on mobile */
+  .map-loader {
+    padding-bottom: calc(env(safe-area-inset-top) + 130px);
+  }
+
   .layout-prototype .topbar-panel {
     top: calc(10px + env(safe-area-inset-top));
     left: 10px;
