@@ -3016,20 +3016,23 @@ document.addEventListener("click", event => {
   if (notificationHostButton) {
     const hostId = notificationHostButton.dataset.notificationHostId;
     toggleNotification(hostId).then(() => {
-      const active = isNotificationEnabled(hostId);
-      // Update all matching bell buttons (popup + race cards) simultaneously
-      document.querySelectorAll("[data-notification-host-id]").forEach(btn => {
-        if (btn.dataset.notificationHostId === hostId) {
-          btn.classList.toggle("active", active);
-          btn.setAttribute("aria-pressed", String(active));
-        }
-      });
-      // Re-render race list so newly created cards also show the correct state
       const list = filteredRaces();
+      const reopenVenueId = pinnedVenueId;
+      updateMarkers(list, false);
+      if (reopenVenueId) {
+        const m = markers.get(reopenVenueId);
+        if (m) {
+          pinnedVenueId = reopenVenueId;
+          m.openPopup();
+        }
+      }
       if (activeVenueId) {
-        renderList(list.filter(race => isRaceAtVenue(race, activeVenueId)));
+        const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+        renderList(venueList);
+        resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
       } else {
         renderList(list);
+        resultLine.textContent = resultLineText(list.length);
       }
     }).catch(e => console.error("toggleNotification:", e));
     return;
