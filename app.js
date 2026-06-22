@@ -4237,7 +4237,7 @@ function openFavoritesPage() {
       void document.body.offsetHeight;
     });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
-    page.addEventListener("click", async e => {
+    page.addEventListener("click", e => {
       const tab = e.target.closest(".fav-tab");
       if (tab) {
         page.querySelectorAll(".fav-tab").forEach(t => t.classList.remove("active"));
@@ -4250,7 +4250,7 @@ function openFavoritesPage() {
       const bellBtn = e.target.closest(".fav-bell-btn");
       if (bellBtn) {
         const venueId = bellBtn.dataset.venueId;
-        if (venueId) { await toggleNotification(venueId); renderFavoritesPage(currentQuery()); }
+        if (venueId) toggleNotification(venueId).then(() => renderFavoritesPage(currentQuery()));
         return;
       }
       const btn = e.target.closest(".fav-star-btn");
