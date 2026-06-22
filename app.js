@@ -3112,8 +3112,13 @@ document.addEventListener("click", event => {
 
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
-    renderList(venueList);
-    resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
+    if (venueList.length) {
+      renderList(venueList);
+      resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
+    } else {
+      const venue = venues.find(v => v.id === activeVenueId);
+      if (venue) renderVenueNoRaces(latestPastRaceForVenue(venue));
+    }
   } else {
     renderList(list);
     resultLine.textContent = resultLineText(list.length);
