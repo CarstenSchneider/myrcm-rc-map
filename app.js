@@ -16,8 +16,8 @@ const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
   attributionControl: false,
-  minZoom: 6
-}).setView([51.8, 11.8], 7);
+  minZoom: 5
+}).setView([51.3, 10.5], 6);
 
 const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
 map.setMaxBounds(MAX_BOUNDS);
@@ -4528,7 +4528,7 @@ window.addEventListener("load", () => {
   // Restore default view after all rAFs (incl. setDrawerState's invalidateSize) have settled
   setTimeout(() => {
     if (!activeVenueId && !pinnedVenueId) {
-      map?.setView([51.8, 11.8], 7, { animate: false });
+      map?.setView([51.3, 10.5], 6, { animate: false });
       baseMapLayer?.getMaplibreMap?.()?.resize?.();
     }
   }, 50);
