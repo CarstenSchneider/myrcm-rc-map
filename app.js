@@ -1330,7 +1330,7 @@ function isNewRace(race) {
 }
 
 function newRaceBadgeHtml(race) {
-  if (!isNewRace(race)) return "";
+  return "";
 
   const firstSeen = parseDate(race.firstSeen);
   const today = todayStart();
