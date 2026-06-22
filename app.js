@@ -3258,7 +3258,7 @@ function render() {
   updateAppModeClass();
   syncFilterUi();
   const list = filteredRaces();
-  updateMarkers(list, !initialRenderDone);
+  updateMarkers(list, false);
   initialRenderDone = true;
 
   if (activeVenueId) {
