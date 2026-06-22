@@ -2746,7 +2746,7 @@ const popupOffset = hasUpcomingRaces
       });
 
       popupElement.addEventListener("click", event => {
-        if (event.target.closest("a") || event.target.closest(".leaflet-popup-close-button")) {
+        if (event.target.closest(".leaflet-popup-close-button")) {
           return;
         }
 
@@ -4522,6 +4522,11 @@ window.addEventListener("load", () => {
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    // Restore default view after invalidateSize re-measures the container
+    // (invalidateSize can shift zoom when the container size was unknown at init time)
+    if (!activeVenueId && !pinnedVenueId) {
+      map?.setView([51.8, 11.8], 7, { animate: false });
+    }
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
