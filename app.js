@@ -410,6 +410,9 @@ function applyRcRaceMapStyle() {
   if (canvas) {
     canvas.style.background = rcRaceMapColors.land;
   }
+
+  // Reveal the map after the first full style pass so no unstyled frame is visible
+  revealMap();
 }
 
 baseMapLayer.getMaplibreMap?.().on("load", applyRcRaceMapStyle);
@@ -3135,11 +3138,10 @@ function revealMap() {
 function revealMapWhenReady() {
   const mapElement = document.getElementById("map");
 
-  // render() has already called fitMapToBounds. Wait for MapLibre GL's camera to settle.
+  // Fallback: reveal map if applyRcRaceMapStyle() never runs (e.g. no WebGL)
   window.setTimeout(() => {
-    if (mapElement?.classList.contains("map-ready")) return;
     revealMap();
-  }, 300);
+  }, 1500);
 }
 
 function render() {
