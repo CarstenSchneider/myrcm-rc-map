@@ -113,38 +113,6 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "mrt-rosenheim-e-v-2025-06-21-myrcm-event-88715",
-    "venueId": "mrt-rosenheim-e-v",
-    "venueName": "MRT Rosenheim e.V.",
-    "venueLocation": "Hoehenkirchen-Siegertsbrunn",
-    "hostId": "mrt-rosenheim-e-v",
-    "hostName": "MRT Rosenheim e.V.",
-    "name": "2. Clublauf 2025",
-    "from": "2025-06-21",
-    "to": "2025-06-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88715&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4483&pLa=en&dId%5BE%5D=88715&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88715&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "EGT 1/8 elektro",
-      "TW 1/10 Hobby",
-      {
-        "name": "TW 1/10 Stock Blinky",
-        "entries": 2
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2025-06-21-myrcm-event-87297",
     "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
@@ -229,54 +197,6 @@
       {
         "name": "ORETR2",
         "entries": 3
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "amc-hamm-e-v-2025-06-21-myrcm-event-88439",
-    "venueId": "amc-hamm-e-v",
-    "venueName": "amc-Hamm e.V.",
-    "venueLocation": "Bönen",
-    "hostId": "amc-hamm-e-v",
-    "hostName": "amc-Hamm e.V.",
-    "name": "Freundschaftsrennen 2 amc Hamm e.V.",
-    "from": "2025-06-21",
-    "to": "2025-06-21",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88439&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=88439&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88439&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "1:10 Tourenwagen Hobby",
-        "entries": 3
-      },
-      {
-        "name": "EG8 (Pancar)",
-        "entries": 1
-      },
-      {
-        "name": "EG8GT3",
-        "entries": 3
-      },
-      "VG10 Tourenwagen",
-      "VG10 Tourenwagen Sport",
-      {
-        "name": "VG8",
-        "entries": 4
-      },
-      {
-        "name": "VG8 GT",
-        "entries": 1
       }
     ],
     "documents": [],
@@ -27286,8 +27206,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": null,
     "classes": [
       {
@@ -27296,7 +27216,7 @@
       },
       {
         "name": "Short Course",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "ORE8 Elo Buggy",
@@ -27304,7 +27224,7 @@
       },
       {
         "name": "OR8 Nitro Buggy",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [
@@ -27642,8 +27562,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 36,
-    "registrationDisplay": "36",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": null,
     "classes": [
       {
@@ -27652,7 +27572,7 @@
       },
       {
         "name": "SPC-Porsche",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "SPC-Fronti",
@@ -27664,7 +27584,7 @@
       },
       {
         "name": "SPC-TW 1:10 -Fun 17,5",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "SPC-Rally",
@@ -27740,13 +27660,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 150,
-    "registrationDisplay": "150",
+    "registrationCount": 149,
+    "registrationDisplay": "149",
     "note": null,
     "classes": [
       {
         "name": "ENS 1:8 SPORT",
-        "entries": 23
+        "entries": 22
       },
       {
         "name": "ENS 1:10 onroad",
@@ -27782,13 +27702,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": null,
     "classes": [
       {
         "name": "MCD Fanatics Cup",
-        "entries": 9
+        "entries": 11
       }
     ],
     "documents": [
@@ -27830,8 +27750,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       {
@@ -27844,7 +27764,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "ORT",
@@ -27938,13 +27858,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 50,
-    "registrationDisplay": "50",
+    "registrationCount": 55,
+    "registrationDisplay": "55",
     "note": null,
     "classes": [
       {
         "name": "OR 8 Hobby",
-        "entries": 18
+        "entries": 20
       },
       {
         "name": "OR8 Expert (1:8 Nitro Offroad Buggy)",
@@ -27952,11 +27872,11 @@
       },
       {
         "name": "OR8E",
-        "entries": 16
+        "entries": 18
       },
       {
         "name": "Hessencup Kids",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -27980,13 +27900,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 3
+        "entries": 6
       },
       "ORE8T"
     ],
@@ -28955,8 +28875,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": null,
     "classes": [
       {
@@ -28965,7 +28885,7 @@
       },
       {
         "name": "OR8 Hobby",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "ORE8",
@@ -29118,16 +29038,22 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": null,
     "classes": [
-      "EG8e",
+      {
+        "name": "EG8e",
+        "entries": 1
+      },
       "EG8GT",
       "VG10S",
       "VG8S",
       "VG10",
-      "VG8KL2",
+      {
+        "name": "VG8KL2",
+        "entries": 1
+      },
       "VG8KL1"
     ],
     "documents": [],
@@ -29153,8 +29079,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       {
@@ -29163,7 +29089,7 @@
       },
       {
         "name": "RCS Formel 1",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "RCS XR5 Klasse",
@@ -29507,7 +29433,7 @@
       },
       {
         "name": "Hobbywing 21.5 Stock",
-        "entries": 49
+        "entries": 50
       },
       {
         "name": "1up Racing 40+",
@@ -29519,7 +29445,7 @@
       },
       {
         "name": "Awesomatix Pro Stock",
-        "entries": 81
+        "entries": 80
       },
       {
         "name": "Cayote Modified",
@@ -30924,18 +30850,42 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98481&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4441&pLa=en&dId%5BE%5D=98481&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98481&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-07-21",
+    "registrationStatus": "open",
+    "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Nennung ab 21.07.2026",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
+    "note": null,
     "classes": [
-      "2WD Buggy",
-      "4WD Buggy",
-      "Fighter-Klasse"
+      {
+        "name": "2WD Buggy",
+        "entries": 1
+      },
+      {
+        "name": "4WD Buggy",
+        "entries": 1
+      },
+      {
+        "name": "Fighter-Klasse",
+        "entries": 1
+      }
     ],
-    "documents": [],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "Ausschreibung26.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9E47C0E0-7FFA-4C5B-9986-BA3447BDF208"
+      },
+      {
+        "type": "document",
+        "label": "PDF",
+        "sourceLabel": null,
+        "fileName": "TSV-Kleinburgwedel-Haftungsausschluss.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=E8BD87B7-2157-46FC-ACFC-4A09AEBE30E7"
+      }
+    ],
     "firstSeen": "2026-06-21"
   },
   {
