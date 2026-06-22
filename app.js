@@ -426,16 +426,17 @@ baseMapLayer.getMaplibreMap?.().on("styledata", () => {
 });
 // Reveal map only after all tiles are fully rendered (idle = nothing more to fetch/paint)
 baseMapLayer.getMaplibreMap?.().once("idle", revealMap);
+let _restoreStyleTimer = null;
 baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
   applyRcRaceMapStyle();
-  requestAnimationFrame(applyRcRaceMapStyle);
-  requestAnimationFrame(() => requestAnimationFrame(applyRcRaceMapStyle));
+  clearTimeout(_restoreStyleTimer);
+  _restoreStyleTimer = setTimeout(applyRcRaceMapStyle, 150);
 });
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) return;
   applyRcRaceMapStyle();
-  requestAnimationFrame(applyRcRaceMapStyle);
-  requestAnimationFrame(() => requestAnimationFrame(applyRcRaceMapStyle));
+  clearTimeout(_restoreStyleTimer);
+  _restoreStyleTimer = setTimeout(applyRcRaceMapStyle, 150);
 });
 
 let venues = [];
