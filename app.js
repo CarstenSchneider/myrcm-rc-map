@@ -608,7 +608,7 @@ function syncNotificationUi(hostId) {
     resultLine.textContent = resultLineText(list.length);
   }
   // Rebuild open popup on next tick (deferred so click event finishes first)
-  const savedVenueId = pinnedVenueId;
+  const savedVenueId = pinnedVenueId || activeVenueId;
   if (savedVenueId) {
     setTimeout(() => {
       const venue = venues.find(v => v.id === savedVenueId);
@@ -2766,6 +2766,9 @@ const popupOffset = hasUpcomingRaces
 
         if (notifBtn || favHostBtn || favVenueBtn) {
           event.stopPropagation();
+          // Ensure venue is pinned so syncNotificationUi can find the popup
+          isPopupPinned = true;
+          pinnedVenueId = venue.id;
           if (!sbUser) { showLoginPrompt(); return; }
 
           if (notifBtn) {
