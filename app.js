@@ -2890,6 +2890,33 @@ function focusRace(race) {
   const targetZoom = Math.max(map.getZoom(), 12);
   panToVisible([venue.lat, venue.lng], targetZoom);
 }
+function buildPastRaceCardEl(race) {
+  const isFavorite = isFavoriteRaceHost(race);
+  const series = raceSeries(race);
+  const label = document.createElement("div");
+  label.className = "venue-last-race-label";
+  label.textContent = "Zuletzt:";
+  const card = document.createElement("article");
+  card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}`;
+  card.dataset.raceId = race.id;
+  card.innerHTML = `
+    <div class="race-host">${raceHostNameHtml(race)}</div>
+    <div class="race-card-header">
+      <div class="race-date">${formatDateRange(race.from, race.to)}</div>
+      <div class="race-name-row">
+        <div class="race-name">${escapeHtml(race.name)}</div>
+        ${registrationCountHtml(race)}
+      </div>
+      <div class="race-tags race-series-tags">
+        ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
+      </div>
+    </div>
+    ${documentLinksHtml(race)}
+    ${statusDetailsHtml(race)}
+  `;
+  return [label, card];
+}
+
 function renderVenueNoRaces(latestPastRace) {
   resultLine.textContent = emptyVenueResultLineText();
   raceList.innerHTML = "";
@@ -2897,32 +2924,7 @@ function renderVenueNoRaces(latestPastRace) {
     raceList.innerHTML = `<div class="empty-state">Keine Rennen an dieser Strecke.</div>`;
     return;
   }
-  const label = document.createElement("div");
-  label.className = "venue-last-race-label";
-  label.textContent = "Zuletzt:";
-  raceList.appendChild(label);
-
-  const isFavorite = isFavoriteRaceHost(latestPastRace);
-  const series = raceSeries(latestPastRace);
-  const card = document.createElement("article");
-  card.className = `race-card registration-${registrationStatus(latestPastRace)}${isRckRace(latestPastRace) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}`;
-  card.dataset.raceId = latestPastRace.id;
-  card.innerHTML = `
-    <div class="race-host">${raceHostNameHtml(latestPastRace)}</div>
-    <div class="race-card-header">
-      <div class="race-date">${formatDateRange(latestPastRace.from, latestPastRace.to)}</div>
-      <div class="race-name-row">
-        <div class="race-name">${escapeHtml(latestPastRace.name)}</div>
-        ${registrationCountHtml(latestPastRace)}
-      </div>
-      <div class="race-tags race-series-tags">
-        ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
-      </div>
-    </div>
-    ${documentLinksHtml(latestPastRace)}
-    ${statusDetailsHtml(latestPastRace)}
-  `;
-  raceList.appendChild(card);
+  buildPastRaceCardEl(latestPastRace).forEach(el => raceList.appendChild(el));
 }
 
 function renderList(list) {
@@ -3012,6 +3014,29 @@ function renderList(list) {
     }
 
     raceList.appendChild(card);
+  }
+
+  // In favorites mode, append "Zuletzt" cards for favorite venues with no upcoming races
+  if (selectedFavoriteFilter === "favorites") {
+    const venueIdsInList = new Set(list.map(r => isRaceAtVenue(r, r._venueId) ? r._venueId : null).filter(Boolean));
+    // Simpler: collect all venue IDs that appear in the list
+    const coveredHostIds = new Set();
+    list.forEach(r => {
+      const hid = raceHostId(r);
+      if (hid) coveredHostIds.add(hid);
+    });
+    venues.forEach(venue => {
+      const isVenueFav = isFavoriteHostId(venue.id)
+        || (venue.hostId && isFavoriteHostId(venue.hostId))
+        || (Array.isArray(venue.hostIds) && venue.hostIds.some(id => isFavoriteHostId(id)));
+      if (!isVenueFav) return;
+      // Check if this venue is already represented in the list
+      const venueHostId = venue.hostId ? String(venue.hostId) : venue.id;
+      if (coveredHostIds.has(venueHostId) || coveredHostIds.has(String(venue.id))) return;
+      const latestPast = latestPastRaceForVenue(venue);
+      if (!latestPast) return;
+      buildPastRaceCardEl(latestPast).forEach(el => raceList.appendChild(el));
+    });
   }
 
 }
