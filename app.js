@@ -67,12 +67,6 @@ const _favIconSvg  = (cls = "favorite-toggle-icon") =>
 // Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
 const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
 const _bellIconSvg = (cls = "notification-toggle-icon") =>
-  `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_bellIconPath}" fill="currentColor"/></svg>`;
-
-// Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
-// Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
-const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
-const _bellIconSvg = (cls = "notification-toggle-icon") =>
   `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_bellIconPath}" fill="currentColor"/></svg>`;
 
 // Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
