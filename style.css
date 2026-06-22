@@ -2096,6 +2096,13 @@ input {
   to { transform: rotate(360deg); }
 }
 
+@media (min-width: 861px) {
+  /* center spinner in visible map area (panel is 390px wide + 24px right gap = 414px) */
+  .layout-prototype .map-loader {
+    right: 414px;
+  }
+}
+
 /* markers hidden until map is fully revealed, then fade in */
 #map .map-marker-visual {
   opacity: 0;
