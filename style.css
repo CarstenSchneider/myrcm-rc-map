@@ -3516,12 +3516,14 @@ body.is-menu-open .app-menu-close {
 .fav-row-actions { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
 .fav-star-btn .fav-star-icon { width: 34px; height: 34px; display: block; flex-shrink: 0; }
 .fav-star-btn { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(var(--text-rgb), 0.22); transition: color 120ms; }
-.fav-star-btn:hover { color: var(--favorite); }
 .fav-star-btn.active { color: var(--favorite); }
-.fav-star-btn.active:hover, .fav-star-btn.active:focus-visible { color: rgba(var(--text-rgb), 0.22); }
 .fav-bell-btn { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: none; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(var(--text-rgb), 0.22); transition: color 120ms; }
-.fav-bell-btn:hover { color: var(--favorite); }
 .fav-bell-btn.active { color: var(--favorite); }
+@media (hover: hover) and (pointer: fine) {
+  .fav-star-btn:hover { color: var(--favorite); }
+  .fav-star-btn.active:hover, .fav-star-btn.active:focus-visible { color: rgba(var(--text-rgb), 0.22); }
+  .fav-bell-btn:hover { color: var(--favorite); }
+}
 .fav-bell-icon { width: 34px; height: 34px; flex-shrink: 0; pointer-events: none; }
 .fav-empty { padding: 32px 24px; font-size: 13px; color: var(--muted); text-align: center; }
 .fav-bell-hint { display: flex; align-items: center; gap: 6px; padding: 24px 24px 14px; font-size: 12px; color: var(--muted); }
