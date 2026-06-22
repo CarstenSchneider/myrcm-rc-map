@@ -2032,23 +2032,51 @@ input {
 /* map startup */
 #map {
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity 220ms ease;
 }
 
 #map.map-ready {
   opacity: 1;
 }
 
-/* map startup marker animation removed
-   Initial map fade remains, markers are always visible.
-   Prevents transparency glitches when filters are changed rapidly.
-*/
-#map .map-marker-visual {
+.map-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
   opacity: 1;
+  transition: opacity 200ms ease;
+  z-index: 10;
 }
 
-#map.map-ready .map-marker-visual {
-  animation: none;
+.map-loader.map-loader-done {
+  opacity: 0;
+}
+
+.map-loader::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  border: 2.5px solid rgba(var(--text-rgb), 0.15);
+  border-top-color: rgba(var(--text-rgb), 0.55);
+  border-radius: 50%;
+  animation: map-spinner 0.75s linear infinite;
+}
+
+@keyframes map-spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* markers hidden until map is fully revealed, then fade in */
+#map .map-marker-visual {
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+#map.map-markers-ready .map-marker-visual {
+  opacity: 1;
 }
 
 /* v1.6.1 venue link hover states */
