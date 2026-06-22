@@ -596,28 +596,21 @@ function syncNotificationUi(hostId) {
     const favQuery = (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
     renderFavoritesPage(favQuery);
   }
-  // Update race list
+  // Update race list (re-renders all cards with correct bell state)
   const list = filteredRaces();
   const vid = activeVenueId || pinnedVenueId;
   if (vid) {
     const vl = list.filter(r => isRaceAtVenue(r, vid));
-    renderList(vl);
-    resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
+    if (vl.length) {
+      renderList(vl);
+      resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
+    } else {
+      const venue = venues.find(v => v.id === vid);
+      if (venue) renderVenueNoRaces(latestPastRaceForVenue(venue));
+    }
   } else {
     renderList(list);
     resultLine.textContent = resultLineText(list.length);
-  }
-  // Rebuild open popup on next tick (deferred so click event finishes first)
-  const savedVenueId = pinnedVenueId || activeVenueId;
-  if (savedVenueId) {
-    setTimeout(() => {
-      const venue = venues.find(v => v.id === savedVenueId);
-      const popup = markers.get(savedVenueId)?.getPopup();
-      if (venue && popup) {
-        const vRaces = filteredRaces().filter(r => isRaceAtVenue(r, savedVenueId));
-        popup.setContent(buildPopup(venue, vRaces, latestPastRaceForVenue(venue)));
-      }
-    }, 0);
   }
 }
 // ─────────────────────────────────────────────────────────────────────────────
@@ -2484,15 +2477,12 @@ function googleMapsRouteUrl(venue) {
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
   const sourceRace = venueRaces[0] || latestPastRace;
-  const hostId = sourceRace ? raceHostId(sourceRace) : null;
-  const hostName = hostId ? raceHostName(sourceRace) : null;
-  const hostWebsite = hostId ? hostWebsiteForRace(sourceRace) : null;
-  const hostNameHtml = hostWebsite
-    ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
-    : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`;
-  const isPopupFav = isFavoriteHostId(hostId);
-  const titleHtml = hostId
-    ? `<span class="venue-name-with-favorite">${hostNameHtml}<span class="venue-action-buttons">${isPopupFav ? notificationHostButtonHtml(hostId, hostName) : ""}${favoriteHostButtonHtml(hostId, hostName)}</span></span>`
+  const hostName = sourceRace ? raceHostName(sourceRace) : null;
+  const hostWebsite = sourceRace ? hostWebsiteForRace(sourceRace) : null;
+  const titleHtml = hostName
+    ? (hostWebsite
+        ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
+        : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`)
     : venueNameHtml(venue);
 
   return `
@@ -2760,41 +2750,6 @@ const popupOffset = hasUpcomingRaces
           return;
         }
 
-        const notifBtn = event.target.closest("[data-notification-host-id]");
-        const favHostBtn = event.target.closest("[data-favorite-host-id]");
-        const favVenueBtn = event.target.closest("[data-favorite-venue-id]");
-
-        if (notifBtn || favHostBtn || favVenueBtn) {
-          event.stopPropagation();
-          // Ensure venue is pinned so syncNotificationUi can find the popup
-          isPopupPinned = true;
-          pinnedVenueId = venue.id;
-          if (!sbUser) { showLoginPrompt(); return; }
-
-          if (notifBtn) {
-            const hid = notifBtn.dataset.notificationHostId;
-            toggleNotification(hid).then(() => syncNotificationUi(hid)).catch(e => console.error("toggleNotification popup:", e));
-          } else if (favHostBtn) {
-            toggleFavoriteHost(favHostBtn.dataset.favoriteHostId);
-            const list = filteredRaces();
-            const reopenVenueId = pinnedVenueId;
-            updateMarkers(list, false);
-            if (reopenVenueId) {
-              const m = markers.get(reopenVenueId);
-              if (m) { pinnedVenueId = reopenVenueId; m.openPopup(); }
-            }
-            const vid = activeVenueId || pinnedVenueId;
-            if (vid) {
-              const vl = list.filter(r => isRaceAtVenue(r, vid));
-              renderList(vl);
-              resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
-            } else { renderList(list); resultLine.textContent = resultLineText(list.length); }
-          } else if (favVenueBtn) {
-            toggleFavoriteVenue(favVenueBtn.dataset.favoriteVenueId);
-          }
-          return;
-        }
-
         isPopupPinned = true;
         pinnedVenueId = venue.id;
         activeVenueId = venue.id;
@@ -2938,15 +2893,36 @@ function focusRace(race) {
 function renderVenueNoRaces(latestPastRace) {
   resultLine.textContent = emptyVenueResultLineText();
   raceList.innerHTML = "";
-  if (latestPastRace) {
-    raceList.innerHTML = `<div class="venue-last-race">
-      <span class="venue-last-race-label">Zuletzt:</span>
-      <strong>${formatDateRange(latestPastRace.from, latestPastRace.to)}</strong>
-      ${escapeHtml(latestPastRace.name)}
-    </div>`;
-  } else {
+  if (!latestPastRace) {
     raceList.innerHTML = `<div class="empty-state">Keine Rennen an dieser Strecke.</div>`;
+    return;
   }
+  const label = document.createElement("div");
+  label.className = "venue-last-race-label";
+  label.textContent = "Zuletzt:";
+  raceList.appendChild(label);
+
+  const isFavorite = isFavoriteRaceHost(latestPastRace);
+  const series = raceSeries(latestPastRace);
+  const card = document.createElement("article");
+  card.className = `race-card registration-${registrationStatus(latestPastRace)}${isRckRace(latestPastRace) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}`;
+  card.dataset.raceId = latestPastRace.id;
+  card.innerHTML = `
+    <div class="race-host">${raceHostNameHtml(latestPastRace)}</div>
+    <div class="race-card-header">
+      <div class="race-date">${formatDateRange(latestPastRace.from, latestPastRace.to)}</div>
+      <div class="race-name-row">
+        <div class="race-name">${escapeHtml(latestPastRace.name)}</div>
+        ${registrationCountHtml(latestPastRace)}
+      </div>
+      <div class="race-tags race-series-tags">
+        ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
+      </div>
+    </div>
+    ${documentLinksHtml(latestPastRace)}
+    ${statusDetailsHtml(latestPastRace)}
+  `;
+  raceList.appendChild(card);
 }
 
 function renderList(list) {
