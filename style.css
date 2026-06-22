@@ -1826,10 +1826,19 @@ input {
 /* v1.6 venue favorites */
 
 .venue-name-with-favorite {
-  display: inline-flex;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
   gap: 5px;
   max-width: 100%;
+  width: 100%;
+}
+
+.venue-action-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .venue-name-with-favorite .venue-link {
@@ -1877,23 +1886,76 @@ input {
   color: var(--favorite);
 }
 
-.popup-title .venue-name-with-favorite {
+.venue-notification-button {
+  appearance: none;
   display: inline-flex;
-  align-items: flex-start;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(var(--text-rgb), 0.42);
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
 }
 
-.popup-title .venue-favorite-button {
+.venue-notification-button .notification-toggle-icon {
+  width: 1em;
+  height: 1em;
+  display: block;
+  flex-shrink: 0;
+}
+
+.venue-notification-button:hover,
+.venue-notification-button:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+.venue-notification-button.active {
+  color: var(--accent);
+  fill: currentColor;
+}
+
+.venue-notification-button.active .notification-toggle-icon {
+  fill: currentColor;
+}
+
+@media (max-width: 860px) {
+  .venue-favorite-button,
+  .venue-notification-button {
+    min-width: 36px;
+    min-height: 36px;
+    justify-content: center;
+  }
+}
+
+.popup-title .venue-name-with-favorite {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.popup-title .venue-favorite-button,
+.popup-title .venue-notification-button {
   width: auto;
   min-width: 0;
   height: auto;
   font-size: 17px;
-  transform: translateY(3px);
+  transform: none;
   flex-shrink: 0;
 }
 
-/* Stern im Popup */
-.popup-standard .venue-favorite-button {
+/* Stern + Glocke im Popup */
+.popup-standard .venue-favorite-button,
+.popup-standard .venue-notification-button {
   color: #ffffff !important;
   transition: color 200ms ease;
   transform: none;
@@ -1901,18 +1963,28 @@ input {
 .popup-standard .venue-favorite-button.active {
   color: #C8B090 !important;
 }
-.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button {
+.popup-standard .venue-notification-button.active {
+  color: #C8B090 !important;
+  fill: #C8B090 !important;
+}
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button,
+.popup-favorite .leaflet-popup-content-wrapper .venue-notification-button {
   color: #213769 !important;
   transition: color 200ms ease;
   transform: none;
 }
-.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active {
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active,
+.popup-favorite .leaflet-popup-content-wrapper .venue-notification-button.active {
   color: #213769 !important;
 }
 .popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:hover,
 .popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button:focus-visible,
 .popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active:hover,
-.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active:focus-visible {
+.popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button.active:focus-visible,
+.popup-favorite .leaflet-popup-content-wrapper .venue-notification-button:hover,
+.popup-favorite .leaflet-popup-content-wrapper .venue-notification-button:focus-visible,
+.popup-favorite .leaflet-popup-content-wrapper .venue-notification-button.active:hover,
+.popup-favorite .leaflet-popup-content-wrapper .venue-notification-button.active:focus-visible {
   color: #ffffff !important;
 }
 
