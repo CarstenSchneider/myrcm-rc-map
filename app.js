@@ -2725,13 +2725,55 @@ const popupOffset = hasUpcomingRaces
       });
 
       popupElement.addEventListener("click", event => {
-        if (
-          event.target.closest("a") ||
-          event.target.closest(".leaflet-popup-close-button") ||
-          event.target.closest("[data-notification-host-id]") ||
-          event.target.closest("[data-favorite-host-id]") ||
-          event.target.closest("[data-favorite-venue-id]")
-        ) {
+        if (event.target.closest("a") || event.target.closest(".leaflet-popup-close-button")) {
+          return;
+        }
+
+        const notifBtn = event.target.closest("[data-notification-host-id]");
+        const favHostBtn = event.target.closest("[data-favorite-host-id]");
+        const favVenueBtn = event.target.closest("[data-favorite-venue-id]");
+
+        if (notifBtn || favHostBtn || favVenueBtn) {
+          event.stopPropagation();
+          if (!sbUser) { showLoginPrompt(); return; }
+
+          if (notifBtn) {
+            const hid = notifBtn.dataset.notificationHostId;
+            toggleNotification(hid).then(() => {
+              const active = isNotificationEnabled(hid);
+              document.querySelectorAll(`[data-notification-host-id="${CSS.escape(hid)}"]`).forEach(btn => {
+                btn.classList.toggle("active", active);
+                btn.setAttribute("aria-pressed", String(active));
+              });
+              const list = filteredRaces();
+              const vid = activeVenueId || pinnedVenueId;
+              if (vid) {
+                const vl = list.filter(r => isRaceAtVenue(r, vid));
+                renderList(vl);
+                resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
+              } else {
+                renderList(list);
+                resultLine.textContent = resultLineText(list.length);
+              }
+            }).catch(e => console.error("toggleNotification popup:", e));
+          } else if (favHostBtn) {
+            toggleFavoriteHost(favHostBtn.dataset.favoriteHostId);
+            const list = filteredRaces();
+            const reopenVenueId = pinnedVenueId;
+            updateMarkers(list, false);
+            if (reopenVenueId) {
+              const m = markers.get(reopenVenueId);
+              if (m) { pinnedVenueId = reopenVenueId; m.openPopup(); }
+            }
+            const vid = activeVenueId || pinnedVenueId;
+            if (vid) {
+              const vl = list.filter(r => isRaceAtVenue(r, vid));
+              renderList(vl);
+              resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
+            } else { renderList(list); resultLine.textContent = resultLineText(list.length); }
+          } else if (favVenueBtn) {
+            toggleFavoriteVenue(favVenueBtn.dataset.favoriteVenueId);
+          }
           return;
         }
 
@@ -3016,18 +3058,17 @@ document.addEventListener("click", event => {
   if (notificationHostButton) {
     const hostId = notificationHostButton.dataset.notificationHostId;
     toggleNotification(hostId).then(() => {
+      const active = isNotificationEnabled(hostId);
+      // Update bell buttons in race cards and open popup
+      document.querySelectorAll(`[data-notification-host-id="${CSS.escape(hostId)}"]`).forEach(btn => {
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", String(active));
+      });
+      // Re-render race list with updated state
       const list = filteredRaces();
-      const reopenVenueId = pinnedVenueId;
-      updateMarkers(list, false);
-      if (reopenVenueId) {
-        const m = markers.get(reopenVenueId);
-        if (m) {
-          pinnedVenueId = reopenVenueId;
-          m.openPopup();
-        }
-      }
-      if (activeVenueId) {
-        const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+      const vid = activeVenueId || pinnedVenueId;
+      if (vid) {
+        const venueList = list.filter(race => isRaceAtVenue(race, vid));
         renderList(venueList);
         resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
       } else {
