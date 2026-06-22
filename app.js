@@ -590,12 +590,19 @@ async function toggleNotification(hostId) {
   }
 }
 function syncNotificationUi(hostId) {
-  const active = isNotificationEnabled(hostId);
-  // Update all bell buttons (race cards + popup)
-  document.querySelectorAll(`[data-notification-host-id="${CSS.escape(hostId)}"]`).forEach(btn => {
-    btn.classList.toggle("active", active);
-    btn.setAttribute("aria-pressed", String(active));
-  });
+  // Rebuild open popup so bell state is fresh
+  if (pinnedVenueId) {
+    const m = markers.get(pinnedVenueId);
+    const popup = m?.getPopup();
+    if (popup) {
+      const venue = venues.get(pinnedVenueId);
+      if (venue) {
+        const vRaces = filteredRaces().filter(r => isRaceAtVenue(r, pinnedVenueId));
+        const latestPast = latestPastRaceForVenue(venue);
+        popup.setContent(buildPopup(venue, vRaces, latestPast));
+      }
+    }
+  }
   // Update favorites page if visible
   const fp = document.getElementById("favoritesPage");
   if (fp && !fp.hidden) renderFavoritesPage(currentQuery());
