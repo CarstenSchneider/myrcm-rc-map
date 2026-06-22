@@ -4152,6 +4152,12 @@ function openFavoritesPage() {
   if (!page) return;
   page.hidden = false;
 
+  if (sbUser) {
+    Promise.all([sbPullFavorites(), sbPullNotifications()]).then(() => {
+      renderFavoritesPage((document.getElementById("favSearch")?.value || "").trim().toLowerCase());
+    });
+  }
+
   if (!_favPageReady) {
     _favPageReady = true;
     document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
