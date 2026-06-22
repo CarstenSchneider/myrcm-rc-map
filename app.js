@@ -17,7 +17,7 @@ const map = L.map("map", {
   zoomControl: false,
   attributionControl: false,
   minZoom: 5
-}).setView([51.3, 10.5], 6);
+}).setView([51.3, 10.5], 5);
 
 const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
 map.setMaxBounds(MAX_BOUNDS);
@@ -2820,7 +2820,7 @@ const popupOffset = hasUpcomingRaces
   });
 
   if (shouldFitBounds && bounds.length >= 1) {
-    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : undefined });
+    fitMapToBounds(bounds, { maxZoom: bounds.length === 1 ? 12 : 6 });
   }
 }
 
@@ -3258,7 +3258,7 @@ function render() {
   updateAppModeClass();
   syncFilterUi();
   const list = filteredRaces();
-  updateMarkers(list, false);
+  updateMarkers(list, !initialRenderDone);
   initialRenderDone = true;
 
   if (activeVenueId) {
@@ -4528,7 +4528,7 @@ window.addEventListener("load", () => {
   // Restore default view after all rAFs (incl. setDrawerState's invalidateSize) have settled
   setTimeout(() => {
     if (!activeVenueId && !pinnedVenueId) {
-      map?.setView([51.3, 10.5], 6, { animate: false });
+      map?.setView([51.3, 10.5], 5, { animate: false });
       baseMapLayer?.getMaplibreMap?.()?.resize?.();
     }
   }, 50);
