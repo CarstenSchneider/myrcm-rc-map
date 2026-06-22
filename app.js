@@ -3417,19 +3417,20 @@ if (activeFilterChips) {
 window.addEventListener("resize", scheduleSlidingPillUpdate);
 
 let resizeRecenterTimer = null;
+let resizeWasMobile = window.matchMedia("(max-width: 860px)").matches;
 window.addEventListener("resize", () => {
   clearTimeout(resizeRecenterTimer);
   resizeRecenterTimer = setTimeout(() => {
     resizeRecenterTimer = null;
-    if (!map || !lastVisibleCenter) return;
-    if (window.matchMedia("(max-width: 860px)").matches) return;
+    if (!map) return;
+    const isMobile = window.matchMedia("(max-width: 860px)").matches;
+    const crossedBreakpoint = isMobile !== resizeWasMobile;
+    resizeWasMobile = isMobile;
     map.invalidateSize({ pan: false });
+    if (!lastVisibleCenter) return;
+    if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
-    const pt = map.project(lastVisibleCenter, zoom);
-    const shifted = L.point(pt.x + 207, pt.y - 40);
-    map.setMaxBounds(null);
-    map.setView(map.unproject(shifted, zoom), zoom, { animate: true, duration: 0.15 });
-    map.setMaxBounds(MAX_BOUNDS);
+    panToVisible(lastVisibleCenter, zoom);
   }, 150);
 });
 
