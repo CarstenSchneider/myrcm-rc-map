@@ -667,9 +667,13 @@
     .layout-prototype .race-host .venue-name-with-favorite {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 0;
       min-width: 0;
       color: inherit;
+    }
+    .layout-prototype .race-host .venue-action-buttons {
+      gap: 0;
+      margin-left: auto;
     }
 
     .layout-prototype .race-host .venue-link,
@@ -692,7 +696,7 @@
     .layout-prototype .race-host .venue-notification-button {
       width: 44px;
       height: 44px;
-      color: rgba(255,255,255,0.7) !important;
+      color: rgba(255,255,255,0.25) !important;
       transition: color 200ms ease;
     }
     .layout-prototype .race-host .venue-favorite-button .favorite-toggle-icon,
@@ -718,7 +722,7 @@
     }
     .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button,
     .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button {
-      color: rgba(33,55,105,0.6) !important;
+      color: rgba(33,55,105,0.25) !important;
     }
     .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button.active,
     .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button.active {
