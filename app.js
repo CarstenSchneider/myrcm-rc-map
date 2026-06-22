@@ -2210,7 +2210,8 @@ function raceHostNameHtml(race) {
     ? `<a class="venue-link${favoriteClass}" href="${escapeHtml(website)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
     : `<span class="host-name${favoriteClass}">${escapeHtml(hostName)}</span>`;
 
-  const actions = `<span class="venue-action-buttons">${notificationHostButtonHtml(hostId, hostName)}${favoriteHostButtonHtml(hostId, hostName)}</span>`;
+  const isFav = isFavoriteHostId(hostId);
+  const actions = `<span class="venue-action-buttons">${isFav ? notificationHostButtonHtml(hostId, hostName) : ""}${favoriteHostButtonHtml(hostId, hostName)}</span>`;
   return `<span class="venue-name-with-favorite${favoriteClass ? " is-favorite" : ""}">${hostHtml}${actions}</span>`;
 }
 
@@ -3013,8 +3014,20 @@ document.addEventListener("click", event => {
     const hostId = notificationHostButton.dataset.notificationHostId;
     toggleNotification(hostId).then(() => {
       const active = isNotificationEnabled(hostId);
-      notificationHostButton.classList.toggle("active", active);
-      notificationHostButton.setAttribute("aria-pressed", String(active));
+      // Update all matching bell buttons (popup + race cards) simultaneously
+      document.querySelectorAll("[data-notification-host-id]").forEach(btn => {
+        if (btn.dataset.notificationHostId === hostId) {
+          btn.classList.toggle("active", active);
+          btn.setAttribute("aria-pressed", String(active));
+        }
+      });
+      // Re-render race list so newly created cards also show the correct state
+      const list = filteredRaces();
+      if (activeVenueId) {
+        renderList(list.filter(race => isRaceAtVenue(race, activeVenueId)));
+      } else {
+        renderList(list);
+      }
     }).catch(e => console.error("toggleNotification:", e));
     return;
   }
@@ -3035,7 +3048,7 @@ document.addEventListener("click", event => {
   }
 
   const list = filteredRaces();
-  const reopenVenueId = favoriteButton.closest(".leaflet-popup") ? pinnedVenueId : null;
+  const reopenVenueId = pinnedVenueId; // always reopen popup if one was open
   updateMarkers(list, false);
   if (reopenVenueId) {
     const m = markers.get(reopenVenueId);
