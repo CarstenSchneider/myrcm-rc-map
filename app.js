@@ -419,13 +419,7 @@ baseMapLayer.getMaplibreMap?.().on("styledata", () => {
   _styleDataTimer = setTimeout(applyRcRaceMapStyle, 80);
 });
 // Reveal map only after all tiles are fully rendered (idle = nothing more to fetch/paint)
-baseMapLayer.getMaplibreMap?.().once("idle", () => {
-  revealMap();
-  // Fade markers in after the map fade-in completes (220ms) + small buffer
-  setTimeout(() => {
-    document.getElementById("map")?.classList.add("map-markers-ready");
-  }, 320);
-});
+baseMapLayer.getMaplibreMap?.().once("idle", revealMap);
 baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
   requestAnimationFrame(applyRcRaceMapStyle);
 });
@@ -3137,8 +3131,12 @@ function updateMarkerAnimationDelays() {
 }
 
 function revealMap() {
-  document.getElementById("map")?.classList.add("map-ready");
+  const mapEl = document.getElementById("map");
+  if (!mapEl || mapEl.classList.contains("map-ready")) return;
+  mapEl.classList.add("map-ready");
   document.querySelector(".map-loader")?.classList.add("map-loader-done");
+  // Fade pins in after map fade-in completes (220ms transition + small buffer)
+  setTimeout(() => mapEl.classList.add("map-markers-ready"), 320);
 }
 
 function revealMapWhenReady() {
