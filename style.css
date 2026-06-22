@@ -1836,7 +1836,7 @@ input {
 .venue-action-buttons {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 6px;
   margin-left: auto;
   flex-shrink: 0;
 }
@@ -1870,7 +1870,7 @@ input {
   background: transparent;
   color: rgba(var(--text-rgb), 0.42);
   font: inherit;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1;
   cursor: pointer;
   transform: translateY(1px);
@@ -1900,7 +1900,7 @@ input {
   background: transparent;
   color: rgba(var(--text-rgb), 0.42);
   font: inherit;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1;
   cursor: pointer;
 }
@@ -1920,11 +1920,6 @@ input {
 
 .venue-notification-button.active {
   color: var(--accent);
-  fill: currentColor;
-}
-
-.venue-notification-button.active .notification-toggle-icon {
-  fill: currentColor;
 }
 
 @media (max-width: 860px) {
@@ -1932,13 +1927,14 @@ input {
   .venue-notification-button {
     min-width: 36px;
     min-height: 36px;
+    font-size: 20px;
     justify-content: center;
   }
 }
 
 .popup-title .venue-name-with-favorite {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
   width: 100%;
 }

@@ -63,9 +63,10 @@ const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.
 const _favIconSvg  = (cls = "favorite-toggle-icon") =>
   `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
-// Bell icon for notifications
+// Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
+const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M18,8 A6,6 0 0,0 6,8 c0,7 -3,9 -3,9 h18 s-3,-2 -3,-9 Z`;
 const _bellIconSvg = (cls = "notification-toggle-icon") =>
-  `<svg class="${cls}" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+  `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_bellIconPath}" fill="currentColor"/></svg>`;
 
 // Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
 function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
@@ -483,9 +484,10 @@ async function sbInit() {
     sbClient.auth.onAuthStateChange(async (_event, session) => {
       sbUser = session?.user ?? null;
       if (sbUser) await sbPullAll();
-      else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
+      else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); _notifIds = new Set(); }
       document.body.classList.toggle("user-logged-in", !!sbUser);
       if (typeof showMenuHome === "function") showMenuHome();
+      render();
     });
     if (sbUser) await sbPullAll();
     else { selectedFavoriteFilter = "all"; saveFavoriteFilter("all"); }
@@ -527,6 +529,14 @@ async function sbPullFavorites() {
   if (toInsert.length) {
     const { error: upsertErr } = await sbClient.from("user_favorites").upsert(toInsert);
     if (upsertErr) console.error("sbPullFavorites upsert:", upsertErr);
+  }
+  // Migrate any non-canonical remote IDs so future deletes work correctly
+  const toMigrate = data.filter(r => canonicalVenueId(r.host_id) !== r.host_id);
+  if (toMigrate.length) {
+    const canonEntries = toMigrate.map(r => ({ user_id: sbUser.id, host_id: canonicalVenueId(r.host_id) }));
+    await sbClient.from("user_favorites").upsert(canonEntries);
+    const oldIds = toMigrate.map(r => r.host_id);
+    await sbClient.from("user_favorites").delete().eq("user_id", sbUser.id).in("host_id", oldIds);
   }
 }
 
@@ -2447,8 +2457,9 @@ function buildPopup(venue, venueRaces, latestPastRace = null) {
   const hostNameHtml = hostWebsite
     ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
     : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`;
+  const isPopupFav = isFavoriteHostId(hostId);
   const titleHtml = hostId
-    ? `<span class="venue-name-with-favorite">${hostNameHtml}<span class="venue-action-buttons">${notificationHostButtonHtml(hostId, hostName)}${favoriteHostButtonHtml(hostId, hostName)}</span></span>`
+    ? `<span class="venue-name-with-favorite">${hostNameHtml}<span class="venue-action-buttons">${isPopupFav ? notificationHostButtonHtml(hostId, hostName) : ""}${favoriteHostButtonHtml(hostId, hostName)}</span></span>`
     : venueNameHtml(venue);
 
   return `
