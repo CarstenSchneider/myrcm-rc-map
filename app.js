@@ -16,7 +16,7 @@ const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
   attributionControl: false,
-  minZoom: 5
+  minZoom: 6
 }).setView([51.3, 10.5], 6);
 
 const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
