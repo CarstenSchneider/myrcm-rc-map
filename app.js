@@ -4522,14 +4522,16 @@ window.addEventListener("load", () => {
   requestAnimationFrame(() => {
     map?.invalidateSize?.();
     baseMapLayer?.getMaplibreMap?.()?.resize?.();
-    // Restore default view after invalidateSize re-measures the container
-    // (invalidateSize can shift zoom when the container size was unknown at init time)
-    if (!activeVenueId && !pinnedVenueId) {
-      map?.setView([51.8, 11.8], 7, { animate: false });
-    }
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
+  // Restore default view after all rAFs (incl. setDrawerState's invalidateSize) have settled
+  setTimeout(() => {
+    if (!activeVenueId && !pinnedVenueId) {
+      map?.setView([51.8, 11.8], 7, { animate: false });
+      baseMapLayer?.getMaplibreMap?.()?.resize?.();
+    }
+  }, 50);
 });
 
 sbInit();
