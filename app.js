@@ -410,9 +410,6 @@ function applyRcRaceMapStyle() {
   if (canvas) {
     canvas.style.background = rcRaceMapColors.land;
   }
-
-  // Reveal the map after the first full style pass so no unstyled frame is visible
-  revealMap();
 }
 
 baseMapLayer.getMaplibreMap?.().on("load", applyRcRaceMapStyle);
@@ -421,6 +418,8 @@ baseMapLayer.getMaplibreMap?.().on("styledata", () => {
   clearTimeout(_styleDataTimer);
   _styleDataTimer = setTimeout(applyRcRaceMapStyle, 80);
 });
+// Reveal map only after all tiles are fully rendered (idle = nothing more to fetch/paint)
+baseMapLayer.getMaplibreMap?.().once("idle", revealMap);
 baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
   requestAnimationFrame(applyRcRaceMapStyle);
 });
