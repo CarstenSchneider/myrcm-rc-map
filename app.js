@@ -382,14 +382,15 @@ function applyRcRaceMapStyle() {
         setMapPaint(maplibreMap, id, "icon-opacity", 0);
 
         if (!countryRegionLabelLayerIds.has(id)) {
-          // Delay smaller settlements until higher zoom levels
-          let minZoom = 5;
+          // Only hide small settlements at low zoom; leave city/capital/unknown layers at Stadia defaults
+          let minZoom = null;
           if (id.includes("suburb") || id.includes("neighbourhood") || id.includes("quarter")) minZoom = 12;
           else if (id.includes("hamlet") || id.includes("locality")) minZoom = 11;
           else if (id.includes("village")) minZoom = 10;
-          else if (id.includes("town")) minZoom = 8;
-          else if (id.includes("city") || id.includes("capital")) minZoom = 5;
-          setMapPaint(maplibreMap, id, "text-opacity", ["step", ["zoom"], 0, minZoom, 1]);
+          else if (id.includes("town") && !id.includes("city")) minZoom = 8;
+          if (minZoom !== null) {
+            setMapPaint(maplibreMap, id, "text-opacity", ["step", ["zoom"], 0, minZoom, 1]);
+          }
         }
       }
 
