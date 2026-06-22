@@ -672,7 +672,7 @@
       color: inherit;
     }
     .layout-prototype .race-host .venue-action-buttons {
-      gap: 0;
+      gap: 0 !important;
       margin-left: auto;
     }
 
@@ -731,9 +731,13 @@
 
     @media (hover: hover) and (pointer: fine) {
       .layout-prototype .race-host .venue-favorite-button:hover,
-      .layout-prototype .race-host .venue-notification-button:hover { color: #fff !important; }
+      .layout-prototype .race-host .venue-notification-button:hover,
+      .layout-prototype .race-host .venue-favorite-button.active:hover,
+      .layout-prototype .race-host .venue-notification-button.active:hover { color: #fff !important; }
       .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button:hover,
-      .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button:hover { color: #213769 !important; }
+      .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button:hover,
+      .layout-prototype .race-card-favorite-venue .race-host .venue-favorite-button.active:hover,
+      .layout-prototype .race-card-favorite-venue .race-host .venue-notification-button.active:hover { color: #213769 !important; }
     }
 
     .layout-prototype .race-card-header {
