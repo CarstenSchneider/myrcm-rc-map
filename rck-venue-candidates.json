@@ -30,8 +30,8 @@
     "address": "Juri-Gagarin-Ring 1",
     "postalCode": "17036",
     "country": "DE",
-    "lat": 53.5557196,
-    "lng": 13.2928946,
+    "lat": null,
+    "lng": null,
     "source": "rck",
     "sources": [
       "rck-kleinserie"
@@ -45,12 +45,7 @@
     "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf",
     "addressVerifiedFromPdf": true,
     "verified": true,
-    "verificationStatus": "verifiziert",
-    "geocodingSource": "nominatim",
-    "geocodingQuery": "Juri-Gagarin-Ring 1, 17036 Neubrandenburg, DE",
-    "geocodingDisplayName": "Lindetal Grill, 1, Juri-Gagarin-Ring, Oststadt, Neubrandenburg, Mecklenburgische Seenplatte, Mecklenburg-Vorpommern, 17036, Deutschland",
-    "geocodingClass": null,
-    "geocodingType": "fast_food"
+    "verificationStatus": "verifiziert"
   },
   {
     "id": "rck-pusdorfer-ring-bremen-bremen",
@@ -59,8 +54,8 @@
     "address": "Senator-Apelt-Strasse",
     "postalCode": "28197",
     "country": "DE",
-    "lat": 53.0904968,
-    "lng": 8.7316452,
+    "lat": null,
+    "lng": null,
     "source": "rck",
     "sources": [
       "rck-challenge",
@@ -75,41 +70,7 @@
     "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520270809KlSeN260505%202307.pdf",
     "addressVerifiedFromPdf": true,
     "verified": true,
-    "verificationStatus": "verifiziert",
-    "geocodingSource": "nominatim",
-    "geocodingQuery": "Senator-Apelt-Strasse, 28197 Bremen, DE",
-    "geocodingDisplayName": "Senator-Apelt-Straße, Neustädter Häfen, Häfen, Bremen-Mitte, Bremen, 28197, Deutschland",
-    "geocodingClass": null,
-    "geocodingType": "tertiary"
-  },
-  {
-    "id": "rck-rc-raceway-holsterfeld-salzbergen",
-    "name": "RC Raceway Holsterfeld",
-    "city": "Salzbergen",
-    "address": "Feldstraße 27",
-    "postalCode": "48499",
-    "country": "DE",
-    "lat": 52.331431,
-    "lng": 7.4293207,
-    "source": "rck",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "rckLocation": "Salzbergen",
-    "organizerName": "ERC-Racing e.V.",
-    "hostId": "erc-racing-e-v",
-    "hostName": "ERC-Racing e.V.",
-    "website": "https://erc-racing.de",
-    "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520270621KlSeG20260531%200212.pdf",
-    "addressVerifiedFromPdf": true,
-    "verified": true,
-    "verificationStatus": "verifiziert",
-    "geocodingSource": "nominatim",
-    "geocodingQuery": "Feldstraße 27, 48499 Salzbergen, DE",
-    "geocodingDisplayName": "27, Feldstraße, Holsten-Bexten, Salzbergen, Landkreis Emsland, Niedersachsen, 48499, Deutschland",
-    "geocodingClass": null,
-    "geocodingType": "house"
+    "verificationStatus": "verifiziert"
   },
   {
     "id": "rck-rcmc-ibbenburen-e-v-horstel-riesenbeck",
@@ -118,8 +79,8 @@
     "address": "Lager Wall 27",
     "postalCode": "48477",
     "country": "DE",
-    "lat": 52.2518902,
-    "lng": 7.6301748,
+    "lat": null,
+    "lng": null,
     "source": "rck",
     "sources": [
       "rck-kleinserie"
@@ -133,12 +94,7 @@
     "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520271108KlSeG20260602%202123.pdf",
     "addressVerifiedFromPdf": true,
     "verified": true,
-    "verificationStatus": "verifiziert",
-    "geocodingSource": "nominatim",
-    "geocodingQuery": "Lager Wall 27, 48477 Hörstel-Riesenbeck, DE",
-    "geocodingDisplayName": "27, Lager Wall, Riesenbeck, Hörstel, Kreis Steinfurt, Nordrhein-Westfalen, 48477, Deutschland",
-    "geocodingClass": null,
-    "geocodingType": "residential"
+    "verificationStatus": "verifiziert"
   },
   {
     "id": "rck-ufm-modellbau-aussenstrecke-hennef",
@@ -147,8 +103,8 @@
     "address": "Löhestr. 47",
     "postalCode": "53773",
     "country": "DE",
-    "lat": 50.7843568,
-    "lng": 7.2666585,
+    "lat": null,
+    "lng": null,
     "source": "rck",
     "sources": [
       "rck-kleinserie"
@@ -162,11 +118,6 @@
     "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520270816KlSeW260206%201440.pdf",
     "addressVerifiedFromPdf": true,
     "verified": true,
-    "verificationStatus": "verifiziert",
-    "geocodingSource": "nominatim",
-    "geocodingQuery": "Löhestr. 47, 53773 Hennef, DE",
-    "geocodingDisplayName": "UFM Modellbau, 47, Löhestraße, Gewerbegebiet West-Nordteil, Geistingen, Weingartsgasse, Hennef (Sieg), Rhein-Sieg-Kreis, Nordrhein-Westfalen, 53773, Deutschland",
-    "geocodingClass": null,
-    "geocodingType": "yes"
+    "verificationStatus": "verifiziert"
   }
 ]
