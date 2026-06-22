@@ -1860,7 +1860,7 @@ input {
   appearance: none;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: auto;
   min-width: 0;
   height: auto;
@@ -1873,7 +1873,6 @@ input {
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
-  transform: translateY(1px);
 }
 
 .venue-favorite-button:hover,
@@ -1927,6 +1926,11 @@ input {
   color: var(--favorite);
 }
 
+.venue-notification-button.active:hover,
+.venue-notification-button.active:focus-visible {
+  color: rgba(var(--text-rgb), 0.42);
+}
+
 @media (max-width: 860px) {
   .venue-favorite-button,
   .venue-notification-button {
@@ -1966,7 +1970,6 @@ input {
 }
 .popup-standard .venue-notification-button.active {
   color: #C8B090 !important;
-  fill: #C8B090 !important;
 }
 .popup-favorite .leaflet-popup-content-wrapper .venue-favorite-button,
 .popup-favorite .leaflet-popup-content-wrapper .venue-notification-button {
