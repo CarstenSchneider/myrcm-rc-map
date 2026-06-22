@@ -2340,9 +2340,10 @@ input {
 }
 
 @media (max-width: 860px) {
-  /* center spinner in visible map area (below topbar) on mobile */
+  /* center spinner in visible map area above the half-open drawer
+     (drawer top = 80px + 50dvh, so visible area center = 25dvh + 20px) */
   .map-loader {
-    padding-bottom: calc(env(safe-area-inset-top) + 130px);
+    padding-bottom: calc(50dvh - 40px);
   }
 
   .layout-prototype .topbar-panel {
