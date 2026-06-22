@@ -61,7 +61,7 @@ const mapPinPath = "M129.98,64.99C129.98,29.1,100.88,0,64.99,0S0,29.1,0,64.99c0,
 // Favorite star icon (viewBox 0 0 24 24): circle + scaled Feather star as cutout
 const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z`;
 const _favIconSvg  = (cls = "favorite-toggle-icon") =>
-  `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
+  `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
 // Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
 function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
@@ -4236,13 +4236,13 @@ function renderFavoritesPage(query) {
   const rest  = filtered.filter(v => !venueIsFav(v));
 
   // Inactive: bell outline only, no circle
-  const _bellSvgOff = `<svg class="fav-bell-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  const _bellSvgOff = `<svg class="fav-bell-icon" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M12 6.5 C9.8 6.5 8 8.3 8 10.5 L8 14.5 L6.5 15.5 L17.5 15.5 L16 14.5 L16 10.5 C16 8.3 14.2 6.5 12 6.5 Z M10.2 15.5 C10.2 16.6 11 17.5 12 17.5 C13 17.5 13.8 16.6 13.8 15.5 Z M11 6.5 L11 6 C11 5.4 11.4 5 12 5 C12.6 5 13 5.4 13 6 L13 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 
   // Active: filled circle with bell as evenodd cutout
   const _bellPath = `M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
-  const _bellSvgOn = `<svg class="fav-bell-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z ${_bellPath}" fill="currentColor"/></svg>`;
+  const _bellSvgOn = `<svg class="fav-bell-icon" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z ${_bellPath}" fill="currentColor"/></svg>`;
 
   // Return the ID actually stored in favorites (or the best candidate for storing)
   const venueCanonicalId = v => {
