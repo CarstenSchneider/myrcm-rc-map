@@ -589,6 +589,28 @@ async function toggleNotification(hostId) {
     if (error) { console.error("toggleNotification delete:", error); _notifIds.add(id); }
   }
 }
+function syncNotificationUi(hostId) {
+  const active = isNotificationEnabled(hostId);
+  // Update all bell buttons (race cards + popup)
+  document.querySelectorAll(`[data-notification-host-id="${CSS.escape(hostId)}"]`).forEach(btn => {
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-pressed", String(active));
+  });
+  // Update favorites page if visible
+  const fp = document.getElementById("favoritesPage");
+  if (fp && !fp.hidden) renderFavoritesPage(currentQuery());
+  // Update race list
+  const list = filteredRaces();
+  const vid = activeVenueId || pinnedVenueId;
+  if (vid) {
+    const vl = list.filter(r => isRaceAtVenue(r, vid));
+    renderList(vl);
+    resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
+  } else {
+    renderList(list);
+    resultLine.textContent = resultLineText(list.length);
+  }
+}
 // ─────────────────────────────────────────────────────────────────────────────
 
 function loadFavoriteFilter() {
@@ -2739,23 +2761,7 @@ const popupOffset = hasUpcomingRaces
 
           if (notifBtn) {
             const hid = notifBtn.dataset.notificationHostId;
-            toggleNotification(hid).then(() => {
-              const active = isNotificationEnabled(hid);
-              document.querySelectorAll(`[data-notification-host-id="${CSS.escape(hid)}"]`).forEach(btn => {
-                btn.classList.toggle("active", active);
-                btn.setAttribute("aria-pressed", String(active));
-              });
-              const list = filteredRaces();
-              const vid = activeVenueId || pinnedVenueId;
-              if (vid) {
-                const vl = list.filter(r => isRaceAtVenue(r, vid));
-                renderList(vl);
-                resultLine.textContent = resultLineText(vl.length, "an dieser Strecke");
-              } else {
-                renderList(list);
-                resultLine.textContent = resultLineText(list.length);
-              }
-            }).catch(e => console.error("toggleNotification popup:", e));
+            toggleNotification(hid).then(() => syncNotificationUi(hid)).catch(e => console.error("toggleNotification popup:", e));
           } else if (favHostBtn) {
             toggleFavoriteHost(favHostBtn.dataset.favoriteHostId);
             const list = filteredRaces();
@@ -3057,25 +3063,7 @@ document.addEventListener("click", event => {
 
   if (notificationHostButton) {
     const hostId = notificationHostButton.dataset.notificationHostId;
-    toggleNotification(hostId).then(() => {
-      const active = isNotificationEnabled(hostId);
-      // Update bell buttons in race cards and open popup
-      document.querySelectorAll(`[data-notification-host-id="${CSS.escape(hostId)}"]`).forEach(btn => {
-        btn.classList.toggle("active", active);
-        btn.setAttribute("aria-pressed", String(active));
-      });
-      // Re-render race list with updated state
-      const list = filteredRaces();
-      const vid = activeVenueId || pinnedVenueId;
-      if (vid) {
-        const venueList = list.filter(race => isRaceAtVenue(race, vid));
-        renderList(venueList);
-        resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
-      } else {
-        renderList(list);
-        resultLine.textContent = resultLineText(list.length);
-      }
-    }).catch(e => console.error("toggleNotification:", e));
+    toggleNotification(hostId).then(() => syncNotificationUi(hostId)).catch(e => console.error("toggleNotification:", e));
     return;
   }
 
@@ -4297,7 +4285,7 @@ function openFavoritesPage() {
       const bellBtn = e.target.closest(".fav-bell-btn");
       if (bellBtn) {
         const venueId = bellBtn.dataset.venueId;
-        if (venueId) toggleNotification(venueId).then(() => renderFavoritesPage(currentQuery()));
+        if (venueId) toggleNotification(venueId).then(() => syncNotificationUi(venueId));
         return;
       }
       const btn = e.target.closest(".fav-star-btn");
