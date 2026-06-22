@@ -27562,8 +27562,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 38,
-    "registrationDisplay": "38",
+    "registrationCount": 39,
+    "registrationDisplay": "39",
     "note": null,
     "classes": [
       {
@@ -27572,7 +27572,7 @@
       },
       {
         "name": "SPC-Porsche",
-        "entries": 14
+        "entries": 15
       },
       {
         "name": "SPC-Fronti",
@@ -27612,8 +27612,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 36,
+    "registrationDisplay": "36",
     "note": null,
     "classes": [
       {
@@ -27634,7 +27634,7 @@
       },
       {
         "name": "EGTWFR",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -27858,8 +27858,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 55,
-    "registrationDisplay": "55",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
     "note": null,
     "classes": [
       {
@@ -27872,7 +27872,7 @@
       },
       {
         "name": "OR8E",
-        "entries": 18
+        "entries": 19
       },
       {
         "name": "Hessencup Kids",
@@ -27900,13 +27900,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       {
         "name": "ORE8",
-        "entries": 6
+        "entries": 7
       },
       "ORE8T"
     ],
@@ -28093,12 +28093,15 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       "MCC - 17.5 Stock fixed",
-      "MCC - Formel",
+      {
+        "name": "MCC - Formel",
+        "entries": 1
+      },
       {
         "name": "MCC - MCC Challenge",
         "entries": 2
@@ -28106,7 +28109,7 @@
       "MCC - Tamiya Fighter",
       {
         "name": "MCC - Tamiya TT",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -28365,8 +28368,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": null,
     "classes": [
       {
@@ -28375,7 +28378,7 @@
       },
       {
         "name": "NRW-Cup Hobby",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "NRW-Cup Top",
@@ -28875,8 +28878,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": null,
     "classes": [
       {
@@ -28892,7 +28895,10 @@
         "entries": 1
       },
       "ORT",
-      "ORET"
+      {
+        "name": "ORET",
+        "entries": 1
+      }
     ],
     "documents": [
       {
@@ -28986,8 +28992,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 96,
-    "registrationDisplay": "96",
+    "registrationCount": 93,
+    "registrationDisplay": "93",
     "note": null,
     "classes": [
       {
@@ -28996,7 +29002,7 @@
       },
       {
         "name": "Monster Truck Modified",
-        "entries": 9
+        "entries": 8
       },
       {
         "name": "2WD Buggy Standard",
@@ -29004,7 +29010,7 @@
       },
       {
         "name": "2WD Buggy",
-        "entries": 10
+        "entries": 9
       },
       {
         "name": "4WD Buggy Standard",
@@ -29012,7 +29018,7 @@
       },
       {
         "name": "4WD Buggy",
-        "entries": 11
+        "entries": 10
       }
     ],
     "documents": [],
