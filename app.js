@@ -3095,7 +3095,7 @@ const popupOffset = hasUpcomingRaces
     });
 
     markers.set(venue.id, marker);
-    bounds.push([venue.lat, venue.lng]);
+    if (hasUpcomingRaces) bounds.push([venue.lat, venue.lng]);
   });
 
   if (shouldFitBounds && bounds.length >= 1) {
@@ -3663,10 +3663,10 @@ searchInput.addEventListener("input", () => {
     _searchDebounce = setTimeout(() => renderList(filteredRaces()), 500);
     return;
   }
-  // Desktop: sofort ohne Debounce
+  // Desktop: Liste sofort, Karte nach 300ms
   const list = filteredRaces();
   renderList(list);
-  updateMarkers(list, true);
+  _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
 });
 
 searchInput.addEventListener("blur", () => {
