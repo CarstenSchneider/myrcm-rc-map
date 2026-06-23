@@ -649,7 +649,9 @@ function extractEventDetail(html, host, eventId, listFallback = {}) {
   const classes = extractClassesFromDetailPage($);
   const fullText = normalizeText($.text());
 
+  const eventLabel = labels["event"] && labels["event"] !== "?" ? labels["event"] : null;
   const name =
+    eventLabel ||
     heading ||
     listFallback.name ||
     `MyRCM Event ${eventId}`;
