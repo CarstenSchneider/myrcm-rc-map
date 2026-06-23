@@ -2704,7 +2704,7 @@ input {
 
 
 /* Hide text labels in drawer — show only icons (star SVG, green dot) */
-.mob-drawer-filters .layout-prototype .topbar .label-full {
+.mob-drawer-filters .topbar .label-full {
   display: none !important;
 }
 
