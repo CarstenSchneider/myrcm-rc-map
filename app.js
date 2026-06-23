@@ -3384,16 +3384,24 @@ seriesFilter.addEventListener("change", () => {
 
 
 let _searchDebounce;
+const isMobile = () => window.matchMedia("(max-width: 860px)").matches;
+
 searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
-  // Render list immediately for responsive typing feel
+  if (isMobile()) return; // mobile: update on blur when keyboard closes
   const list = filteredRaces();
   renderList(list);
-  // Defer the expensive marker re-render
   clearTimeout(_searchDebounce);
   _searchDebounce = setTimeout(() => updateMarkers(list, false), 300);
+});
+
+searchInput.addEventListener("blur", () => {
+  if (!isMobile()) return;
+  const list = filteredRaces();
+  renderList(list);
+  updateMarkers(list, false);
 });
 
 if (filterToggleButton) {
