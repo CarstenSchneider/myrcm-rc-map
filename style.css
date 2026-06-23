@@ -3476,25 +3476,25 @@ body.is-menu-open .app-menu-close {
   border-top: 1px solid rgba(var(--border-rgb), 0.4);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
 .app-menu-footer-brand {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   text-decoration: none;
-  color: var(--muted);
-  font-size: 11px;
 }
 .app-menu-footer-logo {
   height: 10px;
   width: auto;
-  fill: currentColor;
+  fill: #C8B090;
   display: block;
 }
 .app-menu-footer-legal {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
   font-size: 11px;
   color: var(--muted);
@@ -3502,9 +3502,13 @@ body.is-menu-open .app-menu-close {
 .app-menu-footer-legal-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   flex-wrap: nowrap;
 }
+.sub-page-content-footer { text-align: center; padding: 40px 0 0; }
+.sub-page-content-footer a { display: inline-block; line-height: 0; text-decoration: none; }
+.sub-page-content-footer .app-menu-footer-logo { height: 12px; }
 .app-menu-footer-link {
   appearance: none;
   border: 0;
