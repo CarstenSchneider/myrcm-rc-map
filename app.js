@@ -3388,8 +3388,12 @@ searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
+  // Render list immediately for responsive typing feel
+  const list = filteredRaces();
+  renderList(list);
+  // Defer the expensive marker re-render
   clearTimeout(_searchDebounce);
-  _searchDebounce = setTimeout(render, 120);
+  _searchDebounce = setTimeout(() => updateMarkers(list, false), 300);
 });
 
 if (filterToggleButton) {
