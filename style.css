@@ -2810,7 +2810,7 @@ input {
   box-sizing: border-box;
   overflow-y: auto;
   touch-action: pan-y;
-  padding: 14px 12px 0;
+  padding: 14px 12px 40px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -2844,13 +2844,13 @@ input {
   flex: none;
 }
 
-/* padding-bottom is ignored in overflow-scroll flex containers in some browsers.
-   Pseudo-element is a real flex child that scroll engines always respect. */
+/* Safari ignores padding-bottom in overflow-scroll flex containers.
+   Pseudo-element acts as a real spacer the scroll engine respects. */
 .mob-drawer-list::after {
   content: '';
   display: block;
   flex-shrink: 0;
-  height: 48px;
+  height: 1px;
 }
 
 /* Footer — hidden as drawer sibling, cloned into list by JS so it scrolls with cards */
