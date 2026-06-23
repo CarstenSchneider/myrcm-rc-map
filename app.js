@@ -4438,6 +4438,7 @@ function openFavoritesPage() {
     document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
       page.hidden = true;
       void document.body.offsetHeight;
+      openAppMenu();
     });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
     page.addEventListener("click", e => {
@@ -4628,10 +4629,12 @@ function aboutHtml() {
     <section class="app-menu-section">
       <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
       <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
+    </section>
+    <section class="app-menu-section">
       <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
     </section>
     <section class="app-menu-section">
-      <p>Die Daten stammen direkt von MyRCM und RCK. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
+      <p>Die Daten stammen direkt von <a href="https://www.myrcm.ch/" target="_blank" rel="noopener noreferrer">MyRCM</a> und <a href="https://rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
       <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>
     </section>`;
 }
