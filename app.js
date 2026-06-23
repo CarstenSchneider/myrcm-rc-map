@@ -7,6 +7,7 @@ const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
+const mobFilterBtn = document.getElementById("mobFilterBtn");
 const activeFilterChips = document.getElementById("activeFilterChips");
 const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
 const favoriteFilter = document.getElementById("favoriteFilter");
@@ -926,12 +927,20 @@ function renderActiveFilterChips() {
   activeFilterChips.classList.toggle("is-empty", chips.length === 0);
 }
 
+function updateMobFilterDot() {
+  if (!mobFilterBtn) return;
+  const hasActive = selectedRange !== "2" || selectedSeries !== "all" ||
+    selectedFavoriteFilter !== "all" || showOpenOnly;
+  mobFilterBtn.classList.toggle("has-active-filters", hasActive);
+}
+
 function syncFilterUi() {
   updateFilterPanelState();
   updateFavoriteFilterUi();
   updateRegistrationVisibilityUi();
   updateSlidingPills();
   renderActiveFilterChips();
+  updateMobFilterDot();
 }
 
 
@@ -2936,6 +2945,7 @@ function renderList(list) {
   raceList.innerHTML = "";
 
   if (!list.length) {
+    if (!venues.length) return; // data not yet loaded — don't flash the empty state
     raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
     return;
   }
@@ -3387,6 +3397,38 @@ if (filterToggleButton) {
   });
 }
 
+if (mobFilterBtn) {
+  mobFilterBtn.addEventListener("click", () => {
+    const topbar = mobFilterBtn.closest(".topbar");
+    if (!topbar) return;
+    const expanded = topbar.classList.toggle("mob-filters-expanded");
+    mobFilterBtn.classList.toggle("active", expanded);
+    mobFilterBtn.setAttribute("aria-expanded", String(expanded));
+
+    const body = topbar.querySelector(".mob-filters-body");
+    if (!body) return;
+
+    if (expanded) {
+      body.style.display = "flex";
+      // Double RAF: first frame applies display:flex, second triggers transition
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        body.classList.add("is-expanded");
+        updateSlidingPills();
+      }));
+    } else {
+      body.classList.remove("is-expanded");
+      // Wait specifically for max-height to finish (opacity ends 100ms earlier at 200ms;
+      // { once: true } would fire on opacity, setting display:none while height is still animating)
+      const onEnd = (e) => {
+        if (e.propertyName !== "max-height") return;
+        body.removeEventListener("transitionend", onEnd);
+        if (!body.classList.contains("is-expanded")) body.style.display = "none";
+      };
+      body.addEventListener("transitionend", onEnd);
+    }
+  });
+}
+
 if (activeFilterChips) {
   activeFilterChips.addEventListener("click", event => {
     const button = event.target.closest("button[data-clear-filter]");
@@ -3624,6 +3666,19 @@ function setDrawerState(state) {
   if (map) requestAnimationFrame(() => map.invalidateSize());
 }
 
+// ── Track filter section height via CSS variable ───────────────
+// Chrome ignores padding-bottom in overflow:auto containers when height is
+// flex-determined. Keeping max-height equal to the available space makes it
+// the binding constraint so Chrome counts padding-bottom correctly in all states.
+{
+  const mobDrawerFiltersEl = mobDrawer?.querySelector(".mob-drawer-filters");
+  if (mobDrawerFiltersEl && mobDrawer) {
+    new ResizeObserver(() => {
+      mobDrawer.style.setProperty("--mob-filters-h", mobDrawerFiltersEl.offsetHeight + "px");
+    }).observe(mobDrawerFiltersEl);
+  }
+}
+
 // ── Drag / swipe (touch-only, mobile breakpoint guard) ────────
 const mobMq = window.matchMedia("(max-width: 860px)");
 if (mobDrawer && mobDrawerHandle) {
@@ -3708,9 +3763,8 @@ if (mobDrawer && mobDrawerHandle) {
   mobDrawer.addEventListener("touchmove", e => {
     if (!isDragging || !mobMq.matches) return;
     if (drawerState === "full") {
-      const list = mobRaceList;
-      if (list && list.contains(e.target) && list.scrollTop > 0) return;
-      if (list && list.contains(e.target) && e.touches[0].clientY > dragStartY) return;
+      // List scrolls natively in full state — never intercept touches on it
+      if (mobRaceList && mobRaceList.contains(e.target)) return;
     }
     e.preventDefault();
     onDragMove(e.touches[0].clientY);
@@ -3785,10 +3839,34 @@ const _topbarNext   = _topbarEl?.nextSibling;
 function applyMobileLayout(isMobile) {
   if (!mobFilterMount || !_topbarEl) return;
   if (isMobile) {
+    // Wrap the 4 filter groups in a collapsible container (mobile-only)
+    if (!_topbarEl.querySelector(".mob-filters-body")) {
+      const body = document.createElement("div");
+      body.className = "mob-filters-body";
+      body.style.display = "none";
+      [".topbar-range", ".topbar-series", ".topbar-favorites", ".topbar-registration"].forEach(sel => {
+        const el = _topbarEl.querySelector(sel);
+        if (el) body.appendChild(el);
+      });
+      const ref = _topbarEl.querySelector(".mob-filter-btn") || _topbarEl.querySelector(".topbar-search");
+      ref ? ref.before(body) : _topbarEl.appendChild(body);
+    }
     mobFilterMount.appendChild(_topbarEl);
-    // Recalculate sliding-pill positions after layout shift
     requestAnimationFrame(updateSlidingPills);
   } else {
+    // Unwrap filter groups back as direct topbar children before returning to desktop
+    const body = _topbarEl.querySelector(".mob-filters-body");
+    if (body) {
+      body.classList.remove("is-expanded");
+      _topbarEl.classList.remove("mob-filters-expanded");
+      if (mobFilterBtn) {
+        mobFilterBtn.classList.remove("active");
+        mobFilterBtn.setAttribute("aria-expanded", "false");
+      }
+      const insertPoint = _topbarEl.querySelector(".mob-filter-btn") || body;
+      Array.from(body.children).forEach(child => insertPoint.before(child));
+      body.remove();
+    }
     if (_topbarNext && _topbarNext.parentNode === _topbarParent) {
       _topbarParent.insertBefore(_topbarEl, _topbarNext);
     } else if (_topbarParent) {
@@ -3860,9 +3938,8 @@ function fitClassPills(card) {
   const container = card.querySelector(".race-class-tags");
   if (!container) return;
 
-  // Remove desktop toggle — mobile uses its own measurement-based overflow
+  // Reset: remove any previous more-button or desktop count-based toggle
   container.querySelectorAll(".tag-class-toggle, .tag-class-more").forEach(el => el.remove());
-
   const pills = Array.from(container.querySelectorAll(".tag-class"));
   if (!pills.length) return;
 
@@ -3871,33 +3948,61 @@ function fitClassPills(card) {
   const containerWidth = container.getBoundingClientRect().width;
   if (!containerWidth) return;
 
-  const gap = 6;
-  let usedWidth = 0;
-  let lastVisible = pills.length;
+  // Direct wrap detection: fixed-height pills on the same flex row share the same
+  // top value. Width-based totalW comparisons can fail due to sub-pixel rounding.
+  const firstTop = pills[0].getBoundingClientRect().top;
+  if (pills.every(p => Math.abs(p.getBoundingClientRect().top - firstTop) < 2)) return;
 
+  const gap = 5; // matches .race-tags { gap: 5px }
+  const widths = pills.map(p => p.getBoundingClientRect().width);
+
+  // Probe more-button with worst-case text to get exact rendered width.
+  // Absolutely positioned so it doesn't affect flex layout during measurement.
+  const probe = document.createElement("button");
+  probe.className = "tag tag-class tag-class-more";
+  probe.type = "button";
+  probe.textContent = `+${pills.length} weitere`;
+  probe.style.cssText = "position:absolute;opacity:0;pointer-events:none";
+  container.appendChild(probe);
+  const moreBtnW = probe.getBoundingClientRect().width;
+  probe.remove();
+
+  // Find cut point: last index where pills[0..i] + gap + button still fits
+  let usedW = 0;
+  let cutAt = pills.length;
   for (let i = 0; i < pills.length; i++) {
-    const pillWidth = pills[i].getBoundingClientRect().width;
-    if (i > 0) usedWidth += gap;
-    usedWidth += pillWidth;
-
-    const remaining = pills.length - i - 1;
-    if (remaining > 0 && usedWidth + gap + 40 > containerWidth) {
-      lastVisible = i;
+    const next = usedW + (i > 0 ? gap : 0) + widths[i];
+    if (next + gap + moreBtnW > containerWidth) {
+      cutAt = i;
       break;
     }
+    usedW = next;
+    cutAt = i + 1;
   }
 
-  const hiddenCount = pills.length - lastVisible;
-  if (hiddenCount <= 0) return;
+  if (pills.length - cutAt <= 0) return;
 
-  for (let i = lastVisible; i < pills.length; i++) {
+  for (let i = cutAt; i < pills.length; i++) {
     pills[i].style.display = "none";
   }
 
   const moreBtn = document.createElement("button");
   moreBtn.className = "tag tag-class tag-class-more";
   moreBtn.type = "button";
-  moreBtn.textContent = `+${hiddenCount} weitere`;
+  moreBtn.textContent = `+${pills.length - cutAt} weitere`;
+  container.appendChild(moreBtn);
+
+  // Layout verification: if the button still wrapped to a new row (probe was
+  // slightly off or sub-pixel rounding), hide one more pill and repeat.
+  while (cutAt > 0) {
+    const btnTop = moreBtn.getBoundingClientRect().top;
+    const refTop = pills[cutAt - 1].getBoundingClientRect().top; // last visible pill
+    if (Math.abs(btnTop - refTop) < 2) break;
+    cutAt--;
+    pills[cutAt].style.display = "none";
+    moreBtn.textContent = `+${pills.length - cutAt} weitere`;
+  }
+
   moreBtn.addEventListener("click", event => {
     event.stopPropagation();
     pills.forEach(p => { p.style.display = ""; });
@@ -3922,12 +4027,41 @@ function fitClassPills(card) {
 const mobRaceListObserver = new MutationObserver(() => {
   if (window.matchMedia("(max-width: 860px)").matches) {
     syncMobRaceList();
+  } else {
+    // Apply width-based pill trimming on desktop too (replaces count-based toggle)
+    requestAnimationFrame(() => {
+      raceList.querySelectorAll(".race-card").forEach(fitClassPills);
+    });
   }
   syncResultBadge(resultLine.textContent);
 });
 
 if (raceList) {
   mobRaceListObserver.observe(raceList, { childList: true });
+}
+
+// Re-trim pills when a list container changes WIDTH (e.g. window resize, panel open/close).
+// Width-only guard prevents infinite loops: fitClassPills changes container HEIGHT (fewer rows)
+// which would re-trigger a naive observer, but width stays constant so we skip re-runs.
+{
+  const listWidths = new WeakMap();
+  const pillResizeObs = new ResizeObserver(entries => {
+    const toUpdate = [];
+    for (const e of entries) {
+      const w = Math.round(e.contentRect.width);
+      if (listWidths.get(e.target) !== w) {
+        listWidths.set(e.target, w);
+        toUpdate.push(e.target);
+      }
+    }
+    if (toUpdate.length) {
+      requestAnimationFrame(() =>
+        toUpdate.forEach(list => list.querySelectorAll(".race-card").forEach(fitClassPills))
+      );
+    }
+  });
+  if (raceList) pillResizeObs.observe(raceList);
+  if (mobRaceList) pillResizeObs.observe(mobRaceList);
 }
 
 // ── Theme ─────────────────────────────────────────────────────

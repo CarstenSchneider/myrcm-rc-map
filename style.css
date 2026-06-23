@@ -2301,6 +2301,7 @@ input {
   background-color: var(--pill-bg);
   color: var(--accent);
   font-size: 14px;
+  font-family: inherit;
   box-shadow: none;
 }
 
@@ -2310,6 +2311,9 @@ input {
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23213769' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
+}
+.layout-prototype .topbar select:focus {
+  outline: none;
 }
 
 .layout-prototype .topbar input {
@@ -2587,6 +2591,7 @@ input {
   position: fixed;
   left: 0;
   right: 0;
+  overflow: hidden;
   /* top: 80px so translateY(0) = full-open with button visible above */
   top: 80px;
   height: calc(100dvh - 80px);
@@ -2612,10 +2617,28 @@ input {
 .mob-drawer--half      { transform: translateY(50%); }
 .mob-drawer--full      { transform: translateY(0); }
 
-/* Hide filters and list when collapsed so nothing peeks above the handle */
+/* In half/full state, lift touch-action:none from the drawer so the list's
+   pan-y takes effect. Chrome intersects touch-action down the ancestor
+   chain — none on any ancestor blocks all child gestures, including the
+   list's own pan-y. Overriding to auto here lets list scrolling work.
+   The handle keeps touch-action:none so JS drag still fires from the handle.
+   iOS ignores this rule for overflow containers, so mobile is unaffected. */
+.mob-drawer--half,
+.mob-drawer--full { touch-action: auto; }
+
+/* Filters and list: visible by default with no delay so they appear
+   immediately as the drawer starts sliding open. */
+.mob-drawer-filters,
+.mob-drawer-list {
+  transition: visibility 0s ease 0s;
+}
+
+/* When collapsed: hide content, but delay visibility change by 0.32s
+   (drawer transition duration) so content stays visible while sliding down. */
 .mob-drawer--collapsed .mob-drawer-filters,
 .mob-drawer--collapsed .mob-drawer-list {
   visibility: hidden;
+  transition: visibility 0s ease 0.32s;
 }
 
 /* Disable transition during active drag */
@@ -2645,6 +2668,7 @@ input {
   flex: 0 0 auto;
   background: rgba(var(--panel-rgb), 0.94);
   border-bottom: 1px solid var(--line);
+  touch-action: none; /* keep filters draggable even when drawer is in full state */
 }
 
 /* ── Topbar inside drawer ───────────────────────────────────────
@@ -2676,19 +2700,12 @@ input {
   display: none;
 }
 
-/* Filter groups: reset desktop order/width so they wrap naturally */
-.mob-drawer-filters .topbar-range,
-.mob-drawer-filters .topbar-series,
-.mob-drawer-filters .topbar-favorites,
-.mob-drawer-filters .topbar-registration,
-.mob-drawer-filters .topbar-search {
-  order: unset !important;
-}
+/* Filter groups: inside .mob-filters-body wrapper — no order override needed in topbar context */
 
 
-/* Show full labels (Favoriten / Offen) in drawer — override the <1150px hide */
-.mob-drawer-filters .layout-prototype .topbar .label-full {
-  display: inline !important;
+/* Hide text labels in drawer — show only icons (star SVG, green dot) */
+.mob-drawer-filters .topbar .label-full {
+  display: none !important;
 }
 
 /* Search: own full-width row */
@@ -2709,32 +2726,119 @@ input {
   box-sizing: border-box;
 }
 
+/* ── Mobile filter toggle button ────────────────────────────────────────────
+   Hidden on desktop, appears in the drawer on mobile.
+   Shares the top row with the search field.                                */
+.mob-filter-btn {
+  display: none;
+}
+
+.mob-drawer-filters .mob-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  color: var(--accent);
+  cursor: pointer;
+  order: -2;
+}
+
+.mob-drawer-filters .mob-filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.mob-drawer-filters .mob-filter-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Dot indicator: visible when non-default filter is active */
+.mob-filter-dot {
+  display: none;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4A9EE8;
+  border: 2px solid var(--bg, #fff);
+}
+
+.mob-drawer-filters .mob-filter-btn.has-active-filters .mob-filter-dot {
+  display: block;
+}
+
+/* Search: shares top row with filter button — always first row via order: -1 */
+.mob-drawer-filters .topbar-search {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  order: -1 !important;
+}
+
+/* In drawer: hidden by default (no flex row = no gap in topbar) */
+.mob-drawer-filters .mob-filters-body {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 0 0 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 300ms ease-in-out, opacity 200ms ease;
+}
+
+/* JS adds .is-expanded after setting display:flex so transition runs */
+.mob-drawer-filters .mob-filters-body.is-expanded {
+  max-height: 300px;
+  opacity: 1;
+}
+
 /* Race list */
 .mob-drawer-list {
-  flex: 1 1 auto;
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
   overflow-y: auto;
-  padding: 14px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  background: var(--bg);
-}
-
-/* Cards must not grow/shrink — let each card size itself from content.
-   flex:none prevents the flex container from stretching cards to fill space,
-   which would trigger the same height-collapse as the grid approach. */
-.mob-drawer-list > .race-card {
-  flex: none;
-}
-
-/* Safari ignores padding-bottom in overflow-scroll flex containers.
-   Pseudo-element acts as a real spacer the scroll engine respects. */
-.mob-drawer-list::after {
-  content: '';
+  touch-action: pan-y;
+  padding: 14px 12px 32px;
   display: block;
-  flex-shrink: 0;
-  height: 14px;
+  background: var(--bg);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--text-rgb), 0.18) transparent;
 }
+.mob-drawer-list > * + * {
+  margin-top: 14px;
+}
+.mob-drawer-list::-webkit-scrollbar { width: 4px; }
+.mob-drawer-list::-webkit-scrollbar-track { background: transparent; }
+.mob-drawer-list::-webkit-scrollbar-thumb {
+  background: rgba(var(--text-rgb), 0.18);
+  border-radius: 999px;
+}
+.mob-drawer-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--text-rgb), 0.30);
+}
+
+/* In half state, translateY(50%) shifts the drawer but the list element stays
+   full-height — content never overflows it so no scrollbar appears. Cap the
+   list at the actually-visible height so overflow-y:auto triggers correctly.
+   50dvh - 40px = visible drawer height; 36px = handle; 64px ≈ filters row.
+   Transition matches drawer slide so the resize feels synchronised. */
+.mob-drawer--half .mob-drawer-list {
+  max-height: calc(50dvh - 76px - var(--mob-filters-h, 61px));
+}
+
+
 
 /* Footer — hidden as drawer sibling, cloned into list by JS so it scrolls with cards */
 .mob-drawer > .mob-drawer-footer {
