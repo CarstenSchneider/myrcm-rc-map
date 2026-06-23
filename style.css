@@ -238,10 +238,9 @@ input {
 
 /* ── Ads banner ─────────────────────────────────────────────── */
 .ads-banner {
-  flex: 0 0 auto;
+  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid rgba(var(--border-rgb), 0.6);
-  padding: 14px 16px;
-  background: var(--surface);
 }
 
 .ads-banner--mob {
@@ -787,22 +786,14 @@ input {
   width: 390px;
   max-width: calc(100vw - 48px);
   min-width: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
+  padding: 22px;
   background: var(--surface);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(var(--border-rgb), 0.92);
   border-radius: 24px;
   box-shadow: var(--shadow);
-}
-
-.layout-prototype .race-grid {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 22px;
 }
 
 .layout-prototype .panel-header {
