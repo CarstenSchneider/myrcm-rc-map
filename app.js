@@ -2584,7 +2584,13 @@ function fitMapToBounds(bounds, options = {}) {
   // Compute bounds pixel center directly (geographic center is wrong in Mercator).
   // One setView shifts bounds pixel center to visible area center (W/2-207, H/2+40).
   const lBounds = L.latLngBounds(bounds);
-  let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 70));
+  // Expand north by 0.7° (~50px at zoom 6) so tall marker icons aren't clipped by the topbar.
+  // The zoom is computed with this expanded bounds; centering still uses original bounds.
+  const zoomBounds = L.latLngBounds(
+    lBounds.getSouthWest(),
+    L.latLng(lBounds.getNorth() + 0.7, lBounds.getEast())
+  );
+  let zoom = map.getBoundsZoom(zoomBounds, false, L.point(207, 40));
   if (options.maxZoom !== undefined) zoom = Math.min(zoom, options.maxZoom);
   if (options.minZoom !== undefined) zoom = Math.max(zoom, options.minZoom);
   zoom = Math.max(zoom, map.getMinZoom() || 0);
