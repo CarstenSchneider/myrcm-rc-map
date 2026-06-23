@@ -1,0 +1,43 @@
+# RC RaceMap
+
+> Interaktive Karte für RC-Car-Rennen in Deutschland
+
+RC RaceMap ist eine Web-App, die alle RC-Car-Renntermine in Deutschland auf einer interaktiven Karte zeigt. Nutzer können Strecken entdecken, bevorstehende und vergangene Rennen einsehen, Favoriten speichern und sich direkt für Rennen anmelden.
+
+## Was ist RC RaceMap?
+
+RC RaceMap aggregiert Renndaten aus zwei deutschen RC-Car-Plattformen:
+
+- **MyRCM** (myrcm.ch) – bundesweite RC-Car-Rennverwaltung
+- **RCK Solutions** (rck-solutions.de) – Rennverwaltung für weitere Vereine
+
+Die App zeigt Termine für alle gängigen RC-Car-Klassen: Elektro, Verbrenner, On-Road, Off-Road, Touring Car, Short Course und weitere.
+
+## Hauptfunktionen
+
+- **Kartenansicht**: Alle Rennstrecken in Deutschland auf einer Leaflet/MapLibre-Karte mit Stadia Maps Tiles
+- **Terminübersicht**: Bevorstehende Rennen sortiert nach Datum, vergangene Rennen archiviert
+- **Streckendetails**: Adresse, Veranstalter (Verein), Anfahrt via Google Maps, Rennklassen
+- **Favoriten**: Eingeloggte Nutzer können Vereine als Favorit markieren und erhalten so schnell eine personalisierte Ansicht
+- **Suche**: Volltextsuche über Strecken und Veranstalter
+- **Filter**: Nach Rennserie, Disziplin und Zeitraum filtern
+- **Mobile-optimiert**: Responsive Drawer-UI für Smartphone-Nutzung
+
+## Technologie
+
+- Single-Page-App ohne Framework-Build-Step (vanilla JS, CSS, HTML)
+- Leaflet 1.9.4 + MapLibre GL JS 5.23.0 für die Karte
+- Supabase für Authentifizierung (Favoriten, Benachrichtigungen)
+- Deployment auf Hetzner via GitHub Actions
+
+## URL
+
+https://rcracemap.com/
+
+## Entwickler
+
+Entwickelt von [Lessrain](https://lessrain.com), Hamburg.
+
+## Lizenz
+
+Proprietär. Renndaten stammen von MyRCM und RCK Solutions.
