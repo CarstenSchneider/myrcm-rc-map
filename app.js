@@ -572,8 +572,8 @@ async function loadAds() {
 }
 
 function renderAllAdsBanners() {
-  renderAdsBanner("adsBanner");
-  renderAdsBanner("mobAdsBanner");
+  renderAdsBanner("clubBanner");
+  renderAdsBanner("mobClubBanner");
 }
 
 function renderAdsBanner(id) {
@@ -589,35 +589,35 @@ function renderAdsBanner(id) {
   }
 
   el.innerHTML = `
-    <div class="ads-carousel" data-banner="${id}">
-      <div class="ads-slides">
+    <div class="club-carousel" data-banner="${id}">
+      <div class="club-slides">
         ${_ads.map((ad, i) => `
-          <div class="ads-slide${i === 0 ? " is-active" : ""}">
+          <div class="club-slide${i === 0 ? " is-active" : ""}">
             ${ad.link_url
               ? `<a href="${escapeHtml(ad.link_url)}" target="_blank" rel="noopener noreferrer sponsored">`
               : `<div>`}
-            <img src="${escapeHtml(ad.image_url)}" alt="${escapeHtml(ad.alt_text || "")}" class="ads-img" loading="lazy" />
+            <img src="${escapeHtml(ad.image_url)}" alt="${escapeHtml(ad.alt_text || "")}" class="club-img" loading="lazy" />
             ${ad.link_url ? `</a>` : `</div>`}
           </div>`).join("")}
       </div>
       ${_ads.length > 1 ? `
-      <div class="ads-dots">
-        ${_ads.map((_, i) => `<button class="ads-dot${i === 0 ? " is-active" : ""}" type="button" aria-label="Bild ${i + 1}"></button>`).join("")}
+      <div class="club-dots">
+        ${_ads.map((_, i) => `<button class="club-dot${i === 0 ? " is-active" : ""}" type="button" aria-label="Bild ${i + 1}"></button>`).join("")}
       </div>` : ""}
     </div>`;
 
   if (_ads.length > 1) initAdsCarousel(el, id);
 
-  if (id === "mobAdsBanner") {
+  if (id === "mobClubBanner") {
     requestAnimationFrame(() => {
-      document.documentElement.style.setProperty("--mob-ads-h", el.offsetHeight + "px");
+      document.documentElement.style.setProperty("--mob-club-h", el.offsetHeight + "px");
     });
   }
 }
 
 function initAdsCarousel(container, id) {
-  const slides = [...container.querySelectorAll(".ads-slide")];
-  const dots = [...container.querySelectorAll(".ads-dot")];
+  const slides = [...container.querySelectorAll(".club-slide")];
+  const dots = [...container.querySelectorAll(".club-dot")];
   let current = 0;
 
   function goTo(n) {
@@ -672,9 +672,9 @@ async function adminToggleAdActive(id, active) {
 async function adminUploadAdImage(file) {
   const ext = file.name.split(".").pop().toLowerCase();
   const path = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
-  const { error } = await sbClient.storage.from("ads").upload(path, file, { cacheControl: "31536000", upsert: false });
+  const { error } = await sbClient.storage.from("media").upload(path, file, { cacheControl: "31536000", upsert: false });
   if (error) throw error;
-  return sbClient.storage.from("ads").getPublicUrl(path).data.publicUrl;
+  return sbClient.storage.from("media").getPublicUrl(path).data.publicUrl;
 }
 
 function renderAdminAdsTab(container) {
