@@ -3914,10 +3914,6 @@ function syncMobRaceList() {
   if (drawerFooterSrc) {
     mobRaceList.appendChild(drawerFooterSrc.cloneNode(true));
   }
-  // Real DOM spacer — CSS padding-bottom is unreliable in Chrome flex overflow containers
-  const spacer = document.createElement("div");
-  spacer.style.cssText = "height:32px;flex-shrink:0;pointer-events:none";
-  mobRaceList.appendChild(spacer);
   // Class-pills measurement
   requestAnimationFrame(() => {
     mobRaceList.querySelectorAll(".race-card").forEach(fitClassPills);

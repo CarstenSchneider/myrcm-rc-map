@@ -2810,13 +2810,14 @@ input {
   box-sizing: border-box;
   overflow-y: auto;
   touch-action: pan-y;
-  padding: 14px 12px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  padding: 14px 12px 32px;
+  display: block;
   background: var(--bg);
   scrollbar-width: thin;
   scrollbar-color: rgba(var(--text-rgb), 0.18) transparent;
+}
+.mob-drawer-list > * + * {
+  margin-top: 14px;
 }
 .mob-drawer-list::-webkit-scrollbar { width: 4px; }
 .mob-drawer-list::-webkit-scrollbar-track { background: transparent; }
@@ -2837,12 +2838,6 @@ input {
   max-height: calc(50dvh - 137px);
 }
 
-/* Cards must not grow/shrink — let each card size itself from content.
-   flex:none prevents the flex container from stretching cards to fill space,
-   which would trigger the same height-collapse as the grid approach. */
-.mob-drawer-list > .race-card {
-  flex: none;
-}
 
 
 /* Footer — hidden as drawer sibling, cloned into list by JS so it scrolls with cards */
