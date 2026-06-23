@@ -565,7 +565,8 @@ const _adsTimers = new Map(); // bannerId → intervalId
 async function loadAds() {
   if (!sbClient) return;
   const { data, error } = await sbClient.from("ads").select("*").eq("active", true).order("sort_order");
-  if (error) { console.warn("loadAds:", error); return; }
+  if (error) { console.error("loadAds error (check RLS policy):", error.message); return; }
+  console.log("loadAds: got", data?.length ?? 0, "ads");
   _ads = data ?? [];
   renderAllAdsBanners();
 }
