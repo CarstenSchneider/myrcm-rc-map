@@ -3612,12 +3612,10 @@ searchInput.addEventListener("input", () => {
     _searchDebounce = setTimeout(() => renderList(filteredRaces()), 500);
     return;
   }
-  // Desktop: Liste und Karte gemeinsam nach 300ms
-  _searchDebounce = setTimeout(() => {
-    const list = filteredRaces();
-    renderList(list);
-    updateMarkers(list, true);
-  }, 300);
+  // Desktop: sofort ohne Debounce
+  const list = filteredRaces();
+  renderList(list);
+  updateMarkers(list, true);
 });
 
 searchInput.addEventListener("blur", () => {
