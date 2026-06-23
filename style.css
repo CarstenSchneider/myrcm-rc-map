@@ -64,10 +64,6 @@
 }
 
 * { box-sizing: border-box; }
-/* iOS Safari zooms on focus when font-size < 16px — only enforce at focus time */
-@media (max-width: 860px) {
-  input:focus, select:focus, textarea:focus { font-size: 16px !important; }
-}
 
 body {
   margin: 0;
@@ -241,7 +237,6 @@ input {
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
-  overflow: hidden;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
@@ -249,6 +244,13 @@ input {
   border-color: var(--text);
   box-shadow: var(--shadow);
   cursor: pointer;
+}
+
+.club-card:has(a):active {
+  transform: scale(0.972);
+  box-shadow:
+    0 10px 22px rgba(var(--shadow-rgb), 0.18),
+    0 2px 7px rgba(var(--shadow-rgb), 0.12);
 }
 
 .club-carousel {
@@ -260,6 +262,7 @@ input {
   position: relative;
   width: 100%;
   overflow: hidden;
+  border-radius: 17px;
   aspect-ratio: 4 / 1;
 }
 
@@ -2884,16 +2887,11 @@ input {
 .mob-drawer-filters .topbar-series select {
   width: 100%;
   box-sizing: border-box;
-  font-size: 13px !important;
+  font-size: 13px;
 }
 
 .mob-drawer-filters .topbar-search input {
-  font-size: 13px !important;
-}
-
-.mob-drawer-filters .topbar-series select:focus,
-.mob-drawer-filters .topbar-search input:focus {
-  font-size: 16px !important;
+  font-size: 13px;
 }
 
 /* ── Mobile filter toggle button ────────────────────────────────────────────
