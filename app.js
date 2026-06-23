@@ -3670,11 +3670,11 @@ searchInput.addEventListener("input", () => {
 
 searchInput.addEventListener("keydown", (e) => {
   if (e.key !== "Enter") return;
+  e.preventDefault();
   clearTimeout(_searchDebounce);
   const list = filteredRaces();
   renderList(list);
   updateMarkers(list, true);
-  searchInput.blur();
 });
 
 searchInput.addEventListener("blur", () => {
