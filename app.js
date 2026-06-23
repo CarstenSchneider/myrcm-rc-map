@@ -3383,11 +3383,13 @@ seriesFilter.addEventListener("change", () => {
 });
 
 
+let _searchDebounce;
 searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
-  render();
+  clearTimeout(_searchDebounce);
+  _searchDebounce = setTimeout(render, 120);
 });
 
 if (filterToggleButton) {

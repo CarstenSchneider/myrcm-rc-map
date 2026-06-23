@@ -3508,6 +3508,16 @@ body.is-menu-open .app-menu-close {
 }
 .sub-page-content-footer { text-align: center; padding: 40px 0 0; }
 .sub-page-content-footer a { display: inline-block; line-height: 0; text-decoration: none; }
+
+/* Prevent iOS Safari from zooming into focused inputs (requires font-size >= 16px) */
+@supports (-webkit-touch-callout: none) {
+  .layout-prototype .topbar select,
+  .layout-prototype .topbar input,
+  .fav-search {
+    font-size: 16px;
+  }
+}
+
 .app-menu-footer-link {
   appearance: none;
   border: 0;
