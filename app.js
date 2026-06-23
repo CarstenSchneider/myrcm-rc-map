@@ -7,6 +7,7 @@ const rangeFilter = document.getElementById("rangeFilter");
 const mapWideButton = document.getElementById("mapWideButton");
 const listWideButton = document.getElementById("listWideButton");
 const filterToggleButton = document.getElementById("filterToggleButton");
+const mobFilterBtn = document.getElementById("mobFilterBtn");
 const activeFilterChips = document.getElementById("activeFilterChips");
 const registrationVisibilityFilter = document.getElementById("registrationVisibilityFilter");
 const favoriteFilter = document.getElementById("favoriteFilter");
@@ -926,12 +927,20 @@ function renderActiveFilterChips() {
   activeFilterChips.classList.toggle("is-empty", chips.length === 0);
 }
 
+function updateMobFilterDot() {
+  if (!mobFilterBtn) return;
+  const hasActive = selectedRange !== "2" || selectedSeries !== "all" ||
+    selectedFavoriteFilter !== "all" || showOpenOnly;
+  mobFilterBtn.classList.toggle("has-active-filters", hasActive);
+}
+
 function syncFilterUi() {
   updateFilterPanelState();
   updateFavoriteFilterUi();
   updateRegistrationVisibilityUi();
   updateSlidingPills();
   renderActiveFilterChips();
+  updateMobFilterDot();
 }
 
 
@@ -3384,6 +3393,16 @@ if (filterToggleButton) {
   filterToggleButton.addEventListener("click", () => {
     isFilterPanelOpen = !isFilterPanelOpen;
     updateFilterPanelState();
+  });
+}
+
+if (mobFilterBtn) {
+  mobFilterBtn.addEventListener("click", () => {
+    const topbar = mobFilterBtn.closest(".topbar");
+    if (!topbar) return;
+    const expanded = topbar.classList.toggle("mob-filters-expanded");
+    mobFilterBtn.classList.toggle("active", expanded);
+    mobFilterBtn.setAttribute("aria-expanded", String(expanded));
   });
 }
 

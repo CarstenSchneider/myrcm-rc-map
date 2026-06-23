@@ -2709,6 +2709,81 @@ input {
   box-sizing: border-box;
 }
 
+/* ── Mobile filter toggle button ────────────────────────────────────────────
+   Hidden on desktop, appears in the drawer on mobile.
+   Shares the top row with the search field.                                */
+.mob-filter-btn {
+  display: none;
+}
+
+.mob-drawer-filters .mob-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  color: var(--accent);
+  cursor: pointer;
+  order: 0;
+}
+
+.mob-drawer-filters .mob-filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.mob-drawer-filters .mob-filter-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Dot indicator: visible when non-default filter is active */
+.mob-filter-dot {
+  display: none;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4A9EE8;
+  border: 2px solid var(--bg, #fff);
+}
+
+.mob-drawer-filters .mob-filter-btn.has-active-filters .mob-filter-dot {
+  display: block;
+}
+
+/* Search: shares top row with filter button (no longer full-width) */
+.mob-drawer-filters .topbar-search {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  order: 1 !important;
+}
+
+/* Collapsible filter groups — hidden by default on mobile */
+.mob-drawer-filters .topbar-range,
+.mob-drawer-filters .topbar-series,
+.mob-drawer-filters .topbar-favorites,
+.mob-drawer-filters .topbar-registration {
+  display: none !important;
+}
+
+/* When expanded: show all filter groups */
+.mob-drawer-filters .topbar.mob-filters-expanded .topbar-range,
+.mob-drawer-filters .topbar.mob-filters-expanded .topbar-series,
+.mob-drawer-filters .topbar.mob-filters-expanded .topbar-favorites,
+.mob-drawer-filters .topbar.mob-filters-expanded .topbar-registration {
+  display: flex !important;
+}
+
 /* Race list */
 .mob-drawer-list {
   flex: 1 1 auto;
