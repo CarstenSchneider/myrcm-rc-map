@@ -3949,26 +3949,33 @@ function fitClassPills(card) {
   const containerWidth = container.getBoundingClientRect().width;
   if (!containerWidth) return;
 
-  const gap = 6;
-  let usedWidth = 0;
-  let lastVisible = pills.length;
+  const gap = 5;       // matches .race-tags { gap: 5px }
+  const moreBtnW = 70; // conservative estimate for "+N weitere" (font-size:10px, padding:0 8px)
 
+  // Measure all pills while visible (getBoundingClientRect forces layout)
+  const widths = pills.map(p => p.getBoundingClientRect().width);
+
+  // If all pills fit in one row, nothing to do
+  const totalW = widths.reduce((sum, w, i) => sum + (i > 0 ? gap : 0) + w, 0);
+  if (totalW <= containerWidth) return;
+
+  // Find cut point: keep pills while the next pill + more button would still fit
+  let usedW = 0;
+  let cutAt = pills.length;
   for (let i = 0; i < pills.length; i++) {
-    const pillWidth = pills[i].getBoundingClientRect().width;
-    if (i > 0) usedWidth += gap;
-    usedWidth += pillWidth;
-
-    const remaining = pills.length - i - 1;
-    if (remaining > 0 && usedWidth + gap + 40 > containerWidth) {
-      lastVisible = i;
+    const next = usedW + (i > 0 ? gap : 0) + widths[i];
+    if (next + gap + moreBtnW > containerWidth) {
+      cutAt = i;
       break;
     }
+    usedW = next;
+    cutAt = i + 1;
   }
 
-  const hiddenCount = pills.length - lastVisible;
+  const hiddenCount = pills.length - cutAt;
   if (hiddenCount <= 0) return;
 
-  for (let i = lastVisible; i < pills.length; i++) {
+  for (let i = cutAt; i < pills.length; i++) {
     pills[i].style.display = "none";
   }
 
