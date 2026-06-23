@@ -2835,7 +2835,7 @@ input {
    50dvh - 40px = visible drawer height; 36px = handle; 64px ≈ filters row.
    Transition matches drawer slide so the resize feels synchronised. */
 .mob-drawer--half .mob-drawer-list {
-  max-height: calc(50dvh - 137px);
+  max-height: calc(50dvh - 76px - var(--mob-filters-h, 61px));
 }
 
 

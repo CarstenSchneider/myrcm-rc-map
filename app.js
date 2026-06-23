@@ -3666,6 +3666,19 @@ function setDrawerState(state) {
   if (map) requestAnimationFrame(() => map.invalidateSize());
 }
 
+// ── Track filter section height via CSS variable ───────────────
+// Chrome ignores padding-bottom in overflow:auto containers when height is
+// flex-determined. Keeping max-height equal to the available space makes it
+// the binding constraint so Chrome counts padding-bottom correctly in all states.
+{
+  const mobDrawerFiltersEl = mobDrawer?.querySelector(".mob-drawer-filters");
+  if (mobDrawerFiltersEl && mobDrawer) {
+    new ResizeObserver(() => {
+      mobDrawer.style.setProperty("--mob-filters-h", mobDrawerFiltersEl.offsetHeight + "px");
+    }).observe(mobDrawerFiltersEl);
+  }
+}
+
 // ── Drag / swipe (touch-only, mobile breakpoint guard) ────────
 const mobMq = window.matchMedia("(max-width: 860px)");
 if (mobDrawer && mobDrawerHandle) {
