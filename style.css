@@ -2617,11 +2617,13 @@ input {
 .mob-drawer--half      { transform: translateY(50%); }
 .mob-drawer--full      { transform: translateY(0); }
 
-/* In full state, lift touch-action:none from the drawer so the list's
+/* In half/full state, lift touch-action:none from the drawer so the list's
    pan-y takes effect. Chrome intersects touch-action down the ancestor
    chain — none on any ancestor blocks all child gestures, including the
    list's own pan-y. Overriding to auto here lets list scrolling work.
+   The handle keeps touch-action:none so JS drag still fires from the handle.
    iOS ignores this rule for overflow containers, so mobile is unaffected. */
+.mob-drawer--half,
 .mob-drawer--full { touch-action: auto; }
 
 /* Filters and list: visible by default with no delay so they appear
@@ -2814,9 +2816,6 @@ input {
   background: var(--bg);
   scrollbar-width: thin;
   scrollbar-color: rgba(var(--text-rgb), 0.18) transparent;
-  /* Large default so height is flex-driven; enables CSS transition between states */
-  max-height: 100dvh;
-  transition: max-height 0.32s cubic-bezier(0.4,0,0.2,1);
 }
 .mob-drawer-list::-webkit-scrollbar { width: 4px; }
 .mob-drawer-list::-webkit-scrollbar-track { background: transparent; }
@@ -2834,7 +2833,7 @@ input {
    50dvh - 40px = visible drawer height; 36px = handle; 64px ≈ filters row.
    Transition matches drawer slide so the resize feels synchronised. */
 .mob-drawer--half .mob-drawer-list {
-  max-height: calc(50dvh - 140px);
+  max-height: calc(50dvh - 137px);
 }
 
 /* Cards must not grow/shrink — let each card size itself from content.
