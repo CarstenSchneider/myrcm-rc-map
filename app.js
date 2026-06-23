@@ -3938,7 +3938,7 @@ function fitClassPills(card) {
   const container = card.querySelector(".race-class-tags");
   if (!container) return;
 
-  // Remove desktop toggle — mobile uses its own measurement-based overflow
+  // Remove existing toggles (desktop count-based or previous more-button)
   container.querySelectorAll(".tag-class-toggle, .tag-class-more").forEach(el => el.remove());
 
   const pills = Array.from(container.querySelectorAll(".tag-class"));
@@ -3949,8 +3949,7 @@ function fitClassPills(card) {
   const containerWidth = container.getBoundingClientRect().width;
   if (!containerWidth) return;
 
-  const gap = 5;       // matches .race-tags { gap: 5px }
-  const moreBtnW = 70; // conservative estimate for "+N weitere" (font-size:10px, padding:0 8px)
+  const gap = 5; // matches .race-tags { gap: 5px }
 
   // Measure all pills while visible (getBoundingClientRect forces layout)
   const widths = pills.map(p => p.getBoundingClientRect().width);
@@ -3959,7 +3958,18 @@ function fitClassPills(card) {
   const totalW = widths.reduce((sum, w, i) => sum + (i > 0 ? gap : 0) + w, 0);
   if (totalW <= containerWidth) return;
 
-  // Find cut point: keep pills while the next pill + more button would still fit
+  // Probe the actual more button width using worst-case text.
+  // Positioned absolutely so it doesn't affect container layout during measurement.
+  const probe = document.createElement("button");
+  probe.className = "tag tag-class tag-class-more";
+  probe.type = "button";
+  probe.textContent = `+${pills.length} weitere`;
+  probe.style.cssText = "position:absolute;opacity:0;pointer-events:none";
+  container.appendChild(probe);
+  const moreBtnW = probe.getBoundingClientRect().width;
+  probe.remove();
+
+  // Find cut point: keep pills while pill[i] + more button would still fit
   let usedW = 0;
   let cutAt = pills.length;
   for (let i = 0; i < pills.length; i++) {
@@ -4007,6 +4017,11 @@ function fitClassPills(card) {
 const mobRaceListObserver = new MutationObserver(() => {
   if (window.matchMedia("(max-width: 860px)").matches) {
     syncMobRaceList();
+  } else {
+    // Apply width-based pill trimming on desktop too (replaces count-based toggle)
+    requestAnimationFrame(() => {
+      raceList.querySelectorAll(".race-card").forEach(fitClassPills);
+    });
   }
   syncResultBadge(resultLine.textContent);
 });
