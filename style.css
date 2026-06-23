@@ -242,6 +242,13 @@ input {
   border-radius: 18px;
   box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
   overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.club-card:has(a):hover {
+  border-color: var(--text);
+  box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 .club-carousel {
@@ -2877,11 +2884,16 @@ input {
 .mob-drawer-filters .topbar-series select {
   width: 100%;
   box-sizing: border-box;
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 .mob-drawer-filters .topbar-search input {
-  font-size: 13px;
+  font-size: 13px !important;
+}
+
+.mob-drawer-filters .topbar-series select:focus,
+.mob-drawer-filters .topbar-search input:focus {
+  font-size: 16px !important;
 }
 
 /* ── Mobile filter toggle button ────────────────────────────────────────────
