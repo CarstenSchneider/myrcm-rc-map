@@ -2617,6 +2617,13 @@ input {
 .mob-drawer--half      { transform: translateY(50%); }
 .mob-drawer--full      { transform: translateY(0); }
 
+/* In full state, lift touch-action:none from the drawer so the list's
+   pan-y takes effect. Chrome intersects touch-action down the ancestor
+   chain — none on any ancestor blocks all child gestures, including the
+   list's own pan-y. Overriding to auto here lets list scrolling work.
+   iOS ignores this rule for overflow containers, so mobile is unaffected. */
+.mob-drawer--full { touch-action: auto; }
+
 /* Filters and list: visible by default with no delay so they appear
    immediately as the drawer starts sliding open. */
 .mob-drawer-filters,
@@ -2659,6 +2666,7 @@ input {
   flex: 0 0 auto;
   background: rgba(var(--panel-rgb), 0.94);
   border-bottom: 1px solid var(--line);
+  touch-action: none; /* keep filters draggable even when drawer is in full state */
 }
 
 /* ── Topbar inside drawer ───────────────────────────────────────

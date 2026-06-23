@@ -3749,9 +3749,8 @@ if (mobDrawer && mobDrawerHandle) {
   mobDrawer.addEventListener("touchmove", e => {
     if (!isDragging || !mobMq.matches) return;
     if (drawerState === "full") {
-      const list = mobRaceList;
-      if (list && list.contains(e.target) && list.scrollTop > 0) return;
-      if (list && list.contains(e.target) && e.touches[0].clientY > dragStartY) return;
+      // List scrolls natively in full state — never intercept touches on it
+      if (mobRaceList && mobRaceList.contains(e.target)) return;
     }
     e.preventDefault();
     onDragMove(e.touches[0].clientY);
