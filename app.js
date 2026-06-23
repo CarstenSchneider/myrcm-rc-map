@@ -2543,11 +2543,13 @@ function resetVenueSelection() {
 function mapPadding() {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
   if (!isMobile) return { pl: 0, pr: 414, pt: 80, pb: 40 };
-  const dh = window.innerHeight - 80;
+  // Drawer in half state covers 50dvh from the bottom.
+  // Top: 80px topbar + 20px breathing room.
+  // Bottom: actual drawer height + 20px so no pin lands under the drawer.
   const pb = drawerState === "collapsed"
-    ? 84
-    : Math.max(20, Math.round(dh * 0.5 - 20));
-  return { pl: 66, pr: 20, pt: 20, pb };
+    ? 104
+    : Math.round(window.innerHeight * 0.5) + 20;
+  return { pl: 66, pr: 20, pt: 100, pb };
 }
 
 // Center a single latlng in the visible map area at the given zoom.
@@ -3383,11 +3385,26 @@ seriesFilter.addEventListener("change", () => {
 });
 
 
+let _searchDebounce;
+const isMobile = () => window.matchMedia("(max-width: 860px)").matches;
+
 searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
-  render();
+  if (isMobile()) return; // mobile: update on blur when keyboard closes
+  const list = filteredRaces();
+  renderList(list);
+  clearTimeout(_searchDebounce);
+  _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
+});
+
+searchInput.addEventListener("blur", () => {
+  if (!isMobile()) return;
+  const list = filteredRaces();
+  renderList(list);
+  // Wait for keyboard to fully dismiss so window.innerHeight is correct
+  setTimeout(() => updateMarkers(list, true), 150);
 });
 
 if (filterToggleButton) {
