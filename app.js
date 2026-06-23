@@ -28,6 +28,57 @@ L.control.zoom({
   position: "bottomleft"
 }).addTo(map);
 
+let _userLocationLayer = null;
+
+const LocateControl = L.Control.extend({
+  options: { position: "bottomleft" },
+  onAdd() {
+    const btn = L.DomUtil.create("button", "locate-btn");
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Meinen Standort anzeigen");
+    btn.title = "Meinen Standort anzeigen";
+    btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>`;
+    L.DomEvent.on(btn, "click", L.DomEvent.stop);
+    L.DomEvent.on(btn, "click", () => locateUser(btn));
+    return btn;
+  }
+});
+new LocateControl().addTo(map);
+
+function locateUser(btn) {
+  if (!navigator.geolocation) return;
+  btn.classList.add("is-locating");
+  navigator.geolocation.getCurrentPosition(
+    ({ coords: { latitude: lat, longitude: lng, accuracy } }) => {
+      btn.classList.remove("is-locating");
+      const latlng = L.latLng(lat, lng);
+      if (_userLocationLayer) map.removeLayer(_userLocationLayer);
+      _userLocationLayer = L.layerGroup([
+        L.circle(latlng, {
+          radius: Math.min(accuracy, 10000),
+          color: "#4A9EE8", fillColor: "#4A9EE8", fillOpacity: 0.12,
+          weight: 1, interactive: false
+        }),
+        L.marker(latlng, {
+          icon: L.divIcon({
+            className: "",
+            html: '<div class="user-location-dot"></div>',
+            iconSize: [16, 16], iconAnchor: [8, 8]
+          }),
+          interactive: false, zIndexOffset: 2000
+        })
+      ]).addTo(map);
+      const zoom = accuracy < 200 ? 13 : accuracy < 2000 ? 11 : 9;
+      panToVisible(latlng, zoom);
+    },
+    (err) => {
+      btn.classList.remove("is-locating");
+      console.warn("Geolocation:", err.message);
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+  );
+}
+
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColorsLight = {
   water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",

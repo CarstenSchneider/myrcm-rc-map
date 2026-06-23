@@ -851,6 +851,83 @@ input {
   opacity: 0.85;
 }
 
+/* Locate button — desktop: styled like a single zoom bar button; mobile: circular fixed */
+.locate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: var(--panel);
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(var(--shadow-rgb), 0.10);
+  margin-left: 24px;
+  margin-bottom: 24px;
+  float: left;
+  clear: left;
+  transition: background 0.12s;
+}
+.locate-btn:hover { background: rgba(0, 0, 0, 0.07); }
+.locate-btn.is-locating { opacity: 0.45; pointer-events: none; }
+
+:root.theme-dark .locate-btn {
+  border-color: rgba(var(--text-rgb), 0.12);
+  background: var(--panel);
+}
+:root.theme-dark .locate-btn:hover { background: rgba(255, 255, 255, 0.10); }
+
+@media (max-width: 860px) {
+  .locate-btn {
+    position: fixed !important;
+    top: 74px !important;
+    left: 14px !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    float: none !important;
+    clear: none !important;
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 999px !important;
+    border: 0 !important;
+    box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09) !important;
+    background: rgba(var(--panel-rgb), 0.98) !important;
+    color: var(--accent) !important;
+  }
+  .locate-btn:hover { background: rgba(var(--panel-rgb), 0.98) !important; }
+}
+
+/* User location dot with pulsing accuracy ring */
+.user-location-dot {
+  width: 16px;
+  height: 16px;
+  background: #4A9EE8;
+  border: 2.5px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  position: relative;
+}
+.user-location-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  background: rgba(74, 158, 232, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: user-location-pulse 2.5s ease-out infinite;
+}
+@keyframes user-location-pulse {
+  0%   { transform: translate(-50%, -50%) scale(0.4); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
 :root.theme-dark .layout-prototype .leaflet-control-attribution a {
   color: var(--text) !important;
 }
