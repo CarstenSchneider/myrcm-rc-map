@@ -588,6 +588,21 @@ function labelValueMap($) {
   return labels;
 }
 
+const EVENT_KEYWORDS = [
+  "lauf", "cup", "race", "rennen", "serie", "series", "challenge", "masters",
+  "open", "trophy", "meisterschaft", "championship", "turnier", "finale",
+  "warm", "fun", "stage", "round", "heat", "grand prix", "prix", "invitational",
+  "festival", "meeting", "event", "contest", "qualifier", "qualifying"
+];
+
+function isClubNameVariant(heading, hostName) {
+  const lower = heading.toLowerCase();
+  if (EVENT_KEYWORDS.some(kw => lower.includes(kw))) return false;
+  const words = s => s.toUpperCase().split(/\s+/).filter(w => w.length >= 3);
+  const hostWords = new Set(words(hostName));
+  return words(heading).filter(w => hostWords.has(w)).length >= 2;
+}
+
 function firstUsefulHeading($, host) {
   const hostName = normalizeText(host.name);
   const headings = $("h1, h2, h3")
@@ -601,6 +616,7 @@ function firstUsefulHeading($, host) {
       if (heading === host.location) return false;
       if (/^myrcm/i.test(heading)) return false;
       if (isInvalidEventName(heading)) return false;
+      if (isClubNameVariant(heading, hostName)) return false;
       return true;
     }) || ""
   );
