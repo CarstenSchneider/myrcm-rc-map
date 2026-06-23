@@ -2613,10 +2613,19 @@ input {
 .mob-drawer--half      { transform: translateY(50%); }
 .mob-drawer--full      { transform: translateY(0); }
 
-/* Hide filters and list when collapsed so nothing peeks above the handle */
+/* Filters and list: visible by default with no delay so they appear
+   immediately as the drawer starts sliding open. */
+.mob-drawer-filters,
+.mob-drawer-list {
+  transition: visibility 0s ease 0s;
+}
+
+/* When collapsed: hide content, but delay visibility change by 0.32s
+   (drawer transition duration) so content stays visible while sliding down. */
 .mob-drawer--collapsed .mob-drawer-filters,
 .mob-drawer--collapsed .mob-drawer-list {
   visibility: hidden;
+  transition: visibility 0s ease 0.32s;
 }
 
 /* Disable transition during active drag */
@@ -2793,12 +2802,16 @@ input {
   background: var(--bg);
   scrollbar-width: thin;
   scrollbar-color: rgba(var(--text-rgb), 0.18) transparent;
+  /* Large default so height is flex-driven; enables CSS transition between states */
+  max-height: 100dvh;
+  transition: max-height 0.32s cubic-bezier(0.4,0,0.2,1);
 }
 
 /* In half state, translateY(50%) shifts the drawer but the list element stays
    full-height — content never overflows it so no scrollbar appears. Cap the
    list at the actually-visible height so overflow-y:auto triggers correctly.
-   50dvh - 40px = visible drawer height; 36px = handle; 64px ≈ filters row. */
+   50dvh - 40px = visible drawer height; 36px = handle; 64px ≈ filters row.
+   Transition matches drawer slide so the resize feels synchronised. */
 .mob-drawer--half .mob-drawer-list {
   max-height: calc(50dvh - 140px);
 }

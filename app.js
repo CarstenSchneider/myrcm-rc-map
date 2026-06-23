@@ -3416,9 +3416,14 @@ if (mobFilterBtn) {
       }));
     } else {
       body.classList.remove("is-expanded");
-      body.addEventListener("transitionend", () => {
+      // Wait specifically for max-height to finish (opacity ends 100ms earlier at 200ms;
+      // { once: true } would fire on opacity, setting display:none while height is still animating)
+      const onEnd = (e) => {
+        if (e.propertyName !== "max-height") return;
+        body.removeEventListener("transitionend", onEnd);
         if (!body.classList.contains("is-expanded")) body.style.display = "none";
-      }, { once: true });
+      };
+      body.addEventListener("transitionend", onEnd);
     }
   });
 }
