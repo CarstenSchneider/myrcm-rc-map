@@ -3821,10 +3821,34 @@ const _topbarNext   = _topbarEl?.nextSibling;
 function applyMobileLayout(isMobile) {
   if (!mobFilterMount || !_topbarEl) return;
   if (isMobile) {
+    // Wrap the 4 filter groups in a collapsible container (mobile-only)
+    if (!_topbarEl.querySelector(".mob-filters-body")) {
+      const body = document.createElement("div");
+      body.className = "mob-filters-body";
+      body.style.display = "none";
+      [".topbar-range", ".topbar-series", ".topbar-favorites", ".topbar-registration"].forEach(sel => {
+        const el = _topbarEl.querySelector(sel);
+        if (el) body.appendChild(el);
+      });
+      const ref = _topbarEl.querySelector(".mob-filter-btn") || _topbarEl.querySelector(".topbar-search");
+      ref ? ref.before(body) : _topbarEl.appendChild(body);
+    }
     mobFilterMount.appendChild(_topbarEl);
-    // Recalculate sliding-pill positions after layout shift
     requestAnimationFrame(updateSlidingPills);
   } else {
+    // Unwrap filter groups back as direct topbar children before returning to desktop
+    const body = _topbarEl.querySelector(".mob-filters-body");
+    if (body) {
+      body.classList.remove("is-expanded");
+      _topbarEl.classList.remove("mob-filters-expanded");
+      if (mobFilterBtn) {
+        mobFilterBtn.classList.remove("active");
+        mobFilterBtn.setAttribute("aria-expanded", "false");
+      }
+      const insertPoint = _topbarEl.querySelector(".mob-filter-btn") || body;
+      Array.from(body.children).forEach(child => insertPoint.before(child));
+      body.remove();
+    }
     if (_topbarNext && _topbarNext.parentNode === _topbarParent) {
       _topbarParent.insertBefore(_topbarEl, _topbarNext);
     } else if (_topbarParent) {

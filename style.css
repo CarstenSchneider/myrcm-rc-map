@@ -2762,13 +2762,6 @@ input {
   order: -1 !important;
 }
 
-/* Wrapper for collapsible filter groups.
-   display:contents on desktop = transparent passthrough, children act as
-   direct flex children of .topbar so all existing desktop CSS still applies. */
-.mob-filters-body {
-  display: contents;
-}
-
 /* In drawer: hidden by default (no flex row = no gap in topbar) */
 .mob-drawer-filters .mob-filters-body {
   display: none;
