@@ -3394,14 +3394,14 @@ searchInput.addEventListener("input", () => {
   const list = filteredRaces();
   renderList(list);
   clearTimeout(_searchDebounce);
-  _searchDebounce = setTimeout(() => updateMarkers(list, false), 300);
+  _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
 });
 
 searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
   const list = filteredRaces();
   renderList(list);
-  updateMarkers(list, false);
+  updateMarkers(list, true);
 });
 
 if (filterToggleButton) {
