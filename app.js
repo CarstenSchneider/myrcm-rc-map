@@ -3606,10 +3606,14 @@ searchInput.addEventListener("input", () => {
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
-  if (isMobile()) return; // mobile: update on blur when keyboard closes
+  clearTimeout(_searchDebounce);
+  if (isMobile()) {
+    // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
+    _searchDebounce = setTimeout(() => renderList(filteredRaces()), 500);
+    return;
+  }
   const list = filteredRaces();
   renderList(list);
-  clearTimeout(_searchDebounce);
   _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
 });
 
