@@ -2805,11 +2805,11 @@ input {
 
 /* Race list */
 .mob-drawer-list {
-  flex: 1 1 auto;
+  flex: 1;
   min-height: 0;
   overflow-y: auto;
   touch-action: pan-y;
-  padding: 14px 12px;
+  padding: 14px 12px 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -2843,13 +2843,13 @@ input {
   flex: none;
 }
 
-/* Safari ignores padding-bottom in overflow-scroll flex containers.
-   Pseudo-element acts as a real spacer the scroll engine respects. */
+/* padding-bottom is ignored in overflow-scroll flex containers in some browsers.
+   Pseudo-element is a real flex child that scroll engines always respect. */
 .mob-drawer-list::after {
   content: '';
   display: block;
   flex-shrink: 0;
-  height: 14px;
+  height: 24px;
 }
 
 /* Footer — hidden as drawer sibling, cloned into list by JS so it scrolls with cards */
