@@ -2676,14 +2676,7 @@ input {
   display: none;
 }
 
-/* Filter groups: reset desktop order/width so they wrap naturally */
-.mob-drawer-filters .topbar-range,
-.mob-drawer-filters .topbar-series,
-.mob-drawer-filters .topbar-favorites,
-.mob-drawer-filters .topbar-registration,
-.mob-drawer-filters .topbar-search {
-  order: unset !important;
-}
+/* Filter groups: inside .mob-filters-body wrapper — no order override needed in topbar context */
 
 
 /* Show full labels (Favoriten / Offen) in drawer — override the <1150px hide */
@@ -2768,20 +2761,29 @@ input {
   order: -1 !important;
 }
 
-/* Collapsible filter groups — hidden by default on mobile */
-.mob-drawer-filters .topbar-range,
-.mob-drawer-filters .topbar-series,
-.mob-drawer-filters .topbar-favorites,
-.mob-drawer-filters .topbar-registration {
-  display: none !important;
+/* Wrapper for collapsible filter groups.
+   display:contents on desktop = transparent passthrough, children act as
+   direct flex children of .topbar so all existing desktop CSS still applies. */
+.mob-filters-body {
+  display: contents;
 }
 
-/* When expanded: show all filter groups */
-.mob-drawer-filters .topbar.mob-filters-expanded .topbar-range,
-.mob-drawer-filters .topbar.mob-filters-expanded .topbar-series,
-.mob-drawer-filters .topbar.mob-filters-expanded .topbar-favorites,
-.mob-drawer-filters .topbar.mob-filters-expanded .topbar-registration {
-  display: flex !important;
+/* In drawer: become an animated flex container */
+.mob-drawer-filters .mob-filters-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 0 0 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 300ms ease-in-out, opacity 200ms ease;
+}
+
+/* Slide open when toggle is active */
+.mob-drawer-filters .topbar.mob-filters-expanded .mob-filters-body {
+  max-height: 300px;
+  opacity: 1;
 }
 
 /* Race list */

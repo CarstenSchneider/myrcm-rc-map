@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="style.css?v=53" />
+  <link rel="stylesheet" href="style.css?v=54" />
   <style>
     /* v1.6.5 target topbar polish */
     .layout-prototype .filters-panel {
@@ -1118,29 +1118,12 @@
       row-gap: 8px;
       min-height: 0;
     }
-    .mob-drawer .mob-drawer-filters .topbar-range,
-    .mob-drawer .mob-drawer-filters .topbar-series,
-    .mob-drawer .mob-drawer-filters .topbar-favorites,
-    .mob-drawer .mob-drawer-filters .topbar-registration,
-    .mob-drawer .mob-drawer-filters .topbar .filter-field-search {
-      order: unset !important;
-      flex: 0 0 auto;
-    }
     .mob-drawer .mob-drawer-filters .mob-filter-btn { order: -2 !important; }
     .mob-drawer .mob-drawer-filters .topbar-search {
       order: -1 !important;
       flex: 1 1 180px;
       min-width: 0;
       max-width: none;
-    }
-    .mob-drawer .mob-drawer-filters .topbar-series {
-      flex: 1 1 120px;
-      min-width: 0;
-      max-width: none;
-    }
-    .mob-drawer .mob-drawer-filters .topbar-series select {
-      width: 100%;
-      box-sizing: border-box;
     }
 
   </style>
@@ -1162,36 +1145,38 @@
           </svg>
         </button>
 
-        <div class="topbar-range filter-group filter-group-range">
-          <span class="filter-label topbar-filter-label">Zeitraum</span>
-          <div class="segmented" id="rangeFilter" aria-label="Zeitraum">
-            <button class="active" type="button" data-range="2">2 Wochen</button>
-            <button type="button" data-range="4">4 Wochen</button>
-            <button type="button" data-range="all">Alle</button>
+        <div class="mob-filters-body">
+          <div class="topbar-range filter-group filter-group-range">
+            <span class="filter-label topbar-filter-label">Zeitraum</span>
+            <div class="segmented" id="rangeFilter" aria-label="Zeitraum">
+              <button class="active" type="button" data-range="2">2 Wochen</button>
+              <button type="button" data-range="4">4 Wochen</button>
+              <button type="button" data-range="all">Alle</button>
+            </div>
           </div>
-        </div>
 
-        <label class="topbar-series filter-field">
-          <span class="filter-label topbar-filter-label">Serie</span>
-          <select id="seriesFilter">
-            <option value="all">Alle Serien</option>
-          </select>
-        </label>
+          <label class="topbar-series filter-field">
+            <span class="filter-label topbar-filter-label">Serie</span>
+            <select id="seriesFilter">
+              <option value="all">Alle Serien</option>
+            </select>
+          </label>
 
-        <div class="topbar-favorites topbar-filter-group" id="favoriteFilter" aria-label="Favoritenfilter">
-          <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
-          <button type="button" data-favorite-filter="favorites" aria-pressed="false">
-            <svg class="favorite-toggle-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z" fill="currentColor"/></svg>
-            <span class="label-full">Favoriten</span>
-          </button>
-        </div>
+          <div class="topbar-favorites topbar-filter-group" id="favoriteFilter" aria-label="Favoritenfilter">
+            <button class="active" type="button" data-favorite-filter="all" aria-pressed="true">Alle</button>
+            <button type="button" data-favorite-filter="favorites" aria-pressed="false">
+              <svg class="favorite-toggle-icon" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.98,9.6 L18.4,10.25 L15.2,13.37 L15.96,17.77 L12,15.69 L8.04,17.77 L8.8,13.37 L5.6,10.25 L10.02,9.6 Z" fill="currentColor"/></svg>
+              <span class="label-full">Favoriten</span>
+            </button>
+          </div>
 
-        <div class="topbar-registration topbar-filter-group race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
-          <button class="active" type="button" data-registration-visibility="all" aria-pressed="true">Alle</button>
-          <button type="button" data-registration-visibility="open" aria-pressed="false">
-            <span class="race-document-dot" aria-hidden="true"></span>
-            <span class="label-full">Offen</span>
-          </button>
+          <div class="topbar-registration topbar-filter-group race-visibility-toggle" id="registrationVisibilityFilter" aria-label="Nennstatus">
+            <button class="active" type="button" data-registration-visibility="all" aria-pressed="true">Alle</button>
+            <button type="button" data-registration-visibility="open" aria-pressed="false">
+              <span class="race-document-dot" aria-hidden="true"></span>
+              <span class="label-full">Offen</span>
+            </button>
+          </div>
         </div>
 
         <button class="mob-filter-btn" id="mobFilterBtn" type="button" aria-expanded="false" aria-label="Filter ein-/ausblenden">
