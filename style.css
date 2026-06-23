@@ -2680,9 +2680,9 @@ input {
 /* Filter groups: inside .mob-filters-body wrapper — no order override needed in topbar context */
 
 
-/* Show full labels (Favoriten / Offen) in drawer — override the <1150px hide */
+/* Hide text labels in drawer — show only icons (star SVG, green dot) */
 .mob-drawer-filters .layout-prototype .topbar .label-full {
-  display: inline !important;
+  display: none !important;
 }
 
 /* Search: own full-width row */
