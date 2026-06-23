@@ -679,26 +679,31 @@ async function adminUploadAdImage(file) {
 function renderAdminAdsTab(container) {
   container.innerHTML = `<p class="admin-loading">Lade…</p>`;
   adminLoadAds().then(items => {
-    const noAds = !items.length;
     container.innerHTML = `
-      ${noAds ? `<p class="admin-empty">Noch keine Anzeigen.</p>` : `
+      ${items.length ? `
       <div class="admin-ad-list">
         ${items.map(ad => `
           <div class="admin-ad-item" data-ad-id="${escapeHtml(String(ad.id))}">
             <img class="admin-ad-thumb" src="${escapeHtml(ad.image_url)}" alt="" />
-            <div class="admin-ad-info">
+            <div class="admin-ad-meta">
               <span class="admin-ad-link">${escapeHtml(ad.link_url || "Kein Link")}</span>
-              <span class="admin-ad-link">${ad.active ? "Aktiv" : "Inaktiv"}</span>
+              <span class="admin-ad-status">${ad.active ? "Aktiv" : "Inaktiv"}</span>
             </div>
             <div class="admin-ad-actions">
               <button type="button" class="admin-btn admin-btn-toggle" data-active="${ad.active}">${ad.active ? "Pause" : "Aktivieren"}</button>
               <button type="button" class="admin-btn admin-btn-delete">Löschen</button>
             </div>
           </div>`).join("")}
-      </div>`}
+      </div>` : `<p class="admin-empty">Noch keine Anzeigen.</p>`}
       <div class="admin-ad-add">
         <p class="admin-ad-add-title">Neue Anzeige</p>
-        <input type="file" id="adImageFile" class="admin-input" accept="image/*" />
+        <label class="admin-ad-file-label">
+          <input type="file" id="adImageFile" class="admin-ad-file-input" accept="image/*" />
+          <div class="admin-ad-preview" id="adPreview">
+            <span class="admin-ad-preview-placeholder">Bild auswählen…</span>
+            <img id="adPreviewImg" class="admin-ad-preview-img" hidden />
+          </div>
+        </label>
         <input type="url" id="adLinkUrl" class="admin-input admin-input-coords" placeholder="https://..." />
         <input type="text" id="adAltText" class="admin-input admin-input-coords" placeholder="Beschreibung (optional)" />
         <div class="admin-entry-actions">
@@ -706,6 +711,18 @@ function renderAdminAdsTab(container) {
         </div>
         <p class="admin-entry-status" id="adSaveStatus"></p>
       </div>`;
+
+    // Live preview on file select
+    container.querySelector("#adImageFile")?.addEventListener("change", ev => {
+      const file = ev.target.files?.[0];
+      const preview = container.querySelector("#adPreview");
+      const img = container.querySelector("#adPreviewImg");
+      const placeholder = preview?.querySelector(".admin-ad-preview-placeholder");
+      if (!file || !img) return;
+      img.src = URL.createObjectURL(file);
+      img.hidden = false;
+      if (placeholder) placeholder.hidden = true;
+    });
 
     // Delete
     container.querySelectorAll(".admin-btn-delete").forEach(btn => {
@@ -733,16 +750,16 @@ function renderAdminAdsTab(container) {
       });
     });
 
-    // Add new
-    document.getElementById("adSaveBtn")?.addEventListener("click", async () => {
-      const fileInput = document.getElementById("adImageFile");
-      const linkUrl = document.getElementById("adLinkUrl")?.value.trim();
-      const altText = document.getElementById("adAltText")?.value.trim();
-      const status = document.getElementById("adSaveStatus");
+    // Save new ad
+    container.querySelector("#adSaveBtn")?.addEventListener("click", async () => {
+      const fileInput = container.querySelector("#adImageFile");
+      const linkUrl = container.querySelector("#adLinkUrl")?.value.trim();
+      const altText = container.querySelector("#adAltText")?.value.trim();
+      const status = container.querySelector("#adSaveStatus");
       const file = fileInput?.files?.[0];
       if (!file) { status.textContent = "Bitte ein Bild auswählen."; return; }
       status.textContent = "Lade hoch…";
-      document.getElementById("adSaveBtn").disabled = true;
+      container.querySelector("#adSaveBtn").disabled = true;
       try {
         const imageUrl = await adminUploadAdImage(file);
         const err = await adminSaveAd({ imageUrl, linkUrl, altText });
@@ -752,7 +769,7 @@ function renderAdminAdsTab(container) {
         setTimeout(() => renderAdminAdsTab(container), 800);
       } catch (e) {
         status.textContent = "Fehler: " + e.message;
-        document.getElementById("adSaveBtn").disabled = false;
+        container.querySelector("#adSaveBtn").disabled = false;
       }
     });
   });
