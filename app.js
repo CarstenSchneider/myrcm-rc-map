@@ -558,6 +558,206 @@ async function sbSaveTheme(theme) {
   if (error) console.error("sbSaveTheme:", error);
 }
 
+// ── Ads ───────────────────────────────────────────────────────────────────
+let _ads = [];
+const _adsTimers = new Map(); // bannerId → intervalId
+
+async function loadAds() {
+  if (!sbClient) return;
+  const { data, error } = await sbClient.from("ads").select("*").eq("active", true).order("sort_order");
+  if (error) { console.warn("loadAds:", error); return; }
+  _ads = data ?? [];
+  renderAllAdsBanners();
+}
+
+function renderAllAdsBanners() {
+  renderAdsBanner("adsBanner");
+  renderAdsBanner("mobAdsBanner");
+}
+
+function renderAdsBanner(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (!_ads.length) { el.hidden = true; return; }
+  el.hidden = false;
+
+  // Stop existing timer for this banner
+  if (_adsTimers.has(id)) {
+    clearInterval(_adsTimers.get(id));
+    _adsTimers.delete(id);
+  }
+
+  el.innerHTML = `
+    <div class="ads-carousel" data-banner="${id}">
+      <div class="ads-slides">
+        ${_ads.map((ad, i) => `
+          <div class="ads-slide${i === 0 ? " is-active" : ""}">
+            ${ad.link_url
+              ? `<a href="${escapeHtml(ad.link_url)}" target="_blank" rel="noopener noreferrer sponsored">`
+              : `<div>`}
+            <img src="${escapeHtml(ad.image_url)}" alt="${escapeHtml(ad.alt_text || "")}" class="ads-img" loading="lazy" />
+            ${ad.link_url ? `</a>` : `</div>`}
+          </div>`).join("")}
+      </div>
+      ${_ads.length > 1 ? `
+      <div class="ads-dots">
+        ${_ads.map((_, i) => `<button class="ads-dot${i === 0 ? " is-active" : ""}" type="button" aria-label="Bild ${i + 1}"></button>`).join("")}
+      </div>` : ""}
+    </div>`;
+
+  if (_ads.length > 1) initAdsCarousel(el, id);
+
+  if (id === "mobAdsBanner") {
+    requestAnimationFrame(() => {
+      document.documentElement.style.setProperty("--mob-ads-h", el.offsetHeight + "px");
+    });
+  }
+}
+
+function initAdsCarousel(container, id) {
+  const slides = [...container.querySelectorAll(".ads-slide")];
+  const dots = [...container.querySelectorAll(".ads-dot")];
+  let current = 0;
+
+  function goTo(n) {
+    slides[current].classList.remove("is-active");
+    dots[current]?.classList.remove("is-active");
+    current = ((n % slides.length) + slides.length) % slides.length;
+    slides[current].classList.add("is-active");
+    dots[current]?.classList.add("is-active");
+  }
+
+  const timer = setInterval(() => goTo(current + 1), 5000);
+  _adsTimers.set(id, timer);
+
+  dots.forEach((dot, i) => dot.addEventListener("click", () => {
+    clearInterval(timer);
+    goTo(i);
+    const t = setInterval(() => goTo(current + 1), 5000);
+    _adsTimers.set(id, t);
+  }));
+}
+
+// Admin: ads CRUD
+async function adminLoadAds() {
+  if (!sbClient) return [];
+  const { data, error } = await sbClient.from("ads").select("*").order("sort_order");
+  if (error) { console.error("adminLoadAds:", error); return []; }
+  return data ?? [];
+}
+
+async function adminSaveAd({ imageUrl, linkUrl, altText }) {
+  const maxOrder = _ads.reduce((m, a) => Math.max(m, a.sort_order ?? 0), 0);
+  const { error } = await sbClient.from("ads").insert({
+    image_url: imageUrl,
+    link_url: linkUrl || null,
+    alt_text: altText || "",
+    sort_order: maxOrder + 1,
+    active: true
+  });
+  return error;
+}
+
+async function adminDeleteAd(id) {
+  const { error } = await sbClient.from("ads").delete().eq("id", id);
+  return error;
+}
+
+async function adminToggleAdActive(id, active) {
+  const { error } = await sbClient.from("ads").update({ active }).eq("id", id);
+  return error;
+}
+
+async function adminUploadAdImage(file) {
+  const ext = file.name.split(".").pop().toLowerCase();
+  const path = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+  const { error } = await sbClient.storage.from("ads").upload(path, file, { cacheControl: "31536000", upsert: false });
+  if (error) throw error;
+  return sbClient.storage.from("ads").getPublicUrl(path).data.publicUrl;
+}
+
+function renderAdminAdsTab(container) {
+  container.innerHTML = `<p class="admin-loading">Lade…</p>`;
+  adminLoadAds().then(items => {
+    const noAds = !items.length;
+    container.innerHTML = `
+      ${noAds ? `<p class="admin-empty">Noch keine Anzeigen.</p>` : `
+      <div class="admin-ad-list">
+        ${items.map(ad => `
+          <div class="admin-ad-item" data-ad-id="${escapeHtml(String(ad.id))}">
+            <img class="admin-ad-thumb" src="${escapeHtml(ad.image_url)}" alt="" />
+            <div class="admin-ad-info">
+              <span class="admin-ad-link">${escapeHtml(ad.link_url || "Kein Link")}</span>
+              <span class="admin-ad-link">${ad.active ? "Aktiv" : "Inaktiv"}</span>
+            </div>
+            <div class="admin-ad-actions">
+              <button type="button" class="admin-btn admin-btn-toggle" data-active="${ad.active}">${ad.active ? "Pause" : "Aktivieren"}</button>
+              <button type="button" class="admin-btn admin-btn-delete">Löschen</button>
+            </div>
+          </div>`).join("")}
+      </div>`}
+      <div class="admin-ad-add">
+        <p class="admin-ad-add-title">Neue Anzeige</p>
+        <input type="file" id="adImageFile" class="admin-input" accept="image/*" />
+        <input type="url" id="adLinkUrl" class="admin-input admin-input-coords" placeholder="https://..." />
+        <input type="text" id="adAltText" class="admin-input admin-input-coords" placeholder="Beschreibung (optional)" />
+        <div class="admin-entry-actions">
+          <button type="button" class="admin-btn admin-btn-save" id="adSaveBtn">Hochladen & Speichern</button>
+        </div>
+        <p class="admin-entry-status" id="adSaveStatus"></p>
+      </div>`;
+
+    // Delete
+    container.querySelectorAll(".admin-btn-delete").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const id = btn.closest("[data-ad-id]").dataset.adId;
+        if (!confirm("Anzeige löschen?")) return;
+        btn.disabled = true;
+        const err = await adminDeleteAd(id);
+        if (err) { alert("Fehler: " + err.message); btn.disabled = false; return; }
+        await loadAds();
+        renderAdminAdsTab(container);
+      });
+    });
+
+    // Toggle active
+    container.querySelectorAll(".admin-btn-toggle").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const id = btn.closest("[data-ad-id]").dataset.adId;
+        const nowActive = btn.dataset.active === "true";
+        btn.disabled = true;
+        const err = await adminToggleAdActive(id, !nowActive);
+        if (err) { alert("Fehler: " + err.message); btn.disabled = false; return; }
+        await loadAds();
+        renderAdminAdsTab(container);
+      });
+    });
+
+    // Add new
+    document.getElementById("adSaveBtn")?.addEventListener("click", async () => {
+      const fileInput = document.getElementById("adImageFile");
+      const linkUrl = document.getElementById("adLinkUrl")?.value.trim();
+      const altText = document.getElementById("adAltText")?.value.trim();
+      const status = document.getElementById("adSaveStatus");
+      const file = fileInput?.files?.[0];
+      if (!file) { status.textContent = "Bitte ein Bild auswählen."; return; }
+      status.textContent = "Lade hoch…";
+      document.getElementById("adSaveBtn").disabled = true;
+      try {
+        const imageUrl = await adminUploadAdImage(file);
+        const err = await adminSaveAd({ imageUrl, linkUrl, altText });
+        if (err) throw err;
+        status.textContent = "Gespeichert!";
+        await loadAds();
+        setTimeout(() => renderAdminAdsTab(container), 800);
+      } catch (e) {
+        status.textContent = "Fehler: " + e.message;
+        document.getElementById("adSaveBtn").disabled = false;
+      }
+    });
+  });
+}
+
 // ── Venue notifications ───────────────────────────────────────────────────
 let _notifIds = new Set();
 
@@ -3631,6 +3831,7 @@ async function init() {
 
   render();
   revealMapWhenReady();
+  loadAds();
 }
 
 const _unsubUserId = new URLSearchParams(window.location.search).get("unsubscribe");
@@ -4360,81 +4561,95 @@ function openAdminPage() {
   const listEl = document.getElementById("adminPageList");
   if (!adminPage || !listEl) return;
 
-  // Close menu first
   closeAppMenu();
-
   adminPage.hidden = false;
-  listEl.innerHTML = `<p class="admin-loading">Lade…</p>`;
+
+  listEl.innerHTML = `
+    <div class="admin-tabs">
+      <button class="admin-tab is-active" data-tab="locations">Ausrichter</button>
+      <button class="admin-tab" data-tab="ads">Werbung</button>
+    </div>
+    <div id="adminTabContent"></div>`;
+
+  const tabContent = listEl.querySelector("#adminTabContent");
+
+  function showTab(name) {
+    listEl.querySelectorAll(".admin-tab").forEach(t => t.classList.toggle("is-active", t.dataset.tab === name));
+    if (name === "ads") {
+      renderAdminAdsTab(tabContent);
+    } else {
+      tabContent.innerHTML = `<p class="admin-loading">Lade…</p>`;
+      adminLoadUnmatched().then(entries => {
+        if (!entries.length) {
+          tabContent.innerHTML = `<p class="admin-empty">Alle Ausrichter haben einen Ort.</p>`;
+          return;
+        }
+        tabContent.innerHTML = entries.map((e, i) => `
+          <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
+            <div class="admin-entry-header">
+              <strong>${escapeHtml(e.hostName)}</strong>
+              <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
+            </div>
+            ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
+            <label class="admin-entry-toggle">
+              <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
+              Ort unbekannt
+            </label>
+            <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
+              <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
+            </div>
+            <div class="admin-entry-actions">
+              <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+            </div>
+            <p class="admin-entry-status"></p>
+          </div>`).join("");
+
+        tabContent.addEventListener("change", ev => {
+          if (!ev.target.classList.contains("admin-unknown-toggle")) return;
+          const entry = ev.target.closest(".admin-entry");
+          entry.querySelector(".admin-entry-coords").hidden = ev.target.checked;
+        });
+
+        tabContent.addEventListener("click", async ev => {
+          if (!ev.target.classList.contains("admin-btn-save")) return;
+          const entry = ev.target.closest(".admin-entry");
+          const status = entry.querySelector(".admin-entry-status");
+          const hostId = entry.dataset.hostId;
+          const hostName = entry.dataset.hostName;
+          const myrcmOrgId = entry.dataset.myrcmOrgId;
+          const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
+          status.textContent = "Speichern…";
+          try {
+            if (isUnknown) {
+              await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
+            } else {
+              const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
+              const [lat, lng] = parts;
+              if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
+              await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+            }
+            status.textContent = "✓ Gespeichert";
+            entry.classList.add("admin-entry-done");
+          } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+        });
+      }).catch(e => {
+        tabContent.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`;
+      });
+    }
+  }
+
+  listEl.querySelector(".admin-tabs").addEventListener("click", ev => {
+    const tab = ev.target.closest("[data-tab]")?.dataset.tab;
+    if (tab) showTab(tab);
+  });
 
   document.getElementById("adminPageBack")?.addEventListener("click", () => {
     adminPage.hidden = true;
     openAppMenu();
   }, { once: true });
 
-  adminLoadUnmatched().then(entries => {
-    if (!entries.length) {
-      listEl.innerHTML = `<p class="admin-empty">Alle Ausrichter haben einen Ort.</p>`;
-      return;
-    }
-
-    listEl.innerHTML = entries.map((e, i) => `
-      <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
-        <div class="admin-entry-header">
-          <strong>${escapeHtml(e.hostName)}</strong>
-          <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
-        </div>
-        ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-        <label class="admin-entry-toggle">
-          <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
-          Ort unbekannt
-        </label>
-        <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
-          <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
-        </div>
-        <div class="admin-entry-actions">
-          <button type="button" class="admin-btn admin-btn-save">Speichern</button>
-        </div>
-        <p class="admin-entry-status"></p>
-      </div>`).join("");
-
-    listEl.addEventListener("change", ev => {
-      if (!ev.target.classList.contains("admin-unknown-toggle")) return;
-      const entry = ev.target.closest(".admin-entry");
-      const coords = entry.querySelector(".admin-entry-coords");
-      coords.hidden = ev.target.checked;
-    });
-
-    listEl.addEventListener("click", async ev => {
-      if (!ev.target.classList.contains("admin-btn-save")) return;
-      const entry = ev.target.closest(".admin-entry");
-      const status = entry.querySelector(".admin-entry-status");
-      const hostId = entry.dataset.hostId;
-      const hostName = entry.dataset.hostName;
-      const myrcmOrgId = entry.dataset.myrcmOrgId;
-      const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
-
-      status.textContent = "Speichern…";
-      try {
-        if (isUnknown) {
-          await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
-          status.textContent = "✓ Gespeichert";
-          return;
-        } else {
-          const coordsRaw = entry.querySelector("[data-field=coords]").value;
-          const parts = coordsRaw.split(",").map(s => parseFloat(s.trim()));
-          const [lat, lng] = parts;
-          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
-          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
-          status.textContent = "✓ Gespeichert";
-        }
-        entry.classList.add("admin-entry-done");
-      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
-    });
-  }).catch(e => {
-    listEl.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`;
-  });
+  showTab("locations");
 }
-
 
 
 let _favPageReady = false;
