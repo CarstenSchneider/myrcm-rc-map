@@ -3668,6 +3668,15 @@ searchInput.addEventListener("input", () => {
   _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
 });
 
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") return;
+  clearTimeout(_searchDebounce);
+  const list = filteredRaces();
+  renderList(list);
+  updateMarkers(list, true);
+  searchInput.blur();
+});
+
 searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
   const list = filteredRaces();
