@@ -4183,13 +4183,6 @@ function showMenuHome() {
       ${chevron}
     </button>
 ` : ""}
-    ${isAdmin() ? `
-    <div class="app-menu-sep"></div>
-    <button type="button" class="app-menu-row" data-menu="admin">
-      <span class="app-menu-row-icon">${iconPin}</span>
-      <span class="app-menu-row-label">Ausrichter verorten</span>
-      ${chevron}
-    </button>` : ""}
     <div class="app-menu-sep"></div>
     <button type="button" class="app-menu-row" data-menu="about">
       <span class="app-menu-row-icon">${iconInfo}</span>
@@ -4201,6 +4194,13 @@ function showMenuHome() {
       <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
       ${chevron}
     </button>
+    ${isAdmin() ? `
+    <div class="app-menu-sep"></div>
+    <button type="button" class="app-menu-row" data-menu="admin">
+      <span class="app-menu-row-icon">${iconPin}</span>
+      <span class="app-menu-row-label">Ausrichter verorten</span>
+      ${chevron}
+    </button>` : ""}
     <div class="app-menu-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
         <span>made with</span>
@@ -4597,7 +4597,7 @@ function showMenuPage(page) {
 
 function impressumHtml() {
   return `
-    <h2>Impressum &amp; Datenschutz</h2>
+    <h2>Impressum<br>&amp; Datenschutz</h2>
     <section class="app-menu-section">
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Less Rain GmbH<br>Große Hamburger Straße 17<br>10115 Berlin</p>
@@ -4625,18 +4625,12 @@ function impressumHtml() {
 
 function aboutHtml() {
   return `
-    <h2>Über RC RaceMap</h2>
-    <section class="app-menu-section">
-      <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
-      <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
-    </section>
-    <section class="app-menu-section">
-      <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
-    </section>
-    <section class="app-menu-section">
-      <p>Die Daten stammen direkt von <a href="https://www.myrcm.ch/" target="_blank" rel="noopener noreferrer">MyRCM</a> und <a href="https://rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
-      <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>
-    </section>`;
+    <h2>Über<br>RC RaceMap</h2>
+    <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
+    <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
+    <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
+    <p>Die Daten stammen direkt von <a href="https://www.myrcm.ch/" target="_blank" rel="noopener noreferrer">MyRCM</a> und <a href="https://rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
+    <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>`;
 }
 
 menuButtons.forEach(b => b?.addEventListener("click", () => {

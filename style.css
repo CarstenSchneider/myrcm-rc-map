@@ -3599,6 +3599,9 @@ body.is-menu-open .app-menu-close {
 .sub-page-title { font-size: 16px; font-weight: 700; color: var(--accent); letter-spacing: -0.01em; }
 .admin-page-inner { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 .admin-page-inner > .admin-page-list { max-width: 640px; margin: 0 auto; padding: 0 20px 48px; }
+.admin-page-list h2 { font-size: 32px; font-weight: 700; line-height: 1.2; color: var(--text); margin: 28px 0 32px; }
+.admin-page-list > p { font-size: 14px; line-height: 1.6; color: var(--text); opacity: 0.8; margin: 0 0 20px; }
+.admin-page-list > p a { color: var(--accent); text-underline-offset: 3px; }
 .admin-page-list a { color: #6a9fd8; text-decoration: none; }
 .admin-page-list a:hover { text-decoration: underline; opacity: 0.8; }
 .admin-page-list .admin-entry { padding: 16px 0; border-bottom: 1px solid rgba(var(--border-rgb), 0.4); }
