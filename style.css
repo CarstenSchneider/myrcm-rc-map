@@ -3004,7 +3004,7 @@ input {
 .app-menu-row-label { flex: 1; font-size: 13px; font-weight: 400; color: var(--muted); }
 .app-menu-row-value { font-size: 13px; color: var(--muted); }
 .app-menu-row-chevron { width: 14px; height: 14px; stroke: rgba(var(--text-rgb), 0.2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-.app-menu-sep { height: 1px; background: rgba(var(--text-rgb), 0.07); margin: 4px 0; }
+.app-menu-sep { height: 1px; background: rgba(var(--text-rgb), 0.07); margin: 12px 0; }
 .app-menu-section-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); opacity: 0.6; text-transform: uppercase; padding: 12px 20px 4px; }
 
 /* Auth row */
@@ -3477,7 +3477,7 @@ body.is-menu-open .app-menu-close {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
 }
 .app-menu-footer-brand {
   display: flex;
@@ -3486,7 +3486,7 @@ body.is-menu-open .app-menu-close {
   text-decoration: none;
 }
 .app-menu-footer-logo {
-  height: 10px;
+  height: 12px;
   width: auto;
   fill: #C8B090;
   display: block;
@@ -3508,7 +3508,6 @@ body.is-menu-open .app-menu-close {
 }
 .sub-page-content-footer { text-align: center; padding: 40px 0 0; }
 .sub-page-content-footer a { display: inline-block; line-height: 0; text-decoration: none; }
-.sub-page-content-footer .app-menu-footer-logo { height: 12px; }
 .app-menu-footer-link {
   appearance: none;
   border: 0;
