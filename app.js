@@ -3938,9 +3938,8 @@ function fitClassPills(card) {
   const container = card.querySelector(".race-class-tags");
   if (!container) return;
 
-  // Remove existing toggles (desktop count-based or previous more-button)
+  // Reset: remove any previous more-button or desktop count-based toggle
   container.querySelectorAll(".tag-class-toggle, .tag-class-more").forEach(el => el.remove());
-
   const pills = Array.from(container.querySelectorAll(".tag-class"));
   if (!pills.length) return;
 
@@ -3949,17 +3948,16 @@ function fitClassPills(card) {
   const containerWidth = container.getBoundingClientRect().width;
   if (!containerWidth) return;
 
-  const gap = 5; // matches .race-tags { gap: 5px }
+  // Direct wrap detection: fixed-height pills on the same flex row share the same
+  // top value. Width-based totalW comparisons can fail due to sub-pixel rounding.
+  const firstTop = pills[0].getBoundingClientRect().top;
+  if (pills.every(p => Math.abs(p.getBoundingClientRect().top - firstTop) < 2)) return;
 
-  // Measure all pills while visible (getBoundingClientRect forces layout)
+  const gap = 5; // matches .race-tags { gap: 5px }
   const widths = pills.map(p => p.getBoundingClientRect().width);
 
-  // If all pills fit in one row, nothing to do
-  const totalW = widths.reduce((sum, w, i) => sum + (i > 0 ? gap : 0) + w, 0);
-  if (totalW <= containerWidth) return;
-
-  // Probe the actual more button width using worst-case text.
-  // Positioned absolutely so it doesn't affect container layout during measurement.
+  // Probe more-button with worst-case text to get exact rendered width.
+  // Absolutely positioned so it doesn't affect flex layout during measurement.
   const probe = document.createElement("button");
   probe.className = "tag tag-class tag-class-more";
   probe.type = "button";
@@ -3969,7 +3967,7 @@ function fitClassPills(card) {
   const moreBtnW = probe.getBoundingClientRect().width;
   probe.remove();
 
-  // Find cut point: keep pills while pill[i] + more button would still fit
+  // Find cut point: last index where pills[0..i] + gap + button still fits
   let usedW = 0;
   let cutAt = pills.length;
   for (let i = 0; i < pills.length; i++) {
@@ -3982,8 +3980,7 @@ function fitClassPills(card) {
     cutAt = i + 1;
   }
 
-  const hiddenCount = pills.length - cutAt;
-  if (hiddenCount <= 0) return;
+  if (pills.length - cutAt <= 0) return;
 
   for (let i = cutAt; i < pills.length; i++) {
     pills[i].style.display = "none";
@@ -3992,7 +3989,20 @@ function fitClassPills(card) {
   const moreBtn = document.createElement("button");
   moreBtn.className = "tag tag-class tag-class-more";
   moreBtn.type = "button";
-  moreBtn.textContent = `+${hiddenCount} weitere`;
+  moreBtn.textContent = `+${pills.length - cutAt} weitere`;
+  container.appendChild(moreBtn);
+
+  // Layout verification: if the button still wrapped to a new row (probe was
+  // slightly off or sub-pixel rounding), hide one more pill and repeat.
+  while (cutAt > 0) {
+    const btnTop = moreBtn.getBoundingClientRect().top;
+    const refTop = pills[cutAt - 1].getBoundingClientRect().top; // last visible pill
+    if (Math.abs(btnTop - refTop) < 2) break;
+    cutAt--;
+    pills[cutAt].style.display = "none";
+    moreBtn.textContent = `+${pills.length - cutAt} weitere`;
+  }
+
   moreBtn.addEventListener("click", event => {
     event.stopPropagation();
     pills.forEach(p => { p.style.display = ""; });
