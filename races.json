@@ -26679,14 +26679,14 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": null,
     "classes": [
       "BBX",
       {
         "name": "Fighter-Klasse",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "Retro 2WD",
@@ -26789,13 +26789,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": null,
     "classes": [
       {
         "name": "Tamiya Stock",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Tamiya Fighter-Kids",
@@ -26940,8 +26940,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": null,
     "classes": [
       {
@@ -26957,7 +26957,7 @@
       "ORETR2",
       {
         "name": "2WD 13.5T Freundschaftsrennen",
-        "entries": 4
+        "entries": 5
       },
       "2WD Freundschaftsrennen",
       "4WD 10.5T Freundschaftsrennen",
@@ -27844,8 +27844,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": null,
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -27858,7 +27858,7 @@
       "MAC Offroad-Verbrenner 1:8",
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [],
@@ -27912,13 +27912,13 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 36,
-    "registrationDisplay": "36",
+    "registrationCount": 37,
+    "registrationDisplay": "37",
     "note": null,
     "classes": [
       {
         "name": "1:4 Funbike Super-Moto",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "1:8 Funbike",

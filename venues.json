@@ -1281,6 +1281,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-53092",
+    "name": "MFK Kürten e.V.",
+    "city": "",
+    "lat": 51.07755743502219,
+    "lng": 7.288925322171009,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "53092",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "mfr-morschheim-rheinhessen-pfalz-e-v",
     "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
     "city": "Worms",
@@ -1747,6 +1762,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-66454",
+    "name": "MSC Ober-Mörlen e.V.",
+    "city": "",
+    "lat": 50.36381448362496,
+    "lng": 8.703414092776123,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "66454",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "msc-osterhofen-e-v",
     "name": "MSC Osterhofen e.V.",
     "city": "Osterhofen",
@@ -1765,6 +1795,21 @@
     ],
     "myrcmOrgId": "50019",
     "source": "manual-verified-geolocation",
+    "verified": true
+  },
+  {
+    "id": "myrcm-42113",
+    "name": "MSC Ulm e.V.",
+    "city": "",
+    "lat": 48.32186708992988,
+    "lng": 10.051712050024937,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "42113",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -1920,6 +1965,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-51129",
+    "name": "RC Car Chemnitz",
+    "city": "",
+    "lat": 50.79377848514052,
+    "lng": 12.898277901821292,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "51129",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "rc-car-club-hilter-e-v",
     "name": "RC Car Club Hilter e.V.",
     "city": "Hilter",
@@ -1984,6 +2044,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-33778",
+    "name": "RC Drecksloch e.V.",
+    "city": "",
+    "lat": 51.539601453420495,
+    "lng": 7.093322619514601,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "33778",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "rc-fun-racer-e-v",
     "name": "RC Fun Racer e.V.",
     "city": "Velbert",
@@ -2021,6 +2096,51 @@
     ],
     "myrcmOrgId": "1044",
     "source": "verified-existing-geolocation-list",
+    "verified": true
+  },
+  {
+    "id": "myrcm-53665",
+    "name": "RC Modellbaufreunde e.V.",
+    "city": "",
+    "lat": 48.358257335666345,
+    "lng": 11.752698391781367,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "53665",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-55317",
+    "name": "RC Offroad Staaken",
+    "city": "",
+    "lat": 52.475714353240356,
+    "lng": 13.101632355546334,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "55317",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-37520",
+    "name": "RC Race Team München e.V",
+    "city": "",
+    "lat": 48.00857029662106,
+    "lng": 11.36000585844325,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "37520",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -2301,6 +2421,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-6492",
+    "name": "RCCars Bergisch-Born e.V.",
+    "city": "",
+    "lat": 51.17808024290368,
+    "lng": 7.223162604471789,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "6492",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "rccr-munzig-e-v",
     "name": "RCCR Munzig e.V.",
     "city": "Klipphausen",
@@ -2543,6 +2678,21 @@
     ],
     "myrcmOrgId": "490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
+    "verified": true
+  },
+  {
+    "id": "myrcm-51971",
+    "name": "SMC Stuttgart e.V.",
+    "city": "",
+    "lat": 48.720995,
+    "lng": 9.343529,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "51971",
+    "source": "venue-seeds",
     "verified": true
   },
   {
