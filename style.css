@@ -2587,6 +2587,7 @@ input {
   position: fixed;
   left: 0;
   right: 0;
+  overflow: hidden;
   /* top: 80px so translateY(0) = full-open with button visible above */
   top: 80px;
   height: calc(100dvh - 80px);
@@ -2714,9 +2715,9 @@ input {
   align-items: center;
   justify-content: center;
   position: relative;
-  flex: 0 0 44px;
-  width: 44px;
-  height: 44px;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -2768,9 +2769,9 @@ input {
   display: contents;
 }
 
-/* In drawer: become an animated flex container */
+/* In drawer: hidden by default (no flex row = no gap in topbar) */
 .mob-drawer-filters .mob-filters-body {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 8px;
   flex: 0 0 100%;
@@ -2780,8 +2781,8 @@ input {
   transition: max-height 300ms ease-in-out, opacity 200ms ease;
 }
 
-/* Slide open when toggle is active */
-.mob-drawer-filters .topbar.mob-filters-expanded .mob-filters-body {
+/* JS adds .is-expanded after setting display:flex so transition runs */
+.mob-drawer-filters .mob-filters-body.is-expanded {
   max-height: 300px;
   opacity: 1;
 }

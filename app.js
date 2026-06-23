@@ -3403,7 +3403,23 @@ if (mobFilterBtn) {
     const expanded = topbar.classList.toggle("mob-filters-expanded");
     mobFilterBtn.classList.toggle("active", expanded);
     mobFilterBtn.setAttribute("aria-expanded", String(expanded));
-    if (expanded) requestAnimationFrame(updateSlidingPills);
+
+    const body = topbar.querySelector(".mob-filters-body");
+    if (!body) return;
+
+    if (expanded) {
+      body.style.display = "flex";
+      // Double RAF: first frame applies display:flex, second triggers transition
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        body.classList.add("is-expanded");
+        updateSlidingPills();
+      }));
+    } else {
+      body.classList.remove("is-expanded");
+      body.addEventListener("transitionend", () => {
+        if (!body.classList.contains("is-expanded")) body.style.display = "none";
+      }, { once: true });
+    }
   });
 }
 
