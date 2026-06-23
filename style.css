@@ -64,9 +64,9 @@
 }
 
 * { box-sizing: border-box; }
-/* iOS Safari zooms on focus when font-size < 16px — enforce globally */
+/* iOS Safari zooms on focus when font-size < 16px — only enforce at focus time */
 @media (max-width: 860px) {
-  input, select, textarea { font-size: 16px !important; }
+  input:focus, select:focus, textarea:focus { font-size: 16px !important; }
 }
 
 body {
