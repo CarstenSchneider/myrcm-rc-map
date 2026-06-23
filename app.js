@@ -572,24 +572,24 @@ async function loadAds() {
 }
 
 function renderAllAdsBanners() {
-  renderAdsBanner("clubBanner");
-  renderAdsBanner("mobClubBanner");
+  appendAdsCard();
 }
 
-function renderAdsBanner(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  if (!_ads.length) { el.hidden = true; return; }
-  el.hidden = false;
+function appendAdsCard() {
+  if (!raceList) return;
+  raceList.querySelector(".club-card")?.remove();
+  if (!_ads.length) return;
 
-  // Stop existing timer for this banner
-  if (_adsTimers.has(id)) {
-    clearInterval(_adsTimers.get(id));
-    _adsTimers.delete(id);
+  const bannerId = "club-main";
+  if (_adsTimers.has(bannerId)) {
+    clearInterval(_adsTimers.get(bannerId));
+    _adsTimers.delete(bannerId);
   }
 
-  el.innerHTML = `
-    <div class="club-carousel" data-banner="${id}">
+  const card = document.createElement("div");
+  card.className = "club-card";
+  card.innerHTML = `
+    <div class="club-carousel" data-banner="${bannerId}">
       <div class="club-slides">
         ${_ads.map((ad, i) => `
           <div class="club-slide${i === 0 ? " is-active" : ""}">
@@ -606,13 +606,8 @@ function renderAdsBanner(id) {
       </div>` : ""}
     </div>`;
 
-  if (_ads.length > 1) initAdsCarousel(el, id);
-
-  if (id === "mobClubBanner") {
-    requestAnimationFrame(() => {
-      document.documentElement.style.setProperty("--mob-club-h", el.offsetHeight + "px");
-    });
-  }
+  raceList.appendChild(card);
+  if (_ads.length > 1) initAdsCarousel(card, bannerId);
 }
 
 function initAdsCarousel(container, id) {
@@ -3266,6 +3261,7 @@ function renderList(list) {
     }
   }
 
+  renderAllAdsBanners();
 }
 
 function toggleClassList(raceId) {
