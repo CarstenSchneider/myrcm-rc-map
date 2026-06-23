@@ -2730,7 +2730,7 @@ input {
   background: var(--pill-bg);
   color: var(--accent);
   cursor: pointer;
-  order: 0;
+  order: -2;
 }
 
 .mob-drawer-filters .mob-filter-btn.active {
@@ -2760,12 +2760,12 @@ input {
   display: block;
 }
 
-/* Search: shares top row with filter button (no longer full-width) */
+/* Search: shares top row with filter button — always first row via order: -1 */
 .mob-drawer-filters .topbar-search {
   flex: 1 1 auto !important;
   min-width: 0 !important;
   max-width: none !important;
-  order: 1 !important;
+  order: -1 !important;
 }
 
 /* Collapsible filter groups — hidden by default on mobile */
