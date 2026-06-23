@@ -4030,6 +4030,30 @@ if (raceList) {
   mobRaceListObserver.observe(raceList, { childList: true });
 }
 
+// Re-trim pills when a list container changes WIDTH (e.g. window resize, panel open/close).
+// Width-only guard prevents infinite loops: fitClassPills changes container HEIGHT (fewer rows)
+// which would re-trigger a naive observer, but width stays constant so we skip re-runs.
+{
+  const listWidths = new WeakMap();
+  const pillResizeObs = new ResizeObserver(entries => {
+    const toUpdate = [];
+    for (const e of entries) {
+      const w = Math.round(e.contentRect.width);
+      if (listWidths.get(e.target) !== w) {
+        listWidths.set(e.target, w);
+        toUpdate.push(e.target);
+      }
+    }
+    if (toUpdate.length) {
+      requestAnimationFrame(() =>
+        toUpdate.forEach(list => list.querySelectorAll(".race-card").forEach(fitClassPills))
+      );
+    }
+  });
+  if (raceList) pillResizeObs.observe(raceList);
+  if (mobRaceList) pillResizeObs.observe(mobRaceList);
+}
+
 // ── Theme ─────────────────────────────────────────────────────
 const THEME_KEY = "rcracemap-theme";
 
