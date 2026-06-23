@@ -2850,7 +2850,7 @@ input {
   content: '';
   display: block;
   flex-shrink: 0;
-  height: 24px;
+  height: 48px;
 }
 
 /* Footer — hidden as drawer sibling, cloned into list by JS so it scrolls with cards */
