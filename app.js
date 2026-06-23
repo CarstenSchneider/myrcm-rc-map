@@ -2584,7 +2584,7 @@ function fitMapToBounds(bounds, options = {}) {
   // Compute bounds pixel center directly (geographic center is wrong in Mercator).
   // One setView shifts bounds pixel center to visible area center (W/2-207, H/2+40).
   const lBounds = L.latLngBounds(bounds);
-  let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
+  let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 70));
   if (options.maxZoom !== undefined) zoom = Math.min(zoom, options.maxZoom);
   if (options.minZoom !== undefined) zoom = Math.max(zoom, options.minZoom);
   zoom = Math.max(zoom, map.getMinZoom() || 0);
