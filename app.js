@@ -4191,6 +4191,11 @@ function showMenuHome() {
       ${chevron}
     </button>` : ""}
     <div class="app-menu-sep"></div>
+    <button type="button" class="app-menu-row" data-menu="about">
+      <span class="app-menu-row-icon">${iconInfo}</span>
+      <span class="app-menu-row-label">Über RC RaceMap</span>
+      ${chevron}
+    </button>
     <button type="button" class="app-menu-row" data-menu="impressum">
       <span class="app-menu-row-icon">${iconInfo}</span>
       <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
@@ -4305,6 +4310,19 @@ function showLoginPrompt() {
     openAppMenu();
     showMenuPage("login");
   });
+}
+
+function openAboutPage() {
+  const page = document.getElementById("aboutPage");
+  const content = document.getElementById("aboutPageContent");
+  if (!page || !content) return;
+  closeAppMenu();
+  content.innerHTML = aboutHtml();
+  page.hidden = false;
+  document.getElementById("aboutPageBack")?.addEventListener("click", () => {
+    page.hidden = true;
+    openAppMenu();
+  }, { once: true });
 }
 
 function openImpressumPage() {
@@ -4542,6 +4560,7 @@ function renderFavoritesPage(query) {
 function showMenuPage(page) {
   if (!appMenuContent) return;
   if (page === "admin") { openAdminPage(); return; }
+  if (page === "about") { openAboutPage(); return; }
   if (page === "impressum") { openImpressumPage(); return; }
   if (page === "favorites") { closeAppMenu(); openFavoritesPage(); return; }
   const pages = { login: loginPageHtml() };
@@ -4600,6 +4619,20 @@ function impressumHtml() {
       <p>Die dargestellten Renntermine werden aus öffentlich zugänglichen Quellen (MyRCM, RCK) zusammengetragen. RC Race Map steht in keiner geschäftlichen Verbindung zu diesen Plattformen.</p>
       <p>Trotz sorgfältiger Verarbeitung kann keine Gewähr für die Aktualität, Vollständigkeit oder Richtigkeit übernommen werden.</p>
       <p>Hinweise an <a href="mailto:info@rcracemap.com">info@rcracemap.com</a>.</p>
+    </section>`;
+}
+
+function aboutHtml() {
+  return `
+    <h2>Über RC RaceMap</h2>
+    <section class="app-menu-section">
+      <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
+      <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
+      <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
+    </section>
+    <section class="app-menu-section">
+      <p>Die Daten stammen direkt von MyRCM und RCK. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
+      <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>
     </section>`;
 }
 
