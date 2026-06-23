@@ -3663,18 +3663,12 @@ searchInput.addEventListener("input", () => {
     _searchDebounce = setTimeout(() => renderList(filteredRaces()), 500);
     return;
   }
-  const list = filteredRaces();
-  renderList(list);
-  _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
-});
-
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key !== "Enter") return;
-  e.preventDefault();
-  clearTimeout(_searchDebounce);
-  const list = filteredRaces();
-  renderList(list);
-  updateMarkers(list, true);
+  // Desktop: Liste und Karte gemeinsam nach 300ms
+  _searchDebounce = setTimeout(() => {
+    const list = filteredRaces();
+    renderList(list);
+    updateMarkers(list, true);
+  }, 300);
 });
 
 searchInput.addEventListener("blur", () => {
