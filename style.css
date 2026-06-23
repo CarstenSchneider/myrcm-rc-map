@@ -2807,6 +2807,7 @@ input {
 .mob-drawer-list {
   flex: 1;
   min-height: 0;
+  box-sizing: border-box;
   overflow-y: auto;
   touch-action: pan-y;
   padding: 14px 12px 0;
