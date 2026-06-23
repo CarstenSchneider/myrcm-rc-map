@@ -2312,6 +2312,9 @@ input {
   background-repeat: no-repeat;
   background-position: right 14px center;
 }
+.layout-prototype .topbar select:focus {
+  outline: none;
+}
 
 .layout-prototype .topbar input {
   padding: 8px 52px 8px 22px;
@@ -2806,6 +2809,15 @@ input {
   /* Large default so height is flex-driven; enables CSS transition between states */
   max-height: 100dvh;
   transition: max-height 0.32s cubic-bezier(0.4,0,0.2,1);
+}
+.mob-drawer-list::-webkit-scrollbar { width: 4px; }
+.mob-drawer-list::-webkit-scrollbar-track { background: transparent; }
+.mob-drawer-list::-webkit-scrollbar-thumb {
+  background: rgba(var(--text-rgb), 0.18);
+  border-radius: 999px;
+}
+.mob-drawer-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--text-rgb), 0.30);
 }
 
 /* In half state, translateY(50%) shifts the drawer but the list element stays
