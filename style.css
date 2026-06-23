@@ -2791,6 +2791,17 @@ input {
   flex-direction: column;
   gap: 14px;
   background: var(--bg);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--text-rgb), 0.18) transparent;
+}
+.mob-drawer-list::-webkit-scrollbar { width: 4px; }
+.mob-drawer-list::-webkit-scrollbar-track { background: transparent; }
+.mob-drawer-list::-webkit-scrollbar-thumb {
+  background: rgba(var(--text-rgb), 0.18);
+  border-radius: 999px;
+}
+.mob-drawer-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--text-rgb), 0.30);
 }
 
 /* Cards must not grow/shrink — let each card size itself from content.

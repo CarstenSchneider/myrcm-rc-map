@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css" />
-  <link rel="stylesheet" href="style.css?v=58" />
+  <link rel="stylesheet" href="style.css?v=59" />
   <style>
     /* v1.6.5 target topbar polish */
     .layout-prototype .filters-panel {
@@ -1125,14 +1125,16 @@
       min-width: 0;
       max-width: none;
     }
-    /* Uniform 38px touch height for all drawer filter elements.
-       font-size:16px on input prevents iOS Safari from auto-zooming on focus. */
+    /* Uniform 38px touch height for all drawer filter elements. */
     .mob-drawer .mob-drawer-filters .topbar input,
     .mob-drawer .mob-drawer-filters .topbar select {
       height: 38px !important;
       min-height: 38px !important;
-      font-size: 16px !important;
     }
+    /* font-size:16px on <input> prevents iOS Safari from auto-zooming on focus.
+       <select> opens a native picker so no zoom risk — keep at 14px to match desktop. */
+    .mob-drawer .mob-drawer-filters .topbar input { font-size: 16px !important; }
+    .mob-drawer .mob-drawer-filters .topbar select { font-size: 14px !important; }
     .mob-drawer .mob-drawer-filters .topbar .segmented button,
     .mob-drawer .mob-drawer-filters .topbar .topbar-filter-group button {
       height: 38px !important;
