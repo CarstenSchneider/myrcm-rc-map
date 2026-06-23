@@ -4137,6 +4137,8 @@ function closeAppMenu() {
   showMenuHome();
 }
 
+const lessrainSvg = `<svg viewBox="0 0 82.21 14.42" xmlns="http://www.w3.org/2000/svg" class="app-menu-footer-logo" aria-label="Lessrain"><g><path d="M6.11,10.53c0,.36-.02,1.03.08,1.35.22.73,1.13.38,1.13,1.23,0,1.35-2.46,1.25-3.33,1.25s-3.73.1-3.73-1.33c0-.71.87-.44,1.11-1.19.26-.83.26-3.35.26-4.34,0-.79.04-2.3-.14-3.21C1.19,2.8,0,3.33,0,2.18,0,.42,5.24,0,5.53,0,6.21,0,6.37.44,6.37,1.05c0,.46-.26,2.68-.26,5.57v3.91Z"/><path d="M13.41,6.96c0-.73-.44-1.29-1.19-1.29-.67,0-1.21.69-1.21,1.33,0,.73.69.57,1.21.57s1.19.12,1.19-.61M11.66,9.5c-.22,0-.54-.06-.54.28,0,1.01,1.31,1.86,2.26,1.86,1.51,0,2.26-.91,2.68-.91s.79.63.79,1.01c0,1.55-2.84,2.68-4.66,2.68-3.63,0-5.51-2.62-5.51-5.22,0-3.11,2.64-5.37,5.67-5.37,3.43,0,4.94,2.64,4.94,4.16,0,1.33-.6,1.51-1.25,1.51h-4.38Z"/><path d="M22.59,3.95c.36.06.69.14.83.14.2,0,.36-.06.55-.14.18-.06.36-.12.54-.12.93,0,1.86,1.86,1.86,2.68,0,.55-.46.95-.99.95-1.15,0-1.8-1.59-2.68-1.59-.36,0-.73.3-.73.69,0,1.29,4.44,1.53,4.44,4.66,0,1.9-1.84,3.21-3.93,3.21-.4,0-.99-.06-1.49-.14-.5-.06-.95-.12-1.07-.12-.14,0-.26.02-.4.04-.12.02-.24.04-.38.04-.4,0-.6-.06-.89-.38-.5-.56-1.01-1.71-1.01-2.48,0-.52.18-.95.77-.95.89,0,1.69,2,2.82,2,.4,0,.79-.2.79-.64,0-1.19-3.95-1.33-3.95-4.66,0-2.02,1.65-3.29,3.73-3.29.4,0,.83.04,1.21.12"/><path d="M32.29,3.95c.36.06.69.14.83.14.2,0,.36-.06.55-.14.18-.06.36-.12.54-.12.93,0,1.86,1.86,1.86,2.68,0,.55-.46.95-.99.95-1.15,0-1.8-1.59-2.68-1.59-.36,0-.73.3-.73.69,0,1.29,4.44,1.53,4.44,4.66,0,1.9-1.83,3.21-3.93,3.21-.4,0-.99-.06-1.49-.14-.5-.06-.95-.12-1.07-.12-.14,0-.26.02-.4.04-.12.02-.24.04-.38.04-.4,0-.6-.06-.89-.38-.51-.56-1.01-1.71-1.01-2.48,0-.52.18-.95.77-.95.89,0,1.69,2,2.82,2,.4,0,.79-.2.79-.64,0-1.19-3.95-1.33-3.95-4.66,0-2.02,1.65-3.29,3.73-3.29.4,0,.83.04,1.21.12"/><path d="M40.05,8.03c0-1.98-1.25-.87-1.25-2.1,0-1.59,4.72-2.04,4.9-2.04.77,0,.79.2.87.89.02.24,0,.71.34.71.48,0,.79-1.59,2.52-1.59,1.35,0,2.24,1.01,2.24,2.34s-1.15,2.42-2.48,2.42-1.67-1.15-2.2-1.15c-.56,0-.46,1.35-.46,1.71,0,.61.06,1.45.16,2.22.12.89,1.65.34,1.65,1.55s-1.77,1.37-3.99,1.37c-.93,0-3.67.04-3.67-1.35,0-.85.93-.85,1.15-1.55.16-.5.22-1.65.22-2.22v-1.21Z"/><path d="M53.48,11.09c0,.52.28,1.09.87,1.09.77,0,.83-.83.83-1.43,0-.44.02-.95-.54-.95-.69,0-1.15.64-1.15,1.29M59.54,9.32c0,3.55,1.21,1.61,1.21,2.7,0,1.15-1.57,2.4-3.04,2.4-1.59,0-1.63-1.03-2.14-1.03-.24,0-.51.26-.95.5-.44.26-1.05.53-1.98.53-1.67,0-3.35-.89-3.35-2.88,0-1.43,1.37-3.21,4.92-3.21.63,0,.91.04.91-.69,0-.67-.02-2.06-.95-2.06-1.21,0-1.33,2.18-3.13,2.18-.65,0-1.13-.46-1.13-1.11,0-1.71,3.41-2.82,5.32-2.82,1.15,0,4.3.44,4.3,3.47v2.02Z"/><path d="M62.78,3.25c-.85,0-1.75-.38-1.75-1.37C61.03.54,63.69,0,64.72,0c.81,0,1.96.26,1.96,1.27,0,1.57-2.74,1.98-3.89,1.98M66.78,10.41c0,2.38,1.19,1.51,1.19,2.58,0,1.37-2.56,1.37-3.47,1.37-3.47,0-3.61-.79-3.61-1.27,0-.73.83-.77,1.07-1.39.26-.71.3-3.63.08-4.38-.18-.71-1.21-.48-1.21-1.39,0-1.43,5.12-2.04,5.33-2.04.61,0,.62.46.62.89v5.63Z"/><path d="M74.2,10.77c0,1.96.69,1.61.69,2.38,0,1.25-2.68,1.21-3.51,1.21s-2.86,0-2.86-1.21c0-.97.93-.1.99-2.08l.08-3.03c.04-1.49-1.19-1.01-1.19-2.08s4.64-2.08,5.04-2.08c.44,0,.73.38.73.79,0,.12-.02.24-.02.36,0,.24.1.52.4.52.32,0,.5-.42.91-.85.4-.4,1.01-.83,2.16-.83,4.18,0,3.47,4.09,3.67,7.16.1,1.59.93,1.23.93,2.1,0,.36.08,1.21-3.71,1.21-.73,0-2.66.04-2.66-1.09,0-.73.67-.38.77-1.69.1-1.43.67-4.66-1.23-4.66-1.29,0-1.17,1.39-1.17,2.3v1.55Z"/></g></svg>`;
+
 function showMenuHome() {
   if (!appMenuContent) return;
   const current = localStorage.getItem(THEME_KEY) || "auto";
@@ -4147,7 +4149,6 @@ function showMenuHome() {
   const iconPin = `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
   const iconInfo = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`;
   const iconUser = `<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
-  const lessrainSvg = `<svg viewBox="0 0 82.21 14.42" xmlns="http://www.w3.org/2000/svg" class="app-menu-footer-logo" aria-label="Lessrain"><g><path d="M6.11,10.53c0,.36-.02,1.03.08,1.35.22.73,1.13.38,1.13,1.23,0,1.35-2.46,1.25-3.33,1.25s-3.73.1-3.73-1.33c0-.71.87-.44,1.11-1.19.26-.83.26-3.35.26-4.34,0-.79.04-2.3-.14-3.21C1.19,2.8,0,3.33,0,2.18,0,.42,5.24,0,5.53,0,6.21,0,6.37.44,6.37,1.05c0,.46-.26,2.68-.26,5.57v3.91Z"/><path d="M13.41,6.96c0-.73-.44-1.29-1.19-1.29-.67,0-1.21.69-1.21,1.33,0,.73.69.57,1.21.57s1.19.12,1.19-.61M11.66,9.5c-.22,0-.54-.06-.54.28,0,1.01,1.31,1.86,2.26,1.86,1.51,0,2.26-.91,2.68-.91s.79.63.79,1.01c0,1.55-2.84,2.68-4.66,2.68-3.63,0-5.51-2.62-5.51-5.22,0-3.11,2.64-5.37,5.67-5.37,3.43,0,4.94,2.64,4.94,4.16,0,1.33-.6,1.51-1.25,1.51h-4.38Z"/><path d="M22.59,3.95c.36.06.69.14.83.14.2,0,.36-.06.55-.14.18-.06.36-.12.54-.12.93,0,1.86,1.86,1.86,2.68,0,.55-.46.95-.99.95-1.15,0-1.8-1.59-2.68-1.59-.36,0-.73.3-.73.69,0,1.29,4.44,1.53,4.44,4.66,0,1.9-1.84,3.21-3.93,3.21-.4,0-.99-.06-1.49-.14-.5-.06-.95-.12-1.07-.12-.14,0-.26.02-.4.04-.12.02-.24.04-.38.04-.4,0-.6-.06-.89-.38-.5-.56-1.01-1.71-1.01-2.48,0-.52.18-.95.77-.95.89,0,1.69,2,2.82,2,.4,0,.79-.2.79-.64,0-1.19-3.95-1.33-3.95-4.66,0-2.02,1.65-3.29,3.73-3.29.4,0,.83.04,1.21.12"/><path d="M32.29,3.95c.36.06.69.14.83.14.2,0,.36-.06.55-.14.18-.06.36-.12.54-.12.93,0,1.86,1.86,1.86,2.68,0,.55-.46.95-.99.95-1.15,0-1.8-1.59-2.68-1.59-.36,0-.73.3-.73.69,0,1.29,4.44,1.53,4.44,4.66,0,1.9-1.83,3.21-3.93,3.21-.4,0-.99-.06-1.49-.14-.5-.06-.95-.12-1.07-.12-.14,0-.26.02-.4.04-.12.02-.24.04-.38.04-.4,0-.6-.06-.89-.38-.51-.56-1.01-1.71-1.01-2.48,0-.52.18-.95.77-.95.89,0,1.69,2,2.82,2,.4,0,.79-.2.79-.64,0-1.19-3.95-1.33-3.95-4.66,0-2.02,1.65-3.29,3.73-3.29.4,0,.83.04,1.21.12"/><path d="M40.05,8.03c0-1.98-1.25-.87-1.25-2.1,0-1.59,4.72-2.04,4.9-2.04.77,0,.79.2.87.89.02.24,0,.71.34.71.48,0,.79-1.59,2.52-1.59,1.35,0,2.24,1.01,2.24,2.34s-1.15,2.42-2.48,2.42-1.67-1.15-2.2-1.15c-.56,0-.46,1.35-.46,1.71,0,.61.06,1.45.16,2.22.12.89,1.65.34,1.65,1.55s-1.77,1.37-3.99,1.37c-.93,0-3.67.04-3.67-1.35,0-.85.93-.85,1.15-1.55.16-.5.22-1.65.22-2.22v-1.21Z"/><path d="M53.48,11.09c0,.52.28,1.09.87,1.09.77,0,.83-.83.83-1.43,0-.44.02-.95-.54-.95-.69,0-1.15.64-1.15,1.29M59.54,9.32c0,3.55,1.21,1.61,1.21,2.7,0,1.15-1.57,2.4-3.04,2.4-1.59,0-1.63-1.03-2.14-1.03-.24,0-.51.26-.95.5-.44.26-1.05.53-1.98.53-1.67,0-3.35-.89-3.35-2.88,0-1.43,1.37-3.21,4.92-3.21.63,0,.91.04.91-.69,0-.67-.02-2.06-.95-2.06-1.21,0-1.33,2.18-3.13,2.18-.65,0-1.13-.46-1.13-1.11,0-1.71,3.41-2.82,5.32-2.82,1.15,0,4.3.44,4.3,3.47v2.02Z"/><path d="M62.78,3.25c-.85,0-1.75-.38-1.75-1.37C61.03.54,63.69,0,64.72,0c.81,0,1.96.26,1.96,1.27,0,1.57-2.74,1.98-3.89,1.98M66.78,10.41c0,2.38,1.19,1.51,1.19,2.58,0,1.37-2.56,1.37-3.47,1.37-3.47,0-3.61-.79-3.61-1.27,0-.73.83-.77,1.07-1.39.26-.71.3-3.63.08-4.38-.18-.71-1.21-.48-1.21-1.39,0-1.43,5.12-2.04,5.33-2.04.61,0,.62.46.62.89v5.63Z"/><path d="M74.2,10.77c0,1.96.69,1.61.69,2.38,0,1.25-2.68,1.21-3.51,1.21s-2.86,0-2.86-1.21c0-.97.93-.1.99-2.08l.08-3.03c.04-1.49-1.19-1.01-1.19-2.08s4.64-2.08,5.04-2.08c.44,0,.73.38.73.79,0,.12-.02.24-.02.36,0,.24.1.52.4.52.32,0,.5-.42.91-.85.4-.4,1.01-.83,2.16-.83,4.18,0,3.47,4.09,3.67,7.16.1,1.59.93,1.23.93,2.1,0,.36.08,1.21-3.71,1.21-.73,0-2.66.04-2.66-1.09,0-.73.67-.38.77-1.69.1-1.43.67-4.66-1.23-4.66-1.29,0-1.17,1.39-1.17,2.3v1.55Z"/></g></svg>`;
 
   const authSection = sbUser
     ? `<div class="app-menu-auth-user">
@@ -4183,6 +4184,17 @@ function showMenuHome() {
       ${chevron}
     </button>
 ` : ""}
+    <div class="app-menu-sep"></div>
+    <button type="button" class="app-menu-row" data-menu="about">
+      <span class="app-menu-row-icon">${iconInfo}</span>
+      <span class="app-menu-row-label">Über RC RaceMap</span>
+      ${chevron}
+    </button>
+    <button type="button" class="app-menu-row" data-menu="impressum">
+      <span class="app-menu-row-icon">${iconInfo}</span>
+      <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
+      ${chevron}
+    </button>
     ${isAdmin() ? `
     <div class="app-menu-sep"></div>
     <button type="button" class="app-menu-row" data-menu="admin">
@@ -4190,15 +4202,8 @@ function showMenuHome() {
       <span class="app-menu-row-label">Ausrichter verorten</span>
       ${chevron}
     </button>` : ""}
-    <div class="app-menu-sep"></div>
-    <button type="button" class="app-menu-row" data-menu="impressum">
-      <span class="app-menu-row-icon">${iconInfo}</span>
-      <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
-      ${chevron}
-    </button>
     <div class="app-menu-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
-        <span>made with</span>
         ${lessrainSvg}
       </a>
       <div class="app-menu-footer-legal">
@@ -4305,6 +4310,19 @@ function showLoginPrompt() {
     openAppMenu();
     showMenuPage("login");
   });
+}
+
+function openAboutPage() {
+  const page = document.getElementById("aboutPage");
+  const content = document.getElementById("aboutPageContent");
+  if (!page || !content) return;
+  closeAppMenu();
+  content.innerHTML = aboutHtml();
+  page.hidden = false;
+  document.getElementById("aboutPageBack")?.addEventListener("click", () => {
+    page.hidden = true;
+    openAppMenu();
+  }, { once: true });
 }
 
 function openImpressumPage() {
@@ -4420,6 +4438,7 @@ function openFavoritesPage() {
     document.getElementById("favoritesPageBack")?.addEventListener("click", () => {
       page.hidden = true;
       void document.body.offsetHeight;
+      openAppMenu();
     });
     const currentQuery = () => (document.getElementById("favSearch")?.value || "").trim().toLowerCase();
     page.addEventListener("click", e => {
@@ -4542,6 +4561,7 @@ function renderFavoritesPage(query) {
 function showMenuPage(page) {
   if (!appMenuContent) return;
   if (page === "admin") { openAdminPage(); return; }
+  if (page === "about") { openAboutPage(); return; }
   if (page === "impressum") { openImpressumPage(); return; }
   if (page === "favorites") { closeAppMenu(); openFavoritesPage(); return; }
   const pages = { login: loginPageHtml() };
@@ -4577,7 +4597,7 @@ function showMenuPage(page) {
 
 function impressumHtml() {
   return `
-    <h2>Impressum &amp; Datenschutz</h2>
+    <h2>Impressum<br>&amp; Datenschutz</h2>
     <section class="app-menu-section">
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Less Rain GmbH<br>Große Hamburger Straße 17<br>10115 Berlin</p>
@@ -4600,7 +4620,23 @@ function impressumHtml() {
       <p>Die dargestellten Renntermine werden aus öffentlich zugänglichen Quellen (MyRCM, RCK) zusammengetragen. RC Race Map steht in keiner geschäftlichen Verbindung zu diesen Plattformen.</p>
       <p>Trotz sorgfältiger Verarbeitung kann keine Gewähr für die Aktualität, Vollständigkeit oder Richtigkeit übernommen werden.</p>
       <p>Hinweise an <a href="mailto:info@rcracemap.com">info@rcracemap.com</a>.</p>
-    </section>`;
+    </section>
+    <div class="sub-page-content-footer">
+      <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer">${lessrainSvg}</a>
+    </div>`;
+}
+
+function aboutHtml() {
+  return `
+    <h2>Über<br>RC RaceMap</h2>
+    <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
+    <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
+    <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
+    <p>Die Daten stammen direkt von <a href="https://www.myrcm.ch/" target="_blank" rel="noopener noreferrer">MyRCM</a> und <a href="https://rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
+    <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>
+    <div class="sub-page-content-footer">
+      <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer">${lessrainSvg}</a>
+    </div>`;
 }
 
 menuButtons.forEach(b => b?.addEventListener("click", () => {
