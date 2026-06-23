@@ -3403,6 +3403,7 @@ if (mobFilterBtn) {
     const expanded = topbar.classList.toggle("mob-filters-expanded");
     mobFilterBtn.classList.toggle("active", expanded);
     mobFilterBtn.setAttribute("aria-expanded", String(expanded));
+    if (expanded) requestAnimationFrame(updateSlidingPills);
   });
 }
 
