@@ -1699,8 +1699,6 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
         const registrationHtml = await fetchText(regUrl);
         registrationDocuments = extractDocumentsFromHtml(registrationHtml, regUrl);
       } catch (error) {
-        if (error.retryable) throw error;
-
         console.warn(`  Nennseite konnte nicht nach PDFs geprüft werden: ${regUrl}`);
         console.warn(`    ${error.message}`);
       }
@@ -1763,7 +1761,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
   } catch (error) {
     console.warn(`  Event-Detail konnte nicht geladen werden: ${detailUrl}`);
     console.warn(`    ${error.message}`);
-    throw error;
+    return null;
   }
 }
 
