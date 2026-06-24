@@ -1,0 +1,2738 @@
+[
+  {
+    "orgId": "760",
+    "name": "1. GMAC-Litschau",
+    "location": "Schrems",
+    "country": "Austria",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=760&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.1-gmac.at/"
+  },
+  {
+    "orgId": "41404",
+    "name": "1. Marzahner Racing Club e.V.",
+    "location": "Berlin",
+    "country": "Germany",
+    "eventCount": 80,
+    "url": "https://www.myrcm.ch/?dId[O]=41404&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.mrc-berlin.org/"
+  },
+  {
+    "orgId": "39671",
+    "name": "1. MRC Mannheim e.V.",
+    "location": "Mannheim",
+    "country": "Germany",
+    "eventCount": 17,
+    "url": "https://www.myrcm.ch/?dId[O]=39671&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.mrc-mannheim.de/"
+  },
+  {
+    "orgId": "764",
+    "name": "1. MRC Wr. Neustadt",
+    "location": "Wiener Neustadt",
+    "country": "Austria",
+    "eventCount": 138,
+    "url": "https://www.myrcm.ch/?dId[O]=764&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.mrcwrneustadt.at/"
+  },
+  {
+    "orgId": "761",
+    "name": "1. WBC-Hoheneich",
+    "location": "Hoheneich",
+    "country": "Austria",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=761&pLa=en&pId[O]=0&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "504",
+    "name": "A-Team Graz",
+    "location": "Graz",
+    "country": "Austria",
+    "eventCount": 23,
+    "url": "https://www.myrcm.ch/?dId[O]=504&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.ateamgraz.at/"
+  },
+  {
+    "orgId": "53515",
+    "name": "Alpencup",
+    "location": "Schleitheim",
+    "country": "Switzerland",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=53515&pLa=en&pId[O]=0&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "33",
+    "name": "AMC Hildesheim e.V.",
+    "location": "Hildesheim",
+    "country": "Germany",
+    "eventCount": 73,
+    "url": "https://www.myrcm.ch/?dId[O]=33&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://amc-hildesheim.eu/"
+  },
+  {
+    "orgId": "19597",
+    "name": "AMC Lahntal e.V.",
+    "location": "Solms",
+    "country": "Germany",
+    "eventCount": 14,
+    "url": "https://www.myrcm.ch/?dId[O]=19597&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.amc-lahntal.de/"
+  },
+  {
+    "orgId": "6025",
+    "name": "AMC Langenfeld e.V.",
+    "location": "Solingen",
+    "country": "Germany",
+    "eventCount": 53,
+    "url": "https://www.myrcm.ch/?dId[O]=6025&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://amc-langenfeld.blogspot.com/"
+  },
+  {
+    "orgId": "44208",
+    "name": "AMC Magdeburg e.V.",
+    "location": "Magdeburg",
+    "country": "Germany",
+    "eventCount": 37,
+    "url": "https://www.myrcm.ch/?dId[O]=44208&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.amc-magdeburg.de/"
+  },
+  {
+    "orgId": "26450",
+    "name": "AMC Nußdorf / Debant",
+    "location": "Winklern",
+    "country": "Austria",
+    "eventCount": 15,
+    "url": "https://www.myrcm.ch/?dId[O]=26450&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://amcnussdorfdebant.weebly.com/"
+  },
+  {
+    "orgId": "7103",
+    "name": "AMC Saarbrücken e.V.",
+    "location": "Saarbrücken",
+    "country": "Germany",
+    "eventCount": 57,
+    "url": "https://www.myrcm.ch/?dId[O]=7103&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.amc-saarbruecken.de/"
+  },
+  {
+    "orgId": "58267",
+    "name": "AMC Senftenberg e.V.",
+    "location": "Senftenberg",
+    "country": "Germany",
+    "eventCount": 16,
+    "url": "https://www.myrcm.ch/?dId[O]=58267&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.amc-senftenberg.de/"
+  },
+  {
+    "orgId": "4006",
+    "name": "AMC Sonthofen e.V.",
+    "location": "Immenstadt",
+    "country": "Germany",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=4006&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.amc-sonthofen.de/"
+  },
+  {
+    "orgId": "14010",
+    "name": "AMC Tirol",
+    "location": "Zirl",
+    "country": "Austria",
+    "eventCount": 40,
+    "url": "https://www.myrcm.ch/?dId[O]=14010&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.amc-tirol.at/"
+  },
+  {
+    "orgId": "7771",
+    "name": "amc-Hamm e.V.",
+    "location": "Bönen",
+    "country": "Germany",
+    "eventCount": 60,
+    "url": "https://www.myrcm.ch/?dId[O]=7771&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "https://sites.google.com/view/ahev-startseite"
+  },
+  {
+    "orgId": "82",
+    "name": "AMC-Mühlau e.V.",
+    "location": "Mühlau",
+    "country": "Germany",
+    "eventCount": 55,
+    "url": "https://www.myrcm.ch/?dId[O]=82&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "https://www.amc-muehlau.de/"
+  },
+  {
+    "orgId": "36",
+    "name": "AMSC Augsburg e. V.",
+    "location": "Dasing",
+    "country": "Germany",
+    "eventCount": 16,
+    "url": "https://www.myrcm.ch/?dId[O]=36&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.amsc-augsburg.de/"
+  },
+  {
+    "orgId": "29065",
+    "name": "AMSC-Herne e.V.",
+    "location": "Bochum",
+    "country": "Germany",
+    "eventCount": 13,
+    "url": "https://www.myrcm.ch/?dId[O]=29065&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.amsc-herne.de/"
+  },
+  {
+    "orgId": "20278",
+    "name": "ARCB",
+    "location": "Fétigny",
+    "country": "Switzerland",
+    "eventCount": 28,
+    "url": "https://www.myrcm.ch/?dId[O]=20278&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "https://www.arcb.ch/"
+  },
+  {
+    "orgId": "11113",
+    "name": "ART Racing Team Switzerland",
+    "location": "Münsingen",
+    "country": "Switzerland",
+    "eventCount": 124,
+    "url": "https://www.myrcm.ch/?dId[O]=11113&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "https://www.art-racing-team.ch/"
+  },
+  {
+    "orgId": "28",
+    "name": "ARWICO / Tamiya",
+    "location": "Ettingen",
+    "country": "Switzerland",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=28&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.arwico.ch/"
+  },
+  {
+    "orgId": "26821",
+    "name": "ASC Celle e.V.",
+    "location": "Celle",
+    "country": "Germany",
+    "eventCount": 39,
+    "url": "https://www.myrcm.ch/?dId[O]=26821&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.asccelle.com/"
+  },
+  {
+    "orgId": "26596",
+    "name": "ASC Potsdam e.V.",
+    "location": "Potsdam",
+    "country": "Germany",
+    "eventCount": 79,
+    "url": "https://www.myrcm.ch/?dId[O]=26596&pLa=en&pId[O]=1&hId[1]=org",
+    "website": "http://www.asc-potsdam.de/"
+  },
+  {
+    "orgId": "25",
+    "name": "Auto Model Club d'Ajoie",
+    "location": "Fontenais",
+    "country": "Switzerland",
+    "eventCount": 17,
+    "url": "https://www.myrcm.ch/?dId[O]=25&pLa=en&pId[O]=2&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "21",
+    "name": "Auto Modell Club Schaffhausen",
+    "location": "Winterthur",
+    "country": "Switzerland",
+    "eventCount": 23,
+    "url": "https://www.myrcm.ch/?dId[O]=21&pLa=en&pId[O]=2&hId[1]=org",
+    "website": "http://www.krieger.li/amcs/"
+  },
+  {
+    "orgId": "861",
+    "name": "Automodellclub Meißen e.V.",
+    "location": "Nossen",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=861&pLa=en&pId[O]=2&hId[1]=org",
+    "website": "https://www.automodellclub-meissen.de/"
+  },
+  {
+    "orgId": "572",
+    "name": "BCLC Buggy Club de la Côte",
+    "location": "Gland",
+    "country": "Switzerland",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=572&pLa=en&pId[O]=3&hId[1]=org",
+    "website": "http://www.bclc.ch/"
+  },
+  {
+    "orgId": "64649",
+    "name": "Breitenfelder Sportverein von 1924 e.V.",
+    "location": "Breitenfelde",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=64649&pLa=en&pId[O]=3&hId[1]=org",
+    "website": "https://www.bsv-rc-modellsport.de/"
+  },
+  {
+    "orgId": "22302",
+    "name": "Buggy Club Hornets",
+    "location": "Esslingen",
+    "country": "Switzerland",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=22302&pLa=en&pId[O]=3&hId[1]=org",
+    "website": "http://www.bc-hornets.ch/"
+  },
+  {
+    "orgId": "7734",
+    "name": "Buggyclub Zentralschweiz",
+    "location": "Zetzwil",
+    "country": "Switzerland",
+    "eventCount": 52,
+    "url": "https://www.myrcm.ch/?dId[O]=7734&pLa=en&pId[O]=3&hId[1]=org",
+    "website": "http://www.buggyoffroad.ch/"
+  },
+  {
+    "orgId": "52898",
+    "name": "Burning Wheels Blankenfelde",
+    "location": "Blankenfelde-Mahlow",
+    "country": "Germany",
+    "eventCount": 292,
+    "url": "https://www.myrcm.ch/?dId[O]=52898&pLa=en&pId[O]=3&hId[1]=org",
+    "website": "https://www.burningwheels.de/"
+  },
+  {
+    "orgId": "9496",
+    "name": "C-HUB Racing GBR",
+    "location": "Weil der Stadt",
+    "country": "Germany",
+    "eventCount": 7,
+    "url": "https://www.myrcm.ch/?dId[O]=9496&pLa=en&pId[O]=3&hId[1]=org",
+    "website": "http://www.c-hub-racing.de/"
+  },
+  {
+    "orgId": "62",
+    "name": "Catz-Sports GmbH",
+    "location": "Stapelfeld",
+    "country": "Germany",
+    "eventCount": 46,
+    "url": "https://www.myrcm.ch/?dId[O]=62&pLa=en&pId[O]=4&hId[1]=org",
+    "website": "http://www.catz-sports.de/"
+  },
+  {
+    "orgId": "1152",
+    "name": "CC-Racing",
+    "location": "Hamburg",
+    "country": "Germany",
+    "eventCount": 12,
+    "url": "https://www.myrcm.ch/?dId[O]=1152&pLa=en&pId[O]=4&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "1294",
+    "name": "Club der Modellbaufreunde Süd-Ost",
+    "location": "Deutsch Goritz",
+    "country": "Austria",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=1294&pLa=en&pId[O]=5&hId[1]=org",
+    "website": "http://www.cmbf.at/"
+  },
+  {
+    "orgId": "13506",
+    "name": "Conrad Electronic SE",
+    "location": "Hirschau",
+    "country": "Germany",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=13506&pLa=en&pId[O]=5&hId[1]=org",
+    "website": "http://www.conrad.de/"
+  },
+  {
+    "orgId": "17465",
+    "name": "DerShoemaker Racing Events",
+    "location": "Hörstel",
+    "country": "Germany",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=17465&pLa=en&pId[O]=5&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "1288",
+    "name": "DJK Andernach e.V.",
+    "location": ".",
+    "country": "Germany",
+    "eventCount": 36,
+    "url": "https://www.myrcm.ch/?dId[O]=1288&pLa=en&pId[O]=5&hId[1]=org",
+    "website": "http://www.djk-andernach.de/"
+  },
+  {
+    "orgId": "50568",
+    "name": "DJK-SSC Lackenhäuser e.V.",
+    "location": "Neureichenau",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=50568&pLa=en&pId[O]=5&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "11932",
+    "name": "Dominique Durussel",
+    "location": "Monthey",
+    "country": "Switzerland",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=11932&pLa=en&pId[O]=6&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "35606",
+    "name": "EDC Kinzigtal e.V.",
+    "location": "Gengenbach",
+    "country": "Germany",
+    "eventCount": 37,
+    "url": "https://www.myrcm.ch/?dId[O]=35606&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.edc-kinzigtal.de/"
+  },
+  {
+    "orgId": "163",
+    "name": "EFAC Hohenems",
+    "location": "Hohenems",
+    "country": "Austria",
+    "eventCount": 150,
+    "url": "https://www.myrcm.ch/?dId[O]=163&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.efac-hohenems.at/"
+  },
+  {
+    "orgId": "16203",
+    "name": "Electrique Radio Modèle Club",
+    "location": "Grand-Saconnex",
+    "country": "Switzerland",
+    "eventCount": 92,
+    "url": "https://www.myrcm.ch/?dId[O]=16203&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.ermcgs.com/"
+  },
+  {
+    "orgId": "29104",
+    "name": "Elektro Modell Buggy Club March",
+    "location": "Stäfa",
+    "country": "Switzerland",
+    "eventCount": 494,
+    "url": "https://www.myrcm.ch/?dId[O]=29104&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.embcm.ch/"
+  },
+  {
+    "orgId": "521",
+    "name": "Elektro-Modell-Car-Club-Ochsendorf",
+    "location": "Ochsendorf",
+    "country": "Austria",
+    "eventCount": 30,
+    "url": "https://www.myrcm.ch/?dId[O]=521&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "https://www.emcco.at/"
+  },
+  {
+    "orgId": "43367",
+    "name": "EMC-Marktoberdorf",
+    "location": "Marktoberdorf",
+    "country": "Germany",
+    "eventCount": 48,
+    "url": "https://www.myrcm.ch/?dId[O]=43367&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "https://www.emc-marktoberdorf.info/"
+  },
+  {
+    "orgId": "8488",
+    "name": "EOCD - Elektro Offroad Club Dielsdorf",
+    "location": "Adlikon b. Regensdorf",
+    "country": "Switzerland",
+    "eventCount": 83,
+    "url": "https://www.myrcm.ch/?dId[O]=8488&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.eocd.ch/"
+  },
+  {
+    "orgId": "10117",
+    "name": "Equipe RC Nohn",
+    "location": "Nohn",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=10117&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://rc-nohn.npage.de/"
+  },
+  {
+    "orgId": "765",
+    "name": "ERC-Wr.Neudorf",
+    "location": "Wolfsgraben",
+    "country": "Austria",
+    "eventCount": 74,
+    "url": "https://www.myrcm.ch/?dId[O]=765&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.erc-wrneudorf.com/"
+  },
+  {
+    "orgId": "768",
+    "name": "ERT-Steyregg",
+    "location": "Katsdorf",
+    "country": "Austria",
+    "eventCount": 133,
+    "url": "https://www.myrcm.ch/?dId[O]=768&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.ert-steyregg.at/"
+  },
+  {
+    "orgId": "37613",
+    "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
+    "location": "Bischofsheim",
+    "country": "Germany",
+    "eventCount": 49,
+    "url": "https://www.myrcm.ch/?dId[O]=37613&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "https://www.rhein-main-circuit.de/"
+  },
+  {
+    "orgId": "2047",
+    "name": "ETS",
+    "location": "Andernach",
+    "country": "Germany",
+    "eventCount": 229,
+    "url": "https://www.myrcm.ch/?dId[O]=2047&pLa=en&pId[O]=6&hId[1]=org",
+    "website": "http://www.eurorcseries.com/"
+  },
+  {
+    "orgId": "49540",
+    "name": "FS-Timing",
+    "location": "Trebur",
+    "country": "Germany",
+    "eventCount": 79,
+    "url": "https://www.myrcm.ch/?dId[O]=49540&pLa=en&pId[O]=7&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "332",
+    "name": "FSG Motorsport AG",
+    "location": "Herzogenbuchsee",
+    "country": "Switzerland",
+    "eventCount": 59,
+    "url": "https://www.myrcm.ch/?dId[O]=332&pLa=en&pId[O]=7&hId[1]=org",
+    "website": "http://www.rc-motodrom.ch/"
+  },
+  {
+    "orgId": "17182",
+    "name": "fun-center.ch GmbH Jestetten",
+    "location": "Jestetten",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=17182&pLa=en&pId[O]=7&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "14263",
+    "name": "GEMO-Racing",
+    "location": "Trub",
+    "country": "Switzerland",
+    "eventCount": 24,
+    "url": "https://www.myrcm.ch/?dId[O]=14263&pLa=en&pId[O]=7&hId[1]=org",
+    "website": "http://www.rmcb.ch/index.php?option=com_content&task=view&id=47&Itemid=63"
+  },
+  {
+    "orgId": "56473",
+    "name": "Greenhouse RaCer e.V.",
+    "location": "Wendelstein",
+    "country": "Germany",
+    "eventCount": 9,
+    "url": "https://www.myrcm.ch/?dId[O]=56473&pLa=en&pId[O]=7&hId[1]=org",
+    "website": "https://www.mrs-funcup.de/greenhouse-racer"
+  },
+  {
+    "orgId": "52767",
+    "name": "Grünewald Motorsport",
+    "location": "Sonneberg",
+    "country": "Germany",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=52767&pLa=en&pId[O]=7&hId[1]=org",
+    "website": "http://www.gruenewald-motorsport.de/"
+  },
+  {
+    "orgId": "22268",
+    "name": "H-SPEED",
+    "location": "Ebreichsdorf",
+    "country": "Austria",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=22268&pLa=en&pId[O]=7&hId[1]=org",
+    "website": "http://www.h-speed.at/"
+  },
+  {
+    "orgId": "458",
+    "name": "Heiner Martin",
+    "location": "Ulm",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=458&pLa=en&pId[O]=7&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "293",
+    "name": "Hobby Shop Hässig",
+    "location": "Wohlen",
+    "country": "Switzerland",
+    "eventCount": 168,
+    "url": "https://www.myrcm.ch/?dId[O]=293&pLa=en&pId[O]=8&hId[1]=org",
+    "website": "http://www.hobbyshop.ch/"
+  },
+  {
+    "orgId": "94",
+    "name": "HVBRS",
+    "location": "St.Gallen",
+    "country": "Switzerland",
+    "eventCount": 189,
+    "url": "https://www.myrcm.ch/?dId[O]=94&pLa=en&pId[O]=8&hId[1]=org",
+    "website": "http://www.srcca.ch/"
+  },
+  {
+    "orgId": "10490",
+    "name": "IG Racing Team Hamm",
+    "location": "Lippstadt",
+    "country": "Germany",
+    "eventCount": 62,
+    "url": "https://www.myrcm.ch/?dId[O]=10490&pLa=en&pId[O]=8&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "46390",
+    "name": "Indoortrack Wichtrach",
+    "location": "Wichtrach",
+    "country": "Switzerland",
+    "eventCount": 24,
+    "url": "https://www.myrcm.ch/?dId[O]=46390&pLa=en&pId[O]=8&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "26980",
+    "name": "IRCR - Indoor RC Romand",
+    "location": "Lausanne",
+    "country": "Switzerland",
+    "eventCount": 64,
+    "url": "https://www.myrcm.ch/?dId[O]=26980&pLa=en&pId[O]=8&hId[1]=org",
+    "website": "https://www.ircr.ch/"
+  },
+  {
+    "orgId": "30220",
+    "name": "Kartodrom Asbach",
+    "location": "Asbach",
+    "country": "Germany",
+    "eventCount": 1366,
+    "url": "https://www.myrcm.ch/?dId[O]=30220&pLa=en&pId[O]=9&hId[1]=org",
+    "website": "https://www.kartbahn-deutschland.de/"
+  },
+  {
+    "orgId": "24785",
+    "name": "Kartodrom Elles",
+    "location": "Buchholz",
+    "country": "Germany",
+    "eventCount": 1959,
+    "url": "https://www.myrcm.ch/?dId[O]=24785&pLa=en&pId[O]=9&hId[1]=org",
+    "website": "http://www.kartodrom-elles.de/"
+  },
+  {
+    "orgId": "17649",
+    "name": "KLOFT-TIMING",
+    "location": "Reutlingen - Sondelfingen",
+    "country": "Germany",
+    "eventCount": 530,
+    "url": "https://www.myrcm.ch/?dId[O]=17649&pLa=en&pId[O]=9&hId[1]=org",
+    "website": "http://www.kloft-timing.de/"
+  },
+  {
+    "orgId": "52798",
+    "name": "LA Speedway Racing Club e.V.",
+    "location": "Bruckberg",
+    "country": "Germany",
+    "eventCount": 15,
+    "url": "https://www.myrcm.ch/?dId[O]=52798&pLa=en&pId[O]=9&hId[1]=org",
+    "website": "https://laspeedway.de/"
+  },
+  {
+    "orgId": "781",
+    "name": "LAMAC",
+    "location": "St.Paul/Lavanttal",
+    "country": "Austria",
+    "eventCount": 87,
+    "url": "https://www.myrcm.ch/?dId[O]=781&pLa=en&pId[O]=9&hId[1]=org",
+    "website": "http://www.lamac-stpaul.at/"
+  },
+  {
+    "orgId": "1553",
+    "name": "LAMBC-St.Andrä",
+    "location": "St. Andrä im Lavanttal",
+    "country": "Austria",
+    "eventCount": 14,
+    "url": "https://www.myrcm.ch/?dId[O]=1553&pLa=en&pId[O]=9&hId[1]=org",
+    "website": "http://www.lambc-st-andrae.at/"
+  },
+  {
+    "orgId": "66",
+    "name": "LMC - Limbacher Modellsport Club",
+    "location": "Limbach",
+    "country": "Austria",
+    "eventCount": 55,
+    "url": "https://www.myrcm.ch/?dId[O]=66&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.lmcrc.at/"
+  },
+  {
+    "orgId": "17507",
+    "name": "Lost-Place-Racers e.V.",
+    "location": "Prüm",
+    "country": "Germany",
+    "eventCount": 67,
+    "url": "https://www.myrcm.ch/?dId[O]=17507&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.lostplaceracers.de/"
+  },
+  {
+    "orgId": "892",
+    "name": "LRP electronic GmbH",
+    "location": "Schorndorf",
+    "country": "Germany",
+    "eventCount": 12,
+    "url": "https://www.myrcm.ch/?dId[O]=892&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.lrp.cc/"
+  },
+  {
+    "orgId": "19204",
+    "name": "LTS Bremerhaven Racing Team",
+    "location": "Geestland",
+    "country": "Germany",
+    "eventCount": 9,
+    "url": "https://www.myrcm.ch/?dId[O]=19204&pLa=en&pId[O]=10&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "339",
+    "name": "M.A.R.S. Alt Erlaa",
+    "location": "Wien",
+    "country": "Austria",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=339&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://marsalterlaa.de.tl/"
+  },
+  {
+    "orgId": "4602",
+    "name": "MAC Adenau",
+    "location": "Kottenborn",
+    "country": "Germany",
+    "eventCount": 64,
+    "url": "https://www.myrcm.ch/?dId[O]=4602&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mac-adenau.de/"
+  },
+  {
+    "orgId": "1225",
+    "name": "MAC Amstetten",
+    "location": "Biberbach",
+    "country": "Austria",
+    "eventCount": 146,
+    "url": "https://www.myrcm.ch/?dId[O]=1225&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mac-amstetten.at/"
+  },
+  {
+    "orgId": "168",
+    "name": "MAC Berlin e.V.",
+    "location": "Berlin",
+    "country": "Germany",
+    "eventCount": 27,
+    "url": "https://www.myrcm.ch/?dId[O]=168&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mac-speedway.de/"
+  },
+  {
+    "orgId": "678",
+    "name": "MAC Burgdorf e.V.",
+    "location": "Burgdorf",
+    "country": "Germany",
+    "eventCount": 109,
+    "url": "https://www.myrcm.ch/?dId[O]=678&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.mac-burgdorf.de/"
+  },
+  {
+    "orgId": "20622",
+    "name": "MAC Hamburg e.V.",
+    "location": "Hamburg",
+    "country": "Germany",
+    "eventCount": 68,
+    "url": "https://www.myrcm.ch/?dId[O]=20622&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mach-ev.de/"
+  },
+  {
+    "orgId": "258",
+    "name": "MAC Idar-Oberstein",
+    "location": "Idar-Oberstein",
+    "country": "Germany",
+    "eventCount": 28,
+    "url": "https://www.myrcm.ch/?dId[O]=258&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mac-idar-oberstein.de/"
+  },
+  {
+    "orgId": "891",
+    "name": "MAC Mettenheim e.V.",
+    "location": "Vaterstetten",
+    "country": "Germany",
+    "eventCount": 27,
+    "url": "https://www.myrcm.ch/?dId[O]=891&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.mac-mettenheim.de/"
+  },
+  {
+    "orgId": "20718",
+    "name": "MAC Mistelbach",
+    "location": "Mistelbach",
+    "country": "Austria",
+    "eventCount": 31,
+    "url": "https://www.myrcm.ch/?dId[O]=20718&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.modellsport-trinko.at/"
+  },
+  {
+    "orgId": "9976",
+    "name": "MAC Nürnberg e.V",
+    "location": "Nürnberg",
+    "country": "Germany",
+    "eventCount": 48,
+    "url": "https://www.myrcm.ch/?dId[O]=9976&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.macn.de/"
+  },
+  {
+    "orgId": "30735",
+    "name": "MAC OR Hütschenhausen e.V.",
+    "location": "Hütschenhausen",
+    "country": "Germany",
+    "eventCount": 141,
+    "url": "https://www.myrcm.ch/?dId[O]=30735&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mac-huetschenhausen.de/"
+  },
+  {
+    "orgId": "233",
+    "name": "MAC Saar e.V.",
+    "location": "Bexbach",
+    "country": "Germany",
+    "eventCount": 31,
+    "url": "https://www.myrcm.ch/?dId[O]=233&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.macsaar.de/"
+  },
+  {
+    "orgId": "48023",
+    "name": "MAC Siersburg e.V.",
+    "location": "Dillingen",
+    "country": "Germany",
+    "eventCount": 35,
+    "url": "https://www.myrcm.ch/?dId[O]=48023&pLa=en&pId[O]=10&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "53667",
+    "name": "MAC Uetersen e.V.",
+    "location": "Uetersen",
+    "country": "Germany",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=53667&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.macuetersen.com/"
+  },
+  {
+    "orgId": "49037",
+    "name": "MAC-Meckenheim e.V.",
+    "location": "Bad Münstereifel",
+    "country": "Germany",
+    "eventCount": 25,
+    "url": "https://www.myrcm.ch/?dId[O]=49037&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.mac-meckenheim.de/"
+  },
+  {
+    "orgId": "42064",
+    "name": "MAC-Solms e.V.",
+    "location": "Ehringshausen",
+    "country": "Germany",
+    "eventCount": 8,
+    "url": "https://www.myrcm.ch/?dId[O]=42064&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "https://www.mac-solms.de/"
+  },
+  {
+    "orgId": "769",
+    "name": "MAC-Traiskirchen",
+    "location": "Möllersdorf",
+    "country": "Austria",
+    "eventCount": 18,
+    "url": "https://www.myrcm.ch/?dId[O]=769&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.mactraiskirchen.at/"
+  },
+  {
+    "orgId": "858",
+    "name": "MACG - Steiermark",
+    "location": "Kalsdorf",
+    "country": "Austria",
+    "eventCount": 36,
+    "url": "https://www.myrcm.ch/?dId[O]=858&pLa=en&pId[O]=10&hId[1]=org",
+    "website": "http://www.macg-steiermark.at/"
+  },
+  {
+    "orgId": "18",
+    "name": "MACW Modell Auto Club Wohlen",
+    "location": "Rottenschwil",
+    "country": "Switzerland",
+    "eventCount": 120,
+    "url": "https://www.myrcm.ch/?dId[O]=18&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.macw.ch/"
+  },
+  {
+    "orgId": "508",
+    "name": "MARC-Exclusiv Kirchschlag",
+    "location": "Kirchschlag",
+    "country": "Austria",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=508&pLa=en&pId[O]=11&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "217",
+    "name": "MAV Aigen-Schlägl",
+    "location": "Aigen-Schlägl",
+    "country": "Austria",
+    "eventCount": 21,
+    "url": "https://www.myrcm.ch/?dId[O]=217&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mav-aigen-schlaegl.at/"
+  },
+  {
+    "orgId": "505",
+    "name": "MAV-Waidhofen",
+    "location": "Waidhofen an der Thaya",
+    "country": "Austria",
+    "eventCount": 74,
+    "url": "https://www.myrcm.ch/?dId[O]=505&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mav-waidhofen.at/"
+  },
+  {
+    "orgId": "20360",
+    "name": "Max Informatique",
+    "location": "Malleray",
+    "country": "Switzerland",
+    "eventCount": 39,
+    "url": "https://www.myrcm.ch/?dId[O]=20360&pLa=en&pId[O]=11&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "7554",
+    "name": "Max RC Car Racing",
+    "location": "Perg",
+    "country": "Austria",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=7554&pLa=en&pId[O]=11&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "24873",
+    "name": "MBC Goldstein e.V.",
+    "location": "Frankfurt",
+    "country": "Germany",
+    "eventCount": 42,
+    "url": "https://www.myrcm.ch/?dId[O]=24873&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mbcgoldstein.de/"
+  },
+  {
+    "orgId": "2008",
+    "name": "MBC-ASKÖ Trieben",
+    "location": "Ardning",
+    "country": "Austria",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=2008&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mbc-trieben.at/"
+  },
+  {
+    "orgId": "45823",
+    "name": "MBLR Eclépens",
+    "location": "Penthalaz",
+    "country": "Switzerland",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=45823&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://www.mblr.ch/"
+  },
+  {
+    "orgId": "22319",
+    "name": "MBLR Racing",
+    "location": "Penthalaz",
+    "country": "Switzerland",
+    "eventCount": 33,
+    "url": "https://www.myrcm.ch/?dId[O]=22319&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://www.mblr.ch/"
+  },
+  {
+    "orgId": "27211",
+    "name": "MBSC Wächtersbach",
+    "location": "Wächtersbach",
+    "country": "Germany",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=27211&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mbsc-waechtersbach.de/"
+  },
+  {
+    "orgId": "4712",
+    "name": "MBV-Nötsch",
+    "location": "Nötsch",
+    "country": "Austria",
+    "eventCount": 14,
+    "url": "https://www.myrcm.ch/?dId[O]=4712&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mbv-noetsch.at/"
+  },
+  {
+    "orgId": "6221",
+    "name": "MBV-Tieschen",
+    "location": "Tieschen",
+    "country": "Austria",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=6221&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mbv-tieschen.com/"
+  },
+  {
+    "orgId": "121",
+    "name": "MC Ettlingen e.V.",
+    "location": "Karlsruhe",
+    "country": "Germany",
+    "eventCount": 79,
+    "url": "https://www.myrcm.ch/?dId[O]=121&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mc-ettlingen.de/"
+  },
+  {
+    "orgId": "33489",
+    "name": "MC Munster e.V.",
+    "location": "Bremen",
+    "country": "Germany",
+    "eventCount": 59,
+    "url": "https://www.myrcm.ch/?dId[O]=33489&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mcmunster.de/"
+  },
+  {
+    "orgId": "44699",
+    "name": "MC Welden e.V.",
+    "location": "Fuchstal",
+    "country": "Germany",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=44699&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://mcwelden.de/"
+  },
+  {
+    "orgId": "65042",
+    "name": "MC-Fürstenwalde e.V.",
+    "location": "Fürstenwalde",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=65042&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://www.mc-fuerstenwalde.de/"
+  },
+  {
+    "orgId": "27203",
+    "name": "MC-ORC .e.V.",
+    "location": "Haren (EMS)",
+    "country": "Germany",
+    "eventCount": 61,
+    "url": "https://www.myrcm.ch/?dId[O]=27203&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mcorc.de/"
+  },
+  {
+    "orgId": "21299",
+    "name": "MCC Bad Kissingen e. V.",
+    "location": "Volkershausen",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=21299&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://mcc-kg.de.tl/"
+  },
+  {
+    "orgId": "20747",
+    "name": "MCC Borgholzhausen",
+    "location": "Borgholzhhausen",
+    "country": "Germany",
+    "eventCount": 19,
+    "url": "https://www.myrcm.ch/?dId[O]=20747&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://www.mcc-borgholzhausen.de/"
+  },
+  {
+    "orgId": "38659",
+    "name": "MCC Fellbach e.V.",
+    "location": "Fellbach",
+    "country": "Germany",
+    "eventCount": 51,
+    "url": "https://www.myrcm.ch/?dId[O]=38659&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mcc-fellbach.de/"
+  },
+  {
+    "orgId": "4141",
+    "name": "MCC Kastellaun e.V.",
+    "location": "Wüschheim",
+    "country": "Germany",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=4141&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.minidrom.de/"
+  },
+  {
+    "orgId": "5505",
+    "name": "MCC Konstanz",
+    "location": "Überllingen",
+    "country": "Germany",
+    "eventCount": 30,
+    "url": "https://www.myrcm.ch/?dId[O]=5505&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mcc-konstanz.de/"
+  },
+  {
+    "orgId": "52121",
+    "name": "MCC Lüdenscheid e.V.",
+    "location": "Lüdenscheid",
+    "country": "Germany",
+    "eventCount": 51,
+    "url": "https://www.myrcm.ch/?dId[O]=52121&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mcc-luedenscheid.de/"
+  },
+  {
+    "orgId": "49956",
+    "name": "MCC Rheda-Wiedenbrück e.V.",
+    "location": "Gütersloh",
+    "country": "Germany",
+    "eventCount": 12,
+    "url": "https://www.myrcm.ch/?dId[O]=49956&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://de-de.facebook.com/mcc.rhedawiedenbruckev/"
+  },
+  {
+    "orgId": "283",
+    "name": "MCC Rhein Ahr e.V.",
+    "location": "Bad Breisig",
+    "country": "Germany",
+    "eventCount": 156,
+    "url": "https://www.myrcm.ch/?dId[O]=283&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://mcc-rhein-ahr.de/"
+  },
+  {
+    "orgId": "47",
+    "name": "MCC Türkheim e.V.",
+    "location": "Weißenhorn",
+    "country": "Germany",
+    "eventCount": 153,
+    "url": "https://www.myrcm.ch/?dId[O]=47&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://www.mcc-tuerkheim.de/"
+  },
+  {
+    "orgId": "269",
+    "name": "MCC-Hocheifel e.V.",
+    "location": "Urmitz",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=269&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "http://www.mcc-hocheifel.eu/"
+  },
+  {
+    "orgId": "57549",
+    "name": "MCC-Marktredwitz e.V.",
+    "location": "Brand",
+    "country": "Germany",
+    "eventCount": 9,
+    "url": "https://www.myrcm.ch/?dId[O]=57549&pLa=en&pId[O]=11&hId[1]=org",
+    "website": "https://mcc-marktredwitz.de/"
+  },
+  {
+    "orgId": "9269",
+    "name": "MCK e.V. Dormagen",
+    "location": "Köln",
+    "country": "Germany",
+    "eventCount": 63,
+    "url": "https://www.myrcm.ch/?dId[O]=9269&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "https://www.mckdormagen.de/"
+  },
+  {
+    "orgId": "652",
+    "name": "MCRCB",
+    "location": "Baar",
+    "country": "Switzerland",
+    "eventCount": 38,
+    "url": "https://www.myrcm.ch/?dId[O]=652&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://www.mcrcb.ch/"
+  },
+  {
+    "orgId": "50727",
+    "name": "MCRT-Schaafheim e.V.",
+    "location": "Großostheim",
+    "country": "Germany",
+    "eventCount": 423,
+    "url": "https://www.myrcm.ch/?dId[O]=50727&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "https://www.mcrt-schaafheim.de/"
+  },
+  {
+    "orgId": "12227",
+    "name": "MCSS Althengstett e.V.",
+    "location": "Althengstett",
+    "country": "Germany",
+    "eventCount": 100,
+    "url": "https://www.myrcm.ch/?dId[O]=12227&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "https://www.mcss.de/"
+  },
+  {
+    "orgId": "19290",
+    "name": "MCV Dänischer Wohld e.V.",
+    "location": "Tüttendorf",
+    "country": "Germany",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=19290&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://mcv-daenischer-wohld.de/"
+  },
+  {
+    "orgId": "33838",
+    "name": "MD-Timing",
+    "location": "Niederkrüchten",
+    "country": "Germany",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=33838&pLa=en&pId[O]=12&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "32408",
+    "name": "Megadrom RC Team Nord",
+    "location": "Hasloh",
+    "country": "Germany",
+    "eventCount": 61,
+    "url": "https://www.myrcm.ch/?dId[O]=32408&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://www.rcteamnord.de/"
+  },
+  {
+    "orgId": "53092",
+    "name": "MFK Kürten e.V.",
+    "location": "Köln",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=53092&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://modellfreunde-kuerten.de/"
+  },
+  {
+    "orgId": "30759",
+    "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
+    "location": "Worms",
+    "country": "Germany",
+    "eventCount": 28,
+    "url": "https://www.myrcm.ch/?dId[O]=30759&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://www.mfr-morschheim.de/"
+  },
+  {
+    "orgId": "30870",
+    "name": "Mini Bolides Club Jura",
+    "location": "Bassecourt",
+    "country": "Switzerland",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=30870&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://www.mbcj.ch/"
+  },
+  {
+    "orgId": "158",
+    "name": "Mini Car Club Crailsheim e.V.",
+    "location": "Schnelldorf",
+    "country": "Germany",
+    "eventCount": 127,
+    "url": "https://www.myrcm.ch/?dId[O]=158&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://www.mcc-crailsheim.de/"
+  },
+  {
+    "orgId": "31807",
+    "name": "Mini Monster Club Romand",
+    "location": "Grandson",
+    "country": "Switzerland",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=31807&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "https://www.mmcr.ch/"
+  },
+  {
+    "orgId": "19",
+    "name": "Mini Racing Cars Aigle & Lausanne",
+    "location": "Concise",
+    "country": "Switzerland",
+    "eventCount": 132,
+    "url": "https://www.myrcm.ch/?dId[O]=19&pLa=en&pId[O]=12&hId[1]=org",
+    "website": "http://www.mrcal.ch/"
+  },
+  {
+    "orgId": "9845",
+    "name": "Mini Racing Chiasso",
+    "location": "Bellinzona",
+    "country": "Switzerland",
+    "eventCount": 191,
+    "url": "https://www.myrcm.ch/?dId[O]=9845&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "http://www.miniracingchiasso.com/"
+  },
+  {
+    "orgId": "18473",
+    "name": "Mini Tout Terrain Gruyère",
+    "location": "Riaz",
+    "country": "Switzerland",
+    "eventCount": 44,
+    "url": "https://www.myrcm.ch/?dId[O]=18473&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "http://www.mttg.ch/"
+  },
+  {
+    "orgId": "65451",
+    "name": "Miniatutenpark Elsterwerda",
+    "location": "Röderland OT Prösen",
+    "country": "Germany",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=65451&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "https://miniaturenpark-elsterwerda.de/modellauto-rennstrecke.html"
+  },
+  {
+    "orgId": "6266",
+    "name": "Minicar Club Dortmund e.V.",
+    "location": "Hamm",
+    "country": "Germany",
+    "eventCount": 142,
+    "url": "https://www.myrcm.ch/?dId[O]=6266&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "http://www.mcdortmund.net/"
+  },
+  {
+    "orgId": "770",
+    "name": "MMCC",
+    "location": "Mistelbach",
+    "country": "Austria",
+    "eventCount": 196,
+    "url": "https://www.myrcm.ch/?dId[O]=770&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "http://www.mm-cc.at/"
+  },
+  {
+    "orgId": "17623",
+    "name": "MOC - Allhartsberg",
+    "location": "Biberbach",
+    "country": "Austria",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=17623&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "http://www.moc-allhartsberg.at/"
+  },
+  {
+    "orgId": "771",
+    "name": "MOD.RACE-LAA.04",
+    "location": "Neudorf bei Staatz",
+    "country": "Austria",
+    "eventCount": 44,
+    "url": "https://www.myrcm.ch/?dId[O]=771&pLa=en&pId[O]=13&hId[1]=org",
+    "website": "https://modellsport-thomas.wixsite.com/my-site/mod-race-laa-04"
+  },
+  {
+    "orgId": "27",
+    "name": "Modell Auto Club Höfe",
+    "location": "Galgenen",
+    "country": "Switzerland",
+    "eventCount": 7,
+    "url": "https://www.myrcm.ch/?dId[O]=27&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.modellautoclub.ch/"
+  },
+  {
+    "orgId": "277",
+    "name": "Modell Off Road Club Oberbüren",
+    "location": "Arnegg",
+    "country": "Switzerland",
+    "eventCount": 52,
+    "url": "https://www.myrcm.ch/?dId[O]=277&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.morcsg.ch/"
+  },
+  {
+    "orgId": "31",
+    "name": "Modell Rennsport Club Langenthal",
+    "location": "Langenthal",
+    "country": "Switzerland",
+    "eventCount": 34,
+    "url": "https://www.myrcm.ch/?dId[O]=31&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://www.mrcl.net/"
+  },
+  {
+    "orgId": "20",
+    "name": "Modell Rennsport Club St. Gallen MRCSG",
+    "location": "Sitterdorf",
+    "country": "Switzerland",
+    "eventCount": 134,
+    "url": "https://www.myrcm.ch/?dId[O]=20&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://www.mrcsg.ch/"
+  },
+  {
+    "orgId": "17",
+    "name": "Modell Rennsport Club Unterland",
+    "location": "Dietlikon",
+    "country": "Switzerland",
+    "eventCount": 22,
+    "url": "https://www.myrcm.ch/?dId[O]=17&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.mrcu.ch/"
+  },
+  {
+    "orgId": "6177",
+    "name": "Modellbau Foto Heinz",
+    "location": "Fieberbrunn",
+    "country": "Austria",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=6177&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.foto-heinz.com/"
+  },
+  {
+    "orgId": "38488",
+    "name": "Modellbaufreunde Felsberg e.V.",
+    "location": "Felsberg",
+    "country": "Germany",
+    "eventCount": 24,
+    "url": "https://www.myrcm.ch/?dId[O]=38488&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://modellbaufreunde-felsberg.de/"
+  },
+  {
+    "orgId": "15268",
+    "name": "Modellbuggygruppe Dellach/Gail",
+    "location": "Dellach/Gail",
+    "country": "Austria",
+    "eventCount": 25,
+    "url": "https://www.myrcm.ch/?dId[O]=15268&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.mbg-dellach.at/"
+  },
+  {
+    "orgId": "42405",
+    "name": "Modellclub Flensburg e.V",
+    "location": "Flensburg",
+    "country": "Germany",
+    "eventCount": 56,
+    "url": "https://www.myrcm.ch/?dId[O]=42405&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://www.mc-flensburg.de/"
+  },
+  {
+    "orgId": "879",
+    "name": "Modellrenngemeinschaft Dogern e.V.",
+    "location": "Wutöschingen - Horheim",
+    "country": "Germany",
+    "eventCount": 68,
+    "url": "https://www.myrcm.ch/?dId[O]=879&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.mrg-dogern.com/"
+  },
+  {
+    "orgId": "60576",
+    "name": "Modellsportzentrum Zwönitz e.V.",
+    "location": "Zwönitz",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=60576&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://www.modellsportzentrum-zwoenitz.com/"
+  },
+  {
+    "orgId": "216",
+    "name": "MORAC",
+    "location": "Graz",
+    "country": "Austria",
+    "eventCount": 193,
+    "url": "https://www.myrcm.ch/?dId[O]=216&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://www.morac-graz.at/"
+  },
+  {
+    "orgId": "21964",
+    "name": "Motor Sport Club Imst",
+    "location": "Imst",
+    "country": "Austria",
+    "eventCount": 41,
+    "url": "https://www.myrcm.ch/?dId[O]=21964&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "http://www.msc-imst.at/"
+  },
+  {
+    "orgId": "95",
+    "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "location": "Braunschweig",
+    "country": "Germany",
+    "eventCount": 167,
+    "url": "https://www.myrcm.ch/?dId[O]=95&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://msc-polizei-bs.de/"
+  },
+  {
+    "orgId": "64572",
+    "name": "Motorsportvereinigung Zittauer Land e.V.",
+    "location": "Heidenau",
+    "country": "Germany",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=64572&pLa=en&pId[O]=14&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "64",
+    "name": "MRC Alstaden Oberhausen e.V.",
+    "location": "Oberhausen",
+    "country": "Germany",
+    "eventCount": 29,
+    "url": "https://www.myrcm.ch/?dId[O]=64&pLa=en&pId[O]=14&hId[1]=org",
+    "website": "https://www.mrc-oberhausen.de/"
+  },
+  {
+    "orgId": "772",
+    "name": "MRC Fritzens Formel 4",
+    "location": "Fritzens/Tirol",
+    "country": "Austria",
+    "eventCount": 25,
+    "url": "https://www.myrcm.ch/?dId[O]=772&pLa=en&pId[O]=14&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "713",
+    "name": "MRC Leipzig e.V",
+    "location": "Zwenkau",
+    "country": "Germany",
+    "eventCount": 193,
+    "url": "https://www.myrcm.ch/?dId[O]=713&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.mrc-leipzig.de/"
+  },
+  {
+    "orgId": "2245",
+    "name": "MRC Mehrum e.V.",
+    "location": "Peine",
+    "country": "Germany",
+    "eventCount": 36,
+    "url": "https://www.myrcm.ch/?dId[O]=2245&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.mrc-mehrum.de/"
+  },
+  {
+    "orgId": "61183",
+    "name": "MRC Senden e.V.",
+    "location": "Senden / Wullenstetten",
+    "country": "Germany",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=61183&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.mrc-senden.de/"
+  },
+  {
+    "orgId": "4940",
+    "name": "MRC Zillertal",
+    "location": "Finkenberg",
+    "country": "Austria",
+    "eventCount": 67,
+    "url": "https://www.myrcm.ch/?dId[O]=4940&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://mrc.zillertal.at.tf/"
+  },
+  {
+    "orgId": "779",
+    "name": "MRC-Frühwirth",
+    "location": "Sollenau",
+    "country": "Austria",
+    "eventCount": 59,
+    "url": "https://www.myrcm.ch/?dId[O]=779&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.mrc-fruehwirth.at/"
+  },
+  {
+    "orgId": "980",
+    "name": "MRC-Oberaich",
+    "location": "Kapfenberg",
+    "country": "Austria",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=980&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "207",
+    "name": "MRCP",
+    "location": "Steinen",
+    "country": "Switzerland",
+    "eventCount": 158,
+    "url": "https://www.myrcm.ch/?dId[O]=207&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.mrcp.ch/"
+  },
+  {
+    "orgId": "39587",
+    "name": "MRSC Amberg e.V.",
+    "location": "Amberg",
+    "country": "Germany",
+    "eventCount": 59,
+    "url": "https://www.myrcm.ch/?dId[O]=39587&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.mrsc-amberg.de/"
+  },
+  {
+    "orgId": "4483",
+    "name": "MRT Rosenheim e.V.",
+    "location": "Hoehenkirchen-Siegertsbrunn",
+    "country": "Germany",
+    "eventCount": 284,
+    "url": "https://www.myrcm.ch/?dId[O]=4483&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.mrt-rosenheim.de/"
+  },
+  {
+    "orgId": "16",
+    "name": "MRTM Mini Racing Ticino & Moesa",
+    "location": "Lostallo",
+    "country": "Switzerland",
+    "eventCount": 453,
+    "url": "https://www.myrcm.ch/?dId[O]=16&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://mrtm.ch/"
+  },
+  {
+    "orgId": "401",
+    "name": "MRTO",
+    "location": "Altnau",
+    "country": "Switzerland",
+    "eventCount": 40,
+    "url": "https://www.myrcm.ch/?dId[O]=401&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "773",
+    "name": "MRV St. Pölten",
+    "location": "Sankt Poelten",
+    "country": "Austria",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=773&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "3645",
+    "name": "MSC Edelsbach",
+    "location": "Edelsbach bei Feldbach",
+    "country": "Austria",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=3645&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.powerteam-edelsbach.com/"
+  },
+  {
+    "orgId": "44811",
+    "name": "MSC Halle e.V.",
+    "location": "Halle",
+    "country": "Germany",
+    "eventCount": 15,
+    "url": "https://www.myrcm.ch/?dId[O]=44811&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://msc-halle.de/"
+  },
+  {
+    "orgId": "64487",
+    "name": "MSC Herrenhaide",
+    "location": "Burgstädt",
+    "country": "Germany",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=64487&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.msc-herrenhaide.de/"
+  },
+  {
+    "orgId": "56487",
+    "name": "MSC Höckendorf e.V.",
+    "location": "Klingenberg",
+    "country": "Germany",
+    "eventCount": 17,
+    "url": "https://www.myrcm.ch/?dId[O]=56487&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.msc-hoeckendorf.de/"
+  },
+  {
+    "orgId": "17008",
+    "name": "MSC Kirchhain e.V.",
+    "location": "Marburg",
+    "country": "Germany",
+    "eventCount": 35,
+    "url": "https://www.myrcm.ch/?dId[O]=17008&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.msc-kirchhain.de/"
+  },
+  {
+    "orgId": "66454",
+    "name": "MSC Ober-Mörlen e.V.",
+    "location": "Weiterstadt",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=66454&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.msc-obermoerlen.de/"
+  },
+  {
+    "orgId": "50019",
+    "name": "MSC Osterhofen e.V.",
+    "location": "Osterhofen",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=50019&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "72",
+    "name": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
+    "location": "Braunschweig",
+    "country": "Germany",
+    "eventCount": 121,
+    "url": "https://www.myrcm.ch/?dId[O]=72&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://msc-polizei-bs.de/"
+  },
+  {
+    "orgId": "42113",
+    "name": "MSC Ulm e.V.",
+    "location": "Senden",
+    "country": "Germany",
+    "eventCount": 72,
+    "url": "https://www.myrcm.ch/?dId[O]=42113&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "116",
+    "name": "MSC-Hansa Heilbronn e.V.",
+    "location": "Heilbronn",
+    "country": "Germany",
+    "eventCount": 30,
+    "url": "https://www.myrcm.ch/?dId[O]=116&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://www.msc-hansa.de/"
+  },
+  {
+    "orgId": "46202",
+    "name": "MSG Niesky e.V.",
+    "location": "Rothenburg/Oberlausitz",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=46202&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.msg-niesky.de/"
+  },
+  {
+    "orgId": "49105",
+    "name": "MSS \"Am Sägewerk\"",
+    "location": "Seifhennersdorf",
+    "country": "Germany",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=49105&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "15511",
+    "name": "MSV Hürtgenwald e.V.",
+    "location": "Hürtgenwald",
+    "country": "Germany",
+    "eventCount": 19,
+    "url": "https://www.myrcm.ch/?dId[O]=15511&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "https://auto.msv-huertgenwald.de/"
+  },
+  {
+    "orgId": "53491",
+    "name": "MSV Weiz",
+    "location": "Weiz",
+    "country": "Austria",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=53491&pLa=en&pId[O]=15&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "509",
+    "name": "MSV-Wölbling",
+    "location": "Unterwölbling",
+    "country": "Austria",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=509&pLa=en&pId[O]=15&hId[1]=org",
+    "website": "http://www.msv-woelbling.at/"
+  },
+  {
+    "orgId": "34185",
+    "name": "Nitro Süd",
+    "location": "",
+    "country": "Germany",
+    "eventCount": 13,
+    "url": "https://www.myrcm.ch/?dId[O]=34185&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "http://www.xn--nitro-sd-d6a.de/"
+  },
+  {
+    "orgId": "13507",
+    "name": "Nitrofighter",
+    "location": "Lambrechten",
+    "country": "Austria",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=13507&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://www.nitrofighter.at/"
+  },
+  {
+    "orgId": "15092",
+    "name": "NitroManiacs e.V.",
+    "location": "Mönchengladbach",
+    "country": "Germany",
+    "eventCount": 36,
+    "url": "https://www.myrcm.ch/?dId[O]=15092&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://www.nitromaniacs.de/"
+  },
+  {
+    "orgId": "4497",
+    "name": "NMBC Neuchâtel Mini Buggy Club",
+    "location": "Cornaux",
+    "country": "Switzerland",
+    "eventCount": 89,
+    "url": "https://www.myrcm.ch/?dId[O]=4497&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://www.nmbc.ch/"
+  },
+  {
+    "orgId": "61558",
+    "name": "Oefmav",
+    "location": "Klagenfurt am Wörthersee",
+    "country": "Austria",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=61558&pLa=en&pId[O]=16&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "62051",
+    "name": "Off Road Club Montagny",
+    "location": "Montagny-les-Monts",
+    "country": "Switzerland",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=62051&pLa=en&pId[O]=16&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "35380",
+    "name": "Offroad Minicar Crew e.V.",
+    "location": "Heroldsberg",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=35380&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://omconline.de/"
+  },
+  {
+    "orgId": "65790",
+    "name": "Offroad Team Zürich",
+    "location": "Volketswil",
+    "country": "Switzerland",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=65790&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://www.offroad-team.ch/"
+  },
+  {
+    "orgId": "782",
+    "name": "ÖFMAV EOR",
+    "location": "Berndorf",
+    "country": "Austria",
+    "eventCount": 89,
+    "url": "https://www.myrcm.ch/?dId[O]=782&pLa=en&pId[O]=16&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "34619",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "location": "Wien",
+    "country": "Austria",
+    "eventCount": 43,
+    "url": "https://www.myrcm.ch/?dId[O]=34619&pLa=en&pId[O]=16&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "503",
+    "name": "ÖFMAV Sektion OR-8",
+    "location": "Graz",
+    "country": "Austria",
+    "eventCount": 74,
+    "url": "https://www.myrcm.ch/?dId[O]=503&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://oefmav.at/"
+  },
+  {
+    "orgId": "38958",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "location": "Winklarn",
+    "country": "Austria",
+    "eventCount": 37,
+    "url": "https://www.myrcm.ch/?dId[O]=38958&pLa=en&pId[O]=16&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "50394",
+    "name": "one28.ch (Swiss Micro Racer)",
+    "location": "Bichwil",
+    "country": "Switzerland",
+    "eventCount": 229,
+    "url": "https://www.myrcm.ch/?dId[O]=50394&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "https://one28racing.ch/"
+  },
+  {
+    "orgId": "7",
+    "name": "Online Modus",
+    "location": "",
+    "country": "Switzerland",
+    "eventCount": 8,
+    "url": "https://www.myrcm.ch/?dId[O]=7&pLa=en&pId[O]=16&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "36113",
+    "name": "ORC-B Göttingen e.V.",
+    "location": "Göttingen",
+    "country": "Germany",
+    "eventCount": 26,
+    "url": "https://www.myrcm.ch/?dId[O]=36113&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "http://www.orc-b-goettingen.de/"
+  },
+  {
+    "orgId": "573",
+    "name": "ORMC Königsbrunn",
+    "location": "Augsburg",
+    "country": "Germany",
+    "eventCount": 115,
+    "url": "https://www.myrcm.ch/?dId[O]=573&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "http://www.ormck.de/"
+  },
+  {
+    "orgId": "26381",
+    "name": "OstseeRacer RC Modellbau e.V.",
+    "location": "Broderstorf",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=26381&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "http://www.ostseeracer.com/"
+  },
+  {
+    "orgId": "17508",
+    "name": "OTL Offroad Team Langenthal",
+    "location": "Langenthal",
+    "country": "Switzerland",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=17508&pLa=en&pId[O]=16&hId[1]=org",
+    "website": "http://www.otlrc.ch/"
+  },
+  {
+    "orgId": "13247",
+    "name": "PMC Paderborn e.V.",
+    "location": "Paderborn",
+    "country": "Germany",
+    "eventCount": 12,
+    "url": "https://www.myrcm.ch/?dId[O]=13247&pLa=en&pId[O]=17&hId[1]=org",
+    "website": "http://www.paderborner-mc.de/"
+  },
+  {
+    "orgId": "39906",
+    "name": "PR Modellbau GmbH",
+    "location": "Gloten bei Sirnach",
+    "country": "Switzerland",
+    "eventCount": 19,
+    "url": "https://www.myrcm.ch/?dId[O]=39906&pLa=en&pId[O]=17&hId[1]=org",
+    "website": "https://www.pr-modellbau.ch/"
+  },
+  {
+    "orgId": "774",
+    "name": "PSV-Klagenfurt",
+    "location": "Klagenfurt",
+    "country": "Austria",
+    "eventCount": 95,
+    "url": "https://www.myrcm.ch/?dId[O]=774&pLa=en&pId[O]=17&hId[1]=org",
+    "website": "http://www.psv-klagenfurt.at/"
+  },
+  {
+    "orgId": "762",
+    "name": "PSV-Salzburg Automodellsport",
+    "location": "Elsbethen",
+    "country": "Austria",
+    "eventCount": 151,
+    "url": "https://www.myrcm.ch/?dId[O]=762&pLa=en&pId[O]=17&hId[1]=org",
+    "website": "http://www.psv-salzburg.net/"
+  },
+  {
+    "orgId": "30490",
+    "name": "RACERS PARADISE MODELLSPORT",
+    "location": "Erftstadt",
+    "country": "Germany",
+    "eventCount": 70,
+    "url": "https://www.myrcm.ch/?dId[O]=30490&pLa=en&pId[O]=17&hId[1]=org",
+    "website": "http://www.racersparadise.de/"
+  },
+  {
+    "orgId": "38295",
+    "name": "Racing Center Parndorf",
+    "location": "Parndorf",
+    "country": "Austria",
+    "eventCount": 13,
+    "url": "https://www.myrcm.ch/?dId[O]=38295&pLa=en&pId[O]=17&hId[1]=org",
+    "website": "https://www.rcparndorf.at/"
+  },
+  {
+    "orgId": "16149",
+    "name": "Rallye-Club Haltern e.V. im ADAC",
+    "location": "Haltern am See",
+    "country": "Germany",
+    "eventCount": 7,
+    "url": "https://www.myrcm.ch/?dId[O]=16149&pLa=en&pId[O]=18&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "37610",
+    "name": "Rasenracer e.V.",
+    "location": "Alpen",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=37610&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "http://www.rasenracer.de/"
+  },
+  {
+    "orgId": "21125",
+    "name": "RASPEED",
+    "location": "Scheuren",
+    "country": "Switzerland",
+    "eventCount": 22,
+    "url": "https://www.myrcm.ch/?dId[O]=21125&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "http://www.raspeed.ch/"
+  },
+  {
+    "orgId": "21073",
+    "name": "RC - Buggy Indoorbahn",
+    "location": "Regensdorf",
+    "country": "Switzerland",
+    "eventCount": 27,
+    "url": "https://www.myrcm.ch/?dId[O]=21073&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "http://www.rc-indoorbahn.ch/"
+  },
+  {
+    "orgId": "40948",
+    "name": "RC Arena Freienbach",
+    "location": "Freienbach",
+    "country": "Switzerland",
+    "eventCount": 47,
+    "url": "https://www.myrcm.ch/?dId[O]=40948&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "https://sites.google.com/site/embcmtrack/home"
+  },
+  {
+    "orgId": "51129",
+    "name": "RC Car Chemnitz",
+    "location": "Chemnitz",
+    "country": "Germany",
+    "eventCount": 21,
+    "url": "https://www.myrcm.ch/?dId[O]=51129&pLa=en&pId[O]=18&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "55427",
+    "name": "RC Car Freunde Emsdetten e.V.",
+    "location": "Emsdetten",
+    "country": "Germany",
+    "eventCount": 26,
+    "url": "https://www.myrcm.ch/?dId[O]=55427&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "https://www.rcc-emsdetten.de/"
+  },
+  {
+    "orgId": "30429",
+    "name": "RC Car Indoor Minidrom OWL",
+    "location": "Bielefeld",
+    "country": "Germany",
+    "eventCount": 29,
+    "url": "https://www.myrcm.ch/?dId[O]=30429&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "http://rc-car-indoor-minidrom-owl.de.tl/Startseite.htm"
+  },
+  {
+    "orgId": "4708",
+    "name": "Rc Car Ötztal",
+    "location": "Längenfeld",
+    "country": "Austria",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=4708&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "http://www.rc-car-oetztal.com/"
+  },
+  {
+    "orgId": "37209",
+    "name": "RC Cars & Drift St. Wendel",
+    "location": "St. Wendel",
+    "country": "Germany",
+    "eventCount": 8,
+    "url": "https://www.myrcm.ch/?dId[O]=37209&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "https://www.rc-wnd.de/"
+  },
+  {
+    "orgId": "12564",
+    "name": "RC Cars Köngen e.V.",
+    "location": "Stuttgart",
+    "country": "Germany",
+    "eventCount": 89,
+    "url": "https://www.myrcm.ch/?dId[O]=12564&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "http://www.rc-cars-koengen.de/"
+  },
+  {
+    "orgId": "43490",
+    "name": "RC Cars Wernigerode e.V.",
+    "location": "Wernigerode",
+    "country": "Germany",
+    "eventCount": 8,
+    "url": "https://www.myrcm.ch/?dId[O]=43490&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "https://rc-car-wr.de/"
+  },
+  {
+    "orgId": "14101",
+    "name": "RC Club Wyland",
+    "location": "Winterthur",
+    "country": "Switzerland",
+    "eventCount": 25,
+    "url": "https://www.myrcm.ch/?dId[O]=14101&pLa=en&pId[O]=18&hId[1]=org",
+    "website": "https://www.rccw.ch/"
+  },
+  {
+    "orgId": "33778",
+    "name": "RC Drecksloch e.V.",
+    "location": "Oberhausen",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=33778&pLa=en&pId[O]=19&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "44059",
+    "name": "RC Fun Racer e.V",
+    "location": "Velbert",
+    "country": "Germany",
+    "eventCount": 586,
+    "url": "https://www.myrcm.ch/?dId[O]=44059&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://rc-fun-racer.de/"
+  },
+  {
+    "orgId": "42085",
+    "name": "RC Halle e.V.",
+    "location": "Halle",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=42085&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://www.rchalle.de/"
+  },
+  {
+    "orgId": "53665",
+    "name": "RC Modellbaufreunde e.V.",
+    "location": "Attaching",
+    "country": "Germany",
+    "eventCount": 17,
+    "url": "https://www.myrcm.ch/?dId[O]=53665&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://rc-modellbaufreunde.de/"
+  },
+  {
+    "orgId": "55317",
+    "name": "RC Offroad Staaken",
+    "location": "Berlin",
+    "country": "Germany",
+    "eventCount": 13,
+    "url": "https://www.myrcm.ch/?dId[O]=55317&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://www.rcs-offroad.de/"
+  },
+  {
+    "orgId": "37520",
+    "name": "RC Race Team München e.V",
+    "location": "Ainring",
+    "country": "Germany",
+    "eventCount": 25,
+    "url": "https://www.myrcm.ch/?dId[O]=37520&pLa=en&pId[O]=19&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "45781",
+    "name": "Rc Racer Hochsauerland e.V.",
+    "location": "Bestwig",
+    "country": "Germany",
+    "eventCount": 22,
+    "url": "https://www.myrcm.ch/?dId[O]=45781&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://rc-racer-hochsauerland.de/"
+  },
+  {
+    "orgId": "47444",
+    "name": "RC Racers + Toys Shop",
+    "location": "Bad Berneck",
+    "country": "Germany",
+    "eventCount": 33,
+    "url": "https://www.myrcm.ch/?dId[O]=47444&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://nordbayerncup.de/"
+  },
+  {
+    "orgId": "31003",
+    "name": "RC Racing Club Arlesheim",
+    "location": "Arlesheim",
+    "country": "Switzerland",
+    "eventCount": 31,
+    "url": "https://www.myrcm.ch/?dId[O]=31003&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://www.rc-racing-club.ch/"
+  },
+  {
+    "orgId": "45925",
+    "name": "RC Speedracer e.V.",
+    "location": "Bernau",
+    "country": "Germany",
+    "eventCount": 257,
+    "url": "https://www.myrcm.ch/?dId[O]=45925&pLa=en&pId[O]=19&hId[1]=org",
+    "website": "https://www.rcspeedracer.de/"
+  },
+  {
+    "orgId": "35303",
+    "name": "RC Team Sauerland e.V.",
+    "location": "Olpe Kirchesohl",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=35303&pLa=en&pId[O]=20&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "48536",
+    "name": "RC-Bande Zwickau e.V",
+    "location": "Zwickau",
+    "country": "Germany",
+    "eventCount": 19,
+    "url": "https://www.myrcm.ch/?dId[O]=48536&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.modellsport-zwickau.de/"
+  },
+  {
+    "orgId": "175",
+    "name": "RC-Car Shop RaceCrew",
+    "location": "Erftstadt",
+    "country": "Germany",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=175&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://www.der-rc-car-shop.de/"
+  },
+  {
+    "orgId": "9640",
+    "name": "RC-Glashaus e.V.",
+    "location": "Quickborn",
+    "country": "Germany",
+    "eventCount": 48,
+    "url": "https://www.myrcm.ch/?dId[O]=9640&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rc-glashaus.de/"
+  },
+  {
+    "orgId": "18966",
+    "name": "RC-Lords of Dirt",
+    "location": "Sachsenburg",
+    "country": "Austria",
+    "eventCount": 9,
+    "url": "https://www.myrcm.ch/?dId[O]=18966&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://www.rc-lords-of-dirt.at/"
+  },
+  {
+    "orgId": "61583",
+    "name": "RC-MSC Greuthof e.V.",
+    "location": "Wüstenrot",
+    "country": "Germany",
+    "eventCount": 10,
+    "url": "https://www.myrcm.ch/?dId[O]=61583&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rcmsc.de/"
+  },
+  {
+    "orgId": "48425",
+    "name": "RC-Offroad Dortmund e.V.",
+    "location": "Dortmund",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=48425&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rc-offroad-dortmund-ev.de/"
+  },
+  {
+    "orgId": "34102",
+    "name": "RC-Offroad Wattenscheid e.V.",
+    "location": "Bottrop",
+    "country": "Germany",
+    "eventCount": 15,
+    "url": "https://www.myrcm.ch/?dId[O]=34102&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://rc-offroad-wattenscheid.eu/"
+  },
+  {
+    "orgId": "20813",
+    "name": "RC-OffroadCrew Langenfeld e.V.",
+    "location": "Solingen",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=20813&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://www.rc-offroadcrew-langenfeld.de/"
+  },
+  {
+    "orgId": "5208",
+    "name": "RC-RaceArena",
+    "location": "Islikon",
+    "country": "Switzerland",
+    "eventCount": 375,
+    "url": "https://www.myrcm.ch/?dId[O]=5208&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rc-racearena.ch/"
+  },
+  {
+    "orgId": "9965",
+    "name": "RC-Racing Pregarten",
+    "location": "Linz",
+    "country": "Austria",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=9965&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://q7t4u.w4yserver.at/auto/"
+  },
+  {
+    "orgId": "1516",
+    "name": "RC-Schwalmracer e.V.",
+    "location": "Schrecksbach",
+    "country": "Germany",
+    "eventCount": 31,
+    "url": "https://www.myrcm.ch/?dId[O]=1516&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://www.rc-schwalmracer.de/"
+  },
+  {
+    "orgId": "50693",
+    "name": "RC-Sonntagsfahrer e.V.",
+    "location": "Mainhausen",
+    "country": "Germany",
+    "eventCount": 9,
+    "url": "https://www.myrcm.ch/?dId[O]=50693&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rc-sonntagsfahrer.de/"
+  },
+  {
+    "orgId": "4",
+    "name": "RC-Timing",
+    "location": "Oberhasli",
+    "country": "Switzerland",
+    "eventCount": 401,
+    "url": "https://www.myrcm.ch/?dId[O]=4&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rc-timing.ch/"
+  },
+  {
+    "orgId": "1388",
+    "name": "RCB2000, Modellsportverein",
+    "location": "Stockerau",
+    "country": "Austria",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=1388&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://rcb2000.at/"
+  },
+  {
+    "orgId": "33796",
+    "name": "RCC Reken e.V.",
+    "location": "Reken",
+    "country": "Germany",
+    "eventCount": 12,
+    "url": "https://www.myrcm.ch/?dId[O]=33796&pLa=en&pId[O]=20&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "26141",
+    "name": "RCC Sittersdorf",
+    "location": "Sittersdorf",
+    "country": "Austria",
+    "eventCount": 32,
+    "url": "https://www.myrcm.ch/?dId[O]=26141&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://www.rcc-sittersdorf.at/"
+  },
+  {
+    "orgId": "775",
+    "name": "RCC-Grafenwörth",
+    "location": "Grafenwörth",
+    "country": "Austria",
+    "eventCount": 87,
+    "url": "https://www.myrcm.ch/?dId[O]=775&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://rcc-grafenwoerth.at/"
+  },
+  {
+    "orgId": "25565",
+    "name": "RCC-Steinlach e.V.",
+    "location": "Reutlingen",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=25565&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "http://www.rcc-steinlach.de/"
+  },
+  {
+    "orgId": "6492",
+    "name": "RCCars Bergisch-Born e.V.",
+    "location": "Remscheid",
+    "country": "Germany",
+    "eventCount": 66,
+    "url": "https://www.myrcm.ch/?dId[O]=6492&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://www.rccars-bergischborn.de/"
+  },
+  {
+    "orgId": "20891",
+    "name": "RCCR Munzig e.V.",
+    "location": "Klipphausen OT Munzig",
+    "country": "Germany",
+    "eventCount": 95,
+    "url": "https://www.myrcm.ch/?dId[O]=20891&pLa=en&pId[O]=20&hId[1]=org",
+    "website": "https://rccr-munzig.com/"
+  },
+  {
+    "orgId": "134",
+    "name": "RCCT Münden e.V.",
+    "location": "Hann.Münden",
+    "country": "Germany",
+    "eventCount": 46,
+    "url": "https://www.myrcm.ch/?dId[O]=134&pLa=en&pId[O]=20&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "21064",
+    "name": "RCF RC-Festival",
+    "location": "Fehring",
+    "country": "Austria",
+    "eventCount": 56,
+    "url": "https://www.myrcm.ch/?dId[O]=21064&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.powerteam-edelsbach.com/"
+  },
+  {
+    "orgId": "45728",
+    "name": "RCO Ottendorf Okrilla e.V.",
+    "location": "Ottendorf-Okrilla",
+    "country": "Germany",
+    "eventCount": 8,
+    "url": "https://www.myrcm.ch/?dId[O]=45728&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rco-ottendorf-okrilla.de/"
+  },
+  {
+    "orgId": "776",
+    "name": "RCR-Linz",
+    "location": "Linz",
+    "country": "Austria",
+    "eventCount": 154,
+    "url": "https://www.myrcm.ch/?dId[O]=776&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "http://www.rcr-linz.at/"
+  },
+  {
+    "orgId": "15091",
+    "name": "RCRT Duisburg e.V.",
+    "location": "Duisburg",
+    "country": "Germany",
+    "eventCount": 68,
+    "url": "https://www.myrcm.ch/?dId[O]=15091&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rcrt-duisburg.de/"
+  },
+  {
+    "orgId": "16961",
+    "name": "RCSF-Singen e.V.",
+    "location": "Singen",
+    "country": "Germany",
+    "eventCount": 81,
+    "url": "https://www.myrcm.ch/?dId[O]=16961&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rcsf-singen.de/"
+  },
+  {
+    "orgId": "58661",
+    "name": "RCXX.SHOP",
+    "location": "Cham",
+    "country": "Switzerland",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=58661&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rcxx.shop/"
+  },
+  {
+    "orgId": "60396",
+    "name": "RGMC Teck e.V.",
+    "location": "Holzmaden",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=60396&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rgmc-teck.de/"
+  },
+  {
+    "orgId": "26406",
+    "name": "RMC Düren e.V.",
+    "location": "Niederzier",
+    "country": "Germany",
+    "eventCount": 3,
+    "url": "https://www.myrcm.ch/?dId[O]=26406&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "http://www.rmcdueren.de/"
+  },
+  {
+    "orgId": "777",
+    "name": "RMC-Wien",
+    "location": "Schranawand",
+    "country": "Austria",
+    "eventCount": 22,
+    "url": "https://www.myrcm.ch/?dId[O]=777&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "http://www.rmc-wien.at/"
+  },
+  {
+    "orgId": "9703",
+    "name": "RMCB",
+    "location": "Bern",
+    "country": "Switzerland",
+    "eventCount": 92,
+    "url": "https://www.myrcm.ch/?dId[O]=9703&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rmcb.ch/"
+  },
+  {
+    "orgId": "25939",
+    "name": "RT-Fichtenberg e.V.",
+    "location": "Fichtenberg",
+    "country": "Germany",
+    "eventCount": 40,
+    "url": "https://www.myrcm.ch/?dId[O]=25939&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.rt-fichtenberg.de/"
+  },
+  {
+    "orgId": "25165",
+    "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
+    "location": "Salzburg",
+    "country": "Austria",
+    "eventCount": 27,
+    "url": "https://www.myrcm.ch/?dId[O]=25165&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "http://www.sfmav.at/"
+  },
+  {
+    "orgId": "43682",
+    "name": "Sator Events",
+    "location": "Bühl",
+    "country": "Germany",
+    "eventCount": 38,
+    "url": "https://www.myrcm.ch/?dId[O]=43682&pLa=en&pId[O]=21&hId[1]=org",
+    "website": "https://www.sator-events.de/"
+  },
+  {
+    "orgId": "83",
+    "name": "Schneider-Timing-Service",
+    "location": "Lauchheim",
+    "country": "Germany",
+    "eventCount": 6,
+    "url": "https://www.myrcm.ch/?dId[O]=83&pLa=en&pId[O]=22&hId[1]=org",
+    "website": "http://www.schneider-timing-service.de/"
+  },
+  {
+    "orgId": "66122",
+    "name": "Schweriner SC Breitensport e.V.",
+    "location": "Schwerin",
+    "country": "Germany",
+    "eventCount": 7,
+    "url": "https://www.myrcm.ch/?dId[O]=66122&pLa=en&pId[O]=22&hId[1]=org",
+    "website": "https://www.ssc-breitensport.de/"
+  },
+  {
+    "orgId": "62851",
+    "name": "Simbacher Buggyracer e.V.",
+    "location": "Simbach am Inn",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=62851&pLa=en&pId[O]=22&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "60453",
+    "name": "Slottis Supreme Masters",
+    "location": "Sinntal",
+    "country": "Germany",
+    "eventCount": 44,
+    "url": "https://www.myrcm.ch/?dId[O]=60453&pLa=en&pId[O]=22&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "490",
+    "name": "SLR Ingoldstadt 06",
+    "location": "Ingolstadt",
+    "country": "Germany",
+    "eventCount": 24,
+    "url": "https://www.myrcm.ch/?dId[O]=490&pLa=en&pId[O]=22&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "51971",
+    "name": "SMC Stuttgart e.V.",
+    "location": "Stuttgart",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=51971&pLa=en&pId[O]=22&hId[1]=org",
+    "website": "https://www.smc-stuttgart.de/"
+  },
+  {
+    "orgId": "763",
+    "name": "SMRC Wien",
+    "location": "Wien",
+    "country": "Austria",
+    "eventCount": 58,
+    "url": "https://www.myrcm.ch/?dId[O]=763&pLa=en&pId[O]=22&hId[1]=org",
+    "website": "http://www.smrc.at/"
+  },
+  {
+    "orgId": "21160",
+    "name": "Stoppelhopser Oberhausen e.V.",
+    "location": "Oberhausen",
+    "country": "Germany",
+    "eventCount": 21,
+    "url": "https://www.myrcm.ch/?dId[O]=21160&pLa=en&pId[O]=22&hId[1]=org",
+    "website": "http://www.stoppelhopser-oberhausen.de/"
+  },
+  {
+    "orgId": "60911",
+    "name": "Süddeutschland-Cup",
+    "location": "Windach",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=60911&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "https://sueddeutschlandcup.de/"
+  },
+  {
+    "orgId": "24",
+    "name": "Swiss R/C Car Clubs Association",
+    "location": "Gachnang",
+    "country": "Switzerland",
+    "eventCount": 557,
+    "url": "https://www.myrcm.ch/?dId[O]=24&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "http://www.srcca.ch/"
+  },
+  {
+    "orgId": "9425",
+    "name": "Swiss Racing Cup",
+    "location": "Wichtrach",
+    "country": "Switzerland",
+    "eventCount": 67,
+    "url": "https://www.myrcm.ch/?dId[O]=9425&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "https://swissracingcup.ch/"
+  },
+  {
+    "orgId": "47238",
+    "name": "Swiss RC ProTech Sàrl",
+    "location": "Saint-Légier",
+    "country": "Switzerland",
+    "eventCount": 55,
+    "url": "https://www.myrcm.ch/?dId[O]=47238&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "https://swissrcprotech.ch/"
+  },
+  {
+    "orgId": "6328",
+    "name": "Tamiya Cup Austria",
+    "location": "Furth",
+    "country": "Austria",
+    "eventCount": 146,
+    "url": "https://www.myrcm.ch/?dId[O]=6328&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "http://www.tamiya-eurocup.at/"
+  },
+  {
+    "orgId": "36386",
+    "name": "Team Dabo",
+    "location": "Warendorf",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=36386&pLa=en&pId[O]=23&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "17663",
+    "name": "Team Indoor Track Schöftland",
+    "location": "Othmarsingen",
+    "country": "Switzerland",
+    "eventCount": 124,
+    "url": "https://www.myrcm.ch/?dId[O]=17663&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "https://www.indoortrack.ch/"
+  },
+  {
+    "orgId": "529",
+    "name": "Team Speedfreaks Austria",
+    "location": "Krieglach",
+    "country": "Austria",
+    "eventCount": 27,
+    "url": "https://www.myrcm.ch/?dId[O]=529&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "https://www.tsa.co.at/"
+  },
+  {
+    "orgId": "38953",
+    "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
+    "location": "Chemnitz",
+    "country": "Germany",
+    "eventCount": 2,
+    "url": "https://www.myrcm.ch/?dId[O]=38953&pLa=en&pId[O]=23&hId[1]=org",
+    "website": "https://www.tu-chemnitz.de/"
+  },
+  {
+    "orgId": "29586",
+    "name": "Time4Fun",
+    "location": "Idar-Oberstein",
+    "country": "Germany",
+    "eventCount": 24,
+    "url": "https://www.myrcm.ch/?dId[O]=29586&pLa=en&pId[O]=24&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "24531",
+    "name": "ToniSport GmbH",
+    "location": "Andernach",
+    "country": "Germany",
+    "eventCount": 214,
+    "url": "https://www.myrcm.ch/?dId[O]=24531&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "https://www.tonisport.de/"
+  },
+  {
+    "orgId": "506",
+    "name": "TR-Racing",
+    "location": "Gr.Hartmannsdorf 101",
+    "country": "Austria",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=506&pLa=en&pId[O]=24&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "36437",
+    "name": "Trackside",
+    "location": "Erlangen",
+    "country": "Germany",
+    "eventCount": 1,
+    "url": "https://www.myrcm.ch/?dId[O]=36437&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "http://www.trackside.de/"
+  },
+  {
+    "orgId": "991",
+    "name": "TSV 1871 Augsburg e.V.",
+    "location": "Königsbrunn",
+    "country": "Germany",
+    "eventCount": 48,
+    "url": "https://www.myrcm.ch/?dId[O]=991&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "http://www.tsv-1871.de/"
+  },
+  {
+    "orgId": "30389",
+    "name": "TSV Gelenau e.V.",
+    "location": "Gelenau/Erzgebirge",
+    "country": "Germany",
+    "eventCount": 12,
+    "url": "https://www.myrcm.ch/?dId[O]=30389&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "http://www.tsv-gelenau.de/"
+  },
+  {
+    "orgId": "4441",
+    "name": "TSV Kleinburgwedel",
+    "location": "Burgwedel",
+    "country": "Germany",
+    "eventCount": 129,
+    "url": "https://www.myrcm.ch/?dId[O]=4441&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "https://www.rc-car-tsvkleinburgwedel.de/"
+  },
+  {
+    "orgId": "18244",
+    "name": "TSV M97 Berlin RCCR",
+    "location": "Berlin",
+    "country": "Germany",
+    "eventCount": 58,
+    "url": "https://www.myrcm.ch/?dId[O]=18244&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "http://www.msv06-rccar.de/"
+  },
+  {
+    "orgId": "22897",
+    "name": "Turnerschaft 1860 e.V. Großauheim",
+    "location": "Hanau Grossauheim",
+    "country": "Germany",
+    "eventCount": 270,
+    "url": "https://www.myrcm.ch/?dId[O]=22897&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "http://www.mrcgrossauheim.de/"
+  },
+  {
+    "orgId": "59129",
+    "name": "Turngemeinde 1855 Neustadt bei Coburg e.V.",
+    "location": "Neustadt bei Coburg",
+    "country": "Germany",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=59129&pLa=en&pId[O]=24&hId[1]=org",
+    "website": "https://tg-neustadt.de/abteilungen/RC-Motorsport"
+  },
+  {
+    "orgId": "18409",
+    "name": "ub.timing",
+    "location": "Adenau",
+    "country": "Germany",
+    "eventCount": 136,
+    "url": "https://www.myrcm.ch/?dId[O]=18409&pLa=en&pId[O]=24&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "23",
+    "name": "United Model Cars Lyss",
+    "location": "Lyss",
+    "country": "Switzerland",
+    "eventCount": 230,
+    "url": "https://www.myrcm.ch/?dId[O]=23&pLa=en&pId[O]=25&hId[1]=org",
+    "website": "http://www.umcl.ch/"
+  },
+  {
+    "orgId": "54871",
+    "name": "VfL Goldstein 1953 e.V.",
+    "location": "Frankfurt",
+    "country": "Germany",
+    "eventCount": 4,
+    "url": "https://www.myrcm.ch/?dId[O]=54871&pLa=en&pId[O]=25&hId[1]=org",
+    "website": null
+  },
+  {
+    "orgId": "19940",
+    "name": "VFR-Rüsselsheim e.V.",
+    "location": "Rüsselsheim",
+    "country": "Germany",
+    "eventCount": 159,
+    "url": "https://www.myrcm.ch/?dId[O]=19940&pLa=en&pId[O]=25&hId[1]=org",
+    "website": "http://rccar.vfr-ruesselsheim.de/"
+  },
+  {
+    "orgId": "11761",
+    "name": "Wiesbadener Minicar Club e.V.",
+    "location": "Eppstein",
+    "country": "Germany",
+    "eventCount": 29,
+    "url": "https://www.myrcm.ch/?dId[O]=11761&pLa=en&pId[O]=25&hId[1]=org",
+    "website": "https://www.wmc-ev.de/"
+  },
+  {
+    "orgId": "507",
+    "name": "WMW RC-BUGGY-RACING TEAM FEHRING",
+    "location": "Fehring",
+    "country": "Austria",
+    "eventCount": 77,
+    "url": "https://www.myrcm.ch/?dId[O]=507&pLa=en&pId[O]=25&hId[1]=org",
+    "website": "http://www.wmw-fehring.at/"
+  },
+  {
+    "orgId": "1387",
+    "name": "WRC-Drivers",
+    "location": "Schleißheim",
+    "country": "Austria",
+    "eventCount": 31,
+    "url": "https://www.myrcm.ch/?dId[O]=1387&pLa=en&pId[O]=25&hId[1]=org",
+    "website": "http://www.wrc-drivers.at/"
+  }
+]
