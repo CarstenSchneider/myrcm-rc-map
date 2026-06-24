@@ -921,6 +921,17 @@ input {
     color: #fff !important;
     background: var(--pill-bg) !important;
   }
+  .locate-btn.is-active,
+  :root.theme-dark .locate-btn.is-active,
+  :root:not(.theme-light) .locate-btn.is-active {
+    background: var(--accent) !important;
+    color: #fff !important;
+  }
+  .locate-btn.is-active:hover {
+    transform: scale(1.08) !important;
+    background: var(--accent) !important;
+    filter: brightness(1.1);
+  }
 }
 
 /* User location dot with pulsing accuracy ring */
