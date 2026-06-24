@@ -2839,15 +2839,8 @@ let _geocodeMarkerCoords = null;
 
 async function geocodeFallback(query) {
   const key = query.trim().toLowerCase();
-  if (!key) return;
+  if (!key) return false;
   const queryStillCurrent = () => searchInput.value.trim().toLowerCase() === key;
-  const failWithEmpty = () => {
-    if (!queryStillCurrent()) return;
-    if (_geocodePending) {
-      _geocodePending = false;
-      renderList([]);
-    }
-  };
   let coords = _geocodeCache[key];
   if (!coords) {
     try {
@@ -2856,19 +2849,19 @@ async function geocodeFallback(query) {
         { headers: { "Accept-Language": "de", "User-Agent": "rcracemap.com/1.0" } }
       );
       const data = await resp.json();
-      if (!data.length) { failWithEmpty(); return; }
+      if (!data.length) return false;
       coords = { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
       _geocodeCache[key] = coords;
-    } catch { failWithEmpty(); return; }
+    } catch { return false; }
   }
-  if (!queryStillCurrent()) return;
+  if (!queryStillCurrent()) return false;
   const nearbyIds = new Set();
   venues.forEach(venue => {
     if (!hasLatLng(venue)) return;
     if (haversineKm(coords.lat, coords.lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
       nearbyIds.add(String(venue.id));
   });
-  if (!nearbyIds.size) { failWithEmpty(); return; }
+  if (!nearbyIds.size) return false;
   const list = races
     .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
@@ -2877,13 +2870,14 @@ async function geocodeFallback(query) {
     .filter(matchesFavoriteFilter)
     .filter(race => { const venue = venueForRace(race); return venue && nearbyIds.has(String(venue.id)); })
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
-  if (!list.length) { failWithEmpty(); return; }
-  if (!queryStillCurrent()) return;
+  if (!list.length) return false;
+  if (!queryStillCurrent()) return false;
   _geocodePending = false;
   setGeocodeMarker(coords.lat, coords.lng);
   renderList(list);
   updateMarkers(list, false);
   centerOnUserRadius(coords.lat, coords.lng);
+  return true;
 }
 
 function clearGeocodeMarker() {
@@ -3846,33 +3840,31 @@ searchInput.addEventListener("input", () => {
     return;
   }
   if (isMobile()) {
-    // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
-    _searchDebounce = setTimeout(() => {
-      const list = filteredRaces();
-      if (!list.length) {
-        _geocodePending = true;
-        renderList([]);
-        geocodeFallback(query);
-      } else {
+    // 500ms Pause, dann erst Ortssuche, sonst Textsuche
+    _searchDebounce = setTimeout(async () => {
+      _geocodePending = true;
+      renderList([]);
+      const ok = await geocodeFallback(query);
+      if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+        _geocodePending = false;
+        const list = filteredRaces();
         renderList(list);
-        geocodeFallback(query); // parallel: überschreibt bei Ortstrefffer
       }
     }, 500);
     return;
   }
-  // Desktop: Liste sofort, Karte nach 300ms
-  const list = filteredRaces();
-  if (!list.length) {
+  // Desktop: erst Ortssuche, Textsuche als Fallback
+  _searchDebounce = setTimeout(async () => {
     _geocodePending = true;
     renderList([]); // zeigt "Suche…"
-    _searchDebounce = setTimeout(() => geocodeFallback(query), 300);
-  } else {
-    renderList(list);
-    _searchDebounce = setTimeout(() => {
+    const ok = await geocodeFallback(query);
+    if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+      _geocodePending = false;
+      const list = filteredRaces();
+      renderList(list);
       updateMarkers(list, true);
-      geocodeFallback(query); // parallel: überschreibt bei Ortstrefffer
-    }, 300);
-  }
+    }
+  }, 300);
 });
 
 // Enter: sofortige Aktualisierung auf Desktop (schmales Fenster) wo kein blur feuert
