@@ -46,12 +46,15 @@ function emailHtml(rows: RaceRow[], userId: string): string {
       regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>Nennung geschlossen</span>`;
     }
 
+    const announcementLabel = r.announcementUrl?.toLowerCase().endsWith(".pdf")
+      ? "Ausschreibung (PDF) ↗"
+      : "Ausschreibung ↗";
     const announcementLink = r.announcementUrl
-      ? ` &nbsp;·&nbsp; <a href="${r.announcementUrl}" style="color:#6b7280; font-size:13px; text-decoration:none;">Ausschreibung ↗</a>`
+      ? ` &nbsp;·&nbsp; <a href="${r.announcementUrl}" style="color:#6b7280; font-size:13px; text-decoration:none;">${announcementLabel}</a>`
       : "";
 
     const classTags = r.classes.length
-      ? `<div style="margin-top:6px;">${r.classes.slice(0, 6).map(c => `<span class="item-pill" style="display:inline-block;background:#f3f4f6;color:#6b7280;font-size:11px;padding:2px 8px;border-radius:999px;margin:2px 2px 0 0;">${escHtml(c)}</span>`).join("")}${r.classes.length > 6 ? `<span style="font-size:11px;color:#9ca3af;"> +${r.classes.length - 6}</span>` : ""}</div>`
+      ? `<div style="margin-top:6px;">${r.classes.map(c => `<span class="item-pill" style="display:inline-block;background:#f3f4f6;color:#6b7280;font-size:11px;padding:2px 8px;border-radius:999px;margin:2px 2px 0 0;">${escHtml(c)}</span>`).join("")}</div>`
       : "";
 
     return `
