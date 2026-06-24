@@ -641,6 +641,7 @@ function appendAdsCard() {
   card.className = "club-card";
   card.innerHTML = `
     <div class="club-carousel" data-banner="${bannerId}">
+      <span class="club-ad-label">Anzeige</span>
       <div class="club-slides">
         ${_ads.map((ad, i) => `
           <div class="club-slide${i === 0 ? " is-active" : ""}">
