@@ -3753,12 +3753,19 @@ searchInput.addEventListener("input", () => {
   clearTimeout(_searchDebounce);
   _geocodePending = false;
   clearGeocodeMarker();
+  const query = searchInput.value.trim();
+  // Sofortiger Update bei leerem Feld (X-Button) — kein Debounce, kein blur nötig
+  if (!query) {
+    const list = filteredRaces();
+    renderList(list);
+    updateMarkers(list, true);
+    return;
+  }
   if (isMobile()) {
     // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
     _searchDebounce = setTimeout(() => {
       const list = filteredRaces();
-      const query = searchInput.value.trim();
-      if (!list.length && query) {
+      if (!list.length) {
         _geocodePending = true;
         renderList([]);
         geocodeFallback(query);
@@ -3770,14 +3777,13 @@ searchInput.addEventListener("input", () => {
   }
   // Desktop: Liste sofort, Karte nach 300ms
   const list = filteredRaces();
-  const query = searchInput.value.trim();
-  if (!list.length && query) {
+  if (!list.length) {
     _geocodePending = true;
     renderList([]); // zeigt "Suche…"
     _searchDebounce = setTimeout(() => geocodeFallback(query), 300);
   } else {
     renderList(list);
-    if (list.length) _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
+    _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
   }
 });
 
