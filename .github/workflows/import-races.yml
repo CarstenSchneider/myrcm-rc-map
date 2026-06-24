@@ -15,7 +15,7 @@ concurrency:
 jobs:
   import:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 360
 
     steps:
       - name: Checkout main
@@ -46,37 +46,35 @@ jobs:
 
           git add $RCK_FILES
           if git diff --staged --quiet; then
-            echo "main: keine RCK-Änderungen"
+            echo "Keine RCK-Änderungen."
           else
             git commit -m "Update RCK race data"
             git push origin main
-          fi
 
-          git checkout -B dev origin/dev
-          git checkout main -- $RCK_FILES
-          if git diff --staged --quiet; then
-            echo "dev: keine RCK-Änderungen"
-          else
+            git checkout -B dev origin/dev
+            git checkout main -- $RCK_FILES
             git commit -m "Update RCK race data"
             git push origin dev
-          fi
 
-          git checkout main
+            git checkout main
+          fi
 
       - name: Wait for MyRCM availability
         run: |
-          for i in 1 2 3 4 5; do
-            echo "Versuch $i..."
+          for i in $(seq 1 10); do
+            echo "Versuch $i/10 — $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
             if curl --fail --silent --location \
-              --connect-timeout 10 --max-time 25 \
+              --connect-timeout 15 --max-time 30 \
               https://www.myrcm.ch/ > /dev/null; then
-              echo "MyRCM erreichbar"
+              echo "MyRCM erreichbar."
               exit 0
             fi
-            echo "Nicht erreichbar, warte 5 Minuten..."
-            sleep 300
+            if [ "$i" -lt 10 ]; then
+              echo "Nicht erreichbar — warte 20 Minuten..."
+              sleep 1200
+            fi
           done
-          echo "MyRCM nach 5 Versuchen nicht erreichbar, Import übersprungen"
+          echo "MyRCM nach 10 Versuchen nicht erreichbar — Import abgebrochen."
           exit 1
 
       - name: Import MyRCM races
@@ -88,17 +86,34 @@ jobs:
 
           git add $MYRCM_FILES
           if git diff --staged --quiet; then
-            echo "main: keine MyRCM-Änderungen"
+            echo "Keine MyRCM-Änderungen."
           else
             git commit -m "Update MyRCM race data"
             git push origin main
-          fi
 
-          git checkout -B dev origin/dev
-          git checkout main -- $MYRCM_FILES
-          if git diff --staged --quiet; then
-            echo "dev: keine MyRCM-Änderungen"
-          else
+            git checkout -B dev origin/dev
+            git checkout main -- $MYRCM_FILES
             git commit -m "Update MyRCM race data"
             git push origin dev
+
+            git checkout main
           fi
+
+      - name: Send race notifications
+        if: success()
+        run: |
+          echo "Sende Renn-Benachrichtigungen — $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          HTTP_CODE=$(curl --silent \
+            --output /tmp/notif-body.txt \
+            --write-out "%{http_code}" \
+            --request POST \
+            --url "https://ncsqbncxctofkmabmwku.supabase.co/functions/v1/send-race-notifications" \
+            --header "Authorization: Bearer sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P" \
+            --header "Content-Type: application/json")
+          echo "HTTP $HTTP_CODE"
+          cat /tmp/notif-body.txt
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "Benachrichtigung fehlgeschlagen (HTTP $HTTP_CODE)"
+            exit 1
+          fi
+          echo "Benachrichtigungen erfolgreich versendet."
