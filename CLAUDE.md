@@ -15,7 +15,7 @@ Der User testet **ausschließlich auf dev.rcracemap.com**, nie lokal. Nach jeder
 - **Karte:** Leaflet 1.9.4 + MapLibre GL JS 5.23.0 via `@maplibre/maplibre-gl-leaflet`
 - **Tiles:** Stadia Maps (`alidade_smooth` / `alidade_smooth_dark`)
 - **Backend:** Supabase (Auth + Postgres) für Favoriten, Notifications, Theme-Präferenz
-- **Deployment:** Hetzner via SFTP (lftp), GitHub Actions
+- **Deployment:** Hetzner Managed Server via SFTP (lftp), GitHub Actions
 
 ## Architektur
 
@@ -26,7 +26,13 @@ Der User testet **ausschließlich auf dev.rcracemap.com**, nie lokal. Nach jeder
 - `panToVisible(latlng, zoom)` — verschiebt projizierten Punkt um +207px (Desktop) damit geografisches Zentrum bei `W/2 - 207` erscheint (Mitte des sichtbaren Bereichs links vom Panel). Setzt `lastVisibleCenter`.
 - `fitMapToBounds(bounds, options)` — Desktop: `getBoundsZoom` mit 207px symmetrischem Padding + `panToVisible`. Mobile: Leaflet `fitBounds` mit Drawer-Padding.
 - `updateMarkers(list, shouldFitBounds)` — rendert Marker; ruft `fitMapToBounds` wenn `shouldFitBounds = true`
-- `render()` — ruft `updateMarkers(list, !initialRenderDone)`. `initialRenderDone` wird nur auf `true` gesetzt wenn `venues.length > 0` (verhindert Frühzeitiges Setzen durch `onAuthStateChange` vor Datenladen)
+- `render()` — ruft `updateMarkers(list, !initialRenderDone)`. `initialRenderDone` wird nur auf `true` gesetzt wenn `venues.length > 0` (verhindert frühzeitiges Setzen durch `onAuthStateChange` vor Datenladen)
+
+### MAX_BOUNDS
+```js
+const MAX_BOUNDS = [[35.0, -5.0], [62.0, 30.0]];
+```
+Bewusst weiter als DACH: `panToVisible` verschiebt das Kartenzentrum auf Mobile bis ~200px südlich des Ziel-Venues. Leaflet's `_limitCenter` prüft ob der **gesamte Container** (nicht nur das Zentrum) innerhalb der Bounds liegt. Bei Zoom 6 + Container-Höhe 764px ergibt das ~6° Spielraum. Der Südrand 35°N gibt genug Puffer für alle DACH-Venues.
 
 ### Map-Styling
 ```js
@@ -45,6 +51,11 @@ Events die `applyRcRaceMapStyle` auslösen:
 **Ursache:** `onAuthStateChange` (inkl. TOKEN_REFRESHED) rief `sbPullPreferences()` auf → `setTheme()` → `mlMap.setStyle(url)` = voller Style-Reload = Flash.
 **Fix (v87):** `sbPullPreferences` ruft `setTheme` nur auf wenn DB-Theme ≠ localStorage-Theme.
 
+### Mobile Drawer
+- Zustände: `"collapsed"` (H - 64px), `"half"` (80 + (H-80)×0.5), `"full"` (80px)
+- `setDrawerState(state)` ruft `map.invalidateSize({ pan: false })` — `pan: false` verhindert unkontrolliertes Neuzentrieren
+- `panToVisible` berechnet Shift direkt aus CSS-Mathematik (nicht aus `getBoundingClientRect`), da die Drawer-Transition 0.32s dauert und DOM-Messung mid-animation falsche Werte liefert
+
 ### Daten
 - `venues` — Array von Strecken (verwende `.find()`)
 - `races` — Array von Rennen (myrcm + rck)
@@ -61,7 +72,6 @@ Events die `applyRcRaceMapStyle` auslösen:
 
 ### Resize & Window-Load
 ```js
-// window.load: invalidateSize korrigiert Leaflet-Maße, danach panToVisible re-zentrieren
 window.addEventListener("load", () => {
   setDrawerState("half");
   requestAnimationFrame(() => {
@@ -73,26 +83,83 @@ window.addEventListener("load", () => {
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
 });
-
 // Resize: nur bei Breakpoint-Crossing (860px) re-zentrieren
-let resizeWasMobile = window.matchMedia("(max-width: 860px)").matches;
 // debounced 150ms, ruft panToVisible wenn Breakpoint gequert
 ```
 
 ## Deployment
 
 ### Workflows
-| Workflow | Branch | Ziel |
+| Workflow | Trigger | Ziel |
 |---|---|---|
 | `deploy-site-dev-hetzner.yml` | `dev` push | `rcracemap-dev/` (nur HTML/JS/CSS) |
 | `deploy-site-main-hetzner.yml` | `main` push | `.` (root inkl. JSON-Daten) |
 | `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten |
-| `import-myrcm.yml` / `import-rck.yml` | manuell | Renndaten importieren |
+| `import-races.yml` | täglich 04:00 UTC + manuell | Renndaten importieren + Notifications senden |
+
+**Wichtig:** `deploy-site-dev-hetzner.yml` kopiert **keine** JSON-Daten — diese bleiben vom letzten `deploy-data-dev-hetzner.yml` oder `import-races.yml` Lauf.
 
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v87**, **style.css v51**
+Aktuelle Version: **app.js v152**, **style.css v105**
+
+## Import-System
+
+### import-races.yml — Ablauf
+1. **Wait for MyRCM** — 10 Versuche × 20 Minuten (max. 3h 20min), Job-Timeout 360min
+2. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0), läuft immer zuverlässig
+3. **Import MyRCM** — `npm run import` → `import-myrcm.js`
+4. **Commit** — alle JSON-Dateien in einem Commit zu `main` und `dev` (nur wenn Änderungen)
+5. **Send notifications** — POST an Supabase Edge Function
+
+### import-myrcm.js — Fehlerbehandlung
+```js
+async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
+```
+**Nach jedem Netzwerkfehler** (Event-Detail oder Host-Seite):
+- `isMyrcmReachable()` → **true**: einzelner Bad Event/Host, überspringen (`return null` / `continue`)
+- `isMyrcmReachable()` → **false**: systemischer Ausfall → `throw error` → Retry nach 30s (max. 3 Versuche)
+
+`parseEvents()` filtert `null`-Werte mit `races.filter(Boolean)`.
+
+**Buchungsseiten-Check:** Die Nennseite (`hId[1]=bkg`) wird beim Import abgerufen. Enthält sie "Booking not possible", "Registration closed" oder "Booking closed", wird `registrationStatus` auf `"closed"` gesetzt — unabhängig vom Status auf der Listenseite.
+
+### Datendateien
+| Datei | Inhalt |
+|---|---|
+| `races.json` | MyRCM-Rennen |
+| `rck-races.json` | RCK-Rennen |
+| `venues.json` | Strecken |
+| `hosts.json` | Clubs |
+| `venue-unmatched.json` | nicht zugeordnete Venues |
+| `rck-venue-candidates.json` | RCK Venue-Kandidaten |
+
+## Notification-System
+
+### Supabase Edge Function: `send-race-notifications`
+- Datei: `supabase/functions/send-race-notifications/index.ts`
+- Wird aufgerufen: nach jedem erfolgreichen Import via `import-races.yml`
+- Liest Daten von Production: `https://rcracemap.com/races.json` + `rck-races.json` + `venues.json`
+- Sendet Email via **Resend API** (`noreply@rcracemap.com`)
+
+### Datenbank-Tabellen
+- `venue_notifications` — Abonnements: `(user_id, host_id)`, enthält Favoriten mit aktivierter Glocke
+- `seen_race_notifications` — Deduplizierung: `(user_id, race_id, notif_type)` verhindert doppelte Emails
+
+### Notification-Typen
+- `new_race` — neues Rennen bei abonniertem Verein
+- `registration_open` — Nennung geöffnet
+
+### Email neu senden (Test)
+1. Supabase Dashboard → Table Editor → `seen_race_notifications` → eigene Zeilen löschen (Filter: `user_id = [eigene UUID]`)
+2. GitHub → Actions → Import races → Run workflow
+
+### Anon Key (öffentlich, bereits in app.js)
+```
+sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P
+```
+Supabase URL: `https://ncsqbncxctofkmabmwku.supabase.co`
 
 ## Wichtige Design-Entscheidungen
 
@@ -109,10 +176,16 @@ Klick auf Popup (inkl. Streckenname / Route-Button) pinnt die Strecke: `isPopupP
 - `--status-upcoming: #4A9EE8` (hellblau, nicht orange)
 - Definiert in CSS und als JS-Fallback `var(--status-upcoming, #4A9EE8)`
 
+### Warum myrcm.ch manchmal scheitert
+myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitHub Actions IPs sind **nicht** geblockt — die Timeouts sind transient. Der `isMyrcmReachable()`-Check unterscheidet individuelle Bad Events von systemischen Ausfällen.
+
 ## Bekannte Stolperfallen
 1. **`venues` ist Array, `markers` ist Map** — `.find()` vs `.get()`
 2. **`initialRenderDone`** wird nur gesetzt wenn `venues.length > 0`
 3. **`panToVisible`** setzt `lastVisibleCenter` — wichtig für Resize-Handler
 4. **Kein Debounce auf `styledata`** — direkter Aufruf
 5. **`sbPullPreferences`** ruft `setTheme` nur bei echten Änderungen auf
-6. **Dev-Deploy** kopiert keine JSON-Daten — diese bleiben vom letzten manuellen Data-Deploy
+6. **Dev-Deploy** kopiert keine JSON-Daten — `deploy-data-dev-hetzner.yml` manuell ausführen
+7. **MAX_BOUNDS** muss Südrand ≤35°N haben — sonst snap-back bei österreichischen Venues auf Mobile
+8. **`map.invalidateSize({ pan: false })`** in `setDrawerState` — `pan: false` ist entscheidend
+9. **Notification-Funktion** liest von Production (`rcracemap.com`), nicht von dev — auf dev testen macht keinen Sinn
