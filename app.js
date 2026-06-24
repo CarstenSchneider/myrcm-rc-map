@@ -3012,10 +3012,17 @@ let lastVisibleCenter = null;
 function panToVisible(latlng, zoom) {
   lastVisibleCenter = latlng;
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  const pt = map.project(latlng, zoom);
-  const shifted = isMobile
-    ? L.point(pt.x, pt.y + 8)
-    : L.point(pt.x + 207, pt.y - 40);
+  const px = map.project(latlng, zoom);
+  let shifted;
+  if (isMobile) {
+    const pad = mapPadding();
+    // Center the point in the visible area above the drawer:
+    // visible area Y center = (pad.pt + (H - pad.pb)) / 2 — shift by (pad.pb - pad.pt) / 2 downward in tile space
+    const shift = Math.round((pad.pb - pad.pt) / 2);
+    shifted = L.point(px.x, px.y + shift);
+  } else {
+    shifted = L.point(px.x + 207, px.y - 40);
+  }
   map.setMaxBounds(null);
   map.setView(map.unproject(shifted, zoom), zoom, { animate: false });
   map.setMaxBounds(MAX_BOUNDS);
