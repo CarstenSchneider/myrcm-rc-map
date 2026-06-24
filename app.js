@@ -2796,8 +2796,26 @@ function filteredRaces() {
     .filter(isInSelectedRange)
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
-    .filter(matchesFavoriteFilter)
-    .filter(race => !query || raceSearchText(race).includes(query));
+    .filter(matchesFavoriteFilter);
+
+  // Geocode aktiv: Radius-Filter statt Textsuche, damit Filteränderungen den Geocode-Bereich behalten
+  if (_geocodeMarkerCoords) {
+    const { lat, lng } = _geocodeMarkerCoords;
+    const nearbyIds = new Set();
+    venues.forEach(venue => {
+      if (!hasLatLng(venue)) return;
+      if (haversineKm(lat, lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+        nearbyIds.add(String(venue.id));
+    });
+    list = list.filter(race => {
+      const venue = venueForRace(race);
+      return venue && nearbyIds.has(String(venue.id));
+    });
+    return list.sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+  }
+
+  // Textsuche (nur wenn kein Geocode aktiv)
+  list = list.filter(race => !query || raceSearchText(race).includes(query));
 
   if (_userLatLng) {
     const { lat, lng } = _userLatLng;
