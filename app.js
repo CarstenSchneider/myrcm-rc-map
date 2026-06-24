@@ -18,7 +18,7 @@ const map = L.map("map", {
   zoomControl: false,
   attributionControl: false,
   minZoom: 6
-}).setView([51.3, 10.5], 6);
+}).setView([48.5, 10.5], 6);
 
 // Bounds are wider than DACH: panToVisible shifts the actual map center south by up
 // to ~200px to place venues in the visible area above the mobile drawer. Leaflet's
@@ -4127,7 +4127,7 @@ async function init() {
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
-    fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`myrcm-hosts-dach.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog)
   ]);
 
