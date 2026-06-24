@@ -902,6 +902,9 @@ input {
     left: 14px !important;
     bottom: auto !important;
     margin: 0 !important;
+    width: 52px !important;
+    height: 52px !important;
+    box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09) !important;
   }
   :root.theme-dark .locate-btn,
   :root:not(.theme-light) .locate-btn {
