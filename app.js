@@ -30,28 +30,40 @@ L.control.zoom({
 
 let _userLocationLayer = null;
 let _userLatLng = null;
+let _locateBtn = null;
 
 const LocateControl = L.Control.extend({
   options: { position: "bottomleft" },
   onAdd() {
-    const btn = L.DomUtil.create("button", "locate-btn");
-    btn.type = "button";
-    btn.setAttribute("aria-label", "Meinen Standort anzeigen");
-    btn.title = "Meinen Standort anzeigen";
-    btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>`;
-    L.DomEvent.on(btn, "click", L.DomEvent.stop);
-    L.DomEvent.on(btn, "click", () => locateUser(btn));
-    return btn;
+    _locateBtn = L.DomUtil.create("button", "locate-btn");
+    _locateBtn.type = "button";
+    _locateBtn.setAttribute("aria-label", "Meinen Standort anzeigen");
+    _locateBtn.title = "Meinen Standort anzeigen";
+    _locateBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>`;
+    L.DomEvent.on(_locateBtn, "click", L.DomEvent.stop);
+    L.DomEvent.on(_locateBtn, "click", () => locateUser(_locateBtn));
+    return _locateBtn;
   }
 });
 new LocateControl().addTo(map);
 
+function clearLocationFilter() {
+  if (!_locateBtn?.classList.contains("is-active")) return;
+  _locateBtn.classList.remove("is-active");
+  _userLatLng = null;
+  if (_userLocationLayer) { map.removeLayer(_userLocationLayer); _userLocationLayer = null; }
+  renderList(filteredRaces());
+  updateMarkers(filteredRaces(), true);
+}
+
 function locateUser(btn) {
   if (!navigator.geolocation) return;
+  if (btn.classList.contains("is-active")) { clearLocationFilter(); return; }
   btn.classList.add("is-locating");
   navigator.geolocation.getCurrentPosition(
     ({ coords: { latitude: lat, longitude: lng, accuracy } }) => {
       btn.classList.remove("is-locating");
+      btn.classList.add("is-active");
       const latlng = L.latLng(lat, lng);
       _userLatLng = { lat, lng };
       if (_userLocationLayer) map.removeLayer(_userLocationLayer);
@@ -2861,6 +2873,7 @@ function clearGeocodeMarker() {
 
 function setGeocodeMarker(lat, lng) {
   clearGeocodeMarker();
+  clearLocationFilter();
   _geocodeMarkerCoords = { lat, lng };
   const h = raceMapMarkerBaseHeight;
   const w = Math.round(h * mapPinViewBox.width / mapPinViewBox.height);
@@ -3802,6 +3815,7 @@ searchInput.addEventListener("input", () => {
   clearTimeout(_searchDebounce);
   _geocodePending = false;
   clearGeocodeMarker();
+  clearLocationFilter();
   const query = searchInput.value.trim();
   // Sofortiger Update bei leerem Feld (X-Button) — kein Debounce, kein blur nötig
   if (!query) {
@@ -3843,6 +3857,7 @@ searchInput.addEventListener("keydown", (e) => {
   clearTimeout(_searchDebounce);
   _geocodePending = false;
   clearGeocodeMarker();
+  clearLocationFilter();
   const list = filteredRaces();
   const query = searchInput.value.trim();
   if (!list.length && query) {
@@ -3860,6 +3875,7 @@ searchInput.addEventListener("blur", () => {
   const list = filteredRaces();
   const query = searchInput.value.trim();
   clearGeocodeMarker();
+  clearLocationFilter();
   // Wait for keyboard to fully dismiss so window.innerHeight is correct
   setTimeout(() => {
     if (!list.length && query) {
