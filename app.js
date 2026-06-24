@@ -94,12 +94,14 @@ function locateUser(btn) {
           });
         renderList(list);
         updateMarkers(list, false);
-        const bounds = [[lat, lng]];
-        list.forEach(race => {
-          const venue = venueForRace(race);
-          if (venue && hasLatLng(venue)) bounds.push([Number(venue.lat), Number(venue.lng)]);
-        });
-        fitMapToBounds(bounds);
+        // Symmetrische Bounding Box um User-Position: User bleibt im Mittelpunkt
+        // des sichtbaren Bereichs, und der volle 75km-Radius ist sichtbar
+        const dLat = GEO_RADIUS_KM / 111;
+        const dLng = GEO_RADIUS_KM / (111 * Math.cos(lat * Math.PI / 180));
+        fitMapToBounds([
+          [lat - dLat, lng - dLng],
+          [lat + dLat, lng + dLng]
+        ]);
       } else {
         panToVisible(latlng, 9);
       }
