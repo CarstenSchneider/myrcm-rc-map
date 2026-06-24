@@ -1708,11 +1708,20 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
 
     const detailDocuments = extractDocumentsFromHtml(detailHtml, detailUrl);
     let registrationDocuments = [];
+    let bookingPageClosed = false;
 
     if (regUrl) {
       try {
         const registrationHtml = await fetchText(regUrl);
         registrationDocuments = extractDocumentsFromHtml(registrationHtml, regUrl);
+        const regLower = registrationHtml.toLowerCase();
+        if (
+          regLower.includes("booking not possible") ||
+          regLower.includes("registration closed") ||
+          regLower.includes("booking closed")
+        ) {
+          bookingPageClosed = true;
+        }
       } catch (error) {
         console.warn(`  Nennseite konnte nicht nach PDFs geprüft werden: ${regUrl}`);
         console.warn(`    ${error.message}`);
@@ -1722,7 +1731,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
     const documents = mergeDocuments(detailDocuments, registrationDocuments);
 
     const registrationInfo = registrationInfoFromText(eventLink.registrationText);
-    const registrationStatus = registrationInfo.registrationStatus;
+    const registrationStatus = bookingPageClosed ? "closed" : registrationInfo.registrationStatus;
 
     const registrationListInfo = await enrichFromRegistrationList(eventLink.eventId, {
       registrationCount: eventLink.registrationCount,
