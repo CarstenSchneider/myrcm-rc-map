@@ -3397,6 +3397,8 @@ function renderVenueNoRaces(latestPastRace) {
 }
 
 function renderList(list) {
+  document.querySelector(".race-panel")?.scrollTo(0, 0);
+  document.getElementById("mobRaceList")?.scrollTo(0, 0);
   resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
