@@ -24,6 +24,30 @@
     "verificationStatus": "verifiziert"
   },
   {
+    "id": "rck-msc-lowenring-outdoor-braunschweig",
+    "name": "MSC-Löwenring (Outdoor)",
+    "city": "Braunschweig",
+    "address": "Hermann-Blenk-Straße 8",
+    "postalCode": "38108",
+    "country": "DE",
+    "lat": null,
+    "lng": null,
+    "source": "rck",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "rckLocation": "Braunschweig",
+    "organizerName": "MSC der Polizei Braunschweig im ADAC e.V",
+    "hostId": "msc-der-polizei-braunschweig-im-adac-e-v",
+    "hostName": "MSC der Polizei Braunschweig im ADAC e.V",
+    "website": "https://msc-polizei-bs.de",
+    "sourcePdf": "https://challenge.rck-solutions.de/ausschreibung/202520260719Non260623%201829.pdf",
+    "addressVerifiedFromPdf": true,
+    "verified": true,
+    "verificationStatus": "verifiziert"
+  },
+  {
     "id": "rck-neubrandenburg-city-circuit-neubrandenburg",
     "name": "Neubrandenburg City Circuit",
     "city": "Neubrandenburg",
