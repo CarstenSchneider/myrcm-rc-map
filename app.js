@@ -2814,14 +2814,15 @@ function clearGeocodeMarker() {
 function setGeocodeMarker(lat, lng) {
   clearGeocodeMarker();
   _geocodeMarkerCoords = { lat, lng };
-  const w = 16, h = 19;
+  const h = raceMapMarkerBaseHeight;
+  const w = Math.round(h * mapPinViewBox.width / mapPinViewBox.height);
   const svg = mapPinSvgDataUri(rcRaceMapColors.markerClosed, w, h);
   _geocodeMarker = L.marker([lat, lng], {
     interactive: false,
     zIndexOffset: -100,
     icon: L.divIcon({
       className: "",
-      html: `<div class="map-marker-venue-inactive map-marker-visual" style="width:${w}px;height:${h}px;background-image:url('${svg}');--marker-delay:0ms;opacity:0.7;"></div>`,
+      html: `<div class="map-marker-venue-inactive map-marker-visual" style="width:${w}px;height:${h}px;background-image:url('${svg}');--marker-delay:0ms;"></div>`,
       iconSize: [w, h],
       iconAnchor: [Math.round(w / 2), h]
     })
