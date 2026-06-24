@@ -3015,11 +3015,14 @@ function panToVisible(latlng, zoom) {
   const px = map.project(latlng, zoom);
   let shifted;
   if (isMobile) {
-    const pad = mapPadding();
-    // Center the point in the visible area above the drawer:
-    // visible area Y center = (pad.pt + (H - pad.pb)) / 2 — shift by (pad.pb - pad.pt) / 2 downward in tile space
-    const shift = Math.round((pad.pb - pad.pt) / 2);
-    shifted = L.point(px.x, px.y + shift);
+    // Use actual drawer DOM position — correct regardless of drawerState variable timing
+    const drawerEl = document.getElementById("mobDrawer");
+    const drawerTop = drawerEl
+      ? drawerEl.getBoundingClientRect().top
+      : window.innerHeight * 0.5;
+    const topbarH = 80;
+    const shift = Math.round(window.innerHeight / 2 - (topbarH + drawerTop) / 2);
+    shifted = L.point(px.x, px.y + Math.max(shift, 4));
   } else {
     shifted = L.point(px.x + 207, px.y - 40);
   }
@@ -3275,9 +3278,7 @@ const popupOffset = hasUpcomingRaces
       marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
       marker.openPopup();
 
-      if (window.matchMedia("(max-width: 860px)").matches) {
-        panToVisible([venue.lat, venue.lng], map.getZoom());
-      }
+      panToVisible([venue.lat, venue.lng], map.getZoom());
 
       window.setTimeout(() => {
         isSwitchingMarkerPopup = false;
