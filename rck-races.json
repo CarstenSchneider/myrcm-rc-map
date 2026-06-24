@@ -25,8 +25,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 7,
-    "registrationDisplay": "7",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "comingSoon": false,
     "note": null,
     "rckGroup": "West",
@@ -58,7 +58,7 @@
       },
       {
         "name": "Tamiya TT",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -413,8 +413,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -434,7 +434,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Stock Challenge",
@@ -633,8 +633,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Ost",
@@ -654,7 +654,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "LMH",
