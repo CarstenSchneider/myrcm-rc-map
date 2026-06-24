@@ -3015,13 +3015,19 @@ function panToVisible(latlng, zoom) {
   const px = map.project(latlng, zoom);
   let shifted;
   if (isMobile) {
-    // Use actual drawer DOM position — correct regardless of drawerState variable timing
-    const drawerEl = document.getElementById("mobDrawer");
-    const drawerTop = drawerEl
-      ? drawerEl.getBoundingClientRect().top
-      : window.innerHeight * 0.5;
+    const H = window.innerHeight;
+    // Compute expected drawer top from CSS snap states (avoids mid-transition DOM reads):
+    // .mob-drawer: top:80px, height:H-80. translateY values per state:
+    //   full:      translateY(0)          → top = 80
+    //   half:      translateY(50%)        → top = 80 + (H-80)*0.5
+    //   collapsed: translateY(100%-64px)  → top = H-64
+    const drawerTop = drawerState === "collapsed"
+      ? H - 64
+      : drawerState === "full"
+      ? 80
+      : 80 + (H - 80) * 0.5;
     const topbarH = 80;
-    const shift = Math.round(window.innerHeight / 2 - (topbarH + drawerTop) / 2);
+    const shift = Math.round(H / 2 - (topbarH + drawerTop) / 2);
     shifted = L.point(px.x, px.y + Math.max(shift, 4));
   } else {
     shifted = L.point(px.x + 207, px.y - 40);
