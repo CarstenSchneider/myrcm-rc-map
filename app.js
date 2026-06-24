@@ -2750,10 +2750,17 @@ function haversineKm(lat1, lng1, lat2, lng2) {
 
 const _geocodeCache = {};
 const GEO_RADIUS_KM = 75;
+let _geocodePending = false;
 
 async function geocodeFallback(query) {
   const key = query.trim().toLowerCase();
   if (!key) return;
+  const queryStillCurrent = () => searchInput.value.trim().toLowerCase() === key;
+  const failWithEmpty = () => {
+    if (!queryStillCurrent()) return;
+    _geocodePending = false;
+    renderList([]);
+  };
   let coords = _geocodeCache[key];
   if (!coords) {
     try {
@@ -2762,20 +2769,19 @@ async function geocodeFallback(query) {
         { headers: { "Accept-Language": "de", "User-Agent": "rcracemap.com/1.0" } }
       );
       const data = await resp.json();
-      if (!data.length) return;
+      if (!data.length) { failWithEmpty(); return; }
       coords = { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
       _geocodeCache[key] = coords;
-    } catch { return; }
+    } catch { failWithEmpty(); return; }
   }
-  // Abort if user has already changed the query
-  if (searchInput.value.trim().toLowerCase() !== key) return;
+  if (!queryStillCurrent()) return;
   const nearbyIds = new Set();
   venues.forEach(venue => {
     if (!hasLatLng(venue)) return;
     if (haversineKm(coords.lat, coords.lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
       nearbyIds.add(String(venue.id));
   });
-  if (!nearbyIds.size) return;
+  if (!nearbyIds.size) { failWithEmpty(); return; }
   const list = races
     .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
@@ -2784,9 +2790,9 @@ async function geocodeFallback(query) {
     .filter(matchesFavoriteFilter)
     .filter(race => { const venue = venueForRace(race); return venue && nearbyIds.has(String(venue.id)); })
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
-  if (!list.length) return;
-  // Check again query hasn't changed
-  if (searchInput.value.trim().toLowerCase() !== key) return;
+  if (!list.length) { failWithEmpty(); return; }
+  if (!queryStillCurrent()) return;
+  _geocodePending = false;
   renderList(list);
   updateMarkers(list, true);
 }
@@ -3264,6 +3270,10 @@ function renderList(list) {
 
   if (!list.length) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
+    if (_geocodePending) {
+      raceList.innerHTML = `<div class="empty-state">Suche…</div>`;
+      return;
+    }
     raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
     return;
   }
@@ -3710,25 +3720,33 @@ searchInput.addEventListener("input", () => {
   activeRaceId = null;
   updateAppModeClass();
   clearTimeout(_searchDebounce);
+  _geocodePending = false;
   if (isMobile()) {
     // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
     _searchDebounce = setTimeout(() => {
       const list = filteredRaces();
-      renderList(list);
-      if (!list.length && searchInput.value.trim()) geocodeFallback(searchInput.value.trim());
+      const query = searchInput.value.trim();
+      if (!list.length && query) {
+        _geocodePending = true;
+        renderList([]);
+        geocodeFallback(query);
+      } else {
+        renderList(list);
+      }
     }, 500);
     return;
   }
   // Desktop: Liste sofort, Karte nach 300ms
   const list = filteredRaces();
-  renderList(list);
-  _searchDebounce = setTimeout(() => {
-    if (list.length) {
-      updateMarkers(list, true);
-    } else if (searchInput.value.trim()) {
-      geocodeFallback(searchInput.value.trim());
-    }
-  }, 300);
+  const query = searchInput.value.trim();
+  if (!list.length && query) {
+    _geocodePending = true;
+    renderList([]); // zeigt "Suche…"
+    _searchDebounce = setTimeout(() => geocodeFallback(query), 300);
+  } else {
+    renderList(list);
+    if (list.length) _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
+  }
 });
 
 // Enter: sofortige Aktualisierung auf Desktop (schmales Fenster) wo kein blur feuert
@@ -3736,25 +3754,32 @@ searchInput.addEventListener("keydown", (e) => {
   if (e.key !== "Enter") return;
   e.preventDefault();
   clearTimeout(_searchDebounce);
+  _geocodePending = false;
   const list = filteredRaces();
-  renderList(list);
-  if (list.length) {
-    updateMarkers(list, true);
-  } else if (searchInput.value.trim()) {
-    geocodeFallback(searchInput.value.trim());
+  const query = searchInput.value.trim();
+  if (!list.length && query) {
+    _geocodePending = true;
+    renderList([]); // zeigt "Suche…"
+    geocodeFallback(query);
+  } else {
+    renderList(list);
+    if (list.length) updateMarkers(list, true);
   }
 });
 
 searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
   const list = filteredRaces();
-  renderList(list);
+  const query = searchInput.value.trim();
   // Wait for keyboard to fully dismiss so window.innerHeight is correct
   setTimeout(() => {
-    if (list.length) {
-      updateMarkers(list, true);
-    } else if (searchInput.value.trim()) {
-      geocodeFallback(searchInput.value.trim());
+    if (!list.length && query) {
+      _geocodePending = true;
+      renderList([]); // zeigt "Suche…"
+      geocodeFallback(query);
+    } else {
+      renderList(list);
+      if (list.length) updateMarkers(list, true);
     }
   }, 150);
 });
