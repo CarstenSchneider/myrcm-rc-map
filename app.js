@@ -3618,6 +3618,16 @@ searchInput.addEventListener("input", () => {
   _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
 });
 
+// Enter: sofortige Aktualisierung auf Desktop (schmales Fenster) wo kein blur feuert
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key !== "Enter") return;
+  e.preventDefault();
+  clearTimeout(_searchDebounce);
+  const list = filteredRaces();
+  renderList(list);
+  updateMarkers(list, true);
+});
+
 searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
   const list = filteredRaces();
