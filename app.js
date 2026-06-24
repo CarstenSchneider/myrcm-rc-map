@@ -94,14 +94,7 @@ function locateUser(btn) {
           });
         renderList(list);
         updateMarkers(list, false);
-        // Symmetrische Bounding Box um User-Position: User bleibt im Mittelpunkt
-        // des sichtbaren Bereichs, und der volle 75km-Radius ist sichtbar
-        const dLat = GEO_RADIUS_KM / 111;
-        const dLng = GEO_RADIUS_KM / (111 * Math.cos(lat * Math.PI / 180));
-        fitMapToBounds([
-          [lat - dLat, lng - dLng],
-          [lat + dLat, lng + dLng]
-        ]);
+        centerOnUserRadius(lat, lng);
       } else {
         panToVisible(latlng, 9);
       }
@@ -112,6 +105,25 @@ function locateUser(btn) {
     },
     { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
   );
+}
+
+// Zentriert den User-Standort exakt in der Mitte des sichtbaren Kartenbereichs
+// und zeigt den vollen GEO_RADIUS_KM-Radius. Auf Mobile: symmetrisches Padding
+// links/oben/rechts + nur unten Drawer-Abstand, so dass der Mittelpunkt auf H*0.25 landet.
+function centerOnUserRadius(lat, lng) {
+  const isMobileNow = window.matchMedia("(max-width: 860px)").matches;
+  const dLat = GEO_RADIUS_KM / 111;
+  const dLng = GEO_RADIUS_KM / (111 * Math.cos(lat * Math.PI / 180));
+  const bounds = [[lat - dLat, lng - dLng], [lat + dLat, lng + dLng]];
+  if (isMobileNow) {
+    // Symmetrisches Padding links/oben/rechts = 20px; unten = Drawer-Höhe
+    // → Inhalt-Mittelpunkt landet bei H*0.25 = Mitte des sichtbaren Bereichs über dem Drawer
+    const { pb } = mapPadding();
+    map.fitBounds(bounds, { paddingTopLeft: [20, 20], paddingBottomRight: [20, pb] });
+  } else {
+    // Desktop: symmetrische Box → panToVisible zentriert User im sichtbaren Bereich
+    fitMapToBounds(bounds);
+  }
 }
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
