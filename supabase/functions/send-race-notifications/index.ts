@@ -236,12 +236,16 @@ serve(async (req) => {
   }
 
   // 3. Fetch races data from the public JSON (same source as frontend)
-  const [racesRes, venuesRes] = await Promise.all([
+  const [racesRes, venuesRes, rckRacesRes] = await Promise.all([
     fetch("https://rcracemap.com/races.json").then(r => r.json()).catch(() => []),
     fetch("https://rcracemap.com/venues.json").then(r => r.json()).catch(() => []),
+    fetch("https://rcracemap.com/rck-races.json").then(r => r.json()).catch(() => []),
   ]);
 
-  const races: any[] = Array.isArray(racesRes) ? racesRes : [];
+  const races: any[] = [
+    ...(Array.isArray(racesRes) ? racesRes : []),
+    ...(Array.isArray(rckRacesRes) ? rckRacesRes : []),
+  ];
   const venues: any[] = Array.isArray(venuesRes) ? venuesRes : [];
   const venueById = new Map(venues.map((v: any) => [String(v.id), v]));
 
@@ -296,7 +300,7 @@ serve(async (req) => {
       if (!isNewRace && !isNewOpen) continue;
 
       const venue = venueById.get(String(race.venueId ?? race.venue_id ?? ""));
-      const venueName = venue?.name ?? race.hostName ?? race.organizerName ?? "";
+      const venueName = venue?.name ?? race.venueName ?? race.hostName ?? race.organizerName ?? "";
       const raceName = race.name ?? race.title ?? "";
       const raceDate = formatDateRange(race.from ?? race.date, race.to);
       const classes = (race.classes ?? []).map((c: any) => typeof c === "string" ? c : c?.name ?? "").filter(Boolean);

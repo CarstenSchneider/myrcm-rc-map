@@ -32,33 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Import RCK races
-        run: node import-rck.js
-        env:
-          RCK_GEOCODE: "0"
-
-      - name: Commit RCK data to main and dev
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          RCK_FILES="rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
-
-          git add $RCK_FILES
-          if git diff --staged --quiet; then
-            echo "Keine RCK-Änderungen."
-          else
-            git commit -m "Update RCK race data"
-            git push origin main
-
-            git checkout -B dev origin/dev
-            git checkout main -- $RCK_FILES
-            git commit -m "Update RCK race data"
-            git push origin dev
-
-            git checkout main
-          fi
-
       - name: Wait for MyRCM availability
         run: |
           for i in $(seq 1 10); do
@@ -77,23 +50,31 @@ jobs:
           echo "MyRCM nach 10 Versuchen nicht erreichbar — Import abgebrochen."
           exit 1
 
+      - name: Import RCK races
+        run: node import-rck.js
+        env:
+          RCK_GEOCODE: "0"
+
       - name: Import MyRCM races
         run: npm run import
 
-      - name: Commit MyRCM data to main and dev
+      - name: Commit all race data to main and dev
         run: |
-          MYRCM_FILES="races.json hosts.json venues.json venue-unmatched.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add $MYRCM_FILES
+          ALL_FILES="races.json hosts.json venues.json venue-unmatched.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
+
+          git add $ALL_FILES
           if git diff --staged --quiet; then
-            echo "Keine MyRCM-Änderungen."
+            echo "Keine Änderungen."
           else
-            git commit -m "Update MyRCM race data"
+            git commit -m "Update race data"
             git push origin main
 
             git checkout -B dev origin/dev
-            git checkout main -- $MYRCM_FILES
-            git commit -m "Update MyRCM race data"
+            git checkout main -- $ALL_FILES
+            git commit -m "Update race data"
             git push origin dev
 
             git checkout main
