@@ -906,20 +906,28 @@ input {
     height: 52px !important;
     box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09) !important;
   }
-  :root.theme-dark .locate-btn,
-  :root:not(.theme-light) .locate-btn {
+  :root.theme-dark .locate-btn {
     color: #fff !important;
     background: var(--pill-bg) !important;
   }
   .locate-btn.is-active,
-  :root.theme-dark .locate-btn.is-active,
-  :root:not(.theme-light) .locate-btn.is-active {
+  :root.theme-dark .locate-btn.is-active {
     background: var(--accent) !important;
     color: #fff !important;
   }
   .locate-btn.is-active:hover {
     background: var(--accent) !important;
     filter: brightness(1.1);
+  }
+}
+@media (max-width: 860px) and (prefers-color-scheme: dark) {
+  :root:not(.theme-light) .locate-btn {
+    color: #fff !important;
+    background: var(--pill-bg) !important;
+  }
+  :root:not(.theme-light) .locate-btn.is-active {
+    background: var(--accent) !important;
+    color: #fff !important;
   }
 }
 
