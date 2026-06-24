@@ -20,7 +20,11 @@ const map = L.map("map", {
   minZoom: 6
 }).setView([51.3, 10.5], 6);
 
-const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
+// Bounds are wider than DACH: panToVisible shifts the actual map center south by up
+// to ~200px to place venues in the visible area above the mobile drawer. Leaflet's
+// _limitCenter enforces bounds against the full container view (not the visible area),
+// so the south edge needs room for that shift + container half-height at zoom 6.
+const MAX_BOUNDS = [[35.0, -5.0], [62.0, 30.0]];
 map.setMaxBounds(MAX_BOUNDS);
 
 
@@ -4235,8 +4239,9 @@ function setDrawerState(state) {
   if (!mobDrawer) return;
   mobDrawer.classList.remove("mob-drawer--collapsed", "mob-drawer--half", "mob-drawer--full");
   mobDrawer.classList.add(`mob-drawer--${state}`);
-  // Let Leaflet know the full map area is available regardless of drawer position
-  if (map) requestAnimationFrame(() => map.invalidateSize());
+  // Let Leaflet know the full map area is available regardless of drawer position.
+  // pan:false prevents Leaflet from re-centering the map when the container size changes.
+  if (map) requestAnimationFrame(() => map.invalidateSize({ pan: false }));
 }
 
 // ── Track filter section height via CSS variable ───────────────
