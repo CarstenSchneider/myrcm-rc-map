@@ -54,6 +54,16 @@ if (!window.matchMedia("(max-width: 860px)").matches) {
     leafletContainer?.remove();
   }
 }
+if (!localStorage.getItem("locateBtnHinted")) {
+  setTimeout(() => {
+    if (!_locateBtn) return;
+    _locateBtn.classList.add("attention-pulse");
+    _locateBtn.addEventListener("animationend", () => {
+      _locateBtn.classList.remove("attention-pulse");
+      localStorage.setItem("locateBtnHinted", "1");
+    }, { once: true });
+  }, 2500);
+}
 
 function clearLocationFilter() {
   if (!_locateBtn?.classList.contains("is-active")) return;
@@ -65,6 +75,8 @@ function clearLocationFilter() {
 }
 
 function locateUser(btn) {
+  localStorage.setItem("locateBtnHinted", "1");
+  btn.classList.remove("attention-pulse");
   if (!navigator.geolocation) return;
   if (btn.classList.contains("is-active")) { clearLocationFilter(); return; }
   btn.classList.add("is-locating");
