@@ -402,6 +402,21 @@ function orgEventDetailUrl(host, eventId) {
   return target.toString();
 }
 
+async function isMyrcmReachable() {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+    const res = await fetch("https://www.myrcm.ch/", {
+      signal: controller.signal,
+      headers: { "user-agent": "Mozilla/5.0 myrcm-rc-map importer" }
+    });
+    clearTimeout(timer);
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
 async function fetchText(url, attempt = 0) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
@@ -1761,7 +1776,12 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
   } catch (error) {
     console.warn(`  Event-Detail konnte nicht geladen werden: ${detailUrl}`);
     console.warn(`    ${error.message}`);
-    return null;
+    if (await isMyrcmReachable()) {
+      console.warn("  MyRCM noch erreichbar — Event wird übersprungen.");
+      return null;
+    }
+    console.warn("  MyRCM nicht erreichbar — Import wird abgebrochen.");
+    throw error;
   }
 }
 
@@ -1851,6 +1871,11 @@ async function runImportOnce() {
     } catch (error) {
       console.warn(`  Netzwerkfehler bei Host: ${host.name}`);
       console.warn(`    ${error.message}`);
+      if (await isMyrcmReachable()) {
+        console.warn("  MyRCM noch erreichbar — Host wird übersprungen.");
+        continue;
+      }
+      console.warn("  MyRCM nicht erreichbar — Import wird abgebrochen.");
       throw error;
     }
 
