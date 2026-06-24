@@ -2881,12 +2881,7 @@ async function geocodeFallback(query) {
   setGeocodeMarker(coords.lat, coords.lng);
   renderList(list);
   updateMarkers(list, false);
-  const bounds = [[coords.lat, coords.lng]];
-  list.forEach(race => {
-    const venue = venueForRace(race);
-    if (venue && hasLatLng(venue)) bounds.push([Number(venue.lat), Number(venue.lng)]);
-  });
-  fitMapToBounds(bounds);
+  centerOnUserRadius(coords.lat, coords.lng);
 }
 
 function clearGeocodeMarker() {
@@ -3996,6 +3991,14 @@ window.addEventListener("resize", () => {
     const crossedBreakpoint = isMobile !== resizeWasMobile;
     resizeWasMobile = isMobile;
     map.invalidateSize({ pan: false });
+    if (crossedBreakpoint && _locateBtn) {
+      const desktopSlot = document.getElementById("locateDesktopSlot");
+      if (isMobile) {
+        document.body.appendChild(_locateBtn);
+      } else if (desktopSlot) {
+        desktopSlot.appendChild(_locateBtn);
+      }
+    }
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
