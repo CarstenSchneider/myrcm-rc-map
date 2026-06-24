@@ -20,13 +20,129 @@ const map = L.map("map", {
   minZoom: 6
 }).setView([51.3, 10.5], 6);
 
-const MAX_BOUNDS = [[43.0, -3.0], [60.0, 27.0]];
+// Bounds are wider than DACH: panToVisible shifts the actual map center south by up
+// to ~200px to place venues in the visible area above the mobile drawer. Leaflet's
+// _limitCenter enforces bounds against the full container view (not the visible area),
+// so the south edge needs room for that shift + container half-height at zoom 6.
+const MAX_BOUNDS = [[35.0, -5.0], [62.0, 30.0]];
 map.setMaxBounds(MAX_BOUNDS);
 
 
 L.control.zoom({
   position: "bottomleft"
 }).addTo(map);
+
+let _userLocationLayer = null;
+let _userLatLng = null;
+let _locateBtn = null;
+
+const LocateControl = L.Control.extend({
+  options: { position: "bottomleft" },
+  onAdd() {
+    _locateBtn = L.DomUtil.create("button", "locate-btn");
+    _locateBtn.type = "button";
+    _locateBtn.setAttribute("aria-label", "Meinen Standort anzeigen");
+    _locateBtn.title = "Meinen Standort anzeigen";
+    _locateBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>`;
+    L.DomEvent.on(_locateBtn, "click", L.DomEvent.stop);
+    L.DomEvent.on(_locateBtn, "click", () => locateUser(_locateBtn));
+    return _locateBtn;
+  }
+});
+new LocateControl().addTo(map);
+if (!window.matchMedia("(max-width: 860px)").matches) {
+  const desktopSlot = document.getElementById("locateDesktopSlot");
+  if (desktopSlot && _locateBtn) {
+    const leafletContainer = _locateBtn.parentElement;
+    desktopSlot.appendChild(_locateBtn);
+    leafletContainer?.remove();
+  }
+}
+if (!localStorage.getItem("locateBtnHinted")) {
+  setTimeout(() => {
+    if (!_locateBtn) return;
+    _locateBtn.classList.add("attention-pulse");
+    _locateBtn.addEventListener("animationend", () => {
+      _locateBtn.classList.remove("attention-pulse");
+      localStorage.setItem("locateBtnHinted", "1");
+    }, { once: true });
+  }, 2500);
+}
+
+function clearLocationFilter() {
+  if (!_locateBtn?.classList.contains("is-active")) return;
+  _locateBtn.classList.remove("is-active");
+  _userLatLng = null;
+  if (_userLocationLayer) { map.removeLayer(_userLocationLayer); _userLocationLayer = null; }
+  renderList(filteredRaces());
+  updateMarkers(filteredRaces(), true);
+}
+
+function locateUser(btn) {
+  localStorage.setItem("locateBtnHinted", "1");
+  btn.classList.remove("attention-pulse");
+  if (!navigator.geolocation) return;
+  if (btn.classList.contains("is-active")) { clearLocationFilter(); return; }
+  btn.classList.add("is-locating");
+  navigator.geolocation.getCurrentPosition(
+    ({ coords: { latitude: lat, longitude: lng, accuracy } }) => {
+      btn.classList.remove("is-locating");
+      btn.classList.add("is-active");
+      const latlng = L.latLng(lat, lng);
+      _userLatLng = { lat, lng };
+      if (_userLocationLayer) map.removeLayer(_userLocationLayer);
+      _userLocationLayer = L.layerGroup([
+        L.circle(latlng, {
+          radius: Math.min(accuracy, 10000),
+          color: "#4A9EE8", fillColor: "#4A9EE8", fillOpacity: 0.12,
+          weight: 1, interactive: false
+        }),
+        L.marker(latlng, {
+          icon: L.divIcon({
+            className: "",
+            html: '<div class="user-location-dot"></div>',
+            iconSize: [16, 16], iconAnchor: [8, 8]
+          }),
+          interactive: false, zIndexOffset: 2000
+        })
+      ]).addTo(map);
+
+      const hasNearbyVenues = venues.some(v => hasLatLng(v) && haversineKm(lat, lng, v.lat, v.lng) <= GEO_RADIUS_KM);
+      const list = filteredRaces();
+      renderList(list);
+      updateMarkers(list, false);
+      if (hasNearbyVenues) {
+        centerOnUserRadius(lat, lng);
+      } else {
+        panToVisible(latlng, 9);
+      }
+    },
+    (err) => {
+      btn.classList.remove("is-locating");
+      console.warn("Geolocation:", err.message);
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+  );
+}
+
+// Zentriert den User-Standort exakt in der Mitte des sichtbaren Kartenbereichs
+// und zeigt den vollen GEO_RADIUS_KM-Radius. Auf Mobile: symmetrisches Padding
+// links/oben/rechts + nur unten Drawer-Abstand, so dass der Mittelpunkt auf H*0.25 landet.
+function centerOnUserRadius(lat, lng) {
+  const isMobileNow = window.matchMedia("(max-width: 860px)").matches;
+  const dLat = GEO_RADIUS_KM / 111;
+  const dLng = GEO_RADIUS_KM / (111 * Math.cos(lat * Math.PI / 180));
+  const bounds = [[lat - dLat, lng - dLng], [lat + dLat, lng + dLng]];
+  if (isMobileNow) {
+    // Symmetrisches Padding links/oben/rechts = 20px; unten = Drawer-Höhe
+    // → Inhalt-Mittelpunkt landet bei H*0.25 = Mitte des sichtbaren Bereichs über dem Drawer
+    const { pb } = mapPadding();
+    map.fitBounds(bounds, { paddingTopLeft: [20, 20], paddingBottomRight: [20, pb] });
+  } else {
+    // Desktop: symmetrische Box → panToVisible zentriert User im sichtbaren Bereich
+    fitMapToBounds(bounds);
+  }
+}
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColorsLight = {
@@ -590,6 +706,7 @@ function appendAdsCard() {
   card.className = "club-card";
   card.innerHTML = `
     <div class="club-carousel" data-banner="${bannerId}">
+      <span class="club-ad-label">Anzeige</span>
       <div class="club-slides">
         ${_ads.map((ad, i) => `
           <div class="club-slide${i === 0 ? " is-active" : ""}">
@@ -2678,14 +2795,135 @@ if (selectedRange === "all") {
 function filteredRaces() {
   const query = searchInput.value.trim().toLowerCase();
 
-  return races
+  let list = races
+    .filter(isUsefulRckRace)
+    .filter(isInSelectedRange)
+    .filter(matchesRegistrationVisibility)
+    .filter(matchesSelectedSeries)
+    .filter(matchesFavoriteFilter);
+
+  // Geocode aktiv: Radius-Filter statt Textsuche, damit Filteränderungen den Geocode-Bereich behalten
+  if (_geocodeMarkerCoords) {
+    const { lat, lng } = _geocodeMarkerCoords;
+    const nearbyIds = new Set();
+    venues.forEach(venue => {
+      if (!hasLatLng(venue)) return;
+      if (haversineKm(lat, lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+        nearbyIds.add(String(venue.id));
+    });
+    list = list.filter(race => {
+      const venue = venueForRace(race);
+      return venue && nearbyIds.has(String(venue.id));
+    });
+    return list.sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+  }
+
+  // Textsuche (nur wenn kein Geocode aktiv)
+  list = list.filter(race => !query || raceSearchText(race).includes(query));
+
+  if (_userLatLng) {
+    const { lat, lng } = _userLatLng;
+    const nearbyIds = new Set();
+    venues.forEach(venue => {
+      if (!hasLatLng(venue)) return;
+      if (haversineKm(lat, lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+        nearbyIds.add(String(venue.id));
+    });
+    list = list.filter(race => {
+      const venue = venueForRace(race);
+      return venue && nearbyIds.has(String(venue.id));
+    });
+    return list.sort((a, b) => {
+      const va = venueForRace(a), vb = venueForRace(b);
+      const da = va ? haversineKm(lat, lng, Number(va.lat), Number(va.lng)) : Infinity;
+      const db = vb ? haversineKm(lat, lng, Number(vb.lat), Number(vb.lng)) : Infinity;
+      return da - db || a.from.localeCompare(b.from);
+    });
+  }
+
+  return list.sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+}
+
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const φ1 = lat1 * Math.PI / 180, φ2 = lat2 * Math.PI / 180;
+  const dφ = (lat2 - lat1) * Math.PI / 180;
+  const dλ = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(dλ / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+const _geocodeCache = {};
+const GEO_RADIUS_KM = 75;
+let _geocodePending = false;
+let _geocodeMarker = null;
+let _geocodeMarkerCoords = null;
+
+async function geocodeFallback(query) {
+  const key = query.trim().toLowerCase();
+  if (!key) return false;
+  const queryStillCurrent = () => searchInput.value.trim().toLowerCase() === key;
+  let coords = _geocodeCache[key];
+  if (!coords) {
+    try {
+      const resp = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(key)}&format=json&limit=1&countrycodes=de,at,ch`,
+        { headers: { "Accept-Language": "de", "User-Agent": "rcracemap.com/1.0" } }
+      );
+      const data = await resp.json();
+      if (!data.length) return false;
+      coords = { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+      _geocodeCache[key] = coords;
+    } catch { return false; }
+  }
+  if (!queryStillCurrent()) return false;
+  const nearbyIds = new Set();
+  venues.forEach(venue => {
+    if (!hasLatLng(venue)) return;
+    if (haversineKm(coords.lat, coords.lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+      nearbyIds.add(String(venue.id));
+  });
+  if (!nearbyIds.size) return false;
+  const list = races
     .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
     .filter(matchesFavoriteFilter)
-    .filter(race => !query || raceSearchText(race).includes(query))
+    .filter(race => { const venue = venueForRace(race); return venue && nearbyIds.has(String(venue.id)); })
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+  if (!list.length) return false;
+  if (!queryStillCurrent()) return false;
+  _geocodePending = false;
+  setGeocodeMarker(coords.lat, coords.lng);
+  renderList(list);
+  updateMarkers(list, false);
+  centerOnUserRadius(coords.lat, coords.lng);
+  return true;
+}
+
+function clearGeocodeMarker() {
+  if (_geocodeMarker) { _geocodeMarker.remove(); _geocodeMarker = null; }
+  _geocodeMarkerCoords = null;
+}
+
+function setGeocodeMarker(lat, lng) {
+  clearGeocodeMarker();
+  clearLocationFilter();
+  _geocodeMarkerCoords = { lat, lng };
+  const h = raceMapMarkerBaseHeight;
+  const w = Math.round(h * mapPinViewBox.width / mapPinViewBox.height);
+  const svg = mapPinSvgDataUri(rcRaceMapColors.markerClosed, w, h);
+  _geocodeMarker = L.marker([lat, lng], {
+    interactive: false,
+    zIndexOffset: -100,
+    icon: L.divIcon({
+      className: "",
+      html: `<div class="map-marker-venue-inactive map-marker-visual" style="width:${w}px;height:${h}px;background-image:url('${svg}');--marker-delay:0ms;"></div>`,
+      iconSize: [w, h],
+      iconAnchor: [Math.round(w / 2), h]
+    })
+  }).addTo(map);
 }
 
 function googleMapsRouteUrl(venue) {
@@ -2778,10 +3016,26 @@ let lastVisibleCenter = null;
 function panToVisible(latlng, zoom) {
   lastVisibleCenter = latlng;
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  const pt = map.project(latlng, zoom);
-  const shifted = isMobile
-    ? L.point(pt.x, pt.y + 8)
-    : L.point(pt.x + 207, pt.y - 40);
+  const px = map.project(latlng, zoom);
+  let shifted;
+  if (isMobile) {
+    const H = window.innerHeight;
+    // Compute expected drawer top from CSS snap states (avoids mid-transition DOM reads):
+    // .mob-drawer: top:80px, height:H-80. translateY values per state:
+    //   full:      translateY(0)          → top = 80
+    //   half:      translateY(50%)        → top = 80 + (H-80)*0.5
+    //   collapsed: translateY(100%-64px)  → top = H-64
+    const drawerTop = drawerState === "collapsed"
+      ? H - 64
+      : drawerState === "full"
+      ? 80
+      : 80 + (H - 80) * 0.5;
+    const topbarH = 80;
+    const shift = Math.round(H / 2 - (topbarH + drawerTop) / 2);
+    shifted = L.point(px.x, px.y + Math.max(shift, 4));
+  } else {
+    shifted = L.point(px.x + 207, px.y - 40);
+  }
   map.setMaxBounds(null);
   map.setView(map.unproject(shifted, zoom), zoom, { animate: false });
   map.setMaxBounds(MAX_BOUNDS);
@@ -3034,9 +3288,7 @@ const popupOffset = hasUpcomingRaces
       marker.setPopupContent(buildPopup(venue, venueRaces, latestPastRace));
       marker.openPopup();
 
-      if (window.matchMedia("(max-width: 860px)").matches) {
-        panToVisible([venue.lat, venue.lng], map.getZoom());
-      }
+      panToVisible([venue.lat, venue.lng], map.getZoom());
 
       window.setTimeout(() => {
         isSwitchingMarkerPopup = false;
@@ -3156,11 +3408,17 @@ function renderVenueNoRaces(latestPastRace) {
 }
 
 function renderList(list) {
+  document.querySelector(".race-panel")?.scrollTo(0, 0);
+  document.getElementById("mobRaceList")?.scrollTo(0, 0);
   resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
   if (!list.length) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
+    if (_geocodePending) {
+      raceList.innerHTML = `<div class="empty-state">Suche…</div>`;
+      return;
+    }
     raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
     return;
   }
@@ -3254,6 +3512,7 @@ function renderList(list) {
     for (const venue of venues) {
       if (venueIdsInList.has(String(venue.id))) continue;
       if (!isFavoriteHostId(venue.id)) continue;
+      if (_userLatLng && hasLatLng(venue) && haversineKm(_userLatLng.lat, _userLatLng.lng, venue.lat, venue.lng) > GEO_RADIUS_KM) continue;
       const past = latestPastRaceForVenue(venue);
       if (!past) continue;
       const [, card] = buildPastRaceCardEl(past);
@@ -3607,33 +3866,95 @@ searchInput.addEventListener("input", () => {
   activeRaceId = null;
   updateAppModeClass();
   clearTimeout(_searchDebounce);
-  if (isMobile()) {
-    // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
-    _searchDebounce = setTimeout(() => renderList(filteredRaces()), 500);
+  _geocodePending = false;
+  clearGeocodeMarker();
+  clearLocationFilter();
+  const query = searchInput.value.trim();
+  renderActiveFilterChips(); // Suchpille sofort anzeigen/entfernen
+  // Sofortiger Update bei leerem Feld (X-Button) — kein Debounce, kein blur nötig
+  if (!query) {
+    const list = filteredRaces();
+    renderList(list);
+    updateMarkers(list, true);
     return;
   }
-  // Desktop: Liste sofort, Karte nach 300ms
-  const list = filteredRaces();
-  renderList(list);
-  _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
+  if (isMobile()) {
+    // 500ms Pause, dann erst Ortssuche, sonst Textsuche
+    _searchDebounce = setTimeout(async () => {
+      _geocodePending = true;
+      renderList([]);
+      const ok = await geocodeFallback(query);
+      if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+        _geocodePending = false;
+        const list = filteredRaces();
+        renderList(list);
+      }
+    }, 500);
+    return;
+  }
+  // Desktop: erst Ortssuche, Textsuche als Fallback
+  _searchDebounce = setTimeout(async () => {
+    _geocodePending = true;
+    renderList([]); // zeigt "Suche…"
+    const ok = await geocodeFallback(query);
+    if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+      _geocodePending = false;
+      const list = filteredRaces();
+      renderList(list);
+      updateMarkers(list, true);
+    }
+  }, 300);
 });
 
 // Enter: sofortige Aktualisierung auf Desktop (schmales Fenster) wo kein blur feuert
-searchInput.addEventListener("keydown", (e) => {
+searchInput.addEventListener("keydown", async (e) => {
   if (e.key !== "Enter") return;
   e.preventDefault();
   clearTimeout(_searchDebounce);
-  const list = filteredRaces();
-  renderList(list);
-  updateMarkers(list, true);
+  _geocodePending = false;
+  clearGeocodeMarker();
+  clearLocationFilter();
+  const query = searchInput.value.trim();
+  if (!query) {
+    const list = filteredRaces();
+    renderList(list);
+    updateMarkers(list, true);
+    return;
+  }
+  _geocodePending = true;
+  renderList([]); // zeigt "Suche…"
+  const ok = await geocodeFallback(query);
+  if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+    _geocodePending = false;
+    const list = filteredRaces();
+    renderList(list);
+    updateMarkers(list, true);
+  }
 });
 
 searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
-  const list = filteredRaces();
-  renderList(list);
+  const query = searchInput.value.trim();
+  clearGeocodeMarker();
+  clearLocationFilter();
   // Wait for keyboard to fully dismiss so window.innerHeight is correct
-  setTimeout(() => updateMarkers(list, true), 150);
+  setTimeout(async () => {
+    if (!query) {
+      const list = filteredRaces();
+      renderList(list);
+      updateMarkers(list, true);
+      return;
+    }
+    _geocodePending = true;
+    renderList([]); // zeigt "Suche…"
+    const ok = await geocodeFallback(query);
+    if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+      _geocodePending = false;
+      const list = filteredRaces();
+      renderList(list);
+      updateMarkers(list, true);
+    }
+  }, 150);
 });
 
 if (filterToggleButton) {
@@ -3682,6 +4003,7 @@ if (activeFilterChips) {
 
     if (button.dataset.clearFilter === "search") {
       searchInput.value = "";
+      clearGeocodeMarker();
     }
 
     if (button.dataset.clearFilter === "series") {
@@ -3719,6 +4041,14 @@ window.addEventListener("resize", () => {
     const crossedBreakpoint = isMobile !== resizeWasMobile;
     resizeWasMobile = isMobile;
     map.invalidateSize({ pan: false });
+    if (crossedBreakpoint && _locateBtn) {
+      const desktopSlot = document.getElementById("locateDesktopSlot");
+      if (isMobile) {
+        document.body.appendChild(_locateBtn);
+      } else if (desktopSlot) {
+        desktopSlot.appendChild(_locateBtn);
+      }
+    }
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
@@ -3909,8 +4239,9 @@ function setDrawerState(state) {
   if (!mobDrawer) return;
   mobDrawer.classList.remove("mob-drawer--collapsed", "mob-drawer--half", "mob-drawer--full");
   mobDrawer.classList.add(`mob-drawer--${state}`);
-  // Let Leaflet know the full map area is available regardless of drawer position
-  if (map) requestAnimationFrame(() => map.invalidateSize());
+  // Let Leaflet know the full map area is available regardless of drawer position.
+  // pan:false prevents Leaflet from re-centering the map when the container size changes.
+  if (map) requestAnimationFrame(() => map.invalidateSize({ pan: false }));
 }
 
 // ── Track filter section height via CSS variable ───────────────
@@ -4340,6 +4671,7 @@ function applyTheme(theme) {
   if (venues?.length) {
     updateMarkers(filteredRaces(), false);
   }
+  if (_geocodeMarkerCoords) setGeocodeMarker(_geocodeMarkerCoords.lat, _geocodeMarkerCoords.lng);
 }
 
 function setTheme(theme) {
