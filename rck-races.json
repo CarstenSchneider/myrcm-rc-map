@@ -413,8 +413,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -434,7 +434,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Stock Challenge",
@@ -489,8 +489,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -506,7 +506,7 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "GT Challenge",
@@ -561,8 +561,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -590,7 +590,7 @@
       },
       {
         "name": "M-Chassis",
-        "entries": 0
+        "entries": 1
       }
     ],
     "documents": [
@@ -1145,8 +1145,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 59,
-    "registrationDisplay": "59",
+    "registrationCount": 60,
+    "registrationDisplay": "60",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -1167,7 +1167,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 27
+        "entries": 28
       },
       {
         "name": "VTA",
