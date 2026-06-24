@@ -3021,10 +3021,11 @@ input {
   color: var(--accent);
   cursor: pointer;
   order: -2;
+  outline: none;
 }
 
 .mob-drawer-filters .mob-filter-btn:not(.active):hover {
-  background: rgba(var(--text-rgb), 0.14);
+  background: rgba(0, 0, 0, 0.13);
 }
 
 .mob-drawer-filters .mob-filter-btn.active {
@@ -3617,6 +3618,9 @@ body.is-menu-open .app-menu-close {
   background: var(--panel);
   color: var(--accent);
 }
+:root.theme-dark .mob-drawer-filters .mob-filter-btn:not(.active):hover {
+  background: rgba(255, 255, 255, 0.12);
+}
 
 
 @media (prefers-color-scheme: dark) {
@@ -3716,6 +3720,9 @@ body.is-menu-open .app-menu-close {
   :root:not(.theme-light) .mob-drawer-filters .mob-filter-btn:not(.active) {
     background: var(--panel);
     color: var(--accent);
+  }
+  :root:not(.theme-light) .mob-drawer-filters .mob-filter-btn:not(.active):hover {
+    background: rgba(255, 255, 255, 0.12);
   }
 
 }
