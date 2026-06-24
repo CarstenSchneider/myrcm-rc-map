@@ -2739,6 +2739,58 @@ function filteredRaces() {
     .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
 
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const φ1 = lat1 * Math.PI / 180, φ2 = lat2 * Math.PI / 180;
+  const dφ = (lat2 - lat1) * Math.PI / 180;
+  const dλ = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(dλ / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+const _geocodeCache = {};
+const GEO_RADIUS_KM = 75;
+
+async function geocodeFallback(query) {
+  const key = query.trim().toLowerCase();
+  if (!key) return;
+  let coords = _geocodeCache[key];
+  if (!coords) {
+    try {
+      const resp = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(key)}&format=json&limit=1&countrycodes=de,at,ch`,
+        { headers: { "Accept-Language": "de", "User-Agent": "rcracemap.com/1.0" } }
+      );
+      const data = await resp.json();
+      if (!data.length) return;
+      coords = { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+      _geocodeCache[key] = coords;
+    } catch { return; }
+  }
+  // Abort if user has already changed the query
+  if (searchInput.value.trim().toLowerCase() !== key) return;
+  const nearbyIds = new Set();
+  venues.forEach(venue => {
+    if (!hasLatLng(venue)) return;
+    if (haversineKm(coords.lat, coords.lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+      nearbyIds.add(String(venue.id));
+  });
+  if (!nearbyIds.size) return;
+  const list = races
+    .filter(isUsefulRckRace)
+    .filter(isInSelectedRange)
+    .filter(matchesRegistrationVisibility)
+    .filter(matchesSelectedSeries)
+    .filter(matchesFavoriteFilter)
+    .filter(race => { const venue = venueForRace(race); return venue && nearbyIds.has(String(venue.id)); })
+    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+  if (!list.length) return;
+  // Check again query hasn't changed
+  if (searchInput.value.trim().toLowerCase() !== key) return;
+  renderList(list);
+  updateMarkers(list, true);
+}
+
 function googleMapsRouteUrl(venue) {
   if (!hasLatLng(venue)) return "#";
   return `https://www.google.com/maps/dir/?api=1&destination=${Number(venue.lat)},${Number(venue.lng)}`;
@@ -3660,13 +3712,23 @@ searchInput.addEventListener("input", () => {
   clearTimeout(_searchDebounce);
   if (isMobile()) {
     // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
-    _searchDebounce = setTimeout(() => renderList(filteredRaces()), 500);
+    _searchDebounce = setTimeout(() => {
+      const list = filteredRaces();
+      renderList(list);
+      if (!list.length && searchInput.value.trim()) geocodeFallback(searchInput.value.trim());
+    }, 500);
     return;
   }
   // Desktop: Liste sofort, Karte nach 300ms
   const list = filteredRaces();
   renderList(list);
-  _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
+  _searchDebounce = setTimeout(() => {
+    if (list.length) {
+      updateMarkers(list, true);
+    } else if (searchInput.value.trim()) {
+      geocodeFallback(searchInput.value.trim());
+    }
+  }, 300);
 });
 
 // Enter: sofortige Aktualisierung auf Desktop (schmales Fenster) wo kein blur feuert
@@ -3676,7 +3738,11 @@ searchInput.addEventListener("keydown", (e) => {
   clearTimeout(_searchDebounce);
   const list = filteredRaces();
   renderList(list);
-  updateMarkers(list, true);
+  if (list.length) {
+    updateMarkers(list, true);
+  } else if (searchInput.value.trim()) {
+    geocodeFallback(searchInput.value.trim());
+  }
 });
 
 searchInput.addEventListener("blur", () => {
@@ -3684,7 +3750,13 @@ searchInput.addEventListener("blur", () => {
   const list = filteredRaces();
   renderList(list);
   // Wait for keyboard to fully dismiss so window.innerHeight is correct
-  setTimeout(() => updateMarkers(list, true), 150);
+  setTimeout(() => {
+    if (list.length) {
+      updateMarkers(list, true);
+    } else if (searchInput.value.trim()) {
+      geocodeFallback(searchInput.value.trim());
+    }
+  }, 150);
 });
 
 if (filterToggleButton) {
