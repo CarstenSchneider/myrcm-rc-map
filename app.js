@@ -29,6 +29,7 @@ L.control.zoom({
 }).addTo(map);
 
 let _userLocationLayer = null;
+let _userLatLng = null;
 
 const LocateControl = L.Control.extend({
   options: { position: "bottomleft" },
@@ -52,6 +53,7 @@ function locateUser(btn) {
     ({ coords: { latitude: lat, longitude: lng, accuracy } }) => {
       btn.classList.remove("is-locating");
       const latlng = L.latLng(lat, lng);
+      _userLatLng = { lat, lng };
       if (_userLocationLayer) map.removeLayer(_userLocationLayer);
       _userLocationLayer = L.layerGroup([
         L.circle(latlng, {
@@ -68,8 +70,39 @@ function locateUser(btn) {
           interactive: false, zIndexOffset: 2000
         })
       ]).addTo(map);
-      const zoom = accuracy < 200 ? 13 : accuracy < 2000 ? 11 : 9;
-      panToVisible(latlng, zoom);
+
+      const nearbyIds = new Set();
+      venues.forEach(venue => {
+        if (!hasLatLng(venue)) return;
+        if (haversineKm(lat, lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+          nearbyIds.add(String(venue.id));
+      });
+
+      if (nearbyIds.size) {
+        const list = races
+          .filter(isUsefulRckRace)
+          .filter(isInSelectedRange)
+          .filter(matchesRegistrationVisibility)
+          .filter(matchesSelectedSeries)
+          .filter(matchesFavoriteFilter)
+          .filter(race => { const venue = venueForRace(race); return venue && nearbyIds.has(String(venue.id)); })
+          .sort((a, b) => {
+            const va = venueForRace(a), vb = venueForRace(b);
+            const da = va ? haversineKm(lat, lng, Number(va.lat), Number(va.lng)) : Infinity;
+            const db = vb ? haversineKm(lat, lng, Number(vb.lat), Number(vb.lng)) : Infinity;
+            return da - db || a.from.localeCompare(b.from);
+          });
+        renderList(list);
+        updateMarkers(list, false);
+        const bounds = [[lat, lng]];
+        list.forEach(race => {
+          const venue = venueForRace(race);
+          if (venue && hasLatLng(venue)) bounds.push([Number(venue.lat), Number(venue.lng)]);
+        });
+        fitMapToBounds(bounds);
+      } else {
+        panToVisible(latlng, 9);
+      }
     },
     (err) => {
       btn.classList.remove("is-locating");
