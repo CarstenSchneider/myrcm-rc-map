@@ -3483,6 +3483,7 @@ function renderList(list) {
     for (const venue of venues) {
       if (venueIdsInList.has(String(venue.id))) continue;
       if (!isFavoriteHostId(venue.id)) continue;
+      if (_userLatLng && hasLatLng(venue) && haversineKm(_userLatLng.lat, _userLatLng.lng, venue.lat, venue.lng) > GEO_RADIUS_KM) continue;
       const past = latestPastRaceForVenue(venue);
       if (!past) continue;
       const [, card] = buildPastRaceCardEl(past);
