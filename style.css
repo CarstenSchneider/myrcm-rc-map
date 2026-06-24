@@ -867,35 +867,26 @@ input {
   opacity: 0.85;
 }
 
-/* Locate button — desktop: styled like a single zoom bar button; mobile: circular fixed */
+/* Locate button — matches app-menu-button on desktop; fixed on mobile */
 .locate-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
   padding: 0;
-  background: var(--panel);
-  border: 2px solid rgba(0, 0, 0, 0.18);
-  border-radius: 4px;
-  color: var(--text);
+  border: 0;
+  border-radius: 999px;
+  background: rgba(var(--panel-rgb), 0.98);
+  color: var(--accent);
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(var(--shadow-rgb), 0.10);
-  margin-left: 24px;
-  margin-bottom: 24px;
-  float: left;
-  clear: left;
-  transition: background 0.12s;
+  box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09);
+  transition: transform 120ms ease;
 }
-.locate-btn:hover { background: rgba(0, 0, 0, 0.07); }
+.locate-btn:hover { transform: scale(1.08); }
 .locate-btn.is-locating { opacity: 0.45; pointer-events: none; }
 .locate-btn.is-active { background: var(--accent) !important; color: #fff !important; }
-
-:root.theme-dark .locate-btn {
-  border-color: rgba(var(--text-rgb), 0.12);
-  background: var(--panel);
-}
-:root.theme-dark .locate-btn:hover { background: rgba(255, 255, 255, 0.10); }
+.locate-btn.is-active:hover { transform: scale(1.08); filter: brightness(1.1); }
 
 @media (max-width: 860px) {
   .locate-btn {
@@ -904,18 +895,7 @@ input {
     left: 14px !important;
     bottom: auto !important;
     margin: 0 !important;
-    float: none !important;
-    clear: none !important;
-    width: 52px !important;
-    height: 52px !important;
-    border-radius: 999px !important;
-    border: 0 !important;
-    box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09) !important;
-    background: rgba(var(--panel-rgb), 0.98) !important;
-    color: var(--accent) !important;
-    transition: transform 120ms ease !important;
   }
-  .locate-btn:hover { transform: scale(1.08) !important; background: rgba(var(--panel-rgb), 0.98) !important; }
   :root.theme-dark .locate-btn,
   :root:not(.theme-light) .locate-btn {
     color: #fff !important;
@@ -928,7 +908,6 @@ input {
     color: #fff !important;
   }
   .locate-btn.is-active:hover {
-    transform: scale(1.08) !important;
     background: var(--accent) !important;
     filter: brightness(1.1);
   }

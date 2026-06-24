@@ -46,6 +46,14 @@ const LocateControl = L.Control.extend({
   }
 });
 new LocateControl().addTo(map);
+if (!isMobile()) {
+  const desktopSlot = document.getElementById("locateDesktopSlot");
+  if (desktopSlot && _locateBtn) {
+    const leafletContainer = _locateBtn.parentElement;
+    desktopSlot.appendChild(_locateBtn);
+    leafletContainer?.remove();
+  }
+}
 
 function clearLocationFilter() {
   if (!_locateBtn?.classList.contains("is-active")) return;
