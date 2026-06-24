@@ -3982,6 +3982,7 @@ if (activeFilterChips) {
 
     if (button.dataset.clearFilter === "search") {
       searchInput.value = "";
+      clearGeocodeMarker();
     }
 
     if (button.dataset.clearFilter === "series") {
