@@ -2751,6 +2751,8 @@ function haversineKm(lat1, lng1, lat2, lng2) {
 const _geocodeCache = {};
 const GEO_RADIUS_KM = 75;
 let _geocodePending = false;
+let _geocodeMarker = null;
+let _geocodeMarkerCoords = null;
 
 async function geocodeFallback(query) {
   const key = query.trim().toLowerCase();
@@ -2793,8 +2795,37 @@ async function geocodeFallback(query) {
   if (!list.length) { failWithEmpty(); return; }
   if (!queryStillCurrent()) return;
   _geocodePending = false;
+  setGeocodeMarker(coords.lat, coords.lng);
   renderList(list);
-  updateMarkers(list, true);
+  updateMarkers(list, false);
+  const bounds = [[coords.lat, coords.lng]];
+  list.forEach(race => {
+    const venue = venueForRace(race);
+    if (venue && hasLatLng(venue)) bounds.push([Number(venue.lat), Number(venue.lng)]);
+  });
+  fitMapToBounds(bounds);
+}
+
+function clearGeocodeMarker() {
+  if (_geocodeMarker) { _geocodeMarker.remove(); _geocodeMarker = null; }
+  _geocodeMarkerCoords = null;
+}
+
+function setGeocodeMarker(lat, lng) {
+  clearGeocodeMarker();
+  _geocodeMarkerCoords = { lat, lng };
+  const w = 16, h = 19;
+  const svg = mapPinSvgDataUri(rcRaceMapColors.markerClosed, w, h);
+  _geocodeMarker = L.marker([lat, lng], {
+    interactive: false,
+    zIndexOffset: -100,
+    icon: L.divIcon({
+      className: "",
+      html: `<div class="map-marker-venue-inactive map-marker-visual" style="width:${w}px;height:${h}px;background-image:url('${svg}');--marker-delay:0ms;opacity:0.7;"></div>`,
+      iconSize: [w, h],
+      iconAnchor: [Math.round(w / 2), h]
+    })
+  }).addTo(map);
 }
 
 function googleMapsRouteUrl(venue) {
@@ -3721,6 +3752,7 @@ searchInput.addEventListener("input", () => {
   updateAppModeClass();
   clearTimeout(_searchDebounce);
   _geocodePending = false;
+  clearGeocodeMarker();
   if (isMobile()) {
     // Liste nach 500ms Pause aktualisieren; Karte erst beim blur (Keyboard zu)
     _searchDebounce = setTimeout(() => {
@@ -3755,6 +3787,7 @@ searchInput.addEventListener("keydown", (e) => {
   e.preventDefault();
   clearTimeout(_searchDebounce);
   _geocodePending = false;
+  clearGeocodeMarker();
   const list = filteredRaces();
   const query = searchInput.value.trim();
   if (!list.length && query) {
@@ -3771,6 +3804,7 @@ searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
   const list = filteredRaces();
   const query = searchInput.value.trim();
+  clearGeocodeMarker();
   // Wait for keyboard to fully dismiss so window.innerHeight is correct
   setTimeout(() => {
     if (!list.length && query) {
@@ -4488,6 +4522,7 @@ function applyTheme(theme) {
   if (venues?.length) {
     updateMarkers(filteredRaces(), false);
   }
+  if (_geocodeMarkerCoords) setGeocodeMarker(_geocodeMarkerCoords.lat, _geocodeMarkerCoords.lng);
 }
 
 function setTheme(theme) {
