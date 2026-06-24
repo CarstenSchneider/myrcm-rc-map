@@ -25,8 +25,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "comingSoon": false,
     "note": null,
     "rckGroup": "West",
@@ -46,7 +46,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Stock Challenge",
@@ -73,7 +73,7 @@
     "venueWebsite": "https://mcc-luedenscheid.de",
     "registrationDeadline": "2026-06-25",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -101,8 +101,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 50,
-    "registrationDisplay": "50",
+    "registrationCount": 49,
+    "registrationDisplay": "49",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -119,7 +119,7 @@
     "classes": [
       {
         "name": "GT-Sport",
-        "entries": 4
+        "entries": 3
       },
       {
         "name": "Porsche Cup",
@@ -131,11 +131,11 @@
       },
       {
         "name": "LMH",
-        "entries": 11
+        "entries": 12
       },
       {
         "name": "M-Chassis",
-        "entries": 12
+        "entries": 11
       }
     ],
     "documents": [
@@ -150,7 +150,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-06-24",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -178,8 +178,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -211,7 +211,7 @@
       },
       {
         "name": "Gastklasse: Porsche Cup nach RCK",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [
@@ -226,7 +226,7 @@
     "venueWebsite": "https://rcworld-bremen.de",
     "registrationDeadline": "2026-07-03",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -306,7 +306,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-07-02",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -334,8 +334,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 42,
-    "registrationDisplay": "42",
+    "registrationCount": 43,
+    "registrationDisplay": "43",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -358,7 +358,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 20
+        "entries": 21
       },
       {
         "name": "VTA",
@@ -385,7 +385,83 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-07-01",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
+  },
+  {
+    "importerVersion": "import-rck-v13-seed-first-venue-match",
+    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-07-19-rck-challenge-nord-braunschweig",
+    "venueId": "rck-msc-lowenring-outdoor-braunschweig",
+    "venueName": "MSC-Löwenring (Outdoor)",
+    "venueLocation": "Braunschweig",
+    "hostId": "msc-der-polizei-braunschweig-im-adac-e-v",
+    "hostName": "MSC der Polizei Braunschweig im ADAC e.V",
+    "venueStatus": "matched",
+    "name": "RCK Challenge Nord - Braunschweig",
+    "from": "2026-07-19",
+    "to": "2026-07-19",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "rck-challenge",
+    "sources": [
+      "rck-challenge"
+    ],
+    "rckSeries": "challenge",
+    "url": "https://challenge.rck-solutions.de/indexnl.php?nl=202520260719Non",
+    "detailUrl": "https://challenge.rck-solutions.de/indexgo.php",
+    "registrationStatus": "open",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationSource": "rck",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
+    "comingSoon": false,
+    "note": null,
+    "rckGroup": "Nord",
+    "rckGroups": [
+      "Nord"
+    ],
+    "rckLocation": "Braunschweig",
+    "organizerName": "MSC der Polizei Braunschweig im ADAC e.V",
+    "venueAddress": "Hermann-Blenk-Straße 8, 38108 Braunschweig",
+    "venueCity": "Braunschweig",
+    "venuePostalCode": "38108",
+    "addressVerifiedFromPdf": true,
+    "classes": [
+      {
+        "name": "FWD Challenge",
+        "entries": 0
+      },
+      {
+        "name": "GT Challenge",
+        "entries": 1
+      },
+      {
+        "name": "Stock Challenge",
+        "entries": 0
+      },
+      {
+        "name": "Clubman Challenge",
+        "entries": 0
+      },
+      {
+        "name": "Modified",
+        "entries": 1
+      }
+    ],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": "Braunschweig Braunschweig symbol/auschreibung.png",
+        "fileName": "202520260719Non260623 1829.pdf",
+        "url": "https://challenge.rck-solutions.de/ausschreibung/202520260719Non260623%201829.pdf"
+      }
+    ],
+    "venueWebsite": "https://msc-polizei-bs.de",
+    "registrationDeadline": "2026-07-18",
+    "firstSeen": "2026-06-24",
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -413,8 +489,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -430,7 +506,7 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "GT Challenge",
@@ -457,7 +533,7 @@
     "venueWebsite": "https://mac-mettenheim.de",
     "registrationDeadline": "2026-07-15",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -529,7 +605,7 @@
     "venueWebsite": "https://msc-polizei-bs.de",
     "registrationDeadline": "2026-07-22",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -601,7 +677,7 @@
     "venueWebsite": "https://tsvm-racing.de",
     "registrationDeadline": "2026-07-21",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -677,7 +753,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-08-02",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -750,7 +826,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-07-26",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -778,8 +854,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -799,7 +875,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 12
+        "entries": 13
       },
       {
         "name": "VTA",
@@ -826,7 +902,7 @@
     "venueWebsite": "https://rcworld-bremen.de",
     "registrationDeadline": "2026-08-07",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -902,7 +978,7 @@
     "venueWebsite": "https://ufm-modellbau.de",
     "registrationDeadline": "2026-08-12",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -986,7 +1062,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-09-17",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1041,7 +1117,7 @@
     "venueWebsite": "https://modellsport-zwickau.de",
     "registrationDeadline": "2026-09-19",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1118,7 +1194,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-09-16",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1198,7 +1274,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-10-05",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1275,7 +1351,7 @@
     "venueWebsite": "https://rcmc-ibbenbueren.de",
     "registrationDeadline": "2026-11-04",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1355,6 +1431,6 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-12-01",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-23"
+    "lastSeen": "2026-06-24"
   }
 ]
