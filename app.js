@@ -46,7 +46,7 @@ const LocateControl = L.Control.extend({
   }
 });
 new LocateControl().addTo(map);
-if (!isMobile()) {
+if (!window.matchMedia("(max-width: 860px)").matches) {
   const desktopSlot = document.getElementById("locateDesktopSlot");
   if (desktopSlot && _locateBtn) {
     const leafletContainer = _locateBtn.parentElement;
