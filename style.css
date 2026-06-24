@@ -912,8 +912,14 @@ input {
     box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09) !important;
     background: rgba(var(--panel-rgb), 0.98) !important;
     color: var(--accent) !important;
+    transition: transform 120ms ease !important;
   }
-  .locate-btn:hover { background: rgba(var(--panel-rgb), 0.98) !important; }
+  .locate-btn:hover { transform: scale(1.08) !important; background: rgba(var(--panel-rgb), 0.98) !important; }
+  :root.theme-dark .locate-btn,
+  :root:not(.theme-light) .locate-btn {
+    color: #fff !important;
+    background: var(--pill-bg) !important;
+  }
 }
 
 /* User location dot with pulsing accuracy ring */
