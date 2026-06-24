@@ -3868,40 +3868,52 @@ searchInput.addEventListener("input", () => {
 });
 
 // Enter: sofortige Aktualisierung auf Desktop (schmales Fenster) wo kein blur feuert
-searchInput.addEventListener("keydown", (e) => {
+searchInput.addEventListener("keydown", async (e) => {
   if (e.key !== "Enter") return;
   e.preventDefault();
   clearTimeout(_searchDebounce);
   _geocodePending = false;
   clearGeocodeMarker();
   clearLocationFilter();
-  const list = filteredRaces();
   const query = searchInput.value.trim();
-  if (!list.length && query) {
-    _geocodePending = true;
-    renderList([]); // zeigt "Suche…"
-    geocodeFallback(query);
-  } else {
+  if (!query) {
+    const list = filteredRaces();
     renderList(list);
-    if (list.length) updateMarkers(list, true);
+    updateMarkers(list, true);
+    return;
+  }
+  _geocodePending = true;
+  renderList([]); // zeigt "Suche…"
+  const ok = await geocodeFallback(query);
+  if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+    _geocodePending = false;
+    const list = filteredRaces();
+    renderList(list);
+    updateMarkers(list, true);
   }
 });
 
 searchInput.addEventListener("blur", () => {
   if (!isMobile()) return;
-  const list = filteredRaces();
   const query = searchInput.value.trim();
   clearGeocodeMarker();
   clearLocationFilter();
   // Wait for keyboard to fully dismiss so window.innerHeight is correct
-  setTimeout(() => {
-    if (!list.length && query) {
-      _geocodePending = true;
-      renderList([]); // zeigt "Suche…"
-      geocodeFallback(query);
-    } else {
+  setTimeout(async () => {
+    if (!query) {
+      const list = filteredRaces();
       renderList(list);
-      if (list.length) updateMarkers(list, true);
+      updateMarkers(list, true);
+      return;
+    }
+    _geocodePending = true;
+    renderList([]); // zeigt "Suche…"
+    const ok = await geocodeFallback(query);
+    if (!ok && searchInput.value.trim().toLowerCase() === query.toLowerCase()) {
+      _geocodePending = false;
+      const list = filteredRaces();
+      renderList(list);
+      updateMarkers(list, true);
     }
   }, 150);
 });
