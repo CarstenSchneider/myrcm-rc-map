@@ -2843,8 +2843,10 @@ async function geocodeFallback(query) {
   const queryStillCurrent = () => searchInput.value.trim().toLowerCase() === key;
   const failWithEmpty = () => {
     if (!queryStillCurrent()) return;
-    _geocodePending = false;
-    renderList([]);
+    if (_geocodePending) {
+      _geocodePending = false;
+      renderList([]);
+    }
   };
   let coords = _geocodeCache[key];
   if (!coords) {
@@ -3853,6 +3855,7 @@ searchInput.addEventListener("input", () => {
         geocodeFallback(query);
       } else {
         renderList(list);
+        geocodeFallback(query); // parallel: überschreibt bei Ortstrefffer
       }
     }, 500);
     return;
@@ -3865,7 +3868,10 @@ searchInput.addEventListener("input", () => {
     _searchDebounce = setTimeout(() => geocodeFallback(query), 300);
   } else {
     renderList(list);
-    _searchDebounce = setTimeout(() => updateMarkers(list, true), 300);
+    _searchDebounce = setTimeout(() => {
+      updateMarkers(list, true);
+      geocodeFallback(query); // parallel: überschreibt bei Ortstrefffer
+    }, 300);
   }
 });
 
