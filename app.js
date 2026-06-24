@@ -103,29 +103,11 @@ function locateUser(btn) {
         })
       ]).addTo(map);
 
-      const nearbyIds = new Set();
-      venues.forEach(venue => {
-        if (!hasLatLng(venue)) return;
-        if (haversineKm(lat, lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
-          nearbyIds.add(String(venue.id));
-      });
-
-      if (nearbyIds.size) {
-        const list = races
-          .filter(isUsefulRckRace)
-          .filter(isInSelectedRange)
-          .filter(matchesRegistrationVisibility)
-          .filter(matchesSelectedSeries)
-          .filter(matchesFavoriteFilter)
-          .filter(race => { const venue = venueForRace(race); return venue && nearbyIds.has(String(venue.id)); })
-          .sort((a, b) => {
-            const va = venueForRace(a), vb = venueForRace(b);
-            const da = va ? haversineKm(lat, lng, Number(va.lat), Number(va.lng)) : Infinity;
-            const db = vb ? haversineKm(lat, lng, Number(vb.lat), Number(vb.lng)) : Infinity;
-            return da - db || a.from.localeCompare(b.from);
-          });
-        renderList(list);
-        updateMarkers(list, false);
+      const hasNearbyVenues = venues.some(v => hasLatLng(v) && haversineKm(lat, lng, v.lat, v.lng) <= GEO_RADIUS_KM);
+      const list = filteredRaces();
+      renderList(list);
+      updateMarkers(list, false);
+      if (hasNearbyVenues) {
         centerOnUserRadius(lat, lng);
       } else {
         panToVisible(latlng, 9);
@@ -2809,14 +2791,35 @@ if (selectedRange === "all") {
 function filteredRaces() {
   const query = searchInput.value.trim().toLowerCase();
 
-  return races
+  let list = races
     .filter(isUsefulRckRace)
     .filter(isInSelectedRange)
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
     .filter(matchesFavoriteFilter)
-    .filter(race => !query || raceSearchText(race).includes(query))
-    .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+    .filter(race => !query || raceSearchText(race).includes(query));
+
+  if (_userLatLng) {
+    const { lat, lng } = _userLatLng;
+    const nearbyIds = new Set();
+    venues.forEach(venue => {
+      if (!hasLatLng(venue)) return;
+      if (haversineKm(lat, lng, venue.lat, venue.lng) <= GEO_RADIUS_KM)
+        nearbyIds.add(String(venue.id));
+    });
+    list = list.filter(race => {
+      const venue = venueForRace(race);
+      return venue && nearbyIds.has(String(venue.id));
+    });
+    return list.sort((a, b) => {
+      const va = venueForRace(a), vb = venueForRace(b);
+      const da = va ? haversineKm(lat, lng, Number(va.lat), Number(va.lng)) : Infinity;
+      const db = vb ? haversineKm(lat, lng, Number(vb.lat), Number(vb.lng)) : Infinity;
+      return da - db || a.from.localeCompare(b.from);
+    });
+  }
+
+  return list.sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
 }
 
 function haversineKm(lat1, lng1, lat2, lng2) {
