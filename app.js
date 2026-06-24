@@ -3850,6 +3850,7 @@ searchInput.addEventListener("input", () => {
   clearGeocodeMarker();
   clearLocationFilter();
   const query = searchInput.value.trim();
+  renderActiveFilterChips(); // Suchpille sofort anzeigen/entfernen
   // Sofortiger Update bei leerem Feld (X-Button) — kein Debounce, kein blur nötig
   if (!query) {
     const list = filteredRaces();
