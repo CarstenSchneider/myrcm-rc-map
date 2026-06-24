@@ -2432,5 +2432,2129 @@
     "hostName": "TSV Gelenau e.V.",
     "locationUnknown": true,
     "myrcmOrgId": "30389"
+  },
+  {
+    "id": "1-gmac-litschau",
+    "name": "1. GMAC-Litschau",
+    "city": "Schrems",
+    "lat": 48.7933789,
+    "lng": 15.0689756,
+    "hostIds": [
+      "1-gmac-litschau"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "760",
+    "aliases": [
+      "myrcm-760",
+      "1. GMAC-Litschau",
+      "Schrems"
+    ]
+  },
+  {
+    "id": "1-mrc-wr-neustadt",
+    "name": "1. MRC Wr. Neustadt",
+    "city": "Wiener Neustadt",
+    "lat": 47.8131847,
+    "lng": 16.2441166,
+    "hostIds": [
+      "1-mrc-wr-neustadt"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "764",
+    "aliases": [
+      "myrcm-764",
+      "1. MRC Wr. Neustadt",
+      "Wiener Neustadt"
+    ]
+  },
+  {
+    "id": "1-wbc-hoheneich",
+    "name": "1. WBC-Hoheneich",
+    "city": "Hoheneich",
+    "lat": 48.7716533,
+    "lng": 15.0259648,
+    "hostIds": [
+      "1-wbc-hoheneich"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "761",
+    "aliases": [
+      "myrcm-761",
+      "1. WBC-Hoheneich",
+      "Hoheneich"
+    ]
+  },
+  {
+    "id": "a-team-graz",
+    "name": "A-Team Graz",
+    "city": "Graz",
+    "lat": 47.1191146,
+    "lng": 15.3737583,
+    "hostIds": [
+      "a-team-graz"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "504",
+    "aliases": [
+      "myrcm-504",
+      "A-Team Graz",
+      "Graz"
+    ]
+  },
+  {
+    "id": "alpencup",
+    "name": "Alpencup",
+    "city": "Schleitheim",
+    "lat": 47.7488818,
+    "lng": 8.4845902,
+    "hostIds": [
+      "alpencup"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "53515",
+    "aliases": [
+      "myrcm-53515",
+      "Alpencup",
+      "Schleitheim"
+    ]
+  },
+  {
+    "id": "amc-nussdorf-debant",
+    "name": "AMC Nußdorf / Debant",
+    "city": "Winklern",
+    "lat": 46.8704513,
+    "lng": 12.8776815,
+    "hostIds": [
+      "amc-nussdorf-debant"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "26450",
+    "aliases": [
+      "myrcm-26450",
+      "AMC Nußdorf / Debant",
+      "Winklern"
+    ]
+  },
+  {
+    "id": "amc-tirol",
+    "name": "AMC Tirol",
+    "city": "Zirl",
+    "lat": 47.2733773,
+    "lng": 11.2422348,
+    "hostIds": [
+      "amc-tirol"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "14010",
+    "aliases": [
+      "myrcm-14010",
+      "AMC Tirol",
+      "Zirl"
+    ]
+  },
+  {
+    "id": "arcb",
+    "name": "ARCB",
+    "city": "Fétigny",
+    "lat": 46.7964416,
+    "lng": 6.9139995,
+    "hostIds": [
+      "arcb"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "20278",
+    "aliases": [
+      "myrcm-20278",
+      "ARCB",
+      "Fétigny"
+    ]
+  },
+  {
+    "id": "art-racing-team-switzerland",
+    "name": "ART Racing Team Switzerland",
+    "city": "Münsingen",
+    "lat": 46.8739775,
+    "lng": 7.5631943,
+    "hostIds": [
+      "art-racing-team-switzerland"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "11113",
+    "aliases": [
+      "myrcm-11113",
+      "ART Racing Team Switzerland",
+      "Münsingen"
+    ]
+  },
+  {
+    "id": "arwico-tamiya",
+    "name": "ARWICO / Tamiya",
+    "city": "Ettingen",
+    "lat": 47.4816164,
+    "lng": 7.5441378,
+    "hostIds": [
+      "arwico-tamiya"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "28",
+    "aliases": [
+      "myrcm-28",
+      "ARWICO / Tamiya",
+      "Ettingen"
+    ]
+  },
+  {
+    "id": "auto-model-club-d-ajoie",
+    "name": "Auto Model Club d'Ajoie",
+    "city": "Fontenais",
+    "lat": 47.4034795,
+    "lng": 7.080589,
+    "hostIds": [
+      "auto-model-club-d-ajoie"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "25",
+    "aliases": [
+      "myrcm-25",
+      "Auto Model Club d'Ajoie",
+      "Fontenais"
+    ]
+  },
+  {
+    "id": "auto-modell-club-schaffhausen",
+    "name": "Auto Modell Club Schaffhausen",
+    "city": "Winterthur",
+    "lat": 47.4991723,
+    "lng": 8.7291498,
+    "hostIds": [
+      "auto-modell-club-schaffhausen"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "21",
+    "aliases": [
+      "myrcm-21",
+      "Auto Modell Club Schaffhausen",
+      "Winterthur"
+    ]
+  },
+  {
+    "id": "bclc-buggy-club-de-la-c-te",
+    "name": "BCLC Buggy Club de la Côte",
+    "city": "Gland",
+    "lat": 46.4239425,
+    "lng": 6.2655115,
+    "hostIds": [
+      "bclc-buggy-club-de-la-c-te"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "572",
+    "aliases": [
+      "myrcm-572",
+      "BCLC Buggy Club de la Côte",
+      "Gland"
+    ]
+  },
+  {
+    "id": "buggy-club-hornets",
+    "name": "Buggy Club Hornets",
+    "city": "Esslingen",
+    "lat": 47.28919,
+    "lng": 8.7096296,
+    "hostIds": [
+      "buggy-club-hornets"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "22302",
+    "aliases": [
+      "myrcm-22302",
+      "Buggy Club Hornets",
+      "Esslingen"
+    ]
+  },
+  {
+    "id": "buggyclub-zentralschweiz",
+    "name": "Buggyclub Zentralschweiz",
+    "city": "Zetzwil",
+    "lat": 47.2862612,
+    "lng": 8.1508263,
+    "hostIds": [
+      "buggyclub-zentralschweiz"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "7734",
+    "aliases": [
+      "myrcm-7734",
+      "Buggyclub Zentralschweiz",
+      "Zetzwil"
+    ]
+  },
+  {
+    "id": "club-der-modellbaufreunde-sued-ost",
+    "name": "Club der Modellbaufreunde Süd-Ost",
+    "city": "Deutsch Goritz",
+    "lat": 46.7517263,
+    "lng": 15.8304298,
+    "hostIds": [
+      "club-der-modellbaufreunde-sued-ost"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "1294",
+    "aliases": [
+      "myrcm-1294",
+      "Club der Modellbaufreunde Süd-Ost",
+      "Deutsch Goritz"
+    ]
+  },
+  {
+    "id": "dominique-durussel",
+    "name": "Dominique Durussel",
+    "city": "Monthey",
+    "lat": 46.2329491,
+    "lng": 6.9038278,
+    "hostIds": [
+      "dominique-durussel"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "11932",
+    "aliases": [
+      "myrcm-11932",
+      "Dominique Durussel",
+      "Monthey"
+    ]
+  },
+  {
+    "id": "efac-hohenems",
+    "name": "EFAC Hohenems",
+    "city": "Hohenems",
+    "lat": 47.3667469,
+    "lng": 9.6622934,
+    "hostIds": [
+      "efac-hohenems"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "163",
+    "aliases": [
+      "myrcm-163",
+      "EFAC Hohenems",
+      "Hohenems"
+    ]
+  },
+  {
+    "id": "electrique-radio-mod-le-club",
+    "name": "Electrique Radio Modèle Club",
+    "city": "Grand-Saconnex",
+    "lat": 46.2363321,
+    "lng": 6.126532,
+    "hostIds": [
+      "electrique-radio-mod-le-club"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "16203",
+    "aliases": [
+      "myrcm-16203",
+      "Electrique Radio Modèle Club",
+      "Grand-Saconnex"
+    ]
+  },
+  {
+    "id": "elektro-modell-buggy-club-march",
+    "name": "Elektro Modell Buggy Club March",
+    "city": "Stäfa",
+    "lat": 47.1884165,
+    "lng": 8.7023705,
+    "hostIds": [
+      "elektro-modell-buggy-club-march"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "29104",
+    "aliases": [
+      "myrcm-29104",
+      "Elektro Modell Buggy Club March",
+      "Stäfa"
+    ]
+  },
+  {
+    "id": "elektro-modell-car-club-ochsendorf",
+    "name": "Elektro-Modell-Car-Club-Ochsendorf",
+    "city": "Ochsendorf",
+    "lat": 46.689332,
+    "lng": 14.4713752,
+    "hostIds": [
+      "elektro-modell-car-club-ochsendorf"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "521",
+    "aliases": [
+      "myrcm-521",
+      "Elektro-Modell-Car-Club-Ochsendorf",
+      "Ochsendorf"
+    ]
+  },
+  {
+    "id": "eocd-elektro-offroad-club-dielsdorf",
+    "name": "EOCD - Elektro Offroad Club Dielsdorf",
+    "city": "Adlikon b. Regensdorf",
+    "lat": 47.4460559,
+    "lng": 8.4659076,
+    "hostIds": [
+      "eocd-elektro-offroad-club-dielsdorf"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "8488",
+    "aliases": [
+      "myrcm-8488",
+      "EOCD - Elektro Offroad Club Dielsdorf",
+      "Adlikon b. Regensdorf"
+    ]
+  },
+  {
+    "id": "erc-wr-neudorf",
+    "name": "ERC-Wr.Neudorf",
+    "city": "Wolfsgraben",
+    "lat": 48.1579894,
+    "lng": 16.1209769,
+    "hostIds": [
+      "erc-wr-neudorf"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "765",
+    "aliases": [
+      "myrcm-765",
+      "ERC-Wr.Neudorf",
+      "Wolfsgraben"
+    ]
+  },
+  {
+    "id": "ert-steyregg",
+    "name": "ERT-Steyregg",
+    "city": "Katsdorf",
+    "lat": 48.2751706,
+    "lng": 14.3989892,
+    "hostIds": [
+      "ert-steyregg"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "768",
+    "aliases": [
+      "myrcm-768",
+      "ERT-Steyregg",
+      "Katsdorf"
+    ]
+  },
+  {
+    "id": "fsg-motorsport-ag",
+    "name": "FSG Motorsport AG",
+    "city": "Herzogenbuchsee",
+    "lat": 47.1881314,
+    "lng": 7.7057052,
+    "hostIds": [
+      "fsg-motorsport-ag"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "332",
+    "aliases": [
+      "myrcm-332",
+      "FSG Motorsport AG",
+      "Herzogenbuchsee"
+    ]
+  },
+  {
+    "id": "gemo-racing",
+    "name": "GEMO-Racing",
+    "city": "Trub",
+    "lat": 46.9409717,
+    "lng": 7.8769951,
+    "hostIds": [
+      "gemo-racing"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "14263",
+    "aliases": [
+      "myrcm-14263",
+      "GEMO-Racing",
+      "Trub"
+    ]
+  },
+  {
+    "id": "h-speed",
+    "name": "H-SPEED",
+    "city": "Ebreichsdorf",
+    "lat": 47.9714441,
+    "lng": 16.4153899,
+    "hostIds": [
+      "h-speed"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "22268",
+    "aliases": [
+      "myrcm-22268",
+      "H-SPEED",
+      "Ebreichsdorf"
+    ]
+  },
+  {
+    "id": "hobby-shop-haessig",
+    "name": "Hobby Shop Hässig",
+    "city": "Wohlen",
+    "lat": 46.9708428,
+    "lng": 7.35592,
+    "hostIds": [
+      "hobby-shop-haessig"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "293",
+    "aliases": [
+      "myrcm-293",
+      "Hobby Shop Hässig",
+      "Wohlen"
+    ]
+  },
+  {
+    "id": "hvbrs",
+    "name": "HVBRS",
+    "city": "St.Gallen",
+    "lat": 47.425618,
+    "lng": 9.3762397,
+    "hostIds": [
+      "hvbrs"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "94",
+    "aliases": [
+      "myrcm-94",
+      "HVBRS",
+      "St.Gallen"
+    ]
+  },
+  {
+    "id": "indoortrack-wichtrach",
+    "name": "Indoortrack Wichtrach",
+    "city": "Wichtrach",
+    "lat": 46.8457306,
+    "lng": 7.5783419,
+    "hostIds": [
+      "indoortrack-wichtrach"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "46390",
+    "aliases": [
+      "myrcm-46390",
+      "Indoortrack Wichtrach",
+      "Wichtrach"
+    ]
+  },
+  {
+    "id": "ircr-indoor-rc-romand",
+    "name": "IRCR - Indoor RC Romand",
+    "city": "Lausanne",
+    "lat": 46.5218269,
+    "lng": 6.6327025,
+    "hostIds": [
+      "ircr-indoor-rc-romand"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "26980",
+    "aliases": [
+      "myrcm-26980",
+      "IRCR - Indoor RC Romand",
+      "Lausanne"
+    ]
+  },
+  {
+    "id": "lamac",
+    "name": "LAMAC",
+    "city": "St.Paul/Lavanttal",
+    "lat": 46.7006159,
+    "lng": 14.8739037,
+    "hostIds": [
+      "lamac"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "781",
+    "aliases": [
+      "myrcm-781",
+      "LAMAC",
+      "St.Paul/Lavanttal"
+    ]
+  },
+  {
+    "id": "lambc-st-andrae",
+    "name": "LAMBC-St.Andrä",
+    "city": "St. Andrä im Lavanttal",
+    "lat": 46.7629314,
+    "lng": 14.841853,
+    "hostIds": [
+      "lambc-st-andrae"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "1553",
+    "aliases": [
+      "myrcm-1553",
+      "LAMBC-St.Andrä",
+      "St. Andrä im Lavanttal"
+    ]
+  },
+  {
+    "id": "lmc-limbacher-modellsport-club",
+    "name": "LMC - Limbacher Modellsport Club",
+    "city": "Limbach",
+    "lat": 47.3980635,
+    "lng": 16.0031086,
+    "hostIds": [
+      "lmc-limbacher-modellsport-club"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "66",
+    "aliases": [
+      "myrcm-66",
+      "LMC - Limbacher Modellsport Club",
+      "Limbach"
+    ]
+  },
+  {
+    "id": "m-a-r-s-alt-erlaa",
+    "name": "M.A.R.S. Alt Erlaa",
+    "city": "Wien",
+    "lat": 48.1555949,
+    "lng": 16.3186165,
+    "hostIds": [
+      "m-a-r-s-alt-erlaa"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "339",
+    "aliases": [
+      "myrcm-339",
+      "M.A.R.S. Alt Erlaa",
+      "Wien"
+    ]
+  },
+  {
+    "id": "mac-amstetten",
+    "name": "MAC Amstetten",
+    "city": "Biberbach",
+    "lat": 48.0291168,
+    "lng": 14.708497,
+    "hostIds": [
+      "mac-amstetten"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "1225",
+    "aliases": [
+      "myrcm-1225",
+      "MAC Amstetten",
+      "Biberbach"
+    ]
+  },
+  {
+    "id": "mac-mistelbach",
+    "name": "MAC Mistelbach",
+    "city": "Mistelbach",
+    "lat": 48.5694535,
+    "lng": 16.5720327,
+    "hostIds": [
+      "mac-mistelbach"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "20718",
+    "aliases": [
+      "myrcm-20718",
+      "MAC Mistelbach",
+      "Mistelbach"
+    ]
+  },
+  {
+    "id": "mac-traiskirchen",
+    "name": "MAC-Traiskirchen",
+    "city": "Möllersdorf",
+    "lat": 48.0248362,
+    "lng": 16.3040962,
+    "hostIds": [
+      "mac-traiskirchen"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "769",
+    "aliases": [
+      "myrcm-769",
+      "MAC-Traiskirchen",
+      "Möllersdorf"
+    ]
+  },
+  {
+    "id": "macg-steiermark",
+    "name": "MACG - Steiermark",
+    "city": "Kalsdorf",
+    "lat": 46.9644025,
+    "lng": 15.4786966,
+    "hostIds": [
+      "macg-steiermark"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "858",
+    "aliases": [
+      "myrcm-858",
+      "MACG - Steiermark",
+      "Kalsdorf"
+    ]
+  },
+  {
+    "id": "macw-modell-auto-club-wohlen",
+    "name": "MACW Modell Auto Club Wohlen",
+    "city": "Rottenschwil",
+    "lat": 47.3141222,
+    "lng": 8.3638821,
+    "hostIds": [
+      "macw-modell-auto-club-wohlen"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "18",
+    "aliases": [
+      "myrcm-18",
+      "MACW Modell Auto Club Wohlen",
+      "Rottenschwil"
+    ]
+  },
+  {
+    "id": "marc-exclusiv-kirchschlag",
+    "name": "MARC-Exclusiv Kirchschlag",
+    "city": "Kirchschlag",
+    "lat": 48.4130943,
+    "lng": 14.2764418,
+    "hostIds": [
+      "marc-exclusiv-kirchschlag"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "508",
+    "aliases": [
+      "myrcm-508",
+      "MARC-Exclusiv Kirchschlag",
+      "Kirchschlag"
+    ]
+  },
+  {
+    "id": "mav-aigen-schlaegl",
+    "name": "MAV Aigen-Schlägl",
+    "city": "Aigen-Schlägl",
+    "lat": 48.6443258,
+    "lng": 13.9688049,
+    "hostIds": [
+      "mav-aigen-schlaegl"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "217",
+    "aliases": [
+      "myrcm-217",
+      "MAV Aigen-Schlägl",
+      "Aigen-Schlägl"
+    ]
+  },
+  {
+    "id": "mav-waidhofen",
+    "name": "MAV-Waidhofen",
+    "city": "Waidhofen an der Thaya",
+    "lat": 48.8146165,
+    "lng": 15.284518,
+    "hostIds": [
+      "mav-waidhofen"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "505",
+    "aliases": [
+      "myrcm-505",
+      "MAV-Waidhofen",
+      "Waidhofen an der Thaya"
+    ]
+  },
+  {
+    "id": "max-informatique",
+    "name": "Max Informatique",
+    "city": "Malleray",
+    "lat": 47.2386397,
+    "lng": 7.2760225,
+    "hostIds": [
+      "max-informatique"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "20360",
+    "aliases": [
+      "myrcm-20360",
+      "Max Informatique",
+      "Malleray"
+    ]
+  },
+  {
+    "id": "max-rc-car-racing",
+    "name": "Max RC Car Racing",
+    "city": "Perg",
+    "lat": 48.2500898,
+    "lng": 14.6338102,
+    "hostIds": [
+      "max-rc-car-racing"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "7554",
+    "aliases": [
+      "myrcm-7554",
+      "Max RC Car Racing",
+      "Perg"
+    ]
+  },
+  {
+    "id": "mbc-askoe-trieben",
+    "name": "MBC-ASKÖ Trieben",
+    "city": "Ardning",
+    "lat": 47.5911294,
+    "lng": 14.3645596,
+    "hostIds": [
+      "mbc-askoe-trieben"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "2008",
+    "aliases": [
+      "myrcm-2008",
+      "MBC-ASKÖ Trieben",
+      "Ardning"
+    ]
+  },
+  {
+    "id": "mblr-ecl-pens",
+    "name": "MBLR Eclépens",
+    "city": "Penthalaz",
+    "lat": 46.6113262,
+    "lng": 6.5252453,
+    "hostIds": [
+      "mblr-ecl-pens"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "45823",
+    "aliases": [
+      "myrcm-45823",
+      "MBLR Eclépens",
+      "Penthalaz"
+    ]
+  },
+  {
+    "id": "mblr-racing",
+    "name": "MBLR Racing",
+    "city": "Penthalaz",
+    "lat": 46.6113262,
+    "lng": 6.5252453,
+    "hostIds": [
+      "mblr-racing"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "22319",
+    "aliases": [
+      "myrcm-22319",
+      "MBLR Racing",
+      "Penthalaz"
+    ]
+  },
+  {
+    "id": "mbv-noetsch",
+    "name": "MBV-Nötsch",
+    "city": "Nötsch",
+    "lat": 46.6009572,
+    "lng": 13.6272589,
+    "hostIds": [
+      "mbv-noetsch"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "4712",
+    "aliases": [
+      "myrcm-4712",
+      "MBV-Nötsch",
+      "Nötsch"
+    ]
+  },
+  {
+    "id": "mbv-tieschen",
+    "name": "MBV-Tieschen",
+    "city": "Tieschen",
+    "lat": 46.7857098,
+    "lng": 15.9450189,
+    "hostIds": [
+      "mbv-tieschen"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "6221",
+    "aliases": [
+      "myrcm-6221",
+      "MBV-Tieschen",
+      "Tieschen"
+    ]
+  },
+  {
+    "id": "mcrcb",
+    "name": "MCRCB",
+    "city": "Baar",
+    "lat": 47.1951976,
+    "lng": 8.5253985,
+    "hostIds": [
+      "mcrcb"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "652",
+    "aliases": [
+      "myrcm-652",
+      "MCRCB",
+      "Baar"
+    ]
+  },
+  {
+    "id": "mini-bolides-club-jura",
+    "name": "Mini Bolides Club Jura",
+    "city": "Bassecourt",
+    "lat": 47.3370866,
+    "lng": 7.2440935,
+    "hostIds": [
+      "mini-bolides-club-jura"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "30870",
+    "aliases": [
+      "myrcm-30870",
+      "Mini Bolides Club Jura",
+      "Bassecourt"
+    ]
+  },
+  {
+    "id": "mini-monster-club-romand",
+    "name": "Mini Monster Club Romand",
+    "city": "Grandson",
+    "lat": 46.8086306,
+    "lng": 6.6417532,
+    "hostIds": [
+      "mini-monster-club-romand"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "31807",
+    "aliases": [
+      "myrcm-31807",
+      "Mini Monster Club Romand",
+      "Grandson"
+    ]
+  },
+  {
+    "id": "mini-racing-cars-aigle-lausanne",
+    "name": "Mini Racing Cars Aigle & Lausanne",
+    "city": "Concise",
+    "lat": 46.3127464,
+    "lng": 6.9427934,
+    "hostIds": [
+      "mini-racing-cars-aigle-lausanne"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "19",
+    "aliases": [
+      "myrcm-19",
+      "Mini Racing Cars Aigle & Lausanne",
+      "Concise"
+    ]
+  },
+  {
+    "id": "mini-racing-chiasso",
+    "name": "Mini Racing Chiasso",
+    "city": "Bellinzona",
+    "lat": 45.8340513,
+    "lng": 9.013863,
+    "hostIds": [
+      "mini-racing-chiasso"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "9845",
+    "aliases": [
+      "myrcm-9845",
+      "Mini Racing Chiasso",
+      "Bellinzona"
+    ]
+  },
+  {
+    "id": "mini-tout-terrain-gruy-re",
+    "name": "Mini Tout Terrain Gruyère",
+    "city": "Riaz",
+    "lat": 46.640249,
+    "lng": 7.0616291,
+    "hostIds": [
+      "mini-tout-terrain-gruy-re"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "18473",
+    "aliases": [
+      "myrcm-18473",
+      "Mini Tout Terrain Gruyère",
+      "Riaz"
+    ]
+  },
+  {
+    "id": "mmcc",
+    "name": "MMCC",
+    "city": "Mistelbach",
+    "lat": 48.5694535,
+    "lng": 16.5720327,
+    "hostIds": [
+      "mmcc"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "770",
+    "aliases": [
+      "myrcm-770",
+      "MMCC",
+      "Mistelbach"
+    ]
+  },
+  {
+    "id": "moc-allhartsberg",
+    "name": "MOC - Allhartsberg",
+    "city": "Biberbach",
+    "lat": 48.0355233,
+    "lng": 14.7814362,
+    "hostIds": [
+      "moc-allhartsberg"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "17623",
+    "aliases": [
+      "myrcm-17623",
+      "MOC - Allhartsberg",
+      "Biberbach"
+    ]
+  },
+  {
+    "id": "mod-race-laa-04",
+    "name": "MOD.RACE-LAA.04",
+    "city": "Neudorf bei Staatz",
+    "lat": 48.7209394,
+    "lng": 16.4924882,
+    "hostIds": [
+      "mod-race-laa-04"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "771",
+    "aliases": [
+      "myrcm-771",
+      "MOD.RACE-LAA.04",
+      "Neudorf bei Staatz"
+    ]
+  },
+  {
+    "id": "modell-auto-club-hoefe",
+    "name": "Modell Auto Club Höfe",
+    "city": "Galgenen",
+    "lat": 47.1815904,
+    "lng": 8.8742411,
+    "hostIds": [
+      "modell-auto-club-hoefe"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "27",
+    "aliases": [
+      "myrcm-27",
+      "Modell Auto Club Höfe",
+      "Galgenen"
+    ]
+  },
+  {
+    "id": "modell-off-road-club-oberbueren",
+    "name": "Modell Off Road Club Oberbüren",
+    "city": "Arnegg",
+    "lat": 47.44337,
+    "lng": 9.2561241,
+    "hostIds": [
+      "modell-off-road-club-oberbueren"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "277",
+    "aliases": [
+      "myrcm-277",
+      "Modell Off Road Club Oberbüren",
+      "Arnegg"
+    ]
+  },
+  {
+    "id": "modell-rennsport-club-langenthal",
+    "name": "Modell Rennsport Club Langenthal",
+    "city": "Langenthal",
+    "lat": 47.2116019,
+    "lng": 7.788786,
+    "hostIds": [
+      "modell-rennsport-club-langenthal"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "31",
+    "aliases": [
+      "myrcm-31",
+      "Modell Rennsport Club Langenthal",
+      "Langenthal"
+    ]
+  },
+  {
+    "id": "modell-rennsport-club-st-gallen-mrcsg",
+    "name": "Modell Rennsport Club St. Gallen MRCSG",
+    "city": "Sitterdorf",
+    "lat": 47.5026041,
+    "lng": 9.2458915,
+    "hostIds": [
+      "modell-rennsport-club-st-gallen-mrcsg"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "20",
+    "aliases": [
+      "myrcm-20",
+      "Modell Rennsport Club St. Gallen MRCSG",
+      "Sitterdorf"
+    ]
+  },
+  {
+    "id": "modell-rennsport-club-unterland",
+    "name": "Modell Rennsport Club Unterland",
+    "city": "Dietlikon",
+    "lat": 47.4222808,
+    "lng": 8.6155979,
+    "hostIds": [
+      "modell-rennsport-club-unterland"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "17",
+    "aliases": [
+      "myrcm-17",
+      "Modell Rennsport Club Unterland",
+      "Dietlikon"
+    ]
+  },
+  {
+    "id": "modellbau-foto-heinz",
+    "name": "Modellbau Foto Heinz",
+    "city": "Fieberbrunn",
+    "lat": 47.4762087,
+    "lng": 12.5454618,
+    "hostIds": [
+      "modellbau-foto-heinz"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "6177",
+    "aliases": [
+      "myrcm-6177",
+      "Modellbau Foto Heinz",
+      "Fieberbrunn"
+    ]
+  },
+  {
+    "id": "modellbuggygruppe-dellach-gail",
+    "name": "Modellbuggygruppe Dellach/Gail",
+    "city": "Dellach/Gail",
+    "lat": 46.6008784,
+    "lng": 13.5943918,
+    "hostIds": [
+      "modellbuggygruppe-dellach-gail"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "15268",
+    "aliases": [
+      "myrcm-15268",
+      "Modellbuggygruppe Dellach/Gail",
+      "Dellach/Gail"
+    ]
+  },
+  {
+    "id": "morac",
+    "name": "MORAC",
+    "city": "Graz",
+    "lat": 47.0708678,
+    "lng": 15.4382786,
+    "hostIds": [
+      "morac"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "216",
+    "aliases": [
+      "myrcm-216",
+      "MORAC",
+      "Graz"
+    ]
+  },
+  {
+    "id": "motor-sport-club-imst",
+    "name": "Motor Sport Club Imst",
+    "city": "Imst",
+    "lat": 47.2743413,
+    "lng": 10.9733293,
+    "hostIds": [
+      "motor-sport-club-imst"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "21964",
+    "aliases": [
+      "myrcm-21964",
+      "Motor Sport Club Imst",
+      "Imst"
+    ]
+  },
+  {
+    "id": "mrc-fritzens-formel-4",
+    "name": "MRC Fritzens Formel 4",
+    "city": "Fritzens/Tirol",
+    "lat": 47.2810514,
+    "lng": 11.1307299,
+    "hostIds": [
+      "mrc-fritzens-formel-4"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "772",
+    "aliases": [
+      "myrcm-772",
+      "MRC Fritzens Formel 4",
+      "Fritzens/Tirol"
+    ]
+  },
+  {
+    "id": "mrc-zillertal",
+    "name": "MRC Zillertal",
+    "city": "Finkenberg",
+    "lat": 47.0990214,
+    "lng": 11.8064351,
+    "hostIds": [
+      "mrc-zillertal"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "4940",
+    "aliases": [
+      "myrcm-4940",
+      "MRC Zillertal",
+      "Finkenberg"
+    ]
+  },
+  {
+    "id": "mrc-fruehwirth",
+    "name": "MRC-Frühwirth",
+    "city": "Sollenau",
+    "lat": 47.8994729,
+    "lng": 16.2463342,
+    "hostIds": [
+      "mrc-fruehwirth"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "779",
+    "aliases": [
+      "myrcm-779",
+      "MRC-Frühwirth",
+      "Sollenau"
+    ]
+  },
+  {
+    "id": "mrc-oberaich",
+    "name": "MRC-Oberaich",
+    "city": "Kapfenberg",
+    "lat": 47.4405481,
+    "lng": 15.2901669,
+    "hostIds": [
+      "mrc-oberaich"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "980",
+    "aliases": [
+      "myrcm-980",
+      "MRC-Oberaich",
+      "Kapfenberg"
+    ]
+  },
+  {
+    "id": "mrcp",
+    "name": "MRCP",
+    "city": "Steinen",
+    "lat": 47.0500549,
+    "lng": 8.6108291,
+    "hostIds": [
+      "mrcp"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "207",
+    "aliases": [
+      "myrcm-207",
+      "MRCP",
+      "Steinen"
+    ]
+  },
+  {
+    "id": "mrtm-mini-racing-ticino-moesa",
+    "name": "MRTM Mini Racing Ticino & Moesa",
+    "city": "Lostallo",
+    "lat": 46.3106453,
+    "lng": 9.1982861,
+    "hostIds": [
+      "mrtm-mini-racing-ticino-moesa"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "16",
+    "aliases": [
+      "myrcm-16",
+      "MRTM Mini Racing Ticino & Moesa",
+      "Lostallo"
+    ]
+  },
+  {
+    "id": "mrto",
+    "name": "MRTO",
+    "city": "Altnau",
+    "lat": 47.61241,
+    "lng": 9.260705,
+    "hostIds": [
+      "mrto"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "401",
+    "aliases": [
+      "myrcm-401",
+      "MRTO",
+      "Altnau"
+    ]
+  },
+  {
+    "id": "mrv-st-poelten",
+    "name": "MRV St. Pölten",
+    "city": "Sankt Poelten",
+    "lat": 48.2043985,
+    "lng": 15.6229118,
+    "hostIds": [
+      "mrv-st-poelten"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "773",
+    "aliases": [
+      "myrcm-773",
+      "MRV St. Pölten",
+      "Sankt Poelten"
+    ]
+  },
+  {
+    "id": "msc-edelsbach",
+    "name": "MSC Edelsbach",
+    "city": "Edelsbach bei Feldbach",
+    "lat": 46.9886719,
+    "lng": 15.8370708,
+    "hostIds": [
+      "msc-edelsbach"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "3645",
+    "aliases": [
+      "myrcm-3645",
+      "MSC Edelsbach",
+      "Edelsbach bei Feldbach"
+    ]
+  },
+  {
+    "id": "msv-weiz",
+    "name": "MSV Weiz",
+    "city": "Weiz",
+    "lat": 47.2174206,
+    "lng": 15.6221694,
+    "hostIds": [
+      "msv-weiz"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "53491",
+    "aliases": [
+      "myrcm-53491",
+      "MSV Weiz",
+      "Weiz"
+    ]
+  },
+  {
+    "id": "msv-woelbling",
+    "name": "MSV-Wölbling",
+    "city": "Unterwölbling",
+    "lat": 48.3247065,
+    "lng": 15.6281953,
+    "hostIds": [
+      "msv-woelbling"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "509",
+    "aliases": [
+      "myrcm-509",
+      "MSV-Wölbling",
+      "Unterwölbling"
+    ]
+  },
+  {
+    "id": "nitrofighter",
+    "name": "Nitrofighter",
+    "city": "Lambrechten",
+    "lat": 48.3165483,
+    "lng": 13.5135562,
+    "hostIds": [
+      "nitrofighter"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "13507",
+    "aliases": [
+      "myrcm-13507",
+      "Nitrofighter",
+      "Lambrechten"
+    ]
+  },
+  {
+    "id": "nmbc-neuch-tel-mini-buggy-club",
+    "name": "NMBC Neuchâtel Mini Buggy Club",
+    "city": "Cornaux",
+    "lat": 47.0383306,
+    "lng": 7.0188056,
+    "hostIds": [
+      "nmbc-neuch-tel-mini-buggy-club"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "4497",
+    "aliases": [
+      "myrcm-4497",
+      "NMBC Neuchâtel Mini Buggy Club",
+      "Cornaux"
+    ]
+  },
+  {
+    "id": "oefmav",
+    "name": "Oefmav",
+    "city": "Klagenfurt am Wörthersee",
+    "lat": 46.6344126,
+    "lng": 14.3055036,
+    "hostIds": [
+      "oefmav"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "61558",
+    "aliases": [
+      "myrcm-61558",
+      "Oefmav",
+      "Klagenfurt am Wörthersee"
+    ]
+  },
+  {
+    "id": "off-road-club-montagny",
+    "name": "Off Road Club Montagny",
+    "city": "Montagny-les-Monts",
+    "lat": 47.1672915,
+    "lng": 6.9027132,
+    "hostIds": [
+      "off-road-club-montagny"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "62051",
+    "aliases": [
+      "myrcm-62051",
+      "Off Road Club Montagny",
+      "Montagny-les-Monts"
+    ]
+  },
+  {
+    "id": "offroad-team-zuerich",
+    "name": "Offroad Team Zürich",
+    "city": "Volketswil",
+    "lat": 47.3853616,
+    "lng": 8.6785611,
+    "hostIds": [
+      "offroad-team-zuerich"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "65790",
+    "aliases": [
+      "myrcm-65790",
+      "Offroad Team Zürich",
+      "Volketswil"
+    ]
+  },
+  {
+    "id": "oefmav-eor",
+    "name": "ÖFMAV EOR",
+    "city": "Berndorf",
+    "lat": 47.9455876,
+    "lng": 16.1093585,
+    "hostIds": [
+      "oefmav-eor"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "782",
+    "aliases": [
+      "myrcm-782",
+      "ÖFMAV EOR",
+      "Berndorf"
+    ]
+  },
+  {
+    "id": "oefmav-sektion-elektro-offroad",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "city": "Wien",
+    "lat": 48.1857192,
+    "lng": 16.4221587,
+    "hostIds": [
+      "oefmav-sektion-elektro-offroad"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "34619",
+    "aliases": [
+      "myrcm-34619",
+      "ÖFMAV Sektion Elektro Offroad",
+      "Wien"
+    ]
+  },
+  {
+    "id": "oefmav-sektion-or-8",
+    "name": "ÖFMAV Sektion OR-8",
+    "city": "Graz",
+    "lat": 47.0708678,
+    "lng": 15.4382786,
+    "hostIds": [
+      "oefmav-sektion-or-8"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "503",
+    "aliases": [
+      "myrcm-503",
+      "ÖFMAV Sektion OR-8",
+      "Graz"
+    ]
+  },
+  {
+    "id": "oefmav-sektion-verbrenner-flachbahn",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "city": "Winklarn",
+    "lat": 48.0915707,
+    "lng": 14.8477591,
+    "hostIds": [
+      "oefmav-sektion-verbrenner-flachbahn"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "38958",
+    "aliases": [
+      "myrcm-38958",
+      "ÖFMAV Sektion Verbrenner Flachbahn",
+      "Winklarn"
+    ]
+  },
+  {
+    "id": "one28-ch-swiss-micro-racer",
+    "name": "one28.ch (Swiss Micro Racer)",
+    "city": "Bichwil",
+    "lat": 47.4204973,
+    "lng": 9.1369736,
+    "hostIds": [
+      "one28-ch-swiss-micro-racer"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "50394",
+    "aliases": [
+      "myrcm-50394",
+      "one28.ch (Swiss Micro Racer)",
+      "Bichwil"
+    ]
+  },
+  {
+    "id": "online-modus",
+    "name": "Online Modus",
+    "city": "",
+    "lat": 47.5616219,
+    "lng": 7.5798154,
+    "hostIds": [
+      "online-modus"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "7",
+    "aliases": [
+      "myrcm-7",
+      "Online Modus"
+    ]
+  },
+  {
+    "id": "otl-offroad-team-langenthal",
+    "name": "OTL Offroad Team Langenthal",
+    "city": "Langenthal",
+    "lat": 47.2116019,
+    "lng": 7.788786,
+    "hostIds": [
+      "otl-offroad-team-langenthal"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "17508",
+    "aliases": [
+      "myrcm-17508",
+      "OTL Offroad Team Langenthal",
+      "Langenthal"
+    ]
+  },
+  {
+    "id": "pr-modellbau-gmbh",
+    "name": "PR Modellbau GmbH",
+    "city": "Gloten bei Sirnach",
+    "lat": 47.4631186,
+    "lng": 9.0218384,
+    "hostIds": [
+      "pr-modellbau-gmbh"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "39906",
+    "aliases": [
+      "myrcm-39906",
+      "PR Modellbau GmbH",
+      "Gloten bei Sirnach"
+    ]
+  },
+  {
+    "id": "psv-klagenfurt",
+    "name": "PSV-Klagenfurt",
+    "city": "Klagenfurt",
+    "lat": 46.5821384,
+    "lng": 14.1508412,
+    "hostIds": [
+      "psv-klagenfurt"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "774",
+    "aliases": [
+      "myrcm-774",
+      "PSV-Klagenfurt",
+      "Klagenfurt"
+    ]
+  },
+  {
+    "id": "psv-salzburg-automodellsport",
+    "name": "PSV-Salzburg Automodellsport",
+    "city": "Elsbethen",
+    "lat": 47.7592351,
+    "lng": 13.0825458,
+    "hostIds": [
+      "psv-salzburg-automodellsport"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "762",
+    "aliases": [
+      "myrcm-762",
+      "PSV-Salzburg Automodellsport",
+      "Elsbethen"
+    ]
+  },
+  {
+    "id": "racing-center-parndorf",
+    "name": "Racing Center Parndorf",
+    "city": "Parndorf",
+    "lat": 47.9770104,
+    "lng": 16.8500231,
+    "hostIds": [
+      "racing-center-parndorf"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "38295",
+    "aliases": [
+      "myrcm-38295",
+      "Racing Center Parndorf",
+      "Parndorf"
+    ]
+  },
+  {
+    "id": "raspeed",
+    "name": "RASPEED",
+    "city": "Scheuren",
+    "lat": 47.1329616,
+    "lng": 7.3183002,
+    "hostIds": [
+      "raspeed"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "21125",
+    "aliases": [
+      "myrcm-21125",
+      "RASPEED",
+      "Scheuren"
+    ]
+  },
+  {
+    "id": "rc-buggy-indoorbahn",
+    "name": "RC - Buggy Indoorbahn",
+    "city": "Regensdorf",
+    "lat": 47.4317645,
+    "lng": 8.4680435,
+    "hostIds": [
+      "rc-buggy-indoorbahn"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "21073",
+    "aliases": [
+      "myrcm-21073",
+      "RC - Buggy Indoorbahn",
+      "Regensdorf"
+    ]
+  },
+  {
+    "id": "rc-arena-freienbach",
+    "name": "RC Arena Freienbach",
+    "city": "Freienbach",
+    "lat": 47.2015237,
+    "lng": 8.7983441,
+    "hostIds": [
+      "rc-arena-freienbach"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "40948",
+    "aliases": [
+      "myrcm-40948",
+      "RC Arena Freienbach",
+      "Freienbach"
+    ]
+  },
+  {
+    "id": "rc-car-oetztal",
+    "name": "Rc Car Ötztal",
+    "city": "Längenfeld",
+    "lat": 47.072801,
+    "lng": 10.9629594,
+    "hostIds": [
+      "rc-car-oetztal"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "4708",
+    "aliases": [
+      "myrcm-4708",
+      "Rc Car Ötztal",
+      "Längenfeld"
+    ]
+  },
+  {
+    "id": "rc-club-wyland",
+    "name": "RC Club Wyland",
+    "city": "Winterthur",
+    "lat": 47.4991723,
+    "lng": 8.7291498,
+    "hostIds": [
+      "rc-club-wyland"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "14101",
+    "aliases": [
+      "myrcm-14101",
+      "RC Club Wyland",
+      "Winterthur"
+    ]
+  },
+  {
+    "id": "rc-racing-club-arlesheim",
+    "name": "RC Racing Club Arlesheim",
+    "city": "Arlesheim",
+    "lat": 47.4931125,
+    "lng": 7.6202048,
+    "hostIds": [
+      "rc-racing-club-arlesheim"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "31003",
+    "aliases": [
+      "myrcm-31003",
+      "RC Racing Club Arlesheim",
+      "Arlesheim"
+    ]
+  },
+  {
+    "id": "rc-lords-of-dirt",
+    "name": "RC-Lords of Dirt",
+    "city": "Sachsenburg",
+    "lat": 46.829306,
+    "lng": 13.3544424,
+    "hostIds": [
+      "rc-lords-of-dirt"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "18966",
+    "aliases": [
+      "myrcm-18966",
+      "RC-Lords of Dirt",
+      "Sachsenburg"
+    ]
+  },
+  {
+    "id": "rc-racearena",
+    "name": "RC-RaceArena",
+    "city": "Islikon",
+    "lat": 47.547642,
+    "lng": 8.8474629,
+    "hostIds": [
+      "rc-racearena"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "5208",
+    "aliases": [
+      "myrcm-5208",
+      "RC-RaceArena",
+      "Islikon"
+    ]
+  },
+  {
+    "id": "rc-racing-pregarten",
+    "name": "RC-Racing Pregarten",
+    "city": "Linz",
+    "lat": 48.185712,
+    "lng": 14.2512524,
+    "hostIds": [
+      "rc-racing-pregarten"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "9965",
+    "aliases": [
+      "myrcm-9965",
+      "RC-Racing Pregarten",
+      "Linz"
+    ]
+  },
+  {
+    "id": "rc-timing",
+    "name": "RC-Timing",
+    "city": "Oberhasli",
+    "lat": 46.6364532,
+    "lng": 8.0737314,
+    "hostIds": [
+      "rc-timing"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "4",
+    "aliases": [
+      "myrcm-4",
+      "RC-Timing",
+      "Oberhasli"
+    ]
+  },
+  {
+    "id": "rcb2000-modellsportverein",
+    "name": "RCB2000, Modellsportverein",
+    "city": "Stockerau",
+    "lat": 48.3846124,
+    "lng": 16.2076303,
+    "hostIds": [
+      "rcb2000-modellsportverein"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "1388",
+    "aliases": [
+      "myrcm-1388",
+      "RCB2000, Modellsportverein",
+      "Stockerau"
+    ]
+  },
+  {
+    "id": "rcc-sittersdorf",
+    "name": "RCC Sittersdorf",
+    "city": "Sittersdorf",
+    "lat": 46.5250325,
+    "lng": 14.6023619,
+    "hostIds": [
+      "rcc-sittersdorf"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "26141",
+    "aliases": [
+      "myrcm-26141",
+      "RCC Sittersdorf",
+      "Sittersdorf"
+    ]
+  },
+  {
+    "id": "rcc-grafenwoerth",
+    "name": "RCC-Grafenwörth",
+    "city": "Grafenwörth",
+    "lat": 48.4130818,
+    "lng": 15.7752568,
+    "hostIds": [
+      "rcc-grafenwoerth"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "775",
+    "aliases": [
+      "myrcm-775",
+      "RCC-Grafenwörth",
+      "Grafenwörth"
+    ]
+  },
+  {
+    "id": "rcf-rc-festival",
+    "name": "RCF RC-Festival",
+    "city": "Fehring",
+    "lat": 46.9360862,
+    "lng": 16.0104462,
+    "hostIds": [
+      "rcf-rc-festival"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "21064",
+    "aliases": [
+      "myrcm-21064",
+      "RCF RC-Festival",
+      "Fehring"
+    ]
+  },
+  {
+    "id": "rcr-linz",
+    "name": "RCR-Linz",
+    "city": "Linz",
+    "lat": 48.3059078,
+    "lng": 14.286198,
+    "hostIds": [
+      "rcr-linz"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "776",
+    "aliases": [
+      "myrcm-776",
+      "RCR-Linz",
+      "Linz"
+    ]
+  },
+  {
+    "id": "rcxx-shop",
+    "name": "RCXX.SHOP",
+    "city": "Cham",
+    "lat": 47.1811018,
+    "lng": 8.4613273,
+    "hostIds": [
+      "rcxx-shop"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "58661",
+    "aliases": [
+      "myrcm-58661",
+      "RCXX.SHOP",
+      "Cham"
+    ]
+  },
+  {
+    "id": "rmc-wien",
+    "name": "RMC-Wien",
+    "city": "Schranawand",
+    "lat": 48.1924775,
+    "lng": 16.3589101,
+    "hostIds": [
+      "rmc-wien"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "777",
+    "aliases": [
+      "myrcm-777",
+      "RMC-Wien",
+      "Schranawand"
+    ]
+  },
+  {
+    "id": "rmcb",
+    "name": "RMCB",
+    "city": "Bern",
+    "lat": 46.9484742,
+    "lng": 7.4521749,
+    "hostIds": [
+      "rmcb"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "9703",
+    "aliases": [
+      "myrcm-9703",
+      "RMCB",
+      "Bern"
+    ]
+  },
+  {
+    "id": "salzburger-funk-modell-auto-verein-sfmav",
+    "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
+    "city": "Salzburg",
+    "lat": 47.7981346,
+    "lng": 13.0464806,
+    "hostIds": [
+      "salzburger-funk-modell-auto-verein-sfmav"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "25165",
+    "aliases": [
+      "myrcm-25165",
+      "Salzburger-Funk-Modell-Auto-Verein SFMAV",
+      "Salzburg"
+    ]
+  },
+  {
+    "id": "smrc-wien",
+    "name": "SMRC Wien",
+    "city": "Wien",
+    "lat": 48.1730868,
+    "lng": 16.4268115,
+    "hostIds": [
+      "smrc-wien"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "763",
+    "aliases": [
+      "myrcm-763",
+      "SMRC Wien",
+      "Wien"
+    ]
+  },
+  {
+    "id": "swiss-r-c-car-clubs-association",
+    "name": "Swiss R/C Car Clubs Association",
+    "city": "Gachnang",
+    "lat": 47.5396518,
+    "lng": 8.8523731,
+    "hostIds": [
+      "swiss-r-c-car-clubs-association"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "24",
+    "aliases": [
+      "myrcm-24",
+      "Swiss R/C Car Clubs Association",
+      "Gachnang"
+    ]
+  },
+  {
+    "id": "swiss-racing-cup",
+    "name": "Swiss Racing Cup",
+    "city": "Wichtrach",
+    "lat": 46.8457306,
+    "lng": 7.5783419,
+    "hostIds": [
+      "swiss-racing-cup"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "9425",
+    "aliases": [
+      "myrcm-9425",
+      "Swiss Racing Cup",
+      "Wichtrach"
+    ]
+  },
+  {
+    "id": "swiss-rc-protech-s-rl",
+    "name": "Swiss RC ProTech Sàrl",
+    "city": "Saint-Légier",
+    "lat": 46.4835162,
+    "lng": 6.9140943,
+    "hostIds": [
+      "swiss-rc-protech-s-rl"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "47238",
+    "aliases": [
+      "myrcm-47238",
+      "Swiss RC ProTech Sàrl",
+      "Saint-Légier"
+    ]
+  },
+  {
+    "id": "tamiya-cup-austria",
+    "name": "Tamiya Cup Austria",
+    "city": "Furth",
+    "lat": 48.374646,
+    "lng": 15.6131886,
+    "hostIds": [
+      "tamiya-cup-austria"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "6328",
+    "aliases": [
+      "myrcm-6328",
+      "Tamiya Cup Austria",
+      "Furth"
+    ]
+  },
+  {
+    "id": "team-indoor-track-schoeftland",
+    "name": "Team Indoor Track Schöftland",
+    "city": "Othmarsingen",
+    "lat": 47.4023481,
+    "lng": 8.2162901,
+    "hostIds": [
+      "team-indoor-track-schoeftland"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "17663",
+    "aliases": [
+      "myrcm-17663",
+      "Team Indoor Track Schöftland",
+      "Othmarsingen"
+    ]
+  },
+  {
+    "id": "team-speedfreaks-austria",
+    "name": "Team Speedfreaks Austria",
+    "city": "Krieglach",
+    "lat": 47.5523264,
+    "lng": 15.5484247,
+    "hostIds": [
+      "team-speedfreaks-austria"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "529",
+    "aliases": [
+      "myrcm-529",
+      "Team Speedfreaks Austria",
+      "Krieglach"
+    ]
+  },
+  {
+    "id": "tr-racing",
+    "name": "TR-Racing",
+    "city": "Gr.Hartmannsdorf 101",
+    "lat": 47.0475067,
+    "lng": 15.8358721,
+    "hostIds": [
+      "tr-racing"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "506",
+    "aliases": [
+      "myrcm-506",
+      "TR-Racing",
+      "Gr.Hartmannsdorf 101"
+    ]
+  },
+  {
+    "id": "united-model-cars-lyss",
+    "name": "United Model Cars Lyss",
+    "city": "Lyss",
+    "lat": 47.0721368,
+    "lng": 7.305262,
+    "hostIds": [
+      "united-model-cars-lyss"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "23",
+    "aliases": [
+      "myrcm-23",
+      "United Model Cars Lyss",
+      "Lyss"
+    ]
+  },
+  {
+    "id": "wmw-rc-buggy-racing-team-fehring",
+    "name": "WMW RC-BUGGY-RACING TEAM FEHRING",
+    "city": "Fehring",
+    "lat": 46.9360862,
+    "lng": 16.0104462,
+    "hostIds": [
+      "wmw-rc-buggy-racing-team-fehring"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "507",
+    "aliases": [
+      "myrcm-507",
+      "WMW RC-BUGGY-RACING TEAM FEHRING",
+      "Fehring"
+    ]
+  },
+  {
+    "id": "wrc-drivers",
+    "name": "WRC-Drivers",
+    "city": "Schleißheim",
+    "lat": 48.1788658,
+    "lng": 14.0699207,
+    "hostIds": [
+      "wrc-drivers"
+    ],
+    "source": "geocoded-nominatim-dach",
+    "myrcmOrgId": "1387",
+    "aliases": [
+      "myrcm-1387",
+      "WRC-Drivers",
+      "Schleißheim"
+    ]
   }
 ]
