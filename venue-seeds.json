@@ -37,12 +37,12 @@
     "id": "1-wbc-hoheneich",
     "name": "1. WBC-Hoheneich",
     "city": "Hoheneich",
-    "lat": 48.7716533,
-    "lng": 15.0259648,
+    "lat": 48.775892,
+    "lng": 15.031295,
     "hostIds": [
       "1-wbc-hoheneich"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "761",
     "aliases": [
       "myrcm-761",
