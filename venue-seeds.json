@@ -474,12 +474,12 @@
     "id": "bclc-buggy-club-de-la-c-te",
     "name": "BCLC Buggy Club de la Côte",
     "city": "Gland",
-    "lat": 46.4239425,
-    "lng": 6.2655115,
+    "lat": 46.413931127230285,
+    "lng": 6.278890529739932,
     "hostIds": [
       "bclc-buggy-club-de-la-c-te"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "572",
     "aliases": [
       "myrcm-572",
