@@ -1659,9 +1659,12 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE" };
 function venueCountry(venue) {
   if (!venue?.myrcmOrgId) return null;
-  return hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
+  const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
+  if (!c) return null;
+  return _countryNameToCode[c] ?? c;
 }
 
 function matchesCountryFilter(race) {
