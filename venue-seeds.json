@@ -4484,6 +4484,13 @@
     "myrcmOrgId": "20278"
   },
   {
+    "hostId": "art-racing-team-switzerland",
+    "hostName": "ART Racing Team Switzerland",
+    "lat": 46.87177886920145,
+    "lng": 7.560926497083909,
+    "myrcmOrgId": "11113"
+  },
+  {
     "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "lat": 51.07755743502219,
