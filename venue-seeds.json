@@ -2503,18 +2503,17 @@
     "id": "oefmav-sektion-verbrenner-flachbahn",
     "name": "ÖFMAV Sektion Verbrenner Flachbahn",
     "city": "Winklarn",
-    "lat": 48.0915707,
-    "lng": 14.8477591,
     "hostIds": [
       "oefmav-sektion-verbrenner-flachbahn"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "38958",
     "aliases": [
       "myrcm-38958",
       "ÖFMAV Sektion Verbrenner Flachbahn",
       "Winklarn"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "one28-ch-swiss-micro-racer",
