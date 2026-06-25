@@ -2405,18 +2405,17 @@
     "id": "oefmav",
     "name": "Oefmav",
     "city": "Klagenfurt am Wörthersee",
-    "lat": 46.6344126,
-    "lng": 14.3055036,
     "hostIds": [
       "oefmav"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "61558",
     "aliases": [
       "myrcm-61558",
       "Oefmav",
       "Klagenfurt am Wörthersee"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "off-road-club-montagny",
