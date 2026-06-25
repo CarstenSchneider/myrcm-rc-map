@@ -2584,12 +2584,12 @@
     "id": "psv-salzburg-automodellsport",
     "name": "PSV-Salzburg Automodellsport",
     "city": "Elsbethen",
-    "lat": 47.75457427162213,
-    "lng": 13.076550206970264,
+    "lat": 47.7592351,
+    "lng": 13.0825458,
     "hostIds": [
       "psv-salzburg-automodellsport"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "762",
     "aliases": [
       "myrcm-762",
@@ -2677,12 +2677,12 @@
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
-    "lat": 47.59426328236128,
-    "lng": 8.691662723481043,
+    "lat": 47.4991723,
+    "lng": 8.7291498,
     "hostIds": [
       "rc-club-wyland"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "14101",
     "aliases": [
       "myrcm-14101",
@@ -2770,12 +2770,12 @@
     "id": "rc-racing-club-arlesheim",
     "name": "RC Racing Club Arlesheim",
     "city": "Arlesheim",
-    "lat": 47.4959632520367,
-    "lng": 7.610016742809489,
+    "lat": 47.4931125,
+    "lng": 7.6202048,
     "hostIds": [
       "rc-racing-club-arlesheim"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "31003",
     "aliases": [
       "myrcm-31003",
@@ -2937,12 +2937,12 @@
     "id": "rc-racearena",
     "name": "RC-RaceArena",
     "city": "Islikon",
-    "lat": 47.54788666663651,
-    "lng": 8.848190097477717,
+    "lat": 47.547642,
+    "lng": 8.8474629,
     "hostIds": [
       "rc-racearena"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "5208",
     "aliases": [
       "myrcm-5208",
@@ -2988,17 +2988,18 @@
     "id": "rc-timing",
     "name": "RC-Timing",
     "city": "Oberhasli",
+    "lat": 46.6364532,
+    "lng": 8.0737314,
     "hostIds": [
       "rc-timing"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "4",
     "aliases": [
       "myrcm-4",
       "RC-Timing",
       "Oberhasli"
-    ],
-    "locationUnknown": true
+    ]
   },
   {
     "id": "rcc-reken-e-v",
@@ -3021,12 +3022,12 @@
     "id": "rcc-sittersdorf",
     "name": "RCC Sittersdorf",
     "city": "Sittersdorf",
-    "lat": 46.545189738370475,
-    "lng": 14.599871018443983,
+    "lat": 46.5250325,
+    "lng": 14.6023619,
     "hostIds": [
       "rcc-sittersdorf"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "26141",
     "aliases": [
       "myrcm-26141",
@@ -3127,12 +3128,12 @@
     "id": "rcr-linz",
     "name": "RCR-Linz",
     "city": "Linz",
-    "lat": 48.25169566296423,
-    "lng": 14.279948418738599,
+    "lat": 48.3059078,
+    "lng": 14.286198,
     "hostIds": [
       "rcr-linz"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "776",
     "aliases": [
       "myrcm-776",
@@ -3212,12 +3213,12 @@
     "id": "rmcb",
     "name": "RMCB",
     "city": "Bern",
-    "lat": 46.74553578758657,
-    "lng": 7.595843746581002,
+    "lat": 46.9484742,
+    "lng": 7.4521749,
     "hostIds": [
       "rmcb"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "9703",
     "aliases": [
       "myrcm-9703",
@@ -3246,12 +3247,12 @@
     "id": "salzburger-funk-modell-auto-verein-sfmav",
     "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
     "city": "Salzburg",
-    "lat": 47.75457427854086,
-    "lng": 13.076539661915477,
+    "lat": 47.7981346,
+    "lng": 13.0464806,
     "hostIds": [
       "salzburger-funk-modell-auto-verein-sfmav"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "25165",
     "aliases": [
       "myrcm-25165",
@@ -3321,12 +3322,12 @@
     "id": "smrc-wien",
     "name": "SMRC Wien",
     "city": "Wien",
-    "lat": 48.17353863991887,
-    "lng": 16.427145882319753,
+    "lat": 48.1730868,
+    "lng": 16.4268115,
     "hostIds": [
       "smrc-wien"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "763",
     "aliases": [
       "myrcm-763",
@@ -3355,44 +3356,46 @@
     "id": "swiss-r-c-car-clubs-association",
     "name": "Swiss R/C Car Clubs Association",
     "city": "Gachnang",
+    "lat": 47.5396518,
+    "lng": 8.8523731,
     "hostIds": [
       "swiss-r-c-car-clubs-association"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "24",
     "aliases": [
       "myrcm-24",
       "Swiss R/C Car Clubs Association",
       "Gachnang"
-    ],
-    "locationUnknown": true
+    ]
   },
   {
     "id": "swiss-racing-cup",
     "name": "Swiss Racing Cup",
     "city": "Wichtrach",
+    "lat": 46.8457306,
+    "lng": 7.5783419,
     "hostIds": [
       "swiss-racing-cup"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "9425",
     "aliases": [
       "myrcm-9425",
       "Swiss Racing Cup",
       "Wichtrach"
-    ],
-    "locationUnknown": true
+    ]
   },
   {
     "id": "swiss-rc-protech-s-rl",
     "name": "Swiss RC ProTech Sàrl",
     "city": "Saint-Légier",
-    "lat": 46.47627441182076,
-    "lng": 6.865589905376332,
+    "lat": 46.4835162,
+    "lng": 6.9140943,
     "hostIds": [
       "swiss-rc-protech-s-rl"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "47238",
     "aliases": [
       "myrcm-47238",
@@ -3404,28 +3407,29 @@
     "id": "tamiya-cup-austria",
     "name": "Tamiya Cup Austria",
     "city": "Furth",
+    "lat": 48.374646,
+    "lng": 15.6131886,
     "hostIds": [
       "tamiya-cup-austria"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "6328",
     "aliases": [
       "myrcm-6328",
       "Tamiya Cup Austria",
       "Furth"
-    ],
-    "locationUnknown": true
+    ]
   },
   {
     "id": "team-indoor-track-schoeftland",
     "name": "Team Indoor Track Schöftland",
     "city": "Othmarsingen",
-    "lat": 47.31516903389294,
-    "lng": 8.056242068322513,
+    "lat": 47.4023481,
+    "lng": 8.2162901,
     "hostIds": [
       "team-indoor-track-schoeftland"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "17663",
     "aliases": [
       "myrcm-17663",
@@ -3454,17 +3458,18 @@
     "id": "tr-racing",
     "name": "TR-Racing",
     "city": "Gr.Hartmannsdorf 101",
+    "lat": 47.0475067,
+    "lng": 15.8358721,
     "hostIds": [
       "tr-racing"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "506",
     "aliases": [
       "myrcm-506",
       "TR-Racing",
       "Gr.Hartmannsdorf 101"
-    ],
-    "locationUnknown": true
+    ]
   },
   {
     "id": "tsv-1871-augsburg-e-v",
@@ -3602,12 +3607,12 @@
     "id": "united-model-cars-lyss",
     "name": "United Model Cars Lyss",
     "city": "Lyss",
-    "lat": 47.065244636506876,
-    "lng": 7.289806885140061,
+    "lat": 47.0721368,
+    "lng": 7.305262,
     "hostIds": [
       "united-model-cars-lyss"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "23",
     "aliases": [
       "myrcm-23",
@@ -3653,12 +3658,12 @@
     "id": "wmw-rc-buggy-racing-team-fehring",
     "name": "WMW RC-BUGGY-RACING TEAM FEHRING",
     "city": "Fehring",
-    "lat": 46.93733544744133,
-    "lng": 16.02078820408314,
+    "lat": 46.9360862,
+    "lng": 16.0104462,
     "hostIds": [
       "wmw-rc-buggy-racing-team-fehring"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "507",
     "aliases": [
       "myrcm-507",
