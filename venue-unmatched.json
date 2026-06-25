@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "modellclub-flensburg-e-v",
-    "hostName": "Modellclub Flensburg e.V",
-    "source": "myrcm",
-    "myrcmOrgId": "42405",
-    "possibleVenue": "Flensburg",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
     "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
     "source": "myrcm",
