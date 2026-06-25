@@ -1943,18 +1943,17 @@
     "id": "mrc-fritzens-formel-4",
     "name": "MRC Fritzens Formel 4",
     "city": "Fritzens/Tirol",
-    "lat": 47.2810514,
-    "lng": 11.1307299,
     "hostIds": [
       "mrc-fritzens-formel-4"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "772",
     "aliases": [
       "myrcm-772",
       "MRC Fritzens Formel 4",
       "Fritzens/Tirol"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "mrc-leipzig-e-v",
