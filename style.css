@@ -873,8 +873,12 @@ input {
   100% { box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08), 0 0 0 0 rgba(74, 158, 232, 0); }
 }
 
-/* Locate button — matches app-menu-button on desktop; fixed on mobile */
+/* Locate button — fixed top-left on all screen sizes */
 .locate-btn {
+  position: fixed;
+  top: 74px;
+  left: 14px;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -891,10 +895,10 @@ input {
 }
 .locate-btn:hover { transform: scale(1.08); }
 
-/* Country filter pill */
+/* Country filter pill — fixed directly below locate button */
 .country-pill {
   position: fixed;
-  bottom: 100px;
+  top: 124px;  /* 74 (locate top) + 40 (locate height) + 10 gap */
   left: 14px;
   z-index: 1000;
   display: flex;
@@ -921,9 +925,9 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.12s;
+  transition: transform 120ms ease;
 }
-.country-pill-btn:hover { background: rgba(0, 0, 0, 0.05); }
+.country-pill-btn:hover { transform: scale(1.08); }
 .country-pill-btn.is-active { background: rgba(var(--accent-rgb), 0.08); }
 
 .country-flag-icon {
@@ -936,8 +940,7 @@ input {
 
 @media (max-width: 860px) {
   .country-pill {
-    bottom: auto;
-    top: 136px;
+    top: 136px;  /* 74 (locate top) + 52 (locate height) + 10 gap */
     height: 52px;
     max-width: 52px;
   }
@@ -959,11 +962,6 @@ input {
 
 @media (max-width: 860px) {
   .locate-btn {
-    position: fixed !important;
-    top: 74px !important;
-    left: 14px !important;
-    bottom: auto !important;
-    margin: 0 !important;
     width: 52px !important;
     height: 52px !important;
     box-shadow: 0 8px 22px rgba(var(--shadow-rgb), 0.09) !important;
@@ -1493,7 +1491,8 @@ input {
   }
 
   .layout-prototype .leaflet-control-zoom {
-    display: none !important;
+    margin-left: 14px !important;
+    margin-bottom: 80px !important;
   }
 }
 

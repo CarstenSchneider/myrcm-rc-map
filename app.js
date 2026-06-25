@@ -94,13 +94,10 @@ _countryPill.addEventListener("mouseleave", () => _countryPill.classList.remove(
 document.body.appendChild(_countryPill);
 updateCountryPill();
 
-if (!window.matchMedia("(max-width: 860px)").matches) {
-  const desktopSlot = document.getElementById("locateDesktopSlot");
-  if (desktopSlot && _locateBtn) {
-    const leafletContainer = _locateBtn.parentElement;
-    desktopSlot.appendChild(_locateBtn);
-    leafletContainer?.remove();
-  }
+// Locate button is position:fixed via CSS — remove its empty Leaflet wrapper
+const _locateBtnLeafletContainer = _locateBtn?.parentElement;
+if (_locateBtnLeafletContainer?.classList.contains("leaflet-control")) {
+  _locateBtnLeafletContainer.remove();
 }
 if (!localStorage.getItem("locateBtnHinted")) {
   setTimeout(() => {
