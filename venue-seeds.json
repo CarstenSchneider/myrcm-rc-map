@@ -3355,18 +3355,17 @@
     "id": "swiss-r-c-car-clubs-association",
     "name": "Swiss R/C Car Clubs Association",
     "city": "Gachnang",
-    "lat": 47.5396518,
-    "lng": 8.8523731,
     "hostIds": [
       "swiss-r-c-car-clubs-association"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "24",
     "aliases": [
       "myrcm-24",
       "Swiss R/C Car Clubs Association",
       "Gachnang"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "swiss-racing-cup",
