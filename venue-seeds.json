@@ -2471,18 +2471,17 @@
     "id": "oefmav-sektion-elektro-offroad",
     "name": "ÖFMAV Sektion Elektro Offroad",
     "city": "Wien",
-    "lat": 48.1857192,
-    "lng": 16.4221587,
     "hostIds": [
       "oefmav-sektion-elektro-offroad"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "34619",
     "aliases": [
       "myrcm-34619",
       "ÖFMAV Sektion Elektro Offroad",
       "Wien"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "oefmav-sektion-or-8",
