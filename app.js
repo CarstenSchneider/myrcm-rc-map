@@ -51,7 +51,32 @@ const LocateControl = L.Control.extend({
 });
 new LocateControl().addTo(map);
 
-let selectedCountry = "all";
+const COUNTRY_BOUNDS = {
+  DE: [[47.2, 5.8], [55.1, 15.1]],
+  AT: [[46.2, 9.4], [49.0, 17.2]],
+  CH: [[45.7, 5.9], [47.9, 10.6]],
+  all: [[45.7, 5.8], [55.1, 17.5]],
+};
+
+function detectCountryFromLocale() {
+  const langs = Array.from(navigator.languages?.length ? navigator.languages : [navigator.language]);
+  for (const lang of langs) {
+    const match = lang.toUpperCase().match(/-([A-Z]{2})$/);
+    if (match && COUNTRY_BOUNDS[match[1]]) return match[1];
+  }
+  return "all";
+}
+
+function fitToCountry(country) {
+  const bounds = COUNTRY_BOUNDS[country] || COUNTRY_BOUNDS.all;
+  fitMapToBounds(bounds, { maxZoom: 10 });
+}
+
+const _validCountries = new Set(["all", "DE", "AT", "CH"]);
+const _savedCountry = localStorage.getItem("rcRaceMapCountry");
+let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
+let _zoomToCountryPending = false;
+
 const countryFlags = [
   { country: "all", code: "eu", label: "Alle Länder" },
   { country: "DE",  code: "de", label: "Deutschland" },
@@ -90,7 +115,9 @@ function _pillClose(country) {
   _countryPill.classList.remove("is-expanded");
   if (country !== selectedCountry) {
     selectedCountry = country;
+    localStorage.setItem("rcRaceMapCountry", country);
     updateCountryPill();
+    _zoomToCountryPending = true;
     setTimeout(render, 270); // defer past 250ms close transition
   }
 }
@@ -3915,6 +3942,10 @@ function render() {
       updateMarkers(list, shouldFitBounds);
       if (venues.length > 0) initialRenderDone = true;
       mapPanel?.classList.remove("map-is-updating");
+      if (_zoomToCountryPending) {
+        _zoomToCountryPending = false;
+        fitToCountry(selectedCountry);
+      }
     });
   });
 }
@@ -4340,6 +4371,7 @@ async function init() {
 
   syncFilterUi();
 
+  if (selectedCountry !== "all") _zoomToCountryPending = true;
   render();
   revealMapWhenReady();
   loadAds();
