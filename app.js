@@ -87,10 +87,12 @@ function _pillOpen() {
 function _pillClose(country) {
   _pillIsExpanded = false;
   _pillLastClose = Date.now();
-  selectedCountry = country;
   _countryPill.classList.remove("is-expanded");
-  updateCountryPill();
-  render();
+  if (country !== selectedCountry) {
+    selectedCountry = country;
+    updateCountryPill();
+    setTimeout(render, 270); // defer past 250ms close transition
+  }
 }
 
 // Touch: touchstart + preventDefault stops all iOS synthetic events
