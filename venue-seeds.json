@@ -4477,6 +4477,13 @@
     "myrcmOrgId": "14010"
   },
   {
+    "hostId": "arcb",
+    "hostName": "ARCB",
+    "lat": 46.80707362629334,
+    "lng": 6.921959013746761,
+    "myrcmOrgId": "20278"
+  },
+  {
     "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "lat": 51.07755743502219,
