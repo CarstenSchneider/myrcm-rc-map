@@ -2352,12 +2352,12 @@
     "id": "nitrofighter",
     "name": "Nitrofighter",
     "city": "Lambrechten",
-    "lat": 48.3165483,
-    "lng": 13.5135562,
+    "lat": 48.322265539714145,
+    "lng": 13.539756145992305,
     "hostIds": [
       "nitrofighter"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "13507",
     "aliases": [
       "myrcm-13507",
