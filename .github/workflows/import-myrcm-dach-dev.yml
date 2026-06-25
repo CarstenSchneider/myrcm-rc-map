@@ -52,7 +52,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          ALL_FILES="races.json hosts.json venues.json venue-unmatched.json"
+          ALL_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json"
 
           git add $ALL_FILES
           if git diff --staged --quiet; then

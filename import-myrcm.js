@@ -1933,6 +1933,22 @@ async function runImportOnce() {
   const mergedVenues = mergeVenueSeedsIntoVenues(existingVenues, venueSeeds);
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
 
+  // Remove geocoded AT/CH seeds for clubs that have no races in the import window.
+  // importedHosts contains only clubs with at least one race in the current period.
+  const activeOrgIds = new Set(importedHosts.map(h => h.myrcmOrgId).filter(Boolean));
+  const cleanedVenueSeeds = venueSeeds.filter(s =>
+    s.source !== "geocoded-nominatim-dach" || activeOrgIds.has(s.myrcmOrgId)
+  );
+  const removedSeedCount = venueSeeds.length - cleanedVenueSeeds.length;
+  if (removedSeedCount > 0) {
+    await writeFile(
+      venueSeedsFile,
+      JSON.stringify(cleanedVenueSeeds, null, 2) + "\n",
+      "utf8"
+    );
+    console.log(`venue-seeds.json bereinigt: ${removedSeedCount} inaktive Geocoded-Seeds entfernt`);
+  }
+
   await writeFile(
     hostsFile,
     JSON.stringify(mergedHosts, null, 2) + "\n",
