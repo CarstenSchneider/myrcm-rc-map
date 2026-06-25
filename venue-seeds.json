@@ -624,12 +624,12 @@
     "id": "efac-hohenems",
     "name": "EFAC Hohenems",
     "city": "Hohenems",
-    "lat": 47.3667469,
-    "lng": 9.6622934,
+    "lat": 47.36691411956159,
+    "lng": 9.662794396312695,
     "hostIds": [
       "efac-hohenems"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "163",
     "aliases": [
       "myrcm-163",
