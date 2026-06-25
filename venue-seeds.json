@@ -1189,18 +1189,17 @@
     "id": "max-informatique",
     "name": "Max Informatique",
     "city": "Malleray",
-    "lat": 47.2386397,
-    "lng": 7.2760225,
     "hostIds": [
       "max-informatique"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "20360",
     "aliases": [
       "myrcm-20360",
       "Max Informatique",
       "Malleray"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "max-rc-car-racing",
