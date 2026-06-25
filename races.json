@@ -26696,17 +26696,17 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": null,
     "classes": [
       {
         "name": "FCOS 1:8",
-        "entries": 8
+        "entries": 7
       },
       {
         "name": "FCOS 2WD",
-        "entries": 11
+        "entries": 10
       },
       {
         "name": "FCOS TT 02B",
@@ -26738,8 +26738,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": null,
     "classes": [
       {
@@ -26752,7 +26752,7 @@
       },
       {
         "name": "ORE8 Elo Buggy",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "OR8 Nitro Buggy",
@@ -26777,7 +26777,7 @@
     "venueLocation": "Bernau",
     "hostId": "rc-speedracer-bernau",
     "hostName": "RC Speedracer e.V.",
-    "name": "Tamico Offroad Cup + SK-Lauf ORE2WD ST",
+    "name": "Tamico Offroad Cup + SK-Lauf ORE2WD ST - Abgesagt",
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [
@@ -26836,12 +26836,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95007&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=116&pLa=en&dId%5BE%5D=95007&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95007&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "open",
+    "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 50,
-    "registrationDisplay": "50",
-    "note": null,
+    "registrationCount": 48,
+    "registrationDisplay": "48",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "TOC BBX",
@@ -26849,7 +26849,7 @@
       },
       {
         "name": "TOC Fighter-Klasse",
-        "entries": 19
+        "entries": 17
       },
       {
         "name": "TOC Retro 2WD",
@@ -26980,8 +26980,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -26994,7 +26994,7 @@
       },
       {
         "name": "EG- DMC 1:10 Tourenwagen Sport /EGTWSP)",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -27150,7 +27150,7 @@
       },
       {
         "name": "RCK GT2 Porsche",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "EGTWHO",
@@ -27158,7 +27158,7 @@
       },
       {
         "name": "EGTWSP",
-        "entries": 9
+        "entries": 8
       },
       {
         "name": "EGTWFR",
@@ -27188,8 +27188,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 147,
-    "registrationDisplay": "147",
+    "registrationCount": 145,
+    "registrationDisplay": "145",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -27202,7 +27202,7 @@
       },
       {
         "name": "ENS-1:8 +40",
-        "entries": 49
+        "entries": 47
       },
       {
         "name": "ENS 1:8 onroad",
@@ -27278,8 +27278,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
+    "registrationCount": 32,
+    "registrationDisplay": "32",
     "note": null,
     "classes": [
       {
@@ -27292,7 +27292,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 7
+        "entries": 9
       },
       {
         "name": "ORT",
@@ -27440,8 +27440,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       {
@@ -27450,7 +27450,7 @@
       },
       {
         "name": "ORE8T",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [
@@ -27636,8 +27636,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Nennung geschlossen.",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -27647,7 +27647,7 @@
       },
       {
         "name": "MCC - MCC Challenge",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "MCC - Tamiya Fighter",
@@ -27655,7 +27655,7 @@
       },
       {
         "name": "MCC - Tamiya TT",
-        "entries": 4
+        "entries": 6
       }
     ],
     "documents": [],
@@ -27926,8 +27926,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": null,
     "classes": [
       {
@@ -27940,7 +27940,7 @@
       },
       {
         "name": "NRW-Cup Top",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "NRW-Cup Truggy",
@@ -27970,8 +27970,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": null,
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -27984,7 +27984,7 @@
       "MAC Offroad-Verbrenner 1:8",
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [],
@@ -28617,24 +28617,27 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": null,
     "classes": [
       {
         "name": "EG8e",
-        "entries": 1
+        "entries": 2
       },
       "EG8GT",
       "VG10S",
-      "VG8S",
+      {
+        "name": "VG8S",
+        "entries": 1
+      },
       {
         "name": "VG10",
         "entries": 3
       },
       {
         "name": "VG8KL2",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "VG8KL1",
@@ -29642,7 +29645,7 @@
     "registrationOpens": "2026-07-09",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
-    "registrationDisplay": "0/0",
+    "registrationDisplay": "0",
     "note": "Nennung geschlossen.",
     "classes": [
       "2,4h Truck"
@@ -31708,8 +31711,8 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 37,
+    "registrationDisplay": "37",
     "note": null,
     "classes": [
       {
@@ -31718,7 +31721,7 @@
       },
       {
         "name": "Tamico-Cup Fighter-Klasse",
-        "entries": 17
+        "entries": 18
       },
       {
         "name": "Tamico-Cup Retro 2WD",
@@ -31726,7 +31729,7 @@
       },
       {
         "name": "Tamico-Cup Retro 4WD",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Tamico-Cup Truck",
