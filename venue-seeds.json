@@ -3246,12 +3246,12 @@
     "id": "salzburger-funk-modell-auto-verein-sfmav",
     "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
     "city": "Salzburg",
-    "lat": 47.7981346,
-    "lng": 13.0464806,
+    "lat": 47.75457427854086,
+    "lng": 13.076539661915477,
     "hostIds": [
       "salzburger-funk-modell-auto-verein-sfmav"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "25165",
     "aliases": [
       "myrcm-25165",
