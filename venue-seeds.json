@@ -508,12 +508,12 @@
     "id": "buggy-club-hornets",
     "name": "Buggy Club Hornets",
     "city": "Esslingen",
-    "lat": 47.28919,
-    "lng": 8.7096296,
+    "lat": 47.289089113385224,
+    "lng": 8.720930433462604,
     "hostIds": [
       "buggy-club-hornets"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "22302",
     "aliases": [
       "myrcm-22302",
