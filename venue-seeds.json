@@ -928,12 +928,12 @@
     "id": "mac-amstetten",
     "name": "MAC Amstetten",
     "city": "Biberbach",
-    "lat": 48.0291168,
-    "lng": 14.708497,
+    "lat": 48.11474489736409,
+    "lng": 14.8441105606671,
     "hostIds": [
       "mac-amstetten"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "1225",
     "aliases": [
       "myrcm-1225",
