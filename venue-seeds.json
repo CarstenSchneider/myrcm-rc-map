@@ -755,18 +755,17 @@
     "id": "erc-wr-neudorf",
     "name": "ERC-Wr.Neudorf",
     "city": "Wolfsgraben",
-    "lat": 48.1579894,
-    "lng": 16.1209769,
     "hostIds": [
       "erc-wr-neudorf"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "765",
     "aliases": [
       "myrcm-765",
       "ERC-Wr.Neudorf",
       "Wolfsgraben"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "ert-steyregg",
