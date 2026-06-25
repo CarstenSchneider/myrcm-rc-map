@@ -53,10 +53,10 @@ new LocateControl().addTo(map);
 
 let selectedCountry = "all";
 const countryFlags = [
-  { country: "all", flag: "🇪🇺", label: "Alle Länder" },
-  { country: "DE",  flag: "🇩🇪", label: "Deutschland" },
-  { country: "AT",  flag: "🇦🇹", label: "Österreich" },
-  { country: "CH",  flag: "🇨🇭", label: "Schweiz" },
+  { country: "all", code: "eu", label: "Alle Länder" },
+  { country: "DE",  code: "de", label: "Deutschland" },
+  { country: "AT",  code: "at", label: "Österreich" },
+  { country: "CH",  code: "ch", label: "Schweiz" },
 ];
 let _countryPill = null;
 
@@ -67,11 +67,13 @@ function updateCountryPill() {
     ...countryFlags.filter(f => f.country !== selectedCountry),
   ];
   _countryPill.innerHTML = ordered.map(f =>
-    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" title="${f.label}">${f.flag}</button>`
+    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" title="${f.label}">` +
+    `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
+    `</button>`
   ).join("");
   _countryPill.querySelectorAll(".country-pill-btn").forEach(btn => {
-    L.DomEvent.on(btn, "click", L.DomEvent.stop);
-    L.DomEvent.on(btn, "click", () => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
       const wasExpanded = _countryPill.classList.contains("is-expanded");
       if (!wasExpanded) {
         _countryPill.classList.add("is-expanded");
@@ -85,29 +87,18 @@ function updateCountryPill() {
   });
 }
 
-const CountryFilterControl = L.Control.extend({
-  options: { position: "bottomleft" },
-  onAdd() {
-    _countryPill = L.DomUtil.create("div", "country-pill");
-    L.DomEvent.on(_countryPill, "mouseenter", () => _countryPill.classList.add("is-expanded"));
-    L.DomEvent.on(_countryPill, "mouseleave", () => _countryPill.classList.remove("is-expanded"));
-    updateCountryPill();
-    return _countryPill;
-  }
-});
-new CountryFilterControl().addTo(map);
+_countryPill = document.createElement("div");
+_countryPill.className = "country-pill";
+_countryPill.addEventListener("mouseenter", () => _countryPill.classList.add("is-expanded"));
+_countryPill.addEventListener("mouseleave", () => _countryPill.classList.remove("is-expanded"));
+document.body.appendChild(_countryPill);
+updateCountryPill();
 
 if (!window.matchMedia("(max-width: 860px)").matches) {
   const desktopSlot = document.getElementById("locateDesktopSlot");
   if (desktopSlot && _locateBtn) {
     const leafletContainer = _locateBtn.parentElement;
     desktopSlot.appendChild(_locateBtn);
-    leafletContainer?.remove();
-  }
-  const countrySlot = document.getElementById("countryDesktopSlot");
-  if (countrySlot && _countryPill) {
-    const leafletContainer = _countryPill.parentElement;
-    countrySlot.appendChild(_countryPill);
     leafletContainer?.remove();
   }
 }
