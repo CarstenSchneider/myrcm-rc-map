@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
 
-const hostListFile = "myrcm-hosts-germany.json";
+const hostListFile = "myrcm-hosts-dach.json";
 const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
 const venueSeedsFile = "venue-seeds.json";
@@ -9,7 +9,7 @@ const venueUnmatchedFile = "venue-unmatched.json";
 const seriesFile = "series.json";
 const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
 const currentYear = new Date().getFullYear();
-const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
+const allowedYears = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1];
 
 const requestTimeoutMs = 8000;
 const retryCount = 1;
@@ -17,12 +17,12 @@ const detailConcurrency = 5;
 const fullImportAttemptCount = 3;
 const fullImportRetryDelayMs = 30000;
 
-function oneYearAgoString() {
-  // Import window: races older than 365 days are ignored.
+function twoYearsAgoString() {
+  // Import window: races older than 2 years are ignored.
   // Hosts with no races left after this filter are skipped entirely.
-  const oneYearAgo = new Date();
-  oneYearAgo.setDate(oneYearAgo.getDate() - 365);
-  return oneYearAgo.toISOString().slice(0, 10);
+  const twoYearsAgo = new Date();
+  twoYearsAgo.setDate(twoYearsAgo.getDate() - 730);
+  return twoYearsAgo.toISOString().slice(0, 10);
 }
 
 function sleep(ms) {
@@ -1245,11 +1245,13 @@ function myRcmOrgIdFromHost(host) {
 }
 
 function hostRecordFromMyRcmHost(host, venueSeed = null, existingHost = null) {
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE" };
   const importedHost = {
     id: hostIdFromMyRcmHost(host, venueSeed),
     name: hostNameFromMyRcmHost(host),
     website: host.website || host.web || "",
-    myrcmOrgId: myRcmOrgIdFromHost(host)
+    myrcmOrgId: myRcmOrgIdFromHost(host),
+    ...(host.country && countryMap[host.country] ? { country: countryMap[host.country] } : {})
   };
 
   if (!existingHost) return importedHost;
@@ -1567,7 +1569,7 @@ function extractEventLinksFromHostPage(html, host) {
     const fallbackFrom = dates[0] || null;
     const fallbackTo = dates[1] || dates[0] || null;
 
-    if (fallbackTo && fallbackTo < oneYearAgoString()) {
+    if (fallbackTo && fallbackTo < twoYearsAgoString()) {
       skippedPastEvents += 1;
       return;
     }
@@ -1651,7 +1653,7 @@ function shouldSkipRace(race) {
 
   if (race.to < race.from) return true;
 
-  if (race.to < oneYearAgoString()) return true;
+  if (race.to < twoYearsAgoString()) return true;
 
   const raceYear = Number(race.from.slice(0, 4));
   if (!allowedYears.includes(raceYear)) return true;
@@ -1932,6 +1934,22 @@ async function runImportOnce() {
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
   const mergedVenues = mergeVenueSeedsIntoVenues(existingVenues, venueSeeds);
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
+
+  // Remove geocoded AT/CH seeds for clubs that have no races in the import window.
+  // importedHosts contains only clubs with at least one race in the current period.
+  const activeOrgIds = new Set(importedHosts.map(h => h.myrcmOrgId).filter(Boolean));
+  const cleanedVenueSeeds = venueSeeds.filter(s =>
+    s.source !== "geocoded-nominatim-dach" || activeOrgIds.has(s.myrcmOrgId)
+  );
+  const removedSeedCount = venueSeeds.length - cleanedVenueSeeds.length;
+  if (removedSeedCount > 0) {
+    await writeFile(
+      venueSeedsFile,
+      JSON.stringify(cleanedVenueSeeds, null, 2) + "\n",
+      "utf8"
+    );
+    console.log(`venue-seeds.json bereinigt: ${removedSeedCount} inaktive Geocoded-Seeds entfernt`);
+  }
 
   await writeFile(
     hostsFile,
