@@ -2388,12 +2388,12 @@
     "id": "nmbc-neuch-tel-mini-buggy-club",
     "name": "NMBC Neuchâtel Mini Buggy Club",
     "city": "Cornaux",
-    "lat": 47.0383306,
-    "lng": 7.0188056,
+    "lat": 47.03551898685854,
+    "lng": 7.019575312495739,
     "hostIds": [
       "nmbc-neuch-tel-mini-buggy-club"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "4497",
     "aliases": [
       "myrcm-4497",
