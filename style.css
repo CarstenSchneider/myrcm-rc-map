@@ -907,8 +907,12 @@ input {
   overflow: hidden;
   transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  will-change: max-width;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .country-pill.is-expanded { max-width: 164px; }
+@media (hover: hover) { .country-pill:hover { max-width: 164px; } }
 
 .country-pill-btn {
   flex: 0 0 40px;
@@ -922,6 +926,8 @@ input {
   align-items: center;
   justify-content: center;
   transition: transform 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .country-pill-btn:not(.is-active):hover { transform: scale(1.08); }
 
@@ -941,6 +947,8 @@ input {
   :root:not(.theme-light) .country-pill { background: var(--pill-bg) !important; }
   :root:not(.theme-light) .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }
 }
+
+@media (hover: hover) and (max-width: 860px) { .country-pill:hover { max-width: 212px; } }
 
 @media (max-width: 860px) {
   .country-pill {

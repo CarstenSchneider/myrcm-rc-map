@@ -71,26 +71,32 @@ function updateCountryPill() {
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
     `</button>`
   ).join("");
-  _countryPill.querySelectorAll(".country-pill-btn").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.stopPropagation();
-      const wasExpanded = _countryPill.classList.contains("is-expanded");
-      if (!wasExpanded) {
-        _countryPill.classList.add("is-expanded");
-        return;
-      }
-      selectedCountry = btn.dataset.country;
-      _countryPill.classList.remove("is-expanded");
-      updateCountryPill();
-      render();
-    });
-  });
 }
 
 _countryPill = document.createElement("div");
 _countryPill.className = "country-pill";
-_countryPill.addEventListener("mouseenter", () => _countryPill.classList.add("is-expanded"));
-_countryPill.addEventListener("mouseleave", () => _countryPill.classList.remove("is-expanded"));
+_countryPill.addEventListener("click", e => {
+  const btn = e.target.closest(".country-pill-btn");
+  if (!btn) return;
+  e.stopPropagation();
+  if (window.matchMedia("(hover: hover)").matches) {
+    // Desktop: CSS :hover handles expansion; click just selects
+    selectedCountry = btn.dataset.country;
+    _countryPill.classList.remove("is-expanded");
+    updateCountryPill();
+    render();
+    return;
+  }
+  // Touch: tap 1 = expand, tap 2 = select and collapse
+  if (!_countryPill.classList.contains("is-expanded")) {
+    _countryPill.classList.add("is-expanded");
+    return;
+  }
+  selectedCountry = btn.dataset.country;
+  _countryPill.classList.remove("is-expanded");
+  updateCountryPill();
+  render();
+});
 document.body.appendChild(_countryPill);
 updateCountryPill();
 
