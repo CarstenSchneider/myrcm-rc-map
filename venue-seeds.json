@@ -1140,12 +1140,12 @@
     "id": "mac-traiskirchen",
     "name": "MAC-Traiskirchen",
     "city": "Möllersdorf",
-    "lat": 48.0248362,
-    "lng": 16.3040962,
+    "lat": 48.017345965777864,
+    "lng": 16.30643004706267,
     "hostIds": [
       "mac-traiskirchen"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "769",
     "aliases": [
       "myrcm-769",
