@@ -860,12 +860,12 @@
     "id": "lmc-limbacher-modellsport-club",
     "name": "LMC - Limbacher Modellsport Club",
     "city": "Limbach",
-    "lat": 47.3980635,
-    "lng": 16.0031086,
+    "lat": 47.40055037608646,
+    "lng": 16.006066816150238,
     "hostIds": [
       "lmc-limbacher-modellsport-club"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "66",
     "aliases": [
       "myrcm-66",
