@@ -1794,12 +1794,12 @@
     "id": "modellbuggygruppe-dellach-gail",
     "name": "Modellbuggygruppe Dellach/Gail",
     "city": "Dellach/Gail",
-    "lat": 46.6008784,
-    "lng": 13.5943918,
+    "lat": 46.65304374661556,
+    "lng": 13.083070226002091,
     "hostIds": [
       "modellbuggygruppe-dellach-gail"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "15268",
     "aliases": [
       "myrcm-15268",
