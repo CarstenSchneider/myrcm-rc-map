@@ -3584,6 +3584,12 @@
     ]
   },
   {
+    "hostId": "max-informatique",
+    "hostName": "Max Informatique",
+    "locationUnknown": true,
+    "myrcmOrgId": "20360"
+  },
+  {
     "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "lat": 51.07755743502219,
