@@ -3602,12 +3602,12 @@
     "id": "united-model-cars-lyss",
     "name": "United Model Cars Lyss",
     "city": "Lyss",
-    "lat": 47.0721368,
-    "lng": 7.305262,
+    "lat": 47.065244636506876,
+    "lng": 7.289806885140061,
     "hostIds": [
       "united-model-cars-lyss"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "23",
     "aliases": [
       "myrcm-23",
