@@ -1,11 +1,5 @@
 [
   {
-    "id": "1-gmac-litschau",
-    "name": "1. GMAC-Litschau",
-    "website": "https://www.1-gmac.at/",
-    "myrcmOrgId": "760"
-  },
-  {
     "id": "marzahner-racing-club",
     "name": "1. Marzahner Racing Club e.V.",
     "website": "https://www.mrc-berlin.org/",
@@ -16,18 +10,6 @@
     "name": "1. MRC Mannheim e.V.",
     "website": "https://www.mrc-mannheim.de/",
     "myrcmOrgId": "39671"
-  },
-  {
-    "id": "1-mrc-wr-neustadt",
-    "name": "1. MRC Wr. Neustadt",
-    "website": "https://www.mrcwrneustadt.at/",
-    "myrcmOrgId": "764"
-  },
-  {
-    "id": "a-team-graz",
-    "name": "A-Team Graz",
-    "website": "http://www.ateamgraz.at/",
-    "myrcmOrgId": "504"
   },
   {
     "id": "amc-hildesheim-e-v",
@@ -54,12 +36,6 @@
     "myrcmOrgId": "44208"
   },
   {
-    "id": "amc-nussdorf-debant",
-    "name": "AMC Nußdorf / Debant",
-    "website": "http://amcnussdorfdebant.weebly.com/",
-    "myrcmOrgId": "26450"
-  },
-  {
     "id": "amc-saarbrucken-e-v",
     "name": "AMC Saarbrücken e.V.",
     "website": "http://www.amc-saarbruecken.de/",
@@ -76,12 +52,6 @@
     "name": "AMC Sonthofen e.V.",
     "website": "http://www.amc-sonthofen.de/",
     "myrcmOrgId": "4006"
-  },
-  {
-    "id": "amc-tirol",
-    "name": "AMC Tirol",
-    "website": "http://www.amc-tirol.at/",
-    "myrcmOrgId": "14010"
   },
   {
     "id": "amc-hamm-e-v",
@@ -108,18 +78,6 @@
     "myrcmOrgId": "29065"
   },
   {
-    "id": "arcb",
-    "name": "ARCB",
-    "website": "https://www.arcb.ch/",
-    "myrcmOrgId": "20278"
-  },
-  {
-    "id": "art-racing-team-switzerland",
-    "name": "ART Racing Team Switzerland",
-    "website": "https://www.art-racing-team.ch/",
-    "myrcmOrgId": "11113"
-  },
-  {
     "id": "asc-celle-e-v",
     "name": "ASC Celle e.V.",
     "website": "http://www.asccelle.com/",
@@ -138,28 +96,10 @@
     "myrcmOrgId": "861"
   },
   {
-    "id": "bclc-buggy-club-de-la-c-te",
-    "name": "BCLC Buggy Club de la Côte",
-    "website": "http://www.bclc.ch/",
-    "myrcmOrgId": "572"
-  },
-  {
     "id": "breitenfelder-sportverein-von-1924-e-v",
     "name": "Breitenfelder Sportverein von 1924 e.V.",
     "website": "https://www.bsv-rc-modellsport.de/",
     "myrcmOrgId": "64649"
-  },
-  {
-    "id": "buggy-club-hornets",
-    "name": "Buggy Club Hornets",
-    "website": "http://www.bc-hornets.ch/",
-    "myrcmOrgId": "22302"
-  },
-  {
-    "id": "buggyclub-zentralschweiz",
-    "name": "Buggyclub Zentralschweiz",
-    "website": "http://www.buggyoffroad.ch/",
-    "myrcmOrgId": "7734"
   },
   {
     "id": "burning-wheels-blankenfelde",
@@ -216,52 +156,16 @@
     "myrcmOrgId": "35606"
   },
   {
-    "id": "efac-hohenems",
-    "name": "EFAC Hohenems",
-    "website": "http://www.efac-hohenems.at/",
-    "myrcmOrgId": "163"
-  },
-  {
-    "id": "electrique-radio-mod-le-club",
-    "name": "Electrique Radio Modèle Club",
-    "website": "http://www.ermcgs.com/",
-    "myrcmOrgId": "16203"
-  },
-  {
-    "id": "elektro-modell-buggy-club-march",
-    "name": "Elektro Modell Buggy Club March",
-    "website": "http://www.embcm.ch/",
-    "myrcmOrgId": "29104"
-  },
-  {
-    "id": "elektro-modell-car-club-ochsendorf",
-    "name": "Elektro-Modell-Car-Club-Ochsendorf",
-    "website": "https://www.emcco.at/",
-    "myrcmOrgId": "521"
-  },
-  {
     "id": "emc-marktoberdorf",
     "name": "EMC-Marktoberdorf",
     "website": "https://www.emc-marktoberdorf.info/",
     "myrcmOrgId": "43367"
   },
   {
-    "id": "eocd-elektro-offroad-club-dielsdorf",
-    "name": "EOCD - Elektro Offroad Club Dielsdorf",
-    "website": "http://www.eocd.ch/",
-    "myrcmOrgId": "8488"
-  },
-  {
     "id": "equipe-rc-nohn",
     "name": "Equipe RC Nohn",
     "website": "http://rc-nohn.npage.de/",
     "myrcmOrgId": "10117"
-  },
-  {
-    "id": "ert-steyregg",
-    "name": "ERT-Steyregg",
-    "website": "http://www.ert-steyregg.at/",
-    "myrcmOrgId": "768"
   },
   {
     "id": "esv-blau-gold-bischofsheim-1958-e-v",
@@ -306,28 +210,10 @@
     "myrcmOrgId": "458"
   },
   {
-    "id": "hobby-shop-haessig",
-    "name": "Hobby Shop Hässig",
-    "website": "http://www.hobbyshop.ch/",
-    "myrcmOrgId": "293"
-  },
-  {
     "id": "ig-racing-team-hamm",
     "name": "IG Racing Team Hamm",
     "website": "",
     "myrcmOrgId": "10490"
-  },
-  {
-    "id": "indoortrack-wichtrach",
-    "name": "Indoortrack Wichtrach",
-    "website": "",
-    "myrcmOrgId": "46390"
-  },
-  {
-    "id": "ircr-indoor-rc-romand",
-    "name": "IRCR - Indoor RC Romand",
-    "website": "https://www.ircr.ch/",
-    "myrcmOrgId": "26980"
   },
   {
     "id": "kloft-timing",
@@ -340,18 +226,6 @@
     "name": "LA Speedway Racing Club e.V.",
     "website": "https://laspeedway.de/",
     "myrcmOrgId": "52798"
-  },
-  {
-    "id": "lamac",
-    "name": "LAMAC",
-    "website": "http://www.lamac-stpaul.at/",
-    "myrcmOrgId": "781"
-  },
-  {
-    "id": "lmc-limbacher-modellsport-club",
-    "name": "LMC - Limbacher Modellsport Club",
-    "website": "http://www.lmcrc.at/",
-    "myrcmOrgId": "66"
   },
   {
     "id": "lost-place-racers-e-v",
@@ -376,12 +250,6 @@
     "name": "MAC Adenau",
     "website": "http://www.mac-adenau.de/",
     "myrcmOrgId": "4602"
-  },
-  {
-    "id": "mac-amstetten",
-    "name": "MAC Amstetten",
-    "website": "http://www.mac-amstetten.at/",
-    "myrcmOrgId": "1225"
   },
   {
     "id": "mac-berlin-e-v",
@@ -456,40 +324,10 @@
     "myrcmOrgId": "42064"
   },
   {
-    "id": "mac-traiskirchen",
-    "name": "MAC-Traiskirchen",
-    "website": "http://www.mactraiskirchen.at/",
-    "myrcmOrgId": "769"
-  },
-  {
-    "id": "macg-steiermark",
-    "name": "MACG - Steiermark",
-    "website": "http://www.macg-steiermark.at/",
-    "myrcmOrgId": "858"
-  },
-  {
-    "id": "max-informatique",
-    "name": "Max Informatique",
-    "website": "",
-    "myrcmOrgId": "20360"
-  },
-  {
-    "id": "max-rc-car-racing",
-    "name": "Max RC Car Racing",
-    "website": "",
-    "myrcmOrgId": "7554"
-  },
-  {
     "id": "mbc-goldstein-e-v",
     "name": "MBC Goldstein e.V.",
     "website": "http://www.mbcgoldstein.de/",
     "myrcmOrgId": "24873"
-  },
-  {
-    "id": "mblr-ecl-pens",
-    "name": "MBLR Eclépens",
-    "website": "https://www.mblr.ch/",
-    "myrcmOrgId": "45823"
   },
   {
     "id": "mbsc-wachtersbach",
@@ -648,18 +486,6 @@
     "myrcmOrgId": "158"
   },
   {
-    "id": "mini-racing-cars-aigle-lausanne",
-    "name": "Mini Racing Cars Aigle & Lausanne",
-    "website": "http://www.mrcal.ch/",
-    "myrcmOrgId": "19"
-  },
-  {
-    "id": "mini-racing-chiasso",
-    "name": "Mini Racing Chiasso",
-    "website": "http://www.miniracingchiasso.com/",
-    "myrcmOrgId": "9845"
-  },
-  {
     "id": "miniatutenpark-elsterwerda",
     "name": "Miniatutenpark Elsterwerda",
     "website": "https://miniaturenpark-elsterwerda.de/modellauto-rennstrecke.html",
@@ -672,28 +498,10 @@
     "myrcmOrgId": "6266"
   },
   {
-    "id": "mod-race-laa-04",
-    "name": "MOD.RACE-LAA.04",
-    "website": "https://modellsport-thomas.wixsite.com/my-site/mod-race-laa-04",
-    "myrcmOrgId": "771"
-  },
-  {
-    "id": "modell-rennsport-club-st-gallen-mrcsg",
-    "name": "Modell Rennsport Club St. Gallen MRCSG",
-    "website": "https://www.mrcsg.ch/",
-    "myrcmOrgId": "20"
-  },
-  {
     "id": "modellbaufreunde-felsberg-e-v",
     "name": "Modellbaufreunde Felsberg e.V.",
     "website": "https://modellbaufreunde-felsberg.de/",
     "myrcmOrgId": "38488"
-  },
-  {
-    "id": "modellbuggygruppe-dellach-gail",
-    "name": "Modellbuggygruppe Dellach/Gail",
-    "website": "http://www.mbg-dellach.at/",
-    "myrcmOrgId": "15268"
   },
   {
     "id": "modellclub-flensburg-e-v",
@@ -714,18 +522,6 @@
     "myrcmOrgId": "60576"
   },
   {
-    "id": "morac",
-    "name": "MORAC",
-    "website": "https://www.morac-graz.at/",
-    "myrcmOrgId": "216"
-  },
-  {
-    "id": "motor-sport-club-imst",
-    "name": "Motor Sport Club Imst",
-    "website": "http://www.msc-imst.at/",
-    "myrcmOrgId": "21964"
-  },
-  {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "name": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
     "website": "https://msc-polizei-bs.de/",
@@ -742,12 +538,6 @@
     "name": "MRC Alstaden Oberhausen e.V.",
     "website": "https://www.mrc-oberhausen.de/",
     "myrcmOrgId": "64"
-  },
-  {
-    "id": "mrc-fritzens-formel-4",
-    "name": "MRC Fritzens Formel 4",
-    "website": "",
-    "myrcmOrgId": "772"
   },
   {
     "id": "mrc-leipzig-e-v",
@@ -768,24 +558,6 @@
     "myrcmOrgId": "61183"
   },
   {
-    "id": "mrc-fruehwirth",
-    "name": "MRC-Frühwirth",
-    "website": "http://www.mrc-fruehwirth.at/",
-    "myrcmOrgId": "779"
-  },
-  {
-    "id": "mrc-oberaich",
-    "name": "MRC-Oberaich",
-    "website": "",
-    "myrcmOrgId": "980"
-  },
-  {
-    "id": "mrcp",
-    "name": "MRCP",
-    "website": "http://www.mrcp.ch/",
-    "myrcmOrgId": "207"
-  },
-  {
     "id": "mrsc-amberg-e-v",
     "name": "MRSC Amberg e.V.",
     "website": "https://www.mrsc-amberg.de/",
@@ -796,18 +568,6 @@
     "name": "MRT Rosenheim e.V.",
     "website": "https://www.mrt-rosenheim.de/",
     "myrcmOrgId": "4483"
-  },
-  {
-    "id": "mrtm-mini-racing-ticino-moesa",
-    "name": "MRTM Mini Racing Ticino & Moesa",
-    "website": "https://mrtm.ch/",
-    "myrcmOrgId": "16"
-  },
-  {
-    "id": "mrto",
-    "name": "MRTO",
-    "website": "",
-    "myrcmOrgId": "401"
   },
   {
     "id": "msc-halle-e-v",
@@ -888,76 +648,16 @@
     "myrcmOrgId": "34185"
   },
   {
-    "id": "nitrofighter",
-    "name": "Nitrofighter",
-    "website": "https://www.nitrofighter.at/",
-    "myrcmOrgId": "13507"
-  },
-  {
     "id": "nitromaniacs-e-v",
     "name": "NitroManiacs e.V.",
     "website": "https://www.nitromaniacs.de/",
     "myrcmOrgId": "15092"
   },
   {
-    "id": "nmbc-neuch-tel-mini-buggy-club",
-    "name": "NMBC Neuchâtel Mini Buggy Club",
-    "website": "https://www.nmbc.ch/",
-    "myrcmOrgId": "4497"
-  },
-  {
-    "id": "oefmav",
-    "name": "Oefmav",
-    "website": "",
-    "myrcmOrgId": "61558"
-  },
-  {
-    "id": "off-road-club-montagny",
-    "name": "Off Road Club Montagny",
-    "website": "",
-    "myrcmOrgId": "62051"
-  },
-  {
     "id": "offroad-minicar-crew-e-v",
     "name": "Offroad Minicar Crew e.V.",
     "website": "https://omconline.de/",
     "myrcmOrgId": "35380"
-  },
-  {
-    "id": "offroad-team-zuerich",
-    "name": "Offroad Team Zürich",
-    "website": "https://www.offroad-team.ch/",
-    "myrcmOrgId": "65790"
-  },
-  {
-    "id": "oefmav-eor",
-    "name": "ÖFMAV EOR",
-    "website": "",
-    "myrcmOrgId": "782"
-  },
-  {
-    "id": "oefmav-sektion-elektro-offroad",
-    "name": "ÖFMAV Sektion Elektro Offroad",
-    "website": "",
-    "myrcmOrgId": "34619"
-  },
-  {
-    "id": "oefmav-sektion-or-8",
-    "name": "ÖFMAV Sektion OR-8",
-    "website": "https://oefmav.at/",
-    "myrcmOrgId": "503"
-  },
-  {
-    "id": "oefmav-sektion-verbrenner-flachbahn",
-    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
-    "website": "",
-    "myrcmOrgId": "38958"
-  },
-  {
-    "id": "one28-ch-swiss-micro-racer",
-    "name": "one28.ch (Swiss Micro Racer)",
-    "website": "https://one28racing.ch/",
-    "myrcmOrgId": "50394"
   },
   {
     "id": "orc-b-gottingen-e-v",
@@ -982,18 +682,6 @@
     "name": "PMC Paderborn e.V.",
     "website": "http://www.paderborner-mc.de/",
     "myrcmOrgId": "13247"
-  },
-  {
-    "id": "psv-klagenfurt",
-    "name": "PSV-Klagenfurt",
-    "website": "http://www.psv-klagenfurt.at/",
-    "myrcmOrgId": "774"
-  },
-  {
-    "id": "psv-salzburg-automodellsport",
-    "name": "PSV-Salzburg Automodellsport",
-    "website": "http://www.psv-salzburg.net/",
-    "myrcmOrgId": "762"
   },
   {
     "id": "racers-paradise-modellsport",
@@ -1050,12 +738,6 @@
     "myrcmOrgId": "43490"
   },
   {
-    "id": "rc-club-wyland",
-    "name": "RC Club Wyland",
-    "website": "https://www.rccw.ch/",
-    "myrcmOrgId": "14101"
-  },
-  {
     "id": "rc-drecksloch-e-v",
     "name": "RC Drecksloch e.V.",
     "website": "",
@@ -1102,12 +784,6 @@
     "name": "RC Racers + Toys Shop",
     "website": "https://nordbayerncup.de/",
     "myrcmOrgId": "47444"
-  },
-  {
-    "id": "rc-racing-club-arlesheim",
-    "name": "RC Racing Club Arlesheim",
-    "website": "https://www.rc-racing-club.ch/",
-    "myrcmOrgId": "31003"
   },
   {
     "id": "rc-speedracer-bernau",
@@ -1164,12 +840,6 @@
     "myrcmOrgId": "20813"
   },
   {
-    "id": "rc-racearena",
-    "name": "RC-RaceArena",
-    "website": "https://www.rc-racearena.ch/",
-    "myrcmOrgId": "5208"
-  },
-  {
     "id": "rc-schwalmracer-e-v",
     "name": "RC-Schwalmracer e.V.",
     "website": "http://www.rc-schwalmracer.de/",
@@ -1182,22 +852,10 @@
     "myrcmOrgId": "50693"
   },
   {
-    "id": "rc-timing",
-    "name": "RC-Timing",
-    "website": "https://www.rc-timing.ch/",
-    "myrcmOrgId": "4"
-  },
-  {
     "id": "rcc-reken-e-v",
     "name": "RCC Reken e.V.",
     "website": "",
     "myrcmOrgId": "33796"
-  },
-  {
-    "id": "rcc-sittersdorf",
-    "name": "RCC Sittersdorf",
-    "website": "http://www.rcc-sittersdorf.at/",
-    "myrcmOrgId": "26141"
   },
   {
     "id": "rcc-steinlach-e-v",
@@ -1230,12 +888,6 @@
     "myrcmOrgId": "45728"
   },
   {
-    "id": "rcr-linz",
-    "name": "RCR-Linz",
-    "website": "http://www.rcr-linz.at/",
-    "myrcmOrgId": "776"
-  },
-  {
     "id": "rcrt-duisburg-e-v",
     "name": "RCRT Duisburg e.V.",
     "website": "https://www.rcrt-duisburg.de/",
@@ -1260,22 +912,10 @@
     "myrcmOrgId": "26406"
   },
   {
-    "id": "rmcb",
-    "name": "RMCB",
-    "website": "https://www.rmcb.ch/",
-    "myrcmOrgId": "9703"
-  },
-  {
     "id": "rt-fichtenberg-e-v",
     "name": "RT-Fichtenberg e.V.",
     "website": "https://www.rt-fichtenberg.de/",
     "myrcmOrgId": "25939"
-  },
-  {
-    "id": "salzburger-funk-modell-auto-verein-sfmav",
-    "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
-    "website": "http://www.sfmav.at/",
-    "myrcmOrgId": "25165"
   },
   {
     "id": "sator-events",
@@ -1314,12 +954,6 @@
     "myrcmOrgId": "51971"
   },
   {
-    "id": "smrc-wien",
-    "name": "SMRC Wien",
-    "website": "http://www.smrc.at/",
-    "myrcmOrgId": "763"
-  },
-  {
     "id": "stoppelhopser-oberhausen-e-v",
     "name": "Stoppelhopser Oberhausen e.V.",
     "website": "http://www.stoppelhopser-oberhausen.de/",
@@ -1332,40 +966,10 @@
     "myrcmOrgId": "60911"
   },
   {
-    "id": "swiss-r-c-car-clubs-association",
-    "name": "Swiss R/C Car Clubs Association",
-    "website": "http://www.srcca.ch/",
-    "myrcmOrgId": "24"
-  },
-  {
-    "id": "swiss-racing-cup",
-    "name": "Swiss Racing Cup",
-    "website": "https://swissracingcup.ch/",
-    "myrcmOrgId": "9425"
-  },
-  {
-    "id": "swiss-rc-protech-s-rl",
-    "name": "Swiss RC ProTech Sàrl",
-    "website": "https://swissrcprotech.ch/",
-    "myrcmOrgId": "47238"
-  },
-  {
-    "id": "tamiya-cup-austria",
-    "name": "Tamiya Cup Austria",
-    "website": "http://www.tamiya-eurocup.at/",
-    "myrcmOrgId": "6328"
-  },
-  {
     "id": "team-dabo",
     "name": "Team Dabo",
     "website": "",
     "myrcmOrgId": "36386"
-  },
-  {
-    "id": "team-indoor-track-schoeftland",
-    "name": "Team Indoor Track Schöftland",
-    "website": "https://www.indoortrack.ch/",
-    "myrcmOrgId": "17663"
   },
   {
     "id": "technische-universitat-chemnitz-professur-alternative-fahrzeugantriebe",
@@ -1384,12 +988,6 @@
     "name": "ToniSport GmbH",
     "website": "https://www.tonisport.de/",
     "myrcmOrgId": "24531"
-  },
-  {
-    "id": "tr-racing",
-    "name": "TR-Racing",
-    "website": "",
-    "myrcmOrgId": "506"
   },
   {
     "id": "trackside",
@@ -1440,12 +1038,6 @@
     "myrcmOrgId": "18409"
   },
   {
-    "id": "united-model-cars-lyss",
-    "name": "United Model Cars Lyss",
-    "website": "http://www.umcl.ch/",
-    "myrcmOrgId": "23"
-  },
-  {
     "id": "vfl-goldstein-1953-e-v",
     "name": "VfL Goldstein 1953 e.V.",
     "website": "",
@@ -1462,11 +1054,5 @@
     "name": "Wiesbadener Minicar Club e.V.",
     "website": "https://www.wmc-ev.de/",
     "myrcmOrgId": "11761"
-  },
-  {
-    "id": "wmw-rc-buggy-racing-team-fehring",
-    "name": "WMW RC-BUGGY-RACING TEAM FEHRING",
-    "website": "http://www.wmw-fehring.at/",
-    "myrcmOrgId": "507"
   }
 ]
