@@ -707,12 +707,12 @@
     "id": "ert-steyregg",
     "name": "ERT-Steyregg",
     "city": "Katsdorf",
-    "lat": 48.2751706,
-    "lng": 14.3989892,
+    "lat": 48.274961990918094,
+    "lng": 14.399409967006479,
     "hostIds": [
       "ert-steyregg"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "768",
     "aliases": [
       "myrcm-768",
