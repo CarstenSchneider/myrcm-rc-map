@@ -76,7 +76,7 @@ function detectCountryFromLocale() {
 
 function fitToCountry(country) {
   const bounds = COUNTRY_BOUNDS[country] || COUNTRY_BOUNDS.all;
-  fitMapToBounds(bounds, { maxZoom: 10 });
+  fitMapToBounds(bounds, { maxZoom: 10, skipIconShift: true });
 }
 
 const _validCountries = new Set(["all", "DE", "AT", "CH"]);
@@ -3238,7 +3238,8 @@ function fitMapToBounds(bounds, options = {}) {
   const boundsH = sePx.y - nwPx.y;
   const mapH = map.getSize().y;
   const topOfBoundsY = mapH / 2 + 40 - boundsH / 2;
-  const iconShift = Math.max(0, 130 - topOfBoundsY); // 80px topbar + 50px icon headroom
+  // iconShift protects space for marker icons below the topbar — skip for country bounds
+  const iconShift = options.skipIconShift ? 0 : Math.max(0, 130 - topOfBoundsY);
   panToVisible(map.unproject(L.point(cPx.x, cPx.y - iconShift), zoom), zoom);
 }
 

@@ -225,11 +225,8 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 
 ## Offene Punkte / TODO
 
-### Karte sitzt beim ersten Load zu tief (Mobile) — Stand 2026-06-25
-Wenn das Land per Auto-Erkennung gesetzt wird (z.B. CH via Timezone), erscheinen die Marker korrekt auf der Karte, aber die Kartenposition ist etwas zu weit südlich. `fitToCountry` läuft korrekt (wurde durch `shouldFitBounds && !_zoomToCountryPending` von Doppel-Fit befreit), aber das Endresultat auf Mobile (Leaflet `fitBounds` mit Drawer-Padding) stimmt nicht ganz. Mögliche Ursachen:
-- `drawerState = "half"` ist korrekt gesetzt, aber `window.load`-Handler ruft danach `map.invalidateSize` + evtl. `panToVisible` auf, was die Position noch leicht verschiebt
-- `fitBounds` auf Mobile berechnet Center basierend auf `pb = H*0.5 + 20` Padding, was den sichtbaren Bereich nach oben schiebt — das Ergebnis passt optisch nicht zur erwarteten Kartenzentrierung
-- Workaround-Idee: nach `fitToCountry` ein `setTimeout(() => fitToCountry(selectedCountry), 400)` als zweiten Pass, damit Drawer-Transition abgeschlossen ist bevor der finale Zoom berechnet wird
+### ~~Karte sitzt beim ersten Load zu tief (Desktop) — Stand 2026-06-25~~ — BEHOBEN
+`iconShift` in `fitMapToBounds` verschob die Karte bis zu 130px nach oben (Schutz für Marker-Icons unter der Topbar). Bei Länderbounds gibt es keine Icons an den Rändern — der Shift zeigte unnötig viel Süden. Fix: `skipIconShift: true`-Option, die `fitToCountry` nutzt.
 
 ---
 
