@@ -675,12 +675,12 @@
     "id": "elektro-modell-car-club-ochsendorf",
     "name": "Elektro-Modell-Car-Club-Ochsendorf",
     "city": "Ochsendorf",
-    "lat": 46.689332,
-    "lng": 14.4713752,
+    "lat": 46.68913247699892,
+    "lng": 14.473423664621853,
     "hostIds": [
       "elektro-modell-car-club-ochsendorf"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "521",
     "aliases": [
       "myrcm-521",
