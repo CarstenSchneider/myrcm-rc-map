@@ -3454,18 +3454,17 @@
     "id": "tr-racing",
     "name": "TR-Racing",
     "city": "Gr.Hartmannsdorf 101",
-    "lat": 47.0475067,
-    "lng": 15.8358721,
     "hostIds": [
       "tr-racing"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "506",
     "aliases": [
       "myrcm-506",
       "TR-Racing",
       "Gr.Hartmannsdorf 101"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "tsv-1871-augsburg-e-v",
