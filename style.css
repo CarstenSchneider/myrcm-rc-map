@@ -944,6 +944,12 @@ input {
 body.map-is-ready .locate-btn,
 body.map-is-ready .country-pill { opacity: 1; }
 
+body.is-breakpoint-crossing .locate-btn,
+body.is-breakpoint-crossing .country-pill {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
 /* Dark mode: pill and locate match the mob-menu-btn color */
 :root.theme-dark .country-pill { background: var(--pill-bg) !important; }
 :root.theme-dark .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }

@@ -4158,10 +4158,17 @@ window.addEventListener("resize", scheduleSlidingPillUpdate);
 
 let resizeRecenterTimer = null;
 let resizeWasMobile = window.matchMedia("(max-width: 860px)").matches;
+let _resizeBpCrossing = false;
 window.addEventListener("resize", () => {
+  const _isMobileCheck = window.matchMedia("(max-width: 860px)").matches;
+  if (_isMobileCheck !== resizeWasMobile && !_resizeBpCrossing) {
+    _resizeBpCrossing = true;
+    document.body.classList.add("is-breakpoint-crossing");
+  }
   clearTimeout(resizeRecenterTimer);
   resizeRecenterTimer = setTimeout(() => {
     resizeRecenterTimer = null;
+    _resizeBpCrossing = false;
     if (!map) return;
     const isMobile = window.matchMedia("(max-width: 860px)").matches;
     const crossedBreakpoint = isMobile !== resizeWasMobile;
@@ -4175,7 +4182,10 @@ window.addEventListener("resize", () => {
         desktopSlot.appendChild(_locateBtn);
       }
     }
-    requestAnimationFrame(positionCountryPillDesktop);
+    requestAnimationFrame(() => {
+      positionCountryPillDesktop();
+      document.body.classList.remove("is-breakpoint-crossing");
+    });
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
