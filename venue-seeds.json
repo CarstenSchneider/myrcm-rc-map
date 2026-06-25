@@ -721,12 +721,12 @@
     "id": "eocd-elektro-offroad-club-dielsdorf",
     "name": "EOCD - Elektro Offroad Club Dielsdorf",
     "city": "Adlikon b. Regensdorf",
-    "lat": 47.4460559,
-    "lng": 8.4659076,
+    "lat": 47.48004520465024,
+    "lng": 8.470701212915843,
     "hostIds": [
       "eocd-elektro-offroad-club-dielsdorf"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "8488",
     "aliases": [
       "myrcm-8488",
