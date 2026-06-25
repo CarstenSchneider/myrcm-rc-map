@@ -71,18 +71,17 @@
     "id": "alpencup",
     "name": "Alpencup",
     "city": "Schleitheim",
-    "lat": 47.7488818,
-    "lng": 8.4845902,
     "hostIds": [
       "alpencup"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "53515",
     "aliases": [
       "myrcm-53515",
       "Alpencup",
       "Schleitheim"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "amc-hildesheim-e-v",
