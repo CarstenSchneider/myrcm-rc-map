@@ -48,6 +48,7 @@ serve(async (req) => {
 
     const body = await req.json();
     const { action, hostId, hostName, myrcmOrgId, lat, lng } = body;
+    const branch = (body.branch as string) || "main";
 
     const ghHeaders = {
       "Authorization": `Bearer ${githubPat}`,
@@ -57,13 +58,13 @@ serve(async (req) => {
     };
 
     // Fetch current venue-seeds.json
-    const seedsRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}?ref=${BRANCH}`, { headers: ghHeaders });
+    const seedsRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}?ref=${branch}`, { headers: ghHeaders });
     const seedsMeta = await seedsRes.json();
     const seedsSha = seedsMeta.sha;
     const seeds: any[] = fromBase64(seedsMeta.content);
 
     // Fetch current venue-unmatched.json
-    const unmatchedRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}?ref=${BRANCH}`, { headers: ghHeaders });
+    const unmatchedRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}?ref=${branch}`, { headers: ghHeaders });
     const unmatchedMeta = await unmatchedRes.json();
     const unmatchedSha = unmatchedMeta.sha;
     const unmatched: any[] = fromBase64(unmatchedMeta.content);
@@ -94,7 +95,7 @@ serve(async (req) => {
     await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
-      body: JSON.stringify({ message: `admin: ${action} for ${hostName}`, content: seedsContent, sha: seedsSha, branch: BRANCH }),
+      body: JSON.stringify({ message: `admin: ${action} for ${hostName}`, content: seedsContent, sha: seedsSha, branch: branch }),
     });
 
     // Commit unmatched
@@ -102,7 +103,7 @@ serve(async (req) => {
     await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
-      body: JSON.stringify({ message: `admin: remove ${hostName} from unmatched`, content: unmatchedContent, sha: unmatchedSha, branch: BRANCH }),
+      body: JSON.stringify({ message: `admin: remove ${hostName} from unmatched`, content: unmatchedContent, sha: unmatchedSha, branch: branch }),
     });
 
     return new Response(JSON.stringify({ ok: true }), { headers: { ...CORS, "Content-Type": "application/json" } });

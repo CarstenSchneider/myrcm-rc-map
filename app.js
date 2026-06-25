@@ -4834,7 +4834,9 @@ const EXCLUDED_MYRCM_ORG_IDS = new Set(["60453"]); // Slottis Supreme Masters
 function isAdmin() { return sbUser && ADMIN_EMAILS.includes(sbUser.email.toLowerCase()); }
 
 const GITHUB_REPO = "CarstenSchneider/myrcm-rc-map";
-const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
+const IS_DEV_SITE = window.location.hostname === "dev.rcracemap.com";
+const GITHUB_BRANCH = IS_DEV_SITE ? "dev" : "main";
+const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
 async function adminLoadUnmatched() {
@@ -4857,7 +4859,7 @@ async function adminCommit(payload) {
   const res = await fetch(SB_ADMIN_FN, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
-    body: JSON.stringify(payload)
+    body: JSON.stringify({ ...payload, branch: GITHUB_BRANCH })
   });
   if (!res.ok) throw new Error(await res.text());
   return res.json();
@@ -4917,6 +4919,61 @@ function openImpressumPage() {
   }, { once: true });
 }
 
+function renderAdminDachTab(container) {
+  container.innerHTML = `<p class="admin-loading">Lade AT/CH Koordinaten…</p>`;
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => r.json())
+    .then(seeds => {
+      const dachSeeds = seeds.filter(s => s.source === "geocoded-nominatim-dach");
+      if (!dachSeeds.length) {
+        container.innerHTML = `<p class="admin-empty">Keine AT/CH Seeds gefunden.</p>`;
+        return;
+      }
+      container.innerHTML = `
+        <p style="font-size:13px;color:var(--text-muted);margin:0 0 12px;">
+          ${dachSeeds.length} AT/CH Clubs mit automatisch geocodierten Koordinaten (Nominatim/Stadtmitte).
+          Koordinaten prüfen und ggf. korrigieren.
+        </p>
+        ${dachSeeds.map((s, i) => `
+          <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(s.hostIds?.[0] || s.id)}" data-host-name="${escapeHtml(s.name)}" data-myrcm-org-id="${escapeHtml(s.myrcmOrgId || "")}">
+            <div class="admin-entry-header">
+              <strong>${escapeHtml(s.name)}</strong>
+              <span class="admin-entry-meta">${escapeHtml(s.city || "")}${s.myrcmOrgId ? ` · MyRCM #${s.myrcmOrgId}` : ""}</span>
+            </div>
+            <div style="display:flex;gap:8px;margin:4px 0 6px;flex-wrap:wrap;">
+              ${s.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${s.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM ↗</a>` : ""}
+              ${s.lat && s.lng ? `<a class="admin-entry-link" href="https://www.google.com/maps?q=${s.lat},${s.lng}" target="_blank" rel="noopener">Karte (${s.lat.toFixed(4)}, ${s.lng.toFixed(4)}) ↗</a>` : ""}
+            </div>
+            <div class="admin-entry-coords">
+              <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 48.123, 14.456" data-field="coords" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
+            </div>
+            <div class="admin-entry-actions">
+              <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+            </div>
+            <p class="admin-entry-status"></p>
+          </div>`).join("")}`;
+
+      container.addEventListener("click", async ev => {
+        if (!ev.target.classList.contains("admin-btn-save")) return;
+        const entry = ev.target.closest(".admin-entry");
+        const status = entry.querySelector(".admin-entry-status");
+        const hostId = entry.dataset.hostId;
+        const hostName = entry.dataset.hostName;
+        const myrcmOrgId = entry.dataset.myrcmOrgId;
+        const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
+        const [lat, lng] = parts;
+        if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
+        status.textContent = "Speichern…";
+        try {
+          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+          status.textContent = "✓ Gespeichert";
+          entry.classList.add("admin-entry-done");
+        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+      });
+    })
+    .catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
+}
+
 function openAdminPage() {
   const adminPage = document.getElementById("adminPage");
   const listEl = document.getElementById("adminPageList");
@@ -4928,6 +4985,7 @@ function openAdminPage() {
   listEl.innerHTML = `
     <div class="admin-tabs">
       <button class="admin-tab is-active" data-tab="locations">Ausrichter</button>
+      ${IS_DEV_SITE ? `<button class="admin-tab" data-tab="dach">AT/CH</button>` : ""}
       <button class="admin-tab" data-tab="ads">Werbung</button>
     </div>
     <div id="adminTabContent"></div>`;
@@ -4938,6 +4996,8 @@ function openAdminPage() {
     listEl.querySelectorAll(".admin-tab").forEach(t => t.classList.toggle("is-active", t.dataset.tab === name));
     if (name === "ads") {
       renderAdminAdsTab(tabContent);
+    } else if (name === "dach") {
+      renderAdminDachTab(tabContent);
     } else {
       tabContent.innerHTML = `<p class="admin-loading">Lade…</p>`;
       adminLoadUnmatched().then(entries => {
