@@ -104,6 +104,12 @@ if (!window.matchMedia("(max-width: 860px)").matches) {
     desktopSlot.appendChild(_locateBtn);
     leafletContainer?.remove();
   }
+  const countrySlot = document.getElementById("countryDesktopSlot");
+  if (countrySlot && _countryPill) {
+    const leafletContainer = _countryPill.parentElement;
+    countrySlot.appendChild(_countryPill);
+    leafletContainer?.remove();
+  }
 }
 if (!localStorage.getItem("locateBtnHinted")) {
   setTimeout(() => {

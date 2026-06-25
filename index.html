@@ -1112,6 +1112,13 @@
       justify-content: center;
     }
 
+    .layout-prototype .country-desktop-slot {
+      flex: 0 0 auto;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
     .layout-prototype .topbar-chips-row .topbar-chips {
       flex: 1 1 auto;
       margin: 0;
@@ -1124,6 +1131,7 @@
 
     @media (max-width: 860px) {
       .layout-prototype .locate-desktop-slot { display: none; }
+      .layout-prototype .country-desktop-slot { display: none; }
       .layout-prototype .topbar-chips-row { min-height: 0; gap: 8px; }
     }
 
@@ -1271,6 +1279,7 @@
 
       <div class="topbar-chips-row">
         <div id="locateDesktopSlot" class="locate-desktop-slot"></div>
+        <div id="countryDesktopSlot" class="country-desktop-slot"></div>
         <div class="active-filter-chips topbar-chips" id="activeFilterChips" aria-live="polite"></div>
         <div class="result-line topbar-result-line" id="resultLine">Lade Rennen …</div>
       </div>
@@ -1333,7 +1342,7 @@
   <script src="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.js"></script>
   <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.3/leaflet-maplibre-gl.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="app.js?v=159" type="module"></script>
+  <script src="app.js?v=160" type="module"></script>
   <div id="favoritesPage" class="admin-page" hidden>
     <button type="button" class="sub-page-close" id="favoritesPageBack" aria-label="Schließen">
       <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
