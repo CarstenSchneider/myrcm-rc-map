@@ -79,15 +79,6 @@ _countryPill.addEventListener("click", e => {
   const btn = e.target.closest(".country-pill-btn");
   if (!btn) return;
   e.stopPropagation();
-  if (window.matchMedia("(hover: hover)").matches) {
-    // Desktop: CSS :hover handles expansion; click just selects
-    selectedCountry = btn.dataset.country;
-    _countryPill.classList.remove("is-expanded");
-    updateCountryPill();
-    render();
-    return;
-  }
-  // Touch: tap 1 = expand, tap 2 = select and collapse
   if (!_countryPill.classList.contains("is-expanded")) {
     _countryPill.classList.add("is-expanded");
     return;
@@ -97,6 +88,12 @@ _countryPill.addEventListener("click", e => {
   updateCountryPill();
   render();
 });
+// Desktop hover: attach mouseenter/leave only on devices that actually have hover
+// (never added on iOS, so iOS synthetic mouseenter during tap doesn't interfere)
+if (window.matchMedia("(hover: hover)").matches) {
+  _countryPill.addEventListener("mouseenter", () => _countryPill.classList.add("is-expanded"));
+  _countryPill.addEventListener("mouseleave", () => _countryPill.classList.remove("is-expanded"));
+}
 document.body.appendChild(_countryPill);
 updateCountryPill();
 

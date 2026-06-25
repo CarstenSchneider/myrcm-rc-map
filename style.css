@@ -911,7 +911,6 @@ input {
   touch-action: manipulation;
 }
 .country-pill.is-expanded { max-width: 164px; }
-@media (hover: hover) { .country-pill:hover { max-width: 164px; } }
 
 .country-pill-btn {
   flex: 0 0 40px;
@@ -946,8 +945,6 @@ input {
   :root:not(.theme-light) .country-pill { background: var(--pill-bg) !important; }
   :root:not(.theme-light) .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }
 }
-
-@media (hover: hover) and (max-width: 860px) { .country-pill:hover { max-width: 212px; } }
 
 @media (max-width: 860px) {
   .country-pill {
@@ -2910,7 +2907,8 @@ input {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 @media (max-width: 860px) {
   .mob-menu-btn { display: flex; }
