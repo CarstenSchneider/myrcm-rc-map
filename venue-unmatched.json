@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "hostId": "modellclub-flensburg-e-v",
+    "hostName": "Modellclub Flensburg e.V",
+    "source": "myrcm",
+    "myrcmOrgId": "42405",
+    "possibleVenue": "Flensburg",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
+    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
+    "source": "myrcm",
+    "myrcmOrgId": "72",
+    "possibleVenue": "Braunschweig",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "tsv-gelenau-e-v",
+    "hostName": "TSV Gelenau e.V.",
+    "source": "myrcm",
+    "myrcmOrgId": "30389",
+    "possibleVenue": "Gelenau/Erzgebirge",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  }
+]
