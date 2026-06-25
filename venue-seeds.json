@@ -557,12 +557,12 @@
     "id": "club-der-modellbaufreunde-sued-ost",
     "name": "Club der Modellbaufreunde Süd-Ost",
     "city": "Deutsch Goritz",
-    "lat": 46.7517263,
-    "lng": 15.8304298,
+    "lat": 46.740037514799056,
+    "lng": 15.850710928384963,
     "hostIds": [
       "club-der-modellbaufreunde-sued-ost"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "1294",
     "aliases": [
       "myrcm-1294",
