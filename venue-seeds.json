@@ -424,18 +424,17 @@
     "id": "auto-model-club-d-ajoie",
     "name": "Auto Model Club d'Ajoie",
     "city": "Fontenais",
-    "lat": 47.4034795,
-    "lng": 7.080589,
     "hostIds": [
       "auto-model-club-d-ajoie"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "25",
     "aliases": [
       "myrcm-25",
       "Auto Model Club d'Ajoie",
       "Fontenais"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "auto-modell-club-schaffhausen",
