@@ -6,6 +6,10 @@ on:
     branches:
       - dev
 
+concurrency:
+  group: deploy-dev-hetzner
+  cancel-in-progress: true
+
 jobs:
   deploy-site-dev:
     runs-on: ubuntu-latest
