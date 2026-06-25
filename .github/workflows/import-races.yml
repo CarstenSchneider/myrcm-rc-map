@@ -56,7 +56,7 @@ jobs:
           RCK_GEOCODE: "0"
 
       - name: Import MyRCM races
-        run: node --no-warnings import-myrcm.js
+        run: stdbuf -oL -eL node --no-warnings import-myrcm.js
 
       - name: Commit all race data to main and dev
         run: |
