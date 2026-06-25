@@ -51,6 +51,7 @@ const LocateControl = L.Control.extend({
 });
 new LocateControl().addTo(map);
 
+let selectedCountry = "all";
 const countryFlags = [
   { country: "all", flag: "🇪🇺", label: "Alle Länder" },
   { country: "DE",  flag: "🇩🇪", label: "Deutschland" },
@@ -609,7 +610,6 @@ let selectedRange = "2";
 let selectedSeries = "all";
 let showOpenOnly = false;
 let selectedFavoriteFilter = "all";
-let selectedCountry = "all";
 let isFilterPanelOpen = false;
 const expandedClassRaceIds = new Set();
 
