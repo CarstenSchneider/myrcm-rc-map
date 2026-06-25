@@ -3653,12 +3653,12 @@
     "id": "wmw-rc-buggy-racing-team-fehring",
     "name": "WMW RC-BUGGY-RACING TEAM FEHRING",
     "city": "Fehring",
-    "lat": 46.9360862,
-    "lng": 16.0104462,
+    "lat": 46.93733544744133,
+    "lng": 16.02078820408314,
     "hostIds": [
       "wmw-rc-buggy-racing-team-fehring"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "507",
     "aliases": [
       "myrcm-507",
