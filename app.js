@@ -1684,6 +1684,7 @@ function recentPastRacesForVenue(venue) {
     .filter(race => isRaceAtVenue(race, venue.id))
     .filter(isPastRaceWithinLastYear)
     .filter(matchesSelectedSeries)
+    .filter(matchesCountryFilter)
     .filter(matchesSearchQuery)
     .sort((a, b) => raceEndDate(b) - raceEndDate(a));
 }
