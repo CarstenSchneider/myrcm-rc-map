@@ -1692,12 +1692,12 @@
     "id": "mini-racing-chiasso",
     "name": "Mini Racing Chiasso",
     "city": "Bellinzona",
-    "lat": 45.8340513,
-    "lng": 9.013863,
+    "lat": 45.83559574887884,
+    "lng": 9.021743484375046,
     "hostIds": [
       "mini-racing-chiasso"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "9845",
     "aliases": [
       "myrcm-9845",
