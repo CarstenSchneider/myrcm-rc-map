@@ -440,12 +440,12 @@
     "id": "auto-modell-club-schaffhausen",
     "name": "Auto Modell Club Schaffhausen",
     "city": "Winterthur",
-    "lat": 47.4991723,
-    "lng": 8.7291498,
+    "lat": 47.72049425702775,
+    "lng": 8.67281225416738,
     "hostIds": [
       "auto-modell-club-schaffhausen"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "21",
     "aliases": [
       "myrcm-21",
