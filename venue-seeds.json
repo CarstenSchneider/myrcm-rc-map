@@ -1675,12 +1675,12 @@
     "id": "mini-racing-cars-aigle-lausanne",
     "name": "Mini Racing Cars Aigle & Lausanne",
     "city": "Concise",
-    "lat": 46.3127464,
-    "lng": 6.9427934,
+    "lat": 46.31289099431315,
+    "lng": 6.944024554319166,
     "hostIds": [
       "mini-racing-cars-aigle-lausanne"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "19",
     "aliases": [
       "myrcm-19",
