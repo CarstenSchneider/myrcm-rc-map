@@ -3,12 +3,12 @@
     "id": "1-gmac-litschau",
     "name": "1. GMAC-Litschau",
     "city": "Schrems",
-    "lat": 48.7933789,
-    "lng": 15.0689756,
+    "lat": 48.938929126659886,
+    "lng": 15.047519553721385,
     "hostIds": [
       "1-gmac-litschau"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "760",
     "aliases": [
       "myrcm-760",
