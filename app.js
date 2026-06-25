@@ -59,11 +59,18 @@ const COUNTRY_BOUNDS = {
 };
 
 function detectCountryFromLocale() {
+  // Language tags first: "de-AT" → "AT", "fr-CH" → "CH", "de-DE" → "DE"
   const langs = Array.from(navigator.languages?.length ? navigator.languages : [navigator.language]);
   for (const lang of langs) {
     const match = lang.toUpperCase().match(/-([A-Z]{2})$/);
     if (match && COUNTRY_BOUNDS[match[1]]) return match[1];
   }
+  // Timezone fallback: handles bare "de" locale in Germany/Austria/Switzerland
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH" };
+    if (tzCountry[tz]) return tzCountry[tz];
+  } catch (_) {}
   return "all";
 }
 
