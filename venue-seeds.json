@@ -3420,12 +3420,12 @@
     "id": "team-indoor-track-schoeftland",
     "name": "Team Indoor Track Schöftland",
     "city": "Othmarsingen",
-    "lat": 47.4023481,
-    "lng": 8.2162901,
+    "lat": 47.31516903389294,
+    "lng": 8.056242068322513,
     "hostIds": [
       "team-indoor-track-schoeftland"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "17663",
     "aliases": [
       "myrcm-17663",
