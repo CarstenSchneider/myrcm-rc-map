@@ -76,38 +76,63 @@ function updateCountryPill() {
 _countryPill = document.createElement("div");
 _countryPill.className = "country-pill";
 
-function _pillInteract(btn) {
-  if (!_countryPill.classList.contains("is-expanded")) {
-    _countryPill.classList.add("is-expanded");
-    return;
-  }
-  selectedCountry = btn.dataset.country;
+let _pillIsExpanded = false;
+let _pillLastClose = 0;
+let _pillTouchHandled = false;
+
+function _pillOpen() {
+  _pillIsExpanded = true;
+  _countryPill.classList.add("is-expanded");
+}
+function _pillClose(country) {
+  _pillIsExpanded = false;
+  _pillLastClose = Date.now();
+  selectedCountry = country;
   _countryPill.classList.remove("is-expanded");
   updateCountryPill();
   render();
 }
-// Touch: use touchstart + preventDefault to bypass all iOS synthetic event issues
-let _pillTouchHandled = false;
+
+// Touch: touchstart + preventDefault stops all iOS synthetic events
 _countryPill.addEventListener("touchstart", e => {
-  const btn = e.target.closest(".country-pill-btn");
-  if (!btn) return;
   e.preventDefault();
-  e.stopPropagation();
   _pillTouchHandled = true;
-  _pillInteract(btn);
+  const btn = e.target.closest(".country-pill-btn");
+  if (_pillIsExpanded) {
+    // Fallback to active btn if touch missed (border-radius hit-test edge case)
+    const country = (btn ?? _countryPill.querySelector(".country-pill-btn.is-active"))?.dataset.country ?? selectedCountry;
+    _pillClose(country);
+  } else if (btn && Date.now() - _pillLastClose > 300) {
+    _pillOpen();
+  }
 }, { passive: false });
-// Mouse: click handler for desktop (skipped if touch already handled it)
+
+// Desktop mouse click (skipped when touch already handled it)
 _countryPill.addEventListener("click", e => {
   if (_pillTouchHandled) { _pillTouchHandled = false; return; }
   const btn = e.target.closest(".country-pill-btn");
   if (!btn) return;
   e.stopPropagation();
-  _pillInteract(btn);
+  if (_pillIsExpanded) _pillClose(btn.dataset.country);
+  else _pillOpen();
 });
-// Desktop hover expansion (only on real hover-capable devices)
+
+// Close when tapping anywhere outside the pill
+document.addEventListener("touchstart", e => {
+  if (_pillIsExpanded && !_countryPill.contains(e.target)) {
+    _pillIsExpanded = false;
+    _pillLastClose = Date.now();
+    _countryPill.classList.remove("is-expanded");
+  }
+}, { passive: true });
+
+// Desktop hover expansion (only on real pointer devices)
 if (window.matchMedia("(hover: hover)").matches) {
-  _countryPill.addEventListener("mouseenter", () => _countryPill.classList.add("is-expanded"));
-  _countryPill.addEventListener("mouseleave", () => _countryPill.classList.remove("is-expanded"));
+  _countryPill.addEventListener("mouseenter", _pillOpen);
+  _countryPill.addEventListener("mouseleave", () => {
+    _pillIsExpanded = false;
+    _countryPill.classList.remove("is-expanded");
+  });
 }
 document.body.appendChild(_countryPill);
 updateCountryPill();
