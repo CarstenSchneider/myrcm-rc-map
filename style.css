@@ -890,6 +890,53 @@ input {
   transition: transform 120ms ease;
 }
 .locate-btn:hover { transform: scale(1.08); }
+
+/* Country filter pill */
+.country-pill {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  max-width: 40px;
+  border-radius: 999px;
+  background: rgba(var(--panel-rgb), 0.98);
+  box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
+  overflow: hidden;
+  transition: max-width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.country-pill.is-expanded { max-width: 180px; }
+.country-pill-btn {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+  border-radius: 999px;
+}
+.country-pill-btn:hover { background: rgba(var(--text-rgb), 0.08); }
+.country-pill-btn.is-active { background: rgba(var(--accent-rgb, 74,158,232), 0.15); }
+
+@media (max-width: 860px) {
+  .country-pill {
+    position: fixed !important;
+    top: 136px !important;
+    left: 14px !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    height: 52px !important;
+    max-width: 52px !important;
+  }
+  .country-pill.is-expanded { max-width: 232px !important; }
+  .country-pill-btn { flex: 0 0 52px; width: 52px; height: 52px; font-size: 26px; }
+}
 .locate-btn.attention-pulse { animation: locate-attention 1.1s ease-out 3; }
 .locate-btn.is-locating { opacity: 0.45; pointer-events: none; }
 .locate-btn.is-active { background: var(--accent) !important; color: #fff !important; }

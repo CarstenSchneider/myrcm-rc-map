@@ -1245,11 +1245,13 @@ function myRcmOrgIdFromHost(host) {
 }
 
 function hostRecordFromMyRcmHost(host, venueSeed = null, existingHost = null) {
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE" };
   const importedHost = {
     id: hostIdFromMyRcmHost(host, venueSeed),
     name: hostNameFromMyRcmHost(host),
     website: host.website || host.web || "",
-    myrcmOrgId: myRcmOrgIdFromHost(host)
+    myrcmOrgId: myRcmOrgIdFromHost(host),
+    ...(host.country && countryMap[host.country] ? { country: countryMap[host.country] } : {})
   };
 
   if (!existingHost) return importedHost;
