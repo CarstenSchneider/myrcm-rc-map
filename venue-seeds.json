@@ -3597,6 +3597,12 @@
     "myrcmOrgId": "53092"
   },
   {
+    "hostId": "mrc-fritzens-formel-4",
+    "hostName": "MRC Fritzens Formel 4",
+    "locationUnknown": true,
+    "myrcmOrgId": "772"
+  },
+  {
     "hostId": "msc-ober-morlen-e-v",
     "hostName": "MSC Ober-Mörlen e.V.",
     "lat": 50.36381448362496,
