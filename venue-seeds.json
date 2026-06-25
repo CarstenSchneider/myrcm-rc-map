@@ -641,12 +641,12 @@
     "id": "electrique-radio-mod-le-club",
     "name": "Electrique Radio Modèle Club",
     "city": "Grand-Saconnex",
-    "lat": 46.2363321,
-    "lng": 6.126532,
+    "lat": 46.22854517948673,
+    "lng": 6.122811872700666,
     "hostIds": [
       "electrique-radio-mod-le-club"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "16203",
     "aliases": [
       "myrcm-16203",
