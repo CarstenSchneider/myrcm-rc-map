@@ -792,12 +792,12 @@
     "id": "indoortrack-wichtrach",
     "name": "Indoortrack Wichtrach",
     "city": "Wichtrach",
-    "lat": 46.8457306,
-    "lng": 7.5783419,
+    "lat": 46.833593610103485,
+    "lng": 7.563650046089913,
     "hostIds": [
       "indoortrack-wichtrach"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "46390",
     "aliases": [
       "myrcm-46390",
