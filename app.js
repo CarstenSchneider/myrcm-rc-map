@@ -4848,7 +4848,7 @@ async function adminLoadUnmatched() {
   const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
-    .map(s => ({ hostId: s.hostId, hostName: s.hostName, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
+    .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
   // Merge: unmatched first, then unknown seeds not already in unmatched
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
   return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
