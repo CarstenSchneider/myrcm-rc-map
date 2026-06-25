@@ -67,7 +67,7 @@ function updateCountryPill() {
     ...countryFlags.filter(f => f.country !== selectedCountry),
   ];
   _countryPill.innerHTML = ordered.map(f =>
-    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" title="${f.label}">` +
+    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${f.label}">` +
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
     `</button>`
   ).join("");

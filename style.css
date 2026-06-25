@@ -894,17 +894,21 @@ input {
 /* Country filter pill */
 .country-pill {
   position: fixed;
-  top: 80px;
-  left: 24px;
+  bottom: 100px;
+  left: 14px;
   z-index: 1000;
   display: flex;
   align-items: center;
-  gap: 8px;
+  height: 40px;
   max-width: 40px;
+  border-radius: 999px;
+  background: rgba(var(--panel-rgb), 0.98);
+  box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
   overflow: hidden;
   transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
-.country-pill.is-expanded { max-width: 200px; }
+.country-pill.is-expanded { max-width: 164px; }
 
 .country-pill-btn {
   flex: 0 0 40px;
@@ -912,36 +916,32 @@ input {
   height: 40px;
   padding: 0;
   border: 0;
-  border-radius: 50%;
-  background: rgba(var(--panel-rgb), 0.98);
-  box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
+  background: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 120ms ease;
+  transition: background 0.12s;
 }
-.country-pill-btn:hover { transform: scale(1.08); }
-.country-pill-btn.is-active {
-  background: rgba(var(--accent-rgb), 0.12);
-}
+.country-pill-btn:hover { background: rgba(0, 0, 0, 0.05); }
+.country-pill-btn.is-active { background: rgba(var(--accent-rgb), 0.08); }
 
 .country-flag-icon {
   display: block;
-  width: 26px !important;
-  height: 26px !important;
+  width: 28px !important;
+  height: 28px !important;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 860px) {
   .country-pill {
+    bottom: auto;
     top: 136px;
-    left: 14px;
+    height: 52px;
     max-width: 52px;
   }
-  .country-pill.is-expanded { max-width: 240px; }
+  .country-pill.is-expanded { max-width: 212px; }
   .country-pill-btn {
     flex: 0 0 52px;
     width: 52px;
