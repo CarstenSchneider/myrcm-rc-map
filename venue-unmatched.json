@@ -1,10 +1,90 @@
 [
   {
+    "hostId": "alpencup",
+    "hostName": "Alpencup",
+    "source": "myrcm",
+    "myrcmOrgId": "53515",
+    "possibleVenue": "Schleitheim",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "mac-mistelbach",
+    "hostName": "MAC Mistelbach",
+    "source": "myrcm",
+    "myrcmOrgId": "20718",
+    "possibleVenue": "Mistelbach",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "mblr-racing",
+    "hostName": "MBLR Racing",
+    "source": "myrcm",
+    "myrcmOrgId": "22319",
+    "possibleVenue": "Penthalaz",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "mini-tout-terrain-gruyere",
+    "hostName": "Mini Tout Terrain Gruyère",
+    "source": "myrcm",
+    "myrcmOrgId": "18473",
+    "possibleVenue": "Riaz",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
     "hostId": "modellclub-flensburg-e-v",
     "hostName": "Modellclub Flensburg e.V",
     "source": "myrcm",
     "myrcmOrgId": "42405",
     "possibleVenue": "Flensburg",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "msv-weiz",
+    "hostName": "MSV Weiz",
+    "source": "myrcm",
+    "myrcmOrgId": "53491",
+    "possibleVenue": "Weiz",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "rc-cars-wernigerode-e-v",
+    "hostName": "RC Cars Wernigerode e.V.",
+    "source": "myrcm",
+    "myrcmOrgId": "43490",
+    "possibleVenue": "Wernigerode",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "rc-lords-of-dirt",
+    "hostName": "RC-Lords of Dirt",
+    "source": "myrcm",
+    "myrcmOrgId": "18966",
+    "possibleVenue": "Sachsenburg",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "rcc-grafenworth",
+    "hostName": "RCC-Grafenwörth",
+    "source": "myrcm",
+    "myrcmOrgId": "775",
+    "possibleVenue": "Grafenwörth",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "rcxx-shop",
+    "hostName": "RCXX.SHOP",
+    "source": "myrcm",
+    "myrcmOrgId": "58661",
+    "possibleVenue": "Cham",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "rmc-wien",
+    "hostName": "RMC-Wien",
+    "source": "myrcm",
+    "myrcmOrgId": "777",
+    "possibleVenue": "Schranawand",
     "reason": "no confirmed venue for at least one current MyRCM race"
   }
 ]
