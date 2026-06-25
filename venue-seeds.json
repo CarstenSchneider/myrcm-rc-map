@@ -1760,12 +1760,12 @@
     "id": "modell-rennsport-club-st-gallen-mrcsg",
     "name": "Modell Rennsport Club St. Gallen MRCSG",
     "city": "Sitterdorf",
-    "lat": 47.5026041,
-    "lng": 9.2458915,
+    "lat": 47.51027228068182,
+    "lng": 9.263153841386655,
     "hostIds": [
       "modell-rennsport-club-st-gallen-mrcsg"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "20",
     "aliases": [
       "myrcm-20",
