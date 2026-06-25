@@ -1845,12 +1845,12 @@
     "id": "morac",
     "name": "MORAC",
     "city": "Graz",
-    "lat": 47.0708678,
-    "lng": 15.4382786,
+    "lat": 46.96755832909201,
+    "lng": 15.806933629726691,
     "hostIds": [
       "morac"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "216",
     "aliases": [
       "myrcm-216",
