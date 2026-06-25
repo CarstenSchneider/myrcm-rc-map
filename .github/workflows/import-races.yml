@@ -18,10 +18,10 @@ jobs:
     timeout-minutes: 360
 
     steps:
-      - name: Checkout dev
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: main
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -58,7 +58,7 @@ jobs:
       - name: Import MyRCM races
         run: npm run import
 
-      - name: Commit all race data to dev only
+      - name: Commit all race data to main and dev
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -70,7 +70,14 @@ jobs:
             echo "Keine Änderungen."
           else
             git commit -m "Update race data"
+            git push origin main
+
+            git checkout -B dev origin/dev
+            git checkout main -- $ALL_FILES
+            git commit -m "Update race data"
             git push origin dev
+
+            git checkout main
           fi
 
       - name: Send race notifications
