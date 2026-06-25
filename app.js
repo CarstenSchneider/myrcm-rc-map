@@ -3941,7 +3941,8 @@ function render() {
 
   // Phase 2: map markers deferred — browser paints list first, then updates map
   const mapPanel = document.querySelector(".map-panel");
-  const shouldFitBounds = !initialRenderDone;
+  // Skip updateMarkers' own fitBounds when fitToCountry will handle the zoom
+  const shouldFitBounds = !initialRenderDone && !_zoomToCountryPending;
   if (initialRenderDone) mapPanel?.classList.add("map-is-updating");
 
   requestAnimationFrame(() => {
