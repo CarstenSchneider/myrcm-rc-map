@@ -20,12 +20,12 @@
     "id": "1-mrc-wr-neustadt",
     "name": "1. MRC Wr. Neustadt",
     "city": "Wiener Neustadt",
-    "lat": 47.8131847,
-    "lng": 16.2441166,
+    "lat": 47.82523664446471,
+    "lng": 16.21701849675066,
     "hostIds": [
       "1-mrc-wr-neustadt"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "764",
     "aliases": [
       "myrcm-764",
