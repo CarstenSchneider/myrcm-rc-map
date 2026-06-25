@@ -843,12 +843,12 @@
     "id": "lamac",
     "name": "LAMAC",
     "city": "St.Paul/Lavanttal",
-    "lat": 46.7006159,
-    "lng": 14.8739037,
+    "lat": 46.70501810439541,
+    "lng": 14.877295427171088,
     "hostIds": [
       "lamac"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "781",
     "aliases": [
       "myrcm-781",
