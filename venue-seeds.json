@@ -374,18 +374,17 @@
     "id": "arwico-tamiya",
     "name": "ARWICO / Tamiya",
     "city": "Ettingen",
-    "lat": 47.4816164,
-    "lng": 7.5441378,
     "hostIds": [
       "arwico-tamiya"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "28",
     "aliases": [
       "myrcm-28",
       "ARWICO / Tamiya",
       "Ettingen"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "asc-celle-e-v",
