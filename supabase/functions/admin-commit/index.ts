@@ -47,7 +47,7 @@ serve(async (req) => {
     if (!githubPat) return new Response("GITHUB_PAT not configured", { status: 500, headers: CORS });
 
     const body = await req.json();
-    const { action, hostId, hostName, myrcmOrgId, lat, lng } = body;
+    const { action, hostId, hostName, myrcmOrgId, lat, lng, seedId, seedName } = body;
     const branch = (body.branch as string) || "main";
 
     const ghHeaders = {
@@ -68,6 +68,21 @@ serve(async (req) => {
     const unmatchedMeta = await unmatchedRes.json();
     const unmatchedSha = unmatchedMeta.sha;
     const unmatched: any[] = fromBase64(unmatchedMeta.content);
+
+    // Handle AT/CH seed verification (updates existing seed by id, no unmatched change)
+    if (action === "verify-dach-seed") {
+      const seedIdx = seeds.findIndex((s: any) => s.id === seedId);
+      if (seedIdx < 0) return new Response("Seed not found", { status: 404, headers: CORS });
+      seeds[seedIdx] = { ...seeds[seedIdx], lat, lng, source: "verified" };
+      seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
+      const seedsContent = toBase64(JSON.stringify(seeds, null, 2) + "\n");
+      await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
+        method: "PUT",
+        headers: ghHeaders,
+        body: JSON.stringify({ message: `admin: verify coords for ${seedName}`, content: seedsContent, sha: seedsSha, branch }),
+      });
+      return new Response(JSON.stringify({ ok: true }), { headers: { ...CORS, "Content-Type": "application/json" } });
+    }
 
     // Build new seed entry
     let newEntry: Record<string, any>;

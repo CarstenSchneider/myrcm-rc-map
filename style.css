@@ -3850,6 +3850,12 @@ body.is-menu-open .app-menu-close {
 .admin-btn-save:hover { opacity: 0.85; }
 .admin-btn-unknown { background: rgba(var(--text-rgb), 0.1); color: var(--muted); }
 .admin-btn-unknown:hover { background: rgba(var(--text-rgb), 0.18); }
+.admin-btn-ok { background: rgba(var(--text-rgb), 0.1); color: var(--text); }
+.admin-btn-ok:hover { background: rgba(var(--text-rgb), 0.18); }
+.admin-dach-progress { margin-bottom: 16px; }
+.admin-dach-progress span { font-size: 12px; color: var(--muted); display: block; margin-bottom: 5px; }
+.admin-dach-bar { height: 4px; background: rgba(var(--border-rgb), 0.3); border-radius: 2px; overflow: hidden; }
+.admin-dach-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s; }
 .admin-entry-status { font-size: 12px; margin: 6px 0 0; min-height: 16px; color: var(--muted); }
 
 /* Favorites page */

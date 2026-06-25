@@ -4924,52 +4924,84 @@ function renderAdminDachTab(container) {
   fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
     .then(r => r.json())
     .then(seeds => {
-      const dachSeeds = seeds.filter(s => s.source === "geocoded-nominatim-dach");
-      if (!dachSeeds.length) {
-        container.innerHTML = `<p class="admin-empty">Keine AT/CH Seeds gefunden.</p>`;
+      const pending = seeds.filter(s => s.source === "geocoded-nominatim-dach");
+      const totalDach = seeds.filter(s => s.source === "geocoded-nominatim-dach" || s.source === "verified").length;
+      const alreadyDone = totalDach - pending.length;
+
+      if (!pending.length) {
+        container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} AT/CH Clubs verifiziert.</p>`;
         return;
       }
-      container.innerHTML = `
-        <p style="font-size:13px;color:var(--text-muted);margin:0 0 12px;">
-          ${dachSeeds.length} AT/CH Clubs mit automatisch geocodierten Koordinaten (Nominatim/Stadtmitte).
-          Koordinaten prüfen und ggf. korrigieren.
-        </p>
-        ${dachSeeds.map((s, i) => `
-          <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(s.hostIds?.[0] || s.id)}" data-host-name="${escapeHtml(s.name)}" data-myrcm-org-id="${escapeHtml(s.myrcmOrgId || "")}">
+
+      let idx = 0;
+
+      function renderEntry() {
+        const s = pending[idx];
+        const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
+        const doneCount = alreadyDone + idx;
+        const pct = Math.round(doneCount / totalDach * 100);
+
+        container.innerHTML = `
+          <div class="admin-dach-progress">
+            <span>${doneCount} / ${totalDach} verifiziert</span>
+            <div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>
+          </div>
+          <div class="admin-entry">
             <div class="admin-entry-header">
               <strong>${escapeHtml(s.name)}</strong>
               <span class="admin-entry-meta">${escapeHtml(s.city || "")}${s.myrcmOrgId ? ` · MyRCM #${s.myrcmOrgId}` : ""}</span>
             </div>
-            <div style="display:flex;gap:8px;margin:4px 0 6px;flex-wrap:wrap;">
+            <div style="display:flex;gap:8px;margin:4px 0 8px;flex-wrap:wrap;">
               ${s.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${s.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM ↗</a>` : ""}
-              ${s.lat && s.lng ? `<a class="admin-entry-link" href="https://www.google.com/maps?q=${s.lat},${s.lng}" target="_blank" rel="noopener">Karte (${s.lat.toFixed(4)}, ${s.lng.toFixed(4)}) ↗</a>` : ""}
+              ${mapsUrl ? `<a class="admin-entry-link" href="${mapsUrl}" target="_blank" rel="noopener">Karte (${s.lat.toFixed(4)}, ${s.lng.toFixed(4)}) ↗</a>` : ""}
             </div>
             <div class="admin-entry-coords">
-              <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 48.123, 14.456" data-field="coords" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
+              <input type="text" class="admin-input admin-input-coords js-dach-coords" placeholder="48.123, 14.456" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
             </div>
-            <div class="admin-entry-actions">
-              <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+            <div class="admin-entry-actions" style="flex-wrap:wrap;gap:8px;">
+              <button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>
+              <button type="button" class="admin-btn admin-btn-save js-dach-save">Korrigieren & Weiter</button>
+              ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
             </div>
-            <p class="admin-entry-status"></p>
-          </div>`).join("")}`;
+            <p class="admin-entry-status js-dach-status"></p>
+          </div>`;
 
-      container.addEventListener("click", async ev => {
-        if (!ev.target.classList.contains("admin-btn-save")) return;
-        const entry = ev.target.closest(".admin-entry");
-        const status = entry.querySelector(".admin-entry-status");
-        const hostId = entry.dataset.hostId;
-        const hostName = entry.dataset.hostName;
-        const myrcmOrgId = entry.dataset.myrcmOrgId;
-        const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
-        const [lat, lng] = parts;
-        if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
-        status.textContent = "Speichern…";
-        try {
-          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
-          status.textContent = "✓ Gespeichert";
-          entry.classList.add("admin-entry-done");
-        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
-      });
+        const status = container.querySelector(".js-dach-status");
+
+        async function saveSeed(lat, lng) {
+          status.textContent = "Speichern…";
+          try {
+            await adminCommit({ action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng });
+            idx++;
+            if (idx >= pending.length) {
+              container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} AT/CH Clubs verifiziert.</p>`;
+            } else {
+              renderEntry();
+            }
+          } catch (e) {
+            status.textContent = `Fehler: ${e.message}`;
+          }
+        }
+
+        container.querySelector(".js-dach-ok").addEventListener("click", () => {
+          if (!s.lat || !s.lng) { status.textContent = "Keine Koordinaten vorhanden"; return; }
+          saveSeed(s.lat, s.lng);
+        });
+
+        container.querySelector(".js-dach-save").addEventListener("click", () => {
+          const parts = container.querySelector(".js-dach-coords").value.split(",").map(x => parseFloat(x.trim()));
+          const [lat, lng] = parts;
+          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
+          saveSeed(lat, lng);
+        });
+
+        container.querySelector(".js-dach-prev")?.addEventListener("click", () => {
+          idx--;
+          renderEntry();
+        });
+      }
+
+      renderEntry();
     })
     .catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
 }
