@@ -3584,6 +3584,13 @@
     "myrcmOrgId": "53515"
   },
   {
+    "hostId": "mac-mistelbach",
+    "hostName": "MAC Mistelbach",
+    "lat": 48.55312704380916,
+    "lng": 16.550197608841213,
+    "myrcmOrgId": "20718"
+  },
+  {
     "hostId": "max-informatique",
     "hostName": "Max Informatique",
     "locationUnknown": true,
