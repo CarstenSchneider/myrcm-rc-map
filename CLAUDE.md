@@ -223,6 +223,72 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 ### Warum hostsByOrgId Vollnamen normalisiert werden müssen
 `myrcm-hosts-dach.json` (Seed-Datei) hat `country: "Austria"`, `hosts.json` (Import-Output) hat `country: "AT"`. Beide Quellen landen in `hostsByOrgId`, DACH-Einträge kommen zuletzt und überschreiben. `venueCountry()` normalisiert daher via `_countryNameToCode` Map.
 
+## Offene Punkte / TODO
+
+### Karte sitzt beim ersten Load zu tief (Mobile) — Stand 2026-06-25
+Wenn das Land per Auto-Erkennung gesetzt wird (z.B. CH via Timezone), erscheinen die Marker korrekt auf der Karte, aber die Kartenposition ist etwas zu weit südlich. `fitToCountry` läuft korrekt (wurde durch `shouldFitBounds && !_zoomToCountryPending` von Doppel-Fit befreit), aber das Endresultat auf Mobile (Leaflet `fitBounds` mit Drawer-Padding) stimmt nicht ganz. Mögliche Ursachen:
+- `drawerState = "half"` ist korrekt gesetzt, aber `window.load`-Handler ruft danach `map.invalidateSize` + evtl. `panToVisible` auf, was die Position noch leicht verschiebt
+- `fitBounds` auf Mobile berechnet Center basierend auf `pb = H*0.5 + 20` Padding, was den sichtbaren Bereich nach oben schiebt — das Ergebnis passt optisch nicht zur erwarteten Kartenzentrierung
+- Workaround-Idee: nach `fitToCountry` ein `setTimeout(() => fitToCountry(selectedCountry), 400)` als zweiten Pass, damit Drawer-Transition abgeschlossen ist bevor der finale Zoom berechnet wird
+
+---
+
+## Pre-Launch Checkliste
+
+### Karte & Grundfunktion
+- [ ] Startansicht korrekt (richtiges Land auto-erkannt, Karte zentriert)
+- [ ] Alle Marker sichtbar (DE + AT + CH)
+- [ ] Klick auf Marker öffnet Strecken-Panel
+- [ ] Klick außerhalb schließt Panel wieder
+- [ ] Zoom/Pan funktioniert, MAX_BOUNDS begrenzen korrekt
+
+### Länderfilter
+- [ ] DE / AT / CH Filter zeigen nur Rennen des jeweiligen Landes
+- [ ] Filter-Wechsel zoomt Karte auf das Land
+- [ ] "Alle Länder" zeigt DACH-Gesamtansicht
+- [ ] Auswahl bleibt nach Reload erhalten (localStorage)
+- [ ] Auto-Erkennung korrekt (Safari/Chrome, macOS/iOS/Android in DE/AT/CH testen)
+
+### Renndaten
+- [ ] Registrierungsstatus korrekt: "Nennung offen" / "geschlossen" / "Nennung ab [Datum]"
+- [ ] Keine zukünftigen Rennen fälschlicherweise als "geschlossen" markiert
+- [ ] Rennklassen-Tags werden angezeigt
+- [ ] Teilnehmerzahl korrekt (wo verfügbar)
+- [ ] Links zu MyRCM / RCK öffnen sich
+
+### Favoriten & Notifications
+- [ ] Stern setzen/entfernen funktioniert (eingeloggt)
+- [ ] Glocke für Benachrichtigungen setzt/entfernt Abonnement
+- [ ] Notification-Email kommt nach Import an (Supabase `seen_race_notifications` leeren und Import manuell starten)
+- [ ] Favoriten-Filter zeigt nur Favoriten-Strecken
+
+### Mobile (iOS Safari + Android Chrome)
+- [ ] Drawer-Zustände: collapsed / half / full
+- [ ] Swipe-Geste auf Drawer funktioniert
+- [ ] Locate-Button (GPS) zentriert auf eigene Position
+- [ ] Karte bleibt beim Öffnen eines Eintrags sichtbar
+
+### Dark Mode
+- [ ] Theme wechselt korrekt (System-Einstellung + manuell)
+- [ ] Kein grüner Flash beim Tab-Wechsel
+- [ ] Marker-Farben korrekt in beiden Themes
+
+### Performance
+- [ ] Filter-Wechsel sofort responsiv (kein UI-Freeze)
+- [ ] Karten-Spinner erscheint während Marker-Update
+- [ ] Initiales Laden < 3s auf normalem Mobilnetz
+
+### Import-Pipeline
+- [ ] `import-myrcm.js` auf `main` und `dev` identisch (vor Livegang abgleichen)
+- [ ] Nächster geplanter Import (04:00 UTC) schreibt korrekt auf `main` + `dev`
+- [ ] Nach Import: `races.json` enthält DE + AT + CH Rennen
+
+### Deployment
+- [ ] `dev` → `main` Merge nur wenn obige Punkte alle bestätigt
+- [ ] Nach `main`-Push: Production-URL `rcracemap.com` testen
+
+---
+
 ## Bekannte Stolperfallen
 1. **`venues` ist Array, `markers` ist Map** — `.find()` vs `.get()`
 2. **`initialRenderDone`** wird nur gesetzt wenn `venues.length > 0`
