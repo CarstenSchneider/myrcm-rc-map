@@ -91,6 +91,20 @@ serve(async (req) => {
       return new Response(JSON.stringify({ ok: true }), { headers: { ...CORS, "Content-Type": "application/json" } });
     }
 
+    // Handle AT/CH seed deletion
+    if (action === "delete-dach-seed") {
+      const seedIdx = seeds.findIndex((s: any) => s.id === seedId);
+      if (seedIdx < 0) return new Response("Seed not found", { status: 404, headers: CORS });
+      seeds.splice(seedIdx, 1);
+      const seedsContent = toBase64(JSON.stringify(seeds, null, 2) + "\n");
+      await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
+        method: "PUT",
+        headers: ghHeaders,
+        body: JSON.stringify({ message: `admin: delete inactive seed ${seedName}`, content: seedsContent, sha: seedsSha, branch }),
+      });
+      return new Response(JSON.stringify({ ok: true }), { headers: { ...CORS, "Content-Type": "application/json" } });
+    }
+
     // Build new seed entry
     let newEntry: Record<string, any>;
     if (action === "add-venue") {

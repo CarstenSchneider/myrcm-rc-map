@@ -4962,6 +4962,7 @@ function renderAdminDachTab(container) {
               <button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>
               <button type="button" class="admin-btn admin-btn-save js-dach-save">Korrigieren & Weiter</button>
               <button type="button" class="admin-btn admin-btn-unknown js-dach-unknown">Kein Platz bekannt</button>
+              <button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>
               ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
             </div>
             <p class="admin-entry-status js-dach-status"></p>
@@ -4976,9 +4977,25 @@ function renderAdminDachTab(container) {
               ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
               : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
             await adminCommit(payload);
-            idx++;
+            pending.splice(idx, 1);
             if (idx >= pending.length) {
               container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} AT/CH Clubs verifiziert.</p>`;
+            } else {
+              renderEntry();
+            }
+          } catch (e) {
+            status.textContent = `Fehler: ${e.message}`;
+          }
+        }
+
+        async function deleteSeed() {
+          status.textContent = "Löschen…";
+          try {
+            await adminCommit({ action: "delete-dach-seed", seedId: s.id, seedName: s.name });
+            pending.splice(idx, 1);
+            if (idx >= pending.length) idx = Math.max(0, pending.length - 1);
+            if (!pending.length) {
+              container.innerHTML = `<p class="admin-empty">✓ Alle AT/CH Clubs bearbeitet.</p>`;
             } else {
               renderEntry();
             }
@@ -5002,6 +5019,8 @@ function renderAdminDachTab(container) {
         container.querySelector(".js-dach-unknown").addEventListener("click", () => {
           saveSeed(null, null, true);
         });
+
+        container.querySelector(".js-dach-delete").addEventListener("click", deleteSeed);
 
         container.querySelector(".js-dach-prev")?.addEventListener("click", () => {
           idx--;
