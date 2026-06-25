@@ -1743,12 +1743,12 @@
     "id": "mod-race-laa-04",
     "name": "MOD.RACE-LAA.04",
     "city": "Neudorf bei Staatz",
-    "lat": 48.7209394,
-    "lng": 16.4924882,
+    "lat": 48.71152818321577,
+    "lng": 16.367736548425786,
     "hostIds": [
       "mod-race-laa-04"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "771",
     "aliases": [
       "myrcm-771",
