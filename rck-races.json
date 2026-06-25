@@ -73,7 +73,7 @@
     "venueWebsite": "https://mcc-luedenscheid.de",
     "registrationDeadline": "2026-06-25",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -97,14 +97,14 @@
     "rckSeries": "kleinserie",
     "url": "https://kleinserie.rck-solutions.de/indexnl.php?nl=202520270628KlSeC",
     "detailUrl": "https://kleinserie.rck-solutions.de/indexgo.php",
-    "registrationStatus": "open",
+    "registrationStatus": "upcoming",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
     "registrationCount": 49,
     "registrationDisplay": "49",
     "comingSoon": false,
-    "note": null,
+    "note": "Nennung folgt.",
     "rckGroup": "Mitte",
     "rckGroups": [
       "Mitte",
@@ -150,7 +150,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-06-24",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -226,7 +226,7 @@
     "venueWebsite": "https://rcworld-bremen.de",
     "registrationDeadline": "2026-07-03",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -306,7 +306,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-07-02",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -385,7 +385,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-07-01",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -461,7 +461,7 @@
     "venueWebsite": "https://msc-polizei-bs.de",
     "registrationDeadline": "2026-07-18",
     "firstSeen": "2026-06-24",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -489,8 +489,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -506,7 +506,7 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 11
+        "entries": 10
       },
       {
         "name": "GT Challenge",
@@ -533,7 +533,7 @@
     "venueWebsite": "https://mac-mettenheim.de",
     "registrationDeadline": "2026-07-15",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -605,7 +605,7 @@
     "venueWebsite": "https://msc-polizei-bs.de",
     "registrationDeadline": "2026-07-22",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -677,7 +677,7 @@
     "venueWebsite": "https://tsvm-racing.de",
     "registrationDeadline": "2026-07-21",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -753,7 +753,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-08-02",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -826,7 +826,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-07-26",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -902,7 +902,7 @@
     "venueWebsite": "https://rcworld-bremen.de",
     "registrationDeadline": "2026-08-07",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -978,7 +978,7 @@
     "venueWebsite": "https://ufm-modellbau.de",
     "registrationDeadline": "2026-08-12",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1062,7 +1062,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-09-17",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1117,7 +1117,7 @@
     "venueWebsite": "https://modellsport-zwickau.de",
     "registrationDeadline": "2026-09-19",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1194,7 +1194,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-09-16",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1274,7 +1274,7 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-10-05",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1351,7 +1351,7 @@
     "venueWebsite": "https://rcmc-ibbenbueren.de",
     "registrationDeadline": "2026-11-04",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
@@ -1431,6 +1431,6 @@
     "venueWebsite": null,
     "registrationDeadline": "2026-12-01",
     "firstSeen": "2026-06-22",
-    "lastSeen": "2026-06-24"
+    "lastSeen": "2026-06-25"
   }
 ]
