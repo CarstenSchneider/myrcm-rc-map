@@ -1862,12 +1862,12 @@
     "id": "motor-sport-club-imst",
     "name": "Motor Sport Club Imst",
     "city": "Imst",
-    "lat": 47.2743413,
-    "lng": 10.9733293,
+    "lat": 47.24144389630715,
+    "lng": 10.752058751006771,
     "hostIds": [
       "motor-sport-club-imst"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "21964",
     "aliases": [
       "myrcm-21964",
