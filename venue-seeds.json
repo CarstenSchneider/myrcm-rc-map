@@ -591,18 +591,17 @@
     "id": "dominique-durussel",
     "name": "Dominique Durussel",
     "city": "Monthey",
-    "lat": 46.2329491,
-    "lng": 6.9038278,
     "hostIds": [
       "dominique-durussel"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "11932",
     "aliases": [
       "myrcm-11932",
       "Dominique Durussel",
       "Monthey"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "edc-kinzigtal-e-v",
