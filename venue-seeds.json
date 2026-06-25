@@ -2421,12 +2421,12 @@
     "id": "off-road-club-montagny",
     "name": "Off Road Club Montagny",
     "city": "Montagny-les-Monts",
-    "lat": 47.1672915,
-    "lng": 6.9027132,
+    "lat": 47.03555558780845,
+    "lng": 7.020037080878065,
     "hostIds": [
       "off-road-club-montagny"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "62051",
     "aliases": [
       "myrcm-62051",
