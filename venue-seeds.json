@@ -2114,12 +2114,12 @@
     "id": "mrtm-mini-racing-ticino-moesa",
     "name": "MRTM Mini Racing Ticino & Moesa",
     "city": "Lostallo",
-    "lat": 46.3106453,
-    "lng": 9.1982861,
+    "lat": 46.31057031955886,
+    "lng": 9.199186309632507,
     "hostIds": [
       "mrtm-mini-racing-ticino-moesa"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "16",
     "aliases": [
       "myrcm-16",
