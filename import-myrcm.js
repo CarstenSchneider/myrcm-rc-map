@@ -9,7 +9,7 @@ const venueUnmatchedFile = "venue-unmatched.json";
 const seriesFile = "series.json";
 const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
 const currentYear = new Date().getFullYear();
-const allowedYears = [currentYear - 1, currentYear, currentYear + 1];
+const allowedYears = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1];
 
 const requestTimeoutMs = 8000;
 const retryCount = 1;
@@ -17,12 +17,12 @@ const detailConcurrency = 5;
 const fullImportAttemptCount = 3;
 const fullImportRetryDelayMs = 30000;
 
-function oneYearAgoString() {
-  // Import window: races older than 365 days are ignored.
+function twoYearsAgoString() {
+  // Import window: races older than 2 years are ignored.
   // Hosts with no races left after this filter are skipped entirely.
-  const oneYearAgo = new Date();
-  oneYearAgo.setDate(oneYearAgo.getDate() - 365);
-  return oneYearAgo.toISOString().slice(0, 10);
+  const twoYearsAgo = new Date();
+  twoYearsAgo.setDate(twoYearsAgo.getDate() - 730);
+  return twoYearsAgo.toISOString().slice(0, 10);
 }
 
 function sleep(ms) {
@@ -1567,7 +1567,7 @@ function extractEventLinksFromHostPage(html, host) {
     const fallbackFrom = dates[0] || null;
     const fallbackTo = dates[1] || dates[0] || null;
 
-    if (fallbackTo && fallbackTo < oneYearAgoString()) {
+    if (fallbackTo && fallbackTo < twoYearsAgoString()) {
       skippedPastEvents += 1;
       return;
     }
@@ -1651,7 +1651,7 @@ function shouldSkipRace(race) {
 
   if (race.to < race.from) return true;
 
-  if (race.to < oneYearAgoString()) return true;
+  if (race.to < twoYearsAgoString()) return true;
 
   const raceYear = Number(race.from.slice(0, 4));
   if (!allowedYears.includes(raceYear)) return true;
