@@ -2438,12 +2438,12 @@
     "id": "offroad-team-zuerich",
     "name": "Offroad Team Zürich",
     "city": "Volketswil",
-    "lat": 47.3853616,
-    "lng": 8.6785611,
+    "lat": 47.38545418423054,
+    "lng": 8.678769627396195,
     "hostIds": [
       "offroad-team-zuerich"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "65790",
     "aliases": [
       "myrcm-65790",
