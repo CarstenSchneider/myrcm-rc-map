@@ -2519,12 +2519,12 @@
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
-    "lat": 47.4204973,
-    "lng": 9.1369736,
+    "lat": 47.5267929805556,
+    "lng": 9.03531103337579,
     "hostIds": [
       "one28-ch-swiss-micro-racer"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "50394",
     "aliases": [
       "myrcm-50394",
