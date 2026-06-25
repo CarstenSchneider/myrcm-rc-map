@@ -2584,12 +2584,12 @@
     "id": "psv-salzburg-automodellsport",
     "name": "PSV-Salzburg Automodellsport",
     "city": "Elsbethen",
-    "lat": 47.7592351,
-    "lng": 13.0825458,
+    "lat": 47.75457427162213,
+    "lng": 13.076550206970264,
     "hostIds": [
       "psv-salzburg-automodellsport"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "762",
     "aliases": [
       "myrcm-762",
