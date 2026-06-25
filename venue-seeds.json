@@ -2455,18 +2455,17 @@
     "id": "oefmav-eor",
     "name": "ÖFMAV EOR",
     "city": "Berndorf",
-    "lat": 47.9455876,
-    "lng": 16.1093585,
     "hostIds": [
       "oefmav-eor"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "782",
     "aliases": [
       "myrcm-782",
       "ÖFMAV EOR",
       "Berndorf"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "oefmav-sektion-elektro-offroad",
