@@ -1205,12 +1205,12 @@
     "id": "max-rc-car-racing",
     "name": "Max RC Car Racing",
     "city": "Perg",
-    "lat": 48.2500898,
-    "lng": 14.6338102,
+    "lat": 48.23855246912976,
+    "lng": 14.643493657672924,
     "hostIds": [
       "max-rc-car-racing"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "7554",
     "aliases": [
       "myrcm-7554",
