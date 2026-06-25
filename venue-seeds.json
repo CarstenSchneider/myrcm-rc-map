@@ -525,12 +525,12 @@
     "id": "buggyclub-zentralschweiz",
     "name": "Buggyclub Zentralschweiz",
     "city": "Zetzwil",
-    "lat": 47.2862612,
-    "lng": 8.1508263,
+    "lat": 47.20522049695547,
+    "lng": 8.15538634917237,
     "hostIds": [
       "buggyclub-zentralschweiz"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "7734",
     "aliases": [
       "myrcm-7734",
