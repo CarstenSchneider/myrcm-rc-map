@@ -2567,12 +2567,12 @@
     "id": "psv-klagenfurt",
     "name": "PSV-Klagenfurt",
     "city": "Klagenfurt",
-    "lat": 46.5821384,
-    "lng": 14.1508412,
+    "lat": 46.61838480763833,
+    "lng": 14.263077131124918,
     "hostIds": [
       "psv-klagenfurt"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "774",
     "aliases": [
       "myrcm-774",
