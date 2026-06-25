@@ -1932,6 +1932,22 @@ async function runImportOnce() {
   unique = applyFirstSeen(unique, previousRaces);
 
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
+
+  // Backfill country for hosts that exist in the DACH list but had no races this run
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE" };
+  const orgIdToCountry = new Map(
+    hosts
+      .filter(h => h.orgId && h.country && countryMap[h.country])
+      .map(h => [String(h.orgId), countryMap[h.country]])
+  );
+  const hostsWithCountry = mergedHosts.map(h => {
+    if (!h.country && h.myrcmOrgId) {
+      const country = orgIdToCountry.get(String(h.myrcmOrgId));
+      if (country) return { ...h, country };
+    }
+    return h;
+  });
+
   const mergedVenues = mergeVenueSeedsIntoVenues(existingVenues, venueSeeds);
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
 
@@ -1953,7 +1969,7 @@ async function runImportOnce() {
 
   await writeFile(
     hostsFile,
-    JSON.stringify(mergedHosts, null, 2) + "\n",
+    JSON.stringify(hostsWithCountry, null, 2) + "\n",
     "utf8"
   );
 
@@ -1986,7 +2002,7 @@ async function runImportOnce() {
   }, {});
   const totalDocuments = Object.values(documentTypeCounts).reduce((sum, count) => sum + count, 0);
 
-  console.log(`hosts.json geschrieben: ${mergedHosts.length} Hosts`);
+  console.log(`hosts.json geschrieben: ${hostsWithCountry.length} Hosts`);
   console.log(`venues.json geschrieben: ${mergedVenues.length} Strecken`);
   console.log(`venue-unmatched.json geschrieben: ${mergedUnmatched.length} offene Venue-Zuordnungen`);
   console.log(`races.json geschrieben: ${unique.length} Rennen`);
