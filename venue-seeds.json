@@ -2046,12 +2046,12 @@
     "id": "mrc-oberaich",
     "name": "MRC-Oberaich",
     "city": "Kapfenberg",
-    "lat": 47.4405481,
-    "lng": 15.2901669,
+    "lat": 47.4000138029558,
+    "lng": 15.224758784901335,
     "hostIds": [
       "mrc-oberaich"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "980",
     "aliases": [
       "myrcm-980",
