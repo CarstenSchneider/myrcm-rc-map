@@ -809,12 +809,12 @@
     "id": "ircr-indoor-rc-romand",
     "name": "IRCR - Indoor RC Romand",
     "city": "Lausanne",
-    "lat": 46.5218269,
-    "lng": 6.6327025,
+    "lat": 46.7038,
+    "lng": 6.8257,
     "hostIds": [
       "ircr-indoor-rc-romand"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "26980",
     "aliases": [
       "myrcm-26980",
