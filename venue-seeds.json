@@ -658,12 +658,12 @@
     "id": "elektro-modell-buggy-club-march",
     "name": "Elektro Modell Buggy Club March",
     "city": "Stäfa",
-    "lat": 47.1884165,
-    "lng": 8.7023705,
+    "lat": 47.18852912419409,
+    "lng": 8.703300703024011,
     "hostIds": [
       "elektro-modell-buggy-club-march"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "29104",
     "aliases": [
       "myrcm-29104",
