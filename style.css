@@ -887,7 +887,8 @@ input {
   color: var(--accent);
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
-  transition: transform 120ms ease;
+  opacity: 0;
+  transition: transform 120ms ease, opacity 0.35s ease;
 }
 .locate-btn:hover { transform: scale(1.08); }
 
@@ -905,7 +906,8 @@ input {
   background: rgba(var(--panel-rgb), 0.98);
   box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
   overflow: hidden;
-  transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
@@ -937,6 +939,10 @@ input {
   overflow: hidden;
   background-size: cover !important;
 }
+
+/* Reveal locate + pill after map tiles are ready */
+body.map-is-ready .locate-btn,
+body.map-is-ready .country-pill { opacity: 1; }
 
 /* Dark mode: pill and locate match the mob-menu-btn color */
 :root.theme-dark .country-pill { background: var(--pill-bg) !important; }

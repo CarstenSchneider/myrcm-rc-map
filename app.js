@@ -75,10 +75,8 @@ function updateCountryPill() {
 
 _countryPill = document.createElement("div");
 _countryPill.className = "country-pill";
-_countryPill.addEventListener("click", e => {
-  const btn = e.target.closest(".country-pill-btn");
-  if (!btn) return;
-  e.stopPropagation();
+
+function _pillInteract(btn) {
   if (!_countryPill.classList.contains("is-expanded")) {
     _countryPill.classList.add("is-expanded");
     return;
@@ -87,9 +85,26 @@ _countryPill.addEventListener("click", e => {
   _countryPill.classList.remove("is-expanded");
   updateCountryPill();
   render();
+}
+// Touch: use touchstart + preventDefault to bypass all iOS synthetic event issues
+let _pillTouchHandled = false;
+_countryPill.addEventListener("touchstart", e => {
+  const btn = e.target.closest(".country-pill-btn");
+  if (!btn) return;
+  e.preventDefault();
+  e.stopPropagation();
+  _pillTouchHandled = true;
+  _pillInteract(btn);
+}, { passive: false });
+// Mouse: click handler for desktop (skipped if touch already handled it)
+_countryPill.addEventListener("click", e => {
+  if (_pillTouchHandled) { _pillTouchHandled = false; return; }
+  const btn = e.target.closest(".country-pill-btn");
+  if (!btn) return;
+  e.stopPropagation();
+  _pillInteract(btn);
 });
-// Desktop hover: attach mouseenter/leave only on devices that actually have hover
-// (never added on iOS, so iOS synthetic mouseenter during tap doesn't interfere)
+// Desktop hover expansion (only on real hover-capable devices)
 if (window.matchMedia("(hover: hover)").matches) {
   _countryPill.addEventListener("mouseenter", () => _countryPill.classList.add("is-expanded"));
   _countryPill.addEventListener("mouseleave", () => _countryPill.classList.remove("is-expanded"));
@@ -3812,6 +3827,7 @@ function revealMap() {
   const mapEl = document.getElementById("map");
   if (!mapEl || mapEl.classList.contains("map-ready")) return;
   mapEl.classList.add("map-ready");
+  document.body.classList.add("map-is-ready");
   document.querySelector(".map-loader")?.classList.add("map-loader-done");
   // Fade pins in after map fade-in completes (220ms transition + small buffer)
   setTimeout(() => mapEl.classList.add("map-markers-ready"), 320);
