@@ -1202,12 +1202,6 @@
     "locationUnknown": true
   },
   {
-    "hostId": "max-informatique",
-    "hostName": "Max Informatique",
-    "locationUnknown": true,
-    "myrcmOrgId": "20360"
-  },
-  {
     "id": "max-rc-car-racing",
     "name": "Max RC Car Racing",
     "city": "Perg",
@@ -1637,13 +1631,6 @@
     ]
   },
   {
-    "hostId": "mfk-kurten-e-v",
-    "hostName": "MFK Kürten e.V.",
-    "lat": 51.07755743502219,
-    "lng": 7.288925322171009,
-    "myrcmOrgId": "53092"
-  },
-  {
     "id": "mfr-morschheim-rheinhessen-pfalz-e-v",
     "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
     "city": "Worms",
@@ -1962,12 +1949,6 @@
     "locationUnknown": true
   },
   {
-    "hostId": "mrc-fritzens-formel-4",
-    "hostName": "MRC Fritzens Formel 4",
-    "locationUnknown": true,
-    "myrcmOrgId": "772"
-  },
-  {
     "id": "mrc-leipzig-e-v",
     "name": "MRC Leipzig e.V",
     "city": "Zwenkau",
@@ -2256,13 +2237,6 @@
     "myrcmOrgId": "36612"
   },
   {
-    "hostId": "msc-ober-morlen-e-v",
-    "hostName": "MSC Ober-Mörlen e.V.",
-    "lat": 50.36381448362496,
-    "lng": 8.703414092776123,
-    "myrcmOrgId": "66454"
-  },
-  {
     "id": "msc-osterhofen-e-v",
     "name": "MSC Osterhofen e.V.",
     "city": "Osterhofen",
@@ -2278,19 +2252,6 @@
       "Osterhofen",
       "myrcm-50019"
     ]
-  },
-  {
-    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
-    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
-    "locationUnknown": true,
-    "myrcmOrgId": "72"
-  },
-  {
-    "hostId": "msc-ulm-e-v",
-    "hostName": "MSC Ulm e.V.",
-    "lat": 48.32186708992988,
-    "lng": 10.051712050024937,
-    "myrcmOrgId": "42113"
   },
   {
     "id": "msg-niesky-e-v",
@@ -2615,13 +2576,6 @@
     ]
   },
   {
-    "hostId": "rc-car-chemnitz",
-    "hostName": "RC Car Chemnitz",
-    "lat": 50.79377848514052,
-    "lng": 12.898277901821292,
-    "myrcmOrgId": "51129"
-  },
-  {
     "id": "rc-car-club-hilter-e-v",
     "name": "RC Car Club Hilter e.V.",
     "city": "Hilter",
@@ -2691,13 +2645,6 @@
     ]
   },
   {
-    "hostId": "rc-drecksloch-e-v",
-    "hostName": "RC Drecksloch e.V.",
-    "lat": 51.539601453420495,
-    "lng": 7.093322619514601,
-    "myrcmOrgId": "33778"
-  },
-  {
     "id": "rc-fun-racer-e-v",
     "name": "RC Fun Racer e.V.",
     "city": "Velbert",
@@ -2727,27 +2674,6 @@
     ],
     "source": "verified-existing-geolocation-list",
     "myrcmOrgId": "1044"
-  },
-  {
-    "hostId": "rc-modellbaufreunde-e-v",
-    "hostName": "RC Modellbaufreunde e.V.",
-    "lat": 48.358257335666345,
-    "lng": 11.752698391781367,
-    "myrcmOrgId": "53665"
-  },
-  {
-    "hostId": "rc-offroad-staaken",
-    "hostName": "RC Offroad Staaken",
-    "lat": 52.475714353240356,
-    "lng": 13.101632355546334,
-    "myrcmOrgId": "55317"
-  },
-  {
-    "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team München e.V",
-    "lat": 48.00857029662106,
-    "lng": 11.36000585844325,
-    "myrcmOrgId": "37520"
   },
   {
     "id": "rc-racer-hochsauerland-e-v",
@@ -3053,13 +2979,6 @@
     ]
   },
   {
-    "hostId": "rccars-bergisch-born-e-v",
-    "hostName": "RCCars Bergisch-Born e.V.",
-    "lat": 51.17808024290368,
-    "lng": 7.223162604471789,
-    "myrcmOrgId": "6492"
-  },
-  {
     "id": "rccr-munzig-e-v",
     "name": "RCCR Munzig e.V.",
     "city": "Klipphausen",
@@ -3312,13 +3231,6 @@
     ]
   },
   {
-    "hostId": "smc-stuttgart-e-v",
-    "hostName": "SMC Stuttgart e.V.",
-    "lat": 48.720995,
-    "lng": 9.343529,
-    "myrcmOrgId": "51971"
-  },
-  {
     "id": "smrc-wien",
     "name": "SMRC Wien",
     "city": "Wien",
@@ -3503,12 +3415,6 @@
     ]
   },
   {
-    "hostId": "tsv-gelenau-e-v",
-    "hostName": "TSV Gelenau e.V.",
-    "locationUnknown": true,
-    "myrcmOrgId": "30389"
-  },
-  {
     "id": "tsv-kleinburgwedel",
     "name": "TSV Kleinburgwedel",
     "city": "Burgwedel",
@@ -3670,5 +3576,105 @@
       "WMW RC-BUGGY-RACING TEAM FEHRING",
       "Fehring"
     ]
+  },
+  {
+    "hostId": "alpencup",
+    "hostName": "Alpencup",
+    "locationUnknown": true,
+    "myrcmOrgId": "53515"
+  },
+  {
+    "hostId": "max-informatique",
+    "hostName": "Max Informatique",
+    "locationUnknown": true,
+    "myrcmOrgId": "20360"
+  },
+  {
+    "hostId": "mfk-kurten-e-v",
+    "hostName": "MFK Kürten e.V.",
+    "lat": 51.07755743502219,
+    "lng": 7.288925322171009,
+    "myrcmOrgId": "53092"
+  },
+  {
+    "hostId": "mrc-fritzens-formel-4",
+    "hostName": "MRC Fritzens Formel 4",
+    "locationUnknown": true,
+    "myrcmOrgId": "772"
+  },
+  {
+    "hostId": "msc-ober-morlen-e-v",
+    "hostName": "MSC Ober-Mörlen e.V.",
+    "lat": 50.36381448362496,
+    "lng": 8.703414092776123,
+    "myrcmOrgId": "66454"
+  },
+  {
+    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
+    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
+    "locationUnknown": true,
+    "myrcmOrgId": "72"
+  },
+  {
+    "hostId": "msc-ulm-e-v",
+    "hostName": "MSC Ulm e.V.",
+    "lat": 48.32186708992988,
+    "lng": 10.051712050024937,
+    "myrcmOrgId": "42113"
+  },
+  {
+    "hostId": "rc-car-chemnitz",
+    "hostName": "RC Car Chemnitz",
+    "lat": 50.79377848514052,
+    "lng": 12.898277901821292,
+    "myrcmOrgId": "51129"
+  },
+  {
+    "hostId": "rc-drecksloch-e-v",
+    "hostName": "RC Drecksloch e.V.",
+    "lat": 51.539601453420495,
+    "lng": 7.093322619514601,
+    "myrcmOrgId": "33778"
+  },
+  {
+    "hostId": "rc-modellbaufreunde-e-v",
+    "hostName": "RC Modellbaufreunde e.V.",
+    "lat": 48.358257335666345,
+    "lng": 11.752698391781367,
+    "myrcmOrgId": "53665"
+  },
+  {
+    "hostId": "rc-offroad-staaken",
+    "hostName": "RC Offroad Staaken",
+    "lat": 52.475714353240356,
+    "lng": 13.101632355546334,
+    "myrcmOrgId": "55317"
+  },
+  {
+    "hostId": "rc-race-team-munchen-e-v",
+    "hostName": "RC Race Team München e.V",
+    "lat": 48.00857029662106,
+    "lng": 11.36000585844325,
+    "myrcmOrgId": "37520"
+  },
+  {
+    "hostId": "rccars-bergisch-born-e-v",
+    "hostName": "RCCars Bergisch-Born e.V.",
+    "lat": 51.17808024290368,
+    "lng": 7.223162604471789,
+    "myrcmOrgId": "6492"
+  },
+  {
+    "hostId": "smc-stuttgart-e-v",
+    "hostName": "SMC Stuttgart e.V.",
+    "lat": 48.720995,
+    "lng": 9.343529,
+    "myrcmOrgId": "51971"
+  },
+  {
+    "hostId": "tsv-gelenau-e-v",
+    "hostName": "TSV Gelenau e.V.",
+    "locationUnknown": true,
+    "myrcmOrgId": "30389"
   }
 ]
