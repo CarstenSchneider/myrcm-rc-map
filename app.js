@@ -114,7 +114,10 @@ if (_locateBtnLeafletContainer?.classList.contains("leaflet-control")) {
 
 // Position country pill on desktop: same center-to-center gap as hamburger→locate
 function positionCountryPillDesktop() {
-  if (window.matchMedia("(max-width: 860px)").matches) return;
+  if (window.matchMedia("(max-width: 860px)").matches) {
+    if (_countryPill) _countryPill.style.top = "";
+    return;
+  }
   if (!_locateBtn || !_countryPill) return;
   const menuBtn = document.getElementById("appMenuButton");
   if (!menuBtn) return;
