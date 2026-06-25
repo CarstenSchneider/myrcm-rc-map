@@ -664,6 +664,7 @@ let hostsByOrgId = new Map();
 let hostsById = new Map();
 let venueLookup = new Map();
 let markers = new Map();
+const _venueForRaceCache = new Map();
 let activeRaceId = null;
 let activeVenueId = null;
 let initialRenderDone = false;
@@ -2517,13 +2518,11 @@ function venueByRaceNameAndCity(race) {
 
 function venueForRace(race) {
   if (!race) return null;
-
-  return (
-    venueById(race.venueId) ||
-    venueByRaceAddress(race) ||
-    venueByRaceNameAndCity(race) ||
-    null
-  );
+  const key = race.id;
+  if (key !== undefined && _venueForRaceCache.has(key)) return _venueForRaceCache.get(key);
+  const result = venueById(race.venueId) || venueByRaceAddress(race) || venueByRaceNameAndCity(race) || null;
+  if (key !== undefined) _venueForRaceCache.set(key, result);
+  return result;
 }
 
 function normalizeUrl(url) {
@@ -3877,9 +3876,8 @@ function render() {
   updateAppModeClass();
   syncFilterUi();
   const list = filteredRaces();
-  updateMarkers(list, !initialRenderDone);
-  if (venues.length > 0) initialRenderDone = true;
 
+  // Phase 1: list panel updates immediately
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
 
@@ -3907,6 +3905,18 @@ function render() {
     renderList(list);
   }
 
+  // Phase 2: map markers deferred — browser paints list first, then updates map
+  const mapPanel = document.querySelector(".map-panel");
+  const shouldFitBounds = !initialRenderDone;
+  if (initialRenderDone) mapPanel?.classList.add("map-is-updating");
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      updateMarkers(list, shouldFitBounds);
+      if (venues.length > 0) initialRenderDone = true;
+      mapPanel?.classList.remove("map-is-updating");
+    });
+  });
 }
 
 function setLayout(layout) {
@@ -4300,6 +4310,7 @@ async function init() {
       .filter(isUsefulRckRace)
       .map(race => normalizeRaceFromSource(race, "rck"))
   ];
+  _venueForRaceCache.clear();
 
   const hostRecords = Array.isArray(hostsResponse) ? hostsResponse : [];
   const myrcmHostRecords = Array.isArray(myrcmHostsResponse) ? myrcmHostsResponse : [];
