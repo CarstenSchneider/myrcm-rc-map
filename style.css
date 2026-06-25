@@ -894,7 +894,7 @@ input {
 /* Country filter pill — fixed directly below locate button */
 .country-pill {
   position: fixed;
-  top: 140px;  /* 14 (filters-panel top) + 68 (topbar) + 8 (grid gap) + 40 (chips-row) + 10 gap */
+  top: 152px;  /* fallback; overridden by positionCountryPillDesktop() */
   left: 14px;
   z-index: 1000;
   display: flex;

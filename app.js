@@ -105,6 +105,21 @@ if (window.matchMedia("(max-width: 860px)").matches) {
 if (_locateBtnLeafletContainer?.classList.contains("leaflet-control")) {
   _locateBtnLeafletContainer.remove();
 }
+
+// Position country pill on desktop: same center-to-center gap as hamburger→locate
+function positionCountryPillDesktop() {
+  if (window.matchMedia("(max-width: 860px)").matches) return;
+  if (!_locateBtn || !_countryPill) return;
+  const menuBtn = document.getElementById("appMenuButton");
+  if (!menuBtn) return;
+  const menuRect = menuBtn.getBoundingClientRect();
+  const locateRect = _locateBtn.getBoundingClientRect();
+  const menuCenter = menuRect.top + menuRect.height / 2;
+  const locateCenter = locateRect.top + locateRect.height / 2;
+  const spacing = locateCenter - menuCenter;
+  _countryPill.style.top = Math.round(locateCenter + spacing - _countryPill.offsetHeight / 2) + "px";
+}
+requestAnimationFrame(positionCountryPillDesktop);
 if (!localStorage.getItem("locateBtnHinted")) {
   setTimeout(() => {
     if (!_locateBtn) return;
@@ -4111,6 +4126,7 @@ window.addEventListener("resize", () => {
         desktopSlot.appendChild(_locateBtn);
       }
     }
+    requestAnimationFrame(positionCountryPillDesktop);
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
@@ -5474,6 +5490,7 @@ window.addEventListener("load", () => {
     if (lastVisibleCenter && !window.matchMedia("(max-width: 860px)").matches) {
       panToVisible(lastVisibleCenter, map.getZoom());
     }
+    positionCountryPillDesktop();
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });
