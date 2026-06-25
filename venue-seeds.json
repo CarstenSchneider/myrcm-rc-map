@@ -2063,12 +2063,12 @@
     "id": "mrcp",
     "name": "MRCP",
     "city": "Steinen",
-    "lat": 47.0500549,
-    "lng": 8.6108291,
+    "lat": 47.22072276990198,
+    "lng": 7.975249230100009,
     "hostIds": [
       "mrcp"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "207",
     "aliases": [
       "myrcm-207",
