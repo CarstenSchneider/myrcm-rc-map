@@ -1239,12 +1239,12 @@
     "id": "mblr-ecl-pens",
     "name": "MBLR Eclépens",
     "city": "Penthalaz",
-    "lat": 46.6113262,
-    "lng": 6.5252453,
+    "lat": 46.65368842563974,
+    "lng": 6.5560556,
     "hostIds": [
       "mblr-ecl-pens"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "45823",
     "aliases": [
       "myrcm-45823",
