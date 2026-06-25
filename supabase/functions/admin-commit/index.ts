@@ -71,9 +71,16 @@ serve(async (req) => {
 
     // Handle AT/CH seed verification (updates existing seed by id, no unmatched change)
     if (action === "verify-dach-seed") {
+      const locationUnknown = body.locationUnknown === true;
       const seedIdx = seeds.findIndex((s: any) => s.id === seedId);
       if (seedIdx < 0) return new Response("Seed not found", { status: 404, headers: CORS });
-      seeds[seedIdx] = { ...seeds[seedIdx], lat, lng, source: "verified" };
+      if (locationUnknown) {
+        const { lat: _lat, lng: _lng, ...rest } = seeds[seedIdx];
+        seeds[seedIdx] = { ...rest, locationUnknown: true, source: "verified" };
+      } else {
+        const { locationUnknown: _lu, ...rest } = seeds[seedIdx];
+        seeds[seedIdx] = { ...rest, lat, lng, source: "verified" };
+      }
       seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
       const seedsContent = toBase64(JSON.stringify(seeds, null, 2) + "\n");
       await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {

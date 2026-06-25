@@ -4961,6 +4961,7 @@ function renderAdminDachTab(container) {
             <div class="admin-entry-actions" style="flex-wrap:wrap;gap:8px;">
               <button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>
               <button type="button" class="admin-btn admin-btn-save js-dach-save">Korrigieren & Weiter</button>
+              <button type="button" class="admin-btn admin-btn-unknown js-dach-unknown">Kein Platz bekannt</button>
               ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
             </div>
             <p class="admin-entry-status js-dach-status"></p>
@@ -4968,10 +4969,13 @@ function renderAdminDachTab(container) {
 
         const status = container.querySelector(".js-dach-status");
 
-        async function saveSeed(lat, lng) {
+        async function saveSeed(lat, lng, locationUnknown = false) {
           status.textContent = "Speichern…";
           try {
-            await adminCommit({ action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng });
+            const payload = locationUnknown
+              ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
+              : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
+            await adminCommit(payload);
             idx++;
             if (idx >= pending.length) {
               container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} AT/CH Clubs verifiziert.</p>`;
@@ -4993,6 +4997,10 @@ function renderAdminDachTab(container) {
           const [lat, lng] = parts;
           if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
           saveSeed(lat, lng);
+        });
+
+        container.querySelector(".js-dach-unknown").addEventListener("click", () => {
+          saveSeed(null, null, true);
         });
 
         container.querySelector(".js-dach-prev")?.addEventListener("click", () => {
