@@ -2029,12 +2029,12 @@
     "id": "mrc-fruehwirth",
     "name": "MRC-Frühwirth",
     "city": "Sollenau",
-    "lat": 47.8994729,
-    "lng": 16.2463342,
+    "lat": 47.900775492140326,
+    "lng": 16.268502136594467,
     "hostIds": [
       "mrc-fruehwirth"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "779",
     "aliases": [
       "myrcm-779",
