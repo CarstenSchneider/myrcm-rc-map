@@ -68,22 +68,6 @@
     ]
   },
   {
-    "id": "alpencup",
-    "name": "Alpencup",
-    "city": "Schleitheim",
-    "hostIds": [
-      "alpencup"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "53515",
-    "aliases": [
-      "myrcm-53515",
-      "Alpencup",
-      "Schleitheim"
-    ],
-    "locationUnknown": true
-  },
-  {
     "id": "amc-hildesheim-e-v",
     "name": "AMC Hildesheim e.V.",
     "city": "Hildesheim",
@@ -371,22 +355,6 @@
     ]
   },
   {
-    "id": "arwico-tamiya",
-    "name": "ARWICO / Tamiya",
-    "city": "Ettingen",
-    "hostIds": [
-      "arwico-tamiya"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "28",
-    "aliases": [
-      "myrcm-28",
-      "ARWICO / Tamiya",
-      "Ettingen"
-    ],
-    "locationUnknown": true
-  },
-  {
     "id": "asc-celle-e-v",
     "name": "ASC Celle e.V.",
     "city": "Celle",
@@ -419,22 +387,6 @@
       "ASC Potsdam e.V.",
       "Potsdam"
     ]
-  },
-  {
-    "id": "auto-model-club-d-ajoie",
-    "name": "Auto Model Club d'Ajoie",
-    "city": "Fontenais",
-    "hostIds": [
-      "auto-model-club-d-ajoie"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "25",
-    "aliases": [
-      "myrcm-25",
-      "Auto Model Club d'Ajoie",
-      "Fontenais"
-    ],
-    "locationUnknown": true
   },
   {
     "id": "auto-modell-club-schaffhausen",
@@ -586,22 +538,6 @@
       "DJK-SSC Lackenhäuser e.V.",
       "Neureichenau"
     ]
-  },
-  {
-    "id": "dominique-durussel",
-    "name": "Dominique Durussel",
-    "city": "Monthey",
-    "hostIds": [
-      "dominique-durussel"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "11932",
-    "aliases": [
-      "myrcm-11932",
-      "Dominique Durussel",
-      "Monthey"
-    ],
-    "locationUnknown": true
   },
   {
     "id": "edc-kinzigtal-e-v",
@@ -2315,12 +2251,6 @@
     ]
   },
   {
-    "hostId": "modellclub-flensburg-e-v",
-    "hostName": "Modellclub Flensburg e.V",
-    "locationUnknown": true,
-    "myrcmOrgId": "42405"
-  },
-  {
     "id": "modellrenngemeinschaft-dogern-e-v",
     "name": "Modellrenngemeinschaft Dogern e.V.",
     "city": "Wutöschingen",
@@ -2832,12 +2762,6 @@
       "Osterhofen",
       "myrcm-50019"
     ]
-  },
-  {
-    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
-    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
-    "locationUnknown": true,
-    "myrcmOrgId": "72"
   },
   {
     "hostId": "msc-ulm-e-v",
@@ -4365,12 +4289,6 @@
       "myrcm-991",
       "Königsbrunn"
     ]
-  },
-  {
-    "hostId": "tsv-gelenau-e-v",
-    "hostName": "TSV Gelenau e.V.",
-    "locationUnknown": true,
-    "myrcmOrgId": "30389"
   },
   {
     "id": "tsv-kleinburgwedel",
