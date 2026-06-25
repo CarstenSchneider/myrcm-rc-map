@@ -70,11 +70,13 @@ jobs:
             echo "Keine Änderungen."
           else
             git commit -m "Update race data"
+            git pull --rebase origin main
             git push origin main
 
             git checkout -B dev origin/dev
             git checkout main -- $ALL_FILES
             git commit -m "Update race data"
+            git pull --rebase origin dev
             git push origin dev
 
             git checkout main
