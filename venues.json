@@ -829,8 +829,8 @@
     "id": "ert-steyregg",
     "name": "ERT-Steyregg",
     "city": "Katsdorf",
-    "lat": 48.2751706,
-    "lng": 14.3989892,
+    "lat": 48.274961990918094,
+    "lng": 14.399409967006479,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -843,7 +843,7 @@
       "ert-steyregg"
     ],
     "myrcmOrgId": "768",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -955,8 +955,8 @@
     "id": "hobby-shop-haessig",
     "name": "Hobby Shop Hässig",
     "city": "Wohlen",
-    "lat": 46.9708428,
-    "lng": 7.35592,
+    "lat": 47.36153868919157,
+    "lng": 8.268992398119442,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -969,7 +969,7 @@
       "hobby-shop-haessig"
     ],
     "myrcmOrgId": "293",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1018,8 +1018,8 @@
     "id": "indoortrack-wichtrach",
     "name": "Indoortrack Wichtrach",
     "city": "Wichtrach",
-    "lat": 46.8457306,
-    "lng": 7.5783419,
+    "lat": 46.833593610103485,
+    "lng": 7.563650046089913,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1032,15 +1032,15 @@
       "indoortrack-wichtrach"
     ],
     "myrcmOrgId": "46390",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "ircr-indoor-rc-romand",
     "name": "IRCR - Indoor RC Romand",
     "city": "Lausanne",
-    "lat": 46.5218269,
-    "lng": 6.6327025,
+    "lat": 46.7038,
+    "lng": 6.8257,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1053,7 +1053,7 @@
       "ircr-indoor-rc-romand"
     ],
     "myrcmOrgId": "26980",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1081,8 +1081,8 @@
     "id": "lamac",
     "name": "LAMAC",
     "city": "St.Paul/Lavanttal",
-    "lat": 46.7006159,
-    "lng": 14.8739037,
+    "lat": 46.70501810439541,
+    "lng": 14.877295427171088,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1095,7 +1095,7 @@
       "lamac"
     ],
     "myrcmOrgId": "781",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1123,8 +1123,8 @@
     "id": "lmc-limbacher-modellsport-club",
     "name": "LMC - Limbacher Modellsport Club",
     "city": "Limbach",
-    "lat": 47.3980635,
-    "lng": 16.0031086,
+    "lat": 47.40055037608646,
+    "lng": 16.006066816150238,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1137,7 +1137,7 @@
       "lmc-limbacher-modellsport-club"
     ],
     "myrcmOrgId": "66",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1228,8 +1228,8 @@
     "id": "mac-amstetten",
     "name": "MAC Amstetten",
     "city": "Biberbach",
-    "lat": 48.0291168,
-    "lng": 14.708497,
+    "lat": 48.11474489736409,
+    "lng": 14.8441105606671,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1242,7 +1242,7 @@
       "mac-amstetten"
     ],
     "myrcmOrgId": "1225",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1486,8 +1486,8 @@
     "id": "mac-traiskirchen",
     "name": "MAC-Traiskirchen",
     "city": "Möllersdorf",
-    "lat": 48.0248362,
-    "lng": 16.3040962,
+    "lat": 48.017345965777864,
+    "lng": 16.30643004706267,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1500,15 +1500,15 @@
       "mac-traiskirchen"
     ],
     "myrcmOrgId": "769",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "macg-steiermark",
     "name": "MACG - Steiermark",
     "city": "Kalsdorf",
-    "lat": 46.9644025,
-    "lng": 15.4786966,
+    "lat": 46.95878172004298,
+    "lng": 15.396622765556616,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1521,7 +1521,7 @@
       "macg-steiermark"
     ],
     "myrcmOrgId": "858",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1652,8 +1652,8 @@
     "id": "max-rc-car-racing",
     "name": "Max RC Car Racing",
     "city": "Perg",
-    "lat": 48.2500898,
-    "lng": 14.6338102,
+    "lat": 48.23855246912976,
+    "lng": 14.643493657672924,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1666,7 +1666,7 @@
       "max-rc-car-racing"
     ],
     "myrcmOrgId": "7554",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -1715,8 +1715,8 @@
     "id": "mblr-ecl-pens",
     "name": "MBLR Eclépens",
     "city": "Penthalaz",
-    "lat": 46.6113262,
-    "lng": 6.5252453,
+    "lat": 46.65368842563974,
+    "lng": 6.5560556,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -1729,7 +1729,7 @@
       "mblr-ecl-pens"
     ],
     "myrcmOrgId": "45823",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -2349,8 +2349,8 @@
     "id": "mini-racing-cars-aigle-lausanne",
     "name": "Mini Racing Cars Aigle & Lausanne",
     "city": "Concise",
-    "lat": 46.3127464,
-    "lng": 6.9427934,
+    "lat": 46.31289099431315,
+    "lng": 6.944024554319166,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2363,15 +2363,15 @@
       "mini-racing-cars-aigle-lausanne"
     ],
     "myrcmOrgId": "19",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "mini-racing-chiasso",
     "name": "Mini Racing Chiasso",
     "city": "Bellinzona",
-    "lat": 45.8340513,
-    "lng": 9.013863,
+    "lat": 45.83559574887884,
+    "lng": 9.021743484375046,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2384,7 +2384,7 @@
       "mini-racing-chiasso"
     ],
     "myrcmOrgId": "9845",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -2496,8 +2496,8 @@
     "id": "mod-race-laa-04",
     "name": "MOD.RACE-LAA.04",
     "city": "Neudorf bei Staatz",
-    "lat": 48.7209394,
-    "lng": 16.4924882,
+    "lat": 48.71152818321577,
+    "lng": 16.367736548425786,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2510,7 +2510,7 @@
       "mod-race-laa-04"
     ],
     "myrcmOrgId": "771",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -2580,8 +2580,8 @@
     "id": "modell-rennsport-club-st-gallen-mrcsg",
     "name": "Modell Rennsport Club St. Gallen MRCSG",
     "city": "Sitterdorf",
-    "lat": 47.5026041,
-    "lng": 9.2458915,
+    "lat": 47.51027228068182,
+    "lng": 9.263153841386655,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2594,7 +2594,7 @@
       "modell-rennsport-club-st-gallen-mrcsg"
     ],
     "myrcmOrgId": "20",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -2664,8 +2664,8 @@
     "id": "modellbuggygruppe-dellach-gail",
     "name": "Modellbuggygruppe Dellach/Gail",
     "city": "Dellach/Gail",
-    "lat": 46.6008784,
-    "lng": 13.5943918,
+    "lat": 46.65304374661556,
+    "lng": 13.083070226002091,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2678,7 +2678,7 @@
       "modellbuggygruppe-dellach-gail"
     ],
     "myrcmOrgId": "15268",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -2727,8 +2727,8 @@
     "id": "morac",
     "name": "MORAC",
     "city": "Graz",
-    "lat": 47.0708678,
-    "lng": 15.4382786,
+    "lat": 46.96755832909201,
+    "lng": 15.806933629726691,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2741,15 +2741,15 @@
       "morac"
     ],
     "myrcmOrgId": "216",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "motor-sport-club-imst",
     "name": "Motor Sport Club Imst",
     "city": "Imst",
-    "lat": 47.2743413,
-    "lng": 10.9733293,
+    "lat": 47.24144389630715,
+    "lng": 10.752058751006771,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2762,7 +2762,7 @@
       "motor-sport-club-imst"
     ],
     "myrcmOrgId": "21964",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -2963,8 +2963,8 @@
     "id": "mrc-fruehwirth",
     "name": "MRC-Frühwirth",
     "city": "Sollenau",
-    "lat": 47.8994729,
-    "lng": 16.2463342,
+    "lat": 47.900775492140326,
+    "lng": 16.268502136594467,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2977,15 +2977,15 @@
       "mrc-fruehwirth"
     ],
     "myrcmOrgId": "779",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "mrc-oberaich",
     "name": "MRC-Oberaich",
     "city": "Kapfenberg",
-    "lat": 47.4405481,
-    "lng": 15.2901669,
+    "lat": 47.4000138029558,
+    "lng": 15.224758784901335,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -2998,15 +2998,15 @@
       "mrc-oberaich"
     ],
     "myrcmOrgId": "980",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "mrcp",
     "name": "MRCP",
     "city": "Steinen",
-    "lat": 47.0500549,
-    "lng": 8.6108291,
+    "lat": 47.22072276990198,
+    "lng": 7.975249230100009,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3019,7 +3019,7 @@
       "mrcp"
     ],
     "myrcmOrgId": "207",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -3068,8 +3068,8 @@
     "id": "mrtm-mini-racing-ticino-moesa",
     "name": "MRTM Mini Racing Ticino & Moesa",
     "city": "Lostallo",
-    "lat": 46.3106453,
-    "lng": 9.1982861,
+    "lat": 46.31057031955886,
+    "lng": 9.199186309632507,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3082,7 +3082,7 @@
       "mrtm-mini-racing-ticino-moesa"
     ],
     "myrcmOrgId": "16",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -3438,8 +3438,8 @@
     "id": "nitrofighter",
     "name": "Nitrofighter",
     "city": "Lambrechten",
-    "lat": 48.3165483,
-    "lng": 13.5135562,
+    "lat": 48.322265539714145,
+    "lng": 13.539756145992305,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3452,7 +3452,7 @@
       "nitrofighter"
     ],
     "myrcmOrgId": "13507",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -3482,8 +3482,8 @@
     "id": "nmbc-neuch-tel-mini-buggy-club",
     "name": "NMBC Neuchâtel Mini Buggy Club",
     "city": "Cornaux",
-    "lat": 47.0383306,
-    "lng": 7.0188056,
+    "lat": 47.03551898685854,
+    "lng": 7.019575312495739,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3496,7 +3496,7 @@
       "nmbc-neuch-tel-mini-buggy-club"
     ],
     "myrcmOrgId": "4497",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -3524,8 +3524,8 @@
     "id": "off-road-club-montagny",
     "name": "Off Road Club Montagny",
     "city": "Montagny-les-Monts",
-    "lat": 47.1672915,
-    "lng": 6.9027132,
+    "lat": 47.03555558780845,
+    "lng": 7.020037080878065,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3538,15 +3538,15 @@
       "off-road-club-montagny"
     ],
     "myrcmOrgId": "62051",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
     "id": "offroad-team-zuerich",
     "name": "Offroad Team Zürich",
     "city": "Volketswil",
-    "lat": 47.3853616,
-    "lng": 8.6785611,
+    "lat": 47.38545418423054,
+    "lng": 8.678769627396195,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3559,7 +3559,7 @@
       "offroad-team-zuerich"
     ],
     "myrcmOrgId": "65790",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -3650,8 +3650,8 @@
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
-    "lat": 47.4204973,
-    "lng": 9.1369736,
+    "lat": 47.5267929805556,
+    "lng": 9.03531103337579,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3664,7 +3664,7 @@
       "one28-ch-swiss-micro-racer"
     ],
     "myrcmOrgId": "50394",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -3773,8 +3773,8 @@
     "id": "psv-klagenfurt",
     "name": "PSV-Klagenfurt",
     "city": "Klagenfurt",
-    "lat": 46.5821384,
-    "lng": 14.1508412,
+    "lat": 46.61838480763833,
+    "lng": 14.263077131124918,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3787,7 +3787,7 @@
       "psv-klagenfurt"
     ],
     "myrcmOrgId": "774",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
