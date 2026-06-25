@@ -54,12 +54,12 @@
     "id": "a-team-graz",
     "name": "A-Team Graz",
     "city": "Graz",
-    "lat": 47.1191146,
-    "lng": 15.3737583,
+    "lat": 47.119292799446136,
+    "lng": 15.373743198057324,
     "hostIds": [
       "a-team-graz"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "504",
     "aliases": [
       "myrcm-504",
