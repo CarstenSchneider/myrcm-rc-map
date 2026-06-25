@@ -3404,18 +3404,17 @@
     "id": "tamiya-cup-austria",
     "name": "Tamiya Cup Austria",
     "city": "Furth",
-    "lat": 48.374646,
-    "lng": 15.6131886,
     "hostIds": [
       "tamiya-cup-austria"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "6328",
     "aliases": [
       "myrcm-6328",
       "Tamiya Cup Austria",
       "Furth"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "team-indoor-track-schoeftland",
