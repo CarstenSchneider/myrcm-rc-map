@@ -1157,12 +1157,12 @@
     "id": "macg-steiermark",
     "name": "MACG - Steiermark",
     "city": "Kalsdorf",
-    "lat": 46.9644025,
-    "lng": 15.4786966,
+    "lat": 46.95878172004298,
+    "lng": 15.396622765556616,
     "hostIds": [
       "macg-steiermark"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "858",
     "aliases": [
       "myrcm-858",
