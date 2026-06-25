@@ -1733,7 +1733,11 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
     const documents = mergeDocuments(detailDocuments, registrationDocuments);
 
     const registrationInfo = registrationInfoFromText(eventLink.registrationText);
-    const registrationStatus = bookingPageClosed ? "closed" : registrationInfo.registrationStatus;
+    // Don't override "upcoming" with "closed": booking page shows "Booking not possible"
+    // for races whose registration hasn't opened yet — that's not the same as closed.
+    const registrationStatus = (bookingPageClosed && registrationInfo.registrationStatus !== "upcoming")
+      ? "closed"
+      : registrationInfo.registrationStatus;
 
     const registrationListInfo = await enrichFromRegistrationList(eventLink.eventId, {
       registrationCount: eventLink.registrationCount,
