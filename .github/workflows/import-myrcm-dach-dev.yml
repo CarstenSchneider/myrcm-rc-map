@@ -1,0 +1,63 @@
+name: Import MyRCM DACH (dev only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Wait for MyRCM availability
+        run: |
+          for i in $(seq 1 10); do
+            echo "Versuch $i/10 — $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            if curl --fail --silent --location \
+              --connect-timeout 15 --max-time 30 \
+              https://www.myrcm.ch/ > /dev/null; then
+              echo "MyRCM erreichbar."
+              exit 0
+            fi
+            if [ "$i" -lt 10 ]; then
+              echo "Nicht erreichbar — warte 20 Minuten..."
+              sleep 1200
+            fi
+          done
+          echo "MyRCM nach 10 Versuchen nicht erreichbar — Import abgebrochen."
+          exit 1
+
+      - name: Import MyRCM DACH races
+        run: npm run import
+
+      - name: Commit race data to dev
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          ALL_FILES="races.json hosts.json venues.json venue-unmatched.json"
+
+          git add $ALL_FILES
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Import MyRCM DACH data (dev)"
+            git push origin dev
+          fi
