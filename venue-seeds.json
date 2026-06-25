@@ -155,12 +155,12 @@
     "id": "amc-nussdorf-debant",
     "name": "AMC Nußdorf / Debant",
     "city": "Winklern",
-    "lat": 46.8704513,
-    "lng": 12.8776815,
+    "lat": 46.817994705114735,
+    "lng": 12.811589501309584,
     "hostIds": [
       "amc-nussdorf-debant"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "26450",
     "aliases": [
       "myrcm-26450",
