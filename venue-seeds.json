@@ -2065,8 +2065,24 @@
     "myrcmOrgId": "207",
     "aliases": [
       "myrcm-207",
-      "MRCP",
       "Steinen"
+    ]
+  },
+  {
+    "id": "racing-center-parndorf",
+    "name": "Racing Center Parndorf",
+    "city": "Parndorf",
+    "lat": 48.04490091454664,
+    "lng": 16.85155804833806,
+    "hostIds": [
+      "racing-center-parndorf"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "38295",
+    "aliases": [
+      "myrcm-38295",
+      "Racing Center Parndorf",
+      "RC Parndorf"
     ]
   },
   {
