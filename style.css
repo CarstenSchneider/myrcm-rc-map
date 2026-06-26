@@ -3998,6 +3998,7 @@ body.is-menu-open .app-menu-close {
   .fav-star-btn:hover { color: var(--favorite); }
   .fav-star-btn.active:hover, .fav-star-btn.active:focus-visible { color: rgba(var(--text-rgb), 0.22); }
   .fav-bell-btn:hover { color: var(--favorite); }
+  .fav-bell-btn.active:hover, .fav-bell-btn.active:focus-visible { color: rgba(var(--text-rgb), 0.22); }
 }
 .fav-bell-icon { width: 34px; height: 34px; flex-shrink: 0; pointer-events: none; }
 .fav-empty { padding: 32px 24px; font-size: 13px; color: var(--muted); text-align: center; }
