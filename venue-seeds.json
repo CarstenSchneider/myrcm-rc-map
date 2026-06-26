@@ -3554,12 +3554,12 @@
     "id": "tr-racing",
     "name": "TR-Racing",
     "city": "Gr.Hartmannsdorf 101",
-    "lat": 47.0475067,
-    "lng": 15.8358721,
+    "lat": 47.3337664789346,
+    "lng": 15.953367544337484,
     "hostIds": [
       "tr-racing"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "506",
     "aliases": [
       "myrcm-506",
