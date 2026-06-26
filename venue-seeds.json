@@ -3667,6 +3667,13 @@
     "myrcmOrgId": "42113"
   },
   {
+    "hostId": "msv-weiz",
+    "hostName": "MSV Weiz",
+    "lat": 47.19196124203115,
+    "lng": 15.584801352403556,
+    "myrcmOrgId": "53491"
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "lat": 50.79377848514052,
