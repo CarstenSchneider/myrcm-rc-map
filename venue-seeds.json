@@ -3471,18 +3471,17 @@
     "id": "swiss-racing-cup",
     "name": "Swiss Racing Cup",
     "city": "Wichtrach",
-    "lat": 46.8457306,
-    "lng": 7.5783419,
     "hostIds": [
       "swiss-racing-cup"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "9425",
     "aliases": [
       "myrcm-9425",
       "Swiss Racing Cup",
       "Wichtrach"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "swiss-rc-protech-s-rl",
