@@ -529,6 +529,18 @@
     ]
   },
   {
+    "id": "mc-daun",
+    "name": "Daun",
+    "city": "Daun",
+    "lat": 50.17843668713434,
+    "lng": 6.821288015561265,
+    "aliases": [
+      "DAUN / GER",
+      "DAUN/ GER"
+    ],
+    "source": "manual"
+  },
+  {
     "id": "djk-ssc-lackenhaeuser-e-v",
     "name": "DJK-SSC Lackenhäuser e.V.",
     "city": "Neureichenau",
@@ -2492,70 +2504,6 @@
     ]
   },
   {
-    "id": "oefmav-eor",
-    "name": "ÖFMAV EOR",
-    "city": "Berndorf",
-    "hostIds": [
-      "oefmav-eor"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "782",
-    "aliases": [
-      "myrcm-782",
-      "ÖFMAV EOR",
-      "Berndorf"
-    ],
-    "locationUnknown": true
-  },
-  {
-    "id": "oefmav-sektion-elektro-offroad",
-    "name": "ÖFMAV Sektion Elektro Offroad",
-    "city": "Wien",
-    "hostIds": [
-      "oefmav-sektion-elektro-offroad"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "34619",
-    "aliases": [
-      "myrcm-34619",
-      "ÖFMAV Sektion Elektro Offroad",
-      "Wien"
-    ],
-    "locationUnknown": true
-  },
-  {
-    "id": "oefmav-sektion-or-8",
-    "name": "ÖFMAV Sektion OR-8",
-    "city": "Graz",
-    "hostIds": [
-      "oefmav-sektion-or-8"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "503",
-    "aliases": [
-      "myrcm-503",
-      "ÖFMAV Sektion OR-8",
-      "Graz"
-    ],
-    "locationUnknown": true
-  },
-  {
-    "id": "oefmav-sektion-verbrenner-flachbahn",
-    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
-    "city": "Winklarn",
-    "hostIds": [
-      "oefmav-sektion-verbrenner-flachbahn"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "38958",
-    "aliases": [
-      "myrcm-38958",
-      "ÖFMAV Sektion Verbrenner Flachbahn",
-      "Winklarn"
-    ],
-    "locationUnknown": true
-  },
-  {
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
@@ -3761,5 +3709,69 @@
       "WMW RC-BUGGY-RACING TEAM FEHRING",
       "Fehring"
     ]
+  },
+  {
+    "id": "oefmav-eor",
+    "name": "ÖFMAV EOR",
+    "city": "Berndorf",
+    "hostIds": [
+      "oefmav-eor"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "782",
+    "aliases": [
+      "myrcm-782",
+      "ÖFMAV EOR",
+      "Berndorf"
+    ],
+    "locationUnknown": true
+  },
+  {
+    "id": "oefmav-sektion-elektro-offroad",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "city": "Wien",
+    "hostIds": [
+      "oefmav-sektion-elektro-offroad"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "34619",
+    "aliases": [
+      "myrcm-34619",
+      "ÖFMAV Sektion Elektro Offroad",
+      "Wien"
+    ],
+    "locationUnknown": true
+  },
+  {
+    "id": "oefmav-sektion-or-8",
+    "name": "ÖFMAV Sektion OR-8",
+    "city": "Graz",
+    "hostIds": [
+      "oefmav-sektion-or-8"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "503",
+    "aliases": [
+      "myrcm-503",
+      "ÖFMAV Sektion OR-8",
+      "Graz"
+    ],
+    "locationUnknown": true
+  },
+  {
+    "id": "oefmav-sektion-verbrenner-flachbahn",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "city": "Winklarn",
+    "hostIds": [
+      "oefmav-sektion-verbrenner-flachbahn"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "38958",
+    "aliases": [
+      "myrcm-38958",
+      "ÖFMAV Sektion Verbrenner Flachbahn",
+      "Winklarn"
+    ],
+    "locationUnknown": true
   }
 ]
