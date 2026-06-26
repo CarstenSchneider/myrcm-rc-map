@@ -719,7 +719,8 @@ function updateDachOverlay() {
 }
 
 function initDachOverlay(mlMap) {
-  if (!_dachBorderFeatures.length) return;
+  if (!_dachBorderFeatures.length || !mlMap) return;
+  if (mlMap.getSource("dach-overlay-src")) return;
   mlMap.addSource("dach-overlay-src", { type: "geojson", data: _buildOverlayGeoJson(selectedCountry) });
   mlMap.addLayer({ id: "dach-overlay", type: "fill", source: "dach-overlay-src", paint: { "fill-color": "#000000", "fill-opacity": 0.12 } });
 }
@@ -4392,7 +4393,8 @@ async function init() {
   _venueForRaceCache.clear();
 
   _dachBorderFeatures = (dachBordersResponse?.features || []);
-  initDachOverlay(baseMapLayer?.getMaplibreMap?.());
+  const _mlMapForOverlay = baseMapLayer?.getMaplibreMap?.();
+  if (_mlMapForOverlay?.loaded?.()) initDachOverlay(_mlMapForOverlay);
 
   const hostRecords = Array.isArray(hostsResponse) ? hostsResponse : [];
   const myrcmHostRecords = Array.isArray(myrcmHostsResponse) ? myrcmHostsResponse : [];
