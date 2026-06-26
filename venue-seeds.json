@@ -3682,6 +3682,13 @@
     "myrcmOrgId": "37520"
   },
   {
+    "hostId": "rcc-grafenworth",
+    "hostName": "RCC-Grafenwörth",
+    "lat": 48.412696168360476,
+    "lng": 15.775716608555854,
+    "myrcmOrgId": "775"
+  },
+  {
     "hostId": "rccars-bergisch-born-e-v",
     "hostName": "RCCars Bergisch-Born e.V.",
     "lat": 51.17808024290368,
