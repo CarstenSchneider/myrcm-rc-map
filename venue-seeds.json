@@ -3614,6 +3614,13 @@
     "myrcmOrgId": "20360"
   },
   {
+    "hostId": "mblr-racing",
+    "hostName": "MBLR Racing",
+    "lat": 46.65009765198645,
+    "lng": 7.029649162780778,
+    "myrcmOrgId": "22319"
+  },
+  {
     "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "lat": 51.07755743502219,
