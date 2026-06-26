@@ -633,8 +633,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Ost",
@@ -654,7 +654,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "LMH",
