@@ -38,13 +38,5 @@
     "myrcmOrgId": "43490",
     "possibleVenue": "Wernigerode",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rc-lords-of-dirt",
-    "hostName": "RC-Lords of Dirt",
-    "source": "myrcm",
-    "myrcmOrgId": "18966",
-    "possibleVenue": "Sachsenburg",
-    "reason": "no confirmed venue for at least one current MyRCM race"
   }
 ]
