@@ -3017,23 +3017,6 @@
     ]
   },
   {
-    "id": "rc-timing",
-    "name": "RC-Timing",
-    "city": "Oberhasli",
-    "lat": 46.6364532,
-    "lng": 8.0737314,
-    "hostIds": [
-      "rc-timing"
-    ],
-    "source": "geocoded-nominatim-dach",
-    "myrcmOrgId": "4",
-    "aliases": [
-      "myrcm-4",
-      "RC-Timing",
-      "Oberhasli"
-    ]
-  },
-  {
     "id": "rcc-reken-e-v",
     "name": "RCC Reken e.V.",
     "city": "Reken",

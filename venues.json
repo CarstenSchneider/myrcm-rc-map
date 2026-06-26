@@ -357,6 +357,25 @@
     "verified": true
   },
   {
+    "id": "ets-apeldoorn",
+    "name": "Apeldoorn",
+    "city": "Apeldoorn",
+    "lat": 52.191219277519686,
+    "lng": 5.986077898705932,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "APELDOORN / NL",
+      "APELDOORN/ NL",
+      "Apeldoorn NL"
+    ],
+    "hostIds": [],
+    "myrcmOrgId": "",
+    "source": "manual",
+    "verified": true
+  },
+  {
     "id": "arcb",
     "name": "ARCB",
     "city": "Fétigny",
@@ -631,6 +650,24 @@
     ],
     "myrcmOrgId": "1294",
     "source": "verified",
+    "verified": true
+  },
+  {
+    "id": "mc-daun",
+    "name": "Daun",
+    "city": "Daun",
+    "lat": 50.17843668713434,
+    "lng": 6.821288015561265,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "DAUN / GER",
+      "DAUN/ GER"
+    ],
+    "hostIds": [],
+    "myrcmOrgId": "",
+    "source": "manual",
     "verified": true
   },
   {

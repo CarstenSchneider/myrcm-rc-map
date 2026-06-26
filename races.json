@@ -6827,10 +6827,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "ets-2024-08-15-myrcm-event-77864",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2024-08-15-myrcm-event-77864",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": null,
     "hostId": "ets",
     "hostName": "ETS",
@@ -13269,10 +13269,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "ets-2024-10-03-myrcm-event-81187",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2024-10-03-myrcm-event-81187",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": null,
     "hostId": "ets",
     "hostName": "ETS",
@@ -33855,10 +33855,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "ets-2025-05-29-myrcm-event-86355",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2025-05-29-myrcm-event-86355",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.ets.racing/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -46129,10 +46129,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ets-2025-08-28-myrcm-event-89374",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2025-08-28-myrcm-event-89374",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -52775,10 +52775,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ets-2025-10-09-myrcm-event-89911",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2025-10-09-myrcm-event-89911",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -65308,62 +65308,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "amc-langenfeld-e-v-2026-03-16-myrcm-event-95452",
-    "venueId": "amc-langenfeld-e-v",
-    "venueName": "AMC Langenfeld e.V.",
-    "venueLocation": "Solingen",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "test",
-    "from": "2026-03-16",
-    "to": "2026-03-16",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95452&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=95452&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95452&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "ORE4WD"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
-    "id": "amc-langenfeld-e-v-2026-03-17-myrcm-event-95484",
-    "venueId": "amc-langenfeld-e-v",
-    "venueName": "AMC Langenfeld e.V.",
-    "venueLocation": "Solingen",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "test",
-    "from": "2026-03-17",
-    "to": "2026-03-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95484&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=95484&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95484&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "ORE2WD"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "arena33-andernach-2026-03-19-myrcm-event-92736",
     "venueId": "arena33-andernach",
     "venueName": "Arena33",
@@ -67450,10 +67394,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ets-2026-04-16-myrcm-event-92891",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2026-04-16-myrcm-event-92891",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.eos.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -69301,39 +69245,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "msv-hurtgenwald-e-v-2026-04-25-myrcm-event-95623",
-    "venueId": "msv-hurtgenwald-e-v",
-    "venueName": "MSV Hürtgenwald e.V.",
-    "venueLocation": "Hürtgenwald",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "Testing MyRCM",
-    "from": "2026-04-25",
-    "to": "2026-04-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95623&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=95623&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95623&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "TT10 EL 4x2 STD PROMO",
-        "entries": 2
-      },
-      "TT10 EL 4x2 MOD OPEN",
-      "TT10 EL 4x4 MOD OPEN"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "miniatutenpark-elsterwerda-2026-04-25-myrcm-event-96810",
@@ -71283,35 +71194,6 @@
         "name": "ENS 1:8 onroad",
         "entries": 62
       }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
-    "id": "mrc-leipzig-e-v-2026-05-07-myrcm-event-97244",
-    "venueId": "mrc-leipzig-e-v",
-    "venueName": "MRC Leipzig e.V",
-    "venueLocation": "Zwenkau",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "sdfsdf",
-    "from": "2026-05-07",
-    "to": "2026-05-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97244&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=97244&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97244&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "2WD Buggy",
-      "4WD Buggy"
     ],
     "documents": [],
     "firstSeen": "2026-06-26"
@@ -74278,10 +74160,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ets-2026-05-28-myrcm-event-96256",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2026-05-28-myrcm-event-96256",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.ets.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -78665,35 +78547,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-leipzig-e-v-2026-06-18-myrcm-event-98388",
-    "venueId": "mrc-leipzig-e-v",
-    "venueName": "MRC Leipzig e.V",
-    "venueLocation": "Zwenkau",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "sdfsdf",
-    "from": "2026-06-18",
-    "to": "2026-06-18",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98388&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=98388&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98388&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "Tamiya Euro-TW",
-      "Tamiya Gentlemen"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "mini-racing-chiasso-2026-06-19-myrcm-event-98067",
     "venueId": "mini-racing-chiasso",
     "venueName": "Mini Racing Chiasso",
@@ -80438,12 +80291,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97223&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26141&pLa=en&dId%5BE%5D=97223&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97223&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 12,
     "registrationDisplay": "12",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "EB-8 Club",
@@ -80469,12 +80322,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96907&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=521&pLa=en&dId%5BE%5D=96907&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96907&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       "Formel 1",
       "Fronti 17,5T"
@@ -80498,12 +80351,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96344&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53665&pLa=en&dId%5BE%5D=96344&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96344&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 30,
     "registrationDisplay": "30",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "FCOS 1:8",
@@ -80541,12 +80394,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95506&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46202&pLa=en&dId%5BE%5D=95506&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95506&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 27,
     "registrationDisplay": "27",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "Fun Klasse",
@@ -80565,15 +80418,7 @@
         "entries": 6
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Nachtrennen MSG Niesky Ausschreibung 2026.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=97137073-491D-43E0-BA66-A5A1695A0BF9"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -81189,10 +81034,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ets-2026-07-02-myrcm-event-95739",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2026-07-02-myrcm-event-95739",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -82109,8 +81954,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "HRCC GT8",
@@ -82124,7 +81969,7 @@
       "HRCC Plastic/Fronti",
       {
         "name": "HRCC Formel 1",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "HRCC EG10 Stock",
@@ -82702,18 +82547,18 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Verbrenner-Glattbahn 1:8",
-        "entries": 3
+        "entries": 4
       },
       "Verbrenner-Glattbahn 1:10",
       {
         "name": "Elektro Glattbahn 1:8 EG8e",
-        "entries": 1
+        "entries": 2
       },
       "Elektro-Glattbahn 1:8 GT"
     ],
@@ -83284,12 +83129,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96828&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=66122&pLa=en&dId%5BE%5D=96828&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96828&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-06-27",
-    "registrationRequiresLogin": false,
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": "Nennung ab 27.06.2026",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "10,5T - 4WD",
       "13,5T - 2WD",
@@ -84156,10 +84001,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ets-2026-07-23-myrcm-event-97810",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
+    "id": "arena33-andernach-2026-07-23-myrcm-event-97810",
+    "venueId": "arena33-andernach",
+    "venueName": "Arena33",
+    "venueLocation": "Andernach",
     "venueWebsite": "https://www.ets.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
