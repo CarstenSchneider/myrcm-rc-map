@@ -1333,6 +1333,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-20718",
+    "name": "MAC Mistelbach",
+    "city": "",
+    "lat": 48.55312704380916,
+    "lng": 16.550197608841213,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "20718",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "mac-nuernberg-e-v",
     "name": "MAC Nürnberg e.V",
     "city": "Nürnberg",
@@ -3815,21 +3830,22 @@
     "id": "racing-center-parndorf",
     "name": "Racing Center Parndorf",
     "city": "Parndorf",
-    "lat": 47.9770104,
-    "lng": 16.8500231,
+    "lat": 48.04490091454664,
+    "lng": 16.85155804833806,
     "address": "",
     "postalCode": "",
     "website": "",
     "aliases": [
       "myrcm-38295",
       "Racing Center Parndorf",
-      "Parndorf"
+      "Parndorf",
+      "RC Parndorf"
     ],
     "hostIds": [
       "racing-center-parndorf"
     ],
     "myrcmOrgId": "38295",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
