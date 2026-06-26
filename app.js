@@ -1707,9 +1707,15 @@ function matchesCountryFilter(race) {
   if (selectedCountry === "all") return true;
   const venue = venueForRace(race);
   if (!venue) return false;
-  const c = venueCountry(venue);
-  if (!c) return true; // no country data yet → show in all filters
-  return c === selectedCountry;
+  const venueC = venueCountry(venue);
+  if (!venueC) return true; // no country data yet → show in all filters
+  if (venueC === selectedCountry) return true;
+  // Cross-border races: also match by organizer's country
+  const hostId = raceHostId(race);
+  const rawHostC = hostId ? hostsById.get(String(hostId))?.country : null;
+  if (!rawHostC) return false;
+  const hostC = _countryNameToCode[rawHostC] ?? rawHostC;
+  return hostC === selectedCountry;
 }
 
 
