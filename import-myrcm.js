@@ -682,13 +682,20 @@ function extractEventDetail(html, host, eventId, listFallback = {}) {
     from;
 
   const registrationRequiresLogin = /sign up to this event/i.test(fullText);
+  const linkLabel = (labels["link"] || "").trim();
+  const venueWebsite = /^https?:\/\//i.test(linkLabel) ? linkLabel : null;
+  // "host" label on MyRCM event pages may show the hosting club (e.g. "Racing Center Parndorf")
+  // for travelling series where the organizer differs from the physical venue host.
+  const hostLabel = (labels["host"] || "").trim() || null;
 
   return {
     name,
     from,
     to,
     classes,
-    registrationRequiresLogin
+    registrationRequiresLogin,
+    venueWebsite,
+    hostLabel
   };
 }
 
@@ -1090,7 +1097,9 @@ function detectVenueSeedForRace(venueSeeds = [], detail = {}, eventLink = {}, ho
     detail.name,
     eventLink.fallbackName,
     host.location,
-    host.city
+    host.city,
+    // hostLabel from event detail page may show the physical hosting club for travelling series
+    detail.hostLabel
   ]
     .filter(Boolean)
     .join(" ");
@@ -1733,7 +1742,17 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
     const documents = mergeDocuments(detailDocuments, registrationDocuments);
 
     const registrationInfo = registrationInfoFromText(eventLink.registrationText);
-    const registrationStatus = bookingPageClosed ? "closed" : registrationInfo.registrationStatus;
+    // "sign up to this event" in the list means login-required, not truly open.
+    // Don't let the booking page (which says "booking not possible" for non-logged-in users)
+    // override this to "closed".
+    const isSignupRequired = /sign up to this event/i.test(eventLink.registrationText || "");
+    // Don't override "upcoming" with "closed": booking page shows "Booking not possible"
+    // for races whose registration hasn't opened yet — that's not the same as closed.
+    const registrationStatus = isSignupRequired
+      ? "login_required"
+      : (bookingPageClosed && registrationInfo.registrationStatus !== "upcoming")
+        ? "closed"
+        : registrationInfo.registrationStatus;
 
     const registrationListInfo = await enrichFromRegistrationList(eventLink.eventId, {
       registrationCount: eventLink.registrationCount,
@@ -1757,6 +1776,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       venueId,
       venueName: venue?.name || null,
       venueLocation: venue?.city || null,
+      venueWebsite: detail.venueWebsite || null,
       hostId: hostFields.hostId,
       hostName: hostFields.hostName,
       name: detail.name,
@@ -1932,6 +1952,22 @@ async function runImportOnce() {
   unique = applyFirstSeen(unique, previousRaces);
 
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
+
+  // Backfill country for hosts that exist in the DACH list but had no races this run
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE" };
+  const orgIdToCountry = new Map(
+    hosts
+      .filter(h => h.orgId && h.country && countryMap[h.country])
+      .map(h => [String(h.orgId), countryMap[h.country]])
+  );
+  const hostsWithCountry = mergedHosts.map(h => {
+    if (!h.country && h.myrcmOrgId) {
+      const country = orgIdToCountry.get(String(h.myrcmOrgId));
+      if (country) return { ...h, country };
+    }
+    return h;
+  });
+
   const mergedVenues = mergeVenueSeedsIntoVenues(existingVenues, venueSeeds);
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
 
@@ -1953,7 +1989,7 @@ async function runImportOnce() {
 
   await writeFile(
     hostsFile,
-    JSON.stringify(mergedHosts, null, 2) + "\n",
+    JSON.stringify(hostsWithCountry, null, 2) + "\n",
     "utf8"
   );
 
@@ -1986,7 +2022,7 @@ async function runImportOnce() {
   }, {});
   const totalDocuments = Object.values(documentTypeCounts).reduce((sum, count) => sum + count, 0);
 
-  console.log(`hosts.json geschrieben: ${mergedHosts.length} Hosts`);
+  console.log(`hosts.json geschrieben: ${hostsWithCountry.length} Hosts`);
   console.log(`venues.json geschrieben: ${mergedVenues.length} Strecken`);
   console.log(`venue-unmatched.json geschrieben: ${mergedUnmatched.length} offene Venue-Zuordnungen`);
   console.log(`races.json geschrieben: ${unique.length} Rennen`);
