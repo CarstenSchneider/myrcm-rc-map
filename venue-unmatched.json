@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mini-tout-terrain-gruyere",
-    "hostName": "Mini Tout Terrain Gruyère",
-    "source": "myrcm",
-    "myrcmOrgId": "18473",
-    "possibleVenue": "Riaz",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "msv-weiz",
     "hostName": "MSV Weiz",
     "source": "myrcm",
