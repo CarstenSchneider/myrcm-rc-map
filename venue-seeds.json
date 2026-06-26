@@ -3033,12 +3033,12 @@
     "id": "rc-racearena",
     "name": "RC-RaceArena",
     "city": "Islikon",
-    "lat": 47.547642,
-    "lng": 8.8474629,
+    "lat": 47.54797874168236,
+    "lng": 8.847798793449986,
     "hostIds": [
       "rc-racearena"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "5208",
     "aliases": [
       "myrcm-5208",
