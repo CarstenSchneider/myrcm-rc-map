@@ -1058,36 +1058,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "swiss-rc-protech-s-rl-2024-07-04-myrcm-event-80343",
-    "venueId": "swiss-rc-protech-s-rl",
-    "venueName": "Swiss RC ProTech Sàrl",
-    "venueLocation": "Saint-Légier",
-    "venueWebsite": null,
-    "hostId": "swiss-rc-protech-s-rl",
-    "hostName": "Swiss RC ProTech Sàrl",
-    "name": "Test TAM",
-    "from": "2024-07-04",
-    "to": "2024-07-04",
-    "series": [
-      "Tamiyacup / Coupe Tamiya"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80343&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=80343&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80343&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0/0",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "Coupe Tamiya TT-02"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-25"
-  },
-  {
     "id": "auto-modell-club-schaffhausen-2024-07-05-myrcm-event-76985",
     "venueId": "auto-modell-club-schaffhausen",
     "venueName": "Auto Modell Club Schaffhausen",
@@ -6855,6 +6825,51 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "ets-2024-08-15-myrcm-event-77864",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null,
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
+    "from": "2024-08-15",
+    "to": "2024-08-18",
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77864&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=77864&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77864&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 162,
+    "registrationDisplay": "162",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "ENS 1:8 SPORT",
+        "entries": 16
+      },
+      {
+        "name": "ENS 1:10 onroad",
+        "entries": 46
+      },
+      {
+        "name": "ENS-1:8 +40",
+        "entries": 47
+      },
+      {
+        "name": "ENS 1:8 onroad",
+        "entries": 53
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "myrcm-20718-2024-08-17-myrcm-event-80233",
@@ -13252,6 +13267,51 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "ets-2024-10-03-myrcm-event-81187",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null,
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Euro NITRO Series Onroad Round 4 LENO / IT",
+    "from": "2024-10-03",
+    "to": "2024-10-06",
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81187&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=81187&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81187&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 185,
+    "registrationDisplay": "185",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "ENS 1:8 SPORT",
+        "entries": 12
+      },
+      {
+        "name": "ENS 1:10 onroad",
+        "entries": 45
+      },
+      {
+        "name": "ENS-1:8 +40",
+        "entries": 51
+      },
+      {
+        "name": "ENS 1:8 onroad",
+        "entries": 77
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mac-siersburg-e-v-2024-10-04-myrcm-event-81050",
@@ -27698,37 +27758,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-mannheim-e-v-2025-04-12-myrcm-event-86989",
-    "venueId": "mrc-mannheim-e-v",
-    "venueName": "MRC Mannheim e.V.",
-    "venueLocation": "Mannheim",
-    "venueWebsite": null,
-    "hostId": "1-mrc-mannheim-e-v",
-    "hostName": "1. MRC Mannheim e.V.",
-    "name": "Test Race Monnem",
-    "from": "2025-04-12",
-    "to": "2025-04-12",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86989&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=39671&pLa=en&dId%5BE%5D=86989&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86989&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 7,
-    "registrationDisplay": "7",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "TT Clubsport",
-        "entries": 7
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-25"
-  },
-  {
     "id": "wmw-rc-buggy-racing-team-fehring-2025-04-12-myrcm-event-85322",
     "venueId": "wmw-rc-buggy-racing-team-fehring",
     "venueName": "WMW RC-BUGGY-RACING TEAM FEHRING",
@@ -32761,34 +32790,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-leipzig-e-v-2025-05-19-myrcm-event-90418",
-    "venueId": "mrc-leipzig-e-v",
-    "venueName": "MRC Leipzig e.V",
-    "venueLocation": "Zwenkau",
-    "venueWebsite": "http://www.mrc-leipzig.de",
-    "hostId": "mrc-leipzig-e-v",
-    "hostName": "MRC Leipzig e.V",
-    "name": "Test SK 5",
-    "from": "2025-05-19",
-    "to": "2025-05-20",
-    "series": [
-      "Sportkreis (SK)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90418&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=713&pLa=en&dId%5BE%5D=90418&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90418&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Nennung geschlossen.",
-    "classes": [],
-    "documents": [],
-    "firstSeen": "2026-06-25"
-  },
-  {
     "id": "arena33-andernach-2025-05-22-myrcm-event-86864",
     "venueId": "arena33-andernach",
     "venueName": "Arena33",
@@ -33852,6 +33853,59 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "ets-2025-05-29-myrcm-event-86355",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
+    "from": "2025-05-29",
+    "to": "2025-06-01",
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86355&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=86355&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86355&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 333,
+    "registrationDisplay": "333",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "FlySky Frontwheel",
+        "entries": 75
+      },
+      {
+        "name": "Matrix Formula",
+        "entries": 33
+      },
+      {
+        "name": "Awesomatix Pro Stock",
+        "entries": 69
+      },
+      {
+        "name": "Cayote Modified",
+        "entries": 69
+      },
+      {
+        "name": "Hobbywing 21.5 Stock",
+        "entries": 32
+      },
+      {
+        "name": "1up Racing 40+",
+        "entries": 55
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "megadrom-rc-team-nord-2025-05-29-myrcm-event-85869",
@@ -46075,6 +46129,51 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "ets-2025-08-28-myrcm-event-89374",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.euronitroseries.eu/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
+    "from": "2025-08-28",
+    "to": "2025-08-31",
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89374&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=89374&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89374&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 148,
+    "registrationDisplay": "148",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "ENS 1:8 SPORT",
+        "entries": 15
+      },
+      {
+        "name": "ENS 1:10 onroad",
+        "entries": 33
+      },
+      {
+        "name": "ENS-1:8 +40",
+        "entries": 51
+      },
+      {
+        "name": "ENS 1:8 onroad",
+        "entries": 49
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
+  },
+  {
     "id": "amc-muehlau-e-v-2025-08-29-myrcm-event-87995",
     "venueId": "amc-muehlau-e-v",
     "venueName": "AMC-Mühlau e.V.",
@@ -51609,45 +51708,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "ub-timing-2025-09-28-myrcm-event-91026",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "venueWebsite": null,
-    "hostId": "ub-timing",
-    "hostName": "ub.timing",
-    "name": "Test ub2",
-    "from": "2025-09-28",
-    "to": "2025-09-28",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91026&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=18409&pLa=en&dId%5BE%5D=91026&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91026&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "1/12 GT",
-        "entries": 1
-      },
-      {
-        "name": "1/12 Modified",
-        "entries": 1
-      },
-      {
-        "name": "1/12 Stock",
-        "entries": 1
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "ig-racing-team-hamm-2025-09-28-myrcm-event-86665",
     "venueId": "ig-racing-team-hamm",
     "venueName": "IG Racing Team Hamm",
@@ -52713,6 +52773,51 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
+  },
+  {
+    "id": "ets-2025-10-09-myrcm-event-89911",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.euronitroseries.eu/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Euro NITRO Series Onroad Round 4 LENTIAI / IT",
+    "from": "2025-10-09",
+    "to": "2025-10-12",
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89911&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=89911&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89911&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 145,
+    "registrationDisplay": "145",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "ENS 1:8 SPORT",
+        "entries": 13
+      },
+      {
+        "name": "ENS 1:10 onroad",
+        "entries": 32
+      },
+      {
+        "name": "ENS-1:8 +40",
+        "entries": 49
+      },
+      {
+        "name": "ENS 1:8 onroad",
+        "entries": 51
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-racing-club-arlesheim-2025-10-11-myrcm-event-84711",
@@ -61692,39 +61797,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-leipzig-e-v-2026-02-07-myrcm-event-93951",
-    "venueId": "mrc-leipzig-e-v",
-    "venueName": "MRC Leipzig e.V",
-    "venueLocation": "Zwenkau",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "TEST REST SERVICE V2",
-    "from": "2026-02-07",
-    "to": "2026-02-09",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93951&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=93951&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93951&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "GP E Buggy 1:8",
-        "entries": 1
-      },
-      "GP V Buggy 1:8",
-      "IFMAR 1/8 Track"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "msv-hurtgenwald-e-v-2026-02-08-myrcm-event-93537",
     "venueId": "msv-hurtgenwald-e-v",
     "venueName": "MSV Hürtgenwald e.V.",
@@ -62124,34 +62196,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "amc-langenfeld-e-v-2026-02-14-myrcm-event-94436",
-    "venueId": "amc-langenfeld-e-v",
-    "venueName": "AMC Langenfeld e.V.",
-    "venueLocation": "Solingen",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "test livetiming",
-    "from": "2026-02-14",
-    "to": "2026-02-14",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94436&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=94436&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94436&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "ORE2WD"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "mrsc-amberg-e-v-2026-02-15-myrcm-event-92776",
@@ -64338,36 +64382,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "mrc-fritzens-formel-4-2026-03-07-myrcm-event-95117",
-    "venueId": "mrc-fritzens-formel-4",
-    "venueName": "MRC Fritzens Formel 4",
-    "venueLocation": "Fritzens/Tirol",
-    "venueWebsite": null,
-    "hostId": "mrc-fritzens-formel-4",
-    "hostName": "MRC Fritzens Formel 4",
-    "name": "Test Linz",
-    "from": "2026-03-07",
-    "to": "2026-03-07",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95117&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=772&pLa=en&dId%5BE%5D=95117&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95117&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "Classics Formel",
-      "Classics FWD Challenge",
-      "Classics Tourenwagen"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "team-indoor-track-schoeftland-2026-03-08-myrcm-event-90689",
@@ -67434,6 +67448,52 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
+  },
+  {
+    "id": "ets-2026-04-16-myrcm-event-92891",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.eos.racing/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Euro Offroad Series Round 2 Trencin / SK",
+    "from": "2026-04-16",
+    "to": "2026-04-19",
+    "series": [
+      "Sportkreis (SK)",
+      "Euro Offroad Series (EOS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92891&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=92891&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92891&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 169,
+    "registrationDisplay": "169",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "EOS 2 WD 13.5",
+        "entries": 24
+      },
+      {
+        "name": "EOS 2 WD Buggy 1:10 Electric",
+        "entries": 60
+      },
+      {
+        "name": "EOS 4 WD 10.5",
+        "entries": 20
+      },
+      {
+        "name": "EOS 4 WD Buggy 1:10 Electric",
+        "entries": 65
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "minicar-club-dortmund-e-v-2026-04-16-myrcm-event-94888",
@@ -74218,6 +74278,59 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "ets-2026-05-28-myrcm-event-96256",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
+    "from": "2026-05-28",
+    "to": "2026-05-31",
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96256&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=96256&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96256&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 325,
+    "registrationDisplay": "325",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "FlySky Frontwheel",
+        "entries": 71
+      },
+      {
+        "name": "Hobbywing 21.5 Stock",
+        "entries": 48
+      },
+      {
+        "name": "1up Racing 40+",
+        "entries": 54
+      },
+      {
+        "name": "Matrix Formula",
+        "entries": 23
+      },
+      {
+        "name": "Awesomatix Pro Stock",
+        "entries": 69
+      },
+      {
+        "name": "Cayote Modified",
+        "entries": 60
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
+  },
+  {
     "id": "morac-2026-05-30-myrcm-event-95391",
     "venueId": "morac",
     "venueName": "MORAC",
@@ -75898,34 +76011,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "mrc-leipzig-e-v-2026-06-04-myrcm-event-97997",
-    "venueId": "mrc-leipzig-e-v",
-    "venueName": "MRC Leipzig e.V",
-    "venueLocation": "Zwenkau",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "Test Bonair Image",
-    "from": "2026-06-04",
-    "to": "2026-06-04",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97997&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=97997&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97997&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "2WD Buggy"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "mrc-fruehwirth-2026-06-05-myrcm-event-98056",
@@ -81104,6 +81189,51 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "ets-2026-07-02-myrcm-event-95739",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.euronitroseries.eu/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Euro NITRO Series Onroad Round 2 RUCPHEN / NL",
+    "from": "2026-07-02",
+    "to": "2026-07-05",
+    "series": [
+      "Euro Nitro Series (ENS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95739&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95739&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95739&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
+    "registrationCount": 144,
+    "registrationDisplay": "144",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": [
+      {
+        "name": "ENS 1:8 SPORT",
+        "entries": 21
+      },
+      {
+        "name": "ENS 1:10 onroad",
+        "entries": 32
+      },
+      {
+        "name": "ENS-1:8 +40",
+        "entries": 47
+      },
+      {
+        "name": "ENS 1:8 onroad",
+        "entries": 44
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
+  },
+  {
     "id": "mc-munster-e-v-2026-07-03-myrcm-event-98167",
     "venueId": "mc-munster-e-v",
     "venueName": "MC Munster e.V.",
@@ -81265,8 +81395,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81275,11 +81405,11 @@
       },
       {
         "name": "Repas du soir",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 17
+        "entries": 18
       }
     ],
     "documents": [],
@@ -82572,8 +82702,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -82581,7 +82711,10 @@
         "entries": 3
       },
       "Verbrenner-Glattbahn 1:10",
-      "Elektro Glattbahn 1:8 EG8e",
+      {
+        "name": "Elektro Glattbahn 1:8 EG8e",
+        "entries": 1
+      },
       "Elektro-Glattbahn 1:8 GT"
     ],
     "documents": [
@@ -83558,8 +83691,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -83582,7 +83715,7 @@
       },
       {
         "name": "VG8KL1",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [],
@@ -84023,6 +84156,60 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "ets-2026-07-23-myrcm-event-97810",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Cayote Euro Touring Series ROUND 2 TRENCIN SK",
+    "from": "2026-07-23",
+    "to": "2026-07-26",
+    "series": [
+      "Sportkreis (SK)",
+      "Euro Touring Series (ETS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97810&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=97810&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97810&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 335,
+    "registrationDisplay": "335",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "FlySky Frontwheel",
+        "entries": 62
+      },
+      {
+        "name": "Hobbywing 21.5 Stock",
+        "entries": 50
+      },
+      {
+        "name": "1up Racing 40+",
+        "entries": 56
+      },
+      {
+        "name": "Matrix Formula",
+        "entries": 29
+      },
+      {
+        "name": "Awesomatix Pro Stock",
+        "entries": 79
+      },
+      {
+        "name": "Cayote Modified",
+        "entries": 59
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
+  },
+  {
     "id": "mrt-rosenheim-e-v-2026-07-25-myrcm-event-97146",
     "venueId": "mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
@@ -84389,35 +84576,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-21"
-  },
-  {
-    "id": "rc-speedracer-bernau-2026-07-25-myrcm-event-98545",
-    "venueId": "rc-speedracer-bernau",
-    "venueName": "RC Speedracer e.V.",
-    "venueLocation": "Bernau",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "Test Event RC-Timing 1",
-    "from": "2026-07-25",
-    "to": "2026-07-26",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98545&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=98545&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98545&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
-    "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": [
-      "MRC 2WD HM",
-      "MRC 2WD Stock"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "schweriner-sc-breitensport-e-v-2026-07-25-myrcm-event-98152",
@@ -86271,39 +86429,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-speedracer-bernau-2026-08-22-myrcm-event-98546",
-    "venueId": "rc-speedracer-bernau",
-    "venueName": "RC Speedracer e.V.",
-    "venueLocation": "Bernau",
-    "venueWebsite": null,
-    "hostId": "rc-timing",
-    "hostName": "RC-Timing",
-    "name": "Test RC-Timing 2",
-    "from": "2026-08-22",
-    "to": "2026-08-23",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98546&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4&pLa=en&dId%5BE%5D=98546&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98546&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-08-07",
-    "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
-    "note": "Nennung ab 07.08.2026",
-    "classes": [
-      {
-        "name": "FP Controlled - 2WD/4WD Open",
-        "entries": 1
-      },
-      "FP Controlled - 2WD Stock",
-      "2WD HM"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "smrc-wien-2026-08-23-myrcm-event-93447",
     "venueId": "smrc-wien",
     "venueName": "SMRC Wien",
@@ -86952,15 +87077,15 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Open Race Nitro",
       "Repas du soir",
       {
         "name": "V8 Buggy Amateur",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "V8 Buggy Expert",
