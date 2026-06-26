@@ -126,7 +126,6 @@ function _pillClose(country) {
     updateCountryPill();
     populateSeries();
     _zoomToCountryPending = true;
-    updateDachOverlay();
     setTimeout(render, 270); // defer past 250ms close transition
   } else {
     setTimeout(() => fitToCountry(country), 270);
@@ -683,7 +682,7 @@ function applyRcRaceMapStyle() {
   }
 }
 
-baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); initDachOverlay(baseMapLayer.getMaplibreMap()); });
+baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); });
 baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
 // Reveal map only after all tiles are fully rendered (idle = nothing more to fetch/paint)
 baseMapLayer.getMaplibreMap?.().once("idle", revealMap);
@@ -694,27 +693,6 @@ document.addEventListener("visibilitychange", () => {
   if (!document.hidden) requestAnimationFrame(applyRcRaceMapStyle);
 });
 
-// DACH country outline — draws a border around the selected country
-let _dachBorderFeatures = [];
-
-function _buildOverlayGeoJson(country) {
-  if (country === "all") return { type: "FeatureCollection", features: [] };
-  return { type: "FeatureCollection", features: _dachBorderFeatures.filter(f => f.properties.code === country) };
-}
-
-function updateDachOverlay() {
-  const mlMap = baseMapLayer?.getMaplibreMap?.();
-  if (!mlMap || !_dachBorderFeatures.length) return;
-  const src = mlMap.getSource("dach-overlay-src");
-  if (src) src.setData(_buildOverlayGeoJson(selectedCountry));
-}
-
-function initDachOverlay(mlMap) {
-  if (!_dachBorderFeatures.length || !mlMap) return;
-  if (mlMap.getSource("dach-overlay-src")) return;
-  mlMap.addSource("dach-overlay-src", { type: "geojson", data: _buildOverlayGeoJson(selectedCountry) });
-  mlMap.addLayer({ id: "dach-overlay", type: "line", source: "dach-overlay-src", paint: { "line-color": "#3b82f6", "line-width": 2.5, "line-opacity": 0.75 } });
-}
 
 let venues = [];
 let races = [];
@@ -4342,7 +4320,7 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dachBordersResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
@@ -4350,7 +4328,6 @@ async function init() {
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`myrcm-hosts-dach.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog),
-    fetchJsonOrFallback(`dach-borders.json`, { features: [] })
   ]);
 
   dataLastUpdatedAt = latestResponseLastModified([
@@ -4382,10 +4359,6 @@ async function init() {
       .map(race => normalizeRaceFromSource(race, "rck"))
   ];
   _venueForRaceCache.clear();
-
-  _dachBorderFeatures = (dachBordersResponse?.features || []);
-  const _mlMapForOverlay = baseMapLayer?.getMaplibreMap?.();
-  if (_mlMapForOverlay?.loaded?.()) initDachOverlay(_mlMapForOverlay);
 
   const hostRecords = Array.isArray(hostsResponse) ? hostsResponse : [];
   const myrcmHostRecords = Array.isArray(myrcmHostsResponse) ? myrcmHostsResponse : [];
