@@ -3654,6 +3654,13 @@
     "myrcmOrgId": "51129"
   },
   {
+    "hostId": "rc-cars-wernigerode-e-v",
+    "hostName": "RC Cars Wernigerode e.V.",
+    "lat": 51.85763261882311,
+    "lng": 10.803858097976457,
+    "myrcmOrgId": "43490"
+  },
+  {
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "lat": 51.539601453420495,
