@@ -1735,14 +1735,12 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       host,
       venueSeed
     );
-    // Skip races held outside DACH: if the name clearly ends with a non-DACH country
-    // code (e.g. "TRENCIN SK", "RUCPHEN / NL"), the race doesn't belong on the DACH map.
-    // Applied regardless of wasExplicit — hostLabel can contain organizer city (e.g.
-    // "Andernach") causing a false explicit match even for foreign travelling-series races.
-    if (raceNameIndicatesNonDach(detail.name || eventLink.fallbackName)) {
-      return null;
-    }
-    const venue = venueFromSeed(detectedVenueSeed);
+    // For races clearly held outside DACH (name ends with a non-DACH country code like
+    // "RUCPHEN / NL", "TRENCIN SK"), don't assign a venue — they appear in the list
+    // without a map marker. hostLabel can contain the organizer city ("Andernach") causing
+    // a false explicit venue match, so this check is applied unconditionally.
+    const isNonDach = raceNameIndicatesNonDach(detail.name || eventLink.fallbackName);
+    const venue = isNonDach ? null : venueFromSeed(detectedVenueSeed);
     const venueId = venue?.id || null;
 
     const detailDocuments = extractDocumentsFromHtml(detailHtml, detailUrl);
