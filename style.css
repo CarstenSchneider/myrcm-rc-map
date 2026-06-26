@@ -2490,10 +2490,6 @@ body.is-breakpoint-crossing .country-pill {
   transition: color 120ms ease;
 }
 
-.race-venue .venue-link {
-  color: var(--muted);
-}
-
 .venue-link:hover,
 .venue-link:focus-visible {
   color: var(--text);
