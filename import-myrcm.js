@@ -419,29 +419,39 @@ async function isMyrcmReachable() {
 
 async function fetchText(url, attempt = 0) {
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
+  const timeoutPromise = new Promise((_, reject) => {
+    const t = setTimeout(() => {
+      controller.abort();
+      reject(new Error(`Timeout after ${requestTimeoutMs}ms: ${url}`));
+    }, requestTimeoutMs);
+    // Allow Node to exit even if this timer is still pending
+    t.unref?.();
+  });
 
   try {
-    const response = await fetch(url, {
-      signal: controller.signal,
-      headers: {
-        "user-agent": "Mozilla/5.0 myrcm-rc-map importer"
-      }
-    });
+    const response = await Promise.race([
+      fetch(url, {
+        signal: controller.signal,
+        headers: { "user-agent": "Mozilla/5.0 myrcm-rc-map importer" }
+      }),
+      timeoutPromise
+    ]);
 
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
 
-    return await response.text();
+    const textPromise = response.text();
+    return await Promise.race([textPromise, new Promise((_, reject) =>
+      setTimeout(() => reject(new Error(`Body read timeout: ${url}`)), requestTimeoutMs).unref?.()
+    )]);
   } catch (error) {
+    controller.abort();
     if (attempt < retryCount) {
       return fetchText(url, attempt + 1);
     }
 
     throw markRetryable(error, url);
-  } finally {
-    clearTimeout(timeout);
   }
 }
 
