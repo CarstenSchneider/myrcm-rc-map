@@ -2517,6 +2517,70 @@
     ]
   },
   {
+    "id": "oefmav-eor",
+    "name": "ÖFMAV EOR",
+    "city": "Berndorf",
+    "hostIds": [
+      "oefmav-eor"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "782",
+    "aliases": [
+      "myrcm-782",
+      "ÖFMAV EOR",
+      "Berndorf"
+    ],
+    "locationUnknown": true
+  },
+  {
+    "id": "oefmav-sektion-elektro-offroad",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "city": "Wien",
+    "hostIds": [
+      "oefmav-sektion-elektro-offroad"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "34619",
+    "aliases": [
+      "myrcm-34619",
+      "ÖFMAV Sektion Elektro Offroad",
+      "Wien"
+    ],
+    "locationUnknown": true
+  },
+  {
+    "id": "oefmav-sektion-or-8",
+    "name": "ÖFMAV Sektion OR-8",
+    "city": "Graz",
+    "hostIds": [
+      "oefmav-sektion-or-8"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "503",
+    "aliases": [
+      "myrcm-503",
+      "ÖFMAV Sektion OR-8",
+      "Graz"
+    ],
+    "locationUnknown": true
+  },
+  {
+    "id": "oefmav-sektion-verbrenner-flachbahn",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "city": "Winklarn",
+    "hostIds": [
+      "oefmav-sektion-verbrenner-flachbahn"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "38958",
+    "aliases": [
+      "myrcm-38958",
+      "ÖFMAV Sektion Verbrenner Flachbahn",
+      "Winklarn"
+    ],
+    "locationUnknown": true
+  },
+  {
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
@@ -2585,12 +2649,12 @@
     "id": "psv-salzburg-automodellsport",
     "name": "PSV-Salzburg Automodellsport",
     "city": "Elsbethen",
-    "lat": 47.7592351,
-    "lng": 13.0825458,
+    "lat": 47.75523084951555,
+    "lng": 13.075968342794631,
     "hostIds": [
       "psv-salzburg-automodellsport"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "762",
     "aliases": [
       "myrcm-762",
@@ -2702,12 +2766,12 @@
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
-    "lat": 47.4991723,
-    "lng": 8.7291498,
+    "lat": 47.59529281299786,
+    "lng": 8.692502280646423,
     "hostIds": [
       "rc-club-wyland"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "14101",
     "aliases": [
       "myrcm-14101",
@@ -2795,12 +2859,12 @@
     "id": "rc-racing-club-arlesheim",
     "name": "RC Racing Club Arlesheim",
     "city": "Arlesheim",
-    "lat": 47.4931125,
-    "lng": 7.6202048,
+    "lat": 47.49605540100359,
+    "lng": 7.609715167758498,
     "hostIds": [
       "rc-racing-club-arlesheim"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "31003",
     "aliases": [
       "myrcm-31003",
@@ -2969,12 +3033,12 @@
     "id": "rc-racearena",
     "name": "RC-RaceArena",
     "city": "Islikon",
-    "lat": 47.547642,
-    "lng": 8.8474629,
+    "lat": 47.54797874168236,
+    "lng": 8.847798793449986,
     "hostIds": [
       "rc-racearena"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "5208",
     "aliases": [
       "myrcm-5208",
@@ -3037,12 +3101,12 @@
     "id": "rcc-sittersdorf",
     "name": "RCC Sittersdorf",
     "city": "Sittersdorf",
-    "lat": 46.5250325,
-    "lng": 14.6023619,
+    "lat": 46.5446591184532,
+    "lng": 14.601164631183192,
     "hostIds": [
       "rcc-sittersdorf"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "26141",
     "aliases": [
       "myrcm-26141",
@@ -3150,12 +3214,12 @@
     "id": "rcr-linz",
     "name": "RCR-Linz",
     "city": "Linz",
-    "lat": 48.3059078,
-    "lng": 14.286198,
+    "lat": 48.25162750853178,
+    "lng": 14.280130467350359,
     "hostIds": [
       "rcr-linz"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "776",
     "aliases": [
       "myrcm-776",
@@ -3248,12 +3312,12 @@
     "id": "rmcb",
     "name": "RMCB",
     "city": "Bern",
-    "lat": 46.9484742,
-    "lng": 7.4521749,
+    "lat": 46.74730490147598,
+    "lng": 7.5962778538955025,
     "hostIds": [
       "rmcb"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "9703",
     "aliases": [
       "myrcm-9703",
@@ -3282,12 +3346,12 @@
     "id": "salzburger-funk-modell-auto-verein-sfmav",
     "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
     "city": "Salzburg",
-    "lat": 47.7981346,
-    "lng": 13.0464806,
+    "lat": 47.75455290263877,
+    "lng": 13.07642484432594,
     "hostIds": [
       "salzburger-funk-modell-auto-verein-sfmav"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "25165",
     "aliases": [
       "myrcm-25165",
@@ -3357,12 +3421,12 @@
     "id": "smrc-wien",
     "name": "SMRC Wien",
     "city": "Wien",
-    "lat": 48.1730868,
-    "lng": 16.4268115,
+    "lat": 48.173533841016166,
+    "lng": 16.427139962894532,
     "hostIds": [
       "smrc-wien"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "763",
     "aliases": [
       "myrcm-763",
@@ -3391,35 +3455,33 @@
     "id": "swiss-r-c-car-clubs-association",
     "name": "Swiss R/C Car Clubs Association",
     "city": "Gachnang",
-    "lat": 47.5396518,
-    "lng": 8.8523731,
     "hostIds": [
       "swiss-r-c-car-clubs-association"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "24",
     "aliases": [
       "myrcm-24",
       "Swiss R/C Car Clubs Association",
       "Gachnang"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "swiss-racing-cup",
     "name": "Swiss Racing Cup",
     "city": "Wichtrach",
-    "lat": 46.8457306,
-    "lng": 7.5783419,
     "hostIds": [
       "swiss-racing-cup"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "9425",
     "aliases": [
       "myrcm-9425",
       "Swiss Racing Cup",
       "Wichtrach"
-    ]
+    ],
+    "locationUnknown": true
   },
   {
     "id": "swiss-rc-protech-s-rl",
@@ -3705,69 +3767,5 @@
       "WMW RC-BUGGY-RACING TEAM FEHRING",
       "Fehring"
     ]
-  },
-  {
-    "id": "oefmav-eor",
-    "name": "ÖFMAV EOR",
-    "city": "Berndorf",
-    "hostIds": [
-      "oefmav-eor"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "782",
-    "aliases": [
-      "myrcm-782",
-      "ÖFMAV EOR",
-      "Berndorf"
-    ],
-    "locationUnknown": true
-  },
-  {
-    "id": "oefmav-sektion-elektro-offroad",
-    "name": "ÖFMAV Sektion Elektro Offroad",
-    "city": "Wien",
-    "hostIds": [
-      "oefmav-sektion-elektro-offroad"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "34619",
-    "aliases": [
-      "myrcm-34619",
-      "ÖFMAV Sektion Elektro Offroad",
-      "Wien"
-    ],
-    "locationUnknown": true
-  },
-  {
-    "id": "oefmav-sektion-or-8",
-    "name": "ÖFMAV Sektion OR-8",
-    "city": "Graz",
-    "hostIds": [
-      "oefmav-sektion-or-8"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "503",
-    "aliases": [
-      "myrcm-503",
-      "ÖFMAV Sektion OR-8",
-      "Graz"
-    ],
-    "locationUnknown": true
-  },
-  {
-    "id": "oefmav-sektion-verbrenner-flachbahn",
-    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
-    "city": "Winklarn",
-    "hostIds": [
-      "oefmav-sektion-verbrenner-flachbahn"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "38958",
-    "aliases": [
-      "myrcm-38958",
-      "ÖFMAV Sektion Verbrenner Flachbahn",
-      "Winklarn"
-    ],
-    "locationUnknown": true
   }
 ]
