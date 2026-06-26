@@ -1570,9 +1570,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcc-grafenworth-2024-07-06-myrcm-event-79503",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-775-2024-07-06-myrcm-event-79503",
+    "venueId": "myrcm-775",
+    "venueName": "RCC-Grafenwörth",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcc-grafenworth",
@@ -1598,7 +1598,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "msc-kirchhain-e-v-2024-07-06-myrcm-event-79573",
@@ -2077,9 +2077,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mini-tout-terrain-gruyere-2024-07-07-myrcm-event-80039",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18473-2024-07-07-myrcm-event-80039",
+    "venueId": "myrcm-18473",
+    "venueName": "Mini Tout Terrain Gruyère",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-tout-terrain-gruyere",
@@ -2105,7 +2105,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "msc-hansa-heilbronn-e-v-2024-07-07-myrcm-event-80374",
@@ -2660,9 +2660,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2024-07-13-myrcm-event-77392",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2024-07-13-myrcm-event-77392",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -2716,7 +2716,7 @@
       "Stock 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "edc-kinzigtal-e-v-2024-07-13-myrcm-event-79153",
@@ -3149,9 +3149,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mblr-racing-2024-07-14-myrcm-event-80171",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22319-2024-07-14-myrcm-event-80171",
+    "venueId": "myrcm-22319",
+    "venueName": "MBLR Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mblr-racing",
@@ -3181,7 +3181,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "dershoemaker-racing-events-2024-07-14-myrcm-event-79905",
@@ -4817,9 +4817,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcc-grafenworth-2024-07-28-myrcm-event-79504",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-775-2024-07-28-myrcm-event-79504",
+    "venueId": "myrcm-775",
+    "venueName": "RCC-Grafenwörth",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcc-grafenworth",
@@ -4845,7 +4845,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mfr-morschheim-rheinhessen-pfalz-e-v-2024-07-28-myrcm-event-80217",
@@ -6226,9 +6226,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rmc-wien-2024-08-10-myrcm-event-80868",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-777-2024-08-10-myrcm-event-80868",
+    "venueId": "myrcm-777",
+    "venueName": "RMC-Wien",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rmc-wien",
@@ -6267,7 +6267,7 @@
       "Clublauf Truck"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "oefmav-sektion-verbrenner-flachbahn-2024-08-10-myrcm-event-78180",
@@ -6855,51 +6855,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
-  },
-  {
-    "id": "arena33-andernach-2024-08-15-myrcm-event-77864",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": null,
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
-    "from": "2024-08-15",
-    "to": "2024-08-18",
-    "series": [
-      "Euro Nitro Series (ENS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77864&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=77864&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77864&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 162,
-    "registrationDisplay": "162",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "ENS 1:8 SPORT",
-        "entries": 16
-      },
-      {
-        "name": "ENS 1:10 onroad",
-        "entries": 46
-      },
-      {
-        "name": "ENS-1:8 +40",
-        "entries": 47
-      },
-      {
-        "name": "ENS 1:8 onroad",
-        "entries": 53
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "myrcm-20718-2024-08-17-myrcm-event-80233",
@@ -7920,9 +7875,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "msv-weiz-2024-08-24-myrcm-event-80287",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53491-2024-08-24-myrcm-event-80287",
+    "venueId": "myrcm-53491",
+    "venueName": "MSV Weiz",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "msv-weiz",
@@ -7950,7 +7905,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "buggyclub-zentralschweiz-2024-08-24-myrcm-event-80730",
@@ -8912,9 +8867,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2024-08-31-myrcm-event-81125",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2024-08-31-myrcm-event-81125",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -8970,7 +8925,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "modellbuggygruppe-dellach-gail-2024-08-31-myrcm-event-80638",
@@ -9082,9 +9037,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "mblr-racing-2024-09-01-myrcm-event-81278",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22319-2024-09-01-myrcm-event-81278",
+    "venueId": "myrcm-22319",
+    "venueName": "MBLR Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mblr-racing",
@@ -9108,7 +9063,7 @@
       "Buggy 4WD"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "emc-marktoberdorf-2024-09-01-myrcm-event-80882",
@@ -12356,9 +12311,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcxx-shop-2024-09-27-myrcm-event-82169",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-58661-2024-09-27-myrcm-event-82169",
+    "venueId": "myrcm-58661",
+    "venueName": "RCXX.SHOP",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcxx-shop",
@@ -12382,7 +12337,7 @@
       "EFRA Large Scale Touring Cars"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "hobby-shop-haessig-2024-09-28-myrcm-event-82171",
@@ -12850,9 +12805,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-cars-wernigerode-e-v-2024-09-28-myrcm-event-81334",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-43490-2024-09-28-myrcm-event-81334",
+    "venueId": "myrcm-43490",
+    "venueName": "RC Cars Wernigerode e.V.",
     "venueLocation": null,
     "venueWebsite": "http://rc-car-wr.de/wp-content/uploads/2024/08/Ausschreibung-September-Cup-2-2024.pdf",
     "hostId": "rc-cars-wernigerode-e-v",
@@ -12891,7 +12846,7 @@
         "url": "http://rc-car-wr.de/wp-content/uploads/2024/08/Ausschreibung-September-Cup-2-2024.pdf"
       }
     ],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mbsc-waechtersbach-2024-09-29-myrcm-event-80719",
@@ -13297,51 +13252,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
-  },
-  {
-    "id": "arena33-andernach-2024-10-03-myrcm-event-81187",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": null,
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Euro NITRO Series Onroad Round 4 LENO / IT",
-    "from": "2024-10-03",
-    "to": "2024-10-06",
-    "series": [
-      "Euro Nitro Series (ENS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81187&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=81187&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81187&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 185,
-    "registrationDisplay": "185",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "ENS 1:8 SPORT",
-        "entries": 12
-      },
-      {
-        "name": "ENS 1:10 onroad",
-        "entries": 45
-      },
-      {
-        "name": "ENS-1:8 +40",
-        "entries": 51
-      },
-      {
-        "name": "ENS 1:8 onroad",
-        "entries": 77
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "mac-siersburg-e-v-2024-10-04-myrcm-event-81050",
@@ -14209,9 +14119,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "modellclub-flensburg-e-v-2024-10-12-myrcm-event-81815",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2024-10-12-myrcm-event-81815",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -14267,7 +14177,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mrc-leipzig-e-v-2024-10-12-myrcm-event-81866",
@@ -14382,9 +14292,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-lords-of-dirt-2024-10-12-myrcm-event-82121",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18966-2024-10-12-myrcm-event-82121",
+    "venueId": "myrcm-18966",
+    "venueName": "RC-Lords of Dirt",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-lords-of-dirt",
@@ -14414,7 +14324,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mrt-rosenheim-e-v-2024-10-12-myrcm-event-77474",
@@ -16931,9 +16841,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2024-11-09-myrcm-event-81816",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2024-11-09-myrcm-event-81816",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -16990,7 +16900,7 @@
       "Tamiya TRF 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mck-e-v-dormagen-2024-11-09-myrcm-event-82394",
@@ -17229,9 +17139,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mblr-racing-2024-11-10-myrcm-event-82831",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22319-2024-11-10-myrcm-event-82831",
+    "venueId": "myrcm-22319",
+    "venueName": "MBLR Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mblr-racing",
@@ -17261,7 +17171,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2024-11-16-myrcm-event-82236",
@@ -18378,9 +18288,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcxx-shop-2024-12-07-myrcm-event-83414",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-58661-2024-12-07-myrcm-event-83414",
+    "venueId": "myrcm-58661",
+    "venueName": "RCXX.SHOP",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcxx-shop",
@@ -18416,7 +18326,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "ircr-indoor-rc-romand-2024-12-07-myrcm-event-81683",
@@ -18920,9 +18830,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2024-12-14-myrcm-event-81817",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2024-12-14-myrcm-event-81817",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -18975,7 +18885,7 @@
       "Tamiya TRF 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "myrcm-30389-2024-12-14-myrcm-event-83257",
@@ -20935,9 +20845,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-01-18-myrcm-event-81818",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-01-18-myrcm-event-81818",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -20994,7 +20904,7 @@
       "Tamiya TRF 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "amsc-herne-e-v-2025-01-18-myrcm-event-84319",
@@ -21073,9 +20983,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcxx-shop-2025-01-18-myrcm-event-83415",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-58661-2025-01-18-myrcm-event-83415",
+    "venueId": "myrcm-58661",
+    "venueName": "RCXX.SHOP",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcxx-shop",
@@ -21116,7 +21026,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "amc-langenfeld-e-v-2025-01-18-myrcm-event-83673",
@@ -23216,9 +23126,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-02-15-myrcm-event-81819",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-02-15-myrcm-event-81819",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -23272,7 +23182,7 @@
       "Tamiya TRF 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "hobby-shop-haessig-2025-02-15-myrcm-event-84720",
@@ -23388,9 +23298,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcxx-shop-2025-02-15-myrcm-event-83416",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-58661-2025-02-15-myrcm-event-83416",
+    "venueId": "myrcm-58661",
+    "venueName": "RCXX.SHOP",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcxx-shop",
@@ -23419,7 +23329,7 @@
       "Rally Legends"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "amc-langenfeld-e-v-2025-02-15-myrcm-event-84631",
@@ -24049,9 +23959,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcxx-shop-2025-03-01-myrcm-event-85172",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-58661-2025-03-01-myrcm-event-85172",
+    "venueId": "myrcm-58661",
+    "venueName": "RCXX.SHOP",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcxx-shop",
@@ -24089,7 +23999,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "ircr-indoor-rc-romand-2025-03-01-myrcm-event-81684",
@@ -27503,9 +27413,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-04-12-myrcm-event-81822",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-04-12-myrcm-event-81822",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -27561,7 +27471,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-modellbaufreunde-e-v-2025-04-12-myrcm-event-88237",
@@ -33285,9 +33195,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-05-24-myrcm-event-86585",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-05-24-myrcm-event-86585",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -33332,7 +33242,7 @@
       "Tamiya TRF 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-speedracer-bernau-2025-05-24-myrcm-event-85418",
@@ -33944,59 +33854,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2025-05-29-myrcm-event-86355",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.ets.racing/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
-    "from": "2025-05-29",
-    "to": "2025-06-01",
-    "series": [
-      "Euro Touring Series (ETS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86355&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=86355&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86355&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 333,
-    "registrationDisplay": "333",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "FlySky Frontwheel",
-        "entries": 75
-      },
-      {
-        "name": "Matrix Formula",
-        "entries": 33
-      },
-      {
-        "name": "Awesomatix Pro Stock",
-        "entries": 69
-      },
-      {
-        "name": "Cayote Modified",
-        "entries": 69
-      },
-      {
-        "name": "Hobbywing 21.5 Stock",
-        "entries": 32
-      },
-      {
-        "name": "1up Racing 40+",
-        "entries": 55
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "megadrom-rc-team-nord-2025-05-29-myrcm-event-85869",
     "venueId": "megadrom-rc-team-nord",
     "venueName": "Megadrom RC Team Nord",
@@ -34397,9 +34254,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-cars-wernigerode-e-v-2025-05-31-myrcm-event-87311",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-43490-2025-05-31-myrcm-event-87311",
+    "venueId": "myrcm-43490",
+    "venueName": "RC Cars Wernigerode e.V.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-cars-wernigerode-e-v",
@@ -34426,7 +34283,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rt-fichtenberg-e-v-2025-05-31-myrcm-event-85069",
@@ -35227,9 +35084,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rcc-grafenworth-2025-06-01-myrcm-event-88261",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-775-2025-06-01-myrcm-event-88261",
+    "venueId": "myrcm-775",
+    "venueName": "RCC-Grafenwörth",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rcc-grafenworth",
@@ -35255,7 +35112,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-msc-greuthof-e-v-2025-06-01-myrcm-event-88354",
@@ -38177,9 +38034,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-06-22-myrcm-event-86586",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-06-22-myrcm-event-86586",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -38223,7 +38080,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-bande-zwickau-e-v-2025-06-22-myrcm-event-88103",
@@ -46218,51 +46075,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-08-28-myrcm-event-89374",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.euronitroseries.eu/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
-    "from": "2025-08-28",
-    "to": "2025-08-31",
-    "series": [
-      "Euro Nitro Series (ENS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89374&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=89374&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89374&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 148,
-    "registrationDisplay": "148",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "ENS 1:8 SPORT",
-        "entries": 15
-      },
-      {
-        "name": "ENS 1:10 onroad",
-        "entries": 33
-      },
-      {
-        "name": "ENS-1:8 +40",
-        "entries": 51
-      },
-      {
-        "name": "ENS 1:8 onroad",
-        "entries": 49
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "amc-muehlau-e-v-2025-08-29-myrcm-event-87995",
     "venueId": "amc-muehlau-e-v",
     "venueName": "AMC-Mühlau e.V.",
@@ -48743,9 +48555,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-09-13-myrcm-event-89727",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-09-13-myrcm-event-89727",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -48798,7 +48610,7 @@
       "Tamiya TRF 17,5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-racing-club-arlesheim-2025-09-13-myrcm-event-84710",
@@ -52903,51 +52715,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-10-09-myrcm-event-89911",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.euronitroseries.eu/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Euro NITRO Series Onroad Round 4 LENTIAI / IT",
-    "from": "2025-10-09",
-    "to": "2025-10-12",
-    "series": [
-      "Euro Nitro Series (ENS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89911&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=89911&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89911&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 145,
-    "registrationDisplay": "145",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "ENS 1:8 SPORT",
-        "entries": 13
-      },
-      {
-        "name": "ENS 1:10 onroad",
-        "entries": 32
-      },
-      {
-        "name": "ENS-1:8 +40",
-        "entries": 49
-      },
-      {
-        "name": "ENS 1:8 onroad",
-        "entries": 51
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "rc-racing-club-arlesheim-2025-10-11-myrcm-event-84711",
     "venueId": "rc-racing-club-arlesheim",
     "venueName": "RC Racing Club Arlesheim",
@@ -56204,9 +55971,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-11-15-myrcm-event-91317",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-11-15-myrcm-event-91317",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -56264,7 +56031,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "fs-timing-2025-11-15-myrcm-event-91680",
@@ -58456,9 +58223,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "modellclub-flensburg-e-v-2025-12-20-myrcm-event-91318",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2025-12-20-myrcm-event-91318",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -58514,7 +58281,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "turngemeinde-1855-neustadt-bei-coburg-e-v-2025-12-20-myrcm-event-91826",
@@ -60955,9 +60722,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2026-01-24-myrcm-event-93104",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2026-01-24-myrcm-event-93104",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -61015,7 +60782,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "rc-racers-toys-shop-2026-01-24-myrcm-event-93253",
@@ -62622,9 +62389,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2026-02-21-myrcm-event-93201",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2026-02-21-myrcm-event-93201",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -62676,7 +62443,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-02-21-myrcm-event-91279",
@@ -66269,9 +66036,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "modellclub-flensburg-e-v-2026-03-28-myrcm-event-93202",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2026-03-28-myrcm-event-93202",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -66323,7 +66090,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mc-fuerstenwalde-e-v-2026-03-28-myrcm-event-93935",
@@ -67669,52 +67436,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-04-16-myrcm-event-92891",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.eos.racing/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Euro Offroad Series Round 2 Trencin / SK",
-    "from": "2026-04-16",
-    "to": "2026-04-19",
-    "series": [
-      "Sportkreis (SK)",
-      "Euro Offroad Series (EOS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92891&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=92891&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92891&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 169,
-    "registrationDisplay": "169",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "EOS 2 WD 13.5",
-        "entries": 24
-      },
-      {
-        "name": "EOS 2 WD Buggy 1:10 Electric",
-        "entries": 60
-      },
-      {
-        "name": "EOS 4 WD 10.5",
-        "entries": 20
-      },
-      {
-        "name": "EOS 4 WD Buggy 1:10 Electric",
-        "entries": 65
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "minicar-club-dortmund-e-v-2026-04-16-myrcm-event-94888",
     "venueId": "minicar-club-dortmund-e-v",
     "venueName": "Minicar Club Dortmund e.V.",
@@ -69020,9 +68741,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "modellclub-flensburg-e-v-2026-04-25-myrcm-event-93203",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2026-04-25-myrcm-event-93203",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -69074,7 +68795,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "tsv-mariendorf-rc-racing-2026-04-25-myrcm-event-94212",
@@ -74064,9 +73785,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "modellclub-flensburg-e-v-2026-05-23-myrcm-event-94700",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2026-05-23-myrcm-event-94700",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -74116,7 +73837,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "eocd-elektro-offroad-club-dielsdorf-2026-05-23-myrcm-event-96867",
@@ -74495,59 +74216,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "arena33-andernach-2026-05-28-myrcm-event-96256",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.ets.racing/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
-    "from": "2026-05-28",
-    "to": "2026-05-31",
-    "series": [
-      "Euro Touring Series (ETS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96256&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=96256&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96256&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 325,
-    "registrationDisplay": "325",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "FlySky Frontwheel",
-        "entries": 71
-      },
-      {
-        "name": "Hobbywing 21.5 Stock",
-        "entries": 48
-      },
-      {
-        "name": "1up Racing 40+",
-        "entries": 54
-      },
-      {
-        "name": "Matrix Formula",
-        "entries": 23
-      },
-      {
-        "name": "Awesomatix Pro Stock",
-        "entries": 69
-      },
-      {
-        "name": "Cayote Modified",
-        "entries": 60
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "morac-2026-05-30-myrcm-event-95391",
@@ -77668,9 +77336,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "modellclub-flensburg-e-v-2026-06-13-myrcm-event-94701",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-42405-2026-06-13-myrcm-event-94701",
+    "venueId": "myrcm-42405",
+    "venueName": "Modellclub Flensburg e.V",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "modellclub-flensburg-e-v",
@@ -77719,7 +77387,7 @@
       "Tamiya TRF 17.5 / Gastklasse MCV Stock 17.5"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "amsc-augsburg-e-v-2026-06-13-myrcm-event-96082",
@@ -80748,8 +80416,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -80758,7 +80426,7 @@
       },
       {
         "name": "FCOS 2WD",
-        "entries": 11
+        "entries": 12
       },
       {
         "name": "FCOS TT 02B",
@@ -81434,51 +81102,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "arena33-andernach-2026-07-02-myrcm-event-95739",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.euronitroseries.eu/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Euro NITRO Series Onroad Round 2 RUCPHEN / NL",
-    "from": "2026-07-02",
-    "to": "2026-07-05",
-    "series": [
-      "Euro Nitro Series (ENS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95739&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=95739&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95739&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
-    "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 144,
-    "registrationDisplay": "144",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
-    "classes": [
-      {
-        "name": "ENS 1:8 SPORT",
-        "entries": 21
-      },
-      {
-        "name": "ENS 1:10 onroad",
-        "entries": 32
-      },
-      {
-        "name": "ENS-1:8 +40",
-        "entries": 47
-      },
-      {
-        "name": "ENS 1:8 onroad",
-        "entries": 44
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
   },
   {
     "id": "mc-munster-e-v-2026-07-03-myrcm-event-98167",
@@ -82163,8 +81786,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -82177,7 +81800,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 15
+        "entries": 16
       }
     ],
     "documents": [],
@@ -84400,60 +84023,6 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-07-23-myrcm-event-97810",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.ets.racing/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Cayote Euro Touring Series ROUND 2 TRENCIN SK",
-    "from": "2026-07-23",
-    "to": "2026-07-26",
-    "series": [
-      "Sportkreis (SK)",
-      "Euro Touring Series (ETS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97810&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=97810&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97810&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 335,
-    "registrationDisplay": "335",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "FlySky Frontwheel",
-        "entries": 62
-      },
-      {
-        "name": "Hobbywing 21.5 Stock",
-        "entries": 50
-      },
-      {
-        "name": "1up Racing 40+",
-        "entries": 56
-      },
-      {
-        "name": "Matrix Formula",
-        "entries": 29
-      },
-      {
-        "name": "Awesomatix Pro Stock",
-        "entries": 79
-      },
-      {
-        "name": "Cayote Modified",
-        "entries": 59
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "mrt-rosenheim-e-v-2026-07-25-myrcm-event-97146",
     "venueId": "mrt-rosenheim-e-v",
     "venueName": "MRT Rosenheim e.V.",
@@ -85085,6 +84654,35 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "amc-senftenberg-e-v-2026-08-01-myrcm-event-98582",
+    "venueId": "amc-senftenberg-e-v",
+    "venueName": "AMC Senftenberg e.V.",
+    "venueLocation": "Senftenberg",
+    "venueWebsite": null,
+    "hostId": "amc-senftenberg-e-v",
+    "hostName": "AMC Senftenberg e.V.",
+    "name": "Lauf zur Vereinsmeisterschaft EG10 des AMC Senftenberg im Miniaturenpark Elsterwerda",
+    "from": "2026-08-01",
+    "to": "2026-08-02",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98582&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58267&pLa=en&dId%5BE%5D=98582&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98582&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "upcoming",
+    "registrationOpens": "2026-07-01",
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0/0",
+    "note": "Nennung ab 01.07.2026",
+    "classes": [
+      "EG Tamiya Truck",
+      "EG10TWSP(Sfb)"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "macg-steiermark-2026-08-01-myrcm-event-97130",
