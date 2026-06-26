@@ -295,6 +295,19 @@
     ]
   },
   {
+    "id": "ets-apeldoorn",
+    "name": "Apeldoorn",
+    "city": "Apeldoorn",
+    "lat": 52.191219277519686,
+    "lng": 5.986077898705932,
+    "aliases": [
+      "APELDOORN / NL",
+      "APELDOORN/ NL",
+      "Apeldoorn NL"
+    ],
+    "source": "manual"
+  },
+  {
     "id": "arcb",
     "name": "ARCB",
     "city": "Fétigny",
@@ -327,11 +340,11 @@
       "arena-33",
       "djk-andernach",
       "stadionstrasse-andernach",
+      "ToniSport GmbH",
       "Andernach",
       "DjK Andernach",
       "Stadionstr. 90, 56626 Andernach",
-      "myrcm-24531",
-      "ANDERNACH / GER"
+      "myrcm-24531"
     ],
     "address": "Stadionstr. 90, 56626 Andernach",
     "postalCode": "56626",
@@ -527,18 +540,6 @@
       "Club der Modellbaufreunde Süd-Ost",
       "Deutsch Goritz"
     ]
-  },
-  {
-    "id": "mc-daun",
-    "name": "Daun",
-    "city": "Daun",
-    "lat": 50.17843668713434,
-    "lng": 6.821288015561265,
-    "aliases": [
-      "DAUN / GER",
-      "DAUN/ GER"
-    ],
-    "source": "manual"
   },
   {
     "id": "djk-ssc-lackenhaeuser-e-v",
@@ -2689,12 +2690,12 @@
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
-    "lat": 47.593069,
-    "lng": 8.690808,
+    "lat": 47.4991723,
+    "lng": 8.7291498,
     "hostIds": [
       "rc-club-wyland"
     ],
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "myrcmOrgId": "14101",
     "aliases": [
       "myrcm-14101",
