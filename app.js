@@ -2138,6 +2138,10 @@ function ensureRegistrationStatusStyles() {
       color: var(--muted) !important;
     }
 
+    .race-card.registration-closed .venue-link:not(.venue-link-favorite) {
+      color: var(--muted) !important;
+    }
+
     .race-card.registration-closed .venue-link:not(.venue-link-favorite):hover,
     .race-card.registration-closed .venue-link:not(.venue-link-favorite):focus-visible {
       color: var(--muted) !important;
@@ -2163,6 +2167,10 @@ function ensureRegistrationStatusStyles() {
     :root.theme-dark .race-card.registration-closed .race-registration-count,
     :root.theme-dark .race-card.registration-closed .race-link-item-status-closed,
     :root.theme-dark .race-card.registration-closed .race-host {
+      color: #3d5380 !important;
+    }
+
+    :root.theme-dark .race-card.registration-closed .venue-link:not(.venue-link-favorite) {
       color: #3d5380 !important;
     }
 
@@ -2192,6 +2200,10 @@ function ensureRegistrationStatusStyles() {
       :root:not(.theme-light) .race-card.registration-closed .race-registration-count,
       :root:not(.theme-light) .race-card.registration-closed .race-link-item-status-closed,
       :root:not(.theme-light) .race-card.registration-closed .race-host {
+        color: #3d5380 !important;
+      }
+
+      :root:not(.theme-light) .race-card.registration-closed .venue-link:not(.venue-link-favorite) {
         color: #3d5380 !important;
       }
 

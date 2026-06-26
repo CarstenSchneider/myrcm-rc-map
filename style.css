@@ -2485,7 +2485,7 @@ body.is-breakpoint-crossing .country-pill {
 /* v1.6.1 venue link hover states; v114 add text-decoration: none + explicit .race-venue .venue-link color */
 
 .venue-link {
-  color: inherit;
+  color: var(--text);
   text-decoration: none;
   transition: color 120ms ease;
 }
