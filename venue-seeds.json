@@ -3689,6 +3689,13 @@
     "myrcmOrgId": "6492"
   },
   {
+    "hostId": "rmc-wien",
+    "hostName": "RMC-Wien",
+    "lat": 47.95807149138246,
+    "lng": 16.413935566153604,
+    "myrcmOrgId": "777"
+  },
+  {
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "lat": 48.720995,
