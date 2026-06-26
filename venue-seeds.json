@@ -3421,12 +3421,12 @@
     "id": "smrc-wien",
     "name": "SMRC Wien",
     "city": "Wien",
-    "lat": 48.1730868,
-    "lng": 16.4268115,
+    "lat": 48.173533841016166,
+    "lng": 16.427139962894532,
     "hostIds": [
       "smrc-wien"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "763",
     "aliases": [
       "myrcm-763",
