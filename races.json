@@ -166,7 +166,9 @@
     "name": "3.Lauf Tamiyacup Dogern",
     "from": "2024-06-29",
     "to": "2024-06-30",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77775&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=77775&tId=E&hId%5B1%5D=org",
@@ -425,7 +427,9 @@
     "name": "MRCP Series 2024 Run #2",
     "from": "2024-06-29",
     "to": "2024-06-30",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=79946&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=79946&tId=E&hId%5B1%5D=org",
@@ -472,7 +476,9 @@
     "name": "OM OR8-E 2024",
     "from": "2024-06-29",
     "to": "2024-06-30",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80227&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=507&pLa=en&dId%5BE%5D=80227&tId=E&hId%5B1%5D=org",
@@ -756,7 +762,9 @@
     "name": "EOCD Clubseries 2024 #2",
     "from": "2024-06-30",
     "to": "2024-06-30",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78818&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=78818&tId=E&hId%5B1%5D=org",
@@ -1060,7 +1068,9 @@
     "name": "Test TAM",
     "from": "2024-07-04",
     "to": "2024-07-04",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80343&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=80343&tId=E&hId%5B1%5D=org",
@@ -1088,7 +1098,9 @@
     "name": "4. SM Lauf V8TR & V10TR AMCS",
     "from": "2024-07-05",
     "to": "2024-07-07",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=76985&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=76985&tId=E&hId%5B1%5D=org",
@@ -1245,7 +1257,9 @@
     "name": "3. OM Lauf Rallyecross",
     "from": "2024-07-06",
     "to": "2024-07-07",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=79996&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=504&pLa=en&dId%5BE%5D=79996&tId=E&hId%5B1%5D=org",
@@ -1372,7 +1386,9 @@
     "name": "Coupe Tamiya TT-02 RC Club Riviera",
     "from": "2024-07-06",
     "to": "2024-07-06",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78092&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=78092&tId=E&hId%5B1%5D=org",
@@ -1479,7 +1495,9 @@
     "name": "Fun Cup Austria / RCC-Grafenwörth 2024",
     "from": "2024-07-06",
     "to": "2024-07-07",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=75811&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=75811&tId=E&hId%5B1%5D=org",
@@ -1800,7 +1818,9 @@
     "name": "1. ERT Hopfenrace",
     "from": "2024-07-07",
     "to": "2024-07-07",
-    "series": [],
+    "series": [
+      "ERT Hopfenrace"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80196&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=768&pLa=en&dId%5BE%5D=80196&tId=E&hId%5B1%5D=org",
@@ -2406,7 +2426,9 @@
     "name": "EOCD Clubseries 2024 #3",
     "from": "2024-07-12",
     "to": "2024-07-12",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78819&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=78819&tId=E&hId%5B1%5D=org",
@@ -2541,7 +2563,10 @@
     "name": "4. Lauf 2024 ÖM EF - RCR-Linz",
     "from": "2024-07-13",
     "to": "2024-07-14",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80438&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=80438&tId=E&hId%5B1%5D=org",
@@ -2572,7 +2597,9 @@
     "name": "4. ÖFMAV GP-Nord 2024",
     "from": "2024-07-13",
     "to": "2024-07-14",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80437&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=80437&tId=E&hId%5B1%5D=org",
@@ -2783,7 +2810,9 @@
     "name": "ÖFMAV 4. Lauf GP Süd",
     "from": "2024-07-13",
     "to": "2024-07-14",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80518&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=80518&tId=E&hId%5B1%5D=org",
@@ -3042,10 +3071,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2024-07-14-myrcm-event-77641",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2024-07-14-myrcm-event-77641",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -3078,7 +3107,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "psv-klagenfurt-2024-07-14-myrcm-event-77572",
@@ -3409,7 +3438,10 @@
     "name": "2.KÄRNTENCUP",
     "from": "2024-07-20",
     "to": "2024-07-20",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series",
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80521&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=521&pLa=en&dId%5BE%5D=80521&tId=E&hId%5B1%5D=org",
@@ -3756,7 +3788,9 @@
     "name": "Österreichische Meisterschaft 40 Plus OR-8 2024",
     "from": "2024-07-20",
     "to": "2024-07-21",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80585&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=80585&tId=E&hId%5B1%5D=org",
@@ -5165,7 +5199,9 @@
     "name": "3. OM Lauf 2024",
     "from": "2024-08-03",
     "to": "2024-08-04",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80471&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=80471&tId=E&hId%5B1%5D=org",
@@ -5429,7 +5465,9 @@
     "name": "5. ÖFMAV GP-Nord 2024",
     "from": "2024-08-03",
     "to": "2024-08-04",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80839&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=80839&tId=E&hId%5B1%5D=org",
@@ -5756,10 +5794,10 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2024-08-04-myrcm-event-77642",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2024-08-04-myrcm-event-77642",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -5792,7 +5830,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "psv-klagenfurt-2024-08-04-myrcm-event-77573",
@@ -6242,7 +6280,9 @@
     "name": "3. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2024-08-10",
     "to": "2024-08-11",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78180&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=78180&tId=E&hId%5B1%5D=org",
@@ -6273,7 +6313,9 @@
     "name": "5. ÖFMAV GP-Süd MSC-Edelsbach",
     "from": "2024-08-10",
     "to": "2024-08-11",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81014&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=81014&tId=E&hId%5B1%5D=org",
@@ -6419,7 +6461,9 @@
     "name": "Fun Cup Austria / MARS-Hirtenberg 2024",
     "from": "2024-08-10",
     "to": "2024-08-11",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80626&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=80626&tId=E&hId%5B1%5D=org",
@@ -6790,7 +6834,9 @@
     "name": "ERT Hopfenrace August",
     "from": "2024-08-11",
     "to": "2024-08-11",
-    "series": [],
+    "series": [
+      "ERT Hopfenrace"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80879&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=768&pLa=en&dId%5BE%5D=80879&tId=E&hId%5B1%5D=org",
@@ -6897,7 +6943,9 @@
     "name": "4. SM Lauf VLS TC/F1",
     "from": "2024-08-17",
     "to": "2024-08-18",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78145&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20&pLa=en&dId%5BE%5D=78145&tId=E&hId%5B1%5D=org",
@@ -6932,7 +6980,10 @@
     "name": "5. Lauf 2024 ÖM EF - MSC-Imst",
     "from": "2024-08-17",
     "to": "2024-08-18",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81067&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=81067&tId=E&hId%5B1%5D=org",
@@ -7080,7 +7131,10 @@
     "name": "ÖM Rally Finale 2024",
     "from": "2024-08-17",
     "to": "2024-08-18",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80754&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=774&pLa=en&dId%5BE%5D=80754&tId=E&hId%5B1%5D=org",
@@ -7116,7 +7170,9 @@
     "name": "Österreichische Meisterschaft OR8",
     "from": "2024-08-17",
     "to": "2024-08-18",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81123&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1294&pLa=en&dId%5BE%5D=81123&tId=E&hId%5B1%5D=org",
@@ -7145,7 +7201,9 @@
     "name": "Österreichische Meisterschaft OR8 Jugend",
     "from": "2024-08-17",
     "to": "2024-08-17",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81148&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1294&pLa=en&dId%5BE%5D=81148&tId=E&hId%5B1%5D=org",
@@ -7545,7 +7603,9 @@
     "name": "4. OM Lauf 2024",
     "from": "2024-08-24",
     "to": "2024-08-25",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80933&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=80933&tId=E&hId%5B1%5D=org",
@@ -7588,7 +7648,9 @@
     "name": "4.Lauf Tamiyacup Langenthal",
     "from": "2024-08-24",
     "to": "2024-08-25",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77776&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=77776&tId=E&hId%5B1%5D=org",
@@ -7868,7 +7930,9 @@
     "name": "OM Crawler",
     "from": "2024-08-24",
     "to": "2024-08-25",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80287&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53491&pLa=en&dId%5BE%5D=80287&tId=E&hId%5B1%5D=org",
@@ -8116,10 +8180,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2024-08-25-myrcm-event-77643",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2024-08-25-myrcm-event-77643",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -8152,7 +8216,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "amc-langenfeld-e-v-2024-08-25-myrcm-event-81306",
@@ -8466,7 +8530,9 @@
     "name": "EOCD Clubseries 2024 #4",
     "from": "2024-08-30",
     "to": "2024-08-30",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78820&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=78820&tId=E&hId%5B1%5D=org",
@@ -8952,7 +9018,9 @@
     "name": "MINI Challenge Lauf 4",
     "from": "2024-08-31",
     "to": "2024-09-01",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77632&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1225&pLa=en&dId%5BE%5D=77632&tId=E&hId%5B1%5D=org",
@@ -8983,7 +9051,9 @@
     "name": "MRCP Series 2024 Run #3",
     "from": "2024-08-31",
     "to": "2024-09-01",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80340&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38295&pLa=en&dId%5BE%5D=80340&tId=E&hId%5B1%5D=org",
@@ -9429,7 +9499,9 @@
     "name": "5.Lauf Tamiyacup Dintikon",
     "from": "2024-09-07",
     "to": "2024-09-08",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77777&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=77777&tId=E&hId%5B1%5D=org",
@@ -9526,7 +9598,9 @@
     "name": "6. ÖFMAV GP-Nord 2024",
     "from": "2024-09-07",
     "to": "2024-09-08",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81509&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=81509&tId=E&hId%5B1%5D=org",
@@ -9677,7 +9751,9 @@
     "name": "Fun Cup Austria / MRC-Frühwirth 2024",
     "from": "2024-09-07",
     "to": "2024-09-08",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=75812&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=75812&tId=E&hId%5B1%5D=org",
@@ -10306,7 +10382,9 @@
     "name": "5. SM/CS SRCCA 2024 Lauf 1/5 TC/F1 - MRTM - 14/15 September 2024",
     "from": "2024-09-14",
     "to": "2024-09-15",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81276&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16&pLa=en&dId%5BE%5D=81276&tId=E&hId%5B1%5D=org",
@@ -10388,7 +10466,10 @@
     "name": "6. Lauf 2024 ÖM EF - PSV Klagenfurth",
     "from": "2024-09-14",
     "to": "2024-09-15",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81764&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=81764&tId=E&hId%5B1%5D=org",
@@ -10419,7 +10500,9 @@
     "name": "6. ÖFMAV GP-Süd RC Lords of Dirt",
     "from": "2024-09-14",
     "to": "2024-09-15",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81268&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=81268&tId=E&hId%5B1%5D=org",
@@ -10592,7 +10675,9 @@
     "name": "EOCD Clubseries 2024 #5 (res.)",
     "from": "2024-09-14",
     "to": "2024-09-14",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78821&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=78821&tId=E&hId%5B1%5D=org",
@@ -10691,7 +10776,9 @@
     "name": "Österr. Meisterschaft LS 2024, 2. Lauf -- ABGESAGT!",
     "from": "2024-09-14",
     "to": "2024-09-15",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80033&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=80033&tId=E&hId%5B1%5D=org",
@@ -11160,7 +11247,9 @@
     "name": "ERT Hopfenrace September",
     "from": "2024-09-15",
     "to": "2024-09-15",
-    "series": [],
+    "series": [
+      "ERT Hopfenrace"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81562&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=768&pLa=en&dId%5BE%5D=81562&tId=E&hId%5B1%5D=org",
@@ -11408,7 +11497,9 @@
     "name": "5. Lauf Sollenau",
     "from": "2024-09-20",
     "to": "2024-09-22",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78045&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=779&pLa=en&dId%5BE%5D=78045&tId=E&hId%5B1%5D=org",
@@ -11608,7 +11699,9 @@
     "name": "6. PSV Clubrennen - ONROAD 2024 + Kärnten-Cup",
     "from": "2024-09-21",
     "to": "2024-09-21",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=77582&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=774&pLa=en&dId%5BE%5D=77582&tId=E&hId%5B1%5D=org",
@@ -12236,7 +12329,9 @@
     "name": "5. SM Lauf V8TR & V10TR MRCSG",
     "from": "2024-09-27",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=76986&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=76986&tId=E&hId%5B1%5D=org",
@@ -12424,7 +12519,9 @@
     "name": "7. ÖFMAV GP-Nord 2024",
     "from": "2024-09-28",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82108&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=82108&tId=E&hId%5B1%5D=org",
@@ -12454,7 +12551,9 @@
     "name": "7. ÖFMAV GP-Süd LAMBC-St.Andrä",
     "from": "2024-09-28",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81269&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=81269&tId=E&hId%5B1%5D=org",
@@ -12607,7 +12706,9 @@
     "name": "IndoorSeries 2024/25 - WarmUp Lucens",
     "from": "2024-09-28",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81320&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=81320&tId=E&hId%5B1%5D=org",
@@ -12642,7 +12743,9 @@
     "name": "MRCP Series 2024 Run #4 Finale",
     "from": "2024-09-28",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82201&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=82201&tId=E&hId%5B1%5D=org",
@@ -12942,7 +13045,9 @@
     "name": "EOCD Clubseries 2024 #6 (res.)",
     "from": "2024-09-29",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78822&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=78822&tId=E&hId%5B1%5D=org",
@@ -13025,7 +13130,9 @@
     "name": "Onroad Cup Tirol",
     "from": "2024-09-29",
     "to": "2024-09-29",
-    "series": [],
+    "series": [
+      "Onroad Cup Tirol"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81660&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=21964&pLa=en&dId%5BE%5D=81660&tId=E&hId%5B1%5D=org",
@@ -13410,7 +13517,10 @@
     "name": "4. Kärnten-Cup",
     "from": "2024-10-05",
     "to": "2024-10-06",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series",
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=80540&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=521&pLa=en&dId%5BE%5D=80540&tId=E&hId%5B1%5D=org",
@@ -13445,7 +13555,9 @@
     "name": "5.OM Lauf 2024",
     "from": "2024-10-05",
     "to": "2024-10-06",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81659&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=81659&tId=E&hId%5B1%5D=org",
@@ -14217,7 +14329,9 @@
     "name": "4. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2024-10-12",
     "to": "2024-10-13",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78181&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=78181&tId=E&hId%5B1%5D=org",
@@ -14469,7 +14583,9 @@
     "name": "SITCC Manche 1 Saison 2024/2025",
     "from": "2024-10-12",
     "to": "2024-10-12",
-    "series": [],
+    "series": [
+      "SITCC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82265&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=82265&tId=E&hId%5B1%5D=org",
@@ -15388,7 +15504,9 @@
     "name": "ART Wintermeisterschaft 2024/2025 Lauf 1",
     "from": "2024-10-26",
     "to": "2024-10-26",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81083&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=81083&tId=E&hId%5B1%5D=org",
@@ -15427,7 +15545,9 @@
     "name": "Coupe Tamiya TT-02 RC Club Riviera",
     "from": "2024-10-26",
     "to": "2024-10-26",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=78093&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=78093&tId=E&hId%5B1%5D=org",
@@ -15825,7 +15945,9 @@
     "name": "MRCP-1-WML_24/25",
     "from": "2024-10-27",
     "to": "2024-10-27",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82550&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=207&pLa=en&dId%5BE%5D=82550&tId=E&hId%5B1%5D=org",
@@ -16256,7 +16378,9 @@
     "name": "SIORC M1 - Saison 2024-2025",
     "from": "2024-11-02",
     "to": "2024-11-02",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82595&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=82595&tId=E&hId%5B1%5D=org",
@@ -16406,7 +16530,9 @@
     "name": "1. Lauf TIT-Cup meets SundayRACE 2024/2025",
     "from": "2024-11-03",
     "to": "2024-11-03",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82230&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=82230&tId=E&hId%5B1%5D=org",
@@ -16629,7 +16755,10 @@
     "name": "Championnat 24/25 - Round 1",
     "from": "2024-11-03",
     "to": "2024-11-03",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya",
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82977&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=82977&tId=E&hId%5B1%5D=org",
@@ -16697,7 +16826,9 @@
     "name": "1. Lauf HSH Mini Drom Cup 24/25",
     "from": "2024-11-08",
     "to": "2024-11-08",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82662&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=82662&tId=E&hId%5B1%5D=org",
@@ -16768,7 +16899,9 @@
     "name": "1. Samstag Cup",
     "from": "2024-11-09",
     "to": "2024-11-09",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82647&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=82647&tId=E&hId%5B1%5D=org",
@@ -16962,7 +17095,9 @@
     "name": "IndoorSeries 2024/25 - Round 1",
     "from": "2024-11-09",
     "to": "2024-11-10",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81682&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=81682&tId=E&hId%5B1%5D=org",
@@ -17419,7 +17554,9 @@
     "name": "2. Lauf HSH Mini Drom Cup 24/25",
     "from": "2024-11-22",
     "to": "2024-11-22",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83115&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=83115&tId=E&hId%5B1%5D=org",
@@ -17451,7 +17588,9 @@
     "name": "1. Lauf FCA Indoor West Amstetten",
     "from": "2024-11-23",
     "to": "2024-11-23",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81674&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=81674&tId=E&hId%5B1%5D=org",
@@ -17491,7 +17630,9 @@
     "name": "ART Wintermeisterschaft 2024/2025 Lauf 2",
     "from": "2024-11-23",
     "to": "2024-11-23",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81084&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=81084&tId=E&hId%5B1%5D=org",
@@ -17652,7 +17793,9 @@
     "name": "MRCP-2-WML_24/25",
     "from": "2024-11-24",
     "to": "2024-11-24",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82552&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=207&pLa=en&dId%5BE%5D=82552&tId=E&hId%5B1%5D=org",
@@ -18016,7 +18159,9 @@
     "name": "SIORC M2 saison 2024-2025",
     "from": "2024-11-30",
     "to": "2024-11-30",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82999&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=82999&tId=E&hId%5B1%5D=org",
@@ -18243,7 +18388,9 @@
     "name": "Axxelerate Arena Winter Series Round 1",
     "from": "2024-12-07",
     "to": "2024-12-07",
-    "series": [],
+    "series": [
+      "Axxelerate Arena Winter Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83414&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58661&pLa=en&dId%5BE%5D=83414&tId=E&hId%5B1%5D=org",
@@ -18282,7 +18429,9 @@
     "name": "IndoorSeries 2024/25 - Round 2",
     "from": "2024-12-07",
     "to": "2024-12-08",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81683&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=81683&tId=E&hId%5B1%5D=org",
@@ -18317,7 +18466,9 @@
     "name": "2. Lauf TIT-Cup meets SundayRACE 2024/2025",
     "from": "2024-12-08",
     "to": "2024-12-08",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82231&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=82231&tId=E&hId%5B1%5D=org",
@@ -18745,7 +18896,9 @@
     "name": "3. Lauf HSH Mini Drom Cup 24/25",
     "from": "2024-12-13",
     "to": "2024-12-13",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83453&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=83453&tId=E&hId%5B1%5D=org",
@@ -18878,7 +19031,9 @@
     "name": "ART Wintermeisterschaft 2024/2025 Lauf 3",
     "from": "2024-12-14",
     "to": "2024-12-14",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81085&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=81085&tId=E&hId%5B1%5D=org",
@@ -19026,7 +19181,9 @@
     "name": "SIORC Buggy Manche 3 - Saison 2024/25",
     "from": "2024-12-14",
     "to": "2024-12-14",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83574&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=83574&tId=E&hId%5B1%5D=org",
@@ -19152,7 +19309,10 @@
     "name": "Championnat 24/25 - Round 2",
     "from": "2024-12-15",
     "to": "2024-12-15",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya",
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82391&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=82391&tId=E&hId%5B1%5D=org",
@@ -19222,7 +19382,9 @@
     "name": "MRCP-3-WML_24/25",
     "from": "2024-12-15",
     "to": "2024-12-15",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82554&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=207&pLa=en&dId%5BE%5D=82554&tId=E&hId%5B1%5D=org",
@@ -20306,7 +20468,9 @@
     "name": "4. Lauf HSH Mini Drom Cup 24/25",
     "from": "2025-01-10",
     "to": "2025-01-10",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83868&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=83868&tId=E&hId%5B1%5D=org",
@@ -20341,7 +20505,9 @@
     "name": "2. Lauf FCA Indoor West Amstetten",
     "from": "2025-01-11",
     "to": "2025-01-11",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81675&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=81675&tId=E&hId%5B1%5D=org",
@@ -20420,7 +20586,9 @@
     "name": "2. Samstag Cup",
     "from": "2025-01-11",
     "to": "2025-01-11",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82648&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=82648&tId=E&hId%5B1%5D=org",
@@ -20609,7 +20777,9 @@
     "name": "3. Lauf TIT-Cup meets SundayRACE 2024/2025",
     "from": "2025-01-12",
     "to": "2025-01-12",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82232&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=82232&tId=E&hId%5B1%5D=org",
@@ -20868,7 +21038,9 @@
     "name": "ART Wintermeisterschaft 2024/2025 Lauf 4",
     "from": "2025-01-18",
     "to": "2025-01-18",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81086&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=81086&tId=E&hId%5B1%5D=org",
@@ -20911,7 +21083,9 @@
     "name": "Axxelerate Arena Winter Series Round 2",
     "from": "2025-01-18",
     "to": "2025-01-18",
-    "series": [],
+    "series": [
+      "Axxelerate Arena Winter Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83415&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58661&pLa=en&dId%5BE%5D=83415&tId=E&hId%5B1%5D=org",
@@ -21405,7 +21579,9 @@
     "name": "5. Lauf HSH Mini Drom Cup 24/25",
     "from": "2025-01-24",
     "to": "2025-01-24",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84427&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=84427&tId=E&hId%5B1%5D=org",
@@ -21530,7 +21706,9 @@
     "name": "SIORC Manche 4 Finale 2024/25",
     "from": "2025-01-25",
     "to": "2025-01-25",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83974&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=83974&tId=E&hId%5B1%5D=org",
@@ -21752,7 +21930,10 @@
     "name": "Championnat 24/25 - Round 3",
     "from": "2025-01-26",
     "to": "2025-01-26",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya",
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83860&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=83860&tId=E&hId%5B1%5D=org",
@@ -21818,7 +21999,9 @@
     "name": "MRCP-4-WML_24/25",
     "from": "2025-01-26",
     "to": "2025-01-26",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84461&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=207&pLa=en&dId%5BE%5D=84461&tId=E&hId%5B1%5D=org",
@@ -22374,7 +22557,9 @@
     "name": "1 Lauf Tamiyacup Cham",
     "from": "2025-02-08",
     "to": "2025-02-09",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84205&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=84205&tId=E&hId%5B1%5D=org",
@@ -22495,7 +22680,9 @@
     "name": "3. Samstag Cup",
     "from": "2025-02-08",
     "to": "2025-02-08",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82649&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=82649&tId=E&hId%5B1%5D=org",
@@ -22592,7 +22779,10 @@
     "name": "SITCC Manche 2 2024/2025",
     "from": "2025-02-08",
     "to": "2025-02-08",
-    "series": [],
+    "series": [
+      "SIORC",
+      "SITCC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84705&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=84705&tId=E&hId%5B1%5D=org",
@@ -22634,7 +22824,10 @@
     "name": "SITCC Manche 2 La finale",
     "from": "2025-02-08",
     "to": "2025-02-08",
-    "series": [],
+    "series": [
+      "SIORC",
+      "SITCC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85035&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=85035&tId=E&hId%5B1%5D=org",
@@ -22812,7 +23005,9 @@
     "name": "4. Lauf TIT-Cup meets SundayRACE 2024/2025",
     "from": "2025-02-09",
     "to": "2025-02-09",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82233&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=82233&tId=E&hId%5B1%5D=org",
@@ -23090,7 +23285,9 @@
     "name": "6. Lauf HSH Mini Drom Cup 24/25",
     "from": "2025-02-15",
     "to": "2025-02-15",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84720&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=84720&tId=E&hId%5B1%5D=org",
@@ -23201,7 +23398,9 @@
     "name": "Axxelerate Arena Winter Series Round 3",
     "from": "2025-02-15",
     "to": "2025-02-15",
-    "series": [],
+    "series": [
+      "Axxelerate Arena Winter Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83416&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58661&pLa=en&dId%5BE%5D=83416&tId=E&hId%5B1%5D=org",
@@ -23698,7 +23897,9 @@
     "name": "MRCP-5-WML_24/25",
     "from": "2025-02-23",
     "to": "2025-02-23",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84462&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=207&pLa=en&dId%5BE%5D=84462&tId=E&hId%5B1%5D=org",
@@ -23821,7 +24022,9 @@
     "name": "ART Wintermeisterschaft 2024/2025 Lauf 4",
     "from": "2025-03-01",
     "to": "2025-03-01",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81087&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=81087&tId=E&hId%5B1%5D=org",
@@ -23899,7 +24102,9 @@
     "name": "IndoorSeries 2024/25 - Round 3",
     "from": "2025-03-01",
     "to": "2025-03-02",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81684&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=81684&tId=E&hId%5B1%5D=org",
@@ -24159,7 +24364,9 @@
     "name": "3. Lauf FCA Indoor West Amstetten",
     "from": "2025-03-08",
     "to": "2025-03-08",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=81676&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=81676&tId=E&hId%5B1%5D=org",
@@ -24465,7 +24672,9 @@
     "name": "5. Lauf TIT-Cup meets SundayRACE 2024/2025",
     "from": "2025-03-09",
     "to": "2025-03-09",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82234&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=82234&tId=E&hId%5B1%5D=org",
@@ -24798,7 +25007,9 @@
     "name": "4.Samstag Cup",
     "from": "2025-03-15",
     "to": "2025-03-15",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82650&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=82650&tId=E&hId%5B1%5D=org",
@@ -25078,7 +25289,10 @@
     "name": "Championnat 24/25 - Round 4",
     "from": "2025-03-16",
     "to": "2025-03-16",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya",
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=83861&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=83861&tId=E&hId%5B1%5D=org",
@@ -25280,7 +25494,9 @@
     "name": "2.Lauf Tamiyacup Dagmarsellen",
     "from": "2025-03-22",
     "to": "2025-03-23",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84206&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=84206&tId=E&hId%5B1%5D=org",
@@ -25362,7 +25578,9 @@
     "name": "ART Wintermeisterschaft 2024/2025 Lauf 5",
     "from": "2025-03-22",
     "to": "2025-03-22",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84681&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=84681&tId=E&hId%5B1%5D=org",
@@ -26089,7 +26307,9 @@
     "name": "Clubrennen 1 MRCSG - Open",
     "from": "2025-03-30",
     "to": "2025-03-30",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86257&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20&pLa=en&dId%5BE%5D=86257&tId=E&hId%5B1%5D=org",
@@ -26134,7 +26354,9 @@
     "name": "MRCP-6-WML_24/25",
     "from": "2025-03-30",
     "to": "2025-03-30",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84463&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=207&pLa=en&dId%5BE%5D=84463&tId=E&hId%5B1%5D=org",
@@ -26292,7 +26514,9 @@
     "name": "Coupe Tamiya TT-02 RCCR - 1",
     "from": "2025-04-05",
     "to": "2025-04-05",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86083&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=86083&tId=E&hId%5B1%5D=org",
@@ -26410,10 +26634,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2025-04-06-myrcm-event-86152",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2025-04-06-myrcm-event-86152",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -26446,7 +26670,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "myrcm-72-2025-04-06-myrcm-event-85956",
@@ -28086,7 +28310,9 @@
     "name": "1. SM/CS SRCCA 2025 Lauf 1/5 TC/F1 - MRTM Lostallo - 26/27 April 2025",
     "from": "2025-04-25",
     "to": "2025-04-27",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86369&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16&pLa=en&dId%5BE%5D=86369&tId=E&hId%5B1%5D=org",
@@ -28277,7 +28503,9 @@
     "name": "3.Lauf Tamiyacup Dintikon",
     "from": "2025-04-26",
     "to": "2025-04-27",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84207&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=84207&tId=E&hId%5B1%5D=org",
@@ -28367,7 +28595,9 @@
     "name": "Fun Cup Austria / RC-Laa 04",
     "from": "2025-04-26",
     "to": "2025-04-27",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85303&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=85303&tId=E&hId%5B1%5D=org",
@@ -28487,7 +28717,9 @@
     "name": "MINI - Challenge",
     "from": "2025-04-26",
     "to": "2025-04-27",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85783&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1225&pLa=en&dId%5BE%5D=85783&tId=E&hId%5B1%5D=org",
@@ -28579,7 +28811,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf1 EMCCO",
     "from": "2025-04-26",
     "to": "2025-04-27",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86816&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=86816&tId=E&hId%5B1%5D=org",
@@ -28656,7 +28890,9 @@
     "name": "Swiss Racing Cup 2025 - Lauf 1 - Herblingen",
     "from": "2025-04-26",
     "to": "2025-04-26",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85096&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=85096&tId=E&hId%5B1%5D=org",
@@ -28875,10 +29111,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2025-04-27-myrcm-event-86153",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2025-04-27-myrcm-event-86153",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -28911,7 +29147,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mini-racing-chiasso-2025-04-27-myrcm-event-85204",
@@ -29158,7 +29394,9 @@
     "name": "Swiss Racing Cup 2025 - Lauf 2 - Herblingen",
     "from": "2025-04-27",
     "to": "2025-04-27",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85178&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=85178&tId=E&hId%5B1%5D=org",
@@ -29501,7 +29739,9 @@
     "name": "1. OST-Cup 2025 GP Series",
     "from": "2025-05-03",
     "to": "2025-05-04",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87422&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=87422&tId=E&hId%5B1%5D=org",
@@ -29776,7 +30016,9 @@
     "name": "MRCP Series Run #1 2025",
     "from": "2025-05-03",
     "to": "2025-05-04",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86903&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=86903&tId=E&hId%5B1%5D=org",
@@ -30585,7 +30827,9 @@
     "name": "1. SM Lauf 2025 V8TR & V10TR - MRCSG",
     "from": "2025-05-09",
     "to": "2025-05-11",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86667&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=86667&tId=E&hId%5B1%5D=org",
@@ -31468,7 +31712,10 @@
     "name": "1. Lauf 2025 ÖM EF - SFMAV Salzburg",
     "from": "2025-05-17",
     "to": "2025-05-18",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88008&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=88008&tId=E&hId%5B1%5D=org",
@@ -31580,7 +31827,9 @@
     "name": "2.SM-Lauf 2025 1/5 VLS TC/F1",
     "from": "2025-05-17",
     "to": "2025-05-18",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86318&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=14010&pLa=en&dId%5BE%5D=86318&tId=E&hId%5B1%5D=org",
@@ -31615,7 +31864,9 @@
     "name": "3. SM/CS 2024 E8OR (Samstag) @ RC Racing Club Arlesheim",
     "from": "2025-05-17",
     "to": "2025-05-17",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87266&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=31003&pLa=en&dId%5BE%5D=87266&tId=E&hId%5B1%5D=org",
@@ -31719,7 +31970,9 @@
     "name": "Fun Cup Austria / MRC Frühwirth",
     "from": "2025-05-17",
     "to": "2025-05-18",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85304&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=85304&tId=E&hId%5B1%5D=org",
@@ -31820,7 +32073,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf2 MACG",
     "from": "2025-05-17",
     "to": "2025-05-18",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87442&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=87442&tId=E&hId%5B1%5D=org",
@@ -32254,7 +32509,9 @@
     "name": "3. SM/CS 2024 E8OR (Sonntag) @ RC Racing Club Arlesheim",
     "from": "2025-05-18",
     "to": "2025-05-18",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87267&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=31003&pLa=en&dId%5BE%5D=87267&tId=E&hId%5B1%5D=org",
@@ -32757,7 +33014,9 @@
     "name": "2. OST-Cup 2025 GP Series",
     "from": "2025-05-24",
     "to": "2025-05-25",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87859&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=87859&tId=E&hId%5B1%5D=org",
@@ -32789,7 +33048,9 @@
     "name": "2. PSV Clubrennen - ONROAD 2025 + Kärnten-Cup",
     "from": "2025-05-24",
     "to": "2025-05-24",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84730&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=774&pLa=en&dId%5BE%5D=84730&tId=E&hId%5B1%5D=org",
@@ -32981,7 +33242,9 @@
     "name": "4.Lauf Tamiyacup Langenthal",
     "from": "2025-05-24",
     "to": "2025-05-25",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84208&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=84208&tId=E&hId%5B1%5D=org",
@@ -33175,7 +33438,9 @@
     "name": "EOCD Clubseries 2025 #1",
     "from": "2025-05-24",
     "to": "2025-05-24",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87317&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87317&tId=E&hId%5B1%5D=org",
@@ -33316,7 +33581,9 @@
     "name": "Österr. Meisterschaft LS 2025, 1. Lauf",
     "from": "2025-05-24",
     "to": "2025-05-25",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84652&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=84652&tId=E&hId%5B1%5D=org",
@@ -33486,10 +33753,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2025-05-25-myrcm-event-86154",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2025-05-25-myrcm-event-86154",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -33522,7 +33789,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mac-nuernberg-e-v-2025-05-25-myrcm-event-87091",
@@ -33775,7 +34042,9 @@
     "name": "1. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2025-05-31",
     "to": "2025-06-01",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88252&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=88252&tId=E&hId%5B1%5D=org",
@@ -33805,7 +34074,9 @@
     "name": "1. OM Lauf 2025",
     "from": "2025-05-31",
     "to": "2025-06-01",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87605&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=87605&tId=E&hId%5B1%5D=org",
@@ -33848,7 +34119,9 @@
     "name": "2. Lauf Mini-Challenge Austria 2025 Sollenau",
     "from": "2025-05-31",
     "to": "2025-06-01",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85943&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=779&pLa=en&dId%5BE%5D=85943&tId=E&hId%5B1%5D=org",
@@ -35061,7 +35334,10 @@
     "name": "2. Lauf 2025 ÖM EF - MACG Steiermark",
     "from": "2025-06-07",
     "to": "2025-06-08",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88491&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=88491&tId=E&hId%5B1%5D=org",
@@ -35543,7 +35819,9 @@
     "name": "Dielsdorf Dirt Classics 2025",
     "from": "2025-06-07",
     "to": "2025-06-08",
-    "series": [],
+    "series": [
+      "Dielsdorf Dirt Classics"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87324&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87324&tId=E&hId%5B1%5D=org",
@@ -35859,7 +36137,9 @@
     "name": "2. SM Lauf 2025 V8TR & V10TR - MRCAL",
     "from": "2025-06-13",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86673&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=86673&tId=E&hId%5B1%5D=org",
@@ -35894,7 +36174,9 @@
     "name": "2. Lauf Vereinsmeisterschaft Lamac & 2.Lauf Kärnten Cup EF 2025",
     "from": "2025-06-14",
     "to": "2025-06-14",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88441&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=781&pLa=en&dId%5BE%5D=88441&tId=E&hId%5B1%5D=org",
@@ -36015,7 +36297,9 @@
     "name": "3. OST-Cup 2025 GP Series",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87860&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=87860&tId=E&hId%5B1%5D=org",
@@ -36082,7 +36366,9 @@
     "name": "3. SM Lauf VLS TC / F1",
     "from": "2025-06-14",
     "to": "2025-06-15",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86260&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20&pLa=en&dId%5BE%5D=86260&tId=E&hId%5B1%5D=org",
@@ -37051,7 +37337,9 @@
     "name": "2. OM Lauf 2025",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87611&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=87611&tId=E&hId%5B1%5D=org",
@@ -37094,7 +37382,9 @@
     "name": "2.KM GP-Series Dellach/Gail",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88869&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=15268&pLa=en&dId%5BE%5D=88869&tId=E&hId%5B1%5D=org",
@@ -37123,7 +37413,9 @@
     "name": "2025 SM/CS Electro E80R #4 Manche Cornaux (NMBC)",
     "from": "2025-06-21",
     "to": "2025-06-21",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88556&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=88556&tId=E&hId%5B1%5D=org",
@@ -37297,7 +37589,9 @@
     "name": "5.Lauf Tamiyacup Schaffhausen",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84209&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=84209&tId=E&hId%5B1%5D=org",
@@ -37436,7 +37730,9 @@
     "name": "Fun Cup Austria / RCP-Parndorf",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85305&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=85305&tId=E&hId%5B1%5D=org",
@@ -37480,7 +37776,9 @@
     "name": "Mini-Challenge 3.Lauf 2025",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85779&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=85779&tId=E&hId%5B1%5D=org",
@@ -37511,7 +37809,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf3 RCC Sittersdorf",
     "from": "2025-06-21",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88255&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=88255&tId=E&hId%5B1%5D=org",
@@ -37776,7 +38076,9 @@
     "name": "2025 SM/CS Electro E80R #5 Manche Cornaux (NMBC)",
     "from": "2025-06-22",
     "to": "2025-06-22",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88555&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=88555&tId=E&hId%5B1%5D=org",
@@ -38194,7 +38496,10 @@
     "name": "3. Lauf 2025 ÖM EF - RCR-Linz",
     "from": "2025-06-28",
     "to": "2025-06-29",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88978&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=88978&tId=E&hId%5B1%5D=org",
@@ -38558,7 +38863,9 @@
     "name": "OM OR8 40+ - OR8-E 40+ & Jugend - OR8- E Truggy",
     "from": "2025-06-28",
     "to": "2025-06-29",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89037&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=504&pLa=en&dId%5BE%5D=89037&tId=E&hId%5B1%5D=org",
@@ -39097,7 +39404,9 @@
     "name": "3. SM Lauf 2025 V8TR & V10TR - MRTM",
     "from": "2025-07-04",
     "to": "2025-07-06",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86675&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=86675&tId=E&hId%5B1%5D=org",
@@ -39314,7 +39623,9 @@
     "name": "Coupe Tamiya TT-02 RCCR - 2",
     "from": "2025-07-05",
     "to": "2025-07-05",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86084&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=86084&tId=E&hId%5B1%5D=org",
@@ -39345,7 +39656,9 @@
     "name": "MRCP Series Run #2 2025",
     "from": "2025-07-05",
     "to": "2025-07-06",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86904&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=86904&tId=E&hId%5B1%5D=org",
@@ -40197,7 +40510,9 @@
     "name": "EOCD Clubseries 2025 #2",
     "from": "2025-07-11",
     "to": "2025-07-12",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87318&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87318&tId=E&hId%5B1%5D=org",
@@ -40232,7 +40547,9 @@
     "name": "1. Lauf Dirt OM 2025",
     "from": "2025-07-12",
     "to": "2025-07-13",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87609&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=87609&tId=E&hId%5B1%5D=org",
@@ -40271,7 +40588,9 @@
     "name": "2. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2025-07-12",
     "to": "2025-07-13",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89294&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=89294&tId=E&hId%5B1%5D=org",
@@ -41407,7 +41726,10 @@
     "name": "4. Lauf 2025 ÖM EF - PSV Klagenfurt",
     "from": "2025-07-19",
     "to": "2025-07-20",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89416&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=89416&tId=E&hId%5B1%5D=org",
@@ -41500,7 +41822,9 @@
     "name": "Fun Cup Austria / RCC-Grafenwörth",
     "from": "2025-07-19",
     "to": "2025-07-20",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85306&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=85306&tId=E&hId%5B1%5D=org",
@@ -41660,7 +41984,9 @@
     "name": "MINI - Challenge",
     "from": "2025-07-19",
     "to": "2025-07-20",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85784&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1225&pLa=en&dId%5BE%5D=85784&tId=E&hId%5B1%5D=org",
@@ -42792,7 +43118,10 @@
     "name": "5. Lauf 2025 ÖM EF - MSC-Imst",
     "from": "2025-08-02",
     "to": "2025-08-03",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89668&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=89668&tId=E&hId%5B1%5D=org",
@@ -42893,7 +43222,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf4 A-Team Graz",
     "from": "2025-08-02",
     "to": "2025-08-03",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89422&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=89422&tId=E&hId%5B1%5D=org",
@@ -43077,10 +43408,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2025-08-03-myrcm-event-86158",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2025-08-03-myrcm-event-86158",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -43113,7 +43444,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mac-or-huetschenhausen-e-v-2025-08-03-myrcm-event-89400",
@@ -43619,7 +43950,9 @@
     "name": "4. OST-Cup 2025 GP Series",
     "from": "2025-08-09",
     "to": "2025-08-10",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87862&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=87862&tId=E&hId%5B1%5D=org",
@@ -43651,7 +43984,9 @@
     "name": "4. PSV Clubrennen - ONROAD 2025 + Kärnten-Cup",
     "from": "2025-08-09",
     "to": "2025-08-09",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84732&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=774&pLa=en&dId%5BE%5D=84732&tId=E&hId%5B1%5D=org",
@@ -43773,7 +44108,9 @@
     "name": "Fun Cup Austria / LMC-Limbach",
     "from": "2025-08-09",
     "to": "2025-08-10",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85307&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=85307&tId=E&hId%5B1%5D=org",
@@ -44386,7 +44723,9 @@
     "name": "3. OM Lauf 2025",
     "from": "2025-08-16",
     "to": "2025-08-17",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87606&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=87606&tId=E&hId%5B1%5D=org",
@@ -44470,7 +44809,9 @@
     "name": "4. SM Lauf VLS TC / F1",
     "from": "2025-08-16",
     "to": "2025-08-17",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86261&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20&pLa=en&dId%5BE%5D=86261&tId=E&hId%5B1%5D=org",
@@ -44895,7 +45236,9 @@
     "name": "EOCD Clubseries 2025 #3",
     "from": "2025-08-17",
     "to": "2025-08-17",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87320&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87320&tId=E&hId%5B1%5D=org",
@@ -45198,7 +45541,9 @@
     "name": "4. SM Lauf 2025 V8TR & V10TR - AMCS",
     "from": "2025-08-22",
     "to": "2025-08-24",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86676&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=86676&tId=E&hId%5B1%5D=org",
@@ -45371,7 +45716,9 @@
     "name": "3. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2025-08-23",
     "to": "2025-08-24",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90093&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=90093&tId=E&hId%5B1%5D=org",
@@ -45450,7 +45797,9 @@
     "name": "Coupe Tamiya TT-02 \"Rally for Smile\"",
     "from": "2025-08-23",
     "to": "2025-08-23",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89392&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=89392&tId=E&hId%5B1%5D=org",
@@ -45677,7 +46026,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf5 PSV Kagenfurt",
     "from": "2025-08-23",
     "to": "2025-08-24",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=89843&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=89843&tId=E&hId%5B1%5D=org",
@@ -46158,7 +46509,9 @@
     "name": "5. OST-Cup 2025 GP Series",
     "from": "2025-08-30",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87863&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=87863&tId=E&hId%5B1%5D=org",
@@ -46383,7 +46736,9 @@
     "name": "MRCP Series Run #3 2025",
     "from": "2025-08-30",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86907&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=86907&tId=E&hId%5B1%5D=org",
@@ -46539,7 +46894,9 @@
     "name": "Swiss Racing Cup 2025 - Lauf 3 - Sitterdorf",
     "from": "2025-08-30",
     "to": "2025-08-30",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85179&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=85179&tId=E&hId%5B1%5D=org",
@@ -46638,10 +46995,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2025-08-31-myrcm-event-86159",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2025-08-31-myrcm-event-86159",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -46674,7 +47031,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "modellrenngemeinschaft-dogern-e-v-2025-08-31-myrcm-event-86912",
@@ -46919,7 +47276,9 @@
     "name": "Swiss Racing Cup 2025 - Lauf 4 - Sitterdorf",
     "from": "2025-08-31",
     "to": "2025-08-31",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85180&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=85180&tId=E&hId%5B1%5D=org",
@@ -47050,7 +47409,9 @@
     "name": "EOCD Clubseries 2025 #4",
     "from": "2025-09-05",
     "to": "2025-09-06",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87321&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87321&tId=E&hId%5B1%5D=org",
@@ -47379,7 +47740,9 @@
     "name": "5. SM Lauf VLS TC / F1",
     "from": "2025-09-06",
     "to": "2025-09-07",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86259&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20&pLa=en&dId%5BE%5D=86259&tId=E&hId%5B1%5D=org",
@@ -48234,7 +48597,9 @@
     "name": "5. SM Lauf 2025 V8TR & V10TR - MRCL",
     "from": "2025-09-12",
     "to": "2025-09-14",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86677&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=86677&tId=E&hId%5B1%5D=org",
@@ -48565,7 +48930,10 @@
     "name": "6. Lauf 2025 ÖM EF - MAC-Amstetten",
     "from": "2025-09-13",
     "to": "2025-09-14",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90543&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=90543&tId=E&hId%5B1%5D=org",
@@ -49154,7 +49522,9 @@
     "name": "2025 SM/CS V8OR 6. Manche Cornaux NMBC",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85078&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=85078&tId=E&hId%5B1%5D=org",
@@ -49201,7 +49571,9 @@
     "name": "4. Lauf Vereinsmeisterschaft Lamac & 4. Lauf Kärnten Cup EF 2025",
     "from": "2025-09-20",
     "to": "2025-09-20",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90835&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=781&pLa=en&dId%5BE%5D=90835&tId=E&hId%5B1%5D=org",
@@ -49230,7 +49602,9 @@
     "name": "4. OM Lauf 2025",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87607&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=87607&tId=E&hId%5B1%5D=org",
@@ -49378,7 +49752,9 @@
     "name": "6. OST-Cup 2025 GP Series",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87864&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=87864&tId=E&hId%5B1%5D=org",
@@ -49410,7 +49786,9 @@
     "name": "6.Lauf Tamiyacup Sitterdorf",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=84210&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=84210&tId=E&hId%5B1%5D=org",
@@ -49500,7 +49878,9 @@
     "name": "EOCD Clubseries 2025 #5 (Res.)",
     "from": "2025-09-20",
     "to": "2025-09-20",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87322&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87322&tId=E&hId%5B1%5D=org",
@@ -49613,7 +49993,9 @@
     "name": "Fun Cup Austria / MRC-Frühwirth",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85308&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=85308&tId=E&hId%5B1%5D=org",
@@ -49779,7 +50161,9 @@
     "name": "MRCP Series Run #4 Finale 2025",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86908&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=86908&tId=E&hId%5B1%5D=org",
@@ -49860,7 +50244,9 @@
     "name": "Österr. Meisterschaft LS 2025, 2. Lauf",
     "from": "2025-09-20",
     "to": "2025-09-21",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88616&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=88616&tId=E&hId%5B1%5D=org",
@@ -50697,7 +51083,9 @@
     "name": "4. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2025-09-27",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91016&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=91016&tId=E&hId%5B1%5D=org",
@@ -50806,7 +51194,9 @@
     "name": "5. SM/CS SRCCA 2025 E10 & E8 TR - MRCAL Aigle",
     "from": "2025-09-27",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85678&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=85678&tId=E&hId%5B1%5D=org",
@@ -50905,7 +51295,9 @@
     "name": "6. SM/CS SRCCA 2025 Lauf 1/5 TC/F1 - MRTM Lostallo - 27/28 September 2025",
     "from": "2025-09-27",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86371&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16&pLa=en&dId%5BE%5D=86371&tId=E&hId%5B1%5D=org",
@@ -50985,7 +51377,9 @@
     "name": "OM OR8-E 1:8 E-Buggy 2025",
     "from": "2025-09-27",
     "to": "2025-09-28",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90485&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=90485&tId=E&hId%5B1%5D=org",
@@ -51754,7 +52148,9 @@
     "name": "5. Lauf Mini-Challenge Austria 2025 Sollenau",
     "from": "2025-10-04",
     "to": "2025-10-05",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85944&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=779&pLa=en&dId%5BE%5D=85944&tId=E&hId%5B1%5D=org",
@@ -51789,7 +52185,9 @@
     "name": "5. OM Lauf 2025",
     "from": "2025-10-04",
     "to": "2025-10-05",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87608&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=87608&tId=E&hId%5B1%5D=org",
@@ -52168,7 +52566,9 @@
     "name": "2025 SM/CS E8OR 11. Manche Montagny ORCM",
     "from": "2025-10-05",
     "to": "2025-10-05",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88976&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=88976&tId=E&hId%5B1%5D=org",
@@ -52593,7 +52993,9 @@
     "name": "6. SM/CS SRCCA 2025 E10 & E8 TR - MRCSG Sitterdorf",
     "from": "2025-10-11",
     "to": "2025-10-12",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85679&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=85679&tId=E&hId%5B1%5D=org",
@@ -52790,7 +53192,9 @@
     "name": "Österreichische Meisterschaft OR8 2025",
     "from": "2025-10-11",
     "to": "2025-10-12",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91463&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7554&pLa=en&dId%5BE%5D=91463&tId=E&hId%5B1%5D=org",
@@ -53303,7 +53707,9 @@
     "name": "EOCD Clubseries 2025 #6 (Res.)",
     "from": "2025-10-12",
     "to": "2025-10-12",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87323&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=87323&tId=E&hId%5B1%5D=org",
@@ -53607,7 +54013,9 @@
     "name": "ART Wintermeisterschaft 2025/2026 Lauf 1",
     "from": "2025-10-18",
     "to": "2025-10-18",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90904&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=90904&tId=E&hId%5B1%5D=org",
@@ -53654,7 +54062,9 @@
     "name": "Clubrennen 2 MRCSG - Open",
     "from": "2025-10-18",
     "to": "2025-10-18",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86262&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20&pLa=en&dId%5BE%5D=86262&tId=E&hId%5B1%5D=org",
@@ -53916,7 +54326,9 @@
     "name": "Championnat 25/26 - Round 1",
     "from": "2025-10-19",
     "to": "2025-10-19",
-    "series": [],
+    "series": [
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90813&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=90813&tId=E&hId%5B1%5D=org",
@@ -54203,7 +54615,9 @@
     "name": "2025 SM/CS E10OR Samstag ITW / Wichtrach",
     "from": "2025-10-25",
     "to": "2025-10-25",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85404&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=85404&tId=E&hId%5B1%5D=org",
@@ -54238,7 +54652,9 @@
     "name": "Coupe Tamiya TT-02 RCCR - 3",
     "from": "2025-10-25",
     "to": "2025-10-25",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=86085&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=86085&tId=E&hId%5B1%5D=org",
@@ -54422,7 +54838,9 @@
     "name": "2025 SM/CS E10OR Sonntag ITW / Wichtrach",
     "from": "2025-10-26",
     "to": "2025-10-26",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=85405&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=85405&tId=E&hId%5B1%5D=org",
@@ -54822,7 +55240,9 @@
     "name": "IndoorSeries 2025/26 - Round 1",
     "from": "2025-11-01",
     "to": "2025-11-02",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87954&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=87954&tId=E&hId%5B1%5D=org",
@@ -54964,7 +55384,9 @@
     "name": "1. Lauf TIT-Cup meets SundayRACE 2025/2026",
     "from": "2025-11-02",
     "to": "2025-11-02",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90685&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=90685&tId=E&hId%5B1%5D=org",
@@ -55239,7 +55661,9 @@
     "name": "1. Samstag Cup 25/26",
     "from": "2025-11-08",
     "to": "2025-11-08",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91723&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=91723&tId=E&hId%5B1%5D=org",
@@ -55379,7 +55803,9 @@
     "name": "SIORC Manche 1 Saison 2025-26",
     "from": "2025-11-08",
     "to": "2025-11-08",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91369&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=91369&tId=E&hId%5B1%5D=org",
@@ -55674,7 +56100,9 @@
     "name": "1. Lauf HSH Mini Drom Cup 25/26",
     "from": "2025-11-14",
     "to": "2025-11-14",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90856&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=90856&tId=E&hId%5B1%5D=org",
@@ -55744,7 +56172,9 @@
     "name": "1. Lauf FCA Indoor West Amstetten",
     "from": "2025-11-15",
     "to": "2025-11-15",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90221&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=90221&tId=E&hId%5B1%5D=org",
@@ -55880,7 +56310,9 @@
     "name": "ART Wintermeisterschaft 2025/2026 Lauf 2",
     "from": "2025-11-15",
     "to": "2025-11-15",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90905&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=90905&tId=E&hId%5B1%5D=org",
@@ -56019,7 +56451,9 @@
     "name": "SITCC Manche 1 Saison 2025-2026",
     "from": "2025-11-15",
     "to": "2025-11-15",
-    "series": [],
+    "series": [
+      "SITCC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91531&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=91531&tId=E&hId%5B1%5D=org",
@@ -56308,7 +56742,9 @@
     "name": "ITW: Wintermeisterschaft 25-26 - Lauf 1",
     "from": "2025-11-16",
     "to": "2025-11-16",
-    "series": [],
+    "series": [
+      "ITW Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90753&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46390&pLa=en&dId%5BE%5D=90753&tId=E&hId%5B1%5D=org",
@@ -56478,7 +56914,9 @@
     "name": "SIC Rd 1 2025/2026 - RC-RaceArena Islikon",
     "from": "2025-11-22",
     "to": "2025-11-23",
-    "series": [],
+    "series": [
+      "SIC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91404&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=91404&tId=E&hId%5B1%5D=org",
@@ -56533,7 +56971,9 @@
     "name": "Championnat 25/26 - Round 2",
     "from": "2025-11-23",
     "to": "2025-11-23",
-    "series": [],
+    "series": [
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90814&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=90814&tId=E&hId%5B1%5D=org",
@@ -56670,7 +57110,9 @@
     "name": "2. Lauf HSH Mini Drom Cup 25/26",
     "from": "2025-11-28",
     "to": "2025-11-28",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92236&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=92236&tId=E&hId%5B1%5D=org",
@@ -57029,7 +57471,9 @@
     "name": "2. Samstag Cup 25/26",
     "from": "2025-12-06",
     "to": "2025-12-06",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91724&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=91724&tId=E&hId%5B1%5D=org",
@@ -57104,7 +57548,9 @@
     "name": "IndoorSeries 2025/26 - Round 2",
     "from": "2025-12-06",
     "to": "2025-12-07",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87955&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=87955&tId=E&hId%5B1%5D=org",
@@ -57306,7 +57752,9 @@
     "name": "2. Lauf TIT-Cup meets SundayRACE 2025/2026",
     "from": "2025-12-07",
     "to": "2025-12-07",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90686&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=90686&tId=E&hId%5B1%5D=org",
@@ -57433,7 +57881,9 @@
     "name": "ITW: Wintermeisterschaft 25-26 - Lauf 2",
     "from": "2025-12-07",
     "to": "2025-12-07",
-    "series": [],
+    "series": [
+      "ITW Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90754&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46390&pLa=en&dId%5BE%5D=90754&tId=E&hId%5B1%5D=org",
@@ -57602,7 +58052,9 @@
     "name": "3. Lauf HSH Mini Drom Cup 25/26",
     "from": "2025-12-12",
     "to": "2025-12-12",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92515&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=92515&tId=E&hId%5B1%5D=org",
@@ -57680,7 +58132,9 @@
     "name": "ART Wintermeisterschaft 2025/2026 Lauf 3",
     "from": "2025-12-13",
     "to": "2025-12-13",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90906&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=90906&tId=E&hId%5B1%5D=org",
@@ -57727,7 +58181,9 @@
     "name": "SIORC Manche 2 (Saison 2025-2026)",
     "from": "2025-12-13",
     "to": "2025-12-13",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92294&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=92294&tId=E&hId%5B1%5D=org",
@@ -57869,7 +58325,9 @@
     "name": "Championnat 25/26 - Round 3",
     "from": "2025-12-14",
     "to": "2025-12-14",
-    "series": [],
+    "series": [
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90815&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=90815&tId=E&hId%5B1%5D=org",
@@ -58247,7 +58705,9 @@
     "name": "SIC Rd 2 2025/2026 - Race Arena Dagmersellen",
     "from": "2025-12-20",
     "to": "2025-12-21",
-    "series": [],
+    "series": [
+      "SIC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91405&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=91405&tId=E&hId%5B1%5D=org",
@@ -59218,7 +59678,9 @@
     "name": "4. Lauf HSH Mini Drom Cup 25/26",
     "from": "2026-01-09",
     "to": "2026-01-09",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92840&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=92840&tId=E&hId%5B1%5D=org",
@@ -59502,7 +59964,9 @@
     "name": "3. Lauf TIT-Cup meets SundayRACE 2025/2026",
     "from": "2026-01-11",
     "to": "2026-01-11",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90687&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=90687&tId=E&hId%5B1%5D=org",
@@ -59541,7 +60005,9 @@
     "name": "Championnat 25/26 - Round 4",
     "from": "2026-01-11",
     "to": "2026-01-11",
-    "series": [],
+    "series": [
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93077&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=93077&tId=E&hId%5B1%5D=org",
@@ -59615,7 +60081,9 @@
     "name": "ITW: Wintermeisterschaft 25-26 - Lauf 3",
     "from": "2026-01-11",
     "to": "2026-01-11",
-    "series": [],
+    "series": [
+      "ITW Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90755&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46390&pLa=en&dId%5BE%5D=90755&tId=E&hId%5B1%5D=org",
@@ -59769,7 +60237,9 @@
     "name": "2. Lauf FCA Indoor West Amstetten",
     "from": "2026-01-17",
     "to": "2026-01-17",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90222&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=90222&tId=E&hId%5B1%5D=org",
@@ -59809,7 +60279,9 @@
     "name": "3. Samstag Cup 25/26",
     "from": "2026-01-17",
     "to": "2026-01-17",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91725&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=91725&tId=E&hId%5B1%5D=org",
@@ -59852,7 +60324,9 @@
     "name": "ART Wintermeisterschaft 2025/2026 Lauf 4",
     "from": "2026-01-17",
     "to": "2026-01-17",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90907&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=90907&tId=E&hId%5B1%5D=org",
@@ -60454,7 +60928,9 @@
     "name": "5. Lauf HSH Mini Drom Cup 25/26",
     "from": "2026-01-23",
     "to": "2026-01-23",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93449&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=93449&tId=E&hId%5B1%5D=org",
@@ -60641,7 +61117,9 @@
     "name": "SIC Rd 3 2025/2026 - Indoorpiste ART Münsingen",
     "from": "2026-01-24",
     "to": "2026-01-25",
-    "series": [],
+    "series": [
+      "SIC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91406&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=91406&tId=E&hId%5B1%5D=org",
@@ -60688,7 +61166,9 @@
     "name": "SIORC Manche 3 - Saison 2025-2026",
     "from": "2026-01-24",
     "to": "2026-01-24",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92868&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=92868&tId=E&hId%5B1%5D=org",
@@ -61405,7 +61885,9 @@
     "name": "SITCC Manche 2 - Saison 2025-2026",
     "from": "2026-02-07",
     "to": "2026-02-07",
-    "series": [],
+    "series": [
+      "SITCC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92869&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=92869&tId=E&hId%5B1%5D=org",
@@ -61529,7 +62011,9 @@
     "name": "4. Lauf TIT-Cup meets SundayRACE 2025/2026",
     "from": "2026-02-08",
     "to": "2026-02-08",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90688&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=90688&tId=E&hId%5B1%5D=org",
@@ -61647,7 +62131,9 @@
     "name": "4. Samstag Cup 25/26",
     "from": "2026-02-14",
     "to": "2026-02-14",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91726&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=91726&tId=E&hId%5B1%5D=org",
@@ -61690,7 +62176,9 @@
     "name": "6. Lauf HSH Mini Drom Cup 25/26",
     "from": "2026-02-14",
     "to": "2026-02-14",
-    "series": [],
+    "series": [
+      "HSH Mini Drom Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93816&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=293&pLa=en&dId%5BE%5D=93816&tId=E&hId%5B1%5D=org",
@@ -61725,7 +62213,9 @@
     "name": "ART Wintermeisterschaft 2025/2026 Lauf 5",
     "from": "2026-02-14",
     "to": "2026-02-14",
-    "series": [],
+    "series": [
+      "ART Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90908&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=11113&pLa=en&dId%5BE%5D=90908&tId=E&hId%5B1%5D=org",
@@ -61943,7 +62433,9 @@
     "name": "Championnat 25/26 - Round 5",
     "from": "2026-02-15",
     "to": "2026-02-15",
-    "series": [],
+    "series": [
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93078&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=93078&tId=E&hId%5B1%5D=org",
@@ -62017,7 +62509,9 @@
     "name": "ITW: Wintermeisterschaft 25-26 - Lauf 4",
     "from": "2026-02-15",
     "to": "2026-02-15",
-    "series": [],
+    "series": [
+      "ITW Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90756&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46390&pLa=en&dId%5BE%5D=90756&tId=E&hId%5B1%5D=org",
@@ -62382,7 +62876,9 @@
     "name": "SIC Rd 4 2025/2026 - Salle de la Planchette Aigle",
     "from": "2026-02-21",
     "to": "2026-02-22",
-    "series": [],
+    "series": [
+      "SIC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91407&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=91407&tId=E&hId%5B1%5D=org",
@@ -62997,7 +63493,9 @@
     "name": "1. Lauf Tamiyacup Islikon",
     "from": "2026-02-28",
     "to": "2026-03-01",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93527&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=93527&tId=E&hId%5B1%5D=org",
@@ -63091,7 +63589,9 @@
     "name": "3. Lauf FCA Indoor West Amstetten",
     "from": "2026-02-28",
     "to": "2026-02-28",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90223&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=90223&tId=E&hId%5B1%5D=org",
@@ -63138,7 +63638,9 @@
     "name": "IndoorSeries 2025/26 - Round 3",
     "from": "2026-02-28",
     "to": "2026-03-01",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87956&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=87956&tId=E&hId%5B1%5D=org",
@@ -63572,7 +64074,9 @@
     "name": "Lizenzanmeldung ÖFMAV Sektion EF 2026",
     "from": "2026-03-01",
     "to": "2026-04-14",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94149&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=772&pLa=en&dId%5BE%5D=94149&tId=E&hId%5B1%5D=org",
@@ -64109,7 +64613,9 @@
     "name": "5. Lauf TIT-Cup meets SundayRACE 2025/2026",
     "from": "2026-03-08",
     "to": "2026-03-08",
-    "series": [],
+    "series": [
+      "TIT-Cup meets SundayRACE"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90689&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=17663&pLa=en&dId%5BE%5D=90689&tId=E&hId%5B1%5D=org",
@@ -64288,7 +64794,9 @@
     "name": "SCHULUNG1",
     "from": "2026-03-08",
     "to": "2026-03-09",
-    "series": [],
+    "series": [
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95112&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=95112&tId=E&hId%5B1%5D=org",
@@ -64370,7 +64878,9 @@
     "name": "5. Samstag Cup 25/26",
     "from": "2026-03-14",
     "to": "2026-03-14",
-    "series": [],
+    "series": [
+      "Samstag Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=91727&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=401&pLa=en&dId%5BE%5D=91727&tId=E&hId%5B1%5D=org",
@@ -64513,7 +65023,9 @@
     "name": "SIORC GP Buggy 2026",
     "from": "2026-03-14",
     "to": "2026-03-14",
-    "series": [],
+    "series": [
+      "SIORC"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=92870&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16203&pLa=en&dId%5BE%5D=92870&tId=E&hId%5B1%5D=org",
@@ -64647,7 +65159,9 @@
     "name": "Championnat 25/26 - Round 6",
     "from": "2026-03-15",
     "to": "2026-03-15",
-    "series": [],
+    "series": [
+      "Championnat"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93079&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20278&pLa=en&dId%5BE%5D=93079&tId=E&hId%5B1%5D=org",
@@ -65167,7 +65681,9 @@
     "name": "2.Lauf Tamiyacup Langenthal",
     "from": "2026-03-21",
     "to": "2026-03-22",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93530&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=93530&tId=E&hId%5B1%5D=org",
@@ -65461,7 +65977,9 @@
     "name": "ITW: Wintermeisterschaft 25-26 - Lauf 5",
     "from": "2026-03-22",
     "to": "2026-03-22",
-    "series": [],
+    "series": [
+      "ITW Wintermeisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90757&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=46390&pLa=en&dId%5BE%5D=90757&tId=E&hId%5B1%5D=org",
@@ -65693,7 +66211,9 @@
     "name": "2026 SM/CS E8OR 1. Manche Vernier (BMCV)",
     "from": "2026-03-28",
     "to": "2026-03-28",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94347&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94347&tId=E&hId%5B1%5D=org",
@@ -66005,7 +66525,9 @@
     "name": "2026 SM/CS E8OR 2. Manche Vernier (BMCV)",
     "from": "2026-03-29",
     "to": "2026-03-29",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94348&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94348&tId=E&hId%5B1%5D=org",
@@ -66493,7 +67015,9 @@
     "name": "ELS - European Largescale Series / Round 1",
     "from": "2026-04-09",
     "to": "2026-04-12",
-    "series": [],
+    "series": [
+      "European Largescale Series (ELS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96278&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16&pLa=en&dId%5BE%5D=96278&tId=E&hId%5B1%5D=org",
@@ -66646,7 +67170,9 @@
     "name": "2026 SM/CS V8OR 1. Manche Vernier (BMCV)",
     "from": "2026-04-11",
     "to": "2026-04-12",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94109&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94109&tId=E&hId%5B1%5D=org",
@@ -67065,7 +67591,9 @@
     "name": "Coupe Tamiya TT-02 RCCR - 1",
     "from": "2026-04-12",
     "to": "2026-04-12",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94943&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=94943&tId=E&hId%5B1%5D=org",
@@ -67531,7 +68059,9 @@
     "name": "1. SM/CS SRCCA 2026 E10 TR - MRC Chiasso",
     "from": "2026-04-18",
     "to": "2026-04-19",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95044&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95044&tId=E&hId%5B1%5D=org",
@@ -67586,7 +68116,9 @@
     "name": "1.SM-Lauf 2026 1/5 VLS TC/F1 - Sitterdorf",
     "from": "2026-04-18",
     "to": "2026-04-19",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95282&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95282&tId=E&hId%5B1%5D=org",
@@ -67746,7 +68278,9 @@
     "name": "MRCP Series Run #1 2026",
     "from": "2026-04-18",
     "to": "2026-04-19",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95723&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=95723&tId=E&hId%5B1%5D=org",
@@ -67836,7 +68370,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf 1 MORAC",
     "from": "2026-04-18",
     "to": "2026-04-19",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94154&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=94154&tId=E&hId%5B1%5D=org",
@@ -68449,7 +68985,9 @@
     "name": "2026 SM/CS V8OR 2. Manche Ticino e Moesa - Villadossola (MRTM)",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94167&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94167&tId=E&hId%5B1%5D=org",
@@ -68602,7 +69140,9 @@
     "name": "Fun Cup Austria / RC-Laa04",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93386&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=93386&tId=E&hId%5B1%5D=org",
@@ -68852,7 +69392,9 @@
     "name": "MINI - Challenge >>> Lauf 1",
     "from": "2026-04-25",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94050&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1225&pLa=en&dId%5BE%5D=94050&tId=E&hId%5B1%5D=org",
@@ -69085,10 +69627,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2026-04-26-myrcm-event-96024",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2026-04-26-myrcm-event-96024",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -69122,7 +69664,7 @@
       "Tamiya Stock (KP)"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "mac-meckenheim-e-v-2026-04-26-myrcm-event-95427",
@@ -69230,7 +69772,9 @@
     "name": "Coupe Tamiya TT-02 \"Slalom automobile de Bière\"",
     "from": "2026-04-26",
     "to": "2026-04-26",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96286&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=96286&tId=E&hId%5B1%5D=org",
@@ -69518,7 +70062,9 @@
     "name": "1. SM Lauf V8TR & V10TR 2026 - MRTM",
     "from": "2026-05-01",
     "to": "2026-05-03",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94030&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=94030&tId=E&hId%5B1%5D=org",
@@ -69754,7 +70300,10 @@
     "name": "1. Lauf 2026 ÖM EF - RCR Linz",
     "from": "2026-05-02",
     "to": "2026-05-03",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96279&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=96279&tId=E&hId%5B1%5D=org",
@@ -69824,7 +70373,9 @@
     "name": "1.OM Lauf 2026",
     "from": "2026-05-02",
     "to": "2026-05-03",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96432&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=96432&tId=E&hId%5B1%5D=org",
@@ -70036,7 +70587,9 @@
     "name": "2026 SM/CS E10OR Samstag RCCW / Andelfingen",
     "from": "2026-05-02",
     "to": "2026-05-02",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95465&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95465&tId=E&hId%5B1%5D=org",
@@ -70502,7 +71055,9 @@
     "name": "2026 SM/CS E10OR Sonntag RCCW / Andelfingen",
     "from": "2026-05-03",
     "to": "2026-05-03",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95466&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95466&tId=E&hId%5B1%5D=org",
@@ -71066,7 +71621,9 @@
     "name": "1. Clublauf 2026 (ÖM Warmup)",
     "from": "2026-05-09",
     "to": "2026-05-09",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96208&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=858&pLa=en&dId%5BE%5D=96208&tId=E&hId%5B1%5D=org",
@@ -71146,7 +71703,9 @@
     "name": "1. Lauf Vereinsmeisterschaft Lamac & Kärnten Cup EF 2026",
     "from": "2026-05-09",
     "to": "2026-05-09",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96965&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=781&pLa=en&dId%5BE%5D=96965&tId=E&hId%5B1%5D=org",
@@ -71381,7 +71940,9 @@
     "name": "2026 SM/CS V8OR 3. Manche Lausanne (MBLR)",
     "from": "2026-05-09",
     "to": "2026-05-10",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94110&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94110&tId=E&hId%5B1%5D=org",
@@ -71556,7 +72117,9 @@
     "name": "EOCD Clubseries 2026 #1",
     "from": "2026-05-09",
     "to": "2026-05-09",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96857&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=96857&tId=E&hId%5B1%5D=org",
@@ -72097,7 +72660,9 @@
     "name": "2. SM Lauf V8TR & V10TR 2026 - MRCAL",
     "from": "2026-05-15",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94031&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=94031&tId=E&hId%5B1%5D=org",
@@ -72247,7 +72812,10 @@
     "name": "2. Lauf 2026 ÖM EF - MACG Steiermark",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96281&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=96281&tId=E&hId%5B1%5D=org",
@@ -72286,7 +72854,9 @@
     "name": "2. Lauf Mini-Challenge Austria 2026 Sollenau",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95195&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=779&pLa=en&dId%5BE%5D=95195&tId=E&hId%5B1%5D=org",
@@ -72317,7 +72887,9 @@
     "name": "2. SM/CS SRCCA 2026 E10 TR - HSH/TIT Dintikon",
     "from": "2026-05-16",
     "to": "2026-05-17",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95045&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95045&tId=E&hId%5B1%5D=org",
@@ -73285,7 +73857,9 @@
     "name": "1. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2026-05-23",
     "to": "2026-05-24",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97628&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=97628&tId=E&hId%5B1%5D=org",
@@ -73421,7 +73995,9 @@
     "name": "2026 SM/CS V8OR 4. Manche Montagny (ORCM)",
     "from": "2026-05-23",
     "to": "2026-05-24",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94113&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94113&tId=E&hId%5B1%5D=org",
@@ -73553,7 +74129,9 @@
     "name": "Dielsdorf Dirt Classics 2026",
     "from": "2026-05-23",
     "to": "2026-05-24",
-    "series": [],
+    "series": [
+      "Dielsdorf Dirt Classics"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96867&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=96867&tId=E&hId%5B1%5D=org",
@@ -74127,7 +74705,9 @@
     "name": "2. OST-Cup 2026 GP-Series 1:8 Buggy in Pamhagen",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95064&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=95064&tId=E&hId%5B1%5D=org",
@@ -74197,7 +74777,9 @@
     "name": "2.SM-Lauf 2026 1/5 VLS TC/F1 - Luxembourg",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95283&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95283&tId=E&hId%5B1%5D=org",
@@ -74232,7 +74814,9 @@
     "name": "2026 SM/CS E8OR 3. Manche Miécourt (MBCJ)",
     "from": "2026-05-30",
     "to": "2026-05-30",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94384&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94384&tId=E&hId%5B1%5D=org",
@@ -74359,7 +74943,9 @@
     "name": "3. Lauf Tamiyacup Dintikon",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95640&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=95640&tId=E&hId%5B1%5D=org",
@@ -74630,7 +75216,9 @@
     "name": "Fun Cup Austria / MRC-Frühwirth",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93387&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=93387&tId=E&hId%5B1%5D=org",
@@ -74732,7 +75320,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf 2 RCC Sittersdorf",
     "from": "2026-05-30",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94155&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=94155&tId=E&hId%5B1%5D=org",
@@ -74909,10 +75499,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2026-05-31-myrcm-event-96025",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2026-05-31-myrcm-event-96025",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -74946,7 +75536,7 @@
       "Tamiya Stock (KP)"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "myrcm-55317-2026-05-31-myrcm-event-97902",
@@ -75020,7 +75610,9 @@
     "name": "2026 SM/CS E8OR 4. Manche Miécourt (MBCJ)",
     "from": "2026-05-31",
     "to": "2026-05-31",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94385&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94385&tId=E&hId%5B1%5D=org",
@@ -75678,7 +76270,9 @@
     "name": "1. Lauf ÖM LS TW 1:5 und Formel 2026",
     "from": "2026-06-05",
     "to": "2026-06-07",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98056&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=779&pLa=en&dId%5BE%5D=98056&tId=E&hId%5B1%5D=org",
@@ -75707,7 +76301,9 @@
     "name": "3. SM Lauf V8TR & V10TR 2026 - MRCL",
     "from": "2026-06-05",
     "to": "2026-06-07",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94033&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=94033&tId=E&hId%5B1%5D=org",
@@ -75833,7 +76429,9 @@
     "name": "2. PSV Clubrennen - ONROAD 2026 + Kärnten-Cup",
     "from": "2026-06-06",
     "to": "2026-06-06",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94912&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=774&pLa=en&dId%5BE%5D=94912&tId=E&hId%5B1%5D=org",
@@ -75868,7 +76466,9 @@
     "name": "2026 SM/CS V8OR 5. Manche Gland (BCLC)",
     "from": "2026-06-06",
     "to": "2026-06-07",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94114&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94114&tId=E&hId%5B1%5D=org",
@@ -76520,7 +77120,9 @@
     "name": "1. OST-Cup 2026 Ersatztermin GP Series 1:8 Buggy beim MAV-Waidhofen",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95063&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=95063&tId=E&hId%5B1%5D=org",
@@ -76771,7 +77373,9 @@
     "name": "2.OM Lauf 2026",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97171&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=97171&tId=E&hId%5B1%5D=org",
@@ -77194,7 +77798,9 @@
     "name": "Der MAC Amstetten feiert 30 Jahre Asphalt",
     "from": "2026-06-13",
     "to": "2026-06-13",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97662&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1225&pLa=en&dId%5BE%5D=97662&tId=E&hId%5B1%5D=org",
@@ -77300,7 +77906,9 @@
     "name": "MRCP Series Run #2 2026",
     "from": "2026-06-13",
     "to": "2026-06-14",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95724&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=95724&tId=E&hId%5B1%5D=org",
@@ -78560,7 +79168,9 @@
     "name": "2026 SM/CS V8OR 6. Manche Miécourt (MBCJ)",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94387&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94387&tId=E&hId%5B1%5D=org",
@@ -78607,7 +79217,10 @@
     "name": "3. Lauf 2026 ÖM EF - MSC Imst",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96282&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=96282&tId=E&hId%5B1%5D=org",
@@ -78646,7 +79259,9 @@
     "name": "3.SM-Lauf 2026 1/5 VLS TC/F1 - Lostallo",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95284&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95284&tId=E&hId%5B1%5D=org",
@@ -78681,7 +79296,9 @@
     "name": "4.Lauf Tamiyacup Schafhausen",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93532&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=93532&tId=E&hId%5B1%5D=org",
@@ -78841,7 +79458,9 @@
     "name": "Fun Cup Austria / RC-Laa04",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93388&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=93388&tId=E&hId%5B1%5D=org",
@@ -78964,7 +79583,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf 3 ATeam Graz",
     "from": "2026-06-20",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94156&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=94156&tId=E&hId%5B1%5D=org",
@@ -79339,7 +79960,9 @@
     "name": "EOCD Clubseries 2026 #2",
     "from": "2026-06-21",
     "to": "2026-06-21",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96862&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=96862&tId=E&hId%5B1%5D=org",
@@ -79635,7 +80258,9 @@
     "name": "ELS - European Largescale Series / Round 2 - Warm-up World Championship",
     "from": "2026-06-26",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "European Largescale Series (ELS)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98554&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16&pLa=en&dId%5BE%5D=98554&tId=E&hId%5B1%5D=org",
@@ -79769,13 +80394,10 @@
     "registrationDisplay": "19",
     "note": "Nennung geschlossen.",
     "classes": [
-      "Tamiya Euro Cup Stock",
       {
         "name": "Tamiya Euro Cup Top Stock",
         "entries": 5
       },
-      "Tamiya Euro Cup M-Chassis",
-      "Tamiya Euro Cup Race Truck",
       {
         "name": "VM 1/10 Plastic Cars",
         "entries": 3
@@ -79807,7 +80429,9 @@
     "name": "2. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2026-06-27",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98513&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=98513&tId=E&hId%5B1%5D=org",
@@ -79837,7 +80461,10 @@
     "name": "2026 SM/CS E10OR Samstag EOCD / Dielsdorf",
     "from": "2026-06-27",
     "to": "2026-06-27",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA",
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95467&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95467&tId=E&hId%5B1%5D=org",
@@ -79925,7 +80552,9 @@
     "name": "3. SM/CS SRCCA 2026 E10 & E8 TR - AMCS Schaffhausen",
     "from": "2026-06-27",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95046&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95046&tId=E&hId%5B1%5D=org",
@@ -80412,7 +81041,10 @@
     "name": "2026 SM/CS E10OR Sonntag EOCD / Dielsdorf",
     "from": "2026-06-28",
     "to": "2026-06-28",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA",
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95468&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95468&tId=E&hId%5B1%5D=org",
@@ -80641,8 +81273,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -80651,7 +81283,7 @@
       },
       {
         "name": "Truggy-Cup BCZ",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -80905,7 +81537,9 @@
     "name": "4. SM Lauf V8TR & V10TR 2026 - MRCSG",
     "from": "2026-07-03",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94034&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=94034&tId=E&hId%5B1%5D=org",
@@ -80998,7 +81632,9 @@
     "name": "2026 SM/CS E80R #5 Manche Cornaux (NMBC)",
     "from": "2026-07-04",
     "to": "2026-07-04",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97301&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=97301&tId=E&hId%5B1%5D=org",
@@ -81102,7 +81738,9 @@
     "name": "3. OM 2026",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98295&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=34619&pLa=en&dId%5BE%5D=98295&tId=E&hId%5B1%5D=org",
@@ -81110,13 +81748,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 48,
-    "registrationDisplay": "48",
+    "registrationCount": 50,
+    "registrationDisplay": "50",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "2WD Buggy",
-        "entries": 18
+        "entries": 19
       },
       {
         "name": "2WD Buggy Stock",
@@ -81128,7 +81766,7 @@
       },
       {
         "name": "4WD Buggy",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "4WD Buggy Stock",
@@ -81149,7 +81787,9 @@
     "name": "3. OST-Cup 2026 GP-Series 1:8 Buggy in Kirchschlag",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95065&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=95065&tId=E&hId%5B1%5D=org",
@@ -81237,8 +81877,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81247,7 +81887,7 @@
       },
       {
         "name": "ORE8T",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [
@@ -81272,7 +81912,9 @@
     "name": "MINI Challenge, 3. Lauf",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95461&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26450&pLa=en&dId%5BE%5D=95461&tId=E&hId%5B1%5D=org",
@@ -81303,7 +81945,10 @@
     "name": "MRCP Series Run #3 2026 - ÖM WarmUp 2026",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95725&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=95725&tId=E&hId%5B1%5D=org",
@@ -81390,7 +82035,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf 4 MACG Unterpremstätten",
     "from": "2026-07-04",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94157&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=94157&tId=E&hId%5B1%5D=org",
@@ -81506,7 +82153,9 @@
     "name": "2026 SM/CS E80R #6 Manche Cornaux (NMBC)",
     "from": "2026-07-05",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97303&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=97303&tId=E&hId%5B1%5D=org",
@@ -81812,7 +82461,9 @@
     "name": "Onroad Cup Tirol in Kematen 2026",
     "from": "2026-07-05",
     "to": "2026-07-05",
-    "series": [],
+    "series": [
+      "Onroad Cup Tirol"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97784&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=21964&pLa=en&dId%5BE%5D=97784&tId=E&hId%5B1%5D=org",
@@ -82097,7 +82748,10 @@
     "name": "4. Lauf 2026 ÖM EF - SFMAV Salzburg",
     "from": "2026-07-11",
     "to": "2026-07-12",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96283&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=96283&tId=E&hId%5B1%5D=org",
@@ -82191,8 +82845,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -82202,10 +82856,13 @@
       },
       "MAC Offroad-Elektro 1:8",
       "Kombi Offroad-Verbrenner OR8",
-      "MAC Offroad-Verbrenner 1:8",
+      {
+        "name": "MAC Offroad-Verbrenner 1:8",
+        "entries": 1
+      },
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 9
+        "entries": 10
       }
     ],
     "documents": [],
@@ -82292,11 +82949,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
-      "Verbrenner-Glattbahn 1:8",
+      {
+        "name": "Verbrenner-Glattbahn 1:8",
+        "entries": 3
+      },
       "Verbrenner-Glattbahn 1:10",
       "Elektro Glattbahn 1:8 EG8e",
       "Elektro-Glattbahn 1:8 GT"
@@ -82323,7 +82983,9 @@
     "name": "Fun Cup Austria / RCC-Grafenwörth",
     "from": "2026-07-11",
     "to": "2026-07-12",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93389&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=93389&tId=E&hId%5B1%5D=org",
@@ -82689,7 +83351,9 @@
     "name": "Coupe Tamiya TT-02 RCCR - 2",
     "from": "2026-07-12",
     "to": "2026-07-12",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94944&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=94944&tId=E&hId%5B1%5D=org",
@@ -82697,17 +83361,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Tamiya TT-02 RCCR",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "Tamiya TT-02 RCCR \"Juniors\"",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -83910,15 +84574,18 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR 8 Hobby",
         "entries": 2
       },
-      "OR8 Expert",
+      {
+        "name": "OR8 Expert",
+        "entries": 1
+      },
       "OR8E",
       "Hessencup Kids"
     ],
@@ -84065,7 +84732,9 @@
     "name": "Österreichische Meisterschaft Langstrecke",
     "from": "2026-07-25",
     "to": "2026-07-26",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94159&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=94159&tId=E&hId%5B1%5D=org",
@@ -84244,10 +84913,10 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2026-07-26-myrcm-event-96027",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2026-07-26-myrcm-event-96027",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -84272,7 +84941,7 @@
       "Tamiya Stock (KP)"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "myrcm-53665-2026-07-26-myrcm-event-96345",
@@ -84391,7 +85060,9 @@
     "name": "4. OST-Cup 2026 GP-Series 1:8 Buggy in Loosdorf",
     "from": "2026-08-01",
     "to": "2026-08-02",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95066&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=95066&tId=E&hId%5B1%5D=org",
@@ -84426,7 +85097,9 @@
     "name": "MINI - Challenge >>> Lauf 4",
     "from": "2026-08-01",
     "to": "2026-08-02",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97130&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=858&pLa=en&dId%5BE%5D=97130&tId=E&hId%5B1%5D=org",
@@ -84861,7 +85534,9 @@
     "name": "Coupe Tamiya TT-02 / Estivales Epalinges",
     "from": "2026-08-08",
     "to": "2026-08-08",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94946&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=94946&tId=E&hId%5B1%5D=org",
@@ -84932,7 +85607,9 @@
     "name": "Österreichische Meisterschaft OR8 Nitro",
     "from": "2026-08-08",
     "to": "2026-08-09",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98118&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=507&pLa=en&dId%5BE%5D=98118&tId=E&hId%5B1%5D=org",
@@ -84975,7 +85652,9 @@
     "name": "Österreichische Rallycross Meisterschaft Lauf 5 PSV Klagenfurt",
     "from": "2026-08-08",
     "to": "2026-08-09",
-    "series": [],
+    "series": [
+      "Österreichische Rallycross Meisterschaft"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94158&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=61558&pLa=en&dId%5BE%5D=94158&tId=E&hId%5B1%5D=org",
@@ -85145,7 +85824,9 @@
     "name": "EOCD Clubseries 2026 #3",
     "from": "2026-08-14",
     "to": "2026-08-14",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96863&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=96863&tId=E&hId%5B1%5D=org",
@@ -85244,7 +85925,9 @@
     "name": "4.SM-Lauf 2026 1/5 VLS TC/F1 - Sitterdorf",
     "from": "2026-08-15",
     "to": "2026-08-16",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95285&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95285&tId=E&hId%5B1%5D=org",
@@ -85279,7 +85962,9 @@
     "name": "Fun Cup Austria / LMC-Limbach",
     "from": "2026-08-15",
     "to": "2026-08-16",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93390&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=93390&tId=E&hId%5B1%5D=org",
@@ -85392,7 +86077,9 @@
     "name": "Swiss Racing Cup 2026 - Lauf 1 - Herblingen",
     "from": "2026-08-15",
     "to": "2026-08-15",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94980&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=94980&tId=E&hId%5B1%5D=org",
@@ -85455,10 +86142,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2026-08-16-myrcm-event-96028",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2026-08-16-myrcm-event-96028",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -85483,7 +86170,7 @@
       "Tamiya Stock (KP)"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "buggyclub-zentralschweiz-2026-08-16-myrcm-event-98494",
@@ -85558,7 +86245,9 @@
     "name": "Swiss Racing Cup 2026 - Lauf 2 - Herblingen",
     "from": "2026-08-16",
     "to": "2026-08-16",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95009&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=95009&tId=E&hId%5B1%5D=org",
@@ -85659,7 +86348,9 @@
     "name": "3. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2026-08-22",
     "to": "2026-08-23",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94742&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=94742&tId=E&hId%5B1%5D=org",
@@ -85728,7 +86419,9 @@
     "name": "4. PSV Clubrennen - ONROAD 2026 + Kärnten-Cup",
     "from": "2026-08-22",
     "to": "2026-08-22",
-    "series": [],
+    "series": [
+      "Kärntencup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94914&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=774&pLa=en&dId%5BE%5D=94914&tId=E&hId%5B1%5D=org",
@@ -85760,7 +86453,9 @@
     "name": "4. SM/CS SRCCA 2026 E10 & E8 TR - MRCAL Aigle",
     "from": "2026-08-22",
     "to": "2026-08-23",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95047&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95047&tId=E&hId%5B1%5D=org",
@@ -85847,7 +86542,9 @@
     "name": "7. SM/CS Swiss Nationals 2026 - 1:8 Buggy E8OR (Samstag)",
     "from": "2026-08-22",
     "to": "2026-08-22",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96717&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=31003&pLa=en&dId%5BE%5D=96717&tId=E&hId%5B1%5D=org",
@@ -86098,7 +86795,9 @@
     "name": "8. SM/CS Swiss Nationals 2026 - 1:8 Buggy E8OR (Sonntag)",
     "from": "2026-08-23",
     "to": "2026-08-23",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96718&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=31003&pLa=en&dId%5BE%5D=96718&tId=E&hId%5B1%5D=org",
@@ -86260,7 +86959,9 @@
     "name": "5. SM Lauf V8TR & V10TR 2026 - AMCS",
     "from": "2026-08-28",
     "to": "2026-08-30",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94035&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=19&pLa=en&dId%5BE%5D=94035&tId=E&hId%5B1%5D=org",
@@ -86360,7 +87061,10 @@
     "name": "5. Lauf 2026 ÖM EF - RC-Parndorf",
     "from": "2026-08-29",
     "to": "2026-08-30",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96284&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=96284&tId=E&hId%5B1%5D=org",
@@ -86452,7 +87156,9 @@
     "name": "MINI - Challenge >>> Lauf 5",
     "from": "2026-08-29",
     "to": "2026-08-30",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94052&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=1225&pLa=en&dId%5BE%5D=94052&tId=E&hId%5B1%5D=org",
@@ -86638,7 +87344,9 @@
     "name": "2026 SM/CS V80R #7 Manche Cornaux (NMBC)",
     "from": "2026-09-05",
     "to": "2026-09-06",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97313&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=97313&tId=E&hId%5B1%5D=org",
@@ -86827,7 +87535,9 @@
     "name": "MRCP Series Run #4 2026 Finale",
     "from": "2026-09-05",
     "to": "2026-09-06",
-    "series": [],
+    "series": [
+      "MRCP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95726&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=95726&tId=E&hId%5B1%5D=org",
@@ -87143,7 +87853,9 @@
     "name": "2026 SM/CS E10OR Samstag EMBCM / Wollerau",
     "from": "2026-09-12",
     "to": "2026-09-12",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95469&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95469&tId=E&hId%5B1%5D=org",
@@ -87278,7 +87990,9 @@
     "name": "5.SM-Lauf 2026 1/5 VLS TC/F1 - Sitterdorf",
     "from": "2026-09-12",
     "to": "2026-09-13",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95286&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95286&tId=E&hId%5B1%5D=org",
@@ -87375,7 +88089,9 @@
     "name": "Fun Cup Austria / MRC-Frühwirth",
     "from": "2026-09-12",
     "to": "2026-09-13",
-    "series": [],
+    "series": [
+      "Fun Cup Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93391&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=771&pLa=en&dId%5BE%5D=93391&tId=E&hId%5B1%5D=org",
@@ -87408,7 +88124,9 @@
     "name": "2026 SM/CS E10OR Sonntag EMBCM / Wollerau",
     "from": "2026-09-13",
     "to": "2026-09-13",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95470&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95470&tId=E&hId%5B1%5D=org",
@@ -87629,7 +88347,9 @@
     "name": "2026 SM/CS E8OR 9. Manche Lausanne (MBLR)",
     "from": "2026-09-19",
     "to": "2026-09-19",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94353&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94353&tId=E&hId%5B1%5D=org",
@@ -87717,7 +88437,9 @@
     "name": "4. Lauf VF & EF8 & GT8 Österreichische Meisterschaft",
     "from": "2026-09-19",
     "to": "2026-09-20",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94743&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=38958&pLa=en&dId%5BE%5D=94743&tId=E&hId%5B1%5D=org",
@@ -87756,7 +88478,9 @@
     "name": "5.Lauf Tamiyacup Sitterdorf",
     "from": "2026-09-19",
     "to": "2026-09-20",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93533&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=23&pLa=en&dId%5BE%5D=93533&tId=E&hId%5B1%5D=org",
@@ -87944,7 +88668,9 @@
     "name": "2026 SM/CS E8OR 10. Manche Lausanne (MBLR)",
     "from": "2026-09-20",
     "to": "2026-09-20",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94355&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94355&tId=E&hId%5B1%5D=org",
@@ -87966,10 +88692,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tsv-1871-augsburg-e-v-2026-09-20-myrcm-event-96029",
-    "venueId": "tsv-1871-augsburg-e-v",
-    "venueName": "TSV 1871 Augsburg e.V.",
-    "venueLocation": "Königsbrunn",
+    "id": "ormc-koenigsbrunn-2026-09-20-myrcm-event-96029",
+    "venueId": "ormc-koenigsbrunn",
+    "venueName": "ORMC Königsbrunn",
+    "venueLocation": "Augsburg",
     "venueWebsite": "http://ormck.de/kp/ausschreibung.htm",
     "hostId": "ormc-konigsbrunn",
     "hostName": "ORMC Königsbrunn",
@@ -87994,7 +88720,7 @@
       "Tamiya Stock (KP)"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-26"
   },
   {
     "id": "psv-klagenfurt-2026-09-20-myrcm-event-94925",
@@ -88142,7 +88868,9 @@
     "name": "Onroad Cup Tirol 2026 in Imst",
     "from": "2026-09-20",
     "to": "2026-09-20",
-    "series": [],
+    "series": [
+      "Onroad Cup Tirol"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97788&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=21964&pLa=en&dId%5BE%5D=97788&tId=E&hId%5B1%5D=org",
@@ -88413,7 +89141,9 @@
     "name": "5. OST-Cup 2026 GP-Series 1:8 Buggy beim MSV-Wölbling",
     "from": "2026-09-26",
     "to": "2026-09-27",
-    "series": [],
+    "series": [
+      "OST-Cup GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95067&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=503&pLa=en&dId%5BE%5D=95067&tId=E&hId%5B1%5D=org",
@@ -88445,7 +89175,9 @@
     "name": "5. SM/CS SRCCA 2026 E10 & E8 TR - MRCL Langenthal",
     "from": "2026-09-26",
     "to": "2026-09-27",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95048&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95048&tId=E&hId%5B1%5D=org",
@@ -88543,7 +89275,10 @@
     "name": "6. Lauf 2026 ÖM EF - MAC Amstetten",
     "from": "2026-09-26",
     "to": "2026-09-27",
-    "series": [],
+    "series": [
+      "Österreichische Meisterschaft (ÖM)",
+      "ÖFMAV GP Series"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96285&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=782&pLa=en&dId%5BE%5D=96285&tId=E&hId%5B1%5D=org",
@@ -88604,7 +89339,9 @@
     "name": "Swiss Racing Cup 2026 - Lauf 3 - Sitterdorf",
     "from": "2026-09-26",
     "to": "2026-09-26",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95010&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=95010&tId=E&hId%5B1%5D=org",
@@ -88726,7 +89463,9 @@
     "name": "Swiss Racing Cup 2026 - Lauf 4 - Sitterdorf",
     "from": "2026-09-27",
     "to": "2026-09-27",
-    "series": [],
+    "series": [
+      "Swiss Racing Cup"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95011&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=9425&pLa=en&dId%5BE%5D=95011&tId=E&hId%5B1%5D=org",
@@ -88900,7 +89639,9 @@
     "name": "6. Lauf Mini-Challenge Austria 2026 Sollenau",
     "from": "2026-10-03",
     "to": "2026-10-04",
-    "series": [],
+    "series": [
+      "Mini-Challenge Austria"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95196&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=779&pLa=en&dId%5BE%5D=95196&tId=E&hId%5B1%5D=org",
@@ -89023,7 +89764,9 @@
     "name": "2026 SM/CS E8OR 11. Manche Montagny (ORCM)",
     "from": "2026-10-04",
     "to": "2026-10-04",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94358&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=94358&tId=E&hId%5B1%5D=org",
@@ -89252,7 +89995,9 @@
     "name": "6.SM-Lauf 2026 1/5 VLS TC/F1 - Lostallo",
     "from": "2026-10-10",
     "to": "2026-10-11",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95287&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95287&tId=E&hId%5B1%5D=org",
@@ -89500,7 +90245,9 @@
     "name": "Coupe Tamiya TT-02 RCCR - 3",
     "from": "2026-10-11",
     "to": "2026-10-11",
-    "series": [],
+    "series": [
+      "Tamiyacup / Coupe Tamiya"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94945&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=47238&pLa=en&dId%5BE%5D=94945&tId=E&hId%5B1%5D=org",
@@ -89532,7 +90279,9 @@
     "name": "EOCD Clubseries 2026 #4",
     "from": "2026-10-11",
     "to": "2026-10-11",
-    "series": [],
+    "series": [
+      "EOCD Clubseries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96865&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=8488&pLa=en&dId%5BE%5D=96865&tId=E&hId%5B1%5D=org",
@@ -89565,7 +90314,9 @@
     "name": "6. SM/CS SRCCA 2026 E10 & E8 TR - MRCSG Sitterdorf",
     "from": "2026-10-17",
     "to": "2026-10-18",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95049&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95049&tId=E&hId%5B1%5D=org",
@@ -89811,7 +90562,9 @@
     "name": "IndoorSeries 2026/27 - Round 1",
     "from": "2026-10-24",
     "to": "2026-10-25",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96555&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=96555&tId=E&hId%5B1%5D=org",
@@ -89905,7 +90658,9 @@
     "name": "2026 SM/CS E10OR Samstag ITW / Wichtrach",
     "from": "2026-10-31",
     "to": "2026-10-31",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95471&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95471&tId=E&hId%5B1%5D=org",
@@ -89964,7 +90719,9 @@
     "name": "2026 SM/CS E10OR Sonntag ITW / Wichtrach",
     "from": "2026-11-01",
     "to": "2026-11-01",
-    "series": [],
+    "series": [
+      "SM/CS SRCCA"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95472&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24&pLa=en&dId%5BE%5D=95472&tId=E&hId%5B1%5D=org",
@@ -90087,7 +90844,9 @@
     "name": "IndoorSeries 2026/27 - Round 2",
     "from": "2026-12-05",
     "to": "2026-12-06",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96556&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=96556&tId=E&hId%5B1%5D=org",
@@ -90212,7 +90971,9 @@
     "name": "IndoorSeries 2026/27 - Round 3",
     "from": "2027-03-06",
     "to": "2027-03-07",
-    "series": [],
+    "series": [
+      "IndoorSeries"
+    ],
     "source": "myrcm",
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96557&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=26980&pLa=en&dId%5BE%5D=96557&tId=E&hId%5B1%5D=org",
