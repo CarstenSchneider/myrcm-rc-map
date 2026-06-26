@@ -5127,7 +5127,7 @@ function renderAdminUnbekanntTab(container) {
       container.innerHTML = `<p class="admin-empty">Alle Strecken sind zugeordnet.</p>`;
       return;
     }
-    container.innerHTML = entries.map((e, i) => `
+    container.innerHTML = `<div>${entries.map((e, i) => `
       <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
         <div class="admin-entry-header">
           <strong>${escapeHtml(e.hostName)}</strong>
@@ -5145,14 +5145,15 @@ function renderAdminUnbekanntTab(container) {
           <button type="button" class="admin-btn admin-btn-save">Speichern</button>
         </div>
         <p class="admin-entry-status"></p>
-      </div>`).join("");
+      </div>`).join("")}</div>`;
 
-    container.addEventListener("change", ev => {
+    const wrapper = container.firstElementChild;
+    wrapper.addEventListener("change", ev => {
       if (!ev.target.classList.contains("admin-unknown-toggle")) return;
       ev.target.closest(".admin-entry").querySelector(".admin-entry-coords").hidden = ev.target.checked;
     });
 
-    container.addEventListener("click", async ev => {
+    wrapper.addEventListener("click", async ev => {
       if (!ev.target.classList.contains("admin-btn-save")) return;
       const entry = ev.target.closest(".admin-entry");
       const status = entry.querySelector(".admin-entry-status");
