@@ -6,6 +6,7 @@ echo "=== RC RaceMap Import — $(date -u '+%Y-%m-%d %H:%M:%S UTC') ==="
 # Git konfigurieren
 git config user.name "render-import[bot]"
 git config user.email "render-import[bot]@rcracemap.com"
+git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git" 2>/dev/null || \
 git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git"
 
 # Aktuellen Stand von main holen (Render-Checkout kann veraltet sein)
