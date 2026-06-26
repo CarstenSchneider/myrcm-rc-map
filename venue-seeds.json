@@ -3214,12 +3214,12 @@
     "id": "rcr-linz",
     "name": "RCR-Linz",
     "city": "Linz",
-    "lat": 48.3059078,
-    "lng": 14.286198,
+    "lat": 48.25162750853178,
+    "lng": 14.280130467350359,
     "hostIds": [
       "rcr-linz"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "776",
     "aliases": [
       "myrcm-776",
