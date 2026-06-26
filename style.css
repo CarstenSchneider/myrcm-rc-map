@@ -2526,6 +2526,10 @@ body.is-breakpoint-crossing .country-pill {
   cursor: default;
 }
 
+.race-venue .venue-name-text {
+  color: var(--muted);
+}
+
 /* v1.6.3 horizontal topbar filters */
 
 .layout-prototype .topbar-panel {
