@@ -1103,13 +1103,23 @@ function detectVenueSeedFromRaceText(venueSeeds = [], raceText = "", hostRecord 
   return matches[0].seed || null;
 }
 
+// Country codes (ISO 3166-1 alpha-2) that are outside DACH.
+// Used to detect travelling-series races held abroad (e.g. ETS ROUND 2 TRENCIN SK).
+const nonDachCountryCodes = /\b(SK|CZ|PL|HU|FR|NL|BE|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LU|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
+
+function raceNameIndicatesNonDach(name) {
+  return nonDachCountryCodes.test(name || "");
+}
+
 function detectVenueSeedForRace(venueSeeds = [], detail = {}, eventLink = {}, hostRecord = {}, host = {}, defaultVenueSeed = null) {
+  // Use only race-name-derived text for venue matching — NOT host.location/host.city.
+  // Including the organizer's city causes all races from travelling series (e.g. ETS via
+  // ToniSport GmbH, Andernach) to match the organizer's home venue, even when the race
+  // is held abroad (e.g. TRENCIN SK).
   const raceText = [
     detail.name,
     eventLink.fallbackName,
-    host.location,
-    host.city,
-    // hostLabel from event detail page may show the physical hosting club for travelling series
+    // hostLabel from event detail page shows the physical hosting club for travelling series
     detail.hostLabel
   ]
     .filter(Boolean)
@@ -1117,9 +1127,9 @@ function detectVenueSeedForRace(venueSeeds = [], detail = {}, eventLink = {}, ho
 
   const explicitVenueSeed = detectVenueSeedFromRaceText(venueSeeds, raceText, hostRecord, host);
 
-  if (explicitVenueSeed) return explicitVenueSeed;
+  if (explicitVenueSeed) return { seed: explicitVenueSeed, wasExplicit: true };
 
-  return defaultVenueSeed || null;
+  return { seed: defaultVenueSeed || null, wasExplicit: false };
 }
 
 function preferredHostId(previous = {}, next = {}) {
@@ -1717,7 +1727,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       to: eventLink.fallbackTo
     });
 
-    const detectedVenueSeed = detectVenueSeedForRace(
+    const { seed: detectedVenueSeed, wasExplicit } = detectVenueSeedForRace(
       venueSeeds,
       detail,
       eventLink,
@@ -1725,6 +1735,12 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       host,
       venueSeed
     );
+    // Skip travelling-series races held outside DACH: if there was no explicit venue
+    // match from the race name, but the name clearly indicates a non-DACH country
+    // (e.g. "ETS ROUND 2 TRENCIN SK"), the race doesn't belong on the DACH map.
+    if (!wasExplicit && raceNameIndicatesNonDach(detail.name || eventLink.fallbackName)) {
+      return null;
+    }
     const venue = venueFromSeed(detectedVenueSeed);
     const venueId = venue?.id || null;
 
