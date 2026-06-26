@@ -2766,12 +2766,12 @@
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
-    "lat": 47.4991723,
-    "lng": 8.7291498,
+    "lat": 47.59529281299786,
+    "lng": 8.692502280646423,
     "hostIds": [
       "rc-club-wyland"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "14101",
     "aliases": [
       "myrcm-14101",
