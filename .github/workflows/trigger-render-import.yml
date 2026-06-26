@@ -1,0 +1,22 @@
+name: Trigger Render Import
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Cron Job
+        run: |
+          HTTP_CODE=$(curl --silent \
+            --output /tmp/render-response.txt \
+            --write-out "%{http_code}" \
+            --request POST \
+            "${{ secrets.RENDER_DEPLOY_HOOK }}")
+          cat /tmp/render-response.txt
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "Render trigger fehlgeschlagen (HTTP $HTTP_CODE)"
+            exit 1
+          fi
+          echo "Render Import getriggert (HTTP $HTTP_CODE)"
