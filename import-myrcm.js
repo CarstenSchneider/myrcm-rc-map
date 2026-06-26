@@ -44,6 +44,7 @@ const trainingTerms = [
 // MyRCM org IDs to exclude permanently (e.g. slot car series)
 const excludedMyrcmOrgIds = new Set([
   "60453", // Slottis Supreme Masters — slot car series
+  "4",     // RC-Timing — MyRCM test account (publishes only test events)
 ]);
 
 const excludedHostTerms = [
