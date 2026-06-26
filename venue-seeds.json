@@ -3682,6 +3682,13 @@
     "myrcmOrgId": "37520"
   },
   {
+    "hostId": "rc-lords-of-dirt",
+    "hostName": "RC-Lords of Dirt",
+    "lat": 46.81322877318174,
+    "lng": 13.350113343570492,
+    "myrcmOrgId": "18966"
+  },
+  {
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
     "lat": 48.412696168360476,
