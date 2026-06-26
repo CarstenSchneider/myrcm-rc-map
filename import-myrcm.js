@@ -1735,10 +1735,11 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       host,
       venueSeed
     );
-    // Skip travelling-series races held outside DACH: if there was no explicit venue
-    // match from the race name, but the name clearly indicates a non-DACH country
-    // (e.g. "ETS ROUND 2 TRENCIN SK"), the race doesn't belong on the DACH map.
-    if (!wasExplicit && raceNameIndicatesNonDach(detail.name || eventLink.fallbackName)) {
+    // Skip races held outside DACH: if the name clearly ends with a non-DACH country
+    // code (e.g. "TRENCIN SK", "RUCPHEN / NL"), the race doesn't belong on the DACH map.
+    // Applied regardless of wasExplicit — hostLabel can contain organizer city (e.g.
+    // "Andernach") causing a false explicit match even for foreign travelling-series races.
+    if (raceNameIndicatesNonDach(detail.name || eventLink.fallbackName)) {
       return null;
     }
     const venue = venueFromSeed(detectedVenueSeed);
