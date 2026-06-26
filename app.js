@@ -2127,8 +2127,16 @@ function ensureRegistrationStatusStyles() {
     .race-card.registration-closed .race-name,
     .race-card.registration-closed .race-venue,
     .race-card.registration-closed .race-registration-count,
-    .race-card.registration-closed .race-link-item-status-closed {
+    .race-card.registration-closed .race-link-item-status-closed,
+    .race-card.registration-closed .race-host {
       color: var(--muted) !important;
+    }
+
+    .race-card.registration-closed .venue-link:not(.venue-link-favorite):hover,
+    .race-card.registration-closed .venue-link:not(.venue-link-favorite):focus-visible {
+      color: var(--muted) !important;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .race-card.registration-closed .tag-class,
@@ -2147,8 +2155,16 @@ function ensureRegistrationStatusStyles() {
     :root.theme-dark .race-card.registration-closed .race-name,
     :root.theme-dark .race-card.registration-closed .race-venue,
     :root.theme-dark .race-card.registration-closed .race-registration-count,
-    :root.theme-dark .race-card.registration-closed .race-link-item-status-closed {
+    :root.theme-dark .race-card.registration-closed .race-link-item-status-closed,
+    :root.theme-dark .race-card.registration-closed .race-host {
       color: #3d5380 !important;
+    }
+
+    :root.theme-dark .race-card.registration-closed .venue-link:not(.venue-link-favorite):hover,
+    :root.theme-dark .race-card.registration-closed .venue-link:not(.venue-link-favorite):focus-visible {
+      color: #3d5380 !important;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     :root.theme-dark .race-card.registration-closed .tag-class,
@@ -2168,8 +2184,16 @@ function ensureRegistrationStatusStyles() {
       :root:not(.theme-light) .race-card.registration-closed .race-name,
       :root:not(.theme-light) .race-card.registration-closed .race-venue,
       :root:not(.theme-light) .race-card.registration-closed .race-registration-count,
-      :root:not(.theme-light) .race-card.registration-closed .race-link-item-status-closed {
+      :root:not(.theme-light) .race-card.registration-closed .race-link-item-status-closed,
+      :root:not(.theme-light) .race-card.registration-closed .race-host {
         color: #3d5380 !important;
+      }
+
+      :root:not(.theme-light) .race-card.registration-closed .venue-link:not(.venue-link-favorite):hover,
+      :root:not(.theme-light) .race-card.registration-closed .venue-link:not(.venue-link-favorite):focus-visible {
+        color: #3d5380 !important;
+        text-decoration: underline;
+        text-underline-offset: 2px;
       }
 
       :root:not(.theme-light) .race-card.registration-closed .tag-class,
