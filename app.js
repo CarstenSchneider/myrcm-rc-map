@@ -3791,7 +3791,7 @@ raceList.addEventListener("click", event => {
 function populateSeries() {
   const seriesByKey = new Map();
 
-  races.filter(matchesCountryFilter).forEach(race => {
+  races.filter(r => matchesCountryFilter(r) && isInSelectedRange(r)).forEach(race => {
     raceSeries(race).forEach(rawSeries => {
       const key = seriesFilterValue(rawSeries);
       if (!key) return;
@@ -3990,6 +3990,7 @@ rangeFilter.addEventListener("click", event => {
     .querySelectorAll("button")
     .forEach(item => item.classList.toggle("active", item === button));
 
+  populateSeries();
   render();
 });
 
