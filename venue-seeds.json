@@ -3628,6 +3628,13 @@
     "myrcmOrgId": "53092"
   },
   {
+    "hostId": "mini-tout-terrain-gruyere",
+    "hostName": "Mini Tout Terrain Gruyère",
+    "lat": 46.650127738366436,
+    "lng": 7.029607046226385,
+    "myrcmOrgId": "18473"
+  },
+  {
     "hostId": "modellclub-flensburg-e-v",
     "hostName": "Modellclub Flensburg e.V",
     "locationUnknown": true,
