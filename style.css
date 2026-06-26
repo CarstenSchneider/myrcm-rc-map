@@ -452,11 +452,9 @@ input {
 
 .race-venue {
   font-size: 14px;
-  color: var(--muted);
 }
 
 .race-venue-pin {
-  color: var(--muted) !important;
   flex-shrink: 0;
 }
 
@@ -2526,9 +2524,6 @@ body.is-breakpoint-crossing .country-pill {
   cursor: default;
 }
 
-.race-venue .venue-name-text {
-  color: var(--muted) !important;
-}
 
 /* v1.6.3 horizontal topbar filters */
 
