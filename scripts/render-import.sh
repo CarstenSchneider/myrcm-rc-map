@@ -40,7 +40,7 @@ echo "--- Import MyRCM ---"
 node --no-warnings import-myrcm.js
 
 # Änderungen committen und pushen
-ALL_FILES="races.json hosts.json venues.json venue-unmatched.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
+ALL_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
 
 git add $ALL_FILES
 if git diff --staged --quiet; then
