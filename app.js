@@ -3125,14 +3125,11 @@ function googleMapsRouteUrl(venue) {
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null) {
-  const sourceRace = venueRaces[0] || latestPastRace;
-  const hostName = sourceRace ? raceHostName(sourceRace) : null;
-  const hostWebsite = sourceRace ? hostWebsiteForRace(sourceRace) : null;
-  const titleHtml = hostName
-    ? (hostWebsite
-        ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
-        : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`)
-    : venueNameHtml(venue);
+  const venueName = escapeHtml(venue?.name || "Unbekannte Strecke");
+  const venueWs = venueWebsite(venue);
+  const titleHtml = venueWs
+    ? `<a class="popup-venue-link" href="${escapeHtml(venueWs)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${venueName}</a>`
+    : `<span class="venue-name-text">${venueName}</span>`;
 
   return `
     <div class="popup-title">${titleHtml}</div>

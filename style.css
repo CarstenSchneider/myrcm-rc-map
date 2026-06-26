@@ -2482,11 +2482,16 @@ body.is-breakpoint-crossing .country-pill {
   opacity: 1;
 }
 
-/* v1.6.1 venue link hover states */
+/* v1.6.1 venue link hover states; v114 add text-decoration: none + explicit .race-venue .venue-link color */
 
 .venue-link {
   color: inherit;
-  transition: color 120ms ease, text-decoration-color 120ms ease;
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.race-venue .venue-link {
+  color: var(--muted);
 }
 
 .venue-link:hover,
