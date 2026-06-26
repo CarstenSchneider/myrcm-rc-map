@@ -54,13 +54,5 @@
     "myrcmOrgId": "775",
     "possibleVenue": "Grafenwörth",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rcxx-shop",
-    "hostName": "RCXX.SHOP",
-    "source": "myrcm",
-    "myrcmOrgId": "58661",
-    "possibleVenue": "Cham",
-    "reason": "no confirmed venue for at least one current MyRCM race"
   }
 ]
