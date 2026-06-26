@@ -3487,12 +3487,12 @@
     "id": "swiss-rc-protech-s-rl",
     "name": "Swiss RC ProTech Sàrl",
     "city": "Saint-Légier",
-    "lat": 46.4835162,
-    "lng": 6.9140943,
+    "lat": 46.47638310929081,
+    "lng": 6.865479428194317,
     "hostIds": [
       "swiss-rc-protech-s-rl"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "47238",
     "aliases": [
       "myrcm-47238",
