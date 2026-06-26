@@ -1,0 +1,13 @@
+services:
+  - type: cron
+    name: myrcm-rc-map-import
+    runtime: node
+    plan: free
+    schedule: "0 4 * * *"
+    buildCommand: npm install
+    startCommand: bash scripts/render-import.sh
+    envVars:
+      - key: RCK_GEOCODE
+        value: "0"
+      - key: GITHUB_TOKEN
+        sync: false
