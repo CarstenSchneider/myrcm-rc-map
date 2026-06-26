@@ -2859,12 +2859,12 @@
     "id": "rc-racing-club-arlesheim",
     "name": "RC Racing Club Arlesheim",
     "city": "Arlesheim",
-    "lat": 47.4931125,
-    "lng": 7.6202048,
+    "lat": 47.49605540100359,
+    "lng": 7.609715167758498,
     "hostIds": [
       "rc-racing-club-arlesheim"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "31003",
     "aliases": [
       "myrcm-31003",
