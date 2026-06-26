@@ -128,19 +128,27 @@ serve(async (req) => {
 
     // Commit seeds
     const seedsContent = toBase64(JSON.stringify(seeds, null, 2) + "\n");
-    await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
+    const seedsPutRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${SEEDS_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
       body: JSON.stringify({ message: `admin: ${action} for ${hostName}`, content: seedsContent, sha: seedsSha, branch: branch }),
     });
+    if (!seedsPutRes.ok) {
+      const errText = await seedsPutRes.text();
+      return new Response(`GitHub seeds commit failed (${seedsPutRes.status}): ${errText}`, { status: 409, headers: CORS });
+    }
 
     // Commit unmatched
     const unmatchedContent = toBase64(JSON.stringify(newUnmatched, null, 2) + "\n");
-    await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}`, {
+    const unmatchedPutRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${UNMATCHED_PATH}`, {
       method: "PUT",
       headers: ghHeaders,
       body: JSON.stringify({ message: `admin: remove ${hostName} from unmatched`, content: unmatchedContent, sha: unmatchedSha, branch: branch }),
     });
+    if (!unmatchedPutRes.ok) {
+      const errText = await unmatchedPutRes.text();
+      return new Response(`GitHub unmatched commit failed (${unmatchedPutRes.status}): ${errText}`, { status: 409, headers: CORS });
+    }
 
     return new Response(JSON.stringify({ ok: true }), { headers: { ...CORS, "Content-Type": "application/json" } });
   } catch (e) {
