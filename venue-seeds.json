@@ -3621,6 +3621,12 @@
     "myrcmOrgId": "53092"
   },
   {
+    "hostId": "modellclub-flensburg-e-v",
+    "hostName": "Modellclub Flensburg e.V",
+    "locationUnknown": true,
+    "myrcmOrgId": "42405"
+  },
+  {
     "hostId": "mrc-fritzens-formel-4",
     "hostName": "MRC Fritzens Formel 4",
     "locationUnknown": true,
