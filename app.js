@@ -127,6 +127,8 @@ function _pillClose(country) {
     populateSeries();
     _zoomToCountryPending = true;
     setTimeout(render, 270); // defer past 250ms close transition
+  } else {
+    setTimeout(() => fitToCountry(country), 270);
   }
 }
 

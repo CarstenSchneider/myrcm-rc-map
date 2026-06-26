@@ -932,7 +932,7 @@ input {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-.country-pill-btn:not(.is-active):hover { transform: scale(1.08); }
+.country-pill-btn:hover { transform: scale(1.08); }
 
 .country-flag-icon {
   display: block;
