@@ -3634,7 +3634,7 @@ function renderList(list) {
           ${series.map(item => `<span class="tag">${escapeHtml(seriesDisplayName(item))}</span>`).join("")}
         </div>
       </div>
-      ${activeVenueId ? "" : raceVenueMetaHtml(race)}
+      ${raceVenueMetaHtml(race)}
       ${documentLinksHtml(race)}
       ${statusDetailsHtml(race)}
 
