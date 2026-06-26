@@ -223,13 +223,6 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 ### Warum hostsByOrgId Vollnamen normalisiert werden müssen
 `myrcm-hosts-dach.json` (Seed-Datei) hat `country: "Austria"`, `hosts.json` (Import-Output) hat `country: "AT"`. Beide Quellen landen in `hostsByOrgId`, DACH-Einträge kommen zuletzt und überschreiben. `venueCountry()` normalisiert daher via `_countryNameToCode` Map.
 
-## Offene Punkte / TODO
-
-### ~~Karte sitzt beim ersten Load zu tief (Desktop) — Stand 2026-06-25~~ — BEHOBEN
-`iconShift` in `fitMapToBounds` verschob die Karte bis zu 130px nach oben (Schutz für Marker-Icons unter der Topbar). Bei Länderbounds gibt es keine Icons an den Rändern — der Shift zeigte unnötig viel Süden. Fix: `skipIconShift: true`-Option, die `fitToCountry` nutzt.
-
----
-
 ## Pre-Launch Checkliste
 
 ### Karte & Grundfunktion
