@@ -47,14 +47,14 @@ if git diff --staged --quiet; then
   echo "Keine Änderungen — kein Commit nötig."
 else
   git commit -m "Update race data"
-  git pull --rebase origin main
+  git pull --rebase --autostash origin main
   git push origin main
 
   git fetch origin dev
   git checkout -B dev origin/dev
   git checkout main -- $ALL_FILES
   git commit -m "Update race data"
-  git pull --rebase origin dev
+  git pull --rebase --autostash origin dev
   git push origin dev
 
   git checkout main
