@@ -62,13 +62,5 @@
     "myrcmOrgId": "58661",
     "possibleVenue": "Cham",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rmc-wien",
-    "hostName": "RMC-Wien",
-    "source": "myrcm",
-    "myrcmOrgId": "777",
-    "possibleVenue": "Schranawand",
-    "reason": "no confirmed venue for at least one current MyRCM race"
   }
 ]
