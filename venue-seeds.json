@@ -3312,12 +3312,12 @@
     "id": "rmcb",
     "name": "RMCB",
     "city": "Bern",
-    "lat": 46.9484742,
-    "lng": 7.4521749,
+    "lat": 46.74730490147598,
+    "lng": 7.5962778538955025,
     "hostIds": [
       "rmcb"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "9703",
     "aliases": [
       "myrcm-9703",
