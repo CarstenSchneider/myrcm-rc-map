@@ -1065,6 +1065,7 @@ function detectVenueSeedFromRaceText(venueSeeds = [], raceText = "", hostRecord 
 
   for (const seed of venueSeeds || []) {
     if (!seed?.id) continue;
+    if (seed.skipTextMatch) continue;
 
     for (const term of venueSearchTerms(seed)) {
       if (!term) continue;
@@ -1745,7 +1746,7 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
     // "sign up to this event" in the list means login-required, not truly open.
     // Don't let the booking page (which says "booking not possible" for non-logged-in users)
     // override this to "closed".
-    const isSignupRequired = /sign up to this event/i.test(eventLink.registrationText || "");
+    const isSignupRequired = /sign up to this event/i.test(eventLink.registrationText || "") || detail.registrationRequiresLogin;
     // Don't override "upcoming" with "closed": booking page shows "Booking not possible"
     // for races whose registration hasn't opened yet — that's not the same as closed.
     const registrationStatus = isSignupRequired
