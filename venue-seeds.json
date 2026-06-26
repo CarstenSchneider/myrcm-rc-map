@@ -3101,12 +3101,12 @@
     "id": "rcc-sittersdorf",
     "name": "RCC Sittersdorf",
     "city": "Sittersdorf",
-    "lat": 46.5250325,
-    "lng": 14.6023619,
+    "lat": 46.5446591184532,
+    "lng": 14.601164631183192,
     "hostIds": [
       "rcc-sittersdorf"
     ],
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "myrcmOrgId": "26141",
     "aliases": [
       "myrcm-26141",
