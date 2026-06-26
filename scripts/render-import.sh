@@ -9,9 +9,9 @@ git config user.email "render-import[bot]@rcracemap.com"
 git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git" 2>/dev/null || \
 git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git"
 
-# Aktuellen Stand von main holen (Render-Checkout kann veraltet sein)
-git fetch origin main
-git reset --hard origin/main
+# Aktuellen Stand von main holen und lokalen main-Branch anlegen
+git fetch origin main dev
+git checkout -B main origin/main
 
 # MyRCM-Verfügbarkeit prüfen (max. 3 Versuche × 5 Min = 15 Min)
 for i in 1 2 3; do
