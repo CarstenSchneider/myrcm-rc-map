@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mblr-racing",
-    "hostName": "MBLR Racing",
-    "source": "myrcm",
-    "myrcmOrgId": "22319",
-    "possibleVenue": "Penthalaz",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mini-tout-terrain-gruyere",
     "hostName": "Mini Tout Terrain Gruyère",
     "source": "myrcm",
