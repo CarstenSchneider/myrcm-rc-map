@@ -3095,8 +3095,8 @@ function googleMapsRouteUrl(venue) {
   return `https://www.google.com/maps/dir/?api=1&destination=${Number(venue.lat)},${Number(venue.lng)}`;
 }
 
-function buildPopup(venue, venueRaces, latestPastRace = null) {
-  const venueName = escapeHtml(venue?.name || "Unbekannte Strecke");
+function buildPopup(venue, venueRaces, latestPastRace = null, overrideName = null) {
+  const venueName = escapeHtml(overrideName || venue?.name || "Unbekannte Strecke");
   const venueWs = venueWebsite(venue);
   const titleHtml = venueWs
     ? `<a class="popup-venue-link" href="${escapeHtml(venueWs)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${venueName}</a>`
@@ -3525,7 +3525,7 @@ function focusRace(race) {
 
   const marker = markers.get(venue.id);
   if (marker) {
-    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
+    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue), race.venueName || null));
     marker.openPopup();
   }
 
