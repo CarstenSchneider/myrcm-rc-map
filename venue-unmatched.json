@@ -30,13 +30,5 @@
     "myrcmOrgId": "53491",
     "possibleVenue": "Weiz",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "rc-cars-wernigerode-e-v",
-    "hostName": "RC Cars Wernigerode e.V.",
-    "source": "myrcm",
-    "myrcmOrgId": "43490",
-    "possibleVenue": "Wernigerode",
-    "reason": "no confirmed venue for at least one current MyRCM race"
   }
 ]
