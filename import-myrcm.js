@@ -341,6 +341,8 @@ function hasTrainingName(name) {
   if (/\bgastfahrtag/i.test(lower)) return false;
   if (/\bgastklasse/i.test(lower)) return false;
 
+  if (/^test\s/i.test(name) || lower.includes("test event")) return true;
+
   return trainingTerms.some(term => lower.includes(term));
 }
 
