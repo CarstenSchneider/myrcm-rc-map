@@ -206,22 +206,19 @@
     "id": "c-hub-racing-gbr",
     "name": "C-HUB Racing GBR",
     "website": "http://www.c-hub-racing.de/",
-    "myrcmOrgId": "9496",
-    "country": "DE"
+    "myrcmOrgId": "9496"
   },
   {
     "id": "catz-sports-gmbh",
     "name": "Catz-Sports GmbH",
     "website": "http://www.catz-sports.de/",
-    "myrcmOrgId": "62",
-    "country": "DE"
+    "myrcmOrgId": "62"
   },
   {
     "id": "cc-racing",
     "name": "CC-Racing",
     "website": "",
-    "myrcmOrgId": "1152",
-    "country": "DE"
+    "myrcmOrgId": "1152"
   },
   {
     "id": "club-der-modellbaufreunde-sued-ost",
@@ -234,8 +231,7 @@
     "id": "conrad-electronic-se",
     "name": "Conrad Electronic SE",
     "website": "http://www.conrad.de/",
-    "myrcmOrgId": "13506",
-    "country": "DE"
+    "myrcmOrgId": "13506"
   },
   {
     "id": "dershoemaker-racing-events",
@@ -248,8 +244,7 @@
     "id": "djk-andernach-e-v",
     "name": "DJK Andernach e.V.",
     "website": "http://www.djk-andernach.de/",
-    "myrcmOrgId": "1288",
-    "country": "DE"
+    "myrcmOrgId": "1288"
   },
   {
     "id": "djk-ssc-lackenhauser-e-v",
@@ -311,8 +306,7 @@
     "id": "equipe-rc-nohn",
     "name": "Equipe RC Nohn",
     "website": "http://rc-nohn.npage.de/",
-    "myrcmOrgId": "10117",
-    "country": "DE"
+    "myrcmOrgId": "10117"
   },
   {
     "id": "ert-steyregg",
@@ -346,8 +340,7 @@
     "id": "fun-center-ch-gmbh-jestetten",
     "name": "fun-center.ch GmbH Jestetten",
     "website": "",
-    "myrcmOrgId": "17182",
-    "country": "DE"
+    "myrcmOrgId": "17182"
   },
   {
     "id": "greenhouse-racer-e-v",
@@ -360,15 +353,13 @@
     "id": "grunewald-motorsport",
     "name": "Grünewald Motorsport",
     "website": "http://www.gruenewald-motorsport.de/",
-    "myrcmOrgId": "52767",
-    "country": "DE"
+    "myrcmOrgId": "52767"
   },
   {
     "id": "heiner-martin",
     "name": "Heiner Martin",
     "website": "",
-    "myrcmOrgId": "458",
-    "country": "DE"
+    "myrcmOrgId": "458"
   },
   {
     "id": "hobby-shop-haessig",
@@ -402,8 +393,7 @@
     "id": "kloft-timing",
     "name": "KLOFT-TIMING",
     "website": "http://www.kloft-timing.de/",
-    "myrcmOrgId": "17649",
-    "country": "DE"
+    "myrcmOrgId": "17649"
   },
   {
     "id": "la-speedway-racing-club-e-v",
@@ -437,8 +427,7 @@
     "id": "lrp-electronic-gmbh",
     "name": "LRP electronic GmbH",
     "website": "http://www.lrp.cc/",
-    "myrcmOrgId": "892",
-    "country": "DE"
+    "myrcmOrgId": "892"
   },
   {
     "id": "lts-bremerhaven-racing-team",
@@ -451,8 +440,7 @@
     "id": "mac-adenau",
     "name": "MAC Adenau",
     "website": "http://www.mac-adenau.de/",
-    "myrcmOrgId": "4602",
-    "country": "DE"
+    "myrcmOrgId": "4602"
   },
   {
     "id": "mac-amstetten",
@@ -465,8 +453,7 @@
     "id": "mac-berlin-e-v",
     "name": "MAC Berlin e.V.",
     "website": "http://www.mac-speedway.de/",
-    "myrcmOrgId": "168",
-    "country": "DE"
+    "myrcmOrgId": "168"
   },
   {
     "id": "mac-burgdorf-e-v",
@@ -486,8 +473,7 @@
     "id": "mac-idar-oberstein",
     "name": "MAC Idar-Oberstein",
     "website": "http://www.mac-idar-oberstein.de/",
-    "myrcmOrgId": "258",
-    "country": "DE"
+    "myrcmOrgId": "258"
   },
   {
     "id": "mac-mettenheim-e-v",
@@ -605,8 +591,7 @@
     "id": "mbsc-wachtersbach",
     "name": "MBSC Wächtersbach",
     "website": "http://www.mbsc-waechtersbach.de/",
-    "myrcmOrgId": "27211",
-    "country": "DE"
+    "myrcmOrgId": "27211"
   },
   {
     "id": "mc-ettlingen-e-v",
@@ -647,8 +632,7 @@
     "id": "mcc-bad-kissingen-e-v",
     "name": "MCC Bad Kissingen e. V.",
     "website": "http://mcc-kg.de.tl/",
-    "myrcmOrgId": "21299",
-    "country": "DE"
+    "myrcmOrgId": "21299"
   },
   {
     "id": "mcc-borgholzhausen",
@@ -668,15 +652,13 @@
     "id": "mcc-kastellaun-e-v",
     "name": "MCC Kastellaun e.V.",
     "website": "http://www.minidrom.de/",
-    "myrcmOrgId": "4141",
-    "country": "DE"
+    "myrcmOrgId": "4141"
   },
   {
     "id": "mcc-konstanz",
     "name": "MCC Konstanz",
     "website": "http://www.mcc-konstanz.de/",
-    "myrcmOrgId": "5505",
-    "country": "DE"
+    "myrcmOrgId": "5505"
   },
   {
     "id": "mcc-ludenscheid-e-v",
@@ -710,8 +692,7 @@
     "id": "mcc-hocheifel-e-v",
     "name": "MCC-Hocheifel e.V.",
     "website": "http://www.mcc-hocheifel.eu/",
-    "myrcmOrgId": "269",
-    "country": "DE"
+    "myrcmOrgId": "269"
   },
   {
     "id": "mcc-marktredwitz-e-v",
@@ -1074,8 +1055,7 @@
     "id": "nitro-sud",
     "name": "Nitro Süd",
     "website": "http://www.xn--nitro-sd-d6a.de/",
-    "myrcmOrgId": "34185",
-    "country": "DE"
+    "myrcmOrgId": "34185"
   },
   {
     "id": "nitrofighter",
@@ -1116,8 +1096,7 @@
     "id": "offroad-minicar-crew-e-v",
     "name": "Offroad Minicar Crew e.V.",
     "website": "https://omconline.de/",
-    "myrcmOrgId": "35380",
-    "country": "DE"
+    "myrcmOrgId": "35380"
   },
   {
     "id": "offroad-team-zuerich",
@@ -1179,15 +1158,13 @@
     "id": "ostseeracer-rc-modellbau-e-v",
     "name": "OstseeRacer RC Modellbau e.V.",
     "website": "http://www.ostseeracer.com/",
-    "myrcmOrgId": "26381",
-    "country": "DE"
+    "myrcmOrgId": "26381"
   },
   {
     "id": "pmc-paderborn-e-v",
     "name": "PMC Paderborn e.V.",
     "website": "http://www.paderborner-mc.de/",
-    "myrcmOrgId": "13247",
-    "country": "DE"
+    "myrcmOrgId": "13247"
   },
   {
     "id": "psv-klagenfurt",
@@ -1207,8 +1184,7 @@
     "id": "racers-paradise-modellsport",
     "name": "RACERS PARADISE MODELLSPORT",
     "website": "http://www.racersparadise.de/",
-    "myrcmOrgId": "30490",
-    "country": "DE"
+    "myrcmOrgId": "30490"
   },
   {
     "id": "racing-center-parndorf",
@@ -1228,8 +1204,7 @@
     "id": "rasenracer-e-v",
     "name": "Rasenracer e.V.",
     "website": "http://www.rasenracer.de/",
-    "myrcmOrgId": "37610",
-    "country": "DE"
+    "myrcmOrgId": "37610"
   },
   {
     "id": "rc-car-chemnitz",
@@ -1249,15 +1224,13 @@
     "id": "rc-car-indoor-minidrom-owl",
     "name": "RC Car Indoor Minidrom OWL",
     "website": "http://rc-car-indoor-minidrom-owl.de.tl/Startseite.htm",
-    "myrcmOrgId": "30429",
-    "country": "DE"
+    "myrcmOrgId": "30429"
   },
   {
     "id": "rc-cars-drift-st-wendel",
     "name": "RC Cars & Drift St. Wendel",
     "website": "https://www.rc-wnd.de/",
-    "myrcmOrgId": "37209",
-    "country": "DE"
+    "myrcmOrgId": "37209"
   },
   {
     "id": "rc-cars-kongen-e-v",
@@ -1298,8 +1271,7 @@
     "id": "rc-halle-e-v",
     "name": "RC Halle e.V.",
     "website": "https://www.rchalle.de/",
-    "myrcmOrgId": "42085",
-    "country": "DE"
+    "myrcmOrgId": "42085"
   },
   {
     "id": "rc-modellbaufreunde-e-v",
@@ -1354,8 +1326,7 @@
     "id": "rc-team-sauerland-e-v",
     "name": "RC Team Sauerland e.V.",
     "website": "",
-    "myrcmOrgId": "35303",
-    "country": "DE"
+    "myrcmOrgId": "35303"
   },
   {
     "id": "rc-bande-zwickau-e-v",
@@ -1368,8 +1339,7 @@
     "id": "rc-car-shop-racecrew",
     "name": "RC-Car Shop RaceCrew",
     "website": "http://www.der-rc-car-shop.de/",
-    "myrcmOrgId": "175",
-    "country": "DE"
+    "myrcmOrgId": "175"
   },
   {
     "id": "rc-glashaus-e-v",
@@ -1403,15 +1373,13 @@
     "id": "rc-offroad-wattenscheid-e-v",
     "name": "RC-Offroad Wattenscheid e.V.",
     "website": "https://rc-offroad-wattenscheid.eu/",
-    "myrcmOrgId": "34102",
-    "country": "DE"
+    "myrcmOrgId": "34102"
   },
   {
     "id": "rc-offroadcrew-langenfeld-e-v",
     "name": "RC-OffroadCrew Langenfeld e.V.",
     "website": "http://www.rc-offroadcrew-langenfeld.de/",
-    "myrcmOrgId": "20813",
-    "country": "DE"
+    "myrcmOrgId": "20813"
   },
   {
     "id": "rc-racearena",
@@ -1445,8 +1413,7 @@
     "id": "rcc-reken-e-v",
     "name": "RCC Reken e.V.",
     "website": "",
-    "myrcmOrgId": "33796",
-    "country": "DE"
+    "myrcmOrgId": "33796"
   },
   {
     "id": "rcc-sittersdorf",
@@ -1466,8 +1433,7 @@
     "id": "rcc-steinlach-e-v",
     "name": "RCC-Steinlach e.V.",
     "website": "http://www.rcc-steinlach.de/",
-    "myrcmOrgId": "25565",
-    "country": "DE"
+    "myrcmOrgId": "25565"
   },
   {
     "id": "rccars-bergisch-born-e-v",
@@ -1536,8 +1502,7 @@
     "id": "rmc-duren-e-v",
     "name": "RMC Düren e.V.",
     "website": "http://www.rmcdueren.de/",
-    "myrcmOrgId": "26406",
-    "country": "DE"
+    "myrcmOrgId": "26406"
   },
   {
     "id": "rmc-wien",
@@ -1571,15 +1536,13 @@
     "id": "sator-events",
     "name": "Sator Events",
     "website": "https://www.sator-events.de/",
-    "myrcmOrgId": "43682",
-    "country": "DE"
+    "myrcmOrgId": "43682"
   },
   {
     "id": "schneider-timing-service",
     "name": "Schneider-Timing-Service",
     "website": "http://www.schneider-timing-service.de/",
-    "myrcmOrgId": "83",
-    "country": "DE"
+    "myrcmOrgId": "83"
   },
   {
     "id": "schweriner-sc-breitensport-e-v",
@@ -1662,8 +1625,7 @@
     "id": "team-dabo",
     "name": "Team Dabo",
     "website": "",
-    "myrcmOrgId": "36386",
-    "country": "DE"
+    "myrcmOrgId": "36386"
   },
   {
     "id": "team-indoor-track-schoeftland",
@@ -1676,8 +1638,7 @@
     "id": "technische-universitat-chemnitz-professur-alternative-fahrzeugantriebe",
     "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
     "website": "https://www.tu-chemnitz.de/",
-    "myrcmOrgId": "38953",
-    "country": "DE"
+    "myrcmOrgId": "38953"
   },
   {
     "id": "time4fun",
@@ -1704,8 +1665,7 @@
     "id": "trackside",
     "name": "Trackside",
     "website": "http://www.trackside.de/",
-    "myrcmOrgId": "36437",
-    "country": "DE"
+    "myrcmOrgId": "36437"
   },
   {
     "id": "tsv-1871-augsburg-e-v",
@@ -1767,15 +1727,13 @@
     "id": "vfl-goldstein-1953-e-v",
     "name": "VfL Goldstein 1953 e.V.",
     "website": "",
-    "myrcmOrgId": "54871",
-    "country": "DE"
+    "myrcmOrgId": "54871"
   },
   {
     "id": "vfr-russelsheim-e-v",
     "name": "VFR-Rüsselsheim e.V.",
     "website": "http://rccar.vfr-ruesselsheim.de/",
-    "myrcmOrgId": "19940",
-    "country": "DE"
+    "myrcmOrgId": "19940"
   },
   {
     "id": "wiesbadener-minicar-club-e-v",

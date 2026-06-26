@@ -3012,6 +3012,7 @@
     "website": "",
     "aliases": [
       "myrcm-207",
+      "MRCP",
       "Steinen"
     ],
     "hostIds": [
@@ -3814,22 +3815,21 @@
     "id": "racing-center-parndorf",
     "name": "Racing Center Parndorf",
     "city": "Parndorf",
-    "lat": 48.04490091454664,
-    "lng": 16.85155804833806,
+    "lat": 47.9770104,
+    "lng": 16.8500231,
     "address": "",
     "postalCode": "",
     "website": "",
     "aliases": [
       "myrcm-38295",
       "Racing Center Parndorf",
-      "RC Parndorf",
       "Parndorf"
     ],
     "hostIds": [
       "racing-center-parndorf"
     ],
     "myrcmOrgId": "38295",
-    "source": "verified",
+    "source": "geocoded-nominatim-dach",
     "verified": true
   },
   {

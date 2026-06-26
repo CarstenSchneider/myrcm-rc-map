@@ -1,5 +1,21 @@
 [
   {
+    "hostId": "alpencup",
+    "hostName": "Alpencup",
+    "source": "myrcm",
+    "myrcmOrgId": "53515",
+    "possibleVenue": "Schleitheim",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
+    "hostId": "mac-mistelbach",
+    "hostName": "MAC Mistelbach",
+    "source": "myrcm",
+    "myrcmOrgId": "20718",
+    "possibleVenue": "Mistelbach",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
     "hostId": "mblr-racing",
     "hostName": "MBLR Racing",
     "source": "myrcm",
