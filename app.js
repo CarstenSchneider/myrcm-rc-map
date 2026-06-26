@@ -124,6 +124,7 @@ function _pillClose(country) {
     selectedCountry = country;
     localStorage.setItem("rcRaceMapCountry", country);
     updateCountryPill();
+    populateSeries();
     _zoomToCountryPending = true;
     setTimeout(render, 270); // defer past 250ms close transition
   }
@@ -3790,7 +3791,7 @@ raceList.addEventListener("click", event => {
 function populateSeries() {
   const seriesByKey = new Map();
 
-  races.forEach(race => {
+  races.filter(matchesCountryFilter).forEach(race => {
     raceSeries(race).forEach(rawSeries => {
       const key = seriesFilterValue(rawSeries);
       if (!key) return;
@@ -3855,6 +3856,11 @@ function populateSeries() {
   appendGroup("Überregional", groups.overregional);
   appendGroup("Regional", groups.regional);
   appendGroup("Weitere Serien", groups.other);
+
+  if (selectedSeries !== "all" && !seriesFilter.querySelector(`option[value="${selectedSeries}"]`)) {
+    selectedSeries = "all";
+    seriesFilter.value = "all";
+  }
 }
 
 function updateMarkerAnimationDelays() {
