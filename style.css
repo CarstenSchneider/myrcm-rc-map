@@ -2527,7 +2527,7 @@ body.is-breakpoint-crossing .country-pill {
 }
 
 .race-venue .venue-name-text {
-  color: var(--muted);
+  color: var(--muted) !important;
 }
 
 /* v1.6.3 horizontal topbar filters */
