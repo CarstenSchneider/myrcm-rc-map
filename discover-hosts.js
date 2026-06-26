@@ -104,7 +104,7 @@ function parseHosts(html) {
     const country = cells[3];
     const eventCount = Number(cells[4]) || 0;
 
-    if (!/germany|deutschland|deu/i.test(country)) return;
+    if (!/germany|deutschland|deu|austria|österreich|aut|switzerland|schweiz|suisse|svizzera|che/i.test(country)) return;
 
     hosts.push({
       orgId,
@@ -282,12 +282,12 @@ async function main() {
   unique.sort((a, b) => a.name.localeCompare(b.name));
 
   await writeFile(
-    "myrcm-hosts-germany.json",
+    "myrcm-hosts-dach.json",
     JSON.stringify(unique, null, 2) + "\n",
     "utf8"
   );
 
-  console.log(`myrcm-hosts-germany.json geschrieben: ${unique.length} Hosts`);
+  console.log(`myrcm-hosts-dach.json geschrieben: ${unique.length} Hosts`);
 }
 
 main().catch(error => {

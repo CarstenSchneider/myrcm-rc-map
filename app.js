@@ -18,7 +18,7 @@ const map = L.map("map", {
   zoomControl: false,
   attributionControl: false,
   minZoom: 6
-}).setView([51.3, 10.5], 6);
+}).setView([48.5, 10.5], 6);
 
 // Bounds are wider than DACH: panToVisible shifts the actual map center south by up
 // to ~200px to place venues in the visible area above the mobile drawer. Leaflet's
@@ -50,14 +50,159 @@ const LocateControl = L.Control.extend({
   }
 });
 new LocateControl().addTo(map);
-if (!window.matchMedia("(max-width: 860px)").matches) {
-  const desktopSlot = document.getElementById("locateDesktopSlot");
-  if (desktopSlot && _locateBtn) {
-    const leafletContainer = _locateBtn.parentElement;
-    desktopSlot.appendChild(_locateBtn);
-    leafletContainer?.remove();
+
+const COUNTRY_BOUNDS = {
+  DE: [[47.2, 5.8], [55.1, 15.1]],
+  AT: [[46.2, 9.4], [49.0, 17.2]],
+  CH: [[45.7, 5.9], [47.9, 10.6]],
+  all: [[45.7, 5.8], [55.1, 17.5]],
+};
+
+function detectCountryFromLocale() {
+  // Language tags first: "de-AT" → "AT", "fr-CH" → "CH", "de-DE" → "DE"
+  const langs = Array.from(navigator.languages?.length ? navigator.languages : [navigator.language]);
+  for (const lang of langs) {
+    const match = lang.toUpperCase().match(/-([A-Z]{2})$/);
+    if (match && COUNTRY_BOUNDS[match[1]]) return match[1];
+  }
+  // Timezone fallback: handles bare "de" locale in Germany/Austria/Switzerland
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH" };
+    if (tzCountry[tz]) return tzCountry[tz];
+  } catch (_) {}
+  return "all";
+}
+
+function fitToCountry(country) {
+  const bounds = COUNTRY_BOUNDS[country] || COUNTRY_BOUNDS.all;
+  fitMapToBounds(bounds, { maxZoom: 10, skipIconShift: true });
+}
+
+const _validCountries = new Set(["all", "DE", "AT", "CH"]);
+const _savedCountry = localStorage.getItem("rcRaceMapCountry");
+let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
+let _zoomToCountryPending = false;
+
+const countryFlags = [
+  { country: "all", code: "eu", label: "Alle Länder" },
+  { country: "DE",  code: "de", label: "Deutschland" },
+  { country: "AT",  code: "at", label: "Österreich" },
+  { country: "CH",  code: "ch", label: "Schweiz" },
+];
+let _countryPill = null;
+
+function updateCountryPill() {
+  if (!_countryPill) return;
+  const ordered = [
+    countryFlags.find(f => f.country === selectedCountry),
+    ...countryFlags.filter(f => f.country !== selectedCountry),
+  ];
+  _countryPill.innerHTML = ordered.map(f =>
+    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${f.label}">` +
+    `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
+    `</button>`
+  ).join("");
+}
+
+_countryPill = document.createElement("div");
+_countryPill.className = "country-pill";
+
+let _pillIsExpanded = false;
+let _pillLastClose = 0;
+let _pillTouchHandled = false;
+
+function _pillOpen() {
+  _pillIsExpanded = true;
+  _countryPill.classList.add("is-expanded");
+}
+function _pillClose(country) {
+  _pillIsExpanded = false;
+  _pillLastClose = Date.now();
+  _countryPill.classList.remove("is-expanded");
+  if (country !== selectedCountry) {
+    selectedCountry = country;
+    localStorage.setItem("rcRaceMapCountry", country);
+    updateCountryPill();
+    populateSeries();
+    _zoomToCountryPending = true;
+    setTimeout(render, 270); // defer past 250ms close transition
   }
 }
+
+// Touch: touchstart + preventDefault stops all iOS synthetic events
+_countryPill.addEventListener("touchstart", e => {
+  e.preventDefault();
+  _pillTouchHandled = true;
+  const btn = e.target.closest(".country-pill-btn");
+  if (_pillIsExpanded) {
+    // Fallback to active btn if touch missed (border-radius hit-test edge case)
+    const country = (btn ?? _countryPill.querySelector(".country-pill-btn.is-active"))?.dataset.country ?? selectedCountry;
+    _pillClose(country);
+  } else if (btn && Date.now() - _pillLastClose > 300) {
+    _pillOpen();
+  }
+}, { passive: false });
+
+// Desktop mouse click (skipped when touch already handled it)
+_countryPill.addEventListener("click", e => {
+  if (_pillTouchHandled) { _pillTouchHandled = false; return; }
+  const btn = e.target.closest(".country-pill-btn");
+  if (!btn) return;
+  e.stopPropagation();
+  if (_pillIsExpanded) _pillClose(btn.dataset.country);
+  else _pillOpen();
+});
+
+// Close when tapping anywhere outside the pill
+document.addEventListener("touchstart", e => {
+  if (_pillIsExpanded && !_countryPill.contains(e.target)) {
+    _pillIsExpanded = false;
+    _pillLastClose = Date.now();
+    _countryPill.classList.remove("is-expanded");
+  }
+}, { passive: true });
+
+// Desktop hover expansion (only on real pointer devices)
+if (window.matchMedia("(hover: hover)").matches) {
+  _countryPill.addEventListener("mouseenter", _pillOpen);
+  _countryPill.addEventListener("mouseleave", () => {
+    _pillIsExpanded = false;
+    _countryPill.classList.remove("is-expanded");
+  });
+}
+document.body.appendChild(_countryPill);
+updateCountryPill();
+
+// Move locate button out of Leaflet control into the correct slot
+const _locateBtnLeafletContainer = _locateBtn?.parentElement;
+if (window.matchMedia("(max-width: 860px)").matches) {
+  if (_locateBtn) document.body.appendChild(_locateBtn);
+} else {
+  const desktopSlot = document.getElementById("locateDesktopSlot");
+  if (desktopSlot && _locateBtn) desktopSlot.appendChild(_locateBtn);
+}
+if (_locateBtnLeafletContainer?.classList.contains("leaflet-control")) {
+  _locateBtnLeafletContainer.remove();
+}
+
+// Position country pill on desktop: same center-to-center gap as hamburger→locate
+function positionCountryPillDesktop() {
+  if (window.matchMedia("(max-width: 860px)").matches) {
+    if (_countryPill) _countryPill.style.top = "";
+    return;
+  }
+  if (!_locateBtn || !_countryPill) return;
+  const menuBtn = document.getElementById("appMenuButton");
+  if (!menuBtn) return;
+  const menuRect = menuBtn.getBoundingClientRect();
+  const locateRect = _locateBtn.getBoundingClientRect();
+  const menuCenter = menuRect.top + menuRect.height / 2;
+  const locateCenter = locateRect.top + locateRect.height / 2;
+  const spacing = locateCenter - menuCenter;
+  _countryPill.style.top = Math.round(locateCenter + spacing - _countryPill.offsetHeight / 2) + "px";
+}
+requestAnimationFrame(positionCountryPillDesktop);
 if (!localStorage.getItem("locateBtnHinted")) {
   setTimeout(() => {
     if (!_locateBtn) return;
@@ -554,6 +699,7 @@ let hostsByOrgId = new Map();
 let hostsById = new Map();
 let venueLookup = new Map();
 let markers = new Map();
+const _venueForRaceCache = new Map();
 let activeRaceId = null;
 let activeVenueId = null;
 let initialRenderDone = false;
@@ -1549,6 +1695,29 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE" };
+function venueCountry(venue) {
+  if (!venue?.myrcmOrgId) return null;
+  const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
+  if (!c) return null;
+  return _countryNameToCode[c] ?? c;
+}
+
+function matchesCountryFilter(race) {
+  if (selectedCountry === "all") return true;
+  const venue = venueForRace(race);
+  if (!venue) return false;
+  const venueC = venueCountry(venue);
+  if (!venueC) return true; // no country data yet → show in all filters
+  if (venueC === selectedCountry) return true;
+  // Cross-border races: also match by organizer's country
+  const hostId = raceHostId(race);
+  const rawHostC = hostId ? hostsById.get(String(hostId))?.country : null;
+  if (!rawHostC) return false;
+  const hostC = _countryNameToCode[rawHostC] ?? rawHostC;
+  return hostC === selectedCountry;
+}
+
 
 function matchesSearchQuery(race) {
   const query = searchInput.value.trim().toLowerCase();
@@ -1560,6 +1729,7 @@ function recentPastRacesForVenue(venue) {
     .filter(race => isRaceAtVenue(race, venue.id))
     .filter(isPastRaceWithinLastYear)
     .filter(matchesSelectedSeries)
+    .filter(matchesCountryFilter)
     .filter(matchesSearchQuery)
     .sort((a, b) => raceEndDate(b) - raceEndDate(a));
 }
@@ -2389,13 +2559,11 @@ function venueByRaceNameAndCity(race) {
 
 function venueForRace(race) {
   if (!race) return null;
-
-  return (
-    venueById(race.venueId) ||
-    venueByRaceAddress(race) ||
-    venueByRaceNameAndCity(race) ||
-    null
-  );
+  const key = race.id;
+  if (key !== undefined && _venueForRaceCache.has(key)) return _venueForRaceCache.get(key);
+  const result = venueById(race.venueId) || venueByRaceAddress(race) || venueByRaceNameAndCity(race) || null;
+  if (key !== undefined) _venueForRaceCache.set(key, result);
+  return result;
 }
 
 function normalizeUrl(url) {
@@ -2576,12 +2744,7 @@ function raceHostNameHtml(race) {
 
 function raceVenueNameHtml(race) {
   const name = escapeHtml(venueDisplayName(race));
-  const website = raceWebsite(race);
-  const nameHtml = website
-    ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${name}</a>`
-    : `<span class="venue-name-text">${name}</span>`;
-
-  return `<span class="venue-name">${nameHtml}</span>`;
+  return `<span class="venue-name"><span class="venue-name-text">${name}</span></span>`;
 }
 
 
@@ -2800,7 +2963,8 @@ function filteredRaces() {
     .filter(isInSelectedRange)
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
-    .filter(matchesFavoriteFilter);
+    .filter(matchesFavoriteFilter)
+    .filter(matchesCountryFilter);
 
   // Geocode aktiv: Radius-Filter statt Textsuche, damit Filteränderungen den Geocode-Bereich behalten
   if (_geocodeMarkerCoords) {
@@ -2931,15 +3095,12 @@ function googleMapsRouteUrl(venue) {
   return `https://www.google.com/maps/dir/?api=1&destination=${Number(venue.lat)},${Number(venue.lng)}`;
 }
 
-function buildPopup(venue, venueRaces, latestPastRace = null) {
-  const sourceRace = venueRaces[0] || latestPastRace;
-  const hostName = sourceRace ? raceHostName(sourceRace) : null;
-  const hostWebsite = sourceRace ? hostWebsiteForRace(sourceRace) : null;
-  const titleHtml = hostName
-    ? (hostWebsite
-        ? `<a class="popup-venue-link" href="${escapeHtml(hostWebsite)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${escapeHtml(hostName)}</a>`
-        : `<span class="venue-name-text">${escapeHtml(hostName)}</span>`)
-    : venueNameHtml(venue);
+function buildPopup(venue, venueRaces, latestPastRace = null, overrideName = null) {
+  const venueName = escapeHtml(overrideName || venue?.name || "Unbekannte Strecke");
+  const venueWs = venueWebsite(venue);
+  const titleHtml = venueWs
+    ? `<a class="popup-venue-link" href="${escapeHtml(venueWs)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${venueName}</a>`
+    : `<span class="venue-name-text">${venueName}</span>`;
 
   return `
     <div class="popup-title">${titleHtml}</div>
@@ -3076,7 +3237,8 @@ function fitMapToBounds(bounds, options = {}) {
   const boundsH = sePx.y - nwPx.y;
   const mapH = map.getSize().y;
   const topOfBoundsY = mapH / 2 + 40 - boundsH / 2;
-  const iconShift = Math.max(0, 130 - topOfBoundsY); // 80px topbar + 50px icon headroom
+  // iconShift protects space for marker icons below the topbar — skip for country bounds
+  const iconShift = options.skipIconShift ? 0 : Math.max(0, 130 - topOfBoundsY);
   panToVisible(map.unproject(L.point(cPx.x, cPx.y - iconShift), zoom), zoom);
 }
 
@@ -3363,7 +3525,7 @@ function focusRace(race) {
 
   const marker = markers.get(venue.id);
   if (marker) {
-    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue)));
+    marker.setPopupContent(buildPopup(venue, venueList, latestPastRaceForVenue(venue), race.venueName || null));
     marker.openPopup();
   }
 
@@ -3627,7 +3789,7 @@ raceList.addEventListener("click", event => {
 function populateSeries() {
   const seriesByKey = new Map();
 
-  races.forEach(race => {
+  races.filter(r => matchesCountryFilter(r) && isInSelectedRange(r)).forEach(race => {
     raceSeries(race).forEach(rawSeries => {
       const key = seriesFilterValue(rawSeries);
       if (!key) return;
@@ -3692,6 +3854,11 @@ function populateSeries() {
   appendGroup("Überregional", groups.overregional);
   appendGroup("Regional", groups.regional);
   appendGroup("Weitere Serien", groups.other);
+
+  if (selectedSeries !== "all" && !seriesFilter.querySelector(`option[value="${selectedSeries}"]`)) {
+    selectedSeries = "all";
+    seriesFilter.value = "all";
+  }
 }
 
 function updateMarkerAnimationDelays() {
@@ -3729,6 +3896,7 @@ function revealMap() {
   const mapEl = document.getElementById("map");
   if (!mapEl || mapEl.classList.contains("map-ready")) return;
   mapEl.classList.add("map-ready");
+  document.body.classList.add("map-is-ready");
   document.querySelector(".map-loader")?.classList.add("map-loader-done");
   // Fade pins in after map fade-in completes (220ms transition + small buffer)
   setTimeout(() => mapEl.classList.add("map-markers-ready"), 320);
@@ -3747,9 +3915,8 @@ function render() {
   updateAppModeClass();
   syncFilterUi();
   const list = filteredRaces();
-  updateMarkers(list, !initialRenderDone);
-  if (venues.length > 0) initialRenderDone = true;
 
+  // Phase 1: list panel updates immediately
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
 
@@ -3777,6 +3944,23 @@ function render() {
     renderList(list);
   }
 
+  // Phase 2: map markers deferred — browser paints list first, then updates map
+  const mapPanel = document.querySelector(".map-panel");
+  // Skip updateMarkers' own fitBounds when fitToCountry will handle the zoom
+  const shouldFitBounds = !initialRenderDone && !_zoomToCountryPending;
+  if (initialRenderDone) mapPanel?.classList.add("map-is-updating");
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      updateMarkers(list, shouldFitBounds);
+      if (venues.length > 0) initialRenderDone = true;
+      mapPanel?.classList.remove("map-is-updating");
+      if (_zoomToCountryPending) {
+        _zoomToCountryPending = false;
+        fitToCountry(selectedCountry);
+      }
+    });
+  });
 }
 
 function setLayout(layout) {
@@ -3804,6 +3988,7 @@ rangeFilter.addEventListener("click", event => {
     .querySelectorAll("button")
     .forEach(item => item.classList.toggle("active", item === button));
 
+  populateSeries();
   render();
 });
 
@@ -4032,10 +4217,17 @@ window.addEventListener("resize", scheduleSlidingPillUpdate);
 
 let resizeRecenterTimer = null;
 let resizeWasMobile = window.matchMedia("(max-width: 860px)").matches;
+let _resizeBpCrossing = false;
 window.addEventListener("resize", () => {
+  const _isMobileCheck = window.matchMedia("(max-width: 860px)").matches;
+  if (_isMobileCheck !== resizeWasMobile && !_resizeBpCrossing) {
+    _resizeBpCrossing = true;
+    document.body.classList.add("is-breakpoint-crossing");
+  }
   clearTimeout(resizeRecenterTimer);
   resizeRecenterTimer = setTimeout(() => {
     resizeRecenterTimer = null;
+    _resizeBpCrossing = false;
     if (!map) return;
     const isMobile = window.matchMedia("(max-width: 860px)").matches;
     const crossedBreakpoint = isMobile !== resizeWasMobile;
@@ -4049,6 +4241,10 @@ window.addEventListener("resize", () => {
         desktopSlot.appendChild(_locateBtn);
       }
     }
+    requestAnimationFrame(() => {
+      positionCountryPillDesktop();
+      document.body.classList.remove("is-breakpoint-crossing");
+    });
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;
     const zoom = map.getZoom();
@@ -4127,7 +4323,7 @@ async function init() {
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
     fetchJsonOrFallback(`rck-venue-candidates.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
-    fetchJsonOrFallback(`myrcm-hosts-germany.json?v=${cacheBuster}`, []),
+    fetchJsonOrFallback(`myrcm-hosts-dach.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog)
   ]);
 
@@ -4159,6 +4355,7 @@ async function init() {
       .filter(isUsefulRckRace)
       .map(race => normalizeRaceFromSource(race, "rck"))
   ];
+  _venueForRaceCache.clear();
 
   const hostRecords = Array.isArray(hostsResponse) ? hostsResponse : [];
   const myrcmHostRecords = Array.isArray(myrcmHostsResponse) ? myrcmHostsResponse : [];
@@ -4188,6 +4385,7 @@ async function init() {
 
   syncFilterUi();
 
+  if (selectedCountry !== "all") _zoomToCountryPending = true;
   render();
   revealMapWhenReady();
   loadAds();
@@ -4834,7 +5032,9 @@ const EXCLUDED_MYRCM_ORG_IDS = new Set(["60453"]); // Slottis Supreme Masters
 function isAdmin() { return sbUser && ADMIN_EMAILS.includes(sbUser.email.toLowerCase()); }
 
 const GITHUB_REPO = "CarstenSchneider/myrcm-rc-map";
-const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
+const IS_DEV_SITE = window.location.hostname === "dev.rcracemap.com";
+const GITHUB_BRANCH = IS_DEV_SITE ? "dev" : "main";
+const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
 async function adminLoadUnmatched() {
@@ -4846,7 +5046,7 @@ async function adminLoadUnmatched() {
   const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
-    .map(s => ({ hostId: s.hostId, hostName: s.hostName, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
+    .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
   // Merge: unmatched first, then unknown seeds not already in unmatched
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
   return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
@@ -4857,7 +5057,7 @@ async function adminCommit(payload) {
   const res = await fetch(SB_ADMIN_FN, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": `Bearer ${session.access_token}` },
-    body: JSON.stringify(payload)
+    body: JSON.stringify({ ...payload, branch: GITHUB_BRANCH })
   });
   if (!res.ok) throw new Error(await res.text());
   return res.json();
@@ -4917,6 +5117,120 @@ function openImpressumPage() {
   }, { once: true });
 }
 
+function renderAdminDachTab(container) {
+  container.innerHTML = `<p class="admin-loading">Lade AT/CH Koordinaten…</p>`;
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => r.json())
+    .then(seeds => {
+      const pending = seeds.filter(s => s.source === "geocoded-nominatim-dach");
+      const totalDach = seeds.filter(s => s.source === "geocoded-nominatim-dach" || s.source === "verified").length;
+      const alreadyDone = totalDach - pending.length;
+
+      if (!pending.length) {
+        container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} AT/CH Clubs verifiziert.</p>`;
+        return;
+      }
+
+      let idx = 0;
+
+      function renderEntry() {
+        const s = pending[idx];
+        const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
+        const doneCount = alreadyDone + idx;
+        const pct = Math.round(doneCount / totalDach * 100);
+
+        container.innerHTML = `
+          <div class="admin-dach-progress">
+            <span>${doneCount} / ${totalDach} verifiziert</span>
+            <div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>
+          </div>
+          <div class="admin-entry">
+            <div class="admin-entry-header">
+              <strong>${escapeHtml(s.name)}</strong>
+              <span class="admin-entry-meta">${escapeHtml(s.city || "")}${s.myrcmOrgId ? ` · MyRCM #${s.myrcmOrgId}` : ""}</span>
+            </div>
+            <div style="display:flex;gap:8px;margin:4px 0 8px;flex-wrap:wrap;">
+              ${s.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${s.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM ↗</a>` : ""}
+              ${mapsUrl ? `<a class="admin-entry-link" href="${mapsUrl}" target="_blank" rel="noopener">Karte (${s.lat.toFixed(4)}, ${s.lng.toFixed(4)}) ↗</a>` : ""}
+            </div>
+            <div class="admin-entry-coords">
+              <input type="text" class="admin-input admin-input-coords js-dach-coords" placeholder="48.123, 14.456" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
+            </div>
+            <div class="admin-entry-actions" style="flex-wrap:wrap;gap:8px;">
+              <button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>
+              <button type="button" class="admin-btn admin-btn-save js-dach-save">Korrigieren & Weiter</button>
+              <button type="button" class="admin-btn admin-btn-unknown js-dach-unknown">Kein Platz bekannt</button>
+              <button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>
+              ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
+            </div>
+            <p class="admin-entry-status js-dach-status"></p>
+          </div>`;
+
+        const status = container.querySelector(".js-dach-status");
+
+        async function saveSeed(lat, lng, locationUnknown = false) {
+          status.textContent = "Speichern…";
+          try {
+            const payload = locationUnknown
+              ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
+              : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
+            await adminCommit(payload);
+            pending.splice(idx, 1);
+            if (idx >= pending.length) {
+              container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} AT/CH Clubs verifiziert.</p>`;
+            } else {
+              renderEntry();
+            }
+          } catch (e) {
+            status.textContent = `Fehler: ${e.message}`;
+          }
+        }
+
+        async function deleteSeed() {
+          status.textContent = "Löschen…";
+          try {
+            await adminCommit({ action: "delete-dach-seed", seedId: s.id, seedName: s.name });
+            pending.splice(idx, 1);
+            if (idx >= pending.length) idx = Math.max(0, pending.length - 1);
+            if (!pending.length) {
+              container.innerHTML = `<p class="admin-empty">✓ Alle AT/CH Clubs bearbeitet.</p>`;
+            } else {
+              renderEntry();
+            }
+          } catch (e) {
+            status.textContent = `Fehler: ${e.message}`;
+          }
+        }
+
+        container.querySelector(".js-dach-ok").addEventListener("click", () => {
+          if (!s.lat || !s.lng) { status.textContent = "Keine Koordinaten vorhanden"; return; }
+          saveSeed(s.lat, s.lng);
+        });
+
+        container.querySelector(".js-dach-save").addEventListener("click", () => {
+          const parts = container.querySelector(".js-dach-coords").value.split(",").map(x => parseFloat(x.trim()));
+          const [lat, lng] = parts;
+          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
+          saveSeed(lat, lng);
+        });
+
+        container.querySelector(".js-dach-unknown").addEventListener("click", () => {
+          saveSeed(null, null, true);
+        });
+
+        container.querySelector(".js-dach-delete").addEventListener("click", deleteSeed);
+
+        container.querySelector(".js-dach-prev")?.addEventListener("click", () => {
+          idx--;
+          renderEntry();
+        });
+      }
+
+      renderEntry();
+    })
+    .catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
+}
+
 function openAdminPage() {
   const adminPage = document.getElementById("adminPage");
   const listEl = document.getElementById("adminPageList");
@@ -4928,6 +5242,7 @@ function openAdminPage() {
   listEl.innerHTML = `
     <div class="admin-tabs">
       <button class="admin-tab is-active" data-tab="locations">Ausrichter</button>
+      ${IS_DEV_SITE ? `<button class="admin-tab" data-tab="dach">AT/CH</button>` : ""}
       <button class="admin-tab" data-tab="ads">Werbung</button>
     </div>
     <div id="adminTabContent"></div>`;
@@ -4938,6 +5253,8 @@ function openAdminPage() {
     listEl.querySelectorAll(".admin-tab").forEach(t => t.classList.toggle("is-active", t.dataset.tab === name));
     if (name === "ads") {
       renderAdminAdsTab(tabContent);
+    } else if (name === "dach") {
+      renderAdminDachTab(tabContent);
     } else {
       tabContent.innerHTML = `<p class="admin-loading">Lade…</p>`;
       adminLoadUnmatched().then(entries => {
@@ -5293,6 +5610,7 @@ window.addEventListener("load", () => {
     if (lastVisibleCenter && !window.matchMedia("(max-width: 860px)").matches) {
       panToVisible(lastVisibleCenter, map.getZoom());
     }
+    positionCountryPillDesktop();
     // Double-RAF: forces compositor hit-test tree rebuild so CSS :hover works on first load
     requestAnimationFrame(() => { void document.body.offsetHeight; });
   });

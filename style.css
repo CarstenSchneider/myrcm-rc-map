@@ -452,7 +452,10 @@ input {
 
 .race-venue {
   font-size: 14px;
-  color: var(--muted);
+}
+
+.race-venue-pin {
+  flex-shrink: 0;
 }
 
 .race-venue-unknown {
@@ -873,7 +876,7 @@ input {
   100% { box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08), 0 0 0 0 rgba(74, 158, 232, 0); }
 }
 
-/* Locate button — matches app-menu-button on desktop; fixed on mobile */
+/* Locate button — in locateDesktopSlot on desktop; fixed top-left on mobile */
 .locate-btn {
   display: flex;
   align-items: center;
@@ -887,9 +890,94 @@ input {
   color: var(--accent);
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
-  transition: transform 120ms ease;
+  opacity: 0;
+  transition: transform 120ms ease, opacity 0.35s ease;
 }
 .locate-btn:hover { transform: scale(1.08); }
+
+/* Country filter pill — fixed directly below locate button */
+.country-pill {
+  position: fixed;
+  top: 152px;  /* fallback; overridden by positionCountryPillDesktop() */
+  left: 14px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  max-width: 40px;
+  border-radius: 999px;
+  background: rgba(var(--panel-rgb), 0.98);
+  box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.country-pill.is-expanded { max-width: 164px; }
+
+.country-pill-btn {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.country-pill-btn:not(.is-active):hover { transform: scale(1.08); }
+
+.country-flag-icon {
+  display: block;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover !important;
+}
+
+/* Reveal locate + pill after map tiles are ready */
+body.map-is-ready .locate-btn,
+body.map-is-ready .country-pill { opacity: 1; }
+
+body.is-breakpoint-crossing .locate-btn,
+body.is-breakpoint-crossing .country-pill {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+/* Dark mode: pill and locate match the mob-menu-btn color */
+:root.theme-dark .country-pill { background: var(--pill-bg) !important; }
+:root.theme-dark .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-light) .country-pill { background: var(--pill-bg) !important; }
+  :root:not(.theme-light) .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }
+}
+
+@media (max-width: 860px) {
+  .country-pill {
+    top: 136px;  /* 74 (locate top) + 52 (locate height) + 10 gap */
+    height: 52px;
+    max-width: 52px;
+  }
+  .country-pill.is-expanded { max-width: 212px; }
+  .country-pill-btn {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+  }
+  .country-flag-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
 .locate-btn.attention-pulse { animation: locate-attention 1.1s ease-out 3; }
 .locate-btn.is-locating { opacity: 0.45; pointer-events: none; }
 .locate-btn.is-active { background: var(--accent) !important; color: #fff !important; }
@@ -1431,7 +1519,8 @@ input {
   }
 
   .layout-prototype .leaflet-control-zoom {
-    display: none !important;
+    margin-left: 14px !important;
+    margin-bottom: 80px !important;
   }
 }
 
@@ -2380,6 +2469,12 @@ input {
   }
 }
 
+/* map update spinner (filter changes after initial load) */
+.map-panel.map-is-updating .map-loader {
+  opacity: 1;
+  transition: none;
+}
+
 /* markers hidden until map is fully revealed, then fade in */
 #map .map-marker-visual {
   opacity: 0;
@@ -2390,9 +2485,11 @@ input {
   opacity: 1;
 }
 
-/* v1.6.1 venue link hover states */
+/* v1.6.1 venue link hover states; v114 add text-decoration: none + explicit .race-venue .venue-link color */
 
 .venue-link {
+  color: var(--text);
+  text-decoration: none;
   transition: color 120ms ease;
 }
 
@@ -2426,6 +2523,7 @@ input {
   text-decoration: none;
   cursor: default;
 }
+
 
 /* v1.6.3 horizontal topbar filters */
 
@@ -2833,7 +2931,8 @@ input {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 @media (max-width: 860px) {
   .mob-menu-btn { display: flex; }
@@ -3850,6 +3949,14 @@ body.is-menu-open .app-menu-close {
 .admin-btn-save:hover { opacity: 0.85; }
 .admin-btn-unknown { background: rgba(var(--text-rgb), 0.1); color: var(--muted); }
 .admin-btn-unknown:hover { background: rgba(var(--text-rgb), 0.18); }
+.admin-btn-ok { background: rgba(var(--text-rgb), 0.1); color: var(--text); }
+.admin-btn-ok:hover { background: rgba(var(--text-rgb), 0.18); }
+.admin-btn-delete { background: rgba(220,53,69,0.12); color: #dc3545; }
+.admin-btn-delete:hover { background: rgba(220,53,69,0.22); }
+.admin-dach-progress { margin-bottom: 16px; }
+.admin-dach-progress span { font-size: 12px; color: var(--muted); display: block; margin-bottom: 5px; }
+.admin-dach-bar { height: 4px; background: rgba(var(--border-rgb), 0.3); border-radius: 2px; overflow: hidden; }
+.admin-dach-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s; }
 .admin-entry-status { font-size: 12px; margin: 6px 0 0; min-height: 16px; color: var(--muted); }
 
 /* Favorites page */
@@ -3897,6 +4004,7 @@ body.is-menu-open .app-menu-close {
   .fav-star-btn:hover { color: var(--favorite); }
   .fav-star-btn.active:hover, .fav-star-btn.active:focus-visible { color: rgba(var(--text-rgb), 0.22); }
   .fav-bell-btn:hover { color: var(--favorite); }
+  .fav-bell-btn.active:hover, .fav-bell-btn.active:focus-visible { color: rgba(var(--text-rgb), 0.22); }
 }
 .fav-bell-icon { width: 34px; height: 34px; flex-shrink: 0; pointer-events: none; }
 .fav-empty { padding: 32px 24px; font-size: 13px; color: var(--muted); text-align: center; }

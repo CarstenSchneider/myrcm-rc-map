@@ -1,7 +1,7 @@
 # RC Race Map — Claude Context
 
 ## Projekt-Überblick
-RC Race Map ist eine Single-Page-App (kein Build-Schritt, kein Framework) die RC-Car-Rennen in Deutschland auf einer Leaflet/MapLibre-Karte anzeigt. Drei Quelldateien: `app.js` (~4500 Zeilen), `style.css` (~3500 Zeilen), `index.html` (~1350 Zeilen).
+RC Race Map ist eine Single-Page-App (kein Build-Schritt, kein Framework) die RC-Car-Rennen in Deutschland, Österreich und der Schweiz (DACH) auf einer Leaflet/MapLibre-Karte anzeigt. Drei Quelldateien: `app.js` (~5600 Zeilen), `style.css` (~4000 Zeilen), `index.html` (~1400 Zeilen).
 
 **Live-URLs:**
 - Production: `rcracemap.com` — Branch `main`
@@ -26,7 +26,7 @@ Der User testet **ausschließlich auf dev.rcracemap.com**, nie lokal. Nach jeder
 - `panToVisible(latlng, zoom)` — verschiebt projizierten Punkt um +207px (Desktop) damit geografisches Zentrum bei `W/2 - 207` erscheint (Mitte des sichtbaren Bereichs links vom Panel). Setzt `lastVisibleCenter`.
 - `fitMapToBounds(bounds, options)` — Desktop: `getBoundsZoom` mit 207px symmetrischem Padding + `panToVisible`. Mobile: Leaflet `fitBounds` mit Drawer-Padding.
 - `updateMarkers(list, shouldFitBounds)` — rendert Marker; ruft `fitMapToBounds` wenn `shouldFitBounds = true`
-- `render()` — ruft `updateMarkers(list, !initialRenderDone)`. `initialRenderDone` wird nur auf `true` gesetzt wenn `venues.length > 0` (verhindert frühzeitiges Setzen durch `onAuthStateChange` vor Datenladen)
+- `render()` — zweiphasig: Liste sofort (synchron), Karte per double-rAF (async mit Spinner). `initialRenderDone` wird nur auf `true` gesetzt wenn `venues.length > 0`.
 
 ### MAX_BOUNDS
 ```js
@@ -56,12 +56,44 @@ Events die `applyRcRaceMapStyle` auslösen:
 - `setDrawerState(state)` ruft `map.invalidateSize({ pan: false })` — `pan: false` verhindert unkontrolliertes Neuzentrieren
 - `panToVisible` berechnet Shift direkt aus CSS-Mathematik (nicht aus `getBoundingClientRect`), da die Drawer-Transition 0.32s dauert und DOM-Messung mid-animation falsche Werte liefert
 
+### Render-Performance
+`venueForRace(race)` wurde früher ~650.000× pro Render aufgerufen (259 Venues × 2238 Rennen in `updateMarkers` + `latestPastRaceForVenue` + `filteredRaces`). Jetzt gecacht:
+```js
+const _venueForRaceCache = new Map(); // race.id → venue
+// wird in venueForRace() befüllt, nach Datenladen geleert (_venueForRaceCache.clear())
+```
+Zweiphasiger Render in `render()`:
+- **Phase 1 (synchron):** `syncFilterUi()` + `renderList()` — Browser malt sofort
+- **Phase 2 (double-rAF):** `updateMarkers()` — während dieser Phase zeigt `.map-panel.map-is-updating .map-loader` den Spinner
+
 ### Daten
 - `venues` — Array von Strecken (verwende `.find()`)
-- `races` — Array von Rennen (myrcm + rck)
+- `races` — Array von Rennen (myrcm + rck), aktuell ~2238
 - `markers` — Map (venue.id → Leaflet Marker)
-- `hosts`, `hostsById`, `hostsByOrgId` — Club-Daten
+- `hosts`, `hostsById`, `hostsByOrgId` — Club-Daten (256 Hosts: 176 DE, 43 AT, 37 CH)
 - Geladen via `fetch()` parallel; nach Laden: `render()` → `revealMapWhenReady()`
+
+### Länderfilter
+```js
+let selectedCountry = "all"; // | "DE" | "AT" | "CH"
+```
+- `venueCountry(venue)` — schlägt in `hostsByOrgId` nach, normalisiert Vollnamen zu ISO-Codes
+  ```js
+  const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE" };
+  ```
+  **Wichtig:** `myrcm-hosts-dach.json` speichert `country: "Austria"`, `hosts.json` hat `country: "AT"`. Beide Quellen landen in `hostsByOrgId`, DACH-Einträge überschreiben (kommen zuletzt). Ohne Normalisierung würde `"Austria" === "AT"` immer false sein.
+- `matchesCountryFilter(race)` — Fallback `if (!c) return true` wenn kein Country-Datum vorhanden
+- `recentPastRacesForVenue(venue)` — enthält ebenfalls `matchesCountryFilter` (wichtig: sonst erscheinen DE-Venues bei AT-Filter wegen `latestPastRaceForVenue`)
+- **Länderzoom:** Beim Filterwechsel setzt `_zoomToCountryPending = true`, Phase 2 von `render()` ruft `fitToCountry(selectedCountry)` auf
+  ```js
+  const COUNTRY_BOUNDS = {
+    DE: [[47.2, 5.8], [55.1, 15.1]],
+    AT: [[46.2, 9.4], [49.0, 17.2]],
+    CH: [[45.7, 5.9], [47.9, 10.6]],
+    all: [[45.7, 5.8], [55.1, 17.5]],
+  };
+  ```
+- **Auto-Erkennung:** `detectCountryFromLocale()` — prüft zuerst Language-Tags (`de-AT` → AT), dann Timezone-Fallback (`Europe/Vienna` → AT, `Europe/Zurich` → CH, `Europe/Berlin` → DE). Persistiert in `localStorage("rcRaceMapCountry")`.
 
 ### Favoriten & "Zuletzt"-Karten
 - `isFavoriteHostId(id)` — prüft ob Strecke favorisiert
@@ -102,16 +134,22 @@ window.addEventListener("load", () => {
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v152**, **style.css v105**
+Aktuelle Version: **app.js v181**, **style.css v110**
 
 ## Import-System
 
 ### import-races.yml — Ablauf
 1. **Wait for MyRCM** — 10 Versuche × 20 Minuten (max. 3h 20min), Job-Timeout 360min
 2. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0), läuft immer zuverlässig
-3. **Import MyRCM** — `npm run import` → `import-myrcm.js`
-4. **Commit** — alle JSON-Dateien in einem Commit zu `main` und `dev` (nur wenn Änderungen)
+3. **Import MyRCM** — `stdbuf -oL -eL node --no-warnings import-myrcm.js` (stdbuf erzwingt zeilenweises Streaming in CI)
+4. **Commit** — alle JSON-Dateien in einem Commit zu `main` und `dev` (nur wenn Änderungen); `git pull --rebase` vor jedem Push (verhindert Race Condition wenn main/dev zwischenzeitlich geändert wurde)
 5. **Send notifications** — POST an Supabase Edge Function
+
+### import-myrcm.js — Konfiguration
+```js
+const hostListFile = "myrcm-hosts-dach.json"; // 304 Hosts: 179 DE + 67 AT + 58 CH
+```
+**Wichtig:** Muss auf `main` identisch zu `dev` sein — der Import-Job checkt `main` aus.
 
 ### import-myrcm.js — Fehlerbehandlung
 ```js
@@ -123,15 +161,18 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 
 `parseEvents()` filtert `null`-Werte mit `races.filter(Boolean)`.
 
-**Buchungsseiten-Check:** Die Nennseite (`hId[1]=bkg`) wird beim Import abgerufen. Enthält sie "Booking not possible", "Registration closed" oder "Booking closed", wird `registrationStatus` auf `"closed"` gesetzt — unabhängig vom Status auf der Listenseite.
+**Buchungsseiten-Check:** Die Nennseite (`hId[1]=bkg`) wird beim Import abgerufen. Enthält sie "Registration closed" oder "Booking closed", wird `registrationStatus` auf `"closed"` gesetzt. **"Booking not possible" allein setzt NICHT mehr auf closed** — dieser Text erscheint auch wenn die Nennung noch nicht geöffnet ist (Status "upcoming"). Wenn `registrationInfoFromText` bereits "upcoming" zurückgibt, wird das nicht überschrieben.
+
+**Country-Backfill:** Nach `mergeHosts()` wird für Hosts ohne `country`-Feld das Land aus `myrcm-hosts-dach.json` nachgefüllt (via `orgId`-Mapping). So haben alle Hosts in `hosts.json` ein `country`-Feld im ISO-Format (AT/CH/DE).
 
 ### Datendateien
 | Datei | Inhalt |
 |---|---|
-| `races.json` | MyRCM-Rennen |
+| `races.json` | MyRCM-Rennen (~2238 Rennen, DACH) |
 | `rck-races.json` | RCK-Rennen |
-| `venues.json` | Strecken |
-| `hosts.json` | Clubs |
+| `venues.json` | Strecken (259 Venues, DACH) |
+| `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH) |
+| `myrcm-hosts-dach.json` | Seed-Datei: 304 MyRCM-Hosts DACH (orgId, country als Vollname) |
 | `venue-unmatched.json` | nicht zugeordnete Venues |
 | `rck-venue-candidates.json` | RCK Venue-Kandidaten |
 
@@ -179,6 +220,65 @@ Klick auf Popup (inkl. Streckenname / Route-Button) pinnt die Strecke: `isPopupP
 ### Warum myrcm.ch manchmal scheitert
 myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitHub Actions IPs sind **nicht** geblockt — die Timeouts sind transient. Der `isMyrcmReachable()`-Check unterscheidet individuelle Bad Events von systemischen Ausfällen.
 
+### Warum hostsByOrgId Vollnamen normalisiert werden müssen
+`myrcm-hosts-dach.json` (Seed-Datei) hat `country: "Austria"`, `hosts.json` (Import-Output) hat `country: "AT"`. Beide Quellen landen in `hostsByOrgId`, DACH-Einträge kommen zuletzt und überschreiben. `venueCountry()` normalisiert daher via `_countryNameToCode` Map.
+
+## Pre-Launch Checkliste
+
+### Karte & Grundfunktion
+- [ ] Startansicht korrekt (richtiges Land auto-erkannt, Karte zentriert)
+- [ ] Alle Marker sichtbar (DE + AT + CH)
+- [ ] Klick auf Marker öffnet Strecken-Panel
+- [ ] Klick außerhalb schließt Panel wieder
+- [ ] Zoom/Pan funktioniert, MAX_BOUNDS begrenzen korrekt
+
+### Länderfilter
+- [ ] DE / AT / CH Filter zeigen nur Rennen des jeweiligen Landes
+- [ ] Filter-Wechsel zoomt Karte auf das Land
+- [ ] "Alle Länder" zeigt DACH-Gesamtansicht
+- [ ] Auswahl bleibt nach Reload erhalten (localStorage)
+- [ ] Auto-Erkennung korrekt (Safari/Chrome, macOS/iOS/Android in DE/AT/CH testen)
+
+### Renndaten
+- [ ] Registrierungsstatus korrekt: "Nennung offen" / "geschlossen" / "Nennung ab [Datum]"
+- [ ] Keine zukünftigen Rennen fälschlicherweise als "geschlossen" markiert
+- [ ] Rennklassen-Tags werden angezeigt
+- [ ] Teilnehmerzahl korrekt (wo verfügbar)
+- [ ] Links zu MyRCM / RCK öffnen sich
+
+### Favoriten & Notifications
+- [ ] Stern setzen/entfernen funktioniert (eingeloggt)
+- [ ] Glocke für Benachrichtigungen setzt/entfernt Abonnement
+- [ ] Notification-Email kommt nach Import an (Supabase `seen_race_notifications` leeren und Import manuell starten)
+- [ ] Favoriten-Filter zeigt nur Favoriten-Strecken
+
+### Mobile (iOS Safari + Android Chrome)
+- [ ] Drawer-Zustände: collapsed / half / full
+- [ ] Swipe-Geste auf Drawer funktioniert
+- [ ] Locate-Button (GPS) zentriert auf eigene Position
+- [ ] Karte bleibt beim Öffnen eines Eintrags sichtbar
+
+### Dark Mode
+- [ ] Theme wechselt korrekt (System-Einstellung + manuell)
+- [ ] Kein grüner Flash beim Tab-Wechsel
+- [ ] Marker-Farben korrekt in beiden Themes
+
+### Performance
+- [ ] Filter-Wechsel sofort responsiv (kein UI-Freeze)
+- [ ] Karten-Spinner erscheint während Marker-Update
+- [ ] Initiales Laden < 3s auf normalem Mobilnetz
+
+### Import-Pipeline
+- [ ] `import-myrcm.js` auf `main` und `dev` identisch (vor Livegang abgleichen)
+- [ ] Nächster geplanter Import (04:00 UTC) schreibt korrekt auf `main` + `dev`
+- [ ] Nach Import: `races.json` enthält DE + AT + CH Rennen
+
+### Deployment
+- [ ] `dev` → `main` Merge nur wenn obige Punkte alle bestätigt
+- [ ] Nach `main`-Push: Production-URL `rcracemap.com` testen
+
+---
+
 ## Bekannte Stolperfallen
 1. **`venues` ist Array, `markers` ist Map** — `.find()` vs `.get()`
 2. **`initialRenderDone`** wird nur gesetzt wenn `venues.length > 0`
@@ -189,3 +289,7 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 7. **MAX_BOUNDS** muss Südrand ≤35°N haben — sonst snap-back bei österreichischen Venues auf Mobile
 8. **`map.invalidateSize({ pan: false })`** in `setDrawerState` — `pan: false` ist entscheidend
 9. **Notification-Funktion** liest von Production (`rcracemap.com`), nicht von dev — auf dev testen macht keinen Sinn
+10. **`_venueForRaceCache`** muss nach Datenladen geleert werden (`_venueForRaceCache.clear()`) — sonst werden veraltete Venue-Zuordnungen gecacht
+11. **`recentPastRacesForVenue`** muss `matchesCountryFilter` enthalten — sonst erscheinen Venues anderer Länder im Karten-Layer wegen `latestPastRaceForVenue`
+12. **`import-myrcm.js` auf `main` und `dev` synchron halten** — Import-Job checkt `main` aus; Änderungen nur auf `dev` werden beim nächsten Tagesimport ignoriert
+13. **`myrcm-hosts-dach.json` muss auf `main` vorhanden sein** — Import-Job braucht die Datei; fehlt sie auf main, fällt Import auf DE-only zurück

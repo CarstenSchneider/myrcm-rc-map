@@ -293,5 +293,307 @@
       "Carrera Explorer Cup",
       "Carrea Explorer Cup"
     ]
+  },
+  {
+    "id": "om-at",
+    "name": "Österreichische Meisterschaft",
+    "shortName": "ÖM",
+    "displayName": "Österreichische Meisterschaft (ÖM)",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "Österreichische Meisterschaft",
+      "Österr. Meisterschaft",
+      "OM Lauf",
+      "ÖM EF",
+      "OM OR8",
+      "ÖM LS",
+      "Dirt OM",
+      "Lauf ÖM",
+      "OM OR8-E"
+    ]
+  },
+  {
+    "id": "oem-rallycross",
+    "name": "Österreichische Rallycross Meisterschaft",
+    "displayName": "Österreichische Rallycross Meisterschaft",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "Österreichische Rallycross Meisterschaft",
+      "ÖM Rally"
+    ]
+  },
+  {
+    "id": "fun-cup-austria",
+    "name": "Fun Cup Austria",
+    "displayName": "Fun Cup Austria",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "Fun Cup Austria",
+      "FCA Indoor",
+      "Lauf FCA Indoor"
+    ]
+  },
+  {
+    "id": "oefmav",
+    "name": "ÖFMAV GP Series",
+    "shortName": "ÖFMAV",
+    "displayName": "ÖFMAV GP Series",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "ÖFMAV"
+    ]
+  },
+  {
+    "id": "mini-challenge-austria",
+    "name": "Mini-Challenge Austria",
+    "displayName": "Mini-Challenge Austria",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "Mini-Challenge Austria",
+      "MINI - Challenge",
+      "MINI Challenge"
+    ]
+  },
+  {
+    "id": "ost-cup-at",
+    "name": "OST-Cup GP Series",
+    "displayName": "OST-Cup GP Series",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "OST-Cup"
+    ]
+  },
+  {
+    "id": "kaerntencup",
+    "name": "Kärntencup",
+    "displayName": "Kärntencup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Kärntencup",
+      "Kärnten Cup",
+      "KÄRNTENCUP"
+    ]
+  },
+  {
+    "id": "onroad-cup-tirol",
+    "name": "Onroad Cup Tirol",
+    "displayName": "Onroad Cup Tirol",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Onroad Cup Tirol",
+      "On Road Cup Tirol"
+    ]
+  },
+  {
+    "id": "ert-hopfenrace",
+    "name": "ERT Hopfenrace",
+    "displayName": "ERT Hopfenrace",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "ERT Hopfenrace"
+    ]
+  },
+  {
+    "id": "mrcp-series",
+    "name": "MRCP Series",
+    "displayName": "MRCP Series",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "MRCP Series",
+      "MRCP"
+    ]
+  },
+  {
+    "id": "sm-cs",
+    "name": "Schweizer Meisterschaft / Championnat Suisse",
+    "shortName": "SM/CS",
+    "displayName": "SM/CS SRCCA",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "SM/CS",
+      "SM Lauf",
+      "SM-Lauf",
+      "SRCCA",
+      "Swiss Nationals"
+    ]
+  },
+  {
+    "id": "swiss-racing-cup",
+    "name": "Swiss Racing Cup",
+    "displayName": "Swiss Racing Cup",
+    "scope": "national",
+    "source": "curated",
+    "aliases": [
+      "Swiss Racing Cup"
+    ]
+  },
+  {
+    "id": "els",
+    "name": "European Largescale Series",
+    "shortName": "ELS",
+    "displayName": "European Largescale Series (ELS)",
+    "scope": "international",
+    "source": "curated",
+    "aliases": [
+      "ELS",
+      "European Largescale Series"
+    ]
+  },
+  {
+    "id": "tit-cup",
+    "name": "TIT-Cup meets SundayRACE",
+    "displayName": "TIT-Cup meets SundayRACE",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "TIT-Cup meets SundayRACE",
+      "TIT-Cup"
+    ]
+  },
+  {
+    "id": "hsh-mini-drom-cup",
+    "name": "HSH Mini Drom Cup",
+    "displayName": "HSH Mini Drom Cup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "HSH Mini Drom Cup",
+      "Mini Drom Cup"
+    ]
+  },
+  {
+    "id": "tamiyacup-ch",
+    "name": "Tamiyacup / Coupe Tamiya",
+    "displayName": "Tamiyacup / Coupe Tamiya",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Tamiyacup",
+      "Coupe Tamiya"
+    ]
+  },
+  {
+    "id": "indoorseries-ch",
+    "name": "IndoorSeries",
+    "displayName": "IndoorSeries",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "IndoorSeries"
+    ]
+  },
+  {
+    "id": "siorc",
+    "name": "SIORC",
+    "displayName": "SIORC",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "SIORC"
+    ]
+  },
+  {
+    "id": "sitcc",
+    "name": "SITCC",
+    "displayName": "SITCC",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "SITCC"
+    ]
+  },
+  {
+    "id": "eocd-clubseries",
+    "name": "EOCD Clubseries",
+    "displayName": "EOCD Clubseries",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "EOCD Clubseries",
+      "EOCD"
+    ]
+  },
+  {
+    "id": "art-wintermeisterschaft",
+    "name": "ART Wintermeisterschaft",
+    "displayName": "ART Wintermeisterschaft",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "ART Wintermeisterschaft"
+    ]
+  },
+  {
+    "id": "itw-wintermeisterschaft",
+    "name": "ITW Wintermeisterschaft",
+    "displayName": "ITW Wintermeisterschaft",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "ITW: Wintermeisterschaft",
+      "ITW Wintermeisterschaft"
+    ]
+  },
+  {
+    "id": "dielsdorf-dirt-classics",
+    "name": "Dielsdorf Dirt Classics",
+    "displayName": "Dielsdorf Dirt Classics",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Dielsdorf Dirt Classics"
+    ]
+  },
+  {
+    "id": "championnat",
+    "name": "Championnat",
+    "displayName": "Championnat",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Championnat"
+    ]
+  },
+  {
+    "id": "sic",
+    "name": "SIC",
+    "displayName": "SIC",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "SIC Rd"
+    ]
+  },
+  {
+    "id": "axxelerate",
+    "name": "Axxelerate Arena Winter Series",
+    "displayName": "Axxelerate Arena Winter Series",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Axxelerate Arena Winter Series",
+      "Axxelerate"
+    ]
+  },
+  {
+    "id": "samstag-cup",
+    "name": "Samstag Cup",
+    "displayName": "Samstag Cup",
+    "scope": "regional",
+    "source": "curated",
+    "aliases": [
+      "Samstag Cup"
+    ]
   }
 ]
