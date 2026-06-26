@@ -1769,6 +1769,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-22319",
+    "name": "MBLR Racing",
+    "city": "",
+    "lat": 46.65009765198645,
+    "lng": 7.029649162780778,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "22319",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "mbsc-waechtersbach",
     "name": "MBSC Wächtersbach",
     "city": "Wächtersbach",
@@ -2421,6 +2436,21 @@
     ],
     "myrcmOrgId": "18473",
     "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "myrcm-18473",
+    "name": "Mini Tout Terrain Gruyère",
+    "city": "",
+    "lat": 46.650127738366436,
+    "lng": 7.029607046226385,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "18473",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -3429,6 +3459,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-53491",
+    "name": "MSV Weiz",
+    "city": "",
+    "lat": 47.19196124203115,
+    "lng": 15.584801352403556,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "53491",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "msv-woelbling",
     "name": "MSV-Wölbling",
     "city": "Unterwölbling",
@@ -4033,6 +4078,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-43490",
+    "name": "RC Cars Wernigerode e.V.",
+    "city": "",
+    "lat": 51.85763261882311,
+    "lng": 10.803858097976457,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "43490",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
@@ -4302,6 +4362,21 @@
     ],
     "myrcmOrgId": "18966",
     "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "myrcm-18966",
+    "name": "RC-Lords of Dirt",
+    "city": "",
+    "lat": 46.81322877318174,
+    "lng": 13.350113343570492,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "18966",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -4578,6 +4653,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-775",
+    "name": "RCC-Grafenwörth",
+    "city": "",
+    "lat": 48.412696168360476,
+    "lng": 15.775716608555854,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "775",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "rcc-steinlach-e-v",
     "name": "RCC-Steinlach e.V.",
     "city": "Reutlingen",
@@ -4847,6 +4937,21 @@
     ],
     "myrcmOrgId": "777",
     "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "myrcm-777",
+    "name": "RMC-Wien",
+    "city": "",
+    "lat": 47.95807149138246,
+    "lng": 16.413935566153604,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "777",
+    "source": "venue-seeds",
     "verified": true
   },
   {
