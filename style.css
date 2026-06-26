@@ -3953,6 +3953,8 @@ body.is-menu-open .app-menu-close {
 .admin-btn-ok:hover { background: rgba(var(--text-rgb), 0.18); }
 .admin-btn-delete { background: rgba(220,53,69,0.12); color: #dc3545; }
 .admin-btn-delete:hover { background: rgba(220,53,69,0.22); }
+.admin-section { margin-bottom: 8px; }
+.admin-section-title { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 20px 0 4px; }
 .admin-dach-progress { margin-bottom: 16px; }
 .admin-dach-progress span { font-size: 12px; color: var(--muted); display: block; margin-bottom: 5px; }
 .admin-dach-bar { height: 4px; background: rgba(var(--border-rgb), 0.3); border-radius: 2px; overflow: hidden; }
