@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "modellclub-flensburg-e-v",
-    "hostName": "Modellclub Flensburg e.V",
-    "source": "myrcm",
-    "myrcmOrgId": "42405",
-    "possibleVenue": "Flensburg",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "msv-weiz",
     "hostName": "MSV Weiz",
     "source": "myrcm",
