@@ -3755,6 +3755,12 @@
     "lng": 10.77563474253423
   },
   {
+    "hostId": "dmc-ort-fulda",
+    "hostName": "ORT Fulda",
+    "lat": 50.48845151298898,
+    "lng": 9.410104072742504
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "lat": 50.79377848514052,
