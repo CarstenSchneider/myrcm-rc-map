@@ -1,0 +1,29 @@
+name: Test RC Cloud Import
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run RC Cloud import
+        run: node import-rccloud.js
+
+      - name: Show first 50 DMC races
+        run: node -e "
+          const d = JSON.parse(require('fs').readFileSync('rccloud-races.json','utf8'));
+          console.log('Gesamt:', d.length);
+          console.log('Mit venueId:', d.filter(r=>r.venueId).length);
+          d.slice(0,10).forEach(r => console.log(r.from, r.hostName, '->', r.venueId ?? 'KEIN MATCH', '|', r.name));
+        "
