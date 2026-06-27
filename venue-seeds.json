@@ -3771,6 +3771,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "dmc-slr-ingolstadt-e-v",
+    "hostName": "SLR Ingolstadt e.V.",
+    "lat": 48.7154019804972,
+    "lng": 11.41198778356575
+  },
+  {
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "lat": 48.720995,
