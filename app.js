@@ -5783,6 +5783,9 @@ function renderClubList() {
         const status = race.registrationStatus || "";
         const dotCls = status === "open" ? "open" : status === "upcoming" ? "upcoming" : status === "closed" ? "closed" : "";
         const dot = dotCls ? `<span class="race-list-status-dot ${dotCls}"></span>` : "";
+        const regCount = registrationCount(race);
+        const rowScale = markerScaleForRegistrationCount(regCount);
+        const rowFontSize = Math.round(rowScale * 13);
         const hostObjs = (venue?.hostIds ?? []).map(id => hostsById.get(String(id))).filter(Boolean);
         const website = venue?.website || hostObjs.find(h => h.website)?.website || null;
         const nameHtml = website && venue
@@ -5795,7 +5798,7 @@ function renderClubList() {
           const buttons = vid ? `<button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button><button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>` : "";
           iconsCell = `<td class="col-icons">${buttons}</td>`;
         }
-        return `<tr data-race-id="${escapeHtml(race.id)}">
+        return `<tr data-race-id="${escapeHtml(race.id)}" style="font-size:${rowFontSize}px">
           <td class="col-date">${dateStr}</td>
           <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
           ${loggedIn ? iconsCell : ""}
