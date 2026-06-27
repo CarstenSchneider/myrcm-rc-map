@@ -178,8 +178,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -211,7 +211,7 @@
       },
       {
         "name": "Gastklasse: Porsche Cup nach RCK",
-        "entries": 8
+        "entries": 9
       }
     ],
     "documents": [
@@ -705,8 +705,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 59,
-    "registrationDisplay": "59",
+    "registrationCount": 60,
+    "registrationDisplay": "60",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -726,7 +726,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "Stock Challenge",

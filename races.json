@@ -79996,8 +79996,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -80007,10 +80007,6 @@
       {
         "name": "VM 1/10 Plastic Cars",
         "entries": 3
-      },
-      {
-        "name": "VM 1/10 Front Wheel Drive",
-        "entries": 2
       },
       {
         "name": "VM 1/10 Stock 17,5T",
@@ -80672,16 +80668,10 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Nennung geschlossen.",
     "classes": [
-      "Tamiya",
-      {
-        "name": "RCR Style Masters",
-        "entries": 1
-      },
-      "FWD",
       {
         "name": "TW-Elektro-Stock 17.5T",
         "entries": 5
@@ -81128,17 +81118,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 36,
-    "registrationDisplay": "36",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "SRCCA V10TR 2024",
-        "entries": 16
+        "entries": 17
       },
       {
         "name": "SRCCA V8TR 2024",
-        "entries": 20
+        "entries": 21
       }
     ],
     "documents": [],
@@ -81166,13 +81156,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 Expert",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "OR8 Hobby",
@@ -81180,11 +81170,11 @@
       },
       {
         "name": "ORE8",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "ORT",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "ORET",
@@ -81537,8 +81527,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81547,7 +81537,7 @@
       },
       {
         "name": "MRCP Stock 17.5T",
-        "entries": 10
+        "entries": 11
       },
       "MRCP Modified",
       {
@@ -81893,8 +81883,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -81904,7 +81894,7 @@
       },
       {
         "name": "MCC - MCC Challenge",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "MCC - Tamiya Fighter",
@@ -81937,8 +81927,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "HRCC GT8",
@@ -81956,7 +81946,7 @@
       },
       {
         "name": "HRCC EG10 Stock",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "HRCC PRO10",
@@ -82196,13 +82186,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 - Buggy Nitro 1:8",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "ORE8 - Buggy Elo 1:8",
@@ -82429,8 +82419,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -82446,7 +82436,7 @@
       },
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 11
+        "entries": 12
       }
     ],
     "documents": [],
@@ -87120,6 +87110,39 @@
       }
     ],
     "firstSeen": "2026-06-21"
+  },
+  {
+    "id": "morac-2026-09-05-myrcm-event-98601",
+    "venueId": "morac",
+    "venueName": "MORAC",
+    "venueLocation": "Graz",
+    "venueWebsite": "https://www.morac-graz.at",
+    "hostId": "morac",
+    "hostName": "MORAC",
+    "name": "Int. Club-Meisterschaft, 3. Lauf 2026",
+    "from": "2026-09-05",
+    "to": "2026-09-06",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98601&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=98601&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98601&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": [
+      "ICM - VF 1:8",
+      "ICM - VF 1:10",
+      "ICM - EF 1:8 Stock",
+      "ICM - Porsche 962",
+      "ICM - EF eGT8",
+      "ICM - EF 1:10 TW, offen"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-27"
   },
   {
     "id": "1-mrc-wr-neustadt-2026-09-05-myrcm-event-95726",
