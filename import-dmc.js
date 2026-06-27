@@ -181,9 +181,12 @@ function parseTable(html, clubDirectory) {
     // Ausschreibung PDF
     const ausschreibungHref = $(cells[8]).find("a[href]").first().attr("href") || null;
 
-    // Nennformular: cells[9] if present
-    const nennformularHref = cells.length > 9
+    // Nennformular: cells[9] if present — skip generic myrcm booking pages without event ID
+    const rawNennformular = cells.length > 9
       ? $(cells[9]).find("a[href]").first().attr("href") || null
+      : null;
+    const nennformularHref = rawNennformular && !/myrcm\.ch\/myrcm\/main\?hId\[1\]=bkg&pLa=/.test(rawNennformular)
+      ? rawNennformular
       : null;
 
     rows.push({ dateFrom, dateTo, title, clubName, ovNr, city, clubWebsite, ausschreibungHref, nennformularHref });
