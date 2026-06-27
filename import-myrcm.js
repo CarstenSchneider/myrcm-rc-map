@@ -1739,12 +1739,11 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
       venueSeed
     );
     // For races clearly held outside DACH (name ends with a non-DACH country code like
-    // "RUCPHEN / NL", "TRENCIN SK"), don't assign a venue unless the race name explicitly
-    // matched a known venue seed (wasExplicit = true). This allows us to show non-DACH
-    // ETS/ENS rounds with known coordinates (e.g. Apeldoorn/NL) while still listing
-    // truly unknown locations as "Ort unbekannt".
+    // "RUCPHEN / NL", "TRENCIN SK"), always use null — even if an "explicit" seed match
+    // was found via detail.hostLabel. The hostLabel for travelling series (e.g. ETS) often
+    // shows the organizer's home venue (Arena33/Andernach), not the actual race location.
     const isNonDach = raceNameIndicatesNonDach(detail.name || eventLink.fallbackName);
-    const venue = (isNonDach && !wasExplicit) ? null : venueFromSeed(detectedVenueSeed);
+    const venue = isNonDach ? null : venueFromSeed(detectedVenueSeed);
     const venueId = venue?.id || null;
 
     const detailDocuments = extractDocumentsFromHtml(detailHtml, detailUrl);
