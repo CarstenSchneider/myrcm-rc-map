@@ -66,6 +66,13 @@ Zweiphasiger Render in `render()`:
 - **Phase 1 (synchron):** `syncFilterUi()` + `renderList()` — Browser malt sofort
 - **Phase 2 (double-rAF):** `updateMarkers()` — während dieser Phase zeigt `.map-panel.map-is-updating .map-loader` den Spinner
 
+### Datenmodell (Host / Venue / Race)
+- **Host** — Verein/Organisation/Ausrichter (`hosts.json`)
+- **Venue** — physische Strecke mit Koordinate (`venues.json`). MyRCM-Organisation → Host, aber NICHT automatisch → Venue. Venue nur wenn in `venue-seeds.json` vorhanden oder sicher aus RCK-PDF-Adresse ableitbar.
+- **Race** — konkretes Rennen mit `hostId` + `venueId`. Non-DACH-Races haben immer `venueId: null`.
+- `venue-seeds.json` ist die manuelle Wahrheitsquelle für geprüfte Strecken.
+- Kein Rennen soll wegen einer Organisation einen falschen Kartenpunkt bekommen — lieber kein Standort als falscher Standort.
+
 ### Daten
 - `venues` — Array von Strecken (verwende `.find()`)
 - `races` — Array von Rennen (myrcm + rck), aktuell ~2238
