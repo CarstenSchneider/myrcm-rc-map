@@ -5704,11 +5704,17 @@ function closeClubList() {
 function renderClubList() {
   if (!clubListContent) return;
 
-  const races = filteredRaces();
+  const today = todayStart();
 
-  // Group races by venue (or host if no venue)
+  // All future races, country-filtered, no range limit
+  const allRaces = races
+    .filter(isUsefulRckRace)
+    .filter(matchesCountryFilter)
+    .filter(r => parseDate(r.from) >= today);
+
+  // Group by venue/host
   const byKey = new Map();
-  for (const race of races) {
+  for (const race of allRaces) {
     const venue = venueForRace(race);
     const key   = venue ? String(venue.id) : ("host:" + (race.hostId || race.hostName || ""));
     if (!byKey.has(key)) {
@@ -5772,8 +5778,8 @@ function renderClubList() {
       <div class="club-list-venue">
         <span class="club-list-venue-name">${g.hostName}</span>
         <div class="club-list-icons">
-          <button type="button" class="${starCls}" data-host-id="${hid}" aria-label="Favorit">${iconStar}</button>
           <button type="button" class="${bellCls}" data-host-id="${hid}" aria-label="Benachrichtigungen">${iconBell}</button>
+          <button type="button" class="${starCls}" data-host-id="${hid}" aria-label="Favorit">${iconStar}</button>
         </div>
       </div>
       <div class="club-list-races">${raceItems}</div>
