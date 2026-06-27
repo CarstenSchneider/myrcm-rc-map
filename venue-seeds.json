@@ -3611,6 +3611,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "dmc-bc-mitterkreith",
+    "hostName": "BC Mitterkreith",
+    "lat": 49.21155192592243,
+    "lng": 12.493146117142087
+  },
+  {
     "hostId": "dmc-big-hamburg-e-v",
     "hostName": "BIG Hamburg e.V.",
     "lat": 53.64060473290764,
