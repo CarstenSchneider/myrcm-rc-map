@@ -4320,7 +4320,7 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
@@ -4328,6 +4328,8 @@ async function init() {
     fetchJsonOrFallback(`hosts.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`myrcm-hosts-dach.json?v=${cacheBuster}`, []),
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog),
+    fetch(`dmc-races.json?v=${cacheBuster}`).catch(() => null),
+    fetch(`dmc-venues.json?v=${cacheBuster}`).catch(() => null),
   ]);
 
   dataLastUpdatedAt = latestResponseLastModified([
@@ -4342,9 +4344,13 @@ async function init() {
   const rckRaces = Array.isArray(rckRacesResponse) ? rckRacesResponse : [];
   const rckVenueCandidates = Array.isArray(rckVenueCandidatesResponse) ? rckVenueCandidatesResponse : [];
   seriesCatalog = normalizeSeriesCatalog(seriesCatalogResponse);
+  const dmcRacesRaw = await responseJsonOrFallback(dmcRacesRawResponse, []);
+  const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
+  const dmcVenuesRaw = await responseJsonOrFallback(dmcVenuesRawResponse, []);
+  const dmcVenues = Array.isArray(dmcVenuesRaw) ? dmcVenuesRaw : [];
 
   venues = mergeVenues(
-    baseVenues,
+    [...baseVenues, ...dmcVenues],
     rckVenueCandidates,
     { requireVerifiedAddress: true }
   );
@@ -4356,7 +4362,9 @@ async function init() {
       .map(race => normalizeRaceFromSource(race, "myrcm")),
     ...rckRaces
       .filter(isUsefulRckRace)
-      .map(race => normalizeRaceFromSource(race, "rck"))
+      .map(race => normalizeRaceFromSource(race, "rck")),
+    ...dmcRaces
+      .map(race => normalizeRaceFromSource(race, "dmc"))
   ];
   _venueForRaceCache.clear();
 
@@ -5052,7 +5060,18 @@ async function adminLoadUnmatched() {
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
   // Merge: unmatched first, then unknown seeds not already in unmatched
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
-  return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+  const myrcmList = [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+
+  // DMC venues without a venueId — deduplicated by hostId
+  const dmcSeen = new Set(myrcmList.map(u => u.hostId));
+  const dmcUnmatched = races
+    .filter(r => r.source === "dmc" && !r.venueId)
+    .reduce((acc, r) => {
+      if (!dmcSeen.has(r.hostId)) { dmcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, source: "dmc" }); }
+      return acc;
+    }, []);
+
+  return [...myrcmList, ...dmcUnmatched];
 }
 
 async function adminCommit(payload) {
@@ -5131,6 +5150,7 @@ function renderAdminUnbekanntTab(container) {
       <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
         <div class="admin-entry-header">
           <strong>${escapeHtml(e.hostName)}</strong>
+          ${e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
           <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
         </div>
         ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}

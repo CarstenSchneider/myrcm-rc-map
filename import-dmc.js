@@ -3,6 +3,7 @@ import { load } from "cheerio";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
 const OUTPUT_FILE = "dmc-races.json";
+const DMC_VENUES_FILE = "dmc-venues.json";
 const TIMEOUT_MS = 30000;
 
 function normalizeKey(value = "") {
@@ -104,6 +105,11 @@ async function loadHosts() {
   catch { return []; }
 }
 
+async function loadVenueSeeds() {
+  try { return JSON.parse(await readFile("venue-seeds.json", "utf8")); }
+  catch { return []; }
+}
+
 function matchVenue(clubName, venues, hosts) {
   if (!clubName) return null;
   const key = normalizeKey(clubName);
@@ -140,16 +146,43 @@ async function main() {
 
   const venues = await loadVenues();
   const hosts = await loadHosts();
+  const seeds = await loadVenueSeeds();
+
+  // Build lookup: dmc-hostId → seed entry (only if seed has coordinates)
+  const seedByHostId = new Map(
+    seeds
+      .filter(s => s.hostId?.startsWith("dmc-") && s.lat != null && s.lng != null)
+      .map(s => [s.hostId, s])
+  );
+
+  const dmcVenues = [];
+  const dmcVenueIds = new Set();
 
   const races = entries.map(entry => {
     const venue = matchVenue(entry.clubName, venues, hosts);
     const hostSlug = slugify(entry.clubName);
+    const dmcHostId = `dmc-${hostSlug}`;
+    const seed = !venue ? seedByHostId.get(dmcHostId) : null;
+
+    if (seed && !dmcVenueIds.has(dmcHostId)) {
+      dmcVenueIds.add(dmcHostId);
+      dmcVenues.push({
+        id: dmcHostId,
+        name: seed.hostName || entry.clubName,
+        city: null,
+        lat: seed.lat,
+        lng: seed.lng,
+        hostIds: [dmcHostId],
+        source: "dmc-seed",
+      });
+    }
+
     return {
       id: `dmc-${hostSlug}-${entry.dateFrom}`,
-      venueId: venue?.id ?? null,
-      venueName: venue?.name ?? null,
+      venueId: venue?.id ?? (seed ? dmcHostId : null),
+      venueName: venue?.name ?? (seed ? (seed.hostName || entry.clubName) : null),
       venueLocation: venue?.city ?? null,
-      hostId: venue?.hostIds?.[0] ?? `dmc-${hostSlug}`,
+      hostId: venue?.hostIds?.[0] ?? dmcHostId,
       hostName: entry.clubName,
       name: translatePraedikat(entry.title),
       from: entry.dateFrom,
@@ -163,9 +196,11 @@ async function main() {
     };
   });
 
-  console.log(`Venue-Matches: ${races.filter(r => r.venueId).length} / ${races.length}`);
+  console.log(`Venue-Matches: ${races.filter(r => r.venueId).length} / ${races.length} (davon ${dmcVenues.length} via Seed)`);
   await writeFile(OUTPUT_FILE, JSON.stringify(races, null, 2) + "\n");
   console.log(`Geschrieben: ${OUTPUT_FILE}`);
+  await writeFile(DMC_VENUES_FILE, JSON.stringify(dmcVenues, null, 2) + "\n");
+  console.log(`Geschrieben: ${DMC_VENUES_FILE} (${dmcVenues.length} Venues)`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
