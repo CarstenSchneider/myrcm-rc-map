@@ -3828,6 +3828,12 @@
     "myrcmOrgId": "18966"
   },
   {
+    "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
+    "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
+    "lat": 51.208755602022045,
+    "lng": 13.83564932733246
+  },
+  {
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
     "lat": 48.412696168360476,
