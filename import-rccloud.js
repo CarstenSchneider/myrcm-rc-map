@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const RC_CLOUD_URL = "https://rc-cloud.de/germany";
+const RC_CLOUD_URL = "https://api.rc-cloud.de/germany";
 const OUTPUT_FILE = "rccloud-races.json";
 const TIMEOUT_MS = 20000;
 
