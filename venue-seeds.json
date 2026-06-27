@@ -3641,6 +3641,12 @@
     "myrcmOrgId": "20360"
   },
   {
+    "hostId": "dmc-mbc-oberlausitz-e-v",
+    "hostName": "MBC Oberlausitz e.V.",
+    "lat": 51.08318541210428,
+    "lng": 14.57770822945999
+  },
+  {
     "hostId": "mblr-racing",
     "hostName": "MBLR Racing",
     "lat": 46.65009765198645,
