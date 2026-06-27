@@ -4044,58 +4044,81 @@ body.is-menu-open .app-menu-close {
 :root.theme-dark .fav-bell-btn:not(.active) { color: rgba(var(--text-rgb), 0.35); }
 :root.theme-dark .fav-bell-btn:not(.active):hover { color: var(--favorite); }
 
-/* ── Club List View ─────────────────────────────────────────────────────── */
+/* ── Race List View ─────────────────────────────────────────────────────── */
 .club-list-content { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
-.club-list-inner { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
 
-.club-list-row {
+.race-list-filters {
+  display: flex;
+  gap: 8px;
+  padding: 16px 20px 4px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.race-list-range-btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(var(--border-rgb), 0.5);
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.13s, color 0.13s, border-color 0.13s;
+}
+.race-list-range-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.race-list-range-btn:hover:not(.active) { background: rgba(var(--text-rgb), 0.06); }
+
+.race-list-inner { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+
+.race-list-month-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted-light);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 22px 0 6px;
+}
+
+.race-list-item {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: 0 24px;
-  align-items: start;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(var(--border-rgb), 0.35);
-}
-.club-list-venue {
-  display: flex; align-items: flex-start; gap: 8px; padding-top: 1px;
-}
-.club-list-venue-name {
-  flex: 1; font-size: 14px; font-weight: 600; color: var(--text);
-  line-height: 1.35;
-}
-.club-list-icons { display: flex; gap: 4px; flex-shrink: 0; }
-.club-list-star, .club-list-bell {
-  background: none; border: none; cursor: pointer; padding: 2px; line-height: 0;
-  color: rgba(var(--text-rgb), 0.22); border-radius: 4px;
-  transition: color 0.15s;
-}
-.club-list-star svg, .club-list-bell svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; }
-.club-list-star.active, .club-list-bell.active { color: var(--favorite); }
-.club-list-star.active svg, .club-list-bell.active svg { fill: var(--favorite); }
-.club-list-star:hover, .club-list-bell:hover { color: var(--favorite); }
-.club-list-star.hidden, .club-list-bell.hidden { visibility: hidden; }
-
-.club-list-venue-name { flex: 1; font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; text-decoration: none; }
-a.club-list-venue-name:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-
-.club-list-races { display: flex; flex-direction: column; gap: 4px; }
-.club-list-race {
-  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
-  background: none; border: none; cursor: pointer; text-align: left; padding: 3px 6px;
-  margin: 0 -6px; border-radius: 6px; width: calc(100% + 12px);
+  grid-template-columns: 52px 1fr 10px;
+  gap: 0 10px;
+  align-items: center;
+  padding: 9px 6px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
   transition: background 0.13s;
 }
-.club-list-race:hover { background: rgba(var(--text-rgb), 0.06); }
-.club-list-race-date { font-size: 12px; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
-.club-list-race-name { font-size: 13px; color: var(--text); flex: 1; min-width: 0; }
-.club-list-race-status { font-size: 11px; white-space: nowrap; flex-shrink: 0; }
-.club-list-race-status.open     { color: #22c55e; font-weight: 600; }
-.club-list-race-status.upcoming { color: #4A9EE8; font-weight: 600; }
-.club-list-race-status.closed   { color: var(--muted-light); }
-.club-list-no-races { font-size: 12px; color: var(--muted-light); font-style: italic; }
+.race-list-item:hover { background: rgba(var(--text-rgb), 0.05); }
 
-.club-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
+.race-list-date { font-size: 12px; color: var(--muted); white-space: nowrap; line-height: 1.3; }
 
-@media (max-width: 600px) {
-  .club-list-row { grid-template-columns: 1fr; gap: 6px; }
+.race-list-meta { display: flex; flex-direction: column; min-width: 0; }
+.race-list-club {
+  font-size: 11px;
+  color: var(--muted-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
 }
+.race-list-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.35;
+}
+
+.race-list-status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; justify-self: end; }
+.race-list-status-dot.open     { background: #22c55e; }
+.race-list-status-dot.upcoming { background: var(--status-upcoming, #4A9EE8); }
+.race-list-status-dot.closed   { background: rgba(var(--text-rgb), 0.2); }
+
+.race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }

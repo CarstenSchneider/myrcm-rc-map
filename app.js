@@ -4992,7 +4992,7 @@ function showMenuHome() {
 ` : ""}
     <button type="button" class="app-menu-row" id="clubListMenuBtn">
       <span class="app-menu-row-icon">${iconList}</span>
-      <span class="app-menu-row-label">Vereinsliste</span>
+      <span class="app-menu-row-label">Rennliste</span>
       ${chevron}
     </button>
     <button type="button" class="app-menu-row" data-menu="about">
@@ -5682,13 +5682,15 @@ window.addEventListener("load", () => {
 
 sbInit();
 
-// ── Club List View ──────────────────────────────────────────────────────────
+// ── Race List View ──────────────────────────────────────────────────────────
 
 const clubListPage    = document.getElementById("clubListPage");
 const clubListContent = document.getElementById("clubListContent");
 const clubListBack    = document.getElementById("clubListBack");
 
 clubListBack?.addEventListener("click", closeClubList);
+
+let _raceListRange = 28; // days until; 0 = all
 
 function openClubList() {
   if (!clubListPage) return;
@@ -5705,109 +5707,74 @@ function renderClubList() {
   if (!clubListContent) return;
 
   const today = todayStart();
+  const endMs = _raceListRange > 0 ? today.getTime() + _raceListRange * 24 * 60 * 60 * 1000 : null;
 
-  // All future races, country-filtered, no range limit
-  const futureRaces = races
+  const upcoming = races
     .filter(isUsefulRckRace)
     .filter(matchesCountryFilter)
-    .filter(r => parseDate(r.from) >= today);
+    .filter(r => {
+      const d = parseDate(r.from);
+      if (!d || d < today) return false;
+      if (endMs && d.getTime() > endMs) return false;
+      return true;
+    })
+    .sort((a, b) => (a.from || "").localeCompare(b.from || ""));
 
-  const futureByVenue = new Map();
-  for (const race of futureRaces) {
-    const venue = venueForRace(race);
-    const vid = venue ? String(venue.id) : null;
-    if (!vid) continue;
-    if (!futureByVenue.has(vid)) futureByVenue.set(vid, []);
-    futureByVenue.get(vid).push(race);
+  // Group by month
+  const groups = [];
+  const groupMap = new Map();
+  for (const race of upcoming) {
+    const d = parseDate(race.from);
+    const key = `${d.getFullYear()}-${d.getMonth()}`;
+    if (!groupMap.has(key)) {
+      const label = d.toLocaleDateString("de-DE", { month: "long", year: "numeric" });
+      const group = { label, races: [] };
+      groups.push(group);
+      groupMap.set(key, group);
+    }
+    groupMap.get(key).races.push(race);
   }
 
-  // All known venues, country-filtered
-  const allVenues = venues.filter(v => {
-    if (selectedCountry === "all") return true;
-    return venueCountry(v) === selectedCountry;
-  });
+  const rangeOpts = [
+    { label: "4 Wochen", value: 28 },
+    { label: "3 Monate", value: 90 },
+    { label: "Alle", value: 0 },
+  ];
+  const filterHtml = rangeOpts.map(o =>
+    `<button type="button" class="race-list-range-btn${_raceListRange === o.value ? " active" : ""}" data-range="${o.value}">${o.label}</button>`
+  ).join("");
 
-  if (allVenues.length === 0) {
-    clubListContent.innerHTML = `<div class="club-list-empty">Keine Vereine gefunden.</div>`;
-    return;
-  }
-
-  const sorted = [...allVenues].sort((a, b) => (a.name || "").localeCompare(b.name || "", "de"));
-
-  const iconStar = `<svg viewBox="0 0 24 24" stroke-width="1.8"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
-  const iconBell = `<svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
-  const dotOpen     = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#22c55e;margin-right:4px;vertical-align:middle;"></span>`;
-  const dotUpcoming = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#4A9EE8;margin-right:4px;vertical-align:middle;"></span>`;
-
-  const rows = sorted.map(venue => {
-    const vid  = String(venue.id);
-    const hid  = vid;
-    const isFav    = isFavoriteHostId(hid);
-    const isNotif  = isNotificationEnabled(hid);
-    const loggedIn = !!sbUser;
-
-    // Website: prefer venue.website, fall back to first host with a website
-    const hostObjs = (venue.hostIds ?? []).map(id => hostsById[String(id)]).filter(Boolean);
-    const website  = venue.website || hostObjs.find(h => h.website)?.website || null;
-
-    const nameHtml = website
-      ? `<a class="club-list-venue-name" href="${website}" target="_blank" rel="noopener noreferrer">${venue.name}</a>`
-      : `<span class="club-list-venue-name">${venue.name}</span>`;
-
-    const starCls = `club-list-star${isFav ? " active" : ""}${!loggedIn ? " hidden" : ""}`;
-    const bellCls = `club-list-bell${isNotif ? " active" : ""}${(!loggedIn || !isFav) ? " hidden" : ""}`;
-
-    const venueRaces = (futureByVenue.get(vid) ?? [])
-      .slice()
-      .sort((a, b) => (a.from || "").localeCompare(b.from || ""));
-
-    const raceItems = venueRaces.map(race => {
-      const date   = formatDateRange(race.from, race.to !== race.from ? race.to : null);
-      const name   = race.name || race.title || "";
+  const listHtml = groups.map(({ label, races: gr }) => {
+    const items = gr.map(race => {
+      const venue = venueForRace(race);
+      const clubLine = [venue?.name, venue?.city].filter(Boolean).join(" · ");
+      const raceName = race.name || race.title || "";
+      const d = parseDate(race.from);
+      const dateStr = d.toLocaleDateString("de-DE", { day: "numeric", month: "short" });
       const status = race.registrationStatus || "";
-      let statusHtml = "";
-      if (status === "open")
-        statusHtml = `<span class="club-list-race-status open">${dotOpen}Offen</span>`;
-      else if (status === "upcoming") {
-        const opens = race.registrationOpens ? ` ab ${formatDate(race.registrationOpens)}` : "";
-        statusHtml = `<span class="club-list-race-status upcoming">${dotUpcoming}Nennung${opens}</span>`;
-      } else if (status === "closed") {
-        statusHtml = `<span class="club-list-race-status closed">Gesch.</span>`;
-      }
-      return `<button type="button" class="club-list-race" data-race-id="${race.id}">
-        <span class="club-list-race-date">${date}</span>
-        <span class="club-list-race-name">${name}</span>
-        ${statusHtml}
+      const dotCls = status === "open" ? "open" : status === "upcoming" ? "upcoming" : status === "closed" ? "closed" : "";
+      const dot = dotCls ? `<span class="race-list-status-dot ${dotCls}"></span>` : `<span></span>`;
+      return `<button type="button" class="race-list-item" data-race-id="${escapeHtml(race.id)}">
+        <span class="race-list-date">${dateStr}</span>
+        <span class="race-list-meta">
+          <span class="race-list-club">${escapeHtml(clubLine)}</span>
+          <span class="race-list-name">${escapeHtml(raceName)}</span>
+        </span>
+        ${dot}
       </button>`;
     }).join("");
-
-    const noRaces = venueRaces.length === 0
-      ? `<span class="club-list-no-races">Keine Rennen geplant</span>`
-      : "";
-
-    return `<div class="club-list-row" data-venue-id="${vid}">
-      <div class="club-list-venue">
-        ${nameHtml}
-        <div class="club-list-icons">
-          <button type="button" class="${bellCls}" data-host-id="${hid}" aria-label="Benachrichtigungen">${iconBell}</button>
-          <button type="button" class="${starCls}" data-host-id="${hid}" aria-label="Favorit">${iconStar}</button>
-        </div>
-      </div>
-      <div class="club-list-races">${raceItems}${noRaces}</div>
-    </div>`;
+    return `<div class="race-list-month-label">${escapeHtml(label)}</div>${items}`;
   }).join("");
 
-  clubListContent.innerHTML = `<div class="club-list-inner">${rows}</div>`;
+  clubListContent.innerHTML = `
+    <div class="race-list-filters">${filterHtml}</div>
+    <div class="race-list-inner">${groups.length ? listHtml : `<div class="race-list-empty">Keine Rennen gefunden.</div>`}</div>`;
 
-  clubListContent.querySelectorAll(".club-list-star").forEach(btn => {
-    btn.addEventListener("click", () => { toggleFavoriteHost(btn.dataset.hostId); renderClubList(); });
+  clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
+    btn.addEventListener("click", () => { _raceListRange = Number(btn.dataset.range); renderClubList(); });
   });
 
-  clubListContent.querySelectorAll(".club-list-bell").forEach(btn => {
-    btn.addEventListener("click", async () => { await toggleNotification(btn.dataset.hostId); renderClubList(); });
-  });
-
-  clubListContent.querySelectorAll(".club-list-race").forEach(btn => {
+  clubListContent.querySelectorAll(".race-list-item").forEach(btn => {
     btn.addEventListener("click", () => {
       const race = races.find(r => r.id === btn.dataset.raceId);
       if (!race) return;
