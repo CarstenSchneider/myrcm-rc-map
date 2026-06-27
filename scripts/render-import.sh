@@ -73,7 +73,7 @@ if [ "$IMPORT_MYRCM_OK" = "0" ]; then
 fi
 
 # main: MyRCM + RCK Daten committen
-MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
+MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json"
 git add $MAIN_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (main) — kein Commit nötig."
@@ -89,8 +89,8 @@ git fetch origin dev
 git checkout -B dev origin/dev
 git checkout main -- $MAIN_FILES
 
-DEV_EXTRA_FILES=""
-[ "$IMPORT_DMC_OK" = "1" ] && DEV_EXTRA_FILES="dmc-races.json dmc-venues.json"
+DEV_EXTRA_FILES="rck-pdf-cache.json"
+[ "$IMPORT_DMC_OK" = "1" ] && DEV_EXTRA_FILES="$DEV_EXTRA_FILES dmc-races.json dmc-venues.json dmc-pdf-cache.json"
 
 git add $MAIN_FILES $DEV_EXTRA_FILES
 if git diff --staged --quiet; then

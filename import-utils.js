@@ -1,6 +1,31 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 /**
+ * Load a PDF cache from a JSON file.
+ * Returns a Map<url, cachedValue> (value is importer-specific).
+ */
+export async function loadPdfCache(file) {
+  try {
+    const obj = JSON.parse(await readFile(file, "utf8"));
+    return new Map(Object.entries(obj));
+  } catch {
+    return new Map();
+  }
+}
+
+/**
+ * Save a PDF cache Map back to a JSON file.
+ * Only writes if the cache grew (new entries added).
+ * Returns true if the file was written.
+ */
+export async function savePdfCache(file, cache, prevSize) {
+  if (cache.size <= prevSize) return false;
+  await writeFile(file, JSON.stringify(Object.fromEntries(cache), null, 2) + "\n", "utf8");
+  console.log(`PDF-Cache gespeichert: ${file} (${cache.size} Einträge, ${cache.size - prevSize} neu)`);
+  return true;
+}
+
+/**
  * Write a JSON array to a file with sanity checks:
  *   - data.length >= minCount (absolute minimum)
  *   - data.length >= existingCount * minFraction (regression guard)

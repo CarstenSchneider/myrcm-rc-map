@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { load } from "cheerio";
-import { safeWriteJson, warnIfSparse } from "./import-utils.js";
+import { safeWriteJson, warnIfSparse, loadPdfCache, savePdfCache } from "./import-utils.js";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
 const DMC_DIRECTORY_SOURCES = [
@@ -12,6 +12,7 @@ const DMC_DIRECTORY_SOURCES = [
 ];
 const OUTPUT_FILE = "dmc-races.json";
 const DMC_VENUES_FILE = "dmc-venues.json";
+const DMC_PDF_CACHE_FILE = "dmc-pdf-cache.json";
 const TIMEOUT_MS = 30000;
 const PDF_TIMEOUT_MS = 20000;
 
@@ -365,18 +366,21 @@ async function main() {
       .map(s => [s.hostId, s])
   );
 
-  // Extract registration URLs from ausschreibung PDFs (cached by URL)
+  // Extract registration URLs from ausschreibung PDFs — persistent cache skips known URLs
+  const pdfCache = await loadPdfCache(DMC_PDF_CACHE_FILE);
+  const prevCacheSize = pdfCache.size;
   const pdfParse = await loadPdfParse();
-  const pdfCache = new Map(); // pdfUrl → registrationUrl | null
   const uniquePdfUrls = [...new Set(entries.map(e => e.ausschreibungHref).filter(Boolean))];
-  console.log(`PDFs zu prüfen: ${uniquePdfUrls.length}`);
-  for (const pdfUrl of uniquePdfUrls) {
+  const newPdfUrls = uniquePdfUrls.filter(url => !pdfCache.has(url));
+  console.log(`PDFs: ${newPdfUrls.length} neu / ${uniquePdfUrls.length} gesamt (${pdfCache.size} gecacht)`);
+  for (const pdfUrl of newPdfUrls) {
     const regUrl = await extractRegistrationUrlFromPdf(pdfUrl, pdfParse);
     pdfCache.set(pdfUrl, regUrl);
     if (regUrl) console.log(`  Nennung: ${regUrl}`);
   }
+  await savePdfCache(DMC_PDF_CACHE_FILE, pdfCache, prevCacheSize);
   const foundCount = [...pdfCache.values()].filter(Boolean).length;
-  console.log(`Nennungslinks gefunden: ${foundCount} / ${uniquePdfUrls.length}`);
+  console.log(`Nennungslinks gesamt: ${foundCount} / ${uniquePdfUrls.length}`);
 
   const dmcVenues = [];
   const dmcVenueIds = new Set();

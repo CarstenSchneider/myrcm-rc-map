@@ -16,8 +16,8 @@ git checkout -f -B dev origin/dev
 echo "--- Import DMC ---"
 node import-dmc.js
 
-# Renndaten committen
-git add dmc-races.json dmc-venues.json
+# Renndaten + PDF-Cache committen
+git add dmc-races.json dmc-venues.json dmc-pdf-cache.json
 if git diff --staged --quiet; then
   echo "Keine Änderungen — kein Commit nötig."
 else

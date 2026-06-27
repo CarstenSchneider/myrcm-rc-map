@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
-import { safeWriteJson, warnIfSparse } from "./import-utils.js";
+import { safeWriteJson, warnIfSparse, loadPdfCache, savePdfCache } from "./import-utils.js";
 
 const importerVersion = "import-rck-v13-seed-first-venue-match";
 
@@ -27,6 +27,7 @@ const venueSeedsFile = "venue-seeds.json";
 const outputFile = "rck-races.json";
 const unmatchedVenuesFile = "rck-unmatched-venues.json";
 const venueCandidatesFile = "rck-venue-candidates.json";
+const RCK_PDF_CACHE_FILE = "rck-pdf-cache.json";
 
 const requestTimeoutMs = 12000;
 const retryCount = 1;
@@ -34,6 +35,9 @@ const geocodeDelayMs = 1100;
 const geocodeEnabled = process.env.RCK_GEOCODE !== "0";
 
 const groupLabels = ["mitte", "nord", "west", "süd", "sued", "ost"];
+
+// Persistent PDF cache — loaded at startup, saved at end of main()
+let rckPdfCache = new Map(); // pdfUrl → pdfVenueData | null
 
 function normalizeText(text = "") {
   return String(text)
@@ -943,10 +947,15 @@ async function enrichFromPdf(race) {
   const announcement = (race.documents || []).find(document => document.type === "announcement") || race.documents?.[0];
   if (!announcement?.url) return race;
 
-  const text = await extractPdfText(announcement.url);
-  if (!text) return race;
-
-  const pdfVenueData = parsePdfVenueData(text, announcement.url);
+  const url = announcement.url;
+  let pdfVenueData;
+  if (rckPdfCache.has(url)) {
+    pdfVenueData = rckPdfCache.get(url);
+  } else {
+    const text = await extractPdfText(url);
+    pdfVenueData = text ? parsePdfVenueData(text, url) : null;
+    rckPdfCache.set(url, pdfVenueData);
+  }
   if (!pdfVenueData) return race;
 
   const registrationDeadline = pdfVenueData.registrationDeadline || null;
@@ -1442,6 +1451,10 @@ function applySeenDates(races, existingRckRaces) {
 }
 
 async function main() {
+  rckPdfCache = await loadPdfCache(RCK_PDF_CACHE_FILE);
+  const prevCacheSize = rckPdfCache.size;
+  console.log(`RCK PDF-Cache geladen: ${rckPdfCache.size} Einträge`);
+
   const venues = await readJsonIfExists(venuesFile, []);
   const venueSeeds = await readJsonIfExists(venueSeedsFile, []);
   const existingRckRaces = await readJsonIfExists(outputFile, []);
@@ -1509,6 +1522,7 @@ async function main() {
       documents: race.documents || []
     }));
 
+  await savePdfCache(RCK_PDF_CACHE_FILE, rckPdfCache, prevCacheSize);
   warnIfSparse(cleanedRaces, ["from", "venueId"], { label: outputFile });
   await safeWriteJson(cleanedRaces, outputFile, { minCount: 20, minFraction: 0.7, label: outputFile });
   await writeFile(unmatchedVenuesFile, JSON.stringify(unmatchedVenues, null, 2) + "\n", "utf8");
