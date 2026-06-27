@@ -3790,6 +3790,12 @@
     "myrcmOrgId": "51971"
   },
   {
+    "hostId": "dmc-spessart-racer",
+    "hostName": "Spessart Racer",
+    "lat": 49.967133148160016,
+    "lng": 9.303292985142585
+  },
+  {
     "hostId": "tsv-gelenau-e-v",
     "hostName": "TSV Gelenau e.V.",
     "locationUnknown": true,
