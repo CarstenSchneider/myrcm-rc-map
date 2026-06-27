@@ -1,5 +1,4 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { appendFileSync } from "node:fs";
 import { load } from "cheerio";
 import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
@@ -164,9 +163,6 @@ function parseClubDirectory(html, label = "") {
   });
   if (entries.length > 0) return entries;
 
-  // Nothing found — write body HTML to debug file for inspection
-  const bodyHtml = ($("body").html() || $.html()).replace(/\s+/g, " ").trim();
-  try { appendFileSync("dmc-debug-html.json", JSON.stringify({ label, bodyHtml }) + "\n"); } catch { }
   return entries;
 }
 

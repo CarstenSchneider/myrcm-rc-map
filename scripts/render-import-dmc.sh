@@ -16,15 +16,6 @@ git checkout -f -B dev origin/dev
 echo "--- Import DMC ---"
 node import-dmc.js
 
-# Debug-HTML immer committen falls vorhanden (unabhängig von Renndaten)
-if [ -f dmc-debug-html.json ]; then
-  git add dmc-debug-html.json
-  git commit -m "debug: DMC Sportkreis page HTML dump" || true
-  git pull --rebase --autostash origin dev
-  git push origin dev
-  echo "dmc-debug-html.json gepusht."
-fi
-
 # Renndaten committen
 git add dmc-races.json dmc-venues.json
 if git diff --staged --quiet; then
