@@ -1,4 +1,4 @@
-name: Test RC Cloud Import
+name: Test DMC Import
 
 on:
   workflow_dispatch:
@@ -17,13 +17,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run RC Cloud import
-        run: node import-rccloud.js
+      - name: Run DMC import
+        run: node import-dmc.js
 
       - name: Show results
         run: |
           node -e "
-            const d = JSON.parse(require('fs').readFileSync('rccloud-races.json', 'utf8'));
+            const d = JSON.parse(require('fs').readFileSync('dmc-races.json', 'utf8'));
             console.log('Gesamt DMC:', d.length);
             console.log('Mit venueId:', d.filter(r => r.venueId).length);
             d.slice(0, 15).forEach(r => {
