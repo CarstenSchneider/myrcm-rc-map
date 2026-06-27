@@ -3723,6 +3723,12 @@
     "myrcmOrgId": "72"
   },
   {
+    "hostId": "dmc-msc-sand-e-v",
+    "hostName": "MSC Sand e.V.",
+    "lat": 49.97561500237808,
+    "lng": 10.581751303542033
+  },
+  {
     "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "lat": 48.32186708992988,
