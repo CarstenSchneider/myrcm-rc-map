@@ -2871,9 +2871,10 @@ function documentLinksHtml(race) {
         ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
       </span>`;
   } else if (race.url) {
+    const linkLabel = race.dataSource === "dmc" ? "Ausschreibung ↗" : "Nennung ↗";
     registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        <span class="race-link-text">Nennung ↗</span>
+        <span class="race-link-text">${linkLabel}</span>
       </a>`;
   }
 
@@ -4356,15 +4357,25 @@ async function init() {
   );
   buildVenueLookup();
 
-  races = [
+  const nonDmcRaces = [
     ...myrcmRaces
       .filter(race => !isRckEventFromMyRcm(race))
       .map(race => normalizeRaceFromSource(race, "myrcm")),
     ...rckRaces
       .filter(isUsefulRckRace)
       .map(race => normalizeRaceFromSource(race, "rck")),
+  ];
+  races = [
+    ...nonDmcRaces,
     ...dmcRaces
       .map(race => normalizeRaceFromSource(race, "dmc"))
+      .filter(dmcRace => {
+        if (!dmcRace.venueId) return true;
+        return !nonDmcRaces.some(r =>
+          r.venueId === dmcRace.venueId &&
+          r.from <= dmcRace.to && r.to >= dmcRace.from
+        );
+      }),
   ];
   _venueForRaceCache.clear();
 
