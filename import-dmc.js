@@ -163,9 +163,9 @@ function parseClubDirectory(html, label = "") {
   });
   if (entries.length > 0) return entries;
 
-  // Nothing found — dump raw HTML so we can write the right parser
-  const rawHtml = $.html().replace(/\s+/g, " ").trim().slice(0, 3000);
-  console.log(`  [debug ${label}] Keine Einträge geparst. Raw HTML: ${rawHtml}`);
+  // Nothing found — dump body HTML so we can write the right parser
+  const bodyHtml = ($("body").html() || $.html()).replace(/\s+/g, " ").trim().slice(0, 3000);
+  console.log(`  [debug ${label}] Keine Einträge geparst. Body: ${bodyHtml}`);
   return entries;
 }
 
