@@ -5717,6 +5717,7 @@ function renderClubList() {
 
   const upcoming = races
     .filter(isUsefulRckRace)
+    .filter(r => !!venueForRace(r))
     .filter(r => {
       if (_raceListCountry === "all") return true;
       const v = venueForRace(r);
