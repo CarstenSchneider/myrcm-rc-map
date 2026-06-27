@@ -4371,11 +4371,16 @@ async function init() {
     ...dmcRaces
       .map(race => normalizeRaceFromSource(race, "dmc"))
       .filter(dmcRace => {
-        if (!dmcRace.venueId) return true;
-        return !nonDmcRaces.some(r =>
-          r.venueId === dmcRace.venueId &&
-          r.from <= dmcRace.to && r.to >= dmcRace.from
-        );
+        const dmcHostKey = slugifyMatchValue(dmcRace.hostName || dmcRace.venueName || "");
+        return !nonDmcRaces.some(r => {
+          if (!(r.from <= dmcRace.to && r.to >= dmcRace.from)) return false;
+          if (dmcRace.venueId && r.venueId === dmcRace.venueId) return true;
+          if (dmcHostKey) {
+            const rHostKey = slugifyMatchValue(r.hostName || r.venueName || "");
+            if (rHostKey && rHostKey === dmcHostKey) return true;
+          }
+          return false;
+        });
       }),
   ];
   _venueForRaceCache.clear();
