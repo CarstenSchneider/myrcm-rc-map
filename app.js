@@ -5746,9 +5746,18 @@ function renderClubList() {
   const loggedIn = !!sbUser;
   const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
   const svgBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+  const svgExt  = `<svg class="rl-ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
   const colCount = loggedIn ? 6 : 5;
 
   const tableHtml = groups.length ? `<table class="race-table">
+    <colgroup>
+      <col style="width:70px">
+      <col style="width:110px">
+      ${loggedIn ? `<col style="width:44px">` : ""}
+      <col style="width:30%">
+      <col>
+      <col style="width:16px">
+    </colgroup>
     <thead><tr>
       <th>Datum</th>
       <th class="col-city-hdr">Stadt</th>
@@ -5770,7 +5779,7 @@ function renderClubList() {
         const hostObjs = (venue?.hostIds ?? []).map(id => hostsById.get(String(id))).filter(Boolean);
         const website = venue?.website || hostObjs.find(h => h.website)?.website || null;
         const nameHtml = website && venue
-          ? `<a class="rl-venue-link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.name ?? "")}</a>`
+          ? `<a class="rl-venue-link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.name ?? "")}${svgExt}</a>`
           : escapeHtml(venue?.name ?? "");
         let iconsCell = "";
         if (loggedIn && vid) {

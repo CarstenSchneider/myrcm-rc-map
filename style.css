@@ -4059,18 +4059,18 @@ body.is-menu-open .app-menu-close {
 
 .race-list-inner { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
 
-.race-table { width: 100%; border-collapse: collapse; }
+.race-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
 .race-table th {
   text-align: left;
   font-size: 11px; font-weight: 700; color: var(--muted-light);
   text-transform: uppercase; letter-spacing: 0.07em;
   padding: 10px 8px 6px; border-bottom: 2px solid rgba(var(--border-rgb), 0.3);
-  white-space: nowrap;
+  white-space: nowrap; overflow: hidden;
 }
 .race-table td {
   padding: 8px 8px; font-size: 13px; color: var(--text);
   border-bottom: 1px solid rgba(var(--border-rgb), 0.14);
-  vertical-align: middle;
+  vertical-align: middle; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .race-table tbody tr { cursor: pointer; transition: background 0.1s; }
 .race-table tbody tr:hover td { background: rgba(var(--text-rgb), 0.04); }
@@ -4101,8 +4101,10 @@ body.is-menu-open .app-menu-close {
 .rl-bell.active svg, .rl-star.active svg { fill: var(--favorite); }
 .rl-bell:hover, .rl-star:hover { color: var(--favorite); }
 .rl-bell.hidden { visibility: hidden; }
-.rl-venue-link { color: var(--text); text-decoration: none; }
+.rl-venue-link { color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 3px; max-width: 100%; }
 .rl-venue-link:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.rl-ext-icon { width: 11px; height: 11px; flex-shrink: 0; opacity: 0.45; }
+.rl-venue-link:hover .rl-ext-icon { opacity: 1; }
 
 @media (max-width: 600px) {
   .race-table .col-city, .race-table th.col-city-hdr { display: none; }
