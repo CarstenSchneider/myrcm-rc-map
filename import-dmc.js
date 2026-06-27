@@ -107,6 +107,8 @@ async function fetchDmcClubDirectory() {
         continue;
       }
       const html = await res.text();
+      const preview = html.slice(0, 300).replace(/\s+/g, " ");
+      console.log(`  ${label}: HTTP ${res.status}, ${html.length} bytes, preview: ${preview}`);
       const entries = parseClubDirectory(html, label);
       console.log(`  ${label}: ${entries.length} Vereine`);
       for (const entry of entries) {
@@ -142,6 +144,7 @@ function parseClubDirectory(html, label = "") {
     const website = $(cells[5]).find("a[href]").first().attr("href") || null;
     entries.push({ name, ovNr, city, website: website || null });
   });
+  console.log(`    [${label}] Strategy 1 (table.verein): ${entries.length}, tables total: ${"table".length > 0 ? $("table").length : 0}`);
   if (entries.length > 0) return entries;
 
   // Strategy 2: Generic table rows with ≥2 columns (header rows filtered by text pattern)
@@ -153,6 +156,7 @@ function parseClubDirectory(html, label = "") {
     const website = $(tr).find("a[href]").first().attr("href") || null;
     entries.push({ name, ovNr: null, city: null, website: website || null });
   });
+  console.log(`    [${label}] Strategy 2 (table tr): ${entries.length}`);
   if (entries.length > 0) return entries;
 
   // Strategy 3: WordPress content-area links
@@ -162,11 +166,13 @@ function parseClubDirectory(html, label = "") {
     if (!name || name.length < 3) return;
     entries.push({ name, ovNr: null, city: null, website: href });
   });
+  console.log(`    [${label}] Strategy 3 (WP links): ${entries.length}`);
   if (entries.length > 0) return entries;
 
   // Nothing found — write body HTML to debug file for inspection
   const bodyHtml = ($("body").html() || $.html()).replace(/\s+/g, " ").trim();
-  try { appendFileSync("dmc-debug-html.json", JSON.stringify({ label, bodyHtml }) + "\n"); } catch { }
+  console.log(`    [${label}] Debug: body length=${bodyHtml.length}`);
+  try { appendFileSync("dmc-debug-html.json", JSON.stringify({ label, bodyHtml }) + "\n"); } catch (e) { console.warn(`    [${label}] appendFileSync failed: ${e.message}`); }
   return entries;
 }
 
