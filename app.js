@@ -2871,10 +2871,9 @@ function documentLinksHtml(race) {
         ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
       </span>`;
   } else if (race.url) {
-    const linkLabel = race.dataSource === "dmc" ? "Ausschreibung ↗" : "Nennung ↗";
     registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        <span class="race-link-text">${linkLabel}</span>
+        <span class="race-link-text">Nennung ↗</span>
       </a>`;
   }
 

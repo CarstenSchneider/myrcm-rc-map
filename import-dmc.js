@@ -5,6 +5,10 @@ const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
 const OUTPUT_FILE = "dmc-races.json";
 const DMC_VENUES_FILE = "dmc-venues.json";
 const TIMEOUT_MS = 30000;
+const PDF_TIMEOUT_MS = 20000;
+
+// Match registration links inside PDF text
+const REGISTRATION_URL_RE = /https?:\/\/(?:www\.)?(?:rccar-online\.de\/[^\s<>"')\]]+|rccar-nennungen\.de\/[^\s<>"')\]]+)/gi;
 
 function normalizeKey(value = "") {
   return String(value)
@@ -95,6 +99,55 @@ function parseTable(html) {
   return rows;
 }
 
+async function loadPdfParse() {
+  try {
+    const imported = await import("pdf-parse/lib/pdf-parse.js");
+    return imported.default || imported;
+  } catch {
+    try {
+      const imported = await import("pdf-parse");
+      return imported.default || imported;
+    } catch {
+      return null;
+    }
+  }
+}
+
+async function fetchPdfBuffer(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), PDF_TIMEOUT_MS);
+  try {
+    const res = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/pdf,*/*",
+        "Referer": DMC_URL,
+      },
+    });
+    if (!res.ok) return null;
+    return Buffer.from(await res.arrayBuffer());
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function extractRegistrationUrlFromPdf(pdfUrl, pdfParse) {
+  if (!pdfUrl || !pdfParse) return null;
+  const buffer = await fetchPdfBuffer(pdfUrl);
+  if (!buffer) return null;
+  try {
+    const result = await pdfParse(buffer);
+    const text = result?.text || "";
+    const matches = [...text.matchAll(REGISTRATION_URL_RE)];
+    return matches[0]?.[0]?.replace(/[.,;]+$/, "") || null;
+  } catch {
+    return null;
+  }
+}
+
 async function loadVenues() {
   try { return JSON.parse(await readFile("venues.json", "utf8")); }
   catch { return []; }
@@ -155,6 +208,19 @@ async function main() {
       .map(s => [s.hostId, s])
   );
 
+  // Extract registration URLs from ausschreibung PDFs (cached by URL)
+  const pdfParse = await loadPdfParse();
+  const pdfCache = new Map(); // pdfUrl → registrationUrl | null
+  const uniquePdfUrls = [...new Set(entries.map(e => e.ausschreibungHref).filter(Boolean))];
+  console.log(`PDFs zu prüfen: ${uniquePdfUrls.length}`);
+  for (const pdfUrl of uniquePdfUrls) {
+    const regUrl = await extractRegistrationUrlFromPdf(pdfUrl, pdfParse);
+    pdfCache.set(pdfUrl, regUrl);
+    if (regUrl) console.log(`  Nennung: ${regUrl}`);
+  }
+  const foundCount = [...pdfCache.values()].filter(Boolean).length;
+  console.log(`Nennungslinks gefunden: ${foundCount} / ${uniquePdfUrls.length}`);
+
   const dmcVenues = [];
   const dmcVenueIds = new Set();
 
@@ -177,6 +243,11 @@ async function main() {
       });
     }
 
+    const registrationUrl = entry.ausschreibungHref ? (pdfCache.get(entry.ausschreibungHref) || null) : null;
+    const documents = entry.ausschreibungHref
+      ? [{ url: entry.ausschreibungHref, type: "announcement", label: "Ausschreibung" }]
+      : [];
+
     return {
       id: `dmc-${hostSlug}-${entry.dateFrom}`,
       venueId: venue?.id ?? (seed ? dmcHostId : null),
@@ -190,9 +261,10 @@ async function main() {
       series: [],
       classes: [],
       source: "dmc",
-      url: entry.ausschreibungHref,
-      registrationStatus: null,
+      url: registrationUrl,
+      registrationStatus: registrationUrl ? "open" : null,
       registrationOpens: null,
+      documents,
     };
   });
 

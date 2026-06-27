@@ -12,9 +12,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1764276663_Ausschreibung_TOS_2025-2026-_RD3_Sued-_mit_DMC.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1764276663_Ausschreibung_TOS_2025-2026-_RD3_Sued-_mit_DMC.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-cars-kongen-e-v-2026-01-03",
@@ -29,9 +36,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1764276353_AS_KIM2026_1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1764276353_AS_KIM2026_1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msv-hurtgenwald-e-v-2026-01-11",
@@ -46,9 +60,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1763468374_Ausschreibung_HK_Cup_25-26_v2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1763468374_Ausschreibung_HK_Cup_25-26_v2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-modell-car-club-bad-kissingen-e-v-2026-01-11",
@@ -63,9 +84,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1766262210_Ausschreibung_2.MCC_Masters_25_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1766262210_Ausschreibung_2.MCC_Masters_25_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-ulm-e-v-2026-01-11",
@@ -80,9 +108,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767113522_Ausschreibung_SK-Lauf_1_12_Senden.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767113522_Ausschreibung_SK-Lauf_1_12_Senden.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-racer-hochsauerland-e-v-2026-01-17",
@@ -97,9 +132,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768401688_Ausschreibung_Winter_Cup_2025_Lauf_4_2.1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768401688_Ausschreibung_Winter_Cup_2025_Lauf_4_2.1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-burning-wheels-blankenfelde-e-v-2026-01-17",
@@ -114,9 +156,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1760101780_Ausschreibung_SK_Lauf_Ost_und_BWS2025-26____BurningWheels_OV-5-292.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1760101780_Ausschreibung_SK_Lauf_Ost_und_BWS2025-26____BurningWheels_OV-5-292.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rccr-munzig-e-v-2026-01-17",
@@ -131,9 +180,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767167551_20260118_Wintercup_Indoor_Offroad_Teppich.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767167551_20260118_Wintercup_Indoor_Offroad_Teppich.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-01-17",
@@ -150,7 +206,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcrt-schaafheim-2026-01-18",
@@ -165,9 +222,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1766954840_10176_20260118_EG_MRC_Schaafheim_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1766954840_10176_20260118_EG_MRC_Schaafheim_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-magdeburg-e-v-2026-01-18",
@@ -182,9 +246,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767543854_Ausschreibung_SK_Lauf_Ost_4_Lauf_ElbeCup_25_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767543854_Ausschreibung_SK_Lauf_Ost_4_Lauf_ElbeCup_25_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-01-23",
@@ -199,9 +270,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1762409701_ausschreibung_messe_chemnitz_(2).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1762409701_ausschreibung_messe_chemnitz_(2).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-fun-racer-2026-01-25",
@@ -216,9 +294,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767611479_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767611479_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-langenfeld-e-v-2026-01-31",
@@ -233,9 +318,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767183768_Ausschreibung_3._Lauf_Fivedays_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767183768_Ausschreibung_3._Lauf_Fivedays_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-racer-hochsauerland-e-v-2026-02-07",
@@ -250,9 +342,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768401863_Ausschreibung_Winter_Cup_2025_Lauf_5_2.3.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768401863_Ausschreibung_Winter_Cup_2025_Lauf_5_2.3.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-emc-marktoberdorf-e-v-2026-02-08",
@@ -267,9 +366,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769371983_SK-Lauf_08.02.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769371983_SK-Lauf_08.02.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msv-hurtgenwald-e-v-2026-02-08",
@@ -284,9 +390,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1763468391_Ausschreibung_HK_Cup_25-26_v2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1763468391_Ausschreibung_HK_Cup_25-26_v2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-modell-car-club-bad-kissingen-e-v-2026-02-08",
@@ -301,9 +414,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1766262244_Ausschreibung_3.MCC_Masters_25_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1766262244_Ausschreibung_3.MCC_Masters_25_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-solms-2026-02-14",
@@ -318,9 +438,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1766531790_10335_20260214_ORE_MAC_Solms_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1766531790_10335_20260214_ORE_MAC_Solms_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-burning-wheels-blankenfelde-e-v-2026-02-14",
@@ -335,9 +462,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1760101702_Ausschreibung_SK_Lauf_Ost_und_BWS2025-26____BurningWheels_OV-5-292.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1760101702_Ausschreibung_SK_Lauf_Ost_und_BWS2025-26____BurningWheels_OV-5-292.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rcct-munden-e-v-2026-02-15",
@@ -352,9 +486,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769898200_SM-Lauf_2026.doc.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769898200_SM-Lauf_2026.doc.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rcct-munden-e-v-2026-02-15",
@@ -369,9 +510,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769898714_SM-Lauf_2026.doc.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769898714_SM-Lauf_2026.doc.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-02-21",
@@ -386,9 +534,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768858042_10086_20260221_EG_SPC_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768858042_10086_20260221_EG_SPC_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mbc-goldstein-e-v-2026-02-22",
@@ -403,9 +558,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769099934_10180_20260222_EG_MBC_Goldstein_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769099934_10180_20260222_EG_MBC_Goldstein_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-magdeburg-e-v-2026-02-22",
@@ -420,9 +582,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1771777466_Ausschreibung_5_Lauf_ElbeCup_25_26_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1771777466_Ausschreibung_5_Lauf_ElbeCup_25_26_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-langenfeld-e-v-2026-02-28",
@@ -437,9 +606,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770632138_Ausschreibung_4._Lauf_Fivedays_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770632138_Ausschreibung_4._Lauf_Fivedays_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-slr-ingolstadt-e-v-2026-02-28",
@@ -454,9 +630,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1766262402_Ausschreibung_TOS_2025-2026_-_RD4_Ingolstadt_-_mit_DMC.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1766262402_Ausschreibung_TOS_2025-2026_-_RD4_Ingolstadt_-_mit_DMC.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rccr-munzig-e-v-2026-02-28",
@@ -471,9 +654,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767167962_20260301_Wintercup_Indoor_Offroad_Teppich.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767167962_20260301_Wintercup_Indoor_Offroad_Teppich.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-03-01",
@@ -488,9 +678,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1771094423_Ausschreibung_TOS_und_DMC_SK_Nord_Braunschweig_01.03.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1771094423_Ausschreibung_TOS_und_DMC_SK_Nord_Braunschweig_01.03.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-burning-wheels-blankenfelde-e-v-2026-03-07",
@@ -505,9 +702,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768903237_Ausschreibung_SK_Lauf_Ost_und_BWS2025-26____BurningWheels_OV-5-292.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768903237_Ausschreibung_SK_Lauf_Ost_und_BWS2025-26____BurningWheels_OV-5-292.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-03-07",
@@ -522,9 +726,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772014393_Ausschreibung_TECund1zu12_03_26_V1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772014393_Ausschreibung_TECund1zu12_03_26_V1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-emc-marktoberdorf-e-v-2026-03-07",
@@ -539,9 +750,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769621435_DM_7_u_8_Maerz_1_12_V2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769621435_DM_7_u_8_Maerz_1_12_V2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-03-07",
@@ -556,9 +774,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769094971_10383_20260308_EGTW_MAC_Siersburg_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769094971_10383_20260308_EGTW_MAC_Siersburg_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-spessart-racer-2026-03-14",
@@ -575,7 +800,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-03-14",
@@ -590,9 +816,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770581442_10086_20260314_ORE_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770581442_10086_20260314_ORE_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-racer-hochsauerland-e-v-2026-03-14",
@@ -607,9 +840,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773077355_Ausschreibung_Winter_Cup_2025_Lauf_4_2.1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773077355_Ausschreibung_Winter_Cup_2025_Lauf_4_2.1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rccr-munzig-e-v-2026-03-14",
@@ -624,9 +864,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1767166966_20260315_Wintercup_Indoor_Offroad_Teppich.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1767166966_20260315_Wintercup_Indoor_Offroad_Teppich.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mbc-goldstein-e-v-2026-03-21",
@@ -643,7 +890,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-03-21",
@@ -658,9 +906,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773309192_Ausschreibung_OTC_22_03_26_V1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773309192_Ausschreibung_OTC_22_03_26_V1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-lost-place-racers-e-v-2026-03-21",
@@ -675,9 +930,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770631109_Ausschreibung_Tamico_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770631109_Ausschreibung_Tamico_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-big-hamburg-e-v-2026-03-21",
@@ -692,9 +954,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1771434666_Ausschreibung_SH_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1771434666_Ausschreibung_SH_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-magdeburg-e-v-2026-03-26",
@@ -709,9 +978,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1771777523_Ausschreibung_6_Lauf_ElbeCup_25_26_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1771777523_Ausschreibung_6_Lauf_ElbeCup_25_26_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-03-28",
@@ -726,9 +1002,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768314844_Ausschreibung_BB-Fun_DMC_093144.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768314844_Ausschreibung_BB-Fun_DMC_093144.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rccr-munzig-e-v-2026-03-28",
@@ -743,9 +1026,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769972362_4_H_Rennen_Astro_1-10_Buggy.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769972362_4_H_Rennen_Astro_1-10_Buggy.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-langenfeld-e-v-2026-03-28",
@@ -760,9 +1050,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772637789_Ausschreibung_5._Lauf_Fivedays_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772637789_Ausschreibung_5._Lauf_Fivedays_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-muhlau-2026-04-03",
@@ -779,7 +1076,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-munster-e-v-2026-04-04",
@@ -794,9 +1092,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770550277_1-_Heide_Cup_Ausschreibung_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770550277_1-_Heide_Cup_Ausschreibung_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-la-speedway-racing-club-2026-04-10",
@@ -811,9 +1116,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775678079_Ausschreibung_Osterhasenrennen_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775678079_Ausschreibung_Osterhasenrennen_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-04-11",
@@ -828,9 +1140,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770580940_10079_20260410_OR_RCC_Grossheubach_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770580940_10079_20260410_OR_RCC_Grossheubach_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mck-e-v-dormagen-2026-04-11",
@@ -845,9 +1164,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773474948_260412_Dormagen_SMW1_VG_-_Ausschreibung_V2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773474948_260412_Dormagen_SMW1_VG_-_Ausschreibung_V2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-04-11",
@@ -862,9 +1188,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774280227_sk1_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774280227_sk1_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-04-11",
@@ -879,9 +1212,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774695573_10383_20261204_EG_MAC_Siersburg_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774695573_10383_20261204_EG_MAC_Siersburg_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-modellsport-munsterland-e-v-2026-04-12",
@@ -896,9 +1236,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772132416_Ausschreibung_MM_Cup_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772132416_Ausschreibung_MM_Cup_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-04-17",
@@ -913,9 +1260,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1771172851_Ostmasters_Ausschreibung_2026_Final.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1771172851_Ostmasters_Ausschreibung_2026_Final.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-04-18",
@@ -932,7 +1286,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-04-18",
@@ -949,7 +1304,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-04-18",
@@ -966,7 +1322,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-04-18",
@@ -983,7 +1340,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-modellsport-munsterland-e-v-2026-04-18",
@@ -998,9 +1356,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772132215_Ausschreibung_ECN_MM_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772132215_Ausschreibung_ECN_MM_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-osterhofen-e-v-2026-04-18",
@@ -1015,9 +1380,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774443796_Ausschreibung_Osterhofen.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774443796_Ausschreibung_Osterhofen.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-lost-place-racers-e-v-2026-04-18",
@@ -1032,9 +1404,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770631025_Ausschreibung_NORC_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770631025_Ausschreibung_NORC_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-schwedt-e-v-2026-04-19",
@@ -1049,9 +1428,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773830124_Ausschreibung_Schwedter_Gastfahrertag.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773830124_Ausschreibung_Schwedter_Gastfahrertag.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-esv-bischofsheim-e-v-2026-04-24",
@@ -1066,9 +1452,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777928306_10037_20260424_OR8__ESV_Bischofsheim_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777928306_10037_20260424_OR8__ESV_Bischofsheim_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-04-25",
@@ -1083,9 +1476,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770391970_1_Ausschreibung_SK-Lauf-OR8_Sachsencup_OR8E_16-17Mai2025_OV61.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770391970_1_Ausschreibung_SK-Lauf-OR8_Sachsencup_OR8E_16-17Mai2025_OV61.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-orc-b-gottingen-e-v-2026-04-25",
@@ -1100,9 +1500,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773755091_Ausschreibung_EUROMASTERS_2026_GER.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773755091_Ausschreibung_EUROMASTERS_2026_GER.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-ettlingen-e-v-2026-04-25",
@@ -1117,9 +1524,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776715301_10058_20260425_VG8_-_EG8_MC_Ettlingen_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776715301_10058_20260425_VG8_-_EG8_MC_Ettlingen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-meckenheim-e-v-2026-04-26",
@@ -1134,9 +1548,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773581642_Ausschreibung,_26.04.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773581642_Ausschreibung,_26.04.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-raceteam-munchen-e-v-2026-04-26",
@@ -1151,9 +1572,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776086343_Ausschreibung_2.0.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776086343_Ausschreibung_2.0.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-speedracer-2026-05-01",
@@ -1170,7 +1598,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-amc-mistral-lahr-e-v-2026-05-01",
@@ -1187,7 +1616,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rccr-munzig-e-v-2026-05-01",
@@ -1204,7 +1634,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-racer-hochsauerland-e-v-2026-05-01",
@@ -1219,9 +1650,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774979296_Ausschreibung_4_Stunden_Rennen_VFarena.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774979296_Ausschreibung_4_Stunden_Rennen_VFarena.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-hamm-e-v-2026-05-01",
@@ -1238,7 +1676,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-amc-muhlau-2026-05-01",
@@ -1253,9 +1692,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775592499_Ausschreibung_Mai_2026_Muehlau.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775592499_Ausschreibung_Mai_2026_Muehlau.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-edc-kinzigtal-2026-05-01",
@@ -1270,9 +1716,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773430775_Ausschreibung_Tamico_Kinzigtal_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773430775_Ausschreibung_Tamico_Kinzigtal_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-freunde-kinzigtal-e-v-2026-05-02",
@@ -1287,9 +1740,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769716610_Ausschreibung750_Jahr_Race_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769716610_Ausschreibung750_Jahr_Race_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msg-niesky-e-v-2026-05-02",
@@ -1304,9 +1764,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773830026_SK_Lauf_Niesky,_SK-5,_OV_50387,_Ausschreibung_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773830026_SK_Lauf_Niesky,_SK-5,_OV_50387,_Ausschreibung_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-05-02",
@@ -1321,9 +1788,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770550814_SKVG8_u10_Ausschreibung_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770550814_SKVG8_u10_Ausschreibung_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-celle-e-v-2026-05-02",
@@ -1338,9 +1812,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775420363_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775420363_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-celle-e-v-2026-05-02",
@@ -1355,9 +1836,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775420380_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775420380_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-uetersen-e-v-2026-05-02",
@@ -1372,9 +1860,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774330652_ausschreibung_2_SH_Cup.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774330652_ausschreibung_2_SH_Cup.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-bc-mitterkreith-2026-05-02",
@@ -1389,9 +1884,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776018447_Ausschreibung_2026_Mitterkreith_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776018447_Ausschreibung_2026_Mitterkreith_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrt-rosenheim-e-v-2026-05-02",
@@ -1406,9 +1908,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776627727_Motorrad_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776627727_Motorrad_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-05-03",
@@ -1423,9 +1932,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772569236_10079_20260514_OR6_RCC_Grossheubach_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772569236_10079_20260514_OR6_RCC_Grossheubach_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-05-08",
@@ -1440,9 +1956,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774416608_12h_Rennen_Ausschreibung_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774416608_12h_Rennen_Ausschreibung_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-05-08",
@@ -1457,9 +1980,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770392059_2_Ausschreibung_SK-Lauf_GT8+SK_GT8,_EG8e_Pro10,_Pro10SP_09.05.-10.05._MRC_Leipzig_OV61.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770392059_2_Ausschreibung_SK-Lauf_GT8+SK_GT8,_EG8e_Pro10,_Pro10SP_09.05.-10.05._MRC_Leipzig_OV61.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-esv-bischofsheim-e-v-2026-05-09",
@@ -1474,9 +2004,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774482796_10037_20260509_OR8_ESV_Bischofsheim_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774482796_10037_20260509_OR8_ESV_Bischofsheim_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-nitromaniacs-e-v-2026-05-09",
@@ -1491,9 +2028,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776191692_Ausschreibung_Anglühen_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776191692_Ausschreibung_Anglühen_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mbc-oberlausitz-e-v-2026-05-09",
@@ -1508,9 +2052,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775547057_Ausschreibung+09-10052026-1_260327_190311_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775547057_Ausschreibung+09-10052026-1_260327_190311_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-boc-kiel-e-v-2026-05-09",
@@ -1525,9 +2076,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776103277_SK1OR82026BOCKIEL.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776103277_SK1OR82026BOCKIEL.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-meckenheim-e-v-2026-05-10",
@@ -1542,9 +2100,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773581668_Ausschreibung,_10.05.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773581668_Ausschreibung,_10.05.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-05-10",
@@ -1559,9 +2124,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769625475_Ausschreibung_SK5_ORE_V1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769625475_Ausschreibung_SK5_ORE_V1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-05-10",
@@ -1578,7 +2150,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-05-14",
@@ -1593,9 +2166,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768144939_Freundschaftsrennen_14.5.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768144939_Freundschaftsrennen_14.5.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-05-14",
@@ -1610,9 +2190,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777319955_Ausschreibung_fr_wob_Neu_vatertag_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777319955_Ausschreibung_fr_wob_Neu_vatertag_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-05-15",
@@ -1627,9 +2214,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772569381_10079_20260514_OR6_RCC_Grossheubach_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772569381_10079_20260514_OR6_RCC_Grossheubach_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-05-16",
@@ -1644,9 +2238,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778519693_FR-Ausschreibung_236_2026_05_16.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778519693_FR-Ausschreibung_236_2026_05_16.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-racer-hochsauerland-e-v-2026-05-16",
@@ -1661,9 +2262,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777990386_ERS_Elektro_Rennserie_2026-Lauf_1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777990386_ERS_Elektro_Rennserie_2026-Lauf_1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-05-16",
@@ -1678,9 +2286,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768145506_Tamiya_Cup_1617.5.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768145506_Tamiya_Cup_1617.5.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-ttsc-racing-team-2026-05-16",
@@ -1695,9 +2310,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779185135_1023_4297_ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779185135_1023_4297_ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-nurnberg-e-v-2026-05-16",
@@ -1712,9 +2334,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769805192_Ausschreibung_Norispokal_16.+17.05.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769805192_Ausschreibung_Norispokal_16.+17.05.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-senftenberg-2026-05-16",
@@ -1729,9 +2358,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776012553_Ausschreibung_2026-05-17_VM.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776012553_Ausschreibung_2026-05-17_VM.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-langenfeld-e-v-2026-05-16",
@@ -1746,9 +2382,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778065005_Ausschreibung_SK_Lauf_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778065005_Ausschreibung_SK_Lauf_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-wiesbadener-minicar-club-e-v-2026-05-16",
@@ -1763,9 +2406,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776103906_10017_20260516_VG_WMC_Wiesbaden_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776103906_10017_20260516_VG_WMC_Wiesbaden_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-turkheim-e-v-2026-05-16",
@@ -1780,9 +2430,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772739795_Ausschreibung_Alpencup_und_Lauf_VG_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772739795_Ausschreibung_Alpencup_und_Lauf_VG_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-sand-e-v-2026-05-16",
@@ -1797,9 +2454,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776874284_Ausschreibung_Sand_am_Main_SDC_2026_final.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776874284_Ausschreibung_Sand_am_Main_SDC_2026_final.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-langenfeld-e-v-2026-05-16",
@@ -1814,9 +2478,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776241047_Ausschreibung_SK_Lauf_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776241047_Ausschreibung_SK_Lauf_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-emc-marktoberdorf-e-v-2026-05-17",
@@ -1831,9 +2502,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778524769_Ausschreibung_17.05..pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778524769_Ausschreibung_17.05..pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-05-17",
@@ -1848,9 +2526,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773309595_2026-05-17_Ausschreibung_LE-Trophy-Offroad_Lauf-1_OV61.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773309595_2026-05-17_Ausschreibung_LE-Trophy-Offroad_Lauf-1_OV61.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-05-17",
@@ -1865,9 +2550,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775889641_Ausschreibung_TOS_und_DMC_SK_Nord_Braunschweig_17.05.2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775889641_Ausschreibung_TOS_und_DMC_SK_Nord_Braunschweig_17.05.2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-ts-gross-auheim-2026-05-22",
@@ -1882,9 +2574,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777920648_20260522_Einladung_MyRCM_Zeitnahmeschulung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777920648_20260522_Einladung_MyRCM_Zeitnahmeschulung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-saarbrucken-e-v-2026-05-23",
@@ -1899,9 +2598,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776720240_10035_20260523_3LC_AMC_Saarbrücken_-_Ausschreibung_Pfingstrennen.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776720240_10035_20260523_3LC_AMC_Saarbrücken_-_Ausschreibung_Pfingstrennen.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-motorsportvereinigung-zittauer-land-e-v-2026-05-23",
@@ -1918,7 +2624,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-halle-e-v-2026-05-23",
@@ -1933,9 +2640,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776013090_MVZ_Ostmasterslauf.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776013090_MVZ_Ostmasterslauf.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mfk-kurten-e-v-2026-05-23",
@@ -1950,9 +2664,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777901283_MFK_Ausschreibung_Pfingsten_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777901283_MFK_Ausschreibung_Pfingsten_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-05-23",
@@ -1967,9 +2688,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774248560_250524_Bad_Breisig_SMW2_VG_-_Ausschreibung_V1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774248560_250524_Bad_Breisig_SMW2_VG_-_Ausschreibung_V1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-05-23",
@@ -1986,7 +2714,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-munster-e-v-2026-05-23",
@@ -2001,9 +2730,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777015479_2-_Heide_Cup_Ausschreibung_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777015479_2-_Heide_Cup_Ausschreibung_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-05-23",
@@ -2020,7 +2756,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-05-23",
@@ -2035,9 +2772,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774765777_Pfingstrennen_26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774765777_Pfingstrennen_26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrsc-amberg-e-v-2026-05-24",
@@ -2052,9 +2796,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775676882_Ausschreibung_MRSC_CUp_2026_Lauf_1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775676882_Ausschreibung_MRSC_CUp_2026_Lauf_1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-saarbrucken-e-v-2026-05-24",
@@ -2069,9 +2820,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776718450_10035_20260524_3LC_AMC_Saarbrücken_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776718450_10035_20260524_3LC_AMC_Saarbrücken_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-saarbrucken-e-v-2026-05-25",
@@ -2086,9 +2844,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776719336_10035_20260525_AMC_Saarbrücken_-_Ausschreibung_Tag_der_offenen_Tür.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776719336_10035_20260525_AMC_Saarbrücken_-_Ausschreibung_Tag_der_offenen_Tür.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-05-29",
@@ -2103,9 +2868,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777016520_Bikertraining_Ausschreibung_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777016520_Bikertraining_Ausschreibung_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-ort-fulda-2026-05-30",
@@ -2120,9 +2892,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777928689_10003_20260530_ECM_ORT_Fulda_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777928689_10003_20260530_ECM_ORT_Fulda_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-05-30",
@@ -2139,7 +2918,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-drecksloch-e-v-2026-05-30",
@@ -2154,9 +2934,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777990670_ERS_Elektro_Rennserie_2026-Lauf_2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777990670_ERS_Elektro_Rennserie_2026-Lauf_2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-05-30",
@@ -2171,9 +2958,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779274262_Ausschreibung_OTC_31_05_26_V1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779274262_Ausschreibung_OTC_31_05_26_V1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-05-30",
@@ -2188,26 +2982,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777328663_10086_20260530_ORE_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
-  },
-  {
-    "id": "dmc-rc-offroad-ottendorf-okrilla-e-v-2026-05-30",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
-    "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-05-30",
-    "to": "2026-05-31",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780314883_Ausschreibung-3.SK-Lauf-2026.pdf",
-    "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777328663_10086_20260530_ORE_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-offroad-ottendorf-okrilla-e-v-2026-05-30",
@@ -2224,7 +3008,32 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780314883_Ausschreibung-3.SK-Lauf-2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
+    "id": "dmc-rc-offroad-ottendorf-okrilla-e-v-2026-05-30",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
+    "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
+    "name": "Sportkreismeisterschaft",
+    "from": "2026-05-30",
+    "to": "2026-05-31",
+    "series": [],
+    "classes": [],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-speedracer-2026-05-30",
@@ -2239,9 +3048,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772014898_30.-31.05.2026_SK-Lauf_und_BTM_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772014898_30.-31.05.2026_SK-Lauf_und_BTM_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msv-hurtgenwald-e-v-2026-05-30",
@@ -2258,7 +3074,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rimar-rhein-ijssel-modell-auto-race-2026-05-30",
@@ -2273,9 +3090,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776694110_Musterausschreibung_VG5_Velp.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776694110_Musterausschreibung_VG5_Velp.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-la-speedway-racing-club-2026-05-30",
@@ -2290,9 +3114,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778477134_Ausschreibung-LA-Speedway-SDC-2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778477134_Ausschreibung-LA-Speedway-SDC-2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msv-hurtgenwald-e-v-2026-05-30",
@@ -2307,9 +3138,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777316398_Ausschreibung_SK-West_NORC_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777316398_Ausschreibung_SK-West_NORC_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-05-30",
@@ -2324,9 +3162,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774280279_Ausschreibung_SK_Lauf_RCO_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774280279_Ausschreibung_SK_Lauf_RCO_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-hamburg-e-v-2026-05-31",
@@ -2341,9 +3186,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778954033_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778954033_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-06-04",
@@ -2358,9 +3210,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768145673_Tamiya_Cup_47.6.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768145673_Tamiya_Cup_47.6.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-muhlau-2026-06-06",
@@ -2375,9 +3234,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778178726_Ausschreibung_Teamrennen_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778178726_Ausschreibung_Teamrennen_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-06-06",
@@ -2392,9 +3258,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780247592_10383_20260607_EG_MAC_Siersburg_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780247592_10383_20260607_EG_MAC_Siersburg_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-dortmund-e-v-2026-06-06",
@@ -2409,9 +3282,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780394606_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780394606_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-cars-kongen-e-v-2026-06-06",
@@ -2426,9 +3306,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773749148_AS_ROS_2026_V1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773749148_AS_ROS_2026_V1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-racecrew-2026-06-06",
@@ -2443,9 +3330,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778064925_Ausschreibung_RaceCrew_2026_-1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778064925_Ausschreibung_RaceCrew_2026_-1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rt-fichtenberg-2026-06-06",
@@ -2460,9 +3354,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775676604_Ausschreibung_KW-Challenge_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775676604_Ausschreibung_KW-Challenge_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrt-rosenheim-e-v-2026-06-06",
@@ -2477,9 +3378,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776627992_Alpencup_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776627992_Alpencup_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-modellfreunde-rheinhessen-pfalz-e-v-2026-06-07",
@@ -2494,9 +3402,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777671255_10266_20260607_ORE_MFR_Rheinhesen_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777671255_10266_20260607_ORE_MFR_Rheinhesen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-halle-e-v-2026-06-13",
@@ -2511,9 +3426,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780293845_RCHalle_SK_Ausschreibung_v2_2026-06-13.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780293845_RCHalle_SK_Ausschreibung_v2_2026-06-13.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-solms-2026-06-13",
@@ -2528,9 +3450,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779060823_10335_20260613_ORE_MAC-Solms_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779060823_10335_20260613_ORE_MAC-Solms_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rcsf-singen-e-v-2026-06-13",
@@ -2545,9 +3474,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779566151_AUSSCHREIBUNG_2026_Alpencup.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779566151_AUSSCHREIBUNG_2026_Alpencup.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-06-13",
@@ -2562,9 +3498,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780157313_3-_Heide_Cup_Ausschreibung_2026_(1)-1.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780157313_3-_Heide_Cup_Ausschreibung_2026_(1)-1.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-06-13",
@@ -2579,9 +3522,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774483385_10036_20260613_OR8_RCO_Heiligenstadt_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774483385_10036_20260613_OR8_RCO_Heiligenstadt_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-burgdorf-e-v-2026-06-13",
@@ -2596,9 +3546,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776110970_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776110970_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-burgdorf-e-v-2026-06-13",
@@ -2613,9 +3570,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776110989_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776110989_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-hof-e-v-2026-06-13",
@@ -2630,9 +3594,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775335632_2026_Ausschreibung-VG8_VG10.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775335632_2026_Ausschreibung-VG8_VG10.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-senftenberg-2026-06-13",
@@ -2647,9 +3618,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778515565_Ausschreibung_2026-06-14_VM.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778515565_Ausschreibung_2026-06-14_VM.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-06-13",
@@ -2664,9 +3642,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770392097_3_Ausschreibung_SK-Lauf_ORE_13.06-14.06._MRC_Leipzig_OV61.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770392097_3_Ausschreibung_SK-Lauf_ORE_13.06-14.06._MRC_Leipzig_OV61.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-speedracer-2026-06-13",
@@ -2681,9 +3666,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772015013_13.-14.06.2026_SK-Lauf_und_BTM_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772015013_13.-14.06.2026_SK-Lauf_und_BTM_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-06-13",
@@ -2698,9 +3690,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770392369_4_Bikegrandeprix_2026_13-14_Juni.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770392369_4_Bikegrandeprix_2026_13-14_Juni.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-dortmund-e-v-2026-06-13",
@@ -2715,9 +3714,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778523239_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778523239_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-racer-hochsauerland-e-v-2026-06-13",
@@ -2732,9 +3738,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778064892_Ausschreibung_SK-Lauf_RC_Racer_Hochsauerland_e.V.,_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778064892_Ausschreibung_SK-Lauf_RC_Racer_Hochsauerland_e.V.,_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-welden-e-v-2026-06-13",
@@ -2749,9 +3762,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779172116_Ausschreibung_6._SK-Lauf_OR8_Sued_2026_+_4._Lauf_SDC_2026_MC_Welden_e.V_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779172116_Ausschreibung_6._SK-Lauf_OR8_Sued_2026_+_4._Lauf_SDC_2026_MC_Welden_e.V_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-burgdorf-e-v-2026-06-13",
@@ -2766,9 +3786,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776227383_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776227383_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-06-13",
@@ -2783,9 +3810,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780599253_Ausschreibung_4._SK_Lauf_26_+_FR.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780599253_Ausschreibung_4._SK_Lauf_26_+_FR.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-meckenheim-e-v-2026-06-14",
@@ -2800,9 +3834,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773581710_Ausschreibung,_14.06.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773581710_Ausschreibung,_14.06.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-langenfeld-e-v-2026-06-19",
@@ -2817,9 +3858,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773824757_Ausschreibung_RoL_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773824757_Ausschreibung_RoL_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-uetersen-e-v-2026-06-19",
@@ -2834,9 +3882,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776980914_260621_Uetersen_DM_Truggy_-_Ausschreibung_V2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776980914_260621_Uetersen_DM_Truggy_-_Ausschreibung_V2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-uetersen-e-v-2026-06-19",
@@ -2851,9 +3906,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776980832_260621_Uetersen_DM_Truggy_-_Ausschreibung_V2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776980832_260621_Uetersen_DM_Truggy_-_Ausschreibung_V2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-06-20",
@@ -2870,7 +3932,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-modellsport-munsterland-e-v-2026-06-20",
@@ -2885,9 +3948,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1772132322_Ausschreibung_4H_Rennen_MM_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1772132322_Ausschreibung_4H_Rennen_MM_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-tsv-mariendorf-97-berlin-2026-06-20",
@@ -2902,9 +3972,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781172816_kleinserie_21.6.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781172816_kleinserie_21.6.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-speedracer-2026-06-20",
@@ -2919,9 +3996,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780579116_20.-21.06.2026_Ostmasters+_SK-Lauf_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780579116_20.-21.06.2026_Ostmasters+_SK-Lauf_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-kirchhain-e-v-2026-06-20",
@@ -2936,9 +4020,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779267178_10005_20260620_EG8_MSC_Kirchhain_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779267178_10005_20260620_EG8_MSC_Kirchhain_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-haltern-e-v-2026-06-20",
@@ -2953,9 +4044,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779696469_2606212_Haltern_SMW3_VG_-_Ausschreibung_V2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779696469_2606212_Haltern_SMW3_VG_-_Ausschreibung_V2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-saarbrucken-e-v-2026-06-20",
@@ -2970,9 +4068,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776884786_10035_20260620_VG5_AMC_Saarbruecken_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776884786_10035_20260620_VG5_AMC_Saarbruecken_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-hamburg-e-v-2026-06-21",
@@ -2987,9 +4092,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778954155_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778954155_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-gemunden-e-v-i-adac-2026-06-21",
@@ -3004,9 +4116,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779565990_21.06.2026_MRS.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779565990_21.06.2026_MRS.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-offroad-staaken-e-v-2026-06-21",
@@ -3021,9 +4140,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781072604_Ausschreibung_3.RCS-Cup.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781072604_Ausschreibung_3.RCS-Cup.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-06-21",
@@ -3038,9 +4164,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778519823_PC-Ausschreibung_236_2026_06_21.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778519823_PC-Ausschreibung_236_2026_06_21.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-spessart-racer-2026-06-27",
@@ -3055,9 +4188,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779915639_10323_20260627_ORE8_Spessart_Racer_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779915639_10323_20260627_ORE8_Spessart_Racer_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-06-27",
@@ -3072,9 +4212,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775628551_Ausschreibung_+_Reglement_082826.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775628551_Ausschreibung_+_Reglement_082826.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-06-27",
@@ -3091,7 +4238,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrt-rosenheim-e-v-2026-06-27",
@@ -3106,9 +4254,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776627657_TT01_6h_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776627657_TT01_6h_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-06-27",
@@ -3123,9 +4278,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768146413_Freundschaftsrennen_2728.6.26_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768146413_Freundschaftsrennen_2728.6.26_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-06-27",
@@ -3140,9 +4302,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780949748_10086_20260627_EG_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780949748_10086_20260627_EG_MAC_Huetschenhausen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rcsf-singen-e-v-2026-06-27",
@@ -3157,9 +4326,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781697542_Veranstalterung_Freundschaftsrennen_On_Road.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781697542_Veranstalterung_Freundschaftsrennen_On_Road.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-celle-e-v-2026-06-27",
@@ -3174,9 +4350,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779718018_Ausschreibung_SK_Lauf_ORE_28.6.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779718018_Ausschreibung_SK_Lauf_ORE_28.6.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-celle-e-v-2026-06-27",
@@ -3191,9 +4374,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779718035_Ausschreibung_SK_Lauf_ORE_28.6.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779718035_Ausschreibung_SK_Lauf_ORE_28.6.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rccc-coesfeld-2026-06-27",
@@ -3208,9 +4398,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778064955_Ausschreibung-2026-NRWCup-SK_OR8-SK_ORE8-_rccc_coesfeld.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778064955_Ausschreibung-2026-NRWCup-SK_OR8-SK_ORE8-_rccc_coesfeld.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-speedracer-2026-06-27",
@@ -3225,9 +4422,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780853252_27.-28.06.2026_Tamico_Offroad_+_SK-Lauf.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780853252_27.-28.06.2026_Tamico_Offroad_+_SK-Lauf.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-emc-marktoberdorf-e-v-2026-06-28",
@@ -3242,9 +4446,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778524808_Ausschreibung_28.06..pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778524808_Ausschreibung_28.06..pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrt-rosenheim-e-v-2026-06-28",
@@ -3259,9 +4470,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776627841_Jugendtag_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776627841_Jugendtag_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-munster-e-v-2026-07-03",
@@ -3276,9 +4494,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780952986_MCD_Fanatics_Ausschreibung_2026_(2).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780952986_MCD_Fanatics_Ausschreibung_2026_(2).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msv-linsengericht-2026-07-04",
@@ -3293,9 +4518,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776716132_10234_20260704_OR8_MSV_Linsengericht_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776716132_10234_20260704_OR8_MSV_Linsengericht_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-tsv-mariendorf-97-berlin-2026-07-04",
@@ -3310,9 +4542,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781172060_TEC_5.7.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781172060_TEC_5.7.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-senftenberg-2026-07-04",
@@ -3327,9 +4566,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780942477_Ausschreibung_2026-07-05_VM.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780942477_Ausschreibung_2026-07-05_VM.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-laupheim-e-v-2026-07-04",
@@ -3344,43 +4590,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781769097_MCC_Laupheim_3.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
-  },
-  {
-    "id": "dmc-mac-hamburg-e-v-2026-07-05",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
-    "hostId": "mac-hamburg-e-v",
-    "hostName": "MAC Hamburg e.V.",
-    "name": "Freundschaftsrennen",
-    "from": "2026-07-05",
-    "to": "2026-07-05",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778954284_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
-    "registrationStatus": null,
-    "registrationOpens": null
-  },
-  {
-    "id": "dmc-amc-hamm-e-v-2026-07-05",
-    "venueId": "amc-hamm-e-v",
-    "venueName": "amc-Hamm e.V.",
-    "venueLocation": "Bönen",
-    "hostId": "amc-hamm-e-v",
-    "hostName": "amc Hamm e.V.",
-    "name": "Freundschaftsrennen",
-    "from": "2026-07-05",
-    "to": "2026-07-05",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781517294_AMC_Hamm_Freundschaftsrennen_-_Ausschreibung_2026_2_Fin..pdf",
-    "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781769097_MCC_Laupheim_3.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-hamburg-e-v-2026-07-05",
@@ -3397,7 +4616,56 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778954284_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
+    "id": "dmc-amc-hamm-e-v-2026-07-05",
+    "venueId": "amc-hamm-e-v",
+    "venueName": "amc-Hamm e.V.",
+    "venueLocation": "Bönen",
+    "hostId": "amc-hamm-e-v",
+    "hostName": "amc Hamm e.V.",
+    "name": "Freundschaftsrennen",
+    "from": "2026-07-05",
+    "to": "2026-07-05",
+    "series": [],
+    "classes": [],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781517294_AMC_Hamm_Freundschaftsrennen_-_Ausschreibung_2026_2_Fin..pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
+    "id": "dmc-mac-hamburg-e-v-2026-07-05",
+    "venueId": "mac-hamburg-e-v",
+    "venueName": "MAC Hamburg e.V.",
+    "venueLocation": "Hamburg",
+    "hostId": "mac-hamburg-e-v",
+    "hostName": "MAC Hamburg e.V.",
+    "name": "Freundschaftsrennen",
+    "from": "2026-07-05",
+    "to": "2026-07-05",
+    "series": [],
+    "classes": [],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-07-05",
@@ -3412,9 +4680,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773309778_2026-07_05_Ausschreibung_LE-Trophy-Offroad_Lauf-2_OV61.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773309778_2026-07_05_Ausschreibung_LE-Trophy-Offroad_Lauf-2_OV61.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-schwedt-e-v-2026-07-11",
@@ -3429,9 +4704,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777718800_Ausschreibung_Schwedter_Agenda_Diplom.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777718800_Ausschreibung_Schwedter_Agenda_Diplom.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msv-linsengericht-2026-07-11",
@@ -3448,7 +4730,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-amc-hamm-e-v-2026-07-11",
@@ -3463,9 +4746,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779896323_ODM-Hamm_2026_Fin..pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779896323_ODM-Hamm_2026_Fin..pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-speedracer-2026-07-11",
@@ -3480,9 +4770,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781452757_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781452757_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-07-11",
@@ -3499,7 +4796,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-3-sesselracer-2026-07-11",
@@ -3514,9 +4812,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781697104_Ausschreibung_OBP.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781697104_Ausschreibung_OBP.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-stoppelhopser-oberhausen-e-v-2026-07-11",
@@ -3531,9 +4836,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1782385364_Stoppelhopser_Ausschreibung_SK-NRW2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782385364_Stoppelhopser_Ausschreibung_SK-NRW2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rcrt-duisburg-2026-07-11",
@@ -3548,9 +4860,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779793888_Ausschreibung_SK_West_2026_&_NORC_RCRT_Duisburg_e.V..pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779793888_Ausschreibung_SK_West_2026_&_NORC_RCRT_Duisburg_e.V..pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-uetersen-e-v-2026-07-11",
@@ -3565,9 +4884,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781601438_ausschreibung_5.SK_lauf_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781601438_ausschreibung_5.SK_lauf_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-07-18",
@@ -3582,9 +4908,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781601395_1313_3851_ausschreibung_-ecn_wob.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781601395_1313_3851_ausschreibung_-ecn_wob.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mcc-hof-e-v-2026-07-18",
@@ -3599,9 +4932,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781697426_2026_Ausschreibung-VG5_Ostmasters.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781697426_2026_Ausschreibung-VG5_Ostmasters.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-nurnberg-e-v-2026-07-18",
@@ -3616,9 +4956,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769716810_Ausschreibung_SK_Lauf_&_Norispokal_VG8_&_VG10_18.+19.07.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769716810_Ausschreibung_SK_Lauf_&_Norispokal_VG8_&_VG10_18.+19.07.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-edc-kinzigtal-2026-07-18",
@@ -3633,9 +4980,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781696910_Ausschreibung_KOBF2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781696910_Ausschreibung_KOBF2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-hamm-e-v-2026-07-18",
@@ -3652,7 +5006,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mck-e-v-dormagen-2026-07-18",
@@ -3667,9 +5022,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780679608_Ausschreibung_RCS_+_SK_Dormagen_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780679608_Ausschreibung_RCS_+_SK_Dormagen_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-senden-2026-07-18",
@@ -3684,9 +5046,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781769173_Ausschreibung_SDC_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781769173_Ausschreibung_SDC_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-meckenheim-e-v-2026-07-19",
@@ -3701,9 +5070,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768666292_Ausschreibung,_19.07.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768666292_Ausschreibung,_19.07.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-07-24",
@@ -3720,7 +5096,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-07-25",
@@ -3737,7 +5114,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-tsv-mariendorf-97-berlin-2026-07-25",
@@ -3752,9 +5130,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781171161_kleinserie_25.7.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781171161_kleinserie_25.7.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-la-speedway-racing-club-2026-07-25",
@@ -3769,9 +5154,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781697258_AussOBP-Lauf2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781697258_AussOBP-Lauf2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-ober-morlen-e-v-2026-07-25",
@@ -3788,7 +5180,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcc-laupheim-e-v-2026-07-25",
@@ -3803,9 +5196,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773430938_Ausschreibung_TOC_Laupheim_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773430938_Ausschreibung_TOC_Laupheim_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-emc-marktoberdorf-e-v-2026-07-26",
@@ -3820,9 +5220,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778524837_Ausschreibung_26.07.26_.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778524837_Ausschreibung_26.07.26_.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-offroad-kassel-e-v-2026-08-01",
@@ -3839,7 +5246,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-msc-kirchhain-e-v-2026-08-01",
@@ -3854,9 +5262,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1779358022_10005_20260801_VG_MSC_Kirchhain_-_Ausschreibung.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1779358022_10005_20260801_VG_MSC_Kirchhain_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-saarbrucken-e-v-2026-08-01",
@@ -3871,9 +5286,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776720745_10035_20260801_AMC_Saarbrücken_-_Ausschreibung_Motorradtreffen.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776720745_10035_20260801_AMC_Saarbrücken_-_Ausschreibung_Motorradtreffen.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-08-02",
@@ -3888,9 +5310,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778520335_Ausschreibung_Tamico_Offroad_Cup_236__2026_08_01.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778520335_Ausschreibung_Tamico_Offroad_Cup_236__2026_08_01.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-esv-bischofsheim-e-v-2026-08-07",
@@ -3905,9 +5334,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1782124795_Ausschreibung_DM_Final_05062026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782124795_Ausschreibung_DM_Final_05062026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-solms-2026-08-08",
@@ -3924,7 +5360,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-wiesbadener-minicar-club-e-v-2026-08-08",
@@ -3941,24 +5378,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
-  },
-  {
-    "id": "dmc-mac-hamburg-e-v-2026-08-09",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
-    "hostId": "mac-hamburg-e-v",
-    "hostName": "MAC Hamburg e.V.",
-    "name": "Freundschaftsrennen",
-    "from": "2026-08-09",
-    "to": "2026-08-09",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778954379_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
-    "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-hamburg-e-v-2026-08-09",
@@ -3975,7 +5396,32 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778954379_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
+    "id": "dmc-mac-hamburg-e-v-2026-08-09",
+    "venueId": "mac-hamburg-e-v",
+    "venueName": "MAC Hamburg e.V.",
+    "venueLocation": "Hamburg",
+    "hostId": "mac-hamburg-e-v",
+    "hostName": "MAC Hamburg e.V.",
+    "name": "Freundschaftsrennen",
+    "from": "2026-08-09",
+    "to": "2026-08-09",
+    "series": [],
+    "classes": [],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-msv-hurtgenwald-e-v-2026-08-13",
@@ -3992,7 +5438,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-amc-senftenberg-2026-08-15",
@@ -4009,7 +5456,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-08-15",
@@ -4026,7 +5474,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-bande-zwickau-e-v-2026-08-15",
@@ -4041,9 +5490,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1774303914_Ausschreibung_SK+Sachsencup_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1774303914_Ausschreibung_SK+Sachsencup_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-kirchhain-e-v-2026-08-21",
@@ -4060,7 +5516,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-msc-kirchhain-e-v-2026-08-21",
@@ -4077,7 +5534,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-08-21",
@@ -4092,9 +5550,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1782124606_RCOH_Ausschreibung_deutsche_Meisterschaft_2026_(1).doc",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782124606_RCOH_Ausschreibung_deutsche_Meisterschaft_2026_(1).doc",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-solms-2026-08-22",
@@ -4111,7 +5576,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-08-22",
@@ -4128,7 +5594,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-meckenheim-e-v-2026-08-23",
@@ -4143,9 +5610,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768666376_Ausschreibung,_23.08.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768666376_Ausschreibung,_23.08.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-hamm-e-v-2026-08-28",
@@ -4162,7 +5636,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-08-28",
@@ -4179,7 +5654,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-amc-hamm-e-v-2026-08-28",
@@ -4196,7 +5672,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-08-29",
@@ -4213,7 +5690,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-08-29",
@@ -4228,9 +5706,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768146518_Freundschaftsrennen_2930.8.26.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768146518_Freundschaftsrennen_2930.8.26.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-08-29",
@@ -4247,7 +5732,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-speedracer-2026-08-29",
@@ -4262,9 +5748,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781637523_29.-30.08.2026_SK-Lauf_ORE.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781637523_29.-30.08.2026_SK-Lauf_ORE.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-08-30",
@@ -4279,9 +5772,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773309711_2026-08_30_Ausschreibung_LE-Trophy-Offroad_Lauf-3_OV61.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773309711_2026-08_30_Ausschreibung_LE-Trophy-Offroad_Lauf-3_OV61.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mck-e-v-dormagen-2026-09-04",
@@ -4298,7 +5798,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-munster-e-v-2026-09-04",
@@ -4313,9 +5814,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777016763_Bikertraining_Ausschreibung_2026_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777016763_Bikertraining_Ausschreibung_2026_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-speedracer-2026-09-05",
@@ -4330,9 +5838,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781073454_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781073454_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-ort-fulda-2026-09-05",
@@ -4349,7 +5864,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-speedracer-2026-09-05",
@@ -4364,9 +5880,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781454260_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781454260_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-nitromaniacs-e-v-2026-09-05",
@@ -4383,7 +5906,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-09-05",
@@ -4400,7 +5924,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-offroad-staaken-e-v-2026-09-06",
@@ -4417,7 +5942,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-09-11",
@@ -4434,7 +5960,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-schwedt-e-v-2026-09-12",
@@ -4449,9 +5976,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1777718854_Ausschreibung_Schwedter_Meister_Pomeraniacup_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777718854_Ausschreibung_Schwedter_Meister_Pomeraniacup_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-emc-marktoberdorf-e-v-2026-09-13",
@@ -4466,26 +6000,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778524867_Ausschreibung_13.09..pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
-  },
-  {
-    "id": "dmc-mac-hamburg-e-v-2026-09-13",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
-    "hostId": "mac-hamburg-e-v",
-    "hostName": "MAC Hamburg e.V.",
-    "name": "Freundschaftsrennen",
-    "from": "2026-09-13",
-    "to": "2026-09-13",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778954467_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
-    "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778524867_Ausschreibung_13.09..pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-hamburg-e-v-2026-09-13",
@@ -4502,7 +6026,32 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778954467_Ausschreibung_Freundschaftsrennen_HRC-Cup_2026_OV2-24_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
+    "id": "dmc-mac-hamburg-e-v-2026-09-13",
+    "venueId": "mac-hamburg-e-v",
+    "venueName": "MAC Hamburg e.V.",
+    "venueLocation": "Hamburg",
+    "hostId": "mac-hamburg-e-v",
+    "hostName": "MAC Hamburg e.V.",
+    "name": "Freundschaftsrennen",
+    "from": "2026-09-13",
+    "to": "2026-09-13",
+    "series": [],
+    "classes": [],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-09-19",
@@ -4517,9 +6066,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1778520163_FR-Ausschreibung_236_2026_09_19.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1778520163_FR-Ausschreibung_236_2026_09_19.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-ober-morlen-e-v-2026-09-19",
@@ -4536,7 +6092,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-09-19",
@@ -4553,7 +6110,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-nurnberg-e-v-2026-09-19",
@@ -4568,9 +6126,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1769716953_Ausschreibung_SK_Lauf_&_Norispokal_EG_19.+20.09.2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1769716953_Ausschreibung_SK_Lauf_&_Norispokal_EG_19.+20.09.2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-msc-kirchhain-e-v-2026-09-19",
@@ -4587,7 +6152,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mbc-oberlausitz-e-v-2026-09-19",
@@ -4602,9 +6168,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775547132_Ausschreibung+19-20092026-1_260327_190339_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775547132_Ausschreibung+19-20092026-1_260327_190339_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-lost-place-racers-e-v-2026-09-19",
@@ -4621,7 +6194,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-boc-kiel-e-v-2026-09-19",
@@ -4638,7 +6212,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrsc-amberg-e-v-2026-09-20",
@@ -4653,9 +6228,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1775676901_Ausschreibung_MRSC_CUp_2026_Lauf_2.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775676901_Ausschreibung_MRSC_CUp_2026_Lauf_2.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-09-25",
@@ -4672,7 +6254,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-lost-place-racers-e-v-2026-09-25",
@@ -4689,7 +6272,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-09-26",
@@ -4706,7 +6290,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-09-26",
@@ -4721,9 +6306,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768146627_Freundschaftsrennen_2627.9.26_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768146627_Freundschaftsrennen_2627.9.26_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rcr-peterberg-e-v-2026-09-26",
@@ -4740,7 +6332,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-tsv-mariendorf-97-berlin-2026-09-26",
@@ -4755,9 +6348,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1781172583_finale2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781172583_finale2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-09-26",
@@ -4774,7 +6374,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-09-27",
@@ -4791,7 +6392,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-10-02",
@@ -4806,9 +6408,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770392999_7_Messecup_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770392999_7_Messecup_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-senftenberg-2026-10-03",
@@ -4825,7 +6434,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-msv-hurtgenwald-e-v-2026-10-03",
@@ -4842,7 +6452,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-offroad-staaken-e-v-2026-10-04",
@@ -4859,7 +6470,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-10-10",
@@ -4874,9 +6486,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1768147194_Freundschaftsrennen_1011.10.26_(1).pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1768147194_Freundschaftsrennen_1011.10.26_(1).pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-10-10",
@@ -4893,7 +6512,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-10-10",
@@ -4910,7 +6530,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-msv-neubrandenburg-e-v-2026-10-10",
@@ -4927,7 +6548,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-rccr-munzig-e-v-2026-10-10",
@@ -4942,9 +6564,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1773979317_20261011_Sachsencup_2026_Munzig.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1773979317_20261011_Sachsencup_2026_Munzig.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-10-17",
@@ -4961,7 +6590,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mrc-leipzig-e-v-2026-10-17",
@@ -4976,9 +6606,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1770392144_4_Bikegrandeprix_2026_13-14_Juni.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1770392144_4_Bikegrandeprix_2026_13-14_Juni.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-amc-saarbrucken-e-v-2026-10-24",
@@ -4993,9 +6630,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1776720488_10035_20261024_AMC_Saarbrücken_-_Ausschreibung_Teamrennen.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776720488_10035_20261024_AMC_Saarbrücken_-_Ausschreibung_Teamrennen.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-msc-greuthof-e-v-2026-10-30",
@@ -5010,9 +6654,16 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": "https://dmc-online.com/wordpress/terminuploads/1780859366_Ausschreibung_GOIM_2026.pdf",
+    "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1780859366_Ausschreibung_GOIM_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-10-31",
@@ -5029,7 +6680,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-10-31",
@@ -5046,7 +6698,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-tsv-1871-augsburg-e-v-2026-11-06",
@@ -5063,7 +6716,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-11-07",
@@ -5080,7 +6734,8 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   },
   {
     "id": "dmc-mac-siersburg-e-v-2026-11-21",
@@ -5097,6 +6752,7 @@
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
-    "registrationOpens": null
+    "registrationOpens": null,
+    "documents": []
   }
 ]
