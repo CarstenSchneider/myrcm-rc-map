@@ -84,7 +84,7 @@ async function fetchDmcClubDirectory() {
   const clubMap = new Map();
   console.log("Lade DMC Vereinsverzeichnis (plz=1..9) …");
 
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 0; i <= 9; i++) {
     const url = `${DMC_CLUBS_BASE}${i}`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
@@ -156,45 +156,37 @@ function parseTable(html, clubDirectory) {
     const clubName = $(cells[5]).text().trim();
     if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
 
-    // Filter non-DACH clubs via club directory website TLD
     const dirEntry = clubDirectory.get(normalizeKey(clubName));
-    if (dirEntry?.website && NON_DACH_TLDS.test(dirEntry.website)) {
-      console.log(`  Übersprungen (nicht DACH): ${clubName} → ${dirEntry.website}`);
+
+    // Club website: calendar inline link (cells[5]) is the most reliable source
+    const calendarWebsiteHref = $(cells[5]).find("a[href]").first().attr("href") || null;
+    const clubWebsite = calendarWebsiteHref || dirEntry?.website || null;
+
+    // Filter non-DACH clubs via website TLD (calendar link or directory)
+    if (clubWebsite && NON_DACH_TLDS.test(clubWebsite)) {
+      console.log(`  Übersprungen (nicht DACH): ${clubName} → ${clubWebsite}`);
       return;
     }
 
     const dateFrom = parseGermanDate($(cells[0]).text().trim());
     if (!dateFrom) return;
 
-    // Log first data row to understand column structure
-    if (!debugLogged) {
-      debugLogged = true;
-      const allCells = cells.toArray().map((td, i) => ({
-        i,
-        text: $(td).text().trim().slice(0, 60),
-        links: $(td).find("a[href]").toArray().map(a => $(a).attr("href")).filter(Boolean),
-      }));
-      console.log("Spaltenstruktur (erste Zeile):", JSON.stringify(allCells, null, 2));
-    }
-
     const dateToRaw = parseGermanDate($(cells[1]).text().trim());
     const dateTo = dateToRaw || dateFrom;
 
     const title = $(cells[2]).text().trim();
-
-    // Club website: prefer directory entry, fall back to inline link in calendar table
-    const calendarWebsiteHref = $(cells[5]).find("a[href]").first().attr("href") || null;
-    const clubWebsite = dirEntry?.website || calendarWebsiteHref || null;
+    const ovNr = $(cells[4]).text().trim() || null;   // OV-Nummer (Ortsvereinsnummer)
+    const city = $(cells[6]).text().trim() || null;   // Stadt laut Kalender
 
     // Ausschreibung PDF
     const ausschreibungHref = $(cells[8]).find("a[href]").first().attr("href") || null;
 
-    // Nennformular: check cells[9] if present
+    // Nennformular: cells[9] if present
     const nennformularHref = cells.length > 9
       ? $(cells[9]).find("a[href]").first().attr("href") || null
       : null;
 
-    rows.push({ dateFrom, dateTo, title, clubName, clubWebsite, ausschreibungHref, nennformularHref, dirCity: dirEntry?.city || null, dirPlz: dirEntry?.plz || null });
+    rows.push({ dateFrom, dateTo, title, clubName, ovNr, city, clubWebsite, ausschreibungHref, nennformularHref });
   });
 
   return rows;
@@ -334,15 +326,16 @@ async function main() {
   const races = entries.map(entry => {
     const venue = matchVenue(entry.clubName, venues, hosts);
     const hostSlug = slugify(entry.clubName);
-    const dmcHostId = `dmc-${hostSlug}`;
-    const seed = !venue ? seedByHostId.get(dmcHostId) : null;
+    // Use OV-Nummer as stable ID when available, fall back to slugified name
+    const dmcHostId = entry.ovNr ? `dmc-ov-${entry.ovNr}` : `dmc-${hostSlug}`;
+    const seed = !venue ? (seedByHostId.get(dmcHostId) || seedByHostId.get(`dmc-${hostSlug}`)) : null;
 
     if (seed && !dmcVenueIds.has(dmcHostId)) {
       dmcVenueIds.add(dmcHostId);
       dmcVenues.push({
         id: dmcHostId,
         name: seed.hostName || entry.clubName,
-        city: entry.dirCity || null,
+        city: entry.city || null,
         lat: seed.lat,
         lng: seed.lng,
         hostIds: [dmcHostId],
@@ -362,10 +355,12 @@ async function main() {
       id: `dmc-${hostSlug}-${entry.dateFrom}`,
       venueId: venue?.id ?? (seed ? dmcHostId : null),
       venueName: venue?.name ?? (seed ? (seed.hostName || entry.clubName) : null),
-      venueLocation: venue?.city ?? entry.dirCity ?? null,
+      venueLocation: venue?.city ?? entry.city ?? null,
       hostId: venue?.hostIds?.[0] ?? dmcHostId,
       hostName: entry.clubName,
+      hostCity: entry.city || null,
       hostWebsite: entry.clubWebsite || null,
+      dmcOvNr: entry.ovNr || null,
       name: translatePraedikat(entry.title),
       from: entry.dateFrom,
       to: entry.dateTo,
