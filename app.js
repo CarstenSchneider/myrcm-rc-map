@@ -2618,6 +2618,8 @@ function hostWebsiteForRace(race) {
 
   if (host?.website) return normalizeUrl(host.website);
 
+  if (race?.hostWebsite) return normalizeUrl(race.hostWebsite);
+
   const hostOrgId =
     orgIdFromValue(race?.detailUrl) ||
     orgIdFromValue(race?.url) ||
