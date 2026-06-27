@@ -5049,27 +5049,33 @@ const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRAN
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
 async function adminLoadUnmatched() {
-  const [unmatchedRes, seedsRes] = await Promise.all([
-    fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
-    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
+  const t = Date.now();
+  const [unmatchedRes, seedsRes, dmcRacesRes] = await Promise.all([
+    fetch(`${RAW_BASE}/venue-unmatched.json?t=${t}`),
+    fetch(`${RAW_BASE}/venue-seeds.json?t=${t}`),
+    fetch(`${RAW_BASE}/dmc-races.json?t=${t}`).catch(() => null),
   ]);
   const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
   const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
-  // Merge: unmatched first, then unknown seeds not already in unmatched
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
   const myrcmList = [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
 
-  // DMC venues without a venueId — deduplicated by hostId
-  const dmcSeen = new Set(myrcmList.map(u => u.hostId));
-  const dmcUnmatched = races
-    .filter(r => r.source === "dmc" && !r.venueId)
-    .reduce((acc, r) => {
-      if (!dmcSeen.has(r.hostId)) { dmcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, source: "dmc" }); }
-      return acc;
-    }, []);
+  // DMC venues without a venueId — from GitHub raw, deduplicated by hostId
+  let dmcUnmatched = [];
+  try {
+    const dmcRaces = dmcRacesRes?.ok ? await dmcRacesRes.json() : [];
+    const seededHostIds = new Set(seeds.filter(s => s.hostId?.startsWith("dmc-") && (s.lat != null || s.locationUnknown)).map(s => s.hostId));
+    const dmcSeen = new Set(myrcmList.map(u => u.hostId));
+    dmcUnmatched = dmcRaces
+      .filter(r => !r.venueId && !seededHostIds.has(r.hostId))
+      .reduce((acc, r) => {
+        if (!dmcSeen.has(r.hostId)) { dmcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, source: "dmc" }); }
+        return acc;
+      }, []);
+  } catch { /* dmc-races.json not available yet */ }
 
   return [...myrcmList, ...dmcUnmatched];
 }
