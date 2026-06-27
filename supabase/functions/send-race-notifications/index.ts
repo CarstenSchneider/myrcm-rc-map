@@ -390,10 +390,16 @@ serve(async (req) => {
   // Only look at races in the next 60 days
   const now = new Date();
   const cutoff = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000);
-  const upcomingRaces = races.filter((r: any) => {
-    const d = new Date(r.from ?? r.date);
-    return d >= now && d <= cutoff;
-  });
+  const upcomingRaces = races
+    .filter((r: any) => {
+      const d = new Date(r.from ?? r.date);
+      return d >= now && d <= cutoff;
+    })
+    .sort((a: any, b: any) => {
+      const da = a.from ?? a.date ?? "";
+      const db = b.from ?? b.date ?? "";
+      return da < db ? -1 : da > db ? 1 : 0;
+    });
 
   // Filter incoming changes to the same 60-day window
   const upcomingChanges = incomingChanges.filter(c => {
