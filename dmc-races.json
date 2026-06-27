@@ -561,33 +561,6 @@
     ]
   },
   {
-    "id": "dmc-rcct-munden-e-v-2026-02-15",
-    "venueId": "rcct-muenden-e-v",
-    "venueName": "RCCT Münden e.V.",
-    "venueLocation": "Hann. Münden",
-    "hostId": "myrcm-134",
-    "hostName": "RCCT Münden e.V.",
-    "hostCity": "Hann.-Münden",
-    "hostWebsite": "http://www.rc-car-team-muenden.de",
-    "dmcOvNr": "241",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-02-15",
-    "to": "2026-02-15",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1769898714_SM-Lauf_2026.doc.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-mac-or-hutschenhausen-e-v-2026-02-21",
     "venueId": "mac-or-huetschenhausen-e-v",
     "venueName": "MAC OR Hütschenhausen e.V.",
@@ -1445,7 +1418,7 @@
     "dmcOvNr": "236",
     "name": "Freundschaftsrennen",
     "from": "2026-04-18",
-    "to": "0000-00-00",
+    "to": "2026-04-18",
     "series": [],
     "classes": [],
     "source": "dmc",
@@ -1465,27 +1438,6 @@
     "hostWebsite": "http://www.mrc-leipzig.de",
     "dmcOvNr": "61",
     "name": "Sportkreismeisterschaft",
-    "from": "2026-04-18",
-    "to": "0000-00-00",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
-  },
-  {
-    "id": "dmc-asc-potsdam-e-v-2026-04-18",
-    "venueId": "asc-potsdam-e-v",
-    "venueName": "ASC Potsdam e.V.",
-    "venueLocation": "Potsdam",
-    "hostId": "asc-potsdam-e-v",
-    "hostName": "ASC Potsdam e.V.",
-    "hostCity": "Potsdam",
-    "hostWebsite": "http://www.asc-potsdam.de",
-    "dmcOvNr": "236",
-    "name": "Freundschaftsrennen",
     "from": "2026-04-18",
     "to": "2026-04-18",
     "series": [],
@@ -1811,7 +1763,7 @@
   {
     "id": "dmc-amc-mistral-lahr-e-v-2026-05-01",
     "venueId": null,
-    "venueName": null,
+    "venueName": "AMC Mistral Lahr e.V.",
     "venueLocation": "Lahr",
     "hostId": "dmc-ov-87",
     "hostName": "AMC Mistral Lahr e.V.",
@@ -2043,33 +1995,6 @@
     "hostCity": "Nienhagen",
     "hostWebsite": "http://www.asc-celle.de",
     "dmcOvNr": "213",
-    "name": "Freundschaftsrennen",
-    "from": "2026-05-02",
-    "to": "2026-05-03",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1775420363_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
-    "id": "dmc-asc-celle-e-v-2026-05-02",
-    "venueId": "asc-celle-e-v",
-    "venueName": "ASC Celle e.V.",
-    "venueLocation": "Celle",
-    "hostId": "asc-celle-e-v",
-    "hostName": "ASC Celle e.V.",
-    "hostCity": "Nienhagen",
-    "hostWebsite": "http://www.asc-celle.de",
-    "dmcOvNr": "213",
     "name": "Sportkreismeisterschaft",
     "from": "2026-05-02",
     "to": "2026-05-03",
@@ -2081,7 +2006,7 @@
     "registrationOpens": null,
     "documents": [
       {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1775420380_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
+        "url": "https://dmc-online.com/wordpress/terminuploads/1775420363_Ausschreibung_SK_Lauf_ORE_3.5.2026.pdf",
         "type": "announcement",
         "label": "Ausschreibung"
       }
@@ -2396,7 +2321,7 @@
     "dmcOvNr": "223",
     "name": "Sportkreismeisterschaft",
     "from": "2026-05-10",
-    "to": "2026-05-10",
+    "to": "2026-05-11",
     "series": [],
     "classes": [],
     "source": "dmc",
@@ -2410,27 +2335,6 @@
         "label": "Ausschreibung"
       }
     ]
-  },
-  {
-    "id": "dmc-mcc-rudolstadt-e-v-2026-05-10",
-    "venueId": "dmc-ov-223",
-    "venueName": "MCC Rudolstadt e.V.",
-    "venueLocation": "Rudolstadt",
-    "hostId": "dmc-ov-223",
-    "hostName": "MCC Rudolstadt e.V.",
-    "hostCity": "Rudolstadt",
-    "hostWebsite": "http://mcc.rudolstadt.de",
-    "dmcOvNr": "223",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-05-10",
-    "to": "2026-05-11",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
   },
   {
     "id": "dmc-mcv-danischer-wohld-e-v-2026-05-14",
@@ -2597,7 +2501,7 @@
   {
     "id": "dmc-ttsc-racing-team-2026-05-16",
     "venueId": null,
-    "venueName": null,
+    "venueName": "TTSC Racing-Team",
     "venueLocation": "Wasserlosen",
     "hostId": "dmc-ov-354",
     "hostName": "TTSC Racing-Team",
@@ -2784,33 +2688,6 @@
     ]
   },
   {
-    "id": "dmc-amc-langenfeld-e-v-2026-05-16",
-    "venueId": "amc-langenfeld-e-v",
-    "venueName": "AMC Langenfeld e.V.",
-    "venueLocation": "Solingen",
-    "hostId": "amc-langenfeld-e-v",
-    "hostName": "AMC Langenfeld e.V.",
-    "hostCity": "Solingen",
-    "hostWebsite": "http://www.amc-langenfeld.de",
-    "dmcOvNr": "60",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-05-16",
-    "to": "2026-05-17",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1776241047_Ausschreibung_SK_Lauf_2026.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-emc-marktoberdorf-e-v-2026-05-17",
     "venueId": "emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
@@ -2894,7 +2771,7 @@
   {
     "id": "dmc-ts-gross-auheim-2026-05-22",
     "venueId": null,
-    "venueName": null,
+    "venueName": "TS-Gross Auheim",
     "venueLocation": "Gruendau",
     "hostId": "dmc-ov-289",
     "hostName": "TS-Gross Auheim",
@@ -3094,27 +2971,6 @@
         "label": "Ausschreibung"
       }
     ]
-  },
-  {
-    "id": "dmc-mc-munster-e-v-2026-05-23",
-    "venueId": "mc-munster-e-v",
-    "venueName": "MC Munster e.V.",
-    "venueLocation": "Bremen",
-    "hostId": "mc-munster-e-v",
-    "hostName": "MC Munster e.V.",
-    "hostCity": "Schneverdingen",
-    "hostWebsite": "http://www.mcmunster.de",
-    "dmcOvNr": "221",
-    "name": "Freundschaftsrennen",
-    "from": "2026-05-23",
-    "to": "2026-05-24",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-05-23",
@@ -3408,27 +3264,6 @@
     ]
   },
   {
-    "id": "dmc-rc-offroad-ottendorf-okrilla-e-v-2026-05-30",
-    "venueId": "dmc-ov-131",
-    "venueName": "RC-Offroad Ottendorf-Okrilla e.V.",
-    "venueLocation": "Dresden",
-    "hostId": "dmc-ov-131",
-    "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
-    "hostCity": "Dresden",
-    "hostWebsite": "http://www.rco-ottendorf-okrilla.de",
-    "dmcOvNr": "131",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-05-30",
-    "to": "2026-05-31",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
-  },
-  {
     "id": "dmc-rc-speedracer-2026-05-30",
     "venueId": "rc-speedracer-bernau",
     "venueName": "RC Speedracer e.V.",
@@ -3474,7 +3309,13 @@
     "url": null,
     "registrationStatus": null,
     "registrationOpens": null,
-    "documents": []
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1777316398_Ausschreibung_SK-West_NORC_2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-la-speedway-racing-club-2026-05-30",
@@ -3498,33 +3339,6 @@
     "documents": [
       {
         "url": "https://dmc-online.com/wordpress/terminuploads/1778477134_Ausschreibung-LA-Speedway-SDC-2026.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
-    "id": "dmc-msv-hurtgenwald-e-v-2026-05-30",
-    "venueId": "msv-hurtgenwald-e-v",
-    "venueName": "MSV Hürtgenwald e.V.",
-    "venueLocation": "Hürtgenwald",
-    "hostId": "msv-hurtgenwald-e-v",
-    "hostName": "MSV Hürtgenwald e.V.",
-    "hostCity": "Hürtgenwald",
-    "hostWebsite": "http://www.msv-huertgenwald.de",
-    "dmcOvNr": "181",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-05-30",
-    "to": "2026-05-31",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1777316398_Ausschreibung_SK-West_NORC_2026.pdf",
         "type": "announcement",
         "label": "Ausschreibung"
       }
@@ -3668,7 +3482,7 @@
   {
     "id": "dmc-mc-dortmund-e-v-2026-06-06",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MC Dortmund e.V.",
     "venueLocation": "Datteln",
     "hostId": "dmc-ov-143",
     "hostName": "MC Dortmund e.V.",
@@ -3722,7 +3536,7 @@
   {
     "id": "dmc-rc-racecrew-2026-06-06",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RC RaceCrew",
     "venueLocation": "Kreuzau-Drove",
     "hostId": "dmc-ov-149",
     "hostName": "RC RaceCrew",
@@ -3803,7 +3617,7 @@
   {
     "id": "dmc-modellfreunde-rheinhessen-pfalz-e-v-2026-06-07",
     "venueId": null,
-    "venueName": null,
+    "venueName": "Modellfreunde Rheinhessen/Pfalz e.V.",
     "venueLocation": "Stetten",
     "hostId": "dmc-ov-266",
     "hostName": "Modellfreunde Rheinhessen/Pfalz e.V.",
@@ -3938,7 +3752,7 @@
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-06-13",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RC Offroad Heiligenstadt e.V.",
     "venueLocation": "Uelzen",
     "hostId": "dmc-ov-36",
     "hostName": "RC Offroad Heiligenstadt e.V.",
@@ -3990,36 +3804,9 @@
     ]
   },
   {
-    "id": "dmc-mac-burgdorf-e-v-2026-06-13",
-    "venueId": "mac-burgdorf-e-v",
-    "venueName": "MAC Burgdorf e.V.",
-    "venueLocation": "Burgdorf",
-    "hostId": "mac-burgdorf-e-v",
-    "hostName": "MAC Burgdorf e.V.",
-    "hostCity": "Lehrte",
-    "hostWebsite": "http://www.mac-burgdorf.de",
-    "dmcOvNr": "227",
-    "name": "Freundschaftsrennen",
-    "from": "2026-06-13",
-    "to": "2026-06-14",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1776110989_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-mcc-hof-e-v-2026-06-13",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MCC Hof e.V.",
     "venueLocation": "Naila-Marxgrün",
     "hostId": "dmc-ov-56",
     "hostName": "MCC Hof e.V.",
@@ -4125,36 +3912,9 @@
     ]
   },
   {
-    "id": "dmc-mrc-leipzig-e-v-2026-06-13",
-    "venueId": "mrc-leipzig-e-v",
-    "venueName": "MRC Leipzig e.V",
-    "venueLocation": "Zwenkau",
-    "hostId": "mrc-leipzig-e-v",
-    "hostName": "MRC Leipzig e.V.",
-    "hostCity": "Zwenkau",
-    "hostWebsite": "http://www.mrc-leipzig.de",
-    "dmcOvNr": "61",
-    "name": "Freundschaftsrennen",
-    "from": "2026-06-13",
-    "to": "2026-06-14",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1770392369_4_Bikegrandeprix_2026_13-14_Juni.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-mc-dortmund-e-v-2026-06-13",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MC Dortmund e.V.",
     "venueLocation": "Datteln",
     "hostId": "dmc-ov-143",
     "hostName": "MC Dortmund e.V.",
@@ -4227,33 +3987,6 @@
     "documents": [
       {
         "url": "https://dmc-online.com/wordpress/terminuploads/1779172116_Ausschreibung_6._SK-Lauf_OR8_Sued_2026_+_4._Lauf_SDC_2026_MC_Welden_e.V_(1).pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
-    "id": "dmc-mac-burgdorf-e-v-2026-06-13",
-    "venueId": "mac-burgdorf-e-v",
-    "venueName": "MAC Burgdorf e.V.",
-    "venueLocation": "Burgdorf",
-    "hostId": "mac-burgdorf-e-v",
-    "hostName": "MAC Burgdorf e.V.",
-    "hostCity": "Lehrte",
-    "hostWebsite": "http://www.mac-burgdorf.de",
-    "dmcOvNr": "227",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-06-13",
-    "to": "2026-06-14",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1776227383_Ausschreibung_SK_FR_ORE_EG_MAC_Burgdorf_14.06.2026.pdf",
         "type": "announcement",
         "label": "Ausschreibung"
       }
@@ -4362,33 +4095,6 @@
     "documents": [
       {
         "url": "https://dmc-online.com/wordpress/terminuploads/1776980914_260621_Uetersen_DM_Truggy_-_Ausschreibung_V2.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
-    "id": "dmc-mac-uetersen-e-v-2026-06-19",
-    "venueId": "mac-uetersen-e-v",
-    "venueName": "MAC Uetersen e.V.",
-    "venueLocation": "Uetersen",
-    "hostId": "mac-uetersen-e-v",
-    "hostName": "MAC Uetersen e.V.",
-    "hostCity": "Appen",
-    "hostWebsite": "http://www.mac-uetersen.de",
-    "dmcOvNr": "327",
-    "name": "Deutsche Meisterschaft",
-    "from": "2026-06-19",
-    "to": "2026-06-21",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1776980832_260621_Uetersen_DM_Truggy_-_Ausschreibung_V2.pdf",
         "type": "announcement",
         "label": "Ausschreibung"
       }
@@ -4526,7 +4232,7 @@
   {
     "id": "dmc-rc-haltern-e-v-2026-06-20",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RC Haltern e.V.",
     "venueLocation": "Dortmund",
     "hostId": "dmc-ov-160",
     "hostName": "RC Haltern e.V.",
@@ -4607,7 +4313,7 @@
   {
     "id": "dmc-msc-gemunden-e-v-i-adac-2026-06-21",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MSC Gemünden e.V.i. ADAC",
     "venueLocation": "Gemünden",
     "hostId": "dmc-ov-137",
     "hostName": "MSC Gemünden e.V.i. ADAC",
@@ -4738,27 +4444,6 @@
         "label": "Ausschreibung"
       }
     ]
-  },
-  {
-    "id": "dmc-mc-furstenwalde-e-v-2026-06-27",
-    "venueId": "mc-fuerstenwalde-e-v",
-    "venueName": "MC-Fürstenwalde e.V.",
-    "venueLocation": "Fürstenwalde",
-    "hostId": "mc-furstenwalde-e-v",
-    "hostName": "MC Fürstenwalde e.V.",
-    "hostCity": "Fürstenwalde",
-    "hostWebsite": "http://www.mc-fuerstenwalde.de",
-    "dmcOvNr": "264",
-    "name": "BL-CupDMC",
-    "from": "2026-06-27",
-    "to": "2026-06-27",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
   },
   {
     "id": "dmc-mrt-rosenheim-e-v-2026-06-27",
@@ -4896,36 +4581,9 @@
     ]
   },
   {
-    "id": "dmc-asc-celle-e-v-2026-06-27",
-    "venueId": "asc-celle-e-v",
-    "venueName": "ASC Celle e.V.",
-    "venueLocation": "Celle",
-    "hostId": "asc-celle-e-v",
-    "hostName": "ASC Celle e.V.",
-    "hostCity": "Nienhagen",
-    "hostWebsite": "http://www.asc-celle.de",
-    "dmcOvNr": "213",
-    "name": "Freundschaftsrennen",
-    "from": "2026-06-27",
-    "to": "2026-06-28",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1779718035_Ausschreibung_SK_Lauf_ORE_28.6.2026.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-rccc-coesfeld-2026-06-27",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RCCC Coesfeld",
     "venueLocation": "Coesfeld",
     "hostId": "dmc-ov-7",
     "hostName": "RCCC Coesfeld",
@@ -5060,7 +4718,7 @@
   {
     "id": "dmc-msv-linsengericht-2026-07-04",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MSV Linsengericht",
     "venueLocation": "Gelnhausen",
     "hostId": "dmc-ov-234",
     "hostName": "MSV Linsengericht",
@@ -5141,7 +4799,7 @@
   {
     "id": "dmc-mcc-laupheim-e-v-2026-07-04",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MCC Laupheim e.V.",
     "venueLocation": "Laupheim",
     "hostId": "dmc-ov-107",
     "hostName": "MCC Laupheim e.V.",
@@ -5220,27 +4878,6 @@
     ]
   },
   {
-    "id": "dmc-mac-hamburg-e-v-2026-07-05",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
-    "hostId": "mac-hamburg-e-v",
-    "hostName": "MAC Hamburg e.V.",
-    "hostCity": "Hamburg",
-    "hostWebsite": "http://www.mach-ev.de",
-    "dmcOvNr": "24",
-    "name": "Freundschaftsrennen",
-    "from": "2026-07-05",
-    "to": "2026-07-05",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "http://www.myrcm.ch/myrcm/main?hId%5b1%5d=bkg&pLa=de",
-    "registrationStatus": "open",
-    "registrationOpens": null,
-    "documents": []
-  },
-  {
     "id": "dmc-mrc-leipzig-e-v-2026-07-05",
     "venueId": "mrc-leipzig-e-v",
     "venueName": "MRC Leipzig e.V",
@@ -5297,7 +4934,7 @@
   {
     "id": "dmc-msv-linsengericht-2026-07-11",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MSV Linsengericht",
     "venueLocation": "Gelnhausen",
     "hostId": "dmc-ov-234",
     "hostName": "MSV Linsengericht",
@@ -5393,7 +5030,7 @@
   {
     "id": "dmc-3-sesselracer-2026-07-11",
     "venueId": null,
-    "venueName": null,
+    "venueName": "3 Sesselracer",
     "venueLocation": "Neureichenau",
     "hostId": "dmc-ov-386",
     "hostName": "3 Sesselracer",
@@ -5528,7 +5165,7 @@
   {
     "id": "dmc-mcc-hof-e-v-2026-07-18",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MCC Hof e.V.",
     "venueLocation": "Naila-Marxgrün",
     "hostId": "dmc-ov-56",
     "hostName": "MCC Hof e.V.",
@@ -5828,7 +5465,7 @@
   {
     "id": "dmc-mcc-laupheim-e-v-2026-07-25",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MCC Laupheim e.V.",
     "venueLocation": "Laupheim",
     "hostId": "dmc-ov-107",
     "hostName": "MCC Laupheim e.V.",
@@ -5882,7 +5519,7 @@
   {
     "id": "dmc-rc-offroad-kassel-e-v-2026-08-01",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RC-Offroad Kassel e.V.",
     "venueLocation": "Kassel",
     "hostId": "dmc-ov-184",
     "hostName": "RC-Offroad Kassel e.V.",
@@ -6078,27 +5715,6 @@
     ]
   },
   {
-    "id": "dmc-mac-hamburg-e-v-2026-08-09",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
-    "hostId": "mac-hamburg-e-v",
-    "hostName": "MAC Hamburg e.V.",
-    "hostCity": "Hamburg",
-    "hostWebsite": "http://www.mach-ev.de",
-    "dmcOvNr": "24",
-    "name": "Freundschaftsrennen",
-    "from": "2026-08-09",
-    "to": "2026-08-09",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "http://www.myrcm.ch/myrcm/main?hId%5b1%5d=bkg&pLa=de",
-    "registrationStatus": "open",
-    "registrationOpens": null,
-    "documents": []
-  },
-  {
     "id": "dmc-msv-hurtgenwald-e-v-2026-08-13",
     "venueId": "msv-hurtgenwald-e-v",
     "venueName": "MSV Hürtgenwald e.V.",
@@ -6204,27 +5820,6 @@
     "series": [],
     "classes": [],
     "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
-  },
-  {
-    "id": "dmc-msc-kirchhain-e-v-2026-08-21",
-    "venueId": "msc-kirchhain-e-v",
-    "venueName": "MSC Kirchhain e.V.",
-    "venueLocation": "Marburg",
-    "hostId": "msc-kirchhain-e-v",
-    "hostName": "MSC Kirchhain e.V.",
-    "hostCity": "Marburg",
-    "hostWebsite": "http://www.msc-kirchhain.de",
-    "dmcOvNr": "5",
-    "name": "D-CupDMC",
-    "from": "2026-08-21",
-    "to": "2026-08-23",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
     "url": "http://www.myrcm.ch/myrcm/main?hId%5b1%5d=bkg&pLa=de",
     "registrationStatus": "open",
     "registrationOpens": null,
@@ -6233,7 +5828,7 @@
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-08-21",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RC Offroad Heiligenstadt e.V.",
     "venueLocation": "Uelzen",
     "hostId": "dmc-ov-36",
     "hostName": "RC Offroad Heiligenstadt e.V.",
@@ -6336,7 +5931,7 @@
     "hostCity": "Bönen",
     "hostWebsite": "http://www.amc-hamm.de",
     "dmcOvNr": "31",
-    "name": "D-CupDMC",
+    "name": "Deutsche Meisterschaft",
     "from": "2026-08-28",
     "to": "2026-08-30",
     "series": [],
@@ -6358,27 +5953,6 @@
     "hostWebsite": "http://www.mcc-rhein-ahr.de",
     "dmcOvNr": "296",
     "name": "ODMDMC",
-    "from": "2026-08-28",
-    "to": "2026-08-30",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
-  },
-  {
-    "id": "dmc-amc-hamm-e-v-2026-08-28",
-    "venueId": "amc-hamm-e-v",
-    "venueName": "amc-Hamm e.V.",
-    "venueLocation": "Bönen",
-    "hostId": "amc-hamm-e-v",
-    "hostName": "amc Hamm e.V.",
-    "hostCity": "Bönen",
-    "hostWebsite": "http://www.amc-hamm.de",
-    "dmcOvNr": "31",
-    "name": "Deutsche Meisterschaft",
     "from": "2026-08-28",
     "to": "2026-08-30",
     "series": [],
@@ -6572,7 +6146,7 @@
     "dmcOvNr": "55",
     "name": "Sportkreismeisterschaft",
     "from": "2026-09-05",
-    "to": "2026-06-06",
+    "to": "2026-09-06",
     "series": [],
     "classes": [],
     "source": "dmc",
@@ -6607,33 +6181,6 @@
     "registrationStatus": "open",
     "registrationOpens": null,
     "documents": []
-  },
-  {
-    "id": "dmc-rc-speedracer-2026-09-05",
-    "venueId": "rc-speedracer-bernau",
-    "venueName": "RC Speedracer e.V.",
-    "venueLocation": "Bernau",
-    "hostId": "rc-speedracer-bernau",
-    "hostName": "RC Speedracer",
-    "hostCity": "Hönow",
-    "hostWebsite": "http://www.rcspeedracer.de",
-    "dmcOvNr": "55",
-    "name": "Freundschaftsrennen",
-    "from": "2026-09-05",
-    "to": "2026-09-06",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "http://www.myrcm.ch/myrcm/main?hId%5b1%5d=bkg&pLa=de",
-    "registrationStatus": "open",
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1781454260_05.-06.09.2026_Ausschreibung_TOS_mit_SK_Bernau.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
   },
   {
     "id": "dmc-nitromaniacs-e-v-2026-09-05",
@@ -6799,27 +6346,6 @@
         "label": "Ausschreibung"
       }
     ]
-  },
-  {
-    "id": "dmc-mac-hamburg-e-v-2026-09-13",
-    "venueId": "mac-hamburg-e-v",
-    "venueName": "MAC Hamburg e.V.",
-    "venueLocation": "Hamburg",
-    "hostId": "mac-hamburg-e-v",
-    "hostName": "MAC Hamburg e.V.",
-    "hostCity": "Hamburg",
-    "hostWebsite": "http://www.mach-ev.de",
-    "dmcOvNr": "24",
-    "name": "Freundschaftsrennen",
-    "from": "2026-09-13",
-    "to": "2026-09-13",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": "http://www.myrcm.ch/myrcm/main?hId%5b1%5d=bkg&pLa=de",
-    "registrationStatus": "open",
-    "registrationOpens": null,
-    "documents": []
   },
   {
     "id": "dmc-asc-potsdam-e-v-2026-09-19",
@@ -7127,7 +6653,7 @@
   {
     "id": "dmc-rcr-peterberg-e-v-2026-09-26",
     "venueId": null,
-    "venueName": null,
+    "venueName": "RCR Peterberg e.V.",
     "venueLocation": "Siegburg",
     "hostId": "dmc-ov-339",
     "hostName": "RCR Peterberg e.V.",
@@ -7376,7 +6902,7 @@
   {
     "id": "dmc-msv-neubrandenburg-e-v-2026-10-10",
     "venueId": null,
-    "venueName": null,
+    "venueName": "MSV- Neubrandenburg e.V.",
     "venueLocation": "Lebbin",
     "hostId": "dmc-ov-90",
     "hostName": "MSV- Neubrandenburg e.V.",
