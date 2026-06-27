@@ -3606,6 +3606,11 @@
     "myrcmOrgId": "53515"
   },
   {
+    "hostId": "dmc-amc-mistral-lahr-e-v",
+    "hostName": "AMC Mistral Lahr e.V.",
+    "locationUnknown": true
+  },
+  {
     "hostId": "dmc-big-hamburg-e-v",
     "hostName": "BIG Hamburg e.V.",
     "lat": 53.64060473290764,
