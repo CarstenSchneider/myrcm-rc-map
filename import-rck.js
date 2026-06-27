@@ -1524,7 +1524,7 @@ async function main() {
 
   await savePdfCache(RCK_PDF_CACHE_FILE, rckPdfCache, prevCacheSize);
   warnIfSparse(cleanedRaces, ["from", "venueId"], { label: outputFile });
-  await safeWriteJson(cleanedRaces, outputFile, { minCount: 20, minFraction: 0.7, label: outputFile });
+  await safeWriteJson(cleanedRaces, outputFile, { minCount: 10, minFraction: 0.7, label: outputFile });
   await writeFile(unmatchedVenuesFile, JSON.stringify(unmatchedVenues, null, 2) + "\n", "utf8");
   await writeFile(venueCandidatesFile, JSON.stringify(venueCandidates, null, 2) + "\n", "utf8");
 
