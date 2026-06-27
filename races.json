@@ -81910,14 +81910,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MCC - 17.5 Stock fixed",
       {
         "name": "MCC - Formel",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "MCC - MCC Challenge",
@@ -81929,7 +81929,7 @@
       },
       {
         "name": "MCC - Tamiya TT",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -84175,8 +84175,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -84187,8 +84187,14 @@
         "name": "OR8 Expert",
         "entries": 1
       },
-      "OR8E",
-      "Hessencup Kids"
+      {
+        "name": "OR8E",
+        "entries": 2
+      },
+      {
+        "name": "Hessencup Kids",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-26"

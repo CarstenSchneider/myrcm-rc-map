@@ -3891,8 +3891,8 @@
     "id": "psv-salzburg-automodellsport",
     "name": "PSV-Salzburg Automodellsport",
     "city": "Elsbethen",
-    "lat": 47.7592351,
-    "lng": 13.0825458,
+    "lat": 47.75523084951555,
+    "lng": 13.075968342794631,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -3905,7 +3905,7 @@
       "psv-salzburg-automodellsport"
     ],
     "myrcmOrgId": "762",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -4133,8 +4133,8 @@
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
-    "lat": 47.4991723,
-    "lng": 8.7291498,
+    "lat": 47.59529281299786,
+    "lng": 8.692502280646423,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -4147,7 +4147,7 @@
       "rc-club-wyland"
     ],
     "myrcmOrgId": "14101",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -4275,8 +4275,8 @@
     "id": "rc-racing-club-arlesheim",
     "name": "RC Racing Club Arlesheim",
     "city": "Arlesheim",
-    "lat": 47.4931125,
-    "lng": 7.6202048,
+    "lat": 47.49605540100359,
+    "lng": 7.609715167758498,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -4289,7 +4289,7 @@
       "rc-racing-club-arlesheim"
     ],
     "myrcmOrgId": "31003",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -4504,8 +4504,8 @@
     "id": "rc-racearena",
     "name": "RC-RaceArena",
     "city": "Islikon",
-    "lat": 47.547642,
-    "lng": 8.8474629,
+    "lat": 47.54797874168236,
+    "lng": 8.847798793449986,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -4518,7 +4518,7 @@
       "rc-racearena"
     ],
     "myrcmOrgId": "5208",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -4651,8 +4651,8 @@
     "id": "rcc-sittersdorf",
     "name": "RCC Sittersdorf",
     "city": "Sittersdorf",
-    "lat": 46.5250325,
-    "lng": 14.6023619,
+    "lat": 46.5446591184532,
+    "lng": 14.601164631183192,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -4665,7 +4665,7 @@
       "rcc-sittersdorf"
     ],
     "myrcmOrgId": "26141",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -4833,8 +4833,8 @@
     "id": "rcr-linz",
     "name": "RCR-Linz",
     "city": "Linz",
-    "lat": 48.3059078,
-    "lng": 14.286198,
+    "lat": 48.25162750853178,
+    "lng": 14.280130467350359,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -4847,7 +4847,7 @@
       "rcr-linz"
     ],
     "myrcmOrgId": "776",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -4995,8 +4995,8 @@
     "id": "rmcb",
     "name": "RMCB",
     "city": "Bern",
-    "lat": 46.9484742,
-    "lng": 7.4521749,
+    "lat": 46.74730490147598,
+    "lng": 7.5962778538955025,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5009,7 +5009,7 @@
       "rmcb"
     ],
     "myrcmOrgId": "9703",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5037,8 +5037,8 @@
     "id": "salzburger-funk-modell-auto-verein-sfmav",
     "name": "Salzburger-Funk-Modell-Auto-Verein SFMAV",
     "city": "Salzburg",
-    "lat": 47.7981346,
-    "lng": 13.0464806,
+    "lat": 47.75455290263877,
+    "lng": 13.07642484432594,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5051,7 +5051,7 @@
       "salzburger-funk-modell-auto-verein-sfmav"
     ],
     "myrcmOrgId": "25165",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5145,8 +5145,8 @@
     "id": "smrc-wien",
     "name": "SMRC Wien",
     "city": "Wien",
-    "lat": 48.1730868,
-    "lng": 16.4268115,
+    "lat": 48.173533841016166,
+    "lng": 16.427139962894532,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5159,7 +5159,7 @@
       "smrc-wien"
     ],
     "myrcmOrgId": "763",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5229,8 +5229,8 @@
     "id": "swiss-rc-protech-s-rl",
     "name": "Swiss RC ProTech Sàrl",
     "city": "Saint-Légier",
-    "lat": 46.4835162,
-    "lng": 6.9140943,
+    "lat": 46.47638310929081,
+    "lng": 6.865479428194317,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5243,7 +5243,7 @@
       "swiss-rc-protech-s-rl"
     ],
     "myrcmOrgId": "47238",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5271,8 +5271,8 @@
     "id": "team-indoor-track-schoeftland",
     "name": "Team Indoor Track Schöftland",
     "city": "Othmarsingen",
-    "lat": 47.4023481,
-    "lng": 8.2162901,
+    "lat": 47.31482450157927,
+    "lng": 8.054289053770706,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5285,7 +5285,7 @@
       "team-indoor-track-schoeftland"
     ],
     "myrcmOrgId": "17663",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5334,8 +5334,8 @@
     "id": "tr-racing",
     "name": "TR-Racing",
     "city": "Gr.Hartmannsdorf 101",
-    "lat": 47.0475067,
-    "lng": 15.8358721,
+    "lat": 47.3337664789346,
+    "lng": 15.953367544337484,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5348,7 +5348,7 @@
       "tr-racing"
     ],
     "myrcmOrgId": "506",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5472,8 +5472,8 @@
     "id": "united-model-cars-lyss",
     "name": "United Model Cars Lyss",
     "city": "Lyss",
-    "lat": 47.0721368,
-    "lng": 7.305262,
+    "lat": 47.06525917306996,
+    "lng": 7.290073615335668,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5486,7 +5486,7 @@
       "united-model-cars-lyss"
     ],
     "myrcmOrgId": "23",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
@@ -5535,8 +5535,8 @@
     "id": "wmw-rc-buggy-racing-team-fehring",
     "name": "WMW RC-BUGGY-RACING TEAM FEHRING",
     "city": "Fehring",
-    "lat": 46.9360862,
-    "lng": 16.0104462,
+    "lat": 46.937261913544816,
+    "lng": 16.020864492524247,
     "address": "",
     "postalCode": "",
     "website": "",
@@ -5549,7 +5549,7 @@
       "wmw-rc-buggy-racing-team-fehring"
     ],
     "myrcmOrgId": "507",
-    "source": "geocoded-nominatim-dach",
+    "source": "verified",
     "verified": true
   },
   {
