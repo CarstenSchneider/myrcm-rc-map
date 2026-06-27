@@ -4095,12 +4095,12 @@ body.is-menu-open .app-menu-close {
 .race-table .col-icons { width: 44px; padding-right: 2px; white-space: nowrap; }
 .rl-bell, .rl-star {
   background: none; border: none; cursor: pointer; padding: 2px; line-height: 0;
-  color: rgba(var(--text-rgb), 0.2); border-radius: 3px; transition: color 0.15s;
+  color: rgba(var(--text-rgb), 0.18); border-radius: 3px; transition: color 0.15s;
 }
-.rl-bell svg, .rl-star svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+.rl-bell svg, .rl-star svg { width: 14px; height: 14px; fill: currentColor; stroke: none; }
 .rl-bell.active, .rl-star.active { color: var(--favorite); }
-.rl-bell.active svg, .rl-star.active svg { fill: var(--favorite); }
 .rl-bell:hover, .rl-star:hover { color: var(--favorite); }
+.rl-bell.hidden { visibility: hidden; }
 .rl-venue-link { color: var(--text); text-decoration: none; }
 .rl-venue-link:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 

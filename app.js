@@ -1048,7 +1048,14 @@ async function sbPullNotifications() {
 }
 
 function isNotificationEnabled(hostId) {
-  return _notifIds.has(String(hostId));
+  if (!hostId || !_notifIds.size) return false;
+  const id = String(hostId);
+  if (_notifIds.has(id)) return true;
+  const canonical = canonicalVenueId(id);
+  for (const nid of _notifIds) {
+    if (nid === canonical || canonicalVenueId(nid) === canonical) return true;
+  }
+  return false;
 }
 
 async function toggleNotification(hostId) {
@@ -5785,7 +5792,7 @@ function renderClubList() {
           const isFav   = isFavoriteHostId(vid);
           const isNotif = isNotificationEnabled(vid);
           iconsCell = `<td class="col-icons">
-            <button type="button" class="rl-bell${isNotif ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button>
+            <button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button>
             <button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>
           </td>`;
         }
