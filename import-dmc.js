@@ -3,7 +3,15 @@ import { load } from "cheerio";
 import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
-const DMC_CLUB_DIRECTORY_BASE = "https://dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=";
+// Old site: all plz= values return the same SK3 West page, so fetch once
+const DMC_DIRECTORY_SOURCES = [
+  { url: "https://dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=3", label: "Legacy SK West" },
+  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-mitte/sportkreis-mitte-vereine/", label: "SK Mitte" },
+  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-nord/sportkreis-nord-vereine/", label: "SK Nord" },
+  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-west/sportkreis-west-vereine/", label: "SK West" },
+  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-sued/sportkreis-sued-vereine/", label: "SK Süd" },
+  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-ost/sportkreis-ost-vereine/", label: "SK Ost" },
+];
 const OUTPUT_FILE = "dmc-races.json";
 const DMC_VENUES_FILE = "dmc-venues.json";
 const TIMEOUT_MS = 30000;
@@ -78,15 +86,13 @@ async function fetchDmcCalendar(year) {
   }
 }
 
-// Fetch PLZ pages 0–9 of the DMC club directory and build two lookup maps:
-// byName: normalizedName → entry, byOvNr: ovNr → entry
+// Build two lookup maps: byName (normalizedName → entry) and byOvNr (ovNr → entry)
 async function fetchDmcClubDirectory() {
   const byName = new Map();
   const byOvNr = new Map();
-  console.log("Lade DMC Vereinsverzeichnis (PLZ 0–9) …");
+  console.log("Lade DMC Vereinsverzeichnis …");
 
-  for (let plz = 0; plz <= 9; plz++) {
-    const url = `${DMC_CLUB_DIRECTORY_BASE}${plz}`;
+  for (const { url, label } of DMC_DIRECTORY_SOURCES) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
     try {
@@ -98,18 +104,18 @@ async function fetchDmcClubDirectory() {
         },
       });
       if (!res.ok) {
-        console.warn(`  PLZ ${plz}: HTTP ${res.status}`);
+        console.warn(`  ${label}: HTTP ${res.status}`);
         continue;
       }
       const html = await res.text();
-      const entries = parseClubDirectory(html);
-      console.log(`  PLZ ${plz}: ${entries.length} Vereine`);
+      const entries = parseClubDirectory(html, label);
+      console.log(`  ${label}: ${entries.length} Vereine`);
       for (const entry of entries) {
         byName.set(normalizeKey(entry.name), entry);
         if (entry.ovNr) byOvNr.set(entry.ovNr, entry);
       }
     } catch (e) {
-      console.warn(`  PLZ ${plz}: ${e.message}`);
+      console.warn(`  ${label}: ${e.message}`);
     } finally {
       clearTimeout(timeout);
     }
@@ -119,28 +125,49 @@ async function fetchDmcClubDirectory() {
   return { byName, byOvNr };
 }
 
-function parseClubDirectory(html) {
+function parseClubDirectory(html, label = "") {
   const $ = load(html);
   const entries = [];
 
+  // Strategy 1: Old DMC site — table.verein
   // Columns: PLZ(0) | Ortsverein(1) | OV-Nr.(2) | Teamleiter(3) | Ort(4) | Internet(5) | E-Mail(6)
   $("table.verein tr").each((_, tr) => {
     if ($(tr).hasClass("titleRow")) return;
     const cells = $(tr).find("td");
     if (cells.length < 6) return;
-
     const name = $(cells[1]).text().trim();
     if (!name || name.length < 3) return;
-
     const ovNr = $(cells[2]).text().trim() || null;
-    // Ort cell contains "PLZ\n City" — drop the numeric PLZ prefix
     const cityRaw = $(cells[4]).text().replace(/\s+/g, " ").trim();
     const city = cityRaw.split(" ").filter(p => !/^\d+$/.test(p)).join(" ").trim() || null;
     const website = $(cells[5]).find("a[href]").first().attr("href") || null;
-
     entries.push({ name, ovNr, city, website: website || null });
   });
+  if (entries.length > 0) return entries;
 
+  // Strategy 2: Generic table rows with ≥2 columns (header rows filtered by text pattern)
+  $("table tr").each((_, tr) => {
+    const cells = $(tr).find("td");
+    if (cells.length < 2) return;
+    const name = $(cells[0]).text().trim() || $(cells[1]).text().trim();
+    if (!name || name.length < 3 || /^(PLZ|OV|Verein|Club|Name|Ortsverein)/i.test(name)) return;
+    const website = $(tr).find("a[href]").first().attr("href") || null;
+    entries.push({ name, ovNr: null, city: null, website: website || null });
+  });
+  if (entries.length > 0) return entries;
+
+  // Strategy 3: WordPress content-area links
+  $("article a[href], .entry-content a[href], .wp-block-group a[href], main a[href]").each((_, a) => {
+    const name = $(a).text().trim();
+    const href = $(a).attr("href") || null;
+    if (!name || name.length < 3) return;
+    entries.push({ name, ovNr: null, city: null, website: href });
+  });
+  if (entries.length > 0) return entries;
+
+  // Nothing found — dump raw HTML so we can write the right parser
+  const rawHtml = $.html().replace(/\s+/g, " ").trim().slice(0, 3000);
+  console.log(`  [debug ${label}] Keine Einträge geparst. Raw HTML: ${rawHtml}`);
   return entries;
 }
 
