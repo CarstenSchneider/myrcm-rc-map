@@ -3606,6 +3606,12 @@
     "myrcmOrgId": "53515"
   },
   {
+    "hostId": "dmc-big-hamburg-e-v",
+    "hostName": "BIG Hamburg e.V.",
+    "lat": 53.64060473290764,
+    "lng": 9.832929581941356
+  },
+  {
     "hostId": "dmc-dmc-e-v-geschaftsstelle",
     "hostName": "DMC e.V. Geschäftsstelle",
     "locationUnknown": true
