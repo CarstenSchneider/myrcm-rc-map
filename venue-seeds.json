@@ -3669,6 +3669,12 @@
     "myrcmOrgId": "42405"
   },
   {
+    "hostId": "dmc-modellsport-munsterland-e-v",
+    "hostName": "Modellsport Münsterland e.V.",
+    "lat": 52.34156335945138,
+    "lng": 7.577074708374697
+  },
+  {
     "hostId": "mrc-fritzens-formel-4",
     "hostName": "MRC Fritzens Formel 4",
     "locationUnknown": true,
