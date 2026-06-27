@@ -5690,7 +5690,7 @@ const clubListBack    = document.getElementById("clubListBack");
 
 clubListBack?.addEventListener("click", closeClubList);
 
-let _raceListRange = 28; // days until; 0 = all
+let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
 
 function openClubList() {
   if (!clubListPage) return;
@@ -5707,17 +5707,15 @@ function renderClubList() {
   if (!clubListContent) return;
 
   const today = todayStart();
-  const endMs = _raceListRange > 0 ? today.getTime() + _raceListRange * 24 * 60 * 60 * 1000 : null;
 
   const upcoming = races
     .filter(isUsefulRckRace)
-    .filter(matchesCountryFilter)
     .filter(r => {
-      const d = parseDate(r.from);
-      if (!d || d < today) return false;
-      if (endMs && d.getTime() > endMs) return false;
-      return true;
+      if (_raceListCountry === "all") return true;
+      const v = venueForRace(r);
+      return v ? venueCountry(v) === _raceListCountry : false;
     })
+    .filter(r => { const d = parseDate(r.from); return d && d >= today; })
     .sort((a, b) => (a.from || "").localeCompare(b.from || ""));
 
   // Group by month
@@ -5735,36 +5733,59 @@ function renderClubList() {
     groupMap.get(key).races.push(race);
   }
 
-  const rangeOpts = [
-    { label: "4 Wochen", value: 28 },
-    { label: "3 Monate", value: 90 },
-    { label: "Alle", value: 0 },
+  const countryOpts = [
+    { label: "Alle", value: "all" },
+    { label: "DE", value: "DE" },
+    { label: "AT", value: "AT" },
+    { label: "CH", value: "CH" },
   ];
-  const filterHtml = rangeOpts.map(o =>
-    `<button type="button" class="race-list-range-btn${_raceListRange === o.value ? " active" : ""}" data-range="${o.value}">${o.label}</button>`
+  const filterHtml = countryOpts.map(o =>
+    `<button type="button" class="race-list-range-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}">${o.label}</button>`
   ).join("");
+
+  const loggedIn = !!sbUser;
+  const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
+  const svgBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+  const colCount = loggedIn ? 6 : 5;
 
   const tableHtml = groups.length ? `<table class="race-table">
     <thead><tr>
       <th>Datum</th>
       <th class="col-city-hdr">Stadt</th>
+      ${loggedIn ? `<th class="col-icons"></th>` : ""}
       <th>Verein</th>
       <th>Rennen</th>
       <th></th>
     </tr></thead>
     <tbody>${groups.map(({ label, races: gr }) => {
-      const monthRow = `<tr class="race-month-row"><td colspan="5">${escapeHtml(label)}</td></tr>`;
+      const monthRow = `<tr class="race-month-row"><td colspan="${colCount}">${escapeHtml(label)}</td></tr>`;
       const raceRows = gr.map(race => {
         const venue = venueForRace(race);
+        const vid = venue ? String(venue.id) : null;
         const d = parseDate(race.from);
         const dateStr = d.toLocaleDateString("de-DE", { day: "numeric", month: "short" });
         const status = race.registrationStatus || "";
         const dotCls = status === "open" ? "open" : status === "upcoming" ? "upcoming" : status === "closed" ? "closed" : "";
         const dot = dotCls ? `<span class="race-list-status-dot ${dotCls}"></span>` : "";
+        const hostObjs = (venue?.hostIds ?? []).map(id => hostsById.get(String(id))).filter(Boolean);
+        const website = venue?.website || hostObjs.find(h => h.website)?.website || null;
+        const nameHtml = website && venue
+          ? `<a class="rl-venue-link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.name ?? "")}</a>`
+          : escapeHtml(venue?.name ?? "");
+        let iconsCell = "";
+        if (loggedIn && vid) {
+          const isFav   = isFavoriteHostId(vid);
+          const isNotif = isNotificationEnabled(vid);
+          iconsCell = `<td class="col-icons">
+            <button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button>
+            <button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>
+          </td>`;
+        }
         return `<tr data-race-id="${escapeHtml(race.id)}">
           <td class="col-date">${dateStr}</td>
           <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
-          <td class="col-club">${escapeHtml(venue?.name ?? "")}</td>
+          ${loggedIn ? iconsCell : ""}
+          <td class="col-club">${nameHtml}</td>
           <td>${escapeHtml(race.name || race.title || "")}</td>
           <td class="col-status">${dot}</td>
         </tr>`;
@@ -5778,7 +5799,19 @@ function renderClubList() {
     <div class="race-list-inner">${tableHtml}</div>`;
 
   clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
-    btn.addEventListener("click", () => { _raceListRange = Number(btn.dataset.range); renderClubList(); });
+    btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".rl-star").forEach(btn => {
+    btn.addEventListener("click", e => { e.stopPropagation(); toggleFavoriteHost(btn.dataset.hostId); renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".rl-bell").forEach(btn => {
+    btn.addEventListener("click", async e => { e.stopPropagation(); await toggleNotification(btn.dataset.hostId); renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".rl-venue-link").forEach(a => {
+    a.addEventListener("click", e => e.stopPropagation());
   });
 
   clubListContent.querySelectorAll(".race-table tbody tr:not(.race-month-row)").forEach(tr => {
