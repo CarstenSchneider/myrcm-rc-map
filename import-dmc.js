@@ -5,11 +5,11 @@ import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
 const DMC_DIRECTORY_SOURCES = [
-  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-mitte/sportkreis-mitte-vereine/", label: "SK Mitte" },
-  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-nord/sportkreis-nord-vereine/", label: "SK Nord" },
-  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-west/sportkreis-west-vereine/", label: "SK West" },
-  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-sued/sportkreis-sued-vereine/", label: "SK Süd" },
-  { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-ost/sportkreis-ost-vereine/", label: "SK Ost" },
+  { url: "https://dmc-online.com/wordpress/wp-content/themes/dmc-online/vereine_mitte.php", label: "SK Mitte" },
+  { url: "https://dmc-online.com/wordpress/wp-content/themes/dmc-online/vereine_nord.php", label: "SK Nord" },
+  { url: "https://dmc-online.com/wordpress/wp-content/themes/dmc-online/vereine_west.php", label: "SK West" },
+  { url: "https://dmc-online.com/wordpress/wp-content/themes/dmc-online/vereine_sued.php", label: "SK Süd" },
+  { url: "https://dmc-online.com/wordpress/wp-content/themes/dmc-online/vereine_ost.php", label: "SK Ost" },
 ];
 const OUTPUT_FILE = "dmc-races.json";
 const DMC_VENUES_FILE = "dmc-venues.json";
