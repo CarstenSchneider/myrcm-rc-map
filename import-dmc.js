@@ -3,9 +3,7 @@ import { load } from "cheerio";
 import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
-// Old site: all plz= values return the same SK3 West page, so fetch once
 const DMC_DIRECTORY_SOURCES = [
-  { url: "https://dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=3", label: "Legacy SK West" },
   { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-mitte/sportkreis-mitte-vereine/", label: "SK Mitte" },
   { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-nord/sportkreis-nord-vereine/", label: "SK Nord" },
   { url: "https://dmc-online.com/wordpress/sportkreise/sportkreis-west/sportkreis-west-vereine/", label: "SK West" },
