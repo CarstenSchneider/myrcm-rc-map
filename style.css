@@ -4075,14 +4075,24 @@ body.is-menu-open .app-menu-close {
 .club-list-star:hover, .club-list-bell:hover { color: var(--favorite); }
 .club-list-star.hidden, .club-list-bell.hidden { visibility: hidden; }
 
-.club-list-races { display: flex; flex-direction: column; gap: 6px; }
-.club-list-race { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.club-list-venue-name { flex: 1; font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.35; text-decoration: none; }
+a.club-list-venue-name:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+.club-list-races { display: flex; flex-direction: column; gap: 4px; }
+.club-list-race {
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  background: none; border: none; cursor: pointer; text-align: left; padding: 3px 6px;
+  margin: 0 -6px; border-radius: 6px; width: calc(100% + 12px);
+  transition: background 0.13s;
+}
+.club-list-race:hover { background: rgba(var(--text-rgb), 0.06); }
 .club-list-race-date { font-size: 12px; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
 .club-list-race-name { font-size: 13px; color: var(--text); flex: 1; min-width: 0; }
 .club-list-race-status { font-size: 11px; white-space: nowrap; flex-shrink: 0; }
 .club-list-race-status.open     { color: #22c55e; font-weight: 600; }
 .club-list-race-status.upcoming { color: #4A9EE8; font-weight: 600; }
 .club-list-race-status.closed   { color: var(--muted-light); }
+.club-list-no-races { font-size: 12px; color: var(--muted-light); font-style: italic; }
 
 .club-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 

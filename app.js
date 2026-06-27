@@ -5707,100 +5707,112 @@ function renderClubList() {
   const today = todayStart();
 
   // All future races, country-filtered, no range limit
-  const allRaces = races
+  const futureRaces = races
     .filter(isUsefulRckRace)
     .filter(matchesCountryFilter)
     .filter(r => parseDate(r.from) >= today);
 
-  // Group by venue/host
-  const byKey = new Map();
-  for (const race of allRaces) {
+  const futureByVenue = new Map();
+  for (const race of futureRaces) {
     const venue = venueForRace(race);
-    const key   = venue ? String(venue.id) : ("host:" + (race.hostId || race.hostName || ""));
-    if (!byKey.has(key)) {
-      byKey.set(key, {
-        key,
-        venue,
-        hostId:   venue?.id ?? race.hostId ?? null,
-        hostName: venue?.name ?? race.hostName ?? race.venueName ?? "",
-        races: [],
-      });
-    }
-    byKey.get(key).races.push(race);
+    const vid = venue ? String(venue.id) : null;
+    if (!vid) continue;
+    if (!futureByVenue.has(vid)) futureByVenue.set(vid, []);
+    futureByVenue.get(vid).push(race);
   }
 
-  if (byKey.size === 0) {
-    clubListContent.innerHTML = `<div class="club-list-empty">Keine Rennen im gewählten Zeitraum.</div>`;
+  // All known venues, country-filtered
+  const allVenues = venues.filter(v => {
+    if (selectedCountry === "all") return true;
+    return venueCountry(v) === selectedCountry;
+  });
+
+  if (allVenues.length === 0) {
+    clubListContent.innerHTML = `<div class="club-list-empty">Keine Vereine gefunden.</div>`;
     return;
   }
 
-  const groups = [...byKey.values()].sort((a, b) =>
-    a.hostName.localeCompare(b.hostName, "de")
-  );
+  const sorted = [...allVenues].sort((a, b) => (a.name || "").localeCompare(b.name || "", "de"));
 
   const iconStar = `<svg viewBox="0 0 24 24" stroke-width="1.8"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
   const iconBell = `<svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
   const dotOpen     = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#22c55e;margin-right:4px;vertical-align:middle;"></span>`;
   const dotUpcoming = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#4A9EE8;margin-right:4px;vertical-align:middle;"></span>`;
 
-  const rows = groups.map(g => {
-    const hid    = String(g.hostId ?? "");
-    const isFav  = isFavoriteHostId(hid);
-    const isNotif = isNotificationEnabled(hid);
+  const rows = sorted.map(venue => {
+    const vid  = String(venue.id);
+    const hid  = vid;
+    const isFav    = isFavoriteHostId(hid);
+    const isNotif  = isNotificationEnabled(hid);
     const loggedIn = !!sbUser;
 
-    const starCls  = `club-list-star${isFav ? " active" : ""}${!loggedIn ? " hidden" : ""}`;
-    const bellCls  = `club-list-bell${isNotif ? " active" : ""}${(!loggedIn || !isFav) ? " hidden" : ""}`;
+    // Website: prefer venue.website, fall back to first host with a website
+    const hostObjs = (venue.hostIds ?? []).map(id => hostsById[String(id)]).filter(Boolean);
+    const website  = venue.website || hostObjs.find(h => h.website)?.website || null;
 
-    const raceItems = g.races
+    const nameHtml = website
+      ? `<a class="club-list-venue-name" href="${website}" target="_blank" rel="noopener noreferrer">${venue.name}</a>`
+      : `<span class="club-list-venue-name">${venue.name}</span>`;
+
+    const starCls = `club-list-star${isFav ? " active" : ""}${!loggedIn ? " hidden" : ""}`;
+    const bellCls = `club-list-bell${isNotif ? " active" : ""}${(!loggedIn || !isFav) ? " hidden" : ""}`;
+
+    const venueRaces = (futureByVenue.get(vid) ?? [])
       .slice()
-      .sort((a, b) => (a.from || "").localeCompare(b.from || ""))
-      .map(race => {
-        const date = formatDateRange(race.from, race.to !== race.from ? race.to : null);
-        const name = race.name || race.title || "";
-        const status = race.registrationStatus || "";
-        let statusHtml = "";
-        if (status === "open")     statusHtml = `<span class="club-list-race-status open">${dotOpen}Offen</span>`;
-        else if (status === "upcoming") {
-          const opens = race.registrationOpens ? ` ab ${formatDate(race.registrationOpens)}` : "";
-          statusHtml = `<span class="club-list-race-status upcoming">${dotUpcoming}Nennung${opens}</span>`;
-        } else if (status === "closed") {
-          statusHtml = `<span class="club-list-race-status closed">Gesch.</span>`;
-        }
-        return `<div class="club-list-race">
-          <span class="club-list-race-date">${date}</span>
-          <span class="club-list-race-name">${name}</span>
-          ${statusHtml}
-        </div>`;
-      }).join("");
+      .sort((a, b) => (a.from || "").localeCompare(b.from || ""));
 
-    return `<div class="club-list-row" data-host-id="${hid}">
+    const raceItems = venueRaces.map(race => {
+      const date   = formatDateRange(race.from, race.to !== race.from ? race.to : null);
+      const name   = race.name || race.title || "";
+      const status = race.registrationStatus || "";
+      let statusHtml = "";
+      if (status === "open")
+        statusHtml = `<span class="club-list-race-status open">${dotOpen}Offen</span>`;
+      else if (status === "upcoming") {
+        const opens = race.registrationOpens ? ` ab ${formatDate(race.registrationOpens)}` : "";
+        statusHtml = `<span class="club-list-race-status upcoming">${dotUpcoming}Nennung${opens}</span>`;
+      } else if (status === "closed") {
+        statusHtml = `<span class="club-list-race-status closed">Gesch.</span>`;
+      }
+      return `<button type="button" class="club-list-race" data-race-id="${race.id}">
+        <span class="club-list-race-date">${date}</span>
+        <span class="club-list-race-name">${name}</span>
+        ${statusHtml}
+      </button>`;
+    }).join("");
+
+    const noRaces = venueRaces.length === 0
+      ? `<span class="club-list-no-races">Keine Rennen geplant</span>`
+      : "";
+
+    return `<div class="club-list-row" data-venue-id="${vid}">
       <div class="club-list-venue">
-        <span class="club-list-venue-name">${g.hostName}</span>
+        ${nameHtml}
         <div class="club-list-icons">
           <button type="button" class="${bellCls}" data-host-id="${hid}" aria-label="Benachrichtigungen">${iconBell}</button>
           <button type="button" class="${starCls}" data-host-id="${hid}" aria-label="Favorit">${iconStar}</button>
         </div>
       </div>
-      <div class="club-list-races">${raceItems}</div>
+      <div class="club-list-races">${raceItems}${noRaces}</div>
     </div>`;
   }).join("");
 
   clubListContent.innerHTML = `<div class="club-list-inner">${rows}</div>`;
 
   clubListContent.querySelectorAll(".club-list-star").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const hid = btn.dataset.hostId;
-      toggleFavoriteHost(hid);
-      renderClubList();
-    });
+    btn.addEventListener("click", () => { toggleFavoriteHost(btn.dataset.hostId); renderClubList(); });
   });
 
   clubListContent.querySelectorAll(".club-list-bell").forEach(btn => {
-    btn.addEventListener("click", async () => {
-      const hid = btn.dataset.hostId;
-      await toggleNotification(hid);
-      renderClubList();
+    btn.addEventListener("click", async () => { await toggleNotification(btn.dataset.hostId); renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".club-list-race").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const race = races.find(r => r.id === btn.dataset.raceId);
+      if (!race) return;
+      closeClubList();
+      focusRace(race);
     });
   });
 }
