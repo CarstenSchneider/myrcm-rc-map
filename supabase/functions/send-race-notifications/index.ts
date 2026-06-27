@@ -7,13 +7,13 @@ const SUPABASE_SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
-// ── Email template (matches magic-link design) ─────────────────────────────
+// ── Types ──────────────────────────────────────────────────────────────────
 
 type RaceRow = {
   venueName: string;
   raceName: string;
   raceDate: string;
-  registrationStatus: string;   // "open" | "closed" | "upcoming" | ""
+  registrationStatus: string;
   registrationNote: string;
   registrationOpens: string;
   registrationUrl: string;
@@ -21,9 +21,87 @@ type RaceRow = {
   classes: string[];
 };
 
-function emailHtml(rows: RaceRow[], userId: string): string {
+type ChangeRow = RaceRow & { updateDesc: string };
+
+type RaceChange = {
+  id: string;
+  venueId: string | null;
+  hostId: string | null;
+  hostName: string;
+  from: string;
+  to: string;
+  name: string;
+  registrationStatus: string;
+  registrationOpens: string | null;
+  url: string;
+  documents: { url: string; type: string; label: string }[];
+  changed: {
+    registrationStatus?: { from: string | null; to: string | null };
+    date?: { from: string; fromTo: string; to: string; toTo: string };
+    name?: { from: string; to: string };
+  };
+};
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+
+function escHtml(s: string) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+}
+
+function formatDateRange(from: string, to?: string): string {
+  if (!to || to === from) return formatDate(from);
+  const f = new Date(from);
+  const t = new Date(to);
+  const fd = f.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
+  const td = t.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+  return `${fd} – ${td}`;
+}
+
+function simpleHash(str: string): string {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  return Math.abs(h).toString(36);
+}
+
+function changeNotifType(change: RaceChange): string {
+  if (change.registrationStatus === "deleted") return "race_deleted";
+  const key = JSON.stringify(
+    Object.fromEntries(Object.entries(change.changed).map(([k, v]) => [k, (v as any).to]))
+  );
+  return `race_updated_${simpleHash(key)}`;
+}
+
+function changeDescription(change: RaceChange): string {
+  if (change.registrationStatus === "deleted") return "Abgesagt / Gelöscht";
+
+  const parts: string[] = [];
+  const isCancelled = change.name.toLowerCase().includes("abgesagt");
+
+  if (isCancelled) {
+    parts.push("Abgesagt");
+  } else {
+    if (change.changed.registrationStatus?.to === "closed") parts.push("Nennung geschlossen");
+    if (change.changed.name) parts.push(`Neuer Name: ${change.name}`);
+  }
+
+  if (change.changed.date) {
+    const { to, toTo } = change.changed.date;
+    parts.push(`Neues Datum: ${formatDateRange(to, toTo)}`);
+  }
+
+  return parts.join(" · ") || "Aktualisiert";
+}
+
+// ── Email template ─────────────────────────────────────────────────────────
+
+function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []): string {
   const unsubscribeUrl = `https://rcracemap.com?unsubscribe=${encodeURIComponent(userId)}`;
-  // Group by unique race (deduplicate — same race may appear as new_race + registration_open)
+
   const seen = new Set<string>();
   const uniqueRows = rows.filter(r => {
     const key = r.raceName + r.raceDate + r.venueName;
@@ -32,10 +110,13 @@ function emailHtml(rows: RaceRow[], userId: string): string {
     return true;
   });
 
+  const hasNew = uniqueRows.length > 0;
+  const hasChanges = changeRows.length > 0;
+
   const dotStyle = (color: string) =>
     `display:inline-block;width:7px;height:7px;border-radius:50%;background:${color};margin-right:5px;vertical-align:middle;`;
 
-  const items = uniqueRows.map(r => {
+  const renderRaceItem = (r: RaceRow) => {
     let regLine = "";
     if (r.registrationStatus === "open" && r.registrationUrl) {
       regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
@@ -67,7 +148,69 @@ function emailHtml(rows: RaceRow[], userId: string): string {
           ${classTags}
         </td>
       </tr>`;
-  }).join("");
+  };
+
+  const renderChangeItem = (r: ChangeRow) => {
+    const announcementUrl = (r as any)._announcementUrl ?? "";
+    const announcementLabel = announcementUrl?.toLowerCase().endsWith(".pdf")
+      ? "Ausschreibung (PDF) ↗"
+      : "Ausschreibung ↗";
+    const announcementLink = announcementUrl
+      ? ` &nbsp;·&nbsp; <a href="${announcementUrl}" style="color:#6b7280; font-size:13px; text-decoration:none;">${announcementLabel}</a>`
+      : "";
+
+    let regLine = "";
+    if (r.registrationStatus === "open" && r.registrationUrl) {
+      regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
+    } else if (r.registrationStatus === "upcoming") {
+      const note = r.registrationNote || (r.registrationOpens ? `Nennung ab ${r.registrationOpens}` : "Nennung folgt");
+      regLine = `<span style="font-size:13px; font-weight:700; color:#4A9EE8;"><span style="${dotStyle("#4A9EE8")}"></span>${escHtml(note)}</span>`;
+    } else if (r.registrationStatus === "closed") {
+      regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>Nennung geschlossen</span>`;
+    }
+
+    const classTags = r.classes.length
+      ? `<div style="margin-top:6px;">${r.classes.map(c => `<span class="item-pill" style="display:inline-block;background:#f3f4f6;color:#6b7280;font-size:11px;padding:2px 8px;border-radius:999px;margin:2px 2px 0 0;">${escHtml(c)}</span>`).join("")}</div>`
+      : "";
+
+    const isDeleted = r.registrationStatus === "deleted";
+    const titleStyle = isDeleted
+      ? "font-size:15px; font-weight:700; color:#9ca3af; text-decoration:line-through; margin-bottom:6px;"
+      : "font-size:15px; font-weight:700; color:#213769; margin-bottom:6px;";
+
+    return `
+      <tr>
+        <td class="item-sep" style="padding: 14px 0; border-bottom: 1px solid #e5e7eb;">
+          <div style="font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#9ca3af; margin-bottom:6px;">${escHtml(r.updateDesc)}</div>
+          <div style="font-size:14px; font-weight:400; color:#6b7280; margin-bottom:2px;">${escHtml(r.raceDate)}</div>
+          <div style="font-size:14px; font-weight:400; color:#6b7280; margin-bottom:2px;">${escHtml(r.venueName)}</div>
+          <div class="item-title" style="${titleStyle}">${escHtml(r.raceName)}</div>
+          ${!isDeleted && (regLine || announcementLink) ? `<div style="margin-bottom:4px;">${regLine}${announcementLink}</div>` : ""}
+          ${classTags}
+        </td>
+      </tr>`;
+  };
+
+  const sectionLabel = (text: string) =>
+    `<tr><td style="padding: 20px 0 4px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#9ca3af; border-bottom: 2px solid #e5e7eb;">${text}</td></tr>`;
+
+  const newItems = uniqueRows.map(renderRaceItem).join("");
+  const changeItems = changeRows.map(renderChangeItem).join("");
+
+  const heading = !hasNew && hasChanges
+    ? "Updates bei deinen Vereinen"
+    : "Neuigkeiten bei deinen Vereinen";
+
+  const subtext = !hasNew && hasChanges
+    ? "Es gibt Änderungen bei Rennen von Vereinen, denen du folgst."
+    : hasNew && hasChanges
+    ? "Es gibt neue Rennen und Updates bei Vereinen, denen du folgst."
+    : "Es gibt neue Rennen oder geöffnete Nennungen bei Vereinen, denen du folgst.";
+
+  const tableContent = `
+    ${hasNew ? `${hasChanges ? sectionLabel("Neue Rennen") : ""}${newItems}` : ""}
+    ${hasChanges ? `${sectionLabel("Updates")}${changeItems}` : ""}
+  `;
 
   return `<!DOCTYPE html>
 <html lang="de" style="color-scheme: light dark;">
@@ -119,12 +262,10 @@ function emailHtml(rows: RaceRow[], userId: string): string {
         <!-- Body -->
         <tr>
           <td class="email-body" style="padding: 36px 40px 28px;">
-            <h1 class="email-h1" style="margin:0 0 8px; font-size:22px; font-weight:700; color:#213769; line-height:1.2;">Neuigkeiten bei deinen Vereinen</h1>
-            <p class="email-p" style="margin:0 0 24px; font-size:15px; color:#374151; line-height:1.6;">
-              Es gibt neue Rennen oder geöffnete Nennungen bei Vereinen, denen du folgst.
-            </p>
+            <h1 class="email-h1" style="margin:0 0 8px; font-size:22px; font-weight:700; color:#213769; line-height:1.2;">${heading}</h1>
+            <p class="email-p" style="margin:0 0 24px; font-size:15px; color:#374151; line-height:1.6;">${subtext}</p>
             <table width="100%" cellpadding="0" cellspacing="0">
-              ${items}
+              ${tableContent}
             </table>
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
@@ -156,25 +297,7 @@ function emailHtml(rows: RaceRow[], userId: string): string {
 </html>`;
 }
 
-function escHtml(s: string) {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
-
-function formatDate(iso: string): string {
-  const d = new Date(iso);
-  return d.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
-}
-
-function formatDateRange(from: string, to?: string): string {
-  if (!to || to === from) return formatDate(from);
-  const f = new Date(from);
-  const t = new Date(to);
-  const fd = f.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
-  const td = t.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
-  return `${fd} – ${td}`;
-}
-
-// ── Main handler ───────────────────────────────────────────────────────────
+// ── Unsubscribe page ───────────────────────────────────────────────────────
 
 const unsubscribeHtml = (ok: boolean) => `<!DOCTYPE html>
 <html lang="de">
@@ -207,6 +330,8 @@ const unsubscribeHtml = (ok: boolean) => `<!DOCTYPE html>
 </div>
 </body></html>`;
 
+// ── Main handler ───────────────────────────────────────────────────────────
+
 serve(async (req) => {
   // Handle unsubscribe via GET
   const url = new URL(req.url);
@@ -215,12 +340,16 @@ serve(async (req) => {
     const { error } = await supabase.from("venue_notifications").delete().eq("user_id", userId);
     return new Response(unsubscribeHtml(!error), {
       status: 200,
-      headers: {
-        "Content-Type": "text/html; charset=utf-8",
-        "X-Content-Type-Options": "nosniff",
-      },
+      headers: { "Content-Type": "text/html; charset=utf-8", "X-Content-Type-Options": "nosniff" },
     });
   }
+
+  // Parse incoming race changes from POST body
+  let incomingChanges: RaceChange[] = [];
+  try {
+    const body = await req.json();
+    if (Array.isArray(body?.changes)) incomingChanges = body.changes;
+  } catch { /* no body or not JSON */ }
 
   // 1. Fetch all notification subscriptions
   const { data: subs, error: subsErr } = await supabase
@@ -229,7 +358,6 @@ serve(async (req) => {
 
   if (subsErr) return new Response(subsErr.message, { status: 500 });
   if (!subs?.length) return new Response("No subscriptions", { status: 200 });
-
 
   // 2. Group host_ids per user
   const userHosts = new Map<string, Set<string>>();
@@ -252,18 +380,14 @@ serve(async (req) => {
   const venues: any[] = Array.isArray(venuesRes) ? venuesRes : [];
   const venueById = new Map(venues.map((v: any) => [String(v.id), v]));
 
-  // Build a map: any hostId alias → canonical venue id
-  // Venues have id + optional hostIds[] array of aliases used in races
   const hostIdToVenueId = new Map<string, string>();
   for (const v of venues) {
     const vid = String(v.id);
     hostIdToVenueId.set(vid, vid);
-    for (const hid of (v.hostIds ?? [])) {
-      hostIdToVenueId.set(String(hid), vid);
-    }
+    for (const hid of (v.hostIds ?? [])) hostIdToVenueId.set(String(hid), vid);
   }
 
-  // Only look at races in the next 60 days (races use "from" field)
+  // Only look at races in the next 60 days
   const now = new Date();
   const cutoff = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000);
   const upcomingRaces = races.filter((r: any) => {
@@ -271,19 +395,37 @@ serve(async (req) => {
     return d >= now && d <= cutoff;
   });
 
-  // 4. Per user: find unseen races for their subscribed hosts
+  // Filter incoming changes to the same 60-day window
+  const upcomingChanges = incomingChanges.filter(c => {
+    const d = new Date(c.from);
+    return d >= now && d <= cutoff;
+  });
+
+  // 4. Per user: find unseen new races and relevant changes
   const seenPairs: { user_id: string; race_id: string; notif_type: string }[] = [];
   let emailsSent = 0;
 
   for (const [userId, hostIds] of userHosts) {
+    // New/open races for this user
     const relevant = upcomingRaces.filter((r: any) => {
       const raceHostId = String(r.hostId ?? r.host_id ?? "");
       const canonicalId = hostIdToVenueId.get(raceHostId) ?? raceHostId;
       return hostIds.has(raceHostId) || hostIds.has(canonicalId);
     });
-    if (!relevant.length) continue;
 
-    // Check which (race, type) combos already seen
+    // Changes for this user
+    const relevantChanges = upcomingChanges.filter(c => {
+      const hostId = String(c.hostId ?? "");
+      const venueId = String(c.venueId ?? "");
+      const canonicalId = hostIdToVenueId.get(hostId) ?? hostId;
+      const canonicalVenue = hostIdToVenueId.get(venueId) ?? venueId;
+      return hostIds.has(hostId) || hostIds.has(canonicalId) ||
+             hostIds.has(venueId) || hostIds.has(canonicalVenue);
+    });
+
+    if (!relevant.length && !relevantChanges.length) continue;
+
+    // Check seen notifications
     const { data: seen } = await supabase
       .from("seen_race_notifications")
       .select("race_id, notif_type")
@@ -294,6 +436,7 @@ serve(async (req) => {
     const toNotify: RaceRow[] = [];
     const toMark: { raceId: string; notif_type: string }[] = [];
 
+    // Process new/open races
     for (const race of relevant) {
       const raceId = String(race.id);
       const isNewRace = !seenSet.has(`${raceId}:new_race`);
@@ -322,11 +465,49 @@ serve(async (req) => {
       if (isNewOpen) toMark.push({ raceId, notif_type: "registration_open" });
     }
 
-    if (!toNotify.length) continue;
+    // Process changes
+    const toNotifyChanges: ChangeRow[] = [];
+    for (const change of relevantChanges) {
+      const notifType = changeNotifType(change);
+      if (seenSet.has(`${change.id}:${notifType}`)) continue;
+
+      const venue = venueById.get(String(change.venueId ?? ""));
+      const venueName = venue?.name ?? change.hostName ?? "";
+      const raceDate = formatDateRange(change.from, change.to);
+      const announcementUrl = change.documents?.find(d => d?.url)?.url ?? "";
+
+      const row: ChangeRow & { _announcementUrl?: string } = {
+        venueName,
+        raceName: change.name,
+        raceDate,
+        registrationStatus: change.registrationStatus,
+        registrationNote: "",
+        registrationOpens: change.registrationOpens ? formatDate(change.registrationOpens) : "",
+        registrationUrl: change.url ?? "",
+        announcementUrl,
+        classes: [],
+        updateDesc: changeDescription(change),
+        _announcementUrl: announcementUrl,
+      };
+
+      toNotifyChanges.push(row);
+      toMark.push({ raceId: change.id, notif_type: notifType });
+    }
+
+    if (!toNotify.length && !toNotifyChanges.length) continue;
 
     // Fetch user email
     const { data: { user }, error: userErr } = await supabase.auth.admin.getUserById(userId);
     if (userErr || !user?.email) continue;
+
+    // Determine subject
+    const hasNew = toNotify.length > 0;
+    const hasChanges = toNotifyChanges.length > 0;
+    const subject = !hasNew && hasChanges
+      ? "Updates bei deinen Vereinen – RC RaceMap"
+      : hasNew && hasChanges
+      ? "Neuigkeiten & Updates bei deinen Vereinen – RC RaceMap"
+      : "Neuigkeiten bei deinen Vereinen – RC RaceMap";
 
     // Send email via Resend
     const res = await fetch("https://api.resend.com/emails", {
@@ -335,8 +516,8 @@ serve(async (req) => {
       body: JSON.stringify({
         from: "RC RaceMap <noreply@rcracemap.com>",
         to: [user.email],
-        subject: `Neuigkeiten bei deinen Vereinen – RC RaceMap`,
-        html: emailHtml(toNotify, userId),
+        subject,
+        html: emailHtml(toNotify, userId, toNotifyChanges),
       }),
     });
 
@@ -353,7 +534,7 @@ serve(async (req) => {
     await supabase.from("seen_race_notifications").upsert(seenPairs);
   }
 
-  return new Response(JSON.stringify({ emailsSent, seenPairs: seenPairs.length }), {
+  return new Response(JSON.stringify({ emailsSent, seenPairs: seenPairs.length, changes: incomingChanges.length }), {
     headers: { "Content-Type": "application/json" },
   });
 });
