@@ -3859,5 +3859,10 @@
     "hostName": "TSV Gelenau e.V.",
     "locationUnknown": true,
     "myrcmOrgId": "30389"
+  },
+  {
+    "hostId": "dmc-ttsc-racing-team",
+    "hostName": "TTSC Racing-Team",
+    "locationUnknown": true
   }
 ]
