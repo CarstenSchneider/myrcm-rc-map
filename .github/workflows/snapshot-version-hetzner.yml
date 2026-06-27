@@ -40,7 +40,7 @@ jobs:
           cp venues.json .deploy-snapshot/
           cp hosts.json .deploy-snapshot/
           cp series.json .deploy-snapshot/
-          cp myrcm-hosts-germany.json .deploy-snapshot/
+          cp myrcm-hosts-dach.json .deploy-snapshot/
           cp rck-venue-candidates.json .deploy-snapshot/
           cp -R favicon_io .deploy-snapshot/
 
