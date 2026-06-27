@@ -41,7 +41,7 @@ function emailHtml(rows: RaceRow[], userId: string): string {
       regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
     } else if (r.registrationStatus === "upcoming") {
       const note = r.registrationNote || (r.registrationOpens ? `Nennung ab ${r.registrationOpens}` : "Nennung folgt");
-      regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#f59e0b")}"></span>${escHtml(note)}</span>`;
+      regLine = `<span style="font-size:13px; font-weight:700; color:#4A9EE8;"><span style="${dotStyle("#4A9EE8")}"></span>${escHtml(note)}</span>`;
     } else if (r.registrationStatus === "closed") {
       regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>Nennung geschlossen</span>`;
     }
