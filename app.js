@@ -5754,7 +5754,7 @@ function renderClubList() {
   const loggedIn = !!sbUser;
   const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
   const svgBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
-  const colCount = loggedIn ? 6 : 5;
+  const colCount = loggedIn ? 5 : 4;
 
   const tableHtml = groups.length ? `<table class="race-table">
     <colgroup>
@@ -5763,7 +5763,6 @@ function renderClubList() {
       ${loggedIn ? `<col style="width:44px">` : ""}
       <col style="width:30%">
       <col>
-      <col style="width:16px">
     </colgroup>
     <thead><tr>
       <th>Datum</th>
@@ -5771,7 +5770,6 @@ function renderClubList() {
       ${loggedIn ? `<th class="col-icons"></th>` : ""}
       <th>Verein</th>
       <th>Rennen</th>
-      <th></th>
     </tr></thead>
     <tbody>${groups.map(({ label, races: gr }) => {
       const monthRow = `<tr class="race-month-row"><td colspan="${colCount}">${escapeHtml(label)}</td></tr>`;
@@ -5780,12 +5778,6 @@ function renderClubList() {
         const vid = venue ? String(venue.id) : null;
         const d = parseDate(race.from);
         const dateStr = d.toLocaleDateString("de-DE", { day: "numeric", month: "short" });
-        const status = race.registrationStatus || "";
-        const dotCls = status === "open" ? "open" : status === "upcoming" ? "upcoming" : status === "closed" ? "closed" : "";
-        const dot = dotCls ? `<span class="race-list-status-dot ${dotCls}"></span>` : "";
-        const regCount = registrationCount(race);
-        const rowScale = markerScaleForRegistrationCount(regCount);
-        const rowFontSize = Math.round(rowScale * 13);
         const hostObjs = (venue?.hostIds ?? []).map(id => hostsById.get(String(id))).filter(Boolean);
         const website = venue?.website || hostObjs.find(h => h.website)?.website || null;
         const nameHtml = website && venue
@@ -5798,13 +5790,12 @@ function renderClubList() {
           const buttons = vid ? `<button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button><button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>` : "";
           iconsCell = `<td class="col-icons">${buttons}</td>`;
         }
-        return `<tr data-race-id="${escapeHtml(race.id)}" style="font-size:${rowFontSize}px">
+        return `<tr data-race-id="${escapeHtml(race.id)}">
           <td class="col-date">${dateStr}</td>
           <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
           ${loggedIn ? iconsCell : ""}
           <td class="col-club">${nameHtml}</td>
           <td>${escapeHtml(race.name || race.title || "")}</td>
-          <td class="col-status">${dot}</td>
         </tr>`;
       }).join("");
       return monthRow + raceRows;
