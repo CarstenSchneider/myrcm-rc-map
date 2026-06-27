@@ -6827,8 +6827,11 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2024-08-15-myrcm-event-77864",
+    "id": "ets-2024-08-15-myrcm-event-77864",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
@@ -13266,8 +13269,11 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2024-10-03-myrcm-event-81187",
+    "id": "ets-2024-10-03-myrcm-event-81187",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null,
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 4 LENO / IT",
@@ -33849,8 +33855,11 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2025-05-29-myrcm-event-86355",
+    "id": "ets-2025-05-29-myrcm-event-86355",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
@@ -46120,8 +46129,11 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-08-28-myrcm-event-89374",
+    "id": "ets-2025-08-28-myrcm-event-89374",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 3 APELDOORN / NL",
@@ -52763,8 +52775,11 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2025-10-09-myrcm-event-89911",
+    "id": "ets-2025-10-09-myrcm-event-89911",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 4 LENTIAI / IT",
@@ -67379,8 +67394,11 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-04-16-myrcm-event-92891",
+    "id": "ets-2026-04-16-myrcm-event-92891",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.eos.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro Offroad Series Round 2 Trencin / SK",
@@ -74142,8 +74160,11 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-05-28-myrcm-event-96256",
+    "id": "ets-2026-05-28-myrcm-event-96256",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 1 Apeldoorn/ NL",
@@ -80401,54 +80422,37 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-speedracer-bernau-2026-06-27-myrcm-event-94651",
-    "venueId": "rc-speedracer-bernau",
-    "venueName": "RC Speedracer e.V.",
-    "venueLocation": "Bernau",
+    "id": "mrc-mannheim-e-v-2026-06-27-myrcm-event-98588",
+    "venueId": "mrc-mannheim-e-v",
+    "venueName": "MRC Mannheim e.V.",
+    "venueLocation": "Mannheim",
     "venueWebsite": null,
-    "hostId": "rc-speedracer-bernau",
-    "hostName": "RC Speedracer e.V.",
-    "name": "Tamico Offroad Cup + SK-Lauf ORE2WD ST - Abgesagt",
+    "hostId": "1-mrc-mannheim-e-v",
+    "hostName": "1. MRC Mannheim e.V.",
+    "name": "RCK Kleinserie",
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [
-      "Sportkreis (SK)",
-      "Tamico Offroad Cup"
+      "RCK Kleinserie"
     ],
     "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94651&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=94651&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94651&dLt=reg&pLa=en&lType=rList",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98588&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=39671&pLa=en&dId%5BE%5D=98588&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98588&dLt=reg&pLa=en&lType=rList",
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
+    "registrationCount": null,
+    "registrationDisplay": null,
     "note": "Nennung geschlossen.",
     "classes": [
-      {
-        "name": "Fighter-Klasse",
-        "entries": 13
-      },
-      {
-        "name": "Retro 2WD",
-        "entries": 4
-      },
-      {
-        "name": "Retro 4WD",
-        "entries": 3
-      },
-      {
-        "name": "Wheelie",
-        "entries": 6
-      },
-      {
-        "name": "ORE 2WD ST",
-        "entries": 4
-      }
+      "RCK GT-Sport",
+      "RCK LMH",
+      "RCK M-Chassis",
+      "RCK Porsche Cup"
     ],
     "documents": [],
-    "firstSeen": "2026-06-08"
+    "firstSeen": "2026-06-27"
   },
   {
     "id": "msc-hansa-heilbronn-e-v-2026-06-27-myrcm-event-95007",
@@ -80850,13 +80854,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Buggy-Cup BCZ",
-        "entries": 9
+        "entries": 8
       },
       {
         "name": "Truggy-Cup BCZ",
@@ -81013,8 +81017,11 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-07-02-myrcm-event-95739",
+    "id": "ets-2026-07-02-myrcm-event-95739",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Euro NITRO Series Onroad Round 2 RUCPHEN / NL",
@@ -81121,13 +81128,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 36,
+    "registrationDisplay": "36",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "SRCCA V10TR 2024",
-        "entries": 15
+        "entries": 16
       },
       {
         "name": "SRCCA V8TR 2024",
@@ -81159,8 +81166,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 34,
-    "registrationDisplay": "34",
+    "registrationCount": 35,
+    "registrationDisplay": "35",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81177,7 +81184,7 @@
       },
       {
         "name": "ORT",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "ORET",
@@ -81322,8 +81329,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 50,
-    "registrationDisplay": "50",
+    "registrationCount": 51,
+    "registrationDisplay": "51",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81332,7 +81339,7 @@
       },
       {
         "name": "2WD Buggy Stock",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "2WD Truck",
@@ -81371,8 +81378,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 43,
-    "registrationDisplay": "43",
+    "registrationCount": 44,
+    "registrationDisplay": "44",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81381,7 +81388,7 @@
       },
       {
         "name": "OST-Cup VB",
-        "entries": 22
+        "entries": 23
       }
     ],
     "documents": [],
@@ -81737,13 +81744,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Open SRCCA",
-        "entries": 4
+        "entries": 3
       },
       {
         "name": "Repas du soir",
@@ -81778,8 +81785,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81792,7 +81799,7 @@
       },
       {
         "name": "AC26 OpenFun",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "AC26 ProStock 2WD",
@@ -81856,8 +81863,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -82045,8 +82052,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -82059,7 +82066,7 @@
       },
       {
         "name": "TW 17.5 OCT",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "Formel OCT",
@@ -82298,11 +82305,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
-      "17.5 T Clubrennen 2026",
+      {
+        "name": "17.5 T Clubrennen 2026",
+        "entries": 1
+      },
       {
         "name": "Formel Clubrennen 2026",
         "entries": 1
@@ -82419,8 +82429,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -82436,7 +82446,7 @@
       },
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 10
+        "entries": 11
       }
     ],
     "documents": [],
@@ -82492,13 +82502,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Buggy 1/10 - Endurance 2H",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -82523,8 +82533,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -82534,7 +82544,7 @@
       "Verbrenner-Glattbahn 1:10",
       {
         "name": "Elektro Glattbahn 1:8 EG8e",
-        "entries": 2
+        "entries": 4
       },
       "Elektro-Glattbahn 1:8 GT"
     ],
@@ -82973,8 +82983,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -82983,11 +82993,11 @@
       },
       {
         "name": "FCTS TT+",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "FCTS TTS",
-        "entries": 12
+        "entries": 13
       }
     ],
     "documents": [],
@@ -83422,8 +83432,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 50,
-    "registrationDisplay": "50",
+    "registrationCount": 51,
+    "registrationDisplay": "51",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -83432,7 +83442,7 @@
       },
       {
         "name": "Rennstrecke",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [],
@@ -83512,8 +83522,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -83536,7 +83546,7 @@
       },
       {
         "name": "VG8KL1",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -83563,17 +83573,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "RCS GT Klasse",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "RCS Formel 1",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "RCS XR5 Klasse",
@@ -83878,8 +83888,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "4WD Buggy Modified",
@@ -83890,7 +83900,7 @@
       "2WD Buggy Modified.",
       {
         "name": "2WD Buggy Stock 13,5",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "2WD Buggy Ruddog",
@@ -83977,8 +83987,11 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "arena33-andernach-2026-07-23-myrcm-event-97810",
+    "id": "ets-2026-07-23-myrcm-event-97810",
     "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
     "name": "Cayote Euro Touring Series ROUND 2 TRENCIN SK",
@@ -84148,8 +84161,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -84158,11 +84171,11 @@
       },
       {
         "name": "OR8 Expert",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "OR8E",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "Hessencup Kids",
@@ -85124,13 +85137,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Tamiya TT-02 RCCR",
-        "entries": 4
+        "entries": 5
       },
       "Tamiya TT-02 RCCR \"Juniors\""
     ],
@@ -85683,6 +85696,43 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "rc-speedracer-bernau-2026-08-15-myrcm-event-98598",
+    "venueId": "rc-speedracer-bernau",
+    "venueName": "RC Speedracer e.V.",
+    "venueLocation": "Bernau",
+    "venueWebsite": null,
+    "hostId": "rc-speedracer-bernau",
+    "hostName": "RC Speedracer e.V.",
+    "name": "Tamico Offroad Cup + SK-Lauf ORE2WD ST",
+    "from": "2026-08-15",
+    "to": "2026-08-16",
+    "series": [
+      "Sportkreis (SK)",
+      "Tamico Offroad Cup"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98598&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45925&pLa=en&dId%5BE%5D=98598&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98598&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "upcoming",
+    "registrationOpens": "2026-07-20",
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": "Nennung ab 20.07.2026",
+    "classes": [
+      "Wheelie",
+      "BBX",
+      "Fighter-Klasse",
+      "Retro 2WD",
+      "Retro 4WD",
+      "Truck",
+      "ORE 2WD ST"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-27"
   },
   {
     "id": "elektro-modell-buggy-club-march-2026-08-16-myrcm-event-95143",
