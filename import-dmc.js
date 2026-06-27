@@ -78,7 +78,7 @@ function parseTable(html) {
     if (cells.length < 6) return;
 
     const clubName = $(cells[5]).text().trim();
-    if (!clubName || /^(Referent|Sportkreisvorsitzender)/i.test(clubName)) return;
+    if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
 
     const dateFrom = parseGermanDate($(cells[0]).text().trim());
     if (!dateFrom) return;

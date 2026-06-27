@@ -895,7 +895,8 @@
     "aliases": [
       "Bischofsheim",
       "ESV Blau-Gold Bischofsheim 1958 e.V.",
-      "myrcm-37613"
+      "myrcm-37613",
+      "ESV Bischofsheim e.V."
     ],
     "hostIds": [
       "esv-blau-gold-bischofsheim-1958-e-v"
@@ -2861,7 +2862,8 @@
       "Braunschweig",
       "MSC Polizei Braunschweig",
       "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-      "myrcm-95"
+      "myrcm-95",
+      "MSC Pol. Braunschweig"
     ],
     "hostIds": [
       "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
@@ -4244,7 +4246,9 @@
     "address": "",
     "postalCode": "",
     "website": "",
-    "aliases": [],
+    "aliases": [
+      "RC-Raceteam München e.V."
+    ],
     "hostIds": [],
     "myrcmOrgId": "37520",
     "source": "venue-seeds",
@@ -5117,7 +5121,8 @@
     "aliases": [
       "Ingolstadt",
       "SLR Ingoldstadt 06",
-      "myrcm-490"
+      "myrcm-490",
+      "SLR Ingolstadt e.V."
     ],
     "hostIds": [
       "slr-ingoldstadt-06"
