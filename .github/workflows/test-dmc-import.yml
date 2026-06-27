@@ -1,0 +1,33 @@
+name: Test DMC Import
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run DMC import
+        run: node import-dmc.js
+
+      - name: Show results
+        run: |
+          node -e "
+            const d = JSON.parse(require('fs').readFileSync('dmc-races.json', 'utf8'));
+            console.log('Gesamt DMC:', d.length);
+            console.log('Mit venueId:', d.filter(r => r.venueId).length);
+            d.slice(0, 15).forEach(r => {
+              const match = r.venueId || 'KEIN MATCH';
+              console.log(r.from, r.hostName, '->', match, '|', r.name);
+            });
+          "
