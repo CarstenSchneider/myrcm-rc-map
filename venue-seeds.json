@@ -3777,6 +3777,12 @@
     "myrcmOrgId": "58661"
   },
   {
+    "hostId": "dmc-rmc-wolfsburg-e-v",
+    "hostName": "RMC Wolfsburg e.V.",
+    "lat": 52.42966034303305,
+    "lng": 10.865419082462832
+  },
+  {
     "hostId": "rmc-wien",
     "hostName": "RMC-Wien",
     "lat": 47.95807149138246,
