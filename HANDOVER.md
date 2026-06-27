@@ -1,132 +1,180 @@
-# Übergabe-Notizen: Country-Filter-Pill (Stand: v165, Branch `dev`)
-
-Letzter Commit auf `dev`: **v165** (25. Juni 2026)
+# Übergabe-Notizen (Stand: app.js v201, 27. Juni 2026)
 
 ---
 
-## Was wurde implementiert
+## Versionsstand
 
-### Länderfilter-Pille (`country-pill`)
-- Weiße Pille, `position: fixed`, links unter dem Locate-Button auf der Karte
-- Klappt nach rechts auf (`max-width` Transition mit `overflow: hidden`)
-- Erstes Click → expandiert. Zweites Click → wählt Land, kollabiert
-- Mouse-Enter/Leave expandiert/kollabiert ebenfalls (Desktop-Hover)
-- Flaggen via [`flag-icons` CDN](https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css) — Klassen: `fi fi-XX fis country-flag-icon`
-- Hover-Scale **nur** für nicht-aktive Flaggen: `.country-pill-btn:not(.is-active):hover`
-- Nachtmodus: `var(--pill-bg)` = `#1a2a45` — identisch zu `mob-menu-btn` und `locate-btn`
+| Datei | Version | Cache-Buster in `index.html` |
+|---|---|---|
+| `app.js` | **v201** | `<script src="app.js?v=201">` |
+| `style.css` | **v110** | `<link href="style.css?v=110">` |
 
-**Positionen:**
-
-| Screen | `top` | `height` | Berechnung |
-|---|---|---|---|
-| Mobile ≤860px | 136px | 52px | 74 (locate-top) + 52 (locate-h) + 10 gap |
-| Desktop >860px | 140px | 40px | 14 (filters-panel) + 68 (topbar) + 8 (grid gap) + 40 (chips-row) + 10 gap |
-
-### Locate-Button
-- **Desktop**: JS verschiebt Button in `#locateDesktopSlot` (in `.topbar-chips-row`)
-- **Mobile**: JS hängt Button an `document.body`; CSS `position: fixed; top: 74px; left: 14px`
-- Beim Breakpoint-Crossing (Resize über/unter 860px) wird der Button umgehängt (Resize-Handler in `app.js` ~Zeile 4100)
-
-### Länderfilter-Logik (`app.js`)
-- `let selectedCountry = "all"` — deklariert bei Zeile ~54 (VOR `countryFlags`-Array — wichtig wegen TDZ!)
-- `countryFlags` Array mit `{ country, code, label }` — `code` = ISO 3166-1 alpha-2 für flag-icons
-- `matchesCountryFilter(race)` → prüft `hostsByOrgId.get(String(venue.myrcmOrgId))?.country`
-- `filteredRaces()` enthält `.filter(r => matchesCountryFilter(r))`
+Bei jeder Änderung an `app.js` den `?v=`-Wert in `index.html` hochzählen.
 
 ---
 
-## Noch offene Punkte
+## Branch-Regeln (WICHTIG)
 
-### 1. `hosts.json` braucht `country`-Feld (Import ausstehend)
-Das Feld `country` in `hosts.json` wurde noch **nicht** für alle Clubs gesetzt. Der AT/CH-Filter macht daher derzeit nichts. Wird beim nächsten `import-races.yml`-Lauf automatisch nachgezogen.
+- **Immer auf `dev` arbeiten** — nie direkt auf `main` committen
+- Ausnahme: `import-myrcm.js` muss auf `main` UND `dev` identisch sein (Import-Job checkt `main` aus)
+- `dev` → deployt automatisch auf `dev.rcracemap.com`
+- `main` → Production `rcracemap.com` (nur via explizitem Merge)
+- User testet **ausschließlich auf `dev.rcracemap.com`**, nie lokal
+- Nach jeder Änderung sofort auf `dev` pushen
 
-→ Nach dem nächsten Import: **`deploy-data-dev-hetzner.yml`** manuell triggern, damit dev die frischen JSON-Daten bekommt.
-
-### 2. Desktop-Pill-Position ggf. fein justieren
-Aktuelle Berechnung ergibt `top: 140px`. Falls der Locate-Button optisch anders sitzt als erwartet: Wert in `.country-pill` (in `style.css`) anpassen.
-
-### 3. AT/CH-Serien fehlen im Serienfilter
-Der `seriesFilter`-Dropdown zeigt aktuell nur DE-Serien. AT/CH-Serien aus `series.json` müssen noch ergänzt werden.
-
-### 4. AT/CH-Venues: Koordinaten-Review steht aus
-53 geocodierte Seed-Venues für AT/CH wurden noch nicht manuell geprüft.
-
-### 5. Flag-Icons vom externen CDN
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
-```
-Fällt das CDN aus, fehlen die Flaggen. Ggf. lokal ins Repo kopieren.
+### Rollback-Referenz
+Branch `stable/2026-06-27` zeigt auf Commit `7ede4df` (main) — stabiler Stand vor DMC-Arbeit.
 
 ---
 
-## Technische Referenz
+## Import-System
 
-### Geänderte Dateien
+### render.com (Haupt-Import)
+Der tägliche Import läuft auf **render.com**, NICHT in GitHub Actions.
 
-| Datei | Was |
+| Datei | Funktion |
 |---|---|
-| `app.js` | `selectedCountry` früher deklariert; `countryFlags`; `updateCountryPill()`; `matchesCountryFilter()`; `venueCountry()`; `_countryPill`-Init via `document.body.appendChild`; Locate-Slot-Verschiebung (Desktop/Mobile) |
-| `style.css` | `.country-pill`, `.country-pill-btn`, `.country-flag-icon`; Dark-Mode-Regeln für Pill + Locate global; Mobile Locate `position:fixed` |
-| `index.html` | `flag-icons` CDN `<link>`; `#locateDesktopSlot` div in `.topbar-chips-row`; `app.js?v=165` |
+| `render.yaml` | Render-Cron-Config (täglich 04:00 UTC) |
+| `scripts/render-import.sh` | Haupt-Import-Script |
+| `.github/workflows/trigger-render-import.yml` | Manueller Trigger via GitHub Actions |
 
-### Versionsstand
-- `app.js` → `v165` (Cache-Buster in `index.html`: `<script src="app.js?v=165">`)
-- `style.css` → `v108` (Cache-Buster: `<link href="style.css?v=108">`)
-- Bei jeder Änderung an `app.js` den `?v=`-Wert in `index.html` hochzählen
+**WICHTIG:** Import nur via `trigger-render-import.yml` auslösen, NIEMALS direkt `import-races.yml` (falls vorhanden).
 
-### Branch-Regeln (WICHTIG)
-- **Nur auf `dev` arbeiten** — nie direkt auf `main` committen
-- `dev` → deployt automatisch auf `dev.rcracemap.com` (GitHub Action)
-- `main` → Production `rcracemap.com` (nur via explizitem Merge von `dev`)
-- Nach jeder Änderung sofort pushen — User testet ausschließlich auf `dev.rcracemap.com`
+### Was `render-import.sh` macht
+1. MyRCM-Verfügbarkeit prüfen (3 Versuche × 5 Min)
+2. `node import-rck.js` (RCK_GEOCODE=0)
+3. `node import-myrcm.js`
+4. Alle JSON-Dateien committen → push zu `main` und `dev`
+5. Supabase Edge Function `send-race-notifications` aufrufen
 
-### Pill-HTML (generiert in `updateCountryPill()`)
-```html
-<div class="country-pill [is-expanded]">
-  <!-- aktive Flagge immer zuerst (links) -->
-  <button class="country-pill-btn is-active" data-country="all">
-    <span class="fi fi-eu fis country-flag-icon" aria-hidden="true"></span>
-  </button>
-  <button class="country-pill-btn" data-country="DE">
-    <span class="fi fi-de fis country-flag-icon" aria-hidden="true"></span>
-  </button>
-  <button class="country-pill-btn" data-country="AT">
-    <span class="fi fi-at fis country-flag-icon" aria-hidden="true"></span>
-  </button>
-  <button class="country-pill-btn" data-country="CH">
-    <span class="fi fi-ch fis country-flag-icon" aria-hidden="true"></span>
-  </button>
-</div>
+### Commit-Dateien (render-import.sh)
+```
+races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
+rck-races.json rck-unmatched-venues.json rck-venue-candidates.json
 ```
 
-### Dark-Mode-Variablen
-```css
-:root.theme-dark {
-  --pill-bg: #1a2a45;   /* Hamburger + Locate + Country-Pill */
-  --panel:   #111c33;   /* Panel-Hintergrund */
-  --panel-rgb: 17, 28, 51;
+---
+
+## DMC-Import (in Arbeit)
+
+### Status
+- `import-dmc.js` existiert, schreibt nach `dmc-races.json`
+- Aktuell holt es Daten von `api.rc-cloud.de/germany` (Stefan Teitges aggregierter Dienst) — **das ist nur ein Zwischenstand**
+- **Ziel:** Direktes Scraping von `dmc-online.com` (noch nicht implementiert)
+- Scraper soll ebenfalls in `render-import.sh` laufen (wie RCK/MyRCM)
+- Test-Workflow: `.github/workflows/test-dmc-import.yml` (manuell triggern)
+
+### Match-Rate (Test vom 27.06.2026)
+- 410 Rennen total im RC Cloud Feed, davon 128 DMC
+- **100/128 (78%)** haben eine venueId-Zuordnung via `hosts.json`
+- 28 ungematchte Clubs → erscheinen im Admin-Panel unter "Unbekannt" zum manuellen Eintragen
+
+### Datenformat `dmc-races.json`
+```json
+{
+  "id": "dmc-mc-fuerstenwalde-e-v-2026-06-27",
+  "venueId": "mc-fuerstenwalde-e-v",
+  "venueName": "MC Fürstenwalde e.V.",
+  "venueLocation": "Fürstenwalde",
+  "hostId": "mc-fuerstenwalde-e-v",
+  "hostName": "MC Fürstenwalde e.V.",
+  "name": "Rennen",
+  "from": "2026-06-27",
+  "to": "2026-06-27",
+  "series": [],
+  "classes": [],
+  "source": "dmc",
+  "url": null,
+  "registrationStatus": null,
+  "registrationOpens": null
 }
 ```
 
-### Wichtige Stolperfallen (aus CLAUDE.md)
-1. `let selectedCountry` muss VOR `countryFlags` deklariert sein (TDZ!)
-2. `venues` ist Array (`.find()`), `markers` ist Map (`.get()`)
-3. `panToVisible` setzt `lastVisibleCenter` — wichtig für Resize-Handler
-4. **Kein Debounce** auf `styledata` — direkter Aufruf (sonst grüner Flash)
-5. `map.invalidateSize({ pan: false })` — `pan: false` ist entscheidend
-6. Dev-Deploy kopiert keine JSON-Daten — `deploy-data-dev-hetzner.yml` manuell
+---
+
+## Bugfixes seit v165
+
+### 1. ETS-Races fälschlicherweise auf Arena33 gemappt (v~195)
+**Problem:** ETS (Euro Touring Series) reist durch Europa (Trencin/SK, Apeldoorn/NL etc.), aber MyRCM listet diese Rennen unter der ETS-Organisation (Heimat: Arena33/Andernach). `detail.hostLabel` gab "Arena33" zurück → `wasExplicit = true` → `isNonDach`-Check wurde umgangen.
+
+**Fix in `import-myrcm.js`:**
+```js
+// Alt:
+const venue = (isNonDach && !wasExplicit) ? null : venueFromSeed(detectedVenueSeed);
+// Neu:
+const venue = isNonDach ? null : venueFromSeed(detectedVenueSeed);
+```
+→ Non-DACH-Races bekommen immer `venueId: null`, egal ob explicit match.
+
+**Manuell gepatcht in `races.json` (main):** 9 Einträge mit falschem `venueId: "arena33-andernach"` auf `null` gesetzt:
+- Euro NITRO: Apeldoorn/NL, Leno/IT, Rucphen/NL, Aigen/AT (×2)
+- ETS: Apeldoorn/NL (×2), Trencin/SK (×2), EOS Trencin/SK
+
+### 2. Event-Listener-Akkumulation in `renderAdminUnbekanntTab` (v201)
+**Problem:** Listener wurden auf dem persistenten `container`-Element registriert → akkumulierten bei jedem Tab-Wechsel.
+
+**Fix:** Entries in ein inneres `<div>` einwickeln, Listener am `wrapper = container.firstElementChild` registrieren (wird bei jedem Render neu erstellt via `innerHTML`).
 
 ---
 
-## Test-Checkliste
+## Datendateien
 
-- [ ] Mobile: Pill erscheint unter Locate-Button, kein Überlapp mit Zoom-Controls
-- [ ] Desktop: Pill erscheint unter dem topbar-chips-row (Locate-Button im Slot sichtbar)
-- [ ] Click 1 auf Pill → expandiert (alle 4 Flaggen sichtbar)
-- [ ] Click 2 auf Flagge → Land gewählt, Pill kollabiert, Rennen gefiltert
-- [ ] Hover auf nicht-aktive Flagge → Scale 1.08
-- [ ] Hover auf aktive Flagge (links) → kein Effekt
-- [ ] Nachtmodus: Hamburger, Locate, Pill gleiche Farbe (`#1a2a45`)
-- [ ] Tagmodus: Pill weiß, Flaggen mit sichtbarem weißen Rand um die Flagge
-- [ ] Tab-Wechsel: kein grüner Flash (kein `setStyle()` bei Token-Refresh)
-- [ ] Nach Länder-Import: DE/AT/CH-Filter filtert korrekt
+| Datei | Inhalt |
+|---|---|
+| `races.json` | MyRCM-Rennen (~2238, DACH) |
+| `rck-races.json` | RCK-Rennen |
+| `dmc-races.json` | DMC-Rennen (aus RC Cloud / künftig direkt von dmc-online.com) |
+| `venues.json` | Strecken (259 Venues) |
+| `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH) |
+| `myrcm-hosts-dach.json` | Seed: 304 MyRCM-Hosts DACH (orgId, country als Vollname) |
+| `venue-seeds.json` | 228 Venue-Seeds mit Koordinaten (Quelle für Geocoding) |
+| `venue-unmatched.json` | Nicht zugeordnete MyRCM-Venues |
+| `rck-venue-candidates.json` | RCK Venue-Kandidaten |
+
+---
+
+## Wichtige Stolperfallen
+
+1. **`venues` ist Array, `markers` ist Map** — `.find()` vs `.get()`
+2. **`initialRenderDone`** wird nur gesetzt wenn `venues.length > 0`
+3. **`panToVisible`** setzt `lastVisibleCenter` — wichtig für Resize-Handler
+4. **Kein Debounce auf `styledata`** — direkter Aufruf (sonst grüner Flash beim Tab-Wechsel)
+5. **`sbPullPreferences`** ruft `setTheme` nur bei echten Änderungen auf
+6. **Dev-Deploy** kopiert keine JSON-Daten — `deploy-data-dev-hetzner.yml` manuell ausführen
+7. **`map.invalidateSize({ pan: false })`** in `setDrawerState` — `pan: false` ist entscheidend
+8. **`import-myrcm.js`** muss auf `main` und `dev` identisch sein
+9. **`myrcm-hosts-dach.json`** muss auf `main` vorhanden sein (Import-Job braucht sie)
+10. **`_venueForRaceCache`** nach Datenladen leeren (`_venueForRaceCache.clear()`)
+11. **`recentPastRacesForVenue`** muss `matchesCountryFilter` enthalten
+12. **`hosts.json` hat `country: "AT"`**, `myrcm-hosts-dach.json` hat `country: "Austria"` → `venueCountry()` normalisiert via `_countryNameToCode`
+
+---
+
+## Deployment
+
+| Workflow | Trigger | Ziel |
+|---|---|---|
+| `deploy-site-dev-hetzner.yml` | `dev` push | `rcracemap-dev/` (nur HTML/JS/CSS) |
+| `deploy-site-main-hetzner.yml` | `main` push | `.` (root inkl. JSON) |
+| `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten |
+| `trigger-render-import.yml` | manuell | Render.com Cron-Job starten |
+
+---
+
+## Supabase
+
+- URL: `https://ncsqbncxctofkmabmwku.supabase.co`
+- Anon Key (öffentlich, in app.js): `sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P`
+- Edge Function: `send-race-notifications` — liest von Production (`rcracemap.com`)
+- Tabellen: `venue_notifications` (Abos), `seen_race_notifications` (Deduplizierung)
+- Notification-Test: eigene Zeilen in `seen_race_notifications` löschen, dann Import triggern
+
+---
+
+## Nächste offene Punkte
+
+- [ ] **DMC-Scraper** direkt gegen `dmc-online.com` bauen (in `render-import.sh` integrieren)
+- [ ] **`app.js`** lädt `dmc-races.json` noch nicht — muss noch eingebaut werden
+- [ ] **Admin "Unbekannt"-Tab** DMC-Races ohne venueId anzeigen (für manuelles Geo-Nachtragen)
+- [ ] AT/CH-Serien im Serienfilter ergänzen
+- [ ] AT/CH-Venue-Koordinaten manuell prüfen (53 geocodierte Seeds)
