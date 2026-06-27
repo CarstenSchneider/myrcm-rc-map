@@ -3,7 +3,7 @@ import { load } from "cheerio";
 import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
-const DMC_CLUBS_BASE = "https://www.dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=";
+const DMC_CLUB_DIRECTORY_BASE = "https://dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=";
 const OUTPUT_FILE = "dmc-races.json";
 const DMC_VENUES_FILE = "dmc-venues.json";
 const TIMEOUT_MS = 30000;
@@ -78,14 +78,15 @@ async function fetchDmcCalendar(year) {
   }
 }
 
-// Fetch all 9 PLZ pages of the DMC club directory and build a map:
-// normalizedName → { name, plz, city, website }
+// Fetch PLZ pages 0–9 of the DMC club directory and build two lookup maps:
+// byName: normalizedName → entry, byOvNr: ovNr → entry
 async function fetchDmcClubDirectory() {
-  const clubMap = new Map();
-  console.log("Lade DMC Vereinsverzeichnis (plz=1..9) …");
+  const byName = new Map();
+  const byOvNr = new Map();
+  console.log("Lade DMC Vereinsverzeichnis (PLZ 0–9) …");
 
-  for (let i = 0; i <= 9; i++) {
-    const url = `${DMC_CLUBS_BASE}${i}`;
+  for (let plz = 0; plz <= 9; plz++) {
+    const url = `${DMC_CLUB_DIRECTORY_BASE}${plz}`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
     try {
@@ -94,51 +95,50 @@ async function fetchDmcClubDirectory() {
         headers: {
           "User-Agent": "Mozilla/5.0 (compatible; rcracemap-importer/1.0)",
           "Accept": "text/html,application/xhtml+xml",
-          "Referer": DMC_CLUBS_BASE + i,
         },
       });
       if (!res.ok) {
-        console.warn(`  Verzeichnis Seite ${i}: HTTP ${res.status}`);
+        console.warn(`  PLZ ${plz}: HTTP ${res.status}`);
         continue;
       }
       const html = await res.text();
       const entries = parseClubDirectory(html);
-      console.log(`  Seite plz=${i}: ${entries.length} Vereine`);
+      console.log(`  PLZ ${plz}: ${entries.length} Vereine`);
       for (const entry of entries) {
-        clubMap.set(normalizeKey(entry.name), entry);
+        byName.set(normalizeKey(entry.name), entry);
+        if (entry.ovNr) byOvNr.set(entry.ovNr, entry);
       }
     } catch (e) {
-      console.warn(`  Verzeichnis Seite ${i}: ${e.message}`);
+      console.warn(`  PLZ ${plz}: ${e.message}`);
     } finally {
       clearTimeout(timeout);
     }
   }
 
-  console.log(`Vereinsverzeichnis geladen: ${clubMap.size} Vereine`);
-  return clubMap;
+  console.log(`Vereinsverzeichnis geladen: ${byName.size} Vereine`);
+  return { byName, byOvNr };
 }
 
 function parseClubDirectory(html) {
   const $ = load(html);
   const entries = [];
 
-  $("table tr").each((_, tr) => {
+  // Columns: PLZ(0) | Ortsverein(1) | OV-Nr.(2) | Teamleiter(3) | Ort(4) | Internet(5) | E-Mail(6)
+  $("table.verein tr").each((_, tr) => {
+    if ($(tr).hasClass("titleRow")) return;
     const cells = $(tr).find("td");
-    if (cells.length < 5) return;
+    if (cells.length < 6) return;
 
-    const plz = $(cells[0]).text().trim();
     const name = $(cells[1]).text().trim();
-    // cells[2] = Mitglieder, cells[3] = Ansprechpartner, cells[4] = PLZ Stadt
-    const city = $(cells[4]).text().trim().replace(/^\d+\s*/, ""); // strip leading PLZ if combined
-    // cells[5] = website (may be plain text or <a>)
-    const websiteCell = $(cells[5]);
-    const websiteHref = websiteCell.find("a[href]").first().attr("href");
-    const websiteText = websiteCell.text().trim();
-    const website = websiteHref || (websiteText.includes(".") ? websiteText : null);
+    if (!name || name.length < 3) return;
 
-    if (!name || !/^\d{4,5}$/.test(plz)) return;
+    const ovNr = $(cells[2]).text().trim() || null;
+    // Ort cell contains "PLZ\n City" — drop the numeric PLZ prefix
+    const cityRaw = $(cells[4]).text().replace(/\s+/g, " ").trim();
+    const city = cityRaw.split(" ").filter(p => !/^\d+$/.test(p)).join(" ").trim() || null;
+    const website = $(cells[5]).find("a[href]").first().attr("href") || null;
 
-    entries.push({ name, plz, city: city || null, website: website || null });
+    entries.push({ name, ovNr, city, website: website || null });
   });
 
   return entries;
@@ -156,7 +156,10 @@ function parseTable(html, clubDirectory) {
     const clubName = $(cells[5]).text().trim();
     if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
 
-    const dirEntry = clubDirectory.get(normalizeKey(clubName));
+    const ovNr = $(cells[4]).text().trim() || null;
+    // OV-Nr. match is exact; fall back to normalized name match
+    const dirEntry = (ovNr ? clubDirectory.byOvNr.get(ovNr) : null)
+      || clubDirectory.byName.get(normalizeKey(clubName));
 
     // Club website: calendar inline link (cells[5]) is the most reliable source
     const calendarWebsiteHref = $(cells[5]).find("a[href]").first().attr("href") || null;
@@ -175,8 +178,8 @@ function parseTable(html, clubDirectory) {
     const dateTo = dateToRaw || dateFrom;
 
     const title = $(cells[2]).text().trim();
-    const ovNr = $(cells[4]).text().trim() || null;   // OV-Nummer (Ortsvereinsnummer)
-    const city = $(cells[6]).text().trim() || null;   // Stadt laut Kalender
+    // ovNr already extracted above for directory lookup
+    const city = dirEntry?.city || $(cells[6]).text().trim() || null;
 
     // Ausschreibung PDF
     const ausschreibungHref = $(cells[8]).find("a[href]").first().attr("href") || null;
