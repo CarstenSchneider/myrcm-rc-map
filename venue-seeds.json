@@ -3749,6 +3749,12 @@
     "myrcmOrgId": "53491"
   },
   {
+    "hostId": "dmc-offroad-club-ostsee-e-v",
+    "hostName": "Offroad Club Ostsee e.V.",
+    "lat": 54.22601827812129,
+    "lng": 10.77563474253423
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "lat": 50.79377848514052,
