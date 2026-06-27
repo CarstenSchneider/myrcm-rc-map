@@ -22,6 +22,15 @@ function slugify(value = "") {
   return normalizeKey(value).replace(/\s+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
 }
 
+function translatePraedikat(code) {
+  const c = String(code || "").trim().toUpperCase();
+  if (c.startsWith("FR")) return "Freundschaftsrennen";
+  if (c.startsWith("SM")) return "Sportkreismeisterschaft";
+  if (c.startsWith("DM")) return "Deutsche Meisterschaft";
+  if (c.startsWith("PRAES")) return "Präsidiumsveranstaltung";
+  return code || "DMC Rennen";
+}
+
 // "dd.MM.yyyy" → "YYYY-MM-DD"
 function parseGermanDate(str) {
   const m = String(str || "").trim().match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
@@ -142,7 +151,7 @@ async function main() {
       venueLocation: venue?.city ?? null,
       hostId: venue?.hostIds?.[0] ?? `dmc-${hostSlug}`,
       hostName: entry.clubName,
-      name: entry.title || "DMC Rennen",
+      name: translatePraedikat(entry.title),
       from: entry.dateFrom,
       to: entry.dateTo,
       series: [],
