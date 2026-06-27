@@ -86,7 +86,7 @@ fi
 
 # dev: alle Daten inkl. DMC committen
 git fetch origin dev
-git checkout -B dev origin/dev
+git checkout -f -B dev origin/dev
 git checkout main -- $MAIN_FILES
 
 DEV_EXTRA_FILES="rck-pdf-cache.json"
@@ -102,7 +102,7 @@ else
   echo "Daten auf dev gepusht."
 fi
 
-git checkout main
+git checkout -f main
 
 # Benachrichtigungen senden
 echo "--- Sende Benachrichtigungen ---"
