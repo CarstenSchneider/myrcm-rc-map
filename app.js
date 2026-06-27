@@ -4970,9 +4970,10 @@ function showMenuHome() {
         ${chevron}
       </button>`;
 
+  const iconList = `<svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>`;
+
   appMenuContent.innerHTML = `
     ${authSection}
-    <div class="app-menu-sep"></div>
     <div class="app-menu-row app-menu-theme-row">
       <span class="app-menu-row-icon">${iconSun}</span>
       <span class="app-menu-row-label">Darstellung</span>
@@ -4989,7 +4990,11 @@ function showMenuHome() {
       ${chevron}
     </button>
 ` : ""}
-    <div class="app-menu-sep"></div>
+    <button type="button" class="app-menu-row" id="clubListMenuBtn">
+      <span class="app-menu-row-icon">${iconList}</span>
+      <span class="app-menu-row-label">Vereinsliste</span>
+      ${chevron}
+    </button>
     <button type="button" class="app-menu-row" data-menu="about">
       <span class="app-menu-row-icon">${iconInfo}</span>
       <span class="app-menu-row-label">Über RC RaceMap</span>
@@ -5001,7 +5006,6 @@ function showMenuHome() {
       ${chevron}
     </button>
     ${isAdmin() ? `
-    <div class="app-menu-sep"></div>
     <button type="button" class="app-menu-row" data-menu="admin">
       <span class="app-menu-row-icon">${iconPin}</span>
       <span class="app-menu-row-label">Ausrichter verorten</span>
@@ -5034,6 +5038,10 @@ function showMenuHome() {
   document.getElementById("sbSignOutBtn")?.addEventListener("click", async () => {
     await sbSignOut();
     showMenuHome();
+  });
+  document.getElementById("clubListMenuBtn")?.addEventListener("click", () => {
+    closeAppMenu();
+    openClubList();
   });
 }
 
@@ -5673,3 +5681,120 @@ window.addEventListener("load", () => {
 });
 
 sbInit();
+
+// ── Club List View ──────────────────────────────────────────────────────────
+
+const clubListPage    = document.getElementById("clubListPage");
+const clubListContent = document.getElementById("clubListContent");
+const clubListBack    = document.getElementById("clubListBack");
+
+clubListBack?.addEventListener("click", closeClubList);
+
+function openClubList() {
+  if (!clubListPage) return;
+  clubListPage.hidden = false;
+  renderClubList();
+}
+
+function closeClubList() {
+  if (!clubListPage) return;
+  clubListPage.hidden = true;
+}
+
+function renderClubList() {
+  if (!clubListContent) return;
+
+  const races = filteredRaces();
+
+  // Group races by venue (or host if no venue)
+  const byKey = new Map();
+  for (const race of races) {
+    const venue = venueForRace(race);
+    const key   = venue ? String(venue.id) : ("host:" + (race.hostId || race.hostName || ""));
+    if (!byKey.has(key)) {
+      byKey.set(key, {
+        key,
+        venue,
+        hostId:   venue?.id ?? race.hostId ?? null,
+        hostName: venue?.name ?? race.hostName ?? race.venueName ?? "",
+        races: [],
+      });
+    }
+    byKey.get(key).races.push(race);
+  }
+
+  if (byKey.size === 0) {
+    clubListContent.innerHTML = `<div class="club-list-empty">Keine Rennen im gewählten Zeitraum.</div>`;
+    return;
+  }
+
+  const groups = [...byKey.values()].sort((a, b) =>
+    a.hostName.localeCompare(b.hostName, "de")
+  );
+
+  const iconStar = `<svg viewBox="0 0 24 24" stroke-width="1.8"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
+  const iconBell = `<svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+  const dotOpen     = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#22c55e;margin-right:4px;vertical-align:middle;"></span>`;
+  const dotUpcoming = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#4A9EE8;margin-right:4px;vertical-align:middle;"></span>`;
+
+  const rows = groups.map(g => {
+    const hid    = String(g.hostId ?? "");
+    const isFav  = isFavoriteHostId(hid);
+    const isNotif = isNotificationEnabled(hid);
+    const loggedIn = !!sbUser;
+
+    const starCls  = `club-list-star${isFav ? " active" : ""}${!loggedIn ? " hidden" : ""}`;
+    const bellCls  = `club-list-bell${isNotif ? " active" : ""}${(!loggedIn || !isFav) ? " hidden" : ""}`;
+
+    const raceItems = g.races
+      .slice()
+      .sort((a, b) => (a.from || "").localeCompare(b.from || ""))
+      .map(race => {
+        const date = formatDateRange(race.from, race.to !== race.from ? race.to : null);
+        const name = race.name || race.title || "";
+        const status = race.registrationStatus || "";
+        let statusHtml = "";
+        if (status === "open")     statusHtml = `<span class="club-list-race-status open">${dotOpen}Offen</span>`;
+        else if (status === "upcoming") {
+          const opens = race.registrationOpens ? ` ab ${formatDate(race.registrationOpens)}` : "";
+          statusHtml = `<span class="club-list-race-status upcoming">${dotUpcoming}Nennung${opens}</span>`;
+        } else if (status === "closed") {
+          statusHtml = `<span class="club-list-race-status closed">Gesch.</span>`;
+        }
+        return `<div class="club-list-race">
+          <span class="club-list-race-date">${date}</span>
+          <span class="club-list-race-name">${name}</span>
+          ${statusHtml}
+        </div>`;
+      }).join("");
+
+    return `<div class="club-list-row" data-host-id="${hid}">
+      <div class="club-list-venue">
+        <span class="club-list-venue-name">${g.hostName}</span>
+        <div class="club-list-icons">
+          <button type="button" class="${starCls}" data-host-id="${hid}" aria-label="Favorit">${iconStar}</button>
+          <button type="button" class="${bellCls}" data-host-id="${hid}" aria-label="Benachrichtigungen">${iconBell}</button>
+        </div>
+      </div>
+      <div class="club-list-races">${raceItems}</div>
+    </div>`;
+  }).join("");
+
+  clubListContent.innerHTML = `<div class="club-list-inner">${rows}</div>`;
+
+  clubListContent.querySelectorAll(".club-list-star").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const hid = btn.dataset.hostId;
+      toggleFavoriteHost(hid);
+      renderClubList();
+    });
+  });
+
+  clubListContent.querySelectorAll(".club-list-bell").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const hid = btn.dataset.hostId;
+      await toggleNotification(hid);
+      renderClubList();
+    });
+  });
+}
