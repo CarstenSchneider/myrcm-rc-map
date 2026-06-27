@@ -47,11 +47,38 @@ function translatePraedikat(code) {
   return code || "DMC Rennen";
 }
 
-// "dd.MM.yyyy" → "YYYY-MM-DD"
+// "dd.MM.yyyy" → "YYYY-MM-DD", returns null for invalid/zero dates
 function parseGermanDate(str) {
   const m = String(str || "").trim().match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
   if (!m) return null;
-  return `${m[3]}-${m[2]}-${m[1]}`;
+  const iso = `${m[3]}-${m[2]}-${m[1]}`;
+  return iso > "1900-01-01" ? iso : null;
+}
+
+function titlePriority(title) {
+  const c = String(title || "").trim().toUpperCase();
+  if (c.startsWith("DM")) return 4;
+  if (c.startsWith("PRAES")) return 3;
+  if (c.startsWith("SM")) return 2;
+  return 1;
+}
+
+// Merge calendar rows with same club + start date (e.g. FR + SK on the same day = one race)
+function deduplicateEntries(entries) {
+  const byKey = new Map();
+  for (const e of entries) {
+    const key = `${e.ovNr || normalizeKey(e.clubName)}|${e.dateFrom}`;
+    const existing = byKey.get(key);
+    if (!existing) {
+      byKey.set(key, { ...e });
+    } else {
+      if (titlePriority(e.title) > titlePriority(existing.title)) existing.title = e.title;
+      if (e.dateTo > existing.dateTo) existing.dateTo = e.dateTo;
+      if (!existing.ausschreibungHref && e.ausschreibungHref) existing.ausschreibungHref = e.ausschreibungHref;
+      if (!existing.nennformularHref && e.nennformularHref) existing.nennformularHref = e.nennformularHref;
+    }
+  }
+  return [...byKey.values()];
 }
 
 async function fetchDmcCalendar(year) {
@@ -169,7 +196,6 @@ function parseClubDirectory(html, label = "") {
 function parseTable(html, clubDirectory) {
   const $ = load(html);
   const rows = [];
-  let debugLogged = false;
 
   $("table tr").each((_, tr) => {
     const cells = $(tr).find("td");
@@ -318,10 +344,14 @@ async function main() {
     process.exit(1);
   }
 
-  const entries = parseTable(html, clubDirectory);
-  console.log(`Einträge geparst: ${entries.length}`);
-  if (entries.length < 50) {
-    throw new Error(`Sanity-Check fehlgeschlagen: nur ${entries.length} Kalendereinträge geparst — Seitenstruktur geändert?`);
+  const rawEntries = parseTable(html, clubDirectory);
+  console.log(`Einträge geparst: ${rawEntries.length}`);
+  if (rawEntries.length < 50) {
+    throw new Error(`Sanity-Check fehlgeschlagen: nur ${rawEntries.length} Kalendereinträge geparst — Seitenstruktur geändert?`);
+  }
+  const entries = deduplicateEntries(rawEntries);
+  if (rawEntries.length !== entries.length) {
+    console.log(`Deduplication: ${rawEntries.length} → ${entries.length} Einträge`);
   }
 
   const venues = await loadVenues();
@@ -382,7 +412,7 @@ async function main() {
     return {
       id: `dmc-${hostSlug}-${entry.dateFrom}`,
       venueId: venue?.id ?? (seed ? dmcHostId : null),
-      venueName: venue?.name ?? (seed ? (seed.hostName || entry.clubName) : null),
+      venueName: venue?.name ?? (seed ? (seed.hostName || entry.clubName) : entry.clubName),
       venueLocation: venue?.city ?? entry.city ?? null,
       hostId: venue?.hostIds?.[0] ?? dmcHostId,
       hostName: entry.clubName,
