@@ -3623,6 +3623,12 @@
     "lng": 9.832929581941356
   },
   {
+    "hostId": "dmc-boc-kiel-e-v",
+    "hostName": "BOC Kiel e.V.",
+    "lat": 54.405611868632796,
+    "lng": 10.277043224357401
+  },
+  {
     "hostId": "dmc-dmc-e-v-geschaftsstelle",
     "hostName": "DMC e.V. Geschäftsstelle",
     "locationUnknown": true
