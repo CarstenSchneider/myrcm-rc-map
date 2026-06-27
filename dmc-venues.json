@@ -68,7 +68,7 @@
   {
     "id": "dmc-ov-240",
     "name": "Modellsport Münsterland e.V.",
-    "city": "Ibbenbüren",
+    "city": "Ostenwalde",
     "lat": 52.34156335945138,
     "lng": 7.577074708374697,
     "hostIds": [
@@ -156,7 +156,7 @@
   {
     "id": "dmc-ov-296",
     "name": "Modell Car Club Rhein Ahr e.V.",
-    "city": "Wipperfürth",
+    "city": null,
     "lat": 50.63815574143907,
     "lng": 7.760546012964474,
     "hostIds": [
