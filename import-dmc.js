@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, appendFile } from "node:fs/promises";
 import { load } from "cheerio";
 import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
@@ -163,9 +163,10 @@ function parseClubDirectory(html, label = "") {
   });
   if (entries.length > 0) return entries;
 
-  // Nothing found — dump body HTML so we can write the right parser
-  const bodyHtml = ($("body").html() || $.html()).replace(/\s+/g, " ").trim().slice(0, 3000);
-  console.log(`  [debug ${label}] Keine Einträge geparst. Body: ${bodyHtml}`);
+  // Nothing found — write body HTML to debug file for inspection
+  const bodyHtml = ($("body").html() || $.html()).replace(/\s+/g, " ").trim();
+  const debugEntry = JSON.stringify({ label, bodyHtml }) + "\n";
+  appendFile("dmc-debug-html.json", debugEntry).catch(() => {});
   return entries;
 }
 

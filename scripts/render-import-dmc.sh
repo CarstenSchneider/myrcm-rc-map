@@ -17,7 +17,7 @@ echo "--- Import DMC ---"
 node import-dmc.js
 
 # Änderungen committen und pushen (nur dev — DMC noch nicht in Produktion)
-git add dmc-races.json dmc-venues.json
+git add dmc-races.json dmc-venues.json dmc-debug-html.json 2>/dev/null || true
 if git diff --staged --quiet; then
   echo "Keine Änderungen — kein Commit nötig."
 else
