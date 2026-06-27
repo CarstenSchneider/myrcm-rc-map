@@ -12,6 +12,9 @@ git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/car
 git fetch origin main dev
 git checkout -f -B main origin/main
 
+# Alte races.json für Diff sichern (vor dem Import)
+cp races.json /tmp/old-races.json 2>/dev/null || echo "[]" > /tmp/old-races.json
+
 # MyRCM-Verfügbarkeit prüfen (max. 3 Versuche × 5 Min = 15 Min)
 for i in 1 2 3; do
   echo "MyRCM-Check Versuch $i/3 — $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
@@ -104,6 +107,12 @@ fi
 
 git checkout -f main
 
+# Änderungen gegenüber alten races.json berechnen
+echo "--- Berechne Renndaten-Änderungen ---"
+RACE_CHANGES=$(node scripts/diff-races.js /tmp/old-races.json races.json 2>/dev/null || echo "[]")
+RACE_CHANGES_COUNT=$(echo "$RACE_CHANGES" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c).on('end',()=>console.log(JSON.parse(d).length))" 2>/dev/null || echo "0")
+echo "Erkannte Änderungen: $RACE_CHANGES_COUNT"
+
 # Benachrichtigungen senden
 echo "--- Sende Benachrichtigungen ---"
 HTTP_CODE=$(curl --silent \
@@ -112,7 +121,8 @@ HTTP_CODE=$(curl --silent \
   --request POST \
   --url "https://ncsqbncxctofkmabmwku.supabase.co/functions/v1/send-race-notifications" \
   --header "Authorization: Bearer sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P" \
-  --header "Content-Type: application/json")
+  --header "Content-Type: application/json" \
+  --data "{\"changes\":$RACE_CHANGES}")
 echo "HTTP $HTTP_CODE"
 cat /tmp/notif-body.txt
 if [ "$HTTP_CODE" -ge 400 ]; then
