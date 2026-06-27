@@ -3764,6 +3764,12 @@
     "myrcmOrgId": "33778"
   },
   {
+    "hostId": "dmc-rc-halle-e-v",
+    "hostName": "RC Halle e.V.",
+    "lat": 51.46739270411921,
+    "lng": 11.986882520742833
+  },
+  {
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
     "lat": 48.358257335666345,
