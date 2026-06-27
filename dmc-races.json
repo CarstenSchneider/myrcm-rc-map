@@ -4608,33 +4608,6 @@
     ]
   },
   {
-    "id": "dmc-rc-speedracer-2026-06-27",
-    "venueId": "rc-speedracer-bernau",
-    "venueName": "RC Speedracer e.V.",
-    "venueLocation": "Bernau",
-    "hostId": "rc-speedracer-bernau",
-    "hostName": "RC Speedracer",
-    "hostCity": "Hönow",
-    "hostWebsite": "http://www.rcspeedracer.de",
-    "dmcOvNr": "55",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-06-27",
-    "to": "2026-06-28",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1780853252_27.-28.06.2026_Tamico_Offroad_+_SK-Lauf.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-emc-marktoberdorf-e-v-2026-06-28",
     "venueId": "emc-marktoberdorf",
     "venueName": "EMC-Marktoberdorf",
