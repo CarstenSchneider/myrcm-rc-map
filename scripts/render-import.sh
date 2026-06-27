@@ -10,7 +10,7 @@ git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carsten
 git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git"
 
 git fetch origin main dev
-git checkout -B main origin/main
+git checkout -f -B main origin/main
 
 # MyRCM-Verfügbarkeit prüfen (max. 3 Versuche × 5 Min = 15 Min)
 for i in 1 2 3; do
