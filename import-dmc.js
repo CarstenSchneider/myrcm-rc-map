@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { load } from "cheerio";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
+const DMC_CLUBS_BASE = "https://www.dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=";
 const OUTPUT_FILE = "dmc-races.json";
 const DMC_VENUES_FILE = "dmc-venues.json";
 const TIMEOUT_MS = 30000;
@@ -9,6 +10,9 @@ const PDF_TIMEOUT_MS = 20000;
 
 // Match registration links inside PDF text
 const REGISTRATION_URL_RE = /https?:\/\/(?:www\.)?(?:rccar-online\.de\/[^\s<>"')\]]+|rccar-nennungen\.de\/[^\s<>"')\]]+)/gi;
+
+// Non-DACH TLDs — clubs with these website domains are filtered out
+const NON_DACH_TLDS = /\.(?:nl|be|fr|pl|cz|sk|hu|it|es|dk|se|no|fi|gb|uk)(?:\/|$)/i;
 
 function normalizeKey(value = "") {
   return String(value)
@@ -73,7 +77,73 @@ async function fetchDmcCalendar(year) {
   }
 }
 
-function parseTable(html) {
+// Fetch all 9 PLZ pages of the DMC club directory and build a map:
+// normalizedName → { name, plz, city, website }
+async function fetchDmcClubDirectory() {
+  const clubMap = new Map();
+  console.log("Lade DMC Vereinsverzeichnis (plz=1..9) …");
+
+  for (let i = 1; i <= 9; i++) {
+    const url = `${DMC_CLUBS_BASE}${i}`;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    try {
+      const res = await fetch(url, {
+        signal: controller.signal,
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; rcracemap-importer/1.0)",
+          "Accept": "text/html,application/xhtml+xml",
+          "Referer": DMC_CLUBS_BASE + i,
+        },
+      });
+      if (!res.ok) {
+        console.warn(`  Verzeichnis Seite ${i}: HTTP ${res.status}`);
+        continue;
+      }
+      const html = await res.text();
+      const entries = parseClubDirectory(html);
+      console.log(`  Seite plz=${i}: ${entries.length} Vereine`);
+      for (const entry of entries) {
+        clubMap.set(normalizeKey(entry.name), entry);
+      }
+    } catch (e) {
+      console.warn(`  Verzeichnis Seite ${i}: ${e.message}`);
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  console.log(`Vereinsverzeichnis geladen: ${clubMap.size} Vereine`);
+  return clubMap;
+}
+
+function parseClubDirectory(html) {
+  const $ = load(html);
+  const entries = [];
+
+  $("table tr").each((_, tr) => {
+    const cells = $(tr).find("td");
+    if (cells.length < 5) return;
+
+    const plz = $(cells[0]).text().trim();
+    const name = $(cells[1]).text().trim();
+    // cells[2] = Mitglieder, cells[3] = Ansprechpartner, cells[4] = PLZ Stadt
+    const city = $(cells[4]).text().trim().replace(/^\d+\s*/, ""); // strip leading PLZ if combined
+    // cells[5] = website (may be plain text or <a>)
+    const websiteCell = $(cells[5]);
+    const websiteHref = websiteCell.find("a[href]").first().attr("href");
+    const websiteText = websiteCell.text().trim();
+    const website = websiteHref || (websiteText.includes(".") ? websiteText : null);
+
+    if (!name || !/^\d{4,5}$/.test(plz)) return;
+
+    entries.push({ name, plz, city: city || null, website: website || null });
+  });
+
+  return entries;
+}
+
+function parseTable(html, clubDirectory) {
   const $ = load(html);
   const rows = [];
   let debugLogged = false;
@@ -84,8 +154,13 @@ function parseTable(html) {
 
     const clubName = $(cells[5]).text().trim();
     if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
-    // Filter non-DACH clubs (Netherlands, etc.)
-    if (/RIMAR\b/i.test(clubName)) return;
+
+    // Filter non-DACH clubs via club directory website TLD
+    const dirEntry = clubDirectory.get(normalizeKey(clubName));
+    if (dirEntry?.website && NON_DACH_TLDS.test(dirEntry.website)) {
+      console.log(`  Übersprungen (nicht DACH): ${clubName} → ${dirEntry.website}`);
+      return;
+    }
 
     const dateFrom = parseGermanDate($(cells[0]).text().trim());
     if (!dateFrom) return;
@@ -106,8 +181,9 @@ function parseTable(html) {
 
     const title = $(cells[2]).text().trim();
 
-    // Club website: link on club name cell
-    const clubWebsiteHref = $(cells[5]).find("a[href]").first().attr("href") || null;
+    // Club website: prefer directory entry, fall back to inline link in calendar table
+    const calendarWebsiteHref = $(cells[5]).find("a[href]").first().attr("href") || null;
+    const clubWebsite = dirEntry?.website || calendarWebsiteHref || null;
 
     // Ausschreibung PDF
     const ausschreibungHref = $(cells[8]).find("a[href]").first().attr("href") || null;
@@ -117,7 +193,7 @@ function parseTable(html) {
       ? $(cells[9]).find("a[href]").first().attr("href") || null
       : null;
 
-    rows.push({ dateFrom, dateTo, title, clubName, clubWebsiteHref, ausschreibungHref, nennformularHref });
+    rows.push({ dateFrom, dateTo, title, clubName, clubWebsite, ausschreibungHref, nennformularHref, dirCity: dirEntry?.city || null, dirPlz: dirEntry?.plz || null });
   });
 
   return rows;
@@ -208,8 +284,11 @@ function matchVenue(clubName, venues, hosts) {
 
 async function main() {
   const year = new Date().getFullYear();
-  console.log(`Lade DMC-Kalender ${year} …`);
 
+  // Load club directory first (needed for non-DACH filtering + websites)
+  const clubDirectory = await fetchDmcClubDirectory();
+
+  console.log(`Lade DMC-Kalender ${year} …`);
   let html;
   try {
     html = await fetchDmcCalendar(year);
@@ -218,7 +297,7 @@ async function main() {
     process.exit(1);
   }
 
-  const entries = parseTable(html);
+  const entries = parseTable(html, clubDirectory);
   console.log(`Einträge geparst: ${entries.length}`);
 
   const venues = await loadVenues();
@@ -259,7 +338,7 @@ async function main() {
       dmcVenues.push({
         id: dmcHostId,
         name: seed.hostName || entry.clubName,
-        city: null,
+        city: entry.dirCity || null,
         lat: seed.lat,
         lng: seed.lng,
         hostIds: [dmcHostId],
@@ -279,10 +358,10 @@ async function main() {
       id: `dmc-${hostSlug}-${entry.dateFrom}`,
       venueId: venue?.id ?? (seed ? dmcHostId : null),
       venueName: venue?.name ?? (seed ? (seed.hostName || entry.clubName) : null),
-      venueLocation: venue?.city ?? null,
+      venueLocation: venue?.city ?? entry.dirCity ?? null,
       hostId: venue?.hostIds?.[0] ?? dmcHostId,
       hostName: entry.clubName,
-      hostWebsite: entry.clubWebsiteHref || null,
+      hostWebsite: entry.clubWebsite || null,
       name: translatePraedikat(entry.title),
       from: entry.dateFrom,
       to: entry.dateTo,
