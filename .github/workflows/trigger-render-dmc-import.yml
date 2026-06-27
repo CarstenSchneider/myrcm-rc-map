@@ -16,7 +16,7 @@ jobs:
             --url "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/jobs" \
             --header "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
             --header "Content-Type: application/json" \
-            --data '{"startCommand":"bash scripts/render-import-dmc.sh"}')
+            --data '{"startCommand":"git stash --include-untracked 2>/dev/null || true; bash scripts/render-import-dmc.sh"}')
           cat /tmp/render-response.txt
           if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
             echo "Render trigger fehlgeschlagen (HTTP $HTTP_CODE)"
