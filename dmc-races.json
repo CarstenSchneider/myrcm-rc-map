@@ -3078,30 +3078,6 @@
     "documents": []
   },
   {
-    "id": "dmc-rimar-rhein-ijssel-modell-auto-race-2026-05-30",
-    "venueId": null,
-    "venueName": null,
-    "venueLocation": null,
-    "hostId": "dmc-rimar-rhein-ijssel-modell-auto-race",
-    "hostName": "RIMAR Rhein Ijssel Modell Auto Race",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-05-30",
-    "to": "2026-05-31",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1776694110_Musterausschreibung_VG5_Velp.pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
     "id": "dmc-la-speedway-racing-club-2026-05-30",
     "venueId": "la-speedway-racing-club-e-v",
     "venueName": "LA Speedway Racing Club e.V.",

@@ -84,6 +84,8 @@ function parseTable(html) {
 
     const clubName = $(cells[5]).text().trim();
     if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
+    // Filter non-DACH clubs (Netherlands, etc.)
+    if (/RIMAR\b/i.test(clubName)) return;
 
     const dateFrom = parseGermanDate($(cells[0]).text().trim());
     if (!dateFrom) return;
