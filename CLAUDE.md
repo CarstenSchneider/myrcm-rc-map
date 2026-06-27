@@ -134,15 +134,26 @@ window.addEventListener("load", () => {
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v181**, **style.css v110**
+Aktuelle Version: **app.js v201**, **style.css v110**
 
 ## Import-System
 
-### import-races.yml — Ablauf
-1. **Wait for MyRCM** — 10 Versuche × 20 Minuten (max. 3h 20min), Job-Timeout 360min
-2. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0), läuft immer zuverlässig
-3. **Import MyRCM** — `stdbuf -oL -eL node --no-warnings import-myrcm.js` (stdbuf erzwingt zeilenweises Streaming in CI)
-4. **Commit** — alle JSON-Dateien in einem Commit zu `main` und `dev` (nur wenn Änderungen); `git pull --rebase` vor jedem Push (verhindert Race Condition wenn main/dev zwischenzeitlich geändert wurde)
+### Ablauf (render.com)
+Der tägliche Import läuft auf **render.com** (Cron täglich 04:00 UTC), NICHT direkt in GitHub Actions.
+
+| Datei | Funktion |
+|---|---|
+| `render.yaml` | Render-Cron-Config |
+| `scripts/render-import.sh` | Haupt-Import-Script |
+| `.github/workflows/trigger-render-import.yml` | Manueller Trigger |
+
+**WICHTIG:** Import immer via `trigger-render-import.yml` auslösen. `import-races.yml` existiert ggf. noch, aber `render-import.sh` ist die aktuelle Lösung.
+
+### render-import.sh — Ablauf
+1. **MyRCM-Verfügbarkeit prüfen** — 3 Versuche × 5 Minuten
+2. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0)
+3. **Import MyRCM** — `node --no-warnings import-myrcm.js`
+4. **Commit** — alle JSON-Dateien zu `main` und `dev` (nur wenn Änderungen); `git pull --rebase --autostash` vor Push
 5. **Send notifications** — POST an Supabase Edge Function
 
 ### import-myrcm.js — Konfiguration
@@ -170,6 +181,7 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 |---|---|
 | `races.json` | MyRCM-Rennen (~2238 Rennen, DACH) |
 | `rck-races.json` | RCK-Rennen |
+| `dmc-races.json` | DMC-Rennen (via `import-dmc.js`; noch nicht in app.js geladen) |
 | `venues.json` | Strecken (259 Venues, DACH) |
 | `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH) |
 | `myrcm-hosts-dach.json` | Seed-Datei: 304 MyRCM-Hosts DACH (orgId, country als Vollname) |
@@ -194,7 +206,7 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 
 ### Email neu senden (Test)
 1. Supabase Dashboard → Table Editor → `seen_race_notifications` → eigene Zeilen löschen (Filter: `user_id = [eigene UUID]`)
-2. GitHub → Actions → Import races → Run workflow
+2. GitHub → Actions → **Trigger Render Import** → Run workflow
 
 ### Anon Key (öffentlich, bereits in app.js)
 ```
@@ -293,3 +305,5 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 11. **`recentPastRacesForVenue`** muss `matchesCountryFilter` enthalten — sonst erscheinen Venues anderer Länder im Karten-Layer wegen `latestPastRaceForVenue`
 12. **`import-myrcm.js` auf `main` und `dev` synchron halten** — Import-Job checkt `main` aus; Änderungen nur auf `dev` werden beim nächsten Tagesimport ignoriert
 13. **`myrcm-hosts-dach.json` muss auf `main` vorhanden sein** — Import-Job braucht die Datei; fehlt sie auf main, fällt Import auf DE-only zurück
+14. **Non-DACH-Races immer `venueId: null`** — `import-myrcm.js` setzt `venue = isNonDach ? null : venueFromSeed(...)`. Früher gab es `wasExplicit`-Bypass: ETS-Rennen in Trencin/NL wurden fälschlich Arena33 zugeordnet weil `detail.hostLabel` "Arena33" zurückgab. Fix: `wasExplicit` wird für die venue-Zuweisung nicht mehr berücksichtigt.
+15. **DMC-Import läuft noch nicht in `render-import.sh`** — `import-dmc.js` existiert und schreibt `dmc-races.json`, muss aber noch in den Render-Script und in `app.js` integriert werden. Direktes Scraping von `dmc-online.com` ist das Ziel (aktuell: temporär Stefan Teitges API `api.rc-cloud.de`).
