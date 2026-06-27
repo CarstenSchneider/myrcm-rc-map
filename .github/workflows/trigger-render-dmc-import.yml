@@ -1,0 +1,25 @@
+name: Trigger DMC Import (Render)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render DMC Import
+        run: |
+          HTTP_CODE=$(curl --silent \
+            --output /tmp/render-response.txt \
+            --write-out "%{http_code}" \
+            --request POST \
+            --url "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/jobs" \
+            --header "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+            --header "Content-Type: application/json" \
+            --data '{"startCommand":"bash scripts/render-import-dmc.sh"}')
+          cat /tmp/render-response.txt
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "Render trigger fehlgeschlagen (HTTP $HTTP_CODE)"
+            exit 1
+          fi
+          echo "DMC Import getriggert (HTTP $HTTP_CODE)"
