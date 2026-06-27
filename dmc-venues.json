@@ -1,199 +1,199 @@
 [
   {
-    "id": "dmc-modell-car-club-bad-kissingen-e-v",
+    "id": "dmc-ov-44",
     "name": "Modell-Car-Club Bad Kissingen e.V.",
-    "city": null,
+    "city": "Bad Kissingen",
     "lat": 50.20437672229121,
     "lng": 10.097876991086581,
     "hostIds": [
-      "dmc-modell-car-club-bad-kissingen-e-v"
+      "dmc-ov-44"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-mcc-rudolstadt-e-v",
+    "id": "dmc-ov-223",
     "name": "MCC Rudolstadt e.V.",
     "city": null,
     "lat": 50.72384715912249,
     "lng": 11.351920419287275,
     "hostIds": [
-      "dmc-mcc-rudolstadt-e-v"
+      "dmc-ov-223"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-spessart-racer",
+    "id": "dmc-ov-323",
     "name": "Spessart Racer",
-    "city": null,
+    "city": "Spessart-Race Park - Waldaschaff",
     "lat": 49.967133148160016,
     "lng": 9.303292985142585,
     "hostIds": [
-      "dmc-spessart-racer"
+      "dmc-ov-323"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-big-hamburg-e-v",
+    "id": "dmc-ov-118",
     "name": "BIG Hamburg e.V.",
-    "city": null,
+    "city": "Veranstaltung in der Halle DK Tonder",
     "lat": 53.64060473290764,
     "lng": 9.832929581941356,
     "hostIds": [
-      "dmc-big-hamburg-e-v"
+      "dmc-ov-118"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-rc-club-grossheubach-e-v",
+    "id": "dmc-ov-79",
     "name": "RC-Club Grossheubach e.V.",
-    "city": null,
+    "city": "Großheubach",
     "lat": 49.71631983331656,
     "lng": 9.22897600697451,
     "hostIds": [
-      "dmc-rc-club-grossheubach-e-v"
+      "dmc-ov-79"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-rmc-wolfsburg-e-v",
+    "id": "dmc-ov-157",
     "name": "RMC Wolfsburg e.V.",
-    "city": null,
+    "city": "RMC Wolfburg",
     "lat": 52.42966034303305,
     "lng": 10.865419082462832,
     "hostIds": [
-      "dmc-rmc-wolfsburg-e-v"
+      "dmc-ov-157"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-modellsport-munsterland-e-v",
+    "id": "dmc-ov-240",
     "name": "Modellsport Münsterland e.V.",
     "city": "Ibbenbüren",
     "lat": 52.34156335945138,
     "lng": 7.577074708374697,
     "hostIds": [
-      "dmc-modellsport-munsterland-e-v"
+      "dmc-ov-240"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-mc-schwedt-e-v",
+    "id": "dmc-ov-65",
     "name": "MC Schwedt e.V.",
     "city": null,
     "lat": 53.12277371820801,
     "lng": 14.28616563116813,
     "hostIds": [
-      "dmc-mc-schwedt-e-v"
+      "dmc-ov-65"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-rc-freunde-kinzigtal-e-v",
+    "id": "dmc-ov-39",
     "name": "RC-Freunde Kinzigtal e.V.",
-    "city": null,
+    "city": "Kinzigtal",
     "lat": 48.25856894788509,
     "lng": 8.20950494948204,
     "hostIds": [
-      "dmc-rc-freunde-kinzigtal-e-v"
+      "dmc-ov-39"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-bc-mitterkreith",
+    "id": "dmc-ov-238",
     "name": "BC Mitterkreith",
-    "city": null,
+    "city": "Mitterkreith",
     "lat": 49.21155192592243,
     "lng": 12.493146117142087,
     "hostIds": [
-      "dmc-bc-mitterkreith"
+      "dmc-ov-238"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-mbc-oberlausitz-e-v",
+    "id": "dmc-ov-139",
     "name": "MBC Oberlausitz e.V.",
     "city": null,
     "lat": 51.08318541210428,
     "lng": 14.57770822945999,
     "hostIds": [
-      "dmc-mbc-oberlausitz-e-v"
+      "dmc-ov-139"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-boc-kiel-e-v",
+    "id": "dmc-ov-254",
     "name": "BOC Kiel e.V.",
-    "city": null,
+    "city": "BOC Kiel",
     "lat": 54.405611868632796,
     "lng": 10.277043224357401,
     "hostIds": [
-      "dmc-boc-kiel-e-v"
+      "dmc-ov-254"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-msc-sand-e-v",
+    "id": "dmc-ov-349",
     "name": "MSC Sand e.V.",
     "city": null,
     "lat": 49.97561500237808,
     "lng": 10.581751303542033,
     "hostIds": [
-      "dmc-msc-sand-e-v"
+      "dmc-ov-349"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-rc-halle-e-v",
+    "id": "dmc-ov-384",
     "name": "RC Halle e.V.",
     "city": null,
     "lat": 51.46739270411921,
     "lng": 11.986882520742833,
     "hostIds": [
-      "dmc-rc-halle-e-v"
+      "dmc-ov-384"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-modell-car-club-rhein-ahr-e-v",
+    "id": "dmc-ov-296",
     "name": "Modell Car Club Rhein Ahr e.V.",
     "city": "Wipperfürth",
     "lat": 50.63815574143907,
     "lng": 7.760546012964474,
     "hostIds": [
-      "dmc-modell-car-club-rhein-ahr-e-v"
+      "dmc-ov-296"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-offroad-club-ostsee-e-v",
+    "id": "dmc-ov-341",
     "name": "Offroad Club Ostsee e.V.",
-    "city": null,
+    "city": "OCO Ostsee",
     "lat": 54.22601827812129,
     "lng": 10.77563474253423,
     "hostIds": [
-      "dmc-offroad-club-ostsee-e-v"
+      "dmc-ov-341"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-ort-fulda",
+    "id": "dmc-ov-3",
     "name": "ORT Fulda",
-    "city": null,
+    "city": "Robbedrom",
     "lat": 50.48845151298898,
     "lng": 9.410104072742504,
     "hostIds": [
-      "dmc-ort-fulda"
+      "dmc-ov-3"
     ],
     "source": "dmc-seed"
   },
   {
-    "id": "dmc-rc-offroad-ottendorf-okrilla-e-v",
+    "id": "dmc-ov-131",
     "name": "RC-Offroad Ottendorf-Okrilla e.V.",
     "city": null,
     "lat": 51.208755602022045,
     "lng": 13.83564932733246,
     "hostIds": [
-      "dmc-rc-offroad-ottendorf-okrilla-e-v"
+      "dmc-ov-131"
     ],
     "source": "dmc-seed"
   }
