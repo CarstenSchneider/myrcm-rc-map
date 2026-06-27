@@ -5049,11 +5049,9 @@ const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRAN
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
 async function adminLoadUnmatched() {
-  const t = Date.now();
-  const [unmatchedRes, seedsRes, dmcRacesRes] = await Promise.all([
-    fetch(`${RAW_BASE}/venue-unmatched.json?t=${t}`),
-    fetch(`${RAW_BASE}/venue-seeds.json?t=${t}`),
-    fetch(`dmc-races.json?t=${t}`).catch(() => null),
+  const [unmatchedRes, seedsRes] = await Promise.all([
+    fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
+    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
   ]);
   const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
   const seeds = await seedsRes.json();
@@ -5061,23 +5059,7 @@ async function adminLoadUnmatched() {
     .filter(s => s.locationUnknown)
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
-  const myrcmList = [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
-
-  // DMC venues without a venueId — from GitHub raw, deduplicated by hostId
-  let dmcUnmatched = [];
-  try {
-    const dmcRaces = dmcRacesRes?.ok ? await dmcRacesRes.json() : [];
-    const seededHostIds = new Set(seeds.filter(s => s.hostId?.startsWith("dmc-") && (s.lat != null || s.locationUnknown)).map(s => s.hostId));
-    const dmcSeen = new Set(myrcmList.map(u => u.hostId));
-    dmcUnmatched = dmcRaces
-      .filter(r => !r.venueId && !seededHostIds.has(r.hostId))
-      .reduce((acc, r) => {
-        if (!dmcSeen.has(r.hostId)) { dmcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, source: "dmc" }); }
-        return acc;
-      }, []);
-  } catch { /* dmc-races.json not available yet */ }
-
-  return [...myrcmList, ...dmcUnmatched];
+  return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
 }
 
 async function adminCommit(payload) {
@@ -5208,13 +5190,40 @@ function renderAdminUnbekanntTab(container) {
 
 function renderAdminPruefenTab(container) {
   container.innerHTML = `<p class="admin-loading">Lade…</p>`;
-  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`).then(r => r.json()).then(seeds => {
-    const pending = seeds.filter(s => s.source === "geocoded-nominatim-dach");
+  Promise.all([
+    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`).then(r => r.json()),
+    fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
+  ]).then(async ([seeds, dmcRes]) => {
+    const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
+    const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
+
+    // DACH-Seeds die noch verifiziert werden müssen
+    const dachPending = seeds.filter(s => s.source === "geocoded-nominatim-dach");
     const totalDach = seeds.filter(s => s.source === "geocoded-nominatim-dach" || s.source === "verified").length;
-    const alreadyDone = totalDach - pending.length;
+    const alreadyDone = totalDach - dachPending.length;
+
+    // DMC-Venues ohne Koordinaten, noch nicht in seeds eingetragen
+    const seededHostIds = new Set(
+      seeds.filter(s => s.hostId?.startsWith("dmc-") && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
+    );
+    const dmcSeen = new Set();
+    const dmcPending = dmcRaces
+      .filter(r => !r.venueId && !seededHostIds.has(r.hostId))
+      .reduce((acc, r) => {
+        if (!dmcSeen.has(r.hostId)) {
+          dmcSeen.add(r.hostId);
+          acc.push({ _dmc: true, id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
+        }
+        return acc;
+      }, []);
+
+    const pending = [
+      ...dachPending.map(s => ({ ...s, _dmc: false })),
+      ...dmcPending,
+    ];
 
     if (!pending.length) {
-      container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert.</p>`;
+      container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC-Venues.</p>`;
       return;
     }
 
@@ -5222,13 +5231,16 @@ function renderAdminPruefenTab(container) {
 
     function renderEntry() {
       const s = pending[idx];
+      const isDmc = s._dmc;
       const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
-      const doneCount = alreadyDone + idx;
-      const pct = Math.round(doneCount / totalDach * 100);
+      const doneCount = isDmc ? totalDach : alreadyDone + idx;
+      const totalCount = isDmc ? totalDach : totalDach;
+      const dmcIdxDisplay = isDmc ? `DMC ${idx - dachPending.length + 1} / ${dmcPending.length}` : `${doneCount} / ${totalCount} verifiziert`;
+      const pct = isDmc ? 100 : Math.round(doneCount / totalDach * 100);
       container.innerHTML = `
         <div class="admin-dach-progress">
-          <span>${doneCount} / ${totalDach} verifiziert</span>
-          <div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>
+          <span>${dmcIdxDisplay}${isDmc ? ` <span class="admin-source-badge">DMC</span>` : ""}</span>
+          ${!isDmc ? `<div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>` : ""}
         </div>
         <div class="admin-entry">
           <div class="admin-entry-header">
@@ -5243,10 +5255,10 @@ function renderAdminPruefenTab(container) {
             <input type="text" class="admin-input admin-input-coords js-dach-coords" placeholder="48.123, 14.456" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
           </div>
           <div class="admin-entry-actions" style="flex-wrap:wrap;gap:8px;">
-            <button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>
-            <button type="button" class="admin-btn admin-btn-save js-dach-save">Korrigieren & Weiter</button>
+            ${!isDmc ? `<button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>` : ""}
+            <button type="button" class="admin-btn admin-btn-save js-dach-save">${isDmc ? "Speichern" : "Korrigieren & Weiter"}</button>
             <button type="button" class="admin-btn admin-btn-unknown js-dach-unknown">Kein Platz bekannt</button>
-            <button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>
+            ${!isDmc ? `<button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>` : ""}
             ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
           </div>
           <p class="admin-entry-status js-dach-status"></p>
@@ -5254,16 +5266,25 @@ function renderAdminPruefenTab(container) {
 
       const status = container.querySelector(".js-dach-status");
 
-      async function saveSeed(lat, lng, locationUnknown = false) {
+      async function saveEntry(lat, lng, locationUnknown = false) {
         status.textContent = "Speichern…";
         try {
-          const payload = locationUnknown
-            ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
-            : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
+          let payload;
+          if (isDmc) {
+            payload = locationUnknown
+              ? { action: "mark-unknown", hostId: s.hostId, hostName: s.name, myrcmOrgId: null }
+              : { action: "add-venue", hostId: s.hostId, hostName: s.name, myrcmOrgId: null, lat, lng };
+          } else {
+            payload = locationUnknown
+              ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
+              : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
+          }
           await adminCommit(payload);
           pending.splice(idx, 1);
+          if (!isDmc) dachPending.splice(dachPending.indexOf(s), 1);
+          else dmcPending.splice(dmcPending.indexOf(s), 1);
           if (!pending.length) {
-            container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert.</p>`;
+            container.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
             if (idx >= pending.length) idx = pending.length - 1;
             renderEntry();
@@ -5276,27 +5297,28 @@ function renderAdminPruefenTab(container) {
         try {
           await adminCommit({ action: "delete-dach-seed", seedId: s.id, seedName: s.name });
           pending.splice(idx, 1);
+          dachPending.splice(dachPending.indexOf(s), 1);
           if (idx >= pending.length) idx = Math.max(0, pending.length - 1);
           if (!pending.length) {
-            container.innerHTML = `<p class="admin-empty">✓ Alle AT/CH Clubs bearbeitet.</p>`;
+            container.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
             renderEntry();
           }
         } catch (e) { status.textContent = `Fehler: ${e.message}`; }
       }
 
-      container.querySelector(".js-dach-ok").addEventListener("click", () => {
+      container.querySelector(".js-dach-ok")?.addEventListener("click", () => {
         if (!s.lat || !s.lng) { status.textContent = "Keine Koordinaten vorhanden"; return; }
-        saveSeed(s.lat, s.lng);
+        saveEntry(s.lat, s.lng);
       });
       container.querySelector(".js-dach-save").addEventListener("click", () => {
         const parts = container.querySelector(".js-dach-coords").value.split(",").map(x => parseFloat(x.trim()));
         const [lat, lng] = parts;
         if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
-        saveSeed(lat, lng);
+        saveEntry(lat, lng);
       });
-      container.querySelector(".js-dach-unknown").addEventListener("click", () => saveSeed(null, null, true));
-      container.querySelector(".js-dach-delete").addEventListener("click", deleteSeed);
+      container.querySelector(".js-dach-unknown").addEventListener("click", () => saveEntry(null, null, true));
+      container.querySelector(".js-dach-delete")?.addEventListener("click", deleteSeed);
       container.querySelector(".js-dach-prev")?.addEventListener("click", () => { idx--; renderEntry(); });
     }
 
