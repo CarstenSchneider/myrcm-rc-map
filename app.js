@@ -5788,13 +5788,11 @@ function renderClubList() {
           ? `<a class="rl-venue-link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.name ?? "")} ↗</a>`
           : escapeHtml(venue?.name ?? "");
         let iconsCell = "";
-        if (loggedIn && vid) {
-          const isFav   = isFavoriteHostId(vid);
-          const isNotif = isNotificationEnabled(vid);
-          iconsCell = `<td class="col-icons">
-            <button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button>
-            <button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>
-          </td>`;
+        if (loggedIn) {
+          const isFav   = vid ? isFavoriteHostId(vid) : false;
+          const isNotif = vid ? isNotificationEnabled(vid) : false;
+          const buttons = vid ? `<button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button><button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>` : "";
+          iconsCell = `<td class="col-icons">${buttons}</td>`;
         }
         return `<tr data-race-id="${escapeHtml(race.id)}">
           <td class="col-date">${dateStr}</td>
