@@ -3861,6 +3861,11 @@
     "lng": 9.303292985142585
   },
   {
+    "hostId": "dmc-ts-gross-auheim",
+    "hostName": "TS-Gross Auheim",
+    "locationUnknown": true
+  },
+  {
     "hostId": "tsv-gelenau-e-v",
     "hostName": "TSV Gelenau e.V.",
     "locationUnknown": true,
