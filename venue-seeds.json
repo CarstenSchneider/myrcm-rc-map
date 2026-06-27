@@ -3606,6 +3606,11 @@
     "myrcmOrgId": "53515"
   },
   {
+    "hostId": "dmc-dmc-e-v-geschaftsstelle",
+    "hostName": "DMC e.V. Geschäftsstelle",
+    "locationUnknown": true
+  },
+  {
     "hostId": "mac-mistelbach",
     "hostName": "MAC Mistelbach",
     "lat": 48.55312704380916,
