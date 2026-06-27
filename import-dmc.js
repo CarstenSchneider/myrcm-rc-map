@@ -76,6 +76,7 @@ async function fetchDmcCalendar(year) {
 function parseTable(html) {
   const $ = load(html);
   const rows = [];
+  let debugLogged = false;
 
   $("table tr").each((_, tr) => {
     const cells = $(tr).find("td");
@@ -87,13 +88,34 @@ function parseTable(html) {
     const dateFrom = parseGermanDate($(cells[0]).text().trim());
     if (!dateFrom) return;
 
+    // Log first data row to understand column structure
+    if (!debugLogged) {
+      debugLogged = true;
+      const allCells = cells.toArray().map((td, i) => ({
+        i,
+        text: $(td).text().trim().slice(0, 60),
+        links: $(td).find("a[href]").toArray().map(a => $(a).attr("href")).filter(Boolean),
+      }));
+      console.log("Spaltenstruktur (erste Zeile):", JSON.stringify(allCells, null, 2));
+    }
+
     const dateToRaw = parseGermanDate($(cells[1]).text().trim());
     const dateTo = dateToRaw || dateFrom;
 
     const title = $(cells[2]).text().trim();
+
+    // Club website: link on club name cell
+    const clubWebsiteHref = $(cells[5]).find("a[href]").first().attr("href") || null;
+
+    // Ausschreibung PDF
     const ausschreibungHref = $(cells[8]).find("a[href]").first().attr("href") || null;
 
-    rows.push({ dateFrom, dateTo, title, clubName, ausschreibungHref });
+    // Nennformular: check cells[9] if present
+    const nennformularHref = cells.length > 9
+      ? $(cells[9]).find("a[href]").first().attr("href") || null
+      : null;
+
+    rows.push({ dateFrom, dateTo, title, clubName, clubWebsiteHref, ausschreibungHref, nennformularHref });
   });
 
   return rows;
@@ -243,7 +265,10 @@ async function main() {
       });
     }
 
-    const registrationUrl = entry.ausschreibungHref ? (pdfCache.get(entry.ausschreibungHref) || null) : null;
+    // Registration URL: prefer direct Nennformular link from table, then PDF-extracted URL
+    const pdfRegistrationUrl = entry.ausschreibungHref ? (pdfCache.get(entry.ausschreibungHref) || null) : null;
+    const registrationUrl = entry.nennformularHref || pdfRegistrationUrl || null;
+
     const documents = entry.ausschreibungHref
       ? [{ url: entry.ausschreibungHref, type: "announcement", label: "Ausschreibung" }]
       : [];
@@ -255,6 +280,7 @@ async function main() {
       venueLocation: venue?.city ?? null,
       hostId: venue?.hostIds?.[0] ?? dmcHostId,
       hostName: entry.clubName,
+      hostWebsite: entry.clubWebsiteHref || null,
       name: translatePraedikat(entry.title),
       from: entry.dateFrom,
       to: entry.dateTo,
