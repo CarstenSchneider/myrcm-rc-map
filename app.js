@@ -5053,7 +5053,7 @@ async function adminLoadUnmatched() {
   const [unmatchedRes, seedsRes, dmcRacesRes] = await Promise.all([
     fetch(`${RAW_BASE}/venue-unmatched.json?t=${t}`),
     fetch(`${RAW_BASE}/venue-seeds.json?t=${t}`),
-    fetch(`${RAW_BASE}/dmc-races.json?t=${t}`).catch(() => null),
+    fetch(`dmc-races.json?t=${t}`).catch(() => null),
   ]);
   const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
   const seeds = await seedsRes.json();
