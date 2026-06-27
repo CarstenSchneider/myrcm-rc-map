@@ -5744,39 +5744,46 @@ function renderClubList() {
     `<button type="button" class="race-list-range-btn${_raceListRange === o.value ? " active" : ""}" data-range="${o.value}">${o.label}</button>`
   ).join("");
 
-  const listHtml = groups.map(({ label, races: gr }) => {
-    const items = gr.map(race => {
-      const venue = venueForRace(race);
-      const clubLine = [venue?.name, venue?.city].filter(Boolean).join(" · ");
-      const raceName = race.name || race.title || "";
-      const d = parseDate(race.from);
-      const dateStr = d.toLocaleDateString("de-DE", { day: "numeric", month: "short" });
-      const status = race.registrationStatus || "";
-      const dotCls = status === "open" ? "open" : status === "upcoming" ? "upcoming" : status === "closed" ? "closed" : "";
-      const dot = dotCls ? `<span class="race-list-status-dot ${dotCls}"></span>` : `<span></span>`;
-      return `<button type="button" class="race-list-item" data-race-id="${escapeHtml(race.id)}">
-        <span class="race-list-date">${dateStr}</span>
-        <span class="race-list-meta">
-          <span class="race-list-club">${escapeHtml(clubLine)}</span>
-          <span class="race-list-name">${escapeHtml(raceName)}</span>
-        </span>
-        ${dot}
-      </button>`;
-    }).join("");
-    return `<div class="race-list-month-label">${escapeHtml(label)}</div>${items}`;
-  }).join("");
+  const tableHtml = groups.length ? `<table class="race-table">
+    <thead><tr>
+      <th>Datum</th>
+      <th class="col-city-hdr">Stadt</th>
+      <th>Verein</th>
+      <th>Rennen</th>
+      <th></th>
+    </tr></thead>
+    <tbody>${groups.map(({ label, races: gr }) => {
+      const monthRow = `<tr class="race-month-row"><td colspan="5">${escapeHtml(label)}</td></tr>`;
+      const raceRows = gr.map(race => {
+        const venue = venueForRace(race);
+        const d = parseDate(race.from);
+        const dateStr = d.toLocaleDateString("de-DE", { day: "numeric", month: "short" });
+        const status = race.registrationStatus || "";
+        const dotCls = status === "open" ? "open" : status === "upcoming" ? "upcoming" : status === "closed" ? "closed" : "";
+        const dot = dotCls ? `<span class="race-list-status-dot ${dotCls}"></span>` : "";
+        return `<tr data-race-id="${escapeHtml(race.id)}">
+          <td class="col-date">${dateStr}</td>
+          <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
+          <td class="col-club">${escapeHtml(venue?.name ?? "")}</td>
+          <td>${escapeHtml(race.name || race.title || "")}</td>
+          <td class="col-status">${dot}</td>
+        </tr>`;
+      }).join("");
+      return monthRow + raceRows;
+    }).join("")}</tbody>
+  </table>` : `<div class="race-list-empty">Keine Rennen gefunden.</div>`;
 
   clubListContent.innerHTML = `
     <div class="race-list-filters">${filterHtml}</div>
-    <div class="race-list-inner">${groups.length ? listHtml : `<div class="race-list-empty">Keine Rennen gefunden.</div>`}</div>`;
+    <div class="race-list-inner">${tableHtml}</div>`;
 
   clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
     btn.addEventListener("click", () => { _raceListRange = Number(btn.dataset.range); renderClubList(); });
   });
 
-  clubListContent.querySelectorAll(".race-list-item").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const race = races.find(r => r.id === btn.dataset.raceId);
+  clubListContent.querySelectorAll(".race-table tbody tr:not(.race-month-row)").forEach(tr => {
+    tr.addEventListener("click", () => {
+      const race = races.find(r => r.id === tr.dataset.raceId);
       if (!race) return;
       closeClubList();
       focusRace(race);
