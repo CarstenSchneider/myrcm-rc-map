@@ -3766,6 +3766,11 @@
     "myrcmOrgId": "777"
   },
   {
+    "hostId": "dmc-schriftfuhrer",
+    "hostName": "Schriftführer",
+    "locationUnknown": true
+  },
+  {
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
     "lat": 48.720995,
