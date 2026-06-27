@@ -9,7 +9,6 @@ git config user.email "render-import[bot]@rcracemap.com"
 git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git" 2>/dev/null || \
 git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git"
 
-# Aktuellen Stand von main holen und lokalen main-Branch anlegen
 git fetch origin main dev
 git checkout -B main origin/main
 
@@ -31,35 +30,79 @@ for i in 1 2 3; do
   fi
 done
 
-# RCK importieren
+# Importers unabhängig voneinander ausführen — ein Fehler stoppt nicht die anderen
+IMPORT_RCK_OK=0
+IMPORT_MYRCM_OK=0
+IMPORT_DMC_OK=0
+
 echo "--- Import RCK ---"
-RCK_GEOCODE=0 node import-rck.js
+if RCK_GEOCODE=0 node import-rck.js; then
+  IMPORT_RCK_OK=1
+  echo "✓ RCK Import erfolgreich"
+else
+  echo "✗ RCK Import FEHLGESCHLAGEN — rck-races.json wird nicht aktualisiert"
+fi
 
-# MyRCM importieren
 echo "--- Import MyRCM ---"
-node --no-warnings import-myrcm.js
+if node --no-warnings import-myrcm.js; then
+  IMPORT_MYRCM_OK=1
+  echo "✓ MyRCM Import erfolgreich"
+else
+  echo "✗ MyRCM Import FEHLGESCHLAGEN — races.json wird nicht aktualisiert"
+fi
 
-# Änderungen committen und pushen
-ALL_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
+echo "--- Import DMC ---"
+if node import-dmc.js; then
+  IMPORT_DMC_OK=1
+  echo "✓ DMC Import erfolgreich"
+else
+  echo "✗ DMC Import FEHLGESCHLAGEN — dmc-races.json wird nicht aktualisiert"
+fi
 
-git add $ALL_FILES
+# Zusammenfassung
+echo ""
+echo "=== Import-Status ==="
+[ "$IMPORT_RCK_OK" = "1" ]   && echo "✓ RCK"   || echo "✗ RCK"
+[ "$IMPORT_MYRCM_OK" = "1" ] && echo "✓ MyRCM" || echo "✗ MyRCM"
+[ "$IMPORT_DMC_OK" = "1" ]   && echo "✓ DMC"   || echo "✗ DMC"
+
+# Mindestens MyRCM muss erfolgreich sein für einen Commit auf main
+if [ "$IMPORT_MYRCM_OK" = "0" ]; then
+  echo "MyRCM fehlgeschlagen — kein Commit auf main."
+  exit 1
+fi
+
+# main: MyRCM + RCK Daten committen
+MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json"
+git add $MAIN_FILES
 if git diff --staged --quiet; then
-  echo "Keine Änderungen — kein Commit nötig."
+  echo "Keine Änderungen (main) — kein Commit nötig."
 else
   git commit -m "Update race data"
   git pull --rebase --autostash origin main
   git push origin main
+  echo "Daten auf main gepusht."
+fi
 
-  git fetch origin dev
-  git checkout -B dev origin/dev
-  git checkout main -- $ALL_FILES
+# dev: alle Daten inkl. DMC committen
+git fetch origin dev
+git checkout -B dev origin/dev
+git checkout main -- $MAIN_FILES
+
+DEV_EXTRA_FILES=""
+[ "$IMPORT_DMC_OK" = "1" ] && DEV_EXTRA_FILES="dmc-races.json dmc-venues.json"
+
+git add $MAIN_FILES $DEV_EXTRA_FILES
+if git diff --staged --quiet; then
+  echo "Keine Änderungen (dev) — kein Commit nötig."
+else
   git commit -m "Update race data"
   git pull --rebase --autostash origin dev
   git push origin dev
-
-  git checkout main
-  echo "Daten auf main und dev gepusht."
+  echo "Daten auf dev gepusht."
 fi
+
+git checkout main
 
 # Benachrichtigungen senden
 echo "--- Sende Benachrichtigungen ---"

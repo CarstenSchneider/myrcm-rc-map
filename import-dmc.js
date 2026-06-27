@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { load } from "cheerio";
+import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const DMC_URL = "https://dmc-online.com/wordpress/termine/dmc-termine/";
 const DMC_CLUBS_BASE = "https://www.dmc-online.com/NeueSeite/pages/organisationOrtsvereineResultPLZ.php?plz=";
@@ -299,6 +300,9 @@ async function main() {
 
   const entries = parseTable(html, clubDirectory);
   console.log(`Einträge geparst: ${entries.length}`);
+  if (entries.length < 50) {
+    throw new Error(`Sanity-Check fehlgeschlagen: nur ${entries.length} Kalendereinträge geparst — Seitenstruktur geändert?`);
+  }
 
   const venues = await loadVenues();
   const hosts = await loadHosts();
@@ -376,8 +380,8 @@ async function main() {
   });
 
   console.log(`Venue-Matches: ${races.filter(r => r.venueId).length} / ${races.length} (davon ${dmcVenues.length} via Seed)`);
-  await writeFile(OUTPUT_FILE, JSON.stringify(races, null, 2) + "\n");
-  console.log(`Geschrieben: ${OUTPUT_FILE}`);
+  warnIfSparse(races, ["from", "hostName"], { label: OUTPUT_FILE });
+  await safeWriteJson(races, OUTPUT_FILE, { minCount: 50, minFraction: 0.7, label: OUTPUT_FILE });
   await writeFile(DMC_VENUES_FILE, JSON.stringify(dmcVenues, null, 2) + "\n");
   console.log(`Geschrieben: ${DMC_VENUES_FILE} (${dmcVenues.length} Venues)`);
 }

@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
+import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const importerVersion = "import-rck-v13-seed-first-venue-match";
 
@@ -1508,7 +1509,8 @@ async function main() {
       documents: race.documents || []
     }));
 
-  await writeFile(outputFile, JSON.stringify(cleanedRaces, null, 2) + "\n", "utf8");
+  warnIfSparse(cleanedRaces, ["from", "venueId"], { label: outputFile });
+  await safeWriteJson(cleanedRaces, outputFile, { minCount: 20, minFraction: 0.7, label: outputFile });
   await writeFile(unmatchedVenuesFile, JSON.stringify(unmatchedVenues, null, 2) + "\n", "utf8");
   await writeFile(venueCandidatesFile, JSON.stringify(venueCandidates, null, 2) + "\n", "utf8");
 

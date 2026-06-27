@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { access, readFile, writeFile } from "node:fs/promises";
+import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const hostListFile = "myrcm-hosts-dach.json";
 const hostsFile = "hosts.json";
@@ -2034,11 +2035,8 @@ async function runImportOnce() {
     "utf8"
   );
 
-  await writeFile(
-    "races.json",
-    JSON.stringify(unique, null, 2) + "\n",
-    "utf8"
-  );
+  warnIfSparse(unique, ["from", "venueId"], { label: "races.json" });
+  await safeWriteJson(unique, "races.json", { minCount: 500, minFraction: 0.8, label: "races.json" });
 
   const racesWithDocuments = unique.filter(race => race.documents?.length);
   const venuesWithDocuments = new Set(racesWithDocuments.map(race => race.venueId));
