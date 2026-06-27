@@ -3637,6 +3637,12 @@
     "myrcmOrgId": "22319"
   },
   {
+    "hostId": "dmc-mc-schwedt-e-v",
+    "hostName": "MC Schwedt e.V.",
+    "lat": 53.12277371820801,
+    "lng": 14.28616563116813
+  },
+  {
     "hostId": "dmc-mcc-rudolstadt-e-v",
     "hostName": "MCC Rudolstadt e.V.",
     "lat": 50.72384715912249,
