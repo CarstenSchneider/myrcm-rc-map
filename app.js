@@ -5832,10 +5832,8 @@ function renderClubList() {
     tr.addEventListener("click", () => {
       const race = races.find(r => r.id === tr.dataset.raceId);
       if (!race) return;
-      if (!matchesCountryFilter(race)) {
-        selectedCountry = "all";
-        syncFilterUi();
-      }
+      selectedCountry = "all";
+      syncFilterUi();
       closeClubList();
       updateMarkers(filteredRaces(), false);
       focusRace(race);
