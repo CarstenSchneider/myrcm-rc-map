@@ -3,7 +3,7 @@ services:
     name: myrcm-rc-map-import
     runtime: node
     plan: free
-    schedule: "0 4 * * *"
+    schedule: "0 4,16 * * *"
     buildCommand: npm install
     startCommand: bash scripts/render-import.sh
     envVars:
