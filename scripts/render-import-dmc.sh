@@ -10,7 +10,7 @@ git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carsten
 git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/carstenschneider/myrcm-rc-map.git"
 
 git fetch origin dev
-git checkout -B dev origin/dev
+git checkout -f -B dev origin/dev
 
 # DMC importieren
 echo "--- Import DMC ---"
