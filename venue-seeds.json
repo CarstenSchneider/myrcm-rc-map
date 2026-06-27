@@ -3686,6 +3686,12 @@
     "myrcmOrgId": "18473"
   },
   {
+    "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
+    "hostName": "Modell Car Club Rhein Ahr e.V.",
+    "lat": 50.63815574143907,
+    "lng": 7.760546012964474
+  },
+  {
     "hostId": "dmc-modell-car-club-bad-kissingen-e-v",
     "hostName": "Modell-Car-Club Bad Kissingen e.V.",
     "lat": 50.20437672229121,
