@@ -3631,6 +3631,12 @@
     "myrcmOrgId": "22319"
   },
   {
+    "hostId": "dmc-mcc-rudolstadt-e-v",
+    "hostName": "MCC Rudolstadt e.V.",
+    "lat": 50.72384715912249,
+    "lng": 11.351920419287275
+  },
+  {
     "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "lat": 51.07755743502219,
