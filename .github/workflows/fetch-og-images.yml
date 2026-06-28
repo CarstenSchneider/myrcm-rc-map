@@ -1,0 +1,36 @@
+name: Fetch og:images for Club Websites
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-og-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch og:images
+        run: node check-og-images.js
+
+      - name: Commit updated hosts.json
+        run: |
+          git config user.name "fetch-og-images[bot]"
+          git config user.email "fetch-og-images[bot]@rcracemap.com"
+          git add hosts.json
+          if git diff --staged --quiet; then
+            echo "Keine neuen ogImages — kein Commit nötig."
+          else
+            git commit -m "Update hosts.json with og:images"
+            git push origin dev
+            echo "hosts.json auf dev gepusht."
+          fi
