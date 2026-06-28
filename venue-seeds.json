@@ -2715,7 +2715,7 @@
       "myrcm-1044"
     ],
     "source": "verified-existing-geolocation-list",
-    "myrcmOrgId": "1044"
+    "myrcmOrgId": "53665"
   },
   {
     "id": "rc-racer-hochsauerland-e-v",
@@ -3866,14 +3866,6 @@
     "hostName": "RC Haltern e.V.",
     "lat": 51.72503319039647,
     "lng": 7.168746466631296
-  },
-  {
-    "hostId": "rc-modellbaufreunde-e-v",
-    "hostName": "RC Modellbaufreunde e.V.",
-    "city": "Attaching",
-    "lat": 48.358257335666345,
-    "lng": 11.752698391781367,
-    "myrcmOrgId": "53665"
   },
   {
     "hostId": "dmc-ov-36",
