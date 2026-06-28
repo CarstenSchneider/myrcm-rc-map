@@ -3790,28 +3790,40 @@ document.addEventListener("click", event => {
     }
   }
 
-  // Preserve scroll position — renderList resets it to 0
-  const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  const scrollEl = isMobile
-    ? document.getElementById("mobRaceList")
-    : document.querySelector(".race-panel");
-  const savedScroll = scrollEl ? scrollEl.scrollTop : 0;
-
-  if (activeVenueId) {
-    const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
-    if (venueList.length) {
-      renderList(venueList);
-      resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
+  // In "favorites" filter mode the list content changes → full re-render needed.
+  // Otherwise just update button states in-place to avoid scroll jumping.
+  if (selectedFavoriteFilter === "favorites") {
+    if (activeVenueId) {
+      const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
+      if (venueList.length) {
+        renderList(venueList);
+        resultLine.textContent = resultLineText(venueList.length, "an dieser Strecke");
+      } else {
+        const venue = venues.find(v => v.id === activeVenueId);
+        if (venue) renderVenueNoRaces(latestPastRaceForVenue(venue));
+      }
     } else {
-      const venue = venues.find(v => v.id === activeVenueId);
-      if (venue) renderVenueNoRaces(latestPastRaceForVenue(venue));
+      renderList(list);
+      resultLine.textContent = resultLineText(list.length);
     }
   } else {
-    renderList(list);
-    resultLine.textContent = resultLineText(list.length);
+    // Update only the toggled card's classes and buttons in-place
+    const hostId = favoriteButton.dataset.favoriteHostId;
+    const venueId = favoriteButton.dataset.favoriteVenueId;
+    const isFav = hostId ? isFavoriteHostId(hostId) : isFavoriteVenueId(venueId);
+    document.querySelectorAll(
+      hostId
+        ? `[data-favorite-host-id="${CSS.escape(hostId)}"]`
+        : `[data-favorite-venue-id="${CSS.escape(venueId)}"]`
+    ).forEach(btn => btn.classList.toggle("active", isFav));
+    document.querySelectorAll("[data-race-id]").forEach(card => {
+      const raceId = card.dataset.raceId;
+      const race = races.find(r => r.id === raceId);
+      if (!race) return;
+      const isFavCard = isFavoriteRaceHost(race);
+      card.classList.toggle("race-card-favorite-venue", isFavCard);
+    });
   }
-
-  if (scrollEl) scrollEl.scrollTop = savedScroll;
 });
 
 raceList.addEventListener("click", event => {
