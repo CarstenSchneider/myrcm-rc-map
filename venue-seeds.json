@@ -3695,6 +3695,12 @@
     "lng": 14.28616563116813
   },
   {
+    "hostId": "dmc-ov-56",
+    "hostName": "MCC Hof e.V.",
+    "lat": 50.324395365150075,
+    "lng": 11.836592721346877
+  },
+  {
     "hostId": "dmc-mcc-rudolstadt-e-v",
     "hostName": "MCC Rudolstadt e.V.",
     "lat": 50.72384715912249,
