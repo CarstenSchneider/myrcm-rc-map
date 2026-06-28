@@ -4047,15 +4047,51 @@ body.is-menu-open .app-menu-close {
 /* ── Race List View ─────────────────────────────────────────────────────── */
 .club-list-content { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 
-.race-list-filters { display: flex; align-items: center; gap: 8px; padding: 16px 20px 4px; max-width: 860px; margin: 0 auto; flex-wrap: wrap; }
+.race-list-filters {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 20px 8px; max-width: 860px; margin: 0 auto;
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
+}
+.race-list-flag-btn {
+  width: 34px; height: 34px; padding: 0; border: 2px solid transparent;
+  border-radius: 50%; background: transparent; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 120ms ease, border-color 0.13s;
+  -webkit-tap-highlight-color: transparent;
+}
+.race-list-flag-btn .country-flag-icon { width: 26px !important; height: 26px !important; }
+.race-list-flag-btn:hover { transform: scale(1.08); }
+.race-list-flag-btn.active { border-color: var(--accent); }
+
+.race-list-search-wrap {
+  margin-left: auto; position: relative; flex-shrink: 0;
+}
+.race-list-search-wrap::before,
+.race-list-search-wrap::after {
+  content: ""; position: absolute; pointer-events: none;
+}
+.race-list-search-wrap::before {
+  right: 11px; top: 50%;
+  width: 13px; height: 13px;
+  border: 2px solid var(--accent); border-radius: 999px;
+  transform: translateY(-60%);
+}
+.race-list-search-wrap::after {
+  right: 7px; top: calc(50% + 5px);
+  width: 9px; height: 2px;
+  border-radius: 999px; background: var(--accent);
+  transform: rotate(45deg);
+}
 .race-list-search {
-  margin-left: auto; padding: 5px 12px; border-radius: 20px;
+  padding: 5px 30px 5px 12px; border-radius: 20px;
   border: 1px solid rgba(var(--border-rgb), 0.5);
   background: var(--bg); color: var(--text); font-size: 13px;
-  width: 180px; outline: none;
+  width: 160px; outline: none;
   transition: border-color 0.13s, width 0.2s;
 }
-.race-list-search:focus { border-color: var(--accent); width: 240px; }
+.race-list-search:focus { border-color: var(--accent); width: 220px; }
 .race-list-search::placeholder { color: rgba(var(--text-rgb), 0.4); }
 .race-list-range-btn {
   padding: 5px 14px; border-radius: 20px;

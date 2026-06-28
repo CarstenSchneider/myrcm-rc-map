@@ -5743,16 +5743,17 @@ function renderClubList() {
     groupMap.get(key).races.push(race);
   }
 
-  const countryOpts = [
-    { label: "Alle", value: "all" },
-    { label: "DE", value: "DE" },
-    { label: "AT", value: "AT" },
-    { label: "CH", value: "CH" },
+  const flagOpts = [
+    { label: "Alle Länder", value: "all", code: "eu" },
+    { label: "Deutschland",  value: "DE",  code: "de" },
+    { label: "Österreich",   value: "AT",  code: "at" },
+    { label: "Schweiz",      value: "CH",  code: "ch" },
   ];
-  const filterHtml = countryOpts.map(o =>
-    `<button type="button" class="race-list-range-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}">${o.label}</button>`
+  const filterHtml = flagOpts.map(o =>
+    `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +
+    `<span class="fi fi-${o.code} fis country-flag-icon" aria-hidden="true"></span></button>`
   ).join("");
-  const searchHtml = `<input type="search" class="race-list-search" placeholder="Verein, Stadt …" value="${escapeHtml(_raceListSearch)}">`;
+  const searchHtml = `<div class="race-list-search-wrap"><input type="search" class="race-list-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
 
   const loggedIn = !!sbUser;
   const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
@@ -5809,7 +5810,7 @@ function renderClubList() {
     <div class="race-list-filters">${filterHtml}${searchHtml}</div>
     <div class="race-list-inner">${tableHtml}</div>`;
 
-  clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
+  clubListContent.querySelectorAll(".race-list-flag-btn").forEach(btn => {
     btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
   });
 
