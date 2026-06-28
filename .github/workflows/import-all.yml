@@ -1,0 +1,142 @@
+name: Import all races (04:00 + 16:00 UTC)
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Save old races.json for notifications diff
+        run: cp races.json /tmp/old-races.json 2>/dev/null || echo "[]" > /tmp/old-races.json
+
+      # --- IMPORTS (each independent, MyRCM must succeed) ---
+
+      - name: Import RCK
+        id: import_rck
+        continue-on-error: true
+        run: RCK_GEOCODE=0 node import-rck.js
+
+      - name: Import MyRCM
+        run: node --no-warnings import-myrcm.js
+
+      - name: Import DMC
+        id: import_dmc
+        continue-on-error: true
+        run: node import-dmc.js
+
+      - name: Import RCCO
+        id: import_rcco
+        continue-on-error: true
+        run: node import-rcco.js
+
+      # --- COMMIT TO MAIN ---
+
+      - name: Configure git
+        run: |
+          git config user.name "import-bot"
+          git config user.email "import-bot@rcracemap.com"
+
+      - name: Commit and push to main
+        run: |
+          git add \
+            races.json hosts.json venues.json venue-unmatched.json venue-seeds.json \
+            rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json \
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json \
+            rcco-races.json rcco-venues.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen für main"
+          else
+            git pull --rebase --autostash origin main
+            git commit -m "Update race data $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push origin main
+            echo "main: Daten gepusht (production auto-deploy läuft)"
+          fi
+
+      # --- UPDATE DEV BRANCH ---
+
+      - name: Update dev branch with main data
+        run: |
+          git fetch origin dev
+          git checkout -f -B dev origin/dev
+          git checkout main -- \
+            races.json hosts.json venues.json venue-unmatched.json venue-seeds.json \
+            rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json \
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json \
+            rcco-races.json rcco-venues.json 2>/dev/null || true
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen für dev"
+          else
+            git pull --rebase --autostash origin dev
+            git commit -m "Update race data DEV $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push origin dev
+            echo "dev: Daten gepusht"
+          fi
+
+      # --- DEPLOY DATA TO DEV SERVER ---
+
+      - name: Prepare data files for deploy
+        run: |
+          mkdir -p .deploy-data
+          for f in venues.json races.json hosts.json series.json \
+                   rck-races.json rck-venue-candidates.json rck-unmatched-venues.json \
+                   dmc-races.json dmc-venues.json \
+                   rcco-races.json rcco-venues.json \
+                   myrcm-hosts-dach.json; do
+            cp "$f" .deploy-data/ 2>/dev/null || true
+          done
+
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y lftp
+
+      - name: Deploy data to dev server
+        env:
+          HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+          HETZNER_USER: ${{ secrets.HETZNER_USER }}
+          HETZNER_PASSWORD: ${{ secrets.HETZNER_PASSWORD }}
+          HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+        run: |
+          lftp -u "$HETZNER_USER","$HETZNER_PASSWORD" -p "$HETZNER_PORT" "sftp://$HETZNER_HOST" <<'EOF'
+          set sftp:auto-confirm yes
+          mirror -R .deploy-data ./rcracemap-dev --verbose --transfer-all
+          bye
+          EOF
+
+      # --- SEND NOTIFICATIONS ---
+
+      - name: Send race notifications
+        run: |
+          RACE_CHANGES=$(node scripts/diff-races.js /tmp/old-races.json races.json 2>/dev/null || echo "[]")
+          HTTP_CODE=$(curl --silent \
+            --output /tmp/notif-body.txt \
+            --write-out "%{http_code}" \
+            --request POST \
+            --url "https://ncsqbncxctofkmabmwku.supabase.co/functions/v1/send-race-notifications" \
+            --header "Authorization: Bearer sb_publishable_Y9b0eW34GzqNfG3u8JZmiA_EI7fSc6P" \
+            --header "Content-Type: application/json" \
+            --data "{\"changes\":$RACE_CHANGES}")
+          echo "Notifications: HTTP $HTTP_CODE"
+          cat /tmp/notif-body.txt
+          [ "$HTTP_CODE" -lt 400 ] || echo "Notification fehlgeschlagen (non-fatal)"
