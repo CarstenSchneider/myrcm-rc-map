@@ -62,9 +62,6 @@ else
   echo "✗ DMC Import FEHLGESCHLAGEN — dmc-races.json wird nicht aktualisiert"
 fi
 
-echo "--- Fetch og:images ---"
-node check-og-images.js || echo "og:image fetch fehlgeschlagen (nicht kritisch)"
-
 # Zusammenfassung
 echo ""
 echo "=== Import-Status ==="
