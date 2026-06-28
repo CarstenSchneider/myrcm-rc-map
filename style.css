@@ -4090,17 +4090,9 @@ body.is-menu-open .app-menu-close {
 }
 .race-list-row:hover { background: rgba(var(--text-rgb), 0.04); }
 
-/* TEST C: linker Goldbalken + hauchdünner Tint */
-.race-list-row--fav-c { border-left: 3px solid var(--favorite); padding-left: 21px; background: rgba(200,176,144,0.07); }
-.race-list-row--fav-c:hover { background: rgba(200,176,144,0.13); }
-
-/* TEST D: eingerücktes Pill/Card */
-.race-list-row--fav-d { background: rgba(200,176,144,0.13); border-radius: 8px; margin: 2px 12px; padding: 9px 12px; }
-.race-list-row--fav-d:hover { background: rgba(200,176,144,0.2); }
-
-/* TEST E: goldene Outline, kein Hintergrund */
-.race-list-row--fav-e { box-shadow: inset 0 0 0 1.5px var(--favorite); border-radius: 6px; margin: 2px 12px; padding: 9px 12px; }
-.race-list-row--fav-e:hover { background: rgba(200,176,144,0.07); }
+/* Favoriten: linker Balken 10% → 100% bei Hover */
+.race-list-row--fav { border-left: 3px solid rgba(200,176,144,0.10); padding-left: 21px; }
+.race-list-row--fav:hover { border-left-color: var(--favorite); background: rgba(var(--text-rgb), 0.04); }
 
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 

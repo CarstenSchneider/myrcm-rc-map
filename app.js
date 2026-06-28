@@ -5794,8 +5794,7 @@ function renderClubList() {
     const raceRows = gr.map(race => {
       const venue = venueForRace(race);
       const isFav = venueIsFav(venue);
-      const favVariants = ["race-list-row--fav-c", "race-list-row--fav-d", "race-list-row--fav-e"];
-      const favClass = isFav ? " " + favVariants[_favRowIndex++ % 3] : "";
+      const favClass = isFav ? " race-list-row--fav" : "";
       return `<div class="race-list-row${favClass}" data-race-id="${escapeHtml(race.id)}">` +
         `<div class="fav-row-name">${escapeHtml(race.name || race.title || "")}</div>` +
         `<div class="fav-row-city">${escapeHtml(venue?.name || "")}</div>` +
