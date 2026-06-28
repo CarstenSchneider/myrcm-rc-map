@@ -3820,6 +3820,12 @@
     "myrcmOrgId": "37520"
   },
   {
+    "hostId": "dmc-ov-149",
+    "hostName": "RC RaceCrew",
+    "lat": 50.6014459269992,
+    "lng": 6.631677390651763
+  },
+  {
     "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "lat": 49.71631983331656,
