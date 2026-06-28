@@ -329,10 +329,9 @@ const _favIconSvg  = (cls = "favorite-toggle-icon") =>
 
 // --- Onboarding Tips ---
 // render types:
-//   "list-top"    — prepended to race list (position 0), arrow pointing toward star below
-//   "list-second" — inserted after first race card, arrow pointing up to that card
-//   "fixed-locate"— fixed overlay positioned near the locate button
-//   "fixed-filter"— fixed overlay near filter bar (desktop top-center / mobile bottom-center)
+//   "list-top"       — prepended to race list, arrow bottom-right → star button
+//   "list-second"    — after first race card, arrow top-center → that card
+//   "fixed-map"      — fixed overlay centered on the visible map area, no arrow
 const ONBOARDING_TIPS = [
   {
     render: "list-top",
@@ -346,12 +345,8 @@ const ONBOARDING_TIPS = [
     html: `<strong>Tippe auf eine Rennkarte</strong> um die Strecke auf der Karte zu öffnen und alle Details zu sehen.`,
   },
   {
-    render: "fixed-locate",
-    html: `<strong>Eigener Standort</strong> — zeigt Rennen in deiner Nähe.`,
-  },
-  {
-    render: "fixed-filter",
-    html: `<strong>Filter</strong> — wähle Land (DE / AT / CH), Zeitraum oder Rennen mit offener Nennung. Die Ergebnisse ändern sich stark je nach Einstellung.`,
+    render: "fixed-map",
+    html: `Tippe auf einen <strong>Kartenpin</strong> um Rennen an dieser Strecke zu sehen. Nutze <strong>Filter</strong> und <strong>Standort</strong> um mehr zu entdecken.`,
   },
 ];
 
@@ -385,53 +380,28 @@ function _renderTipOverlay() {
   if (!tip || !tip.render.startsWith("fixed-")) return;
   _clearTipOverlay();
 
-  const isMobile = window.matchMedia("(max-width: 860px)").matches;
   const el = _buildTipCardEl(tip);
   el.classList.add("tip-overlay");
   el.style.position = "fixed";
   el.style.zIndex = "9000";
-  el.style.maxWidth = isMobile ? "calc(100vw - 90px)" : "270px";
+  el.style.maxWidth = "280px";
   document.body.appendChild(el);
   _tipOverlayEl = el;
 
   requestAnimationFrame(() => {
-    if (tip.render === "fixed-locate") {
-      const btn = document.querySelector(".locate-btn");
-      if (btn) {
-        const r = btn.getBoundingClientRect();
-        if (isMobile) {
-          el.style.top = `${Math.max(8, r.top)}px`;
-          el.style.left = `${r.right + 14}px`;
-          el.dataset.arrow = "left";
-        } else {
-          el.style.top = `${r.bottom + 12}px`;
-          el.style.left = `${r.left}px`;
-          el.dataset.arrow = "top-left";
-        }
-      } else {
-        el.style.top = "80px";
-        el.style.left = "14px";
-        el.dataset.arrow = "top-left";
-      }
-    } else if (tip.render === "fixed-filter") {
-      if (isMobile) {
-        el.style.bottom = "100px";
-        el.style.left = "50%";
-        el.style.transform = "translateX(-50%)";
-        el.dataset.arrow = "bottom-center";
-      } else {
-        const panel = document.querySelector(".topbar-panel");
-        if (panel) {
-          const r = panel.getBoundingClientRect();
-          el.style.top = `${r.bottom + 12}px`;
-          el.style.left = `${r.left + r.width / 2}px`;
-          el.style.transform = "translateX(-50%)";
-        } else {
-          el.style.top = "80px";
-          el.style.right = "20px";
-        }
-        el.dataset.arrow = "top-center";
-      }
+    // Center on the visible map area
+    const mapEl = document.getElementById("map");
+    if (mapEl) {
+      const r = mapEl.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      el.style.left = `${cx}px`;
+      el.style.top = `${cy}px`;
+      el.style.transform = "translate(-50%, -50%)";
+    } else {
+      el.style.top = "50%";
+      el.style.left = "50%";
+      el.style.transform = "translate(-50%, -50%)";
     }
   });
 }

@@ -4115,65 +4115,38 @@ body.is-menu-open .app-menu-close {
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
   align-items: start;
-  gap: 6px 10px;
+  gap: 5px 10px;
   padding: 13px 14px 11px 14px;
-  border: 1.5px solid var(--status-upcoming);
-  border-radius: 18px;
-  background: color-mix(in srgb, var(--status-upcoming) 8%, var(--card));
-  box-shadow: 0 4px 16px rgba(var(--shadow-rgb), 0.12);
-  overflow: visible; /* allow arrow pseudo-elements to extend outside */
+  border: none;
+  border-radius: 16px;
+  background: var(--status-upcoming);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  overflow: visible;
 }
 
-/* Arrow pseudo-element — blunt triangle, same fill as border */
+/* Arrow — same blue as card, no border → seamlessly integrated */
 .tip-card::after {
   content: '';
   position: absolute;
   display: none;
   background: var(--status-upcoming);
 }
-
-/* Arrow directions */
 .tip-card[data-arrow="bottom-right"]::after {
   display: block;
-  bottom: -11px;
-  right: 32px;
+  bottom: -10px;
+  right: 28px;
   width: 22px;
-  height: 11px;
+  height: 10px;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 .tip-card[data-arrow="top-center"]::after {
   display: block;
-  top: -11px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 22px;
-  height: 11px;
+  height: 10px;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-.tip-card[data-arrow="top-left"]::after {
-  display: block;
-  top: -11px;
-  left: 22px;
-  width: 22px;
-  height: 11px;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-.tip-card[data-arrow="left"]::after {
-  display: block;
-  left: -11px;
-  top: 22px;
-  width: 11px;
-  height: 22px;
-  clip-path: polygon(100% 0, 100% 100%, 0 50%);
-}
-.tip-card[data-arrow="bottom-center"]::after {
-  display: block;
-  bottom: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 22px;
-  height: 11px;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 .tip-text {
@@ -4181,17 +4154,16 @@ body.is-menu-open .app-menu-close {
   grid-row: 1;
   font-size: 14px;
   line-height: 1.45;
-  color: var(--text);
+  color: #fff;
 }
-.tip-text strong { font-weight: 700; }
+.tip-text strong { font-weight: 700; color: #fff; }
 
-/* Inline star icon in tip 1 */
 .tip-inline-icon {
   display: inline-block;
   width: 18px;
   height: 18px;
   vertical-align: -3px;
-  color: var(--status-upcoming);
+  color: rgba(255,255,255,0.9);
 }
 
 .tip-dismiss {
@@ -4204,31 +4176,24 @@ body.is-menu-open .app-menu-close {
   height: 26px;
   border: none;
   border-radius: 50%;
-  background: rgba(var(--text-rgb), 0.08);
-  color: var(--muted);
+  background: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
   font-size: 17px;
   line-height: 1;
   cursor: pointer;
   flex-shrink: 0;
   transition: background 120ms;
 }
-.tip-dismiss:hover { background: rgba(var(--text-rgb), 0.15); color: var(--text); }
+.tip-dismiss:hover { background: rgba(255,255,255,0.35); color: #fff; }
 
 .tip-counter {
   grid-column: 1 / -1;
   grid-row: 2;
   font-size: 11px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.65);
   letter-spacing: 0.02em;
 }
 
-/* Fixed overlay tips */
 .tip-overlay {
-  box-shadow: 0 8px 28px rgba(var(--shadow-rgb), 0.18);
-}
-
-@media (prefers-color-scheme: dark) {
-  .tip-card {
-    background: color-mix(in srgb, var(--status-upcoming) 12%, var(--card));
-  }
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
 }
