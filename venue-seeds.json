@@ -3789,6 +3789,12 @@
     "myrcmOrgId": "42113"
   },
   {
+    "hostId": "dmc-ov-234",
+    "hostName": "MSV Linsengericht",
+    "lat": 50.177551274663394,
+    "lng": 9.201961271228923
+  },
+  {
     "hostId": "msv-weiz",
     "hostName": "MSV Weiz",
     "lat": 47.19196124203115,
