@@ -5460,6 +5460,7 @@ function openFavoritesPage() {
         page.querySelectorAll(".fav-toolbar .race-list-flag-btn").forEach(b => {
           b.classList.toggle("active", b.dataset.country === _favCountry);
         });
+        page.querySelectorAll(".fav-col-list").forEach(el => { el.scrollTop = 0; });
         renderFavoritesPage(currentQuery());
       });
     });
