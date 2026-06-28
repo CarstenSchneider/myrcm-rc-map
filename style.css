@@ -4090,6 +4090,16 @@ body.is-menu-open .app-menu-close {
 }
 .race-list-row:hover { background: rgba(var(--text-rgb), 0.04); }
 
+/* TEST: Favoriten-Highlighting — Variante A: goldene Schrift */
+.race-list-row--fav-a .fav-row-name,
+.race-list-row--fav-a .fav-row-city { color: var(--favorite); }
+
+/* TEST: Favoriten-Highlighting — Variante B: goldenes Feld, inverse Schrift */
+.race-list-row--fav-b { background: var(--favorite); }
+.race-list-row--fav-b .fav-row-name,
+.race-list-row--fav-b .fav-row-city { color: #1f1d1a; }
+.race-list-row--fav-b:hover { background: #b8a07e; }
+
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
 @media (max-width: 600px) {

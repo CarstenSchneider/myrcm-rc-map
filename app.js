@@ -5779,11 +5779,23 @@ function renderClubList() {
   ).join("");
   const searchHtml = `<div class="fav-search-wrap"><input type="search" class="fav-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
 
+  const favIds = new Set(getFavoriteHostIds());
+  const venueIsFav = v => {
+    if (!v || !sbUser) return false;
+    if (favIds.has(String(v.id))) return true;
+    if (v.hostId && favIds.has(String(v.hostId))) return true;
+    if (Array.isArray(v.hostIds)) return v.hostIds.some(id => favIds.has(String(id)));
+    return false;
+  };
+  let _favRowIndex = 0;
+
   const listHtml = groups.length ? groups.map(({ label, races: gr }) => {
     const dateRow = `<div class="race-date-row">${escapeHtml(label)}</div>`;
     const raceRows = gr.map(race => {
       const venue = venueForRace(race);
-      return `<div class="race-list-row" data-race-id="${escapeHtml(race.id)}">` +
+      const isFav = venueIsFav(venue);
+      const favClass = isFav ? (_favRowIndex++ % 2 === 0 ? " race-list-row--fav-a" : " race-list-row--fav-b") : "";
+      return `<div class="race-list-row${favClass}" data-race-id="${escapeHtml(race.id)}">` +
         `<div class="fav-row-name">${escapeHtml(race.name || race.title || "")}</div>` +
         `<div class="fav-row-city">${escapeHtml(venue?.name || "")}</div>` +
         `</div>`;
