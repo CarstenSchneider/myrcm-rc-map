@@ -3807,21 +3807,26 @@ document.addEventListener("click", event => {
       resultLine.textContent = resultLineText(list.length);
     }
   } else {
-    // Update only the toggled card's classes and buttons in-place
+    // Update card classes and buttons in-place to avoid scroll reset.
+    // For host favorites: rebuild .race-host to add/remove the bell button and update star+classes.
+    // For venue favorites: only toggle the star button active state and card class.
     const hostId = favoriteButton.dataset.favoriteHostId;
     const venueId = favoriteButton.dataset.favoriteVenueId;
     const isFav = hostId ? isFavoriteHostId(hostId) : isFavoriteVenueId(venueId);
-    document.querySelectorAll(
-      hostId
-        ? `[data-favorite-host-id="${CSS.escape(hostId)}"]`
-        : `[data-favorite-venue-id="${CSS.escape(venueId)}"]`
-    ).forEach(btn => btn.classList.toggle("active", isFav));
+
     document.querySelectorAll("[data-race-id]").forEach(card => {
       const raceId = card.dataset.raceId;
       const race = races.find(r => r.id === raceId);
       if (!race) return;
-      const isFavCard = isFavoriteRaceHost(race);
-      card.classList.toggle("race-card-favorite-venue", isFavCard);
+      card.classList.toggle("race-card-favorite-venue", isFavoriteRaceHost(race));
+      if (hostId && raceHostId(race) === hostId) {
+        // Rebuild race-host: corrects bell visibility, star active state, and is-favorite classes
+        const raceHostEl = card.querySelector(".race-host");
+        if (raceHostEl) raceHostEl.innerHTML = raceHostNameHtml(race);
+      } else if (venueId) {
+        const btn = card.querySelector(`[data-favorite-venue-id="${CSS.escape(venueId)}"]`);
+        if (btn) btn.classList.toggle("active", isFav);
+      }
     });
   }
 });

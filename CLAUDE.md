@@ -112,9 +112,11 @@ let selectedCountry = "all"; // | "DE" | "AT" | "CH"
 ### Favoriten-Klick — kein Scroll-Reset
 `renderList()` ruft immer `scrollTo(0, 0)` auf. Klick auf Favorit-Stern / Glocke darf daher **nicht** `renderList()` aufrufen, sonst springt die Liste nach oben.
 
-**Fix (v246):** Im `document click`-Handler wird unterschieden:
+**Fix (v246/v247):** Im `document click`-Handler wird unterschieden:
 - `selectedFavoriteFilter === "favorites"`: Full-Re-Render via `renderList()` nötig (Listeninhalt ändert sich)
-- Alle anderen Filter: **In-Place-Update** — nur Button-Klassen (`active`) und Card-Klassen (`race-card-favorite-venue`) werden direkt im DOM geändert, kein `renderList()`-Aufruf, Scroll-Position bleibt erhalten
+- Alle anderen Filter: **In-Place-Update** — kein `renderList()`-Aufruf, Scroll-Position bleibt erhalten:
+  - **Host-Favorit:** `.race-host` des betroffenen Cards wird per `raceHostNameHtml(race)` neu gerendert → Glocke erscheint/verschwindet, Stern-Klasse und `is-favorite`-Klassen werden korrekt gesetzt
+  - **Venue-Favorit:** nur Stern-Button `active`-Klasse und `race-card-favorite-venue` werden getoggelt (keine Glocke bei Venue-Favoriten)
 
 ### Resize & Window-Load
 ```js
@@ -153,7 +155,7 @@ window.addEventListener("load", () => {
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v246**, **style.css v150**
+Aktuelle Version: **app.js v247**, **style.css v150**
 
 ## Import-System
 
@@ -374,5 +376,5 @@ venue-seeds.json (manuell gepflegt, 283 Einträge)
 13. **`myrcm-hosts-dach.json` muss auf `main` vorhanden sein** — Import-Job braucht die Datei; fehlt sie auf main, fällt Import auf DE-only zurück
 14. **Non-DACH-Races immer `venueId: null`** — `import-myrcm.js` setzt `venue = isNonDach ? null : venueFromSeed(...)`. Früher gab es `wasExplicit`-Bypass: ETS-Rennen in Trencin/NL wurden fälschlich Arena33 zugeordnet weil `detail.hostLabel` "Arena33" zurückgab. Fix: `wasExplicit` wird für die venue-Zuweisung nicht mehr berücksichtigt.
 15. **Neue Workflows nur auf `main` triggern** — `workflow_dispatch`-Workflows müssen auf dem Default-Branch (`main`) liegen um über die GitHub API auslösbar zu sein. Neue Workflows daher immer auf beiden Branches commiten (`fetch-og-images.yml`, `check-osm-images.yml` als Beispiele).
-16. **Favoriten-Klick darf `renderList()` nicht aufrufen** — `renderList()` ruft immer `scrollTo(0,0)` auf, was die Scrollposition zurücksetzt. Stattdessen Buttons und Card-Klassen direkt im DOM aktualisieren (In-Place-Update). Ausnahme: `selectedFavoriteFilter === "favorites"` — dort ändert sich der Listeninhalt, Full-Re-Render notwendig.
+16. **Favoriten-Klick darf `renderList()` nicht aufrufen** — `renderList()` ruft immer `scrollTo(0,0)` auf. Stattdessen In-Place-Update: Bei Host-Favorit `.race-host` per `raceHostNameHtml(race)` neu bauen (damit Glocke erscheint/verschwindet). Bei Venue-Favorit nur Button- und Card-Klassen toggen. Ausnahme: `selectedFavoriteFilter === "favorites"` braucht Full-Re-Render.
 17. **`focusRace()` auto-wechselt Länderfilter** — wenn der Marker einer Venue nicht existiert (weil Länderfilter aktiv), wird `selectedCountry = "all"` gesetzt und `updateMarkers()` synchron aufgerufen, bevor auf die Venue gepannt wird. So funktioniert das Klicken auf Rennen aus einem anderem Land als dem aktuell gefilterten.
