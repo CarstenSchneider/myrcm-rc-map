@@ -1,0 +1,41 @@
+name: Compare rccar-online.de with our races
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compare-rcco:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Compare rccar-online.de with our races
+        run: node compare-rcco.js
+
+      - name: Commit results
+        run: |
+          git config user.name "check-rcco[bot]"
+          git config user.email "check-rcco[bot]@rcracemap.com"
+          git add rcco-compare.json
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Add rccar-online.de comparison results"
+            git push origin dev
+          fi
