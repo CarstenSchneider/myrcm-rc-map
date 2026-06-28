@@ -5840,6 +5840,8 @@ function renderClubList() {
       const race = races.find(r => r.id === tr.dataset.raceId);
       if (!race) return;
       selectedCountry = "all";
+      selectedRange = "all";
+      showOpenOnly = false;
       syncFilterUi();
       closeClubList();
       updateMarkers(filteredRaces(), false);
