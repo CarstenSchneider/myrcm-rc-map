@@ -26,6 +26,8 @@ jobs:
           cp series.json .deploy-data/
           cp dmc-races.json .deploy-data/ 2>/dev/null || true
           cp dmc-venues.json .deploy-data/ 2>/dev/null || true
+          cp rcco-races.json .deploy-data/ 2>/dev/null || true
+          cp rcco-venues.json .deploy-data/ 2>/dev/null || true
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
