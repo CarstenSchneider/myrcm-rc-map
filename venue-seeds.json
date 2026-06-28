@@ -3739,6 +3739,12 @@
     "myrcmOrgId": "772"
   },
   {
+    "hostId": "dmc-ov-137",
+    "hostName": "MSC Gemünden e.V.i. ADAC",
+    "lat": 50.070964008562676,
+    "lng": 9.663623726668805
+  },
+  {
     "hostId": "msc-ober-morlen-e-v",
     "hostName": "MSC Ober-Mörlen e.V.",
     "lat": 50.36381448362496,
