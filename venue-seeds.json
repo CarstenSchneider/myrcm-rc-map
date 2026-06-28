@@ -4093,5 +4093,12 @@
     "hostId": "rcco-ttsc-racing",
     "hostName": "TTSC-Racing",
     "locationUnknown": true
+  },
+  {
+    "hostId": "rcco-rcmc-ibbenbueren-e-v",
+    "hostName": "RCMC Ibbenbüren e. V.",
+    "lat": 52.251949472619934,
+    "lng": 7.630418467177663,
+    "website": "http://www.rcmc-ibbenbueren.de/"
   }
 ]
