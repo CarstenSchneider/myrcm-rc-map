@@ -4072,15 +4072,19 @@ body.is-menu-open .app-menu-close {
   .race-date-row { grid-column: 1 / -1; }
 }
 
+@media (min-width: 1300px) {
+  .race-list-inner { grid-template-columns: 1fr 1fr 1fr; }
+}
+
 .race-date-row {
   font-size: 26px; font-weight: 700; color: var(--text);
-  padding: 36px 20px 8px; line-height: 1.1;
+  padding: 36px 24px 8px; line-height: 1.1;
   border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
 }
 .race-date-row:first-child { padding-top: 16px; }
 
 .race-list-row {
-  padding: 9px 20px; cursor: pointer;
+  padding: 9px 24px; cursor: pointer;
   transition: background 120ms;
   border-bottom: 1px solid rgba(var(--border-rgb), 0.07);
 }
