@@ -3800,6 +3800,12 @@
     "myrcmOrgId": "772"
   },
   {
+    "hostId": "rcco-mrc-weiden-e-v",
+    "hostName": "MRC Weiden e.V.",
+    "lat": 49.64588568552558,
+    "lng": 12.120420781877858
+  },
+  {
     "hostId": "rcco-msc-gemunden-e-v",
     "hostName": "MSC Gemünden e.V.",
     "lat": 50.07098433466393,
