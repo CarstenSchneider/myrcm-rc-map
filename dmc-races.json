@@ -1988,7 +1988,7 @@
   },
   {
     "id": "dmc-rc-raceteam-munchen-e-v-2026-04-26",
-    "venueId": null,
+    "venueId": "rc-race-team-munchen-e-v",
     "venueName": "RC-Raceteam München e.V.",
     "venueLocation": "München",
     "hostId": "dmc-ov-392",
