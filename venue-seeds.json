@@ -3715,6 +3715,12 @@
     "myrcmOrgId": "42405"
   },
   {
+    "hostId": "dmc-ov-266",
+    "hostName": "Modellfreunde Rheinhessen/Pfalz e.V.",
+    "lat": 49.699136947713704,
+    "lng": 8.03194898284182
+  },
+  {
     "hostId": "dmc-modellsport-munsterland-e-v",
     "hostName": "Modellsport Münsterland e.V.",
     "lat": 52.34156335945138,
