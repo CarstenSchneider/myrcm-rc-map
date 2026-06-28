@@ -4062,6 +4062,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "rcco-tsg-mst-estenfeld",
+    "hostName": "TSG/MST Estenfeld",
+    "lat": 49.833305473558845,
+    "lng": 9.997546436693286
+  },
+  {
     "hostId": "tsv-gelenau-e-v",
     "hostName": "TSV Gelenau e.V.",
     "locationUnknown": true,
