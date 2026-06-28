@@ -4011,6 +4011,12 @@
     "lng": 9.303292985142585
   },
   {
+    "hostId": "rcco-spessart-racer-e-v",
+    "hostName": "Spessart-Racer e.V.",
+    "lat": 49.96731560181147,
+    "lng": 9.304884510338868
+  },
+  {
     "hostId": "dmc-ts-gross-auheim",
     "hostName": "TS-Gross Auheim",
     "locationUnknown": true
