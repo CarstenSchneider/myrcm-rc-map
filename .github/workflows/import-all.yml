@@ -46,10 +46,8 @@ jobs:
         continue-on-error: true
         run: node import-dmc.js
 
-      - name: Import RCCO
-        id: import_rcco
-        continue-on-error: true
-        run: node import-rcco.js
+      # RCCO-Import deaktiviert — Nutzungsbedingungen von rccar-online.de verbieten Scraping.
+      # Wird reaktiviert sobald eine offizielle Genehmigung vorliegt.
 
       # --- COMMIT TO MAIN ---
 
@@ -63,8 +61,7 @@ jobs:
           git add \
             races.json hosts.json venues.json venue-unmatched.json venue-seeds.json \
             rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json \
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json \
-            rcco-races.json rcco-venues.json 2>/dev/null || true
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Keine Änderungen für main"
           else
@@ -83,8 +80,7 @@ jobs:
           git checkout main -- \
             races.json hosts.json venues.json venue-unmatched.json venue-seeds.json \
             rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json \
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json \
-            rcco-races.json rcco-venues.json 2>/dev/null || true
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json 2>/dev/null || true
           git add -A
           if git diff --cached --quiet; then
             echo "Keine Änderungen für dev"
