@@ -4705,7 +4705,10 @@
     ],
     "website": null,
     "source": "verified",
-    "country": "DE"
+    "country": "DE",
+    "aliases": [
+      "RC-Raceteam München e.V."
+    ]
   },
   {
     "id": "dmc-ov-149",
