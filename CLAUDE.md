@@ -131,40 +131,37 @@ window.addEventListener("load", () => {
 ### Workflows
 | Workflow | Trigger | Ziel |
 |---|---|---|
+| `import-all.yml` | täglich 04:00 + 16:00 UTC, manuell | Vollständiger Import aller Plattformen → main + dev + dev-Server |
 | `deploy-site-dev-hetzner.yml` | `dev` push | `rcracemap-dev/` (nur HTML/JS/CSS) |
 | `deploy-site-main-hetzner.yml` | `main` push | `.` (root inkl. JSON-Daten) |
-| `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten |
-| `trigger-render-import.yml` | manuell | Startet Import auf render.com |
+| `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten (Fallback) |
+| `import-rcco.yml` | manuell | **DEAKTIVIERT** — wartet auf Genehmigung von rccar-online.de |
 | `fetch-og-images.yml` | manuell | Fetcht og:image von Club-Websites → `hosts.json` auf dev |
 | `check-osm-images.yml` | manuell | Prüft OSM/Overpass auf Venue-Bilder → `osm-images-result.json` |
 
-**Wichtig:** `deploy-site-dev-hetzner.yml` kopiert **keine** JSON-Daten — diese bleiben vom letzten `deploy-data-dev-hetzner.yml` oder Render-Import Lauf.
+**Wichtig:** `deploy-site-dev-hetzner.yml` kopiert **keine** JSON-Daten. `import-all.yml` deployed JSON-Daten direkt nach dem Import auf den dev-Server (kein manueller Schritt nötig).
+
+**render.com:** Cron deaktiviert (auf nie-existierendes Datum gesetzt). `scripts/render-import.sh` bleibt als Fallback erhalten, wird aber nicht mehr automatisch ausgeführt.
 
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v240**, **style.css v145**
+Aktuelle Version: **app.js v243**, **style.css v150**
 
 ## Import-System
 
-### Ablauf (render.com)
-Der tägliche Import läuft auf **render.com** (Cron täglich 04:00 UTC), NICHT direkt in GitHub Actions.
+### Ablauf (GitHub Actions `import-all.yml`)
+Der Import läuft täglich **04:00 + 16:00 UTC** via GitHub Actions, NICHT mehr auf render.com.
 
-| Datei | Funktion |
-|---|---|
-| `render.yaml` | Render-Cron-Config |
-| `scripts/render-import.sh` | Haupt-Import-Script |
-| `.github/workflows/trigger-render-import.yml` | Manueller Trigger |
-
-**WICHTIG:** Import immer via `trigger-render-import.yml` auslösen. `import-races.yml` existiert ggf. noch, aber `render-import.sh` ist die aktuelle Lösung.
-
-### render-import.sh — Ablauf
-1. **MyRCM-Verfügbarkeit prüfen** — 3 Versuche × 5 Minuten
-2. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0)
-3. **Import MyRCM** — `node --no-warnings import-myrcm.js`
-4. **Import DMC** — `node import-dmc.js`
-5. **Commit** — alle JSON-Dateien zu `main` und `dev` (nur wenn Änderungen); `git pull --rebase --autostash` vor Push
-6. **Send notifications** — POST an Supabase Edge Function
+### import-all.yml — Ablauf
+1. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0, `continue-on-error`)
+2. **Import MyRCM** — `node --no-warnings import-myrcm.js` (muss klappen, sonst Abbruch)
+3. **Import DMC** — `node import-dmc.js` (`continue-on-error`)
+4. ~~Import RCCO~~ — **deaktiviert** (Nutzungsbedingungen rccar-online.de, seit 2026-06-28)
+5. **Commit main** — alle JSON-Dateien; `git pull --rebase --autostash` vor Push
+6. **Update dev** — `git checkout main -- <files>` → commit + push
+7. **Deploy dev-Server** — SFTP via lftp direkt im Workflow
+8. **Send notifications** — POST an Supabase Edge Function
 
 ### import-myrcm.js — Konfiguration
 ```js
@@ -192,11 +189,27 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 | `races.json` | MyRCM-Rennen (~2229 Rennen, DACH) |
 | `rck-races.json` | RCK-Rennen (~19) |
 | `dmc-races.json` | DMC-Rennen (~276, via `import-dmc.js`, in app.js integriert) |
-| `venues.json` | Strecken (314 Venues, DACH) |
+| `rcco-races.json` | **LEER (`[]`)** — RCCO-Import deaktiviert (ToS-Verstoß) |
+| `rcco-venues.json` | RCCO-Strecken (12 Venues, manuell aus venue-seeds.json — kein Scraping) |
+| `venues.json` | Strecken (DACH); enthält alle venue-seeds.json-Einträge mit gültigen Koordinaten |
 | `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH); enthält `ogImage`-Felder für 47 Clubs (via `fetch-og-images.yml`) |
 | `myrcm-hosts-dach.json` | Seed-Datei: 304 MyRCM-Hosts DACH (orgId, country als Vollname) |
+| `venue-seeds.json` | Manuell geprüfte Strecken-Koordinaten (283 Einträge); Wahrheitsquelle für alle Venues |
 | `venue-unmatched.json` | nicht zugeordnete Venues |
 | `rck-venue-candidates.json` | RCK Venue-Kandidaten |
+
+### RCCO — Status und Genehmigung
+**rccar-online.de Nutzungsbedingungen** (Abschnitt "Webscraping - kommerzieller Nutzung") verbieten automatisiertes Extrahieren von Daten. Import wurde am **2026-06-28** deaktiviert.
+
+- `rcco-races.json` ist geleert (`[]`) und wird nicht mehr befüllt
+- `rcco-venues.json` enthält nur manuell eingetragene Koordinaten (kein Scraping)
+- `import-rcco.yml` gibt eine Fehlermeldung aus und tut nichts
+- `import-all.yml` enthält keinen RCCO-Schritt
+
+**Reaktivierung:** Kontaktaufnahme mit rccar-online.de am 2026-06-28. Sobald Genehmigung vorliegt:
+1. RCCO-Schritt in `import-all.yml` wieder einkommentieren
+2. `import-rcco.yml` wiederherstellen
+3. `rcco-races.json` wird beim nächsten Import automatisch befüllt
 
 ## Notification-System
 
@@ -300,6 +313,31 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 - [ ] Nach `main`-Push: Production-URL `rcracemap.com` testen
 
 ---
+
+## Pipeline-Architektur (Übersicht)
+
+```
+04:00 + 16:00 UTC
+       ↓
+import-all.yml (GitHub Actions)
+  ├── import-rck.js        → rck-races.json
+  ├── import-myrcm.js      → races.json, hosts.json, venues.json
+  ├── import-dmc.js        → dmc-races.json, dmc-venues.json
+  └── [RCCO deaktiviert]
+       ↓
+  Commit → main (auto-deploy Production via deploy-site-main-hetzner.yml)
+  Commit → dev
+  SFTP → dev-Server (rcracemap-dev/)
+  POST → Supabase send-race-notifications
+```
+
+Venue-Seeds → Koordinaten für alle Plattformen:
+```
+venue-seeds.json (manuell gepflegt, 283 Einträge)
+  ├── hostId: "rcco-*"   → rcco-venues.json (immer, auch ohne Events)
+  ├── myrcmOrgId: "..."  → venues.json (via import-myrcm.js mergeVenueSeedsIntoVenues)
+  └── alle mit lat/lng   → venues.json (erscheinen auf Karte, auch ohne Rennen)
+```
 
 ## Bekannte Stolperfallen
 1. **`venues` ist Array, `markers` ist Map** — `.find()` vs `.get()`
