@@ -3683,6 +3683,12 @@
     "myrcmOrgId": "22319"
   },
   {
+    "hostId": "dmc-ov-143",
+    "hostName": "MC Dortmund e.V.",
+    "lat": 51.55786161696523,
+    "lng": 7.521933636366658
+  },
+  {
     "hostId": "dmc-mc-schwedt-e-v",
     "hostName": "MC Schwedt e.V.",
     "lat": 53.12277371820801,
