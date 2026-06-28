@@ -3600,6 +3600,12 @@
     ]
   },
   {
+    "hostId": "dmc-ov-386",
+    "hostName": "3 Sesselracer",
+    "lat": 48.735275140194894,
+    "lng": 13.798908925294255
+  },
+  {
     "hostId": "alpencup",
     "hostName": "Alpencup",
     "locationUnknown": true,
