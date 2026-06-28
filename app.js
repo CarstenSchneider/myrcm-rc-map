@@ -5762,7 +5762,7 @@ function renderClubList() {
 
   const tableHtml = groups.length ? `<table class="race-table">
     <colgroup>
-      <col style="width:70px">
+      <col style="width:84px">
       <col style="width:110px">
       ${loggedIn ? `<col style="width:44px">` : ""}
       <col style="width:30%">

@@ -4126,7 +4126,7 @@ body.is-menu-open .app-menu-close {
   padding: 18px 8px 4px; border-bottom: none; cursor: default;
 }
 .race-table .race-month-row:hover td { background: none; }
-.race-table .col-date { white-space: nowrap; color: var(--muted); width: 68px; }
+.race-table .col-date { white-space: nowrap; color: var(--muted); width: 84px; }
 .race-table .col-city { color: var(--muted); width: 120px; }
 .race-table .col-club { font-weight: 500; width: 35%; }
 .race-table .col-status { width: 12px; padding-right: 0; }
