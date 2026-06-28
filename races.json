@@ -80634,12 +80634,12 @@
     "note": "Nennung geschlossen.",
     "classes": [
       {
-        "name": "2WD Buggy Sportsman",
-        "entries": 4
-      },
-      {
         "name": "2WD Buggy Ü40",
         "entries": 6
+      },
+      {
+        "name": "2WD Buggy Sportsman",
+        "entries": 4
       },
       {
         "name": "4WD Buggy",
@@ -80909,6 +80909,38 @@
     "firstSeen": "2026-06-25"
   },
   {
+    "id": "mcc-luedenscheid-e-v-2026-06-28-myrcm-event-98616",
+    "venueId": "mcc-luedenscheid-e-v",
+    "venueName": "MCC Lüdenscheid e.V.",
+    "venueLocation": "Lüdenscheid",
+    "venueWebsite": null,
+    "hostId": "mcc-ludenscheid-e-v",
+    "hostName": "MCC Lüdenscheid e.V.",
+    "name": "RCK Challenge",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [
+      "RCK Challenge"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98616&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=52121&pLa=en&dId%5BE%5D=98616&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98616&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "note": "Nennung geschlossen.",
+    "classes": [
+      "RCK FWD 17.5T Challenge",
+      "RCK GT 17.5 Challenge",
+      "MCC - Tamiya TT"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-28"
+  },
+  {
     "id": "mac-or-huetschenhausen-e-v-2026-06-28-myrcm-event-98130",
     "venueId": "mac-or-huetschenhausen-e-v",
     "venueName": "MAC OR Hütschenhausen e.V.",
@@ -81027,13 +81059,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 143,
-    "registrationDisplay": "143",
+    "registrationCount": 142,
+    "registrationDisplay": "142",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "ENS 1:8 SPORT",
-        "entries": 20
+        "entries": 19
       },
       {
         "name": "ENS 1:10 onroad",
@@ -81156,13 +81188,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 41,
-    "registrationDisplay": "41",
+    "registrationCount": 43,
+    "registrationDisplay": "43",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 Expert",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "OR8 Hobby",
@@ -81170,7 +81202,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 11
+        "entries": 12
       },
       {
         "name": "ORT",
@@ -81527,22 +81559,22 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "MRCP Fronti",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "MRCP Stock 17.5T",
-        "entries": 12
+        "entries": 13
       },
       "MRCP Modified",
       {
         "name": "MRCP Formel",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [],
@@ -81927,8 +81959,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "HRCC GT8",
@@ -81946,7 +81978,7 @@
       },
       {
         "name": "HRCC EG10 Stock",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "HRCC PRO10",
@@ -81983,8 +82015,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fighter Buggy",
@@ -81994,7 +82026,10 @@
         "entries": 5
       },
       "ORE4WD",
-      "ORE4WDST",
+      {
+        "name": "ORE4WDST",
+        "entries": 1
+      },
       {
         "name": "ORETR2",
         "entries": 3
@@ -82892,13 +82927,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "MRC 17.5 Real Fun",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "MRC F1 21.5",
@@ -82973,13 +83008,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "FCTS Kids Academy",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "FCTS TT+",
@@ -83012,13 +83047,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Nordbayern Cup Club Cup",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Nordbayern Cup M-Chassis",
@@ -83030,7 +83065,7 @@
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "TW Modified",
@@ -83512,8 +83547,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -83528,11 +83563,11 @@
       },
       {
         "name": "VG10",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "VG8KL2",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "VG8KL1",

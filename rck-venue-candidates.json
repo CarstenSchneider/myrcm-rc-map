@@ -51,21 +51,29 @@
     "id": "rck-neubrandenburg-city-circuit-neubrandenburg",
     "name": "Neubrandenburg City Circuit",
     "city": "Neubrandenburg",
+    "lat": 53.55446117359839,
+    "lng": 13.29309143604531,
+    "hostId": "modellsportverein-neubrandenburg-e-v",
+    "hostIds": [
+      "modellsportverein-neubrandenburg-e-v"
+    ],
+    "website": "https://www.rc-neubrandenburg.de",
+    "source": "rck",
+    "aliases": [
+      "Modellsportverein Neubrandenburg e. V.",
+      "MSV Neubrandenburg",
+      "Neubrandenburg City Circuit"
+    ],
     "address": "Juri-Gagarin-Ring 1",
     "postalCode": "17036",
     "country": "DE",
-    "lat": null,
-    "lng": null,
-    "source": "rck",
     "sources": [
       "rck-kleinserie"
     ],
     "rckSeries": "kleinserie",
     "rckLocation": "Neubrandenburg",
     "organizerName": "Modellsportverein Neubrandenburg e. V.",
-    "hostId": "modellsportverein-neubrandenburg-e-v",
     "hostName": "Modellsportverein Neubrandenburg e. V.",
-    "website": null,
     "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520271206KlSeO20260429%202051.pdf",
     "addressVerifiedFromPdf": true,
     "verified": true,

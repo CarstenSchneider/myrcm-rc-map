@@ -854,8 +854,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -871,7 +871,7 @@
     "classes": [
       {
         "name": "GT-Sport",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Porsche Cup",
@@ -930,8 +930,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 52,
-    "registrationDisplay": "52",
+    "registrationCount": 54,
+    "registrationDisplay": "54",
     "comingSoon": false,
     "note": null,
     "rckGroup": "West",
@@ -947,7 +947,7 @@
     "classes": [
       {
         "name": "GT-Sport",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "Porsche Cup",
@@ -959,7 +959,7 @@
       },
       {
         "name": "LMH",
-        "entries": 11
+        "entries": 12
       },
       {
         "name": "M-Chassis",
@@ -1198,7 +1198,7 @@
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
-    "id": "rck-neubrandenburg-2026-10-11-rck-kleinserie-ost-neubrandenburg",
+    "id": "rck-neubrandenburg-city-circuit-neubrandenburg-2026-10-11-rck-kleinserie-ost-neubrandenburg",
     "venueId": "rck-neubrandenburg-city-circuit-neubrandenburg",
     "venueName": "Neubrandenburg City Circuit",
     "venueLocation": "Neubrandenburg",
@@ -1273,7 +1273,7 @@
     ],
     "venueWebsite": null,
     "registrationDeadline": "2026-10-05",
-    "firstSeen": "2026-06-22",
+    "firstSeen": "2026-06-28",
     "lastSeen": "2026-06-28"
   },
   {
@@ -1355,7 +1355,7 @@
   },
   {
     "importerVersion": "import-rck-v13-seed-first-venue-match",
-    "id": "rck-neubrandenburg-2026-12-06-rck-kleinserie-ost-neubrandenburg",
+    "id": "rck-neubrandenburg-city-circuit-neubrandenburg-2026-12-06-rck-kleinserie-ost-neubrandenburg",
     "venueId": "rck-neubrandenburg-city-circuit-neubrandenburg",
     "venueName": "Neubrandenburg City Circuit",
     "venueLocation": "Neubrandenburg",
@@ -1430,7 +1430,7 @@
     ],
     "venueWebsite": null,
     "registrationDeadline": "2026-12-01",
-    "firstSeen": "2026-06-22",
+    "firstSeen": "2026-06-28",
     "lastSeen": "2026-06-28"
   }
 ]

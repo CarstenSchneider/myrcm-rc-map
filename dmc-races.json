@@ -13,7 +13,9 @@
     "from": "2026-01-02",
     "to": "2026-01-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGF1EGTWFREGTWFUNEGTWHOEGTWMO"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -40,7 +42,9 @@
     "from": "2026-01-03",
     "to": "2026-01-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -67,7 +71,9 @@
     "from": "2026-01-11",
     "to": "2026-01-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDSTORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -82,10 +88,10 @@
   },
   {
     "id": "dmc-modell-car-club-bad-kissingen-e-v-2026-01-11",
-    "venueId": "dmc-ov-44",
+    "venueId": "dmc-modell-car-club-bad-kissingen-e-v",
     "venueName": "Modell-Car-Club Bad Kissingen e.V.",
     "venueLocation": "Fuchsstadt",
-    "hostId": "dmc-ov-44",
+    "hostId": "dmc-modell-car-club-bad-kissingen-e-v",
     "hostName": "Modell-Car-Club Bad Kissingen e.V.",
     "hostCity": "Fuchsstadt",
     "hostWebsite": "http://www.mcc-kg.de",
@@ -94,7 +100,9 @@
     "from": "2026-01-11",
     "to": "2026-01-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -109,10 +117,10 @@
   },
   {
     "id": "dmc-msc-ulm-e-v-2026-01-11",
-    "venueId": "myrcm-42113",
+    "venueId": "msc-ulm-e-v",
     "venueName": "MSC Ulm e.V.",
-    "venueLocation": "",
-    "hostId": "dmc-ov-74",
+    "venueLocation": "Senden",
+    "hostId": "msc-ulm-e-v",
     "hostName": "MSC Ulm e.V.",
     "hostCity": "Senden",
     "hostWebsite": "http://www.",
@@ -121,7 +129,9 @@
     "from": "2026-01-11",
     "to": "2026-01-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -148,7 +158,9 @@
     "from": "2026-01-17",
     "to": "2026-01-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "AlleORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -175,7 +187,9 @@
     "from": "2026-01-17",
     "to": "2026-01-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -202,7 +216,9 @@
     "from": "2026-01-17",
     "to": "2026-01-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -229,7 +245,9 @@
     "from": "2026-01-17",
     "to": "2026-01-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -250,7 +268,9 @@
     "from": "2026-01-18",
     "to": "2026-01-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGEGF1EGTEGTWFREGTWHOEGTWMOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -277,7 +297,9 @@
     "from": "2026-01-18",
     "to": "2026-01-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGEGF1EGT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -304,7 +326,9 @@
     "from": "2026-01-23",
     "to": "2026-01-25",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -331,7 +355,9 @@
     "from": "2026-01-25",
     "to": "2026-01-25",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGF1EGT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -358,7 +384,9 @@
     "from": "2026-01-31",
     "to": "2026-02-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE4WDORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -385,7 +413,9 @@
     "from": "2026-02-07",
     "to": "2026-02-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -412,7 +442,9 @@
     "from": "2026-02-08",
     "to": "2026-02-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -439,7 +471,9 @@
     "from": "2026-02-08",
     "to": "2026-02-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDSTORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -454,10 +488,10 @@
   },
   {
     "id": "dmc-modell-car-club-bad-kissingen-e-v-2026-02-08",
-    "venueId": "dmc-ov-44",
+    "venueId": "dmc-modell-car-club-bad-kissingen-e-v",
     "venueName": "Modell-Car-Club Bad Kissingen e.V.",
     "venueLocation": "Fuchsstadt",
-    "hostId": "dmc-ov-44",
+    "hostId": "dmc-modell-car-club-bad-kissingen-e-v",
     "hostName": "Modell-Car-Club Bad Kissingen e.V.",
     "hostCity": "Fuchsstadt",
     "hostWebsite": "http://www.mcc-kg.de",
@@ -466,7 +500,9 @@
     "from": "2026-02-08",
     "to": "2026-02-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -493,7 +529,9 @@
     "from": "2026-02-14",
     "to": "2026-02-15",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -520,7 +558,9 @@
     "from": "2026-02-14",
     "to": "2026-02-15",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -547,7 +587,10 @@
     "from": "2026-02-15",
     "to": "2026-02-15",
     "series": [],
-    "classes": [],
+    "classes": [
+      "HEGTWHOHEGTWMOHEGTWSP",
+      "EG12"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -574,7 +617,9 @@
     "from": "2026-02-21",
     "to": "2026-02-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -601,7 +646,9 @@
     "from": "2026-02-22",
     "to": "2026-02-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGF1EGTWFREGTWHOEGTWMOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -628,7 +675,9 @@
     "from": "2026-02-22",
     "to": "2026-02-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -655,7 +704,9 @@
     "from": "2026-02-28",
     "to": "2026-03-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE4WDORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -670,10 +721,10 @@
   },
   {
     "id": "dmc-slr-ingolstadt-e-v-2026-02-28",
-    "venueId": "slr-ingoldstadt-06",
-    "venueName": "SLR Ingoldstadt 06",
+    "venueId": "dmc-slr-ingolstadt-e-v",
+    "venueName": "SLR Ingolstadt e.V.",
     "venueLocation": "Ingolstadt",
-    "hostId": "slr-ingoldstadt-06",
+    "hostId": "dmc-slr-ingolstadt-e-v",
     "hostName": "SLR Ingolstadt e.V.",
     "hostCity": "Ingolstadt",
     "hostWebsite": "http://slringolstadt06.de",
@@ -682,7 +733,9 @@
     "from": "2026-02-28",
     "to": "2026-03-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10EGF1EGTWFREGTWFUNEGTWHOEGTWMO"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -709,7 +762,9 @@
     "from": "2026-02-28",
     "to": "2026-03-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -724,10 +779,10 @@
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-03-01",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "venueId": null,
+    "venueName": "MSC Pol. Braunschweig",
     "venueLocation": "Braunschweig",
-    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
+    "hostId": "dmc-ov-158",
     "hostName": "MSC Pol. Braunschweig",
     "hostCity": "Braunschweig",
     "hostWebsite": "http://www.msc-polizei-bs.de",
@@ -736,7 +791,9 @@
     "from": "2026-03-01",
     "to": "2026-03-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -763,7 +820,9 @@
     "from": "2026-03-07",
     "to": "2026-03-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -778,10 +837,10 @@
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-03-07",
-    "venueId": "dmc-ov-223",
+    "venueId": "dmc-mcc-rudolstadt-e-v",
     "venueName": "MCC Rudolstadt e.V.",
     "venueLocation": "Rudolstadt",
-    "hostId": "dmc-ov-223",
+    "hostId": "dmc-mcc-rudolstadt-e-v",
     "hostName": "MCC Rudolstadt e.V.",
     "hostCity": "Rudolstadt",
     "hostWebsite": "http://mcc.rudolstadt.de",
@@ -790,7 +849,9 @@
     "from": "2026-03-07",
     "to": "2026-03-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -817,7 +878,9 @@
     "from": "2026-03-07",
     "to": "2026-03-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -844,7 +907,9 @@
     "from": "2026-03-07",
     "to": "2026-03-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -859,10 +924,10 @@
   },
   {
     "id": "dmc-spessart-racer-2026-03-14",
-    "venueId": "dmc-ov-323",
+    "venueId": "dmc-spessart-racer",
     "venueName": "Spessart Racer",
     "venueLocation": "Glattbach",
-    "hostId": "dmc-ov-323",
+    "hostId": "dmc-spessart-racer",
     "hostName": "Spessart Racer",
     "hostCity": "Glattbach",
     "hostWebsite": "http://www.spessart-racer.de",
@@ -871,7 +936,9 @@
     "from": "2026-03-14",
     "to": "2026-03-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -892,7 +959,9 @@
     "from": "2026-03-14",
     "to": "2026-03-15",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -919,7 +988,9 @@
     "from": "2026-03-14",
     "to": "2026-03-15",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -946,7 +1017,9 @@
     "from": "2026-03-14",
     "to": "2026-03-15",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -973,7 +1046,9 @@
     "from": "2026-03-21",
     "to": "2026-03-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -982,10 +1057,10 @@
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-03-21",
-    "venueId": "dmc-ov-223",
+    "venueId": "dmc-mcc-rudolstadt-e-v",
     "venueName": "MCC Rudolstadt e.V.",
     "venueLocation": "Rudolstadt",
-    "hostId": "dmc-ov-223",
+    "hostId": "dmc-mcc-rudolstadt-e-v",
     "hostName": "MCC Rudolstadt e.V.",
     "hostCity": "Rudolstadt",
     "hostWebsite": "http://mcc.rudolstadt.de",
@@ -994,7 +1069,9 @@
     "from": "2026-03-21",
     "to": "2026-03-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1021,7 +1098,9 @@
     "from": "2026-03-21",
     "to": "2026-03-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1036,10 +1115,10 @@
   },
   {
     "id": "dmc-big-hamburg-e-v-2026-03-21",
-    "venueId": "dmc-ov-118",
+    "venueId": "dmc-big-hamburg-e-v",
     "venueName": "BIG Hamburg e.V.",
     "venueLocation": "Hamburg",
-    "hostId": "dmc-ov-118",
+    "hostId": "dmc-big-hamburg-e-v",
     "hostName": "BIG Hamburg e.V.",
     "hostCity": "Hamburg",
     "hostWebsite": "http://www.bighamburg.de",
@@ -1048,7 +1127,9 @@
     "from": "2026-03-21",
     "to": "2026-03-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1075,7 +1156,9 @@
     "from": "2026-03-26",
     "to": "2026-03-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1102,7 +1185,9 @@
     "from": "2026-03-28",
     "to": "2026-03-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDSTORE4WDORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1129,7 +1214,9 @@
     "from": "2026-03-28",
     "to": "2026-03-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1156,7 +1243,9 @@
     "from": "2026-03-28",
     "to": "2026-03-29",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE4WDORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1183,7 +1272,9 @@
     "from": "2026-04-03",
     "to": "2026-04-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1204,7 +1295,9 @@
     "from": "2026-04-04",
     "to": "2026-04-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGVG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1231,7 +1324,9 @@
     "from": "2026-04-10",
     "to": "2026-04-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1246,10 +1341,10 @@
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-04-11",
-    "venueId": "dmc-ov-79",
+    "venueId": "dmc-rc-club-grossheubach-e-v",
     "venueName": "RC-Club Grossheubach e.V.",
     "venueLocation": "Kelkheim",
-    "hostId": "dmc-ov-79",
+    "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "hostCity": "Kelkheim",
     "hostWebsite": "http://www.rc-club-großheubach.de",
@@ -1258,7 +1353,9 @@
     "from": "2026-04-11",
     "to": "2026-04-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1285,7 +1382,9 @@
     "from": "2026-04-11",
     "to": "2026-04-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1300,10 +1399,10 @@
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-04-11",
-    "venueId": "dmc-ov-157",
+    "venueId": "dmc-rmc-wolfsburg-e-v",
     "venueName": "RMC Wolfsburg e.V.",
     "venueLocation": "Gifhorn",
-    "hostId": "dmc-ov-157",
+    "hostId": "dmc-rmc-wolfsburg-e-v",
     "hostName": "RMC Wolfsburg e.V.",
     "hostCity": "Gifhorn",
     "hostWebsite": "http://www.rmc-wolfsburg.eu",
@@ -1312,7 +1411,9 @@
     "from": "2026-04-11",
     "to": "2026-04-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1339,7 +1440,9 @@
     "from": "2026-04-11",
     "to": "2026-04-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1354,10 +1457,10 @@
   },
   {
     "id": "dmc-modellsport-munsterland-e-v-2026-04-12",
-    "venueId": "dmc-ov-240",
+    "venueId": "dmc-modellsport-munsterland-e-v",
     "venueName": "Modellsport Münsterland e.V.",
     "venueLocation": "Ibbenbüren",
-    "hostId": "dmc-ov-240",
+    "hostId": "dmc-modellsport-munsterland-e-v",
     "hostName": "Modellsport Münsterland e.V.",
     "hostCity": "Ibbenbüren",
     "hostWebsite": "http://www.modellsport-muensterland.de",
@@ -1366,7 +1469,9 @@
     "from": "2026-04-12",
     "to": "2026-04-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1393,7 +1498,9 @@
     "from": "2026-04-17",
     "to": "2026-04-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1420,7 +1527,9 @@
     "from": "2026-04-18",
     "to": "2026-04-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1441,7 +1550,9 @@
     "from": "2026-04-18",
     "to": "2026-04-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1462,7 +1573,9 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1471,10 +1584,10 @@
   },
   {
     "id": "dmc-modellsport-munsterland-e-v-2026-04-18",
-    "venueId": "dmc-ov-240",
+    "venueId": "dmc-modellsport-munsterland-e-v",
     "venueName": "Modellsport Münsterland e.V.",
     "venueLocation": "Ibbenbüren",
-    "hostId": "dmc-ov-240",
+    "hostId": "dmc-modellsport-munsterland-e-v",
     "hostName": "Modellsport Münsterland e.V.",
     "hostCity": "Ibbenbüren",
     "hostWebsite": "http://www.modellsport-muensterland.de",
@@ -1483,7 +1596,9 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1510,7 +1625,9 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1537,7 +1654,9 @@
     "from": "2026-04-18",
     "to": "2026-04-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1552,10 +1671,10 @@
   },
   {
     "id": "dmc-mc-schwedt-e-v-2026-04-19",
-    "venueId": "dmc-ov-65",
+    "venueId": "dmc-mc-schwedt-e-v",
     "venueName": "MC Schwedt e.V.",
     "venueLocation": "Schwedt/Oder",
-    "hostId": "dmc-ov-65",
+    "hostId": "dmc-mc-schwedt-e-v",
     "hostName": "MC Schwedt e.V.",
     "hostCity": "Schwedt/Oder",
     "hostWebsite": "http://www.modellclub-schwedt.com",
@@ -1564,7 +1683,9 @@
     "from": "2026-04-19",
     "to": "2026-04-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1579,10 +1700,10 @@
   },
   {
     "id": "dmc-esv-bischofsheim-e-v-2026-04-24",
-    "venueId": "esv-blau-gold-bischofsheim-1958-e-v",
-    "venueName": "ESV Blau-Gold Bischofsheim 1958 e.V.",
-    "venueLocation": "Bischofsheim",
-    "hostId": "esv-blau-gold-bischofsheim-1958-e-v",
+    "venueId": null,
+    "venueName": "ESV Bischofsheim e.V.",
+    "venueLocation": "Esthal",
+    "hostId": "dmc-ov-37",
     "hostName": "ESV Bischofsheim e.V.",
     "hostCity": "Esthal",
     "hostWebsite": "http://rhein-main-circuit.de",
@@ -1591,7 +1712,9 @@
     "from": "2026-04-24",
     "to": "2026-04-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORET"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1618,7 +1741,9 @@
     "from": "2026-04-25",
     "to": "2026-04-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1645,7 +1770,9 @@
     "from": "2026-04-25",
     "to": "2026-04-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE4WD"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1672,7 +1799,9 @@
     "from": "2026-04-25",
     "to": "2026-04-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8EG8GTVGVG10VG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1699,7 +1828,9 @@
     "from": "2026-04-26",
     "to": "2026-04-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGTWFREGTWFUN"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1714,9 +1845,9 @@
   },
   {
     "id": "dmc-rc-raceteam-munchen-e-v-2026-04-26",
-    "venueId": "myrcm-37520",
-    "venueName": "RC Race Team München e.V",
-    "venueLocation": "",
+    "venueId": null,
+    "venueName": "RC-Raceteam München e.V.",
+    "venueLocation": "München",
     "hostId": "dmc-ov-392",
     "hostName": "RC-Raceteam München e.V.",
     "hostCity": "München",
@@ -1726,7 +1857,9 @@
     "from": "2026-04-26",
     "to": "2026-04-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EAEBEGEG10EG12EGTEGTWFREGTWHOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1753,7 +1886,9 @@
     "from": "2026-05-01",
     "to": "2026-05-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1774,7 +1909,9 @@
     "from": "2026-05-01",
     "to": "2026-05-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1795,7 +1932,9 @@
     "from": "2026-05-01",
     "to": "2026-05-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1816,7 +1955,9 @@
     "from": "2026-05-01",
     "to": "2026-05-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDST"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1843,7 +1984,9 @@
     "from": "2026-05-01",
     "to": "2026-05-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG10EG10EG8EG8VG10VG10VG8VG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1864,7 +2007,9 @@
     "from": "2026-05-01",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1891,7 +2036,9 @@
     "from": "2026-05-01",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1906,10 +2053,10 @@
   },
   {
     "id": "dmc-rc-freunde-kinzigtal-e-v-2026-05-02",
-    "venueId": "dmc-ov-39",
+    "venueId": "dmc-rc-freunde-kinzigtal-e-v",
     "venueName": "RC-Freunde Kinzigtal e.V.",
     "venueLocation": "Hausach",
-    "hostId": "dmc-ov-39",
+    "hostId": "dmc-rc-freunde-kinzigtal-e-v",
     "hostName": "RC-Freunde Kinzigtal e.V.",
     "hostCity": "Hausach",
     "hostWebsite": "http://www.rc-freunde-kinzigtal.de",
@@ -1918,7 +2065,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1945,7 +2094,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1972,7 +2123,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8VG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -1999,7 +2152,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2026,7 +2181,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2041,10 +2198,10 @@
   },
   {
     "id": "dmc-bc-mitterkreith-2026-05-02",
-    "venueId": "dmc-ov-238",
+    "venueId": "dmc-bc-mitterkreith",
     "venueName": "BC Mitterkreith",
     "venueLocation": "Roding",
-    "hostId": "dmc-ov-238",
+    "hostId": "dmc-bc-mitterkreith",
     "hostName": "BC Mitterkreith",
     "hostCity": "Roding",
     "hostWebsite": "http://www.bc-mitterkreith.de",
@@ -2053,7 +2210,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2080,7 +2239,9 @@
     "from": "2026-05-02",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VMOT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2095,10 +2256,10 @@
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-05-03",
-    "venueId": "dmc-ov-79",
+    "venueId": "dmc-rc-club-grossheubach-e-v",
     "venueName": "RC-Club Grossheubach e.V.",
     "venueLocation": "Kelkheim",
-    "hostId": "dmc-ov-79",
+    "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "hostCity": "Kelkheim",
     "hostWebsite": "http://www.rc-club-großheubach.de",
@@ -2107,7 +2268,9 @@
     "from": "2026-05-03",
     "to": "2026-05-03",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2134,7 +2297,9 @@
     "from": "2026-05-08",
     "to": "2026-05-09",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG10"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2161,7 +2326,9 @@
     "from": "2026-05-08",
     "to": "2026-05-10",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GTEG8GT3EGPRO10EGPRO10SP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2176,10 +2343,10 @@
   },
   {
     "id": "dmc-esv-bischofsheim-e-v-2026-05-09",
-    "venueId": "esv-blau-gold-bischofsheim-1958-e-v",
-    "venueName": "ESV Blau-Gold Bischofsheim 1958 e.V.",
-    "venueLocation": "Bischofsheim",
-    "hostId": "esv-blau-gold-bischofsheim-1958-e-v",
+    "venueId": null,
+    "venueName": "ESV Bischofsheim e.V.",
+    "venueLocation": "Esthal",
+    "hostId": "dmc-ov-37",
     "hostName": "ESV Bischofsheim e.V.",
     "hostCity": "Esthal",
     "hostWebsite": "http://rhein-main-circuit.de",
@@ -2188,7 +2355,9 @@
     "from": "2026-05-09",
     "to": "2026-05-10",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2215,7 +2384,9 @@
     "from": "2026-05-09",
     "to": "2026-05-10",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2230,10 +2401,10 @@
   },
   {
     "id": "dmc-mbc-oberlausitz-e-v-2026-05-09",
-    "venueId": "dmc-ov-139",
+    "venueId": "dmc-mbc-oberlausitz-e-v",
     "venueName": "MBC Oberlausitz e.V.",
     "venueLocation": "Obercunnersdorf",
-    "hostId": "dmc-ov-139",
+    "hostId": "dmc-mbc-oberlausitz-e-v",
     "hostName": "MBC Oberlausitz e.V.",
     "hostCity": "Obercunnersdorf",
     "hostWebsite": "http://www.mbc-oberlausitz.de",
@@ -2242,7 +2413,9 @@
     "from": "2026-05-09",
     "to": "2026-05-10",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8ORESC2ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2257,10 +2430,10 @@
   },
   {
     "id": "dmc-boc-kiel-e-v-2026-05-09",
-    "venueId": "dmc-ov-254",
+    "venueId": "dmc-boc-kiel-e-v",
     "venueName": "BOC Kiel e.V.",
     "venueLocation": "Schönkirchen",
-    "hostId": "dmc-ov-254",
+    "hostId": "dmc-boc-kiel-e-v",
     "hostName": "BOC Kiel e.V.",
     "hostCity": "Schönkirchen",
     "hostWebsite": "http://www.boc-kiel.de",
@@ -2269,7 +2442,9 @@
     "from": "2026-05-09",
     "to": "2026-05-10",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": "https://rccar-online.de/",
     "registrationStatus": "open",
@@ -2296,7 +2471,9 @@
     "from": "2026-05-10",
     "to": "2026-05-10",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGTWFREGTWFUN"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2311,10 +2488,10 @@
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-05-10",
-    "venueId": "dmc-ov-223",
+    "venueId": "dmc-mcc-rudolstadt-e-v",
     "venueName": "MCC Rudolstadt e.V.",
     "venueLocation": "Rudolstadt",
-    "hostId": "dmc-ov-223",
+    "hostId": "dmc-mcc-rudolstadt-e-v",
     "hostName": "MCC Rudolstadt e.V.",
     "hostCity": "Rudolstadt",
     "hostWebsite": "http://mcc.rudolstadt.de",
@@ -2323,7 +2500,9 @@
     "from": "2026-05-10",
     "to": "2026-05-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2350,7 +2529,9 @@
     "from": "2026-05-14",
     "to": "2026-05-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2365,10 +2546,10 @@
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-05-14",
-    "venueId": "dmc-ov-157",
+    "venueId": "dmc-rmc-wolfsburg-e-v",
     "venueName": "RMC Wolfsburg e.V.",
     "venueLocation": "Gifhorn",
-    "hostId": "dmc-ov-157",
+    "hostId": "dmc-rmc-wolfsburg-e-v",
     "hostName": "RMC Wolfsburg e.V.",
     "hostCity": "Gifhorn",
     "hostWebsite": "http://www.rmc-wolfsburg.eu",
@@ -2377,7 +2558,9 @@
     "from": "2026-05-14",
     "to": "2026-05-16",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2392,10 +2575,10 @@
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-05-15",
-    "venueId": "dmc-ov-79",
+    "venueId": "dmc-rc-club-grossheubach-e-v",
     "venueName": "RC-Club Grossheubach e.V.",
     "venueLocation": "Kelkheim",
-    "hostId": "dmc-ov-79",
+    "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "hostCity": "Kelkheim",
     "hostWebsite": "http://www.rc-club-großheubach.de",
@@ -2404,7 +2587,9 @@
     "from": "2026-05-15",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR6OR62WDOR64WDOR6SC4"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2431,7 +2616,9 @@
     "from": "2026-05-16",
     "to": "2026-05-16",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2458,7 +2645,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8ORET"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2485,7 +2674,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2512,7 +2703,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2539,7 +2732,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG10VG5VG5F1VG5SPVG5TWVG8KL1VG8KL2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2566,7 +2761,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2593,7 +2790,10 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8",
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORE8ORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2620,7 +2820,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8VGVG10VG10SVG8VG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2647,7 +2849,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VGVG10VG10SVG8VG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2662,10 +2866,10 @@
   },
   {
     "id": "dmc-msc-sand-e-v-2026-05-16",
-    "venueId": "dmc-ov-349",
+    "venueId": "dmc-msc-sand-e-v",
     "venueName": "MSC Sand e.V.",
     "venueLocation": "Sand",
-    "hostId": "dmc-ov-349",
+    "hostId": "dmc-msc-sand-e-v",
     "hostName": "MSC Sand e.V.",
     "hostCity": "Sand",
     "hostWebsite": "http://www.mscsand.de",
@@ -2674,7 +2878,9 @@
     "from": "2026-05-16",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2701,7 +2907,9 @@
     "from": "2026-05-17",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10EGTWFREGTWHOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2728,7 +2936,9 @@
     "from": "2026-05-17",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2743,10 +2953,10 @@
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-05-17",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "venueId": null,
+    "venueName": "MSC Pol. Braunschweig",
     "venueLocation": "Braunschweig",
-    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
+    "hostId": "dmc-ov-158",
     "hostName": "MSC Pol. Braunschweig",
     "hostCity": "Braunschweig",
     "hostWebsite": "http://www.msc-polizei-bs.de",
@@ -2755,7 +2965,9 @@
     "from": "2026-05-17",
     "to": "2026-05-17",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGTWFREGTWFUNEGTWHOEGTWMOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2782,7 +2994,9 @@
     "from": "2026-05-22",
     "to": "2026-05-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2809,7 +3023,9 @@
     "from": "2026-05-23",
     "to": "2026-05-23",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GTVG5VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2836,7 +3052,9 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2845,10 +3063,10 @@
   },
   {
     "id": "dmc-rc-halle-e-v-2026-05-23",
-    "venueId": "dmc-ov-384",
+    "venueId": "dmc-rc-halle-e-v",
     "venueName": "RC Halle e.V.",
     "venueLocation": "Halle-Saale",
-    "hostId": "dmc-ov-384",
+    "hostId": "dmc-rc-halle-e-v",
     "hostName": "RC Halle e.V.",
     "hostCity": "Halle-Saale",
     "hostWebsite": "http://www.rchalle.de",
@@ -2857,7 +3075,9 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2872,10 +3092,10 @@
   },
   {
     "id": "dmc-mfk-kurten-e-v-2026-05-23",
-    "venueId": "myrcm-53092",
+    "venueId": "mfk-kurten-e-v",
     "venueName": "MFK Kürten e.V.",
-    "venueLocation": "",
-    "hostId": "dmc-ov-218",
+    "venueLocation": "Wermelskirchen",
+    "hostId": "mfk-kurten-e-v",
     "hostName": "MFK Kürten e.V.",
     "hostCity": "Wermelskirchen",
     "hostWebsite": "http://www.modellfreunde-kuerten.de",
@@ -2884,7 +3104,9 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2899,10 +3121,10 @@
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-05-23",
-    "venueId": "dmc-ov-296",
+    "venueId": "dmc-modell-car-club-rhein-ahr-e-v",
     "venueName": "Modell Car Club Rhein Ahr e.V.",
     "venueLocation": "Wipperfürth",
-    "hostId": "dmc-ov-296",
+    "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "hostCity": "Wipperfürth",
     "hostWebsite": "http://www.mcc-rhein-ahr.de",
@@ -2911,7 +3133,9 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2938,7 +3162,9 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2959,7 +3185,10 @@
     "from": "2026-05-23",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GT3",
+      "EG10"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -2974,10 +3203,10 @@
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-05-23",
-    "venueId": "dmc-ov-341",
+    "venueId": "dmc-offroad-club-ostsee-e-v",
     "venueName": "Offroad Club Ostsee e.V.",
     "venueLocation": "Neustadt in Holstein",
-    "hostId": "dmc-ov-341",
+    "hostId": "dmc-offroad-club-ostsee-e-v",
     "hostName": "Offroad Club Ostsee e.V.",
     "hostCity": "Neustadt in Holstein",
     "hostWebsite": "http://Offroad-Club-Ostsee.Modellbuggy.de",
@@ -2986,7 +3215,9 @@
     "from": "2026-05-23",
     "to": "2026-05-25",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3013,7 +3244,9 @@
     "from": "2026-05-24",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG8VGVG10VG5VG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3040,7 +3273,9 @@
     "from": "2026-05-24",
     "to": "2026-05-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5VG5F1"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3067,7 +3302,9 @@
     "from": "2026-05-25",
     "to": "2026-05-25",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3094,7 +3331,9 @@
     "from": "2026-05-29",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EMOTMOEMOTSTVMOT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3109,10 +3348,10 @@
   },
   {
     "id": "dmc-ort-fulda-2026-05-30",
-    "venueId": "dmc-ov-3",
+    "venueId": "dmc-ort-fulda",
     "venueName": "ORT Fulda",
     "venueLocation": "Steinau",
-    "hostId": "dmc-ov-3",
+    "hostId": "dmc-ort-fulda",
     "hostName": "ORT Fulda",
     "hostCity": "Steinau",
     "hostWebsite": "http://www.ort-fulda.de",
@@ -3121,7 +3360,9 @@
     "from": "2026-05-30",
     "to": "2026-05-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": "https://rccar-online.de/veranstaltungen",
     "registrationStatus": "open",
@@ -3148,7 +3389,9 @@
     "from": "2026-05-30",
     "to": "2026-05-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3157,10 +3400,10 @@
   },
   {
     "id": "dmc-rc-drecksloch-e-v-2026-05-30",
-    "venueId": "myrcm-33778",
+    "venueId": "rc-drecksloch-e-v",
     "venueName": "RC Drecksloch e.V.",
-    "venueLocation": "",
-    "hostId": "dmc-ov-10",
+    "venueLocation": "Oberhausen",
+    "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "hostCity": "Oberhausen",
     "hostWebsite": "http://www.rc-drecksloch.de",
@@ -3169,7 +3412,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8ORET"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3184,10 +3429,10 @@
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v-2026-05-30",
-    "venueId": "dmc-ov-223",
+    "venueId": "dmc-mcc-rudolstadt-e-v",
     "venueName": "MCC Rudolstadt e.V.",
     "venueLocation": "Rudolstadt",
-    "hostId": "dmc-ov-223",
+    "hostId": "dmc-mcc-rudolstadt-e-v",
     "hostName": "MCC Rudolstadt e.V.",
     "hostCity": "Rudolstadt",
     "hostWebsite": "http://mcc.rudolstadt.de",
@@ -3196,7 +3441,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3223,7 +3470,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3238,10 +3487,10 @@
   },
   {
     "id": "dmc-rc-offroad-ottendorf-okrilla-e-v-2026-05-30",
-    "venueId": "dmc-ov-131",
+    "venueId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
     "venueName": "RC-Offroad Ottendorf-Okrilla e.V.",
     "venueLocation": "Dresden",
-    "hostId": "dmc-ov-131",
+    "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
     "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
     "hostCity": "Dresden",
     "hostWebsite": "http://www.rco-ottendorf-okrilla.de",
@@ -3250,7 +3499,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3277,7 +3528,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3304,7 +3557,10 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8",
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORE8ORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3331,7 +3587,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3346,10 +3604,10 @@
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-05-30",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
+    "venueId": null,
+    "venueName": "MSC Pol. Braunschweig",
     "venueLocation": "Braunschweig",
-    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
+    "hostId": "dmc-ov-158",
     "hostName": "MSC Pol. Braunschweig",
     "hostCity": "Braunschweig",
     "hostWebsite": "http://www.msc-polizei-bs.de",
@@ -3358,7 +3616,9 @@
     "from": "2026-05-30",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3385,7 +3645,9 @@
     "from": "2026-05-31",
     "to": "2026-05-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3412,7 +3674,9 @@
     "from": "2026-06-04",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3439,7 +3703,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GTEG8GT3VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3466,7 +3732,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3481,7 +3749,7 @@
   },
   {
     "id": "dmc-mc-dortmund-e-v-2026-06-06",
-    "venueId": null,
+    "venueId": "dmc-ov-143",
     "venueName": "MC Dortmund e.V.",
     "venueLocation": "Datteln",
     "hostId": "dmc-ov-143",
@@ -3493,7 +3761,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3520,7 +3790,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3535,7 +3807,7 @@
   },
   {
     "id": "dmc-rc-racecrew-2026-06-06",
-    "venueId": null,
+    "venueId": "dmc-ov-149",
     "venueName": "RC RaceCrew",
     "venueLocation": "Kreuzau-Drove",
     "hostId": "dmc-ov-149",
@@ -3547,7 +3819,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3574,7 +3848,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8VG5VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3601,7 +3877,9 @@
     "from": "2026-06-06",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GTEGF1VG10VG5VG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3616,7 +3894,7 @@
   },
   {
     "id": "dmc-modellfreunde-rheinhessen-pfalz-e-v-2026-06-07",
-    "venueId": null,
+    "venueId": "dmc-ov-266",
     "venueName": "Modellfreunde Rheinhessen/Pfalz e.V.",
     "venueLocation": "Stetten",
     "hostId": "dmc-ov-266",
@@ -3628,7 +3906,9 @@
     "from": "2026-06-07",
     "to": "2026-06-07",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3643,10 +3923,10 @@
   },
   {
     "id": "dmc-rc-halle-e-v-2026-06-13",
-    "venueId": "dmc-ov-384",
+    "venueId": "dmc-rc-halle-e-v",
     "venueName": "RC Halle e.V.",
     "venueLocation": "Halle-Saale",
-    "hostId": "dmc-ov-384",
+    "hostId": "dmc-rc-halle-e-v",
     "hostName": "RC Halle e.V.",
     "hostCity": "Halle-Saale",
     "hostWebsite": "http://www.rchalle.de",
@@ -3655,7 +3935,9 @@
     "from": "2026-06-13",
     "to": "2026-06-13",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": "https://rccar-online.de/veranstaltungen",
     "registrationStatus": "open",
@@ -3682,7 +3964,9 @@
     "from": "2026-06-13",
     "to": "2026-06-13",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3709,7 +3993,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3736,7 +4022,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG10VG8KL1VG8KL2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3751,7 +4039,7 @@
   },
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-06-13",
-    "venueId": null,
+    "venueId": "dmc-ov-36",
     "venueName": "RC Offroad Heiligenstadt e.V.",
     "venueLocation": "Uelzen",
     "hostId": "dmc-ov-36",
@@ -3763,7 +4051,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3790,7 +4080,10 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2",
+      "EGTWFREGTWFUNEGTWHOEGTWMOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3805,7 +4098,7 @@
   },
   {
     "id": "dmc-mcc-hof-e-v-2026-06-13",
-    "venueId": null,
+    "venueId": "dmc-ov-56",
     "venueName": "MCC Hof e.V.",
     "venueLocation": "Naila-Marxgrün",
     "hostId": "dmc-ov-56",
@@ -3817,7 +4110,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VGVG10VG8VG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3844,7 +4139,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3871,7 +4168,10 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE",
+      "EGMOTVMOT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3898,7 +4198,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3906,33 +4208,6 @@
     "documents": [
       {
         "url": "https://dmc-online.com/wordpress/terminuploads/1772015013_13.-14.06.2026_SK-Lauf_und_BTM_(1).pdf",
-        "type": "announcement",
-        "label": "Ausschreibung"
-      }
-    ]
-  },
-  {
-    "id": "dmc-mc-dortmund-e-v-2026-06-13",
-    "venueId": null,
-    "venueName": "MC Dortmund e.V.",
-    "venueLocation": "Datteln",
-    "hostId": "dmc-ov-143",
-    "hostName": "MC Dortmund e.V.",
-    "hostCity": "Datteln",
-    "hostWebsite": "http://www.mcdortmund.net",
-    "dmcOvNr": "143",
-    "name": "Sportkreismeisterschaft",
-    "from": "2026-06-13",
-    "to": "2026-06-14",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": [
-      {
-        "url": "https://dmc-online.com/wordpress/terminuploads/1778523239_Ausschreibung.pdf",
         "type": "announcement",
         "label": "Ausschreibung"
       }
@@ -3952,7 +4227,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3979,7 +4256,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -3994,10 +4273,10 @@
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-06-13",
-    "venueId": "dmc-ov-341",
+    "venueId": "dmc-offroad-club-ostsee-e-v",
     "venueName": "Offroad Club Ostsee e.V.",
     "venueLocation": "Neustadt in Holstein",
-    "hostId": "dmc-ov-341",
+    "hostId": "dmc-offroad-club-ostsee-e-v",
     "hostName": "Offroad Club Ostsee e.V.",
     "hostCity": "Neustadt in Holstein",
     "hostWebsite": "http://Offroad-Club-Ostsee.Modellbuggy.de",
@@ -4006,7 +4285,9 @@
     "from": "2026-06-13",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4033,7 +4314,9 @@
     "from": "2026-06-14",
     "to": "2026-06-14",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGTWFREGTWFUN"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4060,7 +4343,9 @@
     "from": "2026-06-19",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE4WDORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4087,7 +4372,10 @@
     "from": "2026-06-19",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORETORT",
+      "ORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4114,7 +4402,9 @@
     "from": "2026-06-20",
     "to": "2026-06-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4123,10 +4413,10 @@
   },
   {
     "id": "dmc-modellsport-munsterland-e-v-2026-06-20",
-    "venueId": "dmc-ov-240",
+    "venueId": "dmc-modellsport-munsterland-e-v",
     "venueName": "Modellsport Münsterland e.V.",
     "venueLocation": "Ibbenbüren",
-    "hostId": "dmc-ov-240",
+    "hostId": "dmc-modellsport-munsterland-e-v",
     "hostName": "Modellsport Münsterland e.V.",
     "hostCity": "Ibbenbüren",
     "hostWebsite": "http://www.modellsport-muensterland.de",
@@ -4135,7 +4425,9 @@
     "from": "2026-06-20",
     "to": "2026-06-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4162,7 +4454,9 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4189,7 +4483,9 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4216,7 +4512,9 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GTEG8GT3VG8GT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4231,7 +4529,7 @@
   },
   {
     "id": "dmc-rc-haltern-e-v-2026-06-20",
-    "venueId": null,
+    "venueId": "dmc-ov-160",
     "venueName": "RC Haltern e.V.",
     "venueLocation": "Dortmund",
     "hostId": "dmc-ov-160",
@@ -4243,7 +4541,9 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4270,7 +4570,9 @@
     "from": "2026-06-20",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4297,7 +4599,9 @@
     "from": "2026-06-21",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4312,7 +4616,7 @@
   },
   {
     "id": "dmc-msc-gemunden-e-v-i-adac-2026-06-21",
-    "venueId": null,
+    "venueId": "dmc-ov-137",
     "venueName": "MSC Gemünden e.V.i. ADAC",
     "venueLocation": "Gemünden",
     "hostId": "dmc-ov-137",
@@ -4324,7 +4628,9 @@
     "from": "2026-06-21",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4339,10 +4645,10 @@
   },
   {
     "id": "dmc-rc-offroad-staaken-e-v-2026-06-21",
-    "venueId": "myrcm-55317",
+    "venueId": "rc-offroad-staaken",
     "venueName": "RC Offroad Staaken",
-    "venueLocation": "",
-    "hostId": "dmc-ov-253",
+    "venueLocation": "Berlin",
+    "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken e.V.",
     "hostCity": "Berlin",
     "hostWebsite": "http://www.rcs-offroad.de",
@@ -4351,7 +4657,9 @@
     "from": "2026-06-21",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4378,7 +4686,9 @@
     "from": "2026-06-21",
     "to": "2026-06-21",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4393,10 +4703,10 @@
   },
   {
     "id": "dmc-spessart-racer-2026-06-27",
-    "venueId": "dmc-ov-323",
+    "venueId": "dmc-spessart-racer",
     "venueName": "Spessart Racer",
     "venueLocation": "Glattbach",
-    "hostId": "dmc-ov-323",
+    "hostId": "dmc-spessart-racer",
     "hostName": "Spessart Racer",
     "hostCity": "Glattbach",
     "hostWebsite": "http://www.spessart-racer.de",
@@ -4405,7 +4715,9 @@
     "from": "2026-06-27",
     "to": "2026-06-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4432,7 +4744,10 @@
     "from": "2026-06-27",
     "to": "2026-06-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE",
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4459,7 +4774,9 @@
     "from": "2026-06-27",
     "to": "2026-06-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4486,7 +4803,9 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4513,7 +4832,9 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4540,7 +4861,9 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGTWFREGTWFUNEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4567,7 +4890,9 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4582,7 +4907,7 @@
   },
   {
     "id": "dmc-rccc-coesfeld-2026-06-27",
-    "venueId": null,
+    "venueId": "dmc-ov-7",
     "venueName": "RCCC Coesfeld",
     "venueLocation": "Coesfeld",
     "hostId": "dmc-ov-7",
@@ -4594,7 +4919,9 @@
     "from": "2026-06-27",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4621,7 +4948,9 @@
     "from": "2026-06-28",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10EGTWFREGTWHOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4648,7 +4977,9 @@
     "from": "2026-06-28",
     "to": "2026-06-28",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4675,7 +5006,9 @@
     "from": "2026-07-03",
     "to": "2026-07-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG4"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4690,7 +5023,7 @@
   },
   {
     "id": "dmc-msv-linsengericht-2026-07-04",
-    "venueId": null,
+    "venueId": "dmc-ov-234",
     "venueName": "MSV Linsengericht",
     "venueLocation": "Gelnhausen",
     "hostId": "dmc-ov-234",
@@ -4702,7 +5035,9 @@
     "from": "2026-07-04",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4729,7 +5064,9 @@
     "from": "2026-07-04",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4756,7 +5093,9 @@
     "from": "2026-07-04",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4771,7 +5110,7 @@
   },
   {
     "id": "dmc-mcc-laupheim-e-v-2026-07-04",
-    "venueId": null,
+    "venueId": "dmc-ov-107",
     "venueName": "MCC Laupheim e.V.",
     "venueLocation": "Laupheim",
     "hostId": "dmc-ov-107",
@@ -4783,7 +5122,9 @@
     "from": "2026-07-04",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4810,7 +5151,9 @@
     "from": "2026-07-05",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4837,7 +5180,9 @@
     "from": "2026-07-05",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG10EG8GT3VGVG8GT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4864,7 +5209,9 @@
     "from": "2026-07-05",
     "to": "2026-07-05",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4879,10 +5226,10 @@
   },
   {
     "id": "dmc-mc-schwedt-e-v-2026-07-11",
-    "venueId": "dmc-ov-65",
+    "venueId": "dmc-mc-schwedt-e-v",
     "venueName": "MC Schwedt e.V.",
     "venueLocation": "Schwedt/Oder",
-    "hostId": "dmc-ov-65",
+    "hostId": "dmc-mc-schwedt-e-v",
     "hostName": "MC Schwedt e.V.",
     "hostCity": "Schwedt/Oder",
     "hostWebsite": "http://www.modellclub-schwedt.com",
@@ -4891,7 +5238,9 @@
     "from": "2026-07-11",
     "to": "2026-07-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8OREORE8ORESC2ORESC4ORETORETR2ORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4906,7 +5255,7 @@
   },
   {
     "id": "dmc-msv-linsengericht-2026-07-11",
-    "venueId": null,
+    "venueId": "dmc-ov-234",
     "venueName": "MSV Linsengericht",
     "venueLocation": "Gelnhausen",
     "hostId": "dmc-ov-234",
@@ -4918,7 +5267,9 @@
     "from": "2026-07-11",
     "to": "2026-07-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4939,7 +5290,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EMOTMOEMOTSTVMOT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4966,7 +5319,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -4993,7 +5348,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5002,7 +5359,7 @@
   },
   {
     "id": "dmc-3-sesselracer-2026-07-11",
-    "venueId": null,
+    "venueId": "dmc-ov-386",
     "venueName": "3 Sesselracer",
     "venueLocation": "Neureichenau",
     "hostId": "dmc-ov-386",
@@ -5014,7 +5371,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5041,7 +5400,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5068,7 +5429,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORESC2ORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5095,7 +5458,9 @@
     "from": "2026-07-11",
     "to": "2026-07-12",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5110,10 +5475,10 @@
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v-2026-07-18",
-    "venueId": "dmc-ov-157",
+    "venueId": "dmc-rmc-wolfsburg-e-v",
     "venueName": "RMC Wolfsburg e.V.",
     "venueLocation": "Gifhorn",
-    "hostId": "dmc-ov-157",
+    "hostId": "dmc-rmc-wolfsburg-e-v",
     "hostName": "RMC Wolfsburg e.V.",
     "hostCity": "Gifhorn",
     "hostWebsite": "http://www.rmc-wolfsburg.eu",
@@ -5122,7 +5487,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": "http://www.rccar-online.de/?seite=veranstaltungen",
     "registrationStatus": "open",
@@ -5137,7 +5504,7 @@
   },
   {
     "id": "dmc-mcc-hof-e-v-2026-07-18",
-    "venueId": null,
+    "venueId": "dmc-ov-56",
     "venueName": "MCC Hof e.V.",
     "venueLocation": "Naila-Marxgrün",
     "hostId": "dmc-ov-56",
@@ -5149,7 +5516,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": "https://forms.gle/QrY5XheeoSkEFdb67",
     "registrationStatus": "open",
@@ -5176,7 +5545,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8EG8GTVG10VG10SVG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5203,7 +5574,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5230,7 +5603,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5251,7 +5626,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5278,7 +5655,9 @@
     "from": "2026-07-18",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5305,7 +5684,9 @@
     "from": "2026-07-19",
     "to": "2026-07-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGTWFREGTWFUNEGTWHO"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5317,27 +5698,6 @@
         "label": "Ausschreibung"
       }
     ]
-  },
-  {
-    "id": "dmc-msc-pol-braunschweig-2026-07-24",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
-    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "hostName": "MSC Pol. Braunschweig",
-    "hostCity": "Braunschweig",
-    "hostWebsite": "http://www.msc-polizei-bs.de",
-    "dmcOvNr": "158",
-    "name": "Freundschaftsrennen",
-    "from": "2026-07-24",
-    "to": "2026-07-26",
-    "series": [],
-    "classes": [],
-    "source": "dmc",
-    "url": null,
-    "registrationStatus": null,
-    "registrationOpens": null,
-    "documents": []
   },
   {
     "id": "dmc-mc-furstenwalde-e-v-2026-07-25",
@@ -5353,7 +5713,9 @@
     "from": "2026-07-25",
     "to": "2026-07-25",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5374,7 +5736,9 @@
     "from": "2026-07-25",
     "to": "2026-07-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5401,7 +5765,9 @@
     "from": "2026-07-25",
     "to": "2026-07-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5416,10 +5782,10 @@
   },
   {
     "id": "dmc-msc-ober-morlen-e-v-2026-07-25",
-    "venueId": "msc-ober-moerlen-e-v",
+    "venueId": "msc-ober-morlen-e-v",
     "venueName": "MSC Ober-Mörlen e.V.",
     "venueLocation": "Weiterstadt",
-    "hostId": "myrcm-36612",
+    "hostId": "msc-ober-morlen-e-v",
     "hostName": "MSC Ober-Mörlen e.V.",
     "hostCity": "Weiterstadt",
     "hostWebsite": "http://www.msc-obermoerlen.de",
@@ -5428,7 +5794,9 @@
     "from": "2026-07-25",
     "to": "2026-07-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5437,7 +5805,7 @@
   },
   {
     "id": "dmc-mcc-laupheim-e-v-2026-07-25",
-    "venueId": null,
+    "venueId": "dmc-ov-107",
     "venueName": "MCC Laupheim e.V.",
     "venueLocation": "Laupheim",
     "hostId": "dmc-ov-107",
@@ -5449,7 +5817,9 @@
     "from": "2026-07-25",
     "to": "2026-07-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": "http://www.rccar-online.de/?seite=veranstaltungen",
     "registrationStatus": "open",
@@ -5476,7 +5846,9 @@
     "from": "2026-07-26",
     "to": "2026-07-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10EGTWFREGTWHOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5491,7 +5863,7 @@
   },
   {
     "id": "dmc-rc-offroad-kassel-e-v-2026-08-01",
-    "venueId": null,
+    "venueId": "dmc-ov-184",
     "venueName": "RC-Offroad Kassel e.V.",
     "venueLocation": "Kassel",
     "hostId": "dmc-ov-184",
@@ -5503,7 +5875,9 @@
     "from": "2026-08-01",
     "to": "2026-08-02",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5524,7 +5898,9 @@
     "from": "2026-08-01",
     "to": "2026-08-02",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8VGVG10VG10SVG8VG8KL1VG8KL2VG8S"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5551,7 +5927,9 @@
     "from": "2026-08-01",
     "to": "2026-08-02",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGMOTVMOT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5578,7 +5956,9 @@
     "from": "2026-08-02",
     "to": "2026-08-02",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5593,10 +5973,10 @@
   },
   {
     "id": "dmc-esv-bischofsheim-e-v-2026-08-07",
-    "venueId": "esv-blau-gold-bischofsheim-1958-e-v",
-    "venueName": "ESV Blau-Gold Bischofsheim 1958 e.V.",
-    "venueLocation": "Bischofsheim",
-    "hostId": "esv-blau-gold-bischofsheim-1958-e-v",
+    "venueId": null,
+    "venueName": "ESV Bischofsheim e.V.",
+    "venueLocation": "Esthal",
+    "hostId": "dmc-ov-37",
     "hostName": "ESV Bischofsheim e.V.",
     "hostCity": "Esthal",
     "hostWebsite": "http://rhein-main-circuit.de",
@@ -5605,7 +5985,9 @@
     "from": "2026-08-07",
     "to": "2026-08-09",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5632,7 +6014,9 @@
     "from": "2026-08-08",
     "to": "2026-08-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5653,7 +6037,9 @@
     "from": "2026-08-08",
     "to": "2026-08-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5VG5F1VG5SPVG5TWVG5TWHOVG6TRUCKVG8GT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5674,7 +6060,9 @@
     "from": "2026-08-09",
     "to": "2026-08-09",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5701,7 +6089,9 @@
     "from": "2026-08-13",
     "to": "2026-08-16",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5722,7 +6112,9 @@
     "from": "2026-08-15",
     "to": "2026-08-16",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5731,10 +6123,10 @@
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-08-15",
-    "venueId": "dmc-ov-296",
+    "venueId": "dmc-modell-car-club-rhein-ahr-e-v",
     "venueName": "Modell Car Club Rhein Ahr e.V.",
     "venueLocation": "Wipperfürth",
-    "hostId": "dmc-ov-296",
+    "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "hostCity": "Wipperfürth",
     "hostWebsite": "http://www.mcc-rhein-ahr.de",
@@ -5743,7 +6135,9 @@
     "from": "2026-08-15",
     "to": "2026-08-16",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5F1VG5SPVG5TW"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5764,7 +6158,9 @@
     "from": "2026-08-15",
     "to": "2026-08-16",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5791,7 +6187,10 @@
     "from": "2026-08-21",
     "to": "2026-08-23",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8GT3",
+      "EG8GTVG8GT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5800,7 +6199,7 @@
   },
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-08-21",
-    "venueId": null,
+    "venueId": "dmc-ov-36",
     "venueName": "RC Offroad Heiligenstadt e.V.",
     "venueLocation": "Uelzen",
     "hostId": "dmc-ov-36",
@@ -5812,7 +6211,9 @@
     "from": "2026-08-21",
     "to": "2026-08-23",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5839,7 +6240,9 @@
     "from": "2026-08-22",
     "to": "2026-08-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5860,7 +6263,9 @@
     "from": "2026-08-22",
     "to": "2026-08-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5881,7 +6286,9 @@
     "from": "2026-08-23",
     "to": "2026-08-23",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGTWFREGTWFUNEGTWHO"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5908,7 +6315,10 @@
     "from": "2026-08-28",
     "to": "2026-08-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG10SVG8S",
+      "VG10VG8KL1VG8KL2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5917,10 +6327,10 @@
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-08-28",
-    "venueId": "dmc-ov-296",
+    "venueId": "dmc-modell-car-club-rhein-ahr-e-v",
     "venueName": "Modell Car Club Rhein Ahr e.V.",
     "venueLocation": "Wipperfürth",
-    "hostId": "dmc-ov-296",
+    "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "hostCity": "Wipperfürth",
     "hostWebsite": "http://www.mcc-rhein-ahr.de",
@@ -5929,7 +6339,9 @@
     "from": "2026-08-28",
     "to": "2026-08-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8EGPRO10EGPRO10SP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5950,7 +6362,9 @@
     "from": "2026-08-29",
     "to": "2026-08-29",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5971,7 +6385,9 @@
     "from": "2026-08-29",
     "to": "2026-08-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -5998,7 +6414,9 @@
     "from": "2026-08-29",
     "to": "2026-08-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6019,7 +6437,9 @@
     "from": "2026-08-29",
     "to": "2026-08-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6046,7 +6466,9 @@
     "from": "2026-08-30",
     "to": "2026-08-30",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6073,7 +6495,9 @@
     "from": "2026-09-04",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5VG5F1VG5SPVG5TWVG5TWHO"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6094,7 +6518,9 @@
     "from": "2026-09-04",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EMOTMOEMOTSTVMOT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6121,7 +6547,9 @@
     "from": "2026-09-05",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6136,10 +6564,10 @@
   },
   {
     "id": "dmc-ort-fulda-2026-09-05",
-    "venueId": "dmc-ov-3",
+    "venueId": "dmc-ort-fulda",
     "venueName": "ORT Fulda",
     "venueLocation": "Steinau",
-    "hostId": "dmc-ov-3",
+    "hostId": "dmc-ort-fulda",
     "hostName": "ORT Fulda",
     "hostCity": "Steinau",
     "hostWebsite": "http://www.ort-fulda.de",
@@ -6148,7 +6576,9 @@
     "from": "2026-09-05",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6169,7 +6599,9 @@
     "from": "2026-09-05",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6178,10 +6610,10 @@
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v-2026-09-05",
-    "venueId": "dmc-ov-341",
+    "venueId": "dmc-offroad-club-ostsee-e-v",
     "venueName": "Offroad Club Ostsee e.V.",
     "venueLocation": "Neustadt in Holstein",
-    "hostId": "dmc-ov-341",
+    "hostId": "dmc-offroad-club-ostsee-e-v",
     "hostName": "Offroad Club Ostsee e.V.",
     "hostCity": "Neustadt in Holstein",
     "hostWebsite": "http://Offroad-Club-Ostsee.Modellbuggy.de",
@@ -6190,7 +6622,9 @@
     "from": "2026-09-05",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": "https://eventrc.pro/events",
     "registrationStatus": "open",
@@ -6199,10 +6633,10 @@
   },
   {
     "id": "dmc-rc-offroad-staaken-e-v-2026-09-06",
-    "venueId": "myrcm-55317",
+    "venueId": "rc-offroad-staaken",
     "venueName": "RC Offroad Staaken",
-    "venueLocation": "",
-    "hostId": "dmc-ov-253",
+    "venueLocation": "Berlin",
+    "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken e.V.",
     "hostCity": "Berlin",
     "hostWebsite": "http://www.rcs-offroad.de",
@@ -6211,7 +6645,9 @@
     "from": "2026-09-06",
     "to": "2026-09-06",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6232,7 +6668,9 @@
     "from": "2026-09-11",
     "to": "2026-09-13",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDST"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6241,10 +6679,10 @@
   },
   {
     "id": "dmc-mc-schwedt-e-v-2026-09-12",
-    "venueId": "dmc-ov-65",
+    "venueId": "dmc-mc-schwedt-e-v",
     "venueName": "MC Schwedt e.V.",
     "venueLocation": "Schwedt/Oder",
-    "hostId": "dmc-ov-65",
+    "hostId": "dmc-mc-schwedt-e-v",
     "hostName": "MC Schwedt e.V.",
     "hostCity": "Schwedt/Oder",
     "hostWebsite": "http://www.modellclub-schwedt.com",
@@ -6253,7 +6691,9 @@
     "from": "2026-09-12",
     "to": "2026-09-13",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8OREORE8ORESC2ORESC4ORETORETR2ORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6280,7 +6720,9 @@
     "from": "2026-09-13",
     "to": "2026-09-13",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10EGTWFREGTWHOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6307,7 +6749,9 @@
     "from": "2026-09-13",
     "to": "2026-09-13",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6334,7 +6778,9 @@
     "from": "2026-09-19",
     "to": "2026-09-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6349,10 +6795,10 @@
   },
   {
     "id": "dmc-msc-ober-morlen-e-v-2026-09-19",
-    "venueId": "msc-ober-moerlen-e-v",
+    "venueId": "msc-ober-morlen-e-v",
     "venueName": "MSC Ober-Mörlen e.V.",
     "venueLocation": "Weiterstadt",
-    "hostId": "myrcm-36612",
+    "hostId": "msc-ober-morlen-e-v",
     "hostName": "MSC Ober-Mörlen e.V.",
     "hostCity": "Weiterstadt",
     "hostWebsite": "http://www.msc-obermoerlen.de",
@@ -6361,7 +6807,9 @@
     "from": "2026-09-19",
     "to": "2026-09-19",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6382,7 +6830,9 @@
     "from": "2026-09-19",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6403,7 +6853,9 @@
     "from": "2026-09-19",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEGF1EGPRO10EGPRO10SPEGTWFREGTWHOEGTWMOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6430,7 +6882,9 @@
     "from": "2026-09-19",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG10EG8EG8GTVG10VG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6439,10 +6893,10 @@
   },
   {
     "id": "dmc-mbc-oberlausitz-e-v-2026-09-19",
-    "venueId": "dmc-ov-139",
+    "venueId": "dmc-mbc-oberlausitz-e-v",
     "venueName": "MBC Oberlausitz e.V.",
     "venueLocation": "Obercunnersdorf",
-    "hostId": "dmc-ov-139",
+    "hostId": "dmc-mbc-oberlausitz-e-v",
     "hostName": "MBC Oberlausitz e.V.",
     "hostCity": "Obercunnersdorf",
     "hostWebsite": "http://www.mbc-oberlausitz.de",
@@ -6451,7 +6905,9 @@
     "from": "2026-09-19",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE8ORESC2ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6478,7 +6934,9 @@
     "from": "2026-09-19",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6487,10 +6945,10 @@
   },
   {
     "id": "dmc-boc-kiel-e-v-2026-09-19",
-    "venueId": "dmc-ov-254",
+    "venueId": "dmc-boc-kiel-e-v",
     "venueName": "BOC Kiel e.V.",
     "venueLocation": "Schönkirchen",
-    "hostId": "dmc-ov-254",
+    "hostId": "dmc-boc-kiel-e-v",
     "hostName": "BOC Kiel e.V.",
     "hostCity": "Schönkirchen",
     "hostWebsite": "http://www.boc-kiel.de",
@@ -6499,7 +6957,9 @@
     "from": "2026-09-19",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": "https://eventrc.pro/events",
     "registrationStatus": "open",
@@ -6520,7 +6980,9 @@
     "from": "2026-09-20",
     "to": "2026-09-20",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG8VGVG10VG5VG8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6535,10 +6997,10 @@
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-09-25",
-    "venueId": "dmc-ov-79",
+    "venueId": "dmc-rc-club-grossheubach-e-v",
     "venueName": "RC-Club Grossheubach e.V.",
     "venueLocation": "Kelkheim",
-    "hostId": "dmc-ov-79",
+    "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "hostCity": "Kelkheim",
     "hostWebsite": "http://www.rc-club-großheubach.de",
@@ -6547,7 +7009,9 @@
     "from": "2026-09-25",
     "to": "2026-09-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR6OR62WDOR64WDOR6SC4"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6568,7 +7032,9 @@
     "from": "2026-09-25",
     "to": "2026-09-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE4WD"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6589,7 +7055,9 @@
     "from": "2026-09-26",
     "to": "2026-09-26",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6610,7 +7078,9 @@
     "from": "2026-09-26",
     "to": "2026-09-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6625,7 +7095,7 @@
   },
   {
     "id": "dmc-rcr-peterberg-e-v-2026-09-26",
-    "venueId": null,
+    "venueId": "dmc-ov-339",
     "venueName": "RCR Peterberg e.V.",
     "venueLocation": "Siegburg",
     "hostId": "dmc-ov-339",
@@ -6637,7 +7107,9 @@
     "from": "2026-09-26",
     "to": "2026-09-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6645,11 +7117,40 @@
     "documents": []
   },
   {
+    "id": "dmc-tsv-mariendorf-97-berlin-2026-09-26",
+    "venueId": "tsv-mariendorf-rc-racing",
+    "venueName": "TSV Mariendorf 1897 RCCR",
+    "venueLocation": "Berlin",
+    "hostId": "tsv-mariendorf",
+    "hostName": "TSV Mariendorf 97 Berlin",
+    "hostCity": "Berlin",
+    "hostWebsite": "http://www.tsv-mariendorf97-rccar.de",
+    "dmcOvNr": "102",
+    "name": "Freundschaftsrennen",
+    "from": "2026-09-26",
+    "to": "2026-09-27",
+    "series": [],
+    "classes": [
+      "EG"
+    ],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1781172583_finale2026.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
     "id": "dmc-rmc-wolfsburg-e-v-2026-09-26",
-    "venueId": "dmc-ov-157",
+    "venueId": "dmc-rmc-wolfsburg-e-v",
     "venueName": "RMC Wolfsburg e.V.",
     "venueLocation": "Gifhorn",
-    "hostId": "dmc-ov-157",
+    "hostId": "dmc-rmc-wolfsburg-e-v",
     "hostName": "RMC Wolfsburg e.V.",
     "hostCity": "Gifhorn",
     "hostWebsite": "http://www.rmc-wolfsburg.eu",
@@ -6658,7 +7159,9 @@
     "from": "2026-09-26",
     "to": "2026-09-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6679,7 +7182,9 @@
     "from": "2026-09-27",
     "to": "2026-09-27",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6700,7 +7205,9 @@
     "from": "2026-10-02",
     "to": "2026-10-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "ORE2WDORE2WDSTORE4WDORE4WDSTORE8ORETORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6727,7 +7234,9 @@
     "from": "2026-10-03",
     "to": "2026-10-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6748,7 +7257,9 @@
     "from": "2026-10-03",
     "to": "2026-10-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORETORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6757,10 +7268,10 @@
   },
   {
     "id": "dmc-rc-offroad-staaken-e-v-2026-10-04",
-    "venueId": "myrcm-55317",
+    "venueId": "rc-offroad-staaken",
     "venueName": "RC Offroad Staaken",
-    "venueLocation": "",
-    "hostId": "dmc-ov-253",
+    "venueLocation": "Berlin",
+    "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken e.V.",
     "hostCity": "Berlin",
     "hostWebsite": "http://www.rcs-offroad.de",
@@ -6769,7 +7280,9 @@
     "from": "2026-10-04",
     "to": "2026-10-04",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6790,7 +7303,9 @@
     "from": "2026-10-10",
     "to": "2026-10-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6817,7 +7332,9 @@
     "from": "2026-10-10",
     "to": "2026-10-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6826,10 +7343,10 @@
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v-2026-10-10",
-    "venueId": "dmc-ov-79",
+    "venueId": "dmc-rc-club-grossheubach-e-v",
     "venueName": "RC-Club Grossheubach e.V.",
     "venueLocation": "Kelkheim",
-    "hostId": "dmc-ov-79",
+    "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "hostCity": "Kelkheim",
     "hostWebsite": "http://www.rc-club-großheubach.de",
@@ -6838,7 +7355,9 @@
     "from": "2026-10-10",
     "to": "2026-10-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OROR8ORE8"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6847,7 +7366,7 @@
   },
   {
     "id": "dmc-msv-neubrandenburg-e-v-2026-10-10",
-    "venueId": null,
+    "venueId": "dmc-ov-90",
     "venueName": "MSV- Neubrandenburg e.V.",
     "venueLocation": "Lebbin",
     "hostId": "dmc-ov-90",
@@ -6859,7 +7378,9 @@
     "from": "2026-10-10",
     "to": "2026-10-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6880,7 +7401,9 @@
     "from": "2026-10-10",
     "to": "2026-10-11",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OR8ORE8ORT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6907,7 +7430,9 @@
     "from": "2026-10-17",
     "to": "2026-10-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6928,7 +7453,9 @@
     "from": "2026-10-17",
     "to": "2026-10-18",
     "series": [],
-    "classes": [],
+    "classes": [
+      "VG5"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6955,7 +7482,9 @@
     "from": "2026-10-24",
     "to": "2026-10-24",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG8EG8GT"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -6982,7 +7511,9 @@
     "from": "2026-10-30",
     "to": "2026-11-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGEG10EG8GTEGMOTEGTWFRVG10VG8VMOT"
+    ],
     "source": "dmc",
     "url": "https://forms.gle/gHyWSwCn5273qR9H6",
     "registrationStatus": "open",
@@ -7009,7 +7540,9 @@
     "from": "2026-10-31",
     "to": "2026-10-31",
     "series": [],
-    "classes": [],
+    "classes": [
+      "Alle"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -7030,7 +7563,9 @@
     "from": "2026-10-31",
     "to": "2026-11-01",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -7051,7 +7586,9 @@
     "from": "2026-11-06",
     "to": "2026-11-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EGF1EGTWFREGTWFUNEGTWHOEGTWMOEGTWSP"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -7072,7 +7609,9 @@
     "from": "2026-11-07",
     "to": "2026-11-08",
     "series": [],
-    "classes": [],
+    "classes": [
+      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
@@ -7093,7 +7632,9 @@
     "from": "2026-11-21",
     "to": "2026-11-22",
     "series": [],
-    "classes": [],
+    "classes": [
+      "EG"
+    ],
     "source": "dmc",
     "url": null,
     "registrationStatus": null,
