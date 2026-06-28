@@ -14,7 +14,12 @@
     "to": "2026-01-04",
     "series": [],
     "classes": [
-      "EGEGF1EGTWFREGTWFUNEGTWHOEGTWMO"
+      "EG",
+      "EGF1",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO",
+      "EGTWMO"
     ],
     "source": "dmc",
     "url": null,
@@ -43,7 +48,12 @@
     "to": "2026-01-04",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -72,7 +82,10 @@
     "to": "2026-01-11",
     "series": [],
     "classes": [
-      "OREORE2WDSTORE4WDSTORETR2"
+      "ORE",
+      "ORE2WDST",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -101,7 +114,8 @@
     "to": "2026-01-11",
     "series": [],
     "classes": [
-      "EGEG10"
+      "EG",
+      "EG10"
     ],
     "source": "dmc",
     "url": null,
@@ -130,7 +144,9 @@
     "to": "2026-01-11",
     "series": [],
     "classes": [
-      "EAEBEGT"
+      "EA",
+      "EB",
+      "EGT"
     ],
     "source": "dmc",
     "url": null,
@@ -159,7 +175,12 @@
     "to": "2026-01-18",
     "series": [],
     "classes": [
-      "AlleORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "Alle",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -217,7 +238,11 @@
     "to": "2026-01-18",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -269,7 +294,15 @@
     "to": "2026-01-18",
     "series": [],
     "classes": [
-      "EAEBEGEGF1EGTEGTWFREGTWHOEGTWMOEGTWSP"
+      "EA",
+      "EB",
+      "EG",
+      "EGF1",
+      "EGT",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWMO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -298,7 +331,11 @@
     "to": "2026-01-18",
     "series": [],
     "classes": [
-      "EAEBEGEGF1EGT"
+      "EA",
+      "EB",
+      "EG",
+      "EGF1",
+      "EGT"
     ],
     "source": "dmc",
     "url": null,
@@ -356,7 +393,10 @@
     "to": "2026-01-25",
     "series": [],
     "classes": [
-      "EAEBEGF1EGT"
+      "EA",
+      "EB",
+      "EGF1",
+      "EGT"
     ],
     "source": "dmc",
     "url": null,
@@ -385,7 +425,11 @@
     "to": "2026-02-01",
     "series": [],
     "classes": [
-      "OREORE2WDORE4WDORESC2ORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE4WD",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -414,7 +458,11 @@
     "to": "2026-02-08",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -443,7 +491,9 @@
     "to": "2026-02-08",
     "series": [],
     "classes": [
-      "EAEBEGT"
+      "EA",
+      "EB",
+      "EGT"
     ],
     "source": "dmc",
     "url": null,
@@ -472,7 +522,10 @@
     "to": "2026-02-08",
     "series": [],
     "classes": [
-      "OREORE2WDSTORE4WDSTORETR2"
+      "ORE",
+      "ORE2WDST",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -501,7 +554,8 @@
     "to": "2026-02-08",
     "series": [],
     "classes": [
-      "EGEG10"
+      "EG",
+      "EG10"
     ],
     "source": "dmc",
     "url": null,
@@ -530,7 +584,12 @@
     "to": "2026-02-15",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -588,7 +647,9 @@
     "to": "2026-02-15",
     "series": [],
     "classes": [
-      "HEGTWHOHEGTWMOHEGTWSP",
+      "HEGTWHO",
+      "HEGTWMO",
+      "HEGTWSP",
       "EG12"
     ],
     "source": "dmc",
@@ -647,7 +708,12 @@
     "to": "2026-02-22",
     "series": [],
     "classes": [
-      "EGEGF1EGTWFREGTWHOEGTWMOEGTWSP"
+      "EG",
+      "EGF1",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWMO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -705,7 +771,11 @@
     "to": "2026-03-01",
     "series": [],
     "classes": [
-      "OREORE2WDORE4WDORESC2ORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE4WD",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -734,7 +804,13 @@
     "to": "2026-03-01",
     "series": [],
     "classes": [
-      "EGEG10EGF1EGTWFREGTWFUNEGTWHOEGTWMO"
+      "EG",
+      "EG10",
+      "EGF1",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO",
+      "EGTWMO"
     ],
     "source": "dmc",
     "url": null,
@@ -763,7 +839,11 @@
     "to": "2026-03-01",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -879,7 +959,9 @@
     "to": "2026-03-08",
     "series": [],
     "classes": [
-      "EAEBEGT"
+      "EA",
+      "EB",
+      "EGT"
     ],
     "source": "dmc",
     "url": null,
@@ -937,7 +1019,9 @@
     "to": "2026-03-14",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -960,7 +1044,12 @@
     "to": "2026-03-15",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -989,7 +1078,11 @@
     "to": "2026-03-15",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -1018,7 +1111,11 @@
     "to": "2026-03-15",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -1128,7 +1225,8 @@
     "to": "2026-03-22",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1186,7 +1284,9 @@
     "to": "2026-03-28",
     "series": [],
     "classes": [
-      "ORE2WDSTORE4WDORE8"
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1244,7 +1344,11 @@
     "to": "2026-03-29",
     "series": [],
     "classes": [
-      "OREORE2WDORE4WDORESC2ORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE4WD",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -1296,7 +1400,8 @@
     "to": "2026-04-05",
     "series": [],
     "classes": [
-      "EGVG8"
+      "EG",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -1325,7 +1430,10 @@
     "to": "2026-04-12",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -1354,7 +1462,9 @@
     "to": "2026-04-12",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1383,7 +1493,13 @@
     "to": "2026-04-12",
     "series": [],
     "classes": [
-      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+      "EG8GT3",
+      "VG104WD",
+      "VG10S",
+      "VG8GT",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -1412,7 +1528,8 @@
     "to": "2026-04-12",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1470,7 +1587,8 @@
     "to": "2026-04-12",
     "series": [],
     "classes": [
-      "OR8ORE8ORE8"
+      "OR8ORE8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1499,7 +1617,10 @@
     "to": "2026-04-19",
     "series": [],
     "classes": [
-      "VG5VG5F1VG5SPVG5TW"
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -1551,7 +1672,8 @@
     "to": "2026-04-18",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1626,7 +1748,11 @@
     "to": "2026-04-19",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORETR2"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -1655,7 +1781,12 @@
     "to": "2026-04-19",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORESC2ORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -1713,7 +1844,10 @@
     "to": "2026-04-26",
     "series": [],
     "classes": [
-      "OROR8ORE8ORET"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET"
     ],
     "source": "dmc",
     "url": null,
@@ -1742,7 +1876,8 @@
     "to": "2026-04-26",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1771,7 +1906,9 @@
     "to": "2026-04-26",
     "series": [],
     "classes": [
-      "OREORE2WDORE4WD"
+      "ORE",
+      "ORE2WD",
+      "ORE4WD"
     ],
     "source": "dmc",
     "url": null,
@@ -1800,7 +1937,11 @@
     "to": "2026-04-26",
     "series": [],
     "classes": [
-      "EG8EG8GTVGVG10VG8"
+      "EG8",
+      "EG8GT",
+      "VG",
+      "VG10",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -1829,7 +1970,9 @@
     "to": "2026-04-26",
     "series": [],
     "classes": [
-      "EGEGTWFREGTWFUN"
+      "EG",
+      "EGTWFR",
+      "EGTWFUN"
     ],
     "source": "dmc",
     "url": null,
@@ -1858,7 +2001,15 @@
     "to": "2026-04-26",
     "series": [],
     "classes": [
-      "EAEBEGEG10EG12EGTEGTWFREGTWHOEGTWSP"
+      "EA",
+      "EB",
+      "EG",
+      "EG10",
+      "EG12",
+      "EGT",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -1910,7 +2061,8 @@
     "to": "2026-05-01",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -1933,7 +2085,9 @@
     "to": "2026-05-01",
     "series": [],
     "classes": [
-      "OR8ORE8ORT"
+      "OR8",
+      "ORE8",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -1956,7 +2110,10 @@
     "to": "2026-05-01",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDST"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST"
     ],
     "source": "dmc",
     "url": null,
@@ -1985,7 +2142,14 @@
     "to": "2026-05-01",
     "series": [],
     "classes": [
-      "EG10EG10EG8EG8VG10VG10VG8VG8"
+      "EG10",
+      "EG10",
+      "EG8",
+      "EG8",
+      "VG10",
+      "VG10",
+      "VG8",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -2066,7 +2230,9 @@
     "to": "2026-05-03",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -2095,7 +2261,8 @@
     "to": "2026-05-03",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -2124,7 +2291,8 @@
     "to": "2026-05-03",
     "series": [],
     "classes": [
-      "EG8VG"
+      "EG8",
+      "VG"
     ],
     "source": "dmc",
     "url": null,
@@ -2153,7 +2321,12 @@
     "to": "2026-05-03",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -2182,7 +2355,8 @@
     "to": "2026-05-03",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -2211,7 +2385,11 @@
     "to": "2026-05-03",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORT"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -2327,7 +2505,10 @@
     "to": "2026-05-10",
     "series": [],
     "classes": [
-      "EG8GTEG8GT3EGPRO10EGPRO10SP"
+      "EG8GT",
+      "EG8GT3",
+      "EGPRO10",
+      "EGPRO10SP"
     ],
     "source": "dmc",
     "url": null,
@@ -2356,7 +2537,9 @@
     "to": "2026-05-10",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -2385,7 +2568,8 @@
     "to": "2026-05-10",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -2414,7 +2598,10 @@
     "to": "2026-05-10",
     "series": [],
     "classes": [
-      "ORE8ORESC2ORETORT"
+      "ORE8",
+      "ORESC2",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -2443,7 +2630,8 @@
     "to": "2026-05-10",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": "https://rccar-online.de/",
@@ -2472,7 +2660,9 @@
     "to": "2026-05-10",
     "series": [],
     "classes": [
-      "EGEGTWFREGTWFUN"
+      "EG",
+      "EGTWFR",
+      "EGTWFUN"
     ],
     "source": "dmc",
     "url": null,
@@ -2559,7 +2749,8 @@
     "to": "2026-05-16",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -2588,7 +2779,10 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "OR6OR62WDOR64WDOR6SC4"
+      "OR6",
+      "OR62WD",
+      "OR64WD",
+      "OR6SC4"
     ],
     "source": "dmc",
     "url": null,
@@ -2646,7 +2840,8 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "ORE8ORET"
+      "ORE8",
+      "ORET"
     ],
     "source": "dmc",
     "url": null,
@@ -2704,7 +2899,8 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "EGEG10"
+      "EG",
+      "EG10"
     ],
     "source": "dmc",
     "url": null,
@@ -2733,7 +2929,13 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "VG10VG5VG5F1VG5SPVG5TWVG8KL1VG8KL2"
+      "VG10",
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW",
+      "VG8KL1",
+      "VG8KL2"
     ],
     "source": "dmc",
     "url": null,
@@ -2792,7 +2994,12 @@
     "series": [],
     "classes": [
       "ORE8",
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORE8ORESC2ORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -2821,7 +3028,14 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "EG8VGVG10VG10SVG8VG8KL1VG8KL2VG8S"
+      "EG8",
+      "VG",
+      "VG10",
+      "VG10S",
+      "VG8",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -2850,7 +3064,13 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "VGVG10VG10SVG8VG8KL1VG8KL2VG8S"
+      "VG",
+      "VG10",
+      "VG10S",
+      "VG8",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -2879,7 +3099,11 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORETR2"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -2908,7 +3132,11 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "EGEG10EGTWFREGTWHOEGTWSP"
+      "EG",
+      "EG10",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -2966,7 +3194,11 @@
     "to": "2026-05-17",
     "series": [],
     "classes": [
-      "EGTWFREGTWFUNEGTWHOEGTWMOEGTWSP"
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO",
+      "EGTWMO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -3024,7 +3256,11 @@
     "to": "2026-05-23",
     "series": [],
     "classes": [
-      "EG8GTVG5VG5F1VG5SPVG5TW"
+      "EG8GT",
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -3053,7 +3289,9 @@
     "to": "2026-05-24",
     "series": [],
     "classes": [
-      "VG5F1VG5SPVG5TW"
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -3105,7 +3343,10 @@
     "to": "2026-05-24",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -3134,7 +3375,13 @@
     "to": "2026-05-24",
     "series": [],
     "classes": [
-      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+      "EG8GT3",
+      "VG104WD",
+      "VG10S",
+      "VG8GT",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -3245,7 +3492,12 @@
     "to": "2026-05-24",
     "series": [],
     "classes": [
-      "EGEG8VGVG10VG5VG8"
+      "EG",
+      "EG8",
+      "VG",
+      "VG10",
+      "VG5",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -3274,7 +3526,8 @@
     "to": "2026-05-24",
     "series": [],
     "classes": [
-      "VG5VG5F1"
+      "VG5",
+      "VG5F1"
     ],
     "source": "dmc",
     "url": null,
@@ -3332,7 +3585,9 @@
     "to": "2026-05-31",
     "series": [],
     "classes": [
-      "EMOTMOEMOTSTVMOT"
+      "EMOTMO",
+      "EMOTST",
+      "VMOT"
     ],
     "source": "dmc",
     "url": null,
@@ -3413,7 +3668,8 @@
     "to": "2026-05-31",
     "series": [],
     "classes": [
-      "ORE8ORET"
+      "ORE8",
+      "ORET"
     ],
     "source": "dmc",
     "url": null,
@@ -3471,7 +3727,12 @@
     "to": "2026-05-31",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -3500,7 +3761,8 @@
     "to": "2026-05-31",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -3559,7 +3821,12 @@
     "series": [],
     "classes": [
       "ORE8",
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORE8ORESC2ORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -3588,7 +3855,11 @@
     "to": "2026-05-31",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORETR2"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -3617,7 +3888,8 @@
     "to": "2026-05-31",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -3704,7 +3976,9 @@
     "to": "2026-06-07",
     "series": [],
     "classes": [
-      "EG8GTEG8GT3VG5"
+      "EG8GT",
+      "EG8GT3",
+      "VG5"
     ],
     "source": "dmc",
     "url": null,
@@ -3791,7 +4065,12 @@
     "to": "2026-06-07",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -3820,7 +4099,10 @@
     "to": "2026-06-07",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -3849,7 +4131,10 @@
     "to": "2026-06-07",
     "series": [],
     "classes": [
-      "EG8VG5VG5SPVG5TW"
+      "EG8",
+      "VG5",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -3878,7 +4163,11 @@
     "to": "2026-06-07",
     "series": [],
     "classes": [
-      "EG8GTEGF1VG10VG5VG8"
+      "EG8GT",
+      "EGF1",
+      "VG10",
+      "VG5",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -3907,7 +4196,12 @@
     "to": "2026-06-07",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -3965,7 +4259,12 @@
     "to": "2026-06-13",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -4023,7 +4322,9 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "VG10VG8KL1VG8KL2"
+      "VG10",
+      "VG8KL1",
+      "VG8KL2"
     ],
     "source": "dmc",
     "url": null,
@@ -4052,7 +4353,9 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -4081,8 +4384,17 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2",
-      "EGTWFREGTWFUNEGTWHOEGTWMOEGTWSP"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO",
+      "EGTWMO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -4111,7 +4423,12 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "VGVG10VG8VG8KL1VG8KL2VG8S"
+      "VG",
+      "VG10",
+      "VG8",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -4170,7 +4487,8 @@
     "series": [],
     "classes": [
       "ORE",
-      "EGMOTVMOT"
+      "EGMOT",
+      "VMOT"
     ],
     "source": "dmc",
     "url": null,
@@ -4257,7 +4575,11 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORETR2"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -4286,7 +4608,8 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -4315,7 +4638,9 @@
     "to": "2026-06-14",
     "series": [],
     "classes": [
-      "EGEGTWFREGTWFUN"
+      "EG",
+      "EGTWFR",
+      "EGTWFUN"
     ],
     "source": "dmc",
     "url": null,
@@ -4344,7 +4669,10 @@
     "to": "2026-06-21",
     "series": [],
     "classes": [
-      "OREORE2WDORE4WDORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE4WD",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -4373,7 +4701,7 @@
     "to": "2026-06-21",
     "series": [],
     "classes": [
-      "ORETORT",
+      "ORET",
       "ORT"
     ],
     "source": "dmc",
@@ -4513,7 +4841,9 @@
     "to": "2026-06-21",
     "series": [],
     "classes": [
-      "EG8GTEG8GT3VG8GT"
+      "EG8GT",
+      "EG8GT3",
+      "VG8GT"
     ],
     "source": "dmc",
     "url": null,
@@ -4542,7 +4872,13 @@
     "to": "2026-06-21",
     "series": [],
     "classes": [
-      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+      "EG8GT3",
+      "VG104WD",
+      "VG10S",
+      "VG8GT",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -4571,7 +4907,10 @@
     "to": "2026-06-21",
     "series": [],
     "classes": [
-      "VG5VG5F1VG5SPVG5TW"
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -4658,7 +4997,10 @@
     "to": "2026-06-21",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -4862,7 +5204,10 @@
     "to": "2026-06-28",
     "series": [],
     "classes": [
-      "EGEGTWFREGTWFUNEGTWSP"
+      "EG",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -4891,7 +5236,12 @@
     "to": "2026-06-28",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -4920,7 +5270,10 @@
     "to": "2026-06-28",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -4949,7 +5302,11 @@
     "to": "2026-06-28",
     "series": [],
     "classes": [
-      "EGEG10EGTWFREGTWHOEGTWSP"
+      "EG",
+      "EG10",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -5036,7 +5393,9 @@
     "to": "2026-07-05",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -5123,7 +5482,11 @@
     "to": "2026-07-05",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORETR2"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -5181,7 +5544,10 @@
     "to": "2026-07-05",
     "series": [],
     "classes": [
-      "EG10EG8GT3VGVG8GT"
+      "EG10",
+      "EG8GT3",
+      "VG",
+      "VG8GT"
     ],
     "source": "dmc",
     "url": null,
@@ -5239,7 +5605,14 @@
     "to": "2026-07-11",
     "series": [],
     "classes": [
-      "OR8OREORE8ORESC2ORESC4ORETORETR2ORT"
+      "OR8",
+      "ORE",
+      "ORE8",
+      "ORESC2",
+      "ORESC4",
+      "ORET",
+      "ORETR2",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -5291,7 +5664,9 @@
     "to": "2026-07-12",
     "series": [],
     "classes": [
-      "EMOTMOEMOTSTVMOT"
+      "EMOTMO",
+      "EMOTST",
+      "VMOT"
     ],
     "source": "dmc",
     "url": null,
@@ -5349,7 +5724,12 @@
     "to": "2026-07-12",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -5372,7 +5752,11 @@
     "to": "2026-07-12",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORT"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -5401,7 +5785,10 @@
     "to": "2026-07-12",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -5430,7 +5817,12 @@
     "to": "2026-07-12",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORESC2ORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORESC2",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -5459,7 +5851,8 @@
     "to": "2026-07-12",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -5517,7 +5910,10 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "VG5VG5F1VG5SPVG5TW"
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": "https://forms.gle/QrY5XheeoSkEFdb67",
@@ -5546,7 +5942,13 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "EG8EG8GTVG10VG10SVG8KL1VG8KL2VG8S"
+      "EG8",
+      "EG8GT",
+      "VG10",
+      "VG10S",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -5575,7 +5977,12 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -5604,7 +6011,13 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "EG8GT3VG104WDVG10SVG8GTVG8KL1VG8KL2VG8S"
+      "EG8GT3",
+      "VG104WD",
+      "VG10S",
+      "VG8GT",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -5627,7 +6040,9 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "VG5F1VG5SPVG5TW"
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -5656,7 +6071,11 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORETR2"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -5685,7 +6104,10 @@
     "to": "2026-07-19",
     "series": [],
     "classes": [
-      "EGEGTWFREGTWFUNEGTWHO"
+      "EG",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO"
     ],
     "source": "dmc",
     "url": null,
@@ -5766,7 +6188,11 @@
     "to": "2026-07-26",
     "series": [],
     "classes": [
-      "OROR8ORE8ORETORT"
+      "OR",
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -5795,7 +6221,9 @@
     "to": "2026-07-26",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -5847,7 +6275,11 @@
     "to": "2026-07-26",
     "series": [],
     "classes": [
-      "EGEG10EGTWFREGTWHOEGTWSP"
+      "EG",
+      "EG10",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -5876,7 +6308,9 @@
     "to": "2026-08-02",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -5899,7 +6333,14 @@
     "to": "2026-08-02",
     "series": [],
     "classes": [
-      "EG8VGVG10VG10SVG8VG8KL1VG8KL2VG8S"
+      "EG8",
+      "VG",
+      "VG10",
+      "VG10S",
+      "VG8",
+      "VG8KL1",
+      "VG8KL2",
+      "VG8S"
     ],
     "source": "dmc",
     "url": null,
@@ -5928,7 +6369,8 @@
     "to": "2026-08-02",
     "series": [],
     "classes": [
-      "EGMOTVMOT"
+      "EGMOT",
+      "VMOT"
     ],
     "source": "dmc",
     "url": null,
@@ -6038,7 +6480,13 @@
     "to": "2026-08-08",
     "series": [],
     "classes": [
-      "VG5VG5F1VG5SPVG5TWVG5TWHOVG6TRUCKVG8GT"
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW",
+      "VG5TWHO",
+      "VG6TRUCK",
+      "VG8GT"
     ],
     "source": "dmc",
     "url": null,
@@ -6090,7 +6538,9 @@
     "to": "2026-08-16",
     "series": [],
     "classes": [
-      "ORE4WDORE4WDSTORETR2"
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -6136,7 +6586,9 @@
     "to": "2026-08-16",
     "series": [],
     "classes": [
-      "VG5F1VG5SPVG5TW"
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
     ],
     "source": "dmc",
     "url": null,
@@ -6159,7 +6611,8 @@
     "to": "2026-08-16",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -6189,7 +6642,8 @@
     "series": [],
     "classes": [
       "EG8GT3",
-      "EG8GTVG8GT"
+      "EG8GT",
+      "VG8GT"
     ],
     "source": "dmc",
     "url": null,
@@ -6287,7 +6741,10 @@
     "to": "2026-08-23",
     "series": [],
     "classes": [
-      "EGEGTWFREGTWFUNEGTWHO"
+      "EG",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO"
     ],
     "source": "dmc",
     "url": null,
@@ -6316,8 +6773,11 @@
     "to": "2026-08-30",
     "series": [],
     "classes": [
-      "VG10SVG8S",
-      "VG10VG8KL1VG8KL2"
+      "VG10S",
+      "VG8S",
+      "VG10",
+      "VG8KL1",
+      "VG8KL2"
     ],
     "source": "dmc",
     "url": null,
@@ -6340,7 +6800,9 @@
     "to": "2026-08-30",
     "series": [],
     "classes": [
-      "EG8EGPRO10EGPRO10SP"
+      "EG8",
+      "EGPRO10",
+      "EGPRO10SP"
     ],
     "source": "dmc",
     "url": null,
@@ -6438,7 +6900,11 @@
     "to": "2026-08-30",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -6496,7 +6962,11 @@
     "to": "2026-09-06",
     "series": [],
     "classes": [
-      "VG5VG5F1VG5SPVG5TWVG5TWHO"
+      "VG5",
+      "VG5F1",
+      "VG5SP",
+      "VG5TW",
+      "VG5TWHO"
     ],
     "source": "dmc",
     "url": null,
@@ -6519,7 +6989,9 @@
     "to": "2026-09-06",
     "series": [],
     "classes": [
-      "EMOTMOEMOTSTVMOT"
+      "EMOTMO",
+      "EMOTST",
+      "VMOT"
     ],
     "source": "dmc",
     "url": null,
@@ -6577,7 +7049,9 @@
     "to": "2026-09-06",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -6600,7 +7074,10 @@
     "to": "2026-09-06",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -6623,7 +7100,8 @@
     "to": "2026-09-06",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": "https://eventrc.pro/events",
@@ -6646,7 +7124,10 @@
     "to": "2026-09-06",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -6669,7 +7150,8 @@
     "to": "2026-09-13",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDST"
+      "ORE2WD",
+      "ORE2WDST"
     ],
     "source": "dmc",
     "url": null,
@@ -6692,7 +7174,14 @@
     "to": "2026-09-13",
     "series": [],
     "classes": [
-      "OR8OREORE8ORESC2ORESC4ORETORETR2ORT"
+      "OR8",
+      "ORE",
+      "ORE8",
+      "ORESC2",
+      "ORESC4",
+      "ORET",
+      "ORETR2",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -6721,7 +7210,11 @@
     "to": "2026-09-13",
     "series": [],
     "classes": [
-      "EGEG10EGTWFREGTWHOEGTWSP"
+      "EG",
+      "EG10",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -6831,7 +7324,12 @@
     "to": "2026-09-20",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -6854,7 +7352,14 @@
     "to": "2026-09-20",
     "series": [],
     "classes": [
-      "EGEGF1EGPRO10EGPRO10SPEGTWFREGTWHOEGTWMOEGTWSP"
+      "EG",
+      "EGF1",
+      "EGPRO10",
+      "EGPRO10SP",
+      "EGTWFR",
+      "EGTWHO",
+      "EGTWMO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -6883,7 +7388,11 @@
     "to": "2026-09-20",
     "series": [],
     "classes": [
-      "EG10EG8EG8GTVG10VG8"
+      "EG10",
+      "EG8",
+      "EG8GT",
+      "VG10",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -6906,7 +7415,10 @@
     "to": "2026-09-20",
     "series": [],
     "classes": [
-      "ORE8ORESC2ORETORT"
+      "ORE8",
+      "ORESC2",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -6958,7 +7470,8 @@
     "to": "2026-09-20",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": "https://eventrc.pro/events",
@@ -6981,7 +7494,12 @@
     "to": "2026-09-20",
     "series": [],
     "classes": [
-      "EGEG8VGVG10VG5VG8"
+      "EG",
+      "EG8",
+      "VG",
+      "VG10",
+      "VG5",
+      "VG8"
     ],
     "source": "dmc",
     "url": null,
@@ -7010,7 +7528,10 @@
     "to": "2026-09-27",
     "series": [],
     "classes": [
-      "OR6OR62WDOR64WDOR6SC4"
+      "OR6",
+      "OR62WD",
+      "OR64WD",
+      "OR6SC4"
     ],
     "source": "dmc",
     "url": null,
@@ -7033,7 +7554,8 @@
     "to": "2026-09-27",
     "series": [],
     "classes": [
-      "ORE2WDORE4WD"
+      "ORE2WD",
+      "ORE4WD"
     ],
     "source": "dmc",
     "url": null,
@@ -7108,7 +7630,9 @@
     "to": "2026-09-27",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -7160,7 +7684,8 @@
     "to": "2026-09-27",
     "series": [],
     "classes": [
-      "OR8ORE8"
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -7206,7 +7731,13 @@
     "to": "2026-10-04",
     "series": [],
     "classes": [
-      "ORE2WDORE2WDSTORE4WDORE4WDSTORE8ORETORETR2"
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORE8",
+      "ORET",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
@@ -7258,7 +7789,10 @@
     "to": "2026-10-04",
     "series": [],
     "classes": [
-      "OR8ORE8ORETORT"
+      "OR8",
+      "ORE8",
+      "ORET",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -7356,7 +7890,9 @@
     "to": "2026-10-11",
     "series": [],
     "classes": [
-      "OROR8ORE8"
+      "OR",
+      "OR8",
+      "ORE8"
     ],
     "source": "dmc",
     "url": null,
@@ -7402,7 +7938,9 @@
     "to": "2026-10-11",
     "series": [],
     "classes": [
-      "OR8ORE8ORT"
+      "OR8",
+      "ORE8",
+      "ORT"
     ],
     "source": "dmc",
     "url": null,
@@ -7483,7 +8021,8 @@
     "to": "2026-10-24",
     "series": [],
     "classes": [
-      "EG8EG8GT"
+      "EG8",
+      "EG8GT"
     ],
     "source": "dmc",
     "url": null,
@@ -7512,7 +8051,14 @@
     "to": "2026-11-01",
     "series": [],
     "classes": [
-      "EGEG10EG8GTEGMOTEGTWFRVG10VG8VMOT"
+      "EG",
+      "EG10",
+      "EG8GT",
+      "EGMOT",
+      "EGTWFR",
+      "VG10",
+      "VG8",
+      "VMOT"
     ],
     "source": "dmc",
     "url": "https://forms.gle/gHyWSwCn5273qR9H6",
@@ -7587,7 +8133,12 @@
     "to": "2026-11-08",
     "series": [],
     "classes": [
-      "EGF1EGTWFREGTWFUNEGTWHOEGTWMOEGTWSP"
+      "EGF1",
+      "EGTWFR",
+      "EGTWFUN",
+      "EGTWHO",
+      "EGTWMO",
+      "EGTWSP"
     ],
     "source": "dmc",
     "url": null,
@@ -7610,7 +8161,12 @@
     "to": "2026-11-08",
     "series": [],
     "classes": [
-      "OREORE2WDORE2WDSTORE4WDORE4WDSTORETR2"
+      "ORE",
+      "ORE2WD",
+      "ORE2WDST",
+      "ORE4WD",
+      "ORE4WDST",
+      "ORETR2"
     ],
     "source": "dmc",
     "url": null,
