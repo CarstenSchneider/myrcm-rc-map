@@ -3814,6 +3814,12 @@
     "myrcmOrgId": "53491"
   },
   {
+    "hostId": "dmc-ov-90",
+    "hostName": "MSV- Neubrandenburg e.V.",
+    "lat": 53.55592570845572,
+    "lng": 13.293463030300556
+  },
+  {
     "hostId": "dmc-offroad-club-ostsee-e-v",
     "hostName": "Offroad Club Ostsee e.V.",
     "lat": 54.22601827812129,
