@@ -202,6 +202,9 @@ function parseTable(html, clubDirectory) {
     const cells = $(tr).find("td");
     if (cells.length < 6) return;
 
+    // Skip cancelled events
+    if ($(tr).find("p.absage").text().toLowerCase().includes("abgesagt")) return;
+
     const clubName = $(cells[5]).text().trim();
     if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
 

@@ -25,6 +25,7 @@ jobs:
           cp impressum-datenschutz.html .deploy-site/
           cp races.json .deploy-site/
           cp rck-races.json .deploy-site/
+          cp dmc-races.json .deploy-site/
           cp venues.json .deploy-site/
           cp hosts.json .deploy-site/
           cp series.json .deploy-site/

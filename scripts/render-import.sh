@@ -75,9 +75,11 @@ if [ "$IMPORT_MYRCM_OK" = "0" ]; then
   exit 1
 fi
 
-# main: MyRCM + RCK Daten committen
+# main: alle Importdaten committen
 MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json"
+DMC_FILES="dmc-races.json dmc-venues.json dmc-pdf-cache.json"
 git add $MAIN_FILES
+[ "$IMPORT_DMC_OK" = "1" ] && git add $DMC_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (main) — kein Commit nötig."
 else
@@ -87,15 +89,14 @@ else
   echo "Daten auf main gepusht."
 fi
 
-# dev: alle Daten inkl. DMC committen
+# dev: Daten von main übertragen
 git fetch origin dev
 git checkout -f -B dev origin/dev
 git checkout main -- $MAIN_FILES
+[ "$IMPORT_DMC_OK" = "1" ] && git checkout main -- $DMC_FILES
 
-DEV_EXTRA_FILES="rck-pdf-cache.json"
-[ "$IMPORT_DMC_OK" = "1" ] && DEV_EXTRA_FILES="$DEV_EXTRA_FILES dmc-races.json dmc-venues.json dmc-pdf-cache.json"
-
-git add $MAIN_FILES $DEV_EXTRA_FILES
+git add $MAIN_FILES
+[ "$IMPORT_DMC_OK" = "1" ] && git add $DMC_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (dev) — kein Commit nötig."
 else
