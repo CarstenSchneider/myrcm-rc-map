@@ -3812,6 +3812,12 @@
     "myrcmOrgId": "53665"
   },
   {
+    "hostId": "dmc-ov-36",
+    "hostName": "RC Offroad Heiligenstadt e.V.",
+    "lat": 51.387849617883866,
+    "lng": 10.157074621044304
+  },
+  {
     "hostId": "rc-offroad-staaken",
     "hostName": "RC Offroad Staaken",
     "lat": 52.475714353240356,
