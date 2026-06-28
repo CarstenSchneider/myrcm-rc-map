@@ -1,0 +1,38 @@
+name: Check OSM Images for Venues
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-osm-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Query Overpass API
+        run: node check-osm-images.js
+
+      - name: Commit results
+        run: |
+          git config user.name "check-osm-images[bot]"
+          git config user.email "check-osm-images[bot]@rcracemap.com"
+          git add osm-images-result.json
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Add OSM image lookup results"
+            git push origin dev
+          fi
