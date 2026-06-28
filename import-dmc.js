@@ -237,11 +237,11 @@ function parseTable(html, clubDirectory) {
     const title = $(cells[2]).text().trim();
 
     // Extract class codes from cells[3] (e.g. OR8, ORE, ORE8, ORESC2 …)
-    // DMC renders each code in its own <p> tag; fall back to newline split
-    const classPTags = $(cells[3]).find("p").map((_, p) => $(p).text().trim()).get().filter(Boolean);
-    const classes = classPTags.length > 0
-      ? classPTags
-      : $(cells[3]).text().trim().split(/[\n\r]+/).map(s => s.trim()).filter(Boolean);
+    // DMC separates codes with <br> tags; cheerio's .text() drops <br> silently,
+    // so replace them with a newline before extracting text.
+    const classCell = $(cells[3]).clone();
+    classCell.find("br").replaceWith("\n");
+    const classes = classCell.text().trim().split(/[\n\r]+/).map(s => s.trim()).filter(Boolean);
 
     // ovNr already extracted above for directory lookup
     const city = dirEntry?.city || $(cells[6]).text().trim() || null;
