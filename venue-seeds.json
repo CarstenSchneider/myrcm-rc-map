@@ -3880,6 +3880,12 @@
     "myrcmOrgId": "33778"
   },
   {
+    "hostId": "rcco-rc-freunde-vennebeck-e-v",
+    "hostName": "RC Freunde Vennebeck e.V.",
+    "lat": 52.21367710430686,
+    "lng": 8.87228248647399
+  },
+  {
     "hostId": "dmc-rc-halle-e-v",
     "hostName": "RC Halle e.V.",
     "lat": 51.46739270411921,
