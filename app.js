@@ -727,7 +727,9 @@ function canonicalVenueId(anyId) {
   const venue = venues.find(v =>
     String(v.id) === id ||
     (v.hostId && String(v.hostId) === id) ||
-    (Array.isArray(v.hostIds) && v.hostIds.some(h => String(h) === id))
+    (Array.isArray(v.hostIds) && v.hostIds.some(h => String(h) === id)) ||
+    (v.myrcmOrgId && `myrcm-${v.myrcmOrgId}` === id) ||
+    (Array.isArray(v.aliases) && v.aliases.some(a => String(a) === id))
   );
   return venue ? String(venue.id) : id;
 }
@@ -783,16 +785,12 @@ async function sbPullFavorites() {
   const { data, error } = await sbClient.from("user_favorites").select("host_id").eq("user_id", sbUser.id);
   if (error) { console.error("sbPullFavorites:", error); return; }
   // Normalize all IDs to canonical venue.id
-  const remoteIds = data.map(r => canonicalVenueId(r.host_id));
-  const localIds = getFavoriteHostIds().map(id => canonicalVenueId(id));
-  const merged = [...new Set([...localIds, ...remoteIds])];
-  saveFavoriteHostIds(merged);
-  // Sync any new local IDs to Supabase
-  const toInsert = merged.filter(id => !remoteIds.includes(id)).map(host_id => ({ user_id: sbUser.id, host_id }));
-  if (toInsert.length) {
-    const { error: upsertErr } = await sbClient.from("user_favorites").upsert(toInsert);
-    if (upsertErr) console.error("sbPullFavorites upsert:", upsertErr);
-  }
+  const remoteIds = [...new Set(data.map(r => canonicalVenueId(r.host_id)))];
+  // Supabase is the source of truth — overwrite localStorage unconditionally.
+  // This prevents the re-insertion loop where a concurrent pull during a
+  // pending delete would re-add a just-removed ID to localStorage and then
+  // upsert it back to Supabase on the next pull.
+  saveFavoriteHostIds(remoteIds);
   // Migrate any non-canonical remote IDs so future deletes work correctly
   const toMigrate = data.filter(r => canonicalVenueId(r.host_id) !== r.host_id);
   if (toMigrate.length) {

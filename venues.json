@@ -4650,21 +4650,6 @@
     "country": "DE"
   },
   {
-    "id": "myrcm-55317",
-    "name": "RC Offroad Staaken",
-    "city": "",
-    "lat": 52.475714353240356,
-    "lng": 13.101632355546334,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
-    "hostIds": [],
-    "myrcmOrgId": "55317",
-    "source": "venue-seeds",
-    "verified": true
-  },
-  {
     "id": "rc-offroad-staaken",
     "name": "RC Offroad Staaken",
     "city": null,
@@ -4676,7 +4661,11 @@
     ],
     "website": null,
     "source": "verified",
-    "country": "DE"
+    "country": "DE",
+    "myrcmOrgId": "55317",
+    "aliases": [
+      "myrcm-55317"
+    ]
   },
   {
     "id": "myrcm-37520",
