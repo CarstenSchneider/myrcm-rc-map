@@ -3790,6 +3790,13 @@ document.addEventListener("click", event => {
     }
   }
 
+  // Preserve scroll position — renderList resets it to 0
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  const scrollEl = isMobile
+    ? document.getElementById("mobRaceList")
+    : document.querySelector(".race-panel");
+  const savedScroll = scrollEl ? scrollEl.scrollTop : 0;
+
   if (activeVenueId) {
     const venueList = list.filter(race => isRaceAtVenue(race, activeVenueId));
     if (venueList.length) {
@@ -3803,6 +3810,8 @@ document.addEventListener("click", event => {
     renderList(list);
     resultLine.textContent = resultLineText(list.length);
   }
+
+  if (scrollEl) scrollEl.scrollTop = savedScroll;
 });
 
 raceList.addEventListener("click", event => {
