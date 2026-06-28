@@ -3943,6 +3943,12 @@
     "lng": 7.085230572349691
   },
   {
+    "hostId": "dmc-ov-339",
+    "hostName": "RCR Peterberg e.V.",
+    "lat": 49.57913176184305,
+    "lng": 7.000287284154371
+  },
+  {
     "hostId": "rcxx-shop",
     "hostName": "RCXX.SHOP",
     "locationUnknown": true,
