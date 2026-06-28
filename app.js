@@ -5746,7 +5746,11 @@ function renderClubList() {
       return v ? venueCountry(v) === _raceListCountry : false;
     })
     .filter(r => { const d = parseDate(r.from); return d && d >= today; })
-    .sort((a, b) => (a.from || "").localeCompare(b.from || ""));
+    .sort((a, b) => {
+      const d = (a.from || "").localeCompare(b.from || "");
+      if (d !== 0) return d;
+      return (a.name || "").localeCompare(b.name || "", "de");
+    });
 
   // Group by date
   const groups = [];
