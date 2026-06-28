@@ -5737,6 +5737,15 @@ function renderClubList() {
 
   const today = todayStart();
 
+  const favIds = new Set(getFavoriteHostIds());
+  const venueIsFav = v => {
+    if (!v || !sbUser) return false;
+    if (favIds.has(String(v.id))) return true;
+    if (v.hostId && favIds.has(String(v.hostId))) return true;
+    if (Array.isArray(v.hostIds)) return v.hostIds.some(id => favIds.has(String(id)));
+    return false;
+  };
+
   const upcoming = races
     .filter(isUsefulRckRace)
     .filter(r => !!venueForRace(r))
@@ -5749,6 +5758,9 @@ function renderClubList() {
     .sort((a, b) => {
       const d = (a.from || "").localeCompare(b.from || "");
       if (d !== 0) return d;
+      const aFav = venueIsFav(venueForRace(a)) ? 0 : 1;
+      const bFav = venueIsFav(venueForRace(b)) ? 0 : 1;
+      if (aFav !== bFav) return aFav - bFav;
       return (a.name || "").localeCompare(b.name || "", "de");
     });
 
@@ -5778,16 +5790,6 @@ function renderClubList() {
     `<span class="fi fi-${o.code} fis country-flag-icon" aria-hidden="true"></span></button>`
   ).join("");
   const searchHtml = `<div class="fav-search-wrap"><input type="search" class="fav-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
-
-  const favIds = new Set(getFavoriteHostIds());
-  const venueIsFav = v => {
-    if (!v || !sbUser) return false;
-    if (favIds.has(String(v.id))) return true;
-    if (v.hostId && favIds.has(String(v.hostId))) return true;
-    if (Array.isArray(v.hostIds)) return v.hostIds.some(id => favIds.has(String(id)));
-    return false;
-  };
-  let _favRowIndex = 0;
 
   const listHtml = groups.length ? groups.map(({ label, races: gr }) => {
     const dateRow = `<div class="race-date-row">${escapeHtml(label)}</div>`;
