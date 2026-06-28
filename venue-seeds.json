@@ -3893,6 +3893,12 @@
     "myrcmOrgId": "18966"
   },
   {
+    "hostId": "dmc-ov-184",
+    "hostName": "RC-Offroad Kassel e.V.",
+    "lat": 51.28174359220328,
+    "lng": 9.510991150126777
+  },
+  {
     "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
     "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
     "lat": 51.208755602022045,
