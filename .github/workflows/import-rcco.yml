@@ -28,10 +28,14 @@ jobs:
         run: node import-rcco.js
 
       - name: Commit generated RCCO files to dev
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update RCCO race data DEV
-          branch: dev
-          file_pattern: |
-            rcco-races.json
-            rcco-venues.json
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add rcco-races.json rcco-venues.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git pull --rebase --autostash origin dev
+            git commit -m "Update RCCO race data DEV"
+            git push origin dev
+          fi

@@ -22,6 +22,28 @@
     "source": "rcco-seed"
   },
   {
+    "id": "rcco-erc-racing-e-v",
+    "name": "ERC-Racing e.V.",
+    "city": null,
+    "lat": 52.33147453255704,
+    "lng": 7.429288493596242,
+    "hostIds": [
+      "rcco-erc-racing-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-modellsport-munsterland",
+    "name": "Modellsport Münsterland",
+    "city": null,
+    "lat": 52.341602800495465,
+    "lng": 7.577597547624109,
+    "hostIds": [
+      "rcco-modellsport-munsterland"
+    ],
+    "source": "rcco-seed"
+  },
+  {
     "id": "rcco-mrc-weiden-e-v",
     "name": "MRC Weiden e.V.",
     "city": null,
@@ -29,6 +51,17 @@
     "lng": 12.120420781877858,
     "hostIds": [
       "rcco-mrc-weiden-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-msc-gemunden-e-v",
+    "name": "MSC Gemünden e.V.",
+    "city": null,
+    "lat": 50.07098433466393,
+    "lng": 9.663684036408855,
+    "hostIds": [
+      "rcco-msc-gemunden-e-v"
     ],
     "source": "rcco-seed"
   },
@@ -55,6 +88,17 @@
     "source": "rcco-seed"
   },
   {
+    "id": "rcco-rcmc-ibbenbueren-e-v",
+    "name": "RCMC Ibbenbüren e. V.",
+    "city": null,
+    "lat": 52.251949472619934,
+    "lng": 7.630418467177663,
+    "hostIds": [
+      "rcco-rcmc-ibbenbueren-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
     "id": "rcco-rcrt-quakenbruck-e-v",
     "name": "RCRT-Quakenbrück e.V.",
     "city": null,
@@ -62,6 +106,17 @@
     "lng": 7.934878589989598,
     "hostIds": [
       "rcco-rcrt-quakenbruck-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-spessart-racer-e-v",
+    "name": "Spessart-Racer e.V.",
+    "city": null,
+    "lat": 49.96731560181147,
+    "lng": 9.304884510338868,
+    "hostIds": [
+      "rcco-spessart-racer-e-v"
     ],
     "source": "rcco-seed"
   },

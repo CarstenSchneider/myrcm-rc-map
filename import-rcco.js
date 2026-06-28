@@ -210,6 +210,21 @@ async function main() {
   const byId = new Map(races.map(r => [r.id, r]));
   const unique = Array.from(byId.values()).sort((a, b) => a.from.localeCompare(b.from) || a.hostName.localeCompare(b.hostName));
 
+  // Also include seeded venues that had no events this run — they should always appear on the map
+  for (const [hostId, seed] of seedByHostId) {
+    if (!rccoVenueIds.has(hostId)) {
+      rccoVenues.push({
+        id: hostId,
+        name: seed.hostName || hostId,
+        city: seed.city || null,
+        lat: seed.lat,
+        lng: seed.lng,
+        hostIds: [hostId],
+        source: "rcco-seed",
+      });
+    }
+  }
+
   console.log(`Venue-Matches: ${countMatched} MyRCM-Match, ${countSeeded} via Seed, ${countUnmatched} ohne Koordinaten`);
 
   await writeFile(OUTPUT_RACES, JSON.stringify(unique, null, 2) + "\n");
