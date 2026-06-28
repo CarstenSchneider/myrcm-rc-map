@@ -2632,7 +2632,7 @@
   {
     "id": "myrcm-18473",
     "name": "Mini Tout Terrain Gruyère",
-    "city": "",
+    "city": "Gruyères",
     "lat": 46.650127738366436,
     "lng": 7.029607046226385,
     "address": "",
@@ -4376,7 +4376,7 @@
   {
     "id": "myrcm-51129",
     "name": "RC Car Chemnitz",
-    "city": "",
+    "city": "Chemnitz",
     "lat": 50.79377848514052,
     "lng": 12.898277901821292,
     "address": "",
@@ -4490,7 +4490,7 @@
   {
     "id": "myrcm-43490",
     "name": "RC Cars Wernigerode e.V.",
-    "city": "",
+    "city": "Wernigerode",
     "lat": 51.85763261882311,
     "lng": 10.803858097976457,
     "address": "",
@@ -4680,7 +4680,7 @@
   {
     "id": "myrcm-37520",
     "name": "RC Race Team München e.V",
-    "city": "",
+    "city": "München",
     "lat": 48.00857029662106,
     "lng": 11.36000585844325,
     "address": "",
@@ -5218,7 +5218,7 @@
   {
     "id": "myrcm-775",
     "name": "RCC-Grafenwörth",
-    "city": "",
+    "city": "Grafenwörth",
     "lat": 48.412696168360476,
     "lng": 15.775716608555854,
     "address": "",
@@ -5268,7 +5268,7 @@
   {
     "id": "myrcm-6492",
     "name": "RCCars Bergisch-Born e.V.",
-    "city": "",
+    "city": "Bergisch Born",
     "lat": 51.17808024290368,
     "lng": 7.223162604471789,
     "address": "",
@@ -5739,7 +5739,7 @@
   {
     "id": "myrcm-51971",
     "name": "SMC Stuttgart e.V.",
-    "city": "",
+    "city": "Stuttgart",
     "lat": 48.720995,
     "lng": 9.343529,
     "address": "",
