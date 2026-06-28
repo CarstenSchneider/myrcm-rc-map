@@ -3664,6 +3664,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "rcco-emc-wehrheim-e-v",
+    "hostName": "EMC Wehrheim e. V.",
+    "lat": 50.314507929048034,
+    "lng": 8.558427424524675
+  },
+  {
     "hostId": "dmc-ov-37",
     "hostName": "ESV Bischofsheim e.V.",
     "lat": 49.97771285712217,
