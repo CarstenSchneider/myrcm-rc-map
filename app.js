@@ -3526,6 +3526,15 @@ function focusRace(race) {
   const venue = venueForRace(race);
   if (!venue) return;
 
+  // If the venue's marker doesn't exist, the country filter is hiding it.
+  // Switch to "all" and rebuild markers synchronously so the venue is reachable.
+  if (selectedCountry !== "all" && !markers.get(venue.id)) {
+    selectedCountry = "all";
+    localStorage.setItem("rcRaceMapCountry", "all");
+    updateCountryPill();
+    updateMarkers(filteredRaces(), false);
+  }
+
   // Save scroll position before switching to venue view
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
   const scrollEl = isMobile

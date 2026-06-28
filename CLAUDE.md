@@ -211,6 +211,18 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 2. `import-rcco.yml` wiederherstellen
 3. `rcco-races.json` wird beim nächsten Import automatisch befüllt
 
+### LRP Offroad Series — Status und Genehmigung
+**lrp.cc** betreibt eine eigene Rennserie (LRP Offroad Series) mit einem Veranstaltungskalender ähnlich wie RCK (wahrscheinlich PDF-basiert).
+
+- Noch kein Importer vorhanden
+- Kontaktaufnahme mit lrp.cc am 2026-06-28
+- Implementierung: analog zu `import-rck.js` (PDF-Parser)
+
+**Reaktivierung:** Sobald Genehmigung vorliegt:
+1. `import-lrp.js` erstellen (analog `import-rck.js`)
+2. LRP-Schritt in `import-all.yml` ergänzen
+3. `lrp-races.json` + ggf. `lrp-venues.json` anlegen und in app.js einbinden
+
 ## Notification-System
 
 ### Supabase Edge Function: `send-race-notifications`
