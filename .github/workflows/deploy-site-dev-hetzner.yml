@@ -29,7 +29,6 @@ jobs:
           cp series.json .deploy-site/
           cp dach-borders.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
-          cp og-test.html .deploy-site/ 2>/dev/null || true
 
           cp -R favicon_io .deploy-site/
 
