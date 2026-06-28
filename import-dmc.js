@@ -77,6 +77,11 @@ function deduplicateEntries(entries) {
       if (e.dateTo > existing.dateTo) existing.dateTo = e.dateTo;
       if (!existing.ausschreibungHref && e.ausschreibungHref) existing.ausschreibungHref = e.ausschreibungHref;
       if (!existing.nennformularHref && e.nennformularHref) existing.nennformularHref = e.nennformularHref;
+      if (e.classes?.length) {
+        const merged = new Set(existing.classes || []);
+        for (const c of e.classes) merged.add(c);
+        existing.classes = [...merged];
+      }
     }
   }
   return [...byKey.values()];
@@ -230,6 +235,14 @@ function parseTable(html, clubDirectory) {
     const dateTo = dateToRaw || dateFrom;
 
     const title = $(cells[2]).text().trim();
+
+    // Extract class codes from cells[3] (e.g. OR8, ORE, ORE8, ORESC2 …)
+    // DMC renders each code in its own <p> tag; fall back to newline split
+    const classPTags = $(cells[3]).find("p").map((_, p) => $(p).text().trim()).get().filter(Boolean);
+    const classes = classPTags.length > 0
+      ? classPTags
+      : $(cells[3]).text().trim().split(/[\n\r]+/).map(s => s.trim()).filter(Boolean);
+
     // ovNr already extracted above for directory lookup
     const city = dirEntry?.city || $(cells[6]).text().trim() || null;
 
@@ -244,7 +257,7 @@ function parseTable(html, clubDirectory) {
       ? rawNennformular
       : null;
 
-    rows.push({ dateFrom, dateTo, title, clubName, ovNr, city, clubWebsite, ausschreibungHref, nennformularHref });
+    rows.push({ dateFrom, dateTo, title, clubName, ovNr, city, clubWebsite, ausschreibungHref, nennformularHref, classes });
   });
 
   return rows;
@@ -430,7 +443,7 @@ async function main() {
       from: entry.dateFrom,
       to: entry.dateTo,
       series: [],
-      classes: [],
+      classes: entry.classes || [],
       source: "dmc",
       url: registrationUrl,
       registrationStatus: registrationUrl ? "open" : null,
