@@ -327,6 +327,10 @@ const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.
 const _favIconSvg  = (cls = "favorite-toggle-icon") =>
   `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
+// Locate / crosshair icon (same as locate button)
+const _locateIconSvg = (cls = "tip-inline-icon") =>
+  `<svg class="${cls}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>`;
+
 // --- Onboarding Tips ---
 // render types:
 //   "list-top"       — prepended to race list, arrow bottom-right → star button
@@ -336,17 +340,20 @@ const ONBOARDING_TIPS = [
   {
     render: "list-top",
     arrow: "bottom-right",
-    html: `${_favIconSvg("tip-inline-icon")} Tippe auf den <strong>Stern</strong> einer Rennkarte um den Verein zu favorisieren — mit der <strong>Glocke</strong> bekommst du E-Mails wenn neue Rennen eingetragen werden.`,
+    title: "Mit RC Race Map nie wieder ein Rennen verpassen",
+    html: `Markiere deine Favoriten ${_favIconSvg("tip-inline-icon")} und aktiviere ${_bellIconSvg("tip-inline-icon")} Benachrichtigungen. So informieren wir dich automatisch per E-Mail über neue Rennen, Terminänderungen und Absagen.`,
   },
   {
     render: "list-second",
     arrow: "top-center",
     mobileFull: true,
-    html: `<strong>Tippe auf eine Rennkarte</strong> um die Strecke auf der Karte zu öffnen und alle Details zu sehen.`,
+    title: "Alles zum Rennen auf einen Blick",
+    html: `Hier findest du Informationen zum Rennen, zum Beispiel Nennung, Ausschreibung, Reglement, Rennklassen oder Teilnehmerzahl. Tippe auf die Rennkarte, um die Rennstrecke auf der Karte zu sehen.`,
   },
   {
     render: "fixed-map",
-    html: `Tippe auf einen <strong>Kartenpin</strong> um Rennen an dieser Strecke zu sehen. Nutze <strong>Filter</strong> und <strong>Standort</strong> um mehr zu entdecken.`,
+    title: "Entdecke Rennen in deiner Nähe",
+    html: `Nutze ${_locateIconSvg()} deinen Standort und filtere nach Zeitraum oder Rennserie, um genau die Rennen zu finden, die dich interessieren.<span class="tip-footer">Viel Spaß mit RC Race Map und viel Erfolg auf der Strecke!</span>`,
   },
 ];
 
@@ -366,8 +373,9 @@ function _buildTipCardEl(tip) {
   el.setAttribute("role", "note");
   if (tip.arrow) el.dataset.arrow = tip.arrow;
   el.innerHTML = `
-    <span class="tip-text">${tip.html}</span>
+    <span class="tip-title">${tip.title}</span>
     <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
+    <span class="tip-text">${tip.html}</span>
     <span class="tip-counter">${tip.idx + 1} / ${ONBOARDING_TIPS.length}</span>
   `;
   return el;
