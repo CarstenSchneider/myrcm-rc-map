@@ -2,6 +2,8 @@ name: Trigger Render Import
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * *'  # 16:00 MESZ / 15:00 MEZ
 
 jobs:
   trigger:
