@@ -100,6 +100,14 @@ function matchVenueForHost(host, venues) {
   return venues.find(v => Array.isArray(v.hostIds) && v.hostIds.includes(host.id)) || null;
 }
 
+function matchVenueByName(clubName, venues) {
+  const key = normalizeKey(clubName);
+  return venues.find(v => {
+    const vKey = normalizeKey(v.name || "");
+    return vKey && (vKey === key || key.includes(vKey) || vKey.includes(key));
+  }) || null;
+}
+
 async function main() {
   const [hosts, venues, seeds] = await Promise.all([
     readJsonIfExists("hosts.json"),
@@ -131,13 +139,15 @@ async function main() {
 
     // Try to reuse an existing MyRCM/DMC host + venue by normalized name match
     const existingHost = matchHost(ev.clubName, hosts);
-    const existingVenue = existingHost ? matchVenueForHost(existingHost, venues) : null;
+    const existingVenue = existingHost
+      ? matchVenueForHost(existingHost, venues)
+      : matchVenueByName(ev.clubName, venues);
 
     let hostId, hostName, venueId, venueName, venueLocation;
 
     if (existingVenue) {
-      hostId = existingHost.id;
-      hostName = existingHost.name;
+      hostId = existingHost ? existingHost.id : rccoHostId;
+      hostName = existingHost ? existingHost.name : ev.clubName;
       venueId = existingVenue.id;
       venueName = existingVenue.name;
       venueLocation = existingVenue.city || null;
