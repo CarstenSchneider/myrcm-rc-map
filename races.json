@@ -1543,7 +1543,7 @@
     "id": "myrcm-775-2024-07-06-myrcm-event-79503",
     "venueId": "myrcm-775",
     "venueName": "RCC-Grafenwörth",
-    "venueLocation": null,
+    "venueLocation": "Grafenwörth",
     "venueWebsite": null,
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
@@ -2050,7 +2050,7 @@
     "id": "myrcm-18473-2024-07-07-myrcm-event-80039",
     "venueId": "myrcm-18473",
     "venueName": "Mini Tout Terrain Gruyère",
-    "venueLocation": null,
+    "venueLocation": "Gruyères",
     "venueWebsite": null,
     "hostId": "mini-tout-terrain-gruyere",
     "hostName": "Mini Tout Terrain Gruyère",
@@ -4790,7 +4790,7 @@
     "id": "myrcm-775-2024-07-28-myrcm-event-79504",
     "venueId": "myrcm-775",
     "venueName": "RCC-Grafenwörth",
-    "venueLocation": null,
+    "venueLocation": "Grafenwörth",
     "venueWebsite": null,
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
@@ -12823,7 +12823,7 @@
     "id": "myrcm-43490-2024-09-28-myrcm-event-81334",
     "venueId": "myrcm-43490",
     "venueName": "RC Cars Wernigerode e.V.",
-    "venueLocation": null,
+    "venueLocation": "Wernigerode",
     "venueWebsite": "http://rc-car-wr.de/wp-content/uploads/2024/08/Ausschreibung-September-Cup-2-2024.pdf",
     "hostId": "rc-cars-wernigerode-e-v",
     "hostName": "RC Cars Wernigerode e.V.",
@@ -17964,7 +17964,7 @@
     "id": "myrcm-51129-2024-11-30-myrcm-event-82018",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -19310,7 +19310,7 @@
     "id": "myrcm-37520-2024-12-15-myrcm-event-83315",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -21292,7 +21292,7 @@
     "id": "myrcm-37520-2025-01-19-myrcm-event-83316",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -21579,7 +21579,7 @@
     "id": "myrcm-51129-2025-01-25-myrcm-event-80303",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -23493,7 +23493,7 @@
     "id": "myrcm-37520-2025-02-16-myrcm-event-83317",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -24102,7 +24102,7 @@
     "id": "myrcm-51129-2025-03-01-myrcm-event-84811",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -25290,7 +25290,7 @@
     "id": "myrcm-37520-2025-03-16-myrcm-event-83318",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -34311,7 +34311,7 @@
     "id": "myrcm-43490-2025-05-31-myrcm-event-87311",
     "venueId": "myrcm-43490",
     "venueName": "RC Cars Wernigerode e.V.",
-    "venueLocation": null,
+    "venueLocation": "Wernigerode",
     "venueWebsite": null,
     "hostId": "rc-cars-wernigerode-e-v",
     "hostName": "RC Cars Wernigerode e.V.",
@@ -35141,7 +35141,7 @@
     "id": "myrcm-775-2025-06-01-myrcm-event-88261",
     "venueId": "myrcm-775",
     "venueName": "RCC-Grafenwörth",
-    "venueLocation": null,
+    "venueLocation": "Grafenwörth",
     "venueWebsite": null,
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
@@ -40059,10 +40059,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "myrcm-53665-2025-07-06-myrcm-event-88500",
+    "id": "rc-modellbaufreunde-e-v-2025-07-06-myrcm-event-88500",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -41379,10 +41379,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2025-07-13-myrcm-event-86327",
+    "id": "rc-modellbaufreunde-e-v-2025-07-13-myrcm-event-86327",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -47138,10 +47138,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2025-08-31-myrcm-event-86329",
+    "id": "rc-modellbaufreunde-e-v-2025-08-31-myrcm-event-86329",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -49068,10 +49068,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2025-09-14-myrcm-event-86353",
+    "id": "rc-modellbaufreunde-e-v-2025-09-14-myrcm-event-86353",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -50629,10 +50629,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "myrcm-53665-2025-09-21-myrcm-event-89509",
+    "id": "rc-modellbaufreunde-e-v-2025-09-21-myrcm-event-89509",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -51313,7 +51313,7 @@
     "id": "myrcm-6492-2025-09-27-myrcm-event-90059",
     "venueId": "myrcm-6492",
     "venueName": "RCCars Bergisch-Born e.V.",
-    "venueLocation": null,
+    "venueLocation": "Bergisch Born",
     "venueWebsite": "https://drive.google.com/file/d/1rtJvJ7dIO0gNvi2UuSpI08dsR2CImIhP/view?usp=sharing",
     "hostId": "rccars-bergisch-born-e-v",
     "hostName": "RCCars Bergisch-Born e.V.",
@@ -53122,6 +53122,49 @@
     "firstSeen": "2026-06-08"
   },
   {
+    "id": "rccr-munzig-e-v-2025-10-11-myrcm-event-90439",
+    "venueId": "rccr-munzig-e-v",
+    "venueName": "RCCR Munzig e.V.",
+    "venueLocation": "Klipphausen",
+    "venueWebsite": null,
+    "hostId": "rccr-munzig-e-v",
+    "hostName": "RCCR Munzig e.V.",
+    "name": "Sachsencup 8. Lauf Outdoor Endlauf",
+    "from": "2025-10-11",
+    "to": "2025-10-12",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90439&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20891&pLa=en&dId%5BE%5D=90439&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=90439&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 80,
+    "registrationDisplay": "80",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "OR8",
+        "entries": 28
+      },
+      {
+        "name": "ORE8",
+        "entries": 32
+      },
+      {
+        "name": "ORT",
+        "entries": 12
+      },
+      {
+        "name": "ORET",
+        "entries": 8
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-28"
+  },
+  {
     "id": "rc-glashaus-e-v-2025-10-11-myrcm-event-88477",
     "venueId": "rc-glashaus-e-v",
     "venueName": "RC-Glashaus e.V.",
@@ -53956,7 +53999,7 @@
     "id": "myrcm-51971-2025-10-18-myrcm-event-87729",
     "venueId": "myrcm-51971",
     "venueName": "SMC Stuttgart e.V.",
-    "venueLocation": null,
+    "venueLocation": "Stuttgart",
     "venueWebsite": null,
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
@@ -54185,7 +54228,7 @@
     "id": "myrcm-37520-2025-10-19-myrcm-event-90359",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -56448,7 +56491,7 @@
     "id": "myrcm-37520-2025-11-16-myrcm-event-90360",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -56969,7 +57012,7 @@
     "id": "myrcm-51129-2025-11-29-myrcm-event-92519",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -58184,7 +58227,7 @@
     "id": "myrcm-37520-2025-12-14-myrcm-event-90361",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -60535,7 +60578,7 @@
     "id": "myrcm-37520-2026-01-18-myrcm-event-90362",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -60695,7 +60738,7 @@
     "id": "myrcm-51129-2026-01-23-myrcm-event-91157",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -61672,7 +61715,7 @@
     "id": "myrcm-51129-2026-02-07-myrcm-event-94153",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -62231,7 +62274,7 @@
     "id": "myrcm-37520-2026-02-15-myrcm-event-90363",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -63302,6 +63345,49 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "rccr-munzig-e-v-2026-02-28-myrcm-event-93115",
+    "venueId": "rccr-munzig-e-v",
+    "venueName": "RCCR Munzig e.V.",
+    "venueLocation": "Klipphausen",
+    "venueWebsite": null,
+    "hostId": "rccr-munzig-e-v",
+    "hostName": "RCCR Munzig e.V.",
+    "name": "2. Lauf Wintercup Indoor Offroad Teppich 1:10 2026",
+    "from": "2026-02-28",
+    "to": "2026-03-01",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93115&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=20891&pLa=en&dId%5BE%5D=93115&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93115&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 73,
+    "registrationDisplay": "73",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "Wintercup 1:10 Truck",
+        "entries": 6
+      },
+      {
+        "name": "Wintercup 2 WD Buggy Stock",
+        "entries": 39
+      },
+      {
+        "name": "Wintercup 2 WD Buggy Stock 17,5",
+        "entries": 21
+      },
+      {
+        "name": "Wintercup 4 WD Buggy",
+        "entries": 7
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-28"
   },
   {
     "id": "mod-race-laa-04-2026-02-28-myrcm-event-90223",
@@ -64884,7 +64970,7 @@
     "id": "myrcm-37520-2026-03-15-myrcm-event-90364",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -65487,7 +65573,7 @@
     "id": "myrcm-51129-2026-03-22-myrcm-event-95572",
     "venueId": "myrcm-51129",
     "venueName": "RC Car Chemnitz",
-    "venueLocation": null,
+    "venueLocation": "Chemnitz",
     "venueWebsite": null,
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
@@ -69408,7 +69494,7 @@
     "id": "myrcm-37520-2026-04-26-myrcm-event-96314",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -70766,10 +70852,10 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "myrcm-53665-2026-05-03-myrcm-event-96342",
+    "id": "rc-modellbaufreunde-e-v-2026-05-03-myrcm-event-96342",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -80246,10 +80332,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2026-06-27-myrcm-event-96344",
+    "id": "rc-modellbaufreunde-e-v-2026-06-27-myrcm-event-96344",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -80798,16 +80884,16 @@
     "note": "Nennung geschlossen.",
     "classes": [
       {
+        "name": "Real-STOCK",
+        "entries": 8
+      },
+      {
         "name": "Easy-Stock",
         "entries": 4
       },
       {
         "name": "TRUCK",
         "entries": 4
-      },
-      {
-        "name": "Real-STOCK",
-        "entries": 8
       },
       {
         "name": "FWD",
@@ -81102,8 +81188,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 43,
-    "registrationDisplay": "43",
+    "registrationCount": 44,
+    "registrationDisplay": "44",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81116,7 +81202,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 12
+        "entries": 13
       },
       {
         "name": "ORT",
@@ -81265,13 +81351,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 51,
-    "registrationDisplay": "51",
+    "registrationCount": 53,
+    "registrationDisplay": "53",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "2WD Buggy",
-        "entries": 19
+        "entries": 20
       },
       {
         "name": "2WD Buggy Stock",
@@ -81283,7 +81369,7 @@
       },
       {
         "name": "4WD Buggy",
-        "entries": 14
+        "entries": 15
       },
       {
         "name": "4WD Buggy Stock",
@@ -81632,13 +81718,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "TEC Stock",
-        "entries": 4
+        "entries": 5
       },
       "TEC M-Chassis",
       "TEC Euro-TW",
@@ -81653,7 +81739,7 @@
       },
       {
         "name": "TEC Race-Truck",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [],
@@ -81929,20 +82015,20 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
       {
         "name": "ORE2WDST",
-        "entries": 5
+        "entries": 6
       },
       "ORE4WD",
       {
         "name": "ORE4WDST",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "ORETR2",
@@ -82176,8 +82262,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG 1:10 Scale",
@@ -82187,7 +82273,7 @@
       },
       {
         "name": "VG 1:8",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "EG 1:8 GT",
@@ -82244,17 +82330,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "17.5 T Clubrennen 2026",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Formel Clubrennen 2026",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -82907,7 +82993,7 @@
     "id": "myrcm-37520-2026-07-12-myrcm-event-92877",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -83408,13 +83494,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 93,
-    "registrationDisplay": "93",
+    "registrationCount": 95,
+    "registrationDisplay": "95",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "FighterBuggy Jugendrennen",
-        "entries": 6
+        "entries": 8
       },
       {
         "name": "Monster Truck Modified",
@@ -83473,7 +83559,7 @@
       "VG10S",
       {
         "name": "VG8S",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "VG10",
@@ -83481,7 +83567,7 @@
       },
       {
         "name": "VG8KL2",
-        "entries": 8
+        "entries": 7
       },
       {
         "name": "VG8KL1",
@@ -83512,13 +83598,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "RCS GT Klasse",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "RCS Formel 1",
@@ -83609,7 +83695,7 @@
     "id": "myrcm-6492-2026-07-18-myrcm-event-98301",
     "venueId": "myrcm-6492",
     "venueName": "RCCars Bergisch-Born e.V.",
-    "venueLocation": null,
+    "venueLocation": "Bergisch Born",
     "venueWebsite": null,
     "hostId": "rccars-bergisch-born-e-v",
     "hostName": "RCCars Bergisch-Born e.V.",
@@ -83683,7 +83769,7 @@
     "venueWebsite": null,
     "hostId": "turnerschaft-1860-e-v-gro-auheim",
     "hostName": "Turnerschaft 1860 e.V. Großauheim",
-    "name": "24",
+    "name": "25",
     "from": "2026-07-19",
     "to": "2026-07-19",
     "series": [
@@ -83696,8 +83782,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -83712,7 +83798,7 @@
       },
       {
         "name": "TEC Gentleman",
-        "entries": 7
+        "entries": 8
       },
       "TEC M-Chassis",
       {
@@ -84100,13 +84186,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR 8 Hobby",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "OR8 Expert",
@@ -84118,7 +84204,7 @@
       },
       {
         "name": "Hessencup Kids",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -84455,10 +84541,10 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "myrcm-53665-2026-07-26-myrcm-event-96345",
+    "id": "rc-modellbaufreunde-e-v-2026-07-26-myrcm-event-96345",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -85098,10 +85184,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2026-08-08-myrcm-event-96346",
+    "id": "rc-modellbaufreunde-e-v-2026-08-08-myrcm-event-96346",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -86365,10 +86451,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2026-08-23-myrcm-event-96347",
+    "id": "rc-modellbaufreunde-e-v-2026-08-23-myrcm-event-96347",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -86979,10 +87065,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-53665-2026-09-05-myrcm-event-96348",
+    "id": "rc-modellbaufreunde-e-v-2026-09-05-myrcm-event-96348",
     "venueId": "rc-modellbaufreunde-e-v",
     "venueName": "RC Modellbaufreunde e.V.",
-    "venueLocation": null,
+    "venueLocation": "Attaching",
     "venueWebsite": null,
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
@@ -88458,13 +88544,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Formel OCT",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Fronti OCT",
@@ -90011,7 +90097,7 @@
     "id": "myrcm-37520-2026-10-18-myrcm-event-96271",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -90070,7 +90156,7 @@
     "id": "myrcm-51971-2026-10-23-myrcm-event-97024",
     "venueId": "myrcm-51971",
     "venueName": "SMC Stuttgart e.V.",
-    "venueLocation": null,
+    "venueLocation": "Stuttgart",
     "venueWebsite": null,
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
@@ -90356,7 +90442,7 @@
     "id": "myrcm-37520-2026-11-15-myrcm-event-96272",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -90454,7 +90540,7 @@
     "id": "myrcm-37520-2026-12-13-myrcm-event-96273",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -90484,7 +90570,7 @@
     "id": "myrcm-37520-2027-01-17-myrcm-event-96274",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
@@ -90514,7 +90600,7 @@
     "id": "myrcm-37520-2027-02-21-myrcm-event-96275",
     "venueId": "myrcm-37520",
     "venueName": "RC Race Team München e.V",
-    "venueLocation": null,
+    "venueLocation": "München",
     "venueWebsite": null,
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
