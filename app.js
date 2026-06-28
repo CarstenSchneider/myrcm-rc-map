@@ -5760,25 +5760,21 @@ function renderClubList() {
   ).join("");
   const searchHtml = `<div class="race-list-search-wrap"><input type="search" class="race-list-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
 
-  const tableHtml = groups.length ? `<table class="race-table">
-    <colgroup><col><col style="width:38%"></colgroup>
-    <thead><tr><th>Veranstaltung</th><th>Veranstalter</th></tr></thead>
-    <tbody>${groups.map(({ label, races: gr }) => {
-      const dateRow = `<tr class="race-date-row"><td colspan="2">${escapeHtml(label)}</td></tr>`;
-      const raceRows = gr.map(race => {
-        const venue = venueForRace(race);
-        return `<tr data-race-id="${escapeHtml(race.id)}">
-          <td class="col-name">${escapeHtml(race.name || race.title || "")}</td>
-          <td class="col-club">${escapeHtml(venue?.name || "")}</td>
-        </tr>`;
-      }).join("");
-      return dateRow + raceRows;
-    }).join("")}</tbody>
-  </table>` : `<div class="race-list-empty">Keine Rennen gefunden.</div>`;
+  const listHtml = groups.length ? groups.map(({ label, races: gr }) => {
+    const dateRow = `<div class="race-date-row">${escapeHtml(label)}</div>`;
+    const raceRows = gr.map(race => {
+      const venue = venueForRace(race);
+      return `<div class="race-list-row" data-race-id="${escapeHtml(race.id)}">` +
+        `<div class="fav-row-name">${escapeHtml(race.name || race.title || "")}</div>` +
+        `<div class="fav-row-city">${escapeHtml(venue?.name || "")}</div>` +
+        `</div>`;
+    }).join("");
+    return dateRow + raceRows;
+  }).join("") : `<div class="race-list-empty">Keine Rennen gefunden.</div>`;
 
   clubListContent.innerHTML = `
     <div class="race-list-filters">${filterHtml}${searchHtml}</div>
-    <div class="race-list-inner">${tableHtml}</div>`;
+    <div class="race-list-inner">${listHtml}</div>`;
   clubListContent.scrollTop = 0;
 
   clubListContent.querySelectorAll(".race-list-flag-btn").forEach(btn => {
@@ -5794,9 +5790,9 @@ function renderClubList() {
     if (_raceListSearch) applyRaceListSearch();
   }
 
-  clubListContent.querySelectorAll(".race-table tbody tr:not(.race-date-row)").forEach(tr => {
-    tr.addEventListener("click", () => {
-      const race = races.find(r => r.id === tr.dataset.raceId);
+  clubListContent.querySelectorAll(".race-list-row").forEach(row => {
+    row.addEventListener("click", () => {
+      const race = races.find(r => r.id === row.dataset.raceId);
       if (!race) return;
       selectedCountry = "all";
       selectedRange = "all";
@@ -5811,20 +5807,20 @@ function renderClubList() {
 
 function applyRaceListSearch() {
   const q = _raceListSearch.toLowerCase().trim();
-  const tbody = clubListContent?.querySelector(".race-table tbody");
-  if (!tbody) return;
-  let dateRow = null;
+  const inner = clubListContent?.querySelector(".race-list-inner");
+  if (!inner) return;
+  let dateEl = null;
   let dateHasVisible = false;
-  tbody.querySelectorAll("tr").forEach(tr => {
-    if (tr.classList.contains("race-date-row")) {
-      if (dateRow) dateRow.hidden = !dateHasVisible;
-      dateRow = tr;
+  inner.querySelectorAll(".race-date-row, .race-list-row").forEach(el => {
+    if (el.classList.contains("race-date-row")) {
+      if (dateEl) dateEl.hidden = !dateHasVisible;
+      dateEl = el;
       dateHasVisible = false;
     } else {
-      const visible = !q || tr.textContent.toLowerCase().includes(q);
-      tr.hidden = !visible;
+      const visible = !q || el.textContent.toLowerCase().includes(q);
+      el.hidden = !visible;
       if (visible) dateHasVisible = true;
     }
   });
-  if (dateRow) dateRow.hidden = !dateHasVisible;
+  if (dateEl) dateEl.hidden = !dateHasVisible;
 }

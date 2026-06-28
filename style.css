@@ -4102,40 +4102,28 @@ body.is-menu-open .app-menu-close {
 .race-list-range-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 .race-list-range-btn:hover:not(.active) { background: rgba(var(--text-rgb), 0.06); }
 
-.race-list-inner { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+.race-list-inner { max-width: 860px; margin: 0 auto; padding: 0 0 60px; }
 
-.race-table { width: 100%; border-collapse: collapse; }
-.race-table th {
-  text-align: left;
-  font-size: 11px; font-weight: 700; color: var(--muted-light);
-  text-transform: uppercase; letter-spacing: 0.07em;
-  padding: 10px 8px 6px; border-bottom: 2px solid rgba(var(--border-rgb), 0.3);
-}
-.race-table td {
-  padding: 9px 8px; font-size: 13px; color: var(--text);
-  border-bottom: 1px solid rgba(var(--border-rgb), 0.07);
-  vertical-align: top;
-}
-.race-table tbody tr { cursor: pointer; transition: background 0.1s; }
-.race-table tbody tr:hover td { background: rgba(var(--text-rgb), 0.04); }
-.race-table .race-date-row td {
+.race-date-row {
   font-size: 26px; font-weight: 700; color: var(--text);
-  padding: 36px 8px 8px; border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
-  cursor: default; line-height: 1.1;
+  padding: 36px 20px 8px; line-height: 1.1;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
 }
-.race-table .race-date-row:first-child td { padding-top: 16px; }
-.race-table .race-date-row:hover td { background: none; }
-.race-table .col-name { font-weight: 500; font-size: 13px; }
-.race-table .col-club { color: var(--muted); font-size: 12px; }
+.race-date-row:first-child { padding-top: 16px; }
+
+.race-list-row {
+  padding: 9px 20px; cursor: pointer;
+  transition: background 120ms;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.07);
+}
+.race-list-row:hover { background: rgba(var(--text-rgb), 0.04); }
 
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
 @media (max-width: 600px) {
   .race-list-filters { padding: 12px 12px 8px; }
-  .race-list-inner { padding: 0 12px 60px; }
-  .race-table td:first-child,
-  .race-table th:first-child { padding-left: 0; }
-  .race-table td { padding: 9px 6px; }
-  .race-table .race-date-row td { font-size: 20px; padding: 28px 6px 8px; }
-  .race-table .race-date-row:first-child td { padding-top: 14px; }
+  .race-list-inner { padding: 0 0 60px; }
+  .race-date-row { font-size: 20px; padding: 28px 12px 8px; }
+  .race-date-row:first-child { padding-top: 14px; }
+  .race-list-row { padding: 9px 12px; }
 }
