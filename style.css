@@ -3966,7 +3966,7 @@ body.is-menu-open .app-menu-close {
 /* Favorites page */
 .fav-page-body { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 .fav-toolbar { flex-shrink: 0; display: flex; gap: 10px; padding: 16px 24px; border-bottom: 1px solid rgba(var(--text-rgb), 0.07); }
-.fav-search-wrap { position: relative; flex: 1; max-width: 360px; }
+.fav-search-wrap { position: relative; margin-left: auto; flex-shrink: 0; width: 220px; }
 .fav-search-wrap::before,
 .fav-search-wrap::after { content: ""; position: absolute; pointer-events: none; }
 .fav-search-wrap::before { right: 13px; top: 50%; width: 13px; height: 13px; border: 1.75px solid var(--muted); border-radius: 999px; transform: translateY(-58%); }
@@ -4048,11 +4048,11 @@ body.is-menu-open .app-menu-close {
 .club-list-content { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 
 .race-list-filters {
-  display: flex; align-items: center; gap: 8px;
-  padding: 12px 20px 8px; max-width: 860px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px 24px; flex-shrink: 0;
   position: sticky; top: 0; z-index: 10;
   background: var(--bg);
-  border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
+  border-bottom: 1px solid rgba(var(--text-rgb), 0.07);
 }
 .race-list-flag-btn {
   width: 34px; height: 34px; padding: 0; border: 2px solid transparent;
@@ -4065,90 +4065,44 @@ body.is-menu-open .app-menu-close {
 .race-list-flag-btn:hover { transform: scale(1.08); }
 .race-list-flag-btn.active { border-color: var(--accent); }
 
-.race-list-search-wrap {
-  margin-left: auto; position: relative; flex-shrink: 0;
-}
-.race-list-search-wrap::before,
-.race-list-search-wrap::after {
-  content: ""; position: absolute; pointer-events: none;
-}
-.race-list-search-wrap::before {
-  right: 11px; top: 50%;
-  width: 13px; height: 13px;
-  border: 2px solid var(--accent); border-radius: 999px;
-  transform: translateY(-60%);
-}
-.race-list-search-wrap::after {
-  right: 7px; top: calc(50% + 5px);
-  width: 9px; height: 2px;
-  border-radius: 999px; background: var(--accent);
-  transform: rotate(45deg);
-}
-.race-list-search {
-  padding: 5px 30px 5px 12px; border-radius: 20px;
-  border: 1px solid rgba(var(--border-rgb), 0.5);
-  background: var(--bg); color: var(--text); font-size: 13px;
-  width: 160px; outline: none;
-  transition: border-color 0.13s, width 0.2s;
-}
-.race-list-search:focus { border-color: var(--accent); width: 220px; }
-.race-list-search::placeholder { color: rgba(var(--text-rgb), 0.4); }
-.race-list-range-btn {
-  padding: 5px 14px; border-radius: 20px;
-  border: 1px solid rgba(var(--border-rgb), 0.5);
-  background: none; color: var(--text); cursor: pointer; font-size: 13px;
-  transition: background 0.13s, color 0.13s, border-color 0.13s;
-}
-.race-list-range-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.race-list-range-btn:hover:not(.active) { background: rgba(var(--text-rgb), 0.06); }
+.race-list-inner { padding: 0 0 60px; }
 
-.race-list-inner { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+@media (min-width: 861px) {
+  .race-list-inner { display: grid; grid-template-columns: 1fr 1fr; }
+  .race-date-row { grid-column: 1 / -1; }
+}
 
-.race-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-.race-table th {
-  text-align: left;
-  font-size: 11px; font-weight: 700; color: var(--muted-light);
-  text-transform: uppercase; letter-spacing: 0.07em;
-  padding: 10px 8px 6px; border-bottom: 2px solid rgba(var(--border-rgb), 0.3);
-  white-space: nowrap; overflow: hidden;
+@media (min-width: 1300px) {
+  .race-list-inner { grid-template-columns: 1fr 1fr 1fr; }
 }
-.race-table td {
-  padding: 8px 8px; font-size: 13px; color: var(--text);
-  border-bottom: 1px solid rgba(var(--border-rgb), 0.14);
-  vertical-align: middle; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+
+.race-date-row {
+  font-size: 26px; font-weight: 700; color: var(--text);
+  padding: 36px 24px 8px; line-height: 1.1;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
 }
-.race-table .col-icons { overflow: visible; text-overflow: clip; }
-.race-table tbody tr { cursor: pointer; transition: background 0.1s; }
-.race-table tbody tr:hover td { background: rgba(var(--text-rgb), 0.04); }
-.race-table .race-month-row td {
-  font-size: 11px; font-weight: 700; color: var(--muted-light);
-  text-transform: uppercase; letter-spacing: 0.07em;
-  padding: 18px 8px 4px; border-bottom: none; cursor: default;
+.race-date-row:first-child { padding-top: 16px; }
+
+.race-list-row {
+  padding: 9px 24px; cursor: pointer;
+  transition: background 120ms;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.07);
 }
-.race-table .race-month-row:hover td { background: none; }
-.race-table .col-date { white-space: nowrap; color: var(--muted); width: 84px; }
-.race-table .col-city { color: var(--muted); width: 120px; }
-.race-table .col-club { font-weight: 500; width: 35%; }
-.race-table .col-status { width: 12px; padding-right: 0; }
-.race-list-status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
-.race-list-status-dot.open     { background: #22c55e; }
-.race-list-status-dot.upcoming { background: var(--status-upcoming, #4A9EE8); }
-.race-list-status-dot.closed   { background: rgba(var(--text-rgb), 0.2); }
+.race-list-row:hover { background: rgba(var(--text-rgb), 0.04); }
+
+/* Favoriten: ganzer Balken 10% gold → 100% gold bei Hover */
+.race-list-row--fav { background: rgba(200,176,144,0.25); }
+.race-list-row--fav:hover { background: var(--favorite); }
+.race-list-row--fav:hover .fav-row-name,
+.race-list-row--fav:hover .fav-row-city { color: #1f1d1a; }
 
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
-.race-table .col-icons { width: 44px; padding-right: 2px; white-space: nowrap; }
-.rl-bell, .rl-star {
-  background: none; border: none; cursor: pointer; padding: 2px; line-height: 0;
-  color: rgba(var(--text-rgb), 0.18); border-radius: 3px; transition: color 0.15s;
-}
-.rl-bell svg, .rl-star svg { width: 14px; height: 14px; fill: currentColor; stroke: none; }
-.rl-bell.active, .rl-star.active { color: var(--favorite); }
-.rl-bell:hover, .rl-star:hover { color: var(--favorite); }
-.rl-bell.hidden { visibility: hidden; }
-.rl-venue-link { color: var(--text); text-decoration: none; }
-.rl-venue-link:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-
 @media (max-width: 600px) {
-  .race-table .col-city, .race-table th.col-city-hdr { display: none; }
+  .fav-toolbar,
+  .race-list-filters { padding: 12px 14px; }
+  .race-list-inner { padding: 0 0 60px; }
+  .race-date-row { padding: 36px 14px 8px; }
+  .race-date-row:first-child { padding-top: 16px; }
+  .race-list-row { padding: 9px 14px; }
 }
