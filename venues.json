@@ -4630,23 +4630,8 @@
     "hostIds": [
       "myrcm-1044"
     ],
-    "myrcmOrgId": "1044",
-    "source": "verified-existing-geolocation-list",
-    "verified": true
-  },
-  {
-    "id": "myrcm-53665",
-    "name": "RC Modellbaufreunde e.V.",
-    "city": "",
-    "lat": 48.358257335666345,
-    "lng": 11.752698391781367,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
-    "hostIds": [],
     "myrcmOrgId": "53665",
-    "source": "venue-seeds",
+    "source": "verified-existing-geolocation-list",
     "verified": true
   },
   {

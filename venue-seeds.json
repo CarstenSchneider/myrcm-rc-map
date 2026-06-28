@@ -2715,7 +2715,7 @@
       "myrcm-1044"
     ],
     "source": "verified-existing-geolocation-list",
-    "myrcmOrgId": "1044"
+    "myrcmOrgId": "53665"
   },
   {
     "id": "rc-racer-hochsauerland-e-v",
@@ -3728,6 +3728,7 @@
   {
     "hostId": "mini-tout-terrain-gruyere",
     "hostName": "Mini Tout Terrain Gruyère",
+    "city": "Gruyères",
     "lat": 46.650127738366436,
     "lng": 7.029607046226385,
     "myrcmOrgId": "18473"
@@ -3834,6 +3835,7 @@
   {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
+    "city": "Chemnitz",
     "lat": 50.79377848514052,
     "lng": 12.898277901821292,
     "myrcmOrgId": "51129"
@@ -3841,6 +3843,7 @@
   {
     "hostId": "rc-cars-wernigerode-e-v",
     "hostName": "RC Cars Wernigerode e.V.",
+    "city": "Wernigerode",
     "lat": 51.85763261882311,
     "lng": 10.803858097976457,
     "myrcmOrgId": "43490"
@@ -3865,13 +3868,6 @@
     "lng": 7.168746466631296
   },
   {
-    "hostId": "rc-modellbaufreunde-e-v",
-    "hostName": "RC Modellbaufreunde e.V.",
-    "lat": 48.358257335666345,
-    "lng": 11.752698391781367,
-    "myrcmOrgId": "53665"
-  },
-  {
     "hostId": "dmc-ov-36",
     "hostName": "RC Offroad Heiligenstadt e.V.",
     "lat": 51.387849617883866,
@@ -3887,6 +3883,7 @@
   {
     "hostId": "rc-race-team-munchen-e-v",
     "hostName": "RC Race Team München e.V",
+    "city": "München",
     "lat": 48.00857029662106,
     "lng": 11.36000585844325,
     "myrcmOrgId": "37520"
@@ -3931,6 +3928,7 @@
   {
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
+    "city": "Grafenwörth",
     "lat": 48.412696168360476,
     "lng": 15.775716608555854,
     "myrcmOrgId": "775"
@@ -3938,6 +3936,7 @@
   {
     "hostId": "rccars-bergisch-born-e-v",
     "hostName": "RCCars Bergisch-Born e.V.",
+    "city": "Bergisch Born",
     "lat": 51.17808024290368,
     "lng": 7.223162604471789,
     "myrcmOrgId": "6492"
@@ -3987,6 +3986,7 @@
   {
     "hostId": "smc-stuttgart-e-v",
     "hostName": "SMC Stuttgart e.V.",
+    "city": "Stuttgart",
     "lat": 48.720995,
     "lng": 9.343529,
     "myrcmOrgId": "51971"
