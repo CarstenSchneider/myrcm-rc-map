@@ -1324,6 +1324,15 @@ function updateFavoriteFilterUi() {
     });
 }
 
+function updateRangeFilterUi() {
+  if (!rangeFilter) return;
+  rangeFilter.querySelectorAll("button[data-range]").forEach(btn => {
+    const active = btn.dataset.range === selectedRange;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-pressed", String(active));
+  });
+}
+
 function updateRegistrationVisibilityUi() {
   if (!registrationVisibilityFilter) return;
 
@@ -1422,6 +1431,7 @@ function updateMobFilterDot() {
 
 function syncFilterUi() {
   updateFilterPanelState();
+  updateRangeFilterUi();
   updateFavoriteFilterUi();
   updateRegistrationVisibilityUi();
   updateSlidingPills();
@@ -3995,11 +4005,6 @@ rangeFilter.addEventListener("click", event => {
   activeVenueId = null;
   activeRaceId = null;
   updateAppModeClass();
-
-  rangeFilter
-    .querySelectorAll("button")
-    .forEach(item => item.classList.toggle("active", item === button));
-
   populateSeries();
   render();
 });
