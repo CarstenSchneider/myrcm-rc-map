@@ -4090,15 +4090,17 @@ body.is-menu-open .app-menu-close {
 }
 .race-list-row:hover { background: rgba(var(--text-rgb), 0.04); }
 
-/* TEST: Favoriten-Highlighting — Variante A: goldene Schrift */
-.race-list-row--fav-a .fav-row-name,
-.race-list-row--fav-a .fav-row-city { color: var(--favorite); }
+/* TEST C: linker Goldbalken + hauchdünner Tint */
+.race-list-row--fav-c { border-left: 3px solid var(--favorite); padding-left: 21px; background: rgba(200,176,144,0.07); }
+.race-list-row--fav-c:hover { background: rgba(200,176,144,0.13); }
 
-/* TEST: Favoriten-Highlighting — Variante B: goldenes Feld, inverse Schrift */
-.race-list-row--fav-b { background: var(--favorite); }
-.race-list-row--fav-b .fav-row-name,
-.race-list-row--fav-b .fav-row-city { color: #1f1d1a; }
-.race-list-row--fav-b:hover { background: #b8a07e; }
+/* TEST D: eingerücktes Pill/Card */
+.race-list-row--fav-d { background: rgba(200,176,144,0.13); border-radius: 8px; margin: 2px 12px; padding: 9px 12px; }
+.race-list-row--fav-d:hover { background: rgba(200,176,144,0.2); }
+
+/* TEST E: goldene Outline, kein Hintergrund */
+.race-list-row--fav-e { box-shadow: inset 0 0 0 1.5px var(--favorite); border-radius: 6px; margin: 2px 12px; padding: 9px 12px; }
+.race-list-row--fav-e:hover { background: rgba(200,176,144,0.07); }
 
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
