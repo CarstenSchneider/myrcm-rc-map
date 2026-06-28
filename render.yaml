@@ -4,6 +4,7 @@ services:
     runtime: node
     plan: free
     schedule: "0 4,16 * * *"
+    timezone: "Europe/Berlin"
     buildCommand: npm install
     startCommand: bash scripts/render-import.sh
     envVars:
