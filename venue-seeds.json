@@ -1918,6 +1918,7 @@
     "aliases": [
       "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
       "Braunschweig",
+      "MSC Pol. Braunschweig",
       "MSC Polizei Braunschweig",
       "Bienroder Weg 70, 38106 Braunschweig",
       "myrcm-95"
@@ -3781,12 +3782,6 @@
     "lat": 50.36381448362496,
     "lng": 8.703414092776123,
     "myrcmOrgId": "66454"
-  },
-  {
-    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
-    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
-    "locationUnknown": true,
-    "myrcmOrgId": "72"
   },
   {
     "hostId": "dmc-msc-sand-e-v",
