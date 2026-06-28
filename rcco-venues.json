@@ -1,0 +1,79 @@
+[
+  {
+    "id": "rcco-black-sheep-racers-e-v",
+    "name": "Black Sheep Racers e. V.",
+    "city": null,
+    "lat": 49.124882296659635,
+    "lng": 10.779528541213677,
+    "hostIds": [
+      "rcco-black-sheep-racers-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-emc-wehrheim-e-v",
+    "name": "EMC Wehrheim e. V.",
+    "city": null,
+    "lat": 50.314507929048034,
+    "lng": 8.558427424524675,
+    "hostIds": [
+      "rcco-emc-wehrheim-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-mrc-weiden-e-v",
+    "name": "MRC Weiden e.V.",
+    "city": null,
+    "lat": 49.64588568552558,
+    "lng": 12.120420781877858,
+    "hostIds": [
+      "rcco-mrc-weiden-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-rc-freunde-vennebeck-e-v",
+    "name": "RC Freunde Vennebeck e.V.",
+    "city": null,
+    "lat": 52.21367710430686,
+    "lng": 8.87228248647399,
+    "hostIds": [
+      "rcco-rc-freunde-vennebeck-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-rccc-hilter-e-v",
+    "name": "RCCC Hilter e.V.",
+    "city": null,
+    "lat": 52.14480478722756,
+    "lng": 8.156243732175744,
+    "hostIds": [
+      "rcco-rccc-hilter-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-rcrt-quakenbruck-e-v",
+    "name": "RCRT-Quakenbrück e.V.",
+    "city": null,
+    "lat": 52.68305775352677,
+    "lng": 7.934878589989598,
+    "hostIds": [
+      "rcco-rcrt-quakenbruck-e-v"
+    ],
+    "source": "rcco-seed"
+  },
+  {
+    "id": "rcco-tsg-mst-estenfeld",
+    "name": "TSG/MST Estenfeld",
+    "city": null,
+    "lat": 49.833305473558845,
+    "lng": 9.997546436693286,
+    "hostIds": [
+      "rcco-tsg-mst-estenfeld"
+    ],
+    "source": "rcco-seed"
+  }
+]

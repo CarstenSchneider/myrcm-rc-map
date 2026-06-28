@@ -1,0 +1,497 @@
+{
+  "rccoEvents": [
+    {
+      "date": "2026-07-05",
+      "dateRaw": "05.07.2026",
+      "club": "RCRT-Quakenbrück e.V.",
+      "clubNorm": "rcrt quakenbrück",
+      "name": "1. offener Clublauf RCRT Quakenbrück",
+      "classes": "OR8OR8E",
+      "track": "Eichenring"
+    },
+    {
+      "date": "2026-07-11",
+      "dateRaw": "11.07.2026",
+      "club": "MSV Linsengericht",
+      "clubNorm": "msv linsengericht",
+      "name": "ECM Elektro-Cup-Mitte 3. Lauf",
+      "classes": "OR8E",
+      "track": "Linsenkessel"
+    },
+    {
+      "date": "2026-07-11",
+      "dateRaw": "11.07.202612.07.2026",
+      "club": "TTSC-Racing",
+      "clubNorm": "ttsc racing",
+      "name": "5. TTSC-Lauf 2026",
+      "classes": "TTSCTTSC miniFigtherSTWFUNMST Hobby",
+      "track": "Outdoorstrecke Estenfeld"
+    },
+    {
+      "date": "2026-07-12",
+      "dateRaw": "12.07.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-07-18",
+      "dateRaw": "18.07.202619.07.2026",
+      "club": "RMC-Wolfsburg e.v.",
+      "clubNorm": "rmc wolfsburg",
+      "name": "ECN Elektro Cup Nord",
+      "classes": "OR8E",
+      "track": "Mückenring"
+    },
+    {
+      "date": "2026-07-18",
+      "dateRaw": "18.07.202619.07.2026",
+      "club": "EMC Wehrheim e. V.",
+      "clubNorm": "emc wehrheim",
+      "name": "RC-Club Trophy Wehrheim 2026",
+      "classes": "2WDTRU2WDSt4WDSt4WDBIGFighter4WDMod2WDMod21,5T Fun",
+      "track": "Limesring am Oberloh"
+    },
+    {
+      "date": "2026-07-25",
+      "dateRaw": "25.07.202626.07.2026",
+      "club": "MCC Laupheim e. V.",
+      "clubNorm": "mcc laupheim",
+      "name": "TAMICO Offroad Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighterBBXWheelie",
+      "track": "Kunstrasenstrecke"
+    },
+    {
+      "date": "2026-07-26",
+      "dateRaw": "26.07.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "5. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-08-02",
+      "dateRaw": "02.08.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-08-08",
+      "dateRaw": "08.08.202609.08.2026",
+      "club": "IG Vulkanparkracer e.V.",
+      "clubNorm": "ig vulkanparkracer",
+      "name": "Freundschaftsregatta Vulkanparkracer Nieder-Moos",
+      "classes": "MS1MS2HS1HS2MMMono ASMono BSMAMBMHHydro ASHAHB",
+      "track": "Vulkanpark"
+    },
+    {
+      "date": "2026-08-08",
+      "dateRaw": "08.08.202609.08.2026",
+      "club": "RC Freunde Vennebeck e.V.",
+      "clubNorm": "rc freunde vennebeck",
+      "name": "Tamico Offroad Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighter KlasseBBXWheelie1/8ORE2WDORE4WDMO",
+      "track": "Kaiserring"
+    },
+    {
+      "date": "2026-08-09",
+      "dateRaw": "09.08.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "6. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-08-16",
+      "dateRaw": "16.08.2026",
+      "club": "RCRT-Quakenbrück e.V.",
+      "clubNorm": "rcrt quakenbrück",
+      "name": "2. offener Clublauf RCRT Quakenbrück",
+      "classes": "OR8OR8E",
+      "track": "Eichenring"
+    },
+    {
+      "date": "2026-08-30",
+      "dateRaw": "30.08.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "7. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-09-06",
+      "dateRaw": "06.09.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-09-12",
+      "dateRaw": "12.09.202613.09.2026",
+      "club": "Black Sheep Racers e. V.",
+      "clubNorm": "black sheep racers",
+      "name": "Tamico Offroad-Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighter-KlasseBBXWheelie",
+      "track": "Seenlandring OUTDOOR"
+    },
+    {
+      "date": "2026-09-13",
+      "dateRaw": "13.09.2026",
+      "club": "RCRT-Quakenbrück e.V.",
+      "clubNorm": "rcrt quakenbrück",
+      "name": "3. offener Clublauf RCRT Quakenbrück",
+      "classes": "OR8OR8E",
+      "track": "Eichenring"
+    },
+    {
+      "date": "2026-09-13",
+      "dateRaw": "13.09.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "8. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-09-20",
+      "dateRaw": "20.09.202619.09.2026",
+      "club": "TSG/MST Estenfeld",
+      "clubNorm": "tsg mst estenfeld",
+      "name": "MST LMH endurance",
+      "classes": "LMH",
+      "track": "Aussenstrecke Estenfeld (permanent )"
+    },
+    {
+      "date": "2026-09-20",
+      "dateRaw": "20.09.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-10-03",
+      "dateRaw": "03.10.202604.10.2026",
+      "club": "MRC Weiden e.V.",
+      "clubNorm": "mrc weiden",
+      "name": "2. Lauf des Ostbayernpokals 2026",
+      "classes": "ORT/ORTEOR8EOR8",
+      "track": "RC-Offroadpark Weiden"
+    },
+    {
+      "date": "2026-11-14",
+      "dateRaw": "14.11.202615.11.2026",
+      "club": "Black Sheep Racers e. V.",
+      "clubNorm": "black sheep racers",
+      "name": "Tamico Offroad-Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighter-KlasseBBXWheelie",
+      "track": "Seenlandring INDOOR"
+    },
+    {
+      "date": "2026-06-28",
+      "dateRaw": "28.06.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "4. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-06-28",
+      "dateRaw": "28.06.2026",
+      "club": "MRC Mehrum e.V.",
+      "clubNorm": "mrc mehrum",
+      "name": "4. ECN 2026 MRC Mehrum",
+      "classes": "OR8E",
+      "track": "Vodadrom"
+    },
+    {
+      "date": "2026-06-27",
+      "dateRaw": "27.06.2026",
+      "club": "Spessart-Racer e.V.",
+      "clubNorm": "spessart racer",
+      "name": "2. Lauf ElektroCupMitte",
+      "classes": "OR8E",
+      "track": "Spessart Race Park"
+    },
+    {
+      "date": "2026-06-21",
+      "dateRaw": "21.06.2026",
+      "club": "MSC Gemünden e.V.",
+      "clubNorm": "msc gemünden",
+      "name": "MRS Offroad FunCup Finale 2025/26",
+      "classes": "Rookie2WD Stock4WD Stock2WD Mod4WD ModBig ShipFighter",
+      "track": "Zollberg Raceway"
+    },
+    {
+      "date": "2026-06-20",
+      "dateRaw": "20.06.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "4 Stunden Teamrennen bei Modellsport Münsterland",
+      "classes": "Team 1Team 2Team 3Team 4Team 5Team 6Team 7Team 8Team 9Team 10Team 11Team 12Nachrücker",
+      "track": "Modellsport Münsterland"
+    }
+  ],
+  "matched": [
+    {
+      "date": "2026-06-28",
+      "dateRaw": "28.06.2026",
+      "club": "MRC Mehrum e.V.",
+      "clubNorm": "mrc mehrum",
+      "name": "4. ECN 2026 MRC Mehrum",
+      "classes": "OR8E",
+      "track": "Vodadrom",
+      "clubKnown": true,
+      "dateMatch": false,
+      "sameDateCount": 0
+    }
+  ],
+  "unmatched": [
+    {
+      "date": "2026-07-05",
+      "dateRaw": "05.07.2026",
+      "club": "RCRT-Quakenbrück e.V.",
+      "clubNorm": "rcrt quakenbrück",
+      "name": "1. offener Clublauf RCRT Quakenbrück",
+      "classes": "OR8OR8E",
+      "track": "Eichenring"
+    },
+    {
+      "date": "2026-07-11",
+      "dateRaw": "11.07.2026",
+      "club": "MSV Linsengericht",
+      "clubNorm": "msv linsengericht",
+      "name": "ECM Elektro-Cup-Mitte 3. Lauf",
+      "classes": "OR8E",
+      "track": "Linsenkessel"
+    },
+    {
+      "date": "2026-07-11",
+      "dateRaw": "11.07.202612.07.2026",
+      "club": "TTSC-Racing",
+      "clubNorm": "ttsc racing",
+      "name": "5. TTSC-Lauf 2026",
+      "classes": "TTSCTTSC miniFigtherSTWFUNMST Hobby",
+      "track": "Outdoorstrecke Estenfeld"
+    },
+    {
+      "date": "2026-07-12",
+      "dateRaw": "12.07.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-07-18",
+      "dateRaw": "18.07.202619.07.2026",
+      "club": "RMC-Wolfsburg e.v.",
+      "clubNorm": "rmc wolfsburg",
+      "name": "ECN Elektro Cup Nord",
+      "classes": "OR8E",
+      "track": "Mückenring"
+    },
+    {
+      "date": "2026-07-18",
+      "dateRaw": "18.07.202619.07.2026",
+      "club": "EMC Wehrheim e. V.",
+      "clubNorm": "emc wehrheim",
+      "name": "RC-Club Trophy Wehrheim 2026",
+      "classes": "2WDTRU2WDSt4WDSt4WDBIGFighter4WDMod2WDMod21,5T Fun",
+      "track": "Limesring am Oberloh"
+    },
+    {
+      "date": "2026-07-25",
+      "dateRaw": "25.07.202626.07.2026",
+      "club": "MCC Laupheim e. V.",
+      "clubNorm": "mcc laupheim",
+      "name": "TAMICO Offroad Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighterBBXWheelie",
+      "track": "Kunstrasenstrecke"
+    },
+    {
+      "date": "2026-07-26",
+      "dateRaw": "26.07.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "5. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-08-02",
+      "dateRaw": "02.08.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-08-08",
+      "dateRaw": "08.08.202609.08.2026",
+      "club": "IG Vulkanparkracer e.V.",
+      "clubNorm": "ig vulkanparkracer",
+      "name": "Freundschaftsregatta Vulkanparkracer Nieder-Moos",
+      "classes": "MS1MS2HS1HS2MMMono ASMono BSMAMBMHHydro ASHAHB",
+      "track": "Vulkanpark"
+    },
+    {
+      "date": "2026-08-08",
+      "dateRaw": "08.08.202609.08.2026",
+      "club": "RC Freunde Vennebeck e.V.",
+      "clubNorm": "rc freunde vennebeck",
+      "name": "Tamico Offroad Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighter KlasseBBXWheelie1/8ORE2WDORE4WDMO",
+      "track": "Kaiserring"
+    },
+    {
+      "date": "2026-08-09",
+      "dateRaw": "09.08.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "6. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-08-16",
+      "dateRaw": "16.08.2026",
+      "club": "RCRT-Quakenbrück e.V.",
+      "clubNorm": "rcrt quakenbrück",
+      "name": "2. offener Clublauf RCRT Quakenbrück",
+      "classes": "OR8OR8E",
+      "track": "Eichenring"
+    },
+    {
+      "date": "2026-08-30",
+      "dateRaw": "30.08.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "7. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-09-06",
+      "dateRaw": "06.09.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-09-12",
+      "dateRaw": "12.09.202613.09.2026",
+      "club": "Black Sheep Racers e. V.",
+      "clubNorm": "black sheep racers",
+      "name": "Tamico Offroad-Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighter-KlasseBBXWheelie",
+      "track": "Seenlandring OUTDOOR"
+    },
+    {
+      "date": "2026-09-13",
+      "dateRaw": "13.09.2026",
+      "club": "RCRT-Quakenbrück e.V.",
+      "clubNorm": "rcrt quakenbrück",
+      "name": "3. offener Clublauf RCRT Quakenbrück",
+      "classes": "OR8OR8E",
+      "track": "Eichenring"
+    },
+    {
+      "date": "2026-09-13",
+      "dateRaw": "13.09.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "8. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-09-20",
+      "dateRaw": "20.09.202619.09.2026",
+      "club": "TSG/MST Estenfeld",
+      "clubNorm": "tsg mst estenfeld",
+      "name": "MST LMH endurance",
+      "classes": "LMH",
+      "track": "Aussenstrecke Estenfeld (permanent )"
+    },
+    {
+      "date": "2026-09-20",
+      "dateRaw": "20.09.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "Modellsport Münsterland Cup (offen für jeden)",
+      "classes": "OR8EOR8",
+      "track": "Modellsport Münsterland"
+    },
+    {
+      "date": "2026-10-03",
+      "dateRaw": "03.10.202604.10.2026",
+      "club": "MRC Weiden e.V.",
+      "clubNorm": "mrc weiden",
+      "name": "2. Lauf des Ostbayernpokals 2026",
+      "classes": "ORT/ORTEOR8EOR8",
+      "track": "RC-Offroadpark Weiden"
+    },
+    {
+      "date": "2026-11-14",
+      "dateRaw": "14.11.202615.11.2026",
+      "club": "Black Sheep Racers e. V.",
+      "clubNorm": "black sheep racers",
+      "name": "Tamico Offroad-Cup",
+      "classes": "Retro 2WDRetro 4WDTruckFighter-KlasseBBXWheelie",
+      "track": "Seenlandring INDOOR"
+    },
+    {
+      "date": "2026-06-28",
+      "dateRaw": "28.06.2026",
+      "club": "RCCC Hilter e.V.",
+      "clubNorm": "rccc hilter",
+      "name": "4. Clublauf",
+      "classes": "OR8OR8E",
+      "track": "RCCC Hilter"
+    },
+    {
+      "date": "2026-06-27",
+      "dateRaw": "27.06.2026",
+      "club": "Spessart-Racer e.V.",
+      "clubNorm": "spessart racer",
+      "name": "2. Lauf ElektroCupMitte",
+      "classes": "OR8E",
+      "track": "Spessart Race Park"
+    },
+    {
+      "date": "2026-06-21",
+      "dateRaw": "21.06.2026",
+      "club": "MSC Gemünden e.V.",
+      "clubNorm": "msc gemünden",
+      "name": "MRS Offroad FunCup Finale 2025/26",
+      "classes": "Rookie2WD Stock4WD Stock2WD Mod4WD ModBig ShipFighter",
+      "track": "Zollberg Raceway"
+    },
+    {
+      "date": "2026-06-20",
+      "dateRaw": "20.06.2026",
+      "club": "Modellsport Münsterland",
+      "clubNorm": "modellsport münsterland",
+      "name": "4 Stunden Teamrennen bei Modellsport Münsterland",
+      "classes": "Team 1Team 2Team 3Team 4Team 5Team 6Team 7Team 8Team 9Team 10Team 11Team 12Nachrücker",
+      "track": "Modellsport Münsterland"
+    }
+  ]
+}

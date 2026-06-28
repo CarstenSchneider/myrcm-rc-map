@@ -1,0 +1,516 @@
+[
+  {
+    "id": "rcco-modellsport-munsterland-2026-06-20",
+    "venueId": "dmc-modellsport-munsterland-e-v",
+    "venueName": "Modellsport Münsterland e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-modellsport-munsterland",
+    "hostName": "Modellsport Münsterland",
+    "name": "4 Stunden Teamrennen bei Modellsport Münsterland",
+    "from": "2026-06-20",
+    "to": "2026-06-20",
+    "series": [],
+    "classes": [
+      "Team 1Team 2Team 3Team 4Team 5Team 6Team 7Team 8Team 9Team 10Team 11Team 12Nachrücker"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-msc-gemunden-e-v-2026-06-21",
+    "venueId": "dmc-ov-137",
+    "venueName": "MSC Gemünden e.V.i. ADAC",
+    "venueLocation": "Gemünden",
+    "hostId": "rcco-msc-gemunden-e-v",
+    "hostName": "MSC Gemünden e.V.",
+    "name": "MRS Offroad FunCup Finale 2025/26",
+    "from": "2026-06-21",
+    "to": "2026-06-21",
+    "series": [],
+    "classes": [
+      "Rookie2WD Stock4WD Stock2WD Mod4WD ModBig ShipFighter"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-spessart-racer-e-v-2026-06-27",
+    "venueId": "dmc-spessart-racer",
+    "venueName": "Spessart Racer",
+    "venueLocation": null,
+    "hostId": "rcco-spessart-racer-e-v",
+    "hostName": "Spessart-Racer e.V.",
+    "name": "2. Lauf ElektroCupMitte",
+    "from": "2026-06-27",
+    "to": "2026-06-27",
+    "series": [],
+    "classes": [
+      "OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-mrc-mehrum-e-v-2026-06-28",
+    "venueId": "mrc-mehrum-e-v",
+    "venueName": "MRC Mehrum e.V.",
+    "venueLocation": "Peine",
+    "hostId": "mrc-mehrum-e-v",
+    "hostName": "MRC Mehrum e.V.",
+    "name": "4. ECN 2026 MRC Mehrum",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [],
+    "classes": [
+      "OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rccc-hilter-e-v-2026-06-28",
+    "venueId": "rcco-rccc-hilter-e-v",
+    "venueName": "RCCC Hilter e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rccc-hilter-e-v",
+    "hostName": "RCCC Hilter e.V.",
+    "name": "4. Clublauf",
+    "from": "2026-06-28",
+    "to": "2026-06-28",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rcrt-quakenbruck-e-v-2026-07-05",
+    "venueId": "rcco-rcrt-quakenbruck-e-v",
+    "venueName": "RCRT-Quakenbrück e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rcrt-quakenbruck-e-v",
+    "hostName": "RCRT-Quakenbrück e.V.",
+    "name": "1. offener Clublauf RCRT Quakenbrück",
+    "from": "2026-07-05",
+    "to": "2026-07-05",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-msv-linsengericht-2026-07-11",
+    "venueId": "dmc-ov-234",
+    "venueName": "MSV Linsengericht",
+    "venueLocation": "Gelnhausen",
+    "hostId": "rcco-msv-linsengericht",
+    "hostName": "MSV Linsengericht",
+    "name": "ECM Elektro-Cup-Mitte 3. Lauf",
+    "from": "2026-07-11",
+    "to": "2026-07-11",
+    "series": [],
+    "classes": [
+      "OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-ttsc-racing-2026-07-11",
+    "venueId": null,
+    "venueName": "Outdoorstrecke Estenfeld",
+    "venueLocation": null,
+    "hostId": "rcco-ttsc-racing",
+    "hostName": "TTSC-Racing",
+    "name": "5. TTSC-Lauf 2026",
+    "from": "2026-07-11",
+    "to": "2026-07-11",
+    "series": [],
+    "classes": [
+      "TTSCTTSC miniFigtherSTWFUNMST Hobby"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-modellsport-munsterland-2026-07-12",
+    "venueId": "dmc-modellsport-munsterland-e-v",
+    "venueName": "Modellsport Münsterland e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-modellsport-munsterland",
+    "hostName": "Modellsport Münsterland",
+    "name": "Modellsport Münsterland Cup (offen für jeden)",
+    "from": "2026-07-12",
+    "to": "2026-07-12",
+    "series": [],
+    "classes": [
+      "OR8EOR8"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-emc-wehrheim-e-v-2026-07-18",
+    "venueId": "rcco-emc-wehrheim-e-v",
+    "venueName": "EMC Wehrheim e. V.",
+    "venueLocation": null,
+    "hostId": "rcco-emc-wehrheim-e-v",
+    "hostName": "EMC Wehrheim e. V.",
+    "name": "RC-Club Trophy Wehrheim 2026",
+    "from": "2026-07-18",
+    "to": "2026-07-18",
+    "series": [],
+    "classes": [
+      "2WDTRU2WDSt4WDSt4WDBIGFighter4WDMod2WDMod21",
+      "5T Fun"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rmc-wolfsburg-e-v-2026-07-18",
+    "venueId": "dmc-rmc-wolfsburg-e-v",
+    "venueName": "RMC Wolfsburg e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rmc-wolfsburg-e-v",
+    "hostName": "RMC-Wolfsburg e.v.",
+    "name": "ECN Elektro Cup Nord",
+    "from": "2026-07-18",
+    "to": "2026-07-18",
+    "series": [],
+    "classes": [
+      "OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-mcc-laupheim-e-v-2026-07-25",
+    "venueId": "dmc-ov-107",
+    "venueName": "MCC Laupheim e.V.",
+    "venueLocation": "Laupheim",
+    "hostId": "rcco-mcc-laupheim-e-v",
+    "hostName": "MCC Laupheim e. V.",
+    "name": "TAMICO Offroad Cup",
+    "from": "2026-07-25",
+    "to": "2026-07-25",
+    "series": [],
+    "classes": [
+      "Retro 2WDRetro 4WDTruckFighterBBXWheelie"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rccc-hilter-e-v-2026-07-26",
+    "venueId": "rcco-rccc-hilter-e-v",
+    "venueName": "RCCC Hilter e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rccc-hilter-e-v",
+    "hostName": "RCCC Hilter e.V.",
+    "name": "5. Clublauf",
+    "from": "2026-07-26",
+    "to": "2026-07-26",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-modellsport-munsterland-2026-08-02",
+    "venueId": "dmc-modellsport-munsterland-e-v",
+    "venueName": "Modellsport Münsterland e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-modellsport-munsterland",
+    "hostName": "Modellsport Münsterland",
+    "name": "Modellsport Münsterland Cup (offen für jeden)",
+    "from": "2026-08-02",
+    "to": "2026-08-02",
+    "series": [],
+    "classes": [
+      "OR8EOR8"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-ig-vulkanparkracer-e-v-2026-08-08",
+    "venueId": null,
+    "venueName": "Vulkanpark",
+    "venueLocation": null,
+    "hostId": "rcco-ig-vulkanparkracer-e-v",
+    "hostName": "IG Vulkanparkracer e.V.",
+    "name": "Freundschaftsregatta Vulkanparkracer Nieder-Moos",
+    "from": "2026-08-08",
+    "to": "2026-08-08",
+    "series": [],
+    "classes": [
+      "MS1MS2HS1HS2MMMono ASMono BSMAMBMHHydro ASHAHB"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rc-freunde-vennebeck-e-v-2026-08-08",
+    "venueId": "rcco-rc-freunde-vennebeck-e-v",
+    "venueName": "RC Freunde Vennebeck e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rc-freunde-vennebeck-e-v",
+    "hostName": "RC Freunde Vennebeck e.V.",
+    "name": "Tamico Offroad Cup",
+    "from": "2026-08-08",
+    "to": "2026-08-08",
+    "series": [],
+    "classes": [
+      "Retro 2WDRetro 4WDTruckFighter KlasseBBXWheelie1/8ORE2WDORE4WDMO"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rccc-hilter-e-v-2026-08-09",
+    "venueId": "rcco-rccc-hilter-e-v",
+    "venueName": "RCCC Hilter e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rccc-hilter-e-v",
+    "hostName": "RCCC Hilter e.V.",
+    "name": "6. Clublauf",
+    "from": "2026-08-09",
+    "to": "2026-08-09",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rcrt-quakenbruck-e-v-2026-08-16",
+    "venueId": "rcco-rcrt-quakenbruck-e-v",
+    "venueName": "RCRT-Quakenbrück e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rcrt-quakenbruck-e-v",
+    "hostName": "RCRT-Quakenbrück e.V.",
+    "name": "2. offener Clublauf RCRT Quakenbrück",
+    "from": "2026-08-16",
+    "to": "2026-08-16",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rccc-hilter-e-v-2026-08-30",
+    "venueId": "rcco-rccc-hilter-e-v",
+    "venueName": "RCCC Hilter e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rccc-hilter-e-v",
+    "hostName": "RCCC Hilter e.V.",
+    "name": "7. Clublauf",
+    "from": "2026-08-30",
+    "to": "2026-08-30",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-modellsport-munsterland-2026-09-06",
+    "venueId": "dmc-modellsport-munsterland-e-v",
+    "venueName": "Modellsport Münsterland e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-modellsport-munsterland",
+    "hostName": "Modellsport Münsterland",
+    "name": "Modellsport Münsterland Cup (offen für jeden)",
+    "from": "2026-09-06",
+    "to": "2026-09-06",
+    "series": [],
+    "classes": [
+      "OR8EOR8"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-black-sheep-racers-e-v-2026-09-12",
+    "venueId": "rcco-black-sheep-racers-e-v",
+    "venueName": "Black Sheep Racers e. V.",
+    "venueLocation": null,
+    "hostId": "rcco-black-sheep-racers-e-v",
+    "hostName": "Black Sheep Racers e. V.",
+    "name": "Tamico Offroad-Cup",
+    "from": "2026-09-12",
+    "to": "2026-09-12",
+    "series": [],
+    "classes": [
+      "Retro 2WDRetro 4WDTruckFighter-KlasseBBXWheelie"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rccc-hilter-e-v-2026-09-13",
+    "venueId": "rcco-rccc-hilter-e-v",
+    "venueName": "RCCC Hilter e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rccc-hilter-e-v",
+    "hostName": "RCCC Hilter e.V.",
+    "name": "8. Clublauf",
+    "from": "2026-09-13",
+    "to": "2026-09-13",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-rcrt-quakenbruck-e-v-2026-09-13",
+    "venueId": "rcco-rcrt-quakenbruck-e-v",
+    "venueName": "RCRT-Quakenbrück e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-rcrt-quakenbruck-e-v",
+    "hostName": "RCRT-Quakenbrück e.V.",
+    "name": "3. offener Clublauf RCRT Quakenbrück",
+    "from": "2026-09-13",
+    "to": "2026-09-13",
+    "series": [],
+    "classes": [
+      "OR8OR8E"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-modellsport-munsterland-2026-09-20",
+    "venueId": "dmc-modellsport-munsterland-e-v",
+    "venueName": "Modellsport Münsterland e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-modellsport-munsterland",
+    "hostName": "Modellsport Münsterland",
+    "name": "Modellsport Münsterland Cup (offen für jeden)",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [],
+    "classes": [
+      "OR8EOR8"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-tsg-mst-estenfeld-2026-09-20",
+    "venueId": "rcco-tsg-mst-estenfeld",
+    "venueName": "TSG/MST Estenfeld",
+    "venueLocation": null,
+    "hostId": "rcco-tsg-mst-estenfeld",
+    "hostName": "TSG/MST Estenfeld",
+    "name": "MST LMH endurance",
+    "from": "2026-09-20",
+    "to": "2026-09-20",
+    "series": [],
+    "classes": [
+      "LMH"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-mrc-weiden-e-v-2026-10-03",
+    "venueId": "rcco-mrc-weiden-e-v",
+    "venueName": "MRC Weiden e.V.",
+    "venueLocation": null,
+    "hostId": "rcco-mrc-weiden-e-v",
+    "hostName": "MRC Weiden e.V.",
+    "name": "2. Lauf des Ostbayernpokals 2026",
+    "from": "2026-10-03",
+    "to": "2026-10-03",
+    "series": [],
+    "classes": [
+      "ORT/ORTEOR8EOR8"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  },
+  {
+    "id": "rcco-black-sheep-racers-e-v-2026-11-14",
+    "venueId": "rcco-black-sheep-racers-e-v",
+    "venueName": "Black Sheep Racers e. V.",
+    "venueLocation": null,
+    "hostId": "rcco-black-sheep-racers-e-v",
+    "hostName": "Black Sheep Racers e. V.",
+    "name": "Tamico Offroad-Cup",
+    "from": "2026-11-14",
+    "to": "2026-11-14",
+    "series": [],
+    "classes": [
+      "Retro 2WDRetro 4WDTruckFighter-KlasseBBXWheelie"
+    ],
+    "source": "rcco",
+    "url": "https://rccar-online.de/veranstaltungen",
+    "registrationStatus": null,
+    "registrationOpens": null
+  }
+]

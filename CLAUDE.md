@@ -75,7 +75,7 @@ Zweiphasiger Render in `render()`:
 
 ### Daten
 - `venues` — Array von Strecken (verwende `.find()`)
-- `races` — Array von Rennen (myrcm + rck), aktuell ~2238
+- `races` — Array von Rennen (myrcm + rck + dmc), aktuell ~2524 (2229 MyRCM + 19 RCK + 276 DMC)
 - `markers` — Map (venue.id → Leaflet Marker)
 - `hosts`, `hostsById`, `hostsByOrgId` — Club-Daten (256 Hosts: 176 DE, 43 AT, 37 CH)
 - Geladen via `fetch()` parallel; nach Laden: `render()` → `revealMapWhenReady()`
@@ -134,14 +134,16 @@ window.addEventListener("load", () => {
 | `deploy-site-dev-hetzner.yml` | `dev` push | `rcracemap-dev/` (nur HTML/JS/CSS) |
 | `deploy-site-main-hetzner.yml` | `main` push | `.` (root inkl. JSON-Daten) |
 | `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten |
-| `import-races.yml` | täglich 04:00 UTC + manuell | Renndaten importieren + Notifications senden |
+| `trigger-render-import.yml` | manuell | Startet Import auf render.com |
+| `fetch-og-images.yml` | manuell | Fetcht og:image von Club-Websites → `hosts.json` auf dev |
+| `check-osm-images.yml` | manuell | Prüft OSM/Overpass auf Venue-Bilder → `osm-images-result.json` |
 
-**Wichtig:** `deploy-site-dev-hetzner.yml` kopiert **keine** JSON-Daten — diese bleiben vom letzten `deploy-data-dev-hetzner.yml` oder `import-races.yml` Lauf.
+**Wichtig:** `deploy-site-dev-hetzner.yml` kopiert **keine** JSON-Daten — diese bleiben vom letzten `deploy-data-dev-hetzner.yml` oder Render-Import Lauf.
 
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v201**, **style.css v110**
+Aktuelle Version: **app.js v240**, **style.css v145**
 
 ## Import-System
 
@@ -160,8 +162,9 @@ Der tägliche Import läuft auf **render.com** (Cron täglich 04:00 UTC), NICHT 
 1. **MyRCM-Verfügbarkeit prüfen** — 3 Versuche × 5 Minuten
 2. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0)
 3. **Import MyRCM** — `node --no-warnings import-myrcm.js`
-4. **Commit** — alle JSON-Dateien zu `main` und `dev` (nur wenn Änderungen); `git pull --rebase --autostash` vor Push
-5. **Send notifications** — POST an Supabase Edge Function
+4. **Import DMC** — `node import-dmc.js`
+5. **Commit** — alle JSON-Dateien zu `main` und `dev` (nur wenn Änderungen); `git pull --rebase --autostash` vor Push
+6. **Send notifications** — POST an Supabase Edge Function
 
 ### import-myrcm.js — Konfiguration
 ```js
@@ -186,11 +189,11 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 ### Datendateien
 | Datei | Inhalt |
 |---|---|
-| `races.json` | MyRCM-Rennen (~2238 Rennen, DACH) |
-| `rck-races.json` | RCK-Rennen |
-| `dmc-races.json` | DMC-Rennen (via `import-dmc.js`; noch nicht in app.js geladen) |
-| `venues.json` | Strecken (259 Venues, DACH) |
-| `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH) |
+| `races.json` | MyRCM-Rennen (~2229 Rennen, DACH) |
+| `rck-races.json` | RCK-Rennen (~19) |
+| `dmc-races.json` | DMC-Rennen (~276, via `import-dmc.js`, in app.js integriert) |
+| `venues.json` | Strecken (314 Venues, DACH) |
+| `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH); enthält `ogImage`-Felder für 47 Clubs (via `fetch-og-images.yml`) |
 | `myrcm-hosts-dach.json` | Seed-Datei: 304 MyRCM-Hosts DACH (orgId, country als Vollname) |
 | `venue-unmatched.json` | nicht zugeordnete Venues |
 | `rck-venue-candidates.json` | RCK Venue-Kandidaten |
@@ -313,4 +316,4 @@ myrcm.ch läuft auf einem Managed Server mit gelegentlichen Kurzausfällen. GitH
 12. **`import-myrcm.js` auf `main` und `dev` synchron halten** — Import-Job checkt `main` aus; Änderungen nur auf `dev` werden beim nächsten Tagesimport ignoriert
 13. **`myrcm-hosts-dach.json` muss auf `main` vorhanden sein** — Import-Job braucht die Datei; fehlt sie auf main, fällt Import auf DE-only zurück
 14. **Non-DACH-Races immer `venueId: null`** — `import-myrcm.js` setzt `venue = isNonDach ? null : venueFromSeed(...)`. Früher gab es `wasExplicit`-Bypass: ETS-Rennen in Trencin/NL wurden fälschlich Arena33 zugeordnet weil `detail.hostLabel` "Arena33" zurückgab. Fix: `wasExplicit` wird für die venue-Zuweisung nicht mehr berücksichtigt.
-15. **DMC-Import läuft noch nicht in `render-import.sh`** — `import-dmc.js` existiert und schreibt `dmc-races.json`, muss aber noch in den Render-Script und in `app.js` integriert werden. Direktes Scraping von `dmc-online.com` ist das Ziel (aktuell: temporär Stefan Teitges API `api.rc-cloud.de`).
+15. **Neue Workflows nur auf `main` triggern** — `workflow_dispatch`-Workflows müssen auf dem Default-Branch (`main`) liegen um über die GitHub API auslösbar zu sein. Neue Workflows daher immer auf beiden Branches commiten (`fetch-og-images.yml`, `check-osm-images.yml` als Beispiele).
