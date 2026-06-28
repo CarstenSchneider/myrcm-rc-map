@@ -4334,7 +4334,7 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
@@ -4344,6 +4344,8 @@ async function init() {
     fetchJsonOrFallback(`series.json?v=${cacheBuster}`, fallbackSeriesCatalog),
     fetch(`dmc-races.json?v=${cacheBuster}`).catch(() => null),
     fetch(`dmc-venues.json?v=${cacheBuster}`).catch(() => null),
+    fetch(`rcco-races.json?v=${cacheBuster}`).catch(() => null),
+    fetch(`rcco-venues.json?v=${cacheBuster}`).catch(() => null),
   ]);
 
   dataLastUpdatedAt = latestResponseLastModified([
@@ -4362,9 +4364,13 @@ async function init() {
   const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
   const dmcVenuesRaw = await responseJsonOrFallback(dmcVenuesRawResponse, []);
   const dmcVenues = Array.isArray(dmcVenuesRaw) ? dmcVenuesRaw : [];
+  const rccoRacesRaw = await responseJsonOrFallback(rccoRacesRawResponse, []);
+  const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
+  const rccoVenuesRaw = await responseJsonOrFallback(rccoVenuesRawResponse, []);
+  const rccoVenues = Array.isArray(rccoVenuesRaw) ? rccoVenuesRaw : [];
 
   venues = mergeVenues(
-    [...baseVenues, ...dmcVenues],
+    [...baseVenues, ...dmcVenues, ...rccoVenues],
     rckVenueCandidates,
     { requireVerifiedAddress: true }
   );
@@ -4378,18 +4384,33 @@ async function init() {
       .filter(isUsefulRckRace)
       .map(race => normalizeRaceFromSource(race, "rck")),
   ];
+  const filteredDmcRaces = dmcRaces
+    .map(race => normalizeRaceFromSource(race, "dmc"))
+    .filter(dmcRace => {
+      const dmcHostKey = slugifyMatchValue(dmcRace.hostName || dmcRace.venueName || "");
+      return !nonDmcRaces.some(r => {
+        if (!(r.from <= dmcRace.to && r.to >= dmcRace.from)) return false;
+        if (dmcRace.venueId && r.venueId === dmcRace.venueId) return true;
+        if (dmcHostKey) {
+          const rHostKey = slugifyMatchValue(r.hostName || r.venueName || "");
+          if (rHostKey && rHostKey === dmcHostKey) return true;
+        }
+        return false;
+      });
+    });
+  const knownRaces = [...nonDmcRaces, ...filteredDmcRaces];
   races = [
-    ...nonDmcRaces,
-    ...dmcRaces
-      .map(race => normalizeRaceFromSource(race, "dmc"))
-      .filter(dmcRace => {
-        const dmcHostKey = slugifyMatchValue(dmcRace.hostName || dmcRace.venueName || "");
-        return !nonDmcRaces.some(r => {
-          if (!(r.from <= dmcRace.to && r.to >= dmcRace.from)) return false;
-          if (dmcRace.venueId && r.venueId === dmcRace.venueId) return true;
-          if (dmcHostKey) {
+    ...knownRaces,
+    ...rccoRaces
+      .map(race => normalizeRaceFromSource(race, "rcco"))
+      .filter(rccoRace => {
+        const rccoHostKey = slugifyMatchValue(rccoRace.hostName || rccoRace.venueName || "");
+        return !knownRaces.some(r => {
+          if (!(r.from <= rccoRace.to && r.to >= rccoRace.from)) return false;
+          if (rccoRace.venueId && r.venueId === rccoRace.venueId) return true;
+          if (rccoHostKey) {
             const rHostKey = slugifyMatchValue(r.hostName || r.venueName || "");
-            if (rHostKey && rHostKey === dmcHostKey) return true;
+            if (rHostKey && rHostKey === rccoHostKey) return true;
           }
           return false;
         });
@@ -5231,18 +5252,21 @@ function renderAdminPruefenTab(container) {
   Promise.all([
     fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`).then(r => r.json()),
     fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
-  ]).then(async ([seeds, dmcRes]) => {
+    fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
+  ]).then(async ([seeds, dmcRes, rccoRes]) => {
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
+    const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
+    const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
 
     // DACH-Seeds die noch verifiziert werden müssen
     const dachPending = seeds.filter(s => s.source === "geocoded-nominatim-dach");
     const totalDach = seeds.filter(s => s.source === "geocoded-nominatim-dach" || s.source === "verified").length;
     const alreadyDone = totalDach - dachPending.length;
 
-    // DMC-Venues ohne Koordinaten, noch nicht in seeds eingetragen
+    // Externe Venues ohne Koordinaten, noch nicht in seeds eingetragen
     const seededHostIds = new Set(
-      seeds.filter(s => s.hostId?.startsWith("dmc-") && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
+      seeds.filter(s => (s.hostId?.startsWith("dmc-") || s.hostId?.startsWith("rcco-")) && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
     );
     const dmcSeen = new Set();
     const dmcPending = dmcRaces
@@ -5250,18 +5274,31 @@ function renderAdminPruefenTab(container) {
       .reduce((acc, r) => {
         if (!dmcSeen.has(r.hostId)) {
           dmcSeen.add(r.hostId);
-          acc.push({ _dmc: true, id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
+          acc.push({ _dmc: true, _sourceBadge: "DMC", id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
         }
         return acc;
       }, []);
 
+    const rccoSeen = new Set();
+    const rccoPending = rccoRaces
+      .filter(r => !r.venueId && !seededHostIds.has(r.hostId))
+      .reduce((acc, r) => {
+        if (!rccoSeen.has(r.hostId)) {
+          rccoSeen.add(r.hostId);
+          acc.push({ _dmc: true, _sourceBadge: "RCCO", id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
+        }
+        return acc;
+      }, []);
+
+    const externalPending = [...dmcPending, ...rccoPending];
+
     const pending = [
       ...dachPending.map(s => ({ ...s, _dmc: false })),
-      ...dmcPending,
+      ...externalPending,
     ];
 
     if (!pending.length) {
-      container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC-Venues.</p>`;
+      container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC- oder RCCO-Venues.</p>`;
       return;
     }
 
@@ -5270,14 +5307,15 @@ function renderAdminPruefenTab(container) {
     function renderEntry() {
       const s = pending[idx];
       const isDmc = s._dmc;
+      const extBadge = s._sourceBadge || "DMC";
       const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
       const doneCount = isDmc ? totalDach : alreadyDone + idx;
       const totalCount = isDmc ? totalDach : totalDach;
-      const dmcIdxDisplay = isDmc ? `DMC ${idx - dachPending.length + 1} / ${dmcPending.length}` : `${doneCount} / ${totalCount} verifiziert`;
+      const extIdxDisplay = isDmc ? `${extBadge} ${idx - dachPending.length + 1} / ${externalPending.length}` : `${doneCount} / ${totalCount} verifiziert`;
       const pct = isDmc ? 100 : Math.round(doneCount / totalDach * 100);
       container.innerHTML = `
         <div class="admin-dach-progress">
-          <span>${dmcIdxDisplay}${isDmc ? ` <span class="admin-source-badge">DMC</span>` : ""}</span>
+          <span>${extIdxDisplay}${isDmc ? ` <span class="admin-source-badge">${escapeHtml(extBadge)}</span>` : ""}</span>
           ${!isDmc ? `<div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>` : ""}
         </div>
         <div class="admin-entry">
@@ -5320,7 +5358,7 @@ function renderAdminPruefenTab(container) {
           await adminCommit(payload);
           pending.splice(idx, 1);
           if (!isDmc) dachPending.splice(dachPending.indexOf(s), 1);
-          else dmcPending.splice(dmcPending.indexOf(s), 1);
+          else externalPending.splice(externalPending.indexOf(s), 1);
           if (!pending.length) {
             container.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
