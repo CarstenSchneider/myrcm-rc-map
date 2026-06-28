@@ -5796,7 +5796,7 @@ function renderClubList() {
         }
         return `<tr data-race-id="${escapeHtml(race.id)}">
           <td class="col-date">${dateStr}</td>
-          <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
+          <td class="col-city">${escapeHtml(venue?.city || race.venueLocation || race.hostCity || "")}</td>
           ${loggedIn ? iconsCell : ""}
           <td class="col-club">${nameHtml}</td>
           <td>${escapeHtml(race.name || race.title || "")}</td>
