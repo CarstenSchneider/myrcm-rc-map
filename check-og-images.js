@@ -42,8 +42,9 @@ async function fetchOgImage(url) {
 
 async function run() {
   const hosts = JSON.parse(readFileSync("hosts.json", "utf8"));
-  const withSite = hosts.filter(h => h.website);
-  console.log(`${withSite.length} Hosts mit Website (von ${hosts.length} gesamt)\n`);
+  const withSite = hosts.filter(h => h.website && !h.ogImage);
+  const alreadyHave = hosts.filter(h => h.website && h.ogImage).length;
+  console.log(`${withSite.length} Hosts ohne ogImage (${alreadyHave} bereits gecacht, ${hosts.length} gesamt)\n`);
 
   let done = 0, found = 0, none = 0, errors = 0;
 
@@ -76,8 +77,12 @@ async function run() {
   console.log(`Kein og:image:    ${none}`);
   console.log(`Fehler/Timeout:   ${errors}`);
 
-  writeFileSync("hosts.json", JSON.stringify(hosts, null, 2) + "\n");
-  console.log(`\nhosts.json geschrieben (${found} neue ogImage-Einträge)`);
+  if (found > 0) {
+    writeFileSync("hosts.json", JSON.stringify(hosts, null, 2) + "\n");
+    console.log(`\nhosts.json geschrieben (${found} neue ogImage-Einträge)`);
+  } else {
+    console.log(`\nKeine neuen ogImages — hosts.json unverändert`);
+  }
 }
 
 run().catch(e => { console.error(e); process.exit(1); });
