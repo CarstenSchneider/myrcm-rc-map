@@ -202,6 +202,9 @@ function parseTable(html, clubDirectory) {
     const cells = $(tr).find("td");
     if (cells.length < 6) return;
 
+    // Skip cancelled events
+    if ($(tr).find("p.absage").text().toLowerCase().includes("abgesagt")) return;
+
     const clubName = $(cells[5]).text().trim();
     if (!clubName || /^(Referent|Sportkreisvorsitzender|Schriftf[uü]hrer|DMC e\.V\. Gesch)/i.test(clubName)) return;
 
@@ -237,7 +240,7 @@ function parseTable(html, clubDirectory) {
     const rawNennformular = cells.length > 9
       ? $(cells[9]).find("a[href]").first().attr("href") || null
       : null;
-    const nennformularHref = rawNennformular && !/myrcm\.ch\/myrcm\/main\?hId\[1\]=bkg&pLa=/.test(rawNennformular)
+    const nennformularHref = rawNennformular && !/myrcm\.ch\/myrcm\/main\?hId(%5[Bb]1%5[Dd]|\[1\])=bkg/i.test(rawNennformular)
       ? rawNennformular
       : null;
 
