@@ -4997,7 +4997,8 @@ function showMenuHome() {
       ${chevron}
     </button>
 ` : ""}
-    <button type="button" class="app-menu-row" id="clubListMenuBtn">
+    <!-- Rennliste temporarily hidden until ready -->
+    <button type="button" class="app-menu-row" id="clubListMenuBtn" hidden>
       <span class="app-menu-row-icon">${iconList}</span>
       <span class="app-menu-row-label">Rennliste</span>
       ${chevron}
