@@ -3600,6 +3600,24 @@
     ]
   },
   {
+    "id": "rck-neubrandenburg-city-circuit-neubrandenburg",
+    "name": "Neubrandenburg City Circuit",
+    "city": "Neubrandenburg",
+    "lat": 53.55446117359839,
+    "lng": 13.29309143604531,
+    "hostId": "modellsportverein-neubrandenburg-e-v",
+    "hostIds": [
+      "modellsportverein-neubrandenburg-e-v"
+    ],
+    "website": "https://www.rc-neubrandenburg.de",
+    "source": "verified",
+    "aliases": [
+      "Modellsportverein Neubrandenburg e. V.",
+      "MSV Neubrandenburg",
+      "Neubrandenburg City Circuit"
+    ]
+  },
+  {
     "hostId": "dmc-ov-386",
     "hostName": "3 Sesselracer",
     "lat": 48.735275140194894,

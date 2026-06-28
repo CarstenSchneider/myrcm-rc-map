@@ -1048,7 +1048,14 @@ async function sbPullNotifications() {
 }
 
 function isNotificationEnabled(hostId) {
-  return _notifIds.has(String(hostId));
+  if (!hostId || !_notifIds.size) return false;
+  const id = String(hostId);
+  if (_notifIds.has(id)) return true;
+  const canonical = canonicalVenueId(id);
+  for (const nid of _notifIds) {
+    if (nid === canonical || canonicalVenueId(nid) === canonical) return true;
+  }
+  return false;
 }
 
 async function toggleNotification(hostId) {
@@ -4970,9 +4977,10 @@ function showMenuHome() {
         ${chevron}
       </button>`;
 
+  const iconList = `<svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>`;
+
   appMenuContent.innerHTML = `
     ${authSection}
-    <div class="app-menu-sep"></div>
     <div class="app-menu-row app-menu-theme-row">
       <span class="app-menu-row-icon">${iconSun}</span>
       <span class="app-menu-row-label">Darstellung</span>
@@ -4989,7 +4997,12 @@ function showMenuHome() {
       ${chevron}
     </button>
 ` : ""}
-    <div class="app-menu-sep"></div>
+    <!-- Rennliste temporarily hidden until ready -->
+    <button type="button" class="app-menu-row" id="clubListMenuBtn" hidden>
+      <span class="app-menu-row-icon">${iconList}</span>
+      <span class="app-menu-row-label">Rennliste</span>
+      ${chevron}
+    </button>
     <button type="button" class="app-menu-row" data-menu="about">
       <span class="app-menu-row-icon">${iconInfo}</span>
       <span class="app-menu-row-label">Über RC RaceMap</span>
@@ -5001,7 +5014,6 @@ function showMenuHome() {
       ${chevron}
     </button>
     ${isAdmin() ? `
-    <div class="app-menu-sep"></div>
     <button type="button" class="app-menu-row" data-menu="admin">
       <span class="app-menu-row-icon">${iconPin}</span>
       <span class="app-menu-row-label">Ausrichter verorten</span>
@@ -5034,6 +5046,10 @@ function showMenuHome() {
   document.getElementById("sbSignOutBtn")?.addEventListener("click", async () => {
     await sbSignOut();
     showMenuHome();
+  });
+  document.getElementById("clubListMenuBtn")?.addEventListener("click", () => {
+    closeAppMenu();
+    openClubList();
   });
 }
 
@@ -5673,3 +5689,149 @@ window.addEventListener("load", () => {
 });
 
 sbInit();
+
+// ── Race List View ──────────────────────────────────────────────────────────
+
+const clubListPage    = document.getElementById("clubListPage");
+const clubListContent = document.getElementById("clubListContent");
+const clubListBack    = document.getElementById("clubListBack");
+
+clubListBack?.addEventListener("click", closeClubList);
+
+let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
+
+function openClubList() {
+  if (!clubListPage) return;
+  clubListPage.hidden = false;
+  renderClubList();
+}
+
+function closeClubList() {
+  if (!clubListPage) return;
+  clubListPage.hidden = true;
+}
+
+function renderClubList() {
+  if (!clubListContent) return;
+
+  const today = todayStart();
+
+  const upcoming = races
+    .filter(isUsefulRckRace)
+    .filter(r => !!venueForRace(r))
+    .filter(r => {
+      if (_raceListCountry === "all") return true;
+      const v = venueForRace(r);
+      return v ? venueCountry(v) === _raceListCountry : false;
+    })
+    .filter(r => { const d = parseDate(r.from); return d && d >= today; })
+    .sort((a, b) => (a.from || "").localeCompare(b.from || ""));
+
+  // Group by month
+  const groups = [];
+  const groupMap = new Map();
+  for (const race of upcoming) {
+    const d = parseDate(race.from);
+    const key = `${d.getFullYear()}-${d.getMonth()}`;
+    if (!groupMap.has(key)) {
+      const label = d.toLocaleDateString("de-DE", { month: "long", year: "numeric" });
+      const group = { label, races: [] };
+      groups.push(group);
+      groupMap.set(key, group);
+    }
+    groupMap.get(key).races.push(race);
+  }
+
+  const countryOpts = [
+    { label: "Alle", value: "all" },
+    { label: "DE", value: "DE" },
+    { label: "AT", value: "AT" },
+    { label: "CH", value: "CH" },
+  ];
+  const filterHtml = countryOpts.map(o =>
+    `<button type="button" class="race-list-range-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}">${o.label}</button>`
+  ).join("");
+
+  const loggedIn = !!sbUser;
+  const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
+  const svgBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
+  const colCount = loggedIn ? 5 : 4;
+
+  const tableHtml = groups.length ? `<table class="race-table">
+    <colgroup>
+      <col style="width:70px">
+      <col style="width:110px">
+      ${loggedIn ? `<col style="width:44px">` : ""}
+      <col style="width:30%">
+      <col>
+    </colgroup>
+    <thead><tr>
+      <th>Datum</th>
+      <th class="col-city-hdr">Stadt</th>
+      ${loggedIn ? `<th class="col-icons"></th>` : ""}
+      <th>Verein</th>
+      <th>Rennen</th>
+    </tr></thead>
+    <tbody>${groups.map(({ label, races: gr }) => {
+      const monthRow = `<tr class="race-month-row"><td colspan="${colCount}">${escapeHtml(label)}</td></tr>`;
+      const raceRows = gr.map(race => {
+        const venue = venueForRace(race);
+        const vid = venue ? String(venue.id) : null;
+        const d = parseDate(race.from);
+        const dateStr = d.toLocaleDateString("de-DE", { day: "numeric", month: "short" });
+        const hostObjs = (venue?.hostIds ?? []).map(id => hostsById.get(String(id))).filter(Boolean);
+        const website = venue?.website || hostObjs.find(h => h.website)?.website || null;
+        const nameHtml = website && venue
+          ? `<a class="rl-venue-link" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.name ?? "")} ↗</a>`
+          : escapeHtml(venue?.name ?? "");
+        let iconsCell = "";
+        if (loggedIn) {
+          const isFav   = vid ? isFavoriteHostId(vid) : false;
+          const isNotif = vid ? isNotificationEnabled(vid) : false;
+          const buttons = vid ? `<button type="button" class="rl-bell${isNotif ? " active" : ""}${!isFav ? " hidden" : ""}" data-host-id="${escapeHtml(vid)}">${svgBell}</button><button type="button" class="rl-star${isFav ? " active" : ""}" data-host-id="${escapeHtml(vid)}">${svgStar}</button>` : "";
+          iconsCell = `<td class="col-icons">${buttons}</td>`;
+        }
+        return `<tr data-race-id="${escapeHtml(race.id)}">
+          <td class="col-date">${dateStr}</td>
+          <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
+          ${loggedIn ? iconsCell : ""}
+          <td class="col-club">${nameHtml}</td>
+          <td>${escapeHtml(race.name || race.title || "")}</td>
+        </tr>`;
+      }).join("");
+      return monthRow + raceRows;
+    }).join("")}</tbody>
+  </table>` : `<div class="race-list-empty">Keine Rennen gefunden.</div>`;
+
+  clubListContent.innerHTML = `
+    <div class="race-list-filters">${filterHtml}</div>
+    <div class="race-list-inner">${tableHtml}</div>`;
+
+  clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
+    btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".rl-star").forEach(btn => {
+    btn.addEventListener("click", e => { e.stopPropagation(); toggleFavoriteHost(btn.dataset.hostId); renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".rl-bell").forEach(btn => {
+    btn.addEventListener("click", async e => { e.stopPropagation(); await toggleNotification(btn.dataset.hostId); renderClubList(); });
+  });
+
+  clubListContent.querySelectorAll(".rl-venue-link").forEach(a => {
+    a.addEventListener("click", e => e.stopPropagation());
+  });
+
+  clubListContent.querySelectorAll(".race-table tbody tr:not(.race-month-row)").forEach(tr => {
+    tr.addEventListener("click", () => {
+      const race = races.find(r => r.id === tr.dataset.raceId);
+      if (!race) return;
+      selectedCountry = "all";
+      syncFilterUi();
+      closeClubList();
+      updateMarkers(filteredRaces(), false);
+      focusRace(race);
+    });
+  });
+}
