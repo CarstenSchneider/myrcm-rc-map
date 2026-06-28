@@ -3664,6 +3664,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "dmc-ov-37",
+    "hostName": "ESV Bischofsheim e.V.",
+    "lat": 49.97771285712217,
+    "lng": 8.386922863605161
+  },
+  {
     "hostId": "mac-mistelbach",
     "hostName": "MAC Mistelbach",
     "lat": 48.55312704380916,
