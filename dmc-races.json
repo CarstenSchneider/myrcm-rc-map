@@ -859,7 +859,7 @@
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-03-01",
-    "venueId": null,
+    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "MSC Pol. Braunschweig",
     "venueLocation": "Braunschweig",
     "hostId": "dmc-ov-158",
@@ -3181,7 +3181,7 @@
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-05-17",
-    "venueId": null,
+    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "MSC Pol. Braunschweig",
     "venueLocation": "Braunschweig",
     "hostId": "dmc-ov-158",
@@ -3875,7 +3875,7 @@
   },
   {
     "id": "dmc-msc-pol-braunschweig-2026-05-30",
-    "venueId": null,
+    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
     "venueName": "MSC Pol. Braunschweig",
     "venueLocation": "Braunschweig",
     "hostId": "dmc-ov-158",
