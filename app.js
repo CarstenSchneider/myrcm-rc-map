@@ -5753,7 +5753,7 @@ const clubListPage    = document.getElementById("clubListPage");
 const clubListContent = document.getElementById("clubListContent");
 const clubListBack    = document.getElementById("clubListBack");
 
-clubListBack?.addEventListener("click", closeClubList);
+clubListBack?.addEventListener("click", () => { closeClubList(); openAppMenu(); });
 
 let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
 let _raceListSearch = "";
