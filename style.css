@@ -4112,21 +4112,21 @@ body.is-menu-open .app-menu-close {
   padding: 10px 8px 6px; border-bottom: 2px solid rgba(var(--border-rgb), 0.3);
 }
 .race-table td {
-  padding: 10px 8px; font-size: 14px; color: var(--text);
-  border-bottom: 1px solid rgba(var(--border-rgb), 0.1);
+  padding: 9px 8px; font-size: 13px; color: var(--text);
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.07);
   vertical-align: top;
 }
 .race-table tbody tr { cursor: pointer; transition: background 0.1s; }
 .race-table tbody tr:hover td { background: rgba(var(--text-rgb), 0.04); }
 .race-table .race-date-row td {
-  font-size: 13px; font-weight: 700; color: var(--text);
-  padding: 20px 8px 6px; border-bottom: 1px solid rgba(var(--border-rgb), 0.22);
-  cursor: default;
+  font-size: 26px; font-weight: 700; color: var(--text);
+  padding: 36px 8px 8px; border-bottom: 1px solid rgba(var(--border-rgb), 0.18);
+  cursor: default; line-height: 1.1;
 }
-.race-table .race-date-row:first-child td { padding-top: 12px; }
+.race-table .race-date-row:first-child td { padding-top: 16px; }
 .race-table .race-date-row:hover td { background: none; }
-.race-table .col-name { font-weight: 500; }
-.race-table .col-club { color: var(--muted); font-size: 13px; }
+.race-table .col-name { font-weight: 500; font-size: 13px; }
+.race-table .col-club { color: var(--muted); font-size: 12px; }
 
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
@@ -4135,6 +4135,7 @@ body.is-menu-open .app-menu-close {
   .race-list-inner { padding: 0 12px 60px; }
   .race-table td:first-child,
   .race-table th:first-child { padding-left: 0; }
-  .race-table td { font-size: 13px; padding: 8px 6px; }
-  .race-table .race-date-row td { font-size: 12px; }
+  .race-table td { padding: 9px 6px; }
+  .race-table .race-date-row td { font-size: 20px; padding: 28px 6px 8px; }
+  .race-table .race-date-row:first-child td { padding-top: 14px; }
 }

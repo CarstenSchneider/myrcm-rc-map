@@ -5779,6 +5779,7 @@ function renderClubList() {
   clubListContent.innerHTML = `
     <div class="race-list-filters">${filterHtml}${searchHtml}</div>
     <div class="race-list-inner">${tableHtml}</div>`;
+  clubListContent.scrollTop = 0;
 
   clubListContent.querySelectorAll(".race-list-flag-btn").forEach(btn => {
     btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
