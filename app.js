@@ -5454,9 +5454,22 @@ function openFavoritesPage() {
     document.getElementById("favSearch")?.addEventListener("input", e => {
       renderFavoritesPage(e.target.value.trim().toLowerCase());
     });
+    page.querySelectorAll(".fav-toolbar .race-list-flag-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        _favCountry = btn.dataset.country;
+        page.querySelectorAll(".fav-toolbar .race-list-flag-btn").forEach(b => {
+          b.classList.toggle("active", b.dataset.country === _favCountry);
+        });
+        renderFavoritesPage(currentQuery());
+      });
+    });
   }
 
   document.getElementById("favSearch").value = "";
+  _favCountry = "all";
+  page.querySelectorAll(".fav-toolbar .race-list-flag-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.country === "all");
+  });
 
   const body = page.querySelector(".fav-page-body");
   const tabs = page.querySelector(".fav-tabs");
@@ -5491,9 +5504,9 @@ function renderFavoritesPage(query) {
     .filter(v => v.name)
     .sort((a, b) => a.name.localeCompare(b.name, "de"));
 
-  const filtered = query
-    ? allVenues.filter(v => (v.name + " " + (v.city || "")).toLowerCase().includes(query))
-    : allVenues;
+  const filtered = allVenues
+    .filter(v => _favCountry === "all" || venueCountry(v) === _favCountry)
+    .filter(v => !query || (v.name + " " + (v.city || "")).toLowerCase().includes(query));
 
   const venueIsFav = v => {
     if (favIds.has(String(v.id))) return true;
@@ -5705,6 +5718,7 @@ clubListBack?.addEventListener("click", closeClubList);
 
 let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
 let _raceListSearch = "";
+let _favCountry = "all"; // "all" | "DE" | "AT" | "CH"
 
 function openClubList() {
   if (!clubListPage) return;
@@ -5758,7 +5772,7 @@ function renderClubList() {
     `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +
     `<span class="fi fi-${o.code} fis country-flag-icon" aria-hidden="true"></span></button>`
   ).join("");
-  const searchHtml = `<div class="race-list-search-wrap"><input type="search" class="race-list-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
+  const searchHtml = `<div class="fav-search-wrap"><input type="search" class="fav-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
 
   const listHtml = groups.length ? groups.map(({ label, races: gr }) => {
     const dateRow = `<div class="race-date-row">${escapeHtml(label)}</div>`;
@@ -5781,7 +5795,7 @@ function renderClubList() {
     btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
   });
 
-  const searchInput = clubListContent.querySelector(".race-list-search");
+  const searchInput = clubListContent.querySelector(".fav-search");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       _raceListSearch = searchInput.value;
