@@ -328,18 +328,30 @@ const _favIconSvg  = (cls = "favorite-toggle-icon") =>
   `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
 // --- Onboarding Tips ---
+// render types:
+//   "list-top"    — prepended to race list (position 0), arrow pointing toward star below
+//   "list-second" — inserted after first race card, arrow pointing up to that card
+//   "fixed-locate"— fixed overlay positioned near the locate button
+//   "fixed-filter"— fixed overlay near filter bar (desktop top-center / mobile bottom-center)
 const ONBOARDING_TIPS = [
   {
-    html: `${_favIconSvg("tip-star-icon")} Tippe auf den <strong>Stern</strong> einer Rennkarte um den Verein zu favorisieren. Mit der <strong>Glocke</strong> bekommst du E-Mails wenn neue Rennen eingetragen werden.`,
+    render: "list-top",
+    arrow: "bottom-right",
+    html: `${_favIconSvg("tip-inline-icon")} Tippe auf den <strong>Stern</strong> einer Rennkarte um den Verein zu favorisieren — mit der <strong>Glocke</strong> bekommst du E-Mails wenn neue Rennen eingetragen werden.`,
   },
   {
+    render: "list-second",
+    arrow: "top-center",
+    mobileFull: true,
     html: `<strong>Tippe auf eine Rennkarte</strong> um die Strecke auf der Karte zu öffnen und alle Details zu sehen.`,
   },
   {
-    html: `<strong>Eigener Standort</strong> — der Standort-Button (unten links auf der Karte) zeigt dir Rennen in deiner Nähe.`,
+    render: "fixed-locate",
+    html: `<strong>Eigener Standort</strong> — zeigt Rennen in deiner Nähe.`,
   },
   {
-    html: `<strong>Filter</strong> — wähle Land (DE / AT / CH), Zeitraum oder zeige nur Rennen mit offener Nennung. Die Ergebnisse ändern sich stark je nach Einstellung.`,
+    render: "fixed-filter",
+    html: `<strong>Filter</strong> — wähle Land (DE / AT / CH), Zeitraum oder Rennen mit offener Nennung. Die Ergebnisse ändern sich stark je nach Einstellung.`,
   },
 ];
 
@@ -349,37 +361,105 @@ function _tipIndex() {
 
 function _currentTip() {
   const idx = _tipIndex();
-  return idx < ONBOARDING_TIPS.length ? ONBOARDING_TIPS[idx] : null;
+  return idx < ONBOARDING_TIPS.length ? { ...ONBOARDING_TIPS[idx], idx } : null;
 }
 
-function _buildTipCardEl() {
-  const tip = _currentTip();
+function _buildTipCardEl(tip) {
   if (!tip) return null;
-  const idx = _tipIndex();
   const el = document.createElement("aside");
   el.className = "tip-card";
   el.setAttribute("role", "note");
-  el.dataset.tipIndex = idx;
+  if (tip.arrow) el.dataset.arrow = tip.arrow;
   el.innerHTML = `
     <span class="tip-text">${tip.html}</span>
     <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
-    <span class="tip-counter">${idx + 1} / ${ONBOARDING_TIPS.length}</span>
+    <span class="tip-counter">${tip.idx + 1} / ${ONBOARDING_TIPS.length}</span>
   `;
   return el;
 }
 
-function _dismissTip() {
-  const next = _tipIndex() + 1;
-  localStorage.setItem("rcRaceMapTipIndex", String(next));
-  // Replace or remove tip card in-place (in both desktop + mobile lists)
-  document.querySelectorAll(".tip-card").forEach(existing => {
-    if (next < ONBOARDING_TIPS.length) {
-      const el = _buildTipCardEl();
-      existing.replaceWith(el);
-    } else {
-      existing.remove();
+let _tipOverlayEl = null;
+
+function _renderTipOverlay() {
+  const tip = _currentTip();
+  if (!tip || !tip.render.startsWith("fixed-")) return;
+  _clearTipOverlay();
+
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  const el = _buildTipCardEl(tip);
+  el.classList.add("tip-overlay");
+  el.style.position = "fixed";
+  el.style.zIndex = "9000";
+  el.style.maxWidth = isMobile ? "calc(100vw - 90px)" : "270px";
+  document.body.appendChild(el);
+  _tipOverlayEl = el;
+
+  requestAnimationFrame(() => {
+    if (tip.render === "fixed-locate") {
+      const btn = document.querySelector(".locate-btn");
+      if (btn) {
+        const r = btn.getBoundingClientRect();
+        if (isMobile) {
+          el.style.top = `${Math.max(8, r.top)}px`;
+          el.style.left = `${r.right + 14}px`;
+          el.dataset.arrow = "left";
+        } else {
+          el.style.top = `${r.bottom + 12}px`;
+          el.style.left = `${r.left}px`;
+          el.dataset.arrow = "top-left";
+        }
+      } else {
+        el.style.top = "80px";
+        el.style.left = "14px";
+        el.dataset.arrow = "top-left";
+      }
+    } else if (tip.render === "fixed-filter") {
+      if (isMobile) {
+        el.style.bottom = "100px";
+        el.style.left = "50%";
+        el.style.transform = "translateX(-50%)";
+        el.dataset.arrow = "bottom-center";
+      } else {
+        const panel = document.querySelector(".topbar-panel");
+        if (panel) {
+          const r = panel.getBoundingClientRect();
+          el.style.top = `${r.bottom + 12}px`;
+          el.style.left = `${r.left + r.width / 2}px`;
+          el.style.transform = "translateX(-50%)";
+        } else {
+          el.style.top = "80px";
+          el.style.right = "20px";
+        }
+        el.dataset.arrow = "top-center";
+      }
     }
   });
+}
+
+function _clearTipOverlay() {
+  if (_tipOverlayEl) {
+    _tipOverlayEl.remove();
+    _tipOverlayEl = null;
+  }
+}
+
+function _dismissTip() {
+  const nextIdx = (_tipIndex() + 1) % ONBOARDING_TIPS.length; // cycles for testing
+  localStorage.setItem("rcRaceMapTipIndex", String(nextIdx));
+  const nextTip = _currentTip();
+
+  _clearTipOverlay();
+  document.querySelectorAll(".tip-card").forEach(el => el.remove());
+
+  if (!nextTip) return;
+
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (nextTip.render === "list-top" || nextTip.render === "list-second") {
+    if (nextTip.mobileFull && isMobile) setDrawerState("full");
+    renderList(filteredRaces());
+  } else {
+    _renderTipOverlay();
+  }
 }
 // --- End Onboarding Tips ---
 
@@ -3660,23 +3740,25 @@ function renderList(list) {
   resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
-  // Prepend onboarding tip card for first-time visitors
-  const tipEl = _buildTipCardEl();
-  if (tipEl) raceList.appendChild(tipEl);
+  // Onboarding tip: list-top goes first; fixed tips are rendered as body overlays
+  const _tip = _currentTip();
+  if (_tip?.render === "list-top") {
+    const tipEl = _buildTipCardEl(_tip);
+    if (tipEl) raceList.appendChild(tipEl);
+  } else if (_tip?.render?.startsWith("fixed-") && !_tipOverlayEl) {
+    requestAnimationFrame(_renderTipOverlay);
+  }
 
   if (!list.length) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
     const emptyEl = document.createElement("div");
     emptyEl.className = "empty-state";
-    if (_geocodePending) {
-      emptyEl.textContent = "Suche…";
-    } else {
-      emptyEl.textContent = "Keine Rennen für diesen Filter gefunden.";
-    }
+    emptyEl.textContent = _geocodePending ? "Suche…" : "Keine Rennen für diesen Filter gefunden.";
     raceList.appendChild(emptyEl);
     return;
   }
 
+  let _listSecondInserted = false;
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
     const series = raceSeries(race);
@@ -3755,6 +3837,13 @@ function renderList(list) {
     }
 
     raceList.appendChild(card);
+
+    // list-second tip: insert after the very first race card
+    if (!_listSecondInserted && _tip?.render === "list-second") {
+      _listSecondInserted = true;
+      const tipEl = _buildTipCardEl(_tip);
+      if (tipEl) raceList.appendChild(tipEl);
+    }
   }
 
   if (selectedFavoriteFilter === "favorites") {
