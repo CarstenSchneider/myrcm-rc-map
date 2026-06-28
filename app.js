@@ -5761,21 +5761,23 @@ function renderClubList() {
   const searchHtml = `<div class="race-list-search-wrap"><input type="search" class="race-list-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
 
   const loggedIn = !!sbUser;
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
   const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
   const svgBell = `<svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
-  const colCount = loggedIn ? 5 : 4;
+  const baseColCount = isMobile ? (loggedIn ? 3 : 2) : (loggedIn ? 4 : 3);
+  const colCount = baseColCount + (isMobile ? 0 : 1) + 1;
 
   const tableHtml = groups.length ? `<table class="race-table">
     <colgroup>
-      <col style="width:84px">
-      <col style="width:110px">
-      ${loggedIn ? `<col style="width:44px">` : ""}
-      <col style="width:30%">
+      <col style="width:${isMobile ? 78 : 84}px">
+      ${!isMobile ? `<col style="width:110px">` : ""}
+      ${loggedIn ? `<col style="width:${isMobile ? 40 : 44}px">` : ""}
+      <col style="width:${isMobile ? "42" : "30"}%">
       <col>
     </colgroup>
     <thead><tr>
       <th>Datum</th>
-      <th class="col-city-hdr">Stadt</th>
+      ${!isMobile ? `<th class="col-city-hdr">Stadt</th>` : ""}
       ${loggedIn ? `<th class="col-icons"></th>` : ""}
       <th>Verein</th>
       <th>Rennen</th>
@@ -5801,10 +5803,10 @@ function renderClubList() {
         }
         return `<tr data-race-id="${escapeHtml(race.id)}">
           <td class="col-date">${dateStr}</td>
-          <td class="col-city">${escapeHtml(venue?.city || race.venueLocation || race.hostCity || "")}</td>
+          ${!isMobile ? `<td class="col-city">${escapeHtml(venue?.city || race.venueLocation || race.hostCity || "")}</td>` : ""}
           ${loggedIn ? iconsCell : ""}
           <td class="col-club">${nameHtml}</td>
-          <td>${escapeHtml(race.name || race.title || "")}</td>
+          <td class="col-name">${escapeHtml(race.name || race.title || "")}</td>
         </tr>`;
       }).join("");
       return monthRow + raceRows;
