@@ -327,6 +327,62 @@ const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.
 const _favIconSvg  = (cls = "favorite-toggle-icon") =>
   `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
+// --- Onboarding Tips ---
+const ONBOARDING_TIPS = [
+  {
+    html: `${_favIconSvg("tip-star-icon")} Tippe auf den <strong>Stern</strong> einer Rennkarte um den Verein zu favorisieren. Mit der <strong>Glocke</strong> bekommst du E-Mails wenn neue Rennen eingetragen werden.`,
+  },
+  {
+    html: `<strong>Tippe auf eine Rennkarte</strong> um die Strecke auf der Karte zu öffnen und alle Details zu sehen.`,
+  },
+  {
+    html: `<strong>Eigener Standort</strong> — der Standort-Button (unten links auf der Karte) zeigt dir Rennen in deiner Nähe.`,
+  },
+  {
+    html: `<strong>Filter</strong> — wähle Land (DE / AT / CH), Zeitraum oder zeige nur Rennen mit offener Nennung. Die Ergebnisse ändern sich stark je nach Einstellung.`,
+  },
+];
+
+function _tipIndex() {
+  return parseInt(localStorage.getItem("rcRaceMapTipIndex") || "0", 10);
+}
+
+function _currentTip() {
+  const idx = _tipIndex();
+  return idx < ONBOARDING_TIPS.length ? ONBOARDING_TIPS[idx] : null;
+}
+
+function _buildTipCardEl() {
+  const tip = _currentTip();
+  if (!tip) return null;
+  const idx = _tipIndex();
+  const el = document.createElement("aside");
+  el.className = "tip-card";
+  el.setAttribute("role", "note");
+  el.dataset.tipIndex = idx;
+  el.innerHTML = `
+    <span class="tip-text">${tip.html}</span>
+    <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
+    <span class="tip-counter">${idx + 1} / ${ONBOARDING_TIPS.length}</span>
+  `;
+  return el;
+}
+
+function _dismissTip() {
+  const next = _tipIndex() + 1;
+  localStorage.setItem("rcRaceMapTipIndex", String(next));
+  // Replace or remove tip card in-place (in both desktop + mobile lists)
+  document.querySelectorAll(".tip-card").forEach(existing => {
+    if (next < ONBOARDING_TIPS.length) {
+      const el = _buildTipCardEl();
+      existing.replaceWith(el);
+    } else {
+      existing.remove();
+    }
+  });
+}
+// --- End Onboarding Tips ---
+
 // Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
 // Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
 const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
@@ -3604,13 +3660,20 @@ function renderList(list) {
   resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
+  // Prepend onboarding tip card for first-time visitors
+  const tipEl = _buildTipCardEl();
+  if (tipEl) raceList.appendChild(tipEl);
+
   if (!list.length) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
+    const emptyEl = document.createElement("div");
+    emptyEl.className = "empty-state";
     if (_geocodePending) {
-      raceList.innerHTML = `<div class="empty-state">Suche…</div>`;
-      return;
+      emptyEl.textContent = "Suche…";
+    } else {
+      emptyEl.textContent = "Keine Rennen für diesen Filter gefunden.";
     }
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
+    raceList.appendChild(emptyEl);
     return;
   }
 
@@ -3732,6 +3795,11 @@ function toggleClassList(raceId) {
 }
 
 document.addEventListener("click", event => {
+  if (event.target.closest("[data-tip-dismiss]")) {
+    _dismissTip();
+    return;
+  }
+
   const notificationHostButton = event.target.closest("[data-notification-host-id]");
   const favoriteVenueButton = event.target.closest("[data-favorite-venue-id]");
   const favoriteHostButton = event.target.closest("[data-favorite-host-id]");
