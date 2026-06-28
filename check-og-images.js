@@ -9,6 +9,16 @@ const TIMEOUT_MS = 8000;
 const CONCURRENCY = 8;
 const DELAY_MS = 100;
 
+function decodeHtmlEntities(str) {
+  return str
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"');
+}
+
 function extractOgImage(html) {
   const patterns = [
     /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
@@ -16,7 +26,7 @@ function extractOgImage(html) {
   ];
   for (const re of patterns) {
     const m = html.match(re);
-    if (m) return m[1].trim();
+    if (m) return decodeHtmlEntities(m[1].trim());
   }
   return null;
 }
