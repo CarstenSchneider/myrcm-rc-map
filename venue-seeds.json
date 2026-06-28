@@ -3783,10 +3783,9 @@
     "myrcmOrgId": "66454"
   },
   {
-    "hostId": "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158",
-    "hostName": "MSC Polizei Braunschweig im ADAC e.V. ( RCC-V / OV158 )",
-    "locationUnknown": true,
-    "myrcmOrgId": "72"
+    "hostId": "dmc-ov-158",
+    "hostName": "MSC Pol. Braunschweig",
+    "locationUnknown": true
   },
   {
     "hostId": "dmc-msc-sand-e-v",
