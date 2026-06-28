@@ -4090,9 +4090,11 @@ body.is-menu-open .app-menu-close {
 }
 .race-list-row:hover { background: rgba(var(--text-rgb), 0.04); }
 
-/* Favoriten: linker Balken 10% → 100% bei Hover */
-.race-list-row--fav { border-left: 3px solid rgba(200,176,144,0.10); padding-left: 21px; }
-.race-list-row--fav:hover { border-left-color: var(--favorite); background: rgba(var(--text-rgb), 0.04); }
+/* Favoriten: ganzer Balken 10% gold → 100% gold bei Hover */
+.race-list-row--fav { background: rgba(200,176,144,0.10); }
+.race-list-row--fav:hover { background: var(--favorite); }
+.race-list-row--fav:hover .fav-row-name,
+.race-list-row--fav:hover .fav-row-city { color: #1f1d1a; }
 
 .race-list-empty { padding: 60px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
