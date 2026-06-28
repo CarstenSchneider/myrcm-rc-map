@@ -3870,6 +3870,7 @@
   {
     "hostId": "rc-modellbaufreunde-e-v",
     "hostName": "RC Modellbaufreunde e.V.",
+    "city": "Attaching",
     "lat": 48.358257335666345,
     "lng": 11.752698391781367,
     "myrcmOrgId": "53665"
