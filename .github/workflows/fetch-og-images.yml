@@ -3,6 +3,9 @@ name: Fetch og:images for Club Websites
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch-og-images:
     runs-on: ubuntu-latest
