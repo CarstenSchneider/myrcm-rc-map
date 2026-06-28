@@ -5699,6 +5699,7 @@ const clubListBack    = document.getElementById("clubListBack");
 clubListBack?.addEventListener("click", closeClubList);
 
 let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
+let _raceListSearch = "";
 
 function openClubList() {
   if (!clubListPage) return;
@@ -5751,6 +5752,7 @@ function renderClubList() {
   const filterHtml = countryOpts.map(o =>
     `<button type="button" class="race-list-range-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}">${o.label}</button>`
   ).join("");
+  const searchHtml = `<input type="search" class="race-list-search" placeholder="Verein, Stadt …" value="${escapeHtml(_raceListSearch)}">`;
 
   const loggedIn = !!sbUser;
   const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
@@ -5804,12 +5806,21 @@ function renderClubList() {
   </table>` : `<div class="race-list-empty">Keine Rennen gefunden.</div>`;
 
   clubListContent.innerHTML = `
-    <div class="race-list-filters">${filterHtml}</div>
+    <div class="race-list-filters">${filterHtml}${searchHtml}</div>
     <div class="race-list-inner">${tableHtml}</div>`;
 
   clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
     btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
   });
+
+  const searchInput = clubListContent.querySelector(".race-list-search");
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      _raceListSearch = searchInput.value;
+      applyRaceListSearch();
+    });
+    if (_raceListSearch) applyRaceListSearch();
+  }
 
   clubListContent.querySelectorAll(".rl-star").forEach(btn => {
     btn.addEventListener("click", e => { e.stopPropagation(); toggleFavoriteHost(btn.dataset.hostId); renderClubList(); });
@@ -5834,4 +5845,24 @@ function renderClubList() {
       focusRace(race);
     });
   });
+}
+
+function applyRaceListSearch() {
+  const q = _raceListSearch.toLowerCase().trim();
+  const tbody = clubListContent?.querySelector(".race-table tbody");
+  if (!tbody) return;
+  let monthRow = null;
+  let monthHasVisible = false;
+  tbody.querySelectorAll("tr").forEach(tr => {
+    if (tr.classList.contains("race-month-row")) {
+      if (monthRow) monthRow.hidden = !monthHasVisible;
+      monthRow = tr;
+      monthHasVisible = false;
+    } else {
+      const visible = !q || tr.textContent.toLowerCase().includes(q);
+      tr.hidden = !visible;
+      if (visible) monthHasVisible = true;
+    }
+  });
+  if (monthRow) monthRow.hidden = !monthHasVisible;
 }

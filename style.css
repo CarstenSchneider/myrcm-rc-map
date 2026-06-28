@@ -4047,7 +4047,16 @@ body.is-menu-open .app-menu-close {
 /* ── Race List View ─────────────────────────────────────────────────────── */
 .club-list-content { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
 
-.race-list-filters { display: flex; gap: 8px; padding: 16px 20px 4px; max-width: 860px; margin: 0 auto; }
+.race-list-filters { display: flex; align-items: center; gap: 8px; padding: 16px 20px 4px; max-width: 860px; margin: 0 auto; flex-wrap: wrap; }
+.race-list-search {
+  margin-left: auto; padding: 5px 12px; border-radius: 20px;
+  border: 1px solid rgba(var(--border-rgb), 0.5);
+  background: var(--bg); color: var(--text); font-size: 13px;
+  width: 180px; outline: none;
+  transition: border-color 0.13s, width 0.2s;
+}
+.race-list-search:focus { border-color: var(--accent); width: 240px; }
+.race-list-search::placeholder { color: rgba(var(--text-rgb), 0.4); }
 .race-list-range-btn {
   padding: 5px 14px; border-radius: 20px;
   border: 1px solid rgba(var(--border-rgb), 0.5);
