@@ -3895,6 +3895,12 @@
     "myrcmOrgId": "6492"
   },
   {
+    "hostId": "dmc-ov-7",
+    "hostName": "RCCC Coesfeld",
+    "lat": 51.955437808946684,
+    "lng": 7.085230572349691
+  },
+  {
     "hostId": "rcxx-shop",
     "hostName": "RCXX.SHOP",
     "locationUnknown": true,
