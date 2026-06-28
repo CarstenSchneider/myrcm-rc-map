@@ -5699,6 +5699,7 @@ const clubListBack    = document.getElementById("clubListBack");
 clubListBack?.addEventListener("click", closeClubList);
 
 let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
+let _raceListSearch = "";
 
 function openClubList() {
   if (!clubListPage) return;
@@ -5742,15 +5743,17 @@ function renderClubList() {
     groupMap.get(key).races.push(race);
   }
 
-  const countryOpts = [
-    { label: "Alle", value: "all" },
-    { label: "DE", value: "DE" },
-    { label: "AT", value: "AT" },
-    { label: "CH", value: "CH" },
+  const flagOpts = [
+    { label: "Alle Länder", value: "all", code: "eu" },
+    { label: "Deutschland",  value: "DE",  code: "de" },
+    { label: "Österreich",   value: "AT",  code: "at" },
+    { label: "Schweiz",      value: "CH",  code: "ch" },
   ];
-  const filterHtml = countryOpts.map(o =>
-    `<button type="button" class="race-list-range-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}">${o.label}</button>`
+  const filterHtml = flagOpts.map(o =>
+    `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +
+    `<span class="fi fi-${o.code} fis country-flag-icon" aria-hidden="true"></span></button>`
   ).join("");
+  const searchHtml = `<div class="race-list-search-wrap"><input type="search" class="race-list-search" placeholder="Suchen …" value="${escapeHtml(_raceListSearch)}"></div>`;
 
   const loggedIn = !!sbUser;
   const svgStar = `<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
@@ -5759,7 +5762,7 @@ function renderClubList() {
 
   const tableHtml = groups.length ? `<table class="race-table">
     <colgroup>
-      <col style="width:70px">
+      <col style="width:84px">
       <col style="width:110px">
       ${loggedIn ? `<col style="width:44px">` : ""}
       <col style="width:30%">
@@ -5793,7 +5796,7 @@ function renderClubList() {
         }
         return `<tr data-race-id="${escapeHtml(race.id)}">
           <td class="col-date">${dateStr}</td>
-          <td class="col-city">${escapeHtml(venue?.city ?? "")}</td>
+          <td class="col-city">${escapeHtml(venue?.city || race.venueLocation || race.hostCity || "")}</td>
           ${loggedIn ? iconsCell : ""}
           <td class="col-club">${nameHtml}</td>
           <td>${escapeHtml(race.name || race.title || "")}</td>
@@ -5804,12 +5807,21 @@ function renderClubList() {
   </table>` : `<div class="race-list-empty">Keine Rennen gefunden.</div>`;
 
   clubListContent.innerHTML = `
-    <div class="race-list-filters">${filterHtml}</div>
+    <div class="race-list-filters">${filterHtml}${searchHtml}</div>
     <div class="race-list-inner">${tableHtml}</div>`;
 
-  clubListContent.querySelectorAll(".race-list-range-btn").forEach(btn => {
+  clubListContent.querySelectorAll(".race-list-flag-btn").forEach(btn => {
     btn.addEventListener("click", () => { _raceListCountry = btn.dataset.country; renderClubList(); });
   });
+
+  const searchInput = clubListContent.querySelector(".race-list-search");
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      _raceListSearch = searchInput.value;
+      applyRaceListSearch();
+    });
+    if (_raceListSearch) applyRaceListSearch();
+  }
 
   clubListContent.querySelectorAll(".rl-star").forEach(btn => {
     btn.addEventListener("click", e => { e.stopPropagation(); toggleFavoriteHost(btn.dataset.hostId); renderClubList(); });
@@ -5834,4 +5846,24 @@ function renderClubList() {
       focusRace(race);
     });
   });
+}
+
+function applyRaceListSearch() {
+  const q = _raceListSearch.toLowerCase().trim();
+  const tbody = clubListContent?.querySelector(".race-table tbody");
+  if (!tbody) return;
+  let monthRow = null;
+  let monthHasVisible = false;
+  tbody.querySelectorAll("tr").forEach(tr => {
+    if (tr.classList.contains("race-month-row")) {
+      if (monthRow) monthRow.hidden = !monthHasVisible;
+      monthRow = tr;
+      monthHasVisible = false;
+    } else {
+      const visible = !q || tr.textContent.toLowerCase().includes(q);
+      tr.hidden = !visible;
+      if (visible) monthHasVisible = true;
+    }
+  });
+  if (monthRow) monthRow.hidden = !monthHasVisible;
 }
