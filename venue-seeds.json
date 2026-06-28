@@ -3978,6 +3978,12 @@
     "lng": 7.000287284154371
   },
   {
+    "hostId": "rcco-rcrt-quakenbruck-e-v",
+    "hostName": "RCRT-Quakenbrück e.V.",
+    "lat": 52.68305775352677,
+    "lng": 7.934878589989598
+  },
+  {
     "hostId": "rcxx-shop",
     "hostName": "RCXX.SHOP",
     "locationUnknown": true,
