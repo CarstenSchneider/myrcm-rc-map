@@ -4134,6 +4134,15 @@ body.is-menu-open .app-menu-close {
   clip-path: polygon(100% 0, 100% 100%, 0 50%);
   background: color-mix(in srgb, var(--status-upcoming) 88%, black);
 }
+.tip-card[data-arrow="right"]::after {
+  display: block;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 22px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
 .tip-card[data-arrow="bottom-center"]::after {
   display: block;
   bottom: -9px;

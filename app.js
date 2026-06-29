@@ -338,9 +338,9 @@ const _bellIconSvg = (cls = "notification-toggle-icon") =>
 
 // --- Onboarding Tips ---
 // render types:
-//   "fixed-locate"  — fixed overlay right of locate button, top-aligned, arrow left-top
-//   "list-top"      — prepended to race list, arrow bottom-center → first card below
-//   "list-second"   — after first race card, arrow bottom-right → second card below
+//   "fixed-locate"    — fixed overlay right of locate button, top-aligned, arrow left-top
+//   "fixed-list-left" — desktop: left of first race card, arrow right; mobile: above drawer, arrow bottom-center
+//   "list-top"        — prepended to race list, arrow bottom-center → first card below
 const ONBOARDING_TIPS = [
   {
     render: "fixed-locate",
@@ -350,15 +350,14 @@ const ONBOARDING_TIPS = [
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.79 540.3" aria-hidden="true"><g><path d="M261.52,286.32c-36.2,0-65.65-29.45-65.65-65.64s29.45-65.64,65.65-65.64,65.64,29.45,65.64,65.64-29.45,65.64-65.64,65.64ZM261.52,165.03c-30.68,0-55.65,24.96-55.65,55.64s24.96,55.64,55.65,55.64,55.64-24.96,55.64-55.64-24.96-55.64-55.64-55.64Z" fill="#fff"/><path d="M261.52,254.6c-18.7,0-33.92-15.22-33.92-33.92s15.22-33.92,33.92-33.92,33.92,15.22,33.92,33.92-15.22,33.92-33.92,33.92ZM261.52,196.76c-13.19,0-23.92,10.73-23.92,23.92s10.73,23.92,23.92,23.92,23.92-10.73,23.92-23.92-10.73-23.92-23.92-23.92Z" fill="#fff"/></g><g><circle cx="349.39" cy="58.73" r="46.06" fill="#fff"/><g><path d="M352.08,50.05v16.15c5.38-.73,10.77-1.45,16.15-1.63v-16.15c-5.38.18-10.77.91-16.15,1.63Z" fill="#5b75ab"/><path d="M407.51,58.12c0-32.1-26.02-58.12-58.12-58.12s-58.12,26.02-58.12,58.12c0,27.1,18.54,49.86,43.63,56.3l14.49,14.49,14.49-14.49c25.09-6.44,43.63-29.2,43.63-56.3ZM384.37,66.2c-5.38-1.45-10.77-1.82-16.15-1.63v16.15c-5.38.18-10.77.91-16.15,1.63v-16.15c-5.38.73-10.77,1.45-16.15,1.63v16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v-16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v16.15c5.38-.18,10.77-.91,16.15-1.63v-16.15c5.38-.73,10.77-1.45,16.15-1.63v16.15c5.38-.18,10.77.18,16.15,1.63v16.15Z" fill="#5b75ab"/></g></g><g><circle cx="83.69" cy="216.67" r="66.33" fill="#fff"/><g><path d="M87.56,204.18v23.25c7.75-1.05,15.5-2.09,23.25-2.35v-23.25c-7.75.26-15.5,1.31-23.25,2.35Z" fill="#435c95"/><path d="M167.39,215.8c0-46.22-37.47-83.69-83.69-83.69S0,169.58,0,215.8c0,39.02,26.7,71.8,62.83,81.07l20.86,20.86,20.86-20.86c36.13-9.27,62.83-42.05,62.83-81.07ZM134.07,227.43c-7.75-2.09-15.5-2.62-23.25-2.35v23.25c-7.75.26-15.5,1.31-23.25,2.35v-23.25c-7.75,1.05-15.5,2.09-23.25,2.35v23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v-23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v23.25c7.75-.26,15.5-1.31,23.25-2.35v-23.25c7.75-1.05,15.5-2.09,23.25-2.35v23.25c7.75-.26,15.5.26,23.25,2.35v23.25Z" fill="#435c95"/></g></g><g><circle cx="339.64" cy="380.72" r="104.74" fill="#fff"/><g><path d="M345.74,360.99v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M471.79,379.35c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM419.17,397.7c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
   },
   {
-    render: "list-top",
-    arrow: "bottom-center",
+    render: "fixed-list-left",
     title: "Alles auf einen Blick.",
     html: `Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454.5 520.62" aria-hidden="true"><path d="M102.27,0C45.79,0,0,45.79,0,102.27c0,47.68,32.63,87.74,76.77,99.06l25.5,25.5,25.5-25.5c44.15-11.33,76.77-51.39,76.77-99.06C204.54,45.79,158.75,0,102.27,0Z" fill="#fff" opacity=".35"/><path d="M156.37,321.69c-32.59,0-59.1-26.51-59.1-59.1,0-2.76,2.24-5,5-5s5,2.24,5,5c0,27.08,22.03,49.1,49.1,49.1,2.76,0,5,2.24,5,5s-2.24,5-5,5Z" fill="#fff" opacity=".35"/><g><circle cx="322.35" cy="361.03" r="104.74" fill="#fff"/><g><path d="M328.46,341.3v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M454.5,359.66c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM401.89,378.02c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
   },
   {
-    render: "list-second",
-    arrow: "bottom-right",
+    render: "list-top",
+    arrow: "bottom-center",
     mobileFull: true,
     title: "Kein Rennen verpassen.",
     html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
@@ -417,6 +416,32 @@ function _renderTipOverlay() {
       el.style.left = `${left}px`;
       el.style.top = `${r.top}px`;
       el.style.transform = "";
+    } else if (tip.render === "fixed-list-left") {
+      const isMobile = window.matchMedia("(max-width: 860px)").matches;
+      if (isMobile) {
+        // Above the drawer, centered, arrow pointing down toward drawer
+        const drawerEl = document.getElementById("mobDrawer");
+        const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
+        const cardW = Math.min(el.offsetWidth || 320, window.innerWidth - 32);
+        el.style.width = `${cardW}px`;
+        el.style.left = `${(window.innerWidth - cardW) / 2}px`;
+        el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "bottom center";
+        el.dataset.arrow = "bottom-center";
+      } else {
+        // Left of first race card, vertically aligned to its top, arrow on right side
+        const firstCard = raceList.querySelector(".race-card");
+        if (firstCard) {
+          const r = firstCard.getBoundingClientRect();
+          const cardW = el.offsetWidth || 300;
+          el.style.left = `${Math.max(8, r.left - cardW - 14)}px`;
+          el.style.top = `${r.top}px`;
+        }
+        el.style.transform = "";
+        el.style.transformOrigin = "right center";
+        el.dataset.arrow = "right";
+      }
     } else {
       // Center on the visible map area (fixed-map fallback)
       const mapEl = document.getElementById("map");
@@ -456,7 +481,7 @@ function _dismissTip() {
     _clearTipOverlay();
     document.querySelectorAll(".tip-card").forEach(el => el.remove());
     if (!nextTip) return;
-    if (nextTip.render === "list-top" || nextTip.render === "list-second") {
+    if (nextTip.render === "list-top") {
       if (nextTip.mobileFull && isMobile) setDrawerState("full");
       renderList(filteredRaces());
     } else {
@@ -3763,7 +3788,7 @@ function renderList(list) {
     return;
   }
 
-  let _listSecondInserted = false;
+
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
     const series = raceSeries(race);
@@ -3842,13 +3867,6 @@ function renderList(list) {
     }
 
     raceList.appendChild(card);
-
-    // list-second tip: insert after the very first race card
-    if (!_listSecondInserted && _tip?.render === "list-second") {
-      _listSecondInserted = true;
-      const tipEl = _buildTipCardEl(_tip);
-      if (tipEl) raceList.appendChild(tipEl);
-    }
   }
 
   if (selectedFavoriteFilter === "favorites") {
