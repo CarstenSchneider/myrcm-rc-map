@@ -1927,18 +1927,24 @@ function matchesFavoriteFilter(race) {
 
 const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU" };
 function venueCountry(venue) {
-  if (!venue?.myrcmOrgId) return null;
-  const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
-  if (!c) return null;
-  return _countryNameToCode[c] ?? c;
+  if (!venue) return null;
+  if (venue.myrcmOrgId) {
+    const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
+    if (c) return _countryNameToCode[c] ?? c;
+  }
+  // Direct country field (DMC venues, manually verified venues)
+  if (venue.country) return _countryNameToCode[venue.country] ?? venue.country;
+  return null;
 }
+
+const _dachCountries = new Set(["DE", "AT", "CH"]);
 
 function matchesCountryFilter(race) {
   if (selectedCountry === "all") return true;
   const venue = venueForRace(race);
   if (!venue) return false;
   const venueC = venueCountry(venue);
-  if (!venueC) return true; // no country data yet → show in all filters
+  if (!venueC) return _dachCountries.has(selectedCountry); // no country data → assume DACH only
   if (venueC === selectedCountry) return true;
   // Cross-border races: also match by organizer's country
   const hostId = raceHostId(race);
