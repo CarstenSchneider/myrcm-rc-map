@@ -7,7 +7,7 @@ const maxPages = 40;
 const requestTimeoutMs = 10000;
 const retryCount = 1;
 
-const beneluxPattern = /netherlands|nederland|belgique|belgi[eë]|belgien|luxembourg|luxemburg/i;
+const beneluxPattern = /^(netherlands|nederland|belgium|belgique|belgi[eë]|belgien|luxembourg|luxemburg)$/i;
 
 const excludedTerms = [
   "kart gmbh",
