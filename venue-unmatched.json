@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "buggy-racing-bauffe-club",
-    "hostName": "Buggy Racing Bauffe Club",
-    "source": "myrcm",
-    "myrcmOrgId": "17680",
-    "possibleVenue": "Hornu",
-    "reason": "no venue seed"
-  },
-  {
     "hostId": "buggy-rc-bauffe-a-s-b-l",
     "hostName": "Buggy RC Bauffe a.s.b.l",
     "source": "myrcm",
