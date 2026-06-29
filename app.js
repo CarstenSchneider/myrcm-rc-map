@@ -3909,7 +3909,9 @@ function renderList(list) {
       });
     }
 
-    card.style.animationDelay = `${Math.min(_cardAnimIdx++ * 35, 280)}ms`;
+    card.style.animationDelay = `${Math.min(_cardAnimIdx * 35, 280)}ms`;
+    card.addEventListener("animationend", () => { card.style.animation = ""; card.style.animationDelay = ""; }, { once: true });
+    _cardAnimIdx++;
     raceList.appendChild(card);
   }
 
@@ -3926,7 +3928,9 @@ function renderList(list) {
       const past = latestPastRaceForVenue(venue);
       if (!past) continue;
       const [, card] = buildPastRaceCardEl(past);
-      card.style.animationDelay = `${Math.min(_cardAnimIdx++ * 35, 280)}ms`;
+      card.style.animationDelay = `${Math.min(_cardAnimIdx * 35, 280)}ms`;
+      card.addEventListener("animationend", () => { card.style.animation = ""; card.style.animationDelay = ""; }, { once: true });
+      _cardAnimIdx++;
       raceList.appendChild(card);
     }
   }
