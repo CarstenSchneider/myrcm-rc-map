@@ -1,29 +1,5 @@
 [
   {
-    "id": "rck-1-mrc-mannheim-e-v-mannheim",
-    "name": "1.MRC-Mannheim e.V.",
-    "city": "Mannheim",
-    "address": "Im Pfeifertswörth 30",
-    "postalCode": "68167",
-    "country": "DE",
-    "lat": null,
-    "lng": null,
-    "source": "rck",
-    "sources": [
-      "rck-kleinserie"
-    ],
-    "rckSeries": "kleinserie",
-    "rckLocation": "Mannheim",
-    "organizerName": "1.MRC-Mannheim e.v.",
-    "hostId": "1-mrc-mannheim-e-v",
-    "hostName": "1.MRC-Mannheim e.v.",
-    "website": null,
-    "sourcePdf": "https://kleinserie.rck-solutions.de/ausschreibung/202520270628KlSeC20260622%202139.pdf",
-    "addressVerifiedFromPdf": true,
-    "verified": true,
-    "verificationStatus": "verifiziert"
-  },
-  {
     "id": "rck-msc-lowenring-outdoor-braunschweig",
     "name": "MSC-Löwenring (Outdoor)",
     "city": "Braunschweig",

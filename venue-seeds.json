@@ -3825,6 +3825,11 @@
     "myrcmOrgId": "66454"
   },
   {
+    "hostId": "dmc-ov-158",
+    "hostName": "MSC Pol. Braunschweig",
+    "locationUnknown": true
+  },
+  {
     "hostId": "dmc-msc-sand-e-v",
     "hostName": "MSC Sand e.V.",
     "lat": 49.97561500237808,
