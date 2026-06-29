@@ -28,6 +28,32 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Merge dev-only venue seeds into main
+        run: |
+          node -e "
+            const fs = require('fs');
+            const { execSync } = require('child_process');
+            try {
+              const mainSeeds = JSON.parse(fs.readFileSync('venue-seeds.json', 'utf8'));
+              const devSeedsRaw = execSync('git show origin/dev:venue-seeds.json').toString();
+              const devSeeds = JSON.parse(devSeedsRaw);
+              const mainIds = new Set(mainSeeds.map(s => s.id || s.hostId).filter(Boolean));
+              const newSeeds = devSeeds.filter(s => {
+                const id = s.id || s.hostId;
+                return id && !mainIds.has(id);
+              });
+              if (newSeeds.length > 0) {
+                const merged = [...mainSeeds, ...newSeeds];
+                fs.writeFileSync('venue-seeds.json', JSON.stringify(merged, null, 2) + '\n');
+                console.log('Merged ' + newSeeds.length + ' dev-only seeds into venue-seeds.json');
+              } else {
+                console.log('No dev-only seeds to merge');
+              }
+            } catch (e) {
+              console.log('Could not merge dev seeds (non-fatal):', e.message);
+            }
+          "
+
       - name: Save old races.json for notifications diff
         run: cp races.json /tmp/old-races.json 2>/dev/null || echo "[]" > /tmp/old-races.json
 
