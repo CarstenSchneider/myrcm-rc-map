@@ -399,40 +399,51 @@ let _tipOverlayEl = null;
 let _tipResizeTimer = null;
 
 function _positionTipEl(el, tip) {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+
+  // Set consistent width: match the reference list's race card width
+  if (isMobile) {
+    // Same margins as mob-drawer-list (12px each side) → width = innerWidth - 24
+    el.style.width = `${window.innerWidth - 24}px`;
+  } else {
+    const firstCard = raceList.querySelector(".race-card");
+    if (firstCard) el.style.width = `${Math.round(firstCard.getBoundingClientRect().width)}px`;
+  }
+
+  const tipW = el.offsetWidth || 300;
   let positioned = false;
 
   if (tip.render === "fixed-locate" && _locateBtn) {
     const r = _locateBtn.getBoundingClientRect();
     if (r.width > 0 || r.height > 0) {
-      const cardW = el.offsetWidth || 320;
-      el.style.left = `${Math.min(r.right + 18, window.innerWidth - cardW - 8)}px`;
-      el.style.top = `${r.top}px`;
+      if (isMobile) {
+        // Center horizontally below the button
+        el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
+        el.style.top = `${r.bottom + 12}px`;
+      } else {
+        el.style.left = `${Math.min(r.right + 18, window.innerWidth - tipW - 8)}px`;
+        el.style.top = `${r.top}px`;
+      }
       el.style.transform = "";
       el.style.transformOrigin = "";
       positioned = true;
     }
   } else if (tip.render === "fixed-list-left") {
-    const isMobile = window.matchMedia("(max-width: 860px)").matches;
     if (isMobile) {
-      // Full width with 16px margins, horizontally centered
-      const tipW = window.innerWidth - 32;
-      el.style.width = `${tipW}px`;
       const drawerEl = document.getElementById("mobDrawer");
       const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
-      el.style.left = "16px";
+      el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
       el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
       el.style.transform = "";
       el.style.transformOrigin = "bottom center";
       el.dataset.arrow = "bottom-center";
       positioned = true;
     } else {
-      // Horizontal anchor: left edge of race panel; vertical anchor: top of first race card
       const panelEl = document.querySelector(".race-panel");
       const firstCard = raceList.querySelector(".race-card");
       if (panelEl || firstCard) {
         const panelR = (panelEl || firstCard).getBoundingClientRect();
         const cardR = (firstCard || panelEl).getBoundingClientRect();
-        const tipW = el.offsetWidth || 300;
         el.style.left = `${Math.max(8, panelR.left - tipW - 16)}px`;
         el.style.top = `${cardR.top}px`;
         el.style.transform = "";
