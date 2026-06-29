@@ -401,13 +401,23 @@ let _tipResizeTimer = null;
 function _positionTipEl(el, tip) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
 
-  // Set consistent width: match the reference list's race card width
+  // Set consistent width
   if (isMobile) {
-    // Same margins as mob-drawer-list (12px each side) → width = innerWidth - 24
-    el.style.width = `${window.innerWidth - 24}px`;
+    // Mobile: narrower than race card so tip 1 fits to the right of the locate button
+    // Locate button right edge ≈ 66px → leave 12px gap → tip starts at ~78px → width = innerWidth - 78 - 8
+    const btnRight = (_locateBtn ? _locateBtn.getBoundingClientRect().right : 66) || 66;
+    const mobileW = Math.max(Math.round(window.innerWidth - btnRight - 20), 180);
+    el.style.width = `${mobileW}px`;
   } else {
+    // Desktop: match race card width; fall back to panel width minus padding when list not yet rendered
     const firstCard = raceList.querySelector(".race-card");
-    if (firstCard) el.style.width = `${Math.round(firstCard.getBoundingClientRect().width)}px`;
+    const panelEl = document.querySelector(".race-panel");
+    const w = firstCard
+      ? Math.round(firstCard.getBoundingClientRect().width)
+      : panelEl
+        ? Math.round(panelEl.getBoundingClientRect().width) - 44
+        : 346;
+    el.style.width = `${w}px`;
   }
 
   const tipW = el.offsetWidth || 300;
@@ -417,21 +427,25 @@ function _positionTipEl(el, tip) {
     const r = _locateBtn.getBoundingClientRect();
     if (r.width > 0 || r.height > 0) {
       if (isMobile) {
-        // Center horizontally below the button
-        el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
-        el.style.top = `${r.bottom + 12}px`;
+        // Position to the RIGHT of the locate button, top-aligned with it
+        el.style.left = `${Math.round(r.right + 12)}px`;
+        el.style.top = `${Math.round(r.top)}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "";
+        el.dataset.arrow = "left-top";
       } else {
         el.style.left = `${Math.min(r.right + 18, window.innerWidth - tipW - 8)}px`;
         el.style.top = `${r.top}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "";
       }
-      el.style.transform = "";
-      el.style.transformOrigin = "";
       positioned = true;
     }
   } else if (tip.render === "fixed-list-left") {
     if (isMobile) {
       const drawerEl = document.getElementById("mobDrawer");
       const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
+      // Center horizontally using same width computed above
       el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
       el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
       el.style.transform = "";
