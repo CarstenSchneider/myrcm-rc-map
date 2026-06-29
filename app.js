@@ -414,30 +414,27 @@ function _positionTipEl(el, tip) {
   } else if (tip.render === "fixed-list-left") {
     const isMobile = window.matchMedia("(max-width: 860px)").matches;
     if (isMobile) {
-      // Match the width of the first mobile race card
-      const firstMobCard = document.querySelector("#mobRaceList .race-card");
-      const cardW = firstMobCard
-        ? Math.round(firstMobCard.getBoundingClientRect().width)
-        : Math.min(el.offsetWidth || 320, window.innerWidth - 32);
-      el.style.width = `${cardW}px`;
+      // Full width with 16px margins, horizontally centered
+      const tipW = window.innerWidth - 32;
+      el.style.width = `${tipW}px`;
       const drawerEl = document.getElementById("mobDrawer");
       const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
-      el.style.left = `${(window.innerWidth - cardW) / 2}px`;
+      el.style.left = "16px";
       el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
       el.style.transform = "";
       el.style.transformOrigin = "bottom center";
       el.dataset.arrow = "bottom-center";
       positioned = true;
     } else {
-      // Anchor to the left edge of the race panel, not the first card
+      // Horizontal anchor: left edge of race panel; vertical anchor: top of first race card
       const panelEl = document.querySelector(".race-panel");
       const firstCard = raceList.querySelector(".race-card");
-      const anchorEl = panelEl || firstCard;
-      if (anchorEl) {
-        const r = anchorEl.getBoundingClientRect();
-        const cardW = el.offsetWidth || 300;
-        el.style.left = `${Math.max(8, r.left - cardW - 8)}px`;
-        el.style.top = `${r.top + 8}px`;
+      if (panelEl || firstCard) {
+        const panelR = (panelEl || firstCard).getBoundingClientRect();
+        const cardR = (firstCard || panelEl).getBoundingClientRect();
+        const tipW = el.offsetWidth || 300;
+        el.style.left = `${Math.max(8, panelR.left - tipW - 16)}px`;
+        el.style.top = `${cardR.top}px`;
         el.style.transform = "";
         el.style.transformOrigin = "right center";
         el.dataset.arrow = "right";

@@ -4264,5 +4264,5 @@ body.is-menu-open .app-menu-close {
 
 .tip-overlay {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
-  max-width: 340px;
+  width: 300px;
 }
