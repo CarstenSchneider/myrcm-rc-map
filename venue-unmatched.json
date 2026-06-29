@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "buggy-club-indoor-charleroi-asbl",
-    "hostName": "Buggy Club Indoor Charleroi ASBL",
-    "source": "myrcm",
-    "myrcmOrgId": "743",
-    "possibleVenue": "Lodelinsart",
-    "reason": "no venue seed"
-  },
-  {
     "hostId": "buggy-racing-bauffe-club",
     "hostName": "Buggy Racing Bauffe Club",
     "source": "myrcm",
