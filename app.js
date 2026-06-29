@@ -425,7 +425,7 @@ function _positionTipEl(el, tip) {
     if (r.width > 0 || r.height > 0) {
       if (isMobile) {
         // Position to the RIGHT of the locate button, top-aligned with it; clamp so tip never goes off-screen
-        const mLeft = Math.max(8, Math.min(Math.round(r.right + 20), window.innerWidth - tipW - 8));
+        const mLeft = Math.max(8, Math.min(Math.round(r.right + 20), window.innerWidth - tipW - 14));
         el.style.left = `${mLeft}px`;
         el.style.top = `${Math.round(r.top)}px`;
         el.style.transform = "";
