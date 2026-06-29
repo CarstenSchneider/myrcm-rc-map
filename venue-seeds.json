@@ -3736,6 +3736,13 @@
     "myrcmOrgId": "743"
   },
   {
+    "hostId": "buggy-racing-bauffe-club",
+    "hostName": "Buggy Racing Bauffe Club",
+    "lat": 50.65765924756288,
+    "lng": 4.307777221996776,
+    "myrcmOrgId": "17680"
+  },
+  {
     "hostId": "dmc-dmc-e-v-geschaftsstelle",
     "hostName": "DMC e.V. Geschäftsstelle",
     "locationUnknown": true
