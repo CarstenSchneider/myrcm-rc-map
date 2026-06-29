@@ -381,6 +381,7 @@ function _buildTipCardEl(tip) {
   el.className = "tip-card";
   el.setAttribute("role", "note");
   if (tip.arrow) el.dataset.arrow = tip.arrow;
+  el.dataset.anim = ["slide", "scale", "blur"][tip.idx] ?? "slide";
   el.innerHTML = `
     <div class="tip-illustration" aria-hidden="true">${tip.illustration || ""}</div>
     <div class="tip-body">
@@ -444,19 +445,32 @@ function _dismissTip() {
   const nextIdx = (_tipIndex() + 1) % ONBOARDING_TIPS.length; // cycles for testing
   localStorage.setItem("rcRaceMapTipIndex", String(nextIdx));
   const nextTip = _currentTip();
-
-  _clearTipOverlay();
-  document.querySelectorAll(".tip-card").forEach(el => el.remove());
-
-  if (!nextTip) return;
-
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  if (nextTip.render === "list-top" || nextTip.render === "list-second") {
-    if (nextTip.mobileFull && isMobile) setDrawerState("full");
-    renderList(filteredRaces());
-  } else {
-    _renderTipOverlay();
-  }
+
+  const currentEls = [...document.querySelectorAll(".tip-card:not(.tip-exit)")];
+
+  let proceeded = false;
+  const proceed = () => {
+    if (proceeded) return;
+    proceeded = true;
+    _clearTipOverlay();
+    document.querySelectorAll(".tip-card").forEach(el => el.remove());
+    if (!nextTip) return;
+    if (nextTip.render === "list-top" || nextTip.render === "list-second") {
+      if (nextTip.mobileFull && isMobile) setDrawerState("full");
+      renderList(filteredRaces());
+    } else {
+      _renderTipOverlay();
+    }
+  };
+
+  if (!currentEls.length) { proceed(); return; }
+  let done = 0;
+  currentEls.forEach(el => {
+    el.classList.add("tip-exit");
+    el.addEventListener("animationend", () => { if (++done === currentEls.length) proceed(); }, { once: true });
+  });
+  setTimeout(proceed, 400); // safety fallback if animationend never fires
 }
 // --- End Onboarding Tips ---
 
