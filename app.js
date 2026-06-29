@@ -338,13 +338,13 @@ const _bellIconSvg = (cls = "notification-toggle-icon") =>
 
 // --- Onboarding Tips ---
 // render types:
-//   "fixed-locate"  — fixed overlay anchored right of locate button, arrow left
+//   "fixed-locate"  — fixed overlay below locate button, arrow top-left
 //   "list-top"      — prepended to race list, arrow bottom-center → first card below
-//   "list-second"   — after first race card, arrow bottom-center → second card below
+//   "list-second"   — after first race card, arrow bottom-right → second card below
 const ONBOARDING_TIPS = [
   {
     render: "fixed-locate",
-    arrow: "left",
+    arrow: "top-left",
     title: "Rennen in deiner Nähe.",
     html: `Nutze ${_locateIconSvg()} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.79 540.3" aria-hidden="true"><g><path d="M261.52,286.32c-36.2,0-65.65-29.45-65.65-65.64s29.45-65.64,65.65-65.64,65.64,29.45,65.64,65.64-29.45,65.64-65.64,65.64ZM261.52,165.03c-30.68,0-55.65,24.96-55.65,55.64s24.96,55.64,55.65,55.64,55.64-24.96,55.64-55.64-24.96-55.64-55.64-55.64Z" fill="#fff"/><path d="M261.52,254.6c-18.7,0-33.92-15.22-33.92-33.92s15.22-33.92,33.92-33.92,33.92,15.22,33.92,33.92-15.22,33.92-33.92,33.92ZM261.52,196.76c-13.19,0-23.92,10.73-23.92,23.92s10.73,23.92,23.92,23.92,23.92-10.73,23.92-23.92-10.73-23.92-23.92-23.92Z" fill="#fff"/></g><g><circle cx="349.39" cy="58.73" r="46.06" fill="#fff"/><g><path d="M352.08,50.05v16.15c5.38-.73,10.77-1.45,16.15-1.63v-16.15c-5.38.18-10.77.91-16.15,1.63Z" fill="#5b75ab"/><path d="M407.51,58.12c0-32.1-26.02-58.12-58.12-58.12s-58.12,26.02-58.12,58.12c0,27.1,18.54,49.86,43.63,56.3l14.49,14.49,14.49-14.49c25.09-6.44,43.63-29.2,43.63-56.3ZM384.37,66.2c-5.38-1.45-10.77-1.82-16.15-1.63v16.15c-5.38.18-10.77.91-16.15,1.63v-16.15c-5.38.73-10.77,1.45-16.15,1.63v16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v-16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v16.15c5.38-.18,10.77-.91,16.15-1.63v-16.15c5.38-.73,10.77-1.45,16.15-1.63v16.15c5.38-.18,10.77.18,16.15,1.63v16.15Z" fill="#5b75ab"/></g></g><g><circle cx="83.69" cy="216.67" r="66.33" fill="#fff"/><g><path d="M87.56,204.18v23.25c7.75-1.05,15.5-2.09,23.25-2.35v-23.25c-7.75.26-15.5,1.31-23.25,2.35Z" fill="#435c95"/><path d="M167.39,215.8c0-46.22-37.47-83.69-83.69-83.69S0,169.58,0,215.8c0,39.02,26.7,71.8,62.83,81.07l20.86,20.86,20.86-20.86c36.13-9.27,62.83-42.05,62.83-81.07ZM134.07,227.43c-7.75-2.09-15.5-2.62-23.25-2.35v23.25c-7.75.26-15.5,1.31-23.25,2.35v-23.25c-7.75,1.05-15.5,2.09-23.25,2.35v23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v-23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v23.25c7.75-.26,15.5-1.31,23.25-2.35v-23.25c7.75-1.05,15.5-2.09,23.25-2.35v23.25c7.75-.26,15.5.26,23.25,2.35v23.25Z" fill="#435c95"/></g></g><g><circle cx="339.64" cy="380.72" r="104.74" fill="#fff"/><g><path d="M345.74,360.99v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M471.79,379.35c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM419.17,397.7c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
@@ -358,7 +358,7 @@ const ONBOARDING_TIPS = [
   },
   {
     render: "list-second",
-    arrow: "bottom-center",
+    arrow: "bottom-right",
     mobileFull: true,
     title: "Kein Rennen verpassen.",
     html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
@@ -410,13 +410,13 @@ function _renderTipOverlay() {
   requestAnimationFrame(() => {
     if (tip.render === "fixed-locate" && _locateBtn) {
       const r = _locateBtn.getBoundingClientRect();
-      el.style.left = `${r.right + 14}px`;
-      el.style.top = `${r.top + r.height / 2}px`;
-      el.style.transform = "translateY(-50%)";
-      // Clamp to viewport right edge
+      // Place card below button; arrow at top-left aligns with button center
       const cardW = el.offsetWidth || 320;
-      const maxLeft = window.innerWidth - cardW - 8;
-      if (r.right + 14 > maxLeft) el.style.left = `${maxLeft}px`;
+      let left = r.left + r.width / 2 - 31; // 31 = arrow left(20) + half arrow width(11)
+      left = Math.max(8, Math.min(left, window.innerWidth - cardW - 8));
+      el.style.left = `${left}px`;
+      el.style.top = `${r.bottom + 10}px`;
+      el.style.transform = "";
     } else {
       // Center on the visible map area (fixed-map fallback)
       const mapEl = document.getElementById("map");

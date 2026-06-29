@@ -4125,14 +4125,13 @@ body.is-menu-open .app-menu-close {
   display: none;
   background: var(--status-upcoming);
 }
-.tip-card[data-arrow="left"]::after {
+.tip-card[data-arrow="top-left"]::after {
   display: block;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 22px;
-  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  top: -10px;
+  left: 20px;
+  width: 22px;
+  height: 10px;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
 }
 .tip-card[data-arrow="bottom-center"]::after {
   display: block;
@@ -4143,18 +4142,26 @@ body.is-menu-open .app-menu-close {
   height: 10px;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
+.tip-card[data-arrow="bottom-right"]::after {
+  display: block;
+  bottom: -10px;
+  right: 20px;
+  width: 22px;
+  height: 10px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
 
 .tip-illustration {
-  flex: 0 0 90px;
+  flex: 0 0 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 6px;
+  padding: 16px 14px;
   background: rgba(0, 0, 0, 0.12);
   border-radius: 16px 0 0 16px;
   overflow: hidden;
 }
-.tip-illustration svg { width: 78px; height: auto; }
+.tip-illustration svg { width: 76px; height: 76px; }
 
 .tip-body {
   flex: 1;
@@ -4166,7 +4173,7 @@ body.is-menu-open .app-menu-close {
 }
 
 .tip-title {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
