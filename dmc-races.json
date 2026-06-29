@@ -6023,7 +6023,13 @@
     "url": null,
     "registrationStatus": null,
     "registrationOpens": null,
-    "documents": []
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782708865_260719_Hamm_-_JumpstartRC3_DM-WU_SMW4_Ausschreibung_V4.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-mck-e-v-dormagen-2026-07-18",
