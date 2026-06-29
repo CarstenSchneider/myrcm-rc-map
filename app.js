@@ -371,7 +371,7 @@ function _tipIndex() {
 }
 
 function _currentTip() {
-  const idx = _tipIndex();
+  const idx = _tipIndex() % ONBOARDING_TIPS.length; // DEV: zyklisch für Tests — vor merge auf main zurücksetzen
   const tip = ONBOARDING_TIPS[idx];
   return tip ? { ...tip, idx } : null;
 }
@@ -507,7 +507,7 @@ function _clearTipOverlay() {
 }
 
 function _dismissTip() {
-  const nextIdx = _tipIndex() + 1;
+  const nextIdx = (_tipIndex() + 1) % ONBOARDING_TIPS.length; // DEV: zyklisch — vor merge auf main revertieren
   localStorage.setItem("rcRaceMapTipIndex", String(nextIdx));
   const nextTip = _currentTip();
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
