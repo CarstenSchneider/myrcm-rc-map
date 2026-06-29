@@ -101,8 +101,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -336,8 +336,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -357,7 +357,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "Stock Challenge",
@@ -365,7 +365,7 @@
       },
       {
         "name": "Clubman Challenge",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [
@@ -658,7 +658,7 @@
       },
       {
         "name": "M-Chassis",
-        "entries": 20
+        "entries": 21
       }
     ],
     "documents": [
