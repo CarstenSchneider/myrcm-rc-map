@@ -370,8 +370,8 @@ function _tipIndex() {
 }
 
 function _currentTip() {
-  const idx = _tipIndex();
-  return idx < ONBOARDING_TIPS.length ? { ...ONBOARDING_TIPS[idx], idx } : null;
+  const idx = _tipIndex() % ONBOARDING_TIPS.length;
+  return { ...ONBOARDING_TIPS[idx], idx };
 }
 
 function _buildTipCardEl(tip) {
