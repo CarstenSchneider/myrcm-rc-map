@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "dmc-ov-37",
+    "name": "ESV Bischofsheim e.V.",
+    "city": "Esthal",
+    "lat": 49.97771285712217,
+    "lng": 8.386922863605161,
+    "hostIds": [
+      "dmc-ov-37"
+    ],
+    "source": "dmc-seed"
+  }
+]
