@@ -403,7 +403,7 @@ function _positionTipEl(el, tip) {
 
   // Set consistent width
   if (isMobile) {
-    const mobileW = Math.max(Math.round(window.innerWidth * 0.65), 180);
+    const mobileW = Math.max(Math.round(window.innerWidth * 0.80), 220);
     el.style.width = `${mobileW}px`;
   } else {
     const firstCard = raceList.querySelector(".race-card");
@@ -423,9 +423,11 @@ function _positionTipEl(el, tip) {
     const r = _locateBtn.getBoundingClientRect();
     if (r.width > 0 || r.height > 0) {
       if (isMobile) {
-        // Clamp left so right edge stays within race card margin (14px from screen edge)
-        const mLeft = Math.max(8, Math.min(Math.round(r.right + 20), window.innerWidth - tipW - 14));
-        el.style.left = `${mLeft}px`;
+        const left = Math.round(r.right + 20);
+        // Cap width so right edge stays within race card right margin (14px from screen edge)
+        const maxW = window.innerWidth - left - 14;
+        if (el.offsetWidth > maxW) el.style.width = `${maxW}px`;
+        el.style.left = `${left}px`;
         el.style.top = `${Math.round(r.top)}px`;
         el.style.transform = "";
         el.style.transformOrigin = "";
