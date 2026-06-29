@@ -3729,6 +3729,13 @@
     "myrcmOrgId": "31752"
   },
   {
+    "hostId": "buggy-club-indoor-charleroi-asbl",
+    "hostName": "Buggy Club Indoor Charleroi ASBL",
+    "lat": 50.42900387816841,
+    "lng": 4.446907564457314,
+    "myrcmOrgId": "743"
+  },
+  {
     "hostId": "dmc-dmc-e-v-geschaftsstelle",
     "hostName": "DMC e.V. Geschäftsstelle",
     "locationUnknown": true
