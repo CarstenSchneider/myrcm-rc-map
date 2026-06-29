@@ -1110,22 +1110,30 @@ function detectVenueSeedFromRaceText(venueSeeds = [], raceText = "", hostRecord 
 
 // Country codes (ISO 3166-1 alpha-2) that are outside DACH.
 // Used to detect travelling-series races held abroad (e.g. ETS ROUND 2 TRENCIN SK).
-const nonDachCountryCodes = /\b(SK|CZ|PL|HU|FR|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
+const nonDachCountryCodes = /\b(SK|CZ|PL|HU|FR|NL|BE|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LU|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
 
 function raceNameIndicatesNonDach(name) {
   return nonDachCountryCodes.test(name || "");
 }
 
+// Travelling-series organizers whose home venue must NEVER be auto-assigned.
+// These hosts organize races at many different venues across Europe.
+// Only races whose name explicitly matches a known venue seed get a venueId.
+// Also: detail.hostLabel for these hosts always returns the organizer's own name
+// (not the physical venue), so it is excluded from venue-matching text.
+const travellingSeriesOrgIds = new Set([
+  "24531", // ToniSport GmbH — ENS, ETS, TOS (Arena33/Andernach)
+]);
+
 function detectVenueSeedForRace(venueSeeds = [], detail = {}, eventLink = {}, hostRecord = {}, host = {}, defaultVenueSeed = null) {
-  // Use only race-name-derived text for venue matching — NOT host.location/host.city.
-  // Including the organizer's city causes all races from travelling series (e.g. ETS via
-  // ToniSport GmbH, Andernach) to match the organizer's home venue, even when the race
-  // is held abroad (e.g. TRENCIN SK).
+  const isTravellingSeries = travellingSeriesOrgIds.has(String(host.orgId || ""));
+
   const raceText = [
     detail.name,
     eventLink.fallbackName,
-    // hostLabel from event detail page shows the physical hosting club for travelling series
-    detail.hostLabel
+    // hostLabel shows the physical hosting club — but for travelling series it always
+    // returns the organizer's own name (e.g. "Arena33"), so exclude it there.
+    isTravellingSeries ? null : detail.hostLabel,
   ]
     .filter(Boolean)
     .join(" ");
@@ -1133,6 +1141,9 @@ function detectVenueSeedForRace(venueSeeds = [], detail = {}, eventLink = {}, ho
   const explicitVenueSeed = detectVenueSeedFromRaceText(venueSeeds, raceText, hostRecord, host);
 
   if (explicitVenueSeed) return { seed: explicitVenueSeed, wasExplicit: true };
+
+  // Travelling series: never fall back to the organizer's home venue
+  if (isTravellingSeries) return { seed: null, wasExplicit: false };
 
   return { seed: defaultVenueSeed || null, wasExplicit: false };
 }
@@ -1924,7 +1935,7 @@ async function runImportOnce() {
   const importedHosts = [];
   const importedUnmatched = [];
 
-  console.log(`${hosts.length} deutsche Hosts mit Events geladen`);
+  console.log(`${hosts.length} Hosts mit Events geladen`);
   console.log(`${Array.isArray(seriesCatalog) ? seriesCatalog.length : 0} kuratierte Serien geladen`);
 
   for (const host of hosts) {
