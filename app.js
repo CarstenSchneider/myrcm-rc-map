@@ -366,12 +366,14 @@ const ONBOARDING_TIPS = [
 ];
 
 function _tipIndex() {
-  return parseInt(localStorage.getItem("rcRaceMapTipIndex") || "0", 10);
+  const raw = parseInt(localStorage.getItem("rcRaceMapTipIndex") || "0", 10);
+  return isNaN(raw) ? 0 : raw;
 }
 
 function _currentTip() {
   const idx = _tipIndex() % ONBOARDING_TIPS.length;
-  return { ...ONBOARDING_TIPS[idx], idx };
+  const tip = ONBOARDING_TIPS[idx];
+  return tip ? { ...tip, idx } : null;
 }
 
 function _buildTipCardEl(tip) {
@@ -404,18 +406,26 @@ function _renderTipOverlay() {
   el.classList.add("tip-overlay");
   el.style.position = "fixed";
   el.style.zIndex = "1050"; // below drawer (1100) so drawer covers the tip
+  // Default: center on screen (visible immediately; rAF refines to exact position)
+  el.style.top = "40%";
+  el.style.left = "50%";
+  el.style.transform = "translate(-50%, -50%)";
   document.body.appendChild(el);
   _tipOverlayEl = el;
 
   requestAnimationFrame(() => {
+    let positioned = false;
+
     if (tip.render === "fixed-locate" && _locateBtn) {
       const r = _locateBtn.getBoundingClientRect();
-      // Place card right of button, top-aligned; arrow on left side near top points at button
-      const cardW = el.offsetWidth || 320;
-      const left = Math.min(r.right + 18, window.innerWidth - cardW - 8);
-      el.style.left = `${left}px`;
-      el.style.top = `${r.top}px`;
-      el.style.transform = "";
+      if (r.width > 0 || r.height > 0) {
+        // Place card right of button, top-aligned; arrow on left side near top points at button
+        const cardW = el.offsetWidth || 320;
+        el.style.left = `${Math.min(r.right + 18, window.innerWidth - cardW - 8)}px`;
+        el.style.top = `${r.top}px`;
+        el.style.transform = "";
+        positioned = true;
+      }
     } else if (tip.render === "fixed-list-left") {
       const isMobile = window.matchMedia("(max-width: 860px)").matches;
       if (isMobile) {
@@ -429,6 +439,7 @@ function _renderTipOverlay() {
         el.style.transform = "";
         el.style.transformOrigin = "bottom center";
         el.dataset.arrow = "bottom-center";
+        positioned = true;
       } else {
         // Left of first race card, vertically aligned to its top, arrow on right side
         const firstCard = raceList.querySelector(".race-card");
@@ -437,24 +448,26 @@ function _renderTipOverlay() {
           const cardW = el.offsetWidth || 300;
           el.style.left = `${Math.max(8, r.left - cardW - 14)}px`;
           el.style.top = `${r.top}px`;
+          el.style.transform = "";
+          el.style.transformOrigin = "right center";
+          el.dataset.arrow = "right";
+          positioned = true;
         }
-        el.style.transform = "";
-        el.style.transformOrigin = "right center";
-        el.dataset.arrow = "right";
       }
-    } else {
-      // Center on the visible map area (fixed-map fallback)
+    }
+
+    if (!positioned) {
+      // Fallback: center on the visible map area
       const mapEl = document.getElementById("map");
       if (mapEl) {
         const r = mapEl.getBoundingClientRect();
         el.style.left = `${r.left + r.width / 2}px`;
         el.style.top = `${r.top + r.height / 2}px`;
-        el.style.transform = "translate(-50%, -50%)";
       } else {
-        el.style.top = "50%";
         el.style.left = "50%";
-        el.style.transform = "translate(-50%, -50%)";
+        el.style.top = "40%";
       }
+      el.style.transform = "translate(-50%, -50%)";
     }
   });
 }
