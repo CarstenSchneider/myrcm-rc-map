@@ -4219,7 +4219,7 @@ body.is-menu-open .app-menu-close {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  padding: 14px 40px 12px 14px;
+  padding: 14px 14px 12px 14px;
 }
 
 .tip-title {
@@ -4227,6 +4227,7 @@ body.is-menu-open .app-menu-close {
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
+  padding-right: 30px; /* space for dismiss button */
 }
 
 .tip-text {
