@@ -3622,6 +3622,60 @@
     ]
   },
   {
+    "id": "ets-international",
+    "name": "ETS / TOS International",
+    "locationUnknown": true,
+    "source": "manual",
+    "aliases": [
+      "ETS International",
+      "TOS International"
+    ],
+    "hostIds": [],
+    "skipTextMatch": true
+  },
+  {
+    "id": "mav-aigen-schlaegl",
+    "name": "MAV Aigen-Schlägl",
+    "lat": 48.6443258,
+    "lng": 13.9688049,
+    "city": "Aigen-Schlägl",
+    "source": "manual",
+    "aliases": [
+      "myrcm-217",
+      "Aigen-Schlägl",
+      "Aigen",
+      "Aigen/ AT",
+      "MAV Aigen-Schlägl",
+      "AIGEN",
+      "AIGEN / AT"
+    ],
+    "hostIds": [
+      "mav-aigen-schlaegl"
+    ],
+    "myrcmOrgId": "217"
+  },
+  {
+    "id": "m-a-r-s-alt-erlaa",
+    "name": "M.A.R.S. Alt Erlaa",
+    "lat": 48.1555949,
+    "lng": 16.3186165,
+    "city": "Wien",
+    "source": "manual",
+    "aliases": [
+      "Vienna",
+      "myrcm-339",
+      "M.A.R.S. Alt Erlaa",
+      "VIENNA/ AT",
+      "VIENNA",
+      "VIENNA / AT",
+      "Wien"
+    ],
+    "hostIds": [
+      "m-a-r-s-alt-erlaa"
+    ],
+    "myrcmOrgId": "339"
+  },
+  {
     "hostId": "dmc-ov-386",
     "hostName": "3 Sesselracer",
     "lat": 48.735275140194894,
@@ -3668,6 +3722,13 @@
     "lng": 10.277043224357401
   },
   {
+    "hostId": "bugg-ittre-racing",
+    "hostName": "Bugg'ittre Racing",
+    "lat": 50.65768338233705,
+    "lng": 4.307840911313228,
+    "myrcmOrgId": "31752"
+  },
+  {
     "hostId": "dmc-dmc-e-v-geschaftsstelle",
     "hostName": "DMC e.V. Geschäftsstelle",
     "locationUnknown": true
@@ -3677,6 +3738,13 @@
     "hostName": "EMC Wehrheim e. V.",
     "lat": 50.314507929048034,
     "lng": 8.558427424524675
+  },
+  {
+    "hostId": "rcco-erc-racing-e-v",
+    "hostName": "ERC-Racing e.V.",
+    "lat": 52.33147453255704,
+    "lng": 7.429288493596242,
+    "website": "https://www.facebook.com/p/ERC-Racing-eV-100057458199626/"
   },
   {
     "hostId": "dmc-ov-37",
@@ -3992,6 +4060,13 @@
     "lng": 8.156243732175744
   },
   {
+    "hostId": "rcco-rcmc-ibbenbueren-e-v",
+    "hostName": "RCMC Ibbenbüren e. V.",
+    "lat": 52.251949472619934,
+    "lng": 7.630418467177663,
+    "website": "http://www.rcmc-ibbenbueren.de/"
+  },
+  {
     "hostId": "dmc-ov-339",
     "hostName": "RCR Peterberg e.V.",
     "lat": 49.57913176184305,
@@ -4089,73 +4164,5 @@
     "hostId": "rcco-ttsc-racing",
     "hostName": "TTSC-Racing",
     "locationUnknown": true
-  },
-  {
-    "hostId": "rcco-rcmc-ibbenbueren-e-v",
-    "hostName": "RCMC Ibbenbüren e. V.",
-    "lat": 52.251949472619934,
-    "lng": 7.630418467177663,
-    "website": "http://www.rcmc-ibbenbueren.de/"
-  },
-  {
-    "hostId": "rcco-erc-racing-e-v",
-    "hostName": "ERC-Racing e.V.",
-    "lat": 52.33147453255704,
-    "lng": 7.429288493596242,
-    "website": "https://www.facebook.com/p/ERC-Racing-eV-100057458199626/"
-  },
-  {
-    "id": "ets-international",
-    "name": "ETS / TOS International",
-    "locationUnknown": true,
-    "source": "manual",
-    "aliases": [
-      "ETS International",
-      "TOS International"
-    ],
-    "hostIds": [],
-    "skipTextMatch": true
-  },
-  {
-    "id": "mav-aigen-schlaegl",
-    "name": "MAV Aigen-Schlägl",
-    "lat": 48.6443258,
-    "lng": 13.9688049,
-    "city": "Aigen-Schlägl",
-    "source": "manual",
-    "aliases": [
-      "myrcm-217",
-      "Aigen-Schlägl",
-      "Aigen",
-      "Aigen/ AT",
-      "MAV Aigen-Schlägl",
-      "AIGEN",
-      "AIGEN / AT"
-    ],
-    "hostIds": [
-      "mav-aigen-schlaegl"
-    ],
-    "myrcmOrgId": "217"
-  },
-  {
-    "id": "m-a-r-s-alt-erlaa",
-    "name": "M.A.R.S. Alt Erlaa",
-    "lat": 48.1555949,
-    "lng": 16.3186165,
-    "city": "Wien",
-    "source": "manual",
-    "aliases": [
-      "Vienna",
-      "myrcm-339",
-      "M.A.R.S. Alt Erlaa",
-      "VIENNA/ AT",
-      "VIENNA",
-      "VIENNA / AT",
-      "Wien"
-    ],
-    "hostIds": [
-      "m-a-r-s-alt-erlaa"
-    ],
-    "myrcmOrgId": "339"
   }
 ]
