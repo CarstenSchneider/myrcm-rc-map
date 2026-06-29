@@ -396,6 +396,69 @@ function _buildTipCardEl(tip) {
 }
 
 let _tipOverlayEl = null;
+let _tipResizeTimer = null;
+
+function _positionTipEl(el, tip) {
+  let positioned = false;
+
+  if (tip.render === "fixed-locate" && _locateBtn) {
+    const r = _locateBtn.getBoundingClientRect();
+    if (r.width > 0 || r.height > 0) {
+      const cardW = el.offsetWidth || 320;
+      el.style.left = `${Math.min(r.right + 18, window.innerWidth - cardW - 8)}px`;
+      el.style.top = `${r.top}px`;
+      el.style.transform = "";
+      el.style.transformOrigin = "";
+      positioned = true;
+    }
+  } else if (tip.render === "fixed-list-left") {
+    const isMobile = window.matchMedia("(max-width: 860px)").matches;
+    if (isMobile) {
+      // Match the width of the first mobile race card
+      const firstMobCard = document.querySelector("#mobRaceList .race-card");
+      const cardW = firstMobCard
+        ? Math.round(firstMobCard.getBoundingClientRect().width)
+        : Math.min(el.offsetWidth || 320, window.innerWidth - 32);
+      el.style.width = `${cardW}px`;
+      const drawerEl = document.getElementById("mobDrawer");
+      const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
+      el.style.left = `${(window.innerWidth - cardW) / 2}px`;
+      el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
+      el.style.transform = "";
+      el.style.transformOrigin = "bottom center";
+      el.dataset.arrow = "bottom-center";
+      positioned = true;
+    } else {
+      // Anchor to the left edge of the race panel, not the first card
+      const panelEl = document.querySelector(".race-panel");
+      const firstCard = raceList.querySelector(".race-card");
+      const anchorEl = panelEl || firstCard;
+      if (anchorEl) {
+        const r = anchorEl.getBoundingClientRect();
+        const cardW = el.offsetWidth || 300;
+        el.style.left = `${Math.max(8, r.left - cardW - 8)}px`;
+        el.style.top = `${r.top + 8}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "right center";
+        el.dataset.arrow = "right";
+        positioned = true;
+      }
+    }
+  }
+
+  if (!positioned) {
+    const mapEl = document.getElementById("map");
+    if (mapEl) {
+      const r = mapEl.getBoundingClientRect();
+      el.style.left = `${r.left + r.width / 2}px`;
+      el.style.top = `${r.top + r.height / 2}px`;
+    } else {
+      el.style.left = "50%";
+      el.style.top = "40%";
+    }
+    el.style.transform = "translate(-50%, -50%)";
+  }
+}
 
 function _renderTipOverlay() {
   const tip = _currentTip();
@@ -405,71 +468,15 @@ function _renderTipOverlay() {
   const el = _buildTipCardEl(tip);
   el.classList.add("tip-overlay");
   el.style.position = "fixed";
-  el.style.zIndex = "1050"; // below drawer (1100) so drawer covers the tip
-  // Default: center on screen (visible immediately; rAF refines to exact position)
+  el.style.zIndex = "1050";
+  // Default: center on screen — visible immediately; rAF refines to exact position
   el.style.top = "40%";
   el.style.left = "50%";
   el.style.transform = "translate(-50%, -50%)";
   document.body.appendChild(el);
   _tipOverlayEl = el;
 
-  requestAnimationFrame(() => {
-    let positioned = false;
-
-    if (tip.render === "fixed-locate" && _locateBtn) {
-      const r = _locateBtn.getBoundingClientRect();
-      if (r.width > 0 || r.height > 0) {
-        // Place card right of button, top-aligned; arrow on left side near top points at button
-        const cardW = el.offsetWidth || 320;
-        el.style.left = `${Math.min(r.right + 18, window.innerWidth - cardW - 8)}px`;
-        el.style.top = `${r.top}px`;
-        el.style.transform = "";
-        positioned = true;
-      }
-    } else if (tip.render === "fixed-list-left") {
-      const isMobile = window.matchMedia("(max-width: 860px)").matches;
-      if (isMobile) {
-        // Above the drawer, centered, arrow pointing down toward drawer
-        const drawerEl = document.getElementById("mobDrawer");
-        const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
-        const cardW = Math.min(el.offsetWidth || 320, window.innerWidth - 32);
-        el.style.width = `${cardW}px`;
-        el.style.left = `${(window.innerWidth - cardW) / 2}px`;
-        el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
-        el.style.transform = "";
-        el.style.transformOrigin = "bottom center";
-        el.dataset.arrow = "bottom-center";
-        positioned = true;
-      } else {
-        // Left of first race card, vertically aligned to its top, arrow on right side
-        const firstCard = raceList.querySelector(".race-card");
-        if (firstCard) {
-          const r = firstCard.getBoundingClientRect();
-          const cardW = el.offsetWidth || 300;
-          el.style.left = `${Math.max(8, r.left - cardW - 14)}px`;
-          el.style.top = `${r.top}px`;
-          el.style.transform = "";
-          el.style.transformOrigin = "right center";
-          el.dataset.arrow = "right";
-          positioned = true;
-        }
-      }
-    }
-
-    if (!positioned) {
-      // Fallback: center on the visible map area
-      const mapEl = document.getElementById("map");
-      if (mapEl) {
-        const r = mapEl.getBoundingClientRect();
-        el.style.left = `${r.left + r.width / 2}px`;
-        el.style.top = `${r.top + r.height / 2}px`;
-      } else {
-        el.style.left = "50%";
-        el.style.top = "40%";
-      }
-      el.style.transform = "translate(-50%, -50%)";
-    }
-  });
+  requestAnimationFrame(() => _positionTipEl(el, tip));
 }
 
 function _clearTipOverlay() {
@@ -4487,6 +4494,10 @@ window.addEventListener("resize", () => {
     requestAnimationFrame(() => {
       positionCountryPillDesktop();
       document.body.classList.remove("is-breakpoint-crossing");
+      if (_tipOverlayEl) {
+        const tip = _currentTip();
+        if (tip) _positionTipEl(_tipOverlayEl, tip);
+      }
     });
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;
