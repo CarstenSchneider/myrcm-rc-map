@@ -4202,7 +4202,7 @@ body.is-menu-open .app-menu-close {
 .tip-card[data-anim="blur"].tip-exit  { animation: tip-exit-blur  200ms ease both; pointer-events: none; }
 
 .tip-illustration {
-  flex: 0 0 110px;
+  flex: 0 0 92px;
   display: flex;
   align-items: center;
   justify-content: center;
