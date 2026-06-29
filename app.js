@@ -357,7 +357,7 @@ const ONBOARDING_TIPS = [
   },
   {
     render: "list-top",
-    arrow: "bottom-center",
+    arrow: "bottom-right",
     mobileFull: true,
     title: "Kein Rennen verpassen.",
     html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
@@ -403,10 +403,8 @@ function _positionTipEl(el, tip) {
 
   // Set consistent width
   if (isMobile) {
-    // Mobile: narrower than race card so tip 1 fits to the right of the locate button
-    // Locate button right edge ≈ 66px → leave 12px gap → tip starts at ~78px → width = innerWidth - 78 - 8
-    const btnRight = (_locateBtn ? _locateBtn.getBoundingClientRect().right : 66) || 66;
-    const mobileW = Math.max(Math.round(window.innerWidth - btnRight - 20), 180);
+    // Mobile: ~65% of screen width — narrower than race card (innerWidth-24), tip 1 fits right of locate button
+    const mobileW = Math.max(Math.round(window.innerWidth * 0.65), 180);
     el.style.width = `${mobileW}px`;
   } else {
     // Desktop: match race card width; fall back to panel width minus padding when list not yet rendered
