@@ -123,11 +123,11 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Stock Challenge",
-        "entries": 2
+        "entries": 4
       },
       {
         "name": "Clubman Challenge",
@@ -628,8 +628,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 121,
-    "registrationDisplay": "121",
+    "registrationCount": 122,
+    "registrationDisplay": "122",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -701,8 +701,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 26,
+    "registrationDisplay": "26",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -722,7 +722,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "VTA",
