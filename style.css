@@ -1940,13 +1940,6 @@ body.is-breakpoint-crossing .country-pill {
     background-color 0.16s ease;
 }
 
-.race-card:is(:hover, .is-hovered) {
-  border-color: rgba(var(--border-rgb), 0.75);
-  box-shadow:
-    0 8px 18px rgba(var(--shadow-rgb), 0.09),
-    0 2px 6px rgba(var(--shadow-rgb), 0.07);
-}
-
 .race-card.is-clickable:is(:hover, .is-hovered),
 .race-card.is-clickable:focus-visible {
   transform: scale(0.985);
