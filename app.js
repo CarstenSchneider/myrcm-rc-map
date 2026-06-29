@@ -426,7 +426,7 @@ function _positionTipEl(el, tip) {
     if (r.width > 0 || r.height > 0) {
       if (isMobile) {
         // Position to the RIGHT of the locate button, top-aligned with it
-        el.style.left = `${Math.round(r.right + 12)}px`;
+        el.style.left = `${Math.round(r.right + 20)}px`;
         el.style.top = `${Math.round(r.top)}px`;
         el.style.transform = "";
         el.style.transformOrigin = "";
@@ -3816,7 +3816,9 @@ function renderList(list) {
     const tipEl = _buildTipCardEl(_tip);
     if (tipEl) raceList.appendChild(tipEl);
   } else if (_tip?.render?.startsWith("fixed-") && !_tipOverlayEl) {
-    requestAnimationFrame(_renderTipOverlay);
+    // Only show immediately if map is already revealed (e.g. dismiss → next tip).
+    // On initial load revealMap() triggers the tip after the UI is fully visible.
+    if (document.body.classList.contains("map-is-ready")) requestAnimationFrame(_renderTipOverlay);
   }
 
   if (!list.length) {
@@ -4175,6 +4177,11 @@ function revealMap() {
   document.querySelector(".map-loader")?.classList.add("map-loader-done");
   // Fade pins in after map fade-in completes (220ms transition + small buffer)
   setTimeout(() => mapEl.classList.add("map-markers-ready"), 320);
+  // Show fixed onboarding tips after UI is fully revealed (animate in last)
+  setTimeout(() => {
+    const tip = _currentTip();
+    if (tip?.render?.startsWith("fixed-") && !_tipOverlayEl) _renderTipOverlay();
+  }, 550);
 }
 
 function revealMapWhenReady() {
