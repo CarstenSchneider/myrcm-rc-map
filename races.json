@@ -18616,10 +18616,6 @@
   },
   {
     "id": "arena33-andernach-2024-12-08-myrcm-event-83086",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": null,
     "hostId": "tonisport-gmbh",
     "hostName": "ToniSport GmbH",
     "name": "Round 6 & DMC SK Lauf Sportkreis Nord, RCArena Bünde",
@@ -18667,7 +18663,11 @@
       "SK 1:12 Expert EA"
     ],
     "documents": [],
-    "firstSeen": "2026-06-25"
+    "firstSeen": "2026-06-25",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null
   },
   {
     "id": "myrcm-42113-2024-12-08-myrcm-event-83085",
@@ -39170,10 +39170,6 @@
   },
   {
     "id": "arena33-andernach-2025-06-29-myrcm-event-89023",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": null,
     "hostId": "tonisport-gmbh",
     "hostName": "ToniSport GmbH",
     "name": "RCK Kleinserie",
@@ -39199,7 +39195,11 @@
       "VTA"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-09",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null
   },
   {
     "id": "rmcb-2025-06-29-myrcm-event-86403",
@@ -57221,10 +57221,6 @@
   },
   {
     "id": "arena33-andernach-2025-12-06-myrcm-event-91764",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/",
     "hostId": "tonisport-gmbh",
     "hostName": "ToniSport GmbH",
     "name": "19",
@@ -57277,7 +57273,11 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-09",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/"
   },
   {
     "id": "mrto-2025-12-06-myrcm-event-91724",
@@ -77900,10 +77900,6 @@
   },
   {
     "id": "arena33-andernach-2026-06-13-myrcm-event-96259",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": null,
     "hostId": "tonisport-gmbh",
     "hostName": "ToniSport GmbH",
     "name": "Testv3 (Olli)",
@@ -77929,7 +77925,11 @@
       "Gastklasse MCV FWD"
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-09",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": null
   },
   {
     "id": "mc-orc-e-v-2026-06-13-myrcm-event-97594",
@@ -79305,10 +79305,6 @@
   },
   {
     "id": "arena33-andernach-2026-06-20-myrcm-event-95989",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
-    "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/",
     "hostId": "tonisport-gmbh",
     "hostName": "ToniSport GmbH",
     "name": "TOS Lauf Mitte/West",
@@ -79350,7 +79346,11 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-09"
+    "firstSeen": "2026-06-09",
+    "venueId": null,
+    "venueName": null,
+    "venueLocation": null,
+    "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/"
   },
   {
     "id": "la-speedway-racing-club-e-v-2026-06-21-myrcm-event-98120",
