@@ -81198,8 +81198,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81212,7 +81212,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 23
+        "entries": 24
       }
     ],
     "documents": [],
@@ -81725,18 +81725,15 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Open SRCCA",
         "entries": 3
       },
-      {
-        "name": "Repas du soir",
-        "entries": 1
-      },
+      "Repas du soir",
       {
         "name": "SM/CS Elektro E8OR",
         "entries": 21
@@ -81844,8 +81841,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Elektro Glattbahn 1:10 STOCK (13,5 T.)",
@@ -81974,15 +81971,15 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
       {
         "name": "ORE2WDST",
-        "entries": 7
+        "entries": 8
       },
       "ORE4WD",
       {
@@ -82221,8 +82218,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG 1:10 Scale",
@@ -82236,7 +82233,7 @@
       },
       {
         "name": "EG 1:8 GT",
-        "entries": 4
+        "entries": 3
       }
     ],
     "documents": [],
@@ -82455,13 +82452,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 (1:8 Nitro Offroad Buggy)",
-        "entries": 9
+        "entries": 10
       }
     ],
     "documents": [],
@@ -82604,8 +82601,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 37,
-    "registrationDisplay": "37",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -82614,7 +82611,7 @@
       },
       {
         "name": "1:8 Funbike",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "DMC 1:5 Elektro Superbike",
@@ -83057,13 +83054,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "GT-LMH Cup",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "TW17.5T",
@@ -83105,16 +83102,22 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "SPC-Kids",
-      "Einsteigerklasse Buggy LRP",
+      {
+        "name": "Einsteigerklasse Buggy LRP",
+        "entries": 1
+      },
       "SPC-ORE 2WD",
       "SPC-ORE 2WD ST",
       "SPC-ORE 4WD",
-      "SPC-ORE 4WD ST",
+      {
+        "name": "SPC-ORE 4WD ST",
+        "entries": 1
+      },
       "SPC-ORE TR2"
     ],
     "documents": [],
@@ -85352,8 +85355,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -85370,7 +85373,7 @@
       },
       {
         "name": "OM_OR8_VB_Top",
-        "entries": 9
+        "entries": 10
       }
     ],
     "documents": [],
@@ -86431,16 +86434,22 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8-E Elektro Buggy",
-        "entries": 2
+        "entries": 5
       },
-      "OR8-E Jugend",
-      "OR8-E Truggy"
+      {
+        "name": "OR8-E Jugend",
+        "entries": 1
+      },
+      {
+        "name": "OR8-E Truggy",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-29"
@@ -87266,13 +87275,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "2WD Buggy",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "4WD Buggy",
@@ -87280,7 +87289,7 @@
       },
       {
         "name": "Fighter-Klasse",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [
@@ -87320,13 +87329,16 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "ICM - VF 1:8",
       "ICM - VF 1:10",
-      "ICM - EF 1:8 Stock",
+      {
+        "name": "ICM - EF 1:8 Stock",
+        "entries": 1
+      },
       "ICM - Porsche 962",
       "ICM - EF eGT8",
       "ICM - EF 1:10 TW, offen"
@@ -89218,7 +89230,7 @@
     "venueWebsite": null,
     "hostId": "mc-furstenwalde-e-v",
     "hostName": "MC-Fürstenwalde e.V.",
-    "name": "Tamico Offroad Cup 2026",
+    "name": "Tamico Offroad Cup 2026 + 3. Berlin-Brandenburg Fun Race",
     "from": "2026-09-26",
     "to": "2026-09-27",
     "series": [
@@ -89261,7 +89273,14 @@
         "label": "Ausschreibung",
         "sourceLabel": null,
         "fileName": "TOC Ausschreibung.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=DA423FB5-FC0F-4F08-B21A-A26A14BEDC27"
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=879C90A5-2DCA-47F6-A2AA-02F62DFEC5D5"
+      },
+      {
+        "type": "rules",
+        "label": "Reglement",
+        "sourceLabel": null,
+        "fileName": "Reglement Berlin-Brandenburg Fun Race.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=0E08EFF0-01CF-4B8B-ACEA-7D36E0956033"
       }
     ],
     "firstSeen": "2026-06-08"
