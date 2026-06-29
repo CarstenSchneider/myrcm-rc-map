@@ -6219,5 +6219,23 @@
     "myrcmOrgId": "1387",
     "source": "geocoded-nominatim-dach",
     "verified": true
+  },
+  {
+    "id": "ets-international",
+    "name": "ETS / TOS International",
+    "city": null,
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "https://www.ets.racing",
+    "aliases": [
+      "ETS International",
+      "TOS International"
+    ],
+    "hostIds": [],
+    "myrcmOrgId": "",
+    "source": "manual",
+    "locationUnknown": true
   }
 ]

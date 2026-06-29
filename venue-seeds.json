@@ -1320,7 +1320,9 @@
     "aliases": [
       "myrcm-121",
       "MC Ettlingen e.V.",
-      "Karlsruhe"
+      "Karlsruhe",
+      "Ettlingen",
+      "ETTLINGEN"
     ]
   },
   {
@@ -4101,5 +4103,59 @@
     "lat": 52.33147453255704,
     "lng": 7.429288493596242,
     "website": "https://www.facebook.com/p/ERC-Racing-eV-100057458199626/"
+  },
+  {
+    "id": "ets-international",
+    "name": "ETS / TOS International",
+    "locationUnknown": true,
+    "source": "manual",
+    "aliases": [
+      "ETS International",
+      "TOS International"
+    ],
+    "hostIds": [],
+    "skipTextMatch": true
+  },
+  {
+    "id": "mav-aigen-schlaegl",
+    "name": "MAV Aigen-Schlägl",
+    "lat": 48.6443258,
+    "lng": 13.9688049,
+    "city": "Aigen-Schlägl",
+    "source": "manual",
+    "aliases": [
+      "myrcm-217",
+      "Aigen-Schlägl",
+      "Aigen",
+      "Aigen/ AT",
+      "MAV Aigen-Schlägl",
+      "AIGEN",
+      "AIGEN / AT"
+    ],
+    "hostIds": [
+      "mav-aigen-schlaegl"
+    ],
+    "myrcmOrgId": "217"
+  },
+  {
+    "id": "m-a-r-s-alt-erlaa",
+    "name": "M.A.R.S. Alt Erlaa",
+    "lat": 48.1555949,
+    "lng": 16.3186165,
+    "city": "Wien",
+    "source": "manual",
+    "aliases": [
+      "Vienna",
+      "myrcm-339",
+      "M.A.R.S. Alt Erlaa",
+      "VIENNA/ AT",
+      "VIENNA",
+      "VIENNA / AT",
+      "Wien"
+    ],
+    "hostIds": [
+      "m-a-r-s-alt-erlaa"
+    ],
+    "myrcmOrgId": "339"
   }
 ]
