@@ -338,27 +338,52 @@ const _bellIconSvg = (cls = "notification-toggle-icon") =>
 
 // --- Onboarding Tips ---
 // render types:
-//   "list-top"       — prepended to race list, arrow bottom-right → star button
-//   "list-second"    — after first race card, arrow top-center → that card
-//   "fixed-map"      — fixed overlay centered on the visible map area, no arrow
+//   "fixed-locate"  — fixed overlay anchored right of locate button, arrow left
+//   "list-top"      — prepended to race list, arrow bottom-center → first card below
+//   "list-second"   — after first race card, arrow bottom-center → second card below
+const _tipPin = (opacity) =>
+  `<path d="${mapPinPath}" fill-opacity="${opacity}"/>`;
+
 const ONBOARDING_TIPS = [
   {
+    render: "fixed-locate",
+    arrow: "left",
+    title: "Rennen in deiner Nähe.",
+    html: `Nutze ${_locateIconSvg()} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.`,
+    illustration: `<svg viewBox="0 0 90 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g transform="translate(2,14) scale(0.16)" fill="#fff">${_tipPin("0.38")}</g>
+      <circle cx="19" cy="62" r="12" stroke="#fff" stroke-opacity="0.55" stroke-width="2" fill="none"/>
+      <circle cx="19" cy="62" r="4.5" stroke="#fff" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
+      <circle cx="19" cy="62" r="2" fill="#fff" fill-opacity="0.55"/>
+      <g transform="translate(50,6) scale(0.25)" fill="#fff">${_tipPin("0.62")}</g>
+      <g transform="translate(32,50) scale(0.37)" fill="#001d4a">${_tipPin("0.42")}</g>
+    </svg>`,
+  },
+  {
     render: "list-top",
-    arrow: "bottom-right",
-    title: "Mit RC Race Map nie wieder ein Rennen verpassen",
-    html: `Markiere deine Favoriten ${_favIconSvg("tip-inline-icon")} und aktiviere ${_bellIconSvg("tip-inline-icon")} Benachrichtigungen. So informieren wir dich automatisch per E-Mail über neue Rennen, Terminänderungen und Absagen.`,
+    arrow: "bottom-center",
+    title: "Alles auf einen Blick.",
+    html: `Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.`,
+    illustration: `<svg viewBox="0 0 90 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="42" cy="34" r="24" fill="#fff" fill-opacity="0.22"/>
+      <circle cx="42" cy="34" r="10" fill="#fff" fill-opacity="0.15"/>
+      <path d="M25,55 Q18,67 14,72 Q26,64 36,59 Z" fill="#fff" fill-opacity="0.22"/>
+      <g transform="translate(26,63) scale(0.295)" fill="#001d4a">${_tipPin("0.42")}</g>
+    </svg>`,
   },
   {
     render: "list-second",
-    arrow: "top-center",
+    arrow: "bottom-center",
     mobileFull: true,
-    title: "Alles zum Rennen auf einen Blick",
-    html: `Hier findest du Informationen zum Rennen, zum Beispiel Nennung, Ausschreibung, Reglement, Rennklassen oder Teilnehmerzahl. Tippe auf die Rennkarte, um die Rennstrecke auf der Karte zu sehen.`,
-  },
-  {
-    render: "fixed-map",
-    title: "Entdecke Rennen in deiner Nähe",
-    html: `Nutze ${_locateIconSvg()} deinen Standort und filtere nach Zeitraum oder Rennserie, um genau die Rennen zu finden, die dich interessieren.<span class="tip-footer">Viel Spaß mit RC Race Map und viel Erfolg auf der Strecke!</span>`,
+    title: "Kein Rennen verpassen.",
+    html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
+    illustration: `<svg viewBox="0 0 90 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="8" y="34" width="74" height="51" rx="5" fill="#fff" fill-opacity="0.92"/>
+      <path d="M8,34 L45,60 L82,34 Z" fill="#fff" fill-opacity="0.78"/>
+      <path d="M8,85 L36,60" stroke="rgba(0,29,74,0.14)" stroke-width="1.5" fill="none"/>
+      <path d="M82,85 L54,60" stroke="rgba(0,29,74,0.14)" stroke-width="1.5" fill="none"/>
+      <g transform="translate(31,14) scale(0.20)" fill="#4A9EE8">${_tipPin("1")}</g>
+    </svg>`,
   },
 ];
 
@@ -378,10 +403,13 @@ function _buildTipCardEl(tip) {
   el.setAttribute("role", "note");
   if (tip.arrow) el.dataset.arrow = tip.arrow;
   el.innerHTML = `
-    <span class="tip-title">${tip.title}</span>
+    <div class="tip-illustration" aria-hidden="true">${tip.illustration || ""}</div>
+    <div class="tip-body">
+      <span class="tip-title">${tip.title}</span>
+      <span class="tip-text">${tip.html}</span>
+      <span class="tip-counter">${tip.idx + 1} / ${ONBOARDING_TIPS.length}</span>
+    </div>
     <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
-    <span class="tip-text">${tip.html}</span>
-    <span class="tip-counter">${tip.idx + 1} / ${ONBOARDING_TIPS.length}</span>
   `;
   return el;
 }
@@ -397,24 +425,32 @@ function _renderTipOverlay() {
   el.classList.add("tip-overlay");
   el.style.position = "fixed";
   el.style.zIndex = "9000";
-  el.style.maxWidth = "280px";
   document.body.appendChild(el);
   _tipOverlayEl = el;
 
   requestAnimationFrame(() => {
-    // Center on the visible map area
-    const mapEl = document.getElementById("map");
-    if (mapEl) {
-      const r = mapEl.getBoundingClientRect();
-      const cx = r.left + r.width / 2;
-      const cy = r.top + r.height / 2;
-      el.style.left = `${cx}px`;
-      el.style.top = `${cy}px`;
-      el.style.transform = "translate(-50%, -50%)";
+    if (tip.render === "fixed-locate" && _locateBtn) {
+      const r = _locateBtn.getBoundingClientRect();
+      el.style.left = `${r.right + 14}px`;
+      el.style.top = `${r.top + r.height / 2}px`;
+      el.style.transform = "translateY(-50%)";
+      // Clamp to viewport right edge
+      const cardW = el.offsetWidth || 320;
+      const maxLeft = window.innerWidth - cardW - 8;
+      if (r.right + 14 > maxLeft) el.style.left = `${maxLeft}px`;
     } else {
-      el.style.top = "50%";
-      el.style.left = "50%";
-      el.style.transform = "translate(-50%, -50%)";
+      // Center on the visible map area (fixed-map fallback)
+      const mapEl = document.getElementById("map");
+      if (mapEl) {
+        const r = mapEl.getBoundingClientRect();
+        el.style.left = `${r.left + r.width / 2}px`;
+        el.style.top = `${r.top + r.height / 2}px`;
+        el.style.transform = "translate(-50%, -50%)";
+      } else {
+        el.style.top = "50%";
+        el.style.left = "50%";
+        el.style.transform = "translate(-50%, -50%)";
+      }
     }
   });
 }
