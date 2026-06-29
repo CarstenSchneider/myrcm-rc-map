@@ -5389,7 +5389,15 @@ async function adminLoadUnmatched() {
     .filter(s => s.locationUnknown)
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
-  return [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+  const combined = [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+  // Deduplicate by hostName (same club with different source IDs)
+  const seenNames = new Set();
+  return combined.filter(e => {
+    const key = (e.hostName || "").trim().toLowerCase();
+    if (seenNames.has(key)) return false;
+    seenNames.add(key);
+    return true;
+  });
 }
 
 async function adminCommit(payload) {

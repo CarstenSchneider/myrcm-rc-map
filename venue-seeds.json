@@ -1901,7 +1901,8 @@
     "lng": 10.540686972114958,
     "hostIds": [
       "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-      "myrcm-95"
+      "myrcm-95",
+      "msc-polizei-braunschweig-im-adac-e-v-rcc-v-ov158"
     ],
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "myrcmOrgId": "95",
@@ -3694,12 +3695,6 @@
     "myrcmOrgId": "20718"
   },
   {
-    "hostId": "max-informatique",
-    "hostName": "Max Informatique",
-    "locationUnknown": true,
-    "myrcmOrgId": "20360"
-  },
-  {
     "hostId": "dmc-mbc-oberlausitz-e-v",
     "hostName": "MBC Oberlausitz e.V.",
     "lat": 51.08318541210428,
@@ -3792,12 +3787,6 @@
     "hostName": "Modellsport Münsterland e.V.",
     "lat": 52.34156335945138,
     "lng": 7.577074708374697
-  },
-  {
-    "hostId": "mrc-fritzens-formel-4",
-    "hostName": "MRC Fritzens Formel 4",
-    "locationUnknown": true,
-    "myrcmOrgId": "772"
   },
   {
     "hostId": "rcco-mrc-weiden-e-v",
