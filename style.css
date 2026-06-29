@@ -108,6 +108,7 @@ body {
 .race-panel {
   min-width: 0;
   overflow: auto;
+  overscroll-behavior-y: contain;
   padding: 24px;
   padding-right: 14px;
   background: var(--panel);
@@ -416,6 +417,14 @@ input {
 .admin-ad-preview-placeholder { font-size: 13px; color: var(--muted); }
 .admin-ad-preview-img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block; }
 
+@keyframes card-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .race-card { animation: none !important; }
+}
+
 .race-card {
   display: grid;
   gap: 7px;
@@ -426,6 +435,7 @@ input {
   box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
   cursor: pointer;
   text-align: left;
+  animation: card-in 0.28s ease-out both;
 }
 
 .race-card.is-clickable:is(:hover, .is-hovered),
@@ -4192,11 +4202,11 @@ body.is-menu-open .app-menu-close {
 .tip-card[data-anim="blur"].tip-exit  { animation: tip-exit-blur  200ms ease both; pointer-events: none; }
 
 .tip-illustration {
-  flex: 0 0 110px;
+  flex: 0 0 92px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 14px;
+  padding: 16px 8px;
   background: rgba(0, 0, 0, 0.12);
   border-radius: 16px 0 0 16px;
   overflow: hidden;
@@ -4209,7 +4219,7 @@ body.is-menu-open .app-menu-close {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  padding: 14px 40px 12px 14px;
+  padding: 14px 14px 12px 14px;
 }
 
 .tip-title {
@@ -4217,6 +4227,7 @@ body.is-menu-open .app-menu-close {
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
+  padding-right: 30px; /* space for dismiss button */
 }
 
 .tip-text {

@@ -403,11 +403,9 @@ function _positionTipEl(el, tip) {
 
   // Set consistent width
   if (isMobile) {
-    // Mobile: ~65% of screen width — narrower than race card (innerWidth-24), tip 1 fits right of locate button
-    const mobileW = Math.max(Math.round(window.innerWidth * 0.65), 180);
+    const mobileW = Math.max(Math.round(window.innerWidth * 0.80), 220);
     el.style.width = `${mobileW}px`;
   } else {
-    // Desktop: match race card width; fall back to panel width minus padding when list not yet rendered
     const firstCard = raceList.querySelector(".race-card");
     const panelEl = document.querySelector(".race-panel");
     const w = firstCard
@@ -425,8 +423,11 @@ function _positionTipEl(el, tip) {
     const r = _locateBtn.getBoundingClientRect();
     if (r.width > 0 || r.height > 0) {
       if (isMobile) {
-        // Position to the RIGHT of the locate button, top-aligned with it
-        el.style.left = `${Math.round(r.right + 20)}px`;
+        const left = Math.round(r.right + 20);
+        // Cap width so right edge stays within race card right margin (14px from screen edge)
+        const maxW = window.innerWidth - left - 14;
+        if (el.offsetWidth > maxW) el.style.width = `${maxW}px`;
+        el.style.left = `${left}px`;
         el.style.top = `${Math.round(r.top)}px`;
         el.style.transform = "";
         el.style.transformOrigin = "";
@@ -443,7 +444,6 @@ function _positionTipEl(el, tip) {
     if (isMobile) {
       const drawerEl = document.getElementById("mobDrawer");
       const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
-      // Center horizontally using same width computed above
       el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
       el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
       el.style.transform = "";
@@ -3831,6 +3831,7 @@ function renderList(list) {
   }
 
 
+  let _cardAnimIdx = 0;
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
     const series = raceSeries(race);
@@ -3908,6 +3909,9 @@ function renderList(list) {
       });
     }
 
+    card.style.animationDelay = `${Math.min(_cardAnimIdx * 35, 280)}ms`;
+    card.addEventListener("animationend", () => { card.style.animation = "none"; card.style.animationDelay = ""; }, { once: true });
+    _cardAnimIdx++;
     raceList.appendChild(card);
   }
 
@@ -3924,6 +3928,9 @@ function renderList(list) {
       const past = latestPastRaceForVenue(venue);
       if (!past) continue;
       const [, card] = buildPastRaceCardEl(past);
+      card.style.animationDelay = `${Math.min(_cardAnimIdx * 35, 280)}ms`;
+      card.addEventListener("animationend", () => { card.style.animation = "none"; card.style.animationDelay = ""; }, { once: true });
+      _cardAnimIdx++;
       raceList.appendChild(card);
     }
   }
@@ -5990,6 +5997,20 @@ showMenuHome();
       _fwd = true;
       try { canvas.dispatchEvent(new WheelEvent("wheel", e)); } catch(_) {}
       _fwd = false;
+    }, { passive: true });
+  }
+}
+
+// Prevent map zoom when mouse drifts from race panel to map while wheel-scrolling.
+// Disables scrollWheelZoom briefly after any wheel event on the panel (covers trackpad inertia).
+{
+  let _panelScrollTimer = null;
+  const _panelEl = document.querySelector(".race-panel");
+  if (_panelEl) {
+    _panelEl.addEventListener("wheel", () => {
+      map.scrollWheelZoom.disable();
+      clearTimeout(_panelScrollTimer);
+      _panelScrollTimer = setTimeout(() => map.scrollWheelZoom.enable(), 600);
     }, { passive: true });
   }
 }
