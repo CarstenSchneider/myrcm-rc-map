@@ -22,6 +22,7 @@ const REGISTRATION_URL_RE = /https?:\/\/(?:www\.)?(?:rccar-online\.de\/[^\s<>"')
 // Non-DACH TLDs — clubs with these website domains are filtered out
 const NON_DACH_TLDS = /\.(?:nl|be|fr|pl|cz|sk|hu|it|es|dk|se|no|fi|gb|uk)(?:\/|$)/i;
 
+
 function normalizeKey(value = "") {
   return String(value)
     .toLowerCase()
@@ -64,11 +65,14 @@ function titlePriority(title) {
   return 1;
 }
 
-// Merge calendar rows with same club + start date (e.g. FR + SK on the same day = one race)
+// Merge calendar rows with same club + start date (e.g. FR + SK on the same day = one race).
+// Key uses clubName, NOT ovNr: OV-Nrs are only unique within a Sportkreis, so clubs in different
+// SKs can share the same OV-Nr. Using ovNr alone causes cross-club merges (e.g. two clubs both
+// with OV-Nr 102 would collide on the same date and one club's event appears under the other).
 function deduplicateEntries(entries) {
   const byKey = new Map();
   for (const e of entries) {
-    const key = `${e.ovNr || normalizeKey(e.clubName)}|${e.dateFrom}`;
+    const key = `${normalizeKey(e.clubName)}|${e.dateFrom}`;
     const existing = byKey.get(key);
     if (!existing) {
       byKey.set(key, { ...e });

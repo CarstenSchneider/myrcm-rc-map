@@ -109,6 +109,43 @@ let selectedCountry = "all"; // | "DE" | "AT" | "CH"
 - In `renderList()`: wenn `selectedFavoriteFilter === "favorites"`, werden für favorisierte Strecken ohne aktives Rennen "Zuletzt"-Karten angehängt (ohne Label, ohne Duplikate)
 - `renderVenueNoRaces(latestPastRace)` — zeigt Zuletzt-Karte wenn Strecke ausgewählt aber keine Rennen
 
+### Onboarding Tips
+Erstbesucher sehen drei Tips, die sich beim Schließen nacheinander zeigen. Jeder Tip wird nur einmal gezeigt.
+
+```js
+const ONBOARDING_TIPS = [
+  { render: "list-top",    arrow: "bottom-right", title: "...", html: "..." },
+  { render: "list-second", arrow: "top-center",   title: "...", html: "...", mobileFull: true },
+  { render: "fixed-map",                          title: "...", html: "...<span class='tip-footer'>...</span>" },
+];
+```
+
+**Render-Typen:**
+- `"list-top"` — als erstes Element in der Rennliste eingefügt (vor allen Karten)
+- `"list-second"` — nach der ersten Rennkarte eingefügt (`_listSecondInserted`-Flag)
+- `"fixed-map"` — `position:fixed` Overlay, zentriert auf `#map` via `getBoundingClientRect` + `transform: translate(-50%, -50%)`
+
+**State:** `localStorage("rcRaceMapTipIndex")` — Index des aktuellen Tips. `_dismissTip()` inkrementiert ohne Modulo. Sobald alle gezeigt wurden und Index = Anzahl Tips, wird kein Tip mehr angezeigt.
+
+**DOM:**
+- `_buildTipCardEl(tip)` — erstellt `<aside class="tip-card">` mit Grid-Layout:
+  - Zeile 1: `.tip-title` (fett, weiß) + `.tip-dismiss`-Button
+  - Zeile 2: `.tip-text` (über volle Breite)
+  - Zeile 3: `.tip-counter` ("1 / 3")
+- `.tip-footer` — inline in `tip.html` als `<span>`, kleiner + 75% Opazität
+- `.tip-overlay` — zusätzliche CSS-Klasse für `fixed-map`-Tips (stärkerer Schatten)
+- Pfeilspitze via `::after` pseudo-element, gleiche Farbe wie Karte (nahtlos integriert)
+
+**Icon-Konstanten** (müssen VOR `ONBOARDING_TIPS` definiert sein — TDZ!):
+```js
+const _favIconSvg    = (cls) => `<svg ...>...</svg>`;   // Stern-Icon (Kreis + Feather-Stern-Cutout)
+const _bellIconSvg   = (cls) => `<svg ...>...</svg>`;   // Glocken-Icon (Kreis + Glocke-Cutout)
+const _locateIconSvg = (cls) => `<svg ...>...</svg>`;   // Crosshair-Icon (Kreise + Punkt)
+```
+Alle drei mit `fill-rule: evenodd` bzw. Stroke, `aria-hidden="true"`, Klasse `tip-inline-icon`.
+
+**Farbe:** `background: var(--status-upcoming)` = `#4A9EE8` (Hellblau) — identisch mit offenen Nennungen, funktioniert in Light + Dark Mode.
+
 ### Favoriten-Klick — kein Scroll-Reset
 `renderList()` ruft immer `scrollTo(0, 0)` auf. Klick auf Favorit-Stern / Glocke darf daher **nicht** `renderList()` aufrufen, sonst springt die Liste nach oben.
 
@@ -144,7 +181,7 @@ window.addEventListener("load", () => {
 | `deploy-site-dev-hetzner.yml` | `dev` push | `rcracemap-dev/` (nur HTML/JS/CSS) |
 | `deploy-site-main-hetzner.yml` | `main` push | `.` (root inkl. JSON-Daten) |
 | `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten (Fallback) |
-| `import-rcco.yml` | manuell | **DEAKTIVIERT** — wartet auf Genehmigung von rccar-online.de |
+| `import-rcco.yml` | manuell | **PERMANENT DEAKTIVIERT** — rccar-online.de hat abgesagt (2026-06-29), keine Integration |
 | `fetch-og-images.yml` | manuell | Fetcht og:image von Club-Websites → `hosts.json` auf dev |
 | `check-osm-images.yml` | manuell | Prüft OSM/Overpass auf Venue-Bilder → `osm-images-result.json` |
 
@@ -155,7 +192,7 @@ window.addEventListener("load", () => {
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v247**, **style.css v150**
+Aktuelle Version: **app.js v268**, **style.css v162**
 
 ## Import-System
 
@@ -207,18 +244,15 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 | `venue-unmatched.json` | nicht zugeordnete Venues |
 | `rck-venue-candidates.json` | RCK Venue-Kandidaten |
 
-### RCCO — Status und Genehmigung
-**rccar-online.de Nutzungsbedingungen** (Abschnitt "Webscraping - kommerzieller Nutzung") verbieten automatisiertes Extrahieren von Daten. Import wurde am **2026-06-28** deaktiviert.
+### RCCO — Status: **Dauerhaft abgesagt**
+**rccar-online.de hat am 2026-06-29 abgesagt** — sie möchten ihre Rennen nicht auf der Karte haben. Die Integration ist dauerhaft deaktiviert, keine Reaktivierung geplant.
 
-- `rcco-races.json` ist geleert (`[]`) und wird nicht mehr befüllt
+- `rcco-races.json` bleibt leer (`[]`) — wird nie befüllt
 - `rcco-venues.json` enthält nur manuell eingetragene Koordinaten (kein Scraping)
-- `import-rcco.yml` gibt eine Fehlermeldung aus und tut nichts
+- `import-rcco.yml` ist dauerhaft deaktiviert
 - `import-all.yml` enthält keinen RCCO-Schritt
 
-**Reaktivierung:** Kontaktaufnahme mit rccar-online.de am 2026-06-28. Sobald Genehmigung vorliegt:
-1. RCCO-Schritt in `import-all.yml` wieder einkommentieren
-2. `import-rcco.yml` wiederherstellen
-3. `rcco-races.json` wird beim nächsten Import automatisch befüllt
+**Keine Reaktivierung** — rccar-online.de hat explizit abgesagt. RCCO-Code und Dateien bleiben im Repo als Archiv, werden aber nicht deployed oder ausgeführt.
 
 ### LRP Offroad Series — Status und Genehmigung
 **lrp.cc** betreibt eine eigene Rennserie (LRP Offroad Series) mit einem Veranstaltungskalender ähnlich wie RCK (wahrscheinlich PDF-basiert).
@@ -378,3 +412,4 @@ venue-seeds.json (manuell gepflegt, 283 Einträge)
 15. **Neue Workflows nur auf `main` triggern** — `workflow_dispatch`-Workflows müssen auf dem Default-Branch (`main`) liegen um über die GitHub API auslösbar zu sein. Neue Workflows daher immer auf beiden Branches commiten (`fetch-og-images.yml`, `check-osm-images.yml` als Beispiele).
 16. **Favoriten-Klick darf `renderList()` nicht aufrufen** — `renderList()` ruft immer `scrollTo(0,0)` auf. Stattdessen In-Place-Update: Bei Host-Favorit `.race-host` per `raceHostNameHtml(race)` neu bauen (damit Glocke erscheint/verschwindet). Bei Venue-Favorit nur Button- und Card-Klassen toggen. Ausnahme: `selectedFavoriteFilter === "favorites"` braucht Full-Re-Render.
 17. **`focusRace()` auto-wechselt Länderfilter** — wenn der Marker einer Venue nicht existiert (weil Länderfilter aktiv), wird `selectedCountry = "all"` gesetzt und `updateMarkers()` synchron aufgerufen, bevor auf die Venue gepannt wird. So funktioniert das Klicken auf Rennen aus einem anderem Land als dem aktuell gefilterten.
+18. **Icon-Konstanten müssen VOR `ONBOARDING_TIPS` definiert sein** — `ONBOARDING_TIPS` ist ein `const`-Array-Literal das `_bellIconSvg(...)` in seinem Initializer aufruft. `const` unterliegt der TDZ (Temporal Dead Zone): wird `_bellIconSvg` erst nach `ONBOARDING_TIPS` deklariert, wirft der Modul-Load sofort einen `ReferenceError` und die gesamte App bricht ab (keine Karte, keine Rennen). Reihenfolge: `_favIconSvg` → `_locateIconSvg` → `_bellIconSvg` → `ONBOARDING_TIPS`.

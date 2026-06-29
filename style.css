@@ -4107,3 +4107,161 @@ body.is-menu-open .app-menu-close {
   .race-date-row { padding: 20px 14px; }
   .race-list-row { padding: 9px 14px; }
 }
+
+/* ── Onboarding Tips ─────────────────────────────────────────────────── */
+.tip-card {
+  position: relative;
+  display: flex;
+  border-radius: 16px;
+  background: var(--status-upcoming);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  overflow: visible;
+}
+
+/* Arrow — same blue as card, no border → seamlessly integrated */
+.tip-card::after {
+  content: '';
+  position: absolute;
+  display: none;
+  background: var(--status-upcoming);
+}
+.tip-card[data-arrow="left-top"]::after {
+  display: block;
+  left: -10px;
+  top: 14px;
+  width: 10px;
+  height: 22px;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  background: color-mix(in srgb, var(--status-upcoming) 88%, black);
+}
+.tip-card[data-arrow="right"]::after {
+  display: block;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 22px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.tip-card[data-arrow="bottom-center"]::after {
+  display: block;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 10px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.tip-card[data-arrow="bottom-right"]::after {
+  display: block;
+  bottom: -9px;
+  right: 20px;
+  width: 22px;
+  height: 10px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* ---- Tip card animations ---- */
+@keyframes tip-enter-slide {
+  from { opacity: 0; translate: -14px 0; }
+  to   { opacity: 1; }
+}
+@keyframes tip-enter-scale {
+  from { opacity: 0; scale: 0.9; translate: 0 6px; }
+  to   { opacity: 1; }
+}
+@keyframes tip-enter-blur {
+  from { opacity: 0; filter: blur(8px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+@keyframes tip-exit-slide {
+  to { opacity: 0; translate: -14px 0; }
+}
+@keyframes tip-exit-scale {
+  to { opacity: 0; scale: 0.9; translate: 0 6px; }
+}
+@keyframes tip-exit-blur {
+  to { opacity: 0; filter: blur(8px); }
+}
+
+.tip-card[data-anim="slide"]       { animation: tip-enter-slide 280ms ease both; }
+.tip-card[data-anim="scale"]       { animation: tip-enter-scale 300ms cubic-bezier(0.34, 1.56, 0.64, 1) both; transform-origin: bottom center; }
+.tip-card[data-anim="blur"]        { animation: tip-enter-blur  280ms ease both; }
+.tip-card[data-anim="slide"].tip-exit { animation: tip-exit-slide 200ms ease both; pointer-events: none; }
+.tip-card[data-anim="scale"].tip-exit { animation: tip-exit-scale 180ms ease both; pointer-events: none; }
+.tip-card[data-anim="blur"].tip-exit  { animation: tip-exit-blur  200ms ease both; pointer-events: none; }
+
+.tip-illustration {
+  flex: 0 0 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 14px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+}
+.tip-illustration svg { width: 76px; height: 76px; }
+
+.tip-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 14px 40px 12px 14px;
+}
+
+.tip-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.tip-text {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+}
+.tip-text strong { font-weight: 700; color: #fff; }
+
+.tip-inline-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tip-dismiss {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 120ms;
+}
+.tip-dismiss:hover { background: rgba(255, 255, 255, 0.35); color: #fff; }
+
+.tip-counter {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+
+.tip-overlay {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+}

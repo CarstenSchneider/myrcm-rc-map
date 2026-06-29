@@ -327,11 +327,217 @@ const _favIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,5.6 L13.
 const _favIconSvg  = (cls = "favorite-toggle-icon") =>
   `<svg class="${cls}" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" pointer-events="none"><path fill-rule="evenodd" d="${_favIconPath}" fill="currentColor"/></svg>`;
 
-// Bell icon for notifications — circle + bell-body cutout, same fill-rule evenodd style as the star
-// Bell subpaths: body, clapper arc, top stem — all become cutouts inside the circle
+// Locate / crosshair icon (same as locate button)
+const _locateIconSvg = (cls = "tip-inline-icon") =>
+  `<svg class="${cls}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>`;
+
+// Bell icon (must be defined before ONBOARDING_TIPS which references it)
 const _bellIconPath = `M23,12 A11,11 0 1,1 1,12 A11,11 0 1,1 23,12 Z M12,6.5 C9.8,6.5 8,8.3 8,10.5 L8,14.5 L6.5,15.5 L17.5,15.5 L16,14.5 L16,10.5 C16,8.3 14.2,6.5 12,6.5 Z M10.2,15.5 C10.2,16.6 11,17.5 12,17.5 C13,17.5 13.8,16.6 13.8,15.5 Z M11,6.5 L11,6 C11,5.4 11.4,5 12,5 C12.6,5 13,5.4 13,6 L13,6.5 Z`;
 const _bellIconSvg = (cls = "notification-toggle-icon") =>
   `<svg class="${cls}" width="18" height="18" viewBox="1 1 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="${_bellIconPath}" fill="currentColor"/></svg>`;
+
+// --- Onboarding Tips ---
+// render types:
+//   "fixed-locate"    — fixed overlay right of locate button, top-aligned, arrow left-top
+//   "fixed-list-left" — desktop: left of first race card, arrow right; mobile: above drawer, arrow bottom-center
+//   "list-top"        — prepended to race list, arrow bottom-center → first card below
+const ONBOARDING_TIPS = [
+  {
+    render: "fixed-locate",
+    arrow: "left-top",
+    title: "Rennen in deiner Nähe.",
+    html: `Nutze ${_locateIconSvg()} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.`,
+    illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.79 540.3" aria-hidden="true"><g><path d="M261.52,286.32c-36.2,0-65.65-29.45-65.65-65.64s29.45-65.64,65.65-65.64,65.64,29.45,65.64,65.64-29.45,65.64-65.64,65.64ZM261.52,165.03c-30.68,0-55.65,24.96-55.65,55.64s24.96,55.64,55.65,55.64,55.64-24.96,55.64-55.64-24.96-55.64-55.64-55.64Z" fill="#fff"/><path d="M261.52,254.6c-18.7,0-33.92-15.22-33.92-33.92s15.22-33.92,33.92-33.92,33.92,15.22,33.92,33.92-15.22,33.92-33.92,33.92ZM261.52,196.76c-13.19,0-23.92,10.73-23.92,23.92s10.73,23.92,23.92,23.92,23.92-10.73,23.92-23.92-10.73-23.92-23.92-23.92Z" fill="#fff"/></g><g><circle cx="349.39" cy="58.73" r="46.06" fill="#fff"/><g><path d="M352.08,50.05v16.15c5.38-.73,10.77-1.45,16.15-1.63v-16.15c-5.38.18-10.77.91-16.15,1.63Z" fill="#5b75ab"/><path d="M407.51,58.12c0-32.1-26.02-58.12-58.12-58.12s-58.12,26.02-58.12,58.12c0,27.1,18.54,49.86,43.63,56.3l14.49,14.49,14.49-14.49c25.09-6.44,43.63-29.2,43.63-56.3ZM384.37,66.2c-5.38-1.45-10.77-1.82-16.15-1.63v16.15c-5.38.18-10.77.91-16.15,1.63v-16.15c-5.38.73-10.77,1.45-16.15,1.63v16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v-16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v16.15c5.38-.18,10.77-.91,16.15-1.63v-16.15c5.38-.73,10.77-1.45,16.15-1.63v16.15c5.38-.18,10.77.18,16.15,1.63v16.15Z" fill="#5b75ab"/></g></g><g><circle cx="83.69" cy="216.67" r="66.33" fill="#fff"/><g><path d="M87.56,204.18v23.25c7.75-1.05,15.5-2.09,23.25-2.35v-23.25c-7.75.26-15.5,1.31-23.25,2.35Z" fill="#435c95"/><path d="M167.39,215.8c0-46.22-37.47-83.69-83.69-83.69S0,169.58,0,215.8c0,39.02,26.7,71.8,62.83,81.07l20.86,20.86,20.86-20.86c36.13-9.27,62.83-42.05,62.83-81.07ZM134.07,227.43c-7.75-2.09-15.5-2.62-23.25-2.35v23.25c-7.75.26-15.5,1.31-23.25,2.35v-23.25c-7.75,1.05-15.5,2.09-23.25,2.35v23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v-23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v23.25c7.75-.26,15.5-1.31,23.25-2.35v-23.25c7.75-1.05,15.5-2.09,23.25-2.35v23.25c7.75-.26,15.5.26,23.25,2.35v23.25Z" fill="#435c95"/></g></g><g><circle cx="339.64" cy="380.72" r="104.74" fill="#fff"/><g><path d="M345.74,360.99v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M471.79,379.35c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM419.17,397.7c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
+  },
+  {
+    render: "fixed-list-left",
+    title: "Alles auf einen Blick.",
+    html: `Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.`,
+    illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454.5 520.62" aria-hidden="true"><path d="M102.27,0C45.79,0,0,45.79,0,102.27c0,47.68,32.63,87.74,76.77,99.06l25.5,25.5,25.5-25.5c44.15-11.33,76.77-51.39,76.77-99.06C204.54,45.79,158.75,0,102.27,0Z" fill="#fff" opacity=".35"/><path d="M156.37,321.69c-32.59,0-59.1-26.51-59.1-59.1,0-2.76,2.24-5,5-5s5,2.24,5,5c0,27.08,22.03,49.1,49.1,49.1,2.76,0,5,2.24,5,5s-2.24,5-5,5Z" fill="#fff" opacity=".35"/><g><circle cx="322.35" cy="361.03" r="104.74" fill="#fff"/><g><path d="M328.46,341.3v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M454.5,359.66c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM401.89,378.02c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
+  },
+  {
+    render: "list-top",
+    arrow: "bottom-right",
+    mobileFull: true,
+    title: "Kein Rennen verpassen.",
+    html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
+    illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.77 456.77" aria-hidden="true"><path d="M342.77,257.42l-120.13,94.84,117.94,94.38c1.39-2.62,2.19-5.62,2.19-8.78v-180.44ZM183.29,345.18c-6.95-5.56-16.85-5.56-23.8,0L20.01,456.77h302.76l-139.48-111.6ZM183.19,118.07c-6.92-5.43-16.7-5.43-23.62,0L7.23,237.8c-.24.17-.46.35-.67.54l128.84,101.72,12.2-9.74c13.91-11.14,33.68-11.14,47.57,0l12.2,9.74,128.84-101.72c-.22-.19-.43-.37-.67-.54l-152.34-119.72ZM0,437.86c0,3.16.8,6.16,2.18,8.78l117.96-94.36L0,257.42v180.44Z" fill="#fff"/><g><circle cx="171.39" cy="131.67" r="103.29" fill="#fff"/><g><path d="M177.41,112.22v36.21c12.07-1.63,24.14-3.26,36.21-3.67v-36.21c-12.07.41-24.14,2.04-36.21,3.67Z" fill="#21386a"/><path d="M301.71,130.32C301.71,58.35,243.36,0,171.39,0S41.07,58.35,41.07,130.32c0,60.76,41.58,111.8,97.83,126.24l32.49,32.49,32.49-32.49c56.25-14.44,97.83-65.48,97.83-126.24ZM249.82,148.42c-12.07-3.26-24.14-4.07-36.21-3.67v36.21c-12.07.41-24.14,2.04-36.21,3.67v-36.21c-12.07,1.63-24.14,3.26-36.21,3.67v36.21c-12.07.41-24.14-.41-36.21-3.67v-36.21c12.07,3.26,24.14,4.07,36.21,3.67v-36.21c-12.07.41-24.14-.41-36.21-3.67v-36.21c12.07,3.26,24.14,4.07,36.21,3.67v36.21c12.07-.41,24.14-2.04,36.21-3.67v-36.21c12.07-1.63,24.14-3.26,36.21-3.67v36.21c12.07-.41,24.14.41,36.21,3.67v36.21Z" fill="#21386a"/></g></g></svg>`,
+  },
+];
+
+function _tipIndex() {
+  const raw = parseInt(localStorage.getItem("rcRaceMapTipIndex") || "0", 10);
+  return isNaN(raw) ? 0 : raw;
+}
+
+function _currentTip() {
+  const idx = _tipIndex();
+  const tip = ONBOARDING_TIPS[idx];
+  return tip ? { ...tip, idx } : null;
+}
+
+function _buildTipCardEl(tip) {
+  if (!tip) return null;
+  const el = document.createElement("aside");
+  el.className = "tip-card";
+  el.setAttribute("role", "note");
+  if (tip.arrow) el.dataset.arrow = tip.arrow;
+  el.dataset.anim = ["slide", "scale", "blur"][tip.idx] ?? "slide";
+  el.innerHTML = `
+    <div class="tip-illustration" aria-hidden="true">${tip.illustration || ""}</div>
+    <div class="tip-body">
+      <span class="tip-title">${tip.title}</span>
+      <span class="tip-text">${tip.html}</span>
+      <span class="tip-counter">Tipp ${tip.idx + 1} von ${ONBOARDING_TIPS.length}</span>
+    </div>
+    <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
+  `;
+  return el;
+}
+
+let _tipOverlayEl = null;
+let _tipResizeTimer = null;
+
+function _positionTipEl(el, tip) {
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+
+  // Set consistent width
+  if (isMobile) {
+    // Mobile: ~65% of screen width — narrower than race card (innerWidth-24), tip 1 fits right of locate button
+    const mobileW = Math.max(Math.round(window.innerWidth * 0.65), 180);
+    el.style.width = `${mobileW}px`;
+  } else {
+    // Desktop: match race card width; fall back to panel width minus padding when list not yet rendered
+    const firstCard = raceList.querySelector(".race-card");
+    const panelEl = document.querySelector(".race-panel");
+    const w = firstCard
+      ? Math.round(firstCard.getBoundingClientRect().width)
+      : panelEl
+        ? Math.round(panelEl.getBoundingClientRect().width) - 44
+        : 346;
+    el.style.width = `${w}px`;
+  }
+
+  const tipW = el.offsetWidth || 300;
+  let positioned = false;
+
+  if (tip.render === "fixed-locate" && _locateBtn) {
+    const r = _locateBtn.getBoundingClientRect();
+    if (r.width > 0 || r.height > 0) {
+      if (isMobile) {
+        // Position to the RIGHT of the locate button, top-aligned with it
+        el.style.left = `${Math.round(r.right + 20)}px`;
+        el.style.top = `${Math.round(r.top)}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "";
+        el.dataset.arrow = "left-top";
+      } else {
+        el.style.left = `${Math.min(r.right + 18, window.innerWidth - tipW - 8)}px`;
+        el.style.top = `${r.top}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "";
+      }
+      positioned = true;
+    }
+  } else if (tip.render === "fixed-list-left") {
+    if (isMobile) {
+      const drawerEl = document.getElementById("mobDrawer");
+      const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
+      // Center horizontally using same width computed above
+      el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
+      el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
+      el.style.transform = "";
+      el.style.transformOrigin = "bottom center";
+      el.dataset.arrow = "bottom-center";
+      positioned = true;
+    } else {
+      const panelEl = document.querySelector(".race-panel");
+      const firstCard = raceList.querySelector(".race-card");
+      if (panelEl || firstCard) {
+        const panelR = (panelEl || firstCard).getBoundingClientRect();
+        const cardR = (firstCard || panelEl).getBoundingClientRect();
+        el.style.left = `${Math.max(8, panelR.left - tipW - 16)}px`;
+        el.style.top = `${cardR.top}px`;
+        el.style.transform = "";
+        el.style.transformOrigin = "right center";
+        el.dataset.arrow = "right";
+        positioned = true;
+      }
+    }
+  }
+
+  if (!positioned) {
+    const mapEl = document.getElementById("map");
+    if (mapEl) {
+      const r = mapEl.getBoundingClientRect();
+      el.style.left = `${r.left + r.width / 2}px`;
+      el.style.top = `${r.top + r.height / 2}px`;
+    } else {
+      el.style.left = "50%";
+      el.style.top = "40%";
+    }
+    el.style.transform = "translate(-50%, -50%)";
+  }
+}
+
+function _renderTipOverlay() {
+  const tip = _currentTip();
+  if (!tip || !tip.render.startsWith("fixed-")) return;
+  _clearTipOverlay();
+
+  const el = _buildTipCardEl(tip);
+  el.classList.add("tip-overlay");
+  el.style.position = "fixed";
+  el.style.zIndex = "1050";
+  // Default: center on screen — visible immediately; rAF refines to exact position
+  el.style.top = "40%";
+  el.style.left = "50%";
+  el.style.transform = "translate(-50%, -50%)";
+  document.body.appendChild(el);
+  _tipOverlayEl = el;
+
+  requestAnimationFrame(() => _positionTipEl(el, tip));
+}
+
+function _clearTipOverlay() {
+  if (_tipOverlayEl) {
+    _tipOverlayEl.remove();
+    _tipOverlayEl = null;
+  }
+}
+
+function _dismissTip() {
+  const nextIdx = _tipIndex() + 1;
+  localStorage.setItem("rcRaceMapTipIndex", String(nextIdx));
+  const nextTip = _currentTip();
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+
+  const currentEls = [...document.querySelectorAll(".tip-card:not(.tip-exit)")];
+
+  let proceeded = false;
+  const proceed = () => {
+    if (proceeded) return;
+    proceeded = true;
+    _clearTipOverlay();
+    document.querySelectorAll(".tip-card").forEach(el => el.remove());
+    if (!nextTip) return;
+    if (nextTip.render === "list-top") {
+      if (nextTip.mobileFull && isMobile) setDrawerState("full");
+      renderList(filteredRaces());
+    } else {
+      _renderTipOverlay();
+    }
+  };
+
+  if (!currentEls.length) { proceed(); return; }
+  let done = 0;
+  currentEls.forEach(el => {
+    el.classList.add("tip-exit");
+    el.addEventListener("animationend", () => { if (++done === currentEls.length) proceed(); }, { once: true });
+  });
+  setTimeout(proceed, 400); // safety fallback if animationend never fires
+}
+// --- End Onboarding Tips ---
 
 // Based on racemap_icon.svg: the lower layer is white for favorites, transparent otherwise; the top colour layer gets the marker state color.
 function raceMapMarkerSvgDataUri(color, width, height, bgColor = "transparent") {
@@ -3604,15 +3810,26 @@ function renderList(list) {
   resultLine.textContent = resultLineText(list.length);
   raceList.innerHTML = "";
 
+  // Onboarding tip: list-top goes first; fixed tips are rendered as body overlays
+  const _tip = _currentTip();
+  if (_tip?.render === "list-top") {
+    const tipEl = _buildTipCardEl(_tip);
+    if (tipEl) raceList.appendChild(tipEl);
+  } else if (_tip?.render?.startsWith("fixed-") && !_tipOverlayEl) {
+    // Only show immediately if map is already revealed (e.g. dismiss → next tip).
+    // On initial load revealMap() triggers the tip after the UI is fully visible.
+    if (document.body.classList.contains("map-is-ready")) requestAnimationFrame(_renderTipOverlay);
+  }
+
   if (!list.length) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
-    if (_geocodePending) {
-      raceList.innerHTML = `<div class="empty-state">Suche…</div>`;
-      return;
-    }
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen für diesen Filter gefunden.</div>`;
+    const emptyEl = document.createElement("div");
+    emptyEl.className = "empty-state";
+    emptyEl.textContent = _geocodePending ? "Suche…" : "Keine Rennen für diesen Filter gefunden.";
+    raceList.appendChild(emptyEl);
     return;
   }
+
 
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
@@ -3732,6 +3949,11 @@ function toggleClassList(raceId) {
 }
 
 document.addEventListener("click", event => {
+  if (event.target.closest("[data-tip-dismiss]")) {
+    _dismissTip();
+    return;
+  }
+
   const notificationHostButton = event.target.closest("[data-notification-host-id]");
   const favoriteVenueButton = event.target.closest("[data-favorite-venue-id]");
   const favoriteHostButton = event.target.closest("[data-favorite-host-id]");
@@ -3955,6 +4177,11 @@ function revealMap() {
   document.querySelector(".map-loader")?.classList.add("map-loader-done");
   // Fade pins in after map fade-in completes (220ms transition + small buffer)
   setTimeout(() => mapEl.classList.add("map-markers-ready"), 320);
+  // Show fixed onboarding tips after UI is fully revealed (animate in last)
+  setTimeout(() => {
+    const tip = _currentTip();
+    if (tip?.render?.startsWith("fixed-") && !_tipOverlayEl) _renderTipOverlay();
+  }, 550);
 }
 
 function revealMapWhenReady() {
@@ -4294,6 +4521,10 @@ window.addEventListener("resize", () => {
     requestAnimationFrame(() => {
       positionCountryPillDesktop();
       document.body.classList.remove("is-breakpoint-crossing");
+      if (_tipOverlayEl) {
+        const tip = _currentTip();
+        if (tip) _positionTipEl(_tipOverlayEl, tip);
+      }
     });
     if (!lastVisibleCenter) return;
     if (isMobile && !crossedBreakpoint) return;

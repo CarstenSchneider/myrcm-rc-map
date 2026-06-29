@@ -26,6 +26,9 @@ jobs:
           cp races.json .deploy-site/
           cp rck-races.json .deploy-site/
           cp dmc-races.json .deploy-site/
+          cp dmc-venues.json .deploy-site/ 2>/dev/null || true
+          cp myrcm-hosts-dach.json .deploy-site/ 2>/dev/null || true
+          # rcco-races.json + rcco-venues.json: dauerhaft nicht deployed — rccar-online.de hat abgesagt (2026-06-29)
           cp venues.json .deploy-site/
           cp hosts.json .deploy-site/
           cp series.json .deploy-site/
