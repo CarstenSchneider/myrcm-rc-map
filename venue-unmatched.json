@@ -1,1 +1,722 @@
-[]
+[
+  {
+    "hostId": "bugg-ittre-racing",
+    "hostName": "Bugg'ittre Racing",
+    "source": "myrcm",
+    "myrcmOrgId": "31752",
+    "possibleVenue": "Ittre",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "buggy-club-indoor-charleroi-asbl",
+    "hostName": "Buggy Club Indoor Charleroi ASBL",
+    "source": "myrcm",
+    "myrcmOrgId": "743",
+    "possibleVenue": "Lodelinsart",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "buggy-racing-bauffe-club",
+    "hostName": "Buggy Racing Bauffe Club",
+    "source": "myrcm",
+    "myrcmOrgId": "17680",
+    "possibleVenue": "Hornu",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "buggy-rc-bauffe-a-s-b-l",
+    "hostName": "Buggy RC Bauffe a.s.b.l",
+    "source": "myrcm",
+    "myrcmOrgId": "62332",
+    "possibleVenue": "Quaregnon",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "ezracing",
+    "hostName": "EZracing",
+    "source": "myrcm",
+    "myrcmOrgId": "10434",
+    "possibleVenue": "Brecht",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "fba-vzw",
+    "hostName": "FBA vzw",
+    "source": "myrcm",
+    "myrcmOrgId": "38144",
+    "possibleVenue": "Begijnendijk",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "flatout-rc-vzw",
+    "hostName": "FlatOut RC VZW",
+    "source": "myrcm",
+    "myrcmOrgId": "739",
+    "possibleVenue": "Oud-Turnhout",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "fsr-vrienden",
+    "hostName": "FSR vrienden",
+    "source": "myrcm",
+    "myrcmOrgId": "21320",
+    "possibleVenue": "Alveringem",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "gtm-rc-club",
+    "hostName": "GTM RC Club",
+    "source": "myrcm",
+    "myrcmOrgId": "11676",
+    "possibleVenue": "Vosselaar",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "houthalens-racing-team",
+    "hostName": "Houthalens Racing Team",
+    "source": "myrcm",
+    "myrcmOrgId": "65",
+    "possibleVenue": "Houthalen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "hulshout-offroad-racing",
+    "hostName": "Hulshout Offroad Racing",
+    "source": "myrcm",
+    "myrcmOrgId": "50130",
+    "possibleVenue": "Hulshout",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "indoor-offroad-turnhout",
+    "hostName": "Indoor Offroad Turnhout",
+    "source": "myrcm",
+    "myrcmOrgId": "59433",
+    "possibleVenue": "Turnhout",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "just4fun-rc-beerse",
+    "hostName": "Just4Fun-RC Beerse",
+    "source": "myrcm",
+    "myrcmOrgId": "29722",
+    "possibleVenue": "Beerse",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mbrc",
+    "hostName": "MBRC",
+    "source": "myrcm",
+    "myrcmOrgId": "1176",
+    "possibleVenue": "vedrin",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mbv-kampenhout-vzw",
+    "hostName": "MBV Kampenhout vzw",
+    "source": "myrcm",
+    "myrcmOrgId": "51913",
+    "possibleVenue": "Muizen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mini-racing-car-liege",
+    "hostName": "Mini Racing Car Liège",
+    "source": "myrcm",
+    "myrcmOrgId": "9668",
+    "possibleVenue": "Grâce-Hollogne",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-race-genk-vzw",
+    "hostName": "Model Race Genk vzw",
+    "source": "myrcm",
+    "myrcmOrgId": "3291",
+    "possibleVenue": "Genk",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "modelifun2-0",
+    "hostName": "Modelifun2.0",
+    "source": "myrcm",
+    "myrcmOrgId": "2641",
+    "possibleVenue": "Wanfercée-Baulet",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mrcc",
+    "hostName": "MRCC",
+    "source": "myrcm",
+    "myrcmOrgId": "290",
+    "possibleVenue": "Chatelineau",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mrch",
+    "hostName": "MRCH",
+    "source": "myrcm",
+    "myrcmOrgId": "172",
+    "possibleVenue": "Ghlin",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mrcz-vzw",
+    "hostName": "MRCZ vzw",
+    "source": "myrcm",
+    "myrcmOrgId": "2571",
+    "possibleVenue": "Zwevegem",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "orra",
+    "hostName": "Orra",
+    "source": "myrcm",
+    "myrcmOrgId": "55554",
+    "possibleVenue": "Oud-Turnhout",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "orrt-off-road-rc-racing-torhout",
+    "hostName": "ORRT Off Road RC Racing Torhout",
+    "source": "myrcm",
+    "myrcmOrgId": "31749",
+    "possibleVenue": "Torhout",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "racing-club-roeselare",
+    "hostName": "Racing Club Roeselare",
+    "source": "myrcm",
+    "myrcmOrgId": "76",
+    "possibleVenue": "Roeselare",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-electro-liege",
+    "hostName": "RC ELECTRO LIEGE",
+    "source": "myrcm",
+    "myrcmOrgId": "11201",
+    "possibleVenue": "Chaineux",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-racing-circuit-zolder",
+    "hostName": "RC Racing Circuit Zolder",
+    "source": "myrcm",
+    "myrcmOrgId": "20089",
+    "possibleVenue": "Geetbets",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-speedhouse",
+    "hostName": "RC-Speedhouse",
+    "source": "myrcm",
+    "myrcmOrgId": "15431",
+    "possibleVenue": "",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rctr",
+    "hostName": "RCTR",
+    "source": "myrcm",
+    "myrcmOrgId": "59322",
+    "possibleVenue": "Wevelgem",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "screen-factyory-sprl",
+    "hostName": "Screen Factyory sprl",
+    "source": "myrcm",
+    "myrcmOrgId": "17458",
+    "possibleVenue": "SERAING",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "tamiyacup-belgium",
+    "hostName": "Tamiyacup Belgium",
+    "source": "myrcm",
+    "myrcmOrgId": "35896",
+    "possibleVenue": "Nieuwrode",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "tt-fays",
+    "hostName": "TT Fays",
+    "source": "myrcm",
+    "myrcmOrgId": "22085",
+    "possibleVenue": "Fays",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "velocitatem",
+    "hostName": "Velocitatem",
+    "source": "myrcm",
+    "myrcmOrgId": "29462",
+    "possibleVenue": "Izegem",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "westhoek-racing",
+    "hostName": "Westhoek Racing",
+    "source": "myrcm",
+    "myrcmOrgId": "51743",
+    "possibleVenue": "Poperinge",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "yellowracing-v2-0",
+    "hostName": "Yellowracing V2.0",
+    "source": "myrcm",
+    "myrcmOrgId": "41053",
+    "possibleVenue": "Rekkem",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "flamrc",
+    "hostName": "FLAMRC",
+    "source": "myrcm",
+    "myrcmOrgId": "73",
+    "possibleVenue": "Niederfeulen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "lmcc",
+    "hostName": "LMCC",
+    "source": "myrcm",
+    "myrcmOrgId": "51",
+    "possibleVenue": "Steinfort",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "r-c-car-mertzig-asbl",
+    "hostName": "R/C CAR MERTZIG ASBL",
+    "source": "myrcm",
+    "myrcmOrgId": "112",
+    "possibleVenue": "Vichten",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rcamc",
+    "hostName": "RCAMC",
+    "source": "myrcm",
+    "myrcmOrgId": "45",
+    "possibleVenue": "Esch / Alzette",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "smbm",
+    "hostName": "SMBM",
+    "source": "myrcm",
+    "myrcmOrgId": "44",
+    "possibleVenue": "Bissen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "urbing-rol",
+    "hostName": "Urbing Rol",
+    "source": "myrcm",
+    "myrcmOrgId": "15",
+    "possibleVenue": "Dudelange",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "amca-apeldoorn",
+    "hostName": "AMCA-Apeldoorn",
+    "source": "myrcm",
+    "myrcmOrgId": "7762",
+    "possibleVenue": "Apeldoorn",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "dutch-rc-series",
+    "hostName": "Dutch RC Series",
+    "source": "myrcm",
+    "myrcmOrgId": "28115",
+    "possibleVenue": "Zeewolde",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "dutch-rc-timekeeping",
+    "hostName": "Dutch RC TimeKeeping",
+    "source": "myrcm",
+    "myrcmOrgId": "1980",
+    "possibleVenue": "Oss",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "erce",
+    "hostName": "ERCE",
+    "source": "myrcm",
+    "myrcmOrgId": "3350",
+    "possibleVenue": "Eindhoven",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "evmc-velp",
+    "hostName": "EVMC Velp",
+    "source": "myrcm",
+    "myrcmOrgId": "10817",
+    "possibleVenue": "Renkum",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "h-m-r-c",
+    "hostName": "H.M.R.C.",
+    "source": "myrcm",
+    "myrcmOrgId": "7059",
+    "possibleVenue": "Den Helder",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "hfcc-racing-den-haag",
+    "hostName": "HFCC Racing Den Haag",
+    "source": "myrcm",
+    "myrcmOrgId": "14156",
+    "possibleVenue": "Den Haag",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "hugo-rc-timing-nl",
+    "hostName": "Hugo - RC-Timing.nl",
+    "source": "myrcm",
+    "myrcmOrgId": "2824",
+    "possibleVenue": "Zeewolde",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "instantrc",
+    "hostName": "InstantRC",
+    "source": "myrcm",
+    "myrcmOrgId": "53360",
+    "possibleVenue": "Rijswijk",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "jerome-grimminck",
+    "hostName": "Jerome Grimminck",
+    "source": "myrcm",
+    "myrcmOrgId": "2825",
+    "possibleVenue": "Utrecht",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "m-auto",
+    "hostName": "M-Auto",
+    "source": "myrcm",
+    "myrcmOrgId": "208",
+    "possibleVenue": "Lelystad",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "m-a-c-de-baanbrekers",
+    "hostName": "M.A.C. de Baanbrekers",
+    "source": "myrcm",
+    "myrcmOrgId": "12027",
+    "possibleVenue": "Rucphen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "m-a-c-h-one",
+    "hostName": "M.A.C.H.-One",
+    "source": "myrcm",
+    "myrcmOrgId": "33841",
+    "possibleVenue": "Helmond",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mac-de-kempen",
+    "hostName": "MAC de Kempen",
+    "source": "myrcm",
+    "myrcmOrgId": "32715",
+    "possibleVenue": "Duizel",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mac-vlijmen",
+    "hostName": "MAC Vlijmen",
+    "source": "myrcm",
+    "myrcmOrgId": "30724",
+    "possibleVenue": "Den Haag",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "main-meetings-raalte",
+    "hostName": "Main Meetings Raalte",
+    "source": "myrcm",
+    "myrcmOrgId": "23785",
+    "possibleVenue": "Elst",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mbc-de-sluis-gouda",
+    "hostName": "MBC de Sluis Gouda",
+    "source": "myrcm",
+    "myrcmOrgId": "4842",
+    "possibleVenue": "Gouda",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mbc-het-gelders-eiland-lobith",
+    "hostName": "MBC Het Gelders Eiland Lobith",
+    "source": "myrcm",
+    "myrcmOrgId": "3214",
+    "possibleVenue": "Pannerden",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mbs-racing-geulle-limburg",
+    "hostName": "MBS-RACING GEULLE - LIMBURG",
+    "source": "myrcm",
+    "myrcmOrgId": "279",
+    "possibleVenue": "Geulle",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mini-zshop-nl",
+    "hostName": "Mini-zshop.nl",
+    "source": "myrcm",
+    "myrcmOrgId": "44133",
+    "possibleVenue": "Wolvega",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "moatn-rc-bmc",
+    "hostName": "Moatn / RC-BMC",
+    "source": "myrcm",
+    "myrcmOrgId": "3498",
+    "possibleVenue": "Zuidveen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-auto-club-friesland",
+    "hostName": "Model Auto Club Friesland",
+    "source": "myrcm",
+    "myrcmOrgId": "3337",
+    "possibleVenue": "Marrum",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-auto-club-heemstede",
+    "hostName": "Model Auto Club Heemstede",
+    "source": "myrcm",
+    "myrcmOrgId": "75",
+    "possibleVenue": "Heemstede",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-race-club-zeeland",
+    "hostName": "Model Race Club Zeeland",
+    "source": "myrcm",
+    "myrcmOrgId": "14783",
+    "possibleVenue": "Vlissingen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-racing-almere",
+    "hostName": "Model Racing Almere",
+    "source": "myrcm",
+    "myrcmOrgId": "3213",
+    "possibleVenue": "Almere-Haven",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-racing-club-real80",
+    "hostName": "Model Racing Club Real80",
+    "source": "myrcm",
+    "myrcmOrgId": "104",
+    "possibleVenue": "Groningen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-racing-midland",
+    "hostName": "Model Racing Midland",
+    "source": "myrcm",
+    "myrcmOrgId": "19047",
+    "possibleVenue": "Almere",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "model-stockcar-club-rosmalen",
+    "hostName": "Model Stockcar Club Rosmalen",
+    "source": "myrcm",
+    "myrcmOrgId": "4289",
+    "possibleVenue": "Rosmalen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "modelbouw-vereniging-waterland",
+    "hostName": "Modelbouw Vereniging Waterland",
+    "source": "myrcm",
+    "myrcmOrgId": "439",
+    "possibleVenue": "Purmerend",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "modelsport-vereniging-bergschenhoek",
+    "hostName": "Modelsport Vereniging Bergschenhoek",
+    "source": "myrcm",
+    "myrcmOrgId": "3200",
+    "possibleVenue": "Rotterdam",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "modelstockcar-club-s-r-p-de-peeldrivers",
+    "hostName": "Modelstockcar club S.R.P De Peeldrivers",
+    "source": "myrcm",
+    "myrcmOrgId": "3215",
+    "possibleVenue": "Venray / Ysselsteyn",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mrc-vianen",
+    "hostName": "MRC Vianen",
+    "source": "myrcm",
+    "myrcmOrgId": "18560",
+    "possibleVenue": "Alphen",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "mylaps-sports-timing",
+    "hostName": "MyLAPS Sports Timing",
+    "source": "myrcm",
+    "myrcmOrgId": "220",
+    "possibleVenue": "PJ Haarlem",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "nomac",
+    "hostName": "NOMAC",
+    "source": "myrcm",
+    "myrcmOrgId": "53339",
+    "possibleVenue": "De Meern",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "orcf",
+    "hostName": "ORCF",
+    "source": "myrcm",
+    "myrcmOrgId": "386",
+    "possibleVenue": "Grou",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "racing-arena-limburg",
+    "hostName": "Racing Arena Limburg",
+    "source": "myrcm",
+    "myrcmOrgId": "24678",
+    "possibleVenue": "BD Brunssum",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "raco-2000",
+    "hostName": "RACO 2000",
+    "source": "myrcm",
+    "myrcmOrgId": "5305",
+    "possibleVenue": "Utrecht",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-club-euregio",
+    "hostName": "RC Club Euregio",
+    "source": "myrcm",
+    "myrcmOrgId": "22282",
+    "possibleVenue": "Hengelo",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-club-zoetermeer",
+    "hostName": "RC Club Zoetermeer",
+    "source": "myrcm",
+    "myrcmOrgId": "34977",
+    "possibleVenue": "Zoetermeer",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-de-fivelcrossers",
+    "hostName": "RC de Fivelcrossers",
+    "source": "myrcm",
+    "myrcmOrgId": "18663",
+    "possibleVenue": "Delfzijl",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-hotwheels",
+    "hostName": "RC Hotwheels",
+    "source": "myrcm",
+    "myrcmOrgId": "3074",
+    "possibleVenue": "Deventer",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-indoor-bleiswijk",
+    "hostName": "RC Indoor Bleiswijk",
+    "source": "myrcm",
+    "myrcmOrgId": "47757",
+    "possibleVenue": "DEN HAAG",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-paradise",
+    "hostName": "RC Paradise",
+    "source": "myrcm",
+    "myrcmOrgId": "15785",
+    "possibleVenue": "Uithoorn",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-racing-texel",
+    "hostName": "RC Racing Texel",
+    "source": "myrcm",
+    "myrcmOrgId": "32659",
+    "possibleVenue": "Den Burg",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-rto",
+    "hostName": "Rc RTO",
+    "source": "myrcm",
+    "myrcmOrgId": "14282",
+    "possibleVenue": "oldebroek",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rc-speedway-grou",
+    "hostName": "Rc Speedway Grou",
+    "source": "myrcm",
+    "myrcmOrgId": "29242",
+    "possibleVenue": "Sint Jacobiparochie",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "rcrace-nl",
+    "hostName": "RCrace.nl",
+    "source": "myrcm",
+    "myrcmOrgId": "3398",
+    "possibleVenue": "Blaricum",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "speedway-tilburg",
+    "hostName": "Speedway-Tilburg",
+    "source": "myrcm",
+    "myrcmOrgId": "56820",
+    "possibleVenue": "Tilburg",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "tamiya-cup-nl",
+    "hostName": "Tamiya Cup NL",
+    "source": "myrcm",
+    "myrcmOrgId": "33479",
+    "possibleVenue": "Rotterdam",
+    "reason": "no venue seed"
+  },
+  {
+    "hostId": "telling-rc",
+    "hostName": "telling .rc",
+    "source": "myrcm",
+    "myrcmOrgId": "419",
+    "possibleVenue": "Vriezenveen",
+    "reason": "no venue seed"
+  }
+]
