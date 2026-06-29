@@ -371,7 +371,7 @@ function _tipIndex() {
 }
 
 function _currentTip() {
-  const idx = _tipIndex() % ONBOARDING_TIPS.length;
+  const idx = _tipIndex();
   const tip = ONBOARDING_TIPS[idx];
   return tip ? { ...tip, idx } : null;
 }
@@ -388,7 +388,7 @@ function _buildTipCardEl(tip) {
     <div class="tip-body">
       <span class="tip-title">${tip.title}</span>
       <span class="tip-text">${tip.html}</span>
-      <span class="tip-counter">${tip.idx + 1} / ${ONBOARDING_TIPS.length}</span>
+      <span class="tip-counter">Tipp ${tip.idx + 1} von ${ONBOARDING_TIPS.length}</span>
     </div>
     <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
   `;
@@ -507,7 +507,7 @@ function _clearTipOverlay() {
 }
 
 function _dismissTip() {
-  const nextIdx = (_tipIndex() + 1) % ONBOARDING_TIPS.length; // cycles for testing
+  const nextIdx = _tipIndex() + 1;
   localStorage.setItem("rcRaceMapTipIndex", String(nextIdx));
   const nextTip = _currentTip();
   const isMobile = window.matchMedia("(max-width: 860px)").matches;

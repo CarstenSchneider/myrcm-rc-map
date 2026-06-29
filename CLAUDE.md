@@ -110,7 +110,7 @@ let selectedCountry = "all"; // | "DE" | "AT" | "CH"
 - `renderVenueNoRaces(latestPastRace)` — zeigt Zuletzt-Karte wenn Strecke ausgewählt aber keine Rennen
 
 ### Onboarding Tips
-Erstbesucher sehen drei Tips, die sich beim Schließen nacheinander zeigen (zyklisch für Testzwecke).
+Erstbesucher sehen drei Tips, die sich beim Schließen nacheinander zeigen. Jeder Tip wird nur einmal gezeigt.
 
 ```js
 const ONBOARDING_TIPS = [
@@ -125,7 +125,7 @@ const ONBOARDING_TIPS = [
 - `"list-second"` — nach der ersten Rennkarte eingefügt (`_listSecondInserted`-Flag)
 - `"fixed-map"` — `position:fixed` Overlay, zentriert auf `#map` via `getBoundingClientRect` + `transform: translate(-50%, -50%)`
 
-**State:** `localStorage("rcRaceMapTipIndex")` — Index des aktuellen Tips. `_dismissTip()` inkrementiert modulo Anzahl Tips (zyklisch). Sobald alle gezeigt wurden und Index = Anzahl Tips, wird kein Tip mehr gezeigt (sobald Zyklus entfernt wird).
+**State:** `localStorage("rcRaceMapTipIndex")` — Index des aktuellen Tips. `_dismissTip()` inkrementiert ohne Modulo. Sobald alle gezeigt wurden und Index = Anzahl Tips, wird kein Tip mehr angezeigt.
 
 **DOM:**
 - `_buildTipCardEl(tip)` — erstellt `<aside class="tip-card">` mit Grid-Layout:
