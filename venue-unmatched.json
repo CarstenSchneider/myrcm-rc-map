@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "bugg-ittre-racing",
-    "hostName": "Bugg'ittre Racing",
-    "source": "myrcm",
-    "myrcmOrgId": "31752",
-    "possibleVenue": "Ittre",
-    "reason": "no venue seed"
-  },
-  {
     "hostId": "buggy-club-indoor-charleroi-asbl",
     "hostName": "Buggy Club Indoor Charleroi ASBL",
     "source": "myrcm",
