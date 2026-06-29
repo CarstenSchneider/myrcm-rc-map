@@ -61,7 +61,7 @@ serve(async (req) => {
     if (!githubPat) return new Response("GITHUB_PAT not configured", { status: 500, headers: CORS });
 
     const body = await req.json();
-    const { action, hostId, hostName, myrcmOrgId, lat, lng, seedId, seedName } = body;
+    const { action, hostId, hostName, myrcmOrgId, lat, lng, seedId, seedName, venueId } = body;
 
     const gh: Record<string, string> = {
       "Authorization": `Bearer ${githubPat}`,
@@ -91,10 +91,39 @@ serve(async (req) => {
       }
 
       if (action === "delete-dach-seed") {
-        const idx = seeds.findIndex((s: any) => s.id === seedId);
+        // Find by id or hostId (locationUnknown entries added via mark-unknown use hostId)
+        const idx = seeds.findIndex((s: any) => s.id === seedId || s.hostId === seedId);
         if (idx < 0) continue;
         seeds.splice(idx, 1);
-        await putFile(SEEDS_PATH, seeds, `admin: delete inactive seed ${seedName}`, branch, seedsState.sha, gh);
+        await putFile(SEEDS_PATH, seeds, `admin: delete seed ${seedName || seedId}`, branch, seedsState.sha, gh);
+        continue;
+      }
+
+      if (action === "link-to-venue") {
+        const idx = seeds.findIndex((s: any) => (s.id || s.hostId) === venueId);
+        if (idx < 0) {
+          return new Response(`Venue not found: ${venueId}`, { status: 404, headers: CORS });
+        }
+        const seed = seeds[idx];
+        const existingHostIds: string[] = Array.isArray(seed.hostIds) ? seed.hostIds : [];
+        if (!existingHostIds.includes(hostId)) {
+          seeds[idx] = { ...seed, hostIds: [...existingHostIds, hostId] };
+          await putFile(SEEDS_PATH, seeds, `admin: link ${hostName} → ${venueId}`, branch, seedsState.sha, gh);
+        }
+        const unmatchedState = await fetchFile(UNMATCHED_PATH, branch, gh);
+        if (unmatchedState) {
+          const newUnmatched = unmatchedState.data.filter((u: any) => u.hostId !== hostId);
+          await putFile(UNMATCHED_PATH, newUnmatched, `admin: remove ${hostName} from unmatched`, branch, unmatchedState.sha, gh);
+        }
+        continue;
+      }
+
+      if (action === "delete-unmatched") {
+        const unmatchedState = await fetchFile(UNMATCHED_PATH, branch, gh);
+        if (unmatchedState) {
+          const newUnmatched = unmatchedState.data.filter((u: any) => u.hostId !== hostId);
+          await putFile(UNMATCHED_PATH, newUnmatched, `admin: delete ${hostName} from unmatched`, branch, unmatchedState.sha, gh);
+        }
         continue;
       }
 

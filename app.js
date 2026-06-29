@@ -5387,9 +5387,9 @@ async function adminLoadUnmatched() {
   const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
-    .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true }));
+    .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true, _isUnknownSeed: true }));
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
-  const combined = [...unmatched, ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+  const combined = [...unmatched.map(u => ({ ...u, _isUnknownSeed: false })), ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
   // Deduplicate by hostName (same club with different source IDs)
   const seenNames = new Set();
   return combined.filter(e => {
@@ -5472,8 +5472,24 @@ function renderAdminUnbekanntTab(container) {
       container.innerHTML = `<p class="admin-empty">Alle Strecken sind zugeordnet.</p>`;
       return;
     }
-    container.innerHTML = `<div>${entries.map((e, i) => `
-      <div class="admin-entry" data-index="${i}" data-host-id="${escapeHtml(e.hostId)}" data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}" data-host-name="${escapeHtml(e.hostName)}">
+
+    // Build venue lookup for "Gleiche Strecke wie…"
+    const venuesByDisplay = new Map();
+    for (const v of venues) {
+      const key = v.name + (v.city ? ` – ${v.city}` : "");
+      venuesByDisplay.set(key, v);
+    }
+    const datalistId = "admin-venue-datalist";
+    const datalistHtml = `<datalist id="${datalistId}">${
+      [...venuesByDisplay.keys()].map(k => `<option value="${escapeHtml(k)}">`).join("")
+    }</datalist>`;
+
+    container.innerHTML = `<div>${datalistHtml}${entries.map((e, i) => `
+      <div class="admin-entry" data-index="${i}"
+        data-host-id="${escapeHtml(e.hostId)}"
+        data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}"
+        data-host-name="${escapeHtml(e.hostName)}"
+        data-is-unknown-seed="${e._isUnknownSeed ? "1" : "0"}">
         <div class="admin-entry-header">
           <strong>${escapeHtml(e.hostName)}</strong>
           ${e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
@@ -5487,39 +5503,83 @@ function renderAdminUnbekanntTab(container) {
         <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
           <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
         </div>
+        <div class="admin-entry-link-venue">
+          <input type="text" class="admin-input admin-input-link-venue" placeholder="Gleiche Strecke wie…" list="${datalistId}" />
+          <button type="button" class="admin-btn admin-btn-link">Zuordnen</button>
+        </div>
         <div class="admin-entry-actions">
           <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+          <button type="button" class="admin-btn admin-btn-skip">Überspringen</button>
+          <button type="button" class="admin-btn admin-btn-delete">Löschen</button>
         </div>
         <p class="admin-entry-status"></p>
       </div>`).join("")}</div>`;
 
     const wrapper = container.firstElementChild;
+
     wrapper.addEventListener("change", ev => {
       if (!ev.target.classList.contains("admin-unknown-toggle")) return;
       ev.target.closest(".admin-entry").querySelector(".admin-entry-coords").hidden = ev.target.checked;
     });
 
     wrapper.addEventListener("click", async ev => {
-      if (!ev.target.classList.contains("admin-btn-save")) return;
       const entry = ev.target.closest(".admin-entry");
+      if (!entry) return;
       const status = entry.querySelector(".admin-entry-status");
       const hostId = entry.dataset.hostId;
       const hostName = entry.dataset.hostName;
       const myrcmOrgId = entry.dataset.myrcmOrgId;
-      const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
-      status.textContent = "Speichern…";
-      try {
-        if (isUnknown) {
-          await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
-        } else {
-          const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
-          const [lat, lng] = parts;
-          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
-          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
-        }
-        status.textContent = "✓ Gespeichert";
-        entry.classList.add("admin-entry-done");
-      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+      const isUnknownSeed = entry.dataset.isUnknownSeed === "1";
+
+      if (ev.target.classList.contains("admin-btn-skip")) {
+        entry.hidden = true;
+        return;
+      }
+
+      if (ev.target.classList.contains("admin-btn-delete")) {
+        if (!confirm(`"${hostName}" wirklich löschen?`)) return;
+        status.textContent = "Löschen…";
+        try {
+          if (isUnknownSeed) {
+            await adminCommit({ action: "delete-dach-seed", seedId: hostId, seedName: hostName });
+          } else {
+            await adminCommit({ action: "delete-unmatched", hostId, hostName });
+          }
+          entry.classList.add("admin-entry-done");
+          status.textContent = "✓ Gelöscht";
+        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+        return;
+      }
+
+      if (ev.target.classList.contains("admin-btn-link")) {
+        const inputVal = entry.querySelector(".admin-input-link-venue").value.trim();
+        const matched = venuesByDisplay.get(inputVal);
+        if (!matched) { status.textContent = "Strecke nicht gefunden — exakt aus der Liste wählen"; return; }
+        status.textContent = "Speichern…";
+        try {
+          await adminCommit({ action: "link-to-venue", hostId, hostName, venueId: matched.id });
+          status.textContent = `✓ Verknüpft mit ${matched.name}`;
+          entry.classList.add("admin-entry-done");
+        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+        return;
+      }
+
+      if (ev.target.classList.contains("admin-btn-save")) {
+        const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
+        status.textContent = "Speichern…";
+        try {
+          if (isUnknown) {
+            await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
+          } else {
+            const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
+            const [lat, lng] = parts;
+            if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
+            await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+          }
+          status.textContent = "✓ Gespeichert";
+          entry.classList.add("admin-entry-done");
+        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+      }
     });
   }).catch(e => {
     container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`;
@@ -5588,6 +5648,7 @@ function renderAdminPruefenTab(container) {
       const isDmc = s._dmc;
       const extBadge = s._sourceBadge || "DMC";
       const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
+      const streetViewUrl = s.lat && s.lng ? `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${s.lat},${s.lng}` : null;
       const doneCount = isDmc ? totalDach : alreadyDone + idx;
       const totalCount = isDmc ? totalDach : totalDach;
       const extIdxDisplay = isDmc ? `${extBadge} ${idx - dachPending.length + 1} / ${externalPending.length}` : `${doneCount} / ${totalCount} verifiziert`;
@@ -5602,9 +5663,11 @@ function renderAdminPruefenTab(container) {
             <strong>${escapeHtml(s.name)}</strong>
             <span class="admin-entry-meta">${escapeHtml(s.city || "")}${s.myrcmOrgId ? ` · MyRCM #${s.myrcmOrgId}` : ""}</span>
           </div>
+          ${s.address ? `<p class="admin-entry-address">${escapeHtml(s.address)}</p>` : ""}
           <div style="display:flex;gap:8px;margin:4px 0 8px;flex-wrap:wrap;">
             ${s.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${s.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM ↗</a>` : ""}
             ${mapsUrl ? `<a class="admin-entry-link" href="${mapsUrl}" target="_blank" rel="noopener">Karte (${s.lat.toFixed(4)}, ${s.lng.toFixed(4)}) ↗</a>` : ""}
+            ${streetViewUrl ? `<a class="admin-entry-link" href="${streetViewUrl}" target="_blank" rel="noopener">Street View ↗</a>` : ""}
           </div>
           <div class="admin-entry-coords">
             <input type="text" class="admin-input admin-input-coords js-dach-coords" placeholder="48.123, 14.456" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
@@ -5614,6 +5677,7 @@ function renderAdminPruefenTab(container) {
             <button type="button" class="admin-btn admin-btn-save js-dach-save">${isDmc ? "Speichern" : "Korrigieren & Weiter"}</button>
             <button type="button" class="admin-btn admin-btn-unknown js-dach-unknown">Kein Platz bekannt</button>
             ${!isDmc ? `<button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>` : ""}
+            <button type="button" class="admin-btn admin-btn-skip js-dach-skip">Überspringen</button>
             ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
           </div>
           <p class="admin-entry-status js-dach-status"></p>
@@ -5674,6 +5738,10 @@ function renderAdminPruefenTab(container) {
       });
       container.querySelector(".js-dach-unknown").addEventListener("click", () => saveEntry(null, null, true));
       container.querySelector(".js-dach-delete")?.addEventListener("click", deleteSeed);
+      container.querySelector(".js-dach-skip").addEventListener("click", () => {
+        if (idx < pending.length - 1) { idx++; renderEntry(); }
+        else { status.textContent = "Kein nächster Eintrag"; }
+      });
       container.querySelector(".js-dach-prev")?.addEventListener("click", () => { idx--; renderEntry(); });
     }
 
