@@ -3831,6 +3831,7 @@ function renderList(list) {
   }
 
 
+  let _cardAnimIdx = 0;
   for (const race of list) {
     const isFavorite = isFavoriteRaceHost(race);
     const series = raceSeries(race);
@@ -3908,6 +3909,7 @@ function renderList(list) {
       });
     }
 
+    card.style.animationDelay = `${Math.min(_cardAnimIdx++ * 35, 280)}ms`;
     raceList.appendChild(card);
   }
 
@@ -3924,6 +3926,7 @@ function renderList(list) {
       const past = latestPastRaceForVenue(venue);
       if (!past) continue;
       const [, card] = buildPastRaceCardEl(past);
+      card.style.animationDelay = `${Math.min(_cardAnimIdx++ * 35, 280)}ms`;
       raceList.appendChild(card);
     }
   }
