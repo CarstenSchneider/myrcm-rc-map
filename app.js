@@ -55,7 +55,10 @@ const COUNTRY_BOUNDS = {
   DE: [[47.2, 5.8], [55.1, 15.1]],
   AT: [[46.2, 9.4], [49.0, 17.2]],
   CH: [[45.7, 5.9], [47.9, 10.6]],
-  all: [[45.7, 5.8], [55.1, 17.5]],
+  NL: [[50.75, 3.35], [53.55, 7.22]],
+  BE: [[49.5, 2.55], [51.5, 6.4]],
+  LU: [[49.44, 5.73], [50.19, 6.53]],
+  all: [[45.7, 2.55], [55.1, 17.5]],
 };
 
 function detectCountryFromLocale() {
@@ -65,10 +68,10 @@ function detectCountryFromLocale() {
     const match = lang.toUpperCase().match(/-([A-Z]{2})$/);
     if (match && COUNTRY_BOUNDS[match[1]]) return match[1];
   }
-  // Timezone fallback: handles bare "de" locale in Germany/Austria/Switzerland
+  // Timezone fallback: handles bare locale codes
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH" };
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU" };
     if (tzCountry[tz]) return tzCountry[tz];
   } catch (_) {}
   return "all";
@@ -79,7 +82,7 @@ function fitToCountry(country) {
   fitMapToBounds(bounds, { maxZoom: 10, skipIconShift: true });
 }
 
-const _validCountries = new Set(["all", "DE", "AT", "CH"]);
+const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU"]);
 const _savedCountry = localStorage.getItem("rcRaceMapCountry");
 let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
 let _zoomToCountryPending = false;
@@ -89,6 +92,9 @@ const countryFlags = [
   { country: "DE",  code: "de", label: "Deutschland" },
   { country: "AT",  code: "at", label: "Österreich" },
   { country: "CH",  code: "ch", label: "Schweiz" },
+  { country: "NL",  code: "nl", label: "Niederlande" },
+  { country: "BE",  code: "be", label: "Belgien" },
+  { country: "LU",  code: "lu", label: "Luxemburg" },
 ];
 let _countryPill = null;
 
@@ -1919,7 +1925,7 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
-const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE" };
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU" };
 function venueCountry(venue) {
   if (!venue?.myrcmOrgId) return null;
   const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
@@ -6116,9 +6122,9 @@ const clubListBack    = document.getElementById("clubListBack");
 
 clubListBack?.addEventListener("click", () => { closeClubList(); openAppMenu(); });
 
-let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
+let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH" | "NL" | "BE" | "LU"
 let _raceListSearch = "";
-let _favCountry = "all"; // "all" | "DE" | "AT" | "CH"
+let _favCountry = "all"; // "all" | "DE" | "AT" | "CH" | "NL" | "BE" | "LU"
 
 function openClubList() {
   if (!clubListPage) return;
@@ -6183,6 +6189,9 @@ function renderClubList() {
     { label: "Deutschland",  value: "DE",  code: "de" },
     { label: "Österreich",   value: "AT",  code: "at" },
     { label: "Schweiz",      value: "CH",  code: "ch" },
+    { label: "Niederlande",  value: "NL",  code: "nl" },
+    { label: "Belgien",      value: "BE",  code: "be" },
+    { label: "Luxemburg",    value: "LU",  code: "lu" },
   ];
   const filterHtml = flagOpts.map(o =>
     `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +
