@@ -29,6 +29,13 @@ jobs:
           cp series.json .deploy-site/
           cp dach-borders.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
+          cp races.json .deploy-site/
+          cp rck-races.json .deploy-site/ 2>/dev/null || true
+          cp dmc-races.json .deploy-site/ 2>/dev/null || true
+          cp dmc-venues.json .deploy-site/ 2>/dev/null || true
+          cp venues.json .deploy-site/
+          cp hosts.json .deploy-site/
+          cp rck-venue-candidates.json .deploy-site/ 2>/dev/null || true
 
           cp -R favicon_io .deploy-site/
 
