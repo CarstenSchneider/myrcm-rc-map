@@ -20,7 +20,7 @@ const PDF_TIMEOUT_MS = 20000;
 const REGISTRATION_URL_RE = /https?:\/\/(?:www\.)?(?:rccar-online\.de\/[^\s<>"')\]]+|rccar-nennungen\.de\/[^\s<>"')\]]+)/gi;
 
 // Non-DACH TLDs — clubs with these website domains are filtered out
-const NON_DACH_TLDS = /\.(?:nl|be|fr|pl|cz|sk|hu|it|es|dk|se|no|fi|gb|uk)(?:\/|$)/i;
+const NON_DACH_TLDS = /\.(?:fr|pl|cz|sk|hu|it|es|dk|se|no|fi|gb|uk)(?:\/|$)/i;
 
 
 function normalizeKey(value = "") {
