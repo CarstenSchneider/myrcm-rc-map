@@ -4125,13 +4125,13 @@ body.is-menu-open .app-menu-close {
   display: none;
   background: var(--status-upcoming);
 }
-.tip-card[data-arrow="top-left"]::after {
+.tip-card[data-arrow="left-top"]::after {
   display: block;
-  top: -10px;
-  left: 20px;
-  width: 22px;
-  height: 10px;
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  left: -10px;
+  top: 14px;
+  width: 10px;
+  height: 22px;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
 }
 .tip-card[data-arrow="bottom-center"]::after {
   display: block;
