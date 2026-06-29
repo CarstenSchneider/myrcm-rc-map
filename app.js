@@ -403,7 +403,7 @@ function _renderTipOverlay() {
   const el = _buildTipCardEl(tip);
   el.classList.add("tip-overlay");
   el.style.position = "fixed";
-  el.style.zIndex = "9000";
+  el.style.zIndex = "1050"; // below drawer (1100) so drawer covers the tip
   document.body.appendChild(el);
   _tipOverlayEl = el;
 
@@ -412,7 +412,7 @@ function _renderTipOverlay() {
       const r = _locateBtn.getBoundingClientRect();
       // Place card right of button, top-aligned; arrow on left side near top points at button
       const cardW = el.offsetWidth || 320;
-      const left = Math.min(r.right + 10, window.innerWidth - cardW - 8);
+      const left = Math.min(r.right + 18, window.innerWidth - cardW - 8);
       el.style.left = `${left}px`;
       el.style.top = `${r.top}px`;
       el.style.transform = "";

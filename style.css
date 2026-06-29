@@ -4132,6 +4132,7 @@ body.is-menu-open .app-menu-close {
   width: 10px;
   height: 22px;
   clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  background: color-mix(in srgb, var(--status-upcoming) 88%, black);
 }
 .tip-card[data-arrow="bottom-center"]::after {
   display: block;
