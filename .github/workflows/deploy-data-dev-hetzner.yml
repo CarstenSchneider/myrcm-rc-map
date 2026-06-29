@@ -2,16 +2,20 @@ name: Deploy Data DEV to Hetzner
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy MAIN site to Hetzner"]
+    types: [completed]
 
 jobs:
   deploy-data-dev:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: main
 
       - name: Prepare data files
         run: |
