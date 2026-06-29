@@ -81141,17 +81141,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 48,
-    "registrationDisplay": "48",
+    "registrationCount": 50,
+    "registrationDisplay": "50",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 Expert",
-        "entries": 14
+        "entries": 15
       },
       {
         "name": "OR8 Hobby",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "ORE8",
@@ -81198,8 +81198,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 26,
+    "registrationDisplay": "26",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81212,7 +81212,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 19
+        "entries": 20
       }
     ],
     "documents": [],
@@ -81353,8 +81353,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 55,
-    "registrationDisplay": "55",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81363,7 +81363,7 @@
       },
       {
         "name": "OST-Cup VB",
-        "entries": 29
+        "entries": 30
       }
     ],
     "documents": [],
@@ -81433,8 +81433,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 26,
+    "registrationDisplay": "26",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81443,7 +81443,7 @@
       },
       {
         "name": "ORE8T",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [
@@ -81512,8 +81512,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81522,7 +81522,7 @@
       },
       {
         "name": "MRCP Stock 17.5T",
-        "entries": 14
+        "entries": 16
       },
       "MRCP Modified",
       {
@@ -81719,8 +81719,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -81733,7 +81733,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 17
+        "entries": 18
       }
     ],
     "documents": [],
@@ -81968,20 +81968,20 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Fighter Buggy",
       "ORE2WD",
       {
         "name": "ORE2WDST",
-        "entries": 6
+        "entries": 8
       },
       "ORE4WD",
       {
         "name": "ORE4WDST",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "ORETR2",
@@ -82174,17 +82174,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 - Buggy Nitro 1:8",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "ORE8 - Buggy Elo 1:8",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "ORT E Truggy Nitro/Elo 1:8",
@@ -82215,14 +82215,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG 1:10 Scale",
       {
         "name": "Formel 1",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "VG 1:8",
@@ -82362,21 +82362,21 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 29,
+    "registrationDisplay": "29",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "NRW-Cup Elektro",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "NRW-Cup Hobby",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "NRW-Cup Top",
-        "entries": 8
+        "entries": 11
       },
       {
         "name": "NRW-Cup Truggy",
@@ -82449,13 +82449,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 (1:8 Nitro Offroad Buggy)",
-        "entries": 8
+        "entries": 9
       }
     ],
     "documents": [],
@@ -82558,8 +82558,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCA Jugend",
@@ -82570,7 +82570,7 @@
       },
       {
         "name": "FCA 17.5T",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -82706,8 +82706,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
@@ -82733,7 +82733,7 @@
       },
       {
         "name": "Tamiya Euro Cup Gentlemen 4WD",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Tamiya Euro Cup Euro-TW 2WD/4WD",
@@ -83204,13 +83204,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 Expert",
-        "entries": 4
+        "entries": 6
       },
       {
         "name": "OR8 Hobby",
@@ -83218,7 +83218,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "ORT",
@@ -83532,8 +83532,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -83548,7 +83548,7 @@
       },
       {
         "name": "VG10",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "VG8KL2",
@@ -89052,6 +89052,37 @@
     "firstSeen": "2026-06-25"
   },
   {
+    "id": "morac-2026-09-26-myrcm-event-98644",
+    "venueId": "morac",
+    "venueName": "MORAC",
+    "venueLocation": "Graz",
+    "venueWebsite": "https://www.morac-graz.at",
+    "hostId": "morac",
+    "hostName": "MORAC",
+    "name": "Österr. Meisterschaft LS 2026, 2. Lauf",
+    "from": "2026-09-26",
+    "to": "2026-09-27",
+    "series": [
+      "Österreichische Meisterschaft (ÖM)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98644&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=98644&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98644&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": [
+      "OM LargeScale TW",
+      "OM LargeScale Formel"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-29"
+  },
+  {
     "id": "swiss-racing-cup-2026-09-26-myrcm-event-95010",
     "venueId": "swiss-racing-cup",
     "venueName": "Swiss Racing Cup",
@@ -89774,6 +89805,35 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-25"
+  },
+  {
+    "id": "morac-2026-10-10-myrcm-event-98645",
+    "venueId": "morac",
+    "venueName": "MORAC",
+    "venueLocation": "Graz",
+    "venueWebsite": "https://www.morac-graz.at",
+    "hostId": "morac",
+    "hostName": "MORAC",
+    "name": "Int. Mecatech Major Trophy 2026",
+    "from": "2026-10-10",
+    "to": "2026-10-11",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98645&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=216&pLa=en&dId%5BE%5D=98645&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98645&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": [
+      "LS TW 1:5",
+      "Large Scale Formel"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-29"
   },
   {
     "id": "rccr-munzig-e-v-2026-10-10-myrcm-event-95043",

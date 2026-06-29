@@ -127,7 +127,7 @@
       },
       {
         "name": "Stock Challenge",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "Clubman Challenge",
@@ -336,8 +336,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -357,7 +357,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Stock Challenge",
@@ -628,8 +628,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 123,
-    "registrationDisplay": "123",
+    "registrationCount": 121,
+    "registrationDisplay": "121",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
