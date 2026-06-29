@@ -3,6 +3,7 @@ import { access, readFile, writeFile } from "node:fs/promises";
 import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const hostListFile = "myrcm-hosts-dach.json";
+const beneluxHostListFile = "myrcm-hosts-benelux.json";
 const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
 const venueSeedsFile = "venue-seeds.json";
@@ -1109,7 +1110,7 @@ function detectVenueSeedFromRaceText(venueSeeds = [], raceText = "", hostRecord 
 
 // Country codes (ISO 3166-1 alpha-2) that are outside DACH.
 // Used to detect travelling-series races held abroad (e.g. ETS ROUND 2 TRENCIN SK).
-const nonDachCountryCodes = /\b(SK|CZ|PL|HU|FR|NL|BE|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LU|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
+const nonDachCountryCodes = /\b(SK|CZ|PL|HU|FR|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
 
 function raceNameIndicatesNonDach(name) {
   return nonDachCountryCodes.test(name || "");
@@ -1279,7 +1280,7 @@ function myRcmOrgIdFromHost(host) {
 }
 
 function hostRecordFromMyRcmHost(host, venueSeed = null, existingHost = null) {
-  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE" };
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU" };
   const importedHost = {
     id: hostIdFromMyRcmHost(host, venueSeed),
     name: hostNameFromMyRcmHost(host),
@@ -1876,7 +1877,16 @@ async function parseEvents(html, host, hostRecord, venueSeed, venueSeeds, series
 
 async function loadHosts() {
   const raw = await readFile(hostListFile, "utf8");
-  const hosts = JSON.parse(raw);
+  let hosts = JSON.parse(raw);
+
+  try {
+    const beneluxRaw = await readFile(beneluxHostListFile, "utf8");
+    const beneluxHosts = JSON.parse(beneluxRaw);
+    const existingOrgIds = new Set(hosts.map(h => String(h.orgId)));
+    hosts = [...hosts, ...beneluxHosts.filter(h => !existingOrgIds.has(String(h.orgId)))];
+  } catch {
+    // benelux file optional
+  }
 
   const filteredHosts = hosts
     .filter(host => host.orgId && host.name)
@@ -1983,8 +1993,8 @@ async function runImportOnce() {
 
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
 
-  // Backfill country for hosts that exist in the DACH list but had no races this run
-  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE" };
+  // Backfill country for hosts that exist in the host list but had no races this run
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU" };
   const orgIdToCountry = new Map(
     hosts
       .filter(h => h.orgId && h.country && countryMap[h.country])
