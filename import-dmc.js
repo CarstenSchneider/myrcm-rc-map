@@ -22,6 +22,11 @@ const REGISTRATION_URL_RE = /https?:\/\/(?:www\.)?(?:rccar-online\.de\/[^\s<>"')
 // Non-DACH TLDs — clubs with these website domains are filtered out
 const NON_DACH_TLDS = /\.(?:nl|be|fr|pl|cz|sk|hu|it|es|dk|se|no|fi|gb|uk)(?:\/|$)/i;
 
+// Known-bad DMC entries: wrong data on dmc-online.com, confirmed by club
+const DMC_RACE_BLOCKLIST = new Set([
+  "dmc-tsv-mariendorf-97-berlin-2026-09-26", // DMC calendar error: TSV has no FR on this date (PDF is for a different event)
+]);
+
 function normalizeKey(value = "") {
   return String(value)
     .toLowerCase()
@@ -452,9 +457,13 @@ async function main() {
     };
   });
 
-  console.log(`Venue-Matches: ${races.filter(r => r.venueId).length} / ${races.length} (davon ${dmcVenues.length} via Seed)`);
-  warnIfSparse(races, ["from", "hostName"], { label: OUTPUT_FILE });
-  await safeWriteJson(races, OUTPUT_FILE, { minCount: 50, minFraction: 0.7, label: OUTPUT_FILE });
+  const filteredRaces = races.filter(r => !DMC_RACE_BLOCKLIST.has(r.id));
+  if (filteredRaces.length < races.length)
+    console.log(`Blocklist: ${races.length - filteredRaces.length} Einträge entfernt`);
+
+  console.log(`Venue-Matches: ${filteredRaces.filter(r => r.venueId).length} / ${filteredRaces.length} (davon ${dmcVenues.length} via Seed)`);
+  warnIfSparse(filteredRaces, ["from", "hostName"], { label: OUTPUT_FILE });
+  await safeWriteJson(filteredRaces, OUTPUT_FILE, { minCount: 50, minFraction: 0.7, label: OUTPUT_FILE });
   await writeFile(DMC_VENUES_FILE, JSON.stringify(dmcVenues, null, 2) + "\n");
   console.log(`Geschrieben: ${DMC_VENUES_FILE} (${dmcVenues.length} Venues)`);
 }
