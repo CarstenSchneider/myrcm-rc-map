@@ -401,8 +401,11 @@ let _tipResizeTimer = null;
 function _positionTipEl(el, tip) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
 
-  // Desktop: set width upfront so tipW is accurate for positioning
-  if (!isMobile) {
+  // Set consistent width
+  if (isMobile) {
+    const mobileW = Math.max(Math.round(window.innerWidth * 0.65), 180);
+    el.style.width = `${mobileW}px`;
+  } else {
     const firstCard = raceList.querySelector(".race-card");
     const panelEl = document.querySelector(".race-panel");
     const w = firstCard
@@ -420,10 +423,9 @@ function _positionTipEl(el, tip) {
     const r = _locateBtn.getBoundingClientRect();
     if (r.width > 0 || r.height > 0) {
       if (isMobile) {
-        // Width = space from button right edge to screen right edge minus 14px (matches race card right margin)
-        const left = Math.round(r.right + 20);
-        el.style.width = `${window.innerWidth - left - 14}px`;
-        el.style.left = `${left}px`;
+        // Clamp left so right edge stays within race card margin (14px from screen edge)
+        const mLeft = Math.max(8, Math.min(Math.round(r.right + 20), window.innerWidth - tipW - 14));
+        el.style.left = `${mLeft}px`;
         el.style.top = `${Math.round(r.top)}px`;
         el.style.transform = "";
         el.style.transformOrigin = "";
@@ -438,12 +440,9 @@ function _positionTipEl(el, tip) {
     }
   } else if (tip.render === "fixed-list-left") {
     if (isMobile) {
-      const mobileW = Math.max(Math.round(window.innerWidth * 0.80), 220);
-      el.style.width = `${mobileW}px`;
-      const w2 = el.offsetWidth || mobileW;
       const drawerEl = document.getElementById("mobDrawer");
       const drawerTop = drawerEl ? drawerEl.getBoundingClientRect().top : window.innerHeight * 0.55;
-      el.style.left = `${Math.round((window.innerWidth - w2) / 2)}px`;
+      el.style.left = `${Math.round((window.innerWidth - tipW) / 2)}px`;
       el.style.top = `${drawerTop - (el.offsetHeight || 110) - 16}px`;
       el.style.transform = "";
       el.style.transformOrigin = "bottom center";
