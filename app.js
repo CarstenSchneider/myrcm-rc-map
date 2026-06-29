@@ -5994,6 +5994,20 @@ showMenuHome();
   }
 }
 
+// Prevent map zoom when mouse drifts from race panel to map while wheel-scrolling.
+// Disables scrollWheelZoom briefly after any wheel event on the panel (covers trackpad inertia).
+{
+  let _panelScrollTimer = null;
+  const _panelEl = document.querySelector(".race-panel");
+  if (_panelEl) {
+    _panelEl.addEventListener("wheel", () => {
+      map.scrollWheelZoom.disable();
+      clearTimeout(_panelScrollTimer);
+      _panelScrollTimer = setTimeout(() => map.scrollWheelZoom.enable(), 600);
+    }, { passive: true });
+  }
+}
+
 window.addEventListener("load", () => {
   setDrawerState("half");
   // Force Leaflet and MapLibre to re-measure after CSS is fully applied

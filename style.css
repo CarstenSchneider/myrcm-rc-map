@@ -108,6 +108,7 @@ body {
 .race-panel {
   min-width: 0;
   overflow: auto;
+  overscroll-behavior-y: contain;
   padding: 24px;
   padding-right: 14px;
   background: var(--panel);
