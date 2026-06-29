@@ -181,7 +181,7 @@ window.addEventListener("load", () => {
 | `deploy-site-dev-hetzner.yml` | `dev` push | `rcracemap-dev/` (nur HTML/JS/CSS) |
 | `deploy-site-main-hetzner.yml` | `main` push | `.` (root inkl. JSON-Daten) |
 | `deploy-data-dev-hetzner.yml` | manuell | `rcracemap-dev/` JSON-Daten (Fallback) |
-| `import-rcco.yml` | manuell | **DEAKTIVIERT** — wartet auf Genehmigung von rccar-online.de |
+| `import-rcco.yml` | manuell | **PERMANENT DEAKTIVIERT** — rccar-online.de hat abgesagt (2026-06-29), keine Integration |
 | `fetch-og-images.yml` | manuell | Fetcht og:image von Club-Websites → `hosts.json` auf dev |
 | `check-osm-images.yml` | manuell | Prüft OSM/Overpass auf Venue-Bilder → `osm-images-result.json` |
 
@@ -244,18 +244,15 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 | `venue-unmatched.json` | nicht zugeordnete Venues |
 | `rck-venue-candidates.json` | RCK Venue-Kandidaten |
 
-### RCCO — Status und Genehmigung
-**rccar-online.de Nutzungsbedingungen** (Abschnitt "Webscraping - kommerzieller Nutzung") verbieten automatisiertes Extrahieren von Daten. Import wurde am **2026-06-28** deaktiviert.
+### RCCO — Status: **Dauerhaft abgesagt**
+**rccar-online.de hat am 2026-06-29 abgesagt** — sie möchten ihre Rennen nicht auf der Karte haben. Die Integration ist dauerhaft deaktiviert, keine Reaktivierung geplant.
 
-- `rcco-races.json` ist geleert (`[]`) und wird nicht mehr befüllt
+- `rcco-races.json` bleibt leer (`[]`) — wird nie befüllt
 - `rcco-venues.json` enthält nur manuell eingetragene Koordinaten (kein Scraping)
-- `import-rcco.yml` gibt eine Fehlermeldung aus und tut nichts
+- `import-rcco.yml` ist dauerhaft deaktiviert
 - `import-all.yml` enthält keinen RCCO-Schritt
 
-**Reaktivierung:** Kontaktaufnahme mit rccar-online.de am 2026-06-28. Sobald Genehmigung vorliegt:
-1. RCCO-Schritt in `import-all.yml` wieder einkommentieren
-2. `import-rcco.yml` wiederherstellen
-3. `rcco-races.json` wird beim nächsten Import automatisch befüllt
+**Keine Reaktivierung** — rccar-online.de hat explizit abgesagt. RCCO-Code und Dateien bleiben im Repo als Archiv, werden aber nicht deployed oder ausgeführt.
 
 ### LRP Offroad Series — Status und Genehmigung
 **lrp.cc** betreibt eine eigene Rennserie (LRP Offroad Series) mit einem Veranstaltungskalender ähnlich wie RCK (wahrscheinlich PDF-basiert).
