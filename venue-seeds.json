@@ -4417,6 +4417,13 @@
     "lng": 7.934878589989598
   },
   {
+    "hostId": "rctr",
+    "hostName": "RCTR",
+    "lat": 50.81817112053502,
+    "lng": 3.1745322134369225,
+    "myrcmOrgId": "59322"
+  },
+  {
     "hostId": "rcxx-shop",
     "hostName": "RCXX.SHOP",
     "locationUnknown": true,
