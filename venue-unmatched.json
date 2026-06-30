@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "model-auto-club-heemstede",
-    "hostName": "Model Auto Club Heemstede",
-    "source": "myrcm",
-    "myrcmOrgId": "75",
-    "possibleVenue": "Heemstede",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "model-racing-midland",
     "hostName": "Model Racing Midland",
     "source": "myrcm",
