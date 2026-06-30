@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "tamiya-cup-nl",
-    "hostName": "Tamiya Cup NL",
-    "source": "myrcm",
-    "myrcmOrgId": "33479",
-    "possibleVenue": "Rotterdam",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "tamiyacup-belgium",
     "hostName": "Tamiyacup Belgium",
     "source": "myrcm",
