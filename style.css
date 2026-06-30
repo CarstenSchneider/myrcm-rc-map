@@ -3896,10 +3896,20 @@ body.is-menu-open .app-menu-close {
   transition: background 150ms ease, color 150ms ease;
 }
 .theme-toggle-btn svg { width: 14px; height: 14px; }
+.theme-toggle-btn:not(.active):hover {
+  background: rgba(var(--text-rgb), 0.1);
+  color: var(--text);
+}
 .theme-toggle-btn.active {
   background: var(--accent);
   color: #fff;
 }
+.app-menu-auth-user .theme-toggle-btn {
+  color: var(--text);
+  opacity: 0.55;
+}
+.app-menu-auth-user .theme-toggle-btn:hover { opacity: 1; }
+.app-menu-auth-user .theme-toggle-btn svg { stroke-width: 2; }
 
 /* Menu footer */
 .app-menu-footer {
