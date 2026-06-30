@@ -84,14 +84,16 @@ jobs:
 
       - name: Commit and push to main
         run: |
-          git add \
-            races.json hosts.json venues.json venue-unmatched.json venue-seeds.json \
-            rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json \
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json 2>/dev/null || true
+          DATA_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
+            rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json"
+          git fetch origin main
+          # Reset index to latest origin/main (keeps working tree = import output)
+          git reset --mixed origin/main
+          git add $DATA_FILES 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Keine Änderungen für main"
           else
-            git pull --rebase --autostash origin main
             git commit -m "Update race data $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push origin main
             echo "main: Daten gepusht (production auto-deploy läuft)"
@@ -101,17 +103,17 @@ jobs:
 
       - name: Update dev branch with main data
         run: |
+          DATA_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
+            rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json"
           git fetch origin dev
           git checkout -f -B dev origin/dev
-          git checkout main -- \
-            races.json hosts.json venues.json venue-unmatched.json venue-seeds.json \
-            rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json \
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json 2>/dev/null || true
+          # Bring data files from freshly committed main
+          git checkout main -- $DATA_FILES 2>/dev/null || true
           git add -A
           if git diff --cached --quiet; then
             echo "Keine Änderungen für dev"
           else
-            git pull --rebase --autostash origin dev
             git commit -m "Update race data DEV $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push origin dev
             echo "dev: Daten gepusht"

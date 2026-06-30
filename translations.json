@@ -1,0 +1,554 @@
+{
+  "country.all": {
+    "de": "Alle Länder",
+    "en": "All countries",
+    "fr": "Tous les pays",
+    "nl": "Alle landen"
+  },
+  "country.DE": {
+    "de": "Deutschland",
+    "en": "Germany",
+    "fr": "Allemagne",
+    "nl": "Duitsland"
+  },
+  "country.AT": {
+    "de": "Österreich",
+    "en": "Austria",
+    "fr": "Autriche",
+    "nl": "Oostenrijk"
+  },
+  "country.CH": {
+    "de": "Schweiz",
+    "en": "Switzerland",
+    "fr": "Suisse",
+    "nl": "Zwitserland"
+  },
+  "country.NL": {
+    "de": "Niederlande",
+    "en": "Netherlands",
+    "fr": "Pays-Bas",
+    "nl": "Nederland"
+  },
+  "country.BE": {
+    "de": "Belgien",
+    "en": "Belgium",
+    "fr": "Belgique",
+    "nl": "België"
+  },
+  "country.LU": {
+    "de": "Luxemburg",
+    "en": "Luxembourg",
+    "fr": "Luxembourg",
+    "nl": "Luxemburg"
+  },
+  "filter.range.2w": {
+    "de": "2 Wochen",
+    "en": "2 weeks",
+    "fr": "2 semaines",
+    "nl": "2 weken"
+  },
+  "filter.range.4w": {
+    "de": "4 Wochen",
+    "en": "4 weeks",
+    "fr": "4 semaines",
+    "nl": "4 weken"
+  },
+  "filter.range.all": {
+    "de": "Alle",
+    "en": "All",
+    "fr": "Toutes",
+    "nl": "Alle"
+  },
+  "filter.fav.all": {
+    "de": "Alle",
+    "en": "All",
+    "fr": "Toutes",
+    "nl": "Alle"
+  },
+  "filter.fav.favs": {
+    "de": "Favoriten",
+    "en": "Favourites",
+    "fr": "Favoris",
+    "nl": "Favorieten"
+  },
+  "filter.reg.all": {
+    "de": "Alle",
+    "en": "All",
+    "fr": "Toutes",
+    "nl": "Alle"
+  },
+  "filter.reg.open": {
+    "de": "Offen",
+    "en": "Open",
+    "fr": "Ouvert",
+    "nl": "Open"
+  },
+  "filter.series.all": {
+    "de": "Alle Serien",
+    "en": "All series",
+    "fr": "Toutes les séries",
+    "nl": "Alle series"
+  },
+  "filter.series.national": {
+    "de": "Überregional",
+    "en": "National",
+    "fr": "National",
+    "nl": "Nationaal"
+  },
+  "filter.series.regional": {
+    "de": "Regional",
+    "en": "Regional",
+    "fr": "Régional",
+    "nl": "Regionaal"
+  },
+  "filter.series.other": {
+    "de": "Weitere Serien",
+    "en": "More series",
+    "fr": "Autres séries",
+    "nl": "Meer series"
+  },
+  "reg.login_required": {
+    "de": "Anmeldung nur nach MyRCM-Login sichtbar",
+    "en": "Visible after MyRCM sign-in",
+    "fr": "Visible après connexion MyRCM",
+    "nl": "Zichtbaar na MyRCM-login"
+  },
+  "reg.upcoming.from": {
+    "de": "Nennung ab {date}",
+    "en": "Registration from {date}",
+    "fr": "Inscription dès le {date}",
+    "nl": "Inschrijving vanaf {date}"
+  },
+  "reg.upcoming.soon": {
+    "de": "Nennung noch nicht geöffnet",
+    "en": "Registration not open yet",
+    "fr": "Inscription pas encore ouverte",
+    "nl": "Inschrijving nog niet open"
+  },
+  "reg.upcoming.tba": {
+    "de": "Nennung folgt",
+    "en": "Registration coming soon",
+    "fr": "Inscription bientôt",
+    "nl": "Inschrijving volgt"
+  },
+  "reg.closed": {
+    "de": "Nennung geschlossen",
+    "en": "Registration closed",
+    "fr": "Inscription fermée",
+    "nl": "Inschrijving gesloten"
+  },
+  "reg.open": {
+    "de": "Nennung möglich",
+    "en": "Registration open",
+    "fr": "Inscription ouverte",
+    "nl": "Inschrijving open"
+  },
+  "reg.link": {
+    "de": "Nennung ↗",
+    "en": "Register ↗",
+    "fr": "Inscription ↗",
+    "nl": "Inschrijven ↗"
+  },
+  "doc.announcement": {
+    "de": "Ausschreibung ↗",
+    "en": "Race announcement ↗",
+    "fr": "Annonce ↗",
+    "nl": "Uitnodiging ↗"
+  },
+  "doc.rules": {
+    "de": "Reglement ↗",
+    "en": "Rules ↗",
+    "fr": "Règlement ↗",
+    "nl": "Reglement ↗"
+  },
+  "venue.unknown": {
+    "de": "Ort unbekannt",
+    "en": "Location unknown",
+    "fr": "Lieu inconnu",
+    "nl": "Locatie onbekend"
+  },
+  "venue.trackUnknown": {
+    "de": "Unbekannte Strecke",
+    "en": "Unknown track",
+    "fr": "Piste inconnue",
+    "nl": "Onbekend circuit"
+  },
+  "venue.route": {
+    "de": "Route",
+    "en": "Directions",
+    "fr": "Itinéraire",
+    "nl": "Route"
+  },
+  "race.new": {
+    "de": "NEU",
+    "en": "NEW",
+    "fr": "NOUVEAU",
+    "nl": "NIEUW"
+  },
+  "race.last": {
+    "de": "Zuletzt:",
+    "en": "Last:",
+    "fr": "Dernière :",
+    "nl": "Laatst:"
+  },
+  "race.entries": {
+    "de": "Teilnehmer anzeigen",
+    "en": "Entry list",
+    "fr": "Participants",
+    "nl": "Deelnemers"
+  },
+  "result.found": {
+    "de": "{n} Rennen gefunden",
+    "en": "{n} races found",
+    "fr": "{n} courses trouvées",
+    "nl": "{n} races gevonden"
+  },
+  "result.atTrack": {
+    "de": "{n} Rennen an dieser Strecke",
+    "en": "{n} races at this track",
+    "fr": "{n} courses sur cette piste",
+    "nl": "{n} races op dit circuit"
+  },
+  "result.noUpcoming": {
+    "de": "Keine kommenden Rennen an dieser Strecke",
+    "en": "No upcoming races at this track",
+    "fr": "Aucune course à venir sur cette piste",
+    "nl": "Geen komende races op dit circuit"
+  },
+  "result.loading": {
+    "de": "Lade Rennen …",
+    "en": "Loading races…",
+    "fr": "Chargement…",
+    "nl": "Races laden…"
+  },
+  "result.error": {
+    "de": "Fehler beim Laden der Daten.",
+    "en": "Error loading data.",
+    "fr": "Erreur de chargement.",
+    "nl": "Fout bij laden."
+  },
+  "result.timestamp": {
+    "de": "Stand {date} | {time} Uhr",
+    "en": "Updated {date} | {time}",
+    "fr": "État {date} | {time}",
+    "nl": "Status {date} | {time}"
+  },
+  "empty.noRacesTrack": {
+    "de": "Keine Rennen an dieser Strecke.",
+    "en": "No races at this track.",
+    "fr": "Aucune course sur cette piste.",
+    "nl": "Geen races op dit circuit."
+  },
+  "empty.noRacesFilter": {
+    "de": "Keine Rennen für diesen Filter gefunden.",
+    "en": "No races found.",
+    "fr": "Aucune course trouvée.",
+    "nl": "Geen races gevonden."
+  },
+  "empty.searching": {
+    "de": "Suche…",
+    "en": "Searching…",
+    "fr": "Recherche…",
+    "nl": "Zoeken…"
+  },
+  "chip.fav": {
+    "de": "Favoriten",
+    "en": "Favourites",
+    "fr": "Favoris",
+    "nl": "Favorieten"
+  },
+  "chip.open": {
+    "de": "Offen",
+    "en": "Open",
+    "fr": "Ouvert",
+    "nl": "Open"
+  },
+  "menu.signedIn": {
+    "de": "Angemeldet",
+    "en": "Signed in",
+    "fr": "Connecté",
+    "nl": "Aangemeld"
+  },
+  "menu.signOut": {
+    "de": "Abmelden",
+    "en": "Sign out",
+    "fr": "Déconnexion",
+    "nl": "Afmelden"
+  },
+  "menu.signIn": {
+    "de": "Anmelden & Favoriten",
+    "en": "Sign in & Favourites",
+    "fr": "Connexion & Favoris",
+    "nl": "Inloggen & Favorieten"
+  },
+  "menu.appearance": {
+    "de": "Darstellung",
+    "en": "Appearance",
+    "fr": "Apparence",
+    "nl": "Weergave"
+  },
+  "menu.theme.auto": {
+    "de": "Auto",
+    "en": "Auto",
+    "fr": "Auto",
+    "nl": "Auto"
+  },
+  "menu.theme.light": {
+    "de": "Tag",
+    "en": "Day",
+    "fr": "Jour",
+    "nl": "Dag"
+  },
+  "menu.theme.dark": {
+    "de": "Nacht",
+    "en": "Night",
+    "fr": "Nuit",
+    "nl": "Nacht"
+  },
+  "menu.favourites": {
+    "de": "Favoriten",
+    "en": "Favourites",
+    "fr": "Favoris",
+    "nl": "Favorieten"
+  },
+  "menu.about": {
+    "de": "Über RC RaceMap",
+    "en": "About RC RaceMap",
+    "fr": "À propos",
+    "nl": "Over RC RaceMap"
+  },
+  "menu.legal": {
+    "de": "Impressum & Datenschutz",
+    "en": "Legal & Privacy",
+    "fr": "Mentions & Confidentialité",
+    "nl": "Juridisch & Privacy"
+  },
+  "menu.back": {
+    "de": "Zurück",
+    "en": "Back",
+    "fr": "Retour",
+    "nl": "Terug"
+  },
+  "login.info": {
+    "de": "Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.",
+    "en": "Enter your email. We'll send you a sign-in link — no password needed.",
+    "fr": "Saisis ton e-mail. Tu recevras un lien de connexion — sans mot de passe.",
+    "nl": "Voer je e-mailadres in. Je ontvangt een inloglink — geen wachtwoord nodig."
+  },
+  "login.placeholder": {
+    "de": "deine@email.de",
+    "en": "your@email.com",
+    "fr": "ton@email.fr",
+    "nl": "jouw@email.nl"
+  },
+  "login.send": {
+    "de": "Link senden",
+    "en": "Send link",
+    "fr": "Envoyer le lien",
+    "nl": "Link sturen"
+  },
+  "login.sending": {
+    "de": "Wird gesendet…",
+    "en": "Sending…",
+    "fr": "Envoi…",
+    "nl": "Verzenden…"
+  },
+  "login.sent": {
+    "de": "Gesendet",
+    "en": "Sent",
+    "fr": "Envoyé",
+    "nl": "Verzonden"
+  },
+  "login.confirm": {
+    "de": "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.",
+    "en": "✓ Link sent. Please check your email.",
+    "fr": "✓ Lien envoyé. Vérifie tes e-mails.",
+    "nl": "✓ Link verzonden. Controleer je e-mail."
+  },
+  "loginPrompt.text": {
+    "de": "Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.",
+    "en": "Sign in to save favourites and receive notifications.",
+    "fr": "Connecte-toi pour enregistrer tes favoris et recevoir des notifications.",
+    "nl": "Log in om favorieten op te slaan en meldingen te ontvangen."
+  },
+  "loginPrompt.btn": {
+    "de": "Anmelden",
+    "en": "Sign in",
+    "fr": "Connexion",
+    "nl": "Inloggen"
+  },
+  "fav.empty": {
+    "de": "Keine Favoriten",
+    "en": "No favourites",
+    "fr": "Aucun favori",
+    "nl": "Geen favorieten"
+  },
+  "fav.bellHint": {
+    "de": "Aktiviere {bell} für E-Mail-Updates bei neuen Rennen",
+    "en": "Enable {bell} for email updates on new races",
+    "fr": "Active {bell} pour les e-mails des nouvelles courses",
+    "nl": "Activeer {bell} voor e-mails over nieuwe races"
+  },
+  "fav.bellOn": {
+    "de": "Benachrichtigungen deaktivieren",
+    "en": "Disable notifications",
+    "fr": "Désactiver les notifications",
+    "nl": "Meldingen uitschakelen"
+  },
+  "fav.bellOff": {
+    "de": "Per E-Mail benachrichtigen",
+    "en": "Notify by email",
+    "fr": "Notifier par e-mail",
+    "nl": "Melden per e-mail"
+  },
+  "tip.counter": {
+    "de": "Tipp {n} von {total}",
+    "en": "Tip {n} of {total}",
+    "fr": "Astuce {n} sur {total}",
+    "nl": "Tip {n} van {total}"
+  },
+  "tip.dismiss": {
+    "de": "Tipp schließen",
+    "en": "Close tip",
+    "fr": "Fermer l'astuce",
+    "nl": "Tip sluiten"
+  },
+  "tip1.title": {
+    "de": "Rennen in deiner Nähe.",
+    "en": "Races near you.",
+    "fr": "Des courses près de chez toi.",
+    "nl": "Races bij jou in de buurt."
+  },
+  "tip1.text": {
+    "de": "Nutze {locate} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.",
+    "en": "Use {locate} your location and filter by time or race series. Larger pins mean more activity.",
+    "fr": "Utilise {locate} ta position et filtre par période ou série. Plus le repère est grand, plus il y a d'activité.",
+    "nl": "Gebruik {locate} je locatie en filter op periode of serie. Grotere pins betekenen meer activiteit."
+  },
+  "tip2.title": {
+    "de": "Alles auf einen Blick.",
+    "en": "Everything at a glance.",
+    "fr": "Tout en un coup d'œil.",
+    "nl": "Alles in één oogopslag."
+  },
+  "tip2.text": {
+    "de": "Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.",
+    "en": "All race info with links to the club and registration. Tap the race card to show the track on the map.",
+    "fr": "Toutes les infos avec liens vers le club et l'inscription. Touchez la fiche pour voir la piste sur la carte.",
+    "nl": "Alle race-info met links naar club en inschrijving. Tik op de racekaart om het circuit op de kaart te tonen."
+  },
+  "tip3.title": {
+    "de": "Kein Rennen verpassen.",
+    "en": "Never miss a race.",
+    "fr": "Ne manque plus aucune course.",
+    "nl": "Mis geen race meer."
+  },
+  "tip3.text": {
+    "de": "Favoriten {star} markieren und Benachrichtigungen {bell} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.",
+    "en": "Mark favourites {star} and enable notifications {bell}. We'll notify you about new races, changes and cancellations.",
+    "fr": "Ajoute des favoris {star} et active les notifications {bell}. Nous t'informerons des nouvelles courses, modifications et annulations.",
+    "nl": "Markeer favorieten {star} en activeer meldingen {bell}. We informeren je over nieuwe races, wijzigingen en afgelastingen."
+  },
+  "about.p1": {
+    "de": "RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.",
+    "en": "RC RaceMap shows where and when the next races take place — on a map and in a list. Both can be filtered by club and race series.",
+    "fr": "RC RaceMap montre où et quand auront lieu les prochaines courses — sur une carte et dans une liste. Les deux peuvent être filtrés par club et série.",
+    "nl": "RC RaceMap toont waar en wanneer de volgende races plaatsvinden — op een kaart en in een lijst. Beide kunnen worden gefilterd op club en serie."
+  },
+  "about.p2": {
+    "de": "Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.",
+    "en": "The list includes links to registration and, where available, to the rules and race announcement.",
+    "fr": "La liste contient un lien vers l'inscription et, si disponibles, vers le règlement et l'annonce.",
+    "nl": "De lijst bevat links naar de inschrijving en, indien beschikbaar, naar reglement en uitnodiging."
+  },
+  "about.p3": {
+    "de": "Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.",
+    "en": "Mark your favourite clubs as favourites and get email updates about new races. Just sign in with your email address — no registration required.",
+    "fr": "Ajoute tes clubs favoris et reçois des e-mails sur les nouvelles courses. Connecte-toi simplement avec ton e-mail — aucune inscription nécessaire.",
+    "nl": "Markeer je favoriete clubs en ontvang e-mails over nieuwe races. Log eenvoudig in met je e-mailadres — registreren is niet nodig."
+  },
+  "about.p4": {
+    "de": "Die Daten stammen direkt von MyRCM und RCK. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.",
+    "en": "The data comes directly from MyRCM and RCK. You'll find all race details and registration there. RC RaceMap is a non-commercial service that presents this data on an interactive map.",
+    "fr": "Les données proviennent directement de MyRCM et RCK. Tu y trouveras toutes les informations et l'inscription. RC RaceMap est un service non commercial qui présente ces données sur une carte interactive.",
+    "nl": "De gegevens komen rechtstreeks van MyRCM en RCK. Daar vind je alle informatie en de inschrijving. RC RaceMap is een niet-commerciële dienst die deze gegevens op een interactieve kaart toont."
+  },
+  "about.p5": {
+    "de": "Keine Haftung für Fehler oder verpasste Podiumsplätze.",
+    "en": "No liability for errors or missed podiums.",
+    "fr": "Aucune responsabilité pour les erreurs ou les podiums manqués.",
+    "nl": "Geen aansprakelijkheid voor fouten of gemiste podiumplaatsen."
+  },
+  "nav.search": {
+    "de": "Suche",
+    "en": "Search",
+    "fr": "Recherche",
+    "nl": "Zoeken"
+  },
+  "nav.filter.open": {
+    "de": "Suche und Serienfilter öffnen",
+    "en": "Open search and series filter",
+    "fr": "Ouvrir la recherche et le filtre",
+    "nl": "Zoeken en seriefilter openen"
+  },
+  "nav.filter.close": {
+    "de": "Suche und Serienfilter schließen",
+    "en": "Close search and series filter",
+    "fr": "Fermer la recherche et le filtre",
+    "nl": "Zoeken en seriefilter sluiten"
+  },
+  "menu.language": {
+    "de": "Sprache",
+    "en": "Language",
+    "fr": "Langue",
+    "nl": "Taal"
+  },
+  "menu.racelist": {
+    "de": "Rennliste",
+    "en": "Race list",
+    "fr": "Liste des courses",
+    "nl": "Racelijst"
+  },
+  "menu.footer.data": {
+    "de": "Daten",
+    "en": "Data",
+    "fr": "Données",
+    "nl": "Gegevens"
+  },
+  "menu.footer.map": {
+    "de": "Karte",
+    "en": "Map",
+    "fr": "Carte",
+    "nl": "Kaart"
+  },
+  "fav.search": {
+    "de": "Club suchen…",
+    "en": "Search club…",
+    "fr": "Rechercher un club…",
+    "nl": "Club zoeken…"
+  },
+  "fav.mine": {
+    "de": "Meine Favoriten",
+    "en": "My Favourites",
+    "fr": "Mes favoris",
+    "nl": "Mijn favorieten"
+  },
+  "fav.all": {
+    "de": "Alle Clubs",
+    "en": "All Clubs",
+    "fr": "Tous les clubs",
+    "nl": "Alle clubs"
+  },
+  "seo.title": {
+    "de": "RC RaceMap – RC-Car-Rennen in DACH | Termine & Karte",
+    "en": "RC RaceMap – RC Car Races | Schedule & Map",
+    "fr": "RC RaceMap – Courses RC | Calendrier & Carte",
+    "nl": "RC RaceMap – RC Racing | Kalender & Kaart"
+  },
+  "seo.description": {
+    "de": "RC RaceMap zeigt alle RC-Car-Renntermine in Deutschland, Österreich und der Schweiz auf einer interaktiven Karte. Strecken entdecken, Rennen finden, Favoriten speichern.",
+    "en": "RC RaceMap shows all RC car race events in Germany, Austria and Switzerland on an interactive map. Discover tracks, find races, save favourites.",
+    "fr": "RC RaceMap affiche tous les rendez-vous de courses RC en Allemagne, Autriche et Suisse sur une carte interactive. Découvrez les circuits et trouvez des courses.",
+    "nl": "RC RaceMap toont alle RC racewedstrijden in Duitsland, Oostenrijk en Zwitserland op een interactieve kaart. Ontdek circuits, vind races, sla favorieten op."
+  }
+}

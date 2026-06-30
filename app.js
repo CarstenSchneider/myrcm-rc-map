@@ -55,7 +55,10 @@ const COUNTRY_BOUNDS = {
   DE: [[47.2, 5.8], [55.1, 15.1]],
   AT: [[46.2, 9.4], [49.0, 17.2]],
   CH: [[45.7, 5.9], [47.9, 10.6]],
-  all: [[45.7, 5.8], [55.1, 17.5]],
+  NL: [[50.75, 3.35], [53.55, 7.22]],
+  BE: [[49.5, 2.55], [51.5, 6.4]],
+  LU: [[49.44, 5.73], [50.19, 6.53]],
+  all: [[45.7, 2.55], [55.1, 17.5]],
 };
 
 function detectCountryFromLocale() {
@@ -65,10 +68,10 @@ function detectCountryFromLocale() {
     const match = lang.toUpperCase().match(/-([A-Z]{2})$/);
     if (match && COUNTRY_BOUNDS[match[1]]) return match[1];
   }
-  // Timezone fallback: handles bare "de" locale in Germany/Austria/Switzerland
+  // Timezone fallback: handles bare locale codes
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH" };
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU" };
     if (tzCountry[tz]) return tzCountry[tz];
   } catch (_) {}
   return "all";
@@ -79,16 +82,194 @@ function fitToCountry(country) {
   fitMapToBounds(bounds, { maxZoom: 10, skipIconShift: true });
 }
 
-const _validCountries = new Set(["all", "DE", "AT", "CH"]);
+const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU"]);
 const _savedCountry = localStorage.getItem("rcRaceMapCountry");
 let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
 let _zoomToCountryPending = false;
+
+// --- i18n ---
+const TRANSLATIONS = {
+  "country.all":        { de: "Alle Länder",   en: "All countries",  fr: "Tous les pays",       nl: "Alle landen" },
+  "country.DE":         { de: "Deutschland",   en: "Germany",        fr: "Allemagne",           nl: "Duitsland" },
+  "country.AT":         { de: "Österreich",    en: "Austria",        fr: "Autriche",            nl: "Oostenrijk" },
+  "country.CH":         { de: "Schweiz",       en: "Switzerland",    fr: "Suisse",              nl: "Zwitserland" },
+  "country.NL":         { de: "Niederlande",   en: "Netherlands",    fr: "Pays-Bas",            nl: "Nederland" },
+  "country.BE":         { de: "Belgien",       en: "Belgium",        fr: "Belgique",            nl: "België" },
+  "country.LU":         { de: "Luxemburg",     en: "Luxembourg",     fr: "Luxembourg",          nl: "Luxemburg" },
+  "filter.range.2w":    { de: "2 Wochen",      en: "2 weeks",        fr: "2 semaines",          nl: "2 weken" },
+  "filter.range.4w":    { de: "4 Wochen",      en: "4 weeks",        fr: "4 semaines",          nl: "4 weken" },
+  "filter.range.all":   { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
+  "filter.fav.all":     { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
+  "filter.fav.favs":    { de: "Favoriten",     en: "Favourites",     fr: "Favoris",             nl: "Favorieten" },
+  "filter.reg.all":     { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
+  "filter.reg.open":    { de: "Offen",         en: "Open",           fr: "Ouvert",              nl: "Open" },
+  "filter.series.all":  { de: "Alle Serien",   en: "All series",     fr: "Toutes les séries",   nl: "Alle series" },
+  "filter.series.national": { de: "Überregional", en: "National",    fr: "National",            nl: "Nationaal" },
+  "filter.series.regional": { de: "Regional",     en: "Regional",    fr: "Régional",            nl: "Regionaal" },
+  "filter.series.other":    { de: "Weitere Serien", en: "More series", fr: "Autres séries",     nl: "Meer series" },
+  "reg.login_required": { de: "Anmeldung nur nach MyRCM-Login sichtbar", en: "Visible after MyRCM sign-in",     fr: "Visible après connexion MyRCM",       nl: "Zichtbaar na MyRCM-login" },
+  "reg.upcoming.from":  { de: "Nennung ab {date}",           en: "Registration from {date}",    fr: "Inscription dès le {date}",           nl: "Inschrijving vanaf {date}" },
+  "reg.upcoming.soon":  { de: "Nennung noch nicht geöffnet", en: "Registration not open yet",   fr: "Inscription pas encore ouverte",      nl: "Inschrijving nog niet open" },
+  "reg.upcoming.tba":   { de: "Nennung folgt",               en: "Registration coming soon",    fr: "Inscription bientôt",                 nl: "Inschrijving volgt" },
+  "reg.closed":         { de: "Nennung geschlossen",         en: "Registration closed",         fr: "Inscription fermée",                  nl: "Inschrijving gesloten" },
+  "reg.open":           { de: "Nennung möglich",             en: "Registration open",           fr: "Inscription ouverte",                 nl: "Inschrijving open" },
+  "reg.link":           { de: "Nennung ↗",                   en: "Register ↗",                  fr: "Inscription ↗",                       nl: "Inschrijven ↗" },
+  "doc.announcement":   { de: "Ausschreibung ↗",             en: "Race announcement ↗",         fr: "Annonce ↗",                           nl: "Uitnodiging ↗" },
+  "doc.rules":          { de: "Reglement ↗",                 en: "Rules ↗",                     fr: "Règlement ↗",                         nl: "Reglement ↗" },
+  "venue.unknown":      { de: "Ort unbekannt",       en: "Location unknown",  fr: "Lieu inconnu",        nl: "Locatie onbekend" },
+  "venue.trackUnknown": { de: "Unbekannte Strecke",  en: "Unknown track",     fr: "Piste inconnue",      nl: "Onbekend circuit" },
+  "venue.route":        { de: "Route",               en: "Directions",        fr: "Itinéraire",          nl: "Route" },
+  "race.new":           { de: "NEU",                 en: "NEW",               fr: "NOUVEAU",             nl: "NIEUW" },
+  "race.last":          { de: "Zuletzt:",            en: "Last:",             fr: "Dernière :",          nl: "Laatst:" },
+  "race.entries":       { de: "Teilnehmer anzeigen", en: "Entry list",        fr: "Participants",        nl: "Deelnemers" },
+  "result.found":       { de: "{n} Rennen gefunden",               en: "{n} races found",                  fr: "{n} courses trouvées",                nl: "{n} races gevonden" },
+  "result.atTrack":     { de: "{n} Rennen an dieser Strecke",      en: "{n} races at this track",          fr: "{n} courses sur cette piste",         nl: "{n} races op dit circuit" },
+  "result.noUpcoming":  { de: "Keine kommenden Rennen an dieser Strecke", en: "No upcoming races at this track", fr: "Aucune course à venir sur cette piste", nl: "Geen komende races op dit circuit" },
+  "result.loading":     { de: "Lade Rennen …",                     en: "Loading races…",                   fr: "Chargement…",                         nl: "Races laden…" },
+  "result.error":       { de: "Fehler beim Laden der Daten.",       en: "Error loading data.",              fr: "Erreur de chargement.",               nl: "Fout bij laden." },
+  "result.timestamp":   { de: "Stand {date} | {time} Uhr",         en: "Updated {date} | {time}",          fr: "État {date} | {time}",                nl: "Status {date} | {time}" },
+  "empty.noRacesTrack": { de: "Keine Rennen an dieser Strecke.",          en: "No races at this track.",       fr: "Aucune course sur cette piste.",  nl: "Geen races op dit circuit." },
+  "empty.noRacesFilter":{ de: "Keine Rennen für diesen Filter gefunden.", en: "No races found.",               fr: "Aucune course trouvée.",          nl: "Geen races gevonden." },
+  "empty.searching":    { de: "Suche…",                                   en: "Searching…",                   fr: "Recherche…",                     nl: "Zoeken…" },
+  "chip.fav":           { de: "Favoriten", en: "Favourites", fr: "Favoris",  nl: "Favorieten" },
+  "chip.open":          { de: "Offen",     en: "Open",       fr: "Ouvert",   nl: "Open" },
+  "menu.signedIn":      { de: "Angemeldet",              en: "Signed in",            fr: "Connecté",                    nl: "Aangemeld" },
+  "menu.signOut":       { de: "Abmelden",                en: "Sign out",             fr: "Déconnexion",                 nl: "Afmelden" },
+  "menu.signIn":        { de: "Anmelden & Favoriten",    en: "Sign in & Favourites", fr: "Connexion & Favoris",         nl: "Inloggen & Favorieten" },
+  "menu.appearance":    { de: "Darstellung",             en: "Appearance",           fr: "Apparence",                   nl: "Weergave" },
+  "menu.theme.auto":    { de: "Auto",                    en: "Auto",                 fr: "Auto",                        nl: "Auto" },
+  "menu.theme.light":   { de: "Tag",                     en: "Day",                  fr: "Jour",                        nl: "Dag" },
+  "menu.theme.dark":    { de: "Nacht",                   en: "Night",                fr: "Nuit",                        nl: "Nacht" },
+  "menu.favourites":    { de: "Favoriten",               en: "Favourites",           fr: "Favoris",                     nl: "Favorieten" },
+  "menu.about":         { de: "Über RC RaceMap",         en: "About RC RaceMap",     fr: "À propos",                    nl: "Over RC RaceMap" },
+  "menu.legal":         { de: "Impressum & Datenschutz", en: "Legal & Privacy",      fr: "Mentions & Confidentialité",  nl: "Juridisch & Privacy" },
+  "menu.back":          { de: "Zurück",                  en: "Back",                 fr: "Retour",                      nl: "Terug" },
+  "login.info":         { de: "Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.", en: "Enter your email. We'll send you a sign-in link — no password needed.", fr: "Saisis ton e-mail. Tu recevras un lien de connexion — sans mot de passe.", nl: "Voer je e-mailadres in. Je ontvangt een inloglink — geen wachtwoord nodig." },
+  "login.placeholder":  { de: "deine@email.de",          en: "your@email.com",       fr: "ton@email.fr",                nl: "jouw@email.nl" },
+  "login.send":         { de: "Link senden",             en: "Send link",            fr: "Envoyer le lien",             nl: "Link sturen" },
+  "login.sending":      { de: "Wird gesendet…",          en: "Sending…",             fr: "Envoi…",                      nl: "Verzenden…" },
+  "login.sent":         { de: "Gesendet",                en: "Sent",                 fr: "Envoyé",                      nl: "Verzonden" },
+  "login.confirm":      { de: "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.", en: "✓ Link sent. Please check your email.", fr: "✓ Lien envoyé. Vérifie tes e-mails.", nl: "✓ Link verzonden. Controleer je e-mail." },
+  "loginPrompt.text":   { de: "Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.", en: "Sign in to save favourites and receive notifications.", fr: "Connecte-toi pour enregistrer tes favoris et recevoir des notifications.", nl: "Log in om favorieten op te slaan en meldingen te ontvangen." },
+  "loginPrompt.btn":    { de: "Anmelden", en: "Sign in", fr: "Connexion", nl: "Inloggen" },
+  "fav.empty":          { de: "Keine Favoriten", en: "No favourites", fr: "Aucun favori", nl: "Geen favorieten" },
+  "fav.bellHint":       { de: "Aktiviere {bell} für E-Mail-Updates bei neuen Rennen", en: "Enable {bell} for email updates on new races", fr: "Active {bell} pour les e-mails des nouvelles courses", nl: "Activeer {bell} voor e-mails over nieuwe races" },
+  "fav.bellOn":         { de: "Benachrichtigungen deaktivieren", en: "Disable notifications", fr: "Désactiver les notifications", nl: "Meldingen uitschakelen" },
+  "fav.bellOff":        { de: "Per E-Mail benachrichtigen",      en: "Notify by email",       fr: "Notifier par e-mail",          nl: "Melden per e-mail" },
+  "tip.counter":        { de: "Tipp {n} von {total}",  en: "Tip {n} of {total}", fr: "Astuce {n} sur {total}", nl: "Tip {n} van {total}" },
+  "tip.dismiss":        { de: "Tipp schließen",         en: "Close tip",          fr: "Fermer l'astuce",        nl: "Tip sluiten" },
+  "tip1.title":         { de: "Rennen in deiner Nähe.", en: "Races near you.",    fr: "Des courses près de chez toi.", nl: "Races bij jou in de buurt." },
+  "tip1.text":          { de: "Nutze {locate} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.", en: "Use {locate} your location and filter by time or race series. Larger pins mean more activity.", fr: "Utilise {locate} ta position et filtre par période ou série. Plus le repère est grand, plus il y a d'activité.", nl: "Gebruik {locate} je locatie en filter op periode of serie. Grotere pins betekenen meer activiteit." },
+  "tip2.title":         { de: "Alles auf einen Blick.", en: "Everything at a glance.", fr: "Tout en un coup d'œil.", nl: "Alles in één oogopslag." },
+  "tip2.text":          { de: "Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.", en: "All race info with links to the club and registration. Tap the race card to show the track on the map.", fr: "Toutes les infos avec liens vers le club et l'inscription. Touchez la fiche pour voir la piste sur la carte.", nl: "Alle race-info met links naar club en inschrijving. Tik op de racekaart om het circuit op de kaart te tonen." },
+  "tip3.title":         { de: "Kein Rennen verpassen.", en: "Never miss a race.", fr: "Ne manque plus aucune course.", nl: "Mis geen race meer." },
+  "tip3.text":          { de: "Favoriten {star} markieren und Benachrichtigungen {bell} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.", en: "Mark favourites {star} and enable notifications {bell}. We'll notify you about new races, changes and cancellations.", fr: "Ajoute des favoris {star} et active les notifications {bell}. Nous t'informerons des nouvelles courses, modifications et annulations.", nl: "Markeer favorieten {star} en activeer meldingen {bell}. We informeren je over nieuwe races, wijzigingen en afgelastingen." },
+  "about.p1":           { de: "RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.", en: "RC RaceMap shows where and when the next races take place — on a map and in a list. Both can be filtered by club and race series.", fr: "RC RaceMap montre où et quand auront lieu les prochaines courses — sur une carte et dans une liste. Les deux peuvent être filtrés par club et série.", nl: "RC RaceMap toont waar en wanneer de volgende races plaatsvinden — op een kaart en in een lijst. Beide kunnen worden gefilterd op club en serie." },
+  "about.p2":           { de: "Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.", en: "The list includes links to registration and, where available, to the rules and race announcement.", fr: "La liste contient un lien vers l'inscription et, si disponibles, vers le règlement et l'annonce.", nl: "De lijst bevat links naar de inschrijving en, indien beschikbaar, naar reglement en uitnodiging." },
+  "about.p3":           { de: "Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.", en: "Mark your favourite clubs as favourites and get email updates about new races. Just sign in with your email address — no registration required.", fr: "Ajoute tes clubs favoris et reçois des e-mails sur les nouvelles courses. Connecte-toi simplement avec ton e-mail — aucune inscription nécessaire.", nl: "Markeer je favoriete clubs en ontvang e-mails over nieuwe races. Log eenvoudig in met je e-mailadres — registreren is niet nodig." },
+  "about.p4":           { de: "Die Daten stammen direkt von MyRCM und RCK. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.", en: "The data comes directly from MyRCM and RCK. You'll find all race details and registration there. RC RaceMap is a non-commercial service that presents this data on an interactive map.", fr: "Les données proviennent directement de MyRCM et RCK. Tu y trouveras toutes les informations et l'inscription. RC RaceMap est un service non commercial qui présente ces données sur une carte interactive.", nl: "De gegevens komen rechtstreeks van MyRCM en RCK. Daar vind je alle informatie en de inschrijving. RC RaceMap is een niet-commerciële dienst die deze gegevens op een interactieve kaart toont." },
+  "about.p5":           { de: "Keine Haftung für Fehler oder verpasste Podiumsplätze.", en: "No liability for errors or missed podiums.", fr: "Aucune responsabilité pour les erreurs ou les podiums manqués.", nl: "Geen aansprakelijkheid voor fouten of gemiste podiumplaatsen." },
+  "nav.search":         { de: "Suche", en: "Search", fr: "Recherche", nl: "Zoeken" },
+  "nav.filter.open":    { de: "Suche und Serienfilter öffnen", en: "Open search and series filter", fr: "Ouvrir la recherche et le filtre", nl: "Zoeken en seriefilter openen" },
+  "nav.filter.close":   { de: "Suche und Serienfilter schließen", en: "Close search and series filter", fr: "Fermer la recherche et le filtre", nl: "Zoeken en seriefilter sluiten" },
+  "menu.language":      { de: "Sprache", en: "Language", fr: "Langue", nl: "Taal" },
+  "menu.racelist":      { de: "Rennliste", en: "Race list", fr: "Liste des courses", nl: "Racelijst" },
+  "menu.footer.data":   { de: "Daten", en: "Data", fr: "Données", nl: "Gegevens" },
+  "menu.footer.map":    { de: "Karte", en: "Map", fr: "Carte", nl: "Kaart" },
+  "fav.search":         { de: "Club suchen…", en: "Search club…", fr: "Rechercher un club…", nl: "Club zoeken…" },
+  "fav.mine":           { de: "Meine Favoriten", en: "My Favourites", fr: "Mes favoris", nl: "Mijn favorieten" },
+  "fav.all":            { de: "Alle Clubs", en: "All Clubs", fr: "Tous les clubs", nl: "Alle clubs" },
+  "seo.title":          { de: "RC RaceMap – RC-Car-Rennen in DACH | Termine & Karte", en: "RC RaceMap – RC Car Races | Schedule & Map", fr: "RC RaceMap – Courses RC | Calendrier & Carte", nl: "RC RaceMap – RC Racing | Kalender & Kaart" },
+  "seo.description":    { de: "RC RaceMap zeigt alle RC-Car-Renntermine in Deutschland, Österreich und der Schweiz auf einer interaktiven Karte. Strecken entdecken, Rennen finden, Favoriten speichern.", en: "RC RaceMap shows all RC car race events in Germany, Austria and Switzerland on an interactive map. Discover tracks, find races, save favourites.", fr: "RC RaceMap affiche tous les rendez-vous de courses RC en Allemagne, Autriche et Suisse sur une carte interactive. Découvrez les circuits et trouvez des courses.", nl: "RC RaceMap toont alle RC racewedstrijden in Duitsland, Oostenrijk en Zwitserland op een interactieve kaart. Ontdek circuits, vind races, sla favorieten op." },
+};
+
+function detectLangFromLocale() {
+  const langs = Array.from(navigator.languages?.length ? navigator.languages : [navigator.language]);
+  for (const lang of langs) {
+    const primary = lang.split("-")[0].toLowerCase();
+    if (["de", "en", "fr", "nl"].includes(primary)) return primary;
+  }
+  return "en";
+}
+
+const _savedLang = localStorage.getItem("rcRaceMapLang");
+let _lang = ["de", "en", "fr", "nl"].includes(_savedLang) ? _savedLang : detectLangFromLocale();
+
+function t(key, vars) {
+  const entry = TRANSLATIONS[key];
+  if (!entry) return key;
+  const str = entry[_lang] ?? entry.en ?? key;
+  if (!vars) return str;
+  return str.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? `{${k}}`));
+}
+
+function _dateLocale() {
+  return { de: "de-DE", en: "en-GB", fr: "fr-FR", nl: "nl-NL" }[_lang] || "en-GB";
+}
+
+function _updateStaticI18n() {
+  document.documentElement.lang = _lang;
+  const rangeKeys = { "2": "filter.range.2w", "4": "filter.range.4w", "all": "filter.range.all" };
+  rangeFilter?.querySelectorAll("[data-range]").forEach(btn => {
+    const key = rangeKeys[btn.dataset.range];
+    if (key) btn.textContent = t(key);
+  });
+  const favAll = favoriteFilter?.querySelector("[data-favorite-filter='all']");
+  if (favAll) favAll.textContent = t("filter.fav.all");
+  const favFavsLabel = favoriteFilter?.querySelector(".label-full");
+  if (favFavsLabel) favFavsLabel.textContent = t("filter.fav.favs");
+  const regAll = registrationVisibilityFilter?.querySelector("[data-registration-visibility='all']");
+  if (regAll) regAll.textContent = t("filter.reg.all");
+  const regOpenLabel = registrationVisibilityFilter?.querySelector(".label-full");
+  if (regOpenLabel) regOpenLabel.textContent = t("filter.reg.open");
+
+  // Topbar search
+  const searchLabel = document.querySelector(".topbar-filter-label");
+  if (searchLabel) searchLabel.textContent = t("nav.search");
+  if (searchInput) searchInput.placeholder = t("nav.search");
+
+  // Fav page
+  const favSearchEl = document.getElementById("favSearch");
+  if (favSearchEl) favSearchEl.placeholder = t("fav.search");
+  document.querySelectorAll(".fav-tab[data-fav-tab='mine']").forEach(el => {
+    if (el.childNodes[0]?.nodeType === Node.TEXT_NODE) el.childNodes[0].textContent = t("fav.mine") + " ";
+  });
+  document.querySelectorAll(".fav-tab[data-fav-tab='all']").forEach(el => {
+    if (el.childNodes[0]?.nodeType === Node.TEXT_NODE) el.childNodes[0].textContent = t("fav.all") + " ";
+  });
+  document.querySelectorAll(".fav-col-title").forEach(el => {
+    const col = el.closest(".fav-col");
+    if (col?.id === "favColMine") el.textContent = t("fav.mine");
+    else if (col?.id === "favColAll") el.textContent = t("fav.all");
+  });
+
+  // Page title + meta description (in-browser; static HTML stays German for crawlers)
+  document.title = t("seo.title");
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = t("seo.description");
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) ogLocale.content = { de: "de_DE", en: "en_GB", fr: "fr_FR", nl: "nl_NL" }[_lang] || "de_DE";
+}
+
+function setLang(lang) {
+  if (!["de", "en", "fr", "nl"].includes(lang)) return;
+  _lang = lang;
+  localStorage.setItem("rcRaceMapLang", lang);
+  _updateStaticI18n();
+  updateCountryPill();
+  populateSeries();
+  showMenuHome();
+  render();
+}
 
 const countryFlags = [
   { country: "all", code: "eu", label: "Alle Länder" },
   { country: "DE",  code: "de", label: "Deutschland" },
   { country: "AT",  code: "at", label: "Österreich" },
   { country: "CH",  code: "ch", label: "Schweiz" },
+  { country: "NL",  code: "nl", label: "Niederlande" },
+  { country: "BE",  code: "be", label: "Belgien" },
+  { country: "LU",  code: "lu", label: "Luxemburg" },
 ];
 let _countryPill = null;
 
@@ -99,7 +280,7 @@ function updateCountryPill() {
     ...countryFlags.filter(f => f.country !== selectedCountry),
   ];
   _countryPill.innerHTML = ordered.map(f =>
-    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${f.label}">` +
+    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${t('country.' + f.country)}">` +
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
     `</button>`
   ).join("");
@@ -254,6 +435,12 @@ function locateUser(btn) {
         })
       ]).addTo(map);
 
+      const detectedCountry = detectCountryFromLocale();
+      if (selectedCountry !== detectedCountry) {
+        selectedCountry = detectedCountry;
+        localStorage.setItem("rcRaceMapCountry", detectedCountry);
+        updateCountryPill();
+      }
       const hasNearbyVenues = venues.some(v => hasLatLng(v) && haversineKm(lat, lng, v.lat, v.lng) <= GEO_RADIUS_KM);
       const list = filteredRaces();
       renderList(list);
@@ -345,22 +532,16 @@ const ONBOARDING_TIPS = [
   {
     render: "fixed-locate",
     arrow: "left-top",
-    title: "Rennen in deiner Nähe.",
-    html: `Nutze ${_locateIconSvg()} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.79 540.3" aria-hidden="true"><g><path d="M261.52,286.32c-36.2,0-65.65-29.45-65.65-65.64s29.45-65.64,65.65-65.64,65.64,29.45,65.64,65.64-29.45,65.64-65.64,65.64ZM261.52,165.03c-30.68,0-55.65,24.96-55.65,55.64s24.96,55.64,55.65,55.64,55.64-24.96,55.64-55.64-24.96-55.64-55.64-55.64Z" fill="#fff"/><path d="M261.52,254.6c-18.7,0-33.92-15.22-33.92-33.92s15.22-33.92,33.92-33.92,33.92,15.22,33.92,33.92-15.22,33.92-33.92,33.92ZM261.52,196.76c-13.19,0-23.92,10.73-23.92,23.92s10.73,23.92,23.92,23.92,23.92-10.73,23.92-23.92-10.73-23.92-23.92-23.92Z" fill="#fff"/></g><g><circle cx="349.39" cy="58.73" r="46.06" fill="#fff"/><g><path d="M352.08,50.05v16.15c5.38-.73,10.77-1.45,16.15-1.63v-16.15c-5.38.18-10.77.91-16.15,1.63Z" fill="#5b75ab"/><path d="M407.51,58.12c0-32.1-26.02-58.12-58.12-58.12s-58.12,26.02-58.12,58.12c0,27.1,18.54,49.86,43.63,56.3l14.49,14.49,14.49-14.49c25.09-6.44,43.63-29.2,43.63-56.3ZM384.37,66.2c-5.38-1.45-10.77-1.82-16.15-1.63v16.15c-5.38.18-10.77.91-16.15,1.63v-16.15c-5.38.73-10.77,1.45-16.15,1.63v16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v-16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v16.15c5.38-.18,10.77-.91,16.15-1.63v-16.15c5.38-.73,10.77-1.45,16.15-1.63v16.15c5.38-.18,10.77.18,16.15,1.63v16.15Z" fill="#5b75ab"/></g></g><g><circle cx="83.69" cy="216.67" r="66.33" fill="#fff"/><g><path d="M87.56,204.18v23.25c7.75-1.05,15.5-2.09,23.25-2.35v-23.25c-7.75.26-15.5,1.31-23.25,2.35Z" fill="#435c95"/><path d="M167.39,215.8c0-46.22-37.47-83.69-83.69-83.69S0,169.58,0,215.8c0,39.02,26.7,71.8,62.83,81.07l20.86,20.86,20.86-20.86c36.13-9.27,62.83-42.05,62.83-81.07ZM134.07,227.43c-7.75-2.09-15.5-2.62-23.25-2.35v23.25c-7.75.26-15.5,1.31-23.25,2.35v-23.25c-7.75,1.05-15.5,2.09-23.25,2.35v23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v-23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v23.25c7.75-.26,15.5-1.31,23.25-2.35v-23.25c7.75-1.05,15.5-2.09,23.25-2.35v23.25c7.75-.26,15.5.26,23.25,2.35v23.25Z" fill="#435c95"/></g></g><g><circle cx="339.64" cy="380.72" r="104.74" fill="#fff"/><g><path d="M345.74,360.99v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M471.79,379.35c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM419.17,397.7c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
   },
   {
     render: "fixed-list-left",
-    title: "Alles auf einen Blick.",
-    html: `Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454.5 520.62" aria-hidden="true"><path d="M102.27,0C45.79,0,0,45.79,0,102.27c0,47.68,32.63,87.74,76.77,99.06l25.5,25.5,25.5-25.5c44.15-11.33,76.77-51.39,76.77-99.06C204.54,45.79,158.75,0,102.27,0Z" fill="#fff" opacity=".35"/><path d="M156.37,321.69c-32.59,0-59.1-26.51-59.1-59.1,0-2.76,2.24-5,5-5s5,2.24,5,5c0,27.08,22.03,49.1,49.1,49.1,2.76,0,5,2.24,5,5s-2.24,5-5,5Z" fill="#fff" opacity=".35"/><g><circle cx="322.35" cy="361.03" r="104.74" fill="#fff"/><g><path d="M328.46,341.3v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M454.5,359.66c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM401.89,378.02c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
   },
   {
     render: "list-top",
     arrow: "bottom-right",
     mobileFull: true,
-    title: "Kein Rennen verpassen.",
-    html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.77 456.77" aria-hidden="true"><path d="M342.77,257.42l-120.13,94.84,117.94,94.38c1.39-2.62,2.19-5.62,2.19-8.78v-180.44ZM183.29,345.18c-6.95-5.56-16.85-5.56-23.8,0L20.01,456.77h302.76l-139.48-111.6ZM183.19,118.07c-6.92-5.43-16.7-5.43-23.62,0L7.23,237.8c-.24.17-.46.35-.67.54l128.84,101.72,12.2-9.74c13.91-11.14,33.68-11.14,47.57,0l12.2,9.74,128.84-101.72c-.22-.19-.43-.37-.67-.54l-152.34-119.72ZM0,437.86c0,3.16.8,6.16,2.18,8.78l117.96-94.36L0,257.42v180.44Z" fill="#fff"/><g><circle cx="171.39" cy="131.67" r="103.29" fill="#fff"/><g><path d="M177.41,112.22v36.21c12.07-1.63,24.14-3.26,36.21-3.67v-36.21c-12.07.41-24.14,2.04-36.21,3.67Z" fill="#21386a"/><path d="M301.71,130.32C301.71,58.35,243.36,0,171.39,0S41.07,58.35,41.07,130.32c0,60.76,41.58,111.8,97.83,126.24l32.49,32.49,32.49-32.49c56.25-14.44,97.83-65.48,97.83-126.24ZM249.82,148.42c-12.07-3.26-24.14-4.07-36.21-3.67v36.21c-12.07.41-24.14,2.04-36.21,3.67v-36.21c-12.07,1.63-24.14,3.26-36.21,3.67v36.21c-12.07.41-24.14-.41-36.21-3.67v-36.21c12.07,3.26,24.14,4.07,36.21,3.67v-36.21c-12.07.41-24.14-.41-36.21-3.67v-36.21c12.07,3.26,24.14,4.07,36.21,3.67v36.21c12.07-.41,24.14-2.04,36.21-3.67v-36.21c12.07-1.63,24.14-3.26,36.21-3.67v36.21c12.07-.41,24.14.41,36.21,3.67v36.21Z" fill="#21386a"/></g></g></svg>`,
   },
 ];
@@ -378,6 +559,9 @@ function _currentTip() {
 
 function _buildTipCardEl(tip) {
   if (!tip) return null;
+  const n = tip.idx + 1;
+  const title = t(`tip${n}.title`);
+  const html = t(`tip${n}.text`, { locate: _locateIconSvg("tip-inline-icon"), bell: _bellIconSvg("tip-inline-icon"), star: _favIconSvg("tip-inline-icon") });
   const el = document.createElement("aside");
   el.className = "tip-card";
   el.setAttribute("role", "note");
@@ -386,11 +570,11 @@ function _buildTipCardEl(tip) {
   el.innerHTML = `
     <div class="tip-illustration" aria-hidden="true">${tip.illustration || ""}</div>
     <div class="tip-body">
-      <span class="tip-title">${tip.title}</span>
-      <span class="tip-text">${tip.html}</span>
-      <span class="tip-counter">Tipp ${tip.idx + 1} von ${ONBOARDING_TIPS.length}</span>
+      <span class="tip-title">${title}</span>
+      <span class="tip-text">${html}</span>
+      <span class="tip-counter">${t("tip.counter", { n, total: ONBOARDING_TIPS.length })}</span>
     </div>
-    <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
+    <button class="tip-dismiss" type="button" aria-label="${t("tip.dismiss")}" data-tip-dismiss>×</button>
   `;
   return el;
 }
@@ -1511,8 +1695,8 @@ function updateFilterPanelState() {
   filterToggleButton.setAttribute(
     "aria-label",
     isFilterPanelOpen
-      ? "Suche und Serienfilter schließen"
-      : "Suche und Serienfilter öffnen"
+      ? t("nav.filter.close")
+      : t("nav.filter.open")
   );
 }
 
@@ -1609,7 +1793,7 @@ function renderActiveFilterChips() {
   if (selectedFavoriteFilter === "favorites") {
     chips.push(`
       <button class="active-filter-chip" type="button" data-clear-filter="favorites">
-        Favoriten<span aria-hidden="true">×</span>
+        ${t("chip.fav")}<span aria-hidden="true">×</span>
       </button>
     `);
   }
@@ -1617,7 +1801,7 @@ function renderActiveFilterChips() {
   if (showOpenOnly) {
     chips.push(`
       <button class="active-filter-chip" type="button" data-clear-filter="registration">
-        Offen<span aria-hidden="true">×</span>
+        ${t("chip.open")}<span aria-hidden="true">×</span>
       </button>
     `);
   }
@@ -1919,20 +2103,26 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
-const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE" };
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU" };
 function venueCountry(venue) {
-  if (!venue?.myrcmOrgId) return null;
-  const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
-  if (!c) return null;
-  return _countryNameToCode[c] ?? c;
+  if (!venue) return null;
+  if (venue.myrcmOrgId) {
+    const c = hostsByOrgId.get(String(venue.myrcmOrgId))?.country ?? null;
+    if (c) return _countryNameToCode[c] ?? c;
+  }
+  // Direct country field (DMC venues, manually verified venues)
+  if (venue.country) return _countryNameToCode[venue.country] ?? venue.country;
+  return null;
 }
+
+const _dachCountries = new Set(["DE", "AT", "CH"]);
 
 function matchesCountryFilter(race) {
   if (selectedCountry === "all") return true;
   const venue = venueForRace(race);
   if (!venue) return false;
   const venueC = venueCountry(venue);
-  if (!venueC) return true; // no country data yet → show in all filters
+  if (!venueC) return _dachCountries.has(selectedCountry); // no country data → assume DACH only
   if (venueC === selectedCountry) return true;
   // Cross-border races: also match by organizer's country
   const hostId = raceHostId(race);
@@ -1981,13 +2171,13 @@ function formatDateRange(from, to) {
   const start = parseDate(from);
   const end = parseDate(to || from);
 
-  const fmt = new Intl.DateTimeFormat("de-DE", {
+  const fmt = new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
   });
 
-  const fmtShort = new Intl.DateTimeFormat("de-DE", {
+  const fmtShort = new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit"
   });
@@ -2006,7 +2196,7 @@ function formatDate(dateString) {
 
   const date = parseDate(dateString);
 
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
@@ -2018,7 +2208,7 @@ function formatShortDate(dateString) {
 
   const date = parseDate(dateString);
 
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit",
     year: "2-digit"
@@ -2028,32 +2218,31 @@ function formatShortDate(dateString) {
 function formatDataUpdateTimestamp(date) {
   if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
 
-  const datePart = new Intl.DateTimeFormat("de-DE", {
+  const locale = _dateLocale();
+  const datePart = new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
   }).format(date);
 
-  const timePart = new Intl.DateTimeFormat("de-DE", {
+  const timePart = new Intl.DateTimeFormat(locale, {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false
   }).format(date);
 
-  return `Stand ${datePart} | ${timePart} Uhr`;
+  return t("result.timestamp", { date: datePart, time: timePart });
 }
 
-function resultLineText(count, detail = "gefunden") {
+function resultLineText(count, detail) {
   const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
-  const base = `${count} Rennen ${detail}`;
-
+  const base = t(detail ? "result.atTrack" : "result.found", { n: count });
   return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
 }
 
 function emptyVenueResultLineText() {
   const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
-  const base = "Keine kommenden Rennen an dieser Strecke";
-
+  const base = t("result.noUpcoming");
   return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
 }
 
@@ -2125,20 +2314,20 @@ function registrationLabel(race) {
   const status = registrationStatus(race);
 
   if (status === "login_required") {
-    return "Anmeldung nur nach MyRCM-Login sichtbar";
+    return t("reg.login_required");
   }
 
   if (status === "upcoming") {
     return race.registrationOpens
-      ? `Nennung ab ${formatDate(race.registrationOpens)}`
-      : "Nennung noch nicht geöffnet";
+      ? t("reg.upcoming.from", { date: formatDate(race.registrationOpens) })
+      : t("reg.upcoming.soon");
   }
 
   if (status === "closed") {
-    return "Nennung geschlossen";
+    return t("reg.closed");
   }
 
-  return "Nennung möglich";
+  return t("reg.open");
 }
 
 function registrationDotHtml(race) {
@@ -2176,19 +2365,19 @@ function registrationStatusHtml(race) {
 
   if (status === "closed") {
     return `<div class="registration-status registration-status-closed">
-      ${registrationDotHtml(race)}Nennung geschlossen
+      ${registrationDotHtml(race)}${t("reg.closed")}
     </div>`;
   }
 
   if (status === "upcoming") {
     return `<div class="registration-status registration-status-upcoming">
-      Nennung ab ${race.registrationOpens ? formatDate(race.registrationOpens) : "noch nicht geöffnet"}
+      ${race.registrationOpens ? t("reg.upcoming.from", { date: formatDate(race.registrationOpens) }) : t("reg.upcoming.soon")}
     </div>`;
   }
 
   if (status === "login_required") {
     return `<div class="registration-status registration-status-login_required">
-      Anmeldung nur nach MyRCM-Login sichtbar
+      ${t("reg.login_required")}
     </div>`;
   }
 
@@ -2286,8 +2475,8 @@ function registrationCountHtml(race) {
       href="${escapeHtml(participantUrl)}"
       target="_blank"
       rel="noopener"
-      title="Teilnehmer anzeigen"
-      aria-label="Teilnehmer anzeigen: ${escapeHtml(display)} Nennungen"
+      title="${t("race.entries")}"
+      aria-label="${t("race.entries")}: ${escapeHtml(display)}"
       onclick="event.stopPropagation()"
     >${content}</a>`;
   }
@@ -2891,7 +3080,7 @@ function raceWebsite(race) {
 
 function venueNameHtml(venue) {
   const website = venueWebsite(venue);
-  const name = escapeHtml(venue?.name || "Unbekannte Strecke");
+  const name = escapeHtml(venue?.name || t("venue.trackUnknown"));
   const nameHtml = website
     ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
     : `<span class="venue-name-text">${name}</span>`;
@@ -2947,7 +3136,7 @@ function raceHostAndVenueAreSame(race) {
 
 function raceVenueMetaHtml(race) {
   if (!hasMappableVenue(race)) {
-    return `<div class="race-venue race-venue-unknown">${mapPinIconHtml("race-venue-pin")}<span>Ort unbekannt</span></div>`;
+    return `<div class="race-venue race-venue-unknown">${mapPinIconHtml("race-venue-pin")}<span>${t("venue.unknown")}</span></div>`;
   }
   if (raceHostAndVenueAreSame(race)) return "";
   return `<div class="race-venue">${mapPinIconHtml("race-venue-pin")}${raceVenueNameHtml(race)}</div>`;
@@ -3086,28 +3275,28 @@ function documentLinksHtml(race) {
   if (status === "closed") {
     registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
         <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
-        Nennung geschlossen
+        ${t("reg.closed")}
       </span>`;
   } else if (status === "upcoming") {
     registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
         <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
-        ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
+        ${race.note || (race.registrationOpens ? t("reg.upcoming.from", { date: formatDate(race.registrationOpens) }) : t("reg.upcoming.tba"))}
       </span>`;
   } else if (race.url) {
     registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        <span class="race-link-text">Nennung ↗</span>
+        <span class="race-link-text">${t("reg.link")}</span>
       </a>`;
   }
 
   const documentItems = [];
 
   if (announcement?.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Ausschreibung ↗</a>`);
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${t("doc.announcement")}</a>`);
   }
 
   if (rules?.url && rules.url !== announcement?.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${t("doc.rules")}</a>`);
   }
 
   return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
@@ -3131,7 +3320,7 @@ function venueDisplayName(race) {
     venue?.name ||
     race?.venueLocation ||
     race?.venueId ||
-    "Unbekannte Strecke"
+    t("venue.trackUnknown")
   );
 }
 
@@ -3322,7 +3511,7 @@ function googleMapsRouteUrl(venue) {
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null, overrideName = null) {
-  const venueName = escapeHtml(overrideName || venue?.name || "Unbekannte Strecke");
+  const venueName = escapeHtml(overrideName || venue?.name || t("venue.trackUnknown"));
   const venueWs = venueWebsite(venue);
   const titleHtml = venueWs
     ? `<a class="popup-venue-link" href="${escapeHtml(venueWs)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${venueName}</a>`
@@ -3335,7 +3524,7 @@ function buildPopup(venue, venueRaces, latestPastRace = null, overrideName = nul
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
         </svg>
-        Route
+        ${t("venue.route")}
       </a>
     </div>
   `;
@@ -3772,7 +3961,7 @@ function buildPastRaceCardEl(race) {
   const series = raceSeries(race);
   const label = document.createElement("div");
   label.className = "venue-last-race-label";
-  label.textContent = "Zuletzt:";
+  label.textContent = t("race.last");
   const card = document.createElement("article");
   card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}`;
   card.dataset.raceId = race.id;
@@ -3798,7 +3987,7 @@ function renderVenueNoRaces(latestPastRace) {
   resultLine.textContent = emptyVenueResultLineText();
   raceList.innerHTML = "";
   if (!latestPastRace) {
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen an dieser Strecke.</div>`;
+    raceList.innerHTML = `<div class="empty-state">${t("empty.noRacesTrack")}</div>`;
     return;
   }
   buildPastRaceCardEl(latestPastRace).forEach(el => raceList.appendChild(el));
@@ -3825,7 +4014,7 @@ function renderList(list) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
     const emptyEl = document.createElement("div");
     emptyEl.className = "empty-state";
-    emptyEl.textContent = _geocodePending ? "Suche…" : "Keine Rennen für diesen Filter gefunden.";
+    emptyEl.textContent = _geocodePending ? t("empty.searching") : t("empty.noRacesFilter");
     raceList.appendChild(emptyEl);
     return;
   }
@@ -4091,7 +4280,7 @@ function populateSeries() {
     });
   });
 
-  seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
+  seriesFilter.innerHTML = `<option value="all">${t("filter.series.all")}</option>`;
 
   const groups = {
     overregional: [],
@@ -4135,9 +4324,9 @@ function populateSeries() {
     seriesFilter.appendChild(group);
   };
 
-  appendGroup("Überregional", groups.overregional);
-  appendGroup("Regional", groups.regional);
-  appendGroup("Weitere Serien", groups.other);
+  appendGroup(t("filter.series.national"), groups.overregional);
+  appendGroup(t("filter.series.regional"), groups.regional);
+  appendGroup(t("filter.series.other"), groups.other);
 
   if (selectedSeries !== "all" && !seriesFilter.querySelector(`option[value="${selectedSeries}"]`)) {
     selectedSeries = "all";
@@ -4716,6 +4905,7 @@ async function init() {
   }
 
   syncFilterUi();
+  _updateStaticI18n();
 
   if (selectedCountry !== "all") _zoomToCountryPending = true;
   render();
@@ -4742,7 +4932,7 @@ if (_unsubUserId) {
 } else {
   init().catch(error => {
     console.error(error);
-    resultLine.textContent = "Fehler beim Laden der Daten.";
+    resultLine.textContent = t("result.error");
   });
 }
 
@@ -5258,19 +5448,24 @@ function showMenuHome() {
   const iconPin = `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
   const iconInfo = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`;
   const iconUser = `<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
+  const iconLogout = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>`;
+  const iconThemeLight = `<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="8" y1="0.5" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15.5"/><line x1="0.5" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15.5" y2="8"/><line x1="2.4" y1="2.4" x2="3.8" y2="3.8"/><line x1="12.2" y1="12.2" x2="13.6" y2="13.6"/><line x1="2.4" y1="13.6" x2="3.8" y2="12.2"/><line x1="12.2" y1="3.8" x2="13.6" y2="2.4"/></g></svg>`;
+  const iconThemeDark = `<svg viewBox="0 0 16 16"><path d="M13.5 9.5A6 6 0 0 1 6 2a6 6 0 1 0 7.5 7.5z" fill="currentColor"/></svg>`;
+  const iconThemeAuto = `<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M8 1.5 A6.5 6.5 0 0 1 8 14.5 Z" fill="currentColor"/></svg>`;
+
+  const iconGlobe = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
 
   const authSection = sbUser
     ? `<div class="app-menu-auth-user">
-        <span class="app-menu-auth-avatar">${sbUser.email[0].toUpperCase()}</span>
-        <div class="app-menu-auth-info">
-          <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
-          <span class="app-menu-auth-status">Angemeldet</span>
+        <span class="app-menu-row-icon">${iconUser}</span>
+        <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
+        <div class="theme-toggle">
+          <button type="button" class="theme-toggle-btn" id="sbSignOutBtn" aria-label="${t("menu.signOut")}" title="${t("menu.signOut")}">${iconLogout}</button>
         </div>
-        <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">Abmelden</button>
       </div>`
     : `<button type="button" class="app-menu-row" id="sbLoginBtn">
         <span class="app-menu-row-icon">${iconUser}</span>
-        <span class="app-menu-row-label">Anmelden &amp; Favoriten</span>
+        <span class="app-menu-row-label">${t("menu.signIn")}</span>
         ${chevron}
       </button>`;
 
@@ -5280,34 +5475,34 @@ function showMenuHome() {
     ${authSection}
     <div class="app-menu-row app-menu-theme-row">
       <span class="app-menu-row-icon">${iconSun}</span>
-      <span class="app-menu-row-label">Darstellung</span>
+      <span class="app-menu-row-label">${t("menu.appearance")}</span>
       <div class="theme-toggle">
-        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
-        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">Tag</button>
-        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">Nacht</button>
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto" aria-label="${t("menu.theme.auto")}" title="${t("menu.theme.auto")}">${iconThemeAuto}</button>
+        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light" aria-label="${t("menu.theme.light")}" title="${t("menu.theme.light")}">${iconThemeLight}</button>
+        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark" aria-label="${t("menu.theme.dark")}" title="${t("menu.theme.dark")}">${iconThemeDark}</button>
       </div>
     </div>
     ${sbUser ? `
     <button type="button" class="app-menu-row" data-menu="favorites">
       <span class="app-menu-row-icon">${iconStar}</span>
-      <span class="app-menu-row-label">Favoriten</span>
+      <span class="app-menu-row-label">${t("menu.favourites")}</span>
       ${chevron}
     </button>
 ` : ""}
     <!-- Rennliste temporarily hidden until ready -->
     <button type="button" class="app-menu-row" id="clubListMenuBtn" hidden>
       <span class="app-menu-row-icon">${iconList}</span>
-      <span class="app-menu-row-label">Rennliste</span>
+      <span class="app-menu-row-label">${t("menu.racelist")}</span>
       ${chevron}
     </button>
     <button type="button" class="app-menu-row" data-menu="about">
       <span class="app-menu-row-icon">${iconInfo}</span>
-      <span class="app-menu-row-label">Über RC RaceMap</span>
+      <span class="app-menu-row-label">${t("menu.about")}</span>
       ${chevron}
     </button>
     <button type="button" class="app-menu-row" data-menu="impressum">
       <span class="app-menu-row-icon">${iconInfo}</span>
-      <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
+      <span class="app-menu-row-label">${t("menu.legal")}</span>
       ${chevron}
     </button>
     ${isAdmin() ? `
@@ -5316,26 +5511,37 @@ function showMenuHome() {
       <span class="app-menu-row-label">Ausrichter verorten</span>
       ${chevron}
     </button>` : ""}
+    <div class="app-menu-row app-menu-lang-row">
+      <span class="app-menu-row-icon">${iconGlobe}</span>
+      <span class="app-menu-row-label">${t("menu.language")}</span>
+      <select class="lang-select" aria-label="${t("menu.language")}">
+        <option value="de"${_lang==="de"?" selected":""}>Deutsch</option>
+        <option value="en"${_lang==="en"?" selected":""}>English</option>
+        <option value="fr"${_lang==="fr"?" selected":""}>Français</option>
+        <option value="nl"${_lang==="nl"?" selected":""}>Nederlands</option>
+      </select>
+    </div>
     <div class="app-menu-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
         ${lessrainSvg}
       </a>
       <div class="app-menu-footer-legal">
         <div class="app-menu-footer-legal-row">
-          <span>Daten:</span>
+          <span>${t("menu.footer.data")}:</span>
           <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">MyRCM</a>
           <span>·</span>
           <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">RCK</a>
           <span>·</span>
-          <span>Karte:</span>
+          <span>${t("menu.footer.map")}:</span>
           <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a>
         </div>
       </div>
     </div>`;
 
-  appMenuContent.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+  appMenuContent.querySelectorAll("[data-theme]").forEach(btn => {
     btn.addEventListener("click", () => setTheme(btn.dataset.theme));
   });
+  appMenuContent.querySelector(".lang-select")?.addEventListener("change", e => setLang(e.target.value));
   appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
     btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
   });
@@ -5360,9 +5566,9 @@ function maskEmail(email) {
 function loginPageHtml() {
   return `
     <div class="app-menu-login-form">
-      <p class="app-menu-login-info">Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.</p>
-      <input type="email" id="sbEmailInput" class="app-menu-login-input" placeholder="deine@email.de" autocomplete="email" />
-      <button type="button" class="app-menu-login-submit" id="sbLoginSubmit">Link senden</button>
+      <p class="app-menu-login-info">${t("login.info")}</p>
+      <input type="email" id="sbEmailInput" class="app-menu-login-input" placeholder="${t("login.placeholder")}" autocomplete="email" />
+      <button type="button" class="app-menu-login-submit" id="sbLoginSubmit">${t("login.send")}</button>
       <p class="app-menu-login-hint" id="sbLoginHint"></p>
     </div>`;
 }
@@ -5378,13 +5584,10 @@ const GITHUB_BRANCH = IS_DEV_SITE ? "dev" : "main";
 const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
-async function adminLoadUnmatched() {
-  const [unmatchedRes, seedsRes] = await Promise.all([
-    fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
-    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
-  ]);
+async function adminLoadUnmatched(seeds) {
+  const unmatchedRes = await fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`);
+  if (!unmatchedRes.ok) throw new Error(`venue-unmatched.json: HTTP ${unmatchedRes.status}`);
   const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
-  const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true, _isUnknownSeed: true }));
@@ -5424,8 +5627,8 @@ function showLoginPrompt() {
         <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
       <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
-      <p class="login-prompt-text">Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.</p>
-      <button type="button" class="login-prompt-btn" id="loginPromptBtn">Anmelden</button>
+      <p class="login-prompt-text">${t("loginPrompt.text")}</p>
+      <button type="button" class="login-prompt-btn" id="loginPromptBtn">${t("loginPrompt.btn")}</button>
     </div>`;
 
   const close = () => overlay.remove();
@@ -5465,122 +5668,407 @@ function openImpressumPage() {
   }, { once: true });
 }
 
-function renderAdminUnbekanntTab(container) {
-  container.innerHTML = `<p class="admin-loading">Lade…</p>`;
-  adminLoadUnmatched().then(entries => {
-    if (!entries.length) {
-      container.innerHTML = `<p class="admin-empty">Alle Strecken sind zugeordnet.</p>`;
+function _buildAdminEntryListHtml(entries, datalistId) {
+  const venuesByDisplay = new Map();
+  for (const v of venues) {
+    const key = v.name + (v.city ? ` – ${v.city}` : "");
+    venuesByDisplay.set(key, v);
+  }
+  const datalistHtml = `<datalist id="${datalistId}">${
+    [...venuesByDisplay.keys()].map(k => `<option value="${escapeHtml(k)}">`).join("")
+  }</datalist>`;
+  const html = entries.map((e, i) => `
+    <div class="admin-entry" data-index="${i}"
+      data-host-id="${escapeHtml(e.hostId)}"
+      data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}"
+      data-host-name="${escapeHtml(e.hostName)}"
+      data-is-unknown-seed="${e._isUnknownSeed ? "1" : "0"}">
+      <div class="admin-entry-header">
+        <strong>${escapeHtml(e.hostName)}</strong>
+        ${e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
+        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
+      </div>
+      ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
+      <label class="admin-entry-toggle">
+        <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
+        Ort unbekannt
+      </label>
+      <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
+        <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
+      </div>
+      <div class="admin-entry-link-venue">
+        <input type="text" class="admin-input admin-input-link-venue" placeholder="Gleiche Strecke wie…" list="${datalistId}" />
+        <button type="button" class="admin-btn admin-btn-link">Zuordnen</button>
+      </div>
+      <div class="admin-entry-actions">
+        <button type="button" class="admin-btn admin-btn-save">Speichern</button>
+        <button type="button" class="admin-btn admin-btn-skip">Überspringen</button>
+        <button type="button" class="admin-btn admin-btn-delete">Löschen</button>
+      </div>
+      <p class="admin-entry-status"></p>
+    </div>`).join("");
+  return { html, datalistHtml, venuesByDisplay };
+}
+
+function _attachAdminEntryListHandlers(wrapper, venuesByDisplay) {
+  wrapper.addEventListener("change", ev => {
+    if (!ev.target.classList.contains("admin-unknown-toggle")) return;
+    ev.target.closest(".admin-entry").querySelector(".admin-entry-coords").hidden = ev.target.checked;
+  });
+
+  wrapper.addEventListener("click", async ev => {
+    const entry = ev.target.closest(".admin-entry");
+    if (!entry) return;
+    const status = entry.querySelector(".admin-entry-status");
+    const hostId = entry.dataset.hostId;
+    const hostName = entry.dataset.hostName;
+    const myrcmOrgId = entry.dataset.myrcmOrgId;
+    const isUnknownSeed = entry.dataset.isUnknownSeed === "1";
+
+    if (ev.target.classList.contains("admin-btn-skip")) { entry.hidden = true; return; }
+
+    if (ev.target.classList.contains("admin-btn-delete")) {
+      if (!confirm(`"${hostName}" wirklich löschen?`)) return;
+      status.textContent = "Löschen…";
+      try {
+        await adminCommit(isUnknownSeed
+          ? { action: "delete-dach-seed", seedId: hostId, seedName: hostName }
+          : { action: "delete-unmatched", hostId, hostName });
+        entry.classList.add("admin-entry-done");
+        status.textContent = "✓ Gelöscht";
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
       return;
     }
 
-    // Build venue lookup for "Gleiche Strecke wie…"
-    const venuesByDisplay = new Map();
-    for (const v of venues) {
-      const key = v.name + (v.city ? ` – ${v.city}` : "");
-      venuesByDisplay.set(key, v);
+    if (ev.target.classList.contains("admin-btn-link")) {
+      const inputVal = entry.querySelector(".admin-input-link-venue").value.trim();
+      const matched = venuesByDisplay.get(inputVal);
+      if (!matched) { status.textContent = "Strecke nicht gefunden — exakt aus der Liste wählen"; return; }
+      status.textContent = "Speichern…";
+      try {
+        await adminCommit({ action: "link-to-venue", hostId, hostName, venueId: matched.id });
+        status.textContent = `✓ Verknüpft mit ${matched.name}`;
+        entry.classList.add("admin-entry-done");
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+      return;
     }
-    const datalistId = "admin-venue-datalist";
-    const datalistHtml = `<datalist id="${datalistId}">${
-      [...venuesByDisplay.keys()].map(k => `<option value="${escapeHtml(k)}">`).join("")
-    }</datalist>`;
 
-    container.innerHTML = `<div>${datalistHtml}${entries.map((e, i) => `
-      <div class="admin-entry" data-index="${i}"
-        data-host-id="${escapeHtml(e.hostId)}"
-        data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}"
-        data-host-name="${escapeHtml(e.hostName)}"
-        data-is-unknown-seed="${e._isUnknownSeed ? "1" : "0"}">
-        <div class="admin-entry-header">
-          <strong>${escapeHtml(e.hostName)}</strong>
-          ${e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
-          <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
-        </div>
-        ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-        <label class="admin-entry-toggle">
-          <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
-          Ort unbekannt
-        </label>
-        <div class="admin-entry-coords"${e.locationUnknown ? " hidden" : ""}>
-          <input type="text" class="admin-input admin-input-coords" placeholder="z.B. 51.077, 7.288" data-field="coords" />
-        </div>
-        <div class="admin-entry-link-venue">
-          <input type="text" class="admin-input admin-input-link-venue" placeholder="Gleiche Strecke wie…" list="${datalistId}" />
-          <button type="button" class="admin-btn admin-btn-link">Zuordnen</button>
-        </div>
-        <div class="admin-entry-actions">
-          <button type="button" class="admin-btn admin-btn-save">Speichern</button>
-          <button type="button" class="admin-btn admin-btn-skip">Überspringen</button>
-          <button type="button" class="admin-btn admin-btn-delete">Löschen</button>
-        </div>
-        <p class="admin-entry-status"></p>
-      </div>`).join("")}</div>`;
-
-    const wrapper = container.firstElementChild;
-
-    wrapper.addEventListener("change", ev => {
-      if (!ev.target.classList.contains("admin-unknown-toggle")) return;
-      ev.target.closest(".admin-entry").querySelector(".admin-entry-coords").hidden = ev.target.checked;
-    });
-
-    wrapper.addEventListener("click", async ev => {
-      const entry = ev.target.closest(".admin-entry");
-      if (!entry) return;
-      const status = entry.querySelector(".admin-entry-status");
-      const hostId = entry.dataset.hostId;
-      const hostName = entry.dataset.hostName;
-      const myrcmOrgId = entry.dataset.myrcmOrgId;
-      const isUnknownSeed = entry.dataset.isUnknownSeed === "1";
-
-      if (ev.target.classList.contains("admin-btn-skip")) {
-        entry.hidden = true;
-        return;
-      }
-
-      if (ev.target.classList.contains("admin-btn-delete")) {
-        if (!confirm(`"${hostName}" wirklich löschen?`)) return;
-        status.textContent = "Löschen…";
-        try {
-          if (isUnknownSeed) {
-            await adminCommit({ action: "delete-dach-seed", seedId: hostId, seedName: hostName });
-          } else {
-            await adminCommit({ action: "delete-unmatched", hostId, hostName });
-          }
-          entry.classList.add("admin-entry-done");
-          status.textContent = "✓ Gelöscht";
-        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
-        return;
-      }
-
-      if (ev.target.classList.contains("admin-btn-link")) {
-        const inputVal = entry.querySelector(".admin-input-link-venue").value.trim();
-        const matched = venuesByDisplay.get(inputVal);
-        if (!matched) { status.textContent = "Strecke nicht gefunden — exakt aus der Liste wählen"; return; }
-        status.textContent = "Speichern…";
-        try {
-          await adminCommit({ action: "link-to-venue", hostId, hostName, venueId: matched.id });
-          status.textContent = `✓ Verknüpft mit ${matched.name}`;
-          entry.classList.add("admin-entry-done");
-        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
-        return;
-      }
-
-      if (ev.target.classList.contains("admin-btn-save")) {
-        const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
-        status.textContent = "Speichern…";
-        try {
-          if (isUnknown) {
-            await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
-          } else {
-            const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
-            const [lat, lng] = parts;
-            if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
-            await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
-          }
+    if (ev.target.classList.contains("admin-btn-save")) {
+      const isUnknown = entry.querySelector(".admin-unknown-toggle").checked;
+      status.textContent = "Speichern…";
+      try {
+        if (isUnknown) {
+          await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
           status.textContent = "✓ Gespeichert";
           entry.classList.add("admin-entry-done");
-        } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+        } else {
+          const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
+          const [lat, lng] = parts;
+          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
+          await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+          status.textContent = "✓ Gespeichert";
+        }
+      } catch (e) { status.textContent = `Fehler: ${e.message}`; }
+    }
+  });
+}
+
+function renderAdminStreckenTab(container) {
+  container.innerHTML = `<p class="admin-loading">Lade…</p>`;
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then(seeds => {
+      let searchVal = "";
+      let expandedId = null;
+      let showNewForm = false;
+      let seedsByMerge = new Map();
+
+      const sName = s => s.name ?? s.hostName ?? "";
+      const sId = s => s.id ?? s.hostId ?? "";
+      const sStatus = s => s.lat != null ? "ok" : s.locationUnknown ? "unknown" : "missing";
+      const sCountry = s => {
+        if (s.country) return _countryNameToCode[s.country] ?? s.country;
+        if (s.myrcmOrgId) {
+          const c = hostsByOrgId.get(String(s.myrcmOrgId))?.country;
+          if (c) return _countryNameToCode[c] ?? c;
+        }
+        return "";
+      };
+
+      function buildRows() {
+        const q = searchVal.toLowerCase().trim();
+        const filtered = q ? seeds.filter(s =>
+          sName(s).toLowerCase().includes(q) ||
+          sId(s).toLowerCase().includes(q) ||
+          (Array.isArray(s.aliases) && s.aliases.some(a => a.toLowerCase().includes(q))) ||
+          (Array.isArray(s.hostIds) && s.hostIds.some(h => h.toLowerCase().includes(q)))
+        ) : seeds;
+        return filtered.map(s => {
+          const id = sId(s);
+          const name = sName(s);
+          const st = sStatus(s);
+          const country = sCountry(s);
+          const isExp = expandedId === id;
+          return `<div class="admin-seed-row" data-seed-id="${escapeHtml(id)}">
+            <div class="admin-seed-header">
+              <span class="admin-seed-dot admin-seed-${st}"></span>
+              <span class="admin-seed-name">${escapeHtml(name)}</span>
+              ${country ? `<span class="admin-seed-country">${escapeHtml(country)}</span>` : ""}
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="admin-seed-chevron${isExp ? " is-open" : ""}" aria-hidden="true"><path d="M1.5 3.5l3.5 3 3.5-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            ${isExp ? `<div class="admin-seed-form">
+              <div class="admin-seed-form-row"><span class="admin-seed-label">hostId</span><span class="admin-seed-hostid-val">${escapeHtml(id)}</span></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Name</span><input class="admin-input js-sf-name" value="${escapeHtml(name)}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Land</span><input class="admin-input js-sf-country" placeholder="DE / AT / CH / BE" value="${escapeHtml(country)}" style="max-width:120px;" /></div>
+              <label class="admin-entry-toggle"><input type="checkbox" class="js-sf-unknown"${s.locationUnknown ? " checked" : ""} /> Ort unbekannt</label>
+              <div class="admin-entry-coords js-sf-coords-row"${s.locationUnknown ? " hidden" : ""}><input class="admin-input js-sf-coords" placeholder="48.123, 14.456" value="${s.lat != null ? `${s.lat}, ${s.lng}` : ""}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Website</span><input class="admin-input js-sf-website" placeholder="https://…" value="${escapeHtml(s.website || "")}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Aliases</span><input class="admin-input js-sf-aliases" placeholder="Alias1, Alias2, …" value="${escapeHtml(Array.isArray(s.aliases) ? s.aliases.join(", ") : "")}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">hostIds</span><input class="admin-input js-sf-hostids" placeholder="dmc-ov-87, …" value="${escapeHtml(Array.isArray(s.hostIds) ? s.hostIds.join(", ") : "")}" /></div>
+              <div class="admin-seed-merge-row">
+                <span class="admin-seed-label">Gleiche Strecke wie</span>
+                <input class="admin-input js-sf-merge" list="admin-seeds-merge-dl" placeholder="Anderen Eintrag wählen…" />
+                <button type="button" class="admin-btn admin-btn-link js-sf-merge-btn">Zusammenführen</button>
+              </div>
+              <div class="admin-entry-actions" style="margin-top:8px;">
+                <button type="button" class="admin-btn admin-btn-save js-sf-save">Speichern</button>
+                <button type="button" class="admin-btn admin-btn-delete js-sf-delete">Löschen</button>
+              </div>
+              <p class="admin-entry-status js-sf-status"></p>
+            </div>` : ""}
+          </div>`;
+        }).join("");
       }
-    });
+
+      function render() {
+        const wasSearchFocused = document.activeElement?.classList.contains("js-strecken-search");
+        seedsByMerge = new Map();
+        seeds.forEach(s => seedsByMerge.set(`${sName(s)} · ${sId(s)}`, sId(s)));
+        const mergeDatalist = `<datalist id="admin-seeds-merge-dl">${[...seedsByMerge.keys()].map(k => `<option value="${escapeHtml(k)}">`).join("")}</datalist>`;
+        const newFormHtml = showNewForm ? `<div class="admin-new-seed-form" id="adminNewSeedForm">
+          <p class="admin-new-seed-title">Neue Strecke</p>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">hostId</span><input class="admin-input js-ns-hostid" placeholder="mein-club-e-v" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Name</span><input class="admin-input js-ns-name" placeholder="Mein Club e.V." /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Land</span><input class="admin-input js-ns-country" placeholder="DE / AT / CH / BE" style="max-width:120px;" /></div>
+          <label class="admin-entry-toggle"><input type="checkbox" class="js-ns-unknown" /> Ort unbekannt</label>
+          <div class="admin-entry-coords js-ns-coords-row"><input class="admin-input js-ns-coords" placeholder="48.123, 14.456" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Website</span><input class="admin-input js-ns-website" placeholder="https://…" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Aliases</span><input class="admin-input js-ns-aliases" placeholder="Alias1, Alias2, …" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">MyRCM ID</span><input class="admin-input js-ns-orgid" placeholder="12345" style="max-width:120px;" /></div>
+          <div class="admin-entry-actions" style="margin-top:8px;">
+            <button type="button" class="admin-btn admin-btn-save js-ns-save">Erstellen</button>
+            <button type="button" class="admin-btn admin-btn-skip js-ns-cancel">Abbrechen</button>
+          </div>
+          <p class="admin-entry-status js-ns-status"></p>
+        </div>` : "";
+
+        container.innerHTML = `
+          ${mergeDatalist}
+          <div class="admin-strecken-top">
+            <input type="search" class="admin-input js-strecken-search" placeholder="Suchen…" value="${escapeHtml(searchVal)}" />
+            <span class="admin-strecken-count">${seeds.length}</span>
+            <button type="button" class="admin-btn admin-btn-save js-strecken-new">+ Neu</button>
+          </div>
+          ${newFormHtml}
+          <div class="admin-seed-list">${buildRows()}</div>`;
+
+        if (wasSearchFocused) {
+          const el = container.querySelector(".js-strecken-search");
+          if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+        }
+        bindHandlers();
+      }
+
+      function bindHandlers() {
+        container.querySelector(".js-strecken-search").addEventListener("input", e => {
+          searchVal = e.target.value;
+          render();
+        });
+        container.querySelector(".js-strecken-new").addEventListener("click", () => {
+          showNewForm = !showNewForm;
+          expandedId = null;
+          render();
+        });
+
+        const nsForm = container.querySelector("#adminNewSeedForm");
+        if (nsForm) {
+          nsForm.querySelector(".js-ns-unknown").addEventListener("change", e => {
+            nsForm.querySelector(".js-ns-coords-row").hidden = e.target.checked;
+          });
+          nsForm.querySelector(".js-ns-cancel").addEventListener("click", () => { showNewForm = false; render(); });
+          nsForm.querySelector(".js-ns-save").addEventListener("click", async () => {
+            const st = nsForm.querySelector(".js-ns-status");
+            const hostId = nsForm.querySelector(".js-ns-hostid").value.trim();
+            const hostName = nsForm.querySelector(".js-ns-name").value.trim();
+            const country = nsForm.querySelector(".js-ns-country").value.trim().toUpperCase();
+            const isUnknown = nsForm.querySelector(".js-ns-unknown").checked;
+            const website = nsForm.querySelector(".js-ns-website").value.trim();
+            const aliasesRaw = nsForm.querySelector(".js-ns-aliases").value.trim();
+            const aliases = aliasesRaw ? aliasesRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
+            const myrcmOrgId = nsForm.querySelector(".js-ns-orgid").value.trim();
+            if (!hostId) { st.textContent = "hostId ist erforderlich"; return; }
+            if (!hostName) { st.textContent = "Name ist erforderlich"; return; }
+            let lat, lng;
+            if (!isUnknown) {
+              const raw = nsForm.querySelector(".js-ns-coords").value.trim();
+              if (raw) {
+                const parts = raw.split(",").map(x => parseFloat(x.trim()));
+                if (parts.length < 2 || isNaN(parts[0]) || isNaN(parts[1])) { st.textContent = "Format: 48.123, 14.456"; return; }
+                [lat, lng] = parts;
+              }
+            }
+            st.textContent = "Speichern…";
+            try {
+              await adminCommit({
+                action: "create-seed", hostId, hostName,
+                lat, lng, country: country || undefined,
+                website: website || undefined,
+                aliases: aliases.length ? aliases : undefined,
+                myrcmOrgId: myrcmOrgId || undefined,
+                locationUnknown: isUnknown || undefined,
+              });
+              const newEntry = { hostId, hostName };
+              if (country) newEntry.country = country;
+              if (website) newEntry.website = website;
+              if (aliases.length) newEntry.aliases = aliases;
+              if (myrcmOrgId) newEntry.myrcmOrgId = myrcmOrgId;
+              if (isUnknown) newEntry.locationUnknown = true;
+              else if (lat != null) { newEntry.lat = lat; newEntry.lng = lng; }
+              const ei = seeds.findIndex(s => sId(s) === hostId);
+              if (ei >= 0) seeds[ei] = { ...seeds[ei], ...newEntry };
+              else seeds.push(newEntry);
+              seeds.sort((a, b) => sName(a).localeCompare(sName(b), "de"));
+              showNewForm = false;
+              expandedId = hostId;
+              render();
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+          });
+        }
+
+        container.querySelector(".admin-seed-list").addEventListener("click", async e => {
+          const row = e.target.closest(".admin-seed-row");
+          if (!row) return;
+          const id = row.dataset.seedId;
+
+          if (e.target.closest(".admin-seed-header")) {
+            expandedId = expandedId === id ? null : id;
+            showNewForm = false;
+            render();
+            return;
+          }
+
+          const seed = seeds.find(s => sId(s) === id);
+          if (!seed) return;
+          const st = row.querySelector(".js-sf-status");
+
+          if (e.target.classList.contains("js-sf-save")) {
+            const form = row.querySelector(".admin-seed-form");
+            const name = form.querySelector(".js-sf-name").value.trim();
+            const country = form.querySelector(".js-sf-country").value.trim().toUpperCase();
+            const isUnknown = form.querySelector(".js-sf-unknown").checked;
+            const website = form.querySelector(".js-sf-website").value.trim();
+            const aliasesRaw = form.querySelector(".js-sf-aliases").value.trim();
+            const aliases = aliasesRaw ? aliasesRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
+            const hostIdsRaw = form.querySelector(".js-sf-hostids").value.trim();
+            const hostIds = hostIdsRaw ? hostIdsRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
+            let lat, lng;
+            if (!isUnknown) {
+              const parts = form.querySelector(".js-sf-coords").value.split(",").map(x => parseFloat(x.trim()));
+              if (parts.length >= 2 && !isNaN(parts[0]) && !isNaN(parts[1])) { lat = parts[0]; lng = parts[1]; }
+              if (lat == null) { st.textContent = "Koordinaten fehlen — Format: 48.123, 14.456"; return; }
+            }
+            st.textContent = "Speichern…";
+            try {
+              await adminCommit({
+                action: "update-seed", seedId: id, seedName: name, name,
+                lat, lng, country, website, aliases, hostIds,
+                locationUnknown: isUnknown || undefined,
+              });
+              const idx = seeds.findIndex(s => sId(s) === id);
+              if (idx >= 0) {
+                const upd = { ...seeds[idx] };
+                if (upd.name !== undefined) upd.name = name; else upd.hostName = name;
+                if (isUnknown) { delete upd.lat; delete upd.lng; upd.locationUnknown = true; }
+                else { upd.lat = lat; upd.lng = lng; delete upd.locationUnknown; }
+                if (country) upd.country = country; else delete upd.country;
+                if (website) upd.website = website; else delete upd.website;
+                if (aliases.length) upd.aliases = aliases; else delete upd.aliases;
+                if (hostIds.length) upd.hostIds = hostIds; else delete upd.hostIds;
+                seeds[idx] = upd;
+              }
+              st.textContent = "✓ Gespeichert";
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+            return;
+          }
+
+          if (e.target.classList.contains("js-sf-merge-btn")) {
+            const mergeVal = row.querySelector(".js-sf-merge").value.trim();
+            const targetId = seedsByMerge.get(mergeVal);
+            if (!targetId) { st.textContent = "Strecke nicht gefunden — exakt aus der Liste wählen"; return; }
+            if (targetId === id) { st.textContent = "Kann nicht mit sich selbst zusammenführen"; return; }
+            const targetName = sName(seeds.find(s => sId(s) === targetId) ?? {});
+            if (!confirm(`"${sName(seed)}" mit "${targetName}" zusammenführen?\n\nDer aktuelle Eintrag wird gelöscht, seine hostId zu "${targetName}" hinzugefügt.`)) return;
+            st.textContent = "Zusammenführen…";
+            try {
+              await adminCommit({ action: "merge-seed", seedId: id, seedName: sName(seed), targetSeedId: targetId });
+              // Update local: add src hostId(s) to target, remove src
+              const srcIdx = seeds.findIndex(s => sId(s) === id);
+              const tgtIdx = seeds.findIndex(s => sId(s) === targetId);
+              if (srcIdx >= 0 && tgtIdx >= 0) {
+                const src = seeds[srcIdx];
+                const srcIds = [sId(src), ...(Array.isArray(src.hostIds) ? src.hostIds : [])].filter(Boolean);
+                const tgt = { ...seeds[tgtIdx] };
+                const existing = Array.isArray(tgt.hostIds) ? tgt.hostIds : [];
+                tgt.hostIds = [...new Set([...existing, ...srcIds])];
+                seeds[tgtIdx] = tgt;
+                seeds.splice(srcIdx, 1);
+              }
+              expandedId = targetId;
+              render();
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+            return;
+          }
+
+          if (e.target.classList.contains("js-sf-delete")) {
+            const name = sName(seed);
+            if (!confirm(`"${name}" wirklich löschen?`)) return;
+            st.textContent = "Löschen…";
+            try {
+              await adminCommit({ action: "delete-dach-seed", seedId: id, seedName: name });
+              const idx = seeds.findIndex(s => sId(s) === id);
+              if (idx >= 0) seeds.splice(idx, 1);
+              expandedId = null;
+              render();
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+          }
+        });
+
+        container.querySelector(".admin-seed-list").addEventListener("change", e => {
+          if (!e.target.classList.contains("js-sf-unknown")) return;
+          e.target.closest(".admin-seed-form").querySelector(".js-sf-coords-row").hidden = e.target.checked;
+        });
+      }
+
+      render();
+    })
+    .catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
+}
+
+function renderAdminUnbekanntTab(container) {
+  container.innerHTML = `<p class="admin-loading">Lade…</p>`;
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`venue-seeds.json: HTTP ${r.status}`); return r.json(); })
+    .then(seeds => adminLoadUnmatched(seeds))
+  .then(entries => {
+    // Tab 1: only places explicitly marked as unknown location
+    const unknownEntries = entries.filter(e => e._isUnknownSeed);
+    if (!unknownEntries.length) {
+      container.innerHTML = `<p class="admin-empty">Keine als unbekannt markierten Orte.</p>`;
+      return;
+    }
+    const { html, datalistHtml, venuesByDisplay } = _buildAdminEntryListHtml(unknownEntries, "admin-venue-datalist");
+    container.innerHTML = `<div>${datalistHtml}${html}</div>`;
+    _attachAdminEntryListHandlers(container.firstElementChild, venuesByDisplay);
   }).catch(e => {
     container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`;
   });
@@ -5588,11 +6076,31 @@ function renderAdminUnbekanntTab(container) {
 
 function renderAdminPruefenTab(container) {
   container.innerHTML = `<p class="admin-loading">Lade…</p>`;
-  Promise.all([
-    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`).then(r => r.json()),
-    fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
-    fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
-  ]).then(async ([seeds, dmcRes, rccoRes]) => {
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`venue-seeds.json: HTTP ${r.status}`); return r.json(); })
+    .then(seeds => Promise.all([
+      Promise.resolve(seeds),
+      fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
+      fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
+      adminLoadUnmatched(seeds),
+    ]))
+  .then(async ([seeds, dmcRes, rccoRes, allEntries]) => {
+    // Neue Clubs aus venue-unmatched.json (noch nicht als unbekannt markiert)
+    const newEntries = allEntries.filter(e => !e._isUnknownSeed);
+    if (newEntries.length) {
+      const section = document.createElement("div");
+      section.className = "admin-new-clubs-section";
+      section.innerHTML = `<p class="admin-section-label">Neue Clubs (${newEntries.length})</p>`;
+      const { html, datalistHtml, venuesByDisplay } = _buildAdminEntryListHtml(newEntries, "admin-venue-datalist-pruefen");
+      const listWrapper = document.createElement("div");
+      listWrapper.innerHTML = datalistHtml + html;
+      section.appendChild(listWrapper);
+      _attachAdminEntryListHandlers(listWrapper, venuesByDisplay);
+      container.innerHTML = "";
+      container.appendChild(section);
+    } else {
+      container.innerHTML = "";
+    }
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
     const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
@@ -5636,8 +6144,12 @@ function renderAdminPruefenTab(container) {
       ...externalPending,
     ];
 
+    const geocodedSection = document.createElement("div");
+    geocodedSection.className = "admin-geocoded-section";
+    container.appendChild(geocodedSection);
+
     if (!pending.length) {
-      container.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC- oder RCCO-Venues.</p>`;
+      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC- oder RCCO-Venues.</p>`;
       return;
     }
 
@@ -5653,7 +6165,7 @@ function renderAdminPruefenTab(container) {
       const totalCount = isDmc ? totalDach : totalDach;
       const extIdxDisplay = isDmc ? `${extBadge} ${idx - dachPending.length + 1} / ${externalPending.length}` : `${doneCount} / ${totalCount} verifiziert`;
       const pct = isDmc ? 100 : Math.round(doneCount / totalDach * 100);
-      container.innerHTML = `
+      geocodedSection.innerHTML = `
         <div class="admin-dach-progress">
           <span>${extIdxDisplay}${isDmc ? ` <span class="admin-source-badge">${escapeHtml(extBadge)}</span>` : ""}</span>
           ${!isDmc ? `<div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>` : ""}
@@ -5683,7 +6195,7 @@ function renderAdminPruefenTab(container) {
           <p class="admin-entry-status js-dach-status"></p>
         </div>`;
 
-      const status = container.querySelector(".js-dach-status");
+      const status = geocodedSection.querySelector(".js-dach-status");
 
       async function saveEntry(lat, lng, locationUnknown = false) {
         status.textContent = "Speichern…";
@@ -5703,7 +6215,7 @@ function renderAdminPruefenTab(container) {
           if (!isDmc) dachPending.splice(dachPending.indexOf(s), 1);
           else externalPending.splice(externalPending.indexOf(s), 1);
           if (!pending.length) {
-            container.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
+            geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
             if (idx >= pending.length) idx = pending.length - 1;
             renderEntry();
@@ -5719,30 +6231,30 @@ function renderAdminPruefenTab(container) {
           dachPending.splice(dachPending.indexOf(s), 1);
           if (idx >= pending.length) idx = Math.max(0, pending.length - 1);
           if (!pending.length) {
-            container.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
+            geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
             renderEntry();
           }
         } catch (e) { status.textContent = `Fehler: ${e.message}`; }
       }
 
-      container.querySelector(".js-dach-ok")?.addEventListener("click", () => {
+      geocodedSection.querySelector(".js-dach-ok")?.addEventListener("click", () => {
         if (!s.lat || !s.lng) { status.textContent = "Keine Koordinaten vorhanden"; return; }
         saveEntry(s.lat, s.lng);
       });
-      container.querySelector(".js-dach-save").addEventListener("click", () => {
-        const parts = container.querySelector(".js-dach-coords").value.split(",").map(x => parseFloat(x.trim()));
+      geocodedSection.querySelector(".js-dach-save").addEventListener("click", () => {
+        const parts = geocodedSection.querySelector(".js-dach-coords").value.split(",").map(x => parseFloat(x.trim()));
         const [lat, lng] = parts;
         if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 48.123, 14.456"; return; }
         saveEntry(lat, lng);
       });
-      container.querySelector(".js-dach-unknown").addEventListener("click", () => saveEntry(null, null, true));
-      container.querySelector(".js-dach-delete")?.addEventListener("click", deleteSeed);
-      container.querySelector(".js-dach-skip").addEventListener("click", () => {
+      geocodedSection.querySelector(".js-dach-unknown").addEventListener("click", () => saveEntry(null, null, true));
+      geocodedSection.querySelector(".js-dach-delete")?.addEventListener("click", deleteSeed);
+      geocodedSection.querySelector(".js-dach-skip").addEventListener("click", () => {
         if (idx < pending.length - 1) { idx++; renderEntry(); }
         else { status.textContent = "Kein nächster Eintrag"; }
       });
-      container.querySelector(".js-dach-prev")?.addEventListener("click", () => { idx--; renderEntry(); });
+      geocodedSection.querySelector(".js-dach-prev")?.addEventListener("click", () => { idx--; renderEntry(); });
     }
 
     renderEntry();
@@ -5759,7 +6271,8 @@ function openAdminPage() {
 
   listEl.innerHTML = `
     <div class="admin-tabs">
-      <button class="admin-tab is-active" data-tab="unbekannt">Unbekannte Orte</button>
+      <button class="admin-tab is-active" data-tab="strecken">Strecken</button>
+      <button class="admin-tab" data-tab="unbekannt">Unbekannte Orte</button>
       <button class="admin-tab" data-tab="pruefen">Koordinaten prüfen</button>
       <button class="admin-tab" data-tab="ads">Werbung</button>
     </div>
@@ -5773,8 +6286,10 @@ function openAdminPage() {
       renderAdminAdsTab(tabContent);
     } else if (name === "pruefen") {
       renderAdminPruefenTab(tabContent);
-    } else {
+    } else if (name === "unbekannt") {
       renderAdminUnbekanntTab(tabContent);
+    } else {
+      renderAdminStreckenTab(tabContent);
     }
   }
 
@@ -5788,7 +6303,7 @@ function openAdminPage() {
     openAppMenu();
   }, { once: true });
 
-  showTab("unbekannt");
+  showTab("strecken");
 }
 
 
@@ -5916,7 +6431,7 @@ function renderFavoritesPage(query) {
     const cid = venueCanonicalId(v);
     const notifOn = sbUser && isNotificationEnabled(cid);
     const bellBtn = sbUser && isFav
-      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${_bellSvgFav}</button>`
+      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? t("fav.bellOn") : t("fav.bellOff")}">${_bellSvgFav}</button>`
       : "";
     return `
     <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
@@ -5932,9 +6447,9 @@ function renderFavoritesPage(query) {
   };
 
   const bellHint = sbUser && mine.length
-    ? `<p class="fav-bell-hint">Aktiviere ${_bellSvgFav} für E-Mail-Updates bei neuen Rennen</p>`
+    ? `<p class="fav-bell-hint">${t("fav.bellHint", { bell: _bellSvgFav })}</p>`
     : "";
-  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") + bellHint : `<p class="fav-empty">Keine Favoriten</p>`;
+  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") + bellHint : `<p class="fav-empty">${t("fav.empty")}</p>`;
   listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
   const mineCount = mine.length ? `${mine.length}` : "";
   const allCount  = rest.length  ? `${rest.length}`  : "";
@@ -5952,7 +6467,7 @@ function showMenuPage(page) {
   if (page === "favorites") { closeAppMenu(); openFavoritesPage(); return; }
   const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
-    <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Zurück</button>
+    <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>${t("menu.back")}</button>
     <div class="app-menu-page-content">${pages[page] || ""}</div>`;
   appMenuContent.querySelector(".app-menu-back")
     ?.addEventListener("click", showMenuHome);
@@ -5965,16 +6480,16 @@ function showMenuPage(page) {
       const email = input?.value?.trim();
       if (!email) return;
       btn.disabled = true;
-      btn.textContent = "Wird gesendet…";
+      btn.textContent = t("login.sending");
       const { error } = await sbSendMagicLink(email);
       if (error) {
         hint.textContent = "Fehler: " + (error.message || JSON.stringify(error));
         console.error("Supabase magic link error:", error);
         btn.disabled = false;
-        btn.textContent = "Link senden";
+        btn.textContent = t("login.send");
       } else {
-        hint.textContent = "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.";
-        btn.textContent = "Gesendet";
+        hint.textContent = t("login.confirm");
+        btn.textContent = t("login.sent");
       }
     });
     input?.addEventListener("keydown", e => { if (e.key === "Enter") btn?.click(); });
@@ -6014,12 +6529,12 @@ function impressumHtml() {
 
 function aboutHtml() {
   return `
-    <h2>Über<br>RC RaceMap</h2>
-    <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
-    <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
-    <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
-    <p>Die Daten stammen direkt von <a href="https://www.myrcm.ch/" target="_blank" rel="noopener noreferrer">MyRCM</a> und <a href="https://rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
-    <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>
+    <h2>RC RaceMap<br>– Find your next race.</h2>
+    <p>${t("about.p1")}</p>
+    <p>${t("about.p2")}</p>
+    <p>${t("about.p3")}</p>
+    <p>${t("about.p4", {})}</p>
+    <p>${t("about.p5")}</p>
     <div class="sub-page-content-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer">${lessrainSvg}</a>
     </div>`;
@@ -6116,9 +6631,9 @@ const clubListBack    = document.getElementById("clubListBack");
 
 clubListBack?.addEventListener("click", () => { closeClubList(); openAppMenu(); });
 
-let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH"
+let _raceListCountry = "all"; // "all" | "DE" | "AT" | "CH" | "NL" | "BE" | "LU"
 let _raceListSearch = "";
-let _favCountry = "all"; // "all" | "DE" | "AT" | "CH"
+let _favCountry = "all"; // "all" | "DE" | "AT" | "CH" | "NL" | "BE" | "LU"
 
 function openClubList() {
   if (!clubListPage) return;
@@ -6170,7 +6685,7 @@ function renderClubList() {
     const key = race.from;
     if (!groupMap.has(key)) {
       const d = parseDate(race.from);
-      const label = d.toLocaleDateString("de-DE", { weekday: "short", day: "numeric", month: "long", year: "numeric" });
+      const label = d.toLocaleDateString(_dateLocale(), { weekday: "short", day: "numeric", month: "long", year: "numeric" });
       const group = { label, races: [] };
       groups.push(group);
       groupMap.set(key, group);
@@ -6179,10 +6694,13 @@ function renderClubList() {
   }
 
   const flagOpts = [
-    { label: "Alle Länder", value: "all", code: "eu" },
-    { label: "Deutschland",  value: "DE",  code: "de" },
-    { label: "Österreich",   value: "AT",  code: "at" },
-    { label: "Schweiz",      value: "CH",  code: "ch" },
+    { label: t("country.all"), value: "all", code: "eu" },
+    { label: t("country.DE"),  value: "DE",  code: "de" },
+    { label: t("country.AT"),  value: "AT",  code: "at" },
+    { label: t("country.CH"),  value: "CH",  code: "ch" },
+    { label: t("country.NL"),  value: "NL",  code: "nl" },
+    { label: t("country.BE"),  value: "BE",  code: "be" },
+    { label: t("country.LU"),  value: "LU",  code: "lu" },
   ];
   const filterHtml = flagOpts.map(o =>
     `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +

@@ -99,6 +99,65 @@ serve(async (req) => {
         continue;
       }
 
+      if (action === "merge-seed") {
+        const srcIdx = seeds.findIndex((s: any) => s.id === seedId || s.hostId === seedId);
+        const tgtIdx = seeds.findIndex((s: any) => s.id === body.targetSeedId || s.hostId === body.targetSeedId);
+        if (srcIdx < 0 || tgtIdx < 0) continue;
+        const src = seeds[srcIdx];
+        const srcIds = [src.hostId || src.id, ...(Array.isArray(src.hostIds) ? src.hostIds : [])].filter(Boolean);
+        const tgt = { ...seeds[tgtIdx] };
+        const existingIds: string[] = Array.isArray(tgt.hostIds) ? tgt.hostIds : [];
+        const merged = [...new Set([...existingIds, ...srcIds])];
+        tgt.hostIds = merged;
+        seeds[tgtIdx] = tgt;
+        seeds.splice(srcIdx, 1);
+        seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
+        await putFile(SEEDS_PATH, seeds, `admin: merge ${seedName || seedId} into ${body.targetSeedId}`, branch, seedsState.sha, gh);
+        continue;
+      }
+
+      if (action === "update-seed") {
+        const idx = seeds.findIndex((s: any) => s.id === seedId || s.hostId === seedId);
+        if (idx < 0) continue;
+        const updated = { ...seeds[idx] };
+        if (body.name !== undefined) {
+          if (updated.name !== undefined) updated.name = body.name; else updated.hostName = body.name;
+        }
+        if (body.locationUnknown) {
+          delete updated.lat; delete updated.lng; updated.locationUnknown = true;
+        } else if (body.lat !== undefined && body.lng !== undefined) {
+          updated.lat = body.lat; updated.lng = body.lng; delete updated.locationUnknown;
+        }
+        if (body.country !== undefined) { if (body.country) updated.country = body.country; else delete updated.country; }
+        if (body.website !== undefined) { if (body.website) updated.website = body.website; else delete updated.website; }
+        if (body.aliases !== undefined) {
+          if (Array.isArray(body.aliases) && body.aliases.length) updated.aliases = body.aliases; else delete updated.aliases;
+        }
+        if (body.hostIds !== undefined) {
+          if (Array.isArray(body.hostIds) && body.hostIds.length) updated.hostIds = body.hostIds; else delete updated.hostIds;
+        }
+        seeds[idx] = updated;
+        seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
+        await putFile(SEEDS_PATH, seeds, `admin: update seed ${seedName || seedId}`, branch, seedsState.sha, gh);
+        continue;
+      }
+
+      if (action === "create-seed") {
+        const newSeed: Record<string, any> = { hostId, hostName };
+        if (body.lat != null && body.lng != null) { newSeed.lat = body.lat; newSeed.lng = body.lng; }
+        else if (body.locationUnknown) newSeed.locationUnknown = true;
+        if (body.country) newSeed.country = body.country;
+        if (body.website) newSeed.website = body.website;
+        if (Array.isArray(body.aliases) && body.aliases.length) newSeed.aliases = body.aliases;
+        if (body.myrcmOrgId) newSeed.myrcmOrgId = body.myrcmOrgId;
+        const existingIdx = seeds.findIndex((s: any) => s.hostId === hostId);
+        if (existingIdx >= 0) seeds[existingIdx] = { ...seeds[existingIdx], ...newSeed };
+        else seeds.push(newSeed);
+        seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
+        await putFile(SEEDS_PATH, seeds, `admin: create seed for ${hostName}`, branch, seedsState.sha, gh);
+        continue;
+      }
+
       if (action === "link-to-venue") {
         const idx = seeds.findIndex((s: any) => (s.id || s.hostId) === venueId);
         if (idx < 0) {
