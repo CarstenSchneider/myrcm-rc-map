@@ -4304,5 +4304,21 @@
       "WMW RC-BUGGY-RACING TEAM FEHRING",
       "Fehring"
     ]
+  },
+  {
+    "hostId": "mac-de-baanbrekers",
+    "hostName": "De Baanbrekers",
+    "lat": 51.53884645879424,
+    "lng": 4.571233799852438,
+    "country": "NL",
+    "website": "https://macdebaanbrekers.nl/",
+    "myrcmOrgId": "12027",
+    "aliases": [
+      "RUCPHEN / N",
+      "RUCPHEN/ N",
+      "RUCPHEN",
+      "De Baanbrekers",
+      "Rucphen"
+    ]
   }
 ]

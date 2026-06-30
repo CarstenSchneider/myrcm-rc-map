@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "m-a-c-de-baanbrekers",
-    "hostName": "M.A.C. de Baanbrekers",
-    "source": "myrcm",
-    "myrcmOrgId": "12027",
-    "possibleVenue": "Rucphen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "m-a-c-h-one",
     "hostName": "M.A.C.H.-One",
     "source": "myrcm",

@@ -260,8 +260,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -281,7 +281,7 @@
       },
       {
         "name": "GT Challenge",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Stock Challenge",

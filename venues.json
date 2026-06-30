@@ -693,6 +693,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-62332",
+    "name": "Buggy RC Bauffe a.s.b.l",
+    "city": "",
+    "lat": 50.55163011529372,
+    "lng": 3.8388580908852754,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "62332",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "buggyclub-zentralschweiz",
     "name": "Buggyclub Zentralschweiz",
     "city": "Zetzwil",
@@ -769,6 +784,27 @@
     "hostIds": [],
     "myrcmOrgId": "",
     "source": "manual",
+    "verified": true
+  },
+  {
+    "id": "myrcm-12027",
+    "name": "De Baanbrekers",
+    "city": "",
+    "lat": 51.53884645879424,
+    "lng": 4.571233799852438,
+    "address": "",
+    "postalCode": "",
+    "website": "https://macdebaanbrekers.nl/",
+    "aliases": [
+      "RUCPHEN / N",
+      "RUCPHEN/ N",
+      "RUCPHEN",
+      "De Baanbrekers",
+      "Rucphen"
+    ],
+    "hostIds": [],
+    "myrcmOrgId": "12027",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -964,6 +1000,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-3350",
+    "name": "ERCE",
+    "city": "",
+    "lat": 51.474136507766445,
+    "lng": 5.451839831543991,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "3350",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "ert-steyregg",
     "name": "ERT-Steyregg",
     "city": "Katsdorf",
@@ -1022,6 +1073,36 @@
     "myrcmOrgId": "",
     "source": "manual",
     "locationUnknown": true
+  },
+  {
+    "id": "myrcm-10817",
+    "name": "EVMC Velp",
+    "city": "",
+    "lat": 51.982283708724864,
+    "lng": 5.9870087702161054,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "10817",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-739",
+    "name": "FlatOut RC VZW",
+    "city": "",
+    "lat": 51.311941003199514,
+    "lng": 5.048176366250522,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "739",
+    "source": "venue-seeds",
+    "verified": true
   },
   {
     "id": "fsg-motorsport-ag",
@@ -1108,6 +1189,36 @@
     "verified": true
   },
   {
+    "id": "myrcm-7059",
+    "name": "H.M.R.C.",
+    "city": "",
+    "lat": 52.92978612356075,
+    "lng": 4.7807556333955965,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "7059",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-14156",
+    "name": "HFCC Racing Den Haag",
+    "city": "",
+    "lat": 52.042806391074365,
+    "lng": 4.242145539805281,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "14156",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "hobby-shop-haessig",
     "name": "Hobby Shop Hässig",
     "city": "Wohlen",
@@ -1126,6 +1237,36 @@
     ],
     "myrcmOrgId": "293",
     "source": "verified",
+    "verified": true
+  },
+  {
+    "id": "myrcm-65",
+    "name": "Houthalens Racing Team",
+    "city": "",
+    "lat": 51.04033523105567,
+    "lng": 5.389993492087697,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "65",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-50130",
+    "name": "Hulshout Offroad Racing",
+    "city": "",
+    "lat": 51.08384346853234,
+    "lng": 4.806473990670647,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "50130",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -1168,6 +1309,21 @@
     ],
     "myrcmOrgId": "10490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
+    "verified": true
+  },
+  {
+    "id": "myrcm-59433",
+    "name": "Indoor Offroad Turnhout",
+    "city": "",
+    "lat": 51.32199,
+    "lng": 4.95729,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "59433",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -1294,6 +1450,21 @@
     ],
     "myrcmOrgId": "66",
     "source": "verified",
+    "verified": true
+  },
+  {
+    "id": "myrcm-51",
+    "name": "LMCC",
+    "city": "",
+    "lat": 49.58092061399585,
+    "lng": 6.129729483503843,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "51",
+    "source": "venue-seeds",
     "verified": true
   },
   {
