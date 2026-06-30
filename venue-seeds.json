@@ -4057,6 +4057,13 @@
     "myrcmOrgId": "3291"
   },
   {
+    "hostId": "model-racing-club-real80",
+    "hostName": "Model Racing Club Real80",
+    "lat": 53.20045095888869,
+    "lng": 6.616826415837124,
+    "myrcmOrgId": "104"
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
