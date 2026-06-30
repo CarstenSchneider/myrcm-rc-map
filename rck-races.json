@@ -552,8 +552,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 61,
-    "registrationDisplay": "61",
+    "registrationCount": 62,
+    "registrationDisplay": "62",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -569,7 +569,7 @@
     "classes": [
       {
         "name": "FWD Challenge",
-        "entries": 12
+        "entries": 13
       },
       {
         "name": "GT Challenge",

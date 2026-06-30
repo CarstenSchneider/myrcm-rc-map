@@ -5658,6 +5658,39 @@
     ]
   },
   {
+    "id": "dmc-mc-ettlingen-e-v-2026-07-11",
+    "venueId": "mc-ettlingen-e-v",
+    "venueName": "MC Ettlingen e.V.",
+    "venueLocation": "Karlsruhe",
+    "hostId": "mc-ettlingen-e-v",
+    "hostName": "MC Ettlingen e.V.",
+    "hostCity": "Heidelberg",
+    "hostWebsite": "http://www.mc-ettlingen.de/",
+    "dmcOvNr": "58",
+    "name": "IFRDMC",
+    "from": "2026-07-11",
+    "to": "2026-07-11",
+    "series": [],
+    "classes": [
+      "EG8",
+      "EG8GT",
+      "VG",
+      "VG10",
+      "VG8"
+    ],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782855765_10058_20260425_VG8_-_EG8_MC_Ettlingen_-_Ausschreibung.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
     "id": "dmc-msv-linsengericht-2026-07-11",
     "venueId": "dmc-ov-234",
     "venueName": "MSV Linsengericht",
