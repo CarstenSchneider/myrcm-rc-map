@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "hulshout-offroad-racing",
-    "hostName": "Hulshout Offroad Racing",
-    "source": "myrcm",
-    "myrcmOrgId": "50130",
-    "possibleVenue": "Hulshout",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "indoor-offroad-turnhout",
     "hostName": "Indoor Offroad Turnhout",
     "source": "myrcm",
