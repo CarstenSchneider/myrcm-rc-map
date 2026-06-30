@@ -3858,6 +3858,13 @@
     "locationUnknown": true
   },
   {
+    "hostId": "indoor-offroad-turnhout",
+    "hostName": "Indoor Offroad Turnhout",
+    "lat": 51.32199,
+    "lng": 4.95729,
+    "myrcmOrgId": "59433"
+  },
+  {
     "hostId": "mac-mistelbach",
     "hostName": "MAC Mistelbach",
     "lat": 48.55312704380916,
