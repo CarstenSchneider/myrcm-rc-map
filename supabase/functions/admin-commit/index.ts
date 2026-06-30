@@ -116,6 +116,9 @@ serve(async (req) => {
         if (body.aliases !== undefined) {
           if (Array.isArray(body.aliases) && body.aliases.length) updated.aliases = body.aliases; else delete updated.aliases;
         }
+        if (body.hostIds !== undefined) {
+          if (Array.isArray(body.hostIds) && body.hostIds.length) updated.hostIds = body.hostIds; else delete updated.hostIds;
+        }
         seeds[idx] = updated;
         seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
         await putFile(SEEDS_PATH, seeds, `admin: update seed ${seedName || seedId}`, branch, seedsState.sha, gh);

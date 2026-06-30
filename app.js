@@ -5599,33 +5599,45 @@ function renderAdminStreckenTab(container) {
       const sName = s => s.name ?? s.hostName ?? "";
       const sId = s => s.id ?? s.hostId ?? "";
       const sStatus = s => s.lat != null ? "ok" : s.locationUnknown ? "unknown" : "missing";
+      const sCountry = s => {
+        if (s.country) return _countryNameToCode[s.country] ?? s.country;
+        if (s.myrcmOrgId) {
+          const c = hostsByOrgId.get(String(s.myrcmOrgId))?.country;
+          if (c) return _countryNameToCode[c] ?? c;
+        }
+        return "";
+      };
 
       function buildRows() {
         const q = searchVal.toLowerCase().trim();
         const filtered = q ? seeds.filter(s =>
           sName(s).toLowerCase().includes(q) ||
           sId(s).toLowerCase().includes(q) ||
-          (Array.isArray(s.aliases) && s.aliases.some(a => a.toLowerCase().includes(q)))
+          (Array.isArray(s.aliases) && s.aliases.some(a => a.toLowerCase().includes(q))) ||
+          (Array.isArray(s.hostIds) && s.hostIds.some(h => h.toLowerCase().includes(q)))
         ) : seeds;
         return filtered.map(s => {
           const id = sId(s);
           const name = sName(s);
           const st = sStatus(s);
+          const country = sCountry(s);
           const isExp = expandedId === id;
           return `<div class="admin-seed-row" data-seed-id="${escapeHtml(id)}">
             <div class="admin-seed-header">
               <span class="admin-seed-dot admin-seed-${st}"></span>
               <span class="admin-seed-name">${escapeHtml(name)}</span>
-              ${s.country ? `<span class="admin-seed-country">${escapeHtml(s.country)}</span>` : ""}
+              ${country ? `<span class="admin-seed-country">${escapeHtml(country)}</span>` : ""}
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="admin-seed-chevron${isExp ? " is-open" : ""}" aria-hidden="true"><path d="M1.5 3.5l3.5 3 3.5-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             ${isExp ? `<div class="admin-seed-form">
+              <div class="admin-seed-form-row"><span class="admin-seed-label">hostId</span><span class="admin-seed-hostid-val">${escapeHtml(id)}</span></div>
               <div class="admin-seed-form-row"><span class="admin-seed-label">Name</span><input class="admin-input js-sf-name" value="${escapeHtml(name)}" /></div>
-              <div class="admin-seed-form-row"><span class="admin-seed-label">Land</span><input class="admin-input js-sf-country" placeholder="DE / AT / CH / BE" value="${escapeHtml(s.country || "")}" style="max-width:120px;" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Land</span><input class="admin-input js-sf-country" placeholder="DE / AT / CH / BE" value="${escapeHtml(country)}" style="max-width:120px;" /></div>
               <label class="admin-entry-toggle"><input type="checkbox" class="js-sf-unknown"${s.locationUnknown ? " checked" : ""} /> Ort unbekannt</label>
               <div class="admin-entry-coords js-sf-coords-row"${s.locationUnknown ? " hidden" : ""}><input class="admin-input js-sf-coords" placeholder="48.123, 14.456" value="${s.lat != null ? `${s.lat}, ${s.lng}` : ""}" /></div>
               <div class="admin-seed-form-row"><span class="admin-seed-label">Website</span><input class="admin-input js-sf-website" placeholder="https://…" value="${escapeHtml(s.website || "")}" /></div>
               <div class="admin-seed-form-row"><span class="admin-seed-label">Aliases</span><input class="admin-input js-sf-aliases" placeholder="Alias1, Alias2, …" value="${escapeHtml(Array.isArray(s.aliases) ? s.aliases.join(", ") : "")}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">hostIds</span><input class="admin-input js-sf-hostids" placeholder="dmc-ov-87, …" value="${escapeHtml(Array.isArray(s.hostIds) ? s.hostIds.join(", ") : "")}" /></div>
               <div class="admin-entry-actions" style="margin-top:8px;">
                 <button type="button" class="admin-btn admin-btn-save js-sf-save">Speichern</button>
                 <button type="button" class="admin-btn admin-btn-delete js-sf-delete">Löschen</button>
@@ -5758,6 +5770,8 @@ function renderAdminStreckenTab(container) {
             const website = form.querySelector(".js-sf-website").value.trim();
             const aliasesRaw = form.querySelector(".js-sf-aliases").value.trim();
             const aliases = aliasesRaw ? aliasesRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
+            const hostIdsRaw = form.querySelector(".js-sf-hostids").value.trim();
+            const hostIds = hostIdsRaw ? hostIdsRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
             let lat, lng;
             if (!isUnknown) {
               const parts = form.querySelector(".js-sf-coords").value.split(",").map(x => parseFloat(x.trim()));
@@ -5768,7 +5782,7 @@ function renderAdminStreckenTab(container) {
             try {
               await adminCommit({
                 action: "update-seed", seedId: id, seedName: name, name,
-                lat, lng, country, website, aliases,
+                lat, lng, country, website, aliases, hostIds,
                 locationUnknown: isUnknown || undefined,
               });
               const idx = seeds.findIndex(s => sId(s) === id);
@@ -5780,6 +5794,7 @@ function renderAdminStreckenTab(container) {
                 if (country) upd.country = country; else delete upd.country;
                 if (website) upd.website = website; else delete upd.website;
                 if (aliases.length) upd.aliases = aliases; else delete upd.aliases;
+                if (hostIds.length) upd.hostIds = hostIds; else delete upd.hostIds;
                 seeds[idx] = upd;
               }
               st.textContent = "✓ Gespeichert";
