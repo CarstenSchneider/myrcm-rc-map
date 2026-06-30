@@ -4078,6 +4078,13 @@
     "myrcmOrgId": "439"
   },
   {
+    "hostId": "modelifun2-0",
+    "hostName": "Modelifun2.0",
+    "lat": 50.56385646839561,
+    "lng": 4.798942169186604,
+    "myrcmOrgId": "2641"
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
