@@ -627,6 +627,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-31752",
+    "name": "Bugg'ittre Racing",
+    "city": "",
+    "lat": 50.65768338233705,
+    "lng": 4.307840911313228,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "31752",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "buggy-club-hornets",
     "name": "Buggy Club Hornets",
     "city": "Esslingen",
@@ -645,6 +660,36 @@
     ],
     "myrcmOrgId": "22302",
     "source": "verified",
+    "verified": true
+  },
+  {
+    "id": "myrcm-743",
+    "name": "Buggy Club Indoor Charleroi ASBL",
+    "city": "",
+    "lat": 50.42900387816841,
+    "lng": 4.446907564457314,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "743",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-17680",
+    "name": "Buggy Racing Bauffe Club",
+    "city": "",
+    "lat": 50.65765924756288,
+    "lng": 4.307777221996776,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "17680",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -959,6 +1004,24 @@
     "myrcmOrgId": "37613",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
     "verified": true
+  },
+  {
+    "id": "ets-international",
+    "name": "ETS / TOS International",
+    "city": null,
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "https://www.ets.racing",
+    "aliases": [
+      "ETS International",
+      "TOS International"
+    ],
+    "hostIds": [],
+    "myrcmOrgId": "",
+    "source": "manual",
+    "locationUnknown": true
   },
   {
     "id": "fsg-motorsport-ag",
@@ -1287,13 +1350,17 @@
     "aliases": [
       "myrcm-339",
       "M.A.R.S. Alt Erlaa",
-      "Wien"
+      "Wien",
+      "Vienna",
+      "VIENNA/ AT",
+      "VIENNA",
+      "VIENNA / AT"
     ],
     "hostIds": [
       "m-a-r-s-alt-erlaa"
     ],
     "myrcmOrgId": "339",
-    "source": "geocoded-nominatim-dach",
+    "source": "manual",
     "verified": true
   },
   {
@@ -1705,13 +1772,17 @@
     "aliases": [
       "myrcm-217",
       "MAV Aigen-Schlägl",
-      "Aigen-Schlägl"
+      "Aigen-Schlägl",
+      "Aigen",
+      "Aigen/ AT",
+      "AIGEN",
+      "AIGEN / AT"
     ],
     "hostIds": [
       "mav-aigen-schlaegl"
     ],
     "myrcmOrgId": "217",
-    "source": "geocoded-nominatim-dach",
+    "source": "manual",
     "verified": true
   },
   {
@@ -1982,7 +2053,9 @@
     "aliases": [
       "Karlsruhe",
       "MC Ettlingen e.V.",
-      "myrcm-121"
+      "myrcm-121",
+      "Ettlingen",
+      "ETTLINGEN"
     ],
     "hostIds": [
       "mc-ettlingen-e-v"
@@ -6219,23 +6292,5 @@
     "myrcmOrgId": "1387",
     "source": "geocoded-nominatim-dach",
     "verified": true
-  },
-  {
-    "id": "ets-international",
-    "name": "ETS / TOS International",
-    "city": null,
-    "lat": null,
-    "lng": null,
-    "address": "",
-    "postalCode": "",
-    "website": "https://www.ets.racing",
-    "aliases": [
-      "ETS International",
-      "TOS International"
-    ],
-    "hostIds": [],
-    "myrcmOrgId": "",
-    "source": "manual",
-    "locationUnknown": true
   }
 ]

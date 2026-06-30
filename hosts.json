@@ -123,6 +123,13 @@
     "ogImage": "https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;public&#x2F;j&#x2F;f&#x2F;l&#x2F;temp-lbpwnfwlhsmdfltvwviq&#x2F;whatsapp-image-2026-05-04-at-20-58-32-high.jpg&#x3F;enable-io&#x3D;true&amp;enable&#x3D;upscale&amp;fit&#x3D;bounds&amp;width&#x3D;1200"
   },
   {
+    "id": "amca-apeldoorn",
+    "name": "AMCA-Apeldoorn",
+    "website": "",
+    "myrcmOrgId": "7762",
+    "country": "NL"
+  },
+  {
     "id": "amsc-augsburg-e-v",
     "name": "AMSC Augsburg e. V.",
     "website": "http://www.amsc-augsburg.de/",
@@ -188,11 +195,25 @@
     "country": "DE"
   },
   {
+    "id": "bugg-ittre-racing",
+    "name": "Bugg'ittre Racing",
+    "website": "",
+    "myrcmOrgId": "31752",
+    "country": "BE"
+  },
+  {
     "id": "buggy-club-hornets",
     "name": "Buggy Club Hornets",
     "website": "http://www.bc-hornets.ch/",
     "myrcmOrgId": "22302",
     "country": "CH"
+  },
+  {
+    "id": "buggy-rc-bauffe-a-s-b-l",
+    "name": "Buggy RC Bauffe a.s.b.l",
+    "website": "",
+    "myrcmOrgId": "62332",
+    "country": "BE"
   },
   {
     "id": "buggyclub-zentralschweiz",
@@ -265,6 +286,20 @@
     "country": "DE"
   },
   {
+    "id": "dutch-rc-series",
+    "name": "Dutch RC Series",
+    "website": "",
+    "myrcmOrgId": "28115",
+    "country": "NL"
+  },
+  {
+    "id": "dutch-rc-timekeeping",
+    "name": "Dutch RC TimeKeeping",
+    "website": "",
+    "myrcmOrgId": "1980",
+    "country": "NL"
+  },
+  {
     "id": "edc-kinzigtal-e-v",
     "name": "EDC Kinzigtal e.V.",
     "website": "http://www.edc-kinzigtal.de/",
@@ -322,6 +357,13 @@
     "country": "DE"
   },
   {
+    "id": "erce",
+    "name": "ERCE",
+    "website": "",
+    "myrcmOrgId": "3350",
+    "country": "NL"
+  },
+  {
     "id": "ert-steyregg",
     "name": "ERT-Steyregg",
     "website": "http://www.ert-steyregg.at/",
@@ -342,6 +384,34 @@
     "website": "http://www.eurorcseries.com/",
     "myrcmOrgId": "2047",
     "country": "DE"
+  },
+  {
+    "id": "evmc-velp",
+    "name": "EVMC Velp",
+    "website": "",
+    "myrcmOrgId": "10817",
+    "country": "NL"
+  },
+  {
+    "id": "fba-vzw",
+    "name": "FBA vzw",
+    "website": "",
+    "myrcmOrgId": "38144",
+    "country": "BE"
+  },
+  {
+    "id": "flamrc",
+    "name": "FLAMRC",
+    "website": "",
+    "myrcmOrgId": "73",
+    "country": "LU"
+  },
+  {
+    "id": "flatout-rc-vzw",
+    "name": "FlatOut RC VZW",
+    "website": "",
+    "myrcmOrgId": "739",
+    "country": "BE"
   },
   {
     "id": "fs-timing",
@@ -372,11 +442,25 @@
     "country": "DE"
   },
   {
+    "id": "h-m-r-c",
+    "name": "H.M.R.C.",
+    "website": "",
+    "myrcmOrgId": "7059",
+    "country": "NL"
+  },
+  {
     "id": "heiner-martin",
     "name": "Heiner Martin",
     "website": "",
     "myrcmOrgId": "458",
     "country": "DE"
+  },
+  {
+    "id": "hfcc-racing-den-haag",
+    "name": "HFCC Racing Den Haag",
+    "website": "",
+    "myrcmOrgId": "14156",
+    "country": "NL"
   },
   {
     "id": "hobby-shop-haessig",
@@ -386,6 +470,27 @@
     "country": "CH"
   },
   {
+    "id": "houthalens-racing-team",
+    "name": "Houthalens Racing Team",
+    "website": "",
+    "myrcmOrgId": "65",
+    "country": "BE"
+  },
+  {
+    "id": "hugo-rc-timing-nl",
+    "name": "Hugo - RC-Timing.nl",
+    "website": "",
+    "myrcmOrgId": "2824",
+    "country": "NL"
+  },
+  {
+    "id": "hulshout-offroad-racing",
+    "name": "Hulshout Offroad Racing",
+    "website": "",
+    "myrcmOrgId": "50130",
+    "country": "BE"
+  },
+  {
     "id": "ig-racing-team-hamm",
     "name": "IG Racing Team Hamm",
     "website": "",
@@ -393,11 +498,25 @@
     "country": "DE"
   },
   {
+    "id": "indoor-offroad-turnhout",
+    "name": "Indoor Offroad Turnhout",
+    "website": "",
+    "myrcmOrgId": "59433",
+    "country": "BE"
+  },
+  {
     "id": "indoortrack-wichtrach",
     "name": "Indoortrack Wichtrach",
     "website": "",
     "myrcmOrgId": "46390",
     "country": "CH"
+  },
+  {
+    "id": "instantrc",
+    "name": "InstantRC",
+    "website": "",
+    "myrcmOrgId": "53360",
+    "country": "NL"
   },
   {
     "id": "ircr-indoor-rc-romand",
@@ -435,6 +554,13 @@
     "country": "AT"
   },
   {
+    "id": "lmcc",
+    "name": "LMCC",
+    "website": "",
+    "myrcmOrgId": "51",
+    "country": "LU"
+  },
+  {
     "id": "lost-place-racers-e-v",
     "name": "Lost-Place-Racers e.V.",
     "website": "http://www.lostplaceracers.de/",
@@ -454,6 +580,20 @@
     "website": "",
     "myrcmOrgId": "19204",
     "country": "DE"
+  },
+  {
+    "id": "m-a-c-de-baanbrekers",
+    "name": "M.A.C. de Baanbrekers",
+    "website": "",
+    "myrcmOrgId": "12027",
+    "country": "NL"
+  },
+  {
+    "id": "m-a-c-h-one",
+    "name": "M.A.C.H.-One",
+    "website": "",
+    "myrcmOrgId": "33841",
+    "country": "NL"
   },
   {
     "id": "mac-adenau",
@@ -482,6 +622,13 @@
     "website": "https://www.mac-burgdorf.de/",
     "myrcmOrgId": "678",
     "country": "DE"
+  },
+  {
+    "id": "mac-de-kempen",
+    "name": "MAC de Kempen",
+    "website": "",
+    "myrcmOrgId": "32715",
+    "country": "NL"
   },
   {
     "id": "mac-hamburg-e-v",
@@ -551,6 +698,13 @@
     "ogImage": "https://macuetersen.com/wp-content/uploads/2026/04/img-20260414-wa0001-1.jpg"
   },
   {
+    "id": "mac-vlijmen",
+    "name": "MAC Vlijmen",
+    "website": "",
+    "myrcmOrgId": "30724",
+    "country": "NL"
+  },
+  {
     "id": "mac-meckenheim-e-v",
     "name": "MAC-Meckenheim e.V.",
     "website": "https://www.mac-meckenheim.de/",
@@ -580,6 +734,13 @@
     "ogImage": "https://cdn.citiesapps.com/images/eyJidWNrZXQiOiJhcHBsaWNhdGlvbi1wcm9kLXBhZ2VzLWJ1Y2tldCIsImtleSI6ImJiZWZmODI4OTVlZWQ4MWM2N2NmNmQ1Ni9pbWFnZXMvcHJvZmlsZS8xNzA4NTg4Mjg0NDI2XzMwNjkxNTYxNl80MjU3NzI2ODI5ODg0NDVfODEyMjQzNTM5MzExNTgyMDkxOV9uLmpwZWciLCJlZGl0cyI6eyJjcm9wIjp7IndpZHRoIjoyNzUsImhlaWdodCI6Mjc1LCJ0b3AiOjAsImxlZnQiOjB9LCJyb3RhdGUiOjAsInJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsImhlaWdodCI6MTMxNCwid2lkdGgiOjEzMTQsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19fQ=="
   },
   {
+    "id": "main-meetings-raalte",
+    "name": "Main Meetings Raalte",
+    "website": "",
+    "myrcmOrgId": "23785",
+    "country": "NL"
+  },
+  {
     "id": "max-informatique",
     "name": "Max Informatique",
     "website": "",
@@ -594,11 +755,25 @@
     "country": "AT"
   },
   {
+    "id": "mbc-de-sluis-gouda",
+    "name": "MBC de Sluis Gouda",
+    "website": "",
+    "myrcmOrgId": "4842",
+    "country": "NL"
+  },
+  {
     "id": "mbc-goldstein-e-v",
     "name": "MBC Goldstein e.V.",
     "website": "http://www.mbcgoldstein.de/",
     "myrcmOrgId": "24873",
     "country": "DE"
+  },
+  {
+    "id": "mbc-het-gelders-eiland-lobith",
+    "name": "MBC Het Gelders Eiland Lobith",
+    "website": "",
+    "myrcmOrgId": "3214",
+    "country": "NL"
   },
   {
     "id": "mblr-ecl-pens",
@@ -620,6 +795,13 @@
     "website": "https://mbsc-waechtersbach.de/",
     "myrcmOrgId": "27211",
     "country": "DE"
+  },
+  {
+    "id": "mbv-kampenhout-vzw",
+    "name": "MBV Kampenhout vzw",
+    "website": "",
+    "myrcmOrgId": "51913",
+    "country": "BE"
   },
   {
     "id": "mc-ettlingen-e-v",
@@ -801,6 +983,13 @@
     "country": "DE"
   },
   {
+    "id": "mini-racing-car-liege",
+    "name": "Mini Racing Car Liège",
+    "website": "",
+    "myrcmOrgId": "9668",
+    "country": "BE"
+  },
+  {
     "id": "mini-racing-cars-aigle-lausanne",
     "name": "Mini Racing Cars Aigle & Lausanne",
     "website": "http://www.mrcal.ch/",
@@ -820,6 +1009,13 @@
     "website": "http://www.mttg.ch/",
     "myrcmOrgId": "18473",
     "country": "CH"
+  },
+  {
+    "id": "mini-zshop-nl",
+    "name": "Mini-zshop.nl",
+    "website": "",
+    "myrcmOrgId": "44133",
+    "country": "NL"
   },
   {
     "id": "miniatutenpark-elsterwerda",
@@ -843,6 +1039,48 @@
     "myrcmOrgId": "771",
     "country": "AT",
     "ogImage": "https://static.wixstatic.com/media/1287a5_fcfb5cefd43d476bb5443b2d98f11847%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/1287a5_fcfb5cefd43d476bb5443b2d98f11847%7Emv2.jpg"
+  },
+  {
+    "id": "model-auto-club-heemstede",
+    "name": "Model Auto Club Heemstede",
+    "website": "",
+    "myrcmOrgId": "75",
+    "country": "NL"
+  },
+  {
+    "id": "model-race-genk-vzw",
+    "name": "Model Race Genk vzw",
+    "website": "",
+    "myrcmOrgId": "3291",
+    "country": "BE"
+  },
+  {
+    "id": "model-racing-club-real80",
+    "name": "Model Racing Club Real80",
+    "website": "",
+    "myrcmOrgId": "104",
+    "country": "NL"
+  },
+  {
+    "id": "model-racing-midland",
+    "name": "Model Racing Midland",
+    "website": "",
+    "myrcmOrgId": "19047",
+    "country": "NL"
+  },
+  {
+    "id": "modelbouw-vereniging-waterland",
+    "name": "Modelbouw Vereniging Waterland",
+    "website": "",
+    "myrcmOrgId": "439",
+    "country": "NL"
+  },
+  {
+    "id": "modelifun2-0",
+    "name": "Modelifun2.0",
+    "website": "",
+    "myrcmOrgId": "2641",
+    "country": "BE"
   },
   {
     "id": "modell-rennsport-club-st-gallen-mrcsg",
@@ -887,6 +1125,20 @@
     "website": "https://www.modellsportzentrum-zwoenitz.com/",
     "myrcmOrgId": "60576",
     "country": "DE"
+  },
+  {
+    "id": "modelsport-vereniging-bergschenhoek",
+    "name": "Modelsport Vereniging Bergschenhoek",
+    "website": "",
+    "myrcmOrgId": "3200",
+    "country": "NL"
+  },
+  {
+    "id": "modelstockcar-club-s-r-p-de-peeldrivers",
+    "name": "Modelstockcar club S.R.P De Peeldrivers",
+    "website": "",
+    "myrcmOrgId": "3215",
+    "country": "NL"
   },
   {
     "id": "morac",
@@ -952,6 +1204,13 @@
     "country": "DE"
   },
   {
+    "id": "mrc-vianen",
+    "name": "MRC Vianen",
+    "website": "",
+    "myrcmOrgId": "18560",
+    "country": "NL"
+  },
+  {
     "id": "mrc-fruehwirth",
     "name": "MRC-Frühwirth",
     "website": "http://www.mrc-fruehwirth.at/",
@@ -972,6 +1231,13 @@
     "myrcmOrgId": "207",
     "country": "CH",
     "ogImage": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x1024:format=jpg/path/s39ebd06c909fd72c/image/i68a91d81bcec76b6/version/1774871453/image.jpg"
+  },
+  {
+    "id": "mrcz-vzw",
+    "name": "MRCZ vzw",
+    "website": "",
+    "myrcmOrgId": "2571",
+    "country": "BE"
   },
   {
     "id": "mrsc-amberg-e-v",
@@ -1126,6 +1392,13 @@
     "ogImage": "https://www.nmbc.ch/wp-content/uploads/2025/05/DJI_0374_Mod-scaled.jpg"
   },
   {
+    "id": "nomac",
+    "name": "NOMAC",
+    "website": "",
+    "myrcmOrgId": "53339",
+    "country": "NL"
+  },
+  {
     "id": "oefmav",
     "name": "Oefmav",
     "website": "",
@@ -1206,6 +1479,13 @@
     "country": "DE"
   },
   {
+    "id": "orra",
+    "name": "Orra",
+    "website": "",
+    "myrcmOrgId": "55554",
+    "country": "BE"
+  },
+  {
     "id": "ostseeracer-rc-modellbau-e-v",
     "name": "OstseeRacer RC Modellbau e.V.",
     "website": "http://www.ostseeracer.com/",
@@ -1234,6 +1514,13 @@
     "country": "AT"
   },
   {
+    "id": "r-c-car-mertzig-asbl",
+    "name": "R/C CAR MERTZIG ASBL",
+    "website": "",
+    "myrcmOrgId": "112",
+    "country": "LU"
+  },
+  {
     "id": "racers-paradise-modellsport",
     "name": "RACERS PARADISE MODELLSPORT",
     "website": "http://www.racersparadise.de/",
@@ -1246,6 +1533,20 @@
     "website": "https://www.rcparndorf.at/",
     "myrcmOrgId": "38295",
     "country": "AT"
+  },
+  {
+    "id": "racing-club-roeselare",
+    "name": "Racing Club Roeselare",
+    "website": "",
+    "myrcmOrgId": "76",
+    "country": "BE"
+  },
+  {
+    "id": "raco-2000",
+    "name": "RACO 2000",
+    "website": "",
+    "myrcmOrgId": "5305",
+    "country": "NL"
   },
   {
     "id": "rallye-club-haltern-e-v-im-adac",
@@ -1312,6 +1613,20 @@
     "country": "CH"
   },
   {
+    "id": "rc-club-zoetermeer",
+    "name": "RC Club Zoetermeer",
+    "website": "",
+    "myrcmOrgId": "34977",
+    "country": "NL"
+  },
+  {
+    "id": "rc-de-fivelcrossers",
+    "name": "RC de Fivelcrossers",
+    "website": "",
+    "myrcmOrgId": "18663",
+    "country": "NL"
+  },
+  {
     "id": "rc-drecksloch-e-v",
     "name": "RC Drecksloch e.V.",
     "website": "",
@@ -1332,6 +1647,20 @@
     "myrcmOrgId": "42085",
     "country": "DE",
     "ogImage": "https://www.rchalle.de/img/banner-1280x640.png"
+  },
+  {
+    "id": "rc-hotwheels",
+    "name": "RC Hotwheels",
+    "website": "",
+    "myrcmOrgId": "3074",
+    "country": "NL"
+  },
+  {
+    "id": "rc-indoor-bleiswijk",
+    "name": "RC Indoor Bleiswijk",
+    "website": "",
+    "myrcmOrgId": "47757",
+    "country": "NL"
   },
   {
     "id": "rc-modellbaufreunde-e-v",
@@ -1368,6 +1697,13 @@
     "website": "https://nordbayerncup.de/",
     "myrcmOrgId": "47444",
     "country": "DE"
+  },
+  {
+    "id": "rc-racing-circuit-zolder",
+    "name": "RC Racing Circuit Zolder",
+    "website": "",
+    "myrcmOrgId": "20089",
+    "country": "BE"
   },
   {
     "id": "rc-racing-club-arlesheim",
@@ -1559,6 +1895,13 @@
     "country": "DE"
   },
   {
+    "id": "rctr",
+    "name": "RCTR",
+    "website": "",
+    "myrcmOrgId": "59322",
+    "country": "BE"
+  },
+  {
     "id": "rcxx-shop",
     "name": "RCXX.SHOP",
     "website": "https://www.rcxx.shop/",
@@ -1660,6 +2003,13 @@
     "country": "AT"
   },
   {
+    "id": "speedway-tilburg",
+    "name": "Speedway-Tilburg",
+    "website": "",
+    "myrcmOrgId": "56820",
+    "country": "NL"
+  },
+  {
     "id": "stoppelhopser-oberhausen-e-v",
     "name": "Stoppelhopser Oberhausen e.V.",
     "website": "http://www.stoppelhopser-oberhausen.de/",
@@ -1701,6 +2051,20 @@
     "website": "http://www.tamiya-eurocup.at/",
     "myrcmOrgId": "6328",
     "country": "AT"
+  },
+  {
+    "id": "tamiya-cup-nl",
+    "name": "Tamiya Cup NL",
+    "website": "",
+    "myrcmOrgId": "33479",
+    "country": "NL"
+  },
+  {
+    "id": "tamiyacup-belgium",
+    "name": "Tamiyacup Belgium",
+    "website": "",
+    "myrcmOrgId": "35896",
+    "country": "BE"
   },
   {
     "id": "team-dabo",
@@ -1783,6 +2147,13 @@
     "ogImage": "https://tsvm-racing.de/wp-content/uploads/2024/04/tsvmariendorf-tsv-mariendorf-rc-racing-share.jpg"
   },
   {
+    "id": "tt-fays",
+    "name": "TT Fays",
+    "website": "",
+    "myrcmOrgId": "22085",
+    "country": "BE"
+  },
+  {
     "id": "turnerschaft-1860-e-v-gro-auheim",
     "name": "Turnerschaft 1860 e.V. Großauheim",
     "website": "http://www.mrcgrossauheim.de/",
@@ -1837,5 +2208,12 @@
     "website": "http://www.wmw-fehring.at/",
     "myrcmOrgId": "507",
     "country": "AT"
+  },
+  {
+    "id": "yellowracing-v2-0",
+    "name": "Yellowracing V2.0",
+    "website": "",
+    "myrcmOrgId": "41053",
+    "country": "BE"
   }
 ]
