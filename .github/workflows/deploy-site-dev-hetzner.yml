@@ -27,6 +27,7 @@ jobs:
           cp app.js .deploy-site/
           cp style.css .deploy-site/
           cp series.json .deploy-site/
+          cp translations.json .deploy-site/ 2>/dev/null || true
           cp dach-borders.json .deploy-site/
           cp impressum-datenschutz.html .deploy-site/
           cp races.json .deploy-site/
