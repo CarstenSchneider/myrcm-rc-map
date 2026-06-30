@@ -4128,6 +4128,13 @@
     "myrcmOrgId": "3200"
   },
   {
+    "hostId": "modelstockcar-club-s-r-p-de-peeldrivers",
+    "hostName": "Modelstockcar club S.R.P De Peeldrivers",
+    "lat": 51.51915036416253,
+    "lng": 5.876636258966437,
+    "myrcmOrgId": "3215"
+  },
+  {
     "hostId": "rcco-mrc-weiden-e-v",
     "hostName": "MRC Weiden e.V.",
     "lat": 49.64588568552558,
