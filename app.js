@@ -5595,6 +5595,7 @@ function renderAdminStreckenTab(container) {
       let searchVal = "";
       let expandedId = null;
       let showNewForm = false;
+      let seedsByMerge = new Map();
 
       const sName = s => s.name ?? s.hostName ?? "";
       const sId = s => s.id ?? s.hostId ?? "";
@@ -5638,6 +5639,11 @@ function renderAdminStreckenTab(container) {
               <div class="admin-seed-form-row"><span class="admin-seed-label">Website</span><input class="admin-input js-sf-website" placeholder="https://…" value="${escapeHtml(s.website || "")}" /></div>
               <div class="admin-seed-form-row"><span class="admin-seed-label">Aliases</span><input class="admin-input js-sf-aliases" placeholder="Alias1, Alias2, …" value="${escapeHtml(Array.isArray(s.aliases) ? s.aliases.join(", ") : "")}" /></div>
               <div class="admin-seed-form-row"><span class="admin-seed-label">hostIds</span><input class="admin-input js-sf-hostids" placeholder="dmc-ov-87, …" value="${escapeHtml(Array.isArray(s.hostIds) ? s.hostIds.join(", ") : "")}" /></div>
+              <div class="admin-seed-merge-row">
+                <span class="admin-seed-label">Gleiche Strecke wie</span>
+                <input class="admin-input js-sf-merge" list="admin-seeds-merge-dl" placeholder="Anderen Eintrag wählen…" />
+                <button type="button" class="admin-btn admin-btn-link js-sf-merge-btn">Zusammenführen</button>
+              </div>
               <div class="admin-entry-actions" style="margin-top:8px;">
                 <button type="button" class="admin-btn admin-btn-save js-sf-save">Speichern</button>
                 <button type="button" class="admin-btn admin-btn-delete js-sf-delete">Löschen</button>
@@ -5650,6 +5656,9 @@ function renderAdminStreckenTab(container) {
 
       function render() {
         const wasSearchFocused = document.activeElement?.classList.contains("js-strecken-search");
+        seedsByMerge = new Map();
+        seeds.forEach(s => seedsByMerge.set(`${sName(s)} · ${sId(s)}`, sId(s)));
+        const mergeDatalist = `<datalist id="admin-seeds-merge-dl">${[...seedsByMerge.keys()].map(k => `<option value="${escapeHtml(k)}">`).join("")}</datalist>`;
         const newFormHtml = showNewForm ? `<div class="admin-new-seed-form" id="adminNewSeedForm">
           <p class="admin-new-seed-title">Neue Strecke</p>
           <div class="admin-seed-form-row"><span class="admin-seed-label">hostId</span><input class="admin-input js-ns-hostid" placeholder="mein-club-e-v" /></div>
@@ -5668,6 +5677,7 @@ function renderAdminStreckenTab(container) {
         </div>` : "";
 
         container.innerHTML = `
+          ${mergeDatalist}
           <div class="admin-strecken-top">
             <input type="search" class="admin-input js-strecken-search" placeholder="Suchen…" value="${escapeHtml(searchVal)}" />
             <span class="admin-strecken-count">${seeds.length}</span>
@@ -5798,6 +5808,34 @@ function renderAdminStreckenTab(container) {
                 seeds[idx] = upd;
               }
               st.textContent = "✓ Gespeichert";
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+            return;
+          }
+
+          if (e.target.classList.contains("js-sf-merge-btn")) {
+            const mergeVal = row.querySelector(".js-sf-merge").value.trim();
+            const targetId = seedsByMerge.get(mergeVal);
+            if (!targetId) { st.textContent = "Strecke nicht gefunden — exakt aus der Liste wählen"; return; }
+            if (targetId === id) { st.textContent = "Kann nicht mit sich selbst zusammenführen"; return; }
+            const targetName = sName(seeds.find(s => sId(s) === targetId) ?? {});
+            if (!confirm(`"${sName(seed)}" mit "${targetName}" zusammenführen?\n\nDer aktuelle Eintrag wird gelöscht, seine hostId zu "${targetName}" hinzugefügt.`)) return;
+            st.textContent = "Zusammenführen…";
+            try {
+              await adminCommit({ action: "merge-seed", seedId: id, seedName: sName(seed), targetSeedId: targetId });
+              // Update local: add src hostId(s) to target, remove src
+              const srcIdx = seeds.findIndex(s => sId(s) === id);
+              const tgtIdx = seeds.findIndex(s => sId(s) === targetId);
+              if (srcIdx >= 0 && tgtIdx >= 0) {
+                const src = seeds[srcIdx];
+                const srcIds = [sId(src), ...(Array.isArray(src.hostIds) ? src.hostIds : [])].filter(Boolean);
+                const tgt = { ...seeds[tgtIdx] };
+                const existing = Array.isArray(tgt.hostIds) ? tgt.hostIds : [];
+                tgt.hostIds = [...new Set([...existing, ...srcIds])];
+                seeds[tgtIdx] = tgt;
+                seeds.splice(srcIdx, 1);
+              }
+              expandedId = targetId;
+              render();
             } catch (e) { st.textContent = `Fehler: ${e.message}`; }
             return;
           }

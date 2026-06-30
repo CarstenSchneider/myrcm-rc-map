@@ -99,6 +99,23 @@ serve(async (req) => {
         continue;
       }
 
+      if (action === "merge-seed") {
+        const srcIdx = seeds.findIndex((s: any) => s.id === seedId || s.hostId === seedId);
+        const tgtIdx = seeds.findIndex((s: any) => s.id === body.targetSeedId || s.hostId === body.targetSeedId);
+        if (srcIdx < 0 || tgtIdx < 0) continue;
+        const src = seeds[srcIdx];
+        const srcIds = [src.hostId || src.id, ...(Array.isArray(src.hostIds) ? src.hostIds : [])].filter(Boolean);
+        const tgt = { ...seeds[tgtIdx] };
+        const existingIds: string[] = Array.isArray(tgt.hostIds) ? tgt.hostIds : [];
+        const merged = [...new Set([...existingIds, ...srcIds])];
+        tgt.hostIds = merged;
+        seeds[tgtIdx] = tgt;
+        seeds.splice(srcIdx, 1);
+        seeds.sort((a: any, b: any) => (a.name ?? a.hostName ?? "").localeCompare(b.name ?? b.hostName ?? "", "de"));
+        await putFile(SEEDS_PATH, seeds, `admin: merge ${seedName || seedId} into ${body.targetSeedId}`, branch, seedsState.sha, gh);
+        continue;
+      }
+
       if (action === "update-seed") {
         const idx = seeds.findIndex((s: any) => s.id === seedId || s.hostId === seedId);
         if (idx < 0) continue;
