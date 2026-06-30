@@ -3793,6 +3793,13 @@
     "lng": 8.386922863605161
   },
   {
+    "hostId": "evmc-velp",
+    "hostName": "EVMC Velp",
+    "lat": 51.982283708724864,
+    "lng": 5.9870087702161054,
+    "myrcmOrgId": "10817"
+  },
+  {
     "hostId": "rcco-ig-vulkanparkracer-e-v",
     "hostName": "IG Vulkanparkracer e.V.",
     "locationUnknown": true
