@@ -4,8 +4,10 @@
  * Runs on render.com where myrcm.ch is accessible.
  * Usage: node scripts/discover-myrcm-france.js
  *
- * Strategy: fetch the myrcm.ch event list filtered by country FRA, extract unique org IDs
- * from the Host column, then fetch each org's detail page to confirm country=France.
+ * Strategy:
+ * Phase 1a: Try org-list URL filtered by FRA
+ * Phase 1b: Try filtered event-list URLs (country=FRA variants)
+ * Phase 2:  Full scan of all event pages — detect France via text OR flag image in any cell
  */
 
 import * as cheerio from "cheerio";
@@ -35,7 +37,7 @@ async function fetchText(url) {
   }
 }
 
-// Extract org IDs from any myrcm.ch page (links with dId[O]=NNN)
+// Extract all org IDs from any myrcm.ch page (links with dId[O]=NNN)
 function extractOrgIds(html) {
   const $ = cheerio.load(html);
   const seen = new Map();
@@ -49,98 +51,168 @@ function extractOrgIds(html) {
   return [...seen.entries()].map(([orgId, name]) => ({ orgId, name }));
 }
 
-// Fetch all pages of the event list for France and collect org IDs
+// Detect whether a table row is French: check text AND flag images in all cells
+function isFrenchRow($, row) {
+  const cells = $(row).find("td");
+  for (let i = 0; i < cells.length; i++) {
+    const cell = $(cells[i]);
+    const txt = cell.text().trim();
+    if (txt === "FRA" || txt.toLowerCase() === "france") return true;
+    const img = cell.find("img").first();
+    if (img.length) {
+      const alt = (img.attr("alt") || "").toUpperCase();
+      const src = (img.attr("src") || "").toLowerCase();
+      if (alt === "FRA" || alt === "FRANCE" || src.includes("/fra") || src.includes("fra.")) return true;
+    }
+  }
+  return false;
+}
+
+// Extract French org IDs from an event listing page
+// Checks every table row for France indicator (text or flag image)
+function extractFrenchOrgsFromPage(html) {
+  const $ = cheerio.load(html);
+  const found = new Map();
+  $("tr").each((_, row) => {
+    const cells = $(row).find("td");
+    if (cells.length < 3) return;
+    if (!isFrenchRow($, row)) return;
+    // Org link can be anywhere in the row
+    $(row).find("a[href]").each((_, el) => {
+      const href = $(el).attr("href") || "";
+      const m = href.match(/dId(?:%5B|\[)O(?:%5D|\])=(\d+)/i);
+      if (m) found.set(m[1], $(el).text().trim());
+    });
+  });
+  return found;
+}
+
+function logPageDiagnostics(html, label) {
+  const $ = cheerio.load(html);
+  const rows = $("tr").length;
+  const tds = $("td").length;
+  const allHrefs = $("a[href]").length;
+  const dIdHrefs = $("a[href]").filter((_, el) => ($(el).attr("href") || "").match(/dId/i)).length;
+  const snippet = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 400);
+  console.log(`  [${label}] tr:${rows} td:${tds} a[href]:${allHrefs} dId-links:${dIdHrefs}`);
+  console.log(`  [${label}] snippet: ${snippet}`);
+}
+
+async function paginateOrgIds(baseUrl, orgMap, label) {
+  for (let page = 1; page <= 300; page++) {
+    const pageUrl = `${baseUrl}&pId[O]=${page}`;
+    const pageHtml = await fetchText(pageUrl);
+    if (!pageHtml) break;
+    const pageOrgs = extractOrgIds(pageHtml);
+    if (pageOrgs.length === 0) break;
+    const prevSize = orgMap.size;
+    for (const o of pageOrgs) if (!orgMap.has(o.orgId)) orgMap.set(o.orgId, o.name);
+    console.log(`  [${label}] Page ${page}: ${pageOrgs.length} orgs, ${orgMap.size} total unique`);
+    if (orgMap.size === prevSize) break; // no new orgs → stop
+    await new Promise(r => setTimeout(r, 200));
+  }
+}
+
+async function paginateFrenchOrgs(baseUrl, orgMap, label, totalPages) {
+  for (let page = 1; page < totalPages; page++) {
+    const pageUrl = `${baseUrl}&pId[O]=${page}`;
+    const html = await fetchText(pageUrl);
+    if (!html) continue;
+    for (const [id, name] of extractFrenchOrgsFromPage(html)) orgMap.set(id, name);
+    if (page % 25 === 0) console.log(`  [${label}] Page ${page}/${totalPages}: ${orgMap.size} French orgs`);
+    await new Promise(r => setTimeout(r, 150));
+  }
+}
+
 async function discoverOrgIdsFromEvents() {
   const orgMap = new Map();
 
-  // URL patterns to try for France event listing
-  // hId[1]=arv = archive/event list view, fId[C] or country might filter by country
-  const listUrlPatterns = [
+  // Phase 1a: Try org-list URL filtered by France
+  const orgListPatterns = [
+    `${BASE}/myrcm/main?pLa=en&hId[1]=orl&fId[C]=FRA`,
+    `${BASE}/myrcm/main?pLa=en&hId[1]=orl&fId[C]=France`,
+    `${BASE}/myrcm/main?pLa=en&hId[1]=orl&country=FRA`,
+  ];
+  for (const url of orgListPatterns) {
+    console.log(`Phase 1a: ${url}`);
+    const html = await fetchText(url);
+    if (!html) continue;
+    const orgs = extractOrgIds(html);
+    console.log(`  → ${orgs.length} org links`);
+    if (orgs.length > 0) {
+      for (const o of orgs) if (!orgMap.has(o.orgId)) orgMap.set(o.orgId, o.name);
+      await paginateOrgIds(url, orgMap, "org-list");
+      console.log(`Org-list worked. French orgs found: ${orgMap.size}`);
+      return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+    }
+    logPageDiagnostics(html, url.slice(-40));
+    await new Promise(r => setTimeout(r, 300));
+  }
+
+  // Phase 1b: Try filtered event-list URLs (archived + upcoming)
+  const eventListPatterns = [
     `${BASE}/myrcm/main?pLa=en&hId[1]=arv&fId[C]=FRA`,
     `${BASE}/myrcm/main?pLa=en&hId[1]=arv&country=FRA`,
     `${BASE}/myrcm/main?pLa=en&hId[1]=arv&fId[C]=France`,
-    `${BASE}/myrcm/main?pLa=en&hId[1]=arv&country=France`,
-    `${BASE}/myrcm/main?pLa=fr&hId[1]=arv`,
     `${BASE}/myrcm/main?pLa=en&hId[1]=upc&fId[C]=FRA`,
     `${BASE}/myrcm/main?pLa=en&hId[1]=upc&country=FRA`,
   ];
-
-  // Phase 1: Try filtered URLs first (fast path)
-  for (const url of listUrlPatterns) {
-    console.log(`Trying filtered: ${url}`);
+  for (const url of eventListPatterns) {
+    console.log(`Phase 1b: ${url}`);
     const html = await fetchText(url);
     if (!html) continue;
 
-    const orgs = extractOrgIds(html);
-    console.log(`  → ${orgs.length} org links found`);
+    // Try both extractOrgIds (org links) and extractFrenchOrgsFromPage (row-based)
+    const orgsById = extractOrgIds(html);
+    const orgsByRow = extractFrenchOrgsFromPage(html);
+    console.log(`  → extractOrgIds: ${orgsById.length}, extractFrenchOrgs: ${orgsByRow.size}`);
 
-    if (orgs.length > 0) {
-      for (const o of orgs) if (!orgMap.has(o.orgId)) orgMap.set(o.orgId, o.name);
-
-      // Paginate: pId[O]=1, 2, ...
-      for (let page = 1; page <= 200; page++) {
-        const pageUrl = `${url}&pId[O]=${page}`;
-        const pageHtml = await fetchText(pageUrl);
-        if (!pageHtml) break;
-        const pageOrgs = extractOrgIds(pageHtml);
-        if (pageOrgs.length === 0) break;
-        const prevSize = orgMap.size;
-        for (const o of pageOrgs) if (!orgMap.has(o.orgId)) orgMap.set(o.orgId, o.name);
-        console.log(`  Page ${page}: ${pageOrgs.length} orgs, ${orgMap.size} total unique`);
-        if (orgMap.size === prevSize) break;
-        await new Promise(r => setTimeout(r, 200));
-      }
-      console.log(`Filtered URL worked. Total French org IDs: ${orgMap.size}`);
+    const combined = new Map([...orgsById.map(o => [o.orgId, o.name]), ...orgsByRow]);
+    if (combined.size > 0) {
+      for (const [id, name] of combined) if (!orgMap.has(id)) orgMap.set(id, name);
+      // Paginate using extractFrenchOrgsFromPage (works for flag images too)
+      const totalMatch = html.match(/from\s+([\d,]+)/i);
+      const totalEvents = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 2000;
+      const totalPages = Math.min(Math.ceil(totalEvents / 50), 300);
+      console.log(`  Total events: ${totalEvents}, pages: ${totalPages}`);
+      await paginateFrenchOrgs(url, orgMap, "filtered-events", totalPages);
+      console.log(`Filtered event URL worked. French orgs: ${orgMap.size}`);
       return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
     }
-
-    const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").slice(0, 200);
-    console.log(`  HTML snippet: ${text}`);
+    logPageDiagnostics(html, url.slice(-40));
+    await new Promise(r => setTimeout(r, 300));
   }
 
-  // Phase 2: Fallback — scan ALL event pages and pick rows where Country = FRA
-  console.log("\nFiltered URLs returned no org links. Falling back to full scan...");
+  // Phase 2: Full scan of all event pages
+  console.log("\nPhase 2: Full scan of all event pages...");
   const allEventsUrl = `${BASE}/myrcm/main?pLa=en&hId[1]=arv`;
   const firstHtml = await fetchText(allEventsUrl);
   if (!firstHtml) return [];
 
-  // Detect total pages from "Results X from N" text
+  // Log first-page diagnostics to help debug
+  logPageDiagnostics(firstHtml, "full-scan-p0");
+  // Show a sample row to understand the table structure
+  const $0 = cheerio.load(firstHtml);
+  const firstRow = $0("tr").filter((_, r) => $0(r).find("td").length >= 3).first();
+  if (firstRow.length) {
+    const cells = firstRow.find("td");
+    cells.each((i, c) => {
+      const txt = $0(c).text().trim().slice(0, 60);
+      const imgAlt = $0(c).find("img").attr("alt") || "";
+      const imgSrc = $0(c).find("img").attr("src") || "";
+      console.log(`  Row[0] cell[${i}]: text="${txt}" img.alt="${imgAlt}" img.src="${imgSrc.slice(-40)}"`);
+    });
+  }
+
   const totalMatch = firstHtml.match(/from\s+([\d,]+)/i);
   const totalEvents = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 5000;
-  const perPage = 50;
-  const totalPages = Math.ceil(totalEvents / perPage);
-  console.log(`Total events: ${totalEvents}, pages to scan: ${totalPages}`);
+  const totalPages = Math.ceil(totalEvents / 50);
+  console.log(`Total events: ${totalEvents}, pages: ${totalPages}`);
 
-  function extractFrenchOrgsFromPage(html) {
-    const $ = cheerio.load(html);
-    const found = new Map();
-    $("tr").each((_, row) => {
-      const cells = $(row).find("td");
-      if (cells.length < 4) return;
-      const countryCell = $(cells[2]).text().trim(); // Country column (index 2)
-      if (countryCell !== "FRA" && countryCell.toLowerCase() !== "france") return;
-      // Host is in first column — look for org link
-      $(cells[0]).find("a[href]").each((_, el) => {
-        const href = $(el).attr("href") || "";
-        const m = href.match(/dId(?:%5B|\[)O(?:%5D|\])=(\d+)/i);
-        if (m) found.set(m[1], $(el).text().trim());
-      });
-    });
-    return found;
-  }
-
-  // Process first page
   for (const [id, name] of extractFrenchOrgsFromPage(firstHtml)) orgMap.set(id, name);
-  console.log(`Page 0: ${orgMap.size} French orgs so far`);
+  console.log(`Page 0: ${orgMap.size} French orgs`);
 
-  for (let page = 1; page < totalPages; page++) {
-    const pageUrl = `${allEventsUrl}&pId[O]=${page}`;
-    const html = await fetchText(pageUrl);
-    if (!html) continue;
-    for (const [id, name] of extractFrenchOrgsFromPage(html)) orgMap.set(id, name);
-    if (page % 50 === 0) console.log(`Page ${page}/${totalPages}: ${orgMap.size} French orgs`);
-    await new Promise(r => setTimeout(r, 150));
-  }
+  await paginateFrenchOrgs(allEventsUrl, orgMap, "full-scan", totalPages);
 
   console.log(`Full scan complete. ${orgMap.size} unique French org IDs found.`);
   return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
@@ -172,8 +244,16 @@ async function fetchOrgDetail(orgId) {
     }
   });
 
-  const country = info["country"] || info["pays"] || "";
-  const location = info["location"] || info["city"] || info["ort"] || "";
+  // Also check img alt for country flag
+  let country = info["country"] || info["pays"] || info["land"] || "";
+  if (!country) {
+    $("img").each((_, img) => {
+      const alt = $(img).attr("alt") || "";
+      if (alt.toLowerCase() === "france" || alt === "FRA") { country = "France"; return false; }
+    });
+  }
+
+  const location = info["location"] || info["city"] || info["ville"] || info["ort"] || "";
   const name = $("h1, h2, .org-title, .orgName").first().text().trim()
     || $("title").text().split("|")[0].trim() || "";
   const eventCount = $(`a[href*="dId[E]="], a[href*="dId%5BE%5D="]`).length;
@@ -201,11 +281,10 @@ async function main() {
   console.log(`\nTotal unique orgs found: ${orgs.length}`);
 
   if (orgs.length === 0) {
-    console.error("No org links found. Check the URL patterns above.");
+    console.error("No org links found. Check diagnostics above for page structure clues.");
     process.exit(0);
   }
 
-  // Fetch each org's details
   console.log("Fetching org details...");
   let checked = 0;
   const details = await runBatch(orgs, async ({ orgId, name }) => {
@@ -233,7 +312,6 @@ async function main() {
     console.log(`  ✓ ${entry.name} (${entry.location || "?"})`);
   }
 
-  // Merge with existing
   let existing = [];
   try { existing = JSON.parse(await readFile(OUTPUT, "utf8")); } catch { /* ok */ }
   const existingMap = new Map(existing.map(h => [h.orgId, h]));
