@@ -5686,7 +5686,10 @@ function renderAdminStreckenTab(container) {
           ${newFormHtml}
           <div class="admin-seed-list">${buildRows()}</div>`;
 
-        if (wasSearchFocused) container.querySelector(".js-strecken-search")?.focus();
+        if (wasSearchFocused) {
+          const el = container.querySelector(".js-strecken-search");
+          if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+        }
         bindHandlers();
       }
 
