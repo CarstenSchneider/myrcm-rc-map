@@ -3826,6 +3826,13 @@
     "myrcmOrgId": "7059"
   },
   {
+    "hostId": "hfcc-racing-den-haag",
+    "hostName": "HFCC Racing Den Haag",
+    "lat": 52.042806391074365,
+    "lng": 4.242145539805281,
+    "myrcmOrgId": "14156"
+  },
+  {
     "hostId": "rcco-ig-vulkanparkracer-e-v",
     "hostName": "IG Vulkanparkracer e.V.",
     "locationUnknown": true
