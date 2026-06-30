@@ -4305,6 +4305,13 @@
     "myrcmOrgId": "3074"
   },
   {
+    "hostId": "rc-indoor-bleiswijk",
+    "hostName": "RC Indoor Bleiswijk",
+    "lat": 52.01589367769584,
+    "lng": 4.538336380669699,
+    "myrcmOrgId": "47757"
+  },
+  {
     "hostId": "dmc-ov-36",
     "hostName": "RC Offroad Heiligenstadt e.V.",
     "lat": 51.387849617883866,
