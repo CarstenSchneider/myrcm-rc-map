@@ -4064,6 +4064,13 @@
     "myrcmOrgId": "104"
   },
   {
+    "hostId": "model-racing-midland",
+    "hostName": "Model Racing Midland",
+    "lat": 52.44967235553931,
+    "lng": 5.502659828636451,
+    "myrcmOrgId": "19047"
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
