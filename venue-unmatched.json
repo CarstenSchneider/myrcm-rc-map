@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-de-fivelcrossers",
-    "hostName": "RC de Fivelcrossers",
-    "source": "myrcm",
-    "myrcmOrgId": "18663",
-    "possibleVenue": "Delfzijl",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-hotwheels",
     "hostName": "RC Hotwheels",
     "source": "myrcm",
