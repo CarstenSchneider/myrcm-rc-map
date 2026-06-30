@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "hfcc-racing-den-haag",
-    "hostName": "HFCC Racing Den Haag",
-    "source": "myrcm",
-    "myrcmOrgId": "14156",
-    "possibleVenue": "Den Haag",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "houthalens-racing-team",
     "hostName": "Houthalens Racing Team",
     "source": "myrcm",
