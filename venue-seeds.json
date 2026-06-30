@@ -4298,6 +4298,13 @@
     "lng": 7.168746466631296
   },
   {
+    "hostId": "rc-hotwheels",
+    "hostName": "RC Hotwheels",
+    "lat": 52.270428428950474,
+    "lng": 6.133595960729684,
+    "myrcmOrgId": "3074"
+  },
+  {
     "hostId": "dmc-ov-36",
     "hostName": "RC Offroad Heiligenstadt e.V.",
     "lat": 51.387849617883866,
