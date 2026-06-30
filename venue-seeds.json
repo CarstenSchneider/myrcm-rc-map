@@ -3969,6 +3969,13 @@
     "myrcmOrgId": "22319"
   },
   {
+    "hostId": "mbv-kampenhout-vzw",
+    "hostName": "MBV Kampenhout vzw",
+    "lat": 50.946668630407274,
+    "lng": 4.586491999667621,
+    "myrcmOrgId": "51913"
+  },
+  {
     "hostId": "dmc-ov-143",
     "hostName": "MC Dortmund e.V.",
     "lat": 51.55786161696523,
