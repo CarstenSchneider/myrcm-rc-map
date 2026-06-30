@@ -4,6 +4,7 @@ import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const hostListFile = "myrcm-hosts-dach.json";
 const beneluxHostListFile = "myrcm-hosts-benelux.json";
+const franceHostListFile = "myrcm-hosts-france.json";
 const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
 const venueSeedsFile = "venue-seeds.json";
@@ -1903,6 +1904,15 @@ async function loadHosts() {
     hosts = [...hosts, ...beneluxHosts.filter(h => !existingOrgIds.has(String(h.orgId)))];
   } catch {
     // benelux file optional
+  }
+
+  try {
+    const franceRaw = await readFile(franceHostListFile, "utf8");
+    const franceHosts = JSON.parse(franceRaw);
+    const existingOrgIds = new Set(hosts.map(h => String(h.orgId)));
+    hosts = [...hosts, ...franceHosts.filter(h => !existingOrgIds.has(String(h.orgId)))];
+  } catch {
+    // france file optional
   }
 
   const filteredHosts = hosts
