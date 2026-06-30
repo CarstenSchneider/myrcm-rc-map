@@ -1,3 +1,8 @@
 [
-  { "id": "ffvrc-fr", "name": "France", "locationUnknown": true, "country": "FR" }
+  {
+    "id": "ffvrc-fr",
+    "name": "France",
+    "locationUnknown": true,
+    "country": "FR"
+  }
 ]
