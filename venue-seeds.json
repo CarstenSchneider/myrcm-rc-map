@@ -3935,6 +3935,13 @@
     "myrcmOrgId": "30724"
   },
   {
+    "hostId": "main-meetings-raalte",
+    "hostName": "Main Meetings Raalte",
+    "lat": 51.9375897,
+    "lng": 5.8556088,
+    "myrcmOrgId": "23785"
+  },
+  {
     "hostId": "dmc-mbc-oberlausitz-e-v",
     "hostName": "MBC Oberlausitz e.V.",
     "lat": 51.08318541210428,
