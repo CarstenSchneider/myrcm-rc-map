@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-hotwheels",
-    "hostName": "RC Hotwheels",
-    "source": "myrcm",
-    "myrcmOrgId": "3074",
-    "possibleVenue": "Deventer",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-indoor-bleiswijk",
     "hostName": "RC Indoor Bleiswijk",
     "source": "myrcm",
