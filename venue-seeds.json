@@ -4135,6 +4135,13 @@
     "myrcmOrgId": "3215"
   },
   {
+    "hostId": "mrc-vianen",
+    "hostName": "MRC Vianen",
+    "lat": 51.965841518914125,
+    "lng": 4.516629183745027,
+    "myrcmOrgId": "18560"
+  },
+  {
     "hostId": "rcco-mrc-weiden-e-v",
     "hostName": "MRC Weiden e.V.",
     "lat": 49.64588568552558,
