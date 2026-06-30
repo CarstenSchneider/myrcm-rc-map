@@ -2831,7 +2831,8 @@
       "Oefmav",
       "Klagenfurt am Wörthersee"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "AT"
   },
   {
     "id": "off-road-club-montagny",
