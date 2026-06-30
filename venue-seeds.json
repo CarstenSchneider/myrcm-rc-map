@@ -4121,6 +4121,13 @@
     "lng": 7.577074708374697
   },
   {
+    "hostId": "modelsport-vereniging-bergschenhoek",
+    "hostName": "Modelsport Vereniging Bergschenhoek",
+    "lat": 51.96585780397623,
+    "lng": 4.517203405506449,
+    "myrcmOrgId": "3200"
+  },
+  {
     "hostId": "rcco-mrc-weiden-e-v",
     "hostName": "MRC Weiden e.V.",
     "lat": 49.64588568552558,
