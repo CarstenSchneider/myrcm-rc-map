@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "indoor-offroad-turnhout",
-    "hostName": "Indoor Offroad Turnhout",
-    "source": "myrcm",
-    "myrcmOrgId": "59433",
-    "possibleVenue": "Turnhout",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "instantrc",
     "hostName": "InstantRC",
     "source": "myrcm",
