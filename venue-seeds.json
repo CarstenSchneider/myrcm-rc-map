@@ -4271,5 +4271,13 @@
     "hostId": "rcco-ttsc-racing",
     "hostName": "TTSC-Racing",
     "locationUnknown": true
+  },
+  {
+    "hostId": "mcc-laupheim-e-v",
+    "hostName": "MCC Laupheim e.V.",
+    "lat": 48.26422039066267,
+    "lng": 9.908722337568252,
+    "country": "DE",
+    "website": "https://www.mcc-laupheim.de/"
   }
 ]
