@@ -2062,6 +2062,21 @@
     "verified": true
   },
   {
+    "id": "mbc-het-gelders-eiland-lobith",
+    "name": "MBC Het Gelders Eiland Lobith",
+    "city": "Pannerden",
+    "lat": 51.86394287616501,
+    "lng": 6.120279991490502,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "3214",
+    "source": "manual",
+    "country": "NL"
+  },
+  {
     "id": "dmc-mbc-oberlausitz-e-v",
     "name": "MBC Oberlausitz e.V.",
     "city": null,
