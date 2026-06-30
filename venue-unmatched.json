@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-club-zoetermeer",
-    "hostName": "RC Club Zoetermeer",
-    "source": "myrcm",
-    "myrcmOrgId": "34977",
-    "possibleVenue": "Zoetermeer",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-de-fivelcrossers",
     "hostName": "RC de Fivelcrossers",
     "source": "myrcm",
