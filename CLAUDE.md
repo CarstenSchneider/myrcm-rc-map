@@ -181,10 +181,20 @@ Damit Claude direkt auf render.com und Supabase zugreifen kann, müssen folgende
 | `RENDER_API_KEY` | render.com → Account → API Keys | Import manuell triggern via `scripts/trigger-render-import.sh` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase Dashboard → Project → API → service_role | DB-Abfragen (seen_race_notifications etc.) |
 
-**Import manuell triggern** (wenn `RENDER_API_KEY` gesetzt):
-```bash
-bash scripts/trigger-render-import.sh
+**Import manuell triggern** — Claude nutzt das GitHub MCP Tool direkt (kein API Key nötig, kein Proxy-Problem):
 ```
+mcp__github__actions_run_trigger(
+  method: "run_workflow",
+  owner: "CarstenSchneider",
+  repo: "myrcm-rc-map",
+  workflow_id: "trigger-render-import.yml",
+  ref: "main"
+)
+```
+Das triggert `.github/workflows/trigger-render-import.yml`, welches render.com per `secrets.RENDER_API_KEY` anstößt.
+
+`bash scripts/trigger-render-import.sh` funktioniert **nicht** aus Claude's Umgebung — `api.render.com` ist vom Proxy geblockt (403).
+
 Service ID render.com: `crn-d8v9a4bsq97s73827f8g`
 
 ## Deployment
