@@ -4043,6 +4043,13 @@
     "myrcmOrgId": "44133"
   },
   {
+    "hostId": "model-auto-club-heemstede",
+    "hostName": "Model Auto Club Heemstede",
+    "lat": 52.34292062547972,
+    "lng": 4.636545708142227,
+    "myrcmOrgId": "75"
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
