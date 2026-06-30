@@ -260,6 +260,12 @@ function locateUser(btn) {
         })
       ]).addTo(map);
 
+      const detectedCountry = detectCountryFromLocale();
+      if (selectedCountry !== detectedCountry) {
+        selectedCountry = detectedCountry;
+        localStorage.setItem("rcRaceMapCountry", detectedCountry);
+        updateCountryPill();
+      }
       const hasNearbyVenues = venues.some(v => hasLatLng(v) && haversineKm(lat, lng, v.lat, v.lng) <= GEO_RADIUS_KM);
       const list = filteredRaces();
       renderList(list);
@@ -3202,7 +3208,7 @@ function filteredRaces() {
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
     .filter(matchesFavoriteFilter)
-    .filter(_userLatLng ? () => true : matchesCountryFilter);
+    .filter(matchesCountryFilter);
 
   // Geocode aktiv: Radius-Filter statt Textsuche, damit Filteränderungen den Geocode-Bereich behalten
   if (_geocodeMarkerCoords) {
