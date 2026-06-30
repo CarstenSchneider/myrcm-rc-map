@@ -349,9 +349,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "dutch-rc-timekeeping-2024-06-29-myrcm-event-79732",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2024-06-29-myrcm-event-79732",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -792,9 +792,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2024-06-30-myrcm-event-76186",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2024-06-30-myrcm-event-76186",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -1452,9 +1452,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2024-07-06-myrcm-event-79917",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2024-07-06-myrcm-event-79917",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -2029,9 +2029,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2024-07-06-myrcm-event-77501",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-07-06-myrcm-event-77501",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -2566,9 +2566,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2024-07-07-myrcm-event-80199",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2024-07-07-myrcm-event-80199",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -2602,9 +2602,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hulshout-offroad-racing-2024-07-07-myrcm-event-75333",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2024-07-07-myrcm-event-75333",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -2809,9 +2809,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-07-07-myrcm-event-80177",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-07-07-myrcm-event-80177",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -2996,7 +2996,7 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2024-07-11-myrcm-event-77863",
+    "id": "mav-aigen-schlaegl-2024-07-11-myrcm-event-77863",
     "venueId": "mav-aigen-schlaegl",
     "venueName": "MAV Aigen-Schlägl",
     "venueLocation": "Aigen-Schlägl",
@@ -4033,9 +4033,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "houthalens-racing-team-2024-07-14-myrcm-event-79768",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2024-07-14-myrcm-event-79768",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -4249,7 +4249,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2024-07-18-myrcm-event-78227",
+    "id": "mav-aigen-schlaegl-2024-07-18-myrcm-event-78227",
     "venueId": "mav-aigen-schlaegl",
     "venueName": "MAV Aigen-Schlägl",
     "venueLocation": "Aigen-Schlägl",
@@ -5218,9 +5218,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-07-24-myrcm-event-80180",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-07-24-myrcm-event-80180",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -5401,9 +5401,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "lmcc-2024-07-27-myrcm-event-80405",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2024-07-27-myrcm-event-80405",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -6945,9 +6945,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "houthalens-racing-team-2024-08-03-myrcm-event-80546",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2024-08-03-myrcm-event-80546",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -7143,9 +7143,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-08-03-myrcm-event-80179",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-08-03-myrcm-event-80179",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -7575,9 +7575,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2024-08-04-myrcm-event-80802",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2024-08-04-myrcm-event-80802",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -7771,9 +7771,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2024-08-04-myrcm-event-77502",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-08-04-myrcm-event-77502",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -8791,9 +8791,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "fba-vzw-2024-08-11-myrcm-event-75712",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2024-08-11-myrcm-event-75712",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -8882,9 +8882,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-08-14-myrcm-event-80181",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-08-14-myrcm-event-80181",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -8918,7 +8918,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-2024-08-15-myrcm-event-77864",
+    "id": "ets-apeldoorn-2024-08-15-myrcm-event-77864",
     "venueId": "ets-apeldoorn",
     "venueName": "Apeldoorn",
     "venueLocation": "Apeldoorn",
@@ -9701,9 +9701,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2024-08-21-myrcm-event-80830",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-08-21-myrcm-event-80830",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -10116,9 +10116,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hulshout-offroad-racing-2024-08-24-myrcm-event-75342",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2024-08-24-myrcm-event-75342",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -10699,9 +10699,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2024-08-25-myrcm-event-76187",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2024-08-25-myrcm-event-76187",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -12056,9 +12056,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2024-09-01-myrcm-event-81221",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2024-09-01-myrcm-event-81221",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -12135,9 +12135,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hulshout-offroad-racing-2024-09-01-myrcm-event-75355",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2024-09-01-myrcm-event-75355",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -12313,7 +12313,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2024-09-05-myrcm-event-78228",
+    "id": "ets-international-2024-09-05-myrcm-event-78228",
     "venueId": "ets-international",
     "venueName": "ETS / TOS International",
     "venueLocation": null,
@@ -13441,9 +13441,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "houthalens-racing-team-2024-09-08-myrcm-event-79769",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2024-09-08-myrcm-event-79769",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -13697,9 +13697,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-09-11-myrcm-event-80182",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-09-11-myrcm-event-80182",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -14809,9 +14809,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2024-09-15-myrcm-event-81551",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2024-09-15-myrcm-event-81551",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -14927,9 +14927,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "fba-vzw-2024-09-15-myrcm-event-75713",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2024-09-15-myrcm-event-75713",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -15017,9 +15017,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2024-09-15-myrcm-event-77503",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-09-15-myrcm-event-77503",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -15733,9 +15733,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "flamrc-2024-09-21-myrcm-event-81174",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-73-2024-09-21-myrcm-event-81174",
+    "venueId": "myrcm-73",
+    "venueName": "FLAMRC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flamrc",
@@ -15943,9 +15943,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2024-09-21-myrcm-event-81408",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-09-21-myrcm-event-81408",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -16346,9 +16346,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2024-09-22-myrcm-event-81926",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2024-09-22-myrcm-event-81926",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -16382,9 +16382,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "h-m-r-c-2024-09-22-myrcm-event-81925",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2024-09-22-myrcm-event-81925",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -16763,9 +16763,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2024-09-28-myrcm-event-80028",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2024-09-28-myrcm-event-80028",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -16806,9 +16806,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-09-28-myrcm-event-82140",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-09-28-myrcm-event-82140",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -17632,9 +17632,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2024-09-29-myrcm-event-80829",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-09-29-myrcm-event-80829",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -18095,7 +18095,7 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "ets-2024-10-03-myrcm-event-81187",
+    "id": "ets-international-2024-10-03-myrcm-event-81187",
     "venueId": "ets-international",
     "venueName": "ETS / TOS International",
     "venueLocation": null,
@@ -20890,9 +20890,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-10-23-myrcm-event-82461",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-10-23-myrcm-event-82461",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -22996,9 +22996,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "lmcc-2024-11-10-myrcm-event-83147",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2024-11-10-myrcm-event-83147",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -23434,9 +23434,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-11-20-myrcm-event-82462",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-11-20-myrcm-event-82462",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -23971,9 +23971,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2024-11-24-myrcm-event-82784",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2024-11-24-myrcm-event-82784",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -24478,9 +24478,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "flatout-rc-vzw-2024-12-01-myrcm-event-83077",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-739-2024-12-01-myrcm-event-83077",
+    "venueId": "myrcm-739",
+    "venueName": "FlatOut RC VZW",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flatout-rc-vzw",
@@ -24980,9 +24980,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tonisport-gmbh-2024-12-08-myrcm-event-83086",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2024-12-08-myrcm-event-83086",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tonisport-gmbh",
@@ -25931,9 +25931,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2024-12-18-myrcm-event-82463",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2024-12-18-myrcm-event-82463",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -26097,9 +26097,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "dutch-rc-timekeeping-2024-12-21-myrcm-event-82509",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2024-12-21-myrcm-event-82509",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -26335,9 +26335,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "dutch-rc-timekeeping-2024-12-22-myrcm-event-82512",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2024-12-22-myrcm-event-82512",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -27586,9 +27586,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "flatout-rc-vzw-2025-01-12-myrcm-event-84168",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-739-2025-01-12-myrcm-event-84168",
+    "venueId": "myrcm-739",
+    "venueName": "FlatOut RC VZW",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flatout-rc-vzw",
@@ -28632,9 +28632,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-01-22-myrcm-event-82464",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-01-22-myrcm-event-82464",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -28667,7 +28667,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2025-01-23-myrcm-event-81734",
+    "id": "mc-daun-2025-01-23-myrcm-event-81734",
     "venueId": "mc-daun",
     "venueName": "Daun",
     "venueLocation": "Daun",
@@ -29379,9 +29379,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-01-26-myrcm-event-84610",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-01-26-myrcm-event-84610",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -29477,7 +29477,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2025-01-30-myrcm-event-81735",
+    "id": "mc-daun-2025-01-30-myrcm-event-81735",
     "venueId": "mc-daun",
     "venueName": "Daun",
     "venueLocation": "Daun",
@@ -30566,9 +30566,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "flatout-rc-vzw-2025-02-09-myrcm-event-84628",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-739-2025-02-09-myrcm-event-84628",
+    "venueId": "myrcm-739",
+    "venueName": "FlatOut RC VZW",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flatout-rc-vzw",
@@ -33109,7 +33109,7 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2025-03-13-myrcm-event-83792",
+    "id": "m-a-r-s-alt-erlaa-2025-03-13-myrcm-event-83792",
     "venueId": "m-a-r-s-alt-erlaa",
     "venueName": "M.A.R.S. Alt Erlaa",
     "venueLocation": "Wien",
@@ -34481,9 +34481,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-03-23-myrcm-event-85427",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-03-23-myrcm-event-85427",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -35152,9 +35152,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-03-29-myrcm-event-84189",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-03-29-myrcm-event-84189",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -35531,9 +35531,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-04-02-myrcm-event-85590",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-04-02-myrcm-event-85590",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -35938,9 +35938,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "h-m-r-c-2025-04-06-myrcm-event-86331",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-04-06-myrcm-event-86331",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -36121,9 +36121,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-04-06-myrcm-event-85428",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-04-06-myrcm-event-85428",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -36250,9 +36250,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-04-06-myrcm-event-85654",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-04-06-myrcm-event-85654",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -37247,9 +37247,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-04-12-myrcm-event-85587",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-04-12-myrcm-event-85587",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -37553,9 +37553,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2025-04-13-myrcm-event-85081",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2025-04-13-myrcm-event-85081",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -38223,9 +38223,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-04-20-myrcm-event-85419",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-04-20-myrcm-event-85419",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -38304,9 +38304,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-04-20-myrcm-event-85441",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-04-20-myrcm-event-85441",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -39563,9 +39563,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "erce-2025-04-27-myrcm-event-85532",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-04-27-myrcm-event-85532",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -39698,9 +39698,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-04-27-myrcm-event-85429",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-04-27-myrcm-event-85429",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -39769,9 +39769,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hulshout-offroad-racing-2025-04-27-myrcm-event-83888",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2025-04-27-myrcm-event-83888",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -41282,9 +41282,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2025-05-04-myrcm-event-86332",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-05-04-myrcm-event-86332",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -41898,9 +41898,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-05-07-myrcm-event-85762",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-05-07-myrcm-event-85762",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -42896,9 +42896,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2025-05-11-myrcm-event-85082",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2025-05-11-myrcm-event-85082",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -43009,9 +43009,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-05-11-myrcm-event-85655",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-05-11-myrcm-event-85655",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -43456,9 +43456,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-05-17-myrcm-event-87316",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-05-17-myrcm-event-87316",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -44369,9 +44369,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-05-18-myrcm-event-85442",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-05-18-myrcm-event-85442",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -44942,10 +44942,10 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "arena33-andernach-2025-05-22-myrcm-event-86864",
+    "id": "mc-ettlingen-e-v-2025-05-22-myrcm-event-86864",
     "venueId": "mc-ettlingen-e-v",
     "venueName": "MC Ettlingen e.V.",
-    "venueLocation": "Ettlingen",
+    "venueLocation": "Karlsruhe",
     "venueWebsite": null,
     "hostId": "ets",
     "hostName": "ETS",
@@ -46008,9 +46008,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "h-m-r-c-2025-05-25-myrcm-event-86333",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-05-25-myrcm-event-86333",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -46335,7 +46335,7 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "ets-2025-05-29-myrcm-event-86355",
+    "id": "ets-apeldoorn-2025-05-29-myrcm-event-86355",
     "venueId": "ets-apeldoorn",
     "venueName": "Apeldoorn",
     "venueLocation": "Apeldoorn",
@@ -46868,9 +46868,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "hulshout-offroad-racing-2025-05-31-myrcm-event-83889",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2025-05-31-myrcm-event-83889",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -47026,9 +47026,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hugo-rc-timing-nl-2025-05-31-myrcm-event-86871",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2824-2025-05-31-myrcm-event-86871",
+    "venueId": "myrcm-2824",
+    "venueName": "Hugo - RC-Timing.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hugo-rc-timing-nl",
@@ -48700,9 +48700,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2025-06-07-myrcm-event-85656",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-06-07-myrcm-event-85656",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -48968,9 +48968,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "buggy-rc-bauffe-a-s-b-l-2025-06-08-myrcm-event-88335",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-62332-2025-06-08-myrcm-event-88335",
+    "venueId": "myrcm-62332",
+    "venueName": "Buggy RC Bauffe a.s.b.l",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "buggy-rc-bauffe-a-s-b-l",
@@ -49000,9 +49000,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2025-06-08-myrcm-event-85083",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2025-06-08-myrcm-event-85083",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -49239,9 +49239,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-06-11-myrcm-event-88614",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-06-11-myrcm-event-88614",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -49278,9 +49278,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-06-11-myrcm-event-88240",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-06-11-myrcm-event-88240",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -50195,9 +50195,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-06-15-myrcm-event-85533",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-06-15-myrcm-event-85533",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -51795,9 +51795,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tonisport-gmbh-2025-06-21-myrcm-event-87963",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2025-06-21-myrcm-event-87963",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tonisport-gmbh",
@@ -51999,9 +51999,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2025-06-22-myrcm-event-86334",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-06-22-myrcm-event-86334",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -52156,9 +52156,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hulshout-offroad-racing-2025-06-22-myrcm-event-83890",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2025-06-22-myrcm-event-83890",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -52542,9 +52542,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "lmcc-2025-06-27-myrcm-event-86717",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2025-06-27-myrcm-event-86717",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -53188,9 +53188,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "erce-2025-06-28-myrcm-event-85659",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-06-28-myrcm-event-85659",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -53608,9 +53608,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-06-29-myrcm-event-85446",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-06-29-myrcm-event-85446",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -53649,9 +53649,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "houthalens-racing-team-2025-06-29-myrcm-event-88653",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2025-06-29-myrcm-event-88653",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -53783,9 +53783,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-06-29-myrcm-event-85761",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-06-29-myrcm-event-85761",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -53893,9 +53893,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tonisport-gmbh-2025-06-29-myrcm-event-89023",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2025-06-29-myrcm-event-89023",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tonisport-gmbh",
@@ -54199,9 +54199,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-07-05-myrcm-event-88485",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-07-05-myrcm-event-88485",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -54979,9 +54979,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "h-m-r-c-2025-07-06-myrcm-event-88997",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-07-06-myrcm-event-88997",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -55131,9 +55131,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "hulshout-offroad-racing-2025-07-06-myrcm-event-83891",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2025-07-06-myrcm-event-83891",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -55327,9 +55327,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-07-06-myrcm-event-85449",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-07-06-myrcm-event-85449",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -55574,9 +55574,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-07-11-myrcm-event-85424",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-07-11-myrcm-event-85424",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -55654,9 +55654,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "lmcc-2025-07-11-myrcm-event-88930",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2025-07-11-myrcm-event-88930",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -56805,9 +56805,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2025-07-13-myrcm-event-85084",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2025-07-13-myrcm-event-85084",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -56884,9 +56884,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "houthalens-racing-team-2025-07-13-myrcm-event-89049",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2025-07-13-myrcm-event-89049",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -57227,9 +57227,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-07-16-myrcm-event-85764",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-07-16-myrcm-event-85764",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -57263,7 +57263,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2025-07-17-myrcm-event-88236",
+    "id": "mav-aigen-schlaegl-2025-07-17-myrcm-event-88236",
     "venueId": "mav-aigen-schlaegl",
     "venueName": "MAV Aigen-Schlägl",
     "venueLocation": "Aigen-Schlägl",
@@ -58500,7 +58500,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2025-07-24-myrcm-event-87693",
+    "id": "mav-aigen-schlaegl-2025-07-24-myrcm-event-87693",
     "venueId": "mav-aigen-schlaegl",
     "venueName": "MAV Aigen-Schlägl",
     "venueLocation": "Aigen-Schlägl",
@@ -58930,9 +58930,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-07-26-myrcm-event-85760",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-07-26-myrcm-event-85760",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -59332,9 +59332,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "lmcc-2025-07-28-myrcm-event-89472",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2025-07-28-myrcm-event-89472",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -60080,9 +60080,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "buggy-rc-bauffe-a-s-b-l-2025-08-03-myrcm-event-88995",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-62332-2025-08-03-myrcm-event-88995",
+    "venueId": "myrcm-62332",
+    "venueName": "Buggy RC Bauffe a.s.b.l",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "buggy-rc-bauffe-a-s-b-l",
@@ -61228,9 +61228,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "h-m-r-c-2025-08-10-myrcm-event-88998",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-08-10-myrcm-event-88998",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -61267,9 +61267,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2025-08-10-myrcm-event-85085",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2025-08-10-myrcm-event-85085",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -61459,9 +61459,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-08-10-myrcm-event-87724",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-08-10-myrcm-event-87724",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -61508,9 +61508,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-08-10-myrcm-event-89875",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-08-10-myrcm-event-89875",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -62355,9 +62355,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "houthalens-racing-team-2025-08-17-myrcm-event-89897",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2025-08-17-myrcm-event-89897",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -62473,9 +62473,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-08-17-myrcm-event-85657",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-08-17-myrcm-event-85657",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -62840,9 +62840,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-08-20-myrcm-event-89937",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-08-20-myrcm-event-89937",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -62937,9 +62937,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-08-22-myrcm-event-85425",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-08-22-myrcm-event-85425",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -63338,9 +63338,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "hulshout-offroad-racing-2025-08-23-myrcm-event-83892",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2025-08-23-myrcm-event-83892",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -63551,9 +63551,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-08-23-myrcm-event-81296",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-08-23-myrcm-event-81296",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": "https://macdebaanbrekers.nl/",
     "hostId": "m-a-c-de-baanbrekers",
@@ -63997,9 +63997,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-08-27-myrcm-event-85765",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-08-27-myrcm-event-85765",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -64027,7 +64027,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-2025-08-28-myrcm-event-89374",
+    "id": "ets-apeldoorn-2025-08-28-myrcm-event-89374",
     "venueId": "ets-apeldoorn",
     "venueName": "Apeldoorn",
     "venueLocation": "Apeldoorn",
@@ -64488,9 +64488,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "flamrc-2025-08-30-myrcm-event-89828",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-73-2025-08-30-myrcm-event-89828",
+    "venueId": "myrcm-73",
+    "venueName": "FLAMRC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flamrc",
@@ -65521,7 +65521,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2025-09-04-myrcm-event-88595",
+    "id": "ets-international-2025-09-04-myrcm-event-88595",
     "venueId": "ets-international",
     "venueName": "ETS / TOS International",
     "venueLocation": null,
@@ -66189,9 +66189,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "houthalens-racing-team-2025-09-06-myrcm-event-89899",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2025-09-06-myrcm-event-89899",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -66572,9 +66572,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "h-m-r-c-2025-09-07-myrcm-event-88999",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-09-07-myrcm-event-88999",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -66705,9 +66705,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-09-07-myrcm-event-89933",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-09-07-myrcm-event-89933",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -67049,9 +67049,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "erce-2025-09-07-myrcm-event-85660",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-09-07-myrcm-event-85660",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -68106,9 +68106,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2025-09-14-myrcm-event-85086",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2025-09-14-myrcm-event-85086",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -68442,9 +68442,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-09-17-myrcm-event-85766",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-09-17-myrcm-event-85766",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -69321,9 +69321,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-09-20-myrcm-event-90716",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-09-20-myrcm-event-90716",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -69614,9 +69614,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tonisport-gmbh-2025-09-20-myrcm-event-89229",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2025-09-20-myrcm-event-89229",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/",
     "hostId": "tonisport-gmbh",
@@ -70060,9 +70060,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "hulshout-offroad-racing-2025-09-21-myrcm-event-83893",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2025-09-21-myrcm-event-83893",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -70996,9 +70996,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "instantrc-2025-09-28-myrcm-event-85534",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53360-2025-09-28-myrcm-event-85534",
+    "venueId": "myrcm-53360",
+    "venueName": "InstantRC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "instantrc",
@@ -71114,9 +71114,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-09-28-myrcm-event-89082",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-09-28-myrcm-event-89082",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -71195,9 +71195,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "h-m-r-c-2025-09-28-myrcm-event-89000",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2025-09-28-myrcm-event-89000",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -71412,9 +71412,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-09-28-myrcm-event-90170",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-09-28-myrcm-event-90170",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -73127,9 +73127,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-10-05-myrcm-event-89935",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-10-05-myrcm-event-89935",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -73162,9 +73162,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2025-10-05-myrcm-event-87726",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-10-05-myrcm-event-87726",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -73219,7 +73219,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-2025-10-09-myrcm-event-89911",
+    "id": "ets-international-2025-10-09-myrcm-event-89911",
     "venueId": "ets-international",
     "venueName": "ETS / TOS International",
     "venueLocation": null,
@@ -75309,9 +75309,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2025-10-19-myrcm-event-90581",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-10-19-myrcm-event-90581",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": "http://Bij het inschrijven graag 1 persoon per team laten inschrijven. Teams van maximaal 5 rijders, geef je transponder nummer door aan je team captain (die zich inschrijft) zodat je transponder nummer tijdelijk onder hun naam staat.",
     "hostId": "m-a-c-de-baanbrekers",
@@ -75597,9 +75597,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "lmcc-2025-10-25-myrcm-event-91832",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2025-10-25-myrcm-event-91832",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -75625,9 +75625,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-10-25-myrcm-event-91574",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-10-25-myrcm-event-91574",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -75897,9 +75897,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-10-26-myrcm-event-91576",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-10-26-myrcm-event-91576",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -76349,9 +76349,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-10-26-myrcm-event-91688",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-10-26-myrcm-event-91688",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -76408,9 +76408,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-10-31-myrcm-event-91828",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-10-31-myrcm-event-91828",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -76536,9 +76536,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-01-myrcm-event-91829",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-01-myrcm-event-91829",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -76916,9 +76916,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-02-myrcm-event-91830",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-02-myrcm-event-91830",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -77114,9 +77114,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-07-myrcm-event-91980",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-07-myrcm-event-91980",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -77287,9 +77287,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-08-myrcm-event-91981",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-08-myrcm-event-91981",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -77524,9 +77524,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-09-myrcm-event-91982",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-09-myrcm-event-91982",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -77646,9 +77646,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-11-myrcm-event-92073",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-11-myrcm-event-92073",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -77714,9 +77714,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-14-myrcm-event-92115",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-14-myrcm-event-92115",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -78010,9 +78010,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-15-myrcm-event-92116",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-15-myrcm-event-92116",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -78452,9 +78452,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-16-myrcm-event-92117",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-16-myrcm-event-92117",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -78604,9 +78604,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-11-19-myrcm-event-92031",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-11-19-myrcm-event-92031",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -78678,9 +78678,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-21-myrcm-event-92316",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-21-myrcm-event-92316",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -78709,9 +78709,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-22-myrcm-event-92317",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-22-myrcm-event-92317",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -79073,9 +79073,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-23-myrcm-event-92318",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-23-myrcm-event-92318",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -79141,9 +79141,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-28-myrcm-event-92418",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-28-myrcm-event-92418",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -79400,9 +79400,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-11-29-myrcm-event-92419",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-11-29-myrcm-event-92419",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -79658,9 +79658,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-05-myrcm-event-92507",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-05-myrcm-event-92507",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -79717,9 +79717,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tonisport-gmbh-2025-12-06-myrcm-event-91764",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2025-12-06-myrcm-event-91764",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/",
     "hostId": "tonisport-gmbh",
@@ -79854,9 +79854,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-06-myrcm-event-92508",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-06-myrcm-event-92508",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -80305,9 +80305,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-07-myrcm-event-92509",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-07-myrcm-event-92509",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -80984,9 +80984,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "instantrc-2025-12-14-myrcm-event-91181",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53360-2025-12-14-myrcm-event-91181",
+    "venueId": "myrcm-53360",
+    "venueName": "InstantRC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "instantrc",
@@ -81088,9 +81088,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "erce-2025-12-14-myrcm-event-92543",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2025-12-14-myrcm-event-92543",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -81123,9 +81123,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2025-12-17-myrcm-event-92645",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2025-12-17-myrcm-event-92645",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -81158,9 +81158,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-19-myrcm-event-92907",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-19-myrcm-event-92907",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -81348,9 +81348,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-20-myrcm-event-92906",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-20-myrcm-event-92906",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -81504,9 +81504,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-12-20-myrcm-event-84254",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-12-20-myrcm-event-84254",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -81665,9 +81665,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-21-myrcm-event-92905",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-21-myrcm-event-92905",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -81758,9 +81758,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "dutch-rc-timekeeping-2025-12-21-myrcm-event-84256",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2025-12-21-myrcm-event-84256",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -81867,9 +81867,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-26-myrcm-event-93100",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-26-myrcm-event-93100",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -82048,9 +82048,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-27-myrcm-event-93103",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-27-myrcm-event-93103",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -82302,9 +82302,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2025-12-28-myrcm-event-93102",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2025-12-28-myrcm-event-93102",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -82395,9 +82395,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-02-myrcm-event-93198",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-02-myrcm-event-93198",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -82672,9 +82672,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-03-myrcm-event-93199",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-03-myrcm-event-93199",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -83036,9 +83036,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-04-myrcm-event-93200",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-04-myrcm-event-93200",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -83166,9 +83166,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-09-myrcm-event-93319",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-09-myrcm-event-93319",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -83406,9 +83406,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-10-myrcm-event-93320",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-10-myrcm-event-93320",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -83662,9 +83662,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "flatout-rc-vzw-2026-01-11-myrcm-event-92533",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-739-2026-01-11-myrcm-event-92533",
+    "venueId": "myrcm-739",
+    "venueName": "FlatOut RC VZW",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flatout-rc-vzw",
@@ -83706,9 +83706,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-11-myrcm-event-93321",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-11-myrcm-event-93321",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -83899,9 +83899,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-16-myrcm-event-93549",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-16-myrcm-event-93549",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -84616,9 +84616,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-18-myrcm-event-93550",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-18-myrcm-event-93550",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -84647,9 +84647,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2026-01-21-myrcm-event-93718",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2026-01-21-myrcm-event-93718",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -84678,7 +84678,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-01-22-myrcm-event-91510",
+    "id": "mc-daun-2026-01-22-myrcm-event-91510",
     "venueId": "mc-daun",
     "venueName": "Daun",
     "venueLocation": "Daun",
@@ -85342,51 +85342,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-fun-racer-e-v-2026-01-25-myrcm-event-93060",
-    "venueId": "rc-fun-racer-e-v",
-    "venueName": "RC Fun Racer e.V.",
-    "venueLocation": "Velbert",
-    "venueWebsite": null,
-    "hostId": "rc-fun-racer-e-v",
-    "hostName": "RC Fun Racer e.V.",
-    "name": "RC Fun Racer - 12 Liga by Mobgums / SK Lauf West",
-    "from": "2026-01-25",
-    "to": "2026-01-25",
-    "series": [
-      "Sportkreis (SK)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93060&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=44059&pLa=en&dId%5BE%5D=93060&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93060&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "1:12 EGT",
-        "entries": 4
-      },
-      {
-        "name": "1:12 Standard EB",
-        "entries": 9
-      },
-      {
-        "name": "1:12 Expert EA",
-        "entries": 4
-      },
-      {
-        "name": "Formel 1 EGF1",
-        "entries": 4
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "rc-indoor-bleiswijk-2026-01-25-myrcm-event-92577",
     "venueId": null,
     "venueName": null,
@@ -85522,7 +85477,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-01-29-myrcm-event-90956",
+    "id": "mc-daun-2026-01-29-myrcm-event-90956",
     "venueId": "mc-daun",
     "venueName": "Daun",
     "venueLocation": "Daun",
@@ -85575,50 +85530,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-fun-racer-e-v-2026-01-30-myrcm-event-93059",
-    "venueId": "rc-fun-racer-e-v",
-    "venueName": "RC Fun Racer e.V.",
-    "venueLocation": "Velbert",
-    "venueWebsite": null,
-    "hostId": "rc-fun-racer-e-v",
-    "hostName": "RC Fun Racer e.V.",
-    "name": "Friday Night Race by RC Fun Racer Start 19:00 Uhr",
-    "from": "2026-01-30",
-    "to": "2026-01-30",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93059&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=44059&pLa=en&dId%5BE%5D=93059&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=93059&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "Porsche Cup",
-        "entries": 6
-      },
-      "Fronti",
-      {
-        "name": "TW 21.5",
-        "entries": 7
-      },
-      "12er GT",
-      {
-        "name": "Formel",
-        "entries": 3
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "indoor-offroad-turnhout-2026-01-30-myrcm-event-93884",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-30-myrcm-event-93884",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -85647,9 +85561,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-01-31-myrcm-event-93886",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-01-31-myrcm-event-93886",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -85861,9 +85775,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "erce-2026-02-01-myrcm-event-91581",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-02-01-myrcm-event-91581",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -85964,9 +85878,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-01-myrcm-event-93887",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-01-myrcm-event-93887",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -86556,9 +86470,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-13-myrcm-event-94282",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-13-myrcm-event-94282",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -86743,9 +86657,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-14-myrcm-event-94283",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-14-myrcm-event-94283",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -86996,9 +86910,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-15-myrcm-event-94284",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-15-myrcm-event-94284",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -87228,9 +87142,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-20-myrcm-event-94471",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-20-myrcm-event-94471",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -87347,9 +87261,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-21-myrcm-event-94472",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-21-myrcm-event-94472",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -88341,9 +88255,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-22-myrcm-event-94473",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-22-myrcm-event-94473",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -88526,9 +88440,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-27-myrcm-event-94669",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-27-myrcm-event-94669",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -88788,9 +88702,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-02-28-myrcm-event-94670",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-02-28-myrcm-event-94670",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -89178,9 +89092,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "flatout-rc-vzw-2026-03-01-myrcm-event-94486",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-739-2026-03-01-myrcm-event-94486",
+    "venueId": "myrcm-739",
+    "venueName": "FlatOut RC VZW",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "flatout-rc-vzw",
@@ -89293,9 +89207,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-03-01-myrcm-event-94671",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-03-01-myrcm-event-94671",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -89541,9 +89455,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-03-06-myrcm-event-94971",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-03-06-myrcm-event-94971",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -90350,9 +90264,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-03-13-myrcm-event-95218",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-03-13-myrcm-event-95218",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -90528,9 +90442,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "indoor-offroad-turnhout-2026-03-14-myrcm-event-95219",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59433-2026-03-14-myrcm-event-95219",
+    "venueId": "myrcm-59433",
+    "venueName": "Indoor Offroad Turnhout",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "indoor-offroad-turnhout",
@@ -90659,9 +90573,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "evmc-velp-2026-03-14-myrcm-event-94500",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-03-14-myrcm-event-94500",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "evmc-velp",
@@ -91453,7 +91367,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-03-19-myrcm-event-92736",
+    "id": "m-a-r-s-alt-erlaa-2026-03-19-myrcm-event-92736",
     "venueId": "m-a-r-s-alt-erlaa",
     "venueName": "M.A.R.S. Alt Erlaa",
     "venueLocation": "Wien",
@@ -91758,9 +91672,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "erce-2026-03-22-myrcm-event-93782",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-03-22-myrcm-event-93782",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -92636,9 +92550,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "dutch-rc-timekeeping-2026-03-28-myrcm-event-84190",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2026-03-28-myrcm-event-84190",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -92819,9 +92733,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-03-29-myrcm-event-93415",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-03-29-myrcm-event-93415",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -92993,9 +92907,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hulshout-offroad-racing-2026-03-29-myrcm-event-93799",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2026-03-29-myrcm-event-93799",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -94434,9 +94348,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2026-04-12-myrcm-event-96032",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-04-12-myrcm-event-96032",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -94670,9 +94584,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "fba-vzw-2026-04-12-myrcm-event-94455",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2026-04-12-myrcm-event-94455",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -94737,9 +94651,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "evmc-velp-2026-04-12-myrcm-event-94890",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-04-12-myrcm-event-94890",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "evmc-velp",
@@ -94872,7 +94786,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-2026-04-16-myrcm-event-92891",
+    "id": "ets-international-2026-04-16-myrcm-event-92891",
     "venueId": "ets-international",
     "venueName": "ETS / TOS International",
     "venueLocation": null,
@@ -95692,9 +95606,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-04-18-myrcm-event-93047",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-04-18-myrcm-event-93047",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": "https://macdebaanbrekers.nl/",
     "hostId": "m-a-c-de-baanbrekers",
@@ -95987,9 +95901,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "dutch-rc-timekeeping-2026-04-19-myrcm-event-95500",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2026-04-19-myrcm-event-95500",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -96445,9 +96359,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2026-04-19-myrcm-event-95209",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-04-19-myrcm-event-95209",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -97917,9 +97831,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "hulshout-offroad-racing-2026-04-26-myrcm-event-93802",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2026-04-26-myrcm-event-93802",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -98920,9 +98834,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "lmcc-2026-05-02-myrcm-event-94502",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2026-05-02-myrcm-event-94502",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -99037,9 +98951,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "evmc-velp-2026-05-02-myrcm-event-94891",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-05-02-myrcm-event-94891",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "evmc-velp",
@@ -99339,9 +99253,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "instantrc-2026-05-03-myrcm-event-93411",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53360-2026-05-03-myrcm-event-93411",
+    "venueId": "myrcm-53360",
+    "venueName": "InstantRC",
     "venueLocation": null,
     "venueWebsite": "https://simplyfunracing.nl/reglement/",
     "hostId": "instantrc",
@@ -99415,9 +99329,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2026-05-03-myrcm-event-96033",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-05-03-myrcm-event-96033",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -99843,10 +99757,10 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-05-03-myrcm-event-97155",
+    "id": "mc-ettlingen-e-v-2026-05-03-myrcm-event-97155",
     "venueId": "mc-ettlingen-e-v",
     "venueName": "MC Ettlingen e.V.",
-    "venueLocation": "Ettlingen",
+    "venueLocation": "Karlsruhe",
     "venueWebsite": null,
     "hostId": "ets",
     "hostName": "ETS",
@@ -100085,9 +99999,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hugo-rc-timing-nl-2026-05-04-myrcm-event-97161",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2824-2026-05-04-myrcm-event-97161",
+    "venueId": "myrcm-2824",
+    "venueName": "Hugo - RC-Timing.nl",
     "venueLocation": null,
     "venueWebsite": "http://www.hfccracing.nl",
     "hostId": "hugo-rc-timing-nl",
@@ -100113,10 +100027,10 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-05-07-myrcm-event-95738",
+    "id": "mc-ettlingen-e-v-2026-05-07-myrcm-event-95738",
     "venueId": "mc-ettlingen-e-v",
     "venueName": "MC Ettlingen e.V.",
-    "venueLocation": "Ettlingen",
+    "venueLocation": "Karlsruhe",
     "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -101214,9 +101128,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "buggy-rc-bauffe-a-s-b-l-2026-05-10-myrcm-event-96783",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-62332-2026-05-10-myrcm-event-96783",
+    "venueId": "myrcm-62332",
+    "venueName": "Buggy RC Bauffe a.s.b.l",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "buggy-rc-bauffe-a-s-b-l",
@@ -101251,9 +101165,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-05-10-myrcm-event-93611",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-05-10-myrcm-event-93611",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -101329,9 +101243,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2026-05-10-myrcm-event-94456",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2026-05-10-myrcm-event-94456",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -101368,9 +101282,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "houthalens-racing-team-2026-05-10-myrcm-event-96870",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2026-05-10-myrcm-event-96870",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -102526,9 +102440,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-05-17-myrcm-event-93048",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-05-17-myrcm-event-93048",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": "https://macdebaanbrekers.nl/",
     "hostId": "m-a-c-de-baanbrekers",
@@ -102565,9 +102479,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tonisport-gmbh-2026-05-17-myrcm-event-94902",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2026-05-17-myrcm-event-94902",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tonisport-gmbh",
@@ -103622,9 +103536,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "erce-2026-05-23-myrcm-event-93786",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-05-23-myrcm-event-93786",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -104152,9 +104066,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hulshout-offroad-racing-2026-05-24-myrcm-event-93801",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2026-05-24-myrcm-event-93801",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -104432,7 +104346,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-2026-05-28-myrcm-event-96256",
+    "id": "ets-apeldoorn-2026-05-28-myrcm-event-96256",
     "venueId": "ets-apeldoorn",
     "venueName": "Apeldoorn",
     "venueLocation": "Apeldoorn",
@@ -104767,9 +104681,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "lmcc-2026-05-30-myrcm-event-97872",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2026-05-30-myrcm-event-97872",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -105431,9 +105345,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "evmc-velp-2026-05-30-myrcm-event-93861",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-05-30-myrcm-event-93861",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": "http://www.evmc.nl",
     "hostId": "evmc-velp",
@@ -105476,9 +105390,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-05-30-myrcm-event-93050",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-05-30-myrcm-event-93050",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": "https://macdebaanbrekers.nl/",
     "hostId": "m-a-c-de-baanbrekers",
@@ -105814,9 +105728,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2026-05-31-myrcm-event-96034",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-05-31-myrcm-event-96034",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -106435,9 +106349,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "erce-2026-06-03-myrcm-event-97416",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-06-03-myrcm-event-97416",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -107346,9 +107260,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "dutch-rc-series-2026-06-07-myrcm-event-97781",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-28115-2026-06-07-myrcm-event-97781",
+    "venueId": "myrcm-28115",
+    "venueName": "Dutch RC Series",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-series",
@@ -107420,9 +107334,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "hulshout-offroad-racing-2026-06-07-myrcm-event-93803",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2026-06-07-myrcm-event-93803",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -107526,9 +107440,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "evmc-velp-2026-06-07-myrcm-event-94892",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-06-07-myrcm-event-94892",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "evmc-velp",
@@ -107765,9 +107679,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2026-06-10-myrcm-event-98044",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2026-06-10-myrcm-event-98044",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -108817,9 +108731,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "dutch-rc-timekeeping-2026-06-13-myrcm-event-96910",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-1980-2026-06-13-myrcm-event-96910",
+    "venueId": "myrcm-1980",
+    "venueName": "Dutch RC TimeKeeping",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "dutch-rc-timekeeping",
@@ -109216,9 +109130,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tonisport-gmbh-2026-06-13-myrcm-event-96259",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2026-06-13-myrcm-event-96259",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tonisport-gmbh",
@@ -109491,9 +109405,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2026-06-14-myrcm-event-96035",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-06-14-myrcm-event-96035",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -109530,9 +109444,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-06-14-myrcm-event-93612",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-06-14-myrcm-event-93612",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -109630,9 +109544,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "fba-vzw-2026-06-14-myrcm-event-94457",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2026-06-14-myrcm-event-94457",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -110384,9 +110298,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "erce-2026-06-20-myrcm-event-93787",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-06-20-myrcm-event-93787",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -110831,9 +110745,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "hfcc-racing-den-haag-2026-06-20-myrcm-event-98349",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2026-06-20-myrcm-event-98349",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -111209,9 +111123,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tonisport-gmbh-2026-06-20-myrcm-event-95989",
-    "venueId": null,
-    "venueName": null,
+    "id": "ets-international-2026-06-20-myrcm-event-95989",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
     "venueLocation": null,
     "venueWebsite": "https://www.tonisport-onroad-series.de/reglement/",
     "hostId": "tonisport-gmbh",
@@ -112236,9 +112150,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-06-27-myrcm-event-97631",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-06-27-myrcm-event-97631",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -112986,9 +112900,9 @@
     "firstSeen": "2026-06-21"
   },
   {
-    "id": "houthalens-racing-team-2026-06-28-myrcm-event-98235",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2026-06-28-myrcm-event-98235",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -113199,9 +113113,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "evmc-velp-2026-06-28-myrcm-event-94893",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-06-28-myrcm-event-94893",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "evmc-velp",
@@ -113482,22 +113396,50 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "SEC 13,5 TW",
-        "entries": 20
+        "entries": 19
       }
     ],
     "documents": [],
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2026-07-01-myrcm-event-98539",
-    "venueId": null,
-    "venueName": null,
+    "id": "marzahner-racing-club-e-v-2026-06-30-myrcm-event-98670",
+    "venueId": "marzahner-racing-club-e-v",
+    "venueName": "Marzahner Racing Club e.V.",
+    "venueLocation": "Berlin-Marzahn",
+    "venueWebsite": null,
+    "hostId": "marzahner-racing-club",
+    "hostName": "1. Marzahner Racing Club e.V.",
+    "name": "Onlinestreaming",
+    "from": "2026-06-30",
+    "to": "2026-06-30",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98670&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=41404&pLa=en&dId%5BE%5D=98670&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98670&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "note": "Nennung geschlossen.",
+    "classes": [
+      "EFRA 1/10 Track 200 mm"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-30"
+  },
+  {
+    "id": "myrcm-14156-2026-07-01-myrcm-event-98539",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -113530,10 +113472,10 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-07-02-myrcm-event-95739",
-    "venueId": "mac-de-baanbrekers",
-    "venueName": "De Baanbrekers",
-    "venueLocation": "Rucphen",
+    "id": "ets-international-2026-07-02-myrcm-event-95739",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
+    "venueLocation": null,
     "venueWebsite": "https://www.euronitroseries.eu/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -113593,13 +113535,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "MCD Fanatics Cup",
-        "entries": 12
+        "entries": 15
       }
     ],
     "documents": [
@@ -113679,8 +113621,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 54,
-    "registrationDisplay": "54",
+    "registrationCount": 55,
+    "registrationDisplay": "55",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113693,7 +113635,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 15
+        "entries": 16
       },
       {
         "name": "ORT",
@@ -113928,8 +113870,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 100,
-    "registrationDisplay": "100",
+    "registrationCount": 99,
+    "registrationDisplay": "99",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -113938,7 +113880,7 @@
       },
       {
         "name": "OR8 Expert (1:8 Nitro Offroad Buggy)",
-        "entries": 20
+        "entries": 19
       },
       {
         "name": "OR8E",
@@ -113971,13 +113913,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
+    "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "EC10-Rookie",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "EC10-Fronti",
@@ -114177,8 +114119,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114187,7 +114129,7 @@
       },
       {
         "name": "MRCP Stock 17.5T",
-        "entries": 17
+        "entries": 18
       },
       "MRCP Modified",
       {
@@ -114266,8 +114208,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 7,
-    "registrationDisplay": "7",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114276,7 +114218,7 @@
       },
       {
         "name": "Rallye RTR",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -114334,8 +114276,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114353,7 +114295,7 @@
       "Endurance - BC08 - Koningsklasse",
       {
         "name": "Endurance - EC10 - Touring Car - stock",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -114472,17 +114414,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "AC26 Buggy 2WD",
-        "entries": 10
+        "entries": 9
       },
       {
         "name": "AC26 Buggy 4WD",
-        "entries": 6
+        "entries": 8
       },
       {
         "name": "AC26 OpenFun",
@@ -114519,13 +114461,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Elektro RC SORS",
-        "entries": 24
+        "entries": 25
       }
     ],
     "documents": [],
@@ -114580,8 +114522,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -114591,7 +114533,7 @@
       },
       {
         "name": "MCC - MCC Challenge",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "MCC - Tamiya Fighter",
@@ -114599,16 +114541,16 @@
       },
       {
         "name": "MCC - Tamiya TT",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "h-m-r-c-2026-07-05-myrcm-event-96037",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-07-05-myrcm-event-96037",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -114645,9 +114587,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "buggy-rc-bauffe-a-s-b-l-2026-07-05-myrcm-event-98321",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-62332-2026-07-05-myrcm-event-98321",
+    "venueId": "myrcm-62332",
+    "venueName": "Buggy RC Bauffe a.s.b.l",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "buggy-rc-bauffe-a-s-b-l",
@@ -114700,8 +114642,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 90,
-    "registrationDisplay": "90",
+    "registrationCount": 89,
+    "registrationDisplay": "89",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114710,7 +114652,7 @@
       },
       {
         "name": "1:8 Buggy Nitro",
-        "entries": 23
+        "entries": 22
       },
       {
         "name": "1:8 Truggy Electro",
@@ -114739,8 +114681,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114754,7 +114696,7 @@
       },
       {
         "name": "4WD",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -115452,8 +115394,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -115469,7 +115411,7 @@
       },
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 14
+        "entries": 15
       }
     ],
     "documents": [],
@@ -115525,13 +115467,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Buggy 1/10 - Endurance 2H",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -115606,8 +115548,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 9,
+    "registrationDisplay": "9",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCA Jugend",
@@ -115618,7 +115560,7 @@
       },
       {
         "name": "FCA 17.5T",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -115737,8 +115679,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 37,
-    "registrationDisplay": "37",
+    "registrationCount": 39,
+    "registrationDisplay": "39",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115747,11 +115689,11 @@
       },
       {
         "name": "Elektro-Offroad 1:10 4WD Standard",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "Elektro-Offroad 1:10 Truggy 2WD",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "ORE2WD",
@@ -115918,9 +115860,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "lmcc-2026-07-11-myrcm-event-97370",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-51-2026-07-11-myrcm-event-97370",
+    "venueId": "myrcm-51",
+    "venueName": "LMCC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "lmcc",
@@ -115936,8 +115878,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 63,
-    "registrationDisplay": "63",
+    "registrationCount": 65,
+    "registrationDisplay": "65",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115946,7 +115888,7 @@
       },
       {
         "name": "EC10 TC SPEC",
-        "entries": 37
+        "entries": 39
       },
       {
         "name": "EC10 TC Modified",
@@ -116178,9 +116120,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "fba-vzw-2026-07-12-myrcm-event-94458",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2026-07-12-myrcm-event-94458",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -116196,8 +116138,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -116206,7 +116148,7 @@
       },
       {
         "name": "BK 4WD Buggy 2026",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "BK 2WD Buggy 2026",
@@ -116256,9 +116198,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "houthalens-racing-team-2026-07-12-myrcm-event-96871",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-65-2026-07-12-myrcm-event-96871",
+    "venueId": "myrcm-65",
+    "venueName": "Houthalens Racing Team",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "houthalens-racing-team",
@@ -116527,13 +116469,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "SEC 13,5 TW",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -116672,9 +116614,9 @@
     "firstSeen": "2026-06-21"
   },
   {
-    "id": "erce-2026-07-18-myrcm-event-93788",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-07-18-myrcm-event-93788",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -117030,8 +116972,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -117057,7 +116999,7 @@
       },
       {
         "name": "VG8KL1",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -117174,13 +117116,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 21,
-    "registrationDisplay": "21",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "RCS GT Klasse",
-        "entries": 12
+        "entries": 13
       },
       {
         "name": "RCS Formel 1",
@@ -117443,13 +117385,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "PSV-KLU Buggy 2WD",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "PSV-KLU Buggy 4WD",
@@ -117596,9 +117538,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-07-19-myrcm-event-93613",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-07-19-myrcm-event-93613",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -117697,26 +117639,26 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "CB 1-8 electro",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "Championnat de Belgique nitro",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hfcc-racing-den-haag-2026-07-19-myrcm-event-98540",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-14156-2026-07-19-myrcm-event-98540",
+    "venueId": "myrcm-14156",
+    "venueName": "HFCC Racing Den Haag",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hfcc-racing-den-haag",
@@ -117744,9 +117686,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "hulshout-offroad-racing-2026-07-19-myrcm-event-93804",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2026-07-19-myrcm-event-93804",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -117802,13 +117744,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Interclub 2026",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -117954,7 +117896,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-2026-07-23-myrcm-event-97810",
+    "id": "ets-international-2026-07-23-myrcm-event-97810",
     "venueId": "ets-international",
     "venueName": "ETS / TOS International",
     "venueLocation": null,
@@ -117975,17 +117917,17 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 334,
-    "registrationDisplay": "334",
+    "registrationCount": 332,
+    "registrationDisplay": "332",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "FlySky Frontwheel",
-        "entries": 62
+        "entries": 61
       },
       {
         "name": "Hobbywing 21.5 Stock",
-        "entries": 50
+        "entries": 49
       },
       {
         "name": "1up Racing 40+",
@@ -118156,13 +118098,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR 8 Hobby",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "OR8 Expert",
@@ -118686,13 +118628,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "RCK GT2 Porsche",
-        "entries": 1
+        "entries": 2
       },
       "RCK VintageTransAm",
       "EGTWHO",
@@ -118983,8 +118925,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -118993,7 +118935,7 @@
       },
       {
         "name": "Tamico Fighter-Klasse",
-        "entries": 3
+        "entries": 4
       },
       "Tamico freie Klasse",
       {
@@ -119004,7 +118946,10 @@
         "name": "Tamico Retro 4WD",
         "entries": 2
       },
-      "Tamico Truck",
+      {
+        "name": "Tamico Truck",
+        "entries": 1
+      },
       {
         "name": "Tamico Wheelie",
         "entries": 1
@@ -119043,9 +118988,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2026-08-02-myrcm-event-93789",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-08-02-myrcm-event-93789",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -119733,9 +119678,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "h-m-r-c-2026-08-09-myrcm-event-96038",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-08-09-myrcm-event-96038",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -119763,9 +119708,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2026-08-09-myrcm-event-94459",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2026-08-09-myrcm-event-94459",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -119913,7 +119858,7 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-08-13-myrcm-event-95740",
+    "id": "mav-aigen-schlaegl-2026-08-13-myrcm-event-95740",
     "venueId": "mav-aigen-schlaegl",
     "venueName": "MAV Aigen-Schlägl",
     "venueLocation": "Aigen-Schlägl",
@@ -120424,9 +120369,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "instantrc-2026-08-16-myrcm-event-93413",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53360-2026-08-16-myrcm-event-93413",
+    "venueId": "myrcm-53360",
+    "venueName": "InstantRC",
     "venueLocation": null,
     "venueWebsite": "https://simplyfunracing.nl/reglement/",
     "hostId": "instantrc",
@@ -120490,9 +120435,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "buggy-rc-bauffe-a-s-b-l-2026-08-16-myrcm-event-98516",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-62332-2026-08-16-myrcm-event-98516",
+    "venueId": "myrcm-62332",
+    "venueName": "Buggy RC Bauffe a.s.b.l",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "buggy-rc-bauffe-a-s-b-l",
@@ -120510,13 +120455,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "1/8 CB Brushless",
-        "entries": 1
+        "entries": 2
       },
       "Championnat de Belgique nitro"
     ],
@@ -121211,13 +121156,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 9,
-    "registrationDisplay": "9",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8-E Elektro Buggy",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "OR8-E Jugend",
@@ -121724,9 +121669,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2026-08-26-myrcm-event-97397",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-08-26-myrcm-event-97397",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -122123,9 +122068,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "m-a-c-de-baanbrekers-2026-08-30-myrcm-event-93614",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-08-30-myrcm-event-93614",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "m-a-c-de-baanbrekers",
@@ -122584,9 +122529,9 @@
     "firstSeen": "2026-06-21"
   },
   {
-    "id": "hulshout-offroad-racing-2026-09-05-myrcm-event-93805",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-50130-2026-09-05-myrcm-event-93805",
+    "venueId": "myrcm-50130",
+    "venueName": "Hulshout Offroad Racing",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "hulshout-offroad-racing",
@@ -122943,9 +122888,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "h-m-r-c-2026-09-06-myrcm-event-96039",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-09-06-myrcm-event-96039",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",
@@ -123189,10 +123134,10 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "arena33-andernach-2026-09-10-myrcm-event-97811",
-    "venueId": "arena33-andernach",
-    "venueName": "Arena33",
-    "venueLocation": "Andernach",
+    "id": "ets-international-2026-09-10-myrcm-event-97811",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
+    "venueLocation": null,
     "venueWebsite": "https://www.ets.racing/rules/",
     "hostId": "ets",
     "hostName": "ETS",
@@ -123221,7 +123166,7 @@
       "Cayote Modified"
     ],
     "documents": [],
-    "firstSeen": "2026-06-26"
+    "firstSeen": "2026-06-30"
   },
   {
     "id": "mrc-leipzig-e-v-2026-09-11-myrcm-event-97492",
@@ -123587,9 +123532,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "erce-2026-09-13-myrcm-event-93790",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3350-2026-09-13-myrcm-event-93790",
+    "venueId": "myrcm-3350",
+    "venueName": "ERCE",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "erce",
@@ -123762,9 +123707,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "fba-vzw-2026-09-13-myrcm-event-94460",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-38144-2026-09-13-myrcm-event-94460",
+    "venueId": "myrcm-38144",
+    "venueName": "FBA vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "fba-vzw",
@@ -123881,9 +123826,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "evmc-velp-2026-09-13-myrcm-event-94894",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-09-13-myrcm-event-94894",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "evmc-velp",
@@ -123973,13 +123918,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "RCK GT2 Porsche",
-        "entries": 1
+        "entries": 2
       },
       "RCK VintageTransAm",
       "EGTWHO",
@@ -124432,9 +124377,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "instantrc-2026-09-20-myrcm-event-93414",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53360-2026-09-20-myrcm-event-93414",
+    "venueId": "myrcm-53360",
+    "venueName": "InstantRC",
     "venueLocation": null,
     "venueWebsite": "https://simplyfunracing.nl/reglement/",
     "hostId": "instantrc",
@@ -125446,9 +125391,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "evmc-velp-2026-09-27-myrcm-event-93049",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-10817-2026-09-27-myrcm-event-93049",
+    "venueId": "myrcm-10817",
+    "venueName": "EVMC Velp",
     "venueLocation": null,
     "venueWebsite": "https://macdebaanbrekers.nl/",
     "hostId": "evmc-velp",
@@ -125519,9 +125464,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "h-m-r-c-2026-09-27-myrcm-event-96040",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-7059-2026-09-27-myrcm-event-96040",
+    "venueId": "myrcm-7059",
+    "venueName": "H.M.R.C.",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "h-m-r-c",

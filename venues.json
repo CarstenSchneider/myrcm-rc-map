@@ -693,6 +693,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-62332",
+    "name": "Buggy RC Bauffe a.s.b.l",
+    "city": "",
+    "lat": 50.55163011529372,
+    "lng": 3.8388580908852754,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "62332",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "buggyclub-zentralschweiz",
     "name": "Buggyclub Zentralschweiz",
     "city": "Zetzwil",
@@ -772,9 +787,9 @@
     "verified": true
   },
   {
-    "id": "mac-de-baanbrekers",
+    "id": "myrcm-12027",
     "name": "De Baanbrekers",
-    "city": "Rucphen",
+    "city": "",
     "lat": 51.53884645879424,
     "lng": 4.571233799852438,
     "address": "",
@@ -789,8 +804,8 @@
     ],
     "hostIds": [],
     "myrcmOrgId": "12027",
-    "source": "manual",
-    "country": "NL"
+    "source": "venue-seeds",
+    "verified": true
   },
   {
     "id": "djk-ssc-lackenhaeuser-e-v",
@@ -985,6 +1000,21 @@
     "verified": true
   },
   {
+    "id": "myrcm-3350",
+    "name": "ERCE",
+    "city": "",
+    "lat": 51.474136507766445,
+    "lng": 5.451839831543991,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "3350",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "ert-steyregg",
     "name": "ERT-Steyregg",
     "city": "Katsdorf",
@@ -1043,6 +1073,36 @@
     "myrcmOrgId": "",
     "source": "manual",
     "locationUnknown": true
+  },
+  {
+    "id": "myrcm-10817",
+    "name": "EVMC Velp",
+    "city": "",
+    "lat": 51.982283708724864,
+    "lng": 5.9870087702161054,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "10817",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-739",
+    "name": "FlatOut RC VZW",
+    "city": "",
+    "lat": 51.311941003199514,
+    "lng": 5.048176366250522,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "739",
+    "source": "venue-seeds",
+    "verified": true
   },
   {
     "id": "fsg-motorsport-ag",
@@ -1129,6 +1189,36 @@
     "verified": true
   },
   {
+    "id": "myrcm-7059",
+    "name": "H.M.R.C.",
+    "city": "",
+    "lat": 52.92978612356075,
+    "lng": 4.7807556333955965,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "7059",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-14156",
+    "name": "HFCC Racing Den Haag",
+    "city": "",
+    "lat": 52.042806391074365,
+    "lng": 4.242145539805281,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "14156",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
     "id": "hobby-shop-haessig",
     "name": "Hobby Shop Hässig",
     "city": "Wohlen",
@@ -1147,6 +1237,36 @@
     ],
     "myrcmOrgId": "293",
     "source": "verified",
+    "verified": true
+  },
+  {
+    "id": "myrcm-65",
+    "name": "Houthalens Racing Team",
+    "city": "",
+    "lat": 51.04033523105567,
+    "lng": 5.389993492087697,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "65",
+    "source": "venue-seeds",
+    "verified": true
+  },
+  {
+    "id": "myrcm-50130",
+    "name": "Hulshout Offroad Racing",
+    "city": "",
+    "lat": 51.08384346853234,
+    "lng": 4.806473990670647,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "50130",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -1189,6 +1309,21 @@
     ],
     "myrcmOrgId": "10490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
+    "verified": true
+  },
+  {
+    "id": "myrcm-59433",
+    "name": "Indoor Offroad Turnhout",
+    "city": "",
+    "lat": 51.32199,
+    "lng": 4.95729,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "59433",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -1315,6 +1450,21 @@
     ],
     "myrcmOrgId": "66",
     "source": "verified",
+    "verified": true
+  },
+  {
+    "id": "myrcm-51",
+    "name": "LMCC",
+    "city": "",
+    "lat": 49.58092061399585,
+    "lng": 6.129729483503843,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "51",
+    "source": "venue-seeds",
     "verified": true
   },
   {
@@ -4101,6 +4251,90 @@
     "verified": true
   },
   {
+    "id": "oefmav-eor",
+    "name": "ÖFMAV EOR",
+    "city": "Berndorf",
+    "lat": 47.9455876,
+    "lng": 16.1093585,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-782",
+      "ÖFMAV EOR",
+      "Berndorf"
+    ],
+    "hostIds": [
+      "oefmav-eor"
+    ],
+    "myrcmOrgId": "782",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "oefmav-sektion-elektro-offroad",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "city": "Wien",
+    "lat": 48.1857192,
+    "lng": 16.4221587,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-34619",
+      "ÖFMAV Sektion Elektro Offroad",
+      "Wien"
+    ],
+    "hostIds": [
+      "oefmav-sektion-elektro-offroad"
+    ],
+    "myrcmOrgId": "34619",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "oefmav-sektion-or-8",
+    "name": "ÖFMAV Sektion OR-8",
+    "city": "Graz",
+    "lat": 47.0708678,
+    "lng": 15.4382786,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-503",
+      "ÖFMAV Sektion OR-8",
+      "Graz"
+    ],
+    "hostIds": [
+      "oefmav-sektion-or-8"
+    ],
+    "myrcmOrgId": "503",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "oefmav-sektion-verbrenner-flachbahn",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "city": "Winklarn",
+    "lat": 48.0915707,
+    "lng": 14.8477591,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-38958",
+      "ÖFMAV Sektion Verbrenner Flachbahn",
+      "Winklarn"
+    ],
+    "hostIds": [
+      "oefmav-sektion-verbrenner-flachbahn"
+    ],
+    "myrcmOrgId": "38958",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
@@ -6227,90 +6461,6 @@
       "wrc-drivers"
     ],
     "myrcmOrgId": "1387",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-eor",
-    "name": "ÖFMAV EOR",
-    "city": "Berndorf",
-    "lat": 47.9455876,
-    "lng": 16.1093585,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-782",
-      "ÖFMAV EOR",
-      "Berndorf"
-    ],
-    "hostIds": [
-      "oefmav-eor"
-    ],
-    "myrcmOrgId": "782",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-sektion-elektro-offroad",
-    "name": "ÖFMAV Sektion Elektro Offroad",
-    "city": "Wien",
-    "lat": 48.1857192,
-    "lng": 16.4221587,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-34619",
-      "ÖFMAV Sektion Elektro Offroad",
-      "Wien"
-    ],
-    "hostIds": [
-      "oefmav-sektion-elektro-offroad"
-    ],
-    "myrcmOrgId": "34619",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-sektion-or-8",
-    "name": "ÖFMAV Sektion OR-8",
-    "city": "Graz",
-    "lat": 47.0708678,
-    "lng": 15.4382786,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-503",
-      "ÖFMAV Sektion OR-8",
-      "Graz"
-    ],
-    "hostIds": [
-      "oefmav-sektion-or-8"
-    ],
-    "myrcmOrgId": "503",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-sektion-verbrenner-flachbahn",
-    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
-    "city": "Winklarn",
-    "lat": 48.0915707,
-    "lng": 14.8477591,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-38958",
-      "ÖFMAV Sektion Verbrenner Flachbahn",
-      "Winklarn"
-    ],
-    "hostIds": [
-      "oefmav-sektion-verbrenner-flachbahn"
-    ],
-    "myrcmOrgId": "38958",
     "source": "geocoded-nominatim-dach",
     "verified": true
   }
