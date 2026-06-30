@@ -5587,6 +5587,231 @@ function _attachAdminEntryListHandlers(wrapper, venuesByDisplay) {
   });
 }
 
+function renderAdminStreckenTab(container) {
+  container.innerHTML = `<p class="admin-loading">Lade…</p>`;
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then(seeds => {
+      let searchVal = "";
+      let expandedId = null;
+      let showNewForm = false;
+
+      const sName = s => s.name ?? s.hostName ?? "";
+      const sId = s => s.id ?? s.hostId ?? "";
+      const sStatus = s => s.lat != null ? "ok" : s.locationUnknown ? "unknown" : "missing";
+
+      function buildRows() {
+        const q = searchVal.toLowerCase().trim();
+        const filtered = q ? seeds.filter(s =>
+          sName(s).toLowerCase().includes(q) ||
+          sId(s).toLowerCase().includes(q) ||
+          (Array.isArray(s.aliases) && s.aliases.some(a => a.toLowerCase().includes(q)))
+        ) : seeds;
+        return filtered.map(s => {
+          const id = sId(s);
+          const name = sName(s);
+          const st = sStatus(s);
+          const isExp = expandedId === id;
+          return `<div class="admin-seed-row" data-seed-id="${escapeHtml(id)}">
+            <div class="admin-seed-header">
+              <span class="admin-seed-dot admin-seed-${st}"></span>
+              <span class="admin-seed-name">${escapeHtml(name)}</span>
+              ${s.country ? `<span class="admin-seed-country">${escapeHtml(s.country)}</span>` : ""}
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="admin-seed-chevron${isExp ? " is-open" : ""}" aria-hidden="true"><path d="M1.5 3.5l3.5 3 3.5-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            ${isExp ? `<div class="admin-seed-form">
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Name</span><input class="admin-input js-sf-name" value="${escapeHtml(name)}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Land</span><input class="admin-input js-sf-country" placeholder="DE / AT / CH / BE" value="${escapeHtml(s.country || "")}" style="max-width:120px;" /></div>
+              <label class="admin-entry-toggle"><input type="checkbox" class="js-sf-unknown"${s.locationUnknown ? " checked" : ""} /> Ort unbekannt</label>
+              <div class="admin-entry-coords js-sf-coords-row"${s.locationUnknown ? " hidden" : ""}><input class="admin-input js-sf-coords" placeholder="48.123, 14.456" value="${s.lat != null ? `${s.lat}, ${s.lng}` : ""}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Website</span><input class="admin-input js-sf-website" placeholder="https://…" value="${escapeHtml(s.website || "")}" /></div>
+              <div class="admin-seed-form-row"><span class="admin-seed-label">Aliases</span><input class="admin-input js-sf-aliases" placeholder="Alias1, Alias2, …" value="${escapeHtml(Array.isArray(s.aliases) ? s.aliases.join(", ") : "")}" /></div>
+              <div class="admin-entry-actions" style="margin-top:8px;">
+                <button type="button" class="admin-btn admin-btn-save js-sf-save">Speichern</button>
+                <button type="button" class="admin-btn admin-btn-delete js-sf-delete">Löschen</button>
+              </div>
+              <p class="admin-entry-status js-sf-status"></p>
+            </div>` : ""}
+          </div>`;
+        }).join("");
+      }
+
+      function render() {
+        const wasSearchFocused = document.activeElement?.classList.contains("js-strecken-search");
+        const newFormHtml = showNewForm ? `<div class="admin-new-seed-form" id="adminNewSeedForm">
+          <p class="admin-new-seed-title">Neue Strecke</p>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">hostId</span><input class="admin-input js-ns-hostid" placeholder="mein-club-e-v" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Name</span><input class="admin-input js-ns-name" placeholder="Mein Club e.V." /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Land</span><input class="admin-input js-ns-country" placeholder="DE / AT / CH / BE" style="max-width:120px;" /></div>
+          <label class="admin-entry-toggle"><input type="checkbox" class="js-ns-unknown" /> Ort unbekannt</label>
+          <div class="admin-entry-coords js-ns-coords-row"><input class="admin-input js-ns-coords" placeholder="48.123, 14.456" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Website</span><input class="admin-input js-ns-website" placeholder="https://…" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">Aliases</span><input class="admin-input js-ns-aliases" placeholder="Alias1, Alias2, …" /></div>
+          <div class="admin-seed-form-row"><span class="admin-seed-label">MyRCM ID</span><input class="admin-input js-ns-orgid" placeholder="12345" style="max-width:120px;" /></div>
+          <div class="admin-entry-actions" style="margin-top:8px;">
+            <button type="button" class="admin-btn admin-btn-save js-ns-save">Erstellen</button>
+            <button type="button" class="admin-btn admin-btn-skip js-ns-cancel">Abbrechen</button>
+          </div>
+          <p class="admin-entry-status js-ns-status"></p>
+        </div>` : "";
+
+        container.innerHTML = `
+          <div class="admin-strecken-top">
+            <input type="search" class="admin-input js-strecken-search" placeholder="Suchen…" value="${escapeHtml(searchVal)}" />
+            <span class="admin-strecken-count">${seeds.length}</span>
+            <button type="button" class="admin-btn admin-btn-save js-strecken-new">+ Neu</button>
+          </div>
+          ${newFormHtml}
+          <div class="admin-seed-list">${buildRows()}</div>`;
+
+        if (wasSearchFocused) container.querySelector(".js-strecken-search")?.focus();
+        bindHandlers();
+      }
+
+      function bindHandlers() {
+        container.querySelector(".js-strecken-search").addEventListener("input", e => {
+          searchVal = e.target.value;
+          render();
+        });
+        container.querySelector(".js-strecken-new").addEventListener("click", () => {
+          showNewForm = !showNewForm;
+          expandedId = null;
+          render();
+        });
+
+        const nsForm = container.querySelector("#adminNewSeedForm");
+        if (nsForm) {
+          nsForm.querySelector(".js-ns-unknown").addEventListener("change", e => {
+            nsForm.querySelector(".js-ns-coords-row").hidden = e.target.checked;
+          });
+          nsForm.querySelector(".js-ns-cancel").addEventListener("click", () => { showNewForm = false; render(); });
+          nsForm.querySelector(".js-ns-save").addEventListener("click", async () => {
+            const st = nsForm.querySelector(".js-ns-status");
+            const hostId = nsForm.querySelector(".js-ns-hostid").value.trim();
+            const hostName = nsForm.querySelector(".js-ns-name").value.trim();
+            const country = nsForm.querySelector(".js-ns-country").value.trim().toUpperCase();
+            const isUnknown = nsForm.querySelector(".js-ns-unknown").checked;
+            const website = nsForm.querySelector(".js-ns-website").value.trim();
+            const aliasesRaw = nsForm.querySelector(".js-ns-aliases").value.trim();
+            const aliases = aliasesRaw ? aliasesRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
+            const myrcmOrgId = nsForm.querySelector(".js-ns-orgid").value.trim();
+            if (!hostId) { st.textContent = "hostId ist erforderlich"; return; }
+            if (!hostName) { st.textContent = "Name ist erforderlich"; return; }
+            let lat, lng;
+            if (!isUnknown) {
+              const raw = nsForm.querySelector(".js-ns-coords").value.trim();
+              if (raw) {
+                const parts = raw.split(",").map(x => parseFloat(x.trim()));
+                if (parts.length < 2 || isNaN(parts[0]) || isNaN(parts[1])) { st.textContent = "Format: 48.123, 14.456"; return; }
+                [lat, lng] = parts;
+              }
+            }
+            st.textContent = "Speichern…";
+            try {
+              await adminCommit({
+                action: "create-seed", hostId, hostName,
+                lat, lng, country: country || undefined,
+                website: website || undefined,
+                aliases: aliases.length ? aliases : undefined,
+                myrcmOrgId: myrcmOrgId || undefined,
+                locationUnknown: isUnknown || undefined,
+              });
+              const newEntry = { hostId, hostName };
+              if (country) newEntry.country = country;
+              if (website) newEntry.website = website;
+              if (aliases.length) newEntry.aliases = aliases;
+              if (myrcmOrgId) newEntry.myrcmOrgId = myrcmOrgId;
+              if (isUnknown) newEntry.locationUnknown = true;
+              else if (lat != null) { newEntry.lat = lat; newEntry.lng = lng; }
+              const ei = seeds.findIndex(s => sId(s) === hostId);
+              if (ei >= 0) seeds[ei] = { ...seeds[ei], ...newEntry };
+              else seeds.push(newEntry);
+              seeds.sort((a, b) => sName(a).localeCompare(sName(b), "de"));
+              showNewForm = false;
+              expandedId = hostId;
+              render();
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+          });
+        }
+
+        container.querySelector(".admin-seed-list").addEventListener("click", async e => {
+          const row = e.target.closest(".admin-seed-row");
+          if (!row) return;
+          const id = row.dataset.seedId;
+
+          if (e.target.closest(".admin-seed-header")) {
+            expandedId = expandedId === id ? null : id;
+            showNewForm = false;
+            render();
+            return;
+          }
+
+          const seed = seeds.find(s => sId(s) === id);
+          if (!seed) return;
+          const st = row.querySelector(".js-sf-status");
+
+          if (e.target.classList.contains("js-sf-save")) {
+            const form = row.querySelector(".admin-seed-form");
+            const name = form.querySelector(".js-sf-name").value.trim();
+            const country = form.querySelector(".js-sf-country").value.trim().toUpperCase();
+            const isUnknown = form.querySelector(".js-sf-unknown").checked;
+            const website = form.querySelector(".js-sf-website").value.trim();
+            const aliasesRaw = form.querySelector(".js-sf-aliases").value.trim();
+            const aliases = aliasesRaw ? aliasesRaw.split(",").map(a => a.trim()).filter(Boolean) : [];
+            let lat, lng;
+            if (!isUnknown) {
+              const parts = form.querySelector(".js-sf-coords").value.split(",").map(x => parseFloat(x.trim()));
+              if (parts.length >= 2 && !isNaN(parts[0]) && !isNaN(parts[1])) { lat = parts[0]; lng = parts[1]; }
+              if (lat == null) { st.textContent = "Koordinaten fehlen — Format: 48.123, 14.456"; return; }
+            }
+            st.textContent = "Speichern…";
+            try {
+              await adminCommit({
+                action: "update-seed", seedId: id, seedName: name, name,
+                lat, lng, country, website, aliases,
+                locationUnknown: isUnknown || undefined,
+              });
+              const idx = seeds.findIndex(s => sId(s) === id);
+              if (idx >= 0) {
+                const upd = { ...seeds[idx] };
+                if (upd.name !== undefined) upd.name = name; else upd.hostName = name;
+                if (isUnknown) { delete upd.lat; delete upd.lng; upd.locationUnknown = true; }
+                else { upd.lat = lat; upd.lng = lng; delete upd.locationUnknown; }
+                if (country) upd.country = country; else delete upd.country;
+                if (website) upd.website = website; else delete upd.website;
+                if (aliases.length) upd.aliases = aliases; else delete upd.aliases;
+                seeds[idx] = upd;
+              }
+              st.textContent = "✓ Gespeichert";
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+            return;
+          }
+
+          if (e.target.classList.contains("js-sf-delete")) {
+            const name = sName(seed);
+            if (!confirm(`"${name}" wirklich löschen?`)) return;
+            st.textContent = "Löschen…";
+            try {
+              await adminCommit({ action: "delete-dach-seed", seedId: id, seedName: name });
+              const idx = seeds.findIndex(s => sId(s) === id);
+              if (idx >= 0) seeds.splice(idx, 1);
+              expandedId = null;
+              render();
+            } catch (e) { st.textContent = `Fehler: ${e.message}`; }
+          }
+        });
+
+        container.querySelector(".admin-seed-list").addEventListener("change", e => {
+          if (!e.target.classList.contains("js-sf-unknown")) return;
+          e.target.closest(".admin-seed-form").querySelector(".js-sf-coords-row").hidden = e.target.checked;
+        });
+      }
+
+      render();
+    })
+    .catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
+}
+
 function renderAdminUnbekanntTab(container) {
   container.innerHTML = `<p class="admin-loading">Lade…</p>`;
   adminLoadUnmatched().then(entries => {
@@ -5798,7 +6023,8 @@ function openAdminPage() {
 
   listEl.innerHTML = `
     <div class="admin-tabs">
-      <button class="admin-tab is-active" data-tab="unbekannt">Unbekannte Orte</button>
+      <button class="admin-tab is-active" data-tab="strecken">Strecken</button>
+      <button class="admin-tab" data-tab="unbekannt">Unbekannte Orte</button>
       <button class="admin-tab" data-tab="pruefen">Koordinaten prüfen</button>
       <button class="admin-tab" data-tab="ads">Werbung</button>
     </div>
@@ -5812,8 +6038,10 @@ function openAdminPage() {
       renderAdminAdsTab(tabContent);
     } else if (name === "pruefen") {
       renderAdminPruefenTab(tabContent);
-    } else {
+    } else if (name === "unbekannt") {
       renderAdminUnbekanntTab(tabContent);
+    } else {
+      renderAdminStreckenTab(tabContent);
     }
   }
 
@@ -5827,7 +6055,7 @@ function openAdminPage() {
     openAppMenu();
   }, { once: true });
 
-  showTab("unbekannt");
+  showTab("strecken");
 }
 
 
