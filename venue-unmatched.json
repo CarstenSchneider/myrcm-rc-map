@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "evmc-velp",
-    "hostName": "EVMC Velp",
-    "source": "myrcm",
-    "myrcmOrgId": "10817",
-    "possibleVenue": "Renkum",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "fba-vzw",
     "hostName": "FBA vzw",
     "source": "myrcm",
