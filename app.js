@@ -5584,13 +5584,10 @@ const GITHUB_BRANCH = IS_DEV_SITE ? "dev" : "main";
 const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 const SB_ADMIN_FN = `${SUPABASE_URL}/functions/v1/admin-commit`;
 
-async function adminLoadUnmatched() {
-  const [unmatchedRes, seedsRes] = await Promise.all([
-    fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`),
-    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`),
-  ]);
+async function adminLoadUnmatched(seeds) {
+  const unmatchedRes = await fetch(`${RAW_BASE}/venue-unmatched.json?t=${Date.now()}`);
+  if (!unmatchedRes.ok) throw new Error(`venue-unmatched.json: HTTP ${unmatchedRes.status}`);
   const unmatched = (await unmatchedRes.json()).filter(u => !EXCLUDED_MYRCM_ORG_IDS.has(String(u.myrcmOrgId ?? "")));
-  const seeds = await seedsRes.json();
   const unknownSeeds = seeds
     .filter(s => s.locationUnknown)
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true, _isUnknownSeed: true }));
@@ -6059,7 +6056,10 @@ function renderAdminStreckenTab(container) {
 
 function renderAdminUnbekanntTab(container) {
   container.innerHTML = `<p class="admin-loading">Lade…</p>`;
-  adminLoadUnmatched().then(entries => {
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`venue-seeds.json: HTTP ${r.status}`); return r.json(); })
+    .then(seeds => adminLoadUnmatched(seeds))
+  .then(entries => {
     // Tab 1: only places explicitly marked as unknown location
     const unknownEntries = entries.filter(e => e._isUnknownSeed);
     if (!unknownEntries.length) {
@@ -6076,12 +6076,15 @@ function renderAdminUnbekanntTab(container) {
 
 function renderAdminPruefenTab(container) {
   container.innerHTML = `<p class="admin-loading">Lade…</p>`;
-  Promise.all([
-    fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`).then(r => r.json()),
-    fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
-    fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
-    adminLoadUnmatched(),
-  ]).then(async ([seeds, dmcRes, rccoRes, allEntries]) => {
+  fetch(`${RAW_BASE}/venue-seeds.json?t=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`venue-seeds.json: HTTP ${r.status}`); return r.json(); })
+    .then(seeds => Promise.all([
+      Promise.resolve(seeds),
+      fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
+      fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
+      adminLoadUnmatched(seeds),
+    ]))
+  .then(async ([seeds, dmcRes, rccoRes, allEntries]) => {
     // Neue Clubs aus venue-unmatched.json (noch nicht als unbekannt markiert)
     const newEntries = allEntries.filter(e => !e._isUnknownSeed);
     if (newEntries.length) {
