@@ -409,6 +409,7 @@ function _buildTipCardEl(tip) {
 
 let _tipOverlayEl = null;
 let _tipResizeTimer = null;
+let _adminAutoExpandSeedId = null;
 
 function _positionTipEl(el, tip) {
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
@@ -5574,14 +5575,16 @@ function _attachAdminEntryListHandlers(wrapper, venuesByDisplay) {
       try {
         if (isUnknown) {
           await adminCommit({ action: "mark-unknown", hostId, hostName, myrcmOrgId: myrcmOrgId || null });
+          status.textContent = "✓ Gespeichert";
+          entry.classList.add("admin-entry-done");
         } else {
           const parts = entry.querySelector("[data-field=coords]").value.split(",").map(s => parseFloat(s.trim()));
           const [lat, lng] = parts;
           if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
           await adminCommit({ action: "add-venue", hostId, hostName, myrcmOrgId: myrcmOrgId || null, lat, lng });
+          _adminAutoExpandSeedId = hostId;
+          document.querySelector(".admin-tab[data-tab='strecken']")?.click();
         }
-        status.textContent = "✓ Gespeichert";
-        entry.classList.add("admin-entry-done");
       } catch (e) { status.textContent = `Fehler: ${e.message}`; }
     }
   });
@@ -5593,7 +5596,8 @@ function renderAdminStreckenTab(container) {
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then(seeds => {
       let searchVal = "";
-      let expandedId = null;
+      let expandedId = _adminAutoExpandSeedId;
+      _adminAutoExpandSeedId = null;
       let showNewForm = false;
       let seedsByMerge = new Map();
 
@@ -5864,6 +5868,11 @@ function renderAdminStreckenTab(container) {
       }
 
       render();
+      if (expandedId) {
+        requestAnimationFrame(() => {
+          container.querySelector(`.admin-seed-row[data-seed-id="${CSS.escape(expandedId)}"]`)?.scrollIntoView({ block: "nearest" });
+        });
+      }
     })
     .catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
 }

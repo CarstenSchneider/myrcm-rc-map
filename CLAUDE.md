@@ -192,7 +192,7 @@ window.addEventListener("load", () => {
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v279**, **style.css v168**
+Aktuelle Version: **app.js v291**, **style.css v168**
 
 ## Import-System
 
