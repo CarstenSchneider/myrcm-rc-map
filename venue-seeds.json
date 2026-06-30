@@ -2897,7 +2897,9 @@
       "ÖFMAV EOR",
       "Berndorf"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
   },
   {
     "id": "oefmav-sektion-elektro-offroad",
