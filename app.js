@@ -87,6 +87,142 @@ const _savedCountry = localStorage.getItem("rcRaceMapCountry");
 let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
 let _zoomToCountryPending = false;
 
+// --- i18n ---
+const TRANSLATIONS = {
+  "country.all":        { de: "Alle Länder",   en: "All countries",  fr: "Tous les pays",       nl: "Alle landen" },
+  "country.DE":         { de: "Deutschland",   en: "Germany",        fr: "Allemagne",           nl: "Duitsland" },
+  "country.AT":         { de: "Österreich",    en: "Austria",        fr: "Autriche",            nl: "Oostenrijk" },
+  "country.CH":         { de: "Schweiz",       en: "Switzerland",    fr: "Suisse",              nl: "Zwitserland" },
+  "country.NL":         { de: "Niederlande",   en: "Netherlands",    fr: "Pays-Bas",            nl: "Nederland" },
+  "country.BE":         { de: "Belgien",       en: "Belgium",        fr: "Belgique",            nl: "België" },
+  "country.LU":         { de: "Luxemburg",     en: "Luxembourg",     fr: "Luxembourg",          nl: "Luxemburg" },
+  "filter.range.2w":    { de: "2 Wochen",      en: "2 weeks",        fr: "2 semaines",          nl: "2 weken" },
+  "filter.range.4w":    { de: "4 Wochen",      en: "4 weeks",        fr: "4 semaines",          nl: "4 weken" },
+  "filter.range.all":   { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
+  "filter.fav.all":     { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
+  "filter.fav.favs":    { de: "Favoriten",     en: "Favourites",     fr: "Favoris",             nl: "Favorieten" },
+  "filter.reg.all":     { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
+  "filter.reg.open":    { de: "Offen",         en: "Open",           fr: "Ouvert",              nl: "Open" },
+  "filter.series.all":  { de: "Alle Serien",   en: "All series",     fr: "Toutes les séries",   nl: "Alle series" },
+  "filter.series.national": { de: "Überregional", en: "National",    fr: "National",            nl: "Nationaal" },
+  "filter.series.regional": { de: "Regional",     en: "Regional",    fr: "Régional",            nl: "Regionaal" },
+  "filter.series.other":    { de: "Weitere Serien", en: "More series", fr: "Autres séries",     nl: "Meer series" },
+  "reg.login_required": { de: "Anmeldung nur nach MyRCM-Login sichtbar", en: "Visible after MyRCM sign-in",     fr: "Visible après connexion MyRCM",       nl: "Zichtbaar na MyRCM-login" },
+  "reg.upcoming.from":  { de: "Nennung ab {date}",           en: "Registration from {date}",    fr: "Inscription dès le {date}",           nl: "Inschrijving vanaf {date}" },
+  "reg.upcoming.soon":  { de: "Nennung noch nicht geöffnet", en: "Registration not open yet",   fr: "Inscription pas encore ouverte",      nl: "Inschrijving nog niet open" },
+  "reg.upcoming.tba":   { de: "Nennung folgt",               en: "Registration coming soon",    fr: "Inscription bientôt",                 nl: "Inschrijving volgt" },
+  "reg.closed":         { de: "Nennung geschlossen",         en: "Registration closed",         fr: "Inscription fermée",                  nl: "Inschrijving gesloten" },
+  "reg.open":           { de: "Nennung möglich",             en: "Registration open",           fr: "Inscription ouverte",                 nl: "Inschrijving open" },
+  "reg.link":           { de: "Nennung ↗",                   en: "Register ↗",                  fr: "Inscription ↗",                       nl: "Inschrijven ↗" },
+  "doc.announcement":   { de: "Ausschreibung ↗",             en: "Race announcement ↗",         fr: "Annonce ↗",                           nl: "Uitnodiging ↗" },
+  "doc.rules":          { de: "Reglement ↗",                 en: "Rules ↗",                     fr: "Règlement ↗",                         nl: "Reglement ↗" },
+  "venue.unknown":      { de: "Ort unbekannt",       en: "Location unknown",  fr: "Lieu inconnu",        nl: "Locatie onbekend" },
+  "venue.trackUnknown": { de: "Unbekannte Strecke",  en: "Unknown track",     fr: "Piste inconnue",      nl: "Onbekend circuit" },
+  "venue.route":        { de: "Route",               en: "Directions",        fr: "Itinéraire",          nl: "Route" },
+  "race.new":           { de: "NEU",                 en: "NEW",               fr: "NOUVEAU",             nl: "NIEUW" },
+  "race.last":          { de: "Zuletzt:",            en: "Last:",             fr: "Dernière :",          nl: "Laatst:" },
+  "race.entries":       { de: "Teilnehmer anzeigen", en: "Entry list",        fr: "Participants",        nl: "Deelnemers" },
+  "result.found":       { de: "{n} Rennen gefunden",               en: "{n} races found",                  fr: "{n} courses trouvées",                nl: "{n} races gevonden" },
+  "result.atTrack":     { de: "{n} Rennen an dieser Strecke",      en: "{n} races at this track",          fr: "{n} courses sur cette piste",         nl: "{n} races op dit circuit" },
+  "result.noUpcoming":  { de: "Keine kommenden Rennen an dieser Strecke", en: "No upcoming races at this track", fr: "Aucune course à venir sur cette piste", nl: "Geen komende races op dit circuit" },
+  "result.loading":     { de: "Lade Rennen …",                     en: "Loading races…",                   fr: "Chargement…",                         nl: "Races laden…" },
+  "result.error":       { de: "Fehler beim Laden der Daten.",       en: "Error loading data.",              fr: "Erreur de chargement.",               nl: "Fout bij laden." },
+  "result.timestamp":   { de: "Stand {date} | {time} Uhr",         en: "Updated {date} | {time}",          fr: "État {date} | {time}",                nl: "Status {date} | {time}" },
+  "empty.noRacesTrack": { de: "Keine Rennen an dieser Strecke.",          en: "No races at this track.",       fr: "Aucune course sur cette piste.",  nl: "Geen races op dit circuit." },
+  "empty.noRacesFilter":{ de: "Keine Rennen für diesen Filter gefunden.", en: "No races found.",               fr: "Aucune course trouvée.",          nl: "Geen races gevonden." },
+  "empty.searching":    { de: "Suche…",                                   en: "Searching…",                   fr: "Recherche…",                     nl: "Zoeken…" },
+  "chip.fav":           { de: "Favoriten", en: "Favourites", fr: "Favoris",  nl: "Favorieten" },
+  "chip.open":          { de: "Offen",     en: "Open",       fr: "Ouvert",   nl: "Open" },
+  "menu.signedIn":      { de: "Angemeldet",              en: "Signed in",            fr: "Connecté",                    nl: "Aangemeld" },
+  "menu.signOut":       { de: "Abmelden",                en: "Sign out",             fr: "Déconnexion",                 nl: "Afmelden" },
+  "menu.signIn":        { de: "Anmelden & Favoriten",    en: "Sign in & Favourites", fr: "Connexion & Favoris",         nl: "Inloggen & Favorieten" },
+  "menu.appearance":    { de: "Darstellung",             en: "Appearance",           fr: "Apparence",                   nl: "Weergave" },
+  "menu.theme.auto":    { de: "Auto",                    en: "Auto",                 fr: "Auto",                        nl: "Auto" },
+  "menu.theme.light":   { de: "Tag",                     en: "Day",                  fr: "Jour",                        nl: "Dag" },
+  "menu.theme.dark":    { de: "Nacht",                   en: "Night",                fr: "Nuit",                        nl: "Nacht" },
+  "menu.favourites":    { de: "Favoriten",               en: "Favourites",           fr: "Favoris",                     nl: "Favorieten" },
+  "menu.about":         { de: "Über RC RaceMap",         en: "About RC RaceMap",     fr: "À propos",                    nl: "Over RC RaceMap" },
+  "menu.legal":         { de: "Impressum & Datenschutz", en: "Legal & Privacy",      fr: "Mentions & Confidentialité",  nl: "Juridisch & Privacy" },
+  "menu.back":          { de: "Zurück",                  en: "Back",                 fr: "Retour",                      nl: "Terug" },
+  "login.info":         { de: "Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.", en: "Enter your email. We'll send you a sign-in link — no password needed.", fr: "Saisis ton e-mail. Tu recevras un lien de connexion — sans mot de passe.", nl: "Voer je e-mailadres in. Je ontvangt een inloglink — geen wachtwoord nodig." },
+  "login.placeholder":  { de: "deine@email.de",          en: "your@email.com",       fr: "ton@email.fr",                nl: "jouw@email.nl" },
+  "login.send":         { de: "Link senden",             en: "Send link",            fr: "Envoyer le lien",             nl: "Link sturen" },
+  "login.sending":      { de: "Wird gesendet…",          en: "Sending…",             fr: "Envoi…",                      nl: "Verzenden…" },
+  "login.sent":         { de: "Gesendet",                en: "Sent",                 fr: "Envoyé",                      nl: "Verzonden" },
+  "login.confirm":      { de: "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.", en: "✓ Link sent. Please check your email.", fr: "✓ Lien envoyé. Vérifie tes e-mails.", nl: "✓ Link verzonden. Controleer je e-mail." },
+  "loginPrompt.text":   { de: "Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.", en: "Sign in to save favourites and receive notifications.", fr: "Connecte-toi pour enregistrer tes favoris et recevoir des notifications.", nl: "Log in om favorieten op te slaan en meldingen te ontvangen." },
+  "loginPrompt.btn":    { de: "Anmelden", en: "Sign in", fr: "Connexion", nl: "Inloggen" },
+  "fav.empty":          { de: "Keine Favoriten", en: "No favourites", fr: "Aucun favori", nl: "Geen favorieten" },
+  "fav.bellHint":       { de: "Aktiviere {bell} für E-Mail-Updates bei neuen Rennen", en: "Enable {bell} for email updates on new races", fr: "Active {bell} pour les e-mails des nouvelles courses", nl: "Activeer {bell} voor e-mails over nieuwe races" },
+  "fav.bellOn":         { de: "Benachrichtigungen deaktivieren", en: "Disable notifications", fr: "Désactiver les notifications", nl: "Meldingen uitschakelen" },
+  "fav.bellOff":        { de: "Per E-Mail benachrichtigen",      en: "Notify by email",       fr: "Notifier par e-mail",          nl: "Melden per e-mail" },
+  "tip.counter":        { de: "Tipp {n} von {total}",  en: "Tip {n} of {total}", fr: "Astuce {n} sur {total}", nl: "Tip {n} van {total}" },
+  "tip.dismiss":        { de: "Tipp schließen",         en: "Close tip",          fr: "Fermer l'astuce",        nl: "Tip sluiten" },
+  "tip1.title":         { de: "Rennen in deiner Nähe.", en: "Races near you.",    fr: "Des courses près de chez toi.", nl: "Races bij jou in de buurt." },
+  "tip1.text":          { de: "Nutze {locate} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.", en: "Use {locate} your location and filter by time or race series. Larger pins mean more activity.", fr: "Utilise {locate} ta position et filtre par période ou série. Plus le repère est grand, plus il y a d'activité.", nl: "Gebruik {locate} je locatie en filter op periode of serie. Grotere pins betekenen meer activiteit." },
+  "tip2.title":         { de: "Alles auf einen Blick.", en: "Everything at a glance.", fr: "Tout en un coup d'œil.", nl: "Alles in één oogopslag." },
+  "tip2.text":          { de: "Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.", en: "All race info with links to the club and registration. Tap the race card to show the track on the map.", fr: "Toutes les infos avec liens vers le club et l'inscription. Touchez la fiche pour voir la piste sur la carte.", nl: "Alle race-info met links naar club en inschrijving. Tik op de racekaart om het circuit op de kaart te tonen." },
+  "tip3.title":         { de: "Kein Rennen verpassen.", en: "Never miss a race.", fr: "Ne manque plus aucune course.", nl: "Mis geen race meer." },
+  "tip3.text":          { de: "Favoriten {star} markieren und Benachrichtigungen {bell} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.", en: "Mark favourites {star} and enable notifications {bell}. We'll notify you about new races, changes and cancellations.", fr: "Ajoute des favoris {star} et active les notifications {bell}. Nous t'informerons des nouvelles courses, modifications et annulations.", nl: "Markeer favorieten {star} en activeer meldingen {bell}. We informeren je over nieuwe races, wijzigingen en afgelastingen." },
+  "about.p1":           { de: "RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.", en: "RC RaceMap shows where and when the next races take place — on a map and in a list. Both can be filtered by club and race series.", fr: "RC RaceMap montre où et quand auront lieu les prochaines courses — sur une carte et dans une liste. Les deux peuvent être filtrés par club et série.", nl: "RC RaceMap toont waar en wanneer de volgende races plaatsvinden — op een kaart en in een lijst. Beide kunnen worden gefilterd op club en serie." },
+  "about.p2":           { de: "Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.", en: "The list includes links to registration and, where available, to the rules and race announcement.", fr: "La liste contient un lien vers l'inscription et, si disponibles, vers le règlement et l'annonce.", nl: "De lijst bevat links naar de inschrijving en, indien beschikbaar, naar reglement en uitnodiging." },
+  "about.p3":           { de: "Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.", en: "Mark your favourite clubs as favourites and get email updates about new races. Just sign in with your email address — no registration required.", fr: "Ajoute tes clubs favoris et reçois des e-mails sur les nouvelles courses. Connecte-toi simplement avec ton e-mail — aucune inscription nécessaire.", nl: "Markeer je favoriete clubs en ontvang e-mails over nieuwe races. Log eenvoudig in met je e-mailadres — registreren is niet nodig." },
+  "about.p4":           { de: "Die Daten stammen direkt von MyRCM und RCK. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.", en: "The data comes directly from MyRCM and RCK. You'll find all race details and registration there. RC RaceMap is a non-commercial service that presents this data on an interactive map.", fr: "Les données proviennent directement de MyRCM et RCK. Tu y trouveras toutes les informations et l'inscription. RC RaceMap est un service non commercial qui présente ces données sur une carte interactive.", nl: "De gegevens komen rechtstreeks van MyRCM en RCK. Daar vind je alle informatie en de inschrijving. RC RaceMap is een niet-commerciële dienst die deze gegevens op een interactieve kaart toont." },
+  "about.p5":           { de: "Keine Haftung für Fehler oder verpasste Podiumsplätze.", en: "No liability for errors or missed podiums.", fr: "Aucune responsabilité pour les erreurs ou les podiums manqués.", nl: "Geen aansprakelijkheid voor fouten of gemiste podiumplaatsen." },
+};
+
+function detectLangFromLocale() {
+  const langs = Array.from(navigator.languages?.length ? navigator.languages : [navigator.language]);
+  for (const lang of langs) {
+    const primary = lang.split("-")[0].toLowerCase();
+    if (["de", "en", "fr", "nl"].includes(primary)) return primary;
+  }
+  return "en";
+}
+
+const _savedLang = localStorage.getItem("rcRaceMapLang");
+let _lang = ["de", "en", "fr", "nl"].includes(_savedLang) ? _savedLang : detectLangFromLocale();
+
+function t(key, vars) {
+  const entry = TRANSLATIONS[key];
+  if (!entry) return key;
+  const str = entry[_lang] ?? entry.en ?? key;
+  if (!vars) return str;
+  return str.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? `{${k}}`));
+}
+
+function _dateLocale() {
+  return { de: "de-DE", en: "en-GB", fr: "fr-FR", nl: "nl-NL" }[_lang] || "en-GB";
+}
+
+function _updateStaticI18n() {
+  document.documentElement.lang = _lang;
+  const rangeKeys = { "2": "filter.range.2w", "4": "filter.range.4w", "all": "filter.range.all" };
+  rangeFilter?.querySelectorAll("[data-range]").forEach(btn => {
+    const key = rangeKeys[btn.dataset.range];
+    if (key) btn.textContent = t(key);
+  });
+  const favAll = favoriteFilter?.querySelector("[data-favorite-filter='all']");
+  if (favAll) favAll.textContent = t("filter.fav.all");
+  const favFavsLabel = favoriteFilter?.querySelector(".label-full");
+  if (favFavsLabel) favFavsLabel.textContent = t("filter.fav.favs");
+  const regAll = registrationVisibilityFilter?.querySelector("[data-registration-visibility='all']");
+  if (regAll) regAll.textContent = t("filter.reg.all");
+  const regOpenLabel = registrationVisibilityFilter?.querySelector(".label-full");
+  if (regOpenLabel) regOpenLabel.textContent = t("filter.reg.open");
+}
+
+function setLang(lang) {
+  if (!["de", "en", "fr", "nl"].includes(lang)) return;
+  _lang = lang;
+  localStorage.setItem("rcRaceMapLang", lang);
+  _updateStaticI18n();
+  updateCountryPill();
+  populateSeries();
+  showMenuHome();
+  render();
+}
+
 const countryFlags = [
   { country: "all", code: "eu", label: "Alle Länder" },
   { country: "DE",  code: "de", label: "Deutschland" },
@@ -105,7 +241,7 @@ function updateCountryPill() {
     ...countryFlags.filter(f => f.country !== selectedCountry),
   ];
   _countryPill.innerHTML = ordered.map(f =>
-    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${f.label}">` +
+    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${t('country.' + f.country)}">` +
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
     `</button>`
   ).join("");
@@ -357,22 +493,16 @@ const ONBOARDING_TIPS = [
   {
     render: "fixed-locate",
     arrow: "left-top",
-    title: "Rennen in deiner Nähe.",
-    html: `Nutze ${_locateIconSvg()} deinen Standort, filtere nach Zeitraum und Rennserie. Je größer der Pin, desto mehr Aktivität an der Strecke.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.79 540.3" aria-hidden="true"><g><path d="M261.52,286.32c-36.2,0-65.65-29.45-65.65-65.64s29.45-65.64,65.65-65.64,65.64,29.45,65.64,65.64-29.45,65.64-65.64,65.64ZM261.52,165.03c-30.68,0-55.65,24.96-55.65,55.64s24.96,55.64,55.65,55.64,55.64-24.96,55.64-55.64-24.96-55.64-55.64-55.64Z" fill="#fff"/><path d="M261.52,254.6c-18.7,0-33.92-15.22-33.92-33.92s15.22-33.92,33.92-33.92,33.92,15.22,33.92,33.92-15.22,33.92-33.92,33.92ZM261.52,196.76c-13.19,0-23.92,10.73-23.92,23.92s10.73,23.92,23.92,23.92,23.92-10.73,23.92-23.92-10.73-23.92-23.92-23.92Z" fill="#fff"/></g><g><circle cx="349.39" cy="58.73" r="46.06" fill="#fff"/><g><path d="M352.08,50.05v16.15c5.38-.73,10.77-1.45,16.15-1.63v-16.15c-5.38.18-10.77.91-16.15,1.63Z" fill="#5b75ab"/><path d="M407.51,58.12c0-32.1-26.02-58.12-58.12-58.12s-58.12,26.02-58.12,58.12c0,27.1,18.54,49.86,43.63,56.3l14.49,14.49,14.49-14.49c25.09-6.44,43.63-29.2,43.63-56.3ZM384.37,66.2c-5.38-1.45-10.77-1.82-16.15-1.63v16.15c-5.38.18-10.77.91-16.15,1.63v-16.15c-5.38.73-10.77,1.45-16.15,1.63v16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v-16.15c-5.38.18-10.77-.18-16.15-1.63v-16.15c5.38,1.45,10.77,1.82,16.15,1.63v16.15c5.38-.18,10.77-.91,16.15-1.63v-16.15c5.38-.73,10.77-1.45,16.15-1.63v16.15c5.38-.18,10.77.18,16.15,1.63v16.15Z" fill="#5b75ab"/></g></g><g><circle cx="83.69" cy="216.67" r="66.33" fill="#fff"/><g><path d="M87.56,204.18v23.25c7.75-1.05,15.5-2.09,23.25-2.35v-23.25c-7.75.26-15.5,1.31-23.25,2.35Z" fill="#435c95"/><path d="M167.39,215.8c0-46.22-37.47-83.69-83.69-83.69S0,169.58,0,215.8c0,39.02,26.7,71.8,62.83,81.07l20.86,20.86,20.86-20.86c36.13-9.27,62.83-42.05,62.83-81.07ZM134.07,227.43c-7.75-2.09-15.5-2.62-23.25-2.35v23.25c-7.75.26-15.5,1.31-23.25,2.35v-23.25c-7.75,1.05-15.5,2.09-23.25,2.35v23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v-23.25c-7.75.26-15.5-.26-23.25-2.35v-23.25c7.75,2.09,15.5,2.62,23.25,2.35v23.25c7.75-.26,15.5-1.31,23.25-2.35v-23.25c7.75-1.05,15.5-2.09,23.25-2.35v23.25c7.75-.26,15.5.26,23.25,2.35v23.25Z" fill="#435c95"/></g></g><g><circle cx="339.64" cy="380.72" r="104.74" fill="#fff"/><g><path d="M345.74,360.99v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M471.79,379.35c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM419.17,397.7c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
   },
   {
     render: "fixed-list-left",
-    title: "Alles auf einen Blick.",
-    html: `Alle Infos zum Rennen mit Link zum Verein und zur Nennung. Klick auf die Karteikarte um die Rennstrecke auf der Karte zu sehen.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454.5 520.62" aria-hidden="true"><path d="M102.27,0C45.79,0,0,45.79,0,102.27c0,47.68,32.63,87.74,76.77,99.06l25.5,25.5,25.5-25.5c44.15-11.33,76.77-51.39,76.77-99.06C204.54,45.79,158.75,0,102.27,0Z" fill="#fff" opacity=".35"/><path d="M156.37,321.69c-32.59,0-59.1-26.51-59.1-59.1,0-2.76,2.24-5,5-5s5,2.24,5,5c0,27.08,22.03,49.1,49.1,49.1,2.76,0,5,2.24,5,5s-2.24,5-5,5Z" fill="#fff" opacity=".35"/><g><circle cx="322.35" cy="361.03" r="104.74" fill="#fff"/><g><path d="M328.46,341.3v36.72c12.24-1.65,24.48-3.3,36.72-3.72v-36.72c-12.24.41-24.48,2.07-36.72,3.72Z" fill="#21386a"/><path d="M454.5,359.66c0-72.99-59.17-132.15-132.15-132.15s-132.15,59.17-132.15,132.15c0,61.61,42.16,113.37,99.21,128.01l32.95,32.95,32.95-32.95c57.04-14.64,99.21-66.4,99.21-128.01ZM401.89,378.02c-12.24-3.3-24.48-4.13-36.72-3.72v36.72c-12.24.41-24.48,2.07-36.72,3.72v-36.72c-12.24,1.65-24.48,3.3-36.72,3.72v36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v-36.72c-12.24.41-24.48-.41-36.72-3.72v-36.72c12.24,3.3,24.48,4.13,36.72,3.72v36.72c12.24-.41,24.48-2.07,36.72-3.72v-36.72c12.24-1.65,24.48-3.3,36.72-3.72v36.72c12.24-.41,24.48.41,36.72,3.72v36.72Z" fill="#21386a"/></g></g></svg>`,
   },
   {
     render: "list-top",
     arrow: "bottom-right",
     mobileFull: true,
-    title: "Kein Rennen verpassen.",
-    html: `Favoriten ${_favIconSvg("tip-inline-icon")} markieren und Benachrichtigungen ${_bellIconSvg("tip-inline-icon")} aktivieren. Wir informieren dich über neue Termine, Änderungen und Absagen.`,
     illustration: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.77 456.77" aria-hidden="true"><path d="M342.77,257.42l-120.13,94.84,117.94,94.38c1.39-2.62,2.19-5.62,2.19-8.78v-180.44ZM183.29,345.18c-6.95-5.56-16.85-5.56-23.8,0L20.01,456.77h302.76l-139.48-111.6ZM183.19,118.07c-6.92-5.43-16.7-5.43-23.62,0L7.23,237.8c-.24.17-.46.35-.67.54l128.84,101.72,12.2-9.74c13.91-11.14,33.68-11.14,47.57,0l12.2,9.74,128.84-101.72c-.22-.19-.43-.37-.67-.54l-152.34-119.72ZM0,437.86c0,3.16.8,6.16,2.18,8.78l117.96-94.36L0,257.42v180.44Z" fill="#fff"/><g><circle cx="171.39" cy="131.67" r="103.29" fill="#fff"/><g><path d="M177.41,112.22v36.21c12.07-1.63,24.14-3.26,36.21-3.67v-36.21c-12.07.41-24.14,2.04-36.21,3.67Z" fill="#21386a"/><path d="M301.71,130.32C301.71,58.35,243.36,0,171.39,0S41.07,58.35,41.07,130.32c0,60.76,41.58,111.8,97.83,126.24l32.49,32.49,32.49-32.49c56.25-14.44,97.83-65.48,97.83-126.24ZM249.82,148.42c-12.07-3.26-24.14-4.07-36.21-3.67v36.21c-12.07.41-24.14,2.04-36.21,3.67v-36.21c-12.07,1.63-24.14,3.26-36.21,3.67v36.21c-12.07.41-24.14-.41-36.21-3.67v-36.21c12.07,3.26,24.14,4.07,36.21,3.67v-36.21c-12.07.41-24.14-.41-36.21-3.67v-36.21c12.07,3.26,24.14,4.07,36.21,3.67v36.21c12.07-.41,24.14-2.04,36.21-3.67v-36.21c12.07-1.63,24.14-3.26,36.21-3.67v36.21c12.07-.41,24.14.41,36.21,3.67v36.21Z" fill="#21386a"/></g></g></svg>`,
   },
 ];
@@ -390,6 +520,9 @@ function _currentTip() {
 
 function _buildTipCardEl(tip) {
   if (!tip) return null;
+  const n = tip.idx + 1;
+  const title = t(`tip${n}.title`);
+  const html = t(`tip${n}.text`, { locate: _locateIconSvg("tip-inline-icon"), bell: _bellIconSvg("tip-inline-icon"), star: _favIconSvg("tip-inline-icon") });
   const el = document.createElement("aside");
   el.className = "tip-card";
   el.setAttribute("role", "note");
@@ -398,11 +531,11 @@ function _buildTipCardEl(tip) {
   el.innerHTML = `
     <div class="tip-illustration" aria-hidden="true">${tip.illustration || ""}</div>
     <div class="tip-body">
-      <span class="tip-title">${tip.title}</span>
-      <span class="tip-text">${tip.html}</span>
-      <span class="tip-counter">Tipp ${tip.idx + 1} von ${ONBOARDING_TIPS.length}</span>
+      <span class="tip-title">${title}</span>
+      <span class="tip-text">${html}</span>
+      <span class="tip-counter">${t("tip.counter", { n, total: ONBOARDING_TIPS.length })}</span>
     </div>
-    <button class="tip-dismiss" type="button" aria-label="Tipp schließen" data-tip-dismiss>×</button>
+    <button class="tip-dismiss" type="button" aria-label="${t("tip.dismiss")}" data-tip-dismiss>×</button>
   `;
   return el;
 }
@@ -1621,7 +1754,7 @@ function renderActiveFilterChips() {
   if (selectedFavoriteFilter === "favorites") {
     chips.push(`
       <button class="active-filter-chip" type="button" data-clear-filter="favorites">
-        Favoriten<span aria-hidden="true">×</span>
+        ${t("chip.fav")}<span aria-hidden="true">×</span>
       </button>
     `);
   }
@@ -1629,7 +1762,7 @@ function renderActiveFilterChips() {
   if (showOpenOnly) {
     chips.push(`
       <button class="active-filter-chip" type="button" data-clear-filter="registration">
-        Offen<span aria-hidden="true">×</span>
+        ${t("chip.open")}<span aria-hidden="true">×</span>
       </button>
     `);
   }
@@ -1999,13 +2132,13 @@ function formatDateRange(from, to) {
   const start = parseDate(from);
   const end = parseDate(to || from);
 
-  const fmt = new Intl.DateTimeFormat("de-DE", {
+  const fmt = new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
   });
 
-  const fmtShort = new Intl.DateTimeFormat("de-DE", {
+  const fmtShort = new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit"
   });
@@ -2024,7 +2157,7 @@ function formatDate(dateString) {
 
   const date = parseDate(dateString);
 
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
@@ -2036,7 +2169,7 @@ function formatShortDate(dateString) {
 
   const date = parseDate(dateString);
 
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat(_dateLocale(), {
     day: "2-digit",
     month: "2-digit",
     year: "2-digit"
@@ -2046,32 +2179,31 @@ function formatShortDate(dateString) {
 function formatDataUpdateTimestamp(date) {
   if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
 
-  const datePart = new Intl.DateTimeFormat("de-DE", {
+  const locale = _dateLocale();
+  const datePart = new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
   }).format(date);
 
-  const timePart = new Intl.DateTimeFormat("de-DE", {
+  const timePart = new Intl.DateTimeFormat(locale, {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false
   }).format(date);
 
-  return `Stand ${datePart} | ${timePart} Uhr`;
+  return t("result.timestamp", { date: datePart, time: timePart });
 }
 
-function resultLineText(count, detail = "gefunden") {
+function resultLineText(count, detail) {
   const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
-  const base = `${count} Rennen ${detail}`;
-
+  const base = t(detail ? "result.atTrack" : "result.found", { n: count });
   return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
 }
 
 function emptyVenueResultLineText() {
   const updateTimestamp = formatDataUpdateTimestamp(dataLastUpdatedAt);
-  const base = "Keine kommenden Rennen an dieser Strecke";
-
+  const base = t("result.noUpcoming");
   return updateTimestamp ? `${base} | ${updateTimestamp}` : base;
 }
 
@@ -2143,20 +2275,20 @@ function registrationLabel(race) {
   const status = registrationStatus(race);
 
   if (status === "login_required") {
-    return "Anmeldung nur nach MyRCM-Login sichtbar";
+    return t("reg.login_required");
   }
 
   if (status === "upcoming") {
     return race.registrationOpens
-      ? `Nennung ab ${formatDate(race.registrationOpens)}`
-      : "Nennung noch nicht geöffnet";
+      ? t("reg.upcoming.from", { date: formatDate(race.registrationOpens) })
+      : t("reg.upcoming.soon");
   }
 
   if (status === "closed") {
-    return "Nennung geschlossen";
+    return t("reg.closed");
   }
 
-  return "Nennung möglich";
+  return t("reg.open");
 }
 
 function registrationDotHtml(race) {
@@ -2194,19 +2326,19 @@ function registrationStatusHtml(race) {
 
   if (status === "closed") {
     return `<div class="registration-status registration-status-closed">
-      ${registrationDotHtml(race)}Nennung geschlossen
+      ${registrationDotHtml(race)}${t("reg.closed")}
     </div>`;
   }
 
   if (status === "upcoming") {
     return `<div class="registration-status registration-status-upcoming">
-      Nennung ab ${race.registrationOpens ? formatDate(race.registrationOpens) : "noch nicht geöffnet"}
+      ${race.registrationOpens ? t("reg.upcoming.from", { date: formatDate(race.registrationOpens) }) : t("reg.upcoming.soon")}
     </div>`;
   }
 
   if (status === "login_required") {
     return `<div class="registration-status registration-status-login_required">
-      Anmeldung nur nach MyRCM-Login sichtbar
+      ${t("reg.login_required")}
     </div>`;
   }
 
@@ -2304,8 +2436,8 @@ function registrationCountHtml(race) {
       href="${escapeHtml(participantUrl)}"
       target="_blank"
       rel="noopener"
-      title="Teilnehmer anzeigen"
-      aria-label="Teilnehmer anzeigen: ${escapeHtml(display)} Nennungen"
+      title="${t("race.entries")}"
+      aria-label="${t("race.entries")}: ${escapeHtml(display)}"
       onclick="event.stopPropagation()"
     >${content}</a>`;
   }
@@ -2909,7 +3041,7 @@ function raceWebsite(race) {
 
 function venueNameHtml(venue) {
   const website = venueWebsite(venue);
-  const name = escapeHtml(venue?.name || "Unbekannte Strecke");
+  const name = escapeHtml(venue?.name || t("venue.trackUnknown"));
   const nameHtml = website
     ? `<a class="venue-link" href="${escapeHtml(website)}" target="_blank" rel="noreferrer">${name}</a>`
     : `<span class="venue-name-text">${name}</span>`;
@@ -2965,7 +3097,7 @@ function raceHostAndVenueAreSame(race) {
 
 function raceVenueMetaHtml(race) {
   if (!hasMappableVenue(race)) {
-    return `<div class="race-venue race-venue-unknown">${mapPinIconHtml("race-venue-pin")}<span>Ort unbekannt</span></div>`;
+    return `<div class="race-venue race-venue-unknown">${mapPinIconHtml("race-venue-pin")}<span>${t("venue.unknown")}</span></div>`;
   }
   if (raceHostAndVenueAreSame(race)) return "";
   return `<div class="race-venue">${mapPinIconHtml("race-venue-pin")}${raceVenueNameHtml(race)}</div>`;
@@ -3104,28 +3236,28 @@ function documentLinksHtml(race) {
   if (status === "closed") {
     registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-closed">
         <span class="race-document-dot race-document-dot-closed" aria-hidden="true"></span>
-        Nennung geschlossen
+        ${t("reg.closed")}
       </span>`;
   } else if (status === "upcoming") {
     registrationItem = `<span class="race-link-item race-link-item-status race-link-item-status-upcoming">
         <span class="race-document-dot race-document-dot-upcoming" aria-hidden="true"></span>
-        ${race.note || (race.registrationOpens ? `Nennung ab ${formatDate(race.registrationOpens)}` : "Nennung folgt")}
+        ${race.note || (race.registrationOpens ? t("reg.upcoming.from", { date: formatDate(race.registrationOpens) }) : t("reg.upcoming.tba"))}
       </span>`;
   } else if (race.url) {
     registrationItem = `<a class="race-link-item race-link-item-status" href="${escapeHtml(race.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
         <span class="race-document-dot race-document-dot-open" aria-hidden="true"></span>
-        <span class="race-link-text">Nennung ↗</span>
+        <span class="race-link-text">${t("reg.link")}</span>
       </a>`;
   }
 
   const documentItems = [];
 
   if (announcement?.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Ausschreibung ↗</a>`);
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(announcement.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${t("doc.announcement")}</a>`);
   }
 
   if (rules?.url && rules.url !== announcement?.url) {
-    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Reglement ↗</a>`);
+    documentItems.push(`<a class="race-link-item" href="${escapeHtml(rules.url)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">${t("doc.rules")}</a>`);
   }
 
   return `<div class="race-document-links" aria-label="Nennung und Dokumente">${registrationItem}${documentItems.join("")}</div>`;
@@ -3149,7 +3281,7 @@ function venueDisplayName(race) {
     venue?.name ||
     race?.venueLocation ||
     race?.venueId ||
-    "Unbekannte Strecke"
+    t("venue.trackUnknown")
   );
 }
 
@@ -3340,7 +3472,7 @@ function googleMapsRouteUrl(venue) {
 }
 
 function buildPopup(venue, venueRaces, latestPastRace = null, overrideName = null) {
-  const venueName = escapeHtml(overrideName || venue?.name || "Unbekannte Strecke");
+  const venueName = escapeHtml(overrideName || venue?.name || t("venue.trackUnknown"));
   const venueWs = venueWebsite(venue);
   const titleHtml = venueWs
     ? `<a class="popup-venue-link" href="${escapeHtml(venueWs)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${venueName}</a>`
@@ -3353,7 +3485,7 @@ function buildPopup(venue, venueRaces, latestPastRace = null, overrideName = nul
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
         </svg>
-        Route
+        ${t("venue.route")}
       </a>
     </div>
   `;
@@ -3790,7 +3922,7 @@ function buildPastRaceCardEl(race) {
   const series = raceSeries(race);
   const label = document.createElement("div");
   label.className = "venue-last-race-label";
-  label.textContent = "Zuletzt:";
+  label.textContent = t("race.last");
   const card = document.createElement("article");
   card.className = `race-card registration-${registrationStatus(race)}${isRckRace(race) ? " race-card-rck" : " race-card-myrcm"}${isFavorite ? " race-card-favorite-venue" : ""}`;
   card.dataset.raceId = race.id;
@@ -3816,7 +3948,7 @@ function renderVenueNoRaces(latestPastRace) {
   resultLine.textContent = emptyVenueResultLineText();
   raceList.innerHTML = "";
   if (!latestPastRace) {
-    raceList.innerHTML = `<div class="empty-state">Keine Rennen an dieser Strecke.</div>`;
+    raceList.innerHTML = `<div class="empty-state">${t("empty.noRacesTrack")}</div>`;
     return;
   }
   buildPastRaceCardEl(latestPastRace).forEach(el => raceList.appendChild(el));
@@ -3843,7 +3975,7 @@ function renderList(list) {
     if (!venues.length) return; // data not yet loaded — don't flash the empty state
     const emptyEl = document.createElement("div");
     emptyEl.className = "empty-state";
-    emptyEl.textContent = _geocodePending ? "Suche…" : "Keine Rennen für diesen Filter gefunden.";
+    emptyEl.textContent = _geocodePending ? t("empty.searching") : t("empty.noRacesFilter");
     raceList.appendChild(emptyEl);
     return;
   }
@@ -4109,7 +4241,7 @@ function populateSeries() {
     });
   });
 
-  seriesFilter.innerHTML = `<option value="all">Alle Serien</option>`;
+  seriesFilter.innerHTML = `<option value="all">${t("filter.series.all")}</option>`;
 
   const groups = {
     overregional: [],
@@ -4153,9 +4285,9 @@ function populateSeries() {
     seriesFilter.appendChild(group);
   };
 
-  appendGroup("Überregional", groups.overregional);
-  appendGroup("Regional", groups.regional);
-  appendGroup("Weitere Serien", groups.other);
+  appendGroup(t("filter.series.national"), groups.overregional);
+  appendGroup(t("filter.series.regional"), groups.regional);
+  appendGroup(t("filter.series.other"), groups.other);
 
   if (selectedSeries !== "all" && !seriesFilter.querySelector(`option[value="${selectedSeries}"]`)) {
     selectedSeries = "all";
@@ -4734,6 +4866,7 @@ async function init() {
   }
 
   syncFilterUi();
+  _updateStaticI18n();
 
   if (selectedCountry !== "all") _zoomToCountryPending = true;
   render();
@@ -4760,7 +4893,7 @@ if (_unsubUserId) {
 } else {
   init().catch(error => {
     console.error(error);
-    resultLine.textContent = "Fehler beim Laden der Daten.";
+    resultLine.textContent = t("result.error");
   });
 }
 
@@ -5282,13 +5415,13 @@ function showMenuHome() {
         <span class="app-menu-auth-avatar">${sbUser.email[0].toUpperCase()}</span>
         <div class="app-menu-auth-info">
           <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
-          <span class="app-menu-auth-status">Angemeldet</span>
+          <span class="app-menu-auth-status">${t("menu.signedIn")}</span>
         </div>
-        <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">Abmelden</button>
+        <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">${t("menu.signOut")}</button>
       </div>`
     : `<button type="button" class="app-menu-row" id="sbLoginBtn">
         <span class="app-menu-row-icon">${iconUser}</span>
-        <span class="app-menu-row-label">Anmelden &amp; Favoriten</span>
+        <span class="app-menu-row-label">${t("menu.signIn")}</span>
         ${chevron}
       </button>`;
 
@@ -5298,17 +5431,27 @@ function showMenuHome() {
     ${authSection}
     <div class="app-menu-row app-menu-theme-row">
       <span class="app-menu-row-icon">${iconSun}</span>
-      <span class="app-menu-row-label">Darstellung</span>
+      <span class="app-menu-row-label">${t("menu.appearance")}</span>
       <div class="theme-toggle">
-        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">Auto</button>
-        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">Tag</button>
-        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">Nacht</button>
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">${t("menu.theme.auto")}</button>
+        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">${t("menu.theme.light")}</button>
+        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">${t("menu.theme.dark")}</button>
+      </div>
+    </div>
+    <div class="app-menu-row app-menu-lang-row">
+      <span class="app-menu-row-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+      <span class="app-menu-row-label">Sprache</span>
+      <div class="theme-toggle">
+        <button type="button" class="theme-toggle-btn${_lang==="de"?" active":""}" data-lang="de">DE</button>
+        <button type="button" class="theme-toggle-btn${_lang==="en"?" active":""}" data-lang="en">EN</button>
+        <button type="button" class="theme-toggle-btn${_lang==="fr"?" active":""}" data-lang="fr">FR</button>
+        <button type="button" class="theme-toggle-btn${_lang==="nl"?" active":""}" data-lang="nl">NL</button>
       </div>
     </div>
     ${sbUser ? `
     <button type="button" class="app-menu-row" data-menu="favorites">
       <span class="app-menu-row-icon">${iconStar}</span>
-      <span class="app-menu-row-label">Favoriten</span>
+      <span class="app-menu-row-label">${t("menu.favourites")}</span>
       ${chevron}
     </button>
 ` : ""}
@@ -5320,12 +5463,12 @@ function showMenuHome() {
     </button>
     <button type="button" class="app-menu-row" data-menu="about">
       <span class="app-menu-row-icon">${iconInfo}</span>
-      <span class="app-menu-row-label">Über RC RaceMap</span>
+      <span class="app-menu-row-label">${t("menu.about")}</span>
       ${chevron}
     </button>
     <button type="button" class="app-menu-row" data-menu="impressum">
       <span class="app-menu-row-icon">${iconInfo}</span>
-      <span class="app-menu-row-label">Impressum &amp; Datenschutz</span>
+      <span class="app-menu-row-label">${t("menu.legal")}</span>
       ${chevron}
     </button>
     ${isAdmin() ? `
@@ -5351,8 +5494,11 @@ function showMenuHome() {
       </div>
     </div>`;
 
-  appMenuContent.querySelectorAll(".theme-toggle-btn").forEach(btn => {
+  appMenuContent.querySelectorAll("[data-theme]").forEach(btn => {
     btn.addEventListener("click", () => setTheme(btn.dataset.theme));
+  });
+  appMenuContent.querySelectorAll("[data-lang]").forEach(btn => {
+    btn.addEventListener("click", () => setLang(btn.dataset.lang));
   });
   appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
     btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
@@ -5378,9 +5524,9 @@ function maskEmail(email) {
 function loginPageHtml() {
   return `
     <div class="app-menu-login-form">
-      <p class="app-menu-login-info">Gib deine E-Mail-Adresse ein. Du erhältst einen Link zum Anmelden — kein Passwort nötig.</p>
-      <input type="email" id="sbEmailInput" class="app-menu-login-input" placeholder="deine@email.de" autocomplete="email" />
-      <button type="button" class="app-menu-login-submit" id="sbLoginSubmit">Link senden</button>
+      <p class="app-menu-login-info">${t("login.info")}</p>
+      <input type="email" id="sbEmailInput" class="app-menu-login-input" placeholder="${t("login.placeholder")}" autocomplete="email" />
+      <button type="button" class="app-menu-login-submit" id="sbLoginSubmit">${t("login.send")}</button>
       <p class="app-menu-login-hint" id="sbLoginHint"></p>
     </div>`;
 }
@@ -5442,8 +5588,8 @@ function showLoginPrompt() {
         <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
       <svg class="app-menu-logo-pin" viewBox="0 0 477 528.98" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#C8B090"><path d="M249.52,205.37v66.26c22.09-2.98,44.17-5.96,66.26-6.71v-66.26c-22.09.75-44.17,3.73-66.26,6.71Z"/><path d="M477,238.5C477,106.78,370.22,0,238.5,0S0,106.78,0,238.5c0,111.19,76.09,204.61,179.04,231.03l59.46,59.46,59.46-59.46c102.95-26.42,179.04-119.84,179.04-231.03ZM382.05,271.63c-22.09-5.96-44.17-7.45-66.26-6.71v66.26c-22.09.75-44.17,3.73-66.26,6.71v-66.26c-22.09,2.98-44.17,5.96-66.26,6.71v66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v-66.26c-22.09.75-44.17-.75-66.26-6.71v-66.26c22.09,5.96,44.17,7.45,66.26,6.71v66.26c22.09-.75,44.17-3.73,66.26-6.71v-66.26c22.09-2.98,44.17-5.96,66.26-6.71v66.26c22.09-.75,44.17.75,66.26,6.71v66.26Z"/></g></svg>
-      <p class="login-prompt-text">Melde dich an um Favoriten zu speichern und Benachrichtigungen zu erhalten.</p>
-      <button type="button" class="login-prompt-btn" id="loginPromptBtn">Anmelden</button>
+      <p class="login-prompt-text">${t("loginPrompt.text")}</p>
+      <button type="button" class="login-prompt-btn" id="loginPromptBtn">${t("loginPrompt.btn")}</button>
     </div>`;
 
   const close = () => overlay.remove();
@@ -6240,7 +6386,7 @@ function renderFavoritesPage(query) {
     const cid = venueCanonicalId(v);
     const notifOn = sbUser && isNotificationEnabled(cid);
     const bellBtn = sbUser && isFav
-      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? "Benachrichtigungen deaktivieren" : "Per E-Mail benachrichtigen"}">${_bellSvgFav}</button>`
+      ? `<button type="button" class="fav-bell-btn${notifOn ? " active" : ""}" data-venue-id="${escapeHtml(cid)}" aria-label="${notifOn ? t("fav.bellOn") : t("fav.bellOff")}">${_bellSvgFav}</button>`
       : "";
     return `
     <div class="fav-row" data-venue-id="${escapeHtml(v.id)}">
@@ -6256,9 +6402,9 @@ function renderFavoritesPage(query) {
   };
 
   const bellHint = sbUser && mine.length
-    ? `<p class="fav-bell-hint">Aktiviere ${_bellSvgFav} für E-Mail-Updates bei neuen Rennen</p>`
+    ? `<p class="fav-bell-hint">${t("fav.bellHint", { bell: _bellSvgFav })}</p>`
     : "";
-  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") + bellHint : `<p class="fav-empty">Keine Favoriten</p>`;
+  listMine.innerHTML = mine.length ? mine.map(v => rowHtml(v, true)).join("") + bellHint : `<p class="fav-empty">${t("fav.empty")}</p>`;
   listAll.innerHTML  = rest.length  ? rest.map(v => rowHtml(v, false)).join("") : `<p class="fav-empty">Keine Clubs</p>`;
   const mineCount = mine.length ? `${mine.length}` : "";
   const allCount  = rest.length  ? `${rest.length}`  : "";
@@ -6276,7 +6422,7 @@ function showMenuPage(page) {
   if (page === "favorites") { closeAppMenu(); openFavoritesPage(); return; }
   const pages = { login: loginPageHtml() };
   appMenuContent.innerHTML = `
-    <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Zurück</button>
+    <button type="button" class="app-menu-back"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>${t("menu.back")}</button>
     <div class="app-menu-page-content">${pages[page] || ""}</div>`;
   appMenuContent.querySelector(".app-menu-back")
     ?.addEventListener("click", showMenuHome);
@@ -6289,16 +6435,16 @@ function showMenuPage(page) {
       const email = input?.value?.trim();
       if (!email) return;
       btn.disabled = true;
-      btn.textContent = "Wird gesendet…";
+      btn.textContent = t("login.sending");
       const { error } = await sbSendMagicLink(email);
       if (error) {
         hint.textContent = "Fehler: " + (error.message || JSON.stringify(error));
         console.error("Supabase magic link error:", error);
         btn.disabled = false;
-        btn.textContent = "Link senden";
+        btn.textContent = t("login.send");
       } else {
-        hint.textContent = "✓ Link wurde gesendet. Bitte prüfe deine E-Mails.";
-        btn.textContent = "Gesendet";
+        hint.textContent = t("login.confirm");
+        btn.textContent = t("login.sent");
       }
     });
     input?.addEventListener("keydown", e => { if (e.key === "Enter") btn?.click(); });
@@ -6339,11 +6485,11 @@ function impressumHtml() {
 function aboutHtml() {
   return `
     <h2>RC RaceMap<br>– Find your next race.</h2>
-    <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
-    <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
-    <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
-    <p>Die Daten stammen direkt von <a href="https://www.myrcm.ch/" target="_blank" rel="noopener noreferrer">MyRCM</a> und <a href="https://rck-solutions.de/" target="_blank" rel="noopener noreferrer">RCK</a>. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.</p>
-    <p>Keine Haftung für Fehler oder verpasste Podiumsplätze.</p>
+    <p>${t("about.p1")}</p>
+    <p>${t("about.p2")}</p>
+    <p>${t("about.p3")}</p>
+    <p>${t("about.p4", {})}</p>
+    <p>${t("about.p5")}</p>
     <div class="sub-page-content-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer">${lessrainSvg}</a>
     </div>`;
@@ -6503,13 +6649,13 @@ function renderClubList() {
   }
 
   const flagOpts = [
-    { label: "Alle Länder", value: "all", code: "eu" },
-    { label: "Deutschland",  value: "DE",  code: "de" },
-    { label: "Österreich",   value: "AT",  code: "at" },
-    { label: "Schweiz",      value: "CH",  code: "ch" },
-    { label: "Niederlande",  value: "NL",  code: "nl" },
-    { label: "Belgien",      value: "BE",  code: "be" },
-    { label: "Luxemburg",    value: "LU",  code: "lu" },
+    { label: t("country.all"), value: "all", code: "eu" },
+    { label: t("country.DE"),  value: "DE",  code: "de" },
+    { label: t("country.AT"),  value: "AT",  code: "at" },
+    { label: t("country.CH"),  value: "CH",  code: "ch" },
+    { label: t("country.NL"),  value: "NL",  code: "nl" },
+    { label: t("country.BE"),  value: "BE",  code: "be" },
+    { label: t("country.LU"),  value: "LU",  code: "lu" },
   ];
   const filterHtml = flagOpts.map(o =>
     `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +
