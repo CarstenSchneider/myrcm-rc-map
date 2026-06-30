@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "model-racing-midland",
-    "hostName": "Model Racing Midland",
-    "source": "myrcm",
-    "myrcmOrgId": "19047",
-    "possibleVenue": "Almere",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "modelbouw-vereniging-waterland",
     "hostName": "Modelbouw Vereniging Waterland",
     "source": "myrcm",
