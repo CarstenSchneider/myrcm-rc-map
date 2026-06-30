@@ -2306,7 +2306,8 @@
     "hostId": "dmc-ov-266",
     "hostName": "Modellfreunde Rheinhessen/Pfalz e.V.",
     "lat": 49.699136947713704,
-    "lng": 8.03194898284182
+    "lng": 8.03194898284182,
+    "country": "DE"
   },
   {
     "id": "modellrenngemeinschaft-dogern-e-v",
