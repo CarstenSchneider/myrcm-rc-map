@@ -4021,6 +4021,13 @@
     "myrcmOrgId": "53092"
   },
   {
+    "hostId": "mini-racing-car-liege",
+    "hostName": "Mini Racing Car Liège",
+    "lat": 50.65195560805808,
+    "lng": 5.463004695175359,
+    "myrcmOrgId": "9668"
+  },
+  {
     "hostId": "mini-tout-terrain-gruyere",
     "hostName": "Mini Tout Terrain Gruyère",
     "city": "Gruyères",
