@@ -925,7 +925,7 @@ input {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-.country-pill.is-expanded { max-width: 284px; }
+.country-pill.is-expanded { max-width: 324px; }
 
 .country-pill-btn {
   flex: 0 0 40px;
@@ -977,7 +977,7 @@ body.is-breakpoint-crossing .country-pill {
     height: 52px;
     max-width: 52px;
   }
-  .country-pill.is-expanded { max-width: 368px; }
+  .country-pill.is-expanded { max-width: 420px; }
   .country-pill-btn {
     flex: 0 0 52px;
     width: 52px;
