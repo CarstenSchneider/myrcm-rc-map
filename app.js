@@ -3202,7 +3202,7 @@ function filteredRaces() {
     .filter(matchesRegistrationVisibility)
     .filter(matchesSelectedSeries)
     .filter(matchesFavoriteFilter)
-    .filter(matchesCountryFilter);
+    .filter(_userLatLng ? () => true : matchesCountryFilter);
 
   // Geocode aktiv: Radius-Filter statt Textsuche, damit Filteränderungen den Geocode-Bereich behalten
   if (_geocodeMarkerCoords) {
