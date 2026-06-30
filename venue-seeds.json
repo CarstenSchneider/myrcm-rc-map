@@ -1731,6 +1731,14 @@
     "lng": 9.908719327855406
   },
   {
+    "hostId": "mcc-laupheim-e-v",
+    "hostName": "MCC Laupheim e.V.",
+    "lat": 48.26422039066267,
+    "lng": 9.908722337568252,
+    "country": "DE",
+    "website": "https://www.mcc-laupheim.de/"
+  },
+  {
     "id": "mcc-luedenscheid-e-v",
     "name": "MCC Lüdenscheid e.V.",
     "city": "Lüdenscheid",
@@ -4153,12 +4161,12 @@
     "website": "https://tsvm-racing.de"
   },
   {
-    "hostId": "rcco-ttsc-racing",
-    "hostName": "TTSC-Racing",
+    "hostId": "dmc-ov-354",
+    "hostName": "TTSC Racing-Team",
     "locationUnknown": true,
     "hostIds": [
-      "dmc-ov-354",
-      "dmc-ttsc-racing-team"
+      "dmc-ttsc-racing-team",
+      "rcco-ttsc-racing"
     ]
   },
   {
