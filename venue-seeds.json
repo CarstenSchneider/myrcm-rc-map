@@ -153,12 +153,10 @@
     "hostId": "dmc-amc-mistral-lahr-e-v",
     "hostName": "AMC Mistral Lahr e.V.",
     "locationUnknown": true,
-    "country": "DE"
-  },
-  {
-    "hostId": "dmc-ov-87",
-    "hostName": "AMC Mistral Lahr e.V.",
-    "locationUnknown": true
+    "country": "DE",
+    "hostIds": [
+      "dmc-ov-87"
+    ]
   },
   {
     "id": "amc-nussdorf-debant",
