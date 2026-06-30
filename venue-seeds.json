@@ -3819,6 +3819,13 @@
     "myrcmOrgId": "739"
   },
   {
+    "hostId": "h-m-r-c",
+    "hostName": "H.M.R.C.",
+    "lat": 52.92978612356075,
+    "lng": 4.7807556333955965,
+    "myrcmOrgId": "7059"
+  },
+  {
     "hostId": "rcco-ig-vulkanparkracer-e-v",
     "hostName": "IG Vulkanparkracer e.V.",
     "locationUnknown": true
