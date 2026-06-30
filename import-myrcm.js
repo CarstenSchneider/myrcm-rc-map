@@ -1888,7 +1888,7 @@ async function parseEvents(html, host, hostRecord, venueSeed, venueSeeds, series
     (eventLink, index) => parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSeeds, seriesCatalog, eventLinks.length, index)
   );
 
-  return races.filter(Boolean);
+  return races.filter(r => r && !/^test\b/i.test(r.name || ""));
 }
 
 async function loadHosts() {
