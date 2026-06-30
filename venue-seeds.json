@@ -1699,7 +1699,8 @@
     "hostId": "dmc-mc-schwedt-e-v",
     "hostName": "MC Schwedt e.V.",
     "lat": 53.12277371820801,
-    "lng": 14.28616563116813
+    "lng": 14.28616563116813,
+    "country": "DE"
   },
   {
     "id": "mc-welden-e-v",
