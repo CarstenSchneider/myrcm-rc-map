@@ -4236,6 +4236,13 @@
     "myrcmOrgId": "76"
   },
   {
+    "hostId": "raco-2000",
+    "hostName": "RACO 2000",
+    "lat": 52.13131138645593,
+    "lng": 5.089315204793381,
+    "myrcmOrgId": "5305"
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "city": "Chemnitz",
