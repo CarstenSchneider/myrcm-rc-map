@@ -16662,35 +16662,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "myrcm-58661-2024-09-27-myrcm-event-82169",
-    "venueId": "myrcm-58661",
-    "venueName": "RCXX.SHOP",
-    "venueLocation": null,
-    "venueWebsite": null,
-    "hostId": "rcxx-shop",
-    "hostName": "RCXX.SHOP",
-    "name": "Test",
-    "from": "2024-09-27",
-    "to": "2024-09-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82169&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58661&pLa=en&dId%5BE%5D=82169&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=82169&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "EFRA Large Scale F1",
-      "EFRA Large Scale Touring Cars"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "hobby-shop-haessig-2024-09-28-myrcm-event-82171",
     "venueId": "hobby-shop-haessig",
     "venueName": "Hobby Shop Hässig",
@@ -40105,32 +40076,6 @@
         "entries": 9
       }
     ],
-    "documents": [],
-    "firstSeen": "2026-06-25"
-  },
-  {
-    "id": "mrtm-mini-racing-ticino-moesa-2025-04-27-myrcm-event-87391",
-    "venueId": "mrtm-mini-racing-ticino-moesa",
-    "venueName": "MRTM Mini Racing Ticino & Moesa",
-    "venueLocation": "Lostallo",
-    "venueWebsite": null,
-    "hostId": "mrtm-mini-racing-ticino-moesa",
-    "hostName": "MRTM Mini Racing Ticino & Moesa",
-    "name": "test",
-    "from": "2025-04-27",
-    "to": "2025-04-27",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87391&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=16&pLa=en&dId%5BE%5D=87391&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87391&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Nennung geschlossen.",
-    "classes": [],
     "documents": [],
     "firstSeen": "2026-06-25"
   },
@@ -89378,36 +89323,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "msc-herrenhaide-2026-03-02-myrcm-event-94710",
-    "venueId": "msc-herrenhaide",
-    "venueName": "MSC Herrenhaide",
-    "venueLocation": "Burgstädt",
-    "venueWebsite": null,
-    "hostId": "msc-herrenhaide",
-    "hostName": "MSC Herrenhaide",
-    "name": "Test",
-    "from": "2026-03-02",
-    "to": "2026-03-02",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94710&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=64487&pLa=en&dId%5BE%5D=94710&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94710&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "EFRA 1/10 Track 200 mm",
-      "Training 1/10",
-      "Training 1/12"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
     "id": "time4fun-2026-03-06-myrcm-event-92975",
     "venueId": null,
     "venueName": null,
@@ -93246,37 +93161,6 @@
       {
         "name": "WRC Rookie",
         "entries": 2
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
-  },
-  {
-    "id": "amc-muehlau-e-v-2026-04-03-myrcm-event-94901",
-    "venueId": "amc-muehlau-e-v",
-    "venueName": "AMC-Mühlau e.V.",
-    "venueLocation": "Mühlau",
-    "venueWebsite": null,
-    "hostId": "amc-muhlau-e-v",
-    "hostName": "AMC-Mühlau e.V.",
-    "name": "Test- und Einstellfahrten",
-    "from": "2026-04-03",
-    "to": "2026-04-06",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94901&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=82&pLa=en&dId%5BE%5D=94901&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=94901&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "freies Training alle Klassen",
-        "entries": 1
       }
     ],
     "documents": [],
@@ -102992,34 +102876,6 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-30"
-  },
-  {
-    "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v-2026-05-17-myrcm-event-97540",
-    "venueId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "venueName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "venueLocation": "Braunschweig",
-    "venueWebsite": null,
-    "hostId": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
-    "hostName": "Motorsportclub der Polizei Braunschweig im ADAC e.V.",
-    "name": "test",
-    "from": "2026-05-17",
-    "to": "2026-05-17",
-    "series": [],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97540&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=95&pLa=en&dId%5BE%5D=97540&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97540&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
-    "note": "Nennung geschlossen.",
-    "classes": [
-      "Löwen-Master-Cup 21.5T FUN Cup"
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-08"
   },
   {
     "id": "ig-racing-team-hamm-2026-05-17-myrcm-event-96443",
