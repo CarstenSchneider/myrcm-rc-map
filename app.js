@@ -5453,11 +5453,15 @@ function showMenuHome() {
   const iconThemeDark = `<svg viewBox="0 0 16 16"><path d="M13.5 9.5A6 6 0 0 1 6 2a6 6 0 1 0 7.5 7.5z" fill="currentColor"/></svg>`;
   const iconThemeAuto = `<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M8 1.5 A6.5 6.5 0 0 1 8 14.5 Z" fill="currentColor"/></svg>`;
 
+  const iconGlobe = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
+
   const authSection = sbUser
     ? `<div class="app-menu-auth-user">
         <span class="app-menu-row-icon">${iconUser}</span>
         <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
-        <button type="button" class="app-menu-auth-signout-icon" id="sbSignOutBtn" aria-label="${t("menu.signOut")}" title="${t("menu.signOut")}">${iconLogout}</button>
+        <div class="theme-toggle">
+          <button type="button" class="theme-toggle-btn" id="sbSignOutBtn" aria-label="${t("menu.signOut")}" title="${t("menu.signOut")}">${iconLogout}</button>
+        </div>
       </div>`
     : `<button type="button" class="app-menu-row" id="sbLoginBtn">
         <span class="app-menu-row-icon">${iconUser}</span>
@@ -5507,6 +5511,16 @@ function showMenuHome() {
       <span class="app-menu-row-label">Ausrichter verorten</span>
       ${chevron}
     </button>` : ""}
+    <div class="app-menu-row app-menu-lang-row">
+      <span class="app-menu-row-icon">${iconGlobe}</span>
+      <span class="app-menu-row-label">${t("menu.language")}</span>
+      <select class="lang-select" aria-label="${t("menu.language")}">
+        <option value="de"${_lang==="de"?" selected":""}>Deutsch</option>
+        <option value="en"${_lang==="en"?" selected":""}>English</option>
+        <option value="fr"${_lang==="fr"?" selected":""}>Français</option>
+        <option value="nl"${_lang==="nl"?" selected":""}>Nederlands</option>
+      </select>
+    </div>
     <div class="app-menu-footer">
       <a href="https://lessrain.com" target="_blank" rel="noopener noreferrer" class="app-menu-footer-brand">
         ${lessrainSvg}
@@ -5522,12 +5536,6 @@ function showMenuHome() {
           <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a>
         </div>
       </div>
-      <select class="lang-select" aria-label="${t("menu.language")}">
-        <option value="de"${_lang==="de"?" selected":""}>Deutsch</option>
-        <option value="en"${_lang==="en"?" selected":""}>English</option>
-        <option value="fr"${_lang==="fr"?" selected":""}>Français</option>
-        <option value="nl"${_lang==="nl"?" selected":""}>Nederlands</option>
-      </select>
     </div>`;
 
   appMenuContent.querySelectorAll("[data-theme]").forEach(btn => {

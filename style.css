@@ -3422,6 +3422,8 @@ body.is-breakpoint-crossing .country-pill {
 }
 .app-menu-theme-row { cursor: default; }
 .app-menu-theme-row:hover { background: none; }
+.app-menu-lang-row { cursor: default; }
+.app-menu-lang-row:hover { background: none; }
 .lang-select {
   appearance: none;
   border: none;
@@ -3446,21 +3448,7 @@ body.is-breakpoint-crossing .country-pill {
   background-color: var(--card-closed);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
 }
-.app-menu-auth-signout-icon {
-  background: none;
-  border: none;
-  padding: 6px;
-  cursor: pointer;
-  color: var(--muted);
-  opacity: 0.5;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  border-radius: 6px;
-  transition: opacity 150ms ease;
-}
-.app-menu-auth-signout-icon:hover { opacity: 1; }
-.app-menu-auth-signout-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.app-menu-auth-user .theme-toggle { flex-shrink: 0; }
 .app-menu-auth-email {
   flex: 1;
   font-size: 13px;
@@ -3469,12 +3457,6 @@ body.is-breakpoint-crossing .country-pill {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.app-menu-footer .lang-select {
-  font-size: 11px;
-  padding: 4px 22px 4px 10px;
-  background-size: 10px;
-  background-position: right 7px center;
 }
 .app-menu-auth-signout {
   background: var(--accent);
