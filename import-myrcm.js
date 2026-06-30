@@ -1079,7 +1079,7 @@ function detectVenueSeedFromRaceText(venueSeeds = [], raceText = "", hostRecord 
   const matches = [];
 
   for (const seed of venueSeeds || []) {
-    if (!seed?.id) continue;
+    if (!seed?.id && !seed?.hostId) continue;
     if (seed.skipTextMatch) continue;
 
     for (const term of venueSearchTerms(seed)) {

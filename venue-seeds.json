@@ -359,7 +359,9 @@
       "Andernach",
       "DjK Andernach",
       "Stadionstr. 90, 56626 Andernach",
-      "myrcm-24531"
+      "myrcm-24531",
+      "ANDERNACH / GER",
+      "ANDERNACH/ GER"
     ],
     "address": "Stadionstr. 90, 56626 Andernach",
     "postalCode": "56626",
@@ -621,13 +623,20 @@
     "source": "manual"
   },
   {
-    "hostId": "12027",
+    "hostId": "mac-de-baanbrekers",
     "hostName": "De Baanbrekers",
     "lat": 51.53884645879424,
     "lng": 4.571233799852438,
     "country": "NL",
     "website": "https://macdebaanbrekers.nl/",
-    "myrcmOrgId": "12027"
+    "myrcmOrgId": "12027",
+    "aliases": [
+      "RUCPHEN / N",
+      "RUCPHEN/ N",
+      "RUCPHEN",
+      "De Baanbrekers",
+      "Rucphen"
+    ]
   },
   {
     "id": "djk-ssc-lackenhaeuser-e-v",
@@ -2905,78 +2914,6 @@
     ]
   },
   {
-    "id": "oefmav-eor",
-    "name": "ÖFMAV EOR",
-    "city": "Berndorf",
-    "hostIds": [
-      "oefmav-eor"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "782",
-    "aliases": [
-      "myrcm-782",
-      "ÖFMAV EOR",
-      "Berndorf"
-    ],
-    "locationUnknown": true,
-    "country": "AT",
-    "website": "https://www.oefmav.at/"
-  },
-  {
-    "id": "oefmav-sektion-elektro-offroad",
-    "name": "ÖFMAV Sektion Elektro Offroad",
-    "city": "Wien",
-    "hostIds": [
-      "oefmav-sektion-elektro-offroad"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "34619",
-    "aliases": [
-      "myrcm-34619",
-      "ÖFMAV Sektion Elektro Offroad",
-      "Wien"
-    ],
-    "locationUnknown": true,
-    "country": "AT",
-    "website": "https://www.oefmav.at/"
-  },
-  {
-    "id": "oefmav-sektion-or-8",
-    "name": "ÖFMAV Sektion OR-8",
-    "city": "Graz",
-    "hostIds": [
-      "oefmav-sektion-or-8"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "503",
-    "aliases": [
-      "myrcm-503",
-      "ÖFMAV Sektion OR-8",
-      "Graz"
-    ],
-    "locationUnknown": true,
-    "country": "AT",
-    "website": "https://www.oefmav.at/"
-  },
-  {
-    "id": "oefmav-sektion-verbrenner-flachbahn",
-    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
-    "city": "Winklarn",
-    "hostIds": [
-      "oefmav-sektion-verbrenner-flachbahn"
-    ],
-    "source": "verified",
-    "myrcmOrgId": "38958",
-    "aliases": [
-      "myrcm-38958",
-      "ÖFMAV Sektion Verbrenner Flachbahn",
-      "Winklarn"
-    ],
-    "locationUnknown": true,
-    "country": "AT",
-    "website": "https://www.oefmav.at/"
-  },
-  {
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
@@ -4306,19 +4243,75 @@
     ]
   },
   {
-    "hostId": "mac-de-baanbrekers",
-    "hostName": "De Baanbrekers",
-    "lat": 51.53884645879424,
-    "lng": 4.571233799852438,
-    "country": "NL",
-    "website": "https://macdebaanbrekers.nl/",
-    "myrcmOrgId": "12027",
+    "id": "oefmav-eor",
+    "name": "ÖFMAV EOR",
+    "city": "Berndorf",
+    "hostIds": [
+      "oefmav-eor"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "782",
     "aliases": [
-      "RUCPHEN / N",
-      "RUCPHEN/ N",
-      "RUCPHEN",
-      "De Baanbrekers",
-      "Rucphen"
-    ]
+      "myrcm-782",
+      "ÖFMAV EOR",
+      "Berndorf"
+    ],
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
+  },
+  {
+    "id": "oefmav-sektion-elektro-offroad",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "city": "Wien",
+    "hostIds": [
+      "oefmav-sektion-elektro-offroad"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "34619",
+    "aliases": [
+      "myrcm-34619",
+      "ÖFMAV Sektion Elektro Offroad",
+      "Wien"
+    ],
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
+  },
+  {
+    "id": "oefmav-sektion-or-8",
+    "name": "ÖFMAV Sektion OR-8",
+    "city": "Graz",
+    "hostIds": [
+      "oefmav-sektion-or-8"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "503",
+    "aliases": [
+      "myrcm-503",
+      "ÖFMAV Sektion OR-8",
+      "Graz"
+    ],
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
+  },
+  {
+    "id": "oefmav-sektion-verbrenner-flachbahn",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "city": "Winklarn",
+    "hostIds": [
+      "oefmav-sektion-verbrenner-flachbahn"
+    ],
+    "source": "verified",
+    "myrcmOrgId": "38958",
+    "aliases": [
+      "myrcm-38958",
+      "ÖFMAV Sektion Verbrenner Flachbahn",
+      "Winklarn"
+    ],
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
   }
 ]
