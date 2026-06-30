@@ -963,7 +963,8 @@ function venueRecordFromSeed(seed) {
     hostIds: Array.isArray(seed.hostIds) ? seed.hostIds : [],
     myrcmOrgId: seed.myrcmOrgId || "",
     source: seed.source || "venue-seeds",
-    verified: seed.verified !== false
+    verified: seed.verified !== false,
+    ...(seed.country ? { country: seed.country } : {})
   };
 }
 
