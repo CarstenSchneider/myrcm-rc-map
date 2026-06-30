@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mac-vlijmen",
-    "hostName": "MAC Vlijmen",
-    "source": "myrcm",
-    "myrcmOrgId": "30724",
-    "possibleVenue": "Den Haag",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "main-meetings-raalte",
     "hostName": "Main Meetings Raalte",
     "source": "myrcm",
