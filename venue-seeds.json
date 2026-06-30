@@ -4161,12 +4161,12 @@
     "website": "https://tsvm-racing.de"
   },
   {
-    "hostId": "rcco-ttsc-racing",
-    "hostName": "TTSC-Racing",
+    "hostId": "dmc-ov-354",
+    "hostName": "TTSC Racing-Team",
     "locationUnknown": true,
     "hostIds": [
-      "dmc-ov-354",
-      "dmc-ttsc-racing-team"
+      "dmc-ttsc-racing-team",
+      "rcco-ttsc-racing"
     ]
   },
   {
