@@ -2925,7 +2925,9 @@
       "ÖFMAV Sektion OR-8",
       "Graz"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
   },
   {
     "id": "oefmav-sektion-verbrenner-flachbahn",
