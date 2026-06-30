@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "instantrc",
-    "hostName": "InstantRC",
-    "source": "myrcm",
-    "myrcmOrgId": "53360",
-    "possibleVenue": "Rijswijk",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "lmcc",
     "hostName": "LMCC",
     "source": "myrcm",
