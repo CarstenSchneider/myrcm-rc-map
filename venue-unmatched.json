@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mini-racing-car-liege",
-    "hostName": "Mini Racing Car Liège",
-    "source": "myrcm",
-    "myrcmOrgId": "9668",
-    "possibleVenue": "Grâce-Hollogne",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mini-zshop-nl",
     "hostName": "Mini-zshop.nl",
     "source": "myrcm",
