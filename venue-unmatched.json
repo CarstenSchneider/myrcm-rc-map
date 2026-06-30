@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "fba-vzw",
-    "hostName": "FBA vzw",
-    "source": "myrcm",
-    "myrcmOrgId": "38144",
-    "possibleVenue": "Begijnendijk",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "flamrc",
     "hostName": "FLAMRC",
     "source": "myrcm",
