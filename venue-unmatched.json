@@ -1,5 +1,13 @@
 [
   {
+    "hostId": "mini-zshop-nl",
+    "hostName": "Mini-zshop.nl",
+    "source": "myrcm",
+    "myrcmOrgId": "44133",
+    "possibleVenue": "Wolvega",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
     "hostId": "mrc-vianen",
     "hostName": "MRC Vianen",
     "source": "myrcm",
