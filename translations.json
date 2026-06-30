@@ -478,5 +478,77 @@
     "en": "No liability for errors or missed podiums.",
     "fr": "Aucune responsabilité pour les erreurs ou les podiums manqués.",
     "nl": "Geen aansprakelijkheid voor fouten of gemiste podiumplaatsen."
+  },
+  "nav.search": {
+    "de": "Suche",
+    "en": "Search",
+    "fr": "Recherche",
+    "nl": "Zoeken"
+  },
+  "nav.filter.open": {
+    "de": "Suche und Serienfilter öffnen",
+    "en": "Open search and series filter",
+    "fr": "Ouvrir la recherche et le filtre",
+    "nl": "Zoeken en seriefilter openen"
+  },
+  "nav.filter.close": {
+    "de": "Suche und Serienfilter schließen",
+    "en": "Close search and series filter",
+    "fr": "Fermer la recherche et le filtre",
+    "nl": "Zoeken en seriefilter sluiten"
+  },
+  "menu.language": {
+    "de": "Sprache",
+    "en": "Language",
+    "fr": "Langue",
+    "nl": "Taal"
+  },
+  "menu.racelist": {
+    "de": "Rennliste",
+    "en": "Race list",
+    "fr": "Liste des courses",
+    "nl": "Racelijst"
+  },
+  "menu.footer.data": {
+    "de": "Daten",
+    "en": "Data",
+    "fr": "Données",
+    "nl": "Gegevens"
+  },
+  "menu.footer.map": {
+    "de": "Karte",
+    "en": "Map",
+    "fr": "Carte",
+    "nl": "Kaart"
+  },
+  "fav.search": {
+    "de": "Club suchen…",
+    "en": "Search club…",
+    "fr": "Rechercher un club…",
+    "nl": "Club zoeken…"
+  },
+  "fav.mine": {
+    "de": "Meine Favoriten",
+    "en": "My Favourites",
+    "fr": "Mes favoris",
+    "nl": "Mijn favorieten"
+  },
+  "fav.all": {
+    "de": "Alle Clubs",
+    "en": "All Clubs",
+    "fr": "Tous les clubs",
+    "nl": "Alle clubs"
+  },
+  "seo.title": {
+    "de": "RC RaceMap – RC-Car-Rennen in DACH | Termine & Karte",
+    "en": "RC RaceMap – RC Car Races | Schedule & Map",
+    "fr": "RC RaceMap – Courses RC | Calendrier & Carte",
+    "nl": "RC RaceMap – RC Racing | Kalender & Kaart"
+  },
+  "seo.description": {
+    "de": "RC RaceMap zeigt alle RC-Car-Renntermine in Deutschland, Österreich und der Schweiz auf einer interaktiven Karte. Strecken entdecken, Rennen finden, Favoriten speichern.",
+    "en": "RC RaceMap shows all RC car race events in Germany, Austria and Switzerland on an interactive map. Discover tracks, find races, save favourites.",
+    "fr": "RC RaceMap affiche tous les rendez-vous de courses RC en Allemagne, Autriche et Suisse sur une carte interactive. Découvrez les circuits et trouvez des courses.",
+    "nl": "RC RaceMap toont alle RC racewedstrijden in Duitsland, Oostenrijk en Zwitserland op een interactieve kaart. Ontdek circuits, vind races, sla favorieten op."
   }
 }

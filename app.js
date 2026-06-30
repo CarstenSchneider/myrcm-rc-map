@@ -169,6 +169,18 @@ const TRANSLATIONS = {
   "about.p3":           { de: "Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.", en: "Mark your favourite clubs as favourites and get email updates about new races. Just sign in with your email address — no registration required.", fr: "Ajoute tes clubs favoris et reçois des e-mails sur les nouvelles courses. Connecte-toi simplement avec ton e-mail — aucune inscription nécessaire.", nl: "Markeer je favoriete clubs en ontvang e-mails over nieuwe races. Log eenvoudig in met je e-mailadres — registreren is niet nodig." },
   "about.p4":           { de: "Die Daten stammen direkt von MyRCM und RCK. Dort findest du wie gewohnt alle Infos und die Anmeldung. RC RaceMap ist ein nicht-kommerzielles Angebot, das diese Daten visuell aufbereitet und als Karte darstellt.", en: "The data comes directly from MyRCM and RCK. You'll find all race details and registration there. RC RaceMap is a non-commercial service that presents this data on an interactive map.", fr: "Les données proviennent directement de MyRCM et RCK. Tu y trouveras toutes les informations et l'inscription. RC RaceMap est un service non commercial qui présente ces données sur une carte interactive.", nl: "De gegevens komen rechtstreeks van MyRCM en RCK. Daar vind je alle informatie en de inschrijving. RC RaceMap is een niet-commerciële dienst die deze gegevens op een interactieve kaart toont." },
   "about.p5":           { de: "Keine Haftung für Fehler oder verpasste Podiumsplätze.", en: "No liability for errors or missed podiums.", fr: "Aucune responsabilité pour les erreurs ou les podiums manqués.", nl: "Geen aansprakelijkheid voor fouten of gemiste podiumplaatsen." },
+  "nav.search":         { de: "Suche", en: "Search", fr: "Recherche", nl: "Zoeken" },
+  "nav.filter.open":    { de: "Suche und Serienfilter öffnen", en: "Open search and series filter", fr: "Ouvrir la recherche et le filtre", nl: "Zoeken en seriefilter openen" },
+  "nav.filter.close":   { de: "Suche und Serienfilter schließen", en: "Close search and series filter", fr: "Fermer la recherche et le filtre", nl: "Zoeken en seriefilter sluiten" },
+  "menu.language":      { de: "Sprache", en: "Language", fr: "Langue", nl: "Taal" },
+  "menu.racelist":      { de: "Rennliste", en: "Race list", fr: "Liste des courses", nl: "Racelijst" },
+  "menu.footer.data":   { de: "Daten", en: "Data", fr: "Données", nl: "Gegevens" },
+  "menu.footer.map":    { de: "Karte", en: "Map", fr: "Carte", nl: "Kaart" },
+  "fav.search":         { de: "Club suchen…", en: "Search club…", fr: "Rechercher un club…", nl: "Club zoeken…" },
+  "fav.mine":           { de: "Meine Favoriten", en: "My Favourites", fr: "Mes favoris", nl: "Mijn favorieten" },
+  "fav.all":            { de: "Alle Clubs", en: "All Clubs", fr: "Tous les clubs", nl: "Alle clubs" },
+  "seo.title":          { de: "RC RaceMap – RC-Car-Rennen in DACH | Termine & Karte", en: "RC RaceMap – RC Car Races | Schedule & Map", fr: "RC RaceMap – Courses RC | Calendrier & Carte", nl: "RC RaceMap – RC Racing | Kalender & Kaart" },
+  "seo.description":    { de: "RC RaceMap zeigt alle RC-Car-Renntermine in Deutschland, Österreich und der Schweiz auf einer interaktiven Karte. Strecken entdecken, Rennen finden, Favoriten speichern.", en: "RC RaceMap shows all RC car race events in Germany, Austria and Switzerland on an interactive map. Discover tracks, find races, save favourites.", fr: "RC RaceMap affiche tous les rendez-vous de courses RC en Allemagne, Autriche et Suisse sur une carte interactive. Découvrez les circuits et trouvez des courses.", nl: "RC RaceMap toont alle RC racewedstrijden in Duitsland, Oostenrijk en Zwitserland op een interactieve kaart. Ontdek circuits, vind races, sla favorieten op." },
 };
 
 function detectLangFromLocale() {
@@ -210,6 +222,33 @@ function _updateStaticI18n() {
   if (regAll) regAll.textContent = t("filter.reg.all");
   const regOpenLabel = registrationVisibilityFilter?.querySelector(".label-full");
   if (regOpenLabel) regOpenLabel.textContent = t("filter.reg.open");
+
+  // Topbar search
+  const searchLabel = document.querySelector(".topbar-filter-label");
+  if (searchLabel) searchLabel.textContent = t("nav.search");
+  if (searchInput) searchInput.placeholder = t("nav.search");
+
+  // Fav page
+  const favSearchEl = document.getElementById("favSearch");
+  if (favSearchEl) favSearchEl.placeholder = t("fav.search");
+  document.querySelectorAll(".fav-tab[data-fav-tab='mine']").forEach(el => {
+    if (el.childNodes[0]?.nodeType === Node.TEXT_NODE) el.childNodes[0].textContent = t("fav.mine") + " ";
+  });
+  document.querySelectorAll(".fav-tab[data-fav-tab='all']").forEach(el => {
+    if (el.childNodes[0]?.nodeType === Node.TEXT_NODE) el.childNodes[0].textContent = t("fav.all") + " ";
+  });
+  document.querySelectorAll(".fav-col-title").forEach(el => {
+    const col = el.closest(".fav-col");
+    if (col?.id === "favColMine") el.textContent = t("fav.mine");
+    else if (col?.id === "favColAll") el.textContent = t("fav.all");
+  });
+
+  // Page title + meta description (in-browser; static HTML stays German for crawlers)
+  document.title = t("seo.title");
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = t("seo.description");
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) ogLocale.content = { de: "de_DE", en: "en_GB", fr: "fr_FR", nl: "nl_NL" }[_lang] || "de_DE";
 }
 
 function setLang(lang) {
@@ -1656,8 +1695,8 @@ function updateFilterPanelState() {
   filterToggleButton.setAttribute(
     "aria-label",
     isFilterPanelOpen
-      ? "Suche und Serienfilter schließen"
-      : "Suche und Serienfilter öffnen"
+      ? t("nav.filter.close")
+      : t("nav.filter.open")
   );
 }
 
@@ -5440,7 +5479,7 @@ function showMenuHome() {
     </div>
     <div class="app-menu-row app-menu-lang-row">
       <span class="app-menu-row-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-      <span class="app-menu-row-label">Sprache</span>
+      <span class="app-menu-row-label">${t("menu.language")}</span>
       <div class="theme-toggle">
         <button type="button" class="theme-toggle-btn${_lang==="de"?" active":""}" data-lang="de">DE</button>
         <button type="button" class="theme-toggle-btn${_lang==="en"?" active":""}" data-lang="en">EN</button>
@@ -5458,7 +5497,7 @@ function showMenuHome() {
     <!-- Rennliste temporarily hidden until ready -->
     <button type="button" class="app-menu-row" id="clubListMenuBtn" hidden>
       <span class="app-menu-row-icon">${iconList}</span>
-      <span class="app-menu-row-label">Rennliste</span>
+      <span class="app-menu-row-label">${t("menu.racelist")}</span>
       ${chevron}
     </button>
     <button type="button" class="app-menu-row" data-menu="about">
@@ -5483,12 +5522,12 @@ function showMenuHome() {
       </a>
       <div class="app-menu-footer-legal">
         <div class="app-menu-footer-legal-row">
-          <span>Daten:</span>
+          <span>${t("menu.footer.data")}:</span>
           <a href="https://www.myrcm.ch" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">MyRCM</a>
           <span>·</span>
           <a href="https://www.rck-solutions.de/" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">RCK</a>
           <span>·</span>
-          <span>Karte:</span>
+          <span>${t("menu.footer.map")}:</span>
           <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a>
         </div>
       </div>
@@ -6640,7 +6679,7 @@ function renderClubList() {
     const key = race.from;
     if (!groupMap.has(key)) {
       const d = parseDate(race.from);
-      const label = d.toLocaleDateString("de-DE", { weekday: "short", day: "numeric", month: "long", year: "numeric" });
+      const label = d.toLocaleDateString(_dateLocale(), { weekday: "short", day: "numeric", month: "long", year: "numeric" });
       const group = { label, races: [] };
       groups.push(group);
       groupMap.set(key, group);
