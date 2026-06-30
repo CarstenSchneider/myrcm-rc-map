@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mbc-de-sluis-gouda",
-    "hostName": "MBC de Sluis Gouda",
-    "source": "myrcm",
-    "myrcmOrgId": "4842",
-    "possibleVenue": "Gouda",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mbc-het-gelders-eiland-lobith",
     "hostName": "MBC Het Gelders Eiland Lobith",
     "source": "myrcm",
