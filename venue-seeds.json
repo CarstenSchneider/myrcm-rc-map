@@ -4521,5 +4521,11 @@
       "dmc-ttsc-racing-team",
       "rcco-ttsc-racing"
     ]
+  },
+  {
+    "hostId": "yellowracing-v2-0",
+    "hostName": "Yellowracing V2.0",
+    "locationUnknown": true,
+    "myrcmOrgId": "41053"
   }
 ]
