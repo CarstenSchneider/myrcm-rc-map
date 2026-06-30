@@ -12,6 +12,31 @@ git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/car
 git fetch origin main dev
 git checkout -f -B main origin/main
 
+# Dev-only venue seeds in main mergen (neue Seeds die noch nicht auf main sind)
+node -e "
+  const fs = require('fs');
+  const { execSync } = require('child_process');
+  try {
+    const mainSeeds = JSON.parse(fs.readFileSync('venue-seeds.json', 'utf8'));
+    const devSeedsRaw = execSync('git show origin/dev:venue-seeds.json').toString();
+    const devSeeds = JSON.parse(devSeedsRaw);
+    const mainIds = new Set(mainSeeds.map(s => s.id || s.hostId).filter(Boolean));
+    const newSeeds = devSeeds.filter(s => {
+      const id = s.id || s.hostId;
+      return id && !mainIds.has(id);
+    });
+    if (newSeeds.length > 0) {
+      const merged = [...mainSeeds, ...newSeeds];
+      fs.writeFileSync('venue-seeds.json', JSON.stringify(merged, null, 2) + '\n');
+      console.log('Merged ' + newSeeds.length + ' dev-only seeds into venue-seeds.json');
+    } else {
+      console.log('No dev-only seeds to merge');
+    }
+  } catch (e) {
+    console.log('Could not merge dev seeds (non-fatal):', e.message);
+  }
+"
+
 # Alte races.json für Diff sichern (vor dem Import)
 cp races.json /tmp/old-races.json 2>/dev/null || echo "[]" > /tmp/old-races.json
 
@@ -37,6 +62,7 @@ done
 IMPORT_RCK_OK=0
 IMPORT_MYRCM_OK=0
 IMPORT_DMC_OK=0
+IMPORT_FFVRC_OK=0
 
 echo "--- Import RCK ---"
 if RCK_GEOCODE=0 node import-rck.js; then
@@ -62,12 +88,21 @@ else
   echo "✗ DMC Import FEHLGESCHLAGEN — dmc-races.json wird nicht aktualisiert"
 fi
 
+echo "--- Import FFVRC ---"
+if node import-ffvrc.js; then
+  IMPORT_FFVRC_OK=1
+  echo "✓ FFVRC Import erfolgreich"
+else
+  echo "✗ FFVRC Import FEHLGESCHLAGEN — ffvrc-races.json wird nicht aktualisiert"
+fi
+
 # Zusammenfassung
 echo ""
 echo "=== Import-Status ==="
 [ "$IMPORT_RCK_OK" = "1" ]   && echo "✓ RCK"   || echo "✗ RCK"
 [ "$IMPORT_MYRCM_OK" = "1" ] && echo "✓ MyRCM" || echo "✗ MyRCM"
 [ "$IMPORT_DMC_OK" = "1" ]   && echo "✓ DMC"   || echo "✗ DMC"
+[ "$IMPORT_FFVRC_OK" = "1" ] && echo "✓ FFVRC" || echo "✗ FFVRC"
 
 # Mindestens MyRCM muss erfolgreich sein für einen Commit auf main
 if [ "$IMPORT_MYRCM_OK" = "0" ]; then
@@ -78,12 +113,14 @@ fi
 # main: alle Importdaten committen
 MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json"
 DMC_FILES="dmc-races.json dmc-venues.json dmc-pdf-cache.json"
+FFVRC_FILES="ffvrc-races.json ffvrc-venues.json"
 git add $MAIN_FILES
-[ "$IMPORT_DMC_OK" = "1" ] && git add $DMC_FILES
+[ "$IMPORT_DMC_OK" = "1" ]   && git add $DMC_FILES
+[ "$IMPORT_FFVRC_OK" = "1" ] && git add $FFVRC_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (main) — kein Commit nötig."
 else
-  git commit -m "Update race data"
+  git commit -m "Update race data $(date -u '+%Y-%m-%d %H:%M UTC')"
   git pull --rebase --autostash origin main
   git push origin main
   echo "Daten auf main gepusht."
@@ -93,14 +130,16 @@ fi
 git fetch origin dev
 git checkout -f -B dev origin/dev
 git checkout main -- $MAIN_FILES
-[ "$IMPORT_DMC_OK" = "1" ] && git checkout main -- $DMC_FILES
+[ "$IMPORT_DMC_OK" = "1" ]   && git checkout main -- $DMC_FILES
+[ "$IMPORT_FFVRC_OK" = "1" ] && git checkout main -- $FFVRC_FILES
 
 git add $MAIN_FILES
-[ "$IMPORT_DMC_OK" = "1" ] && git add $DMC_FILES
+[ "$IMPORT_DMC_OK" = "1" ]   && git add $DMC_FILES
+[ "$IMPORT_FFVRC_OK" = "1" ] && git add $FFVRC_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (dev) — kein Commit nötig."
 else
-  git commit -m "Update race data"
+  git commit -m "Update race data DEV $(date -u '+%Y-%m-%d %H:%M UTC')"
   git pull --rebase --autostash origin dev
   git push origin dev
   echo "Daten auf dev gepusht."
