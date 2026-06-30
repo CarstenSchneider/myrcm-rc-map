@@ -4036,6 +4036,13 @@
     "myrcmOrgId": "18473"
   },
   {
+    "hostId": "mini-zshop-nl",
+    "hostName": "Mini-zshop.nl",
+    "lat": 52.82371265640796,
+    "lng": 5.96882803323473,
+    "myrcmOrgId": "44133"
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
