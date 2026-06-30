@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "main-meetings-raalte",
-    "hostName": "Main Meetings Raalte",
-    "source": "myrcm",
-    "myrcmOrgId": "23785",
-    "possibleVenue": "Elst",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mbc-de-sluis-gouda",
     "hostName": "MBC de Sluis Gouda",
     "source": "myrcm",
