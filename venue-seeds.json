@@ -2697,16 +2697,13 @@
     "country": "CH"
   },
   {
-    "hostId": "rcco-msc-gemunden-e-v",
-    "hostName": "MSC Gemünden e.V.",
-    "lat": 50.07098433466393,
-    "lng": 9.663684036408855
-  },
-  {
     "hostId": "dmc-ov-137",
     "hostName": "MSC Gemünden e.V.i. ADAC",
     "lat": 50.070964008562676,
-    "lng": 9.663623726668805
+    "lng": 9.663623726668805,
+    "hostIds": [
+      "rcco-msc-gemunden-e-v"
+    ]
   },
   {
     "id": "msc-halle-e-v",
