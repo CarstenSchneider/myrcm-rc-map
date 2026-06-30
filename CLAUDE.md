@@ -172,6 +172,21 @@ window.addEventListener("load", () => {
 // debounced 150ms, ruft panToVisible wenn Breakpoint gequert
 ```
 
+## Claude Code — Benötigte Umgebungsvariablen
+
+Damit Claude direkt auf render.com und Supabase zugreifen kann, müssen folgende Variablen **einmalig im Claude Code Web-UI unter Environment** gesetzt werden (Settings → Environment → Add variable). Sie stehen dann in jeder Session zur Verfügung.
+
+| Variable | Woher | Wofür |
+|---|---|---|
+| `RENDER_API_KEY` | render.com → Account → API Keys | Import manuell triggern via `scripts/trigger-render-import.sh` |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase Dashboard → Project → API → service_role | DB-Abfragen (seen_race_notifications etc.) |
+
+**Import manuell triggern** (wenn `RENDER_API_KEY` gesetzt):
+```bash
+bash scripts/trigger-render-import.sh
+```
+Service ID render.com: `crn-d8v9a4bsq97s73827f8g`
+
 ## Deployment
 
 ### Workflows
