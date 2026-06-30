@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "dutch-rc-series",
-    "hostName": "Dutch RC Series",
-    "source": "myrcm",
-    "myrcmOrgId": "28115",
-    "possibleVenue": "Zeewolde",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "dutch-rc-timekeeping",
     "hostName": "Dutch RC TimeKeeping",
     "source": "myrcm",
