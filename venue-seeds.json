@@ -4259,6 +4259,13 @@
     "myrcmOrgId": "43490"
   },
   {
+    "hostId": "rc-club-zoetermeer",
+    "hostName": "RC Club Zoetermeer",
+    "lat": 52.04886289303367,
+    "lng": 4.4887118912530095,
+    "myrcmOrgId": "34977"
+  },
+  {
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "lat": 51.539601453420495,
