@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "dutch-rc-timekeeping",
-    "hostName": "Dutch RC TimeKeeping",
-    "source": "myrcm",
-    "myrcmOrgId": "1980",
-    "possibleVenue": "Oss",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "erce",
     "hostName": "ERCE",
     "source": "myrcm",
