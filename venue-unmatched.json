@@ -22,13 +22,5 @@
     "myrcmOrgId": "35896",
     "possibleVenue": "Nieuwrode",
     "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "yellowracing-v2-0",
-    "hostName": "Yellowracing V2.0",
-    "source": "myrcm",
-    "myrcmOrgId": "41053",
-    "possibleVenue": "Rekkem",
-    "reason": "no confirmed venue for at least one current MyRCM race"
   }
 ]
