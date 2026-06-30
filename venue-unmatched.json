@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "modelsport-vereniging-bergschenhoek",
-    "hostName": "Modelsport Vereniging Bergschenhoek",
-    "source": "myrcm",
-    "myrcmOrgId": "3200",
-    "possibleVenue": "Rotterdam",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "modelstockcar-club-s-r-p-de-peeldrivers",
     "hostName": "Modelstockcar club S.R.P De Peeldrivers",
     "source": "myrcm",
