@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rctr",
-    "hostName": "RCTR",
-    "source": "myrcm",
-    "myrcmOrgId": "59322",
-    "possibleVenue": "Wevelgem",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "speedway-tilburg",
     "hostName": "Speedway-Tilburg",
     "source": "myrcm",
