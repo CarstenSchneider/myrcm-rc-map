@@ -3812,6 +3812,13 @@
     "myrcmOrgId": "73"
   },
   {
+    "hostId": "flatout-rc-vzw",
+    "hostName": "FlatOut RC VZW",
+    "lat": 51.311941003199514,
+    "lng": 5.048176366250522,
+    "myrcmOrgId": "739"
+  },
+  {
     "hostId": "rcco-ig-vulkanparkracer-e-v",
     "hostName": "IG Vulkanparkracer e.V.",
     "locationUnknown": true
