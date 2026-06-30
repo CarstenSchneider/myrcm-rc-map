@@ -4061,14 +4061,12 @@
     ]
   },
   {
-    "hostId": "dmc-ts-gross-auheim",
-    "hostName": "TS-Gross Auheim",
-    "locationUnknown": true
-  },
-  {
     "hostId": "dmc-ov-289",
     "hostName": "TS-Gross Auheim",
-    "locationUnknown": true
+    "locationUnknown": true,
+    "hostIds": [
+      "dmc-ts-gross-auheim"
+    ]
   },
   {
     "hostId": "rcco-tsg-mst-estenfeld",
