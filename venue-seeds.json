@@ -3914,6 +3914,13 @@
     "myrcmOrgId": "33841"
   },
   {
+    "hostId": "mac-de-kempen",
+    "hostName": "MAC de Kempen",
+    "lat": 51.37245966432109,
+    "lng": 5.310583681303393,
+    "myrcmOrgId": "32715"
+  },
+  {
     "hostId": "mac-mistelbach",
     "hostName": "MAC Mistelbach",
     "lat": 48.55312704380916,
