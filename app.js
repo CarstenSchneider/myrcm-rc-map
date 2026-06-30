@@ -1896,7 +1896,7 @@ const fallbackSeriesCatalog = [
   {
     id: "tamico-offroad-cup",
     name: "Tamico Offroad Cup",
-    scope: "regional",
+    scope: "national",
     aliases: ["Tamico Offroad Cup", "TAMICO Offroad Cup"]
   }
 ];
