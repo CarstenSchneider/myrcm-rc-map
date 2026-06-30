@@ -3711,6 +3711,11 @@
     "country": "DE"
   },
   {
+    "hostId": "dmc-ov-87",
+    "hostName": "AMC Mistral Lahr e.V.",
+    "locationUnknown": true
+  },
+  {
     "hostId": "dmc-bc-mitterkreith",
     "hostName": "BC Mitterkreith",
     "lat": 49.21155192592243,
