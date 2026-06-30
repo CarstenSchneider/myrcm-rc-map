@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "modelifun2-0",
-    "hostName": "Modelifun2.0",
-    "source": "myrcm",
-    "myrcmOrgId": "2641",
-    "possibleVenue": "Wanfercée-Baulet",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "modelsport-vereniging-bergschenhoek",
     "hostName": "Modelsport Vereniging Bergschenhoek",
     "source": "myrcm",
