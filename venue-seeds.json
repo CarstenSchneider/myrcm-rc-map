@@ -4240,6 +4240,12 @@
     "lng": 9.410104072742504
   },
   {
+    "hostId": "r-c-car-mertzig-asbl",
+    "hostName": "R/C CAR MERTZIG ASBL",
+    "locationUnknown": true,
+    "myrcmOrgId": "112"
+  },
+  {
     "hostId": "racing-club-roeselare",
     "hostName": "Racing Club Roeselare",
     "lat": 50.94490803206435,
