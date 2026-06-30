@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "rc-indoor-bleiswijk",
-    "hostName": "RC Indoor Bleiswijk",
-    "source": "myrcm",
-    "myrcmOrgId": "47757",
-    "possibleVenue": "DEN HAAG",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rctr",
     "hostName": "RCTR",
     "source": "myrcm",
