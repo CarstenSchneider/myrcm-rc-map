@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "raco-2000",
-    "hostName": "RACO 2000",
-    "source": "myrcm",
-    "myrcmOrgId": "5305",
-    "possibleVenue": "Utrecht",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "rc-club-zoetermeer",
     "hostName": "RC Club Zoetermeer",
     "source": "myrcm",
