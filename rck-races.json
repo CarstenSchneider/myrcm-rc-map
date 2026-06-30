@@ -25,8 +25,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -50,7 +50,7 @@
       },
       {
         "name": "Stock Challenge",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "Clubman Challenge",
@@ -628,8 +628,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 122,
-    "registrationDisplay": "122",
+    "registrationCount": 121,
+    "registrationDisplay": "121",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -658,7 +658,7 @@
       },
       {
         "name": "M-Chassis",
-        "entries": 21
+        "entries": 22
       }
     ],
     "documents": [
