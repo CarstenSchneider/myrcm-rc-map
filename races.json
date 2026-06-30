@@ -157,9 +157,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "racing-club-roeselare-2024-06-29-myrcm-event-76952",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2024-06-29-myrcm-event-76952",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": "https://gratis-4542085.jouwweb.site/ec-news",
     "hostId": "racing-club-roeselare",
@@ -196,9 +196,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-de-fivelcrossers-2024-06-29-myrcm-event-79677",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18663-2024-06-29-myrcm-event-79677",
+    "venueId": "myrcm-18663",
+    "venueName": "RC de Fivelcrossers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-de-fivelcrossers",
@@ -1623,9 +1623,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-07-06-myrcm-event-77955",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-07-06-myrcm-event-77955",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -1701,9 +1701,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2024-07-06-myrcm-event-80383",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-07-06-myrcm-event-80383",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -1762,9 +1762,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2024-07-06-myrcm-event-79714",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2024-07-06-myrcm-event-79714",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -4072,9 +4072,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2024-07-14-myrcm-event-76344",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-07-14-myrcm-event-76344",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -4197,9 +4197,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2024-07-14-myrcm-event-78552",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2024-07-14-myrcm-event-78552",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -5119,9 +5119,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "orra-2024-07-21-myrcm-event-75659",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2024-07-21-myrcm-event-75659",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -5254,9 +5254,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2024-07-24-myrcm-event-80580",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-07-24-myrcm-event-80580",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -5881,9 +5881,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "racing-club-roeselare-2024-07-28-myrcm-event-76950",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2024-07-28-myrcm-event-76950",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -6224,9 +6224,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2024-07-28-myrcm-event-78553",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2024-07-28-myrcm-event-78553",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -8008,9 +8008,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-08-07-myrcm-event-80581",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-08-07-myrcm-event-80581",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -9096,9 +9096,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-08-17-myrcm-event-77956",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-08-17-myrcm-event-77956",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -9521,9 +9521,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2024-08-18-myrcm-event-78633",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2024-08-18-myrcm-event-78633",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -9732,9 +9732,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2024-08-22-myrcm-event-80751",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2024-08-22-myrcm-event-80751",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -10917,9 +10917,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-08-25-myrcm-event-76345",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-08-25-myrcm-event-76345",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -10983,9 +10983,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-08-28-myrcm-event-80582",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-08-28-myrcm-event-80582",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -12092,9 +12092,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2024-09-01-myrcm-event-80382",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-09-01-myrcm-event-80382",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -12217,9 +12217,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2024-09-01-myrcm-event-78906",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2024-09-01-myrcm-event-78906",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "speedway-tilburg",
@@ -13019,9 +13019,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-09-07-myrcm-event-80584",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-09-07-myrcm-event-80584",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -13608,9 +13608,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2024-09-08-myrcm-event-78555",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2024-09-08-myrcm-event-78555",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -13660,9 +13660,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tt-fays-2024-09-08-myrcm-event-77620",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22085-2024-09-08-myrcm-event-77620",
+    "venueId": "myrcm-22085",
+    "venueName": "TT Fays",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tt-fays",
@@ -14845,9 +14845,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2024-09-15-myrcm-event-76951",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2024-09-15-myrcm-event-76951",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -15099,9 +15099,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2024-09-15-myrcm-event-77802",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2024-09-15-myrcm-event-77802",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -15144,9 +15144,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2024-09-15-myrcm-event-76346",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-09-15-myrcm-event-76346",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -15350,9 +15350,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-09-18-myrcm-event-80583",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-09-18-myrcm-event-80583",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -15694,9 +15694,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-09-21-myrcm-event-77957",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-09-21-myrcm-event-77957",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -16019,9 +16019,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tt-fays-2024-09-21-myrcm-event-77621",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22085-2024-09-21-myrcm-event-77621",
+    "venueId": "myrcm-22085",
+    "venueName": "TT Fays",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tt-fays",
@@ -16204,9 +16204,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2024-09-22-myrcm-event-81993",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-09-22-myrcm-event-81993",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -16264,9 +16264,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "orra-2024-09-22-myrcm-event-75661",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2024-09-22-myrcm-event-75661",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -16462,9 +16462,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiya-cup-nl-2024-09-22-myrcm-event-76528",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-33479-2024-09-22-myrcm-event-76528",
+    "venueId": "myrcm-33479",
+    "venueName": "Tamiya Cup NL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiya-cup-nl",
@@ -17051,9 +17051,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2024-09-28-myrcm-event-82198",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-09-28-myrcm-event-82198",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -17187,9 +17187,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "speedway-tilburg-2024-09-28-myrcm-event-81255",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2024-09-28-myrcm-event-81255",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "https://speedway-tilburg.nl/index.php/wedstrijden",
     "hostId": "speedway-tilburg",
@@ -17800,9 +17800,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "racing-club-roeselare-2024-09-29-myrcm-event-76948",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2024-09-29-myrcm-event-76948",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -17840,9 +17840,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2024-09-29-myrcm-event-77803",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2024-09-29-myrcm-event-77803",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -17917,9 +17917,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2024-09-29-myrcm-event-78556",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2024-09-29-myrcm-event-78556",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -19065,9 +19065,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2024-10-06-myrcm-event-76347",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-10-06-myrcm-event-76347",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -19425,9 +19425,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2024-10-12-myrcm-event-77958",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2024-10-12-myrcm-event-77958",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -20127,9 +20127,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "racing-club-roeselare-2024-10-13-myrcm-event-76949",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2024-10-13-myrcm-event-76949",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -20171,9 +20171,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2024-10-13-myrcm-event-82408",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2024-10-13-myrcm-event-82408",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -20372,9 +20372,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2024-10-19-myrcm-event-82681",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-10-19-myrcm-event-82681",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -20706,9 +20706,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2024-10-20-myrcm-event-78907",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2024-10-20-myrcm-event-78907",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "speedway-tilburg",
@@ -20896,9 +20896,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2024-10-25-myrcm-event-80381",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-10-25-myrcm-event-80381",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -21411,9 +21411,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2024-10-27-myrcm-event-82126",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2024-10-27-myrcm-event-82126",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -22387,9 +22387,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2024-11-03-myrcm-event-82890",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2024-11-03-myrcm-event-82890",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -22558,9 +22558,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2024-11-09-myrcm-event-82416",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2024-11-09-myrcm-event-82416",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -22848,9 +22848,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rctr-2024-11-09-myrcm-event-82515",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59322-2024-11-09-myrcm-event-82515",
+    "venueId": "myrcm-59322",
+    "venueName": "RCTR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rctr",
@@ -23650,9 +23650,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2024-11-23-myrcm-event-82359",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-11-23-myrcm-event-82359",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -23768,9 +23768,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2024-11-24-myrcm-event-82127",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2024-11-24-myrcm-event-82127",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -23872,9 +23872,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2024-11-24-myrcm-event-82991",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2024-11-24-myrcm-event-82991",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -24349,9 +24349,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "yellowracing-v2-0-2024-12-01-myrcm-event-83169",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2024-12-01-myrcm-event-83169",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -24707,9 +24707,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rctr-2024-12-07-myrcm-event-83171",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59322-2024-12-07-myrcm-event-83171",
+    "venueId": "myrcm-59322",
+    "venueName": "RCTR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rctr",
@@ -25643,9 +25643,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2024-12-15-myrcm-event-83895",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-12-15-myrcm-event-83895",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -25754,9 +25754,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2024-12-15-myrcm-event-83800",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2024-12-15-myrcm-event-83800",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -25968,9 +25968,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2024-12-21-myrcm-event-84017",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2024-12-21-myrcm-event-84017",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -26148,9 +26148,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2024-12-22-myrcm-event-82128",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2024-12-22-myrcm-event-82128",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -27421,9 +27421,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-indoor-bleiswijk-2025-01-11-myrcm-event-83116",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2025-01-11-myrcm-event-83116",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.rcindoorbleiswijk.nl/2024/11/rcib-12th-league-on-january-11th-12th-2025/",
     "hostId": "rc-indoor-bleiswijk",
@@ -28346,9 +28346,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-01-19-myrcm-event-84437",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-01-19-myrcm-event-84437",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -28386,9 +28386,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrc-vianen-2025-01-19-myrcm-event-82129",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-01-19-myrcm-event-82129",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -28466,9 +28466,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-01-19-myrcm-event-83572",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-01-19-myrcm-event-83572",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -28540,9 +28540,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "yellowracing-v2-0-2025-01-19-myrcm-event-84162",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2025-01-19-myrcm-event-84162",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -28728,9 +28728,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2025-01-25-myrcm-event-84742",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-01-25-myrcm-event-84742",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -29295,9 +29295,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2025-01-26-myrcm-event-83562",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-01-26-myrcm-event-83562",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -29417,9 +29417,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-01-29-myrcm-event-84678",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-01-29-myrcm-event-84678",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -29765,9 +29765,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "yellowracing-v2-0-2025-02-02-myrcm-event-84163",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2025-02-02-myrcm-event-84163",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -29816,9 +29816,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-02-02-myrcm-event-84904",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-02-02-myrcm-event-84904",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -30580,9 +30580,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-02-09-myrcm-event-84613",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-02-09-myrcm-event-84613",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -30761,9 +30761,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2025-02-15-myrcm-event-84347",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2025-02-15-myrcm-event-84347",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -31238,9 +31238,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2025-02-16-myrcm-event-82130",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-02-16-myrcm-event-82130",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -31385,9 +31385,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-02-16-myrcm-event-83573",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-02-16-myrcm-event-83573",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -31498,9 +31498,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rctr-2025-02-22-myrcm-event-83905",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59322-2025-02-22-myrcm-event-83905",
+    "venueId": "myrcm-59322",
+    "venueName": "RCTR",
     "venueLocation": null,
     "venueWebsite": "https://www.facebook.com/profile.php?id=61555871078330",
     "hostId": "rctr",
@@ -31665,9 +31665,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-02-23-myrcm-event-84614",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-02-23-myrcm-event-84614",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -31753,9 +31753,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-indoor-bleiswijk-2025-02-23-myrcm-event-82475",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2025-02-23-myrcm-event-82475",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "http://www.simplyfunracing.nl",
     "hostId": "rc-indoor-bleiswijk",
@@ -31788,9 +31788,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiyacup-belgium-2025-02-23-myrcm-event-83563",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-02-23-myrcm-event-83563",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -31915,9 +31915,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2025-03-01-myrcm-event-85264",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2025-03-01-myrcm-event-85264",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -32052,9 +32052,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "mrcz-vzw-2025-03-01-myrcm-event-85698",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-03-01-myrcm-event-85698",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -32708,9 +32708,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2025-03-08-myrcm-event-83388",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2025-03-08-myrcm-event-83388",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -32871,9 +32871,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2025-03-09-myrcm-event-85920",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-03-09-myrcm-event-85920",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -32900,9 +32900,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-03-09-myrcm-event-84615",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-03-09-myrcm-event-84615",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -33696,9 +33696,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2025-03-16-myrcm-event-82131",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-03-16-myrcm-event-82131",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -33854,9 +33854,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-03-18-myrcm-event-85280",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-03-18-myrcm-event-85280",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -33913,9 +33913,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-03-21-myrcm-event-86214",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-03-21-myrcm-event-86214",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -33943,9 +33943,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-03-22-myrcm-event-85031",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-03-22-myrcm-event-85031",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -34497,9 +34497,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2025-03-23-myrcm-event-85716",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2025-03-23-myrcm-event-85716",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -34536,9 +34536,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-03-23-myrcm-event-84616",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-03-23-myrcm-event-84616",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -34751,9 +34751,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2025-03-23-myrcm-event-83564",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-03-23-myrcm-event-83564",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -34894,9 +34894,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2025-03-28-myrcm-event-84438",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-03-28-myrcm-event-84438",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -34927,9 +34927,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-03-28-myrcm-event-86376",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-03-28-myrcm-event-86376",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -35453,9 +35453,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2025-03-30-myrcm-event-85515",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-03-30-myrcm-event-85515",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -35580,9 +35580,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-04-05-myrcm-event-86011",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-04-05-myrcm-event-86011",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -35878,9 +35878,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-04-06-myrcm-event-85297",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-04-06-myrcm-event-85297",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -36315,9 +36315,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-04-06-myrcm-event-86139",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-04-06-myrcm-event-86139",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -37434,9 +37434,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-04-13-myrcm-event-85579",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-04-13-myrcm-event-85579",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -37687,9 +37687,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-04-13-myrcm-event-85376",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-04-13-myrcm-event-85376",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -37732,9 +37732,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-04-13-myrcm-event-85503",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-04-13-myrcm-event-85503",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -37842,9 +37842,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-04-15-myrcm-event-86229",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-04-15-myrcm-event-86229",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -37917,9 +37917,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-04-18-myrcm-event-82888",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-04-18-myrcm-event-82888",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -38316,9 +38316,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2025-04-20-myrcm-event-85715",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2025-04-20-myrcm-event-85715",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -38384,9 +38384,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2025-04-20-myrcm-event-85473",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-04-20-myrcm-event-85473",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -38491,9 +38491,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-04-22-myrcm-event-86230",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-04-22-myrcm-event-86230",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -38851,9 +38851,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-04-26-myrcm-event-87382",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-04-26-myrcm-event-87382",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -40080,9 +40080,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-04-29-myrcm-event-86231",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-04-29-myrcm-event-86231",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -41535,9 +41535,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-05-04-myrcm-event-86142",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-05-04-myrcm-event-86142",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -41812,9 +41812,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-05-06-myrcm-event-86373",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-05-06-myrcm-event-86373",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -41882,9 +41882,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-05-08-myrcm-event-87299",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-05-08-myrcm-event-87299",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -42915,9 +42915,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-05-11-myrcm-event-87326",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-05-11-myrcm-event-87326",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -43001,9 +43001,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-05-11-myrcm-event-85377",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-05-11-myrcm-event-85377",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -43046,9 +43046,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2025-05-11-myrcm-event-86298",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2025-05-11-myrcm-event-86298",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -43116,9 +43116,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-05-13-myrcm-event-86374",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-05-13-myrcm-event-86374",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -43511,9 +43511,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2025-05-17-myrcm-event-86413",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2025-05-17-myrcm-event-86413",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -44359,9 +44359,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-05-18-myrcm-event-85580",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-05-18-myrcm-event-85580",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -44398,9 +44398,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2025-05-18-myrcm-event-85717",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2025-05-18-myrcm-event-85717",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -44680,9 +44680,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2025-05-18-myrcm-event-85474",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-05-18-myrcm-event-85474",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -44818,9 +44818,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tt-fays-2025-05-18-myrcm-event-87120",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22085-2025-05-18-myrcm-event-87120",
+    "venueId": "myrcm-22085",
+    "venueName": "TT Fays",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tt-fays",
@@ -44932,9 +44932,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-hotwheels-2025-05-22-myrcm-event-88087",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-05-22-myrcm-event-88087",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -46192,9 +46192,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-05-25-myrcm-event-87712",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-05-25-myrcm-event-87712",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -47725,9 +47725,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-06-01-myrcm-event-85378",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-06-01-myrcm-event-85378",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -47963,9 +47963,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-06-03-myrcm-event-87883",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-06-03-myrcm-event-87883",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -47994,9 +47994,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-06-04-myrcm-event-86145",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-06-04-myrcm-event-86145",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -48884,9 +48884,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-06-08-myrcm-event-93231",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-06-08-myrcm-event-93231",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -49024,9 +49024,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-06-08-myrcm-event-86140",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-06-08-myrcm-event-86140",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -49153,9 +49153,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "raco-2000-2025-06-10-myrcm-event-87884",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-06-10-myrcm-event-87884",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -49886,9 +49886,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2025-06-14-myrcm-event-86300",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2025-06-14-myrcm-event-86300",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -50448,9 +50448,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-06-15-myrcm-event-85379",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-06-15-myrcm-event-85379",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -50496,9 +50496,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-06-15-myrcm-event-85504",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-06-15-myrcm-event-85504",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -50626,9 +50626,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-06-17-myrcm-event-87885",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-06-17-myrcm-event-87885",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -52062,9 +52062,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-06-22-myrcm-event-85581",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-06-22-myrcm-event-85581",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -52356,9 +52356,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-06-24-myrcm-event-88675",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-06-24-myrcm-event-88675",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -52415,9 +52415,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-06-25-myrcm-event-86146",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-06-25-myrcm-event-86146",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -53799,9 +53799,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-06-29-myrcm-event-85505",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-06-29-myrcm-event-85505",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -53974,9 +53974,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-07-01-myrcm-event-86375",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-07-01-myrcm-event-86375",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -54473,9 +54473,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-club-zoetermeer-2025-07-05-myrcm-event-86143",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-07-05-myrcm-event-86143",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -54963,9 +54963,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-07-06-myrcm-event-89197",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-07-06-myrcm-event-89197",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -55457,9 +55457,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-07-08-myrcm-event-88676",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-07-08-myrcm-event-88676",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -56145,9 +56145,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrcz-vzw-2025-07-12-myrcm-event-89330",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-07-12-myrcm-event-89330",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -56711,9 +56711,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-07-13-myrcm-event-85582",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-07-13-myrcm-event-85582",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -56974,9 +56974,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-07-13-myrcm-event-85506",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-07-13-myrcm-event-85506",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -57085,9 +57085,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2025-07-13-myrcm-event-85475",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-07-13-myrcm-event-85475",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -57141,9 +57141,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-07-15-myrcm-event-89118",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-07-15-myrcm-event-89118",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -57458,9 +57458,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-de-fivelcrossers-2025-07-19-myrcm-event-88904",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18663-2025-07-19-myrcm-event-88904",
+    "venueId": "myrcm-18663",
+    "venueName": "RC de Fivelcrossers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-de-fivelcrossers",
@@ -58022,9 +58022,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "racing-club-roeselare-2025-07-20-myrcm-event-85451",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-07-20-myrcm-event-85451",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -58065,9 +58065,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2025-07-20-myrcm-event-85719",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2025-07-20-myrcm-event-85719",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -58383,9 +58383,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-07-22-myrcm-event-89119",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-07-22-myrcm-event-89119",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -58414,9 +58414,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-07-23-myrcm-event-86147",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-07-23-myrcm-event-86147",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -59221,9 +59221,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2025-07-27-myrcm-event-85476",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-07-27-myrcm-event-85476",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -59307,9 +59307,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-07-29-myrcm-event-89120",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-07-29-myrcm-event-89120",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -59986,9 +59986,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2025-08-03-myrcm-event-85720",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2025-08-03-myrcm-event-85720",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -62557,9 +62557,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2025-08-17-myrcm-event-85507",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-08-17-myrcm-event-85507",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -62754,9 +62754,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-08-19-myrcm-event-89655",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-08-19-myrcm-event-89655",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -63135,9 +63135,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2025-08-23-myrcm-event-90118",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-08-23-myrcm-event-90118",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -63817,9 +63817,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-08-24-myrcm-event-85380",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-08-24-myrcm-event-85380",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -63890,9 +63890,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiyacup-belgium-2025-08-24-myrcm-event-85478",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-08-24-myrcm-event-85478",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -65066,9 +65066,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-08-31-myrcm-event-88735",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-08-31-myrcm-event-88735",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -65109,9 +65109,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "yellowracing-v2-0-2025-08-31-myrcm-event-89510",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2025-08-31-myrcm-event-89510",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -65320,9 +65320,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-08-31-myrcm-event-85508",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-08-31-myrcm-event-85508",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -65363,9 +65363,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-08-31-myrcm-event-86149",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-08-31-myrcm-event-86149",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -65435,9 +65435,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-09-02-myrcm-event-89654",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-09-02-myrcm-event-89654",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -66699,9 +66699,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-09-07-myrcm-event-85452",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-09-07-myrcm-event-85452",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -67174,9 +67174,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2025-09-07-myrcm-event-85479",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2025-09-07-myrcm-event-85479",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -67229,9 +67229,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tt-fays-2025-09-07-myrcm-event-87122",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22085-2025-09-07-myrcm-event-87122",
+    "venueId": "myrcm-22085",
+    "venueName": "TT Fays",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tt-fays",
@@ -67266,9 +67266,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-09-09-myrcm-event-90025",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-09-09-myrcm-event-90025",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -67297,9 +67297,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-09-10-myrcm-event-86148",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-09-10-myrcm-event-86148",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -67610,9 +67610,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-09-13-myrcm-event-89687",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-09-13-myrcm-event-89687",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -68012,9 +68012,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-09-14-myrcm-event-85583",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-09-14-myrcm-event-85583",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -68172,9 +68172,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "speedway-tilburg-2025-09-14-myrcm-event-86301",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2025-09-14-myrcm-event-86301",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -68879,9 +68879,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-09-20-myrcm-event-90869",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-09-20-myrcm-event-90869",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -69645,9 +69645,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2025-09-20-myrcm-event-90492",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-09-20-myrcm-event-90492",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -70163,9 +70163,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "racing-club-roeselare-2025-09-21-myrcm-event-85381",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2025-09-21-myrcm-event-85381",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -70913,9 +70913,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "tt-fays-2025-09-27-myrcm-event-90892",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22085-2025-09-27-myrcm-event-90892",
+    "venueId": "myrcm-22085",
+    "venueName": "TT Fays",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tt-fays",
@@ -71318,9 +71318,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "orra-2025-09-28-myrcm-event-85721",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2025-09-28-myrcm-event-85721",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -71527,9 +71527,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-09-28-myrcm-event-85509",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-09-28-myrcm-event-85509",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -71570,9 +71570,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-09-28-myrcm-event-86141",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-09-28-myrcm-event-86141",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -72337,9 +72337,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiya-cup-nl-2025-10-04-myrcm-event-90717",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-33479-2025-10-04-myrcm-event-90717",
+    "venueId": "myrcm-33479",
+    "venueName": "Tamiya Cup NL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiya-cup-nl",
@@ -72742,9 +72742,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-club-zoetermeer-2025-10-05-myrcm-event-85584",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-10-05-myrcm-event-85584",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -72822,9 +72822,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-10-05-myrcm-event-91304",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-10-05-myrcm-event-91304",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -73369,9 +73369,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrcz-vzw-2025-10-11-myrcm-event-91657",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-10-11-myrcm-event-91657",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -73810,9 +73810,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "yellowracing-v2-0-2025-10-11-myrcm-event-91100",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2025-10-11-myrcm-event-91100",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -74155,9 +74155,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "yellowracing-v2-0-2025-10-12-myrcm-event-91102",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2025-10-12-myrcm-event-91102",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -74286,9 +74286,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "speedway-tilburg-2025-10-12-myrcm-event-86302",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2025-10-12-myrcm-event-86302",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -74322,9 +74322,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2025-10-12-myrcm-event-91254",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2025-10-12-myrcm-event-91254",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -74361,9 +74361,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2025-10-12-myrcm-event-86144",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-10-12-myrcm-event-86144",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -74972,9 +74972,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-club-zoetermeer-2025-10-18-myrcm-event-91295",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-10-18-myrcm-event-91295",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -75159,9 +75159,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2025-10-19-myrcm-event-91685",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2025-10-19-myrcm-event-91685",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -75361,9 +75361,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-10-21-myrcm-event-91387",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-10-21-myrcm-event-91387",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -75431,9 +75431,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2025-10-24-myrcm-event-88736",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-10-24-myrcm-event-88736",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -76012,9 +76012,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-10-26-myrcm-event-91779",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-10-26-myrcm-event-91779",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -76079,9 +76079,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrc-vianen-2025-10-26-myrcm-event-91507",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-10-26-myrcm-event-91507",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -76122,9 +76122,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2025-10-26-myrcm-event-91200",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2025-10-26-myrcm-event-91200",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.rcindoorbleiswijk.nl/2025/08/rcib-racekalender-2025-2026/",
     "hostId": "rc-indoor-bleiswijk",
@@ -76996,9 +76996,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-11-04-myrcm-event-91388",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-11-04-myrcm-event-91388",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -78518,9 +78518,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2025-11-18-myrcm-event-91994",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-11-18-myrcm-event-91994",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -78728,9 +78728,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "mrcz-vzw-2025-11-22-myrcm-event-90891",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-11-22-myrcm-event-90891",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -78873,9 +78873,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2025-11-23-myrcm-event-91508",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-11-23-myrcm-event-91508",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -79117,9 +79117,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2025-11-29-myrcm-event-91800",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2025-11-29-myrcm-event-91800",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -79423,9 +79423,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2025-11-30-myrcm-event-91879",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2025-11-30-myrcm-event-91879",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.rcindoorbleiswijk.nl/rc-indoor-bleiswijk-clubrace/",
     "hostId": "rc-indoor-bleiswijk",
@@ -79529,9 +79529,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "yellowracing-v2-0-2025-11-30-myrcm-event-91105",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2025-11-30-myrcm-event-91105",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -79572,9 +79572,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2025-12-02-myrcm-event-91995",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-12-02-myrcm-event-91995",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -79867,9 +79867,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rctr-2025-12-06-myrcm-event-92087",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59322-2025-12-06-myrcm-event-92087",
+    "venueId": "myrcm-59322",
+    "venueName": "RCTR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rctr",
@@ -80652,9 +80652,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2025-12-13-myrcm-event-91878",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2025-12-13-myrcm-event-91878",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.myrcm.ch/myrcm/main?pLa=nl&dFi=simply&dId[E]=91181&hId[1]=search",
     "hostId": "rc-indoor-bleiswijk",
@@ -80822,9 +80822,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-12-14-myrcm-event-91996",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-12-14-myrcm-event-91996",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -81533,9 +81533,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "mrcz-vzw-2025-12-21-myrcm-event-93034",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-12-21-myrcm-event-93034",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -81781,9 +81781,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-12-23-myrcm-event-92918",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-12-23-myrcm-event-92918",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -81886,9 +81886,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2025-12-27-myrcm-event-93173",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2025-12-27-myrcm-event-93173",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -82204,9 +82204,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrc-vianen-2025-12-28-myrcm-event-91509",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2025-12-28-myrcm-event-91509",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -82309,9 +82309,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2025-12-30-myrcm-event-92919",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2025-12-30-myrcm-event-92919",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -82695,9 +82695,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2026-01-04-myrcm-event-91227",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2026-01-04-myrcm-event-91227",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -83012,9 +83012,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-01-08-myrcm-event-93347",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-01-08-myrcm-event-93347",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -83283,9 +83283,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-01-10-myrcm-event-92125",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-01-10-myrcm-event-92125",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.rcindoorbleiswijk.nl/2025/11/rcib-12th-league-on-jan-10th-11th-2026/",
     "hostId": "rc-indoor-bleiswijk",
@@ -83764,9 +83764,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "yellowracing-v2-0-2026-01-11-myrcm-event-91107",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2026-01-11-myrcm-event-91107",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -84433,9 +84433,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "mrc-vianen-2026-01-18-myrcm-event-91511",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2026-01-18-myrcm-event-91511",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -84505,9 +84505,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "tamiyacup-belgium-2026-01-18-myrcm-event-92142",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-01-18-myrcm-event-92142",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -85287,9 +85287,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-01-25-myrcm-event-92577",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-01-25-myrcm-event-92577",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.rcindoorbleiswijk.nl/rc-indoor-bleiswijk-clubrace/",
     "hostId": "rc-indoor-bleiswijk",
@@ -85391,9 +85391,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-01-27-myrcm-event-93212",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-01-27-myrcm-event-93212",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -85623,9 +85623,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "yellowracing-v2-0-2026-01-31-myrcm-event-93991",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2026-01-31-myrcm-event-93991",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -85788,9 +85788,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-02-01-myrcm-event-93247",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-02-01-myrcm-event-93247",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": "https://www.raco2000.nl/?p=8098",
     "hostId": "raco-2000",
@@ -85854,9 +85854,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-02-06-myrcm-event-94106",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-02-06-myrcm-event-94106",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -86254,9 +86254,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rctr-2026-02-08-myrcm-event-93596",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59322-2026-02-08-myrcm-event-93596",
+    "venueId": "myrcm-59322",
+    "venueName": "RCTR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rctr",
@@ -86384,9 +86384,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-02-10-myrcm-event-93213",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-02-10-myrcm-event-93213",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -86574,9 +86574,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2026-02-14-myrcm-event-94452",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-02-14-myrcm-event-94452",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -86927,9 +86927,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrc-vianen-2026-02-15-myrcm-event-91512",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2026-02-15-myrcm-event-91512",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -87024,9 +87024,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-02-15-myrcm-event-92583",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-02-15-myrcm-event-92583",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -87118,9 +87118,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-02-20-myrcm-event-92584",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-02-20-myrcm-event-92584",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -87737,9 +87737,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-hotwheels-2026-02-22-myrcm-event-94470",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-02-22-myrcm-event-94470",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -87777,9 +87777,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2026-02-22-myrcm-event-94104",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-02-22-myrcm-event-94104",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -88096,9 +88096,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2026-02-22-myrcm-event-92143",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-02-22-myrcm-event-92143",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -88231,9 +88231,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-02-22-myrcm-event-92586",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-02-22-myrcm-event-92586",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -88262,9 +88262,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "yellowracing-v2-0-2026-02-22-myrcm-event-91108",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-41053-2026-02-22-myrcm-event-91108",
+    "venueId": "myrcm-41053",
+    "venueName": "Yellowracing V2.0",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "yellowracing-v2-0",
@@ -88311,9 +88311,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2026-02-24-myrcm-event-94295",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-02-24-myrcm-event-94295",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -88416,9 +88416,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-02-27-myrcm-event-92587",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-02-27-myrcm-event-92587",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -88543,9 +88543,9 @@
     "firstSeen": "2026-06-28"
   },
   {
-    "id": "r-c-car-mertzig-asbl-2026-02-28-myrcm-event-94346",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-112-2026-02-28-myrcm-event-94346",
+    "venueId": "myrcm-112",
+    "venueName": "R/C CAR MERTZIG ASBL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "r-c-car-mertzig-asbl",
@@ -89213,9 +89213,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-hotwheels-2026-03-01-myrcm-event-94668",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-03-01-myrcm-event-94668",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -89401,9 +89401,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-03-06-myrcm-event-93642",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-03-06-myrcm-event-93642",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -89432,9 +89432,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-03-07-myrcm-event-93640",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-03-07-myrcm-event-93640",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": "https://www.myrcm.ch/myrcm/main?pLa=nl&dFi=tamiya&dId[E]=93633&hId[1]=search",
     "hostId": "rc-indoor-bleiswijk",
@@ -89819,9 +89819,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-03-07-myrcm-event-93633",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-03-07-myrcm-event-93633",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -89895,9 +89895,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2026-03-08-myrcm-event-95159",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-03-08-myrcm-event-95159",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -90148,9 +90148,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2026-03-10-myrcm-event-94296",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-03-10-myrcm-event-94296",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -90210,9 +90210,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-03-13-myrcm-event-93643",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-03-13-myrcm-event-93643",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -90329,9 +90329,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2026-03-14-myrcm-event-95385",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-03-14-myrcm-event-95385",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -90981,9 +90981,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrc-vianen-2026-03-15-myrcm-event-91513",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2026-03-15-myrcm-event-91513",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -91251,9 +91251,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-indoor-bleiswijk-2026-03-15-myrcm-event-93645",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-47757-2026-03-15-myrcm-event-93645",
+    "venueId": "myrcm-47757",
+    "venueName": "RC Indoor Bleiswijk",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-indoor-bleiswijk",
@@ -91885,9 +91885,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2026-03-22-myrcm-event-94189",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-03-22-myrcm-event-94189",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -91924,9 +91924,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-03-22-myrcm-event-93998",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-03-22-myrcm-event-93998",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -91963,9 +91963,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rctr-2026-03-22-myrcm-event-94349",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-59322-2026-03-22-myrcm-event-94349",
+    "venueId": "myrcm-59322",
+    "venueName": "RCTR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rctr",
@@ -92742,9 +92742,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mrcz-vzw-2026-03-29-myrcm-event-95854",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-03-29-myrcm-event-95854",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -93013,9 +93013,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrc-vianen-2026-03-29-myrcm-event-95208",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18560-2026-03-29-myrcm-event-95208",
+    "venueId": "myrcm-18560",
+    "venueName": "MRC Vianen",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrc-vianen",
@@ -93062,9 +93062,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2026-03-31-myrcm-event-95227",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-03-31-myrcm-event-95227",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -93093,9 +93093,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-04-03-myrcm-event-94006",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-04-03-myrcm-event-94006",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -93214,9 +93214,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-hotwheels-2026-04-04-myrcm-event-96108",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-04-04-myrcm-event-96108",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -93360,9 +93360,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2026-04-05-myrcm-event-95213",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2026-04-05-myrcm-event-95213",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -93779,9 +93779,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-04-11-myrcm-event-95720",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-04-11-myrcm-event-95720",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -93871,9 +93871,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2026-04-11-myrcm-event-96395",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-04-11-myrcm-event-96395",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -94353,9 +94353,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-04-12-myrcm-event-93558",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-04-12-myrcm-event-93558",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -94637,9 +94637,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-04-14-myrcm-event-95966",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-04-14-myrcm-event-95966",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -95996,9 +95996,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2026-04-19-myrcm-event-94191",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-04-19-myrcm-event-94191",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -96032,9 +96032,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2026-04-19-myrcm-event-96679",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2026-04-19-myrcm-event-96679",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "speedway-tilburg",
@@ -96060,9 +96060,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-04-19-myrcm-event-94199",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-04-19-myrcm-event-94199",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -96187,9 +96187,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2026-04-19-myrcm-event-92144",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-04-19-myrcm-event-92144",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -96324,9 +96324,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-04-21-myrcm-event-95967",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-04-21-myrcm-event-95967",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -96401,9 +96401,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-hotwheels-2026-04-24-myrcm-event-96784",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-04-24-myrcm-event-96784",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -97543,9 +97543,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mrcz-vzw-2026-04-26-myrcm-event-95631",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-04-26-myrcm-event-95631",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -97997,9 +97997,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2026-04-26-myrcm-event-93999",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-04-26-myrcm-event-93999",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -98038,9 +98038,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2026-04-28-myrcm-event-95968",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-04-28-myrcm-event-95968",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -99365,9 +99365,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2026-05-03-myrcm-event-95214",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2026-05-03-myrcm-event-95214",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -99673,9 +99673,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-club-zoetermeer-2026-05-03-myrcm-event-94202",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-05-03-myrcm-event-94202",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -99827,9 +99827,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiyacup-belgium-2026-05-03-myrcm-event-92145",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-05-03-myrcm-event-92145",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -101098,9 +101098,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mrcz-vzw-2026-05-10-myrcm-event-97347",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-2571-2026-05-10-myrcm-event-97347",
+    "venueId": "myrcm-2571",
+    "venueName": "MRCZ vzw",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mrcz-vzw",
@@ -101367,9 +101367,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-05-12-myrcm-event-97028",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-05-12-myrcm-event-97028",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -102203,9 +102203,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "racing-club-roeselare-2026-05-16-myrcm-event-94193",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-05-16-myrcm-event-94193",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -102475,9 +102475,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-05-17-myrcm-event-93559",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-05-17-myrcm-event-93559",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -102553,9 +102553,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-de-fivelcrossers-2026-05-17-myrcm-event-96855",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-18663-2026-05-17-myrcm-event-96855",
+    "venueId": "myrcm-18663",
+    "venueName": "RC de Fivelcrossers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-de-fivelcrossers",
@@ -102754,9 +102754,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "racing-club-roeselare-2026-05-17-myrcm-event-94192",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-05-17-myrcm-event-94192",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -102793,9 +102793,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2026-05-17-myrcm-event-95365",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2026-05-17-myrcm-event-95365",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -103255,9 +103255,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "raco-2000-2026-05-23-myrcm-event-96503",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-05-23-myrcm-event-96503",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -103673,9 +103673,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-hotwheels-2026-05-23-myrcm-event-94000",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-05-23-myrcm-event-94000",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -104100,9 +104100,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tt-fays-2026-05-24-myrcm-event-96711",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-22085-2026-05-24-myrcm-event-96711",
+    "venueId": "myrcm-22085",
+    "venueName": "TT Fays",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tt-fays",
@@ -104171,9 +104171,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-05-26-myrcm-event-97030",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-05-26-myrcm-event-97030",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -105672,9 +105672,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "orra-2026-05-31-myrcm-event-95215",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2026-05-31-myrcm-event-95215",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -106639,9 +106639,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "raco-2000-2026-06-06-myrcm-event-97260",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-06-06-myrcm-event-97260",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -107338,9 +107338,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-06-07-myrcm-event-94200",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-06-07-myrcm-event-94200",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -107445,9 +107445,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiyacup-belgium-2026-06-07-myrcm-event-96726",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-06-07-myrcm-event-96726",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -107504,9 +107504,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2026-06-09-myrcm-event-97172",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-06-09-myrcm-event-97172",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -109877,9 +109877,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-06-16-myrcm-event-97173",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-06-16-myrcm-event-97173",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -111421,9 +111421,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-hotwheels-2026-06-21-myrcm-event-94001",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-06-21-myrcm-event-94001",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -111593,9 +111593,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-06-23-myrcm-event-97174",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-06-23-myrcm-event-97174",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -113234,9 +113234,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-06-30-myrcm-event-97029",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-06-30-myrcm-event-97029",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -113311,13 +113311,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Group C 2026 avond",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "WEC 2026 avond",
@@ -113439,8 +113439,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 45,
-    "registrationDisplay": "45",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113449,7 +113449,7 @@
       },
       {
         "name": "SRCCA V8TR 2024",
-        "entries": 26
+        "entries": 27
       }
     ],
     "documents": [],
@@ -113477,8 +113477,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 56,
-    "registrationDisplay": "56",
+    "registrationCount": 58,
+    "registrationDisplay": "58",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113495,7 +113495,7 @@
       },
       {
         "name": "ORT",
-        "entries": 7
+        "entries": 9
       },
       {
         "name": "ORET",
@@ -113534,8 +113534,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 35,
-    "registrationDisplay": "35",
+    "registrationCount": 36,
+    "registrationDisplay": "36",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113548,7 +113548,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 28
+        "entries": 29
       }
     ],
     "documents": [],
@@ -113573,17 +113573,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "EG10TWSP(Sfb)",
-        "entries": 1
+        "entries": 4
       },
       {
         "name": "EG Tamiya Truck",
-        "entries": 3
+        "entries": 5
       },
       {
         "name": "VG5 Modified (VG5TW) - VM Sfb.",
@@ -113640,8 +113640,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 54,
-    "registrationDisplay": "54",
+    "registrationCount": 53,
+    "registrationDisplay": "53",
     "note": "Nennung geschlossen.",
     "classes": [
       {
@@ -113651,10 +113651,6 @@
       {
         "name": "2WD Buggy Stock",
         "entries": 11
-      },
-      {
-        "name": "2WD Truck",
-        "entries": 1
       },
       {
         "name": "4WD Buggy",
@@ -113724,13 +113720,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "3LC Langstrecke",
-        "entries": 1
+        "entries": 5
       }
     ],
     "documents": [],
@@ -113782,9 +113778,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "nomac-2026-07-04-myrcm-event-98136",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53339-2026-07-04-myrcm-event-98136",
+    "venueId": "myrcm-53339",
+    "venueName": "NOMAC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "nomac",
@@ -113800,8 +113796,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 32,
-    "registrationDisplay": "32",
+    "registrationCount": 34,
+    "registrationDisplay": "34",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113810,12 +113806,12 @@
       },
       {
         "name": "EC10-Fronti",
-        "entries": 6
+        "entries": 7
       },
       "EC10-F1 foam",
       {
         "name": "EC10-F1 rubber",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "EC10-Stock",
@@ -113883,13 +113879,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "ORE8",
-        "entries": 19
+        "entries": 21
       },
       {
         "name": "ORE8T",
@@ -114095,17 +114091,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Rallye",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Rallye RTR",
-        "entries": 6
+        "entries": 8
       }
     ],
     "documents": [],
@@ -114206,12 +114202,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98227&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=18244&pLa=en&dId%5BE%5D=98227&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98227&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 27,
     "registrationDisplay": "27",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "TEC Stock",
@@ -114301,8 +114297,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
+    "registrationCount": 32,
+    "registrationDisplay": "32",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114311,7 +114307,7 @@
       },
       {
         "name": "AC26 Buggy 4WD",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "AC26 OpenFun",
@@ -114319,7 +114315,7 @@
       },
       {
         "name": "AC26 ProStock 2WD",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "AC26-Monster/ShortCourse 2WD",
@@ -114453,8 +114449,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114467,7 +114463,7 @@
       },
       {
         "name": "ShortCourse Open clubwedstrijd",
-        "entries": 12
+        "entries": 13
       }
     ],
     "documents": [],
@@ -114511,9 +114507,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-07-05-myrcm-event-93560",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-07-05-myrcm-event-93560",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -114550,9 +114546,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2026-07-05-myrcm-event-95216",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2026-07-05-myrcm-event-95216",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -114568,18 +114564,21 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Track Tight Racing League",
         "entries": 1
       },
-      "Truck",
+      {
+        "name": "Truck",
+        "entries": 1
+      },
       {
         "name": "2WD",
-        "entries": 7
+        "entries": 10
       },
       {
         "name": "4WD",
@@ -114664,11 +114663,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
-      "Fighter Buggy",
+      {
+        "name": "Fighter Buggy",
+        "entries": 2
+      },
       "ORE2WD",
       {
         "name": "ORE2WDST",
@@ -114726,8 +114728,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114740,7 +114742,7 @@
       },
       {
         "name": "TW 17.5 OCT",
-        "entries": 9
+        "entries": 11
       },
       {
         "name": "Formel OCT",
@@ -114751,9 +114753,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "tamiyacup-belgium-2026-07-05-myrcm-event-96727",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-07-05-myrcm-event-96727",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -114769,8 +114771,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 33,
-    "registrationDisplay": "33",
+    "registrationCount": 42,
+    "registrationDisplay": "42",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Cup Junior",
@@ -114780,27 +114782,27 @@
       },
       {
         "name": "Tamiya Cup Euro Truck",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Tamiya Cup Mini",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Tamiya Cup Super Stock",
-        "entries": 4
-      },
-      {
-        "name": "Tamiya Cup Euro TW",
         "entries": 5
       },
       {
+        "name": "Tamiya Cup Euro TW",
+        "entries": 6
+      },
+      {
         "name": "Tamiya Cup Historic Gr C",
-        "entries": 2
+        "entries": 5
       },
       {
         "name": "Tamiya Cup Euro GT",
-        "entries": 6
+        "entries": 8
       }
     ],
     "documents": [],
@@ -114825,8 +114827,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114849,7 +114851,10 @@
         "name": "VG8",
         "entries": 1
       },
-      "VG8 GT"
+      {
+        "name": "VG8 GT",
+        "entries": 2
+      }
     ],
     "documents": [
       {
@@ -114863,9 +114868,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-07-07-myrcm-event-97175",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-07-07-myrcm-event-97175",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -114954,9 +114959,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-07-10-myrcm-event-94205",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-07-10-myrcm-event-94205",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -115048,17 +115053,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 19,
+    "registrationDisplay": "19",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 - Buggy Nitro 1:8",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "ORE8 - Buggy Elo 1:8",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "ORT E Truggy Nitro/Elo 1:8",
@@ -115236,8 +115241,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 37,
-    "registrationDisplay": "37",
+    "registrationCount": 39,
+    "registrationDisplay": "39",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115246,11 +115251,11 @@
       },
       {
         "name": "NRW-Cup Hobby",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "NRW-Cup Top",
-        "entries": 12
+        "entries": 13
       },
       {
         "name": "NRW-Cup Truggy",
@@ -115281,8 +115286,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Kombi Offroad-Elektro ORE8",
@@ -115298,7 +115303,7 @@
       },
       {
         "name": "SMN Offroad-Verbrenner 1:8",
-        "entries": 15
+        "entries": 16
       }
     ],
     "documents": [],
@@ -115566,8 +115571,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 39,
-    "registrationDisplay": "39",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115593,7 +115598,7 @@
       "RCRT Fun",
       {
         "name": "Short Course 2WD",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -115647,12 +115652,9 @@
       },
       {
         "name": "Tamiya Euro Cup Gentlemen 4WD",
-        "entries": 6
+        "entries": 7
       },
-      {
-        "name": "Tamiya Euro Cup Euro-TW 2WD/4WD",
-        "entries": 1
-      },
+      "Tamiya Euro Cup Euro-TW 2WD/4WD",
       {
         "name": "Tamiya TRF",
         "entries": 1
@@ -115691,8 +115693,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EG8GT",
@@ -115707,7 +115709,7 @@
       "TOS Modified + EGTWMO",
       {
         "name": "TOS Stock 17,5 + EGTWHO",
-        "entries": 1
+        "entries": 2
       },
       "EG8e"
     ],
@@ -115829,9 +115831,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2026-07-11-myrcm-event-94195",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-07-11-myrcm-event-94195",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -115990,13 +115992,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Tamiya TT-02 RCCR",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "Tamiya TT-02 RCCR \"Juniors\"",
@@ -116135,8 +116137,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -116145,11 +116147,11 @@
       },
       {
         "name": "Nordbayern Cup M-Chassis",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Nordbayern Cup GT / LMH 17.5T",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
@@ -116338,9 +116340,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "raco-2000-2026-07-14-myrcm-event-97176",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-07-14-myrcm-event-97176",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -116689,6 +116691,43 @@
     "firstSeen": "2026-06-25"
   },
   {
+    "id": "amc-hamm-e-v-2026-07-18-myrcm-event-98677",
+    "venueId": "amc-hamm-e-v",
+    "venueName": "amc-Hamm e.V.",
+    "venueLocation": "Bönen",
+    "venueWebsite": null,
+    "hostId": "amc-hamm-e-v",
+    "hostName": "amc-Hamm e.V.",
+    "name": "DM-Warmup & JumpstartRC Trophy #3 & Sportkreis-Meisterschaft West VG #4 @ Hamm",
+    "from": "2026-07-18",
+    "to": "2026-07-19",
+    "series": [
+      "Sportkreis (SK)",
+      "JumpstartRC Trophy"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98677&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=98677&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98677&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": null,
+    "registrationDisplay": null,
+    "note": "Nennung geschlossen.",
+    "classes": [
+      "Verbrenner Glattbahn 1:8 Klasse 1",
+      "Verbrenner-Glattbahn 1:8 Klasse 2",
+      "Verbrenner Glattbahn 1:8 Sport",
+      "SMW Verbrenner-Glattbahn 1:10",
+      "SMW Verbrenner-Glattbahn 1:10 Sport",
+      "JumpstartRC Trophy Elektro-Glattbahn 1:8",
+      "Verbrenner Glattbahn 1:8 GT"
+    ],
+    "documents": [],
+    "firstSeen": "2026-06-30"
+  },
+  {
     "id": "rc-racer-hochsauerland-e-v-2026-07-18-myrcm-event-96919",
     "venueId": "rc-racer-hochsauerland-e-v",
     "venueName": "Rc Racer Hochsauerland e.V.",
@@ -116735,13 +116774,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 52,
-    "registrationDisplay": "52",
+    "registrationCount": 53,
+    "registrationDisplay": "53",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Crawler",
-        "entries": 44
+        "entries": 45
       },
       {
         "name": "Rennstrecke",
@@ -117136,9 +117175,9 @@
     "firstSeen": "2026-06-23"
   },
   {
-    "id": "rc-club-zoetermeer-2026-07-18-myrcm-event-94209",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-07-18-myrcm-event-94209",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -117468,9 +117507,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2026-07-19-myrcm-event-97721",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-07-19-myrcm-event-97721",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -117631,13 +117670,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Interclub 2026",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -117682,9 +117721,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-07-19-myrcm-event-94002",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-07-19-myrcm-event-94002",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -117752,9 +117791,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "raco-2000-2026-07-21-myrcm-event-97177",
-    "venueId": "raco-2000",
-    "venueName": null,
+    "id": "myrcm-5305-2026-07-21-myrcm-event-97177",
+    "venueId": "myrcm-5305",
+    "venueName": "RACO 2000",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "raco-2000",
@@ -117837,9 +117876,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "rc-club-zoetermeer-2026-07-24-myrcm-event-94206",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-07-24-myrcm-event-94206",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -117985,21 +118024,21 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 22,
+    "registrationDisplay": "22",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR 8 Hobby",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "OR8 Expert",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "OR8E",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Hessencup Kids",
@@ -118635,9 +118674,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "nomac-2026-08-01-myrcm-event-98137",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-53339-2026-08-01-myrcm-event-98137",
+    "venueId": "myrcm-53339",
+    "venueName": "NOMAC",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "nomac",
@@ -119008,9 +119047,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "racing-club-roeselare-2026-08-02-myrcm-event-97719",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-08-02-myrcm-event-97719",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -119441,8 +119480,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -119455,7 +119494,7 @@
       },
       {
         "name": "OM_OR8_VB_Sport",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "OM_OR8_VB_Top",
@@ -119709,9 +119748,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiya-cup-nl-2026-08-09-myrcm-event-98343",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-33479-2026-08-09-myrcm-event-98343",
+    "venueId": "myrcm-33479",
+    "venueName": "Tamiya Cup NL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiya-cup-nl",
@@ -119947,8 +119986,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 10,
+    "registrationDisplay": "10",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -119957,7 +119996,7 @@
       },
       {
         "name": "VLS Touring SM",
-        "entries": 3
+        "entries": 5
       }
     ],
     "documents": [],
@@ -119984,15 +120023,15 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCA Jugend",
       "FCA Classic",
       {
         "name": "FCA Formel 1",
-        "entries": 1
+        "entries": 2
       },
       "FCA 17.5T"
     ],
@@ -120189,9 +120228,9 @@
     "firstSeen": "2026-06-27"
   },
   {
-    "id": "racing-club-roeselare-2026-08-15-myrcm-event-94196",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-08-15-myrcm-event-94196",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -120559,9 +120598,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-club-zoetermeer-2026-08-21-myrcm-event-94207",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-08-21-myrcm-event-94207",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -121248,9 +121287,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "orra-2026-08-23-myrcm-event-95217",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2026-08-23-myrcm-event-95217",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -121356,9 +121395,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2026-08-23-myrcm-event-94197",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-08-23-myrcm-event-94197",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -121407,17 +121446,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "2WD Buggy (SOM)",
-        "entries": 11
+        "entries": 12
       },
       {
         "name": "4WD Buggy (SOM)",
-        "entries": 3
+        "entries": 4
       },
       "Short Course (SOM)",
       {
@@ -121521,9 +121560,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2026-08-23-myrcm-event-96729",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-08-23-myrcm-event-96729",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -122129,9 +122168,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-08-30-myrcm-event-94003",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-08-30-myrcm-event-94003",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -122164,9 +122203,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-08-30-myrcm-event-94203",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-08-30-myrcm-event-94203",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -122554,8 +122593,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -122577,7 +122616,7 @@
       },
       {
         "name": "Wheelie",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -122805,9 +122844,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "racing-club-roeselare-2026-09-06-myrcm-event-97720",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-09-06-myrcm-event-97720",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -122920,9 +122959,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "speedway-tilburg-2026-09-06-myrcm-event-95367",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2026-09-06-myrcm-event-95367",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -122985,9 +123024,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiya-cup-nl-2026-09-06-myrcm-event-98344",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-33479-2026-09-06-myrcm-event-98344",
+    "venueId": "myrcm-33479",
+    "venueName": "Tamiya Cup NL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiya-cup-nl",
@@ -123085,9 +123124,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-club-zoetermeer-2026-09-11-myrcm-event-94208",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-09-11-myrcm-event-94208",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -123555,9 +123594,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-club-zoetermeer-2026-09-13-myrcm-event-93561",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-09-13-myrcm-event-93561",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -124544,9 +124583,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "racing-club-roeselare-2026-09-20-myrcm-event-94198",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-76-2026-09-20-myrcm-event-94198",
+    "venueId": "myrcm-76",
+    "venueName": "Racing Club Roeselare",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "racing-club-roeselare",
@@ -124610,9 +124649,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "rc-hotwheels-2026-09-20-myrcm-event-94004",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-09-20-myrcm-event-94004",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -124645,9 +124684,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-09-20-myrcm-event-94201",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-09-20-myrcm-event-94201",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -124754,9 +124793,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2026-09-20-myrcm-event-96731",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-09-20-myrcm-event-96731",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -125235,8 +125274,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 7,
+    "registrationDisplay": "7",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "TOC BBX",
@@ -125255,8 +125294,14 @@
         "entries": 1
       },
       "Buggy ORE8",
-      "Buggy 2WD Stock",
-      "Fighter",
+      {
+        "name": "Buggy 2WD Stock",
+        "entries": 1
+      },
+      {
+        "name": "Fighter",
+        "entries": 1
+      },
       "Wheelie"
     ],
     "documents": [
@@ -125381,9 +125426,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "orra-2026-09-27-myrcm-event-95212",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-55554-2026-09-27-myrcm-event-95212",
+    "venueId": "myrcm-55554",
+    "venueName": "Orra",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "orra",
@@ -125489,9 +125534,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "tamiya-cup-nl-2026-09-27-myrcm-event-98345",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-33479-2026-09-27-myrcm-event-98345",
+    "venueId": "myrcm-33479",
+    "venueName": "Tamiya Cup NL",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiya-cup-nl",
@@ -126004,9 +126049,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "speedway-tilburg-2026-10-04-myrcm-event-95368",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-56820-2026-10-04-myrcm-event-95368",
+    "venueId": "myrcm-56820",
+    "venueName": "Speedway-Tilburg",
     "venueLocation": null,
     "venueWebsite": "http://speedway-tilburg.nl",
     "hostId": "speedway-tilburg",
@@ -126034,9 +126079,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-hotwheels-2026-10-04-myrcm-event-94005",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-3074-2026-10-04-myrcm-event-94005",
+    "venueId": "myrcm-3074",
+    "venueName": "RC Hotwheels",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-hotwheels",
@@ -126071,9 +126116,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "rc-club-zoetermeer-2026-10-04-myrcm-event-94204",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-10-04-myrcm-event-94204",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
@@ -126400,8 +126445,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 37,
-    "registrationDisplay": "37",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -126410,7 +126455,7 @@
       },
       {
         "name": "Tamico-Cup Fighter-Klasse",
-        "entries": 18
+        "entries": 19
       },
       {
         "name": "Tamico-Cup Retro 2WD",
@@ -126558,9 +126603,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "rc-club-zoetermeer-2026-10-11-myrcm-event-93562",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-34977-2026-10-11-myrcm-event-93562",
+    "venueId": "myrcm-34977",
+    "venueName": "RC Club Zoetermeer",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "rc-club-zoetermeer",
