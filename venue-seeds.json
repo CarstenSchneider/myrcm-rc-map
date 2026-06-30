@@ -3618,10 +3618,12 @@
   {
     "hostId": "raco-2000",
     "hostName": "RACO 2000",
-    "lat": 52.13131138645593,
-    "lng": 5.089315204793381,
+    "lat": 52.13130295512539,
+    "lng": 5.08833274060954,
     "myrcmOrgId": "5305",
-    "country": "NL"
+    "country": "NL",
+    "id": "raco-2000",
+    "website": "https://www.raco2000.nl/"
   },
   {
     "id": "rallye-club-haltern-e-v-im-adac",
