@@ -5480,12 +5480,12 @@ function showMenuHome() {
     <div class="app-menu-row app-menu-lang-row">
       <span class="app-menu-row-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
       <span class="app-menu-row-label">${t("menu.language")}</span>
-      <div class="theme-toggle">
-        <button type="button" class="theme-toggle-btn${_lang==="de"?" active":""}" data-lang="de">DE</button>
-        <button type="button" class="theme-toggle-btn${_lang==="en"?" active":""}" data-lang="en">EN</button>
-        <button type="button" class="theme-toggle-btn${_lang==="fr"?" active":""}" data-lang="fr">FR</button>
-        <button type="button" class="theme-toggle-btn${_lang==="nl"?" active":""}" data-lang="nl">NL</button>
-      </div>
+      <select class="lang-select" aria-label="${t("menu.language")}">
+        <option value="de"${_lang==="de"?" selected":""}>Deutsch</option>
+        <option value="en"${_lang==="en"?" selected":""}>English</option>
+        <option value="fr"${_lang==="fr"?" selected":""}>Français</option>
+        <option value="nl"${_lang==="nl"?" selected":""}>Nederlands</option>
+      </select>
     </div>
     ${sbUser ? `
     <button type="button" class="app-menu-row" data-menu="favorites">
@@ -5536,9 +5536,7 @@ function showMenuHome() {
   appMenuContent.querySelectorAll("[data-theme]").forEach(btn => {
     btn.addEventListener("click", () => setTheme(btn.dataset.theme));
   });
-  appMenuContent.querySelectorAll("[data-lang]").forEach(btn => {
-    btn.addEventListener("click", () => setLang(btn.dataset.lang));
-  });
+  appMenuContent.querySelector(".lang-select")?.addEventListener("change", e => setLang(e.target.value));
   appMenuContent.querySelectorAll("[data-menu]").forEach(btn => {
     btn.addEventListener("click", () => showMenuPage(btn.dataset.menu));
   });

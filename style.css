@@ -3425,6 +3425,30 @@ body.is-breakpoint-crossing .country-pill {
 .app-menu-theme-row:hover { background: none; }
 .app-menu-lang-row { cursor: default; }
 .app-menu-lang-row:hover { background: none; }
+.lang-select {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: rgba(var(--text-rgb), 0.07);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  color: var(--text);
+  padding: 7px 30px 7px 14px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.lang-select:hover { background-color: rgba(var(--text-rgb), 0.11); }
+:root.theme-dark .lang-select,
+:root:not(.theme-light) .lang-select {
+  background-color: var(--card-closed);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+}
 .app-menu-auth-avatar {
   width: 34px;
   height: 34px;
