@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "erce",
-    "hostName": "ERCE",
-    "source": "myrcm",
-    "myrcmOrgId": "3350",
-    "possibleVenue": "Eindhoven",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "evmc-velp",
     "hostName": "EVMC Velp",
     "source": "myrcm",
