@@ -2703,7 +2703,8 @@
     "lng": 9.663623726668805,
     "hostIds": [
       "rcco-msc-gemunden-e-v"
-    ]
+    ],
+    "country": "DE"
   },
   {
     "id": "msc-halle-e-v",
