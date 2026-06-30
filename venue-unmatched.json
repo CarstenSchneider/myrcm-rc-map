@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "houthalens-racing-team",
-    "hostName": "Houthalens Racing Team",
-    "source": "myrcm",
-    "myrcmOrgId": "65",
-    "possibleVenue": "Houthalen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "hugo-rc-timing-nl",
     "hostName": "Hugo - RC-Timing.nl",
     "source": "myrcm",
