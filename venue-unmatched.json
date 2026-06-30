@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mrcz-vzw",
-    "hostName": "MRCZ vzw",
-    "source": "myrcm",
-    "myrcmOrgId": "2571",
-    "possibleVenue": "Zwevegem",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "nomac",
     "hostName": "NOMAC",
     "source": "myrcm",
