@@ -254,12 +254,14 @@ async function fetchOrgDetail(orgId) {
   }
 
   const location = info["location"] || info["city"] || info["ville"] || info["ort"] || "";
-  const name = $("h1, h2, .org-title, .orgName").first().text().trim()
-    || $("title").text().split("|")[0].trim() || "";
+  const titleRaw = $("title").text().trim();
+  const titleName = titleRaw.replace(/^MyRCM\s*[:\-]\s*(Host\s*[:\-]\s*)?/i, "").trim();
+  const name = $("h1, h2, .org-title, .orgName").first().text().trim() || titleName || "";
   const eventCount = $(`a[href*="dId[E]="], a[href*="dId%5BE%5D="]`).length;
-  const website = $("a[href^='http']").filter((_, el) =>
-    !($(el).attr("href") || "").includes("myrcm.ch")
-  ).first().attr("href") || "";
+  const website = $("a[href^='http']").filter((_, el) => {
+    const href = $(el).attr("href") || "";
+    return !href.includes("myrcm.ch") && !href.includes("apple.com") && !href.includes("play.google.com");
+  }).first().attr("href") || "";
 
   return { country, location, name, eventCount, website };
 }
