@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "h-m-r-c",
-    "hostName": "H.M.R.C.",
-    "source": "myrcm",
-    "myrcmOrgId": "7059",
-    "possibleVenue": "Den Helder",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "hfcc-racing-den-haag",
     "hostName": "HFCC Racing Den Haag",
     "source": "myrcm",
