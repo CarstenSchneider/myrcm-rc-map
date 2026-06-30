@@ -4229,6 +4229,13 @@
     "lng": 9.410104072742504
   },
   {
+    "hostId": "racing-club-roeselare",
+    "hostName": "Racing Club Roeselare",
+    "lat": 50.94490803206435,
+    "lng": 3.1725808042397796,
+    "myrcmOrgId": "76"
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "city": "Chemnitz",
