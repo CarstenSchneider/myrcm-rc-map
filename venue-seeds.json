@@ -3780,6 +3780,13 @@
     "website": "https://www.facebook.com/p/ERC-Racing-eV-100057458199626/"
   },
   {
+    "hostId": "erce",
+    "hostName": "ERCE",
+    "lat": 51.474136507766445,
+    "lng": 5.451839831543991,
+    "myrcmOrgId": "3350"
+  },
+  {
     "hostId": "dmc-ov-37",
     "hostName": "ESV Bischofsheim e.V.",
     "lat": 49.97771285712217,
