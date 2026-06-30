@@ -58,7 +58,8 @@ const COUNTRY_BOUNDS = {
   NL: [[50.75, 3.35], [53.55, 7.22]],
   BE: [[49.5, 2.55], [51.5, 6.4]],
   LU: [[49.44, 5.73], [50.19, 6.53]],
-  all: [[45.7, 2.55], [55.1, 17.5]],
+  FR: [[42.3, -5.0], [51.1, 8.2]],
+  all: [[42.0, -5.0], [55.5, 17.5]],
 };
 
 function detectCountryFromLocale() {
@@ -71,7 +72,7 @@ function detectCountryFromLocale() {
   // Timezone fallback: handles bare locale codes
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU" };
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU", "Europe/Paris": "FR" };
     if (tzCountry[tz]) return tzCountry[tz];
   } catch (_) {}
   return "all";
@@ -82,7 +83,7 @@ function fitToCountry(country) {
   fitMapToBounds(bounds, { maxZoom: 10, skipIconShift: true });
 }
 
-const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU"]);
+const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU", "FR"]);
 const _savedCountry = localStorage.getItem("rcRaceMapCountry");
 let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
 let _zoomToCountryPending = false;
@@ -96,6 +97,7 @@ const TRANSLATIONS = {
   "country.NL":         { de: "Niederlande",   en: "Netherlands",    fr: "Pays-Bas",            nl: "Nederland" },
   "country.BE":         { de: "Belgien",       en: "Belgium",        fr: "Belgique",            nl: "België" },
   "country.LU":         { de: "Luxemburg",     en: "Luxembourg",     fr: "Luxembourg",          nl: "Luxemburg" },
+  "country.FR":         { de: "Frankreich",    en: "France",         fr: "France",              nl: "Frankrijk" },
   "filter.range.2w":    { de: "2 Wochen",      en: "2 weeks",        fr: "2 semaines",          nl: "2 weken" },
   "filter.range.4w":    { de: "4 Wochen",      en: "4 weeks",        fr: "4 semaines",          nl: "4 weken" },
   "filter.range.all":   { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
@@ -271,6 +273,7 @@ const countryFlags = [
   { country: "NL",  code: "nl", label: "Niederlande" },
   { country: "BE",  code: "be", label: "Belgien" },
   { country: "LU",  code: "lu", label: "Luxemburg" },
+  { country: "FR",  code: "fr", label: "Frankreich" },
 ];
 let _countryPill = null;
 
@@ -2111,7 +2114,7 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
-const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU" };
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU", France: "FR" };
 function venueCountry(venue) {
   if (!venue) return null;
   if (venue.myrcmOrgId) {
@@ -4802,7 +4805,7 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse, ffvrcRacesRawResponse, ffvrcVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
@@ -4814,6 +4817,8 @@ async function init() {
     fetch(`dmc-venues.json?v=${cacheBuster}`).catch(() => null),
     fetch(`rcco-races.json?v=${cacheBuster}`).catch(() => null),
     fetch(`rcco-venues.json?v=${cacheBuster}`).catch(() => null),
+    fetch(`ffvrc-races.json?v=${cacheBuster}`).catch(() => null),
+    fetch(`ffvrc-venues.json?v=${cacheBuster}`).catch(() => null),
   ]);
 
   dataLastUpdatedAt = latestResponseLastModified([
@@ -4836,9 +4841,13 @@ async function init() {
   const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
   const rccoVenuesRaw = await responseJsonOrFallback(rccoVenuesRawResponse, []);
   const rccoVenues = Array.isArray(rccoVenuesRaw) ? rccoVenuesRaw : [];
+  const ffvrcRacesRaw = await responseJsonOrFallback(ffvrcRacesRawResponse, []);
+  const ffvrcRaces = Array.isArray(ffvrcRacesRaw) ? ffvrcRacesRaw : [];
+  const ffvrcVenuesRaw = await responseJsonOrFallback(ffvrcVenuesRawResponse, []);
+  const ffvrcVenues = Array.isArray(ffvrcVenuesRaw) ? ffvrcVenuesRaw : [];
 
   venues = mergeVenues(
-    [...baseVenues, ...dmcVenues, ...rccoVenues],
+    [...baseVenues, ...dmcVenues, ...rccoVenues, ...ffvrcVenues],
     rckVenueCandidates,
     { requireVerifiedAddress: true }
   );
@@ -4867,18 +4876,33 @@ async function init() {
       });
     });
   const knownRaces = [...nonDmcRaces, ...filteredDmcRaces];
+  const filteredRccoRaces = rccoRaces
+    .map(race => normalizeRaceFromSource(race, "rcco"))
+    .filter(rccoRace => {
+      const rccoHostKey = slugifyMatchValue(rccoRace.hostName || rccoRace.venueName || "");
+      return !knownRaces.some(r => {
+        if (!(r.from <= rccoRace.to && r.to >= rccoRace.from)) return false;
+        if (rccoRace.venueId && r.venueId === rccoRace.venueId) return true;
+        if (rccoHostKey) {
+          const rHostKey = slugifyMatchValue(r.hostName || r.venueName || "");
+          if (rHostKey && rHostKey === rccoHostKey) return true;
+        }
+        return false;
+      });
+    });
+  const knownRacesWithRcco = [...knownRaces, ...filteredRccoRaces];
   races = [
-    ...knownRaces,
-    ...rccoRaces
-      .map(race => normalizeRaceFromSource(race, "rcco"))
-      .filter(rccoRace => {
-        const rccoHostKey = slugifyMatchValue(rccoRace.hostName || rccoRace.venueName || "");
-        return !knownRaces.some(r => {
-          if (!(r.from <= rccoRace.to && r.to >= rccoRace.from)) return false;
-          if (rccoRace.venueId && r.venueId === rccoRace.venueId) return true;
-          if (rccoHostKey) {
+    ...knownRacesWithRcco,
+    ...ffvrcRaces
+      .map(race => normalizeRaceFromSource(race, "ffvrc"))
+      .filter(ffvrcRace => {
+        const ffvrcHostKey = slugifyMatchValue(ffvrcRace.hostName || "");
+        return !knownRacesWithRcco.some(r => {
+          if (!(r.from <= ffvrcRace.to && r.to >= ffvrcRace.from)) return false;
+          if (ffvrcRace.venueId && ffvrcRace.venueId !== "ffvrc-fr" && r.venueId === ffvrcRace.venueId) return true;
+          if (ffvrcHostKey) {
             const rHostKey = slugifyMatchValue(r.hostName || r.venueName || "");
-            if (rHostKey && rHostKey === rccoHostKey) return true;
+            if (rHostKey && rHostKey === ffvrcHostKey) return true;
           }
           return false;
         });
@@ -6090,9 +6114,10 @@ function renderAdminPruefenTab(container) {
       Promise.resolve(seeds),
       fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
       fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
+      fetch(`ffvrc-races.json?t=${Date.now()}`).catch(() => null),
       adminLoadUnmatched(seeds),
     ]))
-  .then(async ([seeds, dmcRes, rccoRes, allEntries]) => {
+  .then(async ([seeds, dmcRes, rccoRes, ffvrcRes, allEntries]) => {
     // Neue Clubs aus venue-unmatched.json (noch nicht als unbekannt markiert)
     const newEntries = allEntries.filter(e => !e._isUnknownSeed);
     if (newEntries.length) {
@@ -6121,7 +6146,7 @@ function renderAdminPruefenTab(container) {
 
     // Externe Venues ohne Koordinaten, noch nicht in seeds eingetragen
     const seededHostIds = new Set(
-      seeds.filter(s => (s.hostId?.startsWith("dmc-") || s.hostId?.startsWith("rcco-")) && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
+      seeds.filter(s => (s.hostId?.startsWith("dmc-") || s.hostId?.startsWith("rcco-") || s.hostId?.startsWith("ffvrc-")) && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
     );
     const dmcSeen = new Set();
     const dmcPending = dmcRaces
@@ -6145,7 +6170,19 @@ function renderAdminPruefenTab(container) {
         return acc;
       }, []);
 
-    const externalPending = [...dmcPending, ...rccoPending];
+    const ffvrcRacesAdmin = ffvrcRes?.ok ? (await ffvrcRes.json().catch(() => [])) : [];
+    const ffvrcSeen = new Set();
+    const ffvrcPending = (Array.isArray(ffvrcRacesAdmin) ? ffvrcRacesAdmin : [])
+      .filter(r => r.venueId === "ffvrc-fr" && !seededHostIds.has(r.hostId))
+      .reduce((acc, r) => {
+        if (!ffvrcSeen.has(r.hostId)) {
+          ffvrcSeen.add(r.hostId);
+          acc.push({ _dmc: true, _sourceBadge: "FFVRC", id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
+        }
+        return acc;
+      }, []);
+
+    const externalPending = [...dmcPending, ...rccoPending, ...ffvrcPending];
 
     const pending = [
       ...dachPending.map(s => ({ ...s, _dmc: false })),
@@ -6157,7 +6194,7 @@ function renderAdminPruefenTab(container) {
     container.appendChild(geocodedSection);
 
     if (!pending.length) {
-      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC- oder RCCO-Venues.</p>`;
+      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC-, RCCO- oder FFVRC-Venues.</p>`;
       return;
     }
 
