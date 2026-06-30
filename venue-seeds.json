@@ -2330,7 +2330,8 @@
     "hostId": "rcco-modellsport-munsterland",
     "hostName": "Modellsport Münsterland",
     "lat": 52.341602800495465,
-    "lng": 7.577597547624109
+    "lng": 7.577597547624109,
+    "country": "DE"
   },
   {
     "hostId": "dmc-modellsport-munsterland-e-v",
