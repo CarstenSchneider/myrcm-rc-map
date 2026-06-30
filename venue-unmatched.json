@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mbv-kampenhout-vzw",
-    "hostName": "MBV Kampenhout vzw",
-    "source": "myrcm",
-    "myrcmOrgId": "51913",
-    "possibleVenue": "Muizen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mini-racing-car-liege",
     "hostName": "Mini Racing Car Liège",
     "source": "myrcm",
