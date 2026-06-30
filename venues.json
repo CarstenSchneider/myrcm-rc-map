@@ -18,7 +18,8 @@
     ],
     "myrcmOrgId": "760",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "1-mrc-wr-neustadt",
@@ -39,7 +40,8 @@
     ],
     "myrcmOrgId": "764",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "1-wbc-hoheneich",
@@ -60,7 +62,8 @@
     ],
     "myrcmOrgId": "761",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "dmc-ov-386",
@@ -95,7 +98,8 @@
     ],
     "myrcmOrgId": "504",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "amc-hildesheim-e-v",
@@ -116,7 +120,8 @@
     ],
     "myrcmOrgId": "33",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-lahntal-e-v",
@@ -137,7 +142,8 @@
     ],
     "myrcmOrgId": "19597",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-langenfeld-e-v",
@@ -158,7 +164,8 @@
     ],
     "myrcmOrgId": "6025",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-magdeburg-e-v",
@@ -179,7 +186,8 @@
     ],
     "myrcmOrgId": "44208",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-nussdorf-debant",
@@ -200,7 +208,8 @@
     ],
     "myrcmOrgId": "26450",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "amc-saarbruecken-e-v",
@@ -221,7 +230,8 @@
     ],
     "myrcmOrgId": "7103",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-senftenberg-e-v",
@@ -242,7 +252,8 @@
     ],
     "myrcmOrgId": "58267",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-sonthofen-e-v",
@@ -263,7 +274,8 @@
     ],
     "myrcmOrgId": "4006",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-tirol",
@@ -284,7 +296,8 @@
     ],
     "myrcmOrgId": "14010",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "amc-hamm-e-v",
@@ -305,7 +318,8 @@
     ],
     "myrcmOrgId": "7771",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amc-muehlau-e-v",
@@ -326,7 +340,8 @@
     ],
     "myrcmOrgId": "82",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amsc-augsburg-e-v",
@@ -347,7 +362,8 @@
     ],
     "myrcmOrgId": "36",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "amsc-herne-e-v",
@@ -368,7 +384,8 @@
     ],
     "myrcmOrgId": "29065",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "ets-apeldoorn",
@@ -409,7 +426,8 @@
     ],
     "myrcmOrgId": "20278",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "arena33-andernach",
@@ -438,7 +456,8 @@
     ],
     "myrcmOrgId": "1288",
     "source": "manual-corrected-arena33-stadionstrasse-90",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "art-racing-team-switzerland",
@@ -459,7 +478,8 @@
     ],
     "myrcmOrgId": "11113",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "asc-celle-e-v",
@@ -480,7 +500,8 @@
     ],
     "myrcmOrgId": "26821",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "asc-potsdam-e-v",
@@ -501,7 +522,8 @@
     ],
     "myrcmOrgId": "26596",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "auto-modell-club-schaffhausen",
@@ -522,7 +544,8 @@
     ],
     "myrcmOrgId": "21",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "automodellclub-meissen-e-v",
@@ -543,7 +566,8 @@
     ],
     "myrcmOrgId": "861",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-bc-mitterkreith",
@@ -578,7 +602,8 @@
     ],
     "myrcmOrgId": "572",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "dmc-big-hamburg-e-v",
@@ -627,7 +652,8 @@
     ],
     "myrcmOrgId": "64649",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-31752",
@@ -642,7 +668,8 @@
     "hostIds": [],
     "myrcmOrgId": "31752",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "buggy-club-hornets",
@@ -663,7 +690,8 @@
     ],
     "myrcmOrgId": "22302",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "myrcm-743",
@@ -678,7 +706,8 @@
     "hostIds": [],
     "myrcmOrgId": "743",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "myrcm-17680",
@@ -693,7 +722,8 @@
     "hostIds": [],
     "myrcmOrgId": "17680",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "myrcm-62332",
@@ -708,7 +738,8 @@
     "hostIds": [],
     "myrcmOrgId": "62332",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "buggyclub-zentralschweiz",
@@ -729,7 +760,8 @@
     ],
     "myrcmOrgId": "7734",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "burning-wheels-blankenfelde",
@@ -748,7 +780,8 @@
     ],
     "myrcmOrgId": "52898",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "club-der-modellbaufreunde-sued-ost",
@@ -769,7 +802,8 @@
     ],
     "myrcmOrgId": "1294",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mc-daun",
@@ -787,7 +821,8 @@
     "hostIds": [],
     "myrcmOrgId": "",
     "source": "manual",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-12027",
@@ -808,7 +843,8 @@
     "hostIds": [],
     "myrcmOrgId": "12027",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "mac-de-baanbrekers",
@@ -850,7 +886,8 @@
     ],
     "myrcmOrgId": "50568",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "edc-kinzigtal-e-v",
@@ -871,7 +908,8 @@
     ],
     "myrcmOrgId": "35606",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "efac-hohenems",
@@ -892,7 +930,8 @@
     ],
     "myrcmOrgId": "163",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "electrique-radio-mod-le-club",
@@ -913,7 +952,8 @@
     ],
     "myrcmOrgId": "16203",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "elektro-modell-buggy-club-march",
@@ -934,7 +974,8 @@
     ],
     "myrcmOrgId": "29104",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "elektro-modell-car-club-ochsendorf",
@@ -955,7 +996,8 @@
     ],
     "myrcmOrgId": "521",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "emc-marktoberdorf",
@@ -979,7 +1021,8 @@
     ],
     "myrcmOrgId": "43367",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "eocd-elektro-offroad-club-dielsdorf",
@@ -1000,7 +1043,8 @@
     ],
     "myrcmOrgId": "8488",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "equipe-rc-nohn",
@@ -1021,7 +1065,8 @@
     ],
     "myrcmOrgId": "10117",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-3350",
@@ -1036,7 +1081,8 @@
     "hostIds": [],
     "myrcmOrgId": "3350",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "ert-steyregg",
@@ -1057,7 +1103,8 @@
     ],
     "myrcmOrgId": "768",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "esv-blau-gold-bischofsheim-1958-e-v",
@@ -1078,7 +1125,8 @@
     ],
     "myrcmOrgId": "37613",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "ets-international",
@@ -1111,7 +1159,8 @@
     "hostIds": [],
     "myrcmOrgId": "10817",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-739",
@@ -1126,7 +1175,8 @@
     "hostIds": [],
     "myrcmOrgId": "739",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "fsg-motorsport-ag",
@@ -1189,7 +1239,8 @@
     ],
     "myrcmOrgId": "56473",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "h-speed",
@@ -1225,7 +1276,8 @@
     "hostIds": [],
     "myrcmOrgId": "7059",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-14156",
@@ -1240,7 +1292,8 @@
     "hostIds": [],
     "myrcmOrgId": "14156",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "hobby-shop-haessig",
@@ -1261,7 +1314,8 @@
     ],
     "myrcmOrgId": "293",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "myrcm-65",
@@ -1276,7 +1330,8 @@
     "hostIds": [],
     "myrcmOrgId": "65",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "myrcm-50130",
@@ -1291,7 +1346,8 @@
     "hostIds": [],
     "myrcmOrgId": "50130",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "hvbrs",
@@ -1333,7 +1389,8 @@
     ],
     "myrcmOrgId": "10490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-59433",
@@ -1348,7 +1405,8 @@
     "hostIds": [],
     "myrcmOrgId": "59433",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "indoortrack-wichtrach",
@@ -1369,7 +1427,8 @@
     ],
     "myrcmOrgId": "46390",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "ircr-indoor-rc-romand",
@@ -1390,7 +1449,8 @@
     ],
     "myrcmOrgId": "26980",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "la-speedway-racing-club-e-v",
@@ -1411,7 +1471,8 @@
     ],
     "myrcmOrgId": "52798",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "lamac",
@@ -1432,7 +1493,8 @@
     ],
     "myrcmOrgId": "781",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "lambc-st-andrae",
@@ -1474,7 +1536,8 @@
     ],
     "myrcmOrgId": "66",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "myrcm-51",
@@ -1489,7 +1552,8 @@
     "hostIds": [],
     "myrcmOrgId": "51",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "LU"
   },
   {
     "id": "lost-place-racers-e-v",
@@ -1510,7 +1574,8 @@
     ],
     "myrcmOrgId": "17507",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "lts-bremerhaven-racing-team",
@@ -1531,7 +1596,8 @@
     ],
     "myrcmOrgId": "19204",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-33841",
@@ -1546,7 +1612,8 @@
     "hostIds": [],
     "myrcmOrgId": "33841",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "m-a-r-s-alt-erlaa",
@@ -1571,7 +1638,8 @@
     ],
     "myrcmOrgId": "339",
     "source": "manual",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mac-adenau",
@@ -1592,7 +1660,8 @@
     ],
     "myrcmOrgId": "4602",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-amstetten",
@@ -1613,7 +1682,8 @@
     ],
     "myrcmOrgId": "1225",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mac-burgdorf-e-v",
@@ -1634,7 +1704,8 @@
     ],
     "myrcmOrgId": "678",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-32715",
@@ -1649,7 +1720,8 @@
     "hostIds": [],
     "myrcmOrgId": "32715",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "mac-hamburg-e-v",
@@ -1670,7 +1742,8 @@
     ],
     "myrcmOrgId": "20622",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-mettenheim-e-v",
@@ -1694,7 +1767,8 @@
     ],
     "myrcmOrgId": "891",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-mistelbach",
@@ -1730,7 +1804,8 @@
     "hostIds": [],
     "myrcmOrgId": "20718",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mac-nuernberg-e-v",
@@ -1754,7 +1829,8 @@
     ],
     "myrcmOrgId": "9976",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-or-huetschenhausen-e-v",
@@ -1775,7 +1851,8 @@
     ],
     "myrcmOrgId": "30735",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-saar-e-v",
@@ -1796,7 +1873,8 @@
     ],
     "myrcmOrgId": "233",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-siersburg-e-v",
@@ -1817,7 +1895,8 @@
     ],
     "myrcmOrgId": "48023",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-uetersen-e-v",
@@ -1838,7 +1917,8 @@
     ],
     "myrcmOrgId": "53667",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-30724",
@@ -1853,7 +1933,8 @@
     "hostIds": [],
     "myrcmOrgId": "30724",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "mac-meckenheim-e-v",
@@ -1874,7 +1955,8 @@
     ],
     "myrcmOrgId": "49037",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-solms-e-v",
@@ -1895,7 +1977,8 @@
     ],
     "myrcmOrgId": "42064",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mac-traiskirchen",
@@ -1916,7 +1999,8 @@
     ],
     "myrcmOrgId": "769",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "macg-steiermark",
@@ -1937,7 +2021,8 @@
     ],
     "myrcmOrgId": "858",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "macw-modell-auto-club-wohlen",
@@ -1973,7 +2058,8 @@
     "hostIds": [],
     "myrcmOrgId": "23785",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "marc-exclusiv-kirchschlag",
@@ -2013,7 +2099,8 @@
     ],
     "myrcmOrgId": "41404",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mav-aigen-schlaegl",
@@ -2038,7 +2125,8 @@
     ],
     "myrcmOrgId": "217",
     "source": "manual",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mav-waidhofen",
@@ -2101,7 +2189,8 @@
     ],
     "myrcmOrgId": "7554",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "myrcm-4842",
@@ -2116,7 +2205,8 @@
     "hostIds": [],
     "myrcmOrgId": "4842",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "mbc-goldstein-e-v",
@@ -2137,7 +2227,8 @@
     ],
     "myrcmOrgId": "24873",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-3214",
@@ -2152,7 +2243,8 @@
     "hostIds": [],
     "myrcmOrgId": "3214",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "dmc-mbc-oberlausitz-e-v",
@@ -2208,7 +2300,8 @@
     ],
     "myrcmOrgId": "45823",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "mblr-racing",
@@ -2244,7 +2337,8 @@
     "hostIds": [],
     "myrcmOrgId": "22319",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "mbsc-waechtersbach",
@@ -2268,7 +2362,8 @@
     ],
     "myrcmOrgId": "27211",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-51913",
@@ -2283,7 +2378,8 @@
     "hostIds": [],
     "myrcmOrgId": "51913",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "mbv-noetsch",
@@ -2362,7 +2458,8 @@
     ],
     "myrcmOrgId": "121",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mc-munster-e-v",
@@ -2383,7 +2480,8 @@
     ],
     "myrcmOrgId": "33489",
     "source": "old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-mc-schwedt-e-v",
@@ -2418,7 +2516,8 @@
     ],
     "myrcmOrgId": "44699",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mc-fuerstenwalde-e-v",
@@ -2439,7 +2538,8 @@
     ],
     "myrcmOrgId": "65042",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mc-orc-e-v",
@@ -2460,7 +2560,8 @@
     ],
     "myrcmOrgId": "27203",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-bad-kissingen-e-v",
@@ -2481,7 +2582,8 @@
     ],
     "myrcmOrgId": "21299",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-borgholzhausen",
@@ -2502,7 +2604,8 @@
     ],
     "myrcmOrgId": "20747",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-fellbach-e-v",
@@ -2523,7 +2626,8 @@
     ],
     "myrcmOrgId": "38659",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-ov-56",
@@ -2575,7 +2679,8 @@
     ],
     "myrcmOrgId": "52121",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-rheda-wiedenbrueck-e-v",
@@ -2596,7 +2701,8 @@
     ],
     "myrcmOrgId": "49956",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-rhein-ahr-e-v",
@@ -2620,7 +2726,8 @@
     ],
     "myrcmOrgId": "283",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-mcc-rudolstadt-e-v",
@@ -2655,7 +2762,8 @@
     ],
     "myrcmOrgId": "47",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-hocheifel-e-v",
@@ -2676,7 +2784,8 @@
     ],
     "myrcmOrgId": "269",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcc-marktredwitz-e-v",
@@ -2697,7 +2806,8 @@
     ],
     "myrcmOrgId": "57549",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mck-e-v-dormagen",
@@ -2718,7 +2828,8 @@
     ],
     "myrcmOrgId": "9269",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcrcb",
@@ -2761,7 +2872,8 @@
     ],
     "myrcmOrgId": "50727",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcss-althengstett-e-v",
@@ -2782,7 +2894,8 @@
     ],
     "myrcmOrgId": "12227",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mcv-daenischer-wohld-e-v",
@@ -2803,7 +2916,8 @@
     ],
     "myrcmOrgId": "19290",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "megadrom-rc-team-nord",
@@ -2824,7 +2938,8 @@
     ],
     "myrcmOrgId": "32408",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-53092",
@@ -2839,7 +2954,8 @@
     "hostIds": [],
     "myrcmOrgId": "53092",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mfk-kurten-e-v",
@@ -2874,7 +2990,8 @@
     ],
     "myrcmOrgId": "30759",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mini-bolides-club-jura",
@@ -2916,7 +3033,8 @@
     ],
     "myrcmOrgId": "158",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mini-monster-club-romand",
@@ -2952,7 +3070,8 @@
     "hostIds": [],
     "myrcmOrgId": "9668",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "mini-racing-cars-aigle-lausanne",
@@ -2973,7 +3092,8 @@
     ],
     "myrcmOrgId": "19",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "mini-racing-chiasso",
@@ -2994,7 +3114,8 @@
     ],
     "myrcmOrgId": "9845",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "mini-tout-terrain-gruy-re",
@@ -3030,7 +3151,8 @@
     "hostIds": [],
     "myrcmOrgId": "18473",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "mini-tout-terrain-gruyere",
@@ -3059,7 +3181,8 @@
     "hostIds": [],
     "myrcmOrgId": "44133",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "miniatutenpark-elsterwerda",
@@ -3080,7 +3203,8 @@
     ],
     "myrcmOrgId": "65451",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "minicar-club-dortmund-e-v",
@@ -3101,7 +3225,8 @@
     ],
     "myrcmOrgId": "6266",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mmcc",
@@ -3164,7 +3289,8 @@
     ],
     "myrcmOrgId": "771",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "myrcm-75",
@@ -3179,7 +3305,8 @@
     "hostIds": [],
     "myrcmOrgId": "75",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-3291",
@@ -3194,7 +3321,8 @@
     "hostIds": [],
     "myrcmOrgId": "3291",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "myrcm-104",
@@ -3209,7 +3337,8 @@
     "hostIds": [],
     "myrcmOrgId": "104",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-19047",
@@ -3224,7 +3353,8 @@
     "hostIds": [],
     "myrcmOrgId": "19047",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-439",
@@ -3239,7 +3369,8 @@
     "hostIds": [],
     "myrcmOrgId": "439",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-2641",
@@ -3254,7 +3385,8 @@
     "hostIds": [],
     "myrcmOrgId": "2641",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "modell-auto-club-hoefe",
@@ -3352,7 +3484,8 @@
     ],
     "myrcmOrgId": "20",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "modell-rennsport-club-unterland",
@@ -3429,7 +3562,8 @@
     ],
     "myrcmOrgId": "38488",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "modellbuggygruppe-dellach-gail",
@@ -3450,7 +3584,8 @@
     ],
     "myrcmOrgId": "15268",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "dmc-ov-266",
@@ -3485,7 +3620,8 @@
     ],
     "myrcmOrgId": "879",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-modellsport-munsterland-e-v",
@@ -3520,7 +3656,8 @@
     ],
     "myrcmOrgId": "60576",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-3200",
@@ -3535,7 +3672,8 @@
     "hostIds": [],
     "myrcmOrgId": "3200",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-3215",
@@ -3550,7 +3688,8 @@
     "hostIds": [],
     "myrcmOrgId": "3215",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "morac",
@@ -3571,7 +3710,8 @@
     ],
     "myrcmOrgId": "216",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "motor-sport-club-imst",
@@ -3592,7 +3732,8 @@
     ],
     "myrcmOrgId": "21964",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "motorsportclub-der-polizei-braunschweig-im-adac-e-v",
@@ -3618,7 +3759,8 @@
     ],
     "myrcmOrgId": "95",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "motorsportvereinigung-zittauer-land-e-v",
@@ -3639,7 +3781,8 @@
     ],
     "myrcmOrgId": "64572",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrc-alstaden-oberhausen-e-v",
@@ -3660,7 +3803,8 @@
     ],
     "myrcmOrgId": "64",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrc-fritzens-formel-4",
@@ -3702,7 +3846,8 @@
     ],
     "myrcmOrgId": "713",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrc-mannheim-e-v",
@@ -3725,7 +3870,8 @@
     ],
     "myrcmOrgId": "39671",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrc-mehrum-e-v",
@@ -3746,7 +3892,8 @@
     ],
     "myrcmOrgId": "2245",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrc-senden-e-v",
@@ -3767,7 +3914,8 @@
     ],
     "myrcmOrgId": "61183",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-18560",
@@ -3782,7 +3930,8 @@
     "hostIds": [],
     "myrcmOrgId": "18560",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "mrc-zillertal",
@@ -3824,7 +3973,8 @@
     ],
     "myrcmOrgId": "779",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mrc-oberaich",
@@ -3845,7 +3995,8 @@
     ],
     "myrcmOrgId": "980",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "mrcp",
@@ -3866,7 +4017,8 @@
     ],
     "myrcmOrgId": "207",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "myrcm-2571",
@@ -3881,7 +4033,8 @@
     "hostIds": [],
     "myrcmOrgId": "2571",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "mrsc-amberg-e-v",
@@ -3902,7 +4055,8 @@
     ],
     "myrcmOrgId": "39587",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrt-rosenheim-e-v",
@@ -3923,7 +4077,8 @@
     ],
     "myrcmOrgId": "4483",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mrtm-mini-racing-ticino-moesa",
@@ -3944,7 +4099,8 @@
     ],
     "myrcmOrgId": "16",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "mrto",
@@ -4042,7 +4198,8 @@
     ],
     "myrcmOrgId": "44811",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-hansa-heilbronn-e-v",
@@ -4064,7 +4221,8 @@
     ],
     "myrcmOrgId": "116",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-herrenhaide",
@@ -4086,7 +4244,8 @@
     ],
     "myrcmOrgId": "64487",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-hockendorf-e-v",
@@ -4108,7 +4267,8 @@
     ],
     "myrcmOrgId": "56487",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-kirchhain-e-v",
@@ -4129,7 +4289,8 @@
     ],
     "myrcmOrgId": "17008",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-ober-moerlen-e-v",
@@ -4146,7 +4307,8 @@
     ],
     "myrcmOrgId": "36612",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-66454",
@@ -4161,7 +4323,8 @@
     "hostIds": [],
     "myrcmOrgId": "66454",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-ober-morlen-e-v",
@@ -4196,7 +4359,8 @@
     ],
     "myrcmOrgId": "50019",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-msc-sand-e-v",
@@ -4225,7 +4389,8 @@
     "hostIds": [],
     "myrcmOrgId": "42113",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msc-ulm-e-v",
@@ -4261,7 +4426,8 @@
     ],
     "myrcmOrgId": "46202",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "mss-am-saegewerk",
@@ -4284,7 +4450,8 @@
     ],
     "myrcmOrgId": "49105",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "msv-hurtgenwald-e-v",
@@ -4307,7 +4474,8 @@
     ],
     "myrcmOrgId": "15511",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-ov-234",
@@ -4357,7 +4525,8 @@
     "hostIds": [],
     "myrcmOrgId": "53491",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "dmc-ov-90",
@@ -4436,7 +4605,8 @@
     ],
     "myrcmOrgId": "13507",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "nitromaniacs-e-v",
@@ -4459,7 +4629,8 @@
     ],
     "myrcmOrgId": "15092",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "nmbc-neuch-tel-mini-buggy-club",
@@ -4480,7 +4651,8 @@
     ],
     "myrcmOrgId": "4497",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "oefmav",
@@ -4522,7 +4694,8 @@
     ],
     "myrcmOrgId": "62051",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "dmc-offroad-club-ostsee-e-v",
@@ -4557,7 +4730,8 @@
     ],
     "myrcmOrgId": "65790",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "oefmav-eor",
@@ -4662,7 +4836,8 @@
     ],
     "myrcmOrgId": "50394",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "online-modus",
@@ -4705,7 +4880,8 @@
     ],
     "myrcmOrgId": "36113",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "ormc-koenigsbrunn",
@@ -4722,7 +4898,8 @@
     ],
     "myrcmOrgId": "myrcm-991-ormc",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-ort-fulda",
@@ -4799,7 +4976,8 @@
     ],
     "myrcmOrgId": "774",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "psv-salzburg-automodellsport",
@@ -4820,7 +4998,8 @@
     ],
     "myrcmOrgId": "762",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "racing-center-parndorf",
@@ -4842,7 +5021,8 @@
     ],
     "myrcmOrgId": "38295",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "myrcm-76",
@@ -4857,7 +5037,8 @@
     "hostIds": [],
     "myrcmOrgId": "76",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "myrcm-5305",
@@ -4873,6 +5054,22 @@
     "myrcmOrgId": "5305",
     "source": "venue-seeds",
     "verified": true
+  },
+  {
+    "id": "raco-2000",
+    "name": "RACO 2000",
+    "city": "",
+    "lat": 52.13130295512539,
+    "lng": 5.08833274060954,
+    "address": "",
+    "postalCode": "",
+    "website": "https://www.raco2000.nl/",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "5305",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "rallye-club-haltern-e-v-im-adac",
@@ -4893,7 +5090,8 @@
     ],
     "myrcmOrgId": "16149",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "raspeed",
@@ -4971,7 +5169,8 @@
     "hostIds": [],
     "myrcmOrgId": "51129",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-car-chemnitz",
@@ -5006,7 +5205,8 @@
     ],
     "myrcmOrgId": "",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v",
@@ -5028,7 +5228,8 @@
     ],
     "myrcmOrgId": "55427",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-car-oetztal",
@@ -5070,7 +5271,8 @@
     ],
     "myrcmOrgId": "12564",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-43490",
@@ -5085,7 +5287,8 @@
     "hostIds": [],
     "myrcmOrgId": "43490",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-cars-wernigerode-e-v",
@@ -5120,7 +5323,8 @@
     ],
     "myrcmOrgId": "14101",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "myrcm-34977",
@@ -5135,7 +5339,8 @@
     "hostIds": [],
     "myrcmOrgId": "34977",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-18663",
@@ -5150,7 +5355,8 @@
     "hostIds": [],
     "myrcmOrgId": "18663",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-33778",
@@ -5165,7 +5371,8 @@
     "hostIds": [],
     "myrcmOrgId": "33778",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-drecksloch-e-v",
@@ -5202,7 +5409,8 @@
     ],
     "myrcmOrgId": "44059",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-rc-halle-e-v",
@@ -5245,7 +5453,8 @@
     "hostIds": [],
     "myrcmOrgId": "3074",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "myrcm-47757",
@@ -5260,7 +5469,8 @@
     "hostIds": [],
     "myrcmOrgId": "47757",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "rc-modellbaufreunde-e-v",
@@ -5277,7 +5487,8 @@
     ],
     "myrcmOrgId": "53665",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-ov-36",
@@ -5324,7 +5535,8 @@
     "hostIds": [],
     "myrcmOrgId": "55317",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-37520",
@@ -5339,7 +5551,8 @@
     "hostIds": [],
     "myrcmOrgId": "37520",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-race-team-munchen-e-v",
@@ -5391,7 +5604,8 @@
     ],
     "myrcmOrgId": "45781",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-racing-club-arlesheim",
@@ -5412,7 +5626,8 @@
     ],
     "myrcmOrgId": "31003",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "rc-speedracer-bernau",
@@ -5434,7 +5649,8 @@
     ],
     "myrcmOrgId": "45925",
     "source": "verified-existing-geolocation-list",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-team-sauerland-e-v",
@@ -5455,7 +5671,8 @@
     ],
     "myrcmOrgId": "35303",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-bande-zwickau-e-v",
@@ -5479,7 +5696,8 @@
     ],
     "myrcmOrgId": "48536",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-rc-club-grossheubach-e-v",
@@ -5528,7 +5746,8 @@
     ],
     "myrcmOrgId": "9640",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-lords-of-dirt",
@@ -5564,7 +5783,8 @@
     "hostIds": [],
     "myrcmOrgId": "18966",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "rc-msc-greuthof-e-v",
@@ -5585,7 +5805,8 @@
     ],
     "myrcmOrgId": "61583",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-offroad-dortmund-e-v",
@@ -5606,7 +5827,8 @@
     ],
     "myrcmOrgId": "48425",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-ov-184",
@@ -5655,7 +5877,8 @@
     ],
     "myrcmOrgId": "34102",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-offroadcrew-langenfeld-e-v",
@@ -5676,7 +5899,8 @@
     ],
     "myrcmOrgId": "20813",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-racearena",
@@ -5697,7 +5921,8 @@
     ],
     "myrcmOrgId": "5208",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "rc-racing-pregarten",
@@ -5739,7 +5964,8 @@
     ],
     "myrcmOrgId": "1516",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-sonntagsfahrer-e-v",
@@ -5760,7 +5986,8 @@
     ],
     "myrcmOrgId": "50693",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rc-timing",
@@ -5823,7 +6050,8 @@
     ],
     "myrcmOrgId": "33796",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rcc-sittersdorf",
@@ -5844,7 +6072,8 @@
     ],
     "myrcmOrgId": "26141",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "rcc-grafenwoerth",
@@ -5880,7 +6109,8 @@
     "hostIds": [],
     "myrcmOrgId": "775",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "rcc-grafenworth",
@@ -5915,7 +6145,8 @@
     ],
     "myrcmOrgId": "25565",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-6492",
@@ -5930,7 +6161,8 @@
     "hostIds": [],
     "myrcmOrgId": "6492",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rccars-bergisch-born-e-v",
@@ -5979,7 +6211,8 @@
     ],
     "myrcmOrgId": "20891",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rcct-muenden-e-v",
@@ -6004,7 +6237,8 @@
     ],
     "myrcmOrgId": "134",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rcf-rc-festival",
@@ -6047,7 +6281,8 @@
     ],
     "myrcmOrgId": "45728",
     "source": "manual-verified-geolocation",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-ov-339",
@@ -6082,7 +6317,8 @@
     ],
     "myrcmOrgId": "776",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "rcrt-duisburg-e-v",
@@ -6103,7 +6339,8 @@
     ],
     "myrcmOrgId": "15091",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rcsf-singen-e-v",
@@ -6124,7 +6361,8 @@
     ],
     "myrcmOrgId": "16961",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-59322",
@@ -6139,7 +6377,8 @@
     "hostIds": [],
     "myrcmOrgId": "59322",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "rcxx-shop",
@@ -6181,7 +6420,8 @@
     ],
     "myrcmOrgId": "60396",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "rmc-dueren-e-v",
@@ -6202,7 +6442,8 @@
     ],
     "myrcmOrgId": "26406",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-rmc-wolfsburg-e-v",
@@ -6252,7 +6493,8 @@
     "hostIds": [],
     "myrcmOrgId": "777",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "rmcb",
@@ -6273,7 +6515,8 @@
     ],
     "myrcmOrgId": "9703",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "rt-fichtenberg-e-v",
@@ -6294,7 +6537,8 @@
     ],
     "myrcmOrgId": "25939",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "salzburger-funk-modell-auto-verein-sfmav",
@@ -6315,7 +6559,8 @@
     ],
     "myrcmOrgId": "25165",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "myrcm-43682",
@@ -6345,7 +6590,8 @@
     ],
     "myrcmOrgId": "66122",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "simbacher-buggyracer-e-v",
@@ -6366,7 +6612,8 @@
     ],
     "myrcmOrgId": "62851",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "slr-ingoldstadt-06",
@@ -6387,7 +6634,8 @@
     ],
     "myrcmOrgId": "490",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "dmc-slr-ingolstadt-e-v",
@@ -6416,7 +6664,8 @@
     "hostIds": [],
     "myrcmOrgId": "51971",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "smc-stuttgart-e-v",
@@ -6451,7 +6700,8 @@
     ],
     "myrcmOrgId": "763",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "myrcm-56820",
@@ -6466,7 +6716,8 @@
     "hostIds": [],
     "myrcmOrgId": "56820",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "NL"
   },
   {
     "id": "dmc-spessart-racer",
@@ -6501,7 +6752,8 @@
     ],
     "myrcmOrgId": "21160",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "swiss-r-c-car-clubs-association",
@@ -6564,7 +6816,8 @@
     ],
     "myrcmOrgId": "47238",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "tamiya-cup-austria",
@@ -6606,7 +6859,8 @@
     ],
     "myrcmOrgId": "17663",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "team-speedfreaks-austria",
@@ -6648,7 +6902,8 @@
     ],
     "myrcmOrgId": "38953",
     "source": "old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "tr-racing",
@@ -6669,7 +6924,8 @@
     ],
     "myrcmOrgId": "506",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "tsv-1871-augsburg-e-v",
@@ -6694,7 +6950,8 @@
     ],
     "myrcmOrgId": "991",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "tsv-kleinburgwedel",
@@ -6715,7 +6972,8 @@
     ],
     "myrcmOrgId": "4441",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "tsv-mariendorf-rc-racing",
@@ -6741,7 +6999,8 @@
     ],
     "myrcmOrgId": "18244",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "myrcm-22085",
@@ -6756,7 +7015,8 @@
     "hostIds": [],
     "myrcmOrgId": "22085",
     "source": "venue-seeds",
-    "verified": true
+    "verified": true,
+    "country": "BE"
   },
   {
     "id": "turnerschaft-1860-e-v-grossauheim",
@@ -6777,7 +7037,8 @@
     ],
     "myrcmOrgId": "22897",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "turngemeinde-1855-neustadt-bei-coburg-e-v",
@@ -6801,7 +7062,8 @@
     ],
     "myrcmOrgId": "59129",
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "united-model-cars-lyss",
@@ -6822,7 +7084,8 @@
     ],
     "myrcmOrgId": "23",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "CH"
   },
   {
     "id": "vfr-ruesselsheim-e-v",
@@ -6843,7 +7106,8 @@
     ],
     "myrcmOrgId": "19940",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "wiesbadener-minicar-club-e-v",
@@ -6864,7 +7128,8 @@
     ],
     "myrcmOrgId": "11761",
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
-    "verified": true
+    "verified": true,
+    "country": "DE"
   },
   {
     "id": "wmw-rc-buggy-racing-team-fehring",
@@ -6885,7 +7150,8 @@
     ],
     "myrcmOrgId": "507",
     "source": "verified",
-    "verified": true
+    "verified": true,
+    "country": "AT"
   },
   {
     "id": "wrc-drivers",
