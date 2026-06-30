@@ -2327,7 +2327,8 @@
       "MRC Fritzens Formel 4",
       "Fritzens/Tirol"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "CH"
   },
   {
     "id": "mrc-leipzig-e-v",
