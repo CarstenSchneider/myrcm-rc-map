@@ -8,14 +8,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "model-race-genk-vzw",
-    "hostName": "Model Race Genk vzw",
-    "source": "myrcm",
-    "myrcmOrgId": "3291",
-    "possibleVenue": "Genk",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "model-racing-club-real80",
     "hostName": "Model Racing Club Real80",
     "source": "myrcm",
