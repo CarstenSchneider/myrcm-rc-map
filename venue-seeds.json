@@ -3846,6 +3846,13 @@
     "myrcmOrgId": "2824"
   },
   {
+    "hostId": "hulshout-offroad-racing",
+    "hostName": "Hulshout Offroad Racing",
+    "lat": 51.08384346853234,
+    "lng": 4.806473990670647,
+    "myrcmOrgId": "50130"
+  },
+  {
     "hostId": "rcco-ig-vulkanparkracer-e-v",
     "hostName": "IG Vulkanparkracer e.V.",
     "locationUnknown": true
