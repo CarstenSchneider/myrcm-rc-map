@@ -185,9 +185,9 @@ window.addEventListener("load", () => {
 | `fetch-og-images.yml` | manuell | Fetcht og:image von Club-Websites → `hosts.json` auf dev |
 | `check-osm-images.yml` | manuell | Prüft OSM/Overpass auf Venue-Bilder → `osm-images-result.json` |
 
-**Wichtig:** `deploy-site-dev-hetzner.yml` kopiert **keine** JSON-Daten. `import-all.yml` deployed JSON-Daten direkt nach dem Import auf den dev-Server (kein manueller Schritt nötig).
+**Wichtig:** `deploy-site-dev-hetzner.yml` deployt bei einem Push auf `dev` auch alle JSON-Daten. Ein Push auf `dev` reicht — kein manueller Datendeploy nötig.
 
-**render.com:** Cron deaktiviert (auf nie-existierendes Datum gesetzt). `scripts/render-import.sh` bleibt als Fallback erhalten, wird aber nicht mehr automatisch ausgeführt.
+**render.com ist der primäre Import-Runner** (GitHub Actions `import-all.yml` hat Probleme). `scripts/render-import.sh` läuft täglich 04:00 + 16:00 UTC auf render.com und ist die Wahrheitsquelle für den Import-Ablauf. Änderungen am Import-Prozess immer in `render-import.sh` (und parallel in `import-all.yml`) vornehmen.
 
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
@@ -196,24 +196,35 @@ Aktuelle Version: **app.js v291**, **style.css v168**
 
 ## Import-System
 
-### Ablauf (GitHub Actions `import-all.yml`)
-Der Import läuft täglich **04:00 + 16:00 UTC** via GitHub Actions, NICHT mehr auf render.com.
+### Primärer Import: render.com (`scripts/render-import.sh`)
+Der Import läuft täglich **04:00 + 16:00 UTC auf render.com**. `render-import.sh` ist die Wahrheitsquelle.
 
-### import-all.yml — Ablauf
-1. **Import RCK** — `node import-rck.js` (RCK_GEOCODE=0, `continue-on-error`)
-2. **Import MyRCM** — `node --no-warnings import-myrcm.js` (muss klappen, sonst Abbruch)
-3. **Import DMC** — `node import-dmc.js` (`continue-on-error`)
-4. ~~Import RCCO~~ — **deaktiviert** (Nutzungsbedingungen rccar-online.de, seit 2026-06-28)
-5. **Commit main** — alle JSON-Dateien; `git pull --rebase --autostash` vor Push
-6. **Update dev** — `git checkout main -- <files>` → commit + push
-7. **Deploy dev-Server** — SFTP via lftp direkt im Workflow
-8. **Send notifications** — POST an Supabase Edge Function
+### render-import.sh — Ablauf
+1. **Dev-Seeds merge** — neue venue-seeds aus dev → main mergen (vor Import)
+2. **France Discovery** — `node scripts/discover-myrcm-france.js` (aktualisiert `myrcm-hosts-france.json`)
+3. **Import RCK** — `node import-rck.js` (`continue-on-error`)
+4. **Import MyRCM** — `node --no-warnings import-myrcm.js` (muss klappen, sonst Abbruch)
+5. **Import DMC** — `node import-dmc.js` (`continue-on-error`)
+6. **Import FFVRC** — `node import-ffvrc.js` (`continue-on-error`)
+7. ~~Import RCCO~~ — **deaktiviert** (Nutzungsbedingungen rccar-online.de)
+8. **Commit main** — alle JSON-Dateien inkl. `myrcm-hosts-france.json`; `git pull --rebase --autostash` vor Push
+9. **Update dev** — Daten von main → dev branch → push (triggert `deploy-site-dev-hetzner.yml`)
+10. **Send notifications** — POST an Supabase Edge Function
+
+**Neues Land / neue Plattform hinzufügen:** Script schreiben → `render-import.sh` ergänzen → ggf. `loadHosts()` in `import-myrcm.js` erweitern → leere JSON-Datei anlegen → auf dev **und** main pushen.
+
+### myrcm.ch — Zugriff aus Claude's Umgebung NICHT möglich
+**WICHTIG:** Claude's Remote-Execution-Umgebung kann myrcm.ch **nicht** erreichen (Proxy gibt 403/000 zurück). render.com hingegen kann myrcm.ch problemlos erreichen. Für alle Aufgaben die myrcm.ch-Zugriff erfordern (Discovery, Scraping, Test): Script schreiben das auf render.com läuft — nicht versuchen es von hier aus zu testen.
 
 ### import-myrcm.js — Konfiguration
 ```js
-const hostListFile = "myrcm-hosts-dach.json"; // 304 Hosts: 179 DE + 67 AT + 58 CH
+const hostListFile = "myrcm-hosts-dach.json";       // 304 Hosts: 179 DE + 67 AT + 58 CH
+const beneluxHostListFile = "myrcm-hosts-benelux.json"; // 90 Hosts: NL 50, BE 34, LU 6
+const franceHostListFile = "myrcm-hosts-france.json";   // FR Clubs (auto-discovery via render.com)
 ```
-**Wichtig:** Muss auf `main` identisch zu `dev` sein — der Import-Job checkt `main` aus.
+`loadHosts()` lädt alle drei Dateien und mergt sie (Duplikate per orgId dedupliziert).
+
+**Wichtig:** `import-myrcm.js` und alle `myrcm-hosts-*.json` müssen auf `main` und `dev` identisch sein — render.com checkt `main` aus.
 
 ### import-myrcm.js — Fehlerbehandlung
 ```js
@@ -240,6 +251,10 @@ async function isMyrcmReachable()  // schneller Ping auf myrcm.ch (8s Timeout)
 | `venues.json` | Strecken (DACH); enthält alle venue-seeds.json-Einträge mit gültigen Koordinaten |
 | `hosts.json` | Clubs (256 Hosts: 176 DE + 43 AT + 37 CH); enthält `ogImage`-Felder für 47 Clubs (via `fetch-og-images.yml`) |
 | `myrcm-hosts-dach.json` | Seed-Datei: 304 MyRCM-Hosts DACH (orgId, country als Vollname) |
+| `myrcm-hosts-benelux.json` | Seed-Datei: 90 MyRCM-Hosts Benelux (NL 50, BE 34, LU 6) |
+| `myrcm-hosts-france.json` | Auto-generiert von `scripts/discover-myrcm-france.js` auf render.com; initial leer |
+| `ffvrc-races.json` | FFVRC-Rennen (via `import-ffvrc.js`) |
+| `ffvrc-venues.json` | FFVRC-Strecken (locationUnknown Fallback: `ffvrc-fr`) |
 | `venue-seeds.json` | Manuell geprüfte Strecken-Koordinaten (283 Einträge); Wahrheitsquelle für alle Venues |
 | `venue-unmatched.json` | nicht zugeordnete Venues |
 | `rck-venue-candidates.json` | RCK Venue-Kandidaten |
@@ -418,4 +433,8 @@ venue-seeds.json (manuell gepflegt, 283 Einträge)
 21. **ETS-Venue-Aliases in venue-seeds.json** — damit der nächste Import ETS-Läufe korrekt zuordnet, müssen die Venue-Seeds die Ortsnamen aus den Race-Namen als Aliases haben: `mav-aigen-schlaegl` → ["Aigen", "AIGEN"], `mc-ettlingen-e-v` → ["Ettlingen", "ETTLINGEN"], `m-a-r-s-alt-erlaa` → ["Vienna", "VIENNA"], `mc-daun` → ["DAUN / GER", "DAUN/ GER"]. Fehlt ein Alias, bleibt die Race auf `ets-international` (Ort unbekannt) statt am richtigen Marker.
 22. **Races mit `venueId: null` und ohne Venue-Fallback verschwinden aus der Liste** — die App filtert solche Races aus der sichtbaren Liste. Für Races ohne bekannte Koordinaten immer `venueId: "ets-international"` (oder eine andere locationUnknown-Venue) setzen, nicht null lassen.
 23. **`venueCountry()` ignoriert `venue.country` nicht — DACH-Venues haben kein `myrcmOrgId`** — DMC-Venues (und manuell verifizierte Venues) haben `"country": "DE"/"AT"/"CH"` direkt auf dem Objekt, aber kein `myrcmOrgId`. `venueCountry()` prüft zuerst `myrcmOrgId` (Lookup via `hostsByOrgId`), fällt dann auf `venue.country` zurück. Ohne diesen Fallback gab `venueCountry` für alle DMC-Venues `null` zurück — Folge: Deutsche DMC-Strecken erschienen im Belgien-Filter.
-24. **`matchesCountryFilter`-Fallback bei fehlendem Länderdatum: nur DACH** — wenn weder `venue.country` noch `myrcmOrgId`-Lookup ein Land liefern, gilt: bei DACH-Filtern (DE/AT/CH) → `true` (Venue ist vermutlich DACH), bei Nicht-DACH-Filtern (BE/NL/LU) → `false`. Der ursprüngliche generelle `return true`-Fallback war aus der Zeit als nur DACH-Filter existierten — mit Benelux falsch.
+24. **`matchesCountryFilter`-Fallback bei fehlendem Länderdatum: nur DACH** — wenn weder `venue.country` noch `myrcmOrgId`-Lookup ein Land liefern, gilt: bei DACH-Filtern (DE/AT/CH) → `true` (Venue ist vermutlich DACH), bei Nicht-DACH-Filtern (BE/NL/LU/FR) → `false`. Der ursprüngliche generelle `return true`-Fallback war aus der Zeit als nur DACH-Filter existierten — mit Benelux/France falsch.
+25. **myrcm.ch ist aus Claude's Remote-Umgebung NICHT erreichbar** — der Proxy gibt 403 oder 000 zurück. Niemals versuchen myrcm.ch von dieser Umgebung aus zu testen (curl, WebFetch, fetch — alles schlägt fehl). Stattdessen: Script schreiben, auf render.com laufen lassen. render.com hat freien Zugriff auf myrcm.ch.
+26. **render.com ist der primäre Import-Runner** — GitHub Actions `import-all.yml` hat bekannte Probleme. Änderungen am Import immer in `scripts/render-import.sh` vornehmen (und parallel in `import-all.yml` für den Fallback). `render-import.sh` auf `main` pushen — render.com checkt `main` aus.
+27. **`venueRecordFromSeed()` muss `country` vom Seed propagieren** — ohne `...(seed.country ? { country: seed.country } : {})` haben Venues kein `country`-Feld → `venueCountry()` gibt null zurück → Venues erscheinen unter falschem Länderfilter. Fix ist in `import-myrcm.js` vorhanden.
+28. **Seed `id`-Feld ist kritisch für Venue-IDs** — `seedId(seed)` gibt `seed.id` zurück wenn vorhanden, sonst `"myrcm-{orgId}"`. Ohne explizites `id`-Feld hat eine Venue nach dem Import z.B. id `"myrcm-5305"` statt `"raco-2000"`. Immer `"id"` in venue-seeds.json setzen wenn eine sprechende ID gewünscht ist.
