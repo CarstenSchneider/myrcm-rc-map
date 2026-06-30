@@ -9,5 +9,16 @@
       "dmc-ov-37"
     ],
     "source": "dmc-seed"
+  },
+  {
+    "id": "dmc-ov-303",
+    "name": "RIMAR Rhein Ijssel Modell Auto Race",
+    "city": "Voerde",
+    "lat": 51.98236927459978,
+    "lng": 5.987030899603787,
+    "hostIds": [
+      "dmc-ov-303"
+    ],
+    "source": "dmc-seed"
   }
 ]
