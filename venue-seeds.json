@@ -2907,7 +2907,9 @@
       "ÖFMAV Sektion Elektro Offroad",
       "Wien"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
   },
   {
     "id": "oefmav-sektion-or-8",
