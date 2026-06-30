@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "modelbouw-vereniging-waterland",
-    "hostName": "Modelbouw Vereniging Waterland",
-    "source": "myrcm",
-    "myrcmOrgId": "439",
-    "possibleVenue": "Purmerend",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "modelifun2-0",
     "hostName": "Modelifun2.0",
     "source": "myrcm",
