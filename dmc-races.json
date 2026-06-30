@@ -3841,6 +3841,37 @@
     ]
   },
   {
+    "id": "dmc-rimar-rhein-ijssel-modell-auto-race-2026-05-30",
+    "venueId": null,
+    "venueName": "RIMAR Rhein Ijssel Modell Auto Race",
+    "venueLocation": "Voerde",
+    "hostId": "dmc-ov-303",
+    "hostName": "RIMAR Rhein Ijssel Modell Auto Race",
+    "hostCity": "Voerde",
+    "hostWebsite": "http://www.evmc.nl",
+    "dmcOvNr": "303",
+    "name": "Sportkreismeisterschaft",
+    "from": "2026-05-30",
+    "to": "2026-05-31",
+    "series": [],
+    "classes": [
+      "VG5F1",
+      "VG5SP",
+      "VG5TW"
+    ],
+    "source": "dmc",
+    "url": null,
+    "registrationStatus": null,
+    "registrationOpens": null,
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1776694110_Musterausschreibung_VG5_Velp.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
+  },
+  {
     "id": "dmc-la-speedway-racing-club-2026-05-30",
     "venueId": "la-speedway-racing-club-e-v",
     "venueName": "LA Speedway Racing Club e.V.",
@@ -6684,7 +6715,13 @@
     "url": null,
     "registrationStatus": null,
     "registrationOpens": null,
-    "documents": []
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782778152_Ausschreibung_GT_2026_MSC_PDF_DM.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-rc-offroad-heiligenstadt-e-v-2026-08-21",
@@ -6818,7 +6855,13 @@
     "url": null,
     "registrationStatus": null,
     "registrationOpens": null,
-    "documents": []
+    "documents": [
+      {
+        "url": "https://dmc-online.com/wordpress/terminuploads/1782777463_260830_Hamm_DM_VG8-VG10_DC_VG8S-10S_-_Ausschreibung_V5.pdf",
+        "type": "announcement",
+        "label": "Ausschreibung"
+      }
+    ]
   },
   {
     "id": "dmc-modell-car-club-rhein-ahr-e-v-2026-08-28",
