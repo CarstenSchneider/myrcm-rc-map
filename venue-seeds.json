@@ -2236,7 +2236,8 @@
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
-    "lng": 7.760546012964474
+    "lng": 7.760546012964474,
+    "country": "DE"
   },
   {
     "id": "modell-rennsport-club-st-gallen-mrcsg",
