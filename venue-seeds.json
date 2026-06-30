@@ -209,7 +209,8 @@
       "AMC Saarbrücken e.V.",
       "Saarbrücken"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.amc-saarbruecken.de/"
   },
   {
     "id": "amc-senftenberg-e-v",
@@ -303,7 +304,8 @@
       "AMC-Mühlau e.V.",
       "Mühlau"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.amc-muehlau.de/"
   },
   {
     "id": "amsc-augsburg-e-v",
@@ -409,7 +411,8 @@
     "rckLocations": [
       "Andernach"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.djk-andernach.de/"
   },
   {
     "id": "art-racing-team-switzerland",
@@ -484,7 +487,8 @@
       "Auto Modell Club Schaffhausen",
       "Winterthur"
     ],
-    "country": "CH"
+    "country": "CH",
+    "website": "http://www.krieger.li/amcs/"
   },
   {
     "id": "automodellclub-meissen-e-v",
@@ -502,14 +506,16 @@
       "Automodellclub Meißen e.V.",
       "Nossen"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.automodellclub-meissen.de/"
   },
   {
     "hostId": "dmc-bc-mitterkreith",
     "hostName": "BC Mitterkreith",
     "lat": 49.21155192592243,
     "lng": 12.493146117142087,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.bc-mitterkreith.de"
   },
   {
     "id": "bclc-buggy-club-de-la-c-te",
@@ -535,7 +541,8 @@
     "hostName": "BIG Hamburg e.V.",
     "lat": 53.64060473290764,
     "lng": 9.832929581941356,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.bighamburg.de"
   },
   {
     "hostId": "rcco-black-sheep-racers-e-v",
@@ -549,7 +556,8 @@
     "hostName": "BOC Kiel e.V.",
     "lat": 54.405611868632796,
     "lng": 10.277043224357401,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.boc-kiel.de"
   },
   {
     "id": "breitenfelder-sportverein-von-1924-e-v",
@@ -936,7 +944,8 @@
       "Wolfsgraben"
     ],
     "locationUnknown": true,
-    "country": "AT"
+    "country": "AT",
+    "website": "http://www.erc-wrneudorf.com/"
   },
   {
     "hostId": "erce",
@@ -970,7 +979,8 @@
     "hostName": "ESV Bischofsheim e.V.",
     "lat": 49.97771285712217,
     "lng": 8.386922863605161,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://rhein-main-circuit.de"
   },
   {
     "id": "esv-blau-gold-bischofsheim-1958-e-v",
@@ -1316,7 +1326,8 @@
       "m-a-r-s-alt-erlaa"
     ],
     "myrcmOrgId": "339",
-    "country": "AT"
+    "country": "AT",
+    "website": "https://marsalterlaa.de.tl/"
   },
   {
     "id": "mac-adenau",
@@ -1470,7 +1481,8 @@
       "Am Zollhaus, 90471 Nürnberg",
       "myrcm-9976"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.macn.de/"
   },
   {
     "id": "mac-or-huetschenhausen-e-v",
@@ -1488,7 +1500,8 @@
       "MAC OR Hütschenhausen e.V.",
       "Hütschenhausen"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mac-huetschenhausen.de/"
   },
   {
     "id": "mac-saar-e-v",
@@ -1652,7 +1665,8 @@
     "aliases": [
       "marzahn"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.mrc-berlin.org/"
   },
   {
     "id": "mav-aigen-schlaegl",
@@ -1674,7 +1688,8 @@
       "mav-aigen-schlaegl"
     ],
     "myrcmOrgId": "217",
-    "country": "AT"
+    "country": "AT",
+    "website": "http://www.mav-aigen-schlaegl.at/"
   },
   {
     "id": "max-informatique",
@@ -1751,7 +1766,8 @@
     "hostName": "MBC Oberlausitz e.V.",
     "lat": 51.08318541210428,
     "lng": 14.57770822945999,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mbc-oberlausitz.de"
   },
   {
     "id": "mblr-ecl-pens",
@@ -1809,7 +1825,8 @@
       "Industriestr. 1, 63607 Wächtersbach",
       "myrcm-27211"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mbsc-waechtersbach.de/"
   },
   {
     "hostId": "mbv-kampenhout-vzw",
@@ -1824,7 +1841,8 @@
     "hostName": "MC Dortmund e.V.",
     "lat": 51.55786161696523,
     "lng": 7.521933636366658,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mcdortmund.net"
   },
   {
     "id": "mc-ettlingen-e-v",
@@ -1871,7 +1889,8 @@
     "hostName": "MC Schwedt e.V.",
     "lat": 53.12277371820801,
     "lng": 14.28616563116813,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.modellclub-schwedt.com"
   },
   {
     "id": "mc-welden-e-v",
@@ -1908,7 +1927,8 @@
       "MC-Fürstenwalde e.V.",
       "Fürstenwalde"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.mc-fuerstenwalde.de/"
   },
   {
     "id": "mc-orc-e-v",
@@ -1991,7 +2011,8 @@
     "hostName": "MCC Hof e.V.",
     "lat": 50.324395365150075,
     "lng": 11.836592721346877,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mcc-hof.de"
   },
   {
     "hostId": "mcc-laupheim-e-v",
@@ -2051,7 +2072,8 @@
       "MCC Rheda-Wiedenbrück e.V.",
       "Gütersloh"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://de-de.facebook.com/mcc.rhedawiedenbruckev/"
   },
   {
     "id": "mcc-rhein-ahr-e-v",
@@ -2089,7 +2111,8 @@
     "hostName": "MCC Rudolstadt e.V.",
     "lat": 50.72384715912249,
     "lng": 11.351920419287275,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://mcc.rudolstadt.de"
   },
   {
     "id": "mcc-tuerkheim-e-v",
@@ -2107,7 +2130,8 @@
       "MCC Türkheim e.V.",
       "Weißenhorn"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.mcc-tuerkheim.de/"
   },
   {
     "id": "mcc-hocheifel-e-v",
@@ -2221,7 +2245,8 @@
       "MCV Dänischer Wohld e.V.",
       "Tüttendorf"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://mcv-daenischer-wohld.de/"
   },
   {
     "id": "megadrom-rc-team-nord",
@@ -2463,7 +2488,8 @@
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
     "lng": 7.760546012964474,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mcc-rhein-ahr.de"
   },
   {
     "id": "modell-rennsport-club-st-gallen-mrcsg",
@@ -2489,7 +2515,8 @@
     "hostName": "Modell-Car-Club Bad Kissingen e.V.",
     "lat": 50.20437672229121,
     "lng": 10.097876991086581,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mcc-kg.de"
   },
   {
     "id": "modellbaufreunde-felsberg-e-v",
@@ -2542,7 +2569,8 @@
     "hostName": "Modellfreunde Rheinhessen/Pfalz e.V.",
     "lat": 49.699136947713704,
     "lng": 8.03194898284182,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mfr-morschheim.de"
   },
   {
     "id": "modellrenngemeinschaft-dogern-e-v",
@@ -2575,7 +2603,8 @@
     "hostName": "Modellsport Münsterland e.V.",
     "lat": 52.34156335945138,
     "lng": 7.577074708374697,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.modellsport-muensterland.de"
   },
   {
     "id": "modellsportzentrum-zwoenitz-e-v",
@@ -2593,7 +2622,8 @@
       "Modellsportzentrum Zwönitz e.V.",
       "Zwönitz"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.modellsportzentrum-zwoenitz.com/"
   },
   {
     "hostId": "modelsport-vereniging-bergschenhoek",
@@ -2773,7 +2803,8 @@
       "1. MRC Mannheim e.V.",
       "Mannheim"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.mrc-mannheim.de/"
   },
   {
     "id": "mrc-mehrum-e-v",
@@ -2974,7 +3005,8 @@
     "hostIds": [
       "rcco-msc-gemunden-e-v"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.msc-gemuenden.de"
   },
   {
     "id": "msc-halle-e-v",
@@ -3112,7 +3144,8 @@
       "Osterhofen",
       "myrcm-50019"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.MSC-Osterhofen.com"
   },
   {
     "hostId": "dmc-ov-158",
@@ -3125,7 +3158,8 @@
     "hostName": "MSC Sand e.V.",
     "lat": 49.97561500237808,
     "lng": 10.581751303542033,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mscsand.de"
   },
   {
     "hostId": "msc-ulm-e-v",
@@ -3133,7 +3167,8 @@
     "lat": 48.32186708992988,
     "lng": 10.051712050024937,
     "myrcmOrgId": "42113",
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www."
   },
   {
     "id": "msg-niesky-e-v",
@@ -3201,7 +3236,8 @@
     "hostName": "MSV Linsengericht",
     "lat": 50.177551274663394,
     "lng": 9.201961271228923,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.msvlinsengericht.de"
   },
   {
     "hostId": "msv-weiz",
@@ -3344,7 +3380,8 @@
     "hostName": "Offroad Club Ostsee e.V.",
     "lat": 54.22601827812129,
     "lng": 10.77563474253423,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://Offroad-Club-Ostsee.Modellbuggy.de"
   },
   {
     "id": "offroad-team-zuerich",
@@ -3502,7 +3539,8 @@
     "hostName": "ORT Fulda",
     "lat": 50.48845151298898,
     "lng": 9.410104072742504,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.ort-fulda.de"
   },
   {
     "id": "psv-klagenfurt",
@@ -3665,7 +3703,8 @@
       "RC Cars Köngen e.V.",
       "Stuttgart"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rc-cars-koengen.de/"
   },
   {
     "hostId": "rc-cars-wernigerode-e-v",
@@ -3718,7 +3757,8 @@
     "lat": 51.539601453420495,
     "lng": 7.093322619514601,
     "myrcmOrgId": "33778",
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rc-drecksloch.de"
   },
   {
     "hostId": "rcco-rc-freunde-vennebeck-e-v",
@@ -3753,14 +3793,16 @@
     "hostName": "RC Halle e.V.",
     "lat": 51.46739270411921,
     "lng": 11.986882520742833,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rchalle.de"
   },
   {
     "hostId": "dmc-ov-160",
     "hostName": "RC Haltern e.V.",
     "lat": 51.72503319039647,
     "lng": 7.168746466631296,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rc-haltern.de"
   },
   {
     "hostId": "rc-hotwheels",
@@ -3797,7 +3839,8 @@
     "hostName": "RC Offroad Heiligenstadt e.V.",
     "lat": 51.387849617883866,
     "lng": 10.157074621044304,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://rc-offroad-heiligenstadt.de"
   },
   {
     "hostId": "rc-offroad-staaken",
@@ -3815,14 +3858,16 @@
     "lat": 48.00857029662106,
     "lng": 11.36000585844325,
     "myrcmOrgId": "37520",
-    "country": "DE"
+    "country": "DE",
+    "website": "http://dhracing.me"
   },
   {
     "hostId": "dmc-ov-149",
     "hostName": "RC RaceCrew",
     "lat": 50.6014459269992,
     "lng": 6.631677390651763,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rc-racecrew.de"
   },
   {
     "id": "rc-racer-hochsauerland-e-v",
@@ -3936,14 +3981,16 @@
     "hostName": "RC-Club Grossheubach e.V.",
     "lat": 49.71631983331656,
     "lng": 9.22897600697451,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rc-club-großheubach.de"
   },
   {
     "hostId": "dmc-rc-freunde-kinzigtal-e-v",
     "hostName": "RC-Freunde Kinzigtal e.V.",
     "lat": 48.25856894788509,
     "lng": 8.20950494948204,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rc-freunde-kinzigtal.de"
   },
   {
     "id": "rc-glashaus-e-v",
@@ -4023,7 +4070,8 @@
     "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
     "lat": 51.208755602022045,
     "lng": 13.83564932733246,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rco-ottendorf-okrilla.de"
   },
   {
     "id": "rc-offroad-wattenscheid-e-v",
@@ -4201,7 +4249,8 @@
     "hostName": "RCCC Coesfeld",
     "lat": 51.955437808946684,
     "lng": 7.085230572349691,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rccc-coesfeld.de"
   },
   {
     "hostId": "rcco-rccc-hilter-e-v",
@@ -4293,7 +4342,8 @@
     "hostName": "RCR Peterberg e.V.",
     "lat": 49.57913176184305,
     "lng": 7.000287284154371,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rcr-peterberg.de"
   },
   {
     "id": "rcr-linz",
@@ -4399,7 +4449,8 @@
     "hostName": "RIMAR Rhein Ijssel Modell Auto Race",
     "lat": 51.98236927459978,
     "lng": 5.987030899603787,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.evmc.nl"
   },
   {
     "id": "rmc-dueren-e-v",
@@ -4417,14 +4468,16 @@
       "RMC Düren e.V.",
       "Niederzier"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rmcdueren.de/"
   },
   {
     "hostId": "dmc-rmc-wolfsburg-e-v",
     "hostName": "RMC Wolfsburg e.V.",
     "lat": 52.42966034303305,
     "lng": 10.865419082462832,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.rmc-wolfsburg.eu"
   },
   {
     "hostId": "rmc-wien",
@@ -4557,7 +4610,8 @@
     "hostName": "SLR Ingolstadt e.V.",
     "lat": 48.7154019804972,
     "lng": 11.41198778356575,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://slringolstadt06.de"
   },
   {
     "hostId": "smc-stuttgart-e-v",
@@ -4601,7 +4655,8 @@
     "hostName": "Spessart Racer",
     "lat": 49.967133148160016,
     "lng": 9.303292985142585,
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.spessart-racer.de"
   },
   {
     "hostId": "rcco-spessart-racer-e-v",
@@ -4751,7 +4806,8 @@
       "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
       "Chemnitz"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "https://www.tu-chemnitz.de/"
   },
   {
     "id": "tr-racing",
@@ -4778,7 +4834,8 @@
     "hostIds": [
       "dmc-ts-gross-auheim"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mrcgrossauheim.de"
   },
   {
     "hostId": "rcco-tsg-mst-estenfeld",
@@ -4895,7 +4952,8 @@
       "dmc-ttsc-racing-team",
       "rcco-ttsc-racing"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.ttsc-racing.de"
   },
   {
     "id": "turnerschaft-1860-e-v-grossauheim",
@@ -4913,7 +4971,8 @@
       "Turnerschaft 1860 e.V. Großauheim",
       "Hanau Grossauheim"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://www.mrcgrossauheim.de/"
   },
   {
     "id": "turngemeinde-1855-neustadt-bei-coburg-e-v",
@@ -4981,7 +5040,8 @@
       "VFR-Rüsselsheim e.V.",
       "Rüsselsheim"
     ],
-    "country": "DE"
+    "country": "DE",
+    "website": "http://rccar.vfr-ruesselsheim.de/"
   },
   {
     "id": "wiesbadener-minicar-club-e-v",
