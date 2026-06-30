@@ -5456,10 +5456,7 @@ function showMenuHome() {
   const authSection = sbUser
     ? `<div class="app-menu-auth-user">
         <span class="app-menu-row-icon">${iconUser}</span>
-        <div class="app-menu-auth-info">
-          <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
-          <span class="app-menu-auth-status">${t("menu.signedIn")}</span>
-        </div>
+        <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
         <button type="button" class="app-menu-auth-signout-icon" id="sbSignOutBtn" aria-label="${t("menu.signOut")}" title="${t("menu.signOut")}">${iconLogout}</button>
       </div>`
     : `<button type="button" class="app-menu-row" id="sbLoginBtn">
@@ -5480,16 +5477,6 @@ function showMenuHome() {
         <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light" aria-label="${t("menu.theme.light")}" title="${t("menu.theme.light")}">${iconThemeLight}</button>
         <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark" aria-label="${t("menu.theme.dark")}" title="${t("menu.theme.dark")}">${iconThemeDark}</button>
       </div>
-    </div>
-    <div class="app-menu-row app-menu-lang-row">
-      <span class="app-menu-row-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-      <span class="app-menu-row-label">${t("menu.language")}</span>
-      <select class="lang-select" aria-label="${t("menu.language")}">
-        <option value="de"${_lang==="de"?" selected":""}>Deutsch</option>
-        <option value="en"${_lang==="en"?" selected":""}>English</option>
-        <option value="fr"${_lang==="fr"?" selected":""}>Français</option>
-        <option value="nl"${_lang==="nl"?" selected":""}>Nederlands</option>
-      </select>
     </div>
     ${sbUser ? `
     <button type="button" class="app-menu-row" data-menu="favorites">
@@ -5535,6 +5522,12 @@ function showMenuHome() {
           <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="app-menu-footer-link">OpenStreetMap</a>
         </div>
       </div>
+      <select class="lang-select" aria-label="${t("menu.language")}">
+        <option value="de"${_lang==="de"?" selected":""}>Deutsch</option>
+        <option value="en"${_lang==="en"?" selected":""}>English</option>
+        <option value="fr"${_lang==="fr"?" selected":""}>Français</option>
+        <option value="nl"${_lang==="nl"?" selected":""}>Nederlands</option>
+      </select>
     </div>`;
 
   appMenuContent.querySelectorAll("[data-theme]").forEach(btn => {
