@@ -3882,6 +3882,13 @@
     "myrcmOrgId": "53360"
   },
   {
+    "hostId": "lmcc",
+    "hostName": "LMCC",
+    "lat": 49.58092061399585,
+    "lng": 6.129729483503843,
+    "myrcmOrgId": "51"
+  },
+  {
     "hostId": "mac-mistelbach",
     "hostName": "MAC Mistelbach",
     "lat": 48.55312704380916,
