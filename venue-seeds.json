@@ -4266,6 +4266,13 @@
     "myrcmOrgId": "34977"
   },
   {
+    "hostId": "rc-de-fivelcrossers",
+    "hostName": "RC de Fivelcrossers",
+    "lat": 53.3164794867982,
+    "lng": 6.87993253394332,
+    "myrcmOrgId": "18663"
+  },
+  {
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "lat": 51.539601453420495,
