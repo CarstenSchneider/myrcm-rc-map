@@ -1362,6 +1362,30 @@
     "country": "AT"
   },
   {
+    "id": "myrcm-host-mini-auto-club-de-charmes-sur-rhone",
+    "name": "MyRCM : Host : Mini auto Club de Charmes Sur Rhone",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641",
+    "myrcmOrgId": "25367"
+  },
+  {
+    "id": "myrcm-host-pommeraye-mini-racing-car",
+    "name": "MyRCM : Host : POMMERAYE MINI RACING CAR",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641",
+    "myrcmOrgId": "37401"
+  },
+  {
+    "id": "myrcm-host-reims-enduro-model-car",
+    "name": "MyRCM : Host : Reims Enduro Model Car",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641",
+    "myrcmOrgId": "24695"
+  },
+  {
+    "id": "myrcm-host-sermaise-electro-modelisme",
+    "name": "MyRCM : Host : Sermaise Electro Modelisme",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641",
+    "myrcmOrgId": "46243"
+  },
+  {
     "id": "nitro-sud",
     "name": "Nitro Süd",
     "website": "http://www.xn--nitro-sd-d6a.de/",

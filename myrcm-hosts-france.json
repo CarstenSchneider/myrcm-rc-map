@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "orgId": "25367",
+    "name": "MyRCM : Host : Mini auto Club de Charmes Sur Rhone",
+    "location": "CHARMES SUR RHONE",
+    "country": "France",
+    "eventCount": 13,
+    "url": "https://www.myrcm.ch/?dId[O]=25367&pLa=en&hId[1]=org",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641"
+  },
+  {
+    "orgId": "37401",
+    "name": "MyRCM : Host : POMMERAYE MINI RACING CAR",
+    "location": "MAUGES SUR LOIRE",
+    "country": "France",
+    "eventCount": 11,
+    "url": "https://www.myrcm.ch/?dId[O]=37401&pLa=en&hId[1]=org",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641"
+  },
+  {
+    "orgId": "24695",
+    "name": "MyRCM : Host : Reims Enduro Model Car",
+    "location": "Reims",
+    "country": "France",
+    "eventCount": 49,
+    "url": "https://www.myrcm.ch/?dId[O]=24695&pLa=en&hId[1]=org",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641"
+  },
+  {
+    "orgId": "46243",
+    "name": "MyRCM : Host : Sermaise Electro Modelisme",
+    "location": "Sermaise",
+    "country": "France",
+    "eventCount": 5,
+    "url": "https://www.myrcm.ch/?dId[O]=46243&pLa=en&hId[1]=org",
+    "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641"
+  }
+]
