@@ -4228,6 +4228,12 @@
     "lng": 10.77563474253423
   },
   {
+    "hostId": "orra",
+    "hostName": "Orra",
+    "locationUnknown": true,
+    "myrcmOrgId": "55554"
+  },
+  {
     "hostId": "dmc-ort-fulda",
     "hostName": "ORT Fulda",
     "lat": 50.48845151298898,
