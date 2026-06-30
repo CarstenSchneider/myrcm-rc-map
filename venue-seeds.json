@@ -526,7 +526,9 @@
     "hostName": "Bugg'ittre Racing",
     "lat": 50.65768338233705,
     "lng": 4.307840911313228,
-    "myrcmOrgId": "31752"
+    "myrcmOrgId": "31752",
+    "country": "BE",
+    "website": "https://buggittre.be/"
   },
   {
     "id": "buggy-club-hornets",
