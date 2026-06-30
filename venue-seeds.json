@@ -51,6 +51,12 @@
     ]
   },
   {
+    "hostId": "dmc-ov-386",
+    "hostName": "3 Sesselracer",
+    "lat": 48.735275140194894,
+    "lng": 13.798908925294255
+  },
+  {
     "id": "a-team-graz",
     "name": "A-Team Graz",
     "city": "Graz",
@@ -66,6 +72,12 @@
       "A-Team Graz",
       "Graz"
     ]
+  },
+  {
+    "hostId": "alpencup",
+    "hostName": "Alpencup",
+    "locationUnknown": true,
+    "myrcmOrgId": "53515"
   },
   {
     "id": "amc-hildesheim-e-v",
@@ -134,6 +146,16 @@
       "AMC Magdeburg e.V.",
       "Magdeburg"
     ]
+  },
+  {
+    "hostId": "dmc-amc-mistral-lahr-e-v",
+    "hostName": "AMC Mistral Lahr e.V.",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "dmc-ov-87",
+    "hostName": "AMC Mistral Lahr e.V.",
+    "locationUnknown": true
   },
   {
     "id": "amc-nussdorf-debant",
@@ -436,6 +458,12 @@
     ]
   },
   {
+    "hostId": "dmc-bc-mitterkreith",
+    "hostName": "BC Mitterkreith",
+    "lat": 49.21155192592243,
+    "lng": 12.493146117142087
+  },
+  {
     "id": "bclc-buggy-club-de-la-c-te",
     "name": "BCLC Buggy Club de la Côte",
     "city": "Gland",
@@ -451,6 +479,24 @@
       "BCLC Buggy Club de la Côte",
       "Gland"
     ]
+  },
+  {
+    "hostId": "dmc-big-hamburg-e-v",
+    "hostName": "BIG Hamburg e.V.",
+    "lat": 53.64060473290764,
+    "lng": 9.832929581941356
+  },
+  {
+    "hostId": "rcco-black-sheep-racers-e-v",
+    "hostName": "Black Sheep Racers e. V.",
+    "lat": 49.124882296659635,
+    "lng": 10.779528541213677
+  },
+  {
+    "hostId": "dmc-boc-kiel-e-v",
+    "hostName": "BOC Kiel e.V.",
+    "lat": 54.405611868632796,
+    "lng": 10.277043224357401
   },
   {
     "id": "breitenfelder-sportverein-von-1924-e-v",
@@ -470,6 +516,13 @@
     ]
   },
   {
+    "hostId": "bugg-ittre-racing",
+    "hostName": "Bugg'ittre Racing",
+    "lat": 50.65768338233705,
+    "lng": 4.307840911313228,
+    "myrcmOrgId": "31752"
+  },
+  {
     "id": "buggy-club-hornets",
     "name": "Buggy Club Hornets",
     "city": "Esslingen",
@@ -485,6 +538,27 @@
       "Buggy Club Hornets",
       "Esslingen"
     ]
+  },
+  {
+    "hostId": "buggy-club-indoor-charleroi-asbl",
+    "hostName": "Buggy Club Indoor Charleroi ASBL",
+    "lat": 50.42900387816841,
+    "lng": 4.446907564457314,
+    "myrcmOrgId": "743"
+  },
+  {
+    "hostId": "buggy-racing-bauffe-club",
+    "hostName": "Buggy Racing Bauffe Club",
+    "lat": 50.65765924756288,
+    "lng": 4.307777221996776,
+    "myrcmOrgId": "17680"
+  },
+  {
+    "hostId": "buggy-rc-bauffe-a-s-b-l",
+    "hostName": "Buggy RC Bauffe a.s.b.l",
+    "lat": 50.55163011529372,
+    "lng": 3.8388580908852754,
+    "myrcmOrgId": "62332"
   },
   {
     "id": "buggyclub-zentralschweiz",
@@ -563,6 +637,23 @@
       "DJK-SSC Lackenhäuser e.V.",
       "Neureichenau"
     ]
+  },
+  {
+    "hostId": "dmc-dmc-e-v-geschaftsstelle",
+    "hostName": "DMC e.V. Geschäftsstelle",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "dutch-rc-series",
+    "hostName": "Dutch RC Series",
+    "locationUnknown": true,
+    "myrcmOrgId": "28115"
+  },
+  {
+    "hostId": "dutch-rc-timekeeping",
+    "hostName": "Dutch RC TimeKeeping",
+    "locationUnknown": true,
+    "myrcmOrgId": "1980"
   },
   {
     "id": "edc-kinzigtal-e-v",
@@ -650,6 +741,12 @@
     ]
   },
   {
+    "hostId": "rcco-emc-wehrheim-e-v",
+    "hostName": "EMC Wehrheim e. V.",
+    "lat": 50.314507929048034,
+    "lng": 8.558427424524675
+  },
+  {
     "id": "emc-marktoberdorf",
     "name": "EMC-Marktoberdorf",
     "city": "Marktoberdorf",
@@ -713,6 +810,13 @@
     ]
   },
   {
+    "hostId": "rcco-erc-racing-e-v",
+    "hostName": "ERC-Racing e.V.",
+    "lat": 52.33147453255704,
+    "lng": 7.429288493596242,
+    "website": "https://www.facebook.com/p/ERC-Racing-eV-100057458199626/"
+  },
+  {
     "id": "erc-wr-neudorf",
     "name": "ERC-Wr.Neudorf",
     "city": "Wolfsgraben",
@@ -727,6 +831,13 @@
       "Wolfsgraben"
     ],
     "locationUnknown": true
+  },
+  {
+    "hostId": "erce",
+    "hostName": "ERCE",
+    "lat": 51.474136507766445,
+    "lng": 5.451839831543991,
+    "myrcmOrgId": "3350"
   },
   {
     "id": "ert-steyregg",
@@ -746,6 +857,12 @@
     ]
   },
   {
+    "hostId": "dmc-ov-37",
+    "hostName": "ESV Bischofsheim e.V.",
+    "lat": 49.97771285712217,
+    "lng": 8.386922863605161
+  },
+  {
     "id": "esv-blau-gold-bischofsheim-1958-e-v",
     "name": "ESV Blau-Gold Bischofsheim 1958 e.V.",
     "city": "Bischofsheim",
@@ -761,6 +878,44 @@
       "ESV Blau-Gold Bischofsheim 1958 e.V.",
       "Bischofsheim"
     ]
+  },
+  {
+    "id": "ets-international",
+    "name": "ETS / TOS International",
+    "locationUnknown": true,
+    "source": "manual",
+    "aliases": [
+      "ETS International",
+      "TOS International"
+    ],
+    "hostIds": [],
+    "skipTextMatch": true
+  },
+  {
+    "hostId": "evmc-velp",
+    "hostName": "EVMC Velp",
+    "lat": 51.982283708724864,
+    "lng": 5.9870087702161054,
+    "myrcmOrgId": "10817"
+  },
+  {
+    "hostId": "fba-vzw",
+    "hostName": "FBA vzw",
+    "locationUnknown": true,
+    "myrcmOrgId": "38144"
+  },
+  {
+    "hostId": "flamrc",
+    "hostName": "FLAMRC",
+    "locationUnknown": true,
+    "myrcmOrgId": "73"
+  },
+  {
+    "hostId": "flatout-rc-vzw",
+    "hostName": "FlatOut RC VZW",
+    "lat": 51.311941003199514,
+    "lng": 5.048176366250522,
+    "myrcmOrgId": "739"
   },
   {
     "id": "greenhouse-racer-e-v",
@@ -780,6 +935,20 @@
     ]
   },
   {
+    "hostId": "h-m-r-c",
+    "hostName": "H.M.R.C.",
+    "lat": 52.92978612356075,
+    "lng": 4.7807556333955965,
+    "myrcmOrgId": "7059"
+  },
+  {
+    "hostId": "hfcc-racing-den-haag",
+    "hostName": "HFCC Racing Den Haag",
+    "lat": 52.042806391074365,
+    "lng": 4.242145539805281,
+    "myrcmOrgId": "14156"
+  },
+  {
     "id": "hobby-shop-haessig",
     "name": "Hobby Shop Hässig",
     "city": "Wohlen",
@@ -797,6 +966,26 @@
     ]
   },
   {
+    "hostId": "houthalens-racing-team",
+    "hostName": "Houthalens Racing Team",
+    "lat": 51.04033523105567,
+    "lng": 5.389993492087697,
+    "myrcmOrgId": "65"
+  },
+  {
+    "hostId": "hugo-rc-timing-nl",
+    "hostName": "Hugo - RC-Timing.nl",
+    "locationUnknown": true,
+    "myrcmOrgId": "2824"
+  },
+  {
+    "hostId": "hulshout-offroad-racing",
+    "hostName": "Hulshout Offroad Racing",
+    "lat": 51.08384346853234,
+    "lng": 4.806473990670647,
+    "myrcmOrgId": "50130"
+  },
+  {
     "id": "ig-racing-team-hamm",
     "name": "IG Racing Team Hamm",
     "city": "Lippstadt",
@@ -812,6 +1001,18 @@
       "IG Racing Team Hamm",
       "Lippstadt"
     ]
+  },
+  {
+    "hostId": "rcco-ig-vulkanparkracer-e-v",
+    "hostName": "IG Vulkanparkracer e.V.",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "indoor-offroad-turnhout",
+    "hostName": "Indoor Offroad Turnhout",
+    "lat": 51.32199,
+    "lng": 4.95729,
+    "myrcmOrgId": "59433"
   },
   {
     "id": "indoortrack-wichtrach",
@@ -933,6 +1134,27 @@
     ]
   },
   {
+    "id": "m-a-r-s-alt-erlaa",
+    "name": "M.A.R.S. Alt Erlaa",
+    "lat": 48.1555949,
+    "lng": 16.3186165,
+    "city": "Wien",
+    "source": "manual",
+    "aliases": [
+      "Vienna",
+      "myrcm-339",
+      "M.A.R.S. Alt Erlaa",
+      "VIENNA/ AT",
+      "VIENNA",
+      "VIENNA / AT",
+      "Wien"
+    ],
+    "hostIds": [
+      "m-a-r-s-alt-erlaa"
+    ],
+    "myrcmOrgId": "339"
+  },
+  {
     "id": "mac-adenau",
     "name": "MAC Adenau",
     "city": "Kottenborn",
@@ -1029,6 +1251,13 @@
       "myrcm-891",
       "Vaterstetten"
     ]
+  },
+  {
+    "hostId": "mac-mistelbach",
+    "hostName": "MAC Mistelbach",
+    "lat": 48.55312704380916,
+    "lng": 16.550197608841213,
+    "myrcmOrgId": "20718"
   },
   {
     "id": "mac-nuernberg-e-v",
@@ -1211,6 +1440,27 @@
     ]
   },
   {
+    "id": "mav-aigen-schlaegl",
+    "name": "MAV Aigen-Schlägl",
+    "lat": 48.6443258,
+    "lng": 13.9688049,
+    "city": "Aigen-Schlägl",
+    "source": "manual",
+    "aliases": [
+      "myrcm-217",
+      "Aigen-Schlägl",
+      "Aigen",
+      "Aigen/ AT",
+      "MAV Aigen-Schlägl",
+      "AIGEN",
+      "AIGEN / AT"
+    ],
+    "hostIds": [
+      "mav-aigen-schlaegl"
+    ],
+    "myrcmOrgId": "217"
+  },
+  {
     "id": "max-informatique",
     "name": "Max Informatique",
     "city": "Malleray",
@@ -1261,6 +1511,12 @@
     ]
   },
   {
+    "hostId": "dmc-mbc-oberlausitz-e-v",
+    "hostName": "MBC Oberlausitz e.V.",
+    "lat": 51.08318541210428,
+    "lng": 14.57770822945999
+  },
+  {
     "id": "mblr-ecl-pens",
     "name": "MBLR Eclépens",
     "city": "Penthalaz",
@@ -1276,6 +1532,13 @@
       "MBLR Eclépens",
       "Penthalaz"
     ]
+  },
+  {
+    "hostId": "mblr-racing",
+    "hostName": "MBLR Racing",
+    "lat": 46.65009765198645,
+    "lng": 7.029649162780778,
+    "myrcmOrgId": "22319"
   },
   {
     "id": "mbsc-waechtersbach",
@@ -1305,6 +1568,12 @@
       "Industriestr. 1, 63607 Wächtersbach",
       "myrcm-27211"
     ]
+  },
+  {
+    "hostId": "dmc-ov-143",
+    "hostName": "MC Dortmund e.V.",
+    "lat": 51.55786161696523,
+    "lng": 7.521933636366658
   },
   {
     "id": "mc-ettlingen-e-v",
@@ -1341,6 +1610,12 @@
       "MC Munster e.V.",
       "Bremen"
     ]
+  },
+  {
+    "hostId": "dmc-mc-schwedt-e-v",
+    "hostName": "MC Schwedt e.V.",
+    "lat": 53.12277371820801,
+    "lng": 14.28616563116813
   },
   {
     "id": "mc-welden-e-v",
@@ -1445,6 +1720,26 @@
     ]
   },
   {
+    "hostId": "dmc-ov-56",
+    "hostName": "MCC Hof e.V.",
+    "lat": 50.324395365150075,
+    "lng": 11.836592721346877
+  },
+  {
+    "hostId": "dmc-ov-107",
+    "hostName": "MCC Laupheim e.V.",
+    "lat": 48.264141471392975,
+    "lng": 9.908719327855406
+  },
+  {
+    "hostId": "mcc-laupheim-e-v",
+    "hostName": "MCC Laupheim e.V.",
+    "lat": 48.26422039066267,
+    "lng": 9.908722337568252,
+    "country": "DE",
+    "website": "https://www.mcc-laupheim.de/"
+  },
+  {
     "id": "mcc-luedenscheid-e-v",
     "name": "MCC Lüdenscheid e.V.",
     "city": "Lüdenscheid",
@@ -1519,6 +1814,12 @@
       "An der alten Glasfabrik, 53498 Bad Breisig",
       "myrcm-283"
     ]
+  },
+  {
+    "hostId": "dmc-mcc-rudolstadt-e-v",
+    "hostName": "MCC Rudolstadt e.V.",
+    "lat": 50.72384715912249,
+    "lng": 11.351920419287275
   },
   {
     "id": "mcc-tuerkheim-e-v",
@@ -1658,6 +1959,13 @@
     ]
   },
   {
+    "hostId": "mfk-kurten-e-v",
+    "hostName": "MFK Kürten e.V.",
+    "lat": 51.07755743502219,
+    "lng": 7.288925322171009,
+    "myrcmOrgId": "53092"
+  },
+  {
     "id": "mfr-morschheim-rheinhessen-pfalz-e-v",
     "name": "MFR-Morschheim Rheinhessen/Pfalz e.V.",
     "city": "Worms",
@@ -1726,6 +2034,14 @@
     ]
   },
   {
+    "hostId": "mini-tout-terrain-gruyere",
+    "hostName": "Mini Tout Terrain Gruyère",
+    "city": "Gruyères",
+    "lat": 46.650127738366436,
+    "lng": 7.029607046226385,
+    "myrcmOrgId": "18473"
+  },
+  {
     "id": "miniatutenpark-elsterwerda",
     "name": "Miniatutenpark Elsterwerda",
     "city": "Röderland",
@@ -1777,6 +2093,12 @@
     ]
   },
   {
+    "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
+    "hostName": "Modell Car Club Rhein Ahr e.V.",
+    "lat": 50.63815574143907,
+    "lng": 7.760546012964474
+  },
+  {
     "id": "modell-rennsport-club-st-gallen-mrcsg",
     "name": "Modell Rennsport Club St. Gallen MRCSG",
     "city": "Sitterdorf",
@@ -1792,6 +2114,12 @@
       "Modell Rennsport Club St. Gallen MRCSG",
       "Sitterdorf"
     ]
+  },
+  {
+    "hostId": "dmc-modell-car-club-bad-kissingen-e-v",
+    "hostName": "Modell-Car-Club Bad Kissingen e.V.",
+    "lat": 50.20437672229121,
+    "lng": 10.097876991086581
   },
   {
     "id": "modellbaufreunde-felsberg-e-v",
@@ -1828,6 +2156,18 @@
     ]
   },
   {
+    "hostId": "modellclub-flensburg-e-v",
+    "hostName": "Modellclub Flensburg e.V",
+    "locationUnknown": true,
+    "myrcmOrgId": "42405"
+  },
+  {
+    "hostId": "dmc-ov-266",
+    "hostName": "Modellfreunde Rheinhessen/Pfalz e.V.",
+    "lat": 49.699136947713704,
+    "lng": 8.03194898284182
+  },
+  {
     "id": "modellrenngemeinschaft-dogern-e-v",
     "name": "Modellrenngemeinschaft Dogern e.V.",
     "city": "Wutöschingen",
@@ -1843,6 +2183,18 @@
       "Modellrenngemeinschaft Dogern e.V.",
       "Wutöschingen - Horheim"
     ]
+  },
+  {
+    "hostId": "rcco-modellsport-munsterland",
+    "hostName": "Modellsport Münsterland",
+    "lat": 52.341602800495465,
+    "lng": 7.577597547624109
+  },
+  {
+    "hostId": "dmc-modellsport-munsterland-e-v",
+    "hostName": "Modellsport Münsterland e.V.",
+    "lat": 52.34156335945138,
+    "lng": 7.577074708374697
   },
   {
     "id": "modellsportzentrum-zwoenitz-e-v",
@@ -2048,6 +2400,12 @@
     ]
   },
   {
+    "hostId": "rcco-mrc-weiden-e-v",
+    "hostName": "MRC Weiden e.V.",
+    "lat": 49.64588568552558,
+    "lng": 12.120420781877858
+  },
+  {
     "id": "mrc-fruehwirth",
     "name": "MRC-Frühwirth",
     "city": "Sollenau",
@@ -2163,7 +2521,20 @@
       "MRTO",
       "Altnau"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "CH"
+  },
+  {
+    "hostId": "rcco-msc-gemunden-e-v",
+    "hostName": "MSC Gemünden e.V.",
+    "lat": 50.07098433466393,
+    "lng": 9.663684036408855
+  },
+  {
+    "hostId": "dmc-ov-137",
+    "hostName": "MSC Gemünden e.V.i. ADAC",
+    "lat": 50.070964008562676,
+    "lng": 9.663623726668805
   },
   {
     "id": "msc-halle-e-v",
@@ -2266,6 +2637,13 @@
     "myrcmOrgId": "36612"
   },
   {
+    "hostId": "msc-ober-morlen-e-v",
+    "hostName": "MSC Ober-Mörlen e.V.",
+    "lat": 50.36381448362496,
+    "lng": 8.703414092776123,
+    "myrcmOrgId": "66454"
+  },
+  {
     "id": "msc-osterhofen-e-v",
     "name": "MSC Osterhofen e.V.",
     "city": "Osterhofen",
@@ -2281,6 +2659,24 @@
       "Osterhofen",
       "myrcm-50019"
     ]
+  },
+  {
+    "hostId": "dmc-ov-158",
+    "hostName": "MSC Pol. Braunschweig",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "dmc-msc-sand-e-v",
+    "hostName": "MSC Sand e.V.",
+    "lat": 49.97561500237808,
+    "lng": 10.581751303542033
+  },
+  {
+    "hostId": "msc-ulm-e-v",
+    "hostName": "MSC Ulm e.V.",
+    "lat": 48.32186708992988,
+    "lng": 10.051712050024937,
+    "myrcmOrgId": "42113"
   },
   {
     "id": "msg-niesky-e-v",
@@ -2336,6 +2732,43 @@
       "Hürtgenwald",
       "Huertgenwald",
       "myrcm-15511"
+    ]
+  },
+  {
+    "hostId": "dmc-ov-234",
+    "hostName": "MSV Linsengericht",
+    "lat": 50.177551274663394,
+    "lng": 9.201961271228923
+  },
+  {
+    "hostId": "msv-weiz",
+    "hostName": "MSV Weiz",
+    "lat": 47.19196124203115,
+    "lng": 15.584801352403556,
+    "myrcmOrgId": "53491"
+  },
+  {
+    "hostId": "dmc-ov-90",
+    "hostName": "MSV- Neubrandenburg e.V.",
+    "lat": 53.55592570845572,
+    "lng": 13.293463030300556
+  },
+  {
+    "id": "rck-neubrandenburg-city-circuit-neubrandenburg",
+    "name": "Neubrandenburg City Circuit",
+    "city": "Neubrandenburg",
+    "lat": 53.55446117359839,
+    "lng": 13.29309143604531,
+    "hostId": "modellsportverein-neubrandenburg-e-v",
+    "hostIds": [
+      "modellsportverein-neubrandenburg-e-v"
+    ],
+    "website": "https://www.rc-neubrandenburg.de",
+    "source": "verified",
+    "aliases": [
+      "Modellsportverein Neubrandenburg e. V.",
+      "MSV Neubrandenburg",
+      "Neubrandenburg City Circuit"
     ]
   },
   {
@@ -2423,6 +2856,12 @@
       "Off Road Club Montagny",
       "Montagny-les-Monts"
     ]
+  },
+  {
+    "hostId": "dmc-offroad-club-ostsee-e-v",
+    "hostName": "Offroad Club Ostsee e.V.",
+    "lat": 54.22601827812129,
+    "lng": 10.77563474253423
   },
   {
     "id": "offroad-team-zuerich",
@@ -2554,6 +2993,12 @@
     "myrcmOrgId": "myrcm-991-ormc"
   },
   {
+    "hostId": "dmc-ort-fulda",
+    "hostName": "ORT Fulda",
+    "lat": 50.48845151298898,
+    "lng": 9.410104072742504
+  },
+  {
     "id": "psv-klagenfurt",
     "name": "PSV-Klagenfurt",
     "city": "Klagenfurt",
@@ -2622,6 +3067,14 @@
     ]
   },
   {
+    "hostId": "rc-car-chemnitz",
+    "hostName": "RC Car Chemnitz",
+    "city": "Chemnitz",
+    "lat": 50.79377848514052,
+    "lng": 12.898277901821292,
+    "myrcmOrgId": "51129"
+  },
+  {
     "id": "rc-car-club-hilter-e-v",
     "name": "RC Car Club Hilter e.V.",
     "city": "Hilter",
@@ -2674,6 +3127,14 @@
     ]
   },
   {
+    "hostId": "rc-cars-wernigerode-e-v",
+    "hostName": "RC Cars Wernigerode e.V.",
+    "city": "Wernigerode",
+    "lat": 51.85763261882311,
+    "lng": 10.803858097976457,
+    "myrcmOrgId": "43490"
+  },
+  {
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "city": "Winterthur",
@@ -2689,6 +3150,19 @@
       "RC Club Wyland",
       "Winterthur"
     ]
+  },
+  {
+    "hostId": "rc-drecksloch-e-v",
+    "hostName": "RC Drecksloch e.V.",
+    "lat": 51.539601453420495,
+    "lng": 7.093322619514601,
+    "myrcmOrgId": "33778"
+  },
+  {
+    "hostId": "rcco-rc-freunde-vennebeck-e-v",
+    "hostName": "RC Freunde Vennebeck e.V.",
+    "lat": 52.21367710430686,
+    "lng": 8.87228248647399
   },
   {
     "id": "rc-fun-racer-e-v",
@@ -2710,6 +3184,18 @@
     ]
   },
   {
+    "hostId": "dmc-rc-halle-e-v",
+    "hostName": "RC Halle e.V.",
+    "lat": 51.46739270411921,
+    "lng": 11.986882520742833
+  },
+  {
+    "hostId": "dmc-ov-160",
+    "hostName": "RC Haltern e.V.",
+    "lat": 51.72503319039647,
+    "lng": 7.168746466631296
+  },
+  {
     "id": "rc-modellbaufreunde-e-v",
     "name": "RC Modellbaufreunde e.V.",
     "city": "Attaching",
@@ -2720,6 +3206,33 @@
     ],
     "source": "verified-existing-geolocation-list",
     "myrcmOrgId": "53665"
+  },
+  {
+    "hostId": "dmc-ov-36",
+    "hostName": "RC Offroad Heiligenstadt e.V.",
+    "lat": 51.387849617883866,
+    "lng": 10.157074621044304
+  },
+  {
+    "hostId": "rc-offroad-staaken",
+    "hostName": "RC Offroad Staaken",
+    "lat": 52.475714353240356,
+    "lng": 13.101632355546334,
+    "myrcmOrgId": "55317"
+  },
+  {
+    "hostId": "rc-race-team-munchen-e-v",
+    "hostName": "RC Race Team München e.V",
+    "city": "München",
+    "lat": 48.00857029662106,
+    "lng": 11.36000585844325,
+    "myrcmOrgId": "37520"
+  },
+  {
+    "hostId": "dmc-ov-149",
+    "hostName": "RC RaceCrew",
+    "lat": 50.6014459269992,
+    "lng": 6.631677390651763
   },
   {
     "id": "rc-racer-hochsauerland-e-v",
@@ -2821,6 +3334,18 @@
     ]
   },
   {
+    "hostId": "dmc-rc-club-grossheubach-e-v",
+    "hostName": "RC-Club Grossheubach e.V.",
+    "lat": 49.71631983331656,
+    "lng": 9.22897600697451
+  },
+  {
+    "hostId": "dmc-rc-freunde-kinzigtal-e-v",
+    "hostName": "RC-Freunde Kinzigtal e.V.",
+    "lat": 48.25856894788509,
+    "lng": 8.20950494948204
+  },
+  {
     "id": "rc-glashaus-e-v",
     "name": "RC-Glashaus e.V.",
     "city": "Quickborn",
@@ -2836,6 +3361,13 @@
       "RC-Glashaus e.V.",
       "Quickborn"
     ]
+  },
+  {
+    "hostId": "rc-lords-of-dirt",
+    "hostName": "RC-Lords of Dirt",
+    "lat": 46.81322877318174,
+    "lng": 13.350113343570492,
+    "myrcmOrgId": "18966"
   },
   {
     "id": "rc-msc-greuthof-e-v",
@@ -2870,6 +3402,18 @@
       "RC-Offroad Dortmund e.V.",
       "Dortmund"
     ]
+  },
+  {
+    "hostId": "dmc-ov-184",
+    "hostName": "RC-Offroad Kassel e.V.",
+    "lat": 51.28174359220328,
+    "lng": 9.510991150126777
+  },
+  {
+    "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
+    "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
+    "lat": 51.208755602022045,
+    "lng": 13.83564932733246
   },
   {
     "id": "rc-offroad-wattenscheid-e-v",
@@ -2991,6 +3535,14 @@
     ]
   },
   {
+    "hostId": "rcc-grafenworth",
+    "hostName": "RCC-Grafenwörth",
+    "city": "Grafenwörth",
+    "lat": 48.412696168360476,
+    "lng": 15.775716608555854,
+    "myrcmOrgId": "775"
+  },
+  {
     "id": "rcc-steinlach-e-v",
     "name": "RCC-Steinlach e.V.",
     "city": "Reutlingen",
@@ -3006,6 +3558,26 @@
       "RCC-Steinlach e.V.",
       "Reutlingen"
     ]
+  },
+  {
+    "hostId": "rccars-bergisch-born-e-v",
+    "hostName": "RCCars Bergisch-Born e.V.",
+    "city": "Bergisch Born",
+    "lat": 51.17808024290368,
+    "lng": 7.223162604471789,
+    "myrcmOrgId": "6492"
+  },
+  {
+    "hostId": "dmc-ov-7",
+    "hostName": "RCCC Coesfeld",
+    "lat": 51.955437808946684,
+    "lng": 7.085230572349691
+  },
+  {
+    "hostId": "rcco-rccc-hilter-e-v",
+    "hostName": "RCCC Hilter e.V.",
+    "lat": 52.14480478722756,
+    "lng": 8.156243732175744
   },
   {
     "id": "rccr-munzig-e-v",
@@ -3055,6 +3627,13 @@
     ]
   },
   {
+    "hostId": "rcco-rcmc-ibbenbueren-e-v",
+    "hostName": "RCMC Ibbenbüren e. V.",
+    "lat": 52.251949472619934,
+    "lng": 7.630418467177663,
+    "website": "http://www.rcmc-ibbenbueren.de/"
+  },
+  {
     "id": "rco-ottendorf-okrilla-e-v",
     "name": "RCO Ottendorf-Okrilla e.V.",
     "city": "Ottendorf-Okrilla",
@@ -3071,6 +3650,12 @@
       "RCO Ottendorf Okrilla e.V.",
       "RCO Ottendorf-Okrilla e.V."
     ]
+  },
+  {
+    "hostId": "dmc-ov-339",
+    "hostName": "RCR Peterberg e.V.",
+    "lat": 49.57913176184305,
+    "lng": 7.000287284154371
   },
   {
     "id": "rcr-linz",
@@ -3107,6 +3692,12 @@
     ]
   },
   {
+    "hostId": "rcco-rcrt-quakenbruck-e-v",
+    "hostName": "RCRT-Quakenbrück e.V.",
+    "lat": 52.68305775352677,
+    "lng": 7.934878589989598
+  },
+  {
     "id": "rcsf-singen-e-v",
     "name": "RCSF-Singen e.V.",
     "city": "Singen",
@@ -3122,6 +3713,12 @@
       "RCSF-Singen e.V.",
       "Singen"
     ]
+  },
+  {
+    "hostId": "rcxx-shop",
+    "hostName": "RCXX.SHOP",
+    "locationUnknown": true,
+    "myrcmOrgId": "58661"
   },
   {
     "id": "rgmc-teck-e-v",
@@ -3156,6 +3753,19 @@
       "RMC Düren e.V.",
       "Niederzier"
     ]
+  },
+  {
+    "hostId": "dmc-rmc-wolfsburg-e-v",
+    "hostName": "RMC Wolfsburg e.V.",
+    "lat": 52.42966034303305,
+    "lng": 10.865419082462832
+  },
+  {
+    "hostId": "rmc-wien",
+    "hostName": "RMC-Wien",
+    "lat": 47.95807149138246,
+    "lng": 16.413935566153604,
+    "myrcmOrgId": "777"
   },
   {
     "id": "rmcb",
@@ -3209,6 +3819,11 @@
     ]
   },
   {
+    "hostId": "dmc-schriftfuhrer",
+    "hostName": "Schriftführer",
+    "locationUnknown": true
+  },
+  {
     "id": "schweriner-sc-breitensport-e-v",
     "name": "Schweriner SC Breitensport e.V.",
     "city": "Schwerin",
@@ -3260,6 +3875,20 @@
     ]
   },
   {
+    "hostId": "dmc-slr-ingolstadt-e-v",
+    "hostName": "SLR Ingolstadt e.V.",
+    "lat": 48.7154019804972,
+    "lng": 11.41198778356575
+  },
+  {
+    "hostId": "smc-stuttgart-e-v",
+    "hostName": "SMC Stuttgart e.V.",
+    "city": "Stuttgart",
+    "lat": 48.720995,
+    "lng": 9.343529,
+    "myrcmOrgId": "51971"
+  },
+  {
     "id": "smrc-wien",
     "name": "SMRC Wien",
     "city": "Wien",
@@ -3275,6 +3904,18 @@
       "SMRC Wien",
       "Wien"
     ]
+  },
+  {
+    "hostId": "dmc-spessart-racer",
+    "hostName": "Spessart Racer",
+    "lat": 49.967133148160016,
+    "lng": 9.303292985142585
+  },
+  {
+    "hostId": "rcco-spessart-racer-e-v",
+    "hostName": "Spessart-Racer e.V.",
+    "lat": 49.96731560181147,
+    "lng": 9.304884510338868
   },
   {
     "id": "stoppelhopser-oberhausen-e-v",
@@ -3410,6 +4051,22 @@
     ]
   },
   {
+    "hostId": "dmc-ts-gross-auheim",
+    "hostName": "TS-Gross Auheim",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "dmc-ov-289",
+    "hostName": "TS-Gross Auheim",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "rcco-tsg-mst-estenfeld",
+    "hostName": "TSG/MST Estenfeld",
+    "lat": 49.833305473558845,
+    "lng": 9.997546436693286
+  },
+  {
     "id": "tsv-1871-augsburg-e-v",
     "name": "TSV 1871 Augsburg e.V.",
     "city": "Königsbrunn",
@@ -3439,6 +4096,12 @@
       "myrcm-991",
       "Königsbrunn"
     ]
+  },
+  {
+    "hostId": "tsv-gelenau-e-v",
+    "hostName": "TSV Gelenau e.V.",
+    "locationUnknown": true,
+    "myrcmOrgId": "30389"
   },
   {
     "id": "tsv-kleinburgwedel",
@@ -3488,6 +4151,21 @@
       "Berlin"
     ],
     "website": "https://tsvm-racing.de"
+  },
+  {
+    "hostId": "dmc-ttsc-racing-team",
+    "hostName": "TTSC Racing-Team",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "dmc-ov-354",
+    "hostName": "TTSC Racing-Team",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "rcco-ttsc-racing",
+    "hostName": "TTSC-Racing",
+    "locationUnknown": true
   },
   {
     "id": "turnerschaft-1860-e-v-grossauheim",
@@ -3602,682 +4280,5 @@
       "WMW RC-BUGGY-RACING TEAM FEHRING",
       "Fehring"
     ]
-  },
-  {
-    "id": "rck-neubrandenburg-city-circuit-neubrandenburg",
-    "name": "Neubrandenburg City Circuit",
-    "city": "Neubrandenburg",
-    "lat": 53.55446117359839,
-    "lng": 13.29309143604531,
-    "hostId": "modellsportverein-neubrandenburg-e-v",
-    "hostIds": [
-      "modellsportverein-neubrandenburg-e-v"
-    ],
-    "website": "https://www.rc-neubrandenburg.de",
-    "source": "verified",
-    "aliases": [
-      "Modellsportverein Neubrandenburg e. V.",
-      "MSV Neubrandenburg",
-      "Neubrandenburg City Circuit"
-    ]
-  },
-  {
-    "id": "ets-international",
-    "name": "ETS / TOS International",
-    "locationUnknown": true,
-    "source": "manual",
-    "aliases": [
-      "ETS International",
-      "TOS International"
-    ],
-    "hostIds": [],
-    "skipTextMatch": true
-  },
-  {
-    "id": "mav-aigen-schlaegl",
-    "name": "MAV Aigen-Schlägl",
-    "lat": 48.6443258,
-    "lng": 13.9688049,
-    "city": "Aigen-Schlägl",
-    "source": "manual",
-    "aliases": [
-      "myrcm-217",
-      "Aigen-Schlägl",
-      "Aigen",
-      "Aigen/ AT",
-      "MAV Aigen-Schlägl",
-      "AIGEN",
-      "AIGEN / AT"
-    ],
-    "hostIds": [
-      "mav-aigen-schlaegl"
-    ],
-    "myrcmOrgId": "217"
-  },
-  {
-    "id": "m-a-r-s-alt-erlaa",
-    "name": "M.A.R.S. Alt Erlaa",
-    "lat": 48.1555949,
-    "lng": 16.3186165,
-    "city": "Wien",
-    "source": "manual",
-    "aliases": [
-      "Vienna",
-      "myrcm-339",
-      "M.A.R.S. Alt Erlaa",
-      "VIENNA/ AT",
-      "VIENNA",
-      "VIENNA / AT",
-      "Wien"
-    ],
-    "hostIds": [
-      "m-a-r-s-alt-erlaa"
-    ],
-    "myrcmOrgId": "339"
-  },
-  {
-    "hostId": "dmc-ov-386",
-    "hostName": "3 Sesselracer",
-    "lat": 48.735275140194894,
-    "lng": 13.798908925294255
-  },
-  {
-    "hostId": "alpencup",
-    "hostName": "Alpencup",
-    "locationUnknown": true,
-    "myrcmOrgId": "53515"
-  },
-  {
-    "hostId": "dmc-amc-mistral-lahr-e-v",
-    "hostName": "AMC Mistral Lahr e.V.",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dmc-ov-87",
-    "hostName": "AMC Mistral Lahr e.V.",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dmc-bc-mitterkreith",
-    "hostName": "BC Mitterkreith",
-    "lat": 49.21155192592243,
-    "lng": 12.493146117142087
-  },
-  {
-    "hostId": "dmc-big-hamburg-e-v",
-    "hostName": "BIG Hamburg e.V.",
-    "lat": 53.64060473290764,
-    "lng": 9.832929581941356
-  },
-  {
-    "hostId": "rcco-black-sheep-racers-e-v",
-    "hostName": "Black Sheep Racers e. V.",
-    "lat": 49.124882296659635,
-    "lng": 10.779528541213677
-  },
-  {
-    "hostId": "dmc-boc-kiel-e-v",
-    "hostName": "BOC Kiel e.V.",
-    "lat": 54.405611868632796,
-    "lng": 10.277043224357401
-  },
-  {
-    "hostId": "bugg-ittre-racing",
-    "hostName": "Bugg'ittre Racing",
-    "lat": 50.65768338233705,
-    "lng": 4.307840911313228,
-    "myrcmOrgId": "31752"
-  },
-  {
-    "hostId": "buggy-club-indoor-charleroi-asbl",
-    "hostName": "Buggy Club Indoor Charleroi ASBL",
-    "lat": 50.42900387816841,
-    "lng": 4.446907564457314,
-    "myrcmOrgId": "743"
-  },
-  {
-    "hostId": "buggy-racing-bauffe-club",
-    "hostName": "Buggy Racing Bauffe Club",
-    "lat": 50.65765924756288,
-    "lng": 4.307777221996776,
-    "myrcmOrgId": "17680"
-  },
-  {
-    "hostId": "buggy-rc-bauffe-a-s-b-l",
-    "hostName": "Buggy RC Bauffe a.s.b.l",
-    "lat": 50.55163011529372,
-    "lng": 3.8388580908852754,
-    "myrcmOrgId": "62332"
-  },
-  {
-    "hostId": "dmc-dmc-e-v-geschaftsstelle",
-    "hostName": "DMC e.V. Geschäftsstelle",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dutch-rc-series",
-    "hostName": "Dutch RC Series",
-    "locationUnknown": true,
-    "myrcmOrgId": "28115"
-  },
-  {
-    "hostId": "dutch-rc-timekeeping",
-    "hostName": "Dutch RC TimeKeeping",
-    "locationUnknown": true,
-    "myrcmOrgId": "1980"
-  },
-  {
-    "hostId": "rcco-emc-wehrheim-e-v",
-    "hostName": "EMC Wehrheim e. V.",
-    "lat": 50.314507929048034,
-    "lng": 8.558427424524675
-  },
-  {
-    "hostId": "rcco-erc-racing-e-v",
-    "hostName": "ERC-Racing e.V.",
-    "lat": 52.33147453255704,
-    "lng": 7.429288493596242,
-    "website": "https://www.facebook.com/p/ERC-Racing-eV-100057458199626/"
-  },
-  {
-    "hostId": "erce",
-    "hostName": "ERCE",
-    "lat": 51.474136507766445,
-    "lng": 5.451839831543991,
-    "myrcmOrgId": "3350"
-  },
-  {
-    "hostId": "dmc-ov-37",
-    "hostName": "ESV Bischofsheim e.V.",
-    "lat": 49.97771285712217,
-    "lng": 8.386922863605161
-  },
-  {
-    "hostId": "evmc-velp",
-    "hostName": "EVMC Velp",
-    "lat": 51.982283708724864,
-    "lng": 5.9870087702161054,
-    "myrcmOrgId": "10817"
-  },
-  {
-    "hostId": "fba-vzw",
-    "hostName": "FBA vzw",
-    "locationUnknown": true,
-    "myrcmOrgId": "38144"
-  },
-  {
-    "hostId": "flamrc",
-    "hostName": "FLAMRC",
-    "locationUnknown": true,
-    "myrcmOrgId": "73"
-  },
-  {
-    "hostId": "flatout-rc-vzw",
-    "hostName": "FlatOut RC VZW",
-    "lat": 51.311941003199514,
-    "lng": 5.048176366250522,
-    "myrcmOrgId": "739"
-  },
-  {
-    "hostId": "h-m-r-c",
-    "hostName": "H.M.R.C.",
-    "lat": 52.92978612356075,
-    "lng": 4.7807556333955965,
-    "myrcmOrgId": "7059"
-  },
-  {
-    "hostId": "hfcc-racing-den-haag",
-    "hostName": "HFCC Racing Den Haag",
-    "lat": 52.042806391074365,
-    "lng": 4.242145539805281,
-    "myrcmOrgId": "14156"
-  },
-  {
-    "hostId": "houthalens-racing-team",
-    "hostName": "Houthalens Racing Team",
-    "lat": 51.04033523105567,
-    "lng": 5.389993492087697,
-    "myrcmOrgId": "65"
-  },
-  {
-    "hostId": "hugo-rc-timing-nl",
-    "hostName": "Hugo - RC-Timing.nl",
-    "locationUnknown": true,
-    "myrcmOrgId": "2824"
-  },
-  {
-    "hostId": "hulshout-offroad-racing",
-    "hostName": "Hulshout Offroad Racing",
-    "lat": 51.08384346853234,
-    "lng": 4.806473990670647,
-    "myrcmOrgId": "50130"
-  },
-  {
-    "hostId": "rcco-ig-vulkanparkracer-e-v",
-    "hostName": "IG Vulkanparkracer e.V.",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "indoor-offroad-turnhout",
-    "hostName": "Indoor Offroad Turnhout",
-    "lat": 51.32199,
-    "lng": 4.95729,
-    "myrcmOrgId": "59433"
-  },
-  {
-    "hostId": "mac-mistelbach",
-    "hostName": "MAC Mistelbach",
-    "lat": 48.55312704380916,
-    "lng": 16.550197608841213,
-    "myrcmOrgId": "20718"
-  },
-  {
-    "hostId": "dmc-mbc-oberlausitz-e-v",
-    "hostName": "MBC Oberlausitz e.V.",
-    "lat": 51.08318541210428,
-    "lng": 14.57770822945999
-  },
-  {
-    "hostId": "mblr-racing",
-    "hostName": "MBLR Racing",
-    "lat": 46.65009765198645,
-    "lng": 7.029649162780778,
-    "myrcmOrgId": "22319"
-  },
-  {
-    "hostId": "dmc-ov-143",
-    "hostName": "MC Dortmund e.V.",
-    "lat": 51.55786161696523,
-    "lng": 7.521933636366658
-  },
-  {
-    "hostId": "dmc-mc-schwedt-e-v",
-    "hostName": "MC Schwedt e.V.",
-    "lat": 53.12277371820801,
-    "lng": 14.28616563116813
-  },
-  {
-    "hostId": "dmc-ov-56",
-    "hostName": "MCC Hof e.V.",
-    "lat": 50.324395365150075,
-    "lng": 11.836592721346877
-  },
-  {
-    "hostId": "dmc-ov-107",
-    "hostName": "MCC Laupheim e.V.",
-    "lat": 48.264141471392975,
-    "lng": 9.908719327855406
-  },
-  {
-    "hostId": "dmc-mcc-rudolstadt-e-v",
-    "hostName": "MCC Rudolstadt e.V.",
-    "lat": 50.72384715912249,
-    "lng": 11.351920419287275
-  },
-  {
-    "hostId": "mfk-kurten-e-v",
-    "hostName": "MFK Kürten e.V.",
-    "lat": 51.07755743502219,
-    "lng": 7.288925322171009,
-    "myrcmOrgId": "53092"
-  },
-  {
-    "hostId": "mini-tout-terrain-gruyere",
-    "hostName": "Mini Tout Terrain Gruyère",
-    "city": "Gruyères",
-    "lat": 46.650127738366436,
-    "lng": 7.029607046226385,
-    "myrcmOrgId": "18473"
-  },
-  {
-    "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
-    "hostName": "Modell Car Club Rhein Ahr e.V.",
-    "lat": 50.63815574143907,
-    "lng": 7.760546012964474
-  },
-  {
-    "hostId": "dmc-modell-car-club-bad-kissingen-e-v",
-    "hostName": "Modell-Car-Club Bad Kissingen e.V.",
-    "lat": 50.20437672229121,
-    "lng": 10.097876991086581
-  },
-  {
-    "hostId": "modellclub-flensburg-e-v",
-    "hostName": "Modellclub Flensburg e.V",
-    "locationUnknown": true,
-    "myrcmOrgId": "42405"
-  },
-  {
-    "hostId": "dmc-ov-266",
-    "hostName": "Modellfreunde Rheinhessen/Pfalz e.V.",
-    "lat": 49.699136947713704,
-    "lng": 8.03194898284182
-  },
-  {
-    "hostId": "rcco-modellsport-munsterland",
-    "hostName": "Modellsport Münsterland",
-    "lat": 52.341602800495465,
-    "lng": 7.577597547624109
-  },
-  {
-    "hostId": "dmc-modellsport-munsterland-e-v",
-    "hostName": "Modellsport Münsterland e.V.",
-    "lat": 52.34156335945138,
-    "lng": 7.577074708374697
-  },
-  {
-    "hostId": "rcco-mrc-weiden-e-v",
-    "hostName": "MRC Weiden e.V.",
-    "lat": 49.64588568552558,
-    "lng": 12.120420781877858
-  },
-  {
-    "hostId": "rcco-msc-gemunden-e-v",
-    "hostName": "MSC Gemünden e.V.",
-    "lat": 50.07098433466393,
-    "lng": 9.663684036408855
-  },
-  {
-    "hostId": "dmc-ov-137",
-    "hostName": "MSC Gemünden e.V.i. ADAC",
-    "lat": 50.070964008562676,
-    "lng": 9.663623726668805
-  },
-  {
-    "hostId": "msc-ober-morlen-e-v",
-    "hostName": "MSC Ober-Mörlen e.V.",
-    "lat": 50.36381448362496,
-    "lng": 8.703414092776123,
-    "myrcmOrgId": "66454"
-  },
-  {
-    "hostId": "dmc-ov-158",
-    "hostName": "MSC Pol. Braunschweig",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dmc-msc-sand-e-v",
-    "hostName": "MSC Sand e.V.",
-    "lat": 49.97561500237808,
-    "lng": 10.581751303542033
-  },
-  {
-    "hostId": "msc-ulm-e-v",
-    "hostName": "MSC Ulm e.V.",
-    "lat": 48.32186708992988,
-    "lng": 10.051712050024937,
-    "myrcmOrgId": "42113"
-  },
-  {
-    "hostId": "dmc-ov-234",
-    "hostName": "MSV Linsengericht",
-    "lat": 50.177551274663394,
-    "lng": 9.201961271228923
-  },
-  {
-    "hostId": "msv-weiz",
-    "hostName": "MSV Weiz",
-    "lat": 47.19196124203115,
-    "lng": 15.584801352403556,
-    "myrcmOrgId": "53491"
-  },
-  {
-    "hostId": "dmc-ov-90",
-    "hostName": "MSV- Neubrandenburg e.V.",
-    "lat": 53.55592570845572,
-    "lng": 13.293463030300556
-  },
-  {
-    "hostId": "dmc-offroad-club-ostsee-e-v",
-    "hostName": "Offroad Club Ostsee e.V.",
-    "lat": 54.22601827812129,
-    "lng": 10.77563474253423
-  },
-  {
-    "hostId": "dmc-ort-fulda",
-    "hostName": "ORT Fulda",
-    "lat": 50.48845151298898,
-    "lng": 9.410104072742504
-  },
-  {
-    "hostId": "rc-car-chemnitz",
-    "hostName": "RC Car Chemnitz",
-    "city": "Chemnitz",
-    "lat": 50.79377848514052,
-    "lng": 12.898277901821292,
-    "myrcmOrgId": "51129"
-  },
-  {
-    "hostId": "rc-cars-wernigerode-e-v",
-    "hostName": "RC Cars Wernigerode e.V.",
-    "city": "Wernigerode",
-    "lat": 51.85763261882311,
-    "lng": 10.803858097976457,
-    "myrcmOrgId": "43490"
-  },
-  {
-    "hostId": "rc-drecksloch-e-v",
-    "hostName": "RC Drecksloch e.V.",
-    "lat": 51.539601453420495,
-    "lng": 7.093322619514601,
-    "myrcmOrgId": "33778"
-  },
-  {
-    "hostId": "rcco-rc-freunde-vennebeck-e-v",
-    "hostName": "RC Freunde Vennebeck e.V.",
-    "lat": 52.21367710430686,
-    "lng": 8.87228248647399
-  },
-  {
-    "hostId": "dmc-rc-halle-e-v",
-    "hostName": "RC Halle e.V.",
-    "lat": 51.46739270411921,
-    "lng": 11.986882520742833
-  },
-  {
-    "hostId": "dmc-ov-160",
-    "hostName": "RC Haltern e.V.",
-    "lat": 51.72503319039647,
-    "lng": 7.168746466631296
-  },
-  {
-    "hostId": "dmc-ov-36",
-    "hostName": "RC Offroad Heiligenstadt e.V.",
-    "lat": 51.387849617883866,
-    "lng": 10.157074621044304
-  },
-  {
-    "hostId": "rc-offroad-staaken",
-    "hostName": "RC Offroad Staaken",
-    "lat": 52.475714353240356,
-    "lng": 13.101632355546334,
-    "myrcmOrgId": "55317"
-  },
-  {
-    "hostId": "rc-race-team-munchen-e-v",
-    "hostName": "RC Race Team München e.V",
-    "city": "München",
-    "lat": 48.00857029662106,
-    "lng": 11.36000585844325,
-    "myrcmOrgId": "37520"
-  },
-  {
-    "hostId": "dmc-ov-149",
-    "hostName": "RC RaceCrew",
-    "lat": 50.6014459269992,
-    "lng": 6.631677390651763
-  },
-  {
-    "hostId": "dmc-rc-club-grossheubach-e-v",
-    "hostName": "RC-Club Grossheubach e.V.",
-    "lat": 49.71631983331656,
-    "lng": 9.22897600697451
-  },
-  {
-    "hostId": "dmc-rc-freunde-kinzigtal-e-v",
-    "hostName": "RC-Freunde Kinzigtal e.V.",
-    "lat": 48.25856894788509,
-    "lng": 8.20950494948204
-  },
-  {
-    "hostId": "rc-lords-of-dirt",
-    "hostName": "RC-Lords of Dirt",
-    "lat": 46.81322877318174,
-    "lng": 13.350113343570492,
-    "myrcmOrgId": "18966"
-  },
-  {
-    "hostId": "dmc-ov-184",
-    "hostName": "RC-Offroad Kassel e.V.",
-    "lat": 51.28174359220328,
-    "lng": 9.510991150126777
-  },
-  {
-    "hostId": "dmc-rc-offroad-ottendorf-okrilla-e-v",
-    "hostName": "RC-Offroad Ottendorf-Okrilla e.V.",
-    "lat": 51.208755602022045,
-    "lng": 13.83564932733246
-  },
-  {
-    "hostId": "rcc-grafenworth",
-    "hostName": "RCC-Grafenwörth",
-    "city": "Grafenwörth",
-    "lat": 48.412696168360476,
-    "lng": 15.775716608555854,
-    "myrcmOrgId": "775"
-  },
-  {
-    "hostId": "rccars-bergisch-born-e-v",
-    "hostName": "RCCars Bergisch-Born e.V.",
-    "city": "Bergisch Born",
-    "lat": 51.17808024290368,
-    "lng": 7.223162604471789,
-    "myrcmOrgId": "6492"
-  },
-  {
-    "hostId": "dmc-ov-7",
-    "hostName": "RCCC Coesfeld",
-    "lat": 51.955437808946684,
-    "lng": 7.085230572349691
-  },
-  {
-    "hostId": "rcco-rccc-hilter-e-v",
-    "hostName": "RCCC Hilter e.V.",
-    "lat": 52.14480478722756,
-    "lng": 8.156243732175744
-  },
-  {
-    "hostId": "rcco-rcmc-ibbenbueren-e-v",
-    "hostName": "RCMC Ibbenbüren e. V.",
-    "lat": 52.251949472619934,
-    "lng": 7.630418467177663,
-    "website": "http://www.rcmc-ibbenbueren.de/"
-  },
-  {
-    "hostId": "dmc-ov-339",
-    "hostName": "RCR Peterberg e.V.",
-    "lat": 49.57913176184305,
-    "lng": 7.000287284154371
-  },
-  {
-    "hostId": "rcco-rcrt-quakenbruck-e-v",
-    "hostName": "RCRT-Quakenbrück e.V.",
-    "lat": 52.68305775352677,
-    "lng": 7.934878589989598
-  },
-  {
-    "hostId": "rcxx-shop",
-    "hostName": "RCXX.SHOP",
-    "locationUnknown": true,
-    "myrcmOrgId": "58661"
-  },
-  {
-    "hostId": "dmc-rmc-wolfsburg-e-v",
-    "hostName": "RMC Wolfsburg e.V.",
-    "lat": 52.42966034303305,
-    "lng": 10.865419082462832
-  },
-  {
-    "hostId": "rmc-wien",
-    "hostName": "RMC-Wien",
-    "lat": 47.95807149138246,
-    "lng": 16.413935566153604,
-    "myrcmOrgId": "777"
-  },
-  {
-    "hostId": "dmc-schriftfuhrer",
-    "hostName": "Schriftführer",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dmc-slr-ingolstadt-e-v",
-    "hostName": "SLR Ingolstadt e.V.",
-    "lat": 48.7154019804972,
-    "lng": 11.41198778356575
-  },
-  {
-    "hostId": "smc-stuttgart-e-v",
-    "hostName": "SMC Stuttgart e.V.",
-    "city": "Stuttgart",
-    "lat": 48.720995,
-    "lng": 9.343529,
-    "myrcmOrgId": "51971"
-  },
-  {
-    "hostId": "dmc-spessart-racer",
-    "hostName": "Spessart Racer",
-    "lat": 49.967133148160016,
-    "lng": 9.303292985142585
-  },
-  {
-    "hostId": "rcco-spessart-racer-e-v",
-    "hostName": "Spessart-Racer e.V.",
-    "lat": 49.96731560181147,
-    "lng": 9.304884510338868
-  },
-  {
-    "hostId": "dmc-ts-gross-auheim",
-    "hostName": "TS-Gross Auheim",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dmc-ov-289",
-    "hostName": "TS-Gross Auheim",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "rcco-tsg-mst-estenfeld",
-    "hostName": "TSG/MST Estenfeld",
-    "lat": 49.833305473558845,
-    "lng": 9.997546436693286
-  },
-  {
-    "hostId": "tsv-gelenau-e-v",
-    "hostName": "TSV Gelenau e.V.",
-    "locationUnknown": true,
-    "myrcmOrgId": "30389"
-  },
-  {
-    "hostId": "dmc-ttsc-racing-team",
-    "hostName": "TTSC Racing-Team",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "dmc-ov-354",
-    "hostName": "TTSC Racing-Team",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "rcco-ttsc-racing",
-    "hostName": "TTSC-Racing",
-    "locationUnknown": true
-  },
-  {
-    "hostId": "mcc-laupheim-e-v",
-    "hostName": "MCC Laupheim e.V.",
-    "lat": 48.26422039066267,
-    "lng": 9.908722337568252,
-    "country": "DE",
-    "website": "https://www.mcc-laupheim.de/"
   }
 ]
