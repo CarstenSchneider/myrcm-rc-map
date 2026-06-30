@@ -3928,6 +3928,13 @@
     "myrcmOrgId": "20718"
   },
   {
+    "hostId": "mac-vlijmen",
+    "hostName": "MAC Vlijmen",
+    "lat": 51.68806823351692,
+    "lng": 5.178935638227192,
+    "myrcmOrgId": "30724"
+  },
+  {
     "hostId": "dmc-mbc-oberlausitz-e-v",
     "hostName": "MBC Oberlausitz e.V.",
     "lat": 51.08318541210428,
