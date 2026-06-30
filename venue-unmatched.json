@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "flamrc",
-    "hostName": "FLAMRC",
-    "source": "myrcm",
-    "myrcmOrgId": "73",
-    "possibleVenue": "Niederfeulen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "flatout-rc-vzw",
     "hostName": "FlatOut RC VZW",
     "source": "myrcm",
