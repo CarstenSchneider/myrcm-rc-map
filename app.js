@@ -5448,15 +5448,19 @@ function showMenuHome() {
   const iconPin = `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
   const iconInfo = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`;
   const iconUser = `<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
+  const iconLogout = `<svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>`;
+  const iconThemeLight = `<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="8" y1="0.5" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15.5"/><line x1="0.5" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15.5" y2="8"/><line x1="2.4" y1="2.4" x2="3.8" y2="3.8"/><line x1="12.2" y1="12.2" x2="13.6" y2="13.6"/><line x1="2.4" y1="13.6" x2="3.8" y2="12.2"/><line x1="12.2" y1="3.8" x2="13.6" y2="2.4"/></g></svg>`;
+  const iconThemeDark = `<svg viewBox="0 0 16 16"><path d="M13.5 9.5A6 6 0 0 1 6 2a6 6 0 1 0 7.5 7.5z" fill="currentColor"/></svg>`;
+  const iconThemeAuto = `<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M8 1.5 A6.5 6.5 0 0 1 8 14.5 Z" fill="currentColor"/></svg>`;
 
   const authSection = sbUser
     ? `<div class="app-menu-auth-user">
-        <span class="app-menu-auth-avatar">${sbUser.email[0].toUpperCase()}</span>
+        <span class="app-menu-row-icon">${iconUser}</span>
         <div class="app-menu-auth-info">
           <span class="app-menu-auth-email">${maskEmail(sbUser.email)}</span>
           <span class="app-menu-auth-status">${t("menu.signedIn")}</span>
         </div>
-        <button type="button" class="app-menu-auth-signout" id="sbSignOutBtn">${t("menu.signOut")}</button>
+        <button type="button" class="app-menu-auth-signout-icon" id="sbSignOutBtn" aria-label="${t("menu.signOut")}" title="${t("menu.signOut")}">${iconLogout}</button>
       </div>`
     : `<button type="button" class="app-menu-row" id="sbLoginBtn">
         <span class="app-menu-row-icon">${iconUser}</span>
@@ -5472,9 +5476,9 @@ function showMenuHome() {
       <span class="app-menu-row-icon">${iconSun}</span>
       <span class="app-menu-row-label">${t("menu.appearance")}</span>
       <div class="theme-toggle">
-        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto">${t("menu.theme.auto")}</button>
-        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light">${t("menu.theme.light")}</button>
-        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark">${t("menu.theme.dark")}</button>
+        <button type="button" class="theme-toggle-btn${current==="auto"?" active":""}" data-theme="auto" aria-label="${t("menu.theme.auto")}" title="${t("menu.theme.auto")}">${iconThemeAuto}</button>
+        <button type="button" class="theme-toggle-btn${current==="light"?" active":""}" data-theme="light" aria-label="${t("menu.theme.light")}" title="${t("menu.theme.light")}">${iconThemeLight}</button>
+        <button type="button" class="theme-toggle-btn${current==="dark"?" active":""}" data-theme="dark" aria-label="${t("menu.theme.dark")}" title="${t("menu.theme.dark")}">${iconThemeDark}</button>
       </div>
     </div>
     <div class="app-menu-row app-menu-lang-row">

@@ -3416,8 +3416,9 @@ body.is-breakpoint-crossing .country-pill {
 .app-menu-auth-user {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 20px;
+  gap: 14px;
+  padding: 0 20px;
+  height: 52px;
 }
 .app-menu-auth-info { flex: 1; display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .app-menu-auth-status { font-size: 11px; color: var(--muted); opacity: 0.7; }
@@ -3449,19 +3450,21 @@ body.is-breakpoint-crossing .country-pill {
   background-color: var(--card-closed);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
 }
-.app-menu-auth-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
+.app-menu-auth-signout-icon {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--muted);
+  opacity: 0.5;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 700;
-  flex-shrink: 0;
+  border-radius: 6px;
+  transition: opacity 150ms ease;
 }
+.app-menu-auth-signout-icon:hover { opacity: 1; }
+.app-menu-auth-signout-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .app-menu-auth-email {
   flex: 1;
   font-size: 13px;
@@ -3897,14 +3900,18 @@ body.is-menu-open .app-menu-close {
   border: 0;
   background: transparent;
   color: var(--muted);
-  padding: 6px 14px;
+  padding: 7px 10px;
   border-radius: 999px;
   font: inherit;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 150ms ease, color 150ms ease;
 }
+.theme-toggle-btn svg { width: 14px; height: 14px; }
 .theme-toggle-btn.active {
   background: var(--accent);
   color: #fff;
