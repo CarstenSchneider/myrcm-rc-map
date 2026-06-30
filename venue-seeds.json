@@ -1808,7 +1808,8 @@
     "hostId": "dmc-ov-56",
     "hostName": "MCC Hof e.V.",
     "lat": 50.324395365150075,
-    "lng": 11.836592721346877
+    "lng": 11.836592721346877,
+    "country": "DE"
   },
   {
     "hostId": "dmc-ov-107",
