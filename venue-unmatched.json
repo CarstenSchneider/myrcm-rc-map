@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "m-a-c-h-one",
-    "hostName": "M.A.C.H.-One",
-    "source": "myrcm",
-    "myrcmOrgId": "33841",
-    "possibleVenue": "Helmond",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mac-de-kempen",
     "hostName": "MAC de Kempen",
     "source": "myrcm",
