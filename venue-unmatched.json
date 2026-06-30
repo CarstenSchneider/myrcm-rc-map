@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "hugo-rc-timing-nl",
-    "hostName": "Hugo - RC-Timing.nl",
-    "source": "myrcm",
-    "myrcmOrgId": "2824",
-    "possibleVenue": "Zeewolde",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "hulshout-offroad-racing",
     "hostName": "Hulshout Offroad Racing",
     "source": "myrcm",
