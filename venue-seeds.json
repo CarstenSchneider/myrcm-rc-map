@@ -4481,6 +4481,12 @@
     "lng": 9.304884510338868
   },
   {
+    "hostId": "tamiya-cup-nl",
+    "hostName": "Tamiya Cup NL",
+    "locationUnknown": true,
+    "myrcmOrgId": "33479"
+  },
+  {
     "hostId": "dmc-ov-289",
     "hostName": "TS-Gross Auheim",
     "locationUnknown": true,
