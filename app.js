@@ -6338,7 +6338,7 @@ function impressumHtml() {
 
 function aboutHtml() {
   return `
-    <h2>Über<br>RC RaceMap</h2>
+    <h2>RC RaceMap<br>– Find your next race.</h2>
     <p>RC RaceMap zeigt wo und wann die nächsten Rennen stattfinden — auf einer Karte und als Liste. Beides kann nach Vereinen und Serien gefiltert werden.</p>
     <p>Die Liste enthält den Link zur Nennung und, wenn vorhanden, zu Reglement und Ausschreibung.</p>
     <p>Markiere deine Lieblingsvereine als Favoriten und lass dich über neue Rennen per E-Mail informieren. Melde dich dazu einfach mit deiner E-Mail-Adresse an — eine Registrierung ist nicht erforderlich.</p>
