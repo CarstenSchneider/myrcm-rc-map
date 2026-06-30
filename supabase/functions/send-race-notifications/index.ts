@@ -9,6 +9,8 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
+type Lang = "de" | "en" | "fr" | "nl";
+
 type RaceRow = {
   venueName: string;
   raceName: string;
@@ -42,23 +44,67 @@ type RaceChange = {
   };
 };
 
+// ── i18n ───────────────────────────────────────────────────────────────────
+
+const i18n: Record<string, Record<Lang, string>> = {
+  "subject.updates":        { de: "Updates bei deinen Vereinen – RC RaceMap",                   en: "Updates at your clubs – RC RaceMap",               fr: "Mises à jour de vos clubs – RC RaceMap",            nl: "Updates bij je clubs – RC RaceMap" },
+  "subject.news_updates":   { de: "Neuigkeiten & Updates bei deinen Vereinen – RC RaceMap",     en: "News & Updates at your clubs – RC RaceMap",        fr: "Nouveautés & mises à jour de vos clubs – RC RaceMap", nl: "Nieuws & updates bij je clubs – RC RaceMap" },
+  "subject.news":           { de: "Neuigkeiten bei deinen Vereinen – RC RaceMap",               en: "News from your clubs – RC RaceMap",                fr: "Nouveautés de vos clubs – RC RaceMap",              nl: "Nieuws van je clubs – RC RaceMap" },
+  "heading.updates":        { de: "Updates bei deinen Vereinen",                                en: "Updates at your clubs",                            fr: "Mises à jour de vos clubs",                         nl: "Updates bij je clubs" },
+  "heading.news":           { de: "Neuigkeiten bei deinen Vereinen",                            en: "News from your clubs",                             fr: "Nouveautés de vos clubs",                           nl: "Nieuws van je clubs" },
+  "subtext.updates":        { de: "Es gibt Änderungen bei Rennen von Vereinen, denen du folgst.", en: "There are changes to races at clubs you follow.", fr: "Il y a des modifications pour des courses de vos clubs.", nl: "Er zijn wijzigingen bij races van clubs die je volgt." },
+  "subtext.news_updates":   { de: "Es gibt neue Rennen und Updates bei Vereinen, denen du folgst.", en: "There are new races and updates at clubs you follow.", fr: "Il y a de nouvelles courses et des mises à jour de vos clubs.", nl: "Er zijn nieuwe races en updates bij clubs die je volgt." },
+  "subtext.news":           { de: "Es gibt neue Rennen oder geöffnete Nennungen bei Vereinen, denen du folgst.", en: "There are new races or open registrations at clubs you follow.", fr: "Il y a de nouvelles courses ou des inscriptions ouvertes de vos clubs.", nl: "Er zijn nieuwe races of open inschrijvingen bij clubs die je volgt." },
+  "section.new_races":      { de: "Neue Rennen",          en: "New Races",               fr: "Nouvelles courses",    nl: "Nieuwe races" },
+  "section.updates":        { de: "Updates",              en: "Updates",                 fr: "Mises à jour",         nl: "Updates" },
+  "reg.open":               { de: "Nennung ↗",            en: "Registration ↗",          fr: "Inscription ↗",        nl: "Inschrijving ↗" },
+  "reg.upcoming.from":      { de: "Nennung ab {date}",    en: "Registration from {date}", fr: "Inscription dès le {date}", nl: "Inschrijving vanaf {date}" },
+  "reg.upcoming.tba":       { de: "Nennung folgt",        en: "Registration coming soon", fr: "Inscription bientôt", nl: "Inschrijving volgt" },
+  "reg.closed":             { de: "Nennung geschlossen",  en: "Registration closed",     fr: "Inscription fermée",   nl: "Inschrijving gesloten" },
+  "doc.rules":              { de: "Ausschreibung ↗",      en: "Race rules ↗",            fr: "Règlement ↗",          nl: "Reglement ↗" },
+  "doc.rules.pdf":          { de: "Ausschreibung (PDF) ↗", en: "Race rules (PDF) ↗",    fr: "Règlement (PDF) ↗",    nl: "Reglement (PDF) ↗" },
+  "cta.map":                { de: "Auf der Karte ansehen", en: "View on map",            fr: "Voir sur la carte",    nl: "Bekijken op kaart" },
+  "footer.unsubscribe":     { de: "Abmelden",             en: "Unsubscribe",             fr: "Se désabonner",        nl: "Afmelden" },
+  "change.cancelled_deleted": { de: "Abgesagt / Gelöscht", en: "Cancelled / Deleted",   fr: "Annulé / Supprimé",    nl: "Geannuleerd / Verwijderd" },
+  "change.cancelled":       { de: "Abgesagt",             en: "Cancelled",               fr: "Annulé",               nl: "Geannuleerd" },
+  "change.reg_closed":      { de: "Nennung geschlossen",  en: "Registration closed",     fr: "Inscription fermée",   nl: "Inschrijving gesloten" },
+  "change.new_name":        { de: "Neuer Name: ",         en: "New name: ",              fr: "Nouveau nom : ",       nl: "Nieuwe naam: " },
+  "change.new_date":        { de: "Neues Datum: ",        en: "New date: ",              fr: "Nouvelle date : ",     nl: "Nieuwe datum: " },
+  "change.updated":         { de: "Aktualisiert",         en: "Updated",                 fr: "Mis à jour",           nl: "Bijgewerkt" },
+  "email.title":            { de: "RC RaceMap – Neuigkeiten", en: "RC RaceMap – News",  fr: "RC RaceMap – Actualités", nl: "RC RaceMap – Nieuws" },
+  "unsub.page.title":       { de: "RC RaceMap – Abmelden", en: "RC RaceMap – Unsubscribe", fr: "RC RaceMap – Désabonnement", nl: "RC RaceMap – Afmelden" },
+  "unsub.ok.heading":       { de: "Abgemeldet",           en: "Unsubscribed",            fr: "Désabonné(e)",         nl: "Afgemeld" },
+  "unsub.ok.text":          { de: "Du erhältst keine E-Mail-Benachrichtigungen mehr von RC RaceMap.<br>Du kannst sie jederzeit wieder aktivieren.", en: "You will no longer receive email notifications from RC RaceMap.<br>You can re-enable them at any time.", fr: "Vous ne recevrez plus de notifications par e-mail de RC RaceMap.<br>Vous pouvez les réactiver à tout moment.", nl: "Je ontvangt geen e-mailmeldingen meer van RC RaceMap.<br>Je kunt ze altijd opnieuw inschakelen." },
+  "unsub.err.heading":      { de: "Fehler",               en: "Error",                   fr: "Erreur",               nl: "Fout" },
+  "unsub.err.text":         { de: "Der Abmelde-Link ist ungültig oder bereits verwendet.", en: "The unsubscribe link is invalid or already used.", fr: "Le lien de désabonnement est invalide ou déjà utilisé.", nl: "De afmeldlink is ongeldig of al gebruikt." },
+  "unsub.cta":              { de: "Zur Karte",            en: "View map",                fr: "Voir la carte",        nl: "Bekijk kaart" },
+};
+
+function tr(key: string, lang: Lang, vars?: Record<string, string>): string {
+  let str = i18n[key]?.[lang] ?? i18n[key]?.["en"] ?? key;
+  if (vars) for (const [k, v] of Object.entries(vars)) str = str.replace(`{${k}}`, v);
+  return str;
+}
+
+const DATE_LOCALE: Record<Lang, string> = { de: "de-DE", en: "en-GB", fr: "fr-FR", nl: "nl-NL" };
+
 // ── Helpers ────────────────────────────────────────────────────────────────
 
 function escHtml(s: string) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function formatDate(iso: string): string {
+function formatDate(iso: string, lang: Lang): string {
   const d = new Date(iso);
-  return d.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+  return d.toLocaleDateString(DATE_LOCALE[lang], { day: "2-digit", month: "2-digit", year: "numeric" });
 }
 
-function formatDateRange(from: string, to?: string): string {
-  if (!to || to === from) return formatDate(from);
+function formatDateRange(from: string, to: string | undefined, lang: Lang): string {
+  if (!to || to === from) return formatDate(from, lang);
   const f = new Date(from);
-  const t = new Date(to);
-  const fd = f.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
-  const td = t.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+  const toDate = new Date(to);
+  const fd = f.toLocaleDateString(DATE_LOCALE[lang], { day: "2-digit", month: "2-digit" });
+  const td = toDate.toLocaleDateString(DATE_LOCALE[lang], { day: "2-digit", month: "2-digit", year: "numeric" });
   return `${fd} – ${td}`;
 }
 
@@ -76,31 +122,31 @@ function changeNotifType(change: RaceChange): string {
   return `race_updated_${simpleHash(key)}`;
 }
 
-function changeDescription(change: RaceChange): string {
-  if (change.registrationStatus === "deleted") return "Abgesagt / Gelöscht";
+function changeDescription(change: RaceChange, lang: Lang): string {
+  if (change.registrationStatus === "deleted") return tr("change.cancelled_deleted", lang);
 
   const parts: string[] = [];
   const isCancelled = change.name.toLowerCase().includes("abgesagt");
 
   if (isCancelled) {
-    parts.push("Abgesagt");
+    parts.push(tr("change.cancelled", lang));
   } else {
-    if (change.changed.registrationStatus?.to === "closed") parts.push("Nennung geschlossen");
-    if (change.changed.name) parts.push(`Neuer Name: ${change.name}`);
+    if (change.changed.registrationStatus?.to === "closed") parts.push(tr("change.reg_closed", lang));
+    if (change.changed.name) parts.push(`${tr("change.new_name", lang)}${change.name}`);
   }
 
   if (change.changed.date) {
     const { to, toTo } = change.changed.date;
-    parts.push(`Neues Datum: ${formatDateRange(to, toTo)}`);
+    parts.push(`${tr("change.new_date", lang)}${formatDateRange(to, toTo, lang)}`);
   }
 
-  return parts.join(" · ") || "Aktualisiert";
+  return parts.join(" · ") || tr("change.updated", lang);
 }
 
 // ── Email template ─────────────────────────────────────────────────────────
 
-function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []): string {
-  const unsubscribeUrl = `https://rcracemap.com?unsubscribe=${encodeURIComponent(userId)}`;
+function emailHtml(rows: RaceRow[], userId: string, lang: Lang, changeRows: ChangeRow[] = []): string {
+  const unsubscribeUrl = `https://rcracemap.com?unsubscribe=${encodeURIComponent(userId)}&lang=${lang}`;
 
   const seen = new Set<string>();
   const uniqueRows = rows.filter(r => {
@@ -119,17 +165,17 @@ function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []
   const renderRaceItem = (r: RaceRow) => {
     let regLine = "";
     if (r.registrationStatus === "open" && r.registrationUrl) {
-      regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
+      regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>${tr("reg.open", lang)}</a>`;
     } else if (r.registrationStatus === "upcoming") {
-      const note = r.registrationNote || (r.registrationOpens ? `Nennung ab ${r.registrationOpens}` : "Nennung folgt");
+      const note = r.registrationNote || (r.registrationOpens ? tr("reg.upcoming.from", lang, { date: r.registrationOpens }) : tr("reg.upcoming.tba", lang));
       regLine = `<span style="font-size:13px; font-weight:700; color:#4A9EE8;"><span style="${dotStyle("#4A9EE8")}"></span>${escHtml(note)}</span>`;
     } else if (r.registrationStatus === "closed") {
-      regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>Nennung geschlossen</span>`;
+      regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>${tr("reg.closed", lang)}</span>`;
     }
 
     const announcementLabel = r.announcementUrl?.toLowerCase().endsWith(".pdf")
-      ? "Ausschreibung (PDF) ↗"
-      : "Ausschreibung ↗";
+      ? tr("doc.rules.pdf", lang)
+      : tr("doc.rules", lang);
     const announcementLink = r.announcementUrl
       ? ` &nbsp;·&nbsp; <a href="${r.announcementUrl}" style="color:#6b7280; font-size:13px; text-decoration:none;">${announcementLabel}</a>`
       : "";
@@ -153,20 +199,20 @@ function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []
   const renderChangeItem = (r: ChangeRow) => {
     const announcementUrl = (r as any)._announcementUrl ?? "";
     const announcementLabel = announcementUrl?.toLowerCase().endsWith(".pdf")
-      ? "Ausschreibung (PDF) ↗"
-      : "Ausschreibung ↗";
+      ? tr("doc.rules.pdf", lang)
+      : tr("doc.rules", lang);
     const announcementLink = announcementUrl
       ? ` &nbsp;·&nbsp; <a href="${announcementUrl}" style="color:#6b7280; font-size:13px; text-decoration:none;">${announcementLabel}</a>`
       : "";
 
     let regLine = "";
     if (r.registrationStatus === "open" && r.registrationUrl) {
-      regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>Nennung ↗</a>`;
+      regLine = `<a class="item-reg" href="${r.registrationUrl}" style="color:#6b7280; text-decoration:none; font-size:13px; font-weight:400;"><span style="${dotStyle("#22c55e")}"></span>${tr("reg.open", lang)}</a>`;
     } else if (r.registrationStatus === "upcoming") {
-      const note = r.registrationNote || (r.registrationOpens ? `Nennung ab ${r.registrationOpens}` : "Nennung folgt");
+      const note = r.registrationNote || (r.registrationOpens ? tr("reg.upcoming.from", lang, { date: r.registrationOpens }) : tr("reg.upcoming.tba", lang));
       regLine = `<span style="font-size:13px; font-weight:700; color:#4A9EE8;"><span style="${dotStyle("#4A9EE8")}"></span>${escHtml(note)}</span>`;
     } else if (r.registrationStatus === "closed") {
-      regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>Nennung geschlossen</span>`;
+      regLine = `<span style="font-size:13px; color:#9ca3af;"><span style="${dotStyle("#9ca3af")}"></span>${tr("reg.closed", lang)}</span>`;
     }
 
     const classTags = r.classes.length
@@ -198,28 +244,28 @@ function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []
   const changeItems = changeRows.map(renderChangeItem).join("");
 
   const heading = !hasNew && hasChanges
-    ? "Updates bei deinen Vereinen"
-    : "Neuigkeiten bei deinen Vereinen";
+    ? tr("heading.updates", lang)
+    : tr("heading.news", lang);
 
   const subtext = !hasNew && hasChanges
-    ? "Es gibt Änderungen bei Rennen von Vereinen, denen du folgst."
+    ? tr("subtext.updates", lang)
     : hasNew && hasChanges
-    ? "Es gibt neue Rennen und Updates bei Vereinen, denen du folgst."
-    : "Es gibt neue Rennen oder geöffnete Nennungen bei Vereinen, denen du folgst.";
+    ? tr("subtext.news_updates", lang)
+    : tr("subtext.news", lang);
 
   const tableContent = `
-    ${hasNew ? `${hasChanges ? sectionLabel("Neue Rennen") : ""}${newItems}` : ""}
-    ${hasChanges ? `${sectionLabel("Updates")}${changeItems}` : ""}
+    ${hasNew ? `${hasChanges ? sectionLabel(tr("section.new_races", lang)) : ""}${newItems}` : ""}
+    ${hasChanges ? `${sectionLabel(tr("section.updates", lang))}${changeItems}` : ""}
   `;
 
   return `<!DOCTYPE html>
-<html lang="de" style="color-scheme: light dark;">
+<html lang="${lang}" style="color-scheme: light dark;">
 <head>
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RC Race Map – Neuigkeiten</title>
+<title>${tr("email.title", lang)}</title>
 <style>
   :root { color-scheme: light dark; }
   @media (prefers-color-scheme: dark) {
@@ -270,7 +316,7 @@ function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td align="center" style="padding: 28px 0 8px;">
-                  <a href="https://rcracemap.com" style="display:inline-block; background:#213769; color:#ffffff; text-decoration:none; font-size:14px; font-weight:600; padding:12px 32px; border-radius:999px;">Auf der Karte ansehen</a>
+                  <a href="https://rcracemap.com" style="display:inline-block; background:#213769; color:#ffffff; text-decoration:none; font-size:14px; font-weight:600; padding:12px 32px; border-radius:999px;">${tr("cta.map", lang)}</a>
                 </td>
               </tr>
             </table>
@@ -284,7 +330,7 @@ function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []
               RC Race Map &nbsp;|&nbsp;
               <a href="https://rcracemap.com" style="color:#9ca3af; text-decoration:none;">rcracemap.com</a>
               &nbsp;|&nbsp;
-              <a href="${unsubscribeUrl}" style="color:#9ca3af; text-decoration:none;">Abmelden</a>
+              <a href="${unsubscribeUrl}" style="color:#9ca3af; text-decoration:none;">${tr("footer.unsubscribe", lang)}</a>
             </span>
           </td>
         </tr>
@@ -299,10 +345,11 @@ function emailHtml(rows: RaceRow[], userId: string, changeRows: ChangeRow[] = []
 
 // ── Unsubscribe page ───────────────────────────────────────────────────────
 
-const unsubscribeHtml = (ok: boolean) => `<!DOCTYPE html>
-<html lang="de">
+function unsubscribeHtml(ok: boolean, lang: Lang): string {
+  return `<!DOCTYPE html>
+<html lang="${lang}">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RC RaceMap – Abmelden</title>
+<title>${tr("unsub.page.title", lang)}</title>
 <style>
   body { margin:0; background:#f0f2f5; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh; }
   .card { background:#fff; border-radius:12px; padding:48px 40px; max-width:400px; text-align:center; box-shadow:0 4px 24px rgba(0,0,0,0.08); }
@@ -323,12 +370,13 @@ const unsubscribeHtml = (ok: boolean) => `<!DOCTYPE html>
     </svg>
   </div>
   ${ok
-    ? `<h1>Abgemeldet</h1><p>Du erhältst keine E-Mail-Benachrichtigungen mehr von RC RaceMap.<br>Du kannst sie jederzeit wieder aktivieren.</p>`
-    : `<h1>Fehler</h1><p>Der Abmelde-Link ist ungültig oder bereits verwendet.</p>`
+    ? `<h1>${tr("unsub.ok.heading", lang)}</h1><p>${tr("unsub.ok.text", lang)}</p>`
+    : `<h1>${tr("unsub.err.heading", lang)}</h1><p>${tr("unsub.err.text", lang)}</p>`
   }
-  <a href="https://rcracemap.com">Zur Karte</a>
+  <a href="https://rcracemap.com">${tr("unsub.cta", lang)}</a>
 </div>
 </body></html>`;
+}
 
 // ── Main handler ───────────────────────────────────────────────────────────
 
@@ -337,8 +385,10 @@ serve(async (req) => {
   const url = new URL(req.url);
   const userId = url.searchParams.get("unsubscribe");
   if (userId) {
+    const rawLang = url.searchParams.get("lang") ?? "de";
+    const lang: Lang = (["de", "en", "fr", "nl"].includes(rawLang) ? rawLang : "de") as Lang;
     const { error } = await supabase.from("venue_notifications").delete().eq("user_id", userId);
-    return new Response(unsubscribeHtml(!error), {
+    return new Response(unsubscribeHtml(!error, lang), {
       status: 200,
       headers: { "Content-Type": "text/html; charset=utf-8", "X-Content-Type-Options": "nosniff" },
     });
@@ -366,7 +416,19 @@ serve(async (req) => {
     userHosts.get(s.user_id)!.add(s.host_id);
   }
 
-  // 3. Fetch races data from the public JSON (same source as frontend)
+  // 3. Fetch user language preferences
+  const userIds = [...userHosts.keys()];
+  const { data: prefRows } = await supabase
+    .from("user_preferences")
+    .select("user_id, lang")
+    .in("user_id", userIds);
+  const userLang = new Map<string, Lang>(
+    (prefRows ?? [])
+      .filter((p: any) => ["de", "en", "fr", "nl"].includes(p.lang))
+      .map((p: any) => [p.user_id, p.lang as Lang])
+  );
+
+  // 4. Fetch races data from the public JSON (same source as frontend)
   const [racesRes, venuesRes, rckRacesRes] = await Promise.all([
     fetch("https://rcracemap.com/races.json").then(r => r.json()).catch(() => []),
     fetch("https://rcracemap.com/venues.json").then(r => r.json()).catch(() => []),
@@ -407,11 +469,13 @@ serve(async (req) => {
     return d >= now && d <= cutoff;
   });
 
-  // 4. Per user: find unseen new races and relevant changes
+  // 5. Per user: find unseen new races and relevant changes
   const seenPairs: { user_id: string; race_id: string; notif_type: string }[] = [];
   let emailsSent = 0;
 
   for (const [userId, hostIds] of userHosts) {
+    const lang = userLang.get(userId) ?? "de";
+
     // New/open races for this user
     const relevant = upcomingRaces.filter((r: any) => {
       const raceHostId = String(r.hostId ?? r.host_id ?? "");
@@ -454,14 +518,14 @@ serve(async (req) => {
       const venue = venueById.get(String(race.venueId ?? race.venue_id ?? ""));
       const venueName = venue?.name ?? race.venueName ?? race.hostName ?? race.organizerName ?? "";
       const raceName = race.name ?? race.title ?? "";
-      const raceDate = formatDateRange(race.from ?? race.date, race.to);
+      const raceDate = formatDateRange(race.from ?? race.date, race.to, lang);
       const classes = (race.classes ?? []).map((c: any) => typeof c === "string" ? c : c?.name ?? "").filter(Boolean);
 
       toNotify.push({
         venueName, raceName, raceDate,
         registrationStatus: race.registrationStatus ?? race.registration_status ?? "",
         registrationNote: race.note ?? "",
-        registrationOpens: race.registrationOpens ? formatDate(race.registrationOpens) : "",
+        registrationOpens: race.registrationOpens ? formatDate(race.registrationOpens, lang) : "",
         registrationUrl: race.url ?? "",
         announcementUrl: (race.documents ?? []).find((d: any) => d?.url)?.url ?? "",
         classes,
@@ -479,7 +543,7 @@ serve(async (req) => {
 
       const venue = venueById.get(String(change.venueId ?? ""));
       const venueName = venue?.name ?? change.hostName ?? "";
-      const raceDate = formatDateRange(change.from, change.to);
+      const raceDate = formatDateRange(change.from, change.to, lang);
       const announcementUrl = change.documents?.find(d => d?.url)?.url ?? "";
 
       const row: ChangeRow & { _announcementUrl?: string } = {
@@ -488,11 +552,11 @@ serve(async (req) => {
         raceDate,
         registrationStatus: change.registrationStatus,
         registrationNote: "",
-        registrationOpens: change.registrationOpens ? formatDate(change.registrationOpens) : "",
+        registrationOpens: change.registrationOpens ? formatDate(change.registrationOpens, lang) : "",
         registrationUrl: change.url ?? "",
         announcementUrl,
         classes: [],
-        updateDesc: changeDescription(change),
+        updateDesc: changeDescription(change, lang),
         _announcementUrl: announcementUrl,
       };
 
@@ -510,10 +574,10 @@ serve(async (req) => {
     const hasNew = toNotify.length > 0;
     const hasChanges = toNotifyChanges.length > 0;
     const subject = !hasNew && hasChanges
-      ? "Updates bei deinen Vereinen – RC RaceMap"
+      ? tr("subject.updates", lang)
       : hasNew && hasChanges
-      ? "Neuigkeiten & Updates bei deinen Vereinen – RC RaceMap"
-      : "Neuigkeiten bei deinen Vereinen – RC RaceMap";
+      ? tr("subject.news_updates", lang)
+      : tr("subject.news", lang);
 
     // Send email via Resend
     const res = await fetch("https://api.resend.com/emails", {
@@ -523,7 +587,7 @@ serve(async (req) => {
         from: "RC RaceMap <noreply@rcracemap.com>",
         to: [user.email],
         subject,
-        html: emailHtml(toNotify, userId, toNotifyChanges),
+        html: emailHtml(toNotify, userId, lang, toNotifyChanges),
       }),
     });
 
@@ -535,7 +599,7 @@ serve(async (req) => {
     }
   }
 
-  // 5. Insert seen records
+  // 6. Insert seen records
   if (seenPairs.length) {
     await supabase.from("seen_race_notifications").upsert(seenPairs);
   }

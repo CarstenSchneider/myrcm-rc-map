@@ -260,6 +260,7 @@ function setLang(lang) {
   populateSeries();
   showMenuHome();
   render();
+  sbSaveLang(lang);
 }
 
 const countryFlags = [
@@ -1192,9 +1193,10 @@ async function sbPullFavorites() {
 }
 
 async function sbPullPreferences() {
-  const { data, error } = await sbClient.from("user_preferences").select("theme").eq("user_id", sbUser.id).maybeSingle();
+  const { data, error } = await sbClient.from("user_preferences").select("theme, lang").eq("user_id", sbUser.id).maybeSingle();
   if (error) { console.error("sbPullPreferences:", error); return; }
   if (data?.theme && data.theme !== (localStorage.getItem(THEME_KEY) || "auto")) setTheme(data.theme);
+  if (data?.lang && ["de", "en", "fr", "nl"].includes(data.lang) && data.lang !== _lang) setLang(data.lang);
 }
 
 async function sbToggleFavorite(hostId, isNowFavorite) {
@@ -1209,6 +1211,12 @@ async function sbSaveTheme(theme) {
   if (!sbClient || !sbUser) return;
   const { error } = await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, theme, updated_at: new Date().toISOString() });
   if (error) console.error("sbSaveTheme:", error);
+}
+
+async function sbSaveLang(lang) {
+  if (!sbClient || !sbUser) return;
+  const { error } = await sbClient.from("user_preferences").upsert({ user_id: sbUser.id, lang, updated_at: new Date().toISOString() });
+  if (error) console.error("sbSaveLang:", error);
 }
 
 // ── Ads ───────────────────────────────────────────────────────────────────
