@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "modelstockcar-club-s-r-p-de-peeldrivers",
-    "hostName": "Modelstockcar club S.R.P De Peeldrivers",
-    "source": "myrcm",
-    "myrcmOrgId": "3215",
-    "possibleVenue": "Venray / Ysselsteyn",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mrc-vianen",
     "hostName": "MRC Vianen",
     "source": "myrcm",
