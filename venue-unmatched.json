@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mrc-vianen",
-    "hostName": "MRC Vianen",
-    "source": "myrcm",
-    "myrcmOrgId": "18560",
-    "possibleVenue": "Alphen",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mrcz-vzw",
     "hostName": "MRCZ vzw",
     "source": "myrcm",
