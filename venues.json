@@ -6741,5 +6741,20 @@
     "myrcmOrgId": "1387",
     "source": "geocoded-nominatim-dach",
     "verified": true
+  },
+  {
+    "id": "raco-2000",
+    "name": "RACO 2000",
+    "city": "",
+    "lat": 52.13130295512539,
+    "lng": 5.08833274060954,
+    "address": "",
+    "postalCode": "",
+    "website": "https://www.raco2000.nl/",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "5305",
+    "source": "manual",
+    "country": "NL"
   }
 ]
