@@ -3755,6 +3755,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "dutch-rc-series",
+    "hostName": "Dutch RC Series",
+    "locationUnknown": true,
+    "myrcmOrgId": "28115"
+  },
+  {
     "hostId": "rcco-emc-wehrheim-e-v",
     "hostName": "EMC Wehrheim e. V.",
     "lat": 50.314507929048034,
