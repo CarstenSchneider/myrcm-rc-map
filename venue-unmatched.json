@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "flatout-rc-vzw",
-    "hostName": "FlatOut RC VZW",
-    "source": "myrcm",
-    "myrcmOrgId": "739",
-    "possibleVenue": "Oud-Turnhout",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "h-m-r-c",
     "hostName": "H.M.R.C.",
     "source": "myrcm",
