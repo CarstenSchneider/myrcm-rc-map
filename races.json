@@ -52125,60 +52125,6 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "ets-international-2025-06-21-myrcm-event-87963",
-    "venueId": "ets-international",
-    "venueName": "ETS / TOS International",
-    "venueLocation": null,
-    "venueWebsite": null,
-    "hostId": "tonisport-gmbh",
-    "hostName": "ToniSport GmbH",
-    "name": "Tonisport Round 1 & DMC SK Lauf MCC Türkheim",
-    "from": "2025-06-21",
-    "to": "2025-06-22",
-    "series": [
-      "Sportkreis (SK)",
-      "ToniSport Onroad Series (TOS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87963&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=24531&pLa=en&dId%5BE%5D=87963&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=87963&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 44,
-    "registrationDisplay": "44",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "TOS Fun 21.5",
-        "entries": 7
-      },
-      {
-        "name": "TOS F1(EGF1)",
-        "entries": 5
-      },
-      {
-        "name": "TOS Fun 17.5(EGTWHO)",
-        "entries": 11
-      },
-      {
-        "name": "TOS FWD 17.5(EGTWFR)",
-        "entries": 10
-      },
-      {
-        "name": "TOS Stock 13.5(EGTWSP)",
-        "entries": 8
-      },
-      {
-        "name": "TOS Modified(EGTWMOD)",
-        "entries": 3
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-30"
-  },
-  {
     "id": "rcr-linz-2025-06-22-myrcm-event-87660",
     "venueId": "rcr-linz",
     "venueName": "RCR-Linz",
