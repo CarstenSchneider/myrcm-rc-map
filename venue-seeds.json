@@ -1656,7 +1656,8 @@
     "hostId": "dmc-ov-143",
     "hostName": "MC Dortmund e.V.",
     "lat": 51.55786161696523,
-    "lng": 7.521933636366658
+    "lng": 7.521933636366658,
+    "country": "DE"
   },
   {
     "id": "mc-ettlingen-e-v",
