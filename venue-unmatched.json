@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "nomac",
-    "hostName": "NOMAC",
-    "source": "myrcm",
-    "myrcmOrgId": "53339",
-    "possibleVenue": "De Meern",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "orra",
     "hostName": "Orra",
     "source": "myrcm",
