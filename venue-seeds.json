@@ -4435,6 +4435,12 @@
     "myrcmOrgId": "58661"
   },
   {
+    "hostId": "dmc-ov-303",
+    "hostName": "RIMAR Rhein Ijssel Modell Auto Race",
+    "lat": 51.98236927459978,
+    "lng": 5.987030899603787
+  },
+  {
     "hostId": "dmc-rmc-wolfsburg-e-v",
     "hostName": "RMC Wolfsburg e.V.",
     "lat": 52.42966034303305,
