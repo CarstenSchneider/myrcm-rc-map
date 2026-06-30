@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "mac-de-kempen",
-    "hostName": "MAC de Kempen",
-    "source": "myrcm",
-    "myrcmOrgId": "32715",
-    "possibleVenue": "Duizel",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "mac-vlijmen",
     "hostName": "MAC Vlijmen",
     "source": "myrcm",
