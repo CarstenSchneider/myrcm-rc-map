@@ -3833,6 +3833,13 @@
     "myrcmOrgId": "14156"
   },
   {
+    "hostId": "houthalens-racing-team",
+    "hostName": "Houthalens Racing Team",
+    "lat": 51.04033523105567,
+    "lng": 5.389993492087697,
+    "myrcmOrgId": "65"
+  },
+  {
     "hostId": "rcco-ig-vulkanparkracer-e-v",
     "hostName": "IG Vulkanparkracer e.V.",
     "locationUnknown": true
