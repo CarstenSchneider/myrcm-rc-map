@@ -16,14 +16,6 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "racing-club-roeselare",
-    "hostName": "Racing Club Roeselare",
-    "source": "myrcm",
-    "myrcmOrgId": "76",
-    "possibleVenue": "Roeselare",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "raco-2000",
     "hostName": "RACO 2000",
     "source": "myrcm",
