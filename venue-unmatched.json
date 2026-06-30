@@ -1,13 +1,5 @@
 [
   {
-    "hostId": "orra",
-    "hostName": "Orra",
-    "source": "myrcm",
-    "myrcmOrgId": "55554",
-    "possibleVenue": "Oud-Turnhout",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
     "hostId": "r-c-car-mertzig-asbl",
     "hostName": "R/C CAR MERTZIG ASBL",
     "source": "myrcm",
