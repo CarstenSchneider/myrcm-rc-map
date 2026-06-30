@@ -2943,7 +2943,9 @@
       "ÖFMAV Sektion Verbrenner Flachbahn",
       "Winklarn"
     ],
-    "locationUnknown": true
+    "locationUnknown": true,
+    "country": "AT",
+    "website": "https://www.oefmav.at/"
   },
   {
     "id": "one28-ch-swiss-micro-racer",
