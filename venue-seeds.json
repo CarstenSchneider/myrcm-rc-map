@@ -3949,6 +3949,13 @@
     "myrcmOrgId": "4842"
   },
   {
+    "hostId": "mbc-het-gelders-eiland-lobith",
+    "hostName": "MBC Het Gelders Eiland Lobith",
+    "lat": 50.94668894859968,
+    "lng": 4.586513523744008,
+    "myrcmOrgId": "3214"
+  },
+  {
     "hostId": "dmc-mbc-oberlausitz-e-v",
     "hostName": "MBC Oberlausitz e.V.",
     "lat": 51.08318541210428,
