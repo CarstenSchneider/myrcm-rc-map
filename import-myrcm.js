@@ -965,7 +965,8 @@ function venueRecordFromSeed(seed) {
     myrcmOrgId: seed.myrcmOrgId || "",
     source: seed.source || "venue-seeds",
     verified: seed.verified !== false,
-    ...(seed.country ? { country: seed.country } : {})
+    ...(seed.country ? { country: seed.country } : {}),
+    ...(seed.locationUnknown ? { locationUnknown: true } : {})
   };
 }
 
@@ -1021,7 +1022,7 @@ function mergeVenueSeedsIntoVenues(existingVenues = [], venueSeeds = []) {
 
   for (const seed of venueSeeds || []) {
     const venue = venueRecordFromSeed(seed);
-    if (!venue?.id || !hasValidCoordinates(venue)) continue;
+    if (!venue?.id || (!hasValidCoordinates(venue) && !seed.locationUnknown)) continue;
 
     const id = String(venue.id);
     byId.set(id, mergeVenueRecords(byId.get(id) || {}, venue));
@@ -1112,7 +1113,7 @@ function detectVenueSeedFromRaceText(venueSeeds = [], raceText = "", hostRecord 
 
 // Country codes (ISO 3166-1 alpha-2) that are outside DACH.
 // Used to detect travelling-series races held abroad (e.g. ETS ROUND 2 TRENCIN SK).
-const nonDachCountryCodes = /\b(SK|CZ|PL|HU|FR|NL|BE|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LU|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
+const nonDachCountryCodes = /(?:^|[\s/,])(SK|CZ|PL|HU|FR|NL|BE|IT|SI|HR|RS|GB|UK|ES|PT|SE|NO|DK|FI|RO|BG|LU|LT|LV|EE|GR|TR|UA|RU)\s*$/i;
 
 function raceNameIndicatesNonDach(name) {
   return nonDachCountryCodes.test(name || "");
