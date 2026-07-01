@@ -181,8 +181,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 44,
-    "registrationDisplay": "44",
+    "registrationCount": 45,
+    "registrationDisplay": "45",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Mitte",
@@ -205,7 +205,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 21
+        "entries": 22
       },
       {
         "name": "VTA",
