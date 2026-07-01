@@ -297,8 +297,6 @@ const countryFlags = [
   { country: "BE",  code: "be", label: "Belgien" },
   { country: "LU",  code: "lu", label: "Luxemburg" },
 ];
-let _countryOutlines = null;
-let _lastOutlineCountry = null;
 let _countryPill = null;
 let _countryPicker = null;
 let _pickerIsOpen = false;
@@ -310,54 +308,6 @@ function updateCountryPill() {
   const f = countryFlags.find(cf => cf.country === selectedCountry) ?? countryFlags[0];
   _countryPill.innerHTML = `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>`;
   _countryPill.setAttribute("aria-label", t("country." + f.country));
-}
-
-function updateCountryOutline() {
-  // Render inside the MapLibre GL canvas (not as a Leaflet SVG overlay) so it
-  // stays visible above the WebGL tiles. Re-add source+layers after setStyle()
-  // clears them — this function is wired to the "styledata" event.
-  const mlMap = baseMapLayer?.getMaplibreMap?.();
-  if (!mlMap || !mlMap.getStyle?.()) return;
-
-  const hasSource = !!mlMap.getSource("country-outline");
-  // Guard: source exists and country hasn't changed → nothing to do
-  if (hasSource && _lastOutlineCountry === selectedCountry) return;
-
-  const feature = _countryOutlines && selectedCountry !== "all"
-    ? (_countryOutlines.features?.find(f => f.properties?.code === selectedCountry) ?? null)
-    : null;
-
-  _lastOutlineCountry = selectedCountry;
-
-  if (!feature) {
-    if (hasSource) {
-      try { mlMap.setLayoutProperty("country-outline-fill", "visibility", "none"); } catch {}
-      try { mlMap.setLayoutProperty("country-outline-line", "visibility", "none"); } catch {}
-    }
-    return;
-  }
-
-  if (hasSource) {
-    mlMap.getSource("country-outline").setData(feature);
-    try { mlMap.setLayoutProperty("country-outline-fill", "visibility", "visible"); } catch {}
-    try { mlMap.setLayoutProperty("country-outline-line", "visibility", "visible"); } catch {}
-  } else {
-    try {
-      mlMap.addSource("country-outline", { type: "geojson", data: feature });
-      mlMap.addLayer({
-        id: "country-outline-fill",
-        type: "fill",
-        source: "country-outline",
-        paint: { "fill-color": "#4A9EE8", "fill-opacity": 0.07 },
-      });
-      mlMap.addLayer({
-        id: "country-outline-line",
-        type: "line",
-        source: "country-outline",
-        paint: { "line-color": "#4A9EE8", "line-width": 2, "line-opacity": 0.6 },
-      });
-    } catch {}
-  }
 }
 
 function _buildPickerHtml() {
@@ -405,7 +355,7 @@ function _closeCountryPicker(country) {
     selectedCountry = country;
     localStorage.setItem("rcRaceMapCountry", country);
     updateCountryPill();
-    updateCountryOutline();
+    applyRcRaceMapStyle();
     populateSeries();
     _zoomToCountryPending = true;
     render();
@@ -1138,8 +1088,13 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
-      maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
+      if (selectedCountry !== "all") {
+        maplibreMap.setPaintProperty(id, "line-color", "#4A9EE8");
+        maplibreMap.setPaintProperty(id, "line-opacity", 0.9);
+      } else {
+        maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
+        maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
+      }
       return;
     }
 
@@ -1187,7 +1142,6 @@ function applyRcRaceMapStyle() {
 
 baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); });
 baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
-baseMapLayer.getMaplibreMap?.().on("styledata", updateCountryOutline);
 // Reveal map only after all tiles are fully rendered (idle = nothing more to fetch/paint)
 baseMapLayer.getMaplibreMap?.().once("idle", revealMap);
 baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
@@ -4906,7 +4860,6 @@ async function init() {
   ensureRegistrationStatusStyles();
 
   const cacheBuster = Date.now();
-  const countryOutlinesPromise = fetchJsonOrFallback("dach-borders.json", null);
 
   const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse, ffvrcRacesRawResponse, ffvrcVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
@@ -5043,8 +4996,6 @@ async function init() {
   _updateStaticI18n();
 
   if (selectedCountry !== "all") _zoomToCountryPending = true;
-  _countryOutlines = await countryOutlinesPromise;
-  updateCountryOutline();
   render();
   revealMapWhenReady();
   loadAds();
