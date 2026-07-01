@@ -313,5 +313,35 @@
     "rawOrganizerVenueLine": "RC Bande Zwickau e.V. / RC Bande Zwickau e.V.",
     "rawAddressLine": "Reichenbacher Str. 125, 08056 Zwickau",
     "registrationDeadline": "2026-09-19"
+  },
+  "https://challenge.rck-solutions.de/ausschreibung/202520260705Son20260701%201325.pdf": {
+    "organizerName": "TG-Neustadt 1855 e.V.",
+    "venueName": "RC-Arena Neustadt Süd",
+    "address": "Franz-Schneider-Straße 2",
+    "postalCode": "96465",
+    "city": "Neustadt b. Coburg",
+    "country": "DE",
+    "fullAddress": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "website": null,
+    "sourcePdf": "https://challenge.rck-solutions.de/ausschreibung/202520260705Son20260701%201325.pdf",
+    "addressVerifiedFromPdf": true,
+    "rawOrganizerVenueLine": "TG-Neustadt 1855 e.V. / RC-Arena Neustadt Süd",
+    "rawAddressLine": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "registrationDeadline": "2026-07-04"
+  },
+  "https://challenge.rck-solutions.de/ausschreibung/202520260605Oon20260701%201325.pdf": {
+    "organizerName": "TG-Neustadt 1855 e.V.",
+    "venueName": "RC-Arena Neustadt Süd",
+    "address": "Franz-Schneider-Straße 2",
+    "postalCode": "96465",
+    "city": "Neustadt b. Coburg",
+    "country": "DE",
+    "fullAddress": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "website": null,
+    "sourcePdf": "https://challenge.rck-solutions.de/ausschreibung/202520260605Oon20260701%201325.pdf",
+    "addressVerifiedFromPdf": true,
+    "rawOrganizerVenueLine": "TG-Neustadt 1855 e.V. / RC-Arena Neustadt Süd",
+    "rawAddressLine": "Franz-Schneider-Straße 2, 96465 Neustadt b. Coburg",
+    "registrationDeadline": "2026-07-04"
   }
 }
