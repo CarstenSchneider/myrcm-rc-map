@@ -1150,14 +1150,14 @@ function updateCountryOutline() {
         type: "fill",
         source: "country-outline-src",
         layout: {},
-        paint: { "fill-color": "#000000", "fill-opacity": 0.22 },
+        paint: { "fill-color": "#ffffff", "fill-opacity": 0.3 },
       });
     }
     mlMap.setFilter(
       "country-outline",
       selectedCountry === "all"
         ? ["==", ["get", "code"], ""]
-        : ["!=", ["get", "code"], selectedCountry]
+        : ["==", ["get", "code"], selectedCountry]
     );
   } catch {}
 }
