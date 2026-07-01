@@ -5624,7 +5624,7 @@ async function adminLoadUnmatched(seeds) {
     .filter(s => s.locationUnknown)
     .map(s => ({ hostId: s.hostId || s.id, hostName: s.hostName || s.name, myrcmOrgId: s.myrcmOrgId || null, locationUnknown: true, _isUnknownSeed: true }));
   const unmatchedIds = new Set(unmatched.map(u => u.hostId));
-  const combined = [...unmatched.map(u => ({ ...u, _isUnknownSeed: false })), ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
+  const combined = [...unmatched.map(u => ({ ...u, _isUnknownSeed: !!u.locationUnknown })), ...unknownSeeds.filter(s => !unmatchedIds.has(s.hostId))];
   // Deduplicate by hostName (same club with different source IDs)
   const seenNames = new Set();
   return combined.filter(e => {
