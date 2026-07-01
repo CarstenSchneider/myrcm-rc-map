@@ -6120,94 +6120,19 @@ function renderAdminPruefenTab(container) {
   .then(async ([seeds, dmcRes, rccoRes, ffvrcRes, allEntries]) => {
     // Neue Clubs aus venue-unmatched.json (noch nicht als unbekannt markiert)
     const newEntries = allEntries.filter(e => !e._isUnknownSeed);
-    container.innerHTML = "";
-    const newSection = document.createElement("div");
-    newSection.className = "admin-new-clubs-section";
-    container.appendChild(newSection);
-    if (!newEntries.length) {
-      newSection.innerHTML = `<p class="admin-empty">Keine neuen Clubs.</p>`;
+    if (newEntries.length) {
+      const section = document.createElement("div");
+      section.className = "admin-new-clubs-section";
+      section.innerHTML = `<p class="admin-section-label">Neue Clubs (${newEntries.length})</p>`;
+      const { html, datalistHtml, venuesByDisplay } = _buildAdminEntryListHtml(newEntries, "admin-venue-datalist-pruefen");
+      const listWrapper = document.createElement("div");
+      listWrapper.innerHTML = datalistHtml + html;
+      section.appendChild(listWrapper);
+      _attachAdminEntryListHandlers(listWrapper, venuesByDisplay);
+      container.innerHTML = "";
+      container.appendChild(section);
     } else {
-      const venuesByDisplay = new Map();
-      for (const v of venues) {
-        const key = v.name + (v.city ? ` – ${v.city}` : "");
-        venuesByDisplay.set(key, v);
-      }
-      const datalistId = "admin-new-clubs-datalist";
-      newSection.insertAdjacentHTML("beforeend", `<datalist id="${datalistId}">${[...venuesByDisplay.keys()].map(k => `<option value="${escapeHtml(k)}">`).join("")}</datalist>`);
-      let newIdx = 0;
-      function renderNewEntry() {
-        const e = newEntries[newIdx];
-        const hostId = e.hostId;
-        const hostName = e.hostName;
-        const myrcmOrgId = e.myrcmOrgId || null;
-        newSection.querySelector(".admin-new-entry-card")?.remove();
-        const card = document.createElement("div");
-        card.className = "admin-new-entry-card";
-        card.innerHTML = `
-          <div class="admin-dach-progress">
-            <span>Neue Clubs ${newIdx + 1} / ${newEntries.length}</span>
-          </div>
-          <div class="admin-entry">
-            <div class="admin-entry-header">
-              <strong>${escapeHtml(hostName)}</strong>
-              <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${myrcmOrgId ? ` · MyRCM #${myrcmOrgId}` : ""}</span>
-            </div>
-            ${myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-            <div class="admin-entry-coords">
-              <input type="text" class="admin-input admin-input-coords js-new-coords" placeholder="z.B. 51.077, 7.288" />
-            </div>
-            <div class="admin-entry-link-venue">
-              <input type="text" class="admin-input admin-input-link-venue js-new-link-input" list="${datalistId}" placeholder="Gleiche Strecke wie…" />
-              <button type="button" class="admin-btn admin-btn-link js-new-link">Zuordnen</button>
-            </div>
-            <div class="admin-entry-actions" style="flex-wrap:wrap;gap:8px;">
-              <button type="button" class="admin-btn admin-btn-save js-new-save">Speichern</button>
-              <button type="button" class="admin-btn admin-btn-unknown js-new-unknown">Kein Platz bekannt</button>
-              <button type="button" class="admin-btn admin-btn-delete js-new-delete">Löschen</button>
-              <button type="button" class="admin-btn admin-btn-skip js-new-skip">Überspringen</button>
-              ${newIdx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-new-prev" style="margin-left:auto;">← Zurück</button>` : ""}
-            </div>
-            <p class="admin-entry-status js-new-status"></p>
-          </div>`;
-        newSection.appendChild(card);
-        const status = card.querySelector(".js-new-status");
-        async function doAction(payload) {
-          status.textContent = "Speichern…";
-          try {
-            await adminCommit(payload);
-            newEntries.splice(newIdx, 1);
-            if (!newEntries.length) {
-              newSection.innerHTML = `<p class="admin-empty">✓ Alle neuen Clubs bearbeitet.</p>`;
-            } else {
-              if (newIdx >= newEntries.length) newIdx = newEntries.length - 1;
-              renderNewEntry();
-            }
-          } catch (err) { status.textContent = `Fehler: ${err.message}`; }
-        }
-        card.querySelector(".js-new-save").addEventListener("click", () => {
-          const parts = card.querySelector(".js-new-coords").value.split(",").map(x => parseFloat(x.trim()));
-          const [lat, lng] = parts;
-          if (parts.length < 2 || isNaN(lat) || isNaN(lng)) { status.textContent = "Format: 51.077, 7.288"; return; }
-          doAction({ action: "add-venue", hostId, hostName, myrcmOrgId, lat, lng });
-        });
-        card.querySelector(".js-new-unknown").addEventListener("click", () => doAction({ action: "mark-unknown", hostId, hostName, myrcmOrgId }));
-        card.querySelector(".js-new-delete").addEventListener("click", () => {
-          if (!confirm(`"${hostName}" wirklich löschen?`)) return;
-          doAction({ action: "delete-unmatched", hostId, hostName });
-        });
-        card.querySelector(".js-new-link").addEventListener("click", () => {
-          const inputVal = card.querySelector(".js-new-link-input").value.trim();
-          const matched = venuesByDisplay.get(inputVal);
-          if (!matched) { status.textContent = "Strecke nicht gefunden — exakt aus der Liste wählen"; return; }
-          doAction({ action: "link-to-venue", hostId, hostName, venueId: matched.id });
-        });
-        card.querySelector(".js-new-skip").addEventListener("click", () => {
-          if (newIdx < newEntries.length - 1) { newIdx++; renderNewEntry(); }
-          else { status.textContent = "Kein nächster Eintrag"; }
-        });
-        card.querySelector(".js-new-prev")?.addEventListener("click", () => { newIdx--; renderNewEntry(); });
-      }
-      renderNewEntry();
+      container.innerHTML = "";
     }
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
