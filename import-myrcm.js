@@ -1760,9 +1760,10 @@ async function parseSingleEvent(eventLink, host, hostRecord, venueSeed, venueSee
     );
     // For races clearly held outside DACH (name ends with a non-DACH country code like
     // "RUCPHEN / NL", "TRENCIN SK"), use null — unless it's a travelling series race
-    // (ETS/ENS/TOS). Travelling series races always show as ets-international even when
-    // held outside DACH — the explicit venue seed match or ets-international fallback is used.
-    const isNonDach = !isTravellingSeries && raceNameIndicatesNonDach(detail.name || eventLink.fallbackName);
+    // (ETS/ENS/TOS) or we have an explicit venue seed for this host.
+    // If detectedVenueSeed is set, the host is known (local club or text-matched venue)
+    // and the seed is the ground truth — don't null it out based on the race name.
+    const isNonDach = !isTravellingSeries && !detectedVenueSeed && raceNameIndicatesNonDach(detail.name || eventLink.fallbackName);
     const venue = isNonDach ? null : venueFromSeed(detectedVenueSeed);
     const venueId = venue?.id || null;
 
