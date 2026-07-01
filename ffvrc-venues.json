@@ -1208,7 +1208,9 @@
     "source": "ffvrc-calendar",
     "website": "https://macl.86.xooit.fr",
     "phone": "0549982175",
-    "address": "MAIRIE, 1 RUE GAMBETTA, 86200 LOUDUN"
+    "address": "MAIRIE, 1 RUE GAMBETTA, 86200 LOUDUN",
+    "lat": 47.03576101608382,
+    "lng": 0.07098491588301804
   },
   {
     "id": "ffvrc-20",
@@ -1229,7 +1231,9 @@
     "source": "ffvrc-calendar",
     "website": "https://amrt49.fr",
     "phone": "0672129176",
-    "address": "30 AVENUE GALLIENI, 49130 LES PONTS-DE-CE"
+    "address": "30 AVENUE GALLIENI, 49130 LES PONTS-DE-CE",
+    "lat": 47.43395760306007,
+    "lng": -0.5120003624820091
   },
   {
     "id": "ffvrc-1185",
@@ -1238,7 +1242,9 @@
     "city": "JANZE",
     "postalCode": "35150",
     "country": "FR",
-    "source": "ffvrc-calendar"
+    "source": "ffvrc-calendar",
+    "lat": 47.96365396454926,
+    "lng": -1.495256113843914
   },
   {
     "id": "ffvrc-0270",
@@ -1250,7 +1256,9 @@
     "source": "ffvrc-calendar",
     "website": "https://www.rccogolin.fr",
     "phone": "0613438466",
-    "address": "12 RUE DES INVENTION, ZONE CAMP FERRAT, 83120 STE MAXIME"
+    "address": "12 RUE DES INVENTION, ZONE CAMP FERRAT, 83120 STE MAXIME",
+    "lat": 43.25254944891629,
+    "lng": 6.508353326496667
   },
   {
     "id": "ffvrc-0269",
@@ -1261,7 +1269,9 @@
     "country": "FR",
     "source": "ffvrc-calendar",
     "phone": "0680869733",
-    "address": "1 AVENUE DES GUELFES, LES EUCALYPTUS  BLOC  C, 00000 MONACO"
+    "address": "1 AVENUE DES GUELFES, LES EUCALYPTUS  BLOC  C, 00000 MONACO",
+    "lat": 43.72726687552217,
+    "lng": 7.391650472163486
   },
   {
     "id": "ffvrc-0578",
@@ -1272,7 +1282,9 @@
     "country": "FR",
     "source": "ffvrc-calendar",
     "phone": "0327613858",
-    "address": "4 ALLEE EMILE MERCIER, 59440 AVESNES S/HELPE"
+    "address": "4 ALLEE EMILE MERCIER, 59440 AVESNES S/HELPE",
+    "lat": 50.11661694423183,
+    "lng": 3.9145484525814114
   },
   {
     "id": "ffvrc-1164",
@@ -1304,7 +1316,9 @@
     "source": "ffvrc-calendar",
     "website": "https://www.cpbvrc.fr",
     "phone": "0299323340",
-    "address": "3 RUE RAPATEL, 35200 RENNES"
+    "address": "3 RUE RAPATEL, 35200 RENNES",
+    "lat": 48.10268972997567,
+    "lng": -1.4264575482891342
   },
   {
     "id": "ffvrc-0466",
@@ -1330,7 +1344,9 @@
     "source": "ffvrc-calendar",
     "website": "https://www.usbergeracrc.net/",
     "phone": "0685298776",
-    "address": "5 IMPASSE DE L ABBE JEAN SIGALE, 24100 BERGERAC"
+    "address": "5 IMPASSE DE L ABBE JEAN SIGALE, 24100 BERGERAC",
+    "lat": 44.847948,
+    "lng": 0.509122
   },
   {
     "id": "ffvrc-07",
@@ -1363,7 +1379,9 @@
     "source": "ffvrc-calendar",
     "website": "https://ttrc90.webador.fr",
     "phone": "0779313981",
-    "address": "LIEU DIT LA PALE, 90400 BERMONT"
+    "address": "LIEU DIT LA PALE, 90400 BERMONT",
+    "lat": 47.57798701841962,
+    "lng": 6.841061955269027
   },
   {
     "id": "ffvrc-0637",
@@ -1375,7 +1393,9 @@
     "source": "ffvrc-calendar",
     "website": "https://clubecuriedulac.free.fr",
     "phone": "0675667154",
-    "address": "RUE DE L ETANG, 68180 HORBOURG WIHR"
+    "address": "RUE DE L ETANG, 68180 HORBOURG WIHR",
+    "lat": 48.089204502657395,
+    "lng": 7.409253365378129
   },
   {
     "id": "ffvrc-0730",
@@ -1413,7 +1433,9 @@
     "source": "ffvrc-calendar",
     "website": "https://racing-car-yonnais.com",
     "phone": "0786284506",
-    "address": "393 RUE DES LARDRIES, 85440 TALMONT ST HILAIRE"
+    "address": "393 RUE DES LARDRIES, 85440 TALMONT ST HILAIRE",
+    "lat": 46.670548843990765,
+    "lng": -1.4019617215963083
   },
   {
     "id": "ffvrc-0272",
@@ -1424,7 +1446,9 @@
     "country": "FR",
     "source": "ffvrc-calendar",
     "phone": "0606484161",
-    "address": "MAIRIE DE LA FERRIERE AUX ETANGS, 61450 LA FERRIERE AUX ETANGS"
+    "address": "MAIRIE DE LA FERRIERE AUX ETANGS, 61450 LA FERRIERE AUX ETANGS",
+    "lat": 48.64424136959818,
+    "lng": -0.5134987659324164
   },
   {
     "id": "ffvrc-0811",
@@ -1435,7 +1459,9 @@
     "country": "FR",
     "source": "ffvrc-calendar",
     "phone": "0929223937",
-    "address": "ZA DE CHOISY, 32 RUE DES VIEUX MOULINS PROLONGEE, 88200 REMIREMONT"
+    "address": "ZA DE CHOISY, 32 RUE DES VIEUX MOULINS PROLONGEE, 88200 REMIREMONT",
+    "lat": 48.021813067712706,
+    "lng": 6.591965985514044
   },
   {
     "id": "ffvrc-0880",
@@ -1447,7 +1473,9 @@
     "source": "ffvrc-calendar",
     "website": "https://lcml.fr",
     "phone": "0603114658",
-    "address": "55 RUE GUY MOCQUET, 59120 LOOS"
+    "address": "55 RUE GUY MOCQUET, 59120 LOOS",
+    "lat": 50.60747472455799,
+    "lng": 3.022502537762014
   },
   {
     "id": "ffvrc-0039",
@@ -1459,7 +1487,9 @@
     "source": "ffvrc-calendar",
     "website": "http://www.miniautoclubnantais.com/",
     "phone": "0240370622",
-    "address": "ROUTE DE LA JONELIERE, 44240 LA CHAPELLE SUR ERDRE"
+    "address": "ROUTE DE LA JONELIERE, 44240 LA CHAPELLE SUR ERDRE",
+    "lat": 47.25820253561825,
+    "lng": -1.5423672506306092
   },
   {
     "id": "ffvrc-0839",
@@ -1492,7 +1522,9 @@
     "country": "FR",
     "source": "ffvrc-calendar",
     "phone": "0601397789",
-    "address": "CHEMIN DES COMMUNAUX DE LA VEVRE, 18100 VIERZON"
+    "address": "CHEMIN DES COMMUNAUX DE LA VEVRE, 18100 VIERZON",
+    "lat": 47.21162269455771,
+    "lng": 2.126718095822864
   },
   {
     "id": "ffvrc-0540",
@@ -1540,7 +1572,9 @@
     "source": "ffvrc-calendar",
     "website": "https://www.mbn58rc.club",
     "phone": "0671154593",
-    "address": "PLACE PAUL LANGEVIN, MAISON DU SPORT, 58640 VARENNES VAUZELLES"
+    "address": "PLACE PAUL LANGEVIN, MAISON DU SPORT, 58640 VARENNES VAUZELLES",
+    "lat": 47.03859159840167,
+    "lng": 3.155152286333722
   },
   {
     "id": "ffvrc-16",
@@ -1770,7 +1804,9 @@
     "source": "ffvrc-calendar",
     "website": "https://amo-montpellier.fr",
     "phone": "0644243864",
-    "address": "PARC DE GRAMMONT, ALLEE ALEXIS VASTINE, 34000 MONTPELLIER"
+    "address": "PARC DE GRAMMONT, ALLEE ALEXIS VASTINE, 34000 MONTPELLIER",
+    "lat": 43.61483817351905,
+    "lng": 3.924720522751046
   },
   {
     "id": "ffvrc-0963",
@@ -2069,7 +2105,9 @@
     "source": "ffvrc-calendar",
     "website": "https://www.facebook.com/groups/480781168759500/",
     "phone": "0645249624",
-    "address": "17 RUE DE L EGLISE, 14220 CROISILLES"
+    "address": "17 RUE DE L EGLISE, 14220 CROISILLES",
+    "lat": 48.732036230610134,
+    "lng": -0.6676199584497114
   },
   {
     "id": "ffvrc-0580",
