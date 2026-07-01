@@ -23,7 +23,8 @@ const map = L.map("map", {
 // panToVisible shifts the viewport right by 207px (desktop) or up on mobile.
 // Leaflet's _limitCenter enforces bounds against the full container, not the visible area,
 // so west/south edges need extra room: west for the France panel-shift, south for mobile drawer shift.
-const MAX_BOUNDS = [[35.0, -12.0], [64.0, 30.0]];
+// At zoom 5 the viewport spans ~60° longitude — bounds must be wider than that to prevent bouncing.
+const MAX_BOUNDS = [[18.0, -35.0], [75.0, 60.0]];
 map.setMaxBounds(MAX_BOUNDS);
 
 
