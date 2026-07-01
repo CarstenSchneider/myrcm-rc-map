@@ -1327,29 +1327,25 @@ function appendAdsCard() {
     _adsTimers.delete(bannerId);
   }
 
+  const ad = _ads[Math.floor(Math.random() * _ads.length)];
+
   const card = document.createElement("div");
   card.className = "club-card";
   card.innerHTML = `
     <div class="club-carousel" data-banner="${bannerId}">
       <span class="club-ad-label">Anzeige</span>
       <div class="club-slides">
-        ${_ads.map((ad, i) => `
-          <div class="club-slide${i === 0 ? " is-active" : ""}">
-            ${ad.link_url
-              ? `<a href="${escapeHtml(ad.link_url)}" target="_blank" rel="noopener noreferrer sponsored">`
-              : `<div>`}
-            <img src="${escapeHtml(ad.image_url)}" alt="${escapeHtml(ad.alt_text || "")}" class="club-img" loading="lazy" />
-            ${ad.link_url ? `</a>` : `</div>`}
-          </div>`).join("")}
+        <div class="club-slide is-active">
+          ${ad.link_url
+            ? `<a href="${escapeHtml(ad.link_url)}" target="_blank" rel="noopener noreferrer sponsored">`
+            : `<div>`}
+          <img src="${escapeHtml(ad.image_url)}" alt="${escapeHtml(ad.alt_text || "")}" class="club-img" loading="lazy" />
+          ${ad.link_url ? `</a>` : `</div>`}
+        </div>
       </div>
-      ${_ads.length > 1 ? `
-      <div class="club-dots">
-        ${_ads.map((_, i) => `<button class="club-dot${i === 0 ? " is-active" : ""}" type="button" aria-label="Bild ${i + 1}"></button>`).join("")}
-      </div>` : ""}
     </div>`;
 
   raceList.appendChild(card);
-  if (_ads.length > 1) initAdsCarousel(card, bannerId);
 }
 
 function initAdsCarousel(container, id) {
