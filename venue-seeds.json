@@ -4392,6 +4392,11 @@
     "locationUnknown": true
   },
   {
+    "hostId": "ffvrc-16",
+    "hostName": "Ligue Régionale Nouvelle Aquitaine (Zone16) -",
+    "locationUnknown": true
+  },
+  {
     "hostId": "lmcc",
     "hostName": "LMCC",
     "lat": 49.58092061399585,
