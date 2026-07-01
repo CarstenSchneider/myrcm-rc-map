@@ -545,14 +545,14 @@ const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColorsLight = {
   water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",
   landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4", roadMinor: "#cccccc",
-  boundary: "#d8d8d8", countryBorder: "#c0c0c0", label: "#716F6F", labelHalo: "#ebebeb",
+  boundary: "#d8d8d8", countryBorder: "#2952a3", label: "#716F6F", labelHalo: "#ebebeb",
   marker: "#213769", markerClosed: "#c0bdb8", favorite: "#C8B090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#4A9EE8",
 };
 const rcRaceMapColorsDark = {
   water: "#0c1829", land: "#0f1e35", settlement: "#132442",
   landcover: "#0e1c32", building: "#132442", road: "#1e3a5f", roadMinor: "#1e3a5f",
-  boundary: "#1e3a5f", countryBorder: "#2e4a78", label: "#6a9fd8", labelHalo: "#0f1e35",
+  boundary: "#1e3a5f", countryBorder: "#5b8bc8", label: "#6a9fd8", labelHalo: "#0f1e35",
   marker: "#4569a5", markerClosed: "#3d6090", favorite: "#c8b090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#4A9EE8",
 };
@@ -1089,7 +1089,7 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      if (layer.id.startsWith("diag-") || layer.id === "country-borders") return;
+      if (layer.id === "country-borders") return;
       maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
       maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
       return;
@@ -1146,25 +1146,21 @@ function updateCountryOutline() {
     const vtLayer = mlMap.getStyle()?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
     if (!vtLayer) return;
     const src = vtLayer.source;
-    // Remove old single layer if present
-    if (mlMap.getLayer("country-borders")) mlMap.removeLayer("country-borders");
-    const diagLayers = [
-      { id: "diag-border-2", level: 2, color: "#FF00FF", width: 4 },  // Ländergrenzen (Magenta)
-      { id: "diag-border-4", level: 4, color: "#00FFFF", width: 3 },  // Bundesländer (Cyan)
-      { id: "diag-border-6", level: 6, color: "#00FF00", width: 2 },  // Landkreise (Grün)
-      { id: "diag-border-8", level: 8, color: "#FF0000", width: 1 },  // Gemeinden (Rot)
-    ];
-    for (const { id, level, color, width } of diagLayers) {
-      if (!mlMap.getLayer(id)) {
-        mlMap.addLayer({
-          id,
-          type: "line",
-          source: src,
-          "source-layer": "boundary",
-          filter: ["==", "admin_level", level],
-          paint: { "line-color": color, "line-width": width, "line-opacity": 1 },
-        });
-      }
+    // Clean up diagnostic layers from previous version
+    for (const id of ["diag-border-2", "diag-border-4", "diag-border-6", "diag-border-8"]) {
+      if (mlMap.getLayer(id)) mlMap.removeLayer(id);
+    }
+    if (!mlMap.getLayer("country-borders")) {
+      mlMap.addLayer({
+        id: "country-borders",
+        type: "line",
+        source: src,
+        "source-layer": "boundary",
+        filter: ["==", "admin_level", 2],
+        paint: { "line-color": rcRaceMapColors.countryBorder, "line-width": 2.5, "line-opacity": 1 },
+      });
+    } else {
+      mlMap.setPaintProperty("country-borders", "line-color", rcRaceMapColors.countryBorder);
     }
   } catch {}
 }
