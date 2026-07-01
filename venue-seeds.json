@@ -4510,6 +4510,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "ffvrc-0943",
+    "hostName": "MINI AUTO CLUB CHARMES SUR RHONE",
+    "lat": 44.871237268220646,
+    "lng": 4.843786687423566
+  },
+  {
     "id": "myrcm-mini-auto-charmes",
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
     "hostName": "Mini auto Club de Charmes Sur Rhone",
