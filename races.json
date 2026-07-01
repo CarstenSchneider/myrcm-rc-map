@@ -113111,8 +113111,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 37,
-    "registrationDisplay": "37",
+    "registrationCount": 38,
+    "registrationDisplay": "38",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113125,7 +113125,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 30
+        "entries": 31
       }
     ],
     "documents": [],
@@ -113607,8 +113607,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
+    "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113617,7 +113617,7 @@
       },
       {
         "name": "MRCP Stock 17.5T",
-        "entries": 18
+        "entries": 19
       },
       "MRCP Modified",
       {
@@ -113810,13 +113810,13 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": 27,
-    "registrationDisplay": "27",
+    "registrationCount": 28,
+    "registrationDisplay": "28",
     "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "TEC Stock",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "TEC M-Chassis",
@@ -113952,13 +113952,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Elektro RC SORS",
-        "entries": 26
+        "entries": 27
       }
     ],
     "documents": [],
@@ -117278,13 +117278,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Interclub 2026",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],

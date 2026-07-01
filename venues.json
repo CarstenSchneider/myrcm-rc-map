@@ -2994,23 +2994,6 @@
     "country": "DE"
   },
   {
-    "id": "myrcm-mini-auto-charmes",
-    "name": "Mini auto Club de Charmes Sur Rhone",
-    "city": "",
-    "lat": null,
-    "lng": null,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
-    "hostIds": [],
-    "myrcmOrgId": "25367",
-    "source": "venue-seeds",
-    "verified": true,
-    "country": "France",
-    "locationUnknown": true
-  },
-  {
     "id": "mini-bolides-club-jura",
     "name": "Mini Bolides Club Jura",
     "city": "Bassecourt",
@@ -4751,6 +4734,90 @@
     "country": "CH"
   },
   {
+    "id": "oefmav-eor",
+    "name": "ÖFMAV EOR",
+    "city": "Berndorf",
+    "lat": 47.9455876,
+    "lng": 16.1093585,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-782",
+      "ÖFMAV EOR",
+      "Berndorf"
+    ],
+    "hostIds": [
+      "oefmav-eor"
+    ],
+    "myrcmOrgId": "782",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "oefmav-sektion-elektro-offroad",
+    "name": "ÖFMAV Sektion Elektro Offroad",
+    "city": "Wien",
+    "lat": 48.1857192,
+    "lng": 16.4221587,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-34619",
+      "ÖFMAV Sektion Elektro Offroad",
+      "Wien"
+    ],
+    "hostIds": [
+      "oefmav-sektion-elektro-offroad"
+    ],
+    "myrcmOrgId": "34619",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "oefmav-sektion-or-8",
+    "name": "ÖFMAV Sektion OR-8",
+    "city": "Graz",
+    "lat": 47.0708678,
+    "lng": 15.4382786,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-503",
+      "ÖFMAV Sektion OR-8",
+      "Graz"
+    ],
+    "hostIds": [
+      "oefmav-sektion-or-8"
+    ],
+    "myrcmOrgId": "503",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
+    "id": "oefmav-sektion-verbrenner-flachbahn",
+    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
+    "city": "Winklarn",
+    "lat": 48.0915707,
+    "lng": 14.8477591,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [
+      "myrcm-38958",
+      "ÖFMAV Sektion Verbrenner Flachbahn",
+      "Winklarn"
+    ],
+    "hostIds": [
+      "oefmav-sektion-verbrenner-flachbahn"
+    ],
+    "myrcmOrgId": "38958",
+    "source": "geocoded-nominatim-dach",
+    "verified": true
+  },
+  {
     "id": "one28-ch-swiss-micro-racer",
     "name": "one28.ch (Swiss Micro Racer)",
     "city": "Bichwil",
@@ -4868,23 +4935,6 @@
     "myrcmOrgId": "17508",
     "source": "geocoded-nominatim-dach",
     "verified": true
-  },
-  {
-    "id": "myrcm-pommeraye-mini-racing",
-    "name": "POMMERAYE MINI RACING CAR",
-    "city": "",
-    "lat": null,
-    "lng": null,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
-    "hostIds": [],
-    "myrcmOrgId": "37401",
-    "source": "venue-seeds",
-    "verified": true,
-    "country": "France",
-    "locationUnknown": true
   },
   {
     "id": "pr-modellbau-gmbh",
@@ -6352,23 +6402,6 @@
     "verified": true
   },
   {
-    "id": "myrcm-reims-enduro",
-    "name": "Reims Enduro Model Car",
-    "city": "",
-    "lat": null,
-    "lng": null,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
-    "hostIds": [],
-    "myrcmOrgId": "24695",
-    "source": "venue-seeds",
-    "verified": true,
-    "country": "France",
-    "locationUnknown": true
-  },
-  {
     "id": "rgmc-teck-e-v",
     "name": "RGMC Teck e.V.",
     "city": "Holzmaden",
@@ -6559,23 +6592,6 @@
     "source": "verified-existing-geolocation-list-plus-old-main-venues",
     "verified": true,
     "country": "DE"
-  },
-  {
-    "id": "myrcm-sermaise-electro",
-    "name": "Sermaise Electro Modelisme",
-    "city": "",
-    "lat": null,
-    "lng": null,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [],
-    "hostIds": [],
-    "myrcmOrgId": "46243",
-    "source": "venue-seeds",
-    "verified": true,
-    "country": "France",
-    "locationUnknown": true
   },
   {
     "id": "simbacher-buggyracer-e-v",
@@ -7155,90 +7171,6 @@
       "wrc-drivers"
     ],
     "myrcmOrgId": "1387",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-eor",
-    "name": "ÖFMAV EOR",
-    "city": "Berndorf",
-    "lat": 47.9455876,
-    "lng": 16.1093585,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-782",
-      "ÖFMAV EOR",
-      "Berndorf"
-    ],
-    "hostIds": [
-      "oefmav-eor"
-    ],
-    "myrcmOrgId": "782",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-sektion-elektro-offroad",
-    "name": "ÖFMAV Sektion Elektro Offroad",
-    "city": "Wien",
-    "lat": 48.1857192,
-    "lng": 16.4221587,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-34619",
-      "ÖFMAV Sektion Elektro Offroad",
-      "Wien"
-    ],
-    "hostIds": [
-      "oefmav-sektion-elektro-offroad"
-    ],
-    "myrcmOrgId": "34619",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-sektion-or-8",
-    "name": "ÖFMAV Sektion OR-8",
-    "city": "Graz",
-    "lat": 47.0708678,
-    "lng": 15.4382786,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-503",
-      "ÖFMAV Sektion OR-8",
-      "Graz"
-    ],
-    "hostIds": [
-      "oefmav-sektion-or-8"
-    ],
-    "myrcmOrgId": "503",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
-  },
-  {
-    "id": "oefmav-sektion-verbrenner-flachbahn",
-    "name": "ÖFMAV Sektion Verbrenner Flachbahn",
-    "city": "Winklarn",
-    "lat": 48.0915707,
-    "lng": 14.8477591,
-    "address": "",
-    "postalCode": "",
-    "website": "",
-    "aliases": [
-      "myrcm-38958",
-      "ÖFMAV Sektion Verbrenner Flachbahn",
-      "Winklarn"
-    ],
-    "hostIds": [
-      "oefmav-sektion-verbrenner-flachbahn"
-    ],
-    "myrcmOrgId": "38958",
     "source": "geocoded-nominatim-dach",
     "verified": true
   }
