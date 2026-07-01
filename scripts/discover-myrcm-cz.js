@@ -42,18 +42,26 @@ function extractOrgIds(html) {
   return [...seen.entries()].map(([orgId, name]) => ({ orgId, name }));
 }
 
+const CZ_TEXT = new Set(["CZE", "CZ", "CZECH REPUBLIC", "CZECH REP.", "CZECHIA", "TSCHECHIEN", "TCHÉQUIE", "REPUBBLICA CECA", "REPÚBLICA CHECA"]);
+
 function isCzechRow($, row) {
   const cells = $(row).find("td");
   for (let i = 0; i < cells.length; i++) {
     const cell = $(cells[i]);
-    const txt = cell.text().trim();
-    if (txt === "CZE" || txt.toLowerCase() === "czech republic" || txt.toLowerCase() === "czechia") return true;
-    const img = cell.find("img").first();
-    if (img.length) {
-      const alt = (img.attr("alt") || "").toUpperCase();
-      const src = (img.attr("src") || "").toLowerCase();
-      if (alt === "CZE" || alt === "CZECH REPUBLIC" || src.includes("/cze") || src.includes("cze.")) return true;
-    }
+    const txt = cell.text().trim().toUpperCase();
+    if (CZ_TEXT.has(txt)) return true;
+    let imgMatch = false;
+    cell.find("img").each((_, img) => {
+      const alt = ($(img).attr("alt") || "").toUpperCase().trim();
+      const src = ($(img).attr("src") || "").toLowerCase();
+      if (CZ_TEXT.has(alt) || src.includes("/cze") || src.includes("cze.") || src.includes("/cz/") || src.includes("_cz.") || src.includes("czech")) {
+        imgMatch = true;
+        return false;
+      }
+    });
+    if (imgMatch) return true;
+    const html = cell.html() || "";
+    if (/\bfi-cz\b|\bflag-cz\b|\bf-cz\b/i.test(html)) return true;
   }
   return false;
 }
@@ -124,6 +132,28 @@ async function discoverOrgIdsFromEvents() {
     await new Promise(r => setTimeout(r, 300));
   }
 
+  // Phase 1.5: Full org-list scan (no country filter)
+  console.log("\nPhase 1.5: Full org-list scan...");
+  const orgListUrl = `${BASE}/myrcm/main?pLa=en&hId[1]=orl`;
+  const orgListFirst = await fetchText(orgListUrl);
+  if (orgListFirst) {
+    const totalMatch = orgListFirst.match(/from\s+([\d,]+)/i) || orgListFirst.match(/of\s+([\d,]+)/i);
+    const totalOrgs = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 1000;
+    const totalPages = Math.min(Math.ceil(totalOrgs / 50), 500);
+    console.log(`  Org list: ~${totalOrgs} orgs, ${totalPages} pages`);
+    for (const [id, name] of extractCzechOrgsFromPage(orgListFirst)) orgMap.set(id, name);
+    for (let page = 1; page <= totalPages; page++) {
+      const html = await fetchText(`${orgListUrl}&pId[O]=${page}`);
+      if (!html) continue;
+      const before = orgMap.size;
+      for (const [id, name] of extractCzechOrgsFromPage(html)) orgMap.set(id, name);
+      if (page % 50 === 0) console.log(`  [org-list] Page ${page}/${totalPages}: ${orgMap.size} Czech orgs`);
+      await new Promise(r => setTimeout(r, 150));
+    }
+    console.log(`Org-list scan complete. Czech orgs: ${orgMap.size}`);
+    if (orgMap.size > 0) return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+  }
+
   // Phase 1b: Try filtered event-list URLs
   const eventListPatterns = [
     `${BASE}/myrcm/main?pLa=en&hId[1]=arv&fId[C]=CZE`,
@@ -151,17 +181,19 @@ async function discoverOrgIdsFromEvents() {
     await new Promise(r => setTimeout(r, 300));
   }
 
-  // Phase 2: Full scan
-  console.log("\nPhase 2: Full scan of all event pages...");
-  const allEventsUrl = `${BASE}/myrcm/main?pLa=en&hId[1]=arv`;
-  const firstHtml = await fetchText(allEventsUrl);
-  if (!firstHtml) return [];
-  const totalMatch = firstHtml.match(/from\s+([\d,]+)/i);
-  const totalEvents = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 5000;
-  const totalPages = Math.ceil(totalEvents / 50);
-  console.log(`Total events: ${totalEvents}, pages: ${totalPages}`);
-  for (const [id, name] of extractCzechOrgsFromPage(firstHtml)) orgMap.set(id, name);
-  await paginateCzechOrgs(allEventsUrl, orgMap, "full-scan", totalPages);
+  // Phase 2: Full scan of all event pages (arv + upc)
+  for (const [label, evUrl] of [["arv", `${BASE}/myrcm/main?pLa=en&hId[1]=arv`], ["upc", `${BASE}/myrcm/main?pLa=en&hId[1]=upc`]]) {
+    console.log(`\nPhase 2 [${label}]: Full scan...`);
+    const firstHtml = await fetchText(evUrl);
+    if (!firstHtml) continue;
+    const totalMatch = firstHtml.match(/from\s+([\d,]+)/i) || firstHtml.match(/of\s+([\d,]+)/i);
+    const totalEvents = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 5000;
+    const totalPages = Math.min(Math.ceil(totalEvents / 50), 500);
+    console.log(`  Total: ${totalEvents} events, ${totalPages} pages`);
+    for (const [id, name] of extractCzechOrgsFromPage(firstHtml)) orgMap.set(id, name);
+    await paginateCzechOrgs(evUrl, orgMap, label, totalPages);
+    console.log(`  [${label}] Done. Czech orgs so far: ${orgMap.size}`);
+  }
   console.log(`Full scan complete. ${orgMap.size} unique Czech org IDs found.`);
   return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
 }
@@ -190,9 +222,17 @@ async function fetchOrgDetail(orgId) {
   let country = info["country"] || "";
   if (!country) {
     $("img").each((_, img) => {
-      const alt = (img.attr("alt") || "").toUpperCase();
-      if (alt === "CZE" || alt === "CZECH REPUBLIC" || alt === "CZECHIA") { country = "Czech Republic"; return false; }
+      const alt = ($(img).attr("alt") || "").toUpperCase().trim();
+      const src = ($(img).attr("src") || "").toLowerCase();
+      if (CZ_TEXT.has(alt) || src.includes("/cze") || src.includes("/cz/") || src.includes("czech")) {
+        country = "Czech Republic";
+        return false;
+      }
     });
+  }
+  if (!country) {
+    const bodyText = $("body").text().toUpperCase();
+    for (const t of CZ_TEXT) { if (bodyText.includes(t)) { country = "Czech Republic"; break; } }
   }
   const location = info["location"] || info["city"] || info["ort"] || "";
   const titleRaw = $("title").text().trim();
@@ -236,8 +276,8 @@ async function main() {
   const czHosts = [];
   for (const { orgId, name, detail } of details) {
     if (!detail) continue;
-    const c = (detail.country || "").toLowerCase();
-    if (!c.includes("czech") && c !== "cz" && c !== "cze") continue;
+    const c = (detail.country || "").toUpperCase().trim();
+    if (!CZ_TEXT.has(c) && !c.includes("CZECH") && !c.includes("TSCHECH")) continue;
     const entry = {
       orgId,
       name: detail.name || name,
