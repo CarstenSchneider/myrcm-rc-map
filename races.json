@@ -64726,59 +64726,6 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "ets-international-2025-09-04-myrcm-event-88595",
-    "venueId": "ets-international",
-    "venueName": "ETS / TOS International",
-    "venueLocation": null,
-    "venueWebsite": "https://www.ets.racing/rules/",
-    "hostId": "ets",
-    "hostName": "ETS",
-    "name": "Cayote Euro Touring Series ROUND 3 LUXEMBOURG / LUX",
-    "from": "2025-09-04",
-    "to": "2025-09-07",
-    "series": [
-      "Euro Touring Series (ETS)"
-    ],
-    "source": "myrcm",
-    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88595&pLa=en",
-    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=88595&tId=E&hId%5B1%5D=org",
-    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88595&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
-    "registrationRequiresLogin": false,
-    "registrationCount": 335,
-    "registrationDisplay": "335",
-    "note": "Nennung geschlossen.",
-    "classes": [
-      {
-        "name": "FlySky Frontwheel",
-        "entries": 75
-      },
-      {
-        "name": "Matrix Formula",
-        "entries": 32
-      },
-      {
-        "name": "Awesomatix Pro Stock",
-        "entries": 77
-      },
-      {
-        "name": "Cayote Modified",
-        "entries": 53
-      },
-      {
-        "name": "1up Racing 40+",
-        "entries": 50
-      },
-      {
-        "name": "Hobbywing 21.5 Stock",
-        "entries": 48
-      }
-    ],
-    "documents": [],
-    "firstSeen": "2026-06-26"
-  },
-  {
     "id": "mac-nuernberg-e-v-2025-09-05-myrcm-event-89782",
     "venueId": "mac-nuernberg-e-v",
     "venueName": "MAC Nürnberg e.V",
@@ -113111,8 +113058,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 40,
-    "registrationDisplay": "40",
+    "registrationCount": 42,
+    "registrationDisplay": "42",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113121,7 +113068,7 @@
       },
       {
         "name": "Repas du soir",
-        "entries": 5
+        "entries": 7
       },
       {
         "name": "SM/CS Elektro E8OR",
@@ -113406,8 +113353,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 36,
-    "registrationDisplay": "36",
+    "registrationCount": 37,
+    "registrationDisplay": "37",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113416,7 +113363,7 @@
       },
       {
         "name": "EC10-Fronti",
-        "entries": 7
+        "entries": 8
       },
       "EC10-F1 foam",
       {
@@ -113517,13 +113464,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 44,
-    "registrationDisplay": "44",
+    "registrationCount": 46,
+    "registrationDisplay": "46",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "ORE8",
-        "entries": 29
+        "entries": 31
       },
       {
         "name": "ORE8T",
@@ -113930,8 +113877,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 40,
-    "registrationDisplay": "40",
+    "registrationCount": 42,
+    "registrationDisplay": "42",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113952,7 +113899,7 @@
       },
       {
         "name": "AC26-Monster/ShortCourse 2WD",
-        "entries": 5
+        "entries": 7
       }
     ],
     "documents": [],
@@ -113977,13 +113924,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Elektro RC SORS",
-        "entries": 29
+        "entries": 31
       }
     ],
     "documents": [],
@@ -114038,8 +113985,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -114053,7 +114000,7 @@
       },
       {
         "name": "MCC - Tamiya Fighter",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "MCC - Tamiya TT",
@@ -114158,13 +114105,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 87,
-    "registrationDisplay": "87",
+    "registrationCount": 86,
+    "registrationDisplay": "86",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "1:8 Buggy Electro",
-        "entries": 56
+        "entries": 55
       },
       {
         "name": "1:8 Buggy Nitro",
@@ -114197,8 +114144,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114211,7 +114158,7 @@
       },
       {
         "name": "2WD",
-        "entries": 10
+        "entries": 11
       },
       {
         "name": "4WD",
@@ -114296,13 +114243,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 18,
+    "registrationDisplay": "18",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Fighter Buggy",
-        "entries": 2
+        "entries": 3
       },
       "ORE2WD",
       {
@@ -114404,8 +114351,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 42,
-    "registrationDisplay": "42",
+    "registrationCount": 43,
+    "registrationDisplay": "43",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Cup Junior",
@@ -114423,7 +114370,7 @@
       },
       {
         "name": "Tamiya Cup Super Stock",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Tamiya Cup Euro TW",
@@ -114727,8 +114674,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "VG 1:10 Scale",
@@ -114738,7 +114685,7 @@
       },
       {
         "name": "VG 1:8",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "EG 1:8 GT",
@@ -114874,8 +114821,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 39,
-    "registrationDisplay": "39",
+    "registrationCount": 40,
+    "registrationDisplay": "40",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114884,7 +114831,7 @@
       },
       {
         "name": "NRW-Cup Hobby",
-        "entries": 14
+        "entries": 15
       },
       {
         "name": "NRW-Cup Top",
@@ -115204,8 +115151,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 40,
-    "registrationDisplay": "40",
+    "registrationCount": 43,
+    "registrationDisplay": "43",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115214,11 +115161,11 @@
       },
       {
         "name": "Elektro-Offroad 1:10 4WD Standard",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "Elektro-Offroad 1:10 Truggy 2WD",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "ORE2WD",
@@ -115231,7 +115178,7 @@
       "RCRT Fun",
       {
         "name": "Short Course 2WD",
-        "entries": 3
+        "entries": 4
       }
     ],
     "documents": [],
@@ -115323,8 +115270,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "EG8GT",
@@ -115341,7 +115288,10 @@
         "name": "TOS Stock 17,5 + EGTWHO",
         "entries": 2
       },
-      "EG8e"
+      {
+        "name": "EG8e",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-09"
@@ -115444,13 +115394,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "2024-ZAC-Stock-17.5",
-        "entries": 1
+        "entries": 2
       },
       "2024-ZAC-F1/LMP",
       "2024-ZAC-Modified",
@@ -115696,17 +115646,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "FCTS Kids Academy",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "FCTS TT+",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "FCTS TTS",
@@ -116386,20 +116336,22 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98677&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=98677&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98677&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "closed",
-    "registrationOpens": null,
+    "registrationStatus": "upcoming",
+    "registrationOpens": "2026-07-02",
     "registrationRequiresLogin": false,
     "registrationCount": 0,
     "registrationDisplay": "0",
-    "note": "Nennung geschlossen.",
+    "note": "Nennung ab 02.07.2026",
     "classes": [
       "Verbrenner Glattbahn 1:8 Klasse 1",
+      "Verbrenner-Glattbahn 1:10",
       "Verbrenner-Glattbahn 1:8 Klasse 2",
       "Verbrenner Glattbahn 1:8 Sport",
+      "Verbrenner-Glattbahn 1:10 Sport",
       "JumpstartRC Trophy Elektro-Glattbahn 1:8",
+      "Elektro-Glattbahn 1:8 GT",
       "Verbrenner Glattbahn 1:8 GT",
-      "Verbrenner-Glattbahn 1:10",
-      "VG10S"
+      "Elektro-Glattbahn 1:8 GT3"
     ],
     "documents": [],
     "firstSeen": "2026-06-30"
@@ -116451,13 +116403,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 55,
-    "registrationDisplay": "55",
+    "registrationCount": 56,
+    "registrationDisplay": "56",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Crawler",
-        "entries": 45
+        "entries": 46
       },
       {
         "name": "Rennstrecke",
@@ -118672,13 +118624,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Funcup EB",
-        "entries": 3
+        "entries": 4
       },
       "Funcup ET"
     ],
