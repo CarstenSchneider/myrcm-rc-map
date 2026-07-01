@@ -965,7 +965,8 @@ function venueRecordFromSeed(seed) {
     myrcmOrgId: seed.myrcmOrgId || "",
     source: seed.source || "venue-seeds",
     verified: seed.verified !== false,
-    ...(seed.country ? { country: seed.country } : {})
+    ...(seed.country ? { country: seed.country } : {}),
+    ...(seed.locationUnknown ? { locationUnknown: true } : {})
   };
 }
 
@@ -1021,7 +1022,7 @@ function mergeVenueSeedsIntoVenues(existingVenues = [], venueSeeds = []) {
 
   for (const seed of venueSeeds || []) {
     const venue = venueRecordFromSeed(seed);
-    if (!venue?.id || !hasValidCoordinates(venue)) continue;
+    if (!venue?.id || (!hasValidCoordinates(venue) && !seed.locationUnknown)) continue;
 
     const id = String(venue.id);
     byId.set(id, mergeVenueRecords(byId.get(id) || {}, venue));
