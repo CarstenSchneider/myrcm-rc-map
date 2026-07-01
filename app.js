@@ -2135,7 +2135,9 @@ function matchesCountryFilter(race) {
   const venueC = venueCountry(venue);
   if (!venueC) return venue.locationUnknown ? false : _dachCountries.has(selectedCountry);
   if (venueC === selectedCountry) return true;
-  // Cross-border races: also match by organizer's country
+  // Cross-border (DACH only): DE club racing in AT/CH also appears in DE filter.
+  // Not for non-DACH venues — ETS racing in NL should not appear in DE filter.
+  if (!_dachCountries.has(venueC)) return false;
   const hostId = raceHostId(race);
   const rawHostC = hostId ? hostsById.get(String(hostId))?.country : null;
   if (!rawHostC) return false;
