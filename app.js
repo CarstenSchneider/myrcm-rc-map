@@ -99,9 +99,13 @@ function fitToCountry(country) {
   } else {
     // getBoundsZoom with 207px horizontal + 40px vertical panel padding (screen-responsive).
     let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
-    zoom = Math.max(zoom, view.minZoom);
+    // Only cap at maxZoom — don't floor to view.minZoom, that causes miscentering on small screens
+    // where the bounds need a lower zoom to fit the visible area.
     zoom = Math.min(zoom, view.maxZoom);
+    const savedMin = map.options.minZoom;
+    if (zoom < savedMin) map.options.minZoom = zoom;
     panToVisible(L.latLng(view.center), zoom);
+    map.options.minZoom = savedMin;
   }
 }
 
