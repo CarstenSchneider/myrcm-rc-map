@@ -1141,20 +1141,22 @@ function applyRcRaceMapStyle() {
 
 function updateCountryOutline() {
   const mlMap = baseMapLayer?.getMaplibreMap?.();
-  if (!mlMap || mlMap.getLayer("country-borders")) return;
+  if (!mlMap) return;
   try {
-    // Find the source name used by the existing boundary source-layer
-    const style = mlMap.getStyle();
-    const vtLayer = style?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
-    if (!vtLayer) return;
-    mlMap.addLayer({
-      id: "country-borders",
-      type: "line",
-      source: vtLayer.source,
-      "source-layer": "boundary",
-      filter: ["==", "admin_level", 2],
-      paint: { "line-color": "#b0b0b0", "line-width": 1.2, "line-opacity": 0.85 },
-    });
+    if (!mlMap.getLayer("country-borders")) {
+      const vtLayer = mlMap.getStyle()?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
+      if (!vtLayer) return;
+      mlMap.addLayer({
+        id: "country-borders",
+        type: "line",
+        source: vtLayer.source,
+        "source-layer": "boundary",
+        filter: ["==", "admin_level", 2],
+        paint: { "line-color": rcRaceMapColors.water, "line-width": 1.2, "line-opacity": 0.85 },
+      });
+    } else {
+      mlMap.setPaintProperty("country-borders", "line-color", rcRaceMapColors.water);
+    }
   } catch {}
 }
 
