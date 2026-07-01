@@ -17,7 +17,7 @@ const map = L.map("map", {
   scrollWheelZoom: true,
   zoomControl: false,
   attributionControl: false,
-  minZoom: 6
+  minZoom: 5
 }).setView([48.5, 10.5], 6);
 
 // panToVisible shifts the viewport right by 207px (desktop) or up on mobile.
