@@ -5,8 +5,7 @@
     "location": "CHARMES SUR RHONE",
     "country": "France",
     "eventCount": 13,
-    "url": "https://www.myrcm.ch/?dId[O]=25367&pLa=en&hId[1]=org",
-    "website": "https://www.rc-timing.ch/support/faq.html"
+    "url": "https://www.myrcm.ch/?dId[O]=25367&pLa=en&pId[O]=0&hId[1]=org"
   },
   {
     "orgId": "37401",
@@ -14,8 +13,7 @@
     "location": "MAUGES SUR LOIRE",
     "country": "France",
     "eventCount": 11,
-    "url": "https://www.myrcm.ch/?dId[O]=37401&pLa=en&hId[1]=org",
-    "website": "https://www.facebook.com/pommerayeminiracingcar"
+    "url": "https://www.myrcm.ch/?dId[O]=37401&pLa=en&pId[O]=0&hId[1]=org"
   },
   {
     "orgId": "24695",
@@ -23,8 +21,7 @@
     "location": "Reims",
     "country": "France",
     "eventCount": 49,
-    "url": "https://www.myrcm.ch/?dId[O]=24695&pLa=en&hId[1]=org",
-    "website": "https://www.rc-timing.ch/support/faq.html"
+    "url": "https://www.myrcm.ch/?dId[O]=24695&pLa=en&pId[O]=0&hId[1]=org"
   },
   {
     "orgId": "46243",
@@ -32,7 +29,6 @@
     "location": "Sermaise",
     "country": "France",
     "eventCount": 5,
-    "url": "https://www.myrcm.ch/?dId[O]=46243&pLa=en&hId[1]=org",
-    "website": "http://sermaise-electro-modelisme.e-monsite.com/"
+    "url": "https://www.myrcm.ch/?dId[O]=46243&pLa=en&pId[O]=0&hId[1]=org"
   }
 ]

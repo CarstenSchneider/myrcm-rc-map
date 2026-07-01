@@ -307,7 +307,7 @@ async function main() {
       location: detail.location || "",
       country: "France",
       eventCount: detail.eventCount,
-      url: `${BASE}/?dId[O]=${orgId}&pLa=en&hId[1]=org`,
+      url: `${BASE}/?dId[O]=${orgId}&pLa=en&pId[O]=0&hId[1]=org`,
     };
     if (detail.website) entry.website = detail.website;
     franceHosts.push(entry);
