@@ -4818,6 +4818,12 @@
     "country": "LU"
   },
   {
+    "hostId": "ffvrc-0161",
+    "hostName": "RACING CAR YONNAIS",
+    "lat": 46.670548843990765,
+    "lng": -1.4019617215963083
+  },
+  {
     "hostId": "racing-club-roeselare",
     "hostName": "Racing Club Roeselare",
     "lat": 50.94490803206435,
