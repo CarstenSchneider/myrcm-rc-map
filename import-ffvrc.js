@@ -260,7 +260,7 @@ async function main() {
       series: ev.league ? [ev.league] : null,
       country: "FR",
       source: "ffvrc",
-      url: CALENDAR_URL,
+      url: INSCRIPTION_URL,
     });
 
     seenHostIds.add(ev.hostId);
