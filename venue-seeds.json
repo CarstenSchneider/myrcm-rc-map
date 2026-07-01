@@ -4156,6 +4156,12 @@
     "country": "BE"
   },
   {
+    "hostId": "ffvrc-0270",
+    "hostName": "COGOLIN RADIO COMMANDE MAX FUSION",
+    "lat": 43.25254944891629,
+    "lng": 6.508353326496667
+  },
+  {
     "hostId": "mac-de-baanbrekers",
     "hostName": "De Baanbrekers",
     "lat": 51.53884645879424,
