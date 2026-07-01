@@ -298,7 +298,7 @@ const countryFlags = [
   { country: "LU",  code: "lu", label: "Luxemburg" },
 ];
 let _countryOutlines = null;
-let _countryOutlineLayer = null;
+let _lastOutlineCountry = null;
 let _countryPill = null;
 let _countryPicker = null;
 let _pickerIsOpen = false;
@@ -313,25 +313,51 @@ function updateCountryPill() {
 }
 
 function updateCountryOutline() {
-  if (_countryOutlineLayer) {
-    map.removeLayer(_countryOutlineLayer);
-    _countryOutlineLayer = null;
+  // Render inside the MapLibre GL canvas (not as a Leaflet SVG overlay) so it
+  // stays visible above the WebGL tiles. Re-add source+layers after setStyle()
+  // clears them — this function is wired to the "styledata" event.
+  const mlMap = baseMapLayer?.getMaplibreMap?.();
+  if (!mlMap || !mlMap.getStyle?.()) return;
+
+  const hasSource = !!mlMap.getSource("country-outline");
+  // Guard: source exists and country hasn't changed → nothing to do
+  if (hasSource && _lastOutlineCountry === selectedCountry) return;
+
+  const feature = _countryOutlines && selectedCountry !== "all"
+    ? (_countryOutlines.features?.find(f => f.id === selectedCountry) ?? null)
+    : null;
+
+  _lastOutlineCountry = selectedCountry;
+
+  if (!feature) {
+    if (hasSource) {
+      try { mlMap.setLayoutProperty("country-outline-fill", "visibility", "none"); } catch {}
+      try { mlMap.setLayoutProperty("country-outline-line", "visibility", "none"); } catch {}
+    }
+    return;
   }
-  if (!_countryOutlines || selectedCountry === "all") return;
-  const feature = _countryOutlines.features?.find(f => f.id === selectedCountry);
-  if (!feature) return;
-  _countryOutlineLayer = L.geoJSON(feature, {
-    style: {
-      color: "#4A9EE8",
-      weight: 2,
-      opacity: 0.6,
-      fill: true,
-      fillColor: "#4A9EE8",
-      fillOpacity: 0.07,
-    },
-    interactive: false,
-  }).addTo(map);
-  _countryOutlineLayer.bringToBack();
+
+  if (hasSource) {
+    mlMap.getSource("country-outline").setData(feature);
+    try { mlMap.setLayoutProperty("country-outline-fill", "visibility", "visible"); } catch {}
+    try { mlMap.setLayoutProperty("country-outline-line", "visibility", "visible"); } catch {}
+  } else {
+    try {
+      mlMap.addSource("country-outline", { type: "geojson", data: feature });
+      mlMap.addLayer({
+        id: "country-outline-fill",
+        type: "fill",
+        source: "country-outline",
+        paint: { "fill-color": "#4A9EE8", "fill-opacity": 0.07 },
+      });
+      mlMap.addLayer({
+        id: "country-outline-line",
+        type: "line",
+        source: "country-outline",
+        paint: { "line-color": "#4A9EE8", "line-width": 2, "line-opacity": 0.6 },
+      });
+    } catch {}
+  }
 }
 
 function _buildPickerHtml() {
@@ -1161,6 +1187,7 @@ function applyRcRaceMapStyle() {
 
 baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); });
 baseMapLayer.getMaplibreMap?.().on("styledata", applyRcRaceMapStyle);
+baseMapLayer.getMaplibreMap?.().on("styledata", updateCountryOutline);
 // Reveal map only after all tiles are fully rendered (idle = nothing more to fetch/paint)
 baseMapLayer.getMaplibreMap?.().once("idle", revealMap);
 baseMapLayer.getMaplibreMap?.().getCanvas()?.addEventListener("webglcontextrestored", () => {
