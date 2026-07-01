@@ -1013,6 +1013,7 @@ body.is-breakpoint-crossing .country-pill {
 }
 .locate-btn.attention-pulse { animation: locate-attention 1.1s ease-out 3; }
 .locate-btn.is-locating { opacity: 0.45; pointer-events: none; }
+.locate-btn.is-error { background: var(--status-closed, #E51354) !important; color: #fff !important; }
 .locate-btn.is-active { background: var(--accent) !important; color: #fff !important; }
 .locate-btn.is-active:hover { transform: scale(1.08); filter: brightness(1.1); }
 
