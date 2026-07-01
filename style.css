@@ -235,10 +235,7 @@ input {
 
 /* ── Club card (partner banner as last list item) ────────────── */
 .club-card {
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
-  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+  transition: transform 0.15s;
 }
 
 .club-card:has(a) {
@@ -247,6 +244,9 @@ input {
 
 .club-card:has(a):hover {
   transform: scale(0.985);
+}
+
+.club-card:has(a):hover .club-slides {
   border-color: rgba(var(--border-rgb), 0.95);
   box-shadow:
     0 18px 34px rgba(var(--shadow-rgb), 0.16),
@@ -255,6 +255,9 @@ input {
 
 .club-card:has(a):active {
   transform: scale(0.972);
+}
+
+.club-card:has(a):active .club-slides {
   box-shadow:
     0 10px 22px rgba(var(--shadow-rgb), 0.18),
     0 2px 7px rgba(var(--shadow-rgb), 0.12);
@@ -271,6 +274,9 @@ input {
   overflow: hidden;
   border-radius: 17px;
   aspect-ratio: 4 / 1;
+  border: 1px solid var(--line);
+  box-shadow: 0 5px 16px rgba(var(--shadow-rgb), 0.06);
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .club-slide {
