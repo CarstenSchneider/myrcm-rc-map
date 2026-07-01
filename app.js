@@ -50,15 +50,18 @@ const LocateControl = L.Control.extend({
 });
 new LocateControl().addTo(map);
 
-const COUNTRY_BOUNDS = {
-  DE: [[47.2, 5.8], [55.1, 15.1]],
-  AT: [[46.2, 9.4], [49.0, 17.2]],
-  CH: [[45.7, 5.9], [47.9, 10.6]],
-  NL: [[50.75, 3.35], [53.55, 7.22]],
-  BE: [[49.5, 2.55], [51.5, 6.4]],
-  LU: [[49.44, 5.73], [50.19, 6.53]],
-  FR: [[42.3, -4.8], [51.1, 8.2]],
-  all: [[42.3, -4.8], [55.1, 17.5]],
+// Predefined center + zoom per country (desktop). Mobile gets mobileZoom (one level wider).
+// Using center+zoom instead of fitBounds avoids geometry-driven inconsistency: Germany spans
+// ~1153px at zoom 7 (> visible height) so fitBounds returns zoom 6 — same as "all Europe".
+const COUNTRY_VIEWS = {
+  all: { center: [48.5, 8.0],  zoom: 6, mobileZoom: 5 },
+  DE:  { center: [51.2, 10.4], zoom: 7, mobileZoom: 6 },
+  AT:  { center: [47.6, 13.3], zoom: 8, mobileZoom: 7 },
+  CH:  { center: [46.8, 8.2],  zoom: 8, mobileZoom: 7 },
+  FR:  { center: [46.5, 2.3],  zoom: 7, mobileZoom: 6 },
+  NL:  { center: [52.3, 5.3],  zoom: 8, mobileZoom: 7 },
+  BE:  { center: [50.5, 4.5],  zoom: 8, mobileZoom: 7 },
+  LU:  { center: [49.8, 6.1],  zoom: 9, mobileZoom: 8 },
 };
 
 function detectCountryFromLocale() {
@@ -66,7 +69,7 @@ function detectCountryFromLocale() {
   const langs = Array.from(navigator.languages?.length ? navigator.languages : [navigator.language]);
   for (const lang of langs) {
     const match = lang.toUpperCase().match(/-([A-Z]{2})$/);
-    if (match && COUNTRY_BOUNDS[match[1]]) return match[1];
+    if (match && COUNTRY_VIEWS[match[1]]) return match[1];
   }
   // Timezone fallback: handles bare locale codes
   try {
@@ -78,8 +81,24 @@ function detectCountryFromLocale() {
 }
 
 function fitToCountry(country) {
-  const bounds = COUNTRY_BOUNDS[country] || COUNTRY_BOUNDS.all;
-  fitMapToBounds(bounds, { maxZoom: 10, skipIconShift: true });
+  const view = COUNTRY_VIEWS[country] || COUNTRY_VIEWS.all;
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  const latlng = L.latLng(view.center);
+  if (isMobile) {
+    const mz = view.mobileZoom;
+    // "all" needs zoom 5 which is below map's minZoom:6 (desktop-only constraint).
+    // Temporarily lower minZoom for this one setView call on mobile.
+    if (mz < map.getMinZoom()) {
+      const saved = map.options.minZoom;
+      map.options.minZoom = mz;
+      map.setView(latlng, mz);
+      map.options.minZoom = saved;
+    } else {
+      map.setView(latlng, mz);
+    }
+  } else {
+    panToVisible(latlng, view.zoom);
+  }
 }
 
 const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU", "FR"]);
@@ -269,10 +288,10 @@ const countryFlags = [
   { country: "DE",  code: "de", label: "Deutschland" },
   { country: "AT",  code: "at", label: "Österreich" },
   { country: "CH",  code: "ch", label: "Schweiz" },
+  { country: "FR",  code: "fr", label: "Frankreich" },
   { country: "NL",  code: "nl", label: "Niederlande" },
   { country: "BE",  code: "be", label: "Belgien" },
   { country: "LU",  code: "lu", label: "Luxemburg" },
-  { country: "FR",  code: "fr", label: "Frankreich" },
 ];
 let _countryPill = null;
 let _countryPicker = null;
