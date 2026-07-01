@@ -324,7 +324,7 @@ function updateCountryOutline() {
   if (hasSource && _lastOutlineCountry === selectedCountry) return;
 
   const feature = _countryOutlines && selectedCountry !== "all"
-    ? (_countryOutlines.features?.find(f => f.id === selectedCountry) ?? null)
+    ? (_countryOutlines.features?.find(f => f.properties?.code === selectedCountry) ?? null)
     : null;
 
   _lastOutlineCountry = selectedCountry;
@@ -4906,7 +4906,7 @@ async function init() {
   ensureRegistrationStatusStyles();
 
   const cacheBuster = Date.now();
-  const countryOutlinesPromise = fetchJsonOrFallback("country-outlines.json", null);
+  const countryOutlinesPromise = fetchJsonOrFallback("dach-borders.json", null);
 
   const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse, ffvrcRacesRawResponse, ffvrcVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
