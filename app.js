@@ -50,18 +50,19 @@ const LocateControl = L.Control.extend({
 });
 new LocateControl().addTo(map);
 
-// Predefined center + zoom per country (desktop). Mobile gets mobileZoom (one level wider).
-// Using center+zoom instead of fitBounds avoids geometry-driven inconsistency: Germany spans
-// ~1153px at zoom 7 (> visible height) so fitBounds returns zoom 6 — same as "all Europe".
+// Per-country bounds + center for dynamic zoom calculation.
+// Desktop: getBoundsZoom on the bounds (screen-responsive), clamped to [minZoom, maxZoom],
+// then panToVisible(center, zoom) so the panel offset is accounted for.
+// Mobile: map.fitBounds with drawer padding, maxZoom clamped.
 const COUNTRY_VIEWS = {
-  all: { center: [48.5, 8.0],  zoom: 6, mobileZoom: 5 },
-  DE:  { center: [51.2, 10.4], zoom: 7, mobileZoom: 6 },
-  AT:  { center: [47.6, 13.3], zoom: 8, mobileZoom: 7 },
-  CH:  { center: [46.8, 8.2],  zoom: 8, mobileZoom: 7 },
-  FR:  { center: [46.5, 2.3],  zoom: 7, mobileZoom: 6 },
-  NL:  { center: [52.3, 5.3],  zoom: 8, mobileZoom: 7 },
-  BE:  { center: [50.5, 4.5],  zoom: 8, mobileZoom: 7 },
-  LU:  { center: [49.8, 6.1],  zoom: 9, mobileZoom: 8 },
+  all: { bounds: [[40.5, -7.0],  [57.0, 22.0]],  center: [48.5,  8.0],  minZoom: 5, maxZoom: 7 },
+  DE:  { bounds: [[47.2,  5.8],  [55.1, 15.1]],  center: [51.2, 10.4],  minZoom: 6, maxZoom: 8 },
+  AT:  { bounds: [[46.2,  9.4],  [49.0, 17.2]],  center: [47.6, 13.3],  minZoom: 7, maxZoom: 9 },
+  CH:  { bounds: [[45.7,  5.9],  [47.9, 10.6]],  center: [46.8,  8.2],  minZoom: 7, maxZoom: 9 },
+  FR:  { bounds: [[42.3, -4.8],  [51.1,  8.2]],  center: [46.5,  2.3],  minZoom: 6, maxZoom: 8 },
+  NL:  { bounds: [[50.75, 3.35], [53.55, 7.22]], center: [52.3,  5.3],  minZoom: 7, maxZoom: 9 },
+  BE:  { bounds: [[49.5,  2.55], [51.5,  6.4]],  center: [50.5,  4.5],  minZoom: 7, maxZoom: 9 },
+  LU:  { bounds: [[49.44, 5.73], [50.19, 6.53]], center: [49.8,  6.1],  minZoom: 8, maxZoom: 10 },
 };
 
 function detectCountryFromLocale() {
@@ -83,21 +84,24 @@ function detectCountryFromLocale() {
 function fitToCountry(country) {
   const view = COUNTRY_VIEWS[country] || COUNTRY_VIEWS.all;
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  const latlng = L.latLng(view.center);
+  const lBounds = L.latLngBounds(view.bounds);
   if (isMobile) {
-    const mz = view.mobileZoom;
-    // "all" needs zoom 5 which is below map's minZoom:6 (desktop-only constraint).
-    // Temporarily lower minZoom for this one setView call on mobile.
-    if (mz < map.getMinZoom()) {
-      const saved = map.options.minZoom;
-      map.options.minZoom = mz;
-      map.setView(latlng, mz);
-      map.options.minZoom = saved;
-    } else {
-      map.setView(latlng, mz);
-    }
+    const { pl, pr, pt, pb } = mapPadding();
+    // Temporarily lower minZoom so "all" (zoom ~5) isn't clamped to minZoom:6.
+    const savedMin = map.options.minZoom;
+    map.options.minZoom = Math.min(savedMin, view.minZoom);
+    map.fitBounds(lBounds, {
+      paddingTopLeft:     [pl, pt],
+      paddingBottomRight: [pr, pb],
+      maxZoom: view.maxZoom,
+    });
+    map.options.minZoom = savedMin;
   } else {
-    panToVisible(latlng, view.zoom);
+    // getBoundsZoom with 207px horizontal + 40px vertical panel padding (screen-responsive).
+    let zoom = map.getBoundsZoom(lBounds, false, L.point(207, 40));
+    zoom = Math.max(zoom, view.minZoom);
+    zoom = Math.min(zoom, view.maxZoom);
+    panToVisible(L.latLng(view.center), zoom);
   }
 }
 
