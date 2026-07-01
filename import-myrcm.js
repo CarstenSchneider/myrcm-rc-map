@@ -11,6 +11,7 @@ const venueSeedsFile = "venue-seeds.json";
 const venueUnmatchedFile = "venue-unmatched.json";
 const seriesFile = "series.json";
 const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
+const countryOnly = process.env.MYRCM_COUNTRY_ONLY || "";
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1];
 
@@ -1936,6 +1937,13 @@ async function loadHosts() {
         `https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${host.orgId}&pLa=en`
     }));
 
+  if (countryOnly) {
+    const _countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU", "Czech Republic": "CZ", "Czechia": "CZ" };
+    const byCountry = filteredHosts.filter(h => _countryMap[h.country] === countryOnly);
+    console.log(`Country-Filter (${countryOnly}): ${byCountry.length} von ${filteredHosts.length} Hosts`);
+    return byCountry;
+  }
+
   if (hostLimit > 0) {
     console.log(
       `Host-Limit aktiv: ${Math.min(hostLimit, filteredHosts.length)} von ${filteredHosts.length} Hosts`
@@ -2027,6 +2035,15 @@ async function runImportOnce() {
 
   unique = applyFirstSeen(unique, previousRaces);
 
+  if (countryOnly) {
+    // Keep all previous races from non-imported hosts (e.g. DACH/Benelux when running CZ-only)
+    const importedHostIdSet = new Set(importedHosts.map(h => h.id));
+    const previousFromOthers = previousRaces.filter(r => !importedHostIdSet.has(r.hostId));
+    unique = [...unique, ...previousFromOthers]
+      .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+    console.log(`Country-only merge: ${importedHosts.length} importierte Hosts, ${previousFromOthers.length} Races aus anderen Ländern beibehalten, ${unique.length} total`);
+  }
+
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
 
   // Backfill country for hosts that exist in the host list but had no races this run
@@ -2048,19 +2065,21 @@ async function runImportOnce() {
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
 
   // Remove geocoded AT/CH seeds for clubs that have no races in the import window.
-  // importedHosts contains only clubs with at least one race in the current period.
-  const activeOrgIds = new Set(importedHosts.map(h => h.myrcmOrgId).filter(Boolean));
-  const cleanedVenueSeeds = venueSeeds.filter(s =>
-    s.source !== "geocoded-nominatim-dach" || activeOrgIds.has(s.myrcmOrgId)
-  );
-  const removedSeedCount = venueSeeds.length - cleanedVenueSeeds.length;
-  if (removedSeedCount > 0) {
-    await writeFile(
-      venueSeedsFile,
-      JSON.stringify(cleanedVenueSeeds, null, 2) + "\n",
-      "utf8"
+  // Skip when running country-only (activeOrgIds would be incomplete and remove valid seeds).
+  if (!countryOnly) {
+    const activeOrgIds = new Set(importedHosts.map(h => h.myrcmOrgId).filter(Boolean));
+    const cleanedVenueSeeds = venueSeeds.filter(s =>
+      s.source !== "geocoded-nominatim-dach" || activeOrgIds.has(s.myrcmOrgId)
     );
-    console.log(`venue-seeds.json bereinigt: ${removedSeedCount} inaktive Geocoded-Seeds entfernt`);
+    const removedSeedCount = venueSeeds.length - cleanedVenueSeeds.length;
+    if (removedSeedCount > 0) {
+      await writeFile(
+        venueSeedsFile,
+        JSON.stringify(cleanedVenueSeeds, null, 2) + "\n",
+        "utf8"
+      );
+      console.log(`venue-seeds.json bereinigt: ${removedSeedCount} inaktive Geocoded-Seeds entfernt`);
+    }
   }
 
   await writeFile(
