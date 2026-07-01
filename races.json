@@ -7602,9 +7602,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiyacup-belgium-2024-08-11-myrcm-event-78554",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2024-08-11-myrcm-event-78554",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -7651,7 +7651,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-14156-2024-08-14-myrcm-event-80181",
@@ -9216,9 +9216,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mini-zshop-nl-2024-08-25-myrcm-event-80328",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2024-08-25-myrcm-event-80328",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -9244,7 +9244,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-55317-2024-08-25-myrcm-event-79291",
@@ -25944,9 +25944,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mini-zshop-nl-2025-01-05-myrcm-event-83676",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2025-01-05-myrcm-event-83676",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -25988,7 +25988,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "msc-hockendorf-e-v-2025-01-05-myrcm-event-84239",
@@ -58761,9 +58761,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mini-zshop-nl-2025-08-02-myrcm-event-88659",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2025-08-02-myrcm-event-88659",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -58809,7 +58809,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "morac-2025-08-02-myrcm-event-87586",
@@ -60614,9 +60614,9 @@
     "firstSeen": "2026-06-09"
   },
   {
-    "id": "tamiyacup-belgium-2025-08-10-myrcm-event-85477",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2025-08-10-myrcm-event-85477",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -60661,7 +60661,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-14156-2025-08-10-myrcm-event-87724",
@@ -65352,9 +65352,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mini-zshop-nl-2025-09-06-myrcm-event-89865",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2025-09-06-myrcm-event-89865",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -65391,7 +65391,7 @@
       "Mini-z Pancar"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-65-2025-09-06-myrcm-event-89899",
@@ -72218,9 +72218,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mini-zshop-nl-2025-10-05-myrcm-event-89866",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2025-10-05-myrcm-event-89866",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -72257,7 +72257,7 @@
       "Mini-z Pancar"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "rc-car-freunde-emsdetten-e-v-2025-10-05-myrcm-event-90545",
@@ -80923,9 +80923,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mini-zshop-nl-2025-12-21-myrcm-event-91206",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2025-12-21-myrcm-event-91206",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -80968,7 +80968,7 @@
       }
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-59433-2025-12-21-myrcm-event-92905",
@@ -91183,9 +91183,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "mini-zshop-nl-2026-03-22-myrcm-event-91205",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-44133-2026-03-22-myrcm-event-91205",
+    "venueId": "myrcm-44133",
+    "venueName": "Mini-zshop.nl",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-zshop-nl",
@@ -91225,7 +91225,7 @@
       "Mini-z Pancar"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "indoortrack-wichtrach-2026-03-22-myrcm-event-90757",
@@ -113905,8 +113905,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 32,
-    "registrationDisplay": "32",
+    "registrationCount": 33,
+    "registrationDisplay": "33",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113923,7 +113923,7 @@
       },
       {
         "name": "AC26 ProStock 2WD",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "AC26-Monster/ShortCourse 2WD",
@@ -114808,8 +114808,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 14,
-    "registrationDisplay": "14",
+    "registrationCount": 15,
+    "registrationDisplay": "15",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114818,7 +114818,7 @@
       },
       {
         "name": "ÖFMAV EOR - TW 17.5T",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "ÖFMAV EOR - TW Modified",
@@ -119349,9 +119349,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "tamiyacup-belgium-2026-08-09-myrcm-event-96728",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-12027-2026-08-09-myrcm-event-96728",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -119381,7 +119381,7 @@
       "Tamiya Cup Euro GT"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-33479-2026-08-09-myrcm-event-98343",
@@ -122625,9 +122625,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "tamiyacup-belgium-2026-09-06-myrcm-event-96730",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-35896-2026-09-06-myrcm-event-96730",
+    "venueId": "myrcm-35896",
+    "venueName": "Tamiyacup Belgium",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "tamiyacup-belgium",
@@ -122657,7 +122657,7 @@
       "Tamiya Cup Euro GT"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-33479-2026-09-06-myrcm-event-98344",
