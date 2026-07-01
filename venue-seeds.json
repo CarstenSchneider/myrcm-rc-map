@@ -4376,6 +4376,12 @@
     "country": "NL"
   },
   {
+    "hostId": "ffvrc-0393",
+    "hostName": "LES MINI BOLIDES NIVERNAIS",
+    "lat": 47.03859159840167,
+    "lng": 3.155152286333722
+  },
+  {
     "hostId": "ffvrc-20",
     "hostName": "Ligue Régionale Antilles (Zone20) -",
     "locationUnknown": true
