@@ -5,12 +5,14 @@ import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 const hostListFile = "myrcm-hosts-dach.json";
 const beneluxHostListFile = "myrcm-hosts-benelux.json";
 const franceHostListFile = "myrcm-hosts-france.json";
+const czHostListFile = "myrcm-hosts-cz.json";
 const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
 const venueSeedsFile = "venue-seeds.json";
 const venueUnmatchedFile = "venue-unmatched.json";
 const seriesFile = "series.json";
 const hostLimit = Number(process.env.MYRCM_HOST_LIMIT || 0);
+const countryOnly = process.env.MYRCM_COUNTRY_ONLY || "";
 const currentYear = new Date().getFullYear();
 const allowedYears = [currentYear - 2, currentYear - 1, currentYear, currentYear + 1];
 
@@ -1153,6 +1155,13 @@ function detectVenueSeedForRace(venueSeeds = [], detail = {}, eventLink = {}, ho
     return { seed: fallback, wasExplicit: false, isTravellingSeries };
   }
 
+  // Non-DACH country fallback: if no venue seed found, use a country-level placeholder.
+  const countryFallbackVenueId = { "Czech Republic": "cz-general", "Czechia": "cz-general" }[host.country || ""];
+  if (countryFallbackVenueId && !defaultVenueSeed) {
+    const fallback = venueSeeds.find(s => (s.id || s.hostId) === countryFallbackVenueId) || null;
+    return { seed: fallback, wasExplicit: false, isTravellingSeries: false };
+  }
+
   return { seed: defaultVenueSeed || null, wasExplicit: false, isTravellingSeries: false };
 }
 
@@ -1299,7 +1308,7 @@ function myRcmOrgIdFromHost(host) {
 }
 
 function hostRecordFromMyRcmHost(host, venueSeed = null, existingHost = null) {
-  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU" };
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU", "Czech Republic": "CZ", "Czechia": "CZ" };
   const importedHost = {
     id: hostIdFromMyRcmHost(host, venueSeed),
     name: hostNameFromMyRcmHost(host),
@@ -1917,6 +1926,15 @@ async function loadHosts() {
     // france file optional
   }
 
+  try {
+    const czRaw = await readFile(czHostListFile, "utf8");
+    const czHosts = JSON.parse(czRaw);
+    const existingOrgIds = new Set(hosts.map(h => String(h.orgId)));
+    hosts = [...hosts, ...czHosts.filter(h => !existingOrgIds.has(String(h.orgId)))];
+  } catch {
+    // cz file optional
+  }
+
   const filteredHosts = hosts
     .filter(host => host.orgId && host.name)
     .filter(host => Number(host.eventCount || 0) > 0)
@@ -1928,6 +1946,13 @@ async function loadHosts() {
         host.url ||
         `https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${host.orgId}&pLa=en`
     }));
+
+  if (countryOnly) {
+    const _countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU", "Czech Republic": "CZ", "Czechia": "CZ", "France": "FR" };
+    const byCountry = filteredHosts.filter(h => _countryMap[h.country] === countryOnly);
+    console.log(`Country-Filter (${countryOnly}): ${byCountry.length} von ${filteredHosts.length} Hosts`);
+    return byCountry;
+  }
 
   if (hostLimit > 0) {
     console.log(
@@ -2020,10 +2045,18 @@ async function runImportOnce() {
 
   unique = applyFirstSeen(unique, previousRaces);
 
+  if (countryOnly) {
+    const importedHostIdSet = new Set(importedHosts.map(h => h.id));
+    const previousFromOthers = previousRaces.filter(r => !importedHostIdSet.has(r.hostId));
+    unique = [...unique, ...previousFromOthers]
+      .sort((a, b) => a.from.localeCompare(b.from) || a.name.localeCompare(b.name));
+    console.log(`Country-only merge: ${importedHosts.length} importierte Hosts, ${previousFromOthers.length} Races aus anderen Ländern beibehalten, ${unique.length} total`);
+  }
+
   const mergedHosts = mergeHosts(existingHosts, importedHosts);
 
   // Backfill country for hosts that exist in the host list but had no races this run
-  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU" };
+  const countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU", "Czech Republic": "CZ", "Czechia": "CZ" };
   const orgIdToCountry = new Map(
     hosts
       .filter(h => h.orgId && h.country && countryMap[h.country])
@@ -2041,19 +2074,21 @@ async function runImportOnce() {
   const mergedUnmatched = mergeUnmatched(existingUnmatched, importedUnmatched);
 
   // Remove geocoded AT/CH seeds for clubs that have no races in the import window.
-  // importedHosts contains only clubs with at least one race in the current period.
-  const activeOrgIds = new Set(importedHosts.map(h => h.myrcmOrgId).filter(Boolean));
-  const cleanedVenueSeeds = venueSeeds.filter(s =>
-    s.source !== "geocoded-nominatim-dach" || activeOrgIds.has(s.myrcmOrgId)
-  );
-  const removedSeedCount = venueSeeds.length - cleanedVenueSeeds.length;
-  if (removedSeedCount > 0) {
-    await writeFile(
-      venueSeedsFile,
-      JSON.stringify(cleanedVenueSeeds, null, 2) + "\n",
-      "utf8"
+  // Skip when running country-only (activeOrgIds would be incomplete and remove valid seeds).
+  if (!countryOnly) {
+    const activeOrgIds = new Set(importedHosts.map(h => h.myrcmOrgId).filter(Boolean));
+    const cleanedVenueSeeds = venueSeeds.filter(s =>
+      s.source !== "geocoded-nominatim-dach" || activeOrgIds.has(s.myrcmOrgId)
     );
-    console.log(`venue-seeds.json bereinigt: ${removedSeedCount} inaktive Geocoded-Seeds entfernt`);
+    const removedSeedCount = venueSeeds.length - cleanedVenueSeeds.length;
+    if (removedSeedCount > 0) {
+      await writeFile(
+        venueSeedsFile,
+        JSON.stringify(cleanedVenueSeeds, null, 2) + "\n",
+        "utf8"
+      );
+      console.log(`venue-seeds.json bereinigt: ${removedSeedCount} inaktive Geocoded-Seeds entfernt`);
+    }
   }
 
   await writeFile(
