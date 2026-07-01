@@ -5304,5 +5304,14 @@
     "locationUnknown": true,
     "myrcmOrgId": "41053",
     "country": "BE"
+  },
+  {
+    "id": "cz-general",
+    "name": "Tschechien (Ort unbekannt)",
+    "locationUnknown": true,
+    "source": "manual",
+    "country": "CZ",
+    "hostIds": [],
+    "skipTextMatch": true
   }
 ]

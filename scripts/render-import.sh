@@ -63,6 +63,13 @@ IMPORT_RCK_OK=0
 IMPORT_MYRCM_OK=0
 IMPORT_DMC_OK=0
 
+echo "--- Discover CZ clubs ---"
+if node scripts/discover-myrcm-cz.js; then
+  echo "✓ CZ Discovery erfolgreich"
+else
+  echo "✗ CZ Discovery FEHLGESCHLAGEN — myrcm-hosts-cz.json unverändert"
+fi
+
 echo "--- Import RCK ---"
 if RCK_GEOCODE=0 node import-rck.js; then
   IMPORT_RCK_OK=1
@@ -101,7 +108,7 @@ if [ "$IMPORT_MYRCM_OK" = "0" ]; then
 fi
 
 # main: alle Importdaten committen
-MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json"
+MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json myrcm-hosts-cz.json"
 DMC_FILES="dmc-races.json dmc-venues.json dmc-pdf-cache.json"
 git add $MAIN_FILES
 [ "$IMPORT_DMC_OK" = "1" ]   && git add $DMC_FILES

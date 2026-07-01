@@ -59,6 +59,10 @@ jobs:
 
       # --- IMPORTS (each independent, MyRCM must succeed) ---
 
+      - name: Discover CZ clubs
+        continue-on-error: true
+        run: node scripts/discover-myrcm-cz.js
+
       - name: Import RCK
         id: import_rck
         continue-on-error: true
@@ -86,7 +90,7 @@ jobs:
         run: |
           DATA_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
             rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json"
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json myrcm-hosts-cz.json"
           git fetch origin main
           # Reset index to latest origin/main (keeps working tree = import output)
           git reset --mixed origin/main
@@ -105,7 +109,7 @@ jobs:
         run: |
           DATA_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
             rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json"
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json myrcm-hosts-cz.json"
           git fetch origin dev
           git checkout -f -B dev origin/dev
           # Bring data files from freshly committed main

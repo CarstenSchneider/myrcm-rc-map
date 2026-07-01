@@ -63,6 +63,7 @@ const COUNTRY_VIEWS = {
   NL:  { bounds: [[50.75, 3.35], [53.55, 7.22]], center: [52.3,  5.3],  minZoom: 7, maxZoom: 9 },
   BE:  { bounds: [[49.5,  2.55], [51.5,  6.4]],  center: [50.5,  4.5],  minZoom: 7, maxZoom: 9 },
   LU:  { bounds: [[49.44, 5.73], [50.19, 6.53]], center: [49.8,  6.1],  minZoom: 8, maxZoom: 10 },
+  CZ:  { bounds: [[48.5, 12.1],  [51.1, 18.9]],  center: [49.8, 15.5],  minZoom: 7, maxZoom: 9 },
 };
 
 function detectCountryFromLocale() {
@@ -75,7 +76,7 @@ function detectCountryFromLocale() {
   // Timezone fallback: handles bare locale codes
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU" };
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU", "Europe/Prague": "CZ" };
     if (tzCountry[tz]) return tzCountry[tz];
   } catch (_) {}
   return "all";
@@ -109,7 +110,7 @@ function fitToCountry(country) {
   }
 }
 
-const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU"]);
+const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU", "CZ"]);
 const _savedCountry = localStorage.getItem("rcRaceMapCountry");
 let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
 let _zoomToCountryPending = false;
@@ -123,6 +124,7 @@ const TRANSLATIONS = {
   "country.NL":         { de: "Niederlande",   en: "Netherlands",    fr: "Pays-Bas",            nl: "Nederland" },
   "country.BE":         { de: "Belgien",       en: "Belgium",        fr: "Belgique",            nl: "België" },
   "country.LU":         { de: "Luxemburg",     en: "Luxembourg",     fr: "Luxembourg",          nl: "Luxemburg" },
+  "country.CZ":         { de: "Tschechien",    en: "Czech Republic", fr: "République tchèque",  nl: "Tsjechië" },
   "filter.range.2w":    { de: "2 Wochen",      en: "2 weeks",        fr: "2 semaines",          nl: "2 weken" },
   "filter.range.4w":    { de: "4 Wochen",      en: "4 weeks",        fr: "4 semaines",          nl: "4 weken" },
   "filter.range.all":   { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
@@ -298,6 +300,7 @@ const countryFlags = [
   { country: "NL",  code: "nl", label: "Niederlande" },
   { country: "BE",  code: "be", label: "Belgien" },
   { country: "LU",  code: "lu", label: "Luxemburg" },
+  { country: "CZ",  code: "cz", label: "Tschechien" },
 ];
 let _countryPill = null;
 let _countryPicker = null;
@@ -2184,7 +2187,7 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
-const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU" };
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU", "Czech Republic": "CZ", Czechia: "CZ" };
 function venueCountry(venue) {
   if (!venue) return null;
   if (venue.myrcmOrgId) {
@@ -5767,10 +5770,11 @@ function _buildAdminEntryListHtml(entries, datalistId) {
       <div class="admin-entry-header">
         <strong>${escapeHtml(e.hostName)}</strong>
         ${e._sourceBadge ? `<span class="admin-source-badge">${escapeHtml(e._sourceBadge)}</span>` : e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
-        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}${e._postalCode ? ` · ${escapeHtml(e._postalCode)}` : ""}${e._city ? ` ${escapeHtml(e._city)}` : ""}</span>
+        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}${e._postalCode ? ` · ${escapeHtml(e._postalCode)}` : ""}${e._city ? ` ${escapeHtml(e._city)}` : ""}${e._location ? ` · ${escapeHtml(e._location)}` : ""}</span>
       </div>
       ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-      ${e._city ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + " " + e._city + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
+      ${e._website ? `<a class="admin-entry-link" href="${escapeHtml(e._website)}" target="_blank" rel="noopener">Website ↗</a>` : ""}
+      ${(e._city || e._location) ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + " " + (e._location || e._city) + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
       <label class="admin-entry-toggle">
         <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
         Ort unbekannt
@@ -6166,9 +6170,20 @@ function renderAdminPruefenTab(container) {
       Promise.resolve(seeds),
       fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
       fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
+      fetchJsonOrFallback(`${RAW_BASE}/myrcm-hosts-dach.json?t=${Date.now()}`, []),
+      fetchJsonOrFallback(`${RAW_BASE}/myrcm-hosts-benelux.json?t=${Date.now()}`, []),
+      fetchJsonOrFallback(`${RAW_BASE}/myrcm-hosts-cz.json?t=${Date.now()}`, []),
       adminLoadUnmatched(seeds),
     ]))
-  .then(async ([seeds, dmcRes, rccoRes, allEntries]) => {
+  .then(async ([seeds, dmcRes, rccoRes, dachHosts, beneluxHosts, czHosts, allEntries]) => {
+    const _allHostSeeds = [...dachHosts, ...beneluxHosts, ...czHosts];
+    const _hostSeedByOrgId = new Map(_allHostSeeds.filter(h => h.orgId).map(h => [String(h.orgId), h]));
+    const _enrichEntry = e => {
+      if (!e.myrcmOrgId) return e;
+      const seed = _hostSeedByOrgId.get(String(e.myrcmOrgId));
+      if (!seed) return e;
+      return { ...e, _location: seed.location || null, _website: seed.website || null };
+    };
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
     const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
@@ -6200,7 +6215,7 @@ function renderAdminPruefenTab(container) {
       }, []);
 
     // Alle neuen Venues: MyRCM-unmatched + DMC + RCCO → eine gemeinsame Liste
-    const myrcmNew = allEntries.filter(e => !e._isUnknownSeed);
+    const myrcmNew = allEntries.filter(e => !e._isUnknownSeed).map(_enrichEntry);
     const allNewEntries = [...myrcmNew, ...dmcPending, ...rccoPending];
     container.innerHTML = "";
     if (allNewEntries.length) {
@@ -6770,6 +6785,7 @@ function renderClubList() {
     { label: t("country.NL"),  value: "NL",  code: "nl" },
     { label: t("country.BE"),  value: "BE",  code: "be" },
     { label: t("country.LU"),  value: "LU",  code: "lu" },
+    { label: t("country.CZ"),  value: "CZ",  code: "cz" },
   ];
   const filterHtml = flagOpts.map(o =>
     `<button type="button" class="race-list-flag-btn${_raceListCountry === o.value ? " active" : ""}" data-country="${o.value}" aria-label="${o.label}">` +
