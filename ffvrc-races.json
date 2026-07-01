@@ -6322,73 +6322,6 @@
     "url": "https://www.ffvrc.fr/fr/calendrier.html"
   },
   {
-    "id": "mnf-69d8151d93d0b",
-    "hostId": "ffvrc-1001",
-    "hostName": "POMMERAYE MINI RACING CAR",
-    "venueId": "ffvrc-1001",
-    "name": "COURSE DU 31/05/2026 PMRC",
-    "from": "2026-05-31",
-    "to": "2026-05-31",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE 1/10 TH 200MM 4X4"
-    ],
-    "series": [
-      "LIGUE PAYS DE LA LOIRE"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
-    "id": "mnf-69d8151f4ae63",
-    "hostId": "ffvrc-1001",
-    "hostName": "POMMERAYE MINI RACING CAR",
-    "venueId": "ffvrc-1001",
-    "name": "COURSE DU 31/05/2026 PMRC",
-    "from": "2026-05-31",
-    "to": "2026-05-31",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE 1/10 EL TOURISME 17.5",
-      "PISTE 1/10 EL TOURISME 13.5",
-      "PISTE 1/10 EL TOURISME MODIFIE",
-      "PISTE 1/10 EL FORMULE 1 21.5",
-      "PISTE 1/10 EL FWD",
-      "PISTE 1/10 EL PRO10 STOCK",
-      "PISTE 1/10 EL PRO10 MODIFIE"
-    ],
-    "series": [
-      "LIGUE PAYS DE LA LOIRE"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
-    "id": "mnf-69d81521abe63",
-    "hostId": "ffvrc-1001",
-    "hostName": "POMMERAYE MINI RACING CAR",
-    "venueId": "ffvrc-1001",
-    "name": "COURSE DU 31/05/2026 PMRC",
-    "from": "2026-05-31",
-    "to": "2026-05-31",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE 1/8 TH CLASSIQUE",
-      "PISTE 1/8 EL CLASSIQUE",
-      "PISTE 1/8 EL 4X4 STOCK",
-      "PISTE 1/8 EL 4X4 LIBRE",
-      "PISTE 1/8 TH 4X4 LIBRE"
-    ],
-    "series": [
-      "LIGUE PAYS DE LA LOIRE"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
     "id": "mnf-695ce4466245a",
     "hostId": "ffvrc-0202",
     "hostName": "RADIO CLUB MODELISME MONCOUTANT",
@@ -8399,70 +8332,6 @@
     "url": "https://www.ffvrc.fr/fr/calendrier.html"
   },
   {
-    "id": "mnf-697e3f293cb9b",
-    "hostId": "ffvrc-0348",
-    "hostName": "REIMS ENDURO MODEL CAR",
-    "venueId": "ffvrc-fr",
-    "name": "COURSE DU 21/06/2026",
-    "from": "2026-06-21",
-    "to": "2026-06-21",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE 1/5 TH FORMULE FRANCE",
-      "PISTE 1/5 TH TOURISME",
-      "PISTE 1/5 SPORT PROTO ELECTRIQUE"
-    ],
-    "series": [
-      "LIGUE GRAND EST"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
-    "id": "mnf-69baaa2d3f0ab",
-    "hostId": "ffvrc-0348",
-    "hostName": "REIMS ENDURO MODEL CAR",
-    "venueId": "ffvrc-fr",
-    "name": "REMC REIMS PISTE GT8",
-    "from": "2026-06-21",
-    "to": "2026-06-21",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE GT8 TH",
-      "PISTE GT8 EL"
-    ],
-    "series": [
-      "LIGUE GRAND EST"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
-    "id": "mnf-6a1034c8a4b17",
-    "hostId": "ffvrc-0348",
-    "hostName": "REIMS ENDURO MODEL CAR",
-    "venueId": "ffvrc-fr",
-    "name": "REMC REIMS 1/8",
-    "from": "2026-06-21",
-    "to": "2026-06-21",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE 1/8 TH CLASSIQUE",
-      "PISTE 1/8 EL CLASSIQUE",
-      "PISTE 1/8 EL 4X4 STOCK",
-      "PISTE 1/8 EL 4X4 LIBRE",
-      "PISTE 1/8 TH 4X4 LIBRE"
-    ],
-    "series": [
-      "LIGUE GRAND EST"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
     "id": "mnf-699763e3c31d0",
     "hostId": "ffvrc-0892",
     "hostName": "TIGER RACING MODELISME 41",
@@ -8934,48 +8803,6 @@
     "url": "https://www.ffvrc.fr/fr/calendrier.html"
   },
   {
-    "id": "mnf-695ce4a01cb06",
-    "hostId": "ffvrc-1001",
-    "hostName": "POMMERAYE MINI RACING CAR",
-    "venueId": "ffvrc-1001",
-    "name": "CHAMPIONNAT DE LIGUE P5 - PMRC",
-    "from": "2026-06-28",
-    "to": "2026-06-28",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE 1/5 TH FORMULE FRANCE",
-      "PISTE 1/5 TH TOURISME",
-      "PISTE 1/5 TH FORMULE 1",
-      "PISTE 1/5 SPORT PROTO ELECTRIQUE"
-    ],
-    "series": [
-      "LIGUE PAYS DE LA LOIRE"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
-    "id": "mnf-695ce62f5e9f2",
-    "hostId": "ffvrc-1001",
-    "hostName": "POMMERAYE MINI RACING CAR",
-    "venueId": "ffvrc-1001",
-    "name": "CHAMPIONNAT DE LIGUE GT8 - PMRC",
-    "from": "2026-06-28",
-    "to": "2026-06-28",
-    "registrationStatus": null,
-    "classes": [
-      "PISTE GT8 TH",
-      "PISTE GT8 EL"
-    ],
-    "series": [
-      "LIGUE PAYS DE LA LOIRE"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
     "id": "mnf-6968e20286266",
     "hostId": "ffvrc-0694",
     "hostName": "TOURLAVILLE MINI BOLIDES",
@@ -9087,25 +8914,6 @@
     "classes": [
       "TT 1/8 TH 4X4 ELITE",
       "TT 1/8 TH +40 ANS"
-    ],
-    "series": [
-      "COURSE NATIONALE"
-    ],
-    "country": "FR",
-    "source": "ffvrc",
-    "url": "https://www.ffvrc.fr/fr/calendrier.html"
-  },
-  {
-    "id": "mnf-6998392cd83e2",
-    "hostId": "ffvrc-0348",
-    "hostName": "REIMS ENDURO MODEL CAR",
-    "venueId": "ffvrc-fr",
-    "name": "TT8TH NATIONAL CF4",
-    "from": "2026-07-04",
-    "to": "2026-07-04",
-    "registrationStatus": null,
-    "classes": [
-      "TT 1/8 TH 4X4 NATIONAL"
     ],
     "series": [
       "COURSE NATIONALE"

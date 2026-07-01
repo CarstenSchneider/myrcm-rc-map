@@ -1,5 +1,13 @@
 [
   {
+    "hostId": "mini-auto-club-de-charmes-sur-rhone",
+    "hostName": "Mini auto Club de Charmes Sur Rhone",
+    "source": "myrcm",
+    "myrcmOrgId": "25367",
+    "possibleVenue": "CHARMES SUR RHONE",
+    "reason": "no confirmed venue for at least one current MyRCM race"
+  },
+  {
     "hostId": "mini-zshop-nl",
     "hostName": "Mini-zshop.nl",
     "source": "myrcm",
@@ -8,32 +16,24 @@
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "myrcm-host-mini-auto-club-de-charmes-sur-rhone",
-    "hostName": "MyRCM : Host : Mini auto Club de Charmes Sur Rhone",
-    "source": "myrcm",
-    "myrcmOrgId": "25367",
-    "possibleVenue": "CHARMES SUR RHONE",
-    "reason": "no confirmed venue for at least one current MyRCM race"
-  },
-  {
-    "hostId": "myrcm-host-pommeraye-mini-racing-car",
-    "hostName": "MyRCM : Host : POMMERAYE MINI RACING CAR",
+    "hostId": "pommeraye-mini-racing-car",
+    "hostName": "POMMERAYE MINI RACING CAR",
     "source": "myrcm",
     "myrcmOrgId": "37401",
     "possibleVenue": "MAUGES SUR LOIRE",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "myrcm-host-reims-enduro-model-car",
-    "hostName": "MyRCM : Host : Reims Enduro Model Car",
+    "hostId": "reims-enduro-model-car",
+    "hostName": "Reims Enduro Model Car",
     "source": "myrcm",
     "myrcmOrgId": "24695",
     "possibleVenue": "Reims",
     "reason": "no confirmed venue for at least one current MyRCM race"
   },
   {
-    "hostId": "myrcm-host-sermaise-electro-modelisme",
-    "hostName": "MyRCM : Host : Sermaise Electro Modelisme",
+    "hostId": "sermaise-electro-modelisme",
+    "hostName": "Sermaise Electro Modelisme",
     "source": "myrcm",
     "myrcmOrgId": "46243",
     "possibleVenue": "Sermaise",
