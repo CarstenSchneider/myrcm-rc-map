@@ -5790,9 +5790,10 @@ function _buildAdminEntryListHtml(entries, datalistId) {
       <div class="admin-entry-header">
         <strong>${escapeHtml(e.hostName)}</strong>
         ${e._sourceBadge ? `<span class="admin-source-badge">${escapeHtml(e._sourceBadge)}</span>` : e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
-        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
+        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}${e._city ? ` · ${escapeHtml(e._city)}` : ""}</span>
       </div>
       ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
+      ${(e._city || e._sourceBadge === "FFVRC") ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + (e._city ? " " + e._city : "") + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
       <label class="admin-entry-toggle">
         <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
         Ort unbekannt
@@ -6189,13 +6190,16 @@ function renderAdminPruefenTab(container) {
       fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
       fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
       fetch(`ffvrc-races.json?t=${Date.now()}`).catch(() => null),
+      fetch(`ffvrc-venues.json?t=${Date.now()}`).catch(() => null),
       adminLoadUnmatched(seeds),
     ]))
-  .then(async ([seeds, dmcRes, rccoRes, ffvrcRes, allEntries]) => {
+  .then(async ([seeds, dmcRes, rccoRes, ffvrcRes, ffvrcVenuesRes, allEntries]) => {
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
     const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
     const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
+    const ffvrcVenuesRaw = ffvrcVenuesRes?.ok ? await ffvrcVenuesRes.json().catch(() => []) : [];
+    const ffvrcCityByHostId = new Map((Array.isArray(ffvrcVenuesRaw) ? ffvrcVenuesRaw : []).map(v => [v.hostId, v.city]));
 
     // DACH-Seeds die noch verifiziert werden müssen
     const geocodedPending = seeds.filter(s => s.source?.startsWith("geocoded-nominatim"));
@@ -6227,7 +6231,11 @@ function renderAdminPruefenTab(container) {
     const ffvrcPending = (Array.isArray(ffvrcRacesAdmin) ? ffvrcRacesAdmin : [])
       .filter(r => r.venueId === "ffvrc-fr" && !seededHostIds.has(r.hostId))
       .reduce((acc, r) => {
-        if (!ffvrcSeen.has(r.hostId)) { ffvrcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "FFVRC" }); }
+        if (!ffvrcSeen.has(r.hostId)) {
+          ffvrcSeen.add(r.hostId);
+          const city = ffvrcCityByHostId.get(r.hostId) || null;
+          acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "FFVRC", _city: city });
+        }
         return acc;
       }, []);
 
