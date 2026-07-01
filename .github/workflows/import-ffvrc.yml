@@ -31,10 +31,8 @@ jobs:
         run: node scripts/discover-ffvrc-clubs.js
 
       - name: Commit FFVRC data to dev
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update FFVRC data (import + club discovery)
-          branch: dev
-          file_pattern: |
-            ffvrc-races.json
-            ffvrc-venues.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f ffvrc-races.json ffvrc-venues.json
+          git diff --staged --quiet && echo "No changes to commit" || (git commit -m "Update FFVRC data (import + club discovery)" && git push origin dev)
