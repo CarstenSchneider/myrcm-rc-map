@@ -1152,10 +1152,10 @@ function updateCountryOutline() {
         source: vtLayer.source,
         "source-layer": "boundary",
         filter: ["==", "admin_level", 2],
-        paint: { "line-color": rcRaceMapColors.countryBorder, "line-width": 1.5, "line-opacity": 0.9 },
+        paint: { "line-color": rcRaceMapColors.water, "line-width": 3, "line-opacity": 0.9 },
       });
     } else {
-      mlMap.setPaintProperty("country-borders", "line-color", rcRaceMapColors.countryBorder);
+      mlMap.setPaintProperty("country-borders", "line-color", rcRaceMapColors.water);
     }
   } catch {}
 }
