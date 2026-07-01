@@ -11791,9 +11791,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "sermaise-electro-modelisme-2024-09-07-myrcm-event-81653",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-sermaise-electro-2024-09-07-myrcm-event-81653",
+    "venueId": "myrcm-sermaise-electro",
+    "venueName": "Sermaise Electro Modelisme",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "sermaise-electro-modelisme",
@@ -11816,7 +11816,7 @@
       "SEM1/8BLS"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-34977-2024-09-07-myrcm-event-80584",
@@ -18264,9 +18264,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "reims-enduro-model-car-2024-10-12-myrcm-event-82538",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2024-10-12-myrcm-event-82538",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -18291,7 +18291,7 @@
       "FFVRC-CF-TT 1/10 E 4X4 M"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "rcc-sittersdorf-2024-10-12-myrcm-event-82191",
@@ -23592,9 +23592,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "reims-enduro-model-car-2024-12-07-myrcm-event-83660",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2024-12-07-myrcm-event-83660",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -23620,7 +23620,7 @@
       "WSLINE BUGGY BLS PRO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "team-indoor-track-schoeftland-2024-12-08-myrcm-event-82231",
@@ -30447,9 +30447,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "reims-enduro-model-car-2025-02-22-myrcm-event-85363",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-02-22-myrcm-event-85363",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -30477,7 +30477,7 @@
       "WSLINE BUGGY BLS PRO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "motor-sport-club-imst-2025-02-23-myrcm-event-84827",
@@ -30809,9 +30809,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "mini-auto-club-de-charmes-sur-rhone-2025-02-28-myrcm-event-85682",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-mini-auto-charmes-2025-02-28-myrcm-event-85682",
+    "venueId": "myrcm-mini-auto-charmes",
+    "venueName": "Mini auto Club de Charmes Sur Rhone",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
@@ -30835,12 +30835,12 @@
       "NITRO CHARMES CUP"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
-    "id": "mini-auto-club-de-charmes-sur-rhone-2025-02-28-myrcm-event-85671",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-mini-auto-charmes-2025-02-28-myrcm-event-85671",
+    "venueId": "myrcm-mini-auto-charmes",
+    "venueName": "Mini auto Club de Charmes Sur Rhone",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
@@ -30865,7 +30865,7 @@
       "NITRO CHARMES CUP"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-112-2025-03-01-myrcm-event-85264",
@@ -32507,9 +32507,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "pommeraye-mini-racing-car-2025-03-16-myrcm-event-86048",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-pommeraye-mini-racing-2025-03-16-myrcm-event-86048",
+    "venueId": "myrcm-pommeraye-mini-racing",
+    "venueName": "POMMERAYE MINI RACING CAR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "pommeraye-mini-racing-car",
@@ -32538,7 +32538,7 @@
       "P8 TH 4x4 OPEN"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-32715-2025-03-16-myrcm-event-84879",
@@ -35507,9 +35507,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "reims-enduro-model-car-2025-04-11-myrcm-event-86947",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-04-11-myrcm-event-86947",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -35535,7 +35535,7 @@
       "P10 200mm CFE"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "minicar-club-dortmund-e-v-2025-04-11-myrcm-event-84787",
@@ -40900,9 +40900,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "pommeraye-mini-racing-car-2025-05-08-myrcm-event-87773",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-pommeraye-mini-racing-2025-05-08-myrcm-event-87773",
+    "venueId": "myrcm-pommeraye-mini-racing",
+    "venueName": "POMMERAYE MINI RACING CAR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "pommeraye-mini-racing-car",
@@ -40934,7 +40934,7 @@
       "P5 TH TOUR PROMO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-3074-2025-05-08-myrcm-event-87299",
@@ -43369,9 +43369,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "reims-enduro-model-car-2025-05-18-myrcm-event-88023",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-05-18-myrcm-event-88023",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -43397,7 +43397,7 @@
       "TT8 Th 4X4 OP"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-12027-2025-05-18-myrcm-event-85442",
@@ -46682,9 +46682,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "pommeraye-mini-racing-car-2025-06-01-myrcm-event-88098",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-pommeraye-mini-racing-2025-06-01-myrcm-event-88098",
+    "venueId": "myrcm-pommeraye-mini-racing",
+    "venueName": "POMMERAYE MINI RACING CAR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "pommeraye-mini-racing-car",
@@ -46718,7 +46718,7 @@
       "Sport Proto EL AMICALE"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "mblr-ecl-pens-2025-06-01-myrcm-event-87919",
@@ -48109,9 +48109,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mini-auto-club-de-charmes-sur-rhone-2025-06-08-myrcm-event-88569",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-mini-auto-charmes-2025-06-08-myrcm-event-88569",
+    "venueId": "myrcm-mini-auto-charmes",
+    "venueName": "Mini auto Club de Charmes Sur Rhone",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
@@ -48138,7 +48138,7 @@
       "MACCR Ligue 2025 TH promo"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "rc-racers-toys-shop-2025-06-08-myrcm-event-84504",
@@ -52471,9 +52471,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "sermaise-electro-modelisme-2025-06-29-myrcm-event-88970",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-sermaise-electro-2025-06-29-myrcm-event-88970",
+    "venueId": "myrcm-sermaise-electro",
+    "venueName": "Sermaise Electro Modelisme",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "sermaise-electro-modelisme",
@@ -52496,7 +52496,7 @@
       "SEM1/8BLS"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "tsv-1871-augsburg-e-v-2025-06-29-myrcm-event-86845",
@@ -52680,9 +52680,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "reims-enduro-model-car-2025-06-29-myrcm-event-89046",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-06-29-myrcm-event-89046",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -52717,7 +52717,7 @@
       "P5 TH FF AMICALE"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "rc-speedracer-bernau-2025-06-29-myrcm-event-85420",
@@ -54188,9 +54188,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "pommeraye-mini-racing-car-2025-07-06-myrcm-event-89134",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-pommeraye-mini-racing-2025-07-06-myrcm-event-89134",
+    "venueId": "myrcm-pommeraye-mini-racing",
+    "venueName": "POMMERAYE MINI RACING CAR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "pommeraye-mini-racing-car",
@@ -54220,7 +54220,7 @@
       "P8 TH Class OPEN"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-2571-2025-07-06-myrcm-event-89197",
@@ -65857,9 +65857,9 @@
     "firstSeen": "2026-06-08"
   },
   {
-    "id": "reims-enduro-model-car-2025-09-07-myrcm-event-90403",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-09-07-myrcm-event-90403",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -65892,7 +65892,7 @@
       "FFVRC-CL-P 1/5 TH"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "tsv-mariendorf-rc-racing-2025-09-07-myrcm-event-89826",
@@ -70520,9 +70520,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "reims-enduro-model-car-2025-09-28-myrcm-event-91110",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-09-28-myrcm-event-91110",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -70547,7 +70547,7 @@
       "TT10 El 4X4 MOD OP"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-3291-2025-09-28-myrcm-event-90636",
@@ -79334,9 +79334,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "reims-enduro-model-car-2025-12-06-myrcm-event-92665",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2025-12-06-myrcm-event-92665",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -79364,7 +79364,7 @@
       "WSLINE BUGGY BLS PRO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "mini-racing-chiasso-2025-12-07-myrcm-event-92365",
@@ -86567,9 +86567,9 @@
     "firstSeen": "2026-06-26"
   },
   {
-    "id": "reims-enduro-model-car-2026-02-21-myrcm-event-94629",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2026-02-21-myrcm-event-94629",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -86597,7 +86597,7 @@
       "WSLINE BUGGY BLS PRO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-59433-2026-02-21-myrcm-event-94472",
@@ -86955,9 +86955,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "reims-enduro-model-car-2026-02-21-myrcm-event-94601",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2026-02-21-myrcm-event-94601",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -86985,7 +86985,7 @@
       "WSLINE BUGGY BLS PRO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "mini-racing-chiasso-2026-02-22-myrcm-event-93192",
@@ -92830,9 +92830,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mini-auto-club-de-charmes-sur-rhone-2026-04-05-myrcm-event-96042",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-mini-auto-charmes-2026-04-05-myrcm-event-96042",
+    "venueId": "myrcm-mini-auto-charmes",
+    "venueName": "Mini auto Club de Charmes Sur Rhone",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
@@ -92859,7 +92859,7 @@
       "TT 1/8 TH PROMO"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "tsv-mariendorf-rc-racing-2026-04-05-myrcm-event-94105",
@@ -105131,9 +105131,9 @@
     "firstSeen": "2026-06-25"
   },
   {
-    "id": "pommeraye-mini-racing-car-2026-05-31-myrcm-event-97838",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-pommeraye-mini-racing-2026-05-31-myrcm-event-97838",
+    "venueId": "myrcm-pommeraye-mini-racing",
+    "venueName": "POMMERAYE MINI RACING CAR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "pommeraye-mini-racing-car",
@@ -105159,7 +105159,7 @@
       "P10 200mm OPEN"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-55554-2026-05-31-myrcm-event-95215",
@@ -110713,9 +110713,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "reims-enduro-model-car-2026-06-21-myrcm-event-98453",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2026-06-21-myrcm-event-98453",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -110746,7 +110746,7 @@
       "P5 TH TOUR PROM"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-31752-2026-06-21-myrcm-event-94351",
@@ -112329,9 +112329,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "pommeraye-mini-racing-car-2026-06-28-myrcm-event-98576",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-pommeraye-mini-racing-2026-06-28-myrcm-event-98576",
+    "venueId": "myrcm-pommeraye-mini-racing",
+    "venueName": "POMMERAYE MINI RACING CAR",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "pommeraye-mini-racing-car",
@@ -112360,7 +112360,7 @@
       "Sport Proto EL OPEN"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-32715-2026-06-28-myrcm-event-93918",
@@ -112529,9 +112529,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "mini-auto-club-de-charmes-sur-rhone-2026-06-28-myrcm-event-98541",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-mini-auto-charmes-2026-06-28-myrcm-event-98541",
+    "venueId": "myrcm-mini-auto-charmes",
+    "venueName": "Mini auto Club de Charmes Sur Rhone",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
@@ -112557,7 +112557,7 @@
       "TT 1/8 TH OPEN"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "myrcm-10817-2026-06-28-myrcm-event-94893",
@@ -112774,9 +112774,9 @@
     "firstSeen": "2026-06-28"
   },
   {
-    "id": "sermaise-electro-modelisme-2026-06-28-myrcm-event-98657",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-sermaise-electro-2026-06-28-myrcm-event-98657",
+    "venueId": "myrcm-sermaise-electro",
+    "venueName": "Sermaise Electro Modelisme",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "sermaise-electro-modelisme",
@@ -112800,7 +112800,7 @@
       "SEM TRUGGY"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "mac-or-huetschenhausen-e-v-2026-06-28-myrcm-event-98130",
@@ -113438,9 +113438,9 @@
     "firstSeen": "2026-06-30"
   },
   {
-    "id": "reims-enduro-model-car-2026-07-04-myrcm-event-98675",
-    "venueId": null,
-    "venueName": null,
+    "id": "myrcm-reims-enduro-2026-07-04-myrcm-event-98675",
+    "venueId": "myrcm-reims-enduro",
+    "venueName": "Reims Enduro Model Car",
     "venueLocation": null,
     "venueWebsite": null,
     "hostId": "reims-enduro-model-car",
@@ -113463,7 +113463,7 @@
       "Tout-Terrain 1/8 Thermique 4x4 CF National (EVO)"
     ],
     "documents": [],
-    "firstSeen": "2026-06-30"
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "rc-racer-hochsauerland-e-v-2026-07-04-myrcm-event-96916",
