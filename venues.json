@@ -7280,6 +7280,23 @@
     "country": "AT"
   },
   {
+    "id": "cz-general",
+    "name": "Tschechien (Ort unbekannt)",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "",
+    "source": "manual",
+    "verified": true,
+    "country": "CZ",
+    "locationUnknown": true
+  },
+  {
     "id": "tsv-1871-augsburg-e-v",
     "name": "TSV 1871 Augsburg e.V.",
     "city": "Königsbrunn",

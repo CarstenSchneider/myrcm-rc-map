@@ -64726,6 +64726,59 @@
     "firstSeen": "2026-06-30"
   },
   {
+    "id": "ets-international-2025-09-04-myrcm-event-88595",
+    "venueId": "ets-international",
+    "venueName": "ETS / TOS International",
+    "venueLocation": null,
+    "venueWebsite": "https://www.ets.racing/rules/",
+    "hostId": "ets",
+    "hostName": "ETS",
+    "name": "Cayote Euro Touring Series ROUND 3 LUXEMBOURG / LUX",
+    "from": "2025-09-04",
+    "to": "2025-09-07",
+    "series": [
+      "Euro Touring Series (ETS)"
+    ],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88595&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2047&pLa=en&dId%5BE%5D=88595&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=88595&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "closed",
+    "registrationOpens": null,
+    "registrationRequiresLogin": false,
+    "registrationCount": 335,
+    "registrationDisplay": "335",
+    "note": "Nennung geschlossen.",
+    "classes": [
+      {
+        "name": "FlySky Frontwheel",
+        "entries": 75
+      },
+      {
+        "name": "Matrix Formula",
+        "entries": 32
+      },
+      {
+        "name": "Awesomatix Pro Stock",
+        "entries": 77
+      },
+      {
+        "name": "Cayote Modified",
+        "entries": 53
+      },
+      {
+        "name": "1up Racing 40+",
+        "entries": 50
+      },
+      {
+        "name": "Hobbywing 21.5 Stock",
+        "entries": 48
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-07-01"
+  },
+  {
     "id": "mac-nuernberg-e-v-2025-09-05-myrcm-event-89782",
     "venueId": "mac-nuernberg-e-v",
     "venueName": "MAC Nürnberg e.V",
@@ -112219,8 +112272,8 @@
     "registrationStatus": "closed",
     "registrationOpens": null,
     "registrationRequiresLogin": false,
-    "registrationCount": null,
-    "registrationDisplay": null,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
     "note": "Nennung geschlossen.",
     "classes": [
       "ECN ORE8"
@@ -112998,16 +113051,16 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98375&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=60911&pLa=en&dId%5BE%5D=98375&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98375&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 59,
-    "registrationDisplay": "59",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "registrationRequiresLogin": false,
+    "registrationCount": 61,
+    "registrationDisplay": "61",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "OR8 Expert",
-        "entries": 18
+        "entries": 19
       },
       {
         "name": "OR8 Hobby",
@@ -113015,7 +113068,7 @@
       },
       {
         "name": "ORE8",
-        "entries": 17
+        "entries": 18
       },
       {
         "name": "ORT",
@@ -113026,15 +113079,7 @@
         "entries": 4
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung 1. SK-Lauf OR8 Sued 2027 + 5. Lauf SDC 2026 MCC Laupheim e.V..pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=6E5C82F3-A6C7-4F28-848E-43A607E10550"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-21"
   },
   {
@@ -113055,12 +113100,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97301&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=4497&pLa=en&dId%5BE%5D=97301&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97301&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 42,
-    "registrationDisplay": "42",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "registrationRequiresLogin": false,
+    "registrationCount": 43,
+    "registrationDisplay": "43",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "Open SRCCA",
@@ -113072,7 +113117,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 32
+        "entries": 33
       }
     ],
     "documents": [],
@@ -113094,16 +113139,16 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98065&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=58267&pLa=en&dId%5BE%5D=98065&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98065&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "registrationRequiresLogin": false,
+    "registrationCount": 17,
+    "registrationDisplay": "17",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "EG10TWSP(Sfb)",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "EG Tamiya Truck",
@@ -113118,29 +113163,7 @@
         "entries": 2
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung_2026-07-05_VM.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=A2E444FC-903F-43FA-96FB-2A2F88223969"
-      },
-      {
-        "type": "rules",
-        "label": "Reglement",
-        "sourceLabel": null,
-        "fileName": "2026_TAMIYA-EuroCup_Reglement.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=675CA9E3-45B3-4F01-95AF-1EC266C0702E"
-      },
-      {
-        "type": "rules",
-        "label": "Reglement",
-        "sourceLabel": null,
-        "fileName": "Reglement EGTWSP(SFB)_ab2025.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=611DA021-AE75-4CD3-B263-2EDF71B000E6"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -113244,13 +113267,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 5,
-    "registrationDisplay": "5",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "3LC Langstrecke",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -113461,12 +113484,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96916&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=45781&pLa=en&dId%5BE%5D=96916&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96916&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 46,
     "registrationDisplay": "46",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "ORE8",
@@ -113477,15 +113500,7 @@
         "entries": 15
       }
     ],
-    "documents": [
-      {
-        "type": "document",
-        "label": "PDF",
-        "sourceLabel": null,
-        "fileName": "ERS Elektro Rennserie 2026-Lauf 3.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9ABED521-5198-4ADE-A9A2-2A4C5136D712"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -113507,8 +113522,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 48,
-    "registrationDisplay": "48",
+    "registrationCount": 51,
+    "registrationDisplay": "51",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113517,16 +113532,16 @@
       },
       {
         "name": "Tamiya Fighter Buggy",
-        "entries": 6
+        "entries": 9
       },
       {
         "name": "4WD Buggy",
-        "entries": 6
+        "entries": 5
       },
       "TRK / SC 2wd",
       {
         "name": "2WD Buggy",
-        "entries": 28
+        "entries": 29
       }
     ],
     "documents": [],
@@ -113584,16 +113599,16 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95725&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=764&pLa=en&dId%5BE%5D=95725&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=95725&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 31,
-    "registrationDisplay": "31",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "registrationRequiresLogin": false,
+    "registrationCount": 32,
+    "registrationDisplay": "32",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "MRCP Fronti",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "MRCP Stock 17.5T",
@@ -113877,21 +113892,21 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 42,
-    "registrationDisplay": "42",
+    "registrationCount": 49,
+    "registrationDisplay": "49",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "AC26 Buggy 2WD",
-        "entries": 11
+        "entries": 14
       },
       {
         "name": "AC26 Buggy 4WD",
-        "entries": 10
+        "entries": 12
       },
       {
         "name": "AC26 OpenFun",
-        "entries": 7
+        "entries": 8
       },
       {
         "name": "AC26 ProStock 2WD",
@@ -113899,7 +113914,7 @@
       },
       {
         "name": "AC26-Monster/ShortCourse 2WD",
-        "entries": 7
+        "entries": 8
       }
     ],
     "documents": [],
@@ -114144,8 +114159,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 15,
-    "registrationDisplay": "15",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114154,15 +114169,15 @@
       },
       {
         "name": "Truck",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "2WD",
-        "entries": 11
+        "entries": 16
       },
       {
         "name": "4WD",
-        "entries": 2
+        "entries": 3
       }
     ],
     "documents": [],
@@ -114187,8 +114202,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "HRCC GT8",
@@ -114197,7 +114212,7 @@
       "EG8e",
       {
         "name": "HRCC 1/8 GT3",
-        "entries": 2
+        "entries": 3
       },
       "HRCC Plastic/Fronti",
       {
@@ -114243,8 +114258,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 18,
-    "registrationDisplay": "18",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114254,7 +114269,7 @@
       "ORE2WD",
       {
         "name": "ORE2WDST",
-        "entries": 9
+        "entries": 11
       },
       "ORE4WD",
       {
@@ -114266,7 +114281,10 @@
         "entries": 3
       },
       "ORESC2",
-      "ORE8",
+      {
+        "name": "ORE8",
+        "entries": 1
+      },
       "Fun"
     ],
     "documents": [
@@ -114348,21 +114366,24 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96727&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=35896&pLa=en&dId%5BE%5D=96727&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=96727&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 43,
-    "registrationDisplay": "43",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "registrationRequiresLogin": false,
+    "registrationCount": 50,
+    "registrationDisplay": "50",
+    "note": "Nennung geschlossen.",
     "classes": [
-      "Tamiya Cup Junior",
+      {
+        "name": "Tamiya Cup Junior",
+        "entries": 1
+      },
       {
         "name": "Tamiya Cup Top Stock",
-        "entries": 8
+        "entries": 10
       },
       {
         "name": "Tamiya Cup Euro Truck",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "Tamiya Cup Mini",
@@ -114370,11 +114391,11 @@
       },
       {
         "name": "Tamiya Cup Super Stock",
-        "entries": 6
+        "entries": 8
       },
       {
         "name": "Tamiya Cup Euro TW",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Tamiya Cup Historic Gr C",
@@ -114387,6 +114408,42 @@
     ],
     "documents": [],
     "firstSeen": "2026-06-30"
+  },
+  {
+    "id": "mrc-mehrum-e-v-2026-07-05-myrcm-event-98697",
+    "venueId": "mrc-mehrum-e-v",
+    "venueName": "MRC Mehrum e.V.",
+    "venueLocation": "Peine",
+    "venueWebsite": null,
+    "hostId": "mrc-mehrum-e-v",
+    "hostName": "MRC Mehrum e.V.",
+    "name": "VM3 2026",
+    "from": "2026-07-05",
+    "to": "2026-07-05",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98697&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=2245&pLa=en&dId%5BE%5D=98697&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98697&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
+    "registrationCount": 2,
+    "registrationDisplay": "2",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "classes": [
+      "DT03 VM",
+      {
+        "name": "ORE10 Buggy 2WD/4WD VM",
+        "entries": 1
+      },
+      {
+        "name": "ORE8 VM",
+        "entries": 1
+      }
+    ],
+    "documents": [],
+    "firstSeen": "2026-07-01"
   },
   {
     "id": "amc-hamm-e-v-2026-07-05-myrcm-event-97527",
@@ -114404,12 +114461,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97527&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=97527&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97527&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
+    "registrationRequiresLogin": false,
     "registrationCount": 12,
     "registrationDisplay": "12",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "1:10 Elektro Fun Cup",
@@ -114436,15 +114493,7 @@
         "entries": 2
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "AMC Hamm Freundschaftsrennen 2 - Ausschreibung 2026.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=E4B9AC0A-FF0A-4B82-9414-30C84BA87B72"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -114780,8 +114829,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 16,
-    "registrationDisplay": "16",
+    "registrationCount": 17,
+    "registrationDisplay": "17",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114794,7 +114843,7 @@
       },
       {
         "name": "ÖFMAV EOR - TW Modified",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -114821,13 +114870,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 40,
-    "registrationDisplay": "40",
+    "registrationCount": 41,
+    "registrationDisplay": "41",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "NRW-Cup Elektro",
-        "entries": 8
+        "entries": 9
       },
       {
         "name": "NRW-Cup Hobby",
@@ -114908,13 +114957,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 12,
+    "registrationDisplay": "12",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 (1:8 Nitro Offroad Buggy)",
-        "entries": 11
+        "entries": 12
       }
     ],
     "documents": [],
@@ -114970,8 +115019,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114981,7 +115030,7 @@
       "Verbrenner-Glattbahn 1:10",
       {
         "name": "Elektro Glattbahn 1:8 EG8e",
-        "entries": 5
+        "entries": 6
       },
       {
         "name": "Elektro-Glattbahn 1:8 GT",
@@ -115091,12 +115140,12 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97758&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=97758&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=97758&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "login_required",
+    "registrationStatus": "closed",
     "registrationOpens": null,
-    "registrationRequiresLogin": true,
-    "registrationCount": 41,
-    "registrationDisplay": "41",
-    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
+    "registrationRequiresLogin": false,
+    "registrationCount": 44,
+    "registrationDisplay": "44",
+    "note": "Nennung geschlossen.",
     "classes": [
       {
         "name": "1:4 Funbike Super-Moto",
@@ -115104,30 +115153,22 @@
       },
       {
         "name": "1:8 Funbike",
-        "entries": 7
-      },
-      {
-        "name": "DMC 1:5 Elektro Superbike",
         "entries": 8
       },
       {
+        "name": "DMC 1:5 Elektro Superbike",
+        "entries": 9
+      },
+      {
         "name": "DMC 1:5 Stockbike Elektro",
-        "entries": 15
+        "entries": 16
       },
       {
         "name": "DMC 1:5 Verbrenner Bike",
         "entries": 5
       }
     ],
-    "documents": [
-      {
-        "type": "announcement",
-        "label": "Ausschreibung",
-        "sourceLabel": null,
-        "fileName": "Ausschreibung offene Motorrad DM.pdf",
-        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=9A06E715-ED28-4F8D-802D-F9699236961B"
-      }
-    ],
+    "documents": [],
     "firstSeen": "2026-06-08"
   },
   {
@@ -115607,8 +115648,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115621,7 +115662,7 @@
       },
       {
         "name": "BK 2WD Buggy 2026",
-        "entries": 6
+        "entries": 7
       }
     ],
     "documents": [],
@@ -115685,11 +115726,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 6,
+    "registrationDisplay": "6",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
-      "HRT 17.5 T Fixed 2026",
+      {
+        "name": "HRT 17.5 T Fixed 2026",
+        "entries": 2
+      },
       {
         "name": "HRT 17.5 Open Touring 2026",
         "entries": 2
@@ -115726,8 +115770,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 22,
-    "registrationDisplay": "22",
+    "registrationCount": 23,
+    "registrationDisplay": "23",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115744,7 +115788,7 @@
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "TW Modified",
@@ -116336,24 +116380,47 @@
     "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98677&pLa=en",
     "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=7771&pLa=en&dId%5BE%5D=98677&tId=E&hId%5B1%5D=org",
     "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98677&dLt=reg&pLa=en&lType=rList",
-    "registrationStatus": "upcoming",
-    "registrationOpens": "2026-07-02",
-    "registrationRequiresLogin": false,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
-    "note": "Nennung ab 02.07.2026",
+    "registrationStatus": "login_required",
+    "registrationOpens": null,
+    "registrationRequiresLogin": true,
+    "registrationCount": 8,
+    "registrationDisplay": "8",
+    "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
-      "Verbrenner Glattbahn 1:8 Klasse 1",
-      "Verbrenner-Glattbahn 1:10",
-      "Verbrenner-Glattbahn 1:8 Klasse 2",
-      "Verbrenner Glattbahn 1:8 Sport",
+      {
+        "name": "Verbrenner Glattbahn 1:8 Klasse 1",
+        "entries": 2
+      },
+      {
+        "name": "Verbrenner-Glattbahn 1:10",
+        "entries": 1
+      },
+      {
+        "name": "Verbrenner-Glattbahn 1:8 Klasse 2",
+        "entries": 1
+      },
+      {
+        "name": "Verbrenner Glattbahn 1:8 Sport",
+        "entries": 1
+      },
       "Verbrenner-Glattbahn 1:10 Sport",
-      "JumpstartRC Trophy Elektro-Glattbahn 1:8",
+      {
+        "name": "JumpstartRC Trophy Elektro-Glattbahn 1:8",
+        "entries": 3
+      },
       "Elektro-Glattbahn 1:8 GT",
       "Verbrenner Glattbahn 1:8 GT",
       "Elektro-Glattbahn 1:8 GT3"
     ],
-    "documents": [],
+    "documents": [
+      {
+        "type": "announcement",
+        "label": "Ausschreibung",
+        "sourceLabel": null,
+        "fileName": "260719 Hamm - JumpstartRC3 DM-WU SMW4 Ausschreibung V5.pdf",
+        "url": "https://www.myrcm.ch/myrcm/main?hId=doc&token=825F8D25-77DF-4D00-9664-487C1A77136F"
+      }
+    ],
     "firstSeen": "2026-06-30"
   },
   {
@@ -116403,13 +116470,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 56,
-    "registrationDisplay": "56",
+    "registrationCount": 57,
+    "registrationDisplay": "57",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Crawler",
-        "entries": 46
+        "entries": 47
       },
       {
         "name": "Rennstrecke",
@@ -116527,8 +116594,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 28,
-    "registrationDisplay": "28",
+    "registrationCount": 29,
+    "registrationDisplay": "29",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -116537,7 +116604,7 @@
       },
       {
         "name": "EG8GT",
-        "entries": 2
+        "entries": 3
       },
       "VG10S",
       {
@@ -117772,8 +117839,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 30,
-    "registrationDisplay": "30",
+    "registrationCount": 31,
+    "registrationDisplay": "31",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -117782,7 +117849,7 @@
       },
       {
         "name": "Buggy 2WD mod",
-        "entries": 13
+        "entries": 14
       },
       {
         "name": "Buggy 4WD mod",
@@ -118350,8 +118417,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -118360,7 +118427,7 @@
       },
       {
         "name": "EG10TWSP(Sfb)",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -119683,15 +119750,15 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "FCA Jugend",
       "FCA Classic",
       {
         "name": "FCA Formel 1",
-        "entries": 2
+        "entries": 3
       },
       "FCA 17.5T"
     ],
@@ -119717,15 +119784,18 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 1,
-    "registrationDisplay": "1",
+    "registrationCount": 2,
+    "registrationDisplay": "2",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8E",
         "entries": 1
       },
-      "OR8N"
+      {
+        "name": "OR8N",
+        "entries": 1
+      }
     ],
     "documents": [],
     "firstSeen": "2026-06-30"

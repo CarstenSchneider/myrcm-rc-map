@@ -1,1 +1,898 @@
-[]
+[
+  {
+    "id": "ffvrc-fr",
+    "name": "France",
+    "locationUnknown": true,
+    "country": "FR"
+  },
+  {
+    "id": "ffvrc-1077",
+    "hostId": "ffvrc-1077",
+    "name": "MINI MODELES BIGUGLIA",
+    "city": "BIGUGLIA",
+    "lat": 42.605861,
+    "lng": 9.447448,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1069",
+    "hostId": "ffvrc-1069",
+    "name": "AJACCIO GRAVONA MODELS CARS",
+    "city": null,
+    "lat": 41.98094,
+    "lng": 8.832278,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1124",
+    "hostId": "ffvrc-1124",
+    "name": "THOUBERVILLE RACING CLUB MODELISME",
+    "city": "ST OUEN DE THOUBERVILLE",
+    "lat": 49.359149,
+    "lng": 0.891785,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0357",
+    "hostId": "ffvrc-0357",
+    "name": "LAVAL MINI AUTO CLUB",
+    "city": "LAVAL",
+    "lat": 48.036946,
+    "lng": -0.7403,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0840",
+    "hostId": "ffvrc-0840",
+    "name": "RACING CLUB ARGENTEUIL",
+    "city": "ARGENTEUIL",
+    "lat": 48.950614,
+    "lng": 2.224129,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0936",
+    "hostId": "ffvrc-0936",
+    "name": "AUTO MODEL CLUB DU GOLFE",
+    "city": "VANNES",
+    "lat": 47.658154,
+    "lng": -2.770722,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1168",
+    "hostId": "ffvrc-1168",
+    "name": "SPEED R/C BRENOUILLE",
+    "city": "BRENOUILLE",
+    "lat": 49.30884,
+    "lng": 2.549772,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0876",
+    "hostId": "ffvrc-0876",
+    "name": "MALNOUE EMERAINVILLE SPORTS",
+    "city": "EMERAINVILLE",
+    "lat": 48.825614,
+    "lng": 2.608736,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0965",
+    "hostId": "ffvrc-0965",
+    "name": "PASSION MODELISME ORANGEOIS",
+    "city": "ORANGE",
+    "lat": 44.130139,
+    "lng": 4.796122,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1063",
+    "hostId": "ffvrc-1063",
+    "name": "MODELISME RADIO COMMANDE CORZEEN",
+    "city": "CORZE",
+    "lat": 47.554568,
+    "lng": -0.39993,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0806",
+    "hostId": "ffvrc-0806",
+    "name": "NITRO SYMPHONIE CLUB",
+    "city": "MOUGINS",
+    "lat": 43.591698,
+    "lng": 7.032486,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0952",
+    "hostId": "ffvrc-0952",
+    "name": "AUTO MODELISME CLUB DE TOURS",
+    "city": "TOURS",
+    "lat": 47.401378,
+    "lng": 0.711215,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0235",
+    "hostId": "ffvrc-0235",
+    "name": "MODELE AUTO RACING CAR GASCON",
+    "city": "CASTELSARRASIN",
+    "lat": 44.030944,
+    "lng": 1.085495,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0331",
+    "hostId": "ffvrc-0331",
+    "name": "CLUB AUTO MODELS MACONNAIS",
+    "city": "MACON",
+    "lat": 46.337214,
+    "lng": 4.811137,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1046",
+    "hostId": "ffvrc-1046",
+    "name": "ASSOCIATION MODELISTE MEYRARGUAISE",
+    "city": "MEYRARGUES",
+    "lat": 43.637325,
+    "lng": 5.51975,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1015",
+    "hostId": "ffvrc-1015",
+    "name": "AUTO MODELISME REIGNACAIS",
+    "city": "REIGNAC",
+    "lat": 45.235546,
+    "lng": -0.522298,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0848",
+    "hostId": "ffvrc-0848",
+    "name": "MINI BOLIDE GRUCHET LE VALASSE",
+    "city": null,
+    "lat": 49.546779,
+    "lng": 0.490855,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0034",
+    "hostId": "ffvrc-0034",
+    "name": "LIMOUSIN MINI RACING CAR",
+    "city": null,
+    "lat": 45.900664,
+    "lng": 1.405628,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-04",
+    "hostId": "ffvrc-04",
+    "name": "Ligue Régionale Haut de France (Zone04)",
+    "city": "SAVEUSE",
+    "lat": 49.90055,
+    "lng": 2.217379,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0699",
+    "hostId": "ffvrc-0699",
+    "name": "L'AUTOMOBILE RADIOCOMMANDEE CREMONVILLE",
+    "city": null,
+    "lat": 49.228125,
+    "lng": 1.183188,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0359",
+    "hostId": "ffvrc-0359",
+    "name": "SAVEUSE AUTOMOBILES RADIO COMMANDEES",
+    "city": "SAVEUSE",
+    "lat": 49.903466,
+    "lng": 2.218637,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0822",
+    "hostId": "ffvrc-0822",
+    "name": "ABEILLE CLUB",
+    "city": "LE MESNIL-EN-THELLE",
+    "lat": 49.187152,
+    "lng": 2.287499,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0749",
+    "hostId": "ffvrc-0749",
+    "name": "MINI AUTO HERRLISHEIM",
+    "city": "HERRLISHEIM",
+    "lat": 48.748719,
+    "lng": 7.922717,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0020",
+    "hostId": "ffvrc-0020",
+    "name": "MINI RACING TEAM DE L'ESSONNE",
+    "city": "RIS-ORANGIS",
+    "lat": 48.627661,
+    "lng": 2.395964,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0173",
+    "hostId": "ffvrc-0173",
+    "name": "AUTO RADIO COMMANDE ANGOULEME",
+    "city": "ANGOULEME",
+    "lat": 45.654117960367,
+    "lng": 0.14183703173831,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0085",
+    "hostId": "ffvrc-0085",
+    "name": "MINI RACING CLUB PALOIS",
+    "city": "PAU",
+    "lat": 43.306174,
+    "lng": -0.324816,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0626",
+    "hostId": "ffvrc-0626",
+    "name": "CLUB MODELISME DE LE PIN",
+    "city": "LE PIN",
+    "lat": 48.913841,
+    "lng": 2.638686,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0291",
+    "hostId": "ffvrc-0291",
+    "name": "BOLIDES RADIO COMMANDES PRADINES",
+    "city": "PRADINES",
+    "lat": 44.4793351985,
+    "lng": 1.395835371225,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0031",
+    "hostId": "ffvrc-0031",
+    "name": "AUTO MODELE LE GRAOUILLY",
+    "city": "METZ",
+    "lat": 49.122197,
+    "lng": 6.154447,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0156",
+    "hostId": "ffvrc-0156",
+    "name": "AUTO MODEL CLUB D'AMPUIS",
+    "city": "AMPUIS",
+    "lat": 45.494804,
+    "lng": 4.820992,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0051",
+    "hostId": "ffvrc-0051",
+    "name": "CLUB D'AUTOS RADIOCOMMANDEES DE BESANCON",
+    "city": null,
+    "lat": 47.194183,
+    "lng": 5.845969,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0694",
+    "hostId": "ffvrc-0694",
+    "name": "TOURLAVILLE MINI BOLIDES",
+    "city": null,
+    "lat": 49.631714,
+    "lng": -1.551068,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1154",
+    "hostId": "ffvrc-1154",
+    "name": "LOISIRS CREATIONS ACTIVITES",
+    "city": null,
+    "lat": -20.8949,
+    "lng": 55.414202,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0007",
+    "hostId": "ffvrc-0007",
+    "name": "RADIO COMMANDE CAR LYONNAIS",
+    "city": "LENTILLY",
+    "lat": 45.79422,
+    "lng": 4.668245,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0112",
+    "hostId": "ffvrc-0112",
+    "name": "CLUB AUTOS RADIO COMMANDEES DU BERRY",
+    "city": "MARMAGNE",
+    "lat": 47.079723,
+    "lng": 2.297838,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0494",
+    "hostId": "ffvrc-0494",
+    "name": "RADIO COMMANDE CLUB",
+    "city": null,
+    "lat": 49.374368,
+    "lng": 3.349843,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0302",
+    "hostId": "ffvrc-0302",
+    "name": "MARSEILLE MINI MODELES",
+    "city": "MARSEILLE",
+    "lat": 43.284438,
+    "lng": 5.510309,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0452",
+    "hostId": "ffvrc-0452",
+    "name": "BEAUMONT MONTEUX VOITURES RADIO COMMANDE",
+    "city": null,
+    "lat": 45.025131,
+    "lng": 4.925963,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0567",
+    "hostId": "ffvrc-0567",
+    "name": "AMICALE DES MODELISTES OLERONAIS",
+    "city": null,
+    "lat": 45.910948,
+    "lng": -1.2516,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0166",
+    "hostId": "ffvrc-0166",
+    "name": "MODEL CLUB DE CORNOUAILLE",
+    "city": "CONCARNEAU",
+    "lat": 47.898009,
+    "lng": -3.895169,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1158",
+    "hostId": "ffvrc-1158",
+    "name": "RC RACERS 67",
+    "city": "LOBSANN",
+    "lat": 48.97044,
+    "lng": 7.830068,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0823",
+    "hostId": "ffvrc-0823",
+    "name": "MINI RACING CLUB MUNICIPAL DE GRAYAN",
+    "city": null,
+    "lat": 45.43231,
+    "lng": -1.146441,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1131",
+    "hostId": "ffvrc-1131",
+    "name": "MONTEUX VENTOUX RADIO COMMANDE",
+    "city": "MONTEUX",
+    "lat": 44.052295,
+    "lng": 4.947656,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0659",
+    "hostId": "ffvrc-0659",
+    "name": "AUTO MODEL CLUB MONTBRISONNAIS",
+    "city": "MONTBRISON",
+    "lat": 45.61436,
+    "lng": 4.068525,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0878",
+    "hostId": "ffvrc-0878",
+    "name": "CLUB MODELISME A2TECH",
+    "city": null,
+    "lat": 48.224887,
+    "lng": 3.281715,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0915",
+    "hostId": "ffvrc-0915",
+    "name": "AUTO RC CABRIERES",
+    "city": null,
+    "lat": 43.892712,
+    "lng": 4.461243,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0168",
+    "hostId": "ffvrc-0168",
+    "name": "MODELISME ST AFFRICAIN",
+    "city": "ROQUEFORT-SUR-SOULZON",
+    "lat": 43.957785,
+    "lng": 2.948209,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1042",
+    "hostId": "ffvrc-1042",
+    "name": "MODELISME RACING CLUB DU DOMAINE",
+    "city": null,
+    "lat": -21.312545,
+    "lng": 55.549353,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0405",
+    "hostId": "ffvrc-0405",
+    "name": "MINI RACING CAR IGNYMONTAIN",
+    "city": "MONTIGNY-LE-BRETONNEUX",
+    "lat": 48.773607,
+    "lng": 2.020454,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1001",
+    "hostId": "ffvrc-1001",
+    "name": "POMMERAYE MINI RACING CAR",
+    "city": null,
+    "lat": 47.35837,
+    "lng": -0.870194,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0021",
+    "hostId": "ffvrc-0021",
+    "name": "MINI RACING CAR LONGVICIEN",
+    "city": "LONGVIC",
+    "lat": 47.288494,
+    "lng": 5.054859,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1100",
+    "hostId": "ffvrc-1100",
+    "name": "MODELISTES MULATINS",
+    "city": "LA MULATIERE",
+    "lat": 45.726484,
+    "lng": 4.806583,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0278",
+    "hostId": "ffvrc-0278",
+    "name": "MINI VOITURES HISPANO SUIZA",
+    "city": null,
+    "lat": 48.538756,
+    "lng": 7.445333,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0256",
+    "hostId": "ffvrc-0256",
+    "name": "MINI BOLIDES VICHY CUSSET BELLERIVE",
+    "city": "VICHY",
+    "lat": 46.139939,
+    "lng": 3.404903,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1147",
+    "hostId": "ffvrc-1147",
+    "name": "CENTRE ET LOISIR DE MODELISME DU VAL DE MARNE",
+    "city": "LA QUEUE-EN-BRIE",
+    "lat": 48.771942,
+    "lng": 2.584036,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1078",
+    "hostId": "ffvrc-1078",
+    "name": "TARNOS RACING ELECTRIC CAR",
+    "city": "TARNOS",
+    "lat": 43.546345,
+    "lng": -1.453656,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0929",
+    "hostId": "ffvrc-0929",
+    "name": "BUGGY CLUB CAPDENACOIS",
+    "city": null,
+    "lat": 44.575435,
+    "lng": 2.090196,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1138",
+    "hostId": "ffvrc-1138",
+    "name": "UNION SPORTIVE CHEMINOTE DE VENAREY LES AUMES",
+    "city": null,
+    "lat": 47.518056,
+    "lng": 4.459805,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0964",
+    "hostId": "ffvrc-0964",
+    "name": "NANTES RACING CLUB",
+    "city": null,
+    "lat": 47.106741,
+    "lng": -1.545285,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-15",
+    "hostId": "ffvrc-15",
+    "name": "Ligue Régionale Nouvelle Aquitaine (Zone15)",
+    "city": "REIGNAC",
+    "lat": 45.236528444255,
+    "lng": -0.52123704507449,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0796",
+    "hostId": "ffvrc-0796",
+    "name": "RADIO MODELISME BASTIDIEN",
+    "city": "LABASTIDE-SAINT-PIERRE",
+    "lat": 43.898696,
+    "lng": 1.358485,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1057",
+    "hostId": "ffvrc-1057",
+    "name": "CLUB VOITURES RADIO-COMMANDEES 01",
+    "city": "PERREX",
+    "lat": 46.245991,
+    "lng": 4.997808,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0892",
+    "hostId": "ffvrc-0892",
+    "name": "TIGER RACING MODELISME 41",
+    "city": "DHUIZON",
+    "lat": 47.61626382928,
+    "lng": 1.6667032241821,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0334",
+    "hostId": "ffvrc-0334",
+    "name": "MODELISME MAUREPAS CLUB",
+    "city": "MAUREPAS",
+    "lat": 48.760012,
+    "lng": 1.913393,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0727",
+    "hostId": "ffvrc-0727",
+    "name": "CLUB MONTCELLIEN D'AUTO RADIO COMMANDE",
+    "city": null,
+    "lat": 46.689788,
+    "lng": 4.378717,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0339",
+    "hostId": "ffvrc-0339",
+    "name": "CASTRES AUTO MODELISME 81",
+    "city": "CASTRES",
+    "lat": 43.593749,
+    "lng": 2.187814,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1101",
+    "hostId": "ffvrc-1101",
+    "name": "MABLY MINI BOLIDE",
+    "city": "MABLY",
+    "lat": 46.0906,
+    "lng": 4.077435,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0514",
+    "hostId": "ffvrc-0514",
+    "name": "MINI CAR CLUB DAMMARTINOIS",
+    "city": "DAMMARTIN-EN-GOELE",
+    "lat": 49.064598,
+    "lng": 2.683237,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0954",
+    "hostId": "ffvrc-0954",
+    "name": "HEUGAS RACING CLUB",
+    "city": "HEUGAS",
+    "lat": 43.626104,
+    "lng": -1.060202,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0483",
+    "hostId": "ffvrc-0483",
+    "name": "CLUB DE BUGGY COMMINGEOIS",
+    "city": null,
+    "lat": 43.098319,
+    "lng": 0.705992,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1169",
+    "hostId": "ffvrc-1169",
+    "name": "AUTO MODELISME RACING CLUB 27",
+    "city": null,
+    "lat": 48.726454,
+    "lng": 0.908644,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0570",
+    "hostId": "ffvrc-0570",
+    "name": "CLUB MODELISME AUTO DE TOMBLAINE",
+    "city": "TOMBLAINE",
+    "lat": 48.675026,
+    "lng": 6.234442,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1102",
+    "hostId": "ffvrc-1102",
+    "name": "ELECTRIC FAST CARS FENOUILLET",
+    "city": "FENOUILLET",
+    "lat": 43.671519,
+    "lng": 1.386724,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0296",
+    "hostId": "ffvrc-0296",
+    "name": "MINI BOLID' CLUB PERTUISIEN",
+    "city": "PERTUIS",
+    "lat": 43.668756,
+    "lng": 5.503281,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0508",
+    "hostId": "ffvrc-0508",
+    "name": "TEAM ELECTRIC BUGGY",
+    "city": "GARGENVILLE",
+    "lat": 48.985931,
+    "lng": 1.818808,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0992",
+    "hostId": "ffvrc-0992",
+    "name": "MONSTER TRUCK TEAM 16",
+    "city": null,
+    "lat": 45.871569,
+    "lng": 0.583854,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0631",
+    "hostId": "ffvrc-0631",
+    "name": "MODELES REDUITS COTE DE NACRE",
+    "city": null,
+    "lat": 49.325262,
+    "lng": -0.385202,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1033",
+    "hostId": "ffvrc-1033",
+    "name": "X-TREME BUGGY LA BRILLANNE",
+    "city": "LA BRILLANNE",
+    "lat": 43.927216,
+    "lng": 5.895415,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1066",
+    "hostId": "ffvrc-1066",
+    "name": "RACING CAR NOIZEEN",
+    "city": "NOIZAY",
+    "lat": 47.406076,
+    "lng": 0.896158,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1176",
+    "hostId": "ffvrc-1176",
+    "name": "RC PARK",
+    "city": "ERQUINGHEM-LYS",
+    "lat": 50.678583,
+    "lng": 2.850842,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0432",
+    "hostId": "ffvrc-0432",
+    "name": "MINI RACING CLUB PENNES MIRABEAU",
+    "city": null,
+    "lat": 43.398871,
+    "lng": 5.326241,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0718",
+    "hostId": "ffvrc-0718",
+    "name": "CLUB AUTOMODELISME DE VIGLAIN",
+    "city": "VIGLAIN",
+    "lat": 47.730912,
+    "lng": 2.30919,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1103",
+    "hostId": "ffvrc-1103",
+    "name": "SERMAISE ELECTRO MODELISME",
+    "city": "SERMAISE",
+    "lat": 48.535051,
+    "lng": 2.071586,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0529",
+    "hostId": "ffvrc-0529",
+    "name": "TOURNEFEUILLE VOITURES RADIO COMMANDEES",
+    "city": "TOURNEFEUILLE",
+    "lat": 43.56472,
+    "lng": 1.345226,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0257",
+    "hostId": "ffvrc-0257",
+    "name": "AUTO MODEL CLUB DE L'OUEST",
+    "city": "BREST",
+    "lat": 48.421308745145,
+    "lng": -4.4583999185242,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-1083",
+    "hostId": "ffvrc-1083",
+    "name": "AUTODROME RC DU FOREZ",
+    "city": "BOISSET ST PRIEST",
+    "lat": 45.507200741936,
+    "lng": 4.1104681586914,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0070",
+    "hostId": "ffvrc-0070",
+    "name": "RADIO AUTOMOBILE CLUB DU GRESIVAUDAN",
+    "city": null,
+    "lat": 45.212655,
+    "lng": 5.82979,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0089",
+    "hostId": "ffvrc-0089",
+    "name": "RADIO SPORT MODELISME AULNAY",
+    "city": "TREMBLAY-EN-FRANCE",
+    "lat": 48.978583,
+    "lng": 2.52398,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  },
+  {
+    "id": "ffvrc-0547",
+    "hostId": "ffvrc-0547",
+    "name": "MINI AUTO CLUB INGRANDAIS",
+    "city": "INGRANDES SUR VIENNE",
+    "lat": 46.866632,
+    "lng": 0.561547,
+    "country": "FR",
+    "source": "ffvrc-calendar"
+  }
+]

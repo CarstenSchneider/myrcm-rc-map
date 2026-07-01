@@ -127,11 +127,11 @@
       },
       {
         "name": "Stock Challenge",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "Clubman Challenge",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [
@@ -552,8 +552,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 63,
-    "registrationDisplay": "63",
+    "registrationCount": 64,
+    "registrationDisplay": "64",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Süd",
@@ -585,7 +585,7 @@
       },
       {
         "name": "RCK Porsche",
-        "entries": 8
+        "entries": 9
       }
     ],
     "documents": [
@@ -701,8 +701,8 @@
     "registrationOpens": null,
     "registrationRequiresLogin": false,
     "registrationSource": "rck",
-    "registrationCount": 26,
-    "registrationDisplay": "26",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "comingSoon": false,
     "note": null,
     "rckGroup": "Nord",
@@ -722,7 +722,7 @@
       },
       {
         "name": "Porsche Cup",
-        "entries": 14
+        "entries": 15
       },
       {
         "name": "VTA",
