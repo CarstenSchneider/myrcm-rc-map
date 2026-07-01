@@ -4086,6 +4086,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "ffvrc-0210",
+    "hostName": "ANJOU MINI RACING TEAM",
+    "lat": 47.43395760306007,
+    "lng": -0.5120003624820091
+  },
+  {
     "hostId": "dmc-bc-mitterkreith",
     "hostName": "BC Mitterkreith",
     "lat": 49.21155192592243,
@@ -4148,6 +4154,35 @@
     "lng": 3.8388580908852754,
     "myrcmOrgId": "62332",
     "country": "BE"
+  },
+  {
+    "hostId": "ffvrc-0578",
+    "hostName": "BUGGY'S RACING CLUB AVESNOIS",
+    "lat": 50.11661694423183,
+    "lng": 3.9145484525814114
+  },
+  {
+    "hostId": "ffvrc-1072",
+    "hostName": "CELTIC CPB RACING 35",
+    "lat": 48.10268972997567,
+    "lng": -1.4264575482891342
+  },
+  {
+    "hostId": "ffvrc-0466",
+    "hostName": "CLUB AUTOMOBILE R/C ARTESIEN -",
+    "lat": 50.48318631691692,
+    "lng": 2.681954278171369
+  },
+  {
+    "hostId": "ffvrc-1164",
+    "hostName": "CLUB MODELISME CABOURG",
+    "locationUnknown": true
+  },
+  {
+    "hostId": "ffvrc-0270",
+    "hostName": "COGOLIN RADIO COMMANDE MAX FUSION",
+    "lat": 43.25254944891629,
+    "lng": 6.508353326496667
   },
   {
     "hostId": "mac-de-baanbrekers",
@@ -4306,6 +4341,11 @@
     "country": "NL"
   },
   {
+    "hostId": "ffvrc-20",
+    "hostName": "Ligue Régionale Antilles (Zone20) -",
+    "locationUnknown": true
+  },
+  {
     "hostId": "lmcc",
     "hostName": "LMCC",
     "lat": 49.58092061399585,
@@ -4454,6 +4494,18 @@
     "locationUnknown": true,
     "myrcmOrgId": "25367",
     "country": "France"
+  },
+  {
+    "hostId": "ffvrc-0375",
+    "hostName": "MINI AUTO CLUB LOUDUNAIS",
+    "lat": 47.03576101608382,
+    "lng": 0.07098491588301804
+  },
+  {
+    "hostId": "ffvrc-1185",
+    "hostName": "MINI BOLIDES JANZEENS 35",
+    "lat": 47.96365396454926,
+    "lng": -1.495256113843914
   },
   {
     "hostId": "mini-racing-car-liege",
@@ -4695,6 +4747,11 @@
     "lng": 10.77563474253423,
     "country": "DE",
     "website": "http://Offroad-Club-Ostsee.Modellbuggy.de"
+  },
+  {
+    "hostId": "ffvrc-0839",
+    "hostName": "OPALE RADIO COMMANDEE AUTOMOBILE",
+    "locationUnknown": true
   },
   {
     "hostId": "orra",
@@ -5064,6 +5121,11 @@
     "country": "DE"
   },
   {
+    "hostId": "ffvrc-1024",
+    "hostName": "SPORTS RC 56",
+    "locationUnknown": true
+  },
+  {
     "hostId": "tamiya-cup-nl",
     "hostName": "Tamiya Cup NL",
     "locationUnknown": true,
@@ -5120,6 +5182,12 @@
     ],
     "country": "DE",
     "website": "http://www.ttsc-racing.de"
+  },
+  {
+    "hostId": "ffvrc-0269",
+    "hostName": "TURBIE RACING CLUB",
+    "lat": 43.72726687552217,
+    "lng": 7.391650472163486
   },
   {
     "hostId": "yellowracing-v2-0",

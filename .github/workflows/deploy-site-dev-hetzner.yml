@@ -34,6 +34,10 @@ jobs:
           cp rck-races.json .deploy-site/ 2>/dev/null || true
           cp dmc-races.json .deploy-site/ 2>/dev/null || true
           cp dmc-venues.json .deploy-site/ 2>/dev/null || true
+          cp ffvrc-races.json .deploy-site/ 2>/dev/null || true
+          cp ffvrc-venues.json .deploy-site/ 2>/dev/null || true
+          cp rcco-races.json .deploy-site/ 2>/dev/null || true
+          cp rcco-venues.json .deploy-site/ 2>/dev/null || true
           cp venues.json .deploy-site/
           cp hosts.json .deploy-site/
           cp rck-venue-candidates.json .deploy-site/ 2>/dev/null || true
