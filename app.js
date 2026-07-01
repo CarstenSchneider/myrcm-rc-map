@@ -521,9 +521,11 @@ function locateUser(btn) {
     },
     (err) => {
       btn.classList.remove("is-locating");
+      btn.classList.add("is-error");
+      setTimeout(() => btn.classList.remove("is-error"), 2000);
       console.warn("Geolocation:", err.message);
     },
-    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+    { enableHighAccuracy: false, timeout: 8000, maximumAge: 60000 }
   );
 }
 
