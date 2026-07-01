@@ -5110,6 +5110,11 @@
     "country": "DE"
   },
   {
+    "hostId": "ffvrc-1024",
+    "hostName": "SPORTS RC 56",
+    "locationUnknown": true
+  },
+  {
     "hostId": "tamiya-cup-nl",
     "hostName": "Tamiya Cup NL",
     "locationUnknown": true,
