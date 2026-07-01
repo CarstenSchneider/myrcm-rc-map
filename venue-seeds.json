@@ -5090,5 +5090,37 @@
     "locationUnknown": true,
     "myrcmOrgId": "41053",
     "country": "BE"
+  },
+  {
+    "id": "myrcm-mini-auto-charmes",
+    "hostId": "mini-auto-club-de-charmes-sur-rhone",
+    "hostName": "Mini auto Club de Charmes Sur Rhone",
+    "locationUnknown": true,
+    "myrcmOrgId": "25367",
+    "country": "France"
+  },
+  {
+    "id": "myrcm-pommeraye-mini-racing",
+    "hostId": "pommeraye-mini-racing-car",
+    "hostName": "POMMERAYE MINI RACING CAR",
+    "locationUnknown": true,
+    "myrcmOrgId": "37401",
+    "country": "France"
+  },
+  {
+    "id": "myrcm-reims-enduro",
+    "hostId": "reims-enduro-model-car",
+    "hostName": "Reims Enduro Model Car",
+    "locationUnknown": true,
+    "myrcmOrgId": "24695",
+    "country": "France"
+  },
+  {
+    "id": "myrcm-sermaise-electro",
+    "hostId": "sermaise-electro-modelisme",
+    "hostName": "Sermaise Electro Modelisme",
+    "locationUnknown": true,
+    "myrcmOrgId": "46243",
+    "country": "France"
   }
 ]
