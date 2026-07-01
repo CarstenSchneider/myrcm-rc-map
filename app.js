@@ -316,8 +316,8 @@ function updateCountryPill() {
 }
 
 function _buildPickerHtml() {
-  return countryFlags.map(f =>
-    `<button class="country-picker-item${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${t("country." + f.country)}">` +
+  return countryFlags.filter(f => f.country !== selectedCountry).map(f =>
+    `<button class="country-picker-item" data-country="${f.country}" aria-label="${t("country." + f.country)}">` +
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
     `</button>`
   ).join("");
@@ -363,8 +363,8 @@ function _closeCountryPicker(country) {
     _zoomToCountryPending = true;
     render();
     updateCountryOutline();
-  } else if (country !== undefined) {
-    fitToCountry(country);
+  } else if (selectedCountry !== "all") {
+    fitToCountry(selectedCountry);
   }
 }
 
