@@ -4488,6 +4488,11 @@
     "website": "http://modellfreunde-kuerten.de/"
   },
   {
+    "hostId": "ffvrc-0365",
+    "hostName": "MINI AUTO CLUB ANDELYSIEN",
+    "locationUnknown": true
+  },
+  {
     "id": "myrcm-mini-auto-charmes",
     "hostId": "mini-auto-club-de-charmes-sur-rhone",
     "hostName": "Mini auto Club de Charmes Sur Rhone",
