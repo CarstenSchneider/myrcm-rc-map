@@ -4086,6 +4086,12 @@
     "locationUnknown": true
   },
   {
+    "hostId": "ffvrc-0210",
+    "hostName": "ANJOU MINI RACING TEAM",
+    "lat": 47.43395760306007,
+    "lng": -0.5120003624820091
+  },
+  {
     "hostId": "dmc-bc-mitterkreith",
     "hostName": "BC Mitterkreith",
     "lat": 49.21155192592243,
