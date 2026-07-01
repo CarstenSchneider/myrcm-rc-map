@@ -4335,6 +4335,11 @@
     "country": "NL"
   },
   {
+    "hostId": "ffvrc-20",
+    "hostName": "Ligue Régionale Antilles (Zone20) -",
+    "locationUnknown": true
+  },
+  {
     "hostId": "lmcc",
     "hostName": "LMCC",
     "lat": 49.58092061399585,
