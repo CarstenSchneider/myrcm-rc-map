@@ -905,44 +905,71 @@ input {
 }
 .locate-btn:hover { transform: scale(1.08); }
 
-/* Country filter pill — fixed directly below locate button */
+/* Country filter — toggle button (circle) */
 .country-pill {
   position: fixed;
   top: 152px;  /* fallback; overridden by positionCountryPillDesktop() */
   left: 14px;
   z-index: 1000;
-  display: flex;
-  align-items: center;
+  width: 40px;
   height: 40px;
-  max-width: 40px;
-  border-radius: 999px;
+  border-radius: 50%;
+  border: none;
   background: rgba(var(--panel-rgb), 0.98);
   box-shadow: 0 6px 16px rgba(var(--shadow-rgb), 0.08);
-  overflow: hidden;
   opacity: 0;
-  transition: max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  transition: opacity 0.35s ease, transform 120ms ease;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-}
-.country-pill.is-expanded { max-width: 324px; }
-
-.country-pill-btn {
-  flex: 0 0 40px;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 120ms ease;
+}
+.country-pill:hover { transform: scale(1.08); }
+
+/* Country picker — floating grid panel */
+.country-picker {
+  position: fixed;
+  z-index: 1001;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 8px;
+  background: rgba(var(--panel-rgb), 0.98);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(var(--shadow-rgb), 0.14);
+}
+.country-picker.is-open { display: grid; }
+
+.country-picker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 6px 5px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 52px;
+  transition: background 120ms ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-.country-pill-btn:hover { transform: scale(1.08); }
+.country-picker-item:hover { background: rgba(var(--shadow-rgb), 0.06); }
+.country-picker-item.is-active { background: var(--accent); }
+
+.country-picker-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--text);
+  font-family: inherit;
+  line-height: 1;
+}
+.country-picker-item.is-active .country-picker-label { color: #fff; }
 
 .country-flag-icon {
   display: block;
@@ -963,23 +990,19 @@ body.is-breakpoint-crossing .country-pill {
   transition: none !important;
 }
 
-/* Dark mode: pill and locate match the mob-menu-btn color */
+/* Dark mode */
 :root.theme-dark .country-pill { background: var(--pill-bg) !important; }
+:root.theme-dark .country-picker { background: var(--pill-bg) !important; }
 :root.theme-dark .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-light) .country-pill { background: var(--pill-bg) !important; }
+  :root:not(.theme-light) .country-picker { background: var(--pill-bg) !important; }
   :root:not(.theme-light) .locate-btn { background: var(--pill-bg) !important; color: #fff !important; }
 }
 
 @media (max-width: 860px) {
   .country-pill {
     top: 136px;  /* 74 (locate top) + 52 (locate height) + 10 gap */
-    height: 52px;
-    max-width: 52px;
-  }
-  .country-pill.is-expanded { max-width: 420px; }
-  .country-pill-btn {
-    flex: 0 0 52px;
     width: 52px;
     height: 52px;
   }

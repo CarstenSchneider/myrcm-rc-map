@@ -217,7 +217,7 @@ Service ID render.com: `crn-d8v9a4bsq97s73827f8g`
 ### Cache-Busting
 `index.html` verlinkt `app.js?v=XX` und `style.css?v=YY`. Bei jeder Änderung an `app.js` die Versionsnummer in `index.html` hochzählen.
 
-Aktuelle Version: **app.js v291**, **style.css v168**
+Aktuelle Version: **app.js v313**, **style.css v179**
 
 ## Import-System
 

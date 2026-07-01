@@ -275,89 +275,124 @@ const countryFlags = [
   { country: "FR",  code: "fr", label: "Frankreich" },
 ];
 let _countryPill = null;
+let _countryPicker = null;
+let _pickerIsOpen = false;
+let _pickerTouchHandled = false;
+let _pickerLastClose = 0;
 
 function updateCountryPill() {
   if (!_countryPill) return;
-  const ordered = [
-    countryFlags.find(f => f.country === selectedCountry),
-    ...countryFlags.filter(f => f.country !== selectedCountry),
-  ];
-  _countryPill.innerHTML = ordered.map(f =>
-    `<button class="country-pill-btn${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${t('country.' + f.country)}">` +
+  const f = countryFlags.find(cf => cf.country === selectedCountry) ?? countryFlags[0];
+  _countryPill.innerHTML = `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>`;
+  _countryPill.setAttribute("aria-label", t("country." + f.country));
+}
+
+function _buildPickerHtml() {
+  return countryFlags.map(f =>
+    `<button class="country-picker-item${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${t("country." + f.country)}">` +
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
+    `<span class="country-picker-label">${f.country === "all" ? "EU" : f.country}</span>` +
     `</button>`
   ).join("");
 }
 
-_countryPill = document.createElement("div");
-_countryPill.className = "country-pill";
-
-let _pillIsExpanded = false;
-let _pillLastClose = 0;
-let _pillTouchHandled = false;
-
-function _pillOpen() {
-  _pillIsExpanded = true;
-  _countryPill.classList.add("is-expanded");
+function _positionCountryPicker() {
+  if (!_countryPicker || !_countryPill) return;
+  const pillRect = _countryPill.getBoundingClientRect();
+  const pickerW = _countryPicker.offsetWidth;
+  const pickerH = _countryPicker.offsetHeight;
+  const gap = 8;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  let left = pillRect.right + gap;
+  if (left + pickerW > vw - gap) left = pillRect.left - pickerW - gap;
+  left = Math.max(gap, left);
+  let top = pillRect.top;
+  if (top + pickerH > vh - gap) top = Math.max(gap, vh - pickerH - gap);
+  _countryPicker.style.left = left + "px";
+  _countryPicker.style.top = top + "px";
 }
-function _pillClose(country) {
-  _pillIsExpanded = false;
-  _pillLastClose = Date.now();
-  _countryPill.classList.remove("is-expanded");
-  if (country !== selectedCountry) {
+
+function _openCountryPicker() {
+  if (_pickerIsOpen || Date.now() - _pickerLastClose < 200) return;
+  _pickerIsOpen = true;
+  _countryPicker.innerHTML = _buildPickerHtml();
+  _countryPicker.classList.add("is-open");
+  _positionCountryPicker();
+  _countryPill.setAttribute("aria-expanded", "true");
+}
+
+function _closeCountryPicker(country) {
+  if (!_pickerIsOpen) return;
+  _pickerIsOpen = false;
+  _pickerLastClose = Date.now();
+  _countryPicker.classList.remove("is-open");
+  _countryPill.setAttribute("aria-expanded", "false");
+  if (country !== undefined && country !== selectedCountry) {
     selectedCountry = country;
     localStorage.setItem("rcRaceMapCountry", country);
     updateCountryPill();
     populateSeries();
     _zoomToCountryPending = true;
-    setTimeout(render, 270); // defer past 250ms close transition
-  } else {
-    setTimeout(() => fitToCountry(country), 270);
+    render();
+  } else if (country !== undefined) {
+    fitToCountry(country);
   }
 }
 
-// Touch: touchstart + preventDefault stops all iOS synthetic events
+_countryPill = document.createElement("button");
+_countryPill.className = "country-pill";
+_countryPill.setAttribute("type", "button");
+_countryPill.setAttribute("aria-haspopup", "listbox");
+_countryPill.setAttribute("aria-expanded", "false");
+
+_countryPicker = document.createElement("div");
+_countryPicker.className = "country-picker";
+_countryPicker.setAttribute("role", "listbox");
+
+// Toggle button: open/close picker
 _countryPill.addEventListener("touchstart", e => {
   e.preventDefault();
-  _pillTouchHandled = true;
-  const btn = e.target.closest(".country-pill-btn");
-  if (_pillIsExpanded) {
-    // Fallback to active btn if touch missed (border-radius hit-test edge case)
-    const country = (btn ?? _countryPill.querySelector(".country-pill-btn.is-active"))?.dataset.country ?? selectedCountry;
-    _pillClose(country);
-  } else if (btn && Date.now() - _pillLastClose > 300) {
-    _pillOpen();
-  }
+  _pickerTouchHandled = true;
+  if (_pickerIsOpen) _closeCountryPicker();
+  else _openCountryPicker();
 }, { passive: false });
 
-// Desktop mouse click (skipped when touch already handled it)
 _countryPill.addEventListener("click", e => {
-  if (_pillTouchHandled) { _pillTouchHandled = false; return; }
-  const btn = e.target.closest(".country-pill-btn");
-  if (!btn) return;
-  e.stopPropagation();
-  if (_pillIsExpanded) _pillClose(btn.dataset.country);
-  else _pillOpen();
+  if (_pickerTouchHandled) { _pickerTouchHandled = false; return; }
+  if (_pickerIsOpen) _closeCountryPicker();
+  else _openCountryPicker();
 });
 
-// Close when tapping anywhere outside the pill
+// Picker items: select country
+_countryPicker.addEventListener("touchstart", e => {
+  e.preventDefault();
+  _pickerTouchHandled = true;
+  const item = e.target.closest(".country-picker-item");
+  if (item) _closeCountryPicker(item.dataset.country);
+}, { passive: false });
+
+_countryPicker.addEventListener("click", e => {
+  if (_pickerTouchHandled) { _pickerTouchHandled = false; return; }
+  const item = e.target.closest(".country-picker-item");
+  if (item) _closeCountryPicker(item.dataset.country);
+});
+
+// Close on outside interaction
 document.addEventListener("touchstart", e => {
-  if (_pillIsExpanded && !_countryPill.contains(e.target)) {
-    _pillIsExpanded = false;
-    _pillLastClose = Date.now();
-    _countryPill.classList.remove("is-expanded");
+  if (_pickerIsOpen && !_countryPill.contains(e.target) && !_countryPicker.contains(e.target)) {
+    _closeCountryPicker();
   }
 }, { passive: true });
 
-// Desktop hover expansion (only on real pointer devices)
-if (window.matchMedia("(hover: hover)").matches) {
-  _countryPill.addEventListener("mouseenter", _pillOpen);
-  _countryPill.addEventListener("mouseleave", () => {
-    _pillIsExpanded = false;
-    _countryPill.classList.remove("is-expanded");
-  });
-}
+document.addEventListener("click", e => {
+  if (_pickerIsOpen && !_countryPill.contains(e.target) && !_countryPicker.contains(e.target)) {
+    _closeCountryPicker();
+  }
+}, { capture: true });
+
 document.body.appendChild(_countryPill);
+document.body.appendChild(_countryPicker);
 updateCountryPill();
 
 // Move locate button out of Leaflet control into the correct slot
@@ -387,6 +422,7 @@ function positionCountryPillDesktop() {
   const locateCenter = locateRect.top + locateRect.height / 2;
   const spacing = locateCenter - menuCenter;
   _countryPill.style.top = Math.round(locateCenter + spacing - _countryPill.offsetHeight / 2) + "px";
+  if (_pickerIsOpen) _positionCountryPicker();
 }
 requestAnimationFrame(positionCountryPillDesktop);
 if (!localStorage.getItem("locateBtnHinted")) {
