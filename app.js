@@ -6355,6 +6355,8 @@ function renderAdminPruefenTab(container) {
   }).catch(e => { container.innerHTML = `<p class="admin-error">Fehler: ${e.message}</p>`; });
 }
 
+let _adminPageReady = false;
+
 function openAdminPage() {
   const adminPage = document.getElementById("adminPage");
   const listEl = document.getElementById("adminPageList");
@@ -6362,6 +6364,17 @@ function openAdminPage() {
 
   closeAppMenu();
   adminPage.hidden = false;
+
+  // Re-register back button each time (once: true removes it after first use)
+  document.getElementById("adminPageBack")?.addEventListener("click", () => {
+    adminPage.hidden = true;
+    openAppMenu();
+  }, { once: true });
+
+  // Don't re-fetch/rebuild if already initialized — raw.githubusercontent.com CDN cache
+  // can be several minutes stale, causing freshly committed seeds to disappear on return.
+  if (_adminPageReady) return;
+  _adminPageReady = true;
 
   listEl.innerHTML = `
     <div class="admin-tabs">
@@ -6391,11 +6404,6 @@ function openAdminPage() {
     const tab = ev.target.closest("[data-tab]")?.dataset.tab;
     if (tab) showTab(tab);
   });
-
-  document.getElementById("adminPageBack")?.addEventListener("click", () => {
-    adminPage.hidden = true;
-    openAppMenu();
-  }, { once: true });
 
   showTab("strecken");
 }
