@@ -58,7 +58,8 @@ const COUNTRY_BOUNDS = {
   NL: [[50.75, 3.35], [53.55, 7.22]],
   BE: [[49.5, 2.55], [51.5, 6.4]],
   LU: [[49.44, 5.73], [50.19, 6.53]],
-  all: [[45.7, 2.55], [55.1, 17.5]],
+  FR: [[42.3, -4.8], [51.1, 8.2]],
+  all: [[42.3, -4.8], [55.1, 17.5]],
 };
 
 function detectCountryFromLocale() {
@@ -71,7 +72,7 @@ function detectCountryFromLocale() {
   // Timezone fallback: handles bare locale codes
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU" };
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU", "Europe/Paris": "FR" };
     if (tzCountry[tz]) return tzCountry[tz];
   } catch (_) {}
   return "all";
