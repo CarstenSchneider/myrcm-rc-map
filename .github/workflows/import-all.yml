@@ -72,11 +72,6 @@ jobs:
         continue-on-error: true
         run: node import-dmc.js
 
-      - name: Import FFVRC
-        id: import_ffvrc
-        continue-on-error: true
-        run: node import-ffvrc.js
-
       # RCCO-Import deaktiviert — Nutzungsbedingungen von rccar-online.de verbieten Scraping.
       # Wird reaktiviert sobald eine offizielle Genehmigung vorliegt.
 
@@ -91,8 +86,7 @@ jobs:
         run: |
           DATA_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
             rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json
-            ffvrc-races.json ffvrc-venues.json"
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json"
           git fetch origin main
           # Reset index to latest origin/main (keeps working tree = import output)
           git reset --mixed origin/main
@@ -111,8 +105,7 @@ jobs:
         run: |
           DATA_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json
             rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json
-            dmc-races.json dmc-venues.json dmc-pdf-cache.json
-            ffvrc-races.json ffvrc-venues.json"
+            dmc-races.json dmc-venues.json dmc-pdf-cache.json"
           git fetch origin dev
           git checkout -f -B dev origin/dev
           # Bring data files from freshly committed main
@@ -135,7 +128,6 @@ jobs:
                    rck-races.json rck-venue-candidates.json rck-unmatched-venues.json \
                    dmc-races.json dmc-venues.json \
                    rcco-races.json rcco-venues.json \
-                   ffvrc-races.json ffvrc-venues.json \
                    myrcm-hosts-dach.json; do
             cp "$f" .deploy-data/ 2>/dev/null || true
           done

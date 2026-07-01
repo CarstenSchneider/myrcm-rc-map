@@ -60,7 +60,6 @@ const COUNTRY_VIEWS = {
   DE:  { bounds: [[47.2,  5.8],  [55.1, 15.1]],  center: [51.2, 10.4],  minZoom: 6, maxZoom: 8 },
   AT:  { bounds: [[46.2,  9.4],  [49.0, 17.2]],  center: [47.6, 13.3],  minZoom: 7, maxZoom: 9 },
   CH:  { bounds: [[45.7,  5.9],  [47.9, 10.6]],  center: [46.8,  8.2],  minZoom: 7, maxZoom: 9 },
-  FR:  { bounds: [[42.3, -4.8],  [51.1,  8.2]],  center: [46.5,  2.3],  minZoom: 6, maxZoom: 8 },
   NL:  { bounds: [[50.75, 3.35], [53.55, 7.22]], center: [52.3,  5.3],  minZoom: 7, maxZoom: 9 },
   BE:  { bounds: [[49.5,  2.55], [51.5,  6.4]],  center: [50.5,  4.5],  minZoom: 7, maxZoom: 9 },
   LU:  { bounds: [[49.44, 5.73], [50.19, 6.53]], center: [49.8,  6.1],  minZoom: 8, maxZoom: 10 },
@@ -76,7 +75,7 @@ function detectCountryFromLocale() {
   // Timezone fallback: handles bare locale codes
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU", "Europe/Paris": "FR" };
+    const tzCountry = { "Europe/Berlin": "DE", "Europe/Busingen": "DE", "Europe/Vienna": "AT", "Europe/Zurich": "CH", "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Luxembourg": "LU" };
     if (tzCountry[tz]) return tzCountry[tz];
   } catch (_) {}
   return "all";
@@ -110,7 +109,7 @@ function fitToCountry(country) {
   }
 }
 
-const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU", "FR"]);
+const _validCountries = new Set(["all", "DE", "AT", "CH", "NL", "BE", "LU"]);
 const _savedCountry = localStorage.getItem("rcRaceMapCountry");
 let selectedCountry = _validCountries.has(_savedCountry) ? _savedCountry : detectCountryFromLocale();
 let _zoomToCountryPending = false;
@@ -124,7 +123,6 @@ const TRANSLATIONS = {
   "country.NL":         { de: "Niederlande",   en: "Netherlands",    fr: "Pays-Bas",            nl: "Nederland" },
   "country.BE":         { de: "Belgien",       en: "Belgium",        fr: "Belgique",            nl: "België" },
   "country.LU":         { de: "Luxemburg",     en: "Luxembourg",     fr: "Luxembourg",          nl: "Luxemburg" },
-  "country.FR":         { de: "Frankreich",    en: "France",         fr: "France",              nl: "Frankrijk" },
   "filter.range.2w":    { de: "2 Wochen",      en: "2 weeks",        fr: "2 semaines",          nl: "2 weken" },
   "filter.range.4w":    { de: "4 Wochen",      en: "4 weeks",        fr: "4 semaines",          nl: "4 weken" },
   "filter.range.all":   { de: "Alle",          en: "All",            fr: "Toutes",              nl: "Alle" },
@@ -297,7 +295,6 @@ const countryFlags = [
   { country: "DE",  code: "de", label: "Deutschland" },
   { country: "AT",  code: "at", label: "Österreich" },
   { country: "CH",  code: "ch", label: "Schweiz" },
-  { country: "FR",  code: "fr", label: "Frankreich" },
   { country: "NL",  code: "nl", label: "Niederlande" },
   { country: "BE",  code: "be", label: "Belgien" },
   { country: "LU",  code: "lu", label: "Luxemburg" },
@@ -2187,7 +2184,7 @@ function matchesFavoriteFilter(race) {
   return selectedFavoriteFilter !== "favorites" || isFavoriteRace(race);
 }
 
-const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU", France: "FR" };
+const _countryNameToCode = { Austria: "AT", Switzerland: "CH", Germany: "DE", Netherlands: "NL", Belgium: "BE", Luxembourg: "LU" };
 function venueCountry(venue) {
   if (!venue) return null;
   if (venue.myrcmOrgId) {
@@ -4873,7 +4870,7 @@ async function init() {
 
   const cacheBuster = Date.now();
 
-  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse, ffvrcRacesRawResponse, ffvrcVenuesRawResponse] = await Promise.all([
+  const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
     fetch(`races.json?v=${cacheBuster}`),
     fetch(`rck-races.json?v=${cacheBuster}`).catch(() => null),
@@ -4885,8 +4882,6 @@ async function init() {
     fetch(`dmc-venues.json?v=${cacheBuster}`).catch(() => null),
     fetch(`rcco-races.json?v=${cacheBuster}`).catch(() => null),
     fetch(`rcco-venues.json?v=${cacheBuster}`).catch(() => null),
-    fetch(`ffvrc-races.json?v=${cacheBuster}`).catch(() => null),
-    fetch(`ffvrc-venues.json?v=${cacheBuster}`).catch(() => null),
   ]);
 
   // Non-blocking: country border polygons for outline highlight
@@ -4915,13 +4910,9 @@ async function init() {
   const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
   const rccoVenuesRaw = await responseJsonOrFallback(rccoVenuesRawResponse, []);
   const rccoVenues = Array.isArray(rccoVenuesRaw) ? rccoVenuesRaw : [];
-  const ffvrcRacesRaw = await responseJsonOrFallback(ffvrcRacesRawResponse, []);
-  const ffvrcRaces = Array.isArray(ffvrcRacesRaw) ? ffvrcRacesRaw : [];
-  const ffvrcVenuesRaw = await responseJsonOrFallback(ffvrcVenuesRawResponse, []);
-  const ffvrcVenues = Array.isArray(ffvrcVenuesRaw) ? ffvrcVenuesRaw : [];
 
   venues = mergeVenues(
-    [...baseVenues, ...dmcVenues, ...rccoVenues, ...ffvrcVenues],
+    [...baseVenues, ...dmcVenues, ...rccoVenues],
     rckVenueCandidates,
     { requireVerifiedAddress: true }
   );
@@ -4964,24 +4955,7 @@ async function init() {
         return false;
       });
     });
-  const knownRacesWithRcco = [...knownRaces, ...filteredRccoRaces];
-  races = [
-    ...knownRacesWithRcco,
-    ...ffvrcRaces
-      .map(race => normalizeRaceFromSource(race, "ffvrc"))
-      .filter(ffvrcRace => {
-        const ffvrcHostKey = slugifyMatchValue(ffvrcRace.hostName || "");
-        return !knownRacesWithRcco.some(r => {
-          if (!(r.from <= ffvrcRace.to && r.to >= ffvrcRace.from)) return false;
-          if (ffvrcRace.venueId && ffvrcRace.venueId !== "ffvrc-fr" && r.venueId === ffvrcRace.venueId) return true;
-          if (ffvrcHostKey) {
-            const rHostKey = slugifyMatchValue(r.hostName || r.venueName || "");
-            if (rHostKey && rHostKey === ffvrcHostKey) return true;
-          }
-          return false;
-        });
-      }),
-  ];
+  races = [...knownRaces, ...filteredRccoRaces];
   _venueForRaceCache.clear();
 
   const hostRecords = Array.isArray(hostsResponse) ? hostsResponse : [];
@@ -5796,7 +5770,7 @@ function _buildAdminEntryListHtml(entries, datalistId) {
         <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}${e._postalCode ? ` · ${escapeHtml(e._postalCode)}` : ""}${e._city ? ` ${escapeHtml(e._city)}` : ""}</span>
       </div>
       ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-      ${e._ffvrcDeptUrl ? `<a class="admin-entry-link" href="${escapeHtml(e._ffvrcDeptUrl)}" target="_blank" rel="noopener">FFVRC Département ↗</a>` : (e._city || e._sourceBadge === "FFVRC") ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + (e._city ? " " + e._city : "") + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
+      ${e._city ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + " " + e._city + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
       <label class="admin-entry-toggle">
         <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
         Ort unbekannt
@@ -6192,27 +6166,13 @@ function renderAdminPruefenTab(container) {
       Promise.resolve(seeds),
       fetch(`dmc-races.json?t=${Date.now()}`).catch(() => null),
       fetch(`rcco-races.json?t=${Date.now()}`).catch(() => null),
-      fetch(`ffvrc-races.json?t=${Date.now()}`).catch(() => null),
-      fetch(`ffvrc-venues.json?t=${Date.now()}`).catch(() => null),
       adminLoadUnmatched(seeds),
     ]))
-  .then(async ([seeds, dmcRes, rccoRes, ffvrcRes, ffvrcVenuesRes, allEntries]) => {
+  .then(async ([seeds, dmcRes, rccoRes, allEntries]) => {
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
     const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
     const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
-    const ffvrcVenuesRaw = ffvrcVenuesRes?.ok ? await ffvrcVenuesRes.json().catch(() => []) : [];
-    const _ffvrcV = Array.isArray(ffvrcVenuesRaw) ? ffvrcVenuesRaw : [];
-    const ffvrcCityByHostId = new Map(_ffvrcV.map(v => [v.hostId, v.city]));
-    const ffvrcPostalByHostId = new Map(_ffvrcV.map(v => [v.hostId, v.postalCode]));
-    const _FFVRC_DEPT = {"01":"ain","02":"aisne","03":"allier","04":"alpes-de-haute-provence","05":"hautes-alpes","06":"alpes-maritimes","07":"ardeche","08":"ardennes","09":"ariege","10":"aube","11":"aude","12":"aveyron","13":"bouches-du-rhone","14":"calvados","15":"cantal","16":"charente","17":"charente-maritime","18":"cher","19":"correze","20":"corse-du-sud","21":"cote-dor","22":"cotes-darmor","23":"creuse","24":"dordogne","25":"doubs","26":"drome","27":"eure","28":"eure-et-loir","29":"finistere","30":"gard","31":"haute-garonne","32":"gers","33":"gironde","34":"herault","35":"ille-et-vilaine","36":"indre","37":"indre-et-loire","38":"isere","39":"jura","40":"landes","41":"loir-et-cher","42":"loire","43":"haute-loire","44":"loire-atlantique","45":"loiret","46":"lot","47":"lot-et-garonne","48":"lozere","49":"maine-et-loire","50":"manche","51":"marne","52":"haute-marne","53":"mayenne","54":"meurthe-et-moselle","55":"meuse","56":"morbihan","57":"moselle","58":"nievre","59":"nord","60":"oise","61":"orne","62":"pas-de-calais","63":"puy-de-dome","64":"pyrenees-atlantiques","65":"hautes-pyrenees","66":"pyrenees-orientales","67":"bas-rhin","68":"haut-rhin","69":"rhone","70":"haute-saone","71":"saone-et-loire","72":"sarthe","73":"savoie","74":"haute-savoie","75":"paris","76":"seine-maritime","77":"seine-et-marne","78":"yvelines","79":"deux-sevres","80":"somme","81":"tarn","82":"tarn-et-garonne","83":"var","84":"vaucluse","85":"vendee","86":"vienne","87":"haute-vienne","88":"vosges","89":"yonne","90":"territoire-de-belfort","91":"essonne","92":"hauts-de-seine","93":"seine-saint-denis","94":"val-de-marne","95":"val-doise","971":"guadeloupe","972":"martinique","973":"guyane","974":"la-reunion","975":"saint-pierre-et-miquelon","976":"mayotte","978":"saint-martin","986":"wallis-et-futuna","987":"polynesie-francaise","988":"nouvelle-caledonie","991":"monaco"};
-    function _ffvrcDeptUrl(postalCode) {
-      if (!postalCode) return null;
-      const d3 = postalCode.slice(0, 3); const d2 = postalCode.slice(0, 2);
-      const dept = _FFVRC_DEPT[d3] ? d3 : (_FFVRC_DEPT[d2] ? d2 : null);
-      if (!dept) return null;
-      return `https://www.ffvrc.fr/fr/clubs/trouver-un-club/trouver-un-club-resultats/DEPT${dept}-${_FFVRC_DEPT[dept]}.html`;
-    }
 
     // DACH-Seeds die noch verifiziert werden müssen
     const geocodedPending = seeds.filter(s => s.source?.startsWith("geocoded-nominatim"));
@@ -6221,7 +6181,7 @@ function renderAdminPruefenTab(container) {
 
     // Externe Venues ohne Koordinaten, noch nicht in seeds eingetragen
     const seededHostIds = new Set(
-      seeds.filter(s => (s.hostId?.startsWith("dmc-") || s.hostId?.startsWith("rcco-") || s.hostId?.startsWith("ffvrc-")) && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
+      seeds.filter(s => (s.hostId?.startsWith("dmc-") || s.hostId?.startsWith("rcco-")) && (s.lat != null || s.locationUnknown)).map(s => s.hostId)
     );
     const dmcSeen = new Set();
     const dmcPending = dmcRaces
@@ -6239,23 +6199,9 @@ function renderAdminPruefenTab(container) {
         return acc;
       }, []);
 
-    const ffvrcRacesAdmin = ffvrcRes?.ok ? (await ffvrcRes.json().catch(() => [])) : [];
-    const ffvrcSeen = new Set();
-    const ffvrcPending = (Array.isArray(ffvrcRacesAdmin) ? ffvrcRacesAdmin : [])
-      .filter(r => r.venueId === "ffvrc-fr" && !seededHostIds.has(r.hostId))
-      .reduce((acc, r) => {
-        if (!ffvrcSeen.has(r.hostId)) {
-          ffvrcSeen.add(r.hostId);
-          const city = ffvrcCityByHostId.get(r.hostId) || null;
-          const postalCode = ffvrcPostalByHostId.get(r.hostId) || null;
-          acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "FFVRC", _city: city, _postalCode: postalCode, _ffvrcDeptUrl: _ffvrcDeptUrl(postalCode) });
-        }
-        return acc;
-      }, []);
-
-    // Alle neuen Venues: MyRCM-unmatched + DMC + RCCO + FFVRC → eine gemeinsame Liste
+    // Alle neuen Venues: MyRCM-unmatched + DMC + RCCO → eine gemeinsame Liste
     const myrcmNew = allEntries.filter(e => !e._isUnknownSeed);
-    const allNewEntries = [...myrcmNew, ...dmcPending, ...rccoPending, ...ffvrcPending];
+    const allNewEntries = [...myrcmNew, ...dmcPending, ...rccoPending];
     container.innerHTML = "";
     if (allNewEntries.length) {
       const section = document.createElement("div");

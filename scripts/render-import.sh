@@ -62,14 +62,6 @@ done
 IMPORT_RCK_OK=0
 IMPORT_MYRCM_OK=0
 IMPORT_DMC_OK=0
-IMPORT_FFVRC_OK=0
-
-echo "--- Discover France clubs ---"
-if node scripts/discover-myrcm-france.js; then
-  echo "✓ France discovery erfolgreich"
-else
-  echo "✗ France discovery FEHLGESCHLAGEN — myrcm-hosts-france.json unverändert"
-fi
 
 echo "--- Import RCK ---"
 if RCK_GEOCODE=0 node import-rck.js; then
@@ -95,30 +87,12 @@ else
   echo "✗ DMC Import FEHLGESCHLAGEN — dmc-races.json wird nicht aktualisiert"
 fi
 
-echo "--- Import FFVRC ---"
-if node import-ffvrc.js; then
-  IMPORT_FFVRC_OK=1
-  echo "✓ FFVRC Import erfolgreich"
-else
-  echo "✗ FFVRC Import FEHLGESCHLAGEN — ffvrc-races.json wird nicht aktualisiert"
-fi
-
-echo "--- Discover FFVRC clubs ---"
-if [ "$IMPORT_FFVRC_OK" = "1" ]; then
-  if node scripts/discover-ffvrc-clubs.js; then
-    echo "✓ FFVRC Club Discovery erfolgreich"
-  else
-    echo "✗ FFVRC Club Discovery FEHLGESCHLAGEN — ffvrc-venues.json unverändert"
-  fi
-fi
-
 # Zusammenfassung
 echo ""
 echo "=== Import-Status ==="
 [ "$IMPORT_RCK_OK" = "1" ]   && echo "✓ RCK"   || echo "✗ RCK"
 [ "$IMPORT_MYRCM_OK" = "1" ] && echo "✓ MyRCM" || echo "✗ MyRCM"
 [ "$IMPORT_DMC_OK" = "1" ]   && echo "✓ DMC"   || echo "✗ DMC"
-[ "$IMPORT_FFVRC_OK" = "1" ] && echo "✓ FFVRC" || echo "✗ FFVRC"
 
 # Mindestens MyRCM muss erfolgreich sein für einen Commit auf main
 if [ "$IMPORT_MYRCM_OK" = "0" ]; then
@@ -127,12 +101,10 @@ if [ "$IMPORT_MYRCM_OK" = "0" ]; then
 fi
 
 # main: alle Importdaten committen
-MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json myrcm-hosts-france.json"
+MAIN_FILES="races.json hosts.json venues.json venue-unmatched.json venue-seeds.json rck-races.json rck-unmatched-venues.json rck-venue-candidates.json rck-pdf-cache.json"
 DMC_FILES="dmc-races.json dmc-venues.json dmc-pdf-cache.json"
-FFVRC_FILES="ffvrc-races.json ffvrc-venues.json"
 git add $MAIN_FILES
 [ "$IMPORT_DMC_OK" = "1" ]   && git add $DMC_FILES
-[ "$IMPORT_FFVRC_OK" = "1" ] && git add $FFVRC_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (main) — kein Commit nötig."
 else
@@ -147,11 +119,9 @@ git fetch origin dev
 git checkout -f -B dev origin/dev
 git checkout main -- $MAIN_FILES
 [ "$IMPORT_DMC_OK" = "1" ]   && git checkout main -- $DMC_FILES
-[ "$IMPORT_FFVRC_OK" = "1" ] && git checkout main -- $FFVRC_FILES
 
 git add $MAIN_FILES
 [ "$IMPORT_DMC_OK" = "1" ]   && git add $DMC_FILES
-[ "$IMPORT_FFVRC_OK" = "1" ] && git add $FFVRC_FILES
 if git diff --staged --quiet; then
   echo "Keine Änderungen (dev) — kein Commit nötig."
 else
