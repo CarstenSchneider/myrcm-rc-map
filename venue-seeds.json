@@ -4622,6 +4622,11 @@
     "country": "BE"
   },
   {
+    "hostId": "ffvrc-0934",
+    "hostName": "MODELISME AGATHOIS",
+    "locationUnknown": true
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
