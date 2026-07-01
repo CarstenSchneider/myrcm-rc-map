@@ -103,6 +103,15 @@ else
   echo "✗ FFVRC Import FEHLGESCHLAGEN — ffvrc-races.json wird nicht aktualisiert"
 fi
 
+echo "--- Discover FFVRC clubs ---"
+if [ "$IMPORT_FFVRC_OK" = "1" ]; then
+  if node scripts/discover-ffvrc-clubs.js; then
+    echo "✓ FFVRC Club Discovery erfolgreich"
+  else
+    echo "✗ FFVRC Club Discovery FEHLGESCHLAGEN — ffvrc-venues.json unverändert"
+  fi
+fi
+
 # Zusammenfassung
 echo ""
 echo "=== Import-Status ==="
