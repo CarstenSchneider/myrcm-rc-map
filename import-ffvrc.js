@@ -79,6 +79,7 @@ function parseCalendar(html, year) {
     const clubName = parts[1] || souslibelle;
     const locationStr = parts[2] || "";
     const postalMatch = locationStr.match(/^(\d{5})\s*(.*)?$/);
+    const postalCode = postalMatch ? postalMatch[1] : null;
     const city = postalMatch ? (postalMatch[2] || "").trim() : locationStr;
 
     // Google Maps coords from "Itinéraire" link
@@ -92,7 +93,7 @@ function parseCalendar(html, year) {
 
     const hostId = `ffvrc-${slugify(clubCode || clubName)}`;
 
-    events.push({ mnfId, hostId, clubCode, clubName, city, title, dateFrom, classes, league, lat, lng });
+    events.push({ mnfId, hostId, clubCode, clubName, city, postalCode, title, dateFrom, classes, league, lat, lng });
   });
 
   return events;
@@ -185,6 +186,7 @@ async function main() {
 
   // Build auto-venue map (from Google Maps coords in calendar)
   const autoVenues = new Map();
+  const partialVenues = new Map(); // no coords but have city/postalCode for admin display
   for (const ev of events) {
     if (ev.lat != null && ev.lng != null && !autoVenues.has(ev.hostId)) {
       autoVenues.set(ev.hostId, {
@@ -192,18 +194,30 @@ async function main() {
         hostId: ev.hostId,
         name: ev.clubName,
         city: ev.city || null,
+        postalCode: ev.postalCode || null,
         lat: ev.lat,
         lng: ev.lng,
+        country: "FR",
+        source: "ffvrc-calendar",
+      });
+    } else if (ev.lat == null && !autoVenues.has(ev.hostId) && !partialVenues.has(ev.hostId)) {
+      partialVenues.set(ev.hostId, {
+        id: ev.hostId,
+        hostId: ev.hostId,
+        name: ev.clubName,
+        city: ev.city || null,
+        postalCode: ev.postalCode || null,
         country: "FR",
         source: "ffvrc-calendar",
       });
     }
   }
 
-  // ffvrc-venues.json: placeholder + auto-extracted
+  // ffvrc-venues.json: placeholder + auto-extracted + partial (no coords, for admin info)
   const ffvrcVenues = [
     { id: "ffvrc-fr", name: "France", locationUnknown: true, country: "FR" },
     ...Array.from(autoVenues.values()),
+    ...Array.from(partialVenues.values()).filter(v => !autoVenues.has(v.hostId)),
   ];
 
   // Build race list

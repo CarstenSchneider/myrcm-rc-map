@@ -5790,10 +5790,10 @@ function _buildAdminEntryListHtml(entries, datalistId) {
       <div class="admin-entry-header">
         <strong>${escapeHtml(e.hostName)}</strong>
         ${e._sourceBadge ? `<span class="admin-source-badge">${escapeHtml(e._sourceBadge)}</span>` : e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
-        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}${e._city ? ` · ${escapeHtml(e._city)}` : ""}</span>
+        <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}${e._postalCode ? ` · ${escapeHtml(e._postalCode)}` : ""}${e._city ? ` ${escapeHtml(e._city)}` : ""}</span>
       </div>
       ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
-      ${(e._city || e._sourceBadge === "FFVRC") ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + (e._city ? " " + e._city : "") + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
+      ${e._ffvrcDeptUrl ? `<a class="admin-entry-link" href="${escapeHtml(e._ffvrcDeptUrl)}" target="_blank" rel="noopener">FFVRC Département ↗</a>` : (e._city || e._sourceBadge === "FFVRC") ? `<a class="admin-entry-link" href="https://www.google.com/maps/search/${encodeURIComponent((e.hostName || "") + (e._city ? " " + e._city : "") + " RC")}" target="_blank" rel="noopener">Google Maps ↗</a>` : ""}
       <label class="admin-entry-toggle">
         <input type="checkbox" class="admin-unknown-toggle"${e.locationUnknown ? " checked" : ""} />
         Ort unbekannt
@@ -6199,7 +6199,17 @@ function renderAdminPruefenTab(container) {
     const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
     const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
     const ffvrcVenuesRaw = ffvrcVenuesRes?.ok ? await ffvrcVenuesRes.json().catch(() => []) : [];
-    const ffvrcCityByHostId = new Map((Array.isArray(ffvrcVenuesRaw) ? ffvrcVenuesRaw : []).map(v => [v.hostId, v.city]));
+    const _ffvrcV = Array.isArray(ffvrcVenuesRaw) ? ffvrcVenuesRaw : [];
+    const ffvrcCityByHostId = new Map(_ffvrcV.map(v => [v.hostId, v.city]));
+    const ffvrcPostalByHostId = new Map(_ffvrcV.map(v => [v.hostId, v.postalCode]));
+    const _FFVRC_DEPT = {"01":"ain","02":"aisne","03":"allier","04":"alpes-de-haute-provence","05":"hautes-alpes","06":"alpes-maritimes","07":"ardeche","08":"ardennes","09":"ariege","10":"aube","11":"aude","12":"aveyron","13":"bouches-du-rhone","14":"calvados","15":"cantal","16":"charente","17":"charente-maritime","18":"cher","19":"correze","20":"corse-du-sud","21":"cote-dor","22":"cotes-darmor","23":"creuse","24":"dordogne","25":"doubs","26":"drome","27":"eure","28":"eure-et-loir","29":"finistere","30":"gard","31":"haute-garonne","32":"gers","33":"gironde","34":"herault","35":"ille-et-vilaine","36":"indre","37":"indre-et-loire","38":"isere","39":"jura","40":"landes","41":"loir-et-cher","42":"loire","43":"haute-loire","44":"loire-atlantique","45":"loiret","46":"lot","47":"lot-et-garonne","48":"lozere","49":"maine-et-loire","50":"manche","51":"marne","52":"haute-marne","53":"mayenne","54":"meurthe-et-moselle","55":"meuse","56":"morbihan","57":"moselle","58":"nievre","59":"nord","60":"oise","61":"orne","62":"pas-de-calais","63":"puy-de-dome","64":"pyrenees-atlantiques","65":"hautes-pyrenees","66":"pyrenees-orientales","67":"bas-rhin","68":"haut-rhin","69":"rhone","70":"haute-saone","71":"saone-et-loire","72":"sarthe","73":"savoie","74":"haute-savoie","75":"paris","76":"seine-maritime","77":"seine-et-marne","78":"yvelines","79":"deux-sevres","80":"somme","81":"tarn","82":"tarn-et-garonne","83":"var","84":"vaucluse","85":"vendee","86":"vienne","87":"haute-vienne","88":"vosges","89":"yonne","90":"territoire-de-belfort","91":"essonne","92":"hauts-de-seine","93":"seine-saint-denis","94":"val-de-marne","95":"val-doise","971":"guadeloupe","972":"martinique","973":"guyane","974":"la-reunion","975":"saint-pierre-et-miquelon","976":"mayotte","978":"saint-martin","986":"wallis-et-futuna","987":"polynesie-francaise","988":"nouvelle-caledonie","991":"monaco"};
+    function _ffvrcDeptUrl(postalCode) {
+      if (!postalCode) return null;
+      const d3 = postalCode.slice(0, 3); const d2 = postalCode.slice(0, 2);
+      const dept = _FFVRC_DEPT[d3] ? d3 : (_FFVRC_DEPT[d2] ? d2 : null);
+      if (!dept) return null;
+      return `https://www.ffvrc.fr/fr/clubs/trouver-un-club/trouver-un-club-resultats/DEPT${dept}-${_FFVRC_DEPT[dept]}.html`;
+    }
 
     // DACH-Seeds die noch verifiziert werden müssen
     const geocodedPending = seeds.filter(s => s.source?.startsWith("geocoded-nominatim"));
@@ -6234,7 +6244,8 @@ function renderAdminPruefenTab(container) {
         if (!ffvrcSeen.has(r.hostId)) {
           ffvrcSeen.add(r.hostId);
           const city = ffvrcCityByHostId.get(r.hostId) || null;
-          acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "FFVRC", _city: city });
+          const postalCode = ffvrcPostalByHostId.get(r.hostId) || null;
+          acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "FFVRC", _city: city, _postalCode: postalCode, _ffvrcDeptUrl: _ffvrcDeptUrl(postalCode) });
         }
         return acc;
       }, []);
