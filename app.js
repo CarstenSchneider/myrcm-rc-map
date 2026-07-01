@@ -543,14 +543,14 @@ function centerOnUserRadius(lat, lng) {
 
 const stadiaApiKey = "8b841ee3-0006-49fa-b575-45544e8d1b5e";
 const rcRaceMapColorsLight = {
-  water: "#2952a3", land: "#f4f4f4", settlement: "#ebebeb",
+  water: "#ffffff", land: "#f4f4f4", settlement: "#ebebeb",
   landcover: "#f4f4f4", building: "#f4f4f4", road: "#d4d4d4", roadMinor: "#cccccc",
   boundary: "#d8d8d8", countryBorder: "#2952a3", label: "#716F6F", labelHalo: "#ebebeb",
   marker: "#213769", markerClosed: "#c0bdb8", favorite: "#C8B090",
   statusOpen: "#73FF60", statusClosed: "#E51354", statusUpcoming: "#4A9EE8",
 };
 const rcRaceMapColorsDark = {
-  water: "#5b8bc8", land: "#0f1e35", settlement: "#132442",
+  water: "#0c1829", land: "#0f1e35", settlement: "#132442",
   landcover: "#0e1c32", building: "#132442", road: "#1e3a5f", roadMinor: "#1e3a5f",
   boundary: "#1e3a5f", countryBorder: "#5b8bc8", label: "#6a9fd8", labelHalo: "#0f1e35",
   marker: "#4569a5", markerClosed: "#3d6090", favorite: "#c8b090",
@@ -1089,7 +1089,6 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      if (layer.id === "country-borders") return;
       maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
       maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
       return;
@@ -1136,31 +1135,11 @@ function applyRcRaceMapStyle() {
     canvas.style.background = rcRaceMapColors.land;
   }
 
-  updateCountryOutline();
-}
-
-function updateCountryOutline() {
-  const mlMap = baseMapLayer?.getMaplibreMap?.();
-  if (!mlMap) return;
+  // Clean up any leftover custom border layers
   try {
-    const vtLayer = mlMap.getStyle()?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
-    if (!vtLayer) return;
-    const src = vtLayer.source;
-    // Clean up diagnostic layers from previous version
-    for (const id of ["diag-border-2", "diag-border-4", "diag-border-6", "diag-border-8"]) {
-      if (mlMap.getLayer(id)) mlMap.removeLayer(id);
-    }
-    if (!mlMap.getLayer("country-borders")) {
-      mlMap.addLayer({
-        id: "country-borders",
-        type: "line",
-        source: src,
-        "source-layer": "boundary",
-        filter: ["==", "admin_level", 2],
-        paint: { "line-color": rcRaceMapColors.countryBorder, "line-width": 1.5, "line-opacity": 1 },
-      });
-    } else {
-      mlMap.setPaintProperty("country-borders", "line-color", rcRaceMapColors.countryBorder);
+    const mlMap = baseMapLayer?.getMaplibreMap?.();
+    for (const id of ["country-borders", "diag-border-2", "diag-border-4", "diag-border-6", "diag-border-8"]) {
+      if (mlMap?.getLayer(id)) mlMap.removeLayer(id);
     }
   } catch {}
 }
