@@ -2115,23 +2115,13 @@ function venueCountry(venue) {
   return null;
 }
 
-const _dachCountries = new Set(["DE", "AT", "CH"]);
-
 function matchesCountryFilter(race) {
   if (selectedCountry === "all") return true;
   const venue = venueForRace(race);
   if (!venue) return false;
   const venueC = venueCountry(venue);
-  if (!venueC) return venue.locationUnknown ? false : _dachCountries.has(selectedCountry);
-  if (venueC === selectedCountry) return true;
-  // Cross-border (DACH only): DE club racing in AT/CH also appears in DE filter.
-  // Not for non-DACH venues — ETS racing in NL should not appear in DE filter.
-  if (!_dachCountries.has(venueC)) return false;
-  const hostId = raceHostId(race);
-  const rawHostC = hostId ? hostsById.get(String(hostId))?.country : null;
-  if (!rawHostC) return false;
-  const hostC = _countryNameToCode[rawHostC] ?? rawHostC;
-  return hostC === selectedCountry;
+  if (!venueC) return false;
+  return venueC === selectedCountry;
 }
 
 
@@ -6097,9 +6087,9 @@ function renderAdminPruefenTab(container) {
     const rccoRaces = Array.isArray(rccoRacesRaw) ? rccoRacesRaw : [];
 
     // DACH-Seeds die noch verifiziert werden müssen
-    const dachPending = seeds.filter(s => s.source === "geocoded-nominatim-dach");
-    const totalDach = seeds.filter(s => s.source === "geocoded-nominatim-dach" || s.source === "verified").length;
-    const alreadyDone = totalDach - dachPending.length;
+    const geocodedPending = seeds.filter(s => s.source?.startsWith("geocoded-nominatim"));
+    const totalGeocoded = seeds.filter(s => s.source?.startsWith("geocoded-nominatim") || s.source === "verified").length;
+    const alreadyDone = totalGeocoded - geocodedPending.length;
 
     // Externe Venues ohne Koordinaten, noch nicht in seeds eingetragen
     const seededHostIds = new Set(
@@ -6146,14 +6136,14 @@ function renderAdminPruefenTab(container) {
       container.appendChild(section);
     }
 
-    const pending = dachPending.map(s => ({ ...s, _dmc: false }));
+    const pending = geocodedPending.map(s => ({ ...s, _dmc: false }));
 
     const geocodedSection = document.createElement("div");
     geocodedSection.className = "admin-geocoded-section";
     container.appendChild(geocodedSection);
 
     if (!pending.length) {
-      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert.</p>`;
+      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalGeocoded} Strecken verifiziert.</p>`;
       return;
     }
 
@@ -6164,10 +6154,10 @@ function renderAdminPruefenTab(container) {
       const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
       const streetViewUrl = s.lat && s.lng ? `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${s.lat},${s.lng}` : null;
       const doneCount = alreadyDone + idx;
-      const pct = Math.round(doneCount / totalDach * 100);
+      const pct = Math.round(doneCount / totalGeocoded * 100);
       geocodedSection.innerHTML = `
         <div class="admin-dach-progress">
-          <span>${doneCount} / ${totalDach} verifiziert</span>
+          <span>${doneCount} / ${totalGeocoded} verifiziert</span>
           <div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>
         </div>
         <div class="admin-entry">
@@ -6205,7 +6195,7 @@ function renderAdminPruefenTab(container) {
             : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
           await adminCommit(payload);
           pending.splice(idx, 1);
-          dachPending.splice(dachPending.indexOf(s), 1);
+          geocodedPending.splice(geocodedPending.indexOf(s), 1);
           if (!pending.length) {
             geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
@@ -6220,7 +6210,7 @@ function renderAdminPruefenTab(container) {
         try {
           await adminCommit({ action: "delete-dach-seed", seedId: s.id, seedName: s.name });
           pending.splice(idx, 1);
-          dachPending.splice(dachPending.indexOf(s), 1);
+          geocodedPending.splice(geocodedPending.indexOf(s), 1);
           if (idx >= pending.length) idx = Math.max(0, pending.length - 1);
           if (!pending.length) {
             geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
