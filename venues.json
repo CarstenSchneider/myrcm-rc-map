@@ -102,6 +102,23 @@
     "country": "AT"
   },
   {
+    "id": "myrcm-53515",
+    "name": "Alpencup",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "53515",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
+  },
+  {
     "id": "amc-hildesheim-e-v",
     "name": "AMC Hildesheim e.V.",
     "city": "Hildesheim",
@@ -890,6 +907,40 @@
     "country": "DE"
   },
   {
+    "id": "myrcm-28115",
+    "name": "Dutch RC Series",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "28115",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL",
+    "locationUnknown": true
+  },
+  {
+    "id": "myrcm-1980",
+    "name": "Dutch RC TimeKeeping",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "1980",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL",
+    "locationUnknown": true
+  },
+  {
     "id": "edc-kinzigtal-e-v",
     "name": "EDC Kinzigtal e.V.",
     "city": "Gengenbach",
@@ -1069,6 +1120,29 @@
     "country": "DE"
   },
   {
+    "id": "erc-wr-neudorf",
+    "name": "ERC-Wr.Neudorf",
+    "city": "Wolfsgraben",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "http://www.erc-wrneudorf.com/",
+    "aliases": [
+      "myrcm-765",
+      "ERC-Wr.Neudorf",
+      "Wolfsgraben"
+    ],
+    "hostIds": [
+      "erc-wr-neudorf"
+    ],
+    "myrcmOrgId": "765",
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
+  },
+  {
     "id": "myrcm-3350",
     "name": "ERCE",
     "city": "",
@@ -1131,7 +1205,7 @@
   {
     "id": "ets-international",
     "name": "ETS / TOS International",
-    "city": null,
+    "city": "",
     "lat": null,
     "lng": null,
     "address": "",
@@ -1144,7 +1218,8 @@
     "hostIds": [],
     "myrcmOrgId": "",
     "source": "manual",
-    "locationUnknown": true
+    "locationUnknown": true,
+    "verified": true
   },
   {
     "id": "myrcm-10817",
@@ -1161,6 +1236,40 @@
     "source": "venue-seeds",
     "verified": true,
     "country": "NL"
+  },
+  {
+    "id": "myrcm-38144",
+    "name": "FBA vzw",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "38144",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "BE",
+    "locationUnknown": true
+  },
+  {
+    "id": "myrcm-73",
+    "name": "FLAMRC",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "73",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "LU",
+    "locationUnknown": true
   },
   {
     "id": "myrcm-739",
@@ -1334,6 +1443,23 @@
     "country": "BE"
   },
   {
+    "id": "myrcm-2824",
+    "name": "Hugo - RC-Timing.nl",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "2824",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL",
+    "locationUnknown": true
+  },
+  {
     "id": "myrcm-50130",
     "name": "Hulshout Offroad Racing",
     "city": "",
@@ -1429,6 +1555,23 @@
     "source": "verified",
     "verified": true,
     "country": "CH"
+  },
+  {
+    "id": "myrcm-53360",
+    "name": "InstantRC",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "53360",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL",
+    "locationUnknown": true
   },
   {
     "id": "ircr-indoor-rc-romand",
@@ -2167,8 +2310,10 @@
       "max-informatique"
     ],
     "myrcmOrgId": "20360",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
   },
   {
     "id": "max-rc-car-racing",
@@ -2994,6 +3139,23 @@
     "country": "DE"
   },
   {
+    "id": "myrcm-mini-auto-charmes",
+    "name": "Mini auto Club de Charmes Sur Rhone",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "25367",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "France",
+    "locationUnknown": true
+  },
+  {
     "id": "mini-bolides-club-jura",
     "name": "Mini Bolides Club Jura",
     "city": "Bassecourt",
@@ -3588,6 +3750,23 @@
     "country": "AT"
   },
   {
+    "id": "myrcm-42405",
+    "name": "Modellclub Flensburg e.V",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "https://www.mc-flensburg.de/",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "42405",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "DE",
+    "locationUnknown": true
+  },
+  {
     "id": "dmc-ov-266",
     "name": "Modellfreunde Rheinhessen/Pfalz e.V.",
     "city": "Stetten",
@@ -3824,8 +4003,10 @@
       "mrc-fritzens-formel-4"
     ],
     "myrcmOrgId": "772",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
   },
   {
     "id": "mrc-leipzig-e-v",
@@ -4120,8 +4301,10 @@
       "mrto"
     ],
     "myrcmOrgId": "401",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
   },
   {
     "id": "mrv-st-poelten",
@@ -4655,6 +4838,23 @@
     "country": "CH"
   },
   {
+    "id": "myrcm-53339",
+    "name": "NOMAC",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "53339",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL",
+    "locationUnknown": true
+  },
+  {
     "id": "oefmav",
     "name": "Oefmav",
     "city": "Klagenfurt am Wörthersee",
@@ -4662,7 +4862,7 @@
     "lng": 14.3055036,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "https://www.oefmav.at/",
     "aliases": [
       "myrcm-61558",
       "Oefmav",
@@ -4672,8 +4872,10 @@
       "oefmav"
     ],
     "myrcmOrgId": "61558",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
   },
   {
     "id": "off-road-club-montagny",
@@ -4741,7 +4943,7 @@
     "lng": 16.1093585,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "https://www.oefmav.at/",
     "aliases": [
       "myrcm-782",
       "ÖFMAV EOR",
@@ -4751,8 +4953,10 @@
       "oefmav-eor"
     ],
     "myrcmOrgId": "782",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
   },
   {
     "id": "oefmav-sektion-elektro-offroad",
@@ -4762,7 +4966,7 @@
     "lng": 16.4221587,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "https://www.oefmav.at/",
     "aliases": [
       "myrcm-34619",
       "ÖFMAV Sektion Elektro Offroad",
@@ -4772,8 +4976,10 @@
       "oefmav-sektion-elektro-offroad"
     ],
     "myrcmOrgId": "34619",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
   },
   {
     "id": "oefmav-sektion-or-8",
@@ -4783,7 +4989,7 @@
     "lng": 15.4382786,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "https://www.oefmav.at/",
     "aliases": [
       "myrcm-503",
       "ÖFMAV Sektion OR-8",
@@ -4793,8 +4999,10 @@
       "oefmav-sektion-or-8"
     ],
     "myrcmOrgId": "503",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
   },
   {
     "id": "oefmav-sektion-verbrenner-flachbahn",
@@ -4804,7 +5012,7 @@
     "lng": 14.8477591,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "https://www.oefmav.at/",
     "aliases": [
       "myrcm-38958",
       "ÖFMAV Sektion Verbrenner Flachbahn",
@@ -4814,8 +5022,10 @@
       "oefmav-sektion-verbrenner-flachbahn"
     ],
     "myrcmOrgId": "38958",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
   },
   {
     "id": "one28-ch-swiss-micro-racer",
@@ -4902,6 +5112,23 @@
     "country": "DE"
   },
   {
+    "id": "myrcm-55554",
+    "name": "Orra",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "55554",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "BE",
+    "locationUnknown": true
+  },
+  {
     "id": "dmc-ort-fulda",
     "name": "ORT Fulda",
     "city": null,
@@ -4935,6 +5162,23 @@
     "myrcmOrgId": "17508",
     "source": "geocoded-nominatim-dach",
     "verified": true
+  },
+  {
+    "id": "myrcm-pommeraye-mini-racing",
+    "name": "POMMERAYE MINI RACING CAR",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "37401",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "France",
+    "locationUnknown": true
   },
   {
     "id": "pr-modellbau-gmbh",
@@ -5000,6 +5244,23 @@
     "source": "verified",
     "verified": true,
     "country": "AT"
+  },
+  {
+    "id": "myrcm-112",
+    "name": "R/C CAR MERTZIG ASBL",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "112",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "LU",
+    "locationUnknown": true
   },
   {
     "id": "racing-center-parndorf",
@@ -6402,6 +6663,40 @@
     "verified": true
   },
   {
+    "id": "myrcm-58661",
+    "name": "RCXX.SHOP",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "https://www.rcxx.shop/",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "58661",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
+  },
+  {
+    "id": "myrcm-reims-enduro",
+    "name": "Reims Enduro Model Car",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "24695",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "France",
+    "locationUnknown": true
+  },
+  {
     "id": "rgmc-teck-e-v",
     "name": "RGMC Teck e.V.",
     "city": "Holzmaden",
@@ -6594,6 +6889,23 @@
     "country": "DE"
   },
   {
+    "id": "myrcm-sermaise-electro",
+    "name": "Sermaise Electro Modelisme",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "46243",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "France",
+    "locationUnknown": true
+  },
+  {
     "id": "simbacher-buggyracer-e-v",
     "name": "Simbacher Buggyracer e.V.",
     "city": "Simbach am Inn",
@@ -6763,7 +7075,7 @@
     "lng": 8.8523731,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "http://www.srcca.ch/",
     "aliases": [
       "myrcm-24",
       "Swiss R/C Car Clubs Association",
@@ -6773,8 +7085,10 @@
       "swiss-r-c-car-clubs-association"
     ],
     "myrcmOrgId": "24",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
   },
   {
     "id": "swiss-racing-cup",
@@ -6784,7 +7098,7 @@
     "lng": 7.5783419,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "https://swissracingcup.ch/",
     "aliases": [
       "myrcm-9425",
       "Swiss Racing Cup",
@@ -6794,8 +7108,10 @@
       "swiss-racing-cup"
     ],
     "myrcmOrgId": "9425",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "CH",
+    "locationUnknown": true
   },
   {
     "id": "swiss-rc-protech-s-rl",
@@ -6827,7 +7143,7 @@
     "lng": 15.6131886,
     "address": "",
     "postalCode": "",
-    "website": "",
+    "website": "http://www.tamiya-eurocup.at/",
     "aliases": [
       "myrcm-6328",
       "Tamiya Cup Austria",
@@ -6837,8 +7153,44 @@
       "tamiya-cup-austria"
     ],
     "myrcmOrgId": "6328",
-    "source": "geocoded-nominatim-dach",
-    "verified": true
+    "source": "verified",
+    "verified": true,
+    "country": "AT",
+    "locationUnknown": true
+  },
+  {
+    "id": "myrcm-33479",
+    "name": "Tamiya Cup NL",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "33479",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "NL",
+    "locationUnknown": true
+  },
+  {
+    "id": "myrcm-35896",
+    "name": "Tamiyacup Belgium",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "35896",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "BE",
+    "locationUnknown": true
   },
   {
     "id": "team-indoor-track-schoeftland",
@@ -6952,6 +7304,23 @@
     "source": "verified-existing-geolocation-list-plus-rck-pdf-address-plus-old-main-venues",
     "verified": true,
     "country": "DE"
+  },
+  {
+    "id": "myrcm-30389",
+    "name": "TSV Gelenau e.V.",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "http://www.tsv-gelenau.de/",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "30389",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "DE",
+    "locationUnknown": true
   },
   {
     "id": "tsv-kleinburgwedel",
@@ -7173,5 +7542,22 @@
     "myrcmOrgId": "1387",
     "source": "geocoded-nominatim-dach",
     "verified": true
+  },
+  {
+    "id": "myrcm-41053",
+    "name": "Yellowracing V2.0",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "address": "",
+    "postalCode": "",
+    "website": "",
+    "aliases": [],
+    "hostIds": [],
+    "myrcmOrgId": "41053",
+    "source": "venue-seeds",
+    "verified": true,
+    "country": "BE",
+    "locationUnknown": true
   }
 ]
