@@ -5714,10 +5714,11 @@ function _buildAdminEntryListHtml(entries, datalistId) {
       data-host-id="${escapeHtml(e.hostId)}"
       data-myrcm-org-id="${escapeHtml(e.myrcmOrgId || "")}"
       data-host-name="${escapeHtml(e.hostName)}"
-      data-is-unknown-seed="${e._isUnknownSeed ? "1" : "0"}">
+      data-is-unknown-seed="${e._isUnknownSeed ? "1" : "0"}"
+      data-is-external="${e._isExternal ? "1" : "0"}">
       <div class="admin-entry-header">
         <strong>${escapeHtml(e.hostName)}</strong>
-        ${e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
+        ${e._sourceBadge ? `<span class="admin-source-badge">${escapeHtml(e._sourceBadge)}</span>` : e.source === "dmc" ? `<span class="admin-source-badge">DMC</span>` : ""}
         <span class="admin-entry-meta">${escapeHtml(e.possibleVenue || "")}${e.myrcmOrgId ? ` · MyRCM #${e.myrcmOrgId}` : ""}</span>
       </div>
       ${e.myrcmOrgId ? `<a class="admin-entry-link" href="https://www.myrcm.ch/myrcm/main?hId[1]=org&dId[O]=${e.myrcmOrgId}&pLa=de" target="_blank" rel="noopener">MyRCM-Seite ↗</a>` : ""}
@@ -5756,10 +5757,12 @@ function _attachAdminEntryListHandlers(wrapper, venuesByDisplay) {
     const hostName = entry.dataset.hostName;
     const myrcmOrgId = entry.dataset.myrcmOrgId;
     const isUnknownSeed = entry.dataset.isUnknownSeed === "1";
+    const isExternal = entry.dataset.isExternal === "1";
 
     if (ev.target.classList.contains("admin-btn-skip")) { entry.hidden = true; return; }
 
     if (ev.target.classList.contains("admin-btn-delete")) {
+      if (isExternal) { entry.hidden = true; return; }
       if (!confirm(`"${hostName}" wirklich löschen?`)) return;
       status.textContent = "Löschen…";
       try {
@@ -6118,22 +6121,6 @@ function renderAdminPruefenTab(container) {
       adminLoadUnmatched(seeds),
     ]))
   .then(async ([seeds, dmcRes, rccoRes, ffvrcRes, allEntries]) => {
-    // Neue Clubs aus venue-unmatched.json (noch nicht als unbekannt markiert)
-    const newEntries = allEntries.filter(e => !e._isUnknownSeed);
-    if (newEntries.length) {
-      const section = document.createElement("div");
-      section.className = "admin-new-clubs-section";
-      section.innerHTML = `<p class="admin-section-label">Neue Clubs (${newEntries.length})</p>`;
-      const { html, datalistHtml, venuesByDisplay } = _buildAdminEntryListHtml(newEntries, "admin-venue-datalist-pruefen");
-      const listWrapper = document.createElement("div");
-      listWrapper.innerHTML = datalistHtml + html;
-      section.appendChild(listWrapper);
-      _attachAdminEntryListHandlers(listWrapper, venuesByDisplay);
-      container.innerHTML = "";
-      container.appendChild(section);
-    } else {
-      container.innerHTML = "";
-    }
     const dmcRacesRaw = dmcRes?.ok ? await dmcRes.json() : [];
     const dmcRaces = Array.isArray(dmcRacesRaw) ? dmcRacesRaw : [];
     const rccoRacesRaw = rccoRes?.ok ? await rccoRes.json() : [];
@@ -6152,10 +6139,7 @@ function renderAdminPruefenTab(container) {
     const dmcPending = dmcRaces
       .filter(r => !r.venueId && !seededHostIds.has(r.hostId))
       .reduce((acc, r) => {
-        if (!dmcSeen.has(r.hostId)) {
-          dmcSeen.add(r.hostId);
-          acc.push({ _dmc: true, _sourceBadge: "DMC", id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
-        }
+        if (!dmcSeen.has(r.hostId)) { dmcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "DMC" }); }
         return acc;
       }, []);
 
@@ -6163,10 +6147,7 @@ function renderAdminPruefenTab(container) {
     const rccoPending = rccoRaces
       .filter(r => !r.venueId && !seededHostIds.has(r.hostId))
       .reduce((acc, r) => {
-        if (!rccoSeen.has(r.hostId)) {
-          rccoSeen.add(r.hostId);
-          acc.push({ _dmc: true, _sourceBadge: "RCCO", id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
-        }
+        if (!rccoSeen.has(r.hostId)) { rccoSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "RCCO" }); }
         return acc;
       }, []);
 
@@ -6175,26 +6156,34 @@ function renderAdminPruefenTab(container) {
     const ffvrcPending = (Array.isArray(ffvrcRacesAdmin) ? ffvrcRacesAdmin : [])
       .filter(r => r.venueId === "ffvrc-fr" && !seededHostIds.has(r.hostId))
       .reduce((acc, r) => {
-        if (!ffvrcSeen.has(r.hostId)) {
-          ffvrcSeen.add(r.hostId);
-          acc.push({ _dmc: true, _sourceBadge: "FFVRC", id: r.hostId, hostId: r.hostId, name: r.hostName, city: null, lat: null, lng: null, myrcmOrgId: null });
-        }
+        if (!ffvrcSeen.has(r.hostId)) { ffvrcSeen.add(r.hostId); acc.push({ hostId: r.hostId, hostName: r.hostName, myrcmOrgId: null, possibleVenue: null, locationUnknown: false, _isUnknownSeed: false, _isExternal: true, _sourceBadge: "FFVRC" }); }
         return acc;
       }, []);
 
-    const externalPending = [...dmcPending, ...rccoPending, ...ffvrcPending];
+    // Alle neuen Venues: MyRCM-unmatched + DMC + RCCO + FFVRC → eine gemeinsame Liste
+    const myrcmNew = allEntries.filter(e => !e._isUnknownSeed);
+    const allNewEntries = [...myrcmNew, ...dmcPending, ...rccoPending, ...ffvrcPending];
+    container.innerHTML = "";
+    if (allNewEntries.length) {
+      const section = document.createElement("div");
+      section.className = "admin-new-clubs-section";
+      section.innerHTML = `<p class="admin-section-label">Neue Venues (${allNewEntries.length})</p>`;
+      const { html, datalistHtml, venuesByDisplay } = _buildAdminEntryListHtml(allNewEntries, "admin-venue-datalist-pruefen");
+      const listWrapper = document.createElement("div");
+      listWrapper.innerHTML = datalistHtml + html;
+      section.appendChild(listWrapper);
+      _attachAdminEntryListHandlers(listWrapper, venuesByDisplay);
+      container.appendChild(section);
+    }
 
-    const pending = [
-      ...dachPending.map(s => ({ ...s, _dmc: false })),
-      ...externalPending,
-    ];
+    const pending = dachPending.map(s => ({ ...s, _dmc: false }));
 
     const geocodedSection = document.createElement("div");
     geocodedSection.className = "admin-geocoded-section";
     container.appendChild(geocodedSection);
 
     if (!pending.length) {
-      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert, keine offenen DMC-, RCCO- oder FFVRC-Venues.</p>`;
+      geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle ${totalDach} Strecken verifiziert.</p>`;
       return;
     }
 
@@ -6202,18 +6191,14 @@ function renderAdminPruefenTab(container) {
 
     function renderEntry() {
       const s = pending[idx];
-      const isDmc = s._dmc;
-      const extBadge = s._sourceBadge || "DMC";
       const mapsUrl = s.lat && s.lng ? `https://www.google.com/maps?q=${s.lat},${s.lng}` : null;
       const streetViewUrl = s.lat && s.lng ? `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${s.lat},${s.lng}` : null;
-      const doneCount = isDmc ? totalDach : alreadyDone + idx;
-      const totalCount = isDmc ? totalDach : totalDach;
-      const extIdxDisplay = isDmc ? `${extBadge} ${idx - dachPending.length + 1} / ${externalPending.length}` : `${doneCount} / ${totalCount} verifiziert`;
-      const pct = isDmc ? 100 : Math.round(doneCount / totalDach * 100);
+      const doneCount = alreadyDone + idx;
+      const pct = Math.round(doneCount / totalDach * 100);
       geocodedSection.innerHTML = `
         <div class="admin-dach-progress">
-          <span>${extIdxDisplay}${isDmc ? ` <span class="admin-source-badge">${escapeHtml(extBadge)}</span>` : ""}</span>
-          ${!isDmc ? `<div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>` : ""}
+          <span>${doneCount} / ${totalDach} verifiziert</span>
+          <div class="admin-dach-bar"><div class="admin-dach-bar-fill" style="width:${pct}%"></div></div>
         </div>
         <div class="admin-entry">
           <div class="admin-entry-header">
@@ -6230,10 +6215,10 @@ function renderAdminPruefenTab(container) {
             <input type="text" class="admin-input admin-input-coords js-dach-coords" placeholder="48.123, 14.456" value="${s.lat && s.lng ? `${s.lat}, ${s.lng}` : ""}" />
           </div>
           <div class="admin-entry-actions" style="flex-wrap:wrap;gap:8px;">
-            ${!isDmc ? `<button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>` : ""}
-            <button type="button" class="admin-btn admin-btn-save js-dach-save">${isDmc ? "Speichern" : "Korrigieren & Weiter"}</button>
+            <button type="button" class="admin-btn admin-btn-ok js-dach-ok">✓ Stimmt so</button>
+            <button type="button" class="admin-btn admin-btn-save js-dach-save">Korrigieren & Weiter</button>
             <button type="button" class="admin-btn admin-btn-unknown js-dach-unknown">Kein Platz bekannt</button>
-            ${!isDmc ? `<button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>` : ""}
+            <button type="button" class="admin-btn admin-btn-delete js-dach-delete">Löschen</button>
             <button type="button" class="admin-btn admin-btn-skip js-dach-skip">Überspringen</button>
             ${idx > 0 ? `<button type="button" class="admin-btn admin-btn-unknown js-dach-prev" style="margin-left:auto;">← Zurück</button>` : ""}
           </div>
@@ -6245,20 +6230,12 @@ function renderAdminPruefenTab(container) {
       async function saveEntry(lat, lng, locationUnknown = false) {
         status.textContent = "Speichern…";
         try {
-          let payload;
-          if (isDmc) {
-            payload = locationUnknown
-              ? { action: "mark-unknown", hostId: s.hostId, hostName: s.name, myrcmOrgId: null }
-              : { action: "add-venue", hostId: s.hostId, hostName: s.name, myrcmOrgId: null, lat, lng };
-          } else {
-            payload = locationUnknown
-              ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
-              : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
-          }
+          const payload = locationUnknown
+            ? { action: "verify-dach-seed", seedId: s.id, seedName: s.name, locationUnknown: true }
+            : { action: "verify-dach-seed", seedId: s.id, seedName: s.name, lat, lng };
           await adminCommit(payload);
           pending.splice(idx, 1);
-          if (!isDmc) dachPending.splice(dachPending.indexOf(s), 1);
-          else externalPending.splice(externalPending.indexOf(s), 1);
+          dachPending.splice(dachPending.indexOf(s), 1);
           if (!pending.length) {
             geocodedSection.innerHTML = `<p class="admin-empty">✓ Alle Strecken bearbeitet.</p>`;
           } else {
