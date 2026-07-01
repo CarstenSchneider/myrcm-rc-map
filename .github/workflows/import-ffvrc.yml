@@ -1,0 +1,40 @@
+name: Import FFVRC races + club discovery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-ffvrc:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run FFVRC importer
+        run: node import-ffvrc.js
+
+      - name: Run FFVRC club discovery
+        run: node scripts/discover-ffvrc-clubs.js
+
+      - name: Commit FFVRC data to dev
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update FFVRC data (import + club discovery)
+          branch: dev
+          file_pattern: |
+            ffvrc-races.json
+            ffvrc-venues.json
