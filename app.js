@@ -3754,8 +3754,9 @@ function updateMarkers(list, shouldFitBounds = true) {
       : "map-marker-venue-inactive";
 
     const registrationTotal = venueRegistrationCount(venueRaces);
+    const venueHasKnownCount = hasUpcomingRaces && venueRaces.some(r => hasRegistrationCount(r));
     const markerScale = hasUpcomingRaces
-      ? markerScaleForRegistrationCount(registrationTotal)
+      ? (venueHasKnownCount ? markerScaleForRegistrationCount(registrationTotal) : 1.0)
       : 1;
 
     const markerWidth = hasUpcomingRaces ? Math.round(raceMapMarkerBaseWidth * markerScale) : 10;
@@ -3785,7 +3786,9 @@ function updateMarkers(list, shouldFitBounds = true) {
     } else if (hasUpcomingRaces && !venueHasActiveRegistration) {
       markerColor = rcRaceMapColors.markerClosed;
     } else if (hasUpcomingRaces) {
-      markerColor = markerColorForRegistrationCount(registrationTotal);
+      markerColor = venueHasKnownCount
+        ? markerColorForRegistrationCount(registrationTotal)
+        : rcRaceMapColors.marker;
     } else {
       markerColor = rcRaceMapColors.markerClosed;
     }
