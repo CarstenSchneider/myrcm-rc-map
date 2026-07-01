@@ -355,7 +355,6 @@ function _closeCountryPicker(country) {
     selectedCountry = country;
     localStorage.setItem("rcRaceMapCountry", country);
     updateCountryPill();
-    applyRcRaceMapStyle();
     populateSeries();
     _zoomToCountryPending = true;
     render();
@@ -1088,13 +1087,8 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      if (selectedCountry !== "all") {
-        maplibreMap.setPaintProperty(id, "line-color", "#4A9EE8");
-        maplibreMap.setPaintProperty(id, "line-opacity", 0.9);
-      } else {
-        maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
-        maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
-      }
+      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
+      maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
       return;
     }
 
