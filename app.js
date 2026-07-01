@@ -20,11 +20,10 @@ const map = L.map("map", {
   minZoom: 6
 }).setView([48.5, 10.5], 6);
 
-// Bounds are wider than DACH: panToVisible shifts the actual map center south by up
-// to ~200px to place venues in the visible area above the mobile drawer. Leaflet's
-// _limitCenter enforces bounds against the full container view (not the visible area),
-// so the south edge needs room for that shift + container half-height at zoom 6.
-const MAX_BOUNDS = [[35.0, -5.0], [62.0, 30.0]];
+// panToVisible shifts the viewport right by 207px (desktop) or up on mobile.
+// Leaflet's _limitCenter enforces bounds against the full container, not the visible area,
+// so west/south edges need extra room: west for the France panel-shift, south for mobile drawer shift.
+const MAX_BOUNDS = [[35.0, -12.0], [64.0, 30.0]];
 map.setMaxBounds(MAX_BOUNDS);
 
 
