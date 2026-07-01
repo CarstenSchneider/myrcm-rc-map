@@ -1009,15 +1009,6 @@ function applyCountryRegionLabelStyle(maplibreMap, layerId) {
   });
 }
 
-function _filterHasAdminLevel(filter, level) {
-  if (!Array.isArray(filter)) return false;
-  if (filter[0] === "==" && filter[2] === level) {
-    const prop = filter[1];
-    if (prop === "admin_level") return true;
-    if (Array.isArray(prop) && prop[1] === "admin_level") return true;
-  }
-  return filter.some(f => Array.isArray(f) && _filterHasAdminLevel(f, level));
-}
 
 function applyRcRaceMapStyle() {
   const maplibreMap = baseMapLayer.getMaplibreMap?.();
@@ -1098,14 +1089,9 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      if (_filterHasAdminLevel(layer.filter, 2)) {
-        maplibreMap.setPaintProperty(id, "line-color", "#b0b0b0");
-        maplibreMap.setPaintProperty(id, "line-width", 1.0);
-        maplibreMap.setPaintProperty(id, "line-opacity", 0.9);
-      } else {
-        maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
-        maplibreMap.setPaintProperty(id, "line-opacity", 0.5);
-      }
+      if (layer.id === "country-borders") return;
+      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
+      maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
       return;
     }
 
@@ -1154,7 +1140,22 @@ function applyRcRaceMapStyle() {
 }
 
 function updateCountryOutline() {
-  // country borders via map's admin_level-2 boundary layer (see applyRcRaceMapStyle)
+  const mlMap = baseMapLayer?.getMaplibreMap?.();
+  if (!mlMap || mlMap.getLayer("country-borders")) return;
+  try {
+    // Find the source name used by the existing boundary source-layer
+    const style = mlMap.getStyle();
+    const vtLayer = style?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
+    if (!vtLayer) return;
+    mlMap.addLayer({
+      id: "country-borders",
+      type: "line",
+      source: vtLayer.source,
+      "source-layer": "boundary",
+      filter: ["==", "admin_level", 2],
+      paint: { "line-color": "#b0b0b0", "line-width": 1.2, "line-opacity": 0.85 },
+    });
+  } catch {}
 }
 
 baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); });
