@@ -5140,6 +5140,12 @@
     "website": "http://www.ttsc-racing.de"
   },
   {
+    "hostId": "ffvrc-0269",
+    "hostName": "TURBIE RACING CLUB",
+    "lat": 43.72726687552217,
+    "lng": 7.391650472163486
+  },
+  {
     "hostId": "yellowracing-v2-0",
     "hostName": "Yellowracing V2.0",
     "locationUnknown": true,
