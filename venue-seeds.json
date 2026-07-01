@@ -4220,6 +4220,12 @@
     "country": "NL"
   },
   {
+    "hostId": "ffvrc-0637",
+    "hostName": "ECURIE DU LAC",
+    "lat": 48.089204502657395,
+    "lng": 7.409253365378129
+  },
+  {
     "hostId": "rcco-emc-wehrheim-e-v",
     "hostName": "EMC Wehrheim e. V.",
     "lat": 50.314507929048034,
