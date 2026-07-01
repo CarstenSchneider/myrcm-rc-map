@@ -1089,7 +1089,7 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      if (layer.id === "country-borders") return;
+      if (layer.id.startsWith("diag-") || layer.id === "country-borders") return;
       maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
       maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
       return;
@@ -1143,19 +1143,28 @@ function updateCountryOutline() {
   const mlMap = baseMapLayer?.getMaplibreMap?.();
   if (!mlMap) return;
   try {
-    if (!mlMap.getLayer("country-borders")) {
-      const vtLayer = mlMap.getStyle()?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
-      if (!vtLayer) return;
-      mlMap.addLayer({
-        id: "country-borders",
-        type: "line",
-        source: vtLayer.source,
-        "source-layer": "boundary",
-        filter: ["==", "admin_level", 2],
-        paint: { "line-color": rcRaceMapColors.water, "line-width": 3, "line-opacity": 0.9 },
-      });
-    } else {
-      mlMap.setPaintProperty("country-borders", "line-color", rcRaceMapColors.water);
+    const vtLayer = mlMap.getStyle()?.layers?.find(l => l["source-layer"] === "boundary" && l.type === "line");
+    if (!vtLayer) return;
+    const src = vtLayer.source;
+    // Remove old single layer if present
+    if (mlMap.getLayer("country-borders")) mlMap.removeLayer("country-borders");
+    const diagLayers = [
+      { id: "diag-border-2", level: 2, color: "#FF00FF", width: 4 },  // Ländergrenzen (Magenta)
+      { id: "diag-border-4", level: 4, color: "#00FFFF", width: 3 },  // Bundesländer (Cyan)
+      { id: "diag-border-6", level: 6, color: "#00FF00", width: 2 },  // Landkreise (Grün)
+      { id: "diag-border-8", level: 8, color: "#FF0000", width: 1 },  // Gemeinden (Rot)
+    ];
+    for (const { id, level, color, width } of diagLayers) {
+      if (!mlMap.getLayer(id)) {
+        mlMap.addLayer({
+          id,
+          type: "line",
+          source: src,
+          "source-layer": "boundary",
+          filter: ["==", "admin_level", level],
+          paint: { "line-color": color, "line-width": width, "line-opacity": 1 },
+        });
+      }
     }
   } catch {}
 }
