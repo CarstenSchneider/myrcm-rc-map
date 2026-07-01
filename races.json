@@ -113111,8 +113111,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 36,
-    "registrationDisplay": "36",
+    "registrationCount": 37,
+    "registrationDisplay": "37",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113125,7 +113125,7 @@
       },
       {
         "name": "SM/CS Elektro E8OR",
-        "entries": 29
+        "entries": 30
       }
     ],
     "documents": [],
@@ -113484,17 +113484,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 31,
-    "registrationDisplay": "31",
+    "registrationCount": 33,
+    "registrationDisplay": "33",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "ORE8",
-        "entries": 21
+        "entries": 22
       },
       {
         "name": "ORE8T",
-        "entries": 10
+        "entries": 11
       }
     ],
     "documents": [
@@ -113647,8 +113647,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 69,
-    "registrationDisplay": "69",
+    "registrationCount": 67,
+    "registrationDisplay": "67",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113657,11 +113657,11 @@
       },
       {
         "name": "WRC 4WD",
-        "entries": 31
+        "entries": 30
       },
       {
         "name": "WRC Rookie",
-        "entries": 25
+        "entries": 24
       }
     ],
     "documents": [
@@ -113864,15 +113864,18 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Open SRCCA",
-        "entries": 3
+        "entries": 4
       },
-      "Repas du soir",
+      {
+        "name": "Repas du soir",
+        "entries": 1
+      },
       {
         "name": "SM/CS Elektro E8OR",
         "entries": 22
@@ -114010,8 +114013,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 20,
-    "registrationDisplay": "20",
+    "registrationCount": 21,
+    "registrationDisplay": "21",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MCC - 17.5 Stock fixed",
@@ -114029,7 +114032,7 @@
       },
       {
         "name": "MCC - Tamiya TT",
-        "entries": 9
+        "entries": 10
       }
     ],
     "documents": [],
@@ -114805,13 +114808,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "ÖFMAV EOR - FWD Fronti",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "ÖFMAV EOR - TW 17.5T",
@@ -114819,7 +114822,7 @@
       },
       {
         "name": "ÖFMAV EOR - TW Modified",
-        "entries": 4
+        "entries": 5
       }
     ],
     "documents": [],
@@ -114933,13 +114936,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 10,
-    "registrationDisplay": "10",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8 (1:8 Nitro Offroad Buggy)",
-        "entries": 10
+        "entries": 11
       }
     ],
     "documents": [],
@@ -115597,13 +115600,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 13,
-    "registrationDisplay": "13",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Tamiya TT-02 RCCR",
-        "entries": 11
+        "entries": 12
       },
       {
         "name": "Tamiya TT-02 RCCR \"Juniors\"",
@@ -116267,8 +116270,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 19,
-    "registrationDisplay": "19",
+    "registrationCount": 20,
+    "registrationDisplay": "20",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -116289,7 +116292,7 @@
       },
       {
         "name": "EuroTW",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -118326,11 +118329,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 0,
-    "registrationDisplay": "0",
+    "registrationCount": 1,
+    "registrationDisplay": "1",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
-      "EG Tamiya Truck",
+      {
+        "name": "EG Tamiya Truck",
+        "entries": 1
+      },
       "EG10TWSP(Sfb)"
     ],
     "documents": [
@@ -119110,8 +119116,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 28,
-    "registrationDisplay": "28",
+    "registrationCount": 29,
+    "registrationDisplay": "29",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -119128,7 +119134,7 @@
       },
       {
         "name": "OM_OR8_VB_Top",
-        "entries": 10
+        "entries": 11
       }
     ],
     "documents": [],
