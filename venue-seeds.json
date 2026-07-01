@@ -4743,6 +4743,11 @@
     "website": "http://Offroad-Club-Ostsee.Modellbuggy.de"
   },
   {
+    "hostId": "ffvrc-0839",
+    "hostName": "OPALE RADIO COMMANDEE AUTOMOBILE",
+    "locationUnknown": true
+  },
+  {
     "hostId": "orra",
     "hostName": "Orra",
     "locationUnknown": true,
