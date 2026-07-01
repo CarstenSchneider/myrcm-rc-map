@@ -319,7 +319,6 @@ function _buildPickerHtml() {
   return countryFlags.map(f =>
     `<button class="country-picker-item${f.country === selectedCountry ? " is-active" : ""}" data-country="${f.country}" aria-label="${t("country." + f.country)}">` +
     `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>` +
-    `<span class="country-picker-label">${f.country === "all" ? "EU" : f.country}</span>` +
     `</button>`
   ).join("");
 }

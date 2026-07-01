@@ -950,32 +950,21 @@ input {
 
 .country-picker-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  padding: 7px 6px 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border: none;
   background: transparent;
-  border-radius: 8px;
+  border-radius: 50%;
   cursor: pointer;
-  min-width: 52px;
   transition: background 120ms ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 .country-picker-item:hover { background: rgba(var(--shadow-rgb), 0.06); }
 .country-picker-item.is-active { background: var(--accent); }
-
-.country-picker-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  color: var(--text);
-  font-family: inherit;
-  line-height: 1;
-}
-.country-picker-item.is-active .country-picker-label { color: #fff; }
 
 .country-flag-icon {
   display: block;
@@ -1009,6 +998,10 @@ body.is-breakpoint-crossing .country-pill {
 @media (max-width: 860px) {
   .country-pill {
     top: 136px;  /* 74 (locate top) + 52 (locate height) + 10 gap */
+    width: 52px;
+    height: 52px;
+  }
+  .country-picker-item {
     width: 52px;
     height: 52px;
   }
