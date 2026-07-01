@@ -2133,7 +2133,7 @@ function matchesCountryFilter(race) {
   const venue = venueForRace(race);
   if (!venue) return false;
   const venueC = venueCountry(venue);
-  if (!venueC) return _dachCountries.has(selectedCountry); // no country data → assume DACH only
+  if (!venueC) return venue.locationUnknown ? false : _dachCountries.has(selectedCountry);
   if (venueC === selectedCountry) return true;
   // Cross-border races: also match by organizer's country
   const hostId = raceHostId(race);
