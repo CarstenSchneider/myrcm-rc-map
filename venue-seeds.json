@@ -5207,6 +5207,12 @@
     "lng": 7.391650472163486
   },
   {
+    "hostId": "ffvrc-0439",
+    "hostName": "UNION SPORTIVE BERGERACOISE RACING CAR",
+    "lat": 44.847948,
+    "lng": 0.509122
+  },
+  {
     "hostId": "yellowracing-v2-0",
     "hostName": "Yellowracing V2.0",
     "locationUnknown": true,
