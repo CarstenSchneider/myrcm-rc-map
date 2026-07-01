@@ -5145,6 +5145,12 @@
     "country": "BE"
   },
   {
+    "hostId": "ffvrc-0554",
+    "hostName": "TOUT TERRAIN RADIOCOMMANDE 90",
+    "lat": 47.57798701841962,
+    "lng": 6.841061955269027
+  },
+  {
     "hostId": "dmc-ov-289",
     "hostName": "TS-Gross Auheim",
     "locationUnknown": true,
