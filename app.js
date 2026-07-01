@@ -1009,6 +1009,16 @@ function applyCountryRegionLabelStyle(maplibreMap, layerId) {
   });
 }
 
+function _filterHasAdminLevel(filter, level) {
+  if (!Array.isArray(filter)) return false;
+  if (filter[0] === "==" && filter[2] === level) {
+    const prop = filter[1];
+    if (prop === "admin_level") return true;
+    if (Array.isArray(prop) && prop[1] === "admin_level") return true;
+  }
+  return filter.some(f => Array.isArray(f) && _filterHasAdminLevel(f, level));
+}
+
 function applyRcRaceMapStyle() {
   const maplibreMap = baseMapLayer.getMaplibreMap?.();
   if (!maplibreMap?.getStyle) return;
@@ -1088,8 +1098,14 @@ function applyRcRaceMapStyle() {
     }
 
     if (layer.type === "line" && layerLooksLike(layer, ["boundary"])) {
-      maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
-      maplibreMap.setPaintProperty(id, "line-opacity", 0.72);
+      if (_filterHasAdminLevel(layer.filter, 2)) {
+        maplibreMap.setPaintProperty(id, "line-color", "#b0b0b0");
+        maplibreMap.setPaintProperty(id, "line-width", 1.0);
+        maplibreMap.setPaintProperty(id, "line-opacity", 0.9);
+      } else {
+        maplibreMap.setPaintProperty(id, "line-color", rcRaceMapColors.boundary);
+        maplibreMap.setPaintProperty(id, "line-opacity", 0.5);
+      }
       return;
     }
 
@@ -1138,28 +1154,7 @@ function applyRcRaceMapStyle() {
 }
 
 function updateCountryOutline() {
-  const mlMap = baseMapLayer?.getMaplibreMap?.();
-  if (!mlMap || !_countryBorders) return;
-  try {
-    if (!mlMap.getLayer("country-outline")) {
-      if (!mlMap.getSource("country-outline-src")) {
-        mlMap.addSource("country-outline-src", { type: "geojson", data: _countryBorders });
-      }
-      mlMap.addLayer({
-        id: "country-outline",
-        type: "fill",
-        source: "country-outline-src",
-        layout: {},
-        paint: { "fill-color": "#4A9EE8", "fill-opacity": 0.1 },
-      });
-    }
-    mlMap.setFilter(
-      "country-outline",
-      selectedCountry === "all"
-        ? ["==", ["get", "code"], ""]
-        : ["==", ["get", "code"], selectedCountry]
-    );
-  } catch {}
+  // country borders via map's admin_level-2 boundary layer (see applyRcRaceMapStyle)
 }
 
 baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); });
