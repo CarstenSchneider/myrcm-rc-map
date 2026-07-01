@@ -297,6 +297,8 @@ const countryFlags = [
   { country: "BE",  code: "be", label: "Belgien" },
   { country: "LU",  code: "lu", label: "Luxemburg" },
 ];
+let _countryOutlines = null;
+let _countryOutlineLayer = null;
 let _countryPill = null;
 let _countryPicker = null;
 let _pickerIsOpen = false;
@@ -308,6 +310,28 @@ function updateCountryPill() {
   const f = countryFlags.find(cf => cf.country === selectedCountry) ?? countryFlags[0];
   _countryPill.innerHTML = `<span class="fi fi-${f.code} fis country-flag-icon" aria-hidden="true"></span>`;
   _countryPill.setAttribute("aria-label", t("country." + f.country));
+}
+
+function updateCountryOutline() {
+  if (_countryOutlineLayer) {
+    map.removeLayer(_countryOutlineLayer);
+    _countryOutlineLayer = null;
+  }
+  if (!_countryOutlines || selectedCountry === "all") return;
+  const feature = _countryOutlines.features?.find(f => f.id === selectedCountry);
+  if (!feature) return;
+  _countryOutlineLayer = L.geoJSON(feature, {
+    style: {
+      color: "#4A9EE8",
+      weight: 2,
+      opacity: 0.6,
+      fill: true,
+      fillColor: "#4A9EE8",
+      fillOpacity: 0.07,
+    },
+    interactive: false,
+  }).addTo(map);
+  _countryOutlineLayer.bringToBack();
 }
 
 function _buildPickerHtml() {
@@ -355,6 +379,7 @@ function _closeCountryPicker(country) {
     selectedCountry = country;
     localStorage.setItem("rcRaceMapCountry", country);
     updateCountryPill();
+    updateCountryOutline();
     populateSeries();
     _zoomToCountryPending = true;
     render();
@@ -4854,6 +4879,7 @@ async function init() {
   ensureRegistrationStatusStyles();
 
   const cacheBuster = Date.now();
+  const countryOutlinesPromise = fetchJsonOrFallback("country-outlines.json", null);
 
   const [venuesResponse, racesResponse, rckRacesRawResponse, rckVenueCandidatesResponse, hostsResponse, myrcmHostsResponse, seriesCatalogResponse, dmcRacesRawResponse, dmcVenuesRawResponse, rccoRacesRawResponse, rccoVenuesRawResponse, ffvrcRacesRawResponse, ffvrcVenuesRawResponse] = await Promise.all([
     fetch(`venues.json?v=${cacheBuster}`),
@@ -4990,6 +5016,8 @@ async function init() {
   _updateStaticI18n();
 
   if (selectedCountry !== "all") _zoomToCountryPending = true;
+  _countryOutlines = await countryOutlinesPromise;
+  updateCountryOutline();
   render();
   revealMapWhenReady();
   loadAds();
