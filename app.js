@@ -358,6 +358,7 @@ function _closeCountryPicker(country) {
     populateSeries();
     _zoomToCountryPending = true;
     render();
+    updateCountryOutline();
   } else if (country !== undefined) {
     fitToCountry(country);
   }
@@ -1132,6 +1133,33 @@ function applyRcRaceMapStyle() {
   if (canvas) {
     canvas.style.background = rcRaceMapColors.land;
   }
+
+  updateCountryOutline();
+}
+
+function updateCountryOutline() {
+  const mlMap = baseMapLayer?.getMaplibreMap?.();
+  if (!mlMap || !_countryBorders) return;
+  try {
+    if (!mlMap.getLayer("country-outline")) {
+      if (!mlMap.getSource("country-outline-src")) {
+        mlMap.addSource("country-outline-src", { type: "geojson", data: _countryBorders });
+      }
+      mlMap.addLayer({
+        id: "country-outline",
+        type: "line",
+        source: "country-outline-src",
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: { "line-color": "#4A9EE8", "line-width": 2.5, "line-opacity": 0.75 },
+      });
+    }
+    mlMap.setFilter(
+      "country-outline",
+      selectedCountry === "all"
+        ? ["==", ["get", "code"], ""]
+        : ["==", ["get", "code"], selectedCountry]
+    );
+  } catch {}
 }
 
 baseMapLayer.getMaplibreMap?.().on("load", () => { applyRcRaceMapStyle(); });
@@ -1145,6 +1173,8 @@ document.addEventListener("visibilitychange", () => {
   if (!document.hidden) requestAnimationFrame(applyRcRaceMapStyle);
 });
 
+
+let _countryBorders = null;
 
 let venues = [];
 let races = [];
@@ -4870,6 +4900,12 @@ async function init() {
     fetch(`ffvrc-races.json?v=${cacheBuster}`).catch(() => null),
     fetch(`ffvrc-venues.json?v=${cacheBuster}`).catch(() => null),
   ]);
+
+  // Non-blocking: country border polygons for outline highlight
+  fetch(`dach-borders.json?v=${cacheBuster}`)
+    .then(r => r.json())
+    .then(data => { _countryBorders = data; updateCountryOutline(); })
+    .catch(() => {});
 
   dataLastUpdatedAt = latestResponseLastModified([
     venuesResponse,
