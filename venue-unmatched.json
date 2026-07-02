@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rca-starec",
-    "hostName": "RCA Stařeč",
-    "source": "myrcm",
-    "myrcmOrgId": "38058",
-    "possibleVenue": "Stařeč"
-  },
-  {
     "hostId": "team-rebels",
     "hostName": "Team Rebels",
     "source": "myrcm",
