@@ -260,7 +260,7 @@ async function fetchOrgDetail(orgId) {
   const eventCount = $(`a[href*="dId[E]="], a[href*="dId%5BE%5D="]`).length;
   const website = $("a[href^='http']").filter((_, el) => {
     const href = $(el).attr("href") || "";
-    return !href.includes("myrcm.ch") && !href.includes("apple.com") && !href.includes("play.google.com");
+    return !href.includes("myrcm.ch") && !href.includes("apple.com") && !href.includes("play.google.com") && !href.includes("rc-timing.ch");
   }).first().attr("href") || "";
 
   return { country, location, name, eventCount, website };
