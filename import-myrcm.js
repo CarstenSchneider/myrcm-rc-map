@@ -4,7 +4,6 @@ import { safeWriteJson, warnIfSparse } from "./import-utils.js";
 
 const hostListFile = "myrcm-hosts-dach.json";
 const beneluxHostListFile = "myrcm-hosts-benelux.json";
-const franceHostListFile = "myrcm-hosts-france.json";
 const czHostListFile = "myrcm-hosts-cz.json";
 const hostsFile = "hosts.json";
 const venuesFile = "venues.json";
@@ -1918,15 +1917,6 @@ async function loadHosts() {
   }
 
   try {
-    const franceRaw = await readFile(franceHostListFile, "utf8");
-    const franceHosts = JSON.parse(franceRaw);
-    const existingOrgIds = new Set(hosts.map(h => String(h.orgId)));
-    hosts = [...hosts, ...franceHosts.filter(h => !existingOrgIds.has(String(h.orgId)))];
-  } catch {
-    // france file optional
-  }
-
-  try {
     const czRaw = await readFile(czHostListFile, "utf8");
     const czHosts = JSON.parse(czRaw);
     const existingOrgIds = new Set(hosts.map(h => String(h.orgId)));
@@ -1948,7 +1938,7 @@ async function loadHosts() {
     }));
 
   if (countryOnly) {
-    const _countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU", "Czech Republic": "CZ", "Czechia": "CZ", "France": "FR" };
+    const _countryMap = { "Austria": "AT", "Switzerland": "CH", "Germany": "DE", "Netherlands": "NL", "Belgium": "BE", "Luxembourg": "LU", "Czech Republic": "CZ", "Czechia": "CZ" };
     const byCountry = filteredHosts.filter(h => _countryMap[h.country] === countryOnly);
     console.log(`Country-Filter (${countryOnly}): ${byCountry.length} von ${filteredHosts.length} Hosts`);
     return byCountry;
@@ -2046,6 +2036,7 @@ async function runImportOnce() {
   unique = applyFirstSeen(unique, previousRaces);
 
   if (countryOnly) {
+    // Keep all previous races from non-imported hosts (e.g. DACH/Benelux when running CZ-only)
     const importedHostIdSet = new Set(importedHosts.map(h => h.id));
     const previousFromOthers = previousRaces.filter(r => !importedHostIdSet.has(r.hostId));
     unique = [...unique, ...previousFromOthers]
