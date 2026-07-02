@@ -5425,6 +5425,12 @@
     "myrcmOrgId": "215"
   },
   {
+    "hostId": "xraystore-cz",
+    "hostName": "XRAYstore.cz",
+    "locationUnknown": true,
+    "myrcmOrgId": "93"
+  },
+  {
     "hostId": "yellowracing-v2-0",
     "hostName": "Yellowracing V2.0",
     "locationUnknown": true,
