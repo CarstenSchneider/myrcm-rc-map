@@ -14,6 +14,13 @@
     "country": "DE"
   },
   {
+    "id": "1-mini-z-racer-cr",
+    "name": "1. Mini-Z Racer ČR",
+    "website": "https://www.mini-z.cz",
+    "myrcmOrgId": "16978",
+    "country": "CZ"
+  },
+  {
     "id": "1-mrc-mannheim-e-v",
     "name": "1. MRC Mannheim e.V.",
     "website": "https://www.mrc-mannheim.de/",
@@ -174,6 +181,13 @@
     "country": "DE"
   },
   {
+    "id": "auto-rc-olomouc",
+    "name": "Auto RC Olomouc",
+    "website": "http://www.autorcolomouc.cz",
+    "myrcmOrgId": "6309",
+    "country": "CZ"
+  },
+  {
     "id": "automodellclub-mei-en-e-v",
     "name": "Automodellclub Meißen e.V.",
     "website": "https://www.automodellclub-meissen.de/",
@@ -284,6 +298,13 @@
     "website": "",
     "myrcmOrgId": "50568",
     "country": "DE"
+  },
+  {
+    "id": "domansky-s-r-o",
+    "name": "Domanský s.r.o.",
+    "website": "https://www.rc-timing.ch/support/faq.html",
+    "myrcmOrgId": "11567",
+    "country": "CZ"
   },
   {
     "id": "dutch-rc-series",
@@ -524,6 +545,13 @@
     "website": "https://www.ircr.ch/",
     "myrcmOrgId": "26980",
     "country": "CH"
+  },
+  {
+    "id": "jmkracing",
+    "name": "JMKracing",
+    "website": "http://www.jmkracing.cz",
+    "myrcmOrgId": "14814",
+    "country": "CZ"
   },
   {
     "id": "kloft-timing",
@@ -976,6 +1004,13 @@
     "country": "DE"
   },
   {
+    "id": "mibosport",
+    "name": "MIBOSPORT",
+    "website": "https://www.mibosport.com",
+    "myrcmOrgId": "6957",
+    "country": "CZ"
+  },
+  {
     "id": "mini-auto-club-de-charmes-sur-rhone",
     "name": "Mini auto Club de Charmes Sur Rhone",
     "website": "https://apps.apple.com/ch/app/myrcm-by-so-dialed/id6744058641",
@@ -1015,6 +1050,13 @@
     "website": "http://www.mttg.ch/",
     "myrcmOrgId": "18473",
     "country": "CH"
+  },
+  {
+    "id": "mini-z-ostrava",
+    "name": "Mini-Z Ostrava",
+    "website": "http://www.mini-zostrava.cz",
+    "myrcmOrgId": "1334",
+    "country": "CZ"
   },
   {
     "id": "mini-zshop-nl",
@@ -1087,6 +1129,13 @@
     "website": "",
     "myrcmOrgId": "2641",
     "country": "BE"
+  },
+  {
+    "id": "modelklub-svitavy",
+    "name": "Modelklub Svitavy",
+    "website": "https://www.modelklub-svitavy.cz",
+    "myrcmOrgId": "49095",
+    "country": "CZ"
   },
   {
     "id": "modell-rennsport-club-st-gallen-mrcsg",
@@ -1554,6 +1603,13 @@
     "country": "BE"
   },
   {
+    "id": "racing-club-zlin",
+    "name": "Racing Club Zlín",
+    "website": "http://www.rc.zlin.cz",
+    "myrcmOrgId": "21771",
+    "country": "CZ"
+  },
+  {
     "id": "raco-2000",
     "name": "RACO 2000",
     "website": "https://www.raco2000.nl/",
@@ -1573,6 +1629,20 @@
     "website": "http://www.rasenracer.de/",
     "myrcmOrgId": "37610",
     "country": "DE"
+  },
+  {
+    "id": "rc-auta-vizovice-z-s",
+    "name": "RC auta Vizovice, z.s.",
+    "website": "https://www.rcvizovice.cz",
+    "myrcmOrgId": "63755",
+    "country": "CZ"
+  },
+  {
+    "id": "rc-blansko-z-s",
+    "name": "RC Blansko,z.s.",
+    "website": "https://www.rcblansko.eu",
+    "myrcmOrgId": "590",
+    "country": "CZ"
   },
   {
     "id": "rc-car-chemnitz",
@@ -1618,6 +1688,13 @@
     "country": "DE"
   },
   {
+    "id": "rc-carsclub-ostrov",
+    "name": "RC Carsclub Ostrov",
+    "website": "https://rccco.cz",
+    "myrcmOrgId": "28176",
+    "country": "CZ"
+  },
+  {
     "id": "rc-club-wyland",
     "name": "RC Club Wyland",
     "website": "https://www.rccw.ch/",
@@ -1637,6 +1714,13 @@
     "website": "",
     "myrcmOrgId": "18663",
     "country": "NL"
+  },
+  {
+    "id": "rc-divoke-jeleni",
+    "name": "RC DIVOKE JELENI",
+    "website": "https://www.facebook.com/rcdivoke.jeleni",
+    "myrcmOrgId": "41010",
+    "country": "CZ"
   },
   {
     "id": "rc-drecksloch-e-v",
@@ -1673,6 +1757,13 @@
     "website": "",
     "myrcmOrgId": "47757",
     "country": "NL"
+  },
+  {
+    "id": "rc-model-car-club-brno",
+    "name": "RC Model Car Club Brno",
+    "website": "http://www.rcautomodely.com",
+    "myrcmOrgId": "3202",
+    "country": "CZ"
   },
   {
     "id": "rc-modellbaufreunde-e-v",
@@ -1731,6 +1822,13 @@
     "myrcmOrgId": "45925",
     "country": "DE",
     "ogImage": "https://www.rcspeedracer.de/wp-content/uploads/2024/04/speedracer-share-small.jpg"
+  },
+  {
+    "id": "rc-team-rychvald",
+    "name": "RC Team Rychvald",
+    "website": "https://www.rcteamrychvald.cz",
+    "myrcmOrgId": "33726",
+    "country": "CZ"
   },
   {
     "id": "rc-team-sauerland-e-v",
@@ -1827,6 +1925,13 @@
     "website": "https://www.rc-timing.ch/",
     "myrcmOrgId": "4",
     "country": "CH"
+  },
+  {
+    "id": "rca-starec",
+    "name": "RCA Stařeč",
+    "website": "https://www.facebook.com/RCAStarec",
+    "myrcmOrgId": "38058",
+    "country": "CZ"
   },
   {
     "id": "rcc-reken-e-v",
@@ -2105,6 +2210,13 @@
     "country": "CH"
   },
   {
+    "id": "team-rebels",
+    "name": "Team Rebels",
+    "website": "http://teamrebels.cz/",
+    "myrcmOrgId": "11482",
+    "country": "CZ"
+  },
+  {
     "id": "technische-universitat-chemnitz-professur-alternative-fahrzeugantriebe",
     "name": "Technische Universität Chemnitz - Professur Alternative Fahrzeugantriebe",
     "website": "https://www.tu-chemnitz.de/",
@@ -2206,6 +2318,13 @@
     "country": "CH"
   },
   {
+    "id": "vegatrucks",
+    "name": "Vegatrucks",
+    "website": "https://www.rc-timing.ch/support/faq.html",
+    "myrcmOrgId": "215",
+    "country": "CZ"
+  },
+  {
     "id": "vfl-goldstein-1953-e-v",
     "name": "VfL Goldstein 1953 e.V.",
     "website": "",
@@ -2232,6 +2351,13 @@
     "website": "http://www.wmw-fehring.at/",
     "myrcmOrgId": "507",
     "country": "AT"
+  },
+  {
+    "id": "xraystore-cz",
+    "name": "XRAYstore.cz",
+    "website": "https://www.xraystore.cz",
+    "myrcmOrgId": "93",
+    "country": "CZ"
   },
   {
     "id": "yellowracing-v2-0",

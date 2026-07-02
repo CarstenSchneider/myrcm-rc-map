@@ -1,11 +1,164 @@
 [
   {
+    "orgId": "16978",
+    "name": "1. Mini-Z Racer ČR",
+    "location": "Neratovice",
+    "country": "Czech Republic",
+    "eventCount": 97,
+    "url": "https://www.myrcm.ch/?dId[O]=16978&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.mini-z.cz"
+  },
+  {
+    "orgId": "6309",
+    "name": "Auto RC Olomouc",
+    "location": "Velký Týnec",
+    "country": "Czech Republic",
+    "eventCount": 96,
+    "url": "https://www.myrcm.ch/?dId[O]=6309&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.autorcolomouc.cz"
+  },
+  {
+    "orgId": "11567",
+    "name": "Domanský s.r.o.",
+    "location": "Praha",
+    "country": "Czech Republic",
+    "eventCount": 95,
+    "url": "https://www.myrcm.ch/?dId[O]=11567&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.rc-timing.ch/support/faq.html"
+  },
+  {
+    "orgId": "14814",
+    "name": "JMKracing",
+    "location": "Štěnovice",
+    "country": "Czech Republic",
+    "eventCount": 112,
+    "url": "https://www.myrcm.ch/?dId[O]=14814&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.jmkracing.cz"
+  },
+  {
+    "orgId": "6957",
+    "name": "MIBOSPORT",
+    "location": "Třebíč",
+    "country": "Czech Republic",
+    "eventCount": 84,
+    "url": "https://www.myrcm.ch/?dId[O]=6957&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.mibosport.com"
+  },
+  {
+    "orgId": "1334",
+    "name": "Mini-Z Ostrava",
+    "location": "Ostrava",
+    "country": "Czech Republic",
+    "eventCount": 96,
+    "url": "https://www.myrcm.ch/?dId[O]=1334&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.mini-zostrava.cz"
+  },
+  {
+    "orgId": "49095",
+    "name": "Modelklub Svitavy",
+    "location": "Svitavy - Lány",
+    "country": "Czech Republic",
+    "eventCount": 102,
+    "url": "https://www.myrcm.ch/?dId[O]=49095&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.modelklub-svitavy.cz"
+  },
+  {
+    "orgId": "21771",
+    "name": "Racing Club Zlín",
+    "location": "Želechovice nad Dřevnicí",
+    "country": "Czech Republic",
+    "eventCount": 97,
+    "url": "https://www.myrcm.ch/?dId[O]=21771&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.rc.zlin.cz"
+  },
+  {
+    "orgId": "63755",
+    "name": "RC auta Vizovice, z.s.",
+    "location": "Vizovice",
+    "country": "Czech Republic",
+    "eventCount": 14,
+    "url": "https://www.myrcm.ch/?dId[O]=63755&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.rcvizovice.cz"
+  },
+  {
     "orgId": "590",
     "name": "RC Blansko,z.s.",
-    "location": "Blansko",
+    "location": "Blansko Czech Republic",
     "country": "Czech Republic",
-    "eventCount": 0,
+    "eventCount": 105,
     "url": "https://www.myrcm.ch/?dId[O]=590&pLa=en&pId[O]=0&hId[1]=org",
     "website": "https://www.rcblansko.eu"
+  },
+  {
+    "orgId": "28176",
+    "name": "RC Carsclub Ostrov",
+    "location": "Ostrov",
+    "country": "Czech Republic",
+    "eventCount": 101,
+    "url": "https://www.myrcm.ch/?dId[O]=28176&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://rccco.cz"
+  },
+  {
+    "orgId": "41010",
+    "name": "RC DIVOKE JELENI",
+    "location": "Horni Jeleni",
+    "country": "Czech Republic",
+    "eventCount": 100,
+    "url": "https://www.myrcm.ch/?dId[O]=41010&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.facebook.com/rcdivoke.jeleni"
+  },
+  {
+    "orgId": "3202",
+    "name": "RC Model Car Club Brno",
+    "location": "Brno",
+    "country": "Czech Republic",
+    "eventCount": 99,
+    "url": "https://www.myrcm.ch/?dId[O]=3202&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://www.rcautomodely.com"
+  },
+  {
+    "orgId": "33726",
+    "name": "RC Team Rychvald",
+    "location": "Rychvald",
+    "country": "Czech Republic",
+    "eventCount": 98,
+    "url": "https://www.myrcm.ch/?dId[O]=33726&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.rcteamrychvald.cz"
+  },
+  {
+    "orgId": "38058",
+    "name": "RCA Stařeč",
+    "location": "Stařeč",
+    "country": "Czech Republic",
+    "eventCount": 63,
+    "url": "https://www.myrcm.ch/?dId[O]=38058&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.facebook.com/RCAStarec"
+  },
+  {
+    "orgId": "11482",
+    "name": "Team Rebels",
+    "location": "Náchod",
+    "country": "Czech Republic",
+    "eventCount": 98,
+    "url": "https://www.myrcm.ch/?dId[O]=11482&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "http://teamrebels.cz/"
+  },
+  {
+    "orgId": "215",
+    "name": "Vegatrucks",
+    "location": "Praha 98",
+    "country": "Czech Republic",
+    "eventCount": 99,
+    "url": "https://www.myrcm.ch/?dId[O]=215&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.rc-timing.ch/support/faq.html"
+  },
+  {
+    "orgId": "93",
+    "name": "XRAYstore.cz",
+    "location": "Česká republika",
+    "country": "Czech Republic",
+    "eventCount": 102,
+    "url": "https://www.myrcm.ch/?dId[O]=93&pLa=en&pId[O]=0&hId[1]=org",
+    "website": "https://www.xraystore.cz"
   }
 ]
