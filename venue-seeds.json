@@ -5074,6 +5074,13 @@
     "country": "NL"
   },
   {
+    "hostId": "rc-model-car-club-brno",
+    "hostName": "RC Model Car Club Brno",
+    "lat": 49.17428119476407,
+    "lng": 16.555893485145255,
+    "myrcmOrgId": "3202"
+  },
+  {
     "hostId": "dmc-ov-36",
     "hostName": "RC Offroad Heiligenstadt e.V.",
     "lat": 51.387849617883866,
