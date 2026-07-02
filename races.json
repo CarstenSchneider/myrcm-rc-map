@@ -113536,12 +113536,12 @@
       },
       {
         "name": "4WD Buggy",
-        "entries": 5
+        "entries": 4
       },
       "TRK / SC 2wd",
       {
         "name": "2WD Buggy",
-        "entries": 29
+        "entries": 30
       }
     ],
     "documents": [],
@@ -113939,13 +113939,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 31,
-    "registrationDisplay": "31",
+    "registrationCount": 32,
+    "registrationDisplay": "32",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Elektro RC SORS",
-        "entries": 31
+        "entries": 32
       }
     ],
     "documents": [],
@@ -114202,8 +114202,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 24,
-    "registrationDisplay": "24",
+    "registrationCount": 25,
+    "registrationDisplay": "25",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "HRCC GT8",
@@ -114231,7 +114231,7 @@
       "HRCC EG10 Fronti",
       {
         "name": "HRCC EG10 Plastic Cars",
-        "entries": 5
+        "entries": 6
       }
     ],
     "documents": [],
@@ -114428,18 +114428,18 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "DT03 VM",
       {
         "name": "ORE10 Buggy 2WD/4WD VM",
-        "entries": 1
+        "entries": 2
       },
       {
         "name": "ORE8 VM",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
@@ -115246,8 +115246,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 29,
-    "registrationDisplay": "29",
+    "registrationCount": 30,
+    "registrationDisplay": "30",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "Tamiya Euro Cup Fighter-Kids",
@@ -115265,7 +115265,7 @@
       },
       {
         "name": "Tamiya Euro Cup Race-Truck 4WD",
-        "entries": 4
+        "entries": 5
       },
       {
         "name": "Tamiya Euro Cup Top Stock 4WD",
@@ -116383,8 +116383,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -116401,9 +116401,12 @@
       },
       {
         "name": "Verbrenner Glattbahn 1:8 Sport",
+        "entries": 2
+      },
+      {
+        "name": "Verbrenner-Glattbahn 1:10 Sport",
         "entries": 1
       },
-      "Verbrenner-Glattbahn 1:10 Sport",
       {
         "name": "JumpstartRC Trophy Elektro-Glattbahn 1:8",
         "entries": 4
@@ -118397,6 +118400,39 @@
     "classes": [],
     "documents": [],
     "firstSeen": "2026-06-30"
+  },
+  {
+    "id": "myrcm-12027-2026-08-01-myrcm-event-98707",
+    "venueId": "myrcm-12027",
+    "venueName": "De Baanbrekers",
+    "venueLocation": null,
+    "venueWebsite": null,
+    "hostId": "nomac",
+    "hostName": "NOMAC",
+    "name": "5e N.K. EC10 NOMAC Baanbrekers",
+    "from": "2026-08-01",
+    "to": "2026-08-02",
+    "series": [],
+    "source": "myrcm",
+    "url": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98707&pLa=en",
+    "detailUrl": "https://www.myrcm.ch/myrcm/main?dId%5BO%5D=53339&pLa=en&dId%5BE%5D=98707&tId=E&hId%5B1%5D=org",
+    "registrationListUrl": "https://www.myrcm.ch/myrcm/main?hId%5B1%5D=bkg&dId%5BE%5D=98707&dLt=reg&pLa=en&lType=rList",
+    "registrationStatus": "upcoming",
+    "registrationOpens": "2026-07-06",
+    "registrationRequiresLogin": false,
+    "registrationCount": 0,
+    "registrationDisplay": "0",
+    "note": "Nennung ab 06.07.2026",
+    "classes": [
+      "EC10-Rookie",
+      "EC10-Fronti",
+      "EC10-F1 foam",
+      "EC10-F1 rubber",
+      "EC10-Stock",
+      "EC10-Modified"
+    ],
+    "documents": [],
+    "firstSeen": "2026-07-02"
   },
   {
     "id": "amc-senftenberg-e-v-2026-08-01-myrcm-event-98582",
