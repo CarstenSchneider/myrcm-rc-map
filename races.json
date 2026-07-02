@@ -113683,8 +113683,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 12,
-    "registrationDisplay": "12",
+    "registrationCount": 14,
+    "registrationDisplay": "14",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113693,7 +113693,7 @@
       },
       {
         "name": "Rallye RTR",
-        "entries": 9
+        "entries": 11
       }
     ],
     "documents": [],
@@ -114000,14 +114000,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 25,
-    "registrationDisplay": "25",
+    "registrationCount": 27,
+    "registrationDisplay": "27",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "MCC - 17.5 Stock fixed",
       {
         "name": "MCC - Formel",
-        "entries": 3
+        "entries": 4
       },
       {
         "name": "MCC - MCC Challenge",
@@ -114019,7 +114019,7 @@
       },
       {
         "name": "MCC - Tamiya TT",
-        "entries": 11
+        "entries": 12
       }
     ],
     "documents": [],
@@ -114829,8 +114829,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 17,
-    "registrationDisplay": "17",
+    "registrationCount": 16,
+    "registrationDisplay": "16",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -114843,7 +114843,7 @@
       },
       {
         "name": "ÖFMAV EOR - TW Modified",
-        "entries": 7
+        "entries": 6
       }
     ],
     "documents": [],
@@ -115106,13 +115106,16 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 2,
-    "registrationDisplay": "2",
+    "registrationCount": 3,
+    "registrationDisplay": "3",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "1/10 EL 13.5",
       "1/10 EL 17.5",
-      "1/5",
+      {
+        "name": "1/5",
+        "entries": 1
+      },
       "1/8 EL PAN",
       "1/8 GT E Intro",
       {
@@ -115866,14 +115869,14 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 3,
-    "registrationDisplay": "3",
+    "registrationCount": 4,
+    "registrationDisplay": "4",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "SPC-Kids",
       {
         "name": "Einsteigerklasse Buggy LRP",
-        "entries": 2
+        "entries": 3
       },
       "SPC-ORE 2WD",
       "SPC-ORE 2WD ST",
@@ -116473,17 +116476,17 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 57,
-    "registrationDisplay": "57",
+    "registrationCount": 59,
+    "registrationDisplay": "59",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "Crawler",
-        "entries": 47
+        "entries": 48
       },
       {
         "name": "Rennstrecke",
-        "entries": 10
+        "entries": 11
       }
     ],
     "documents": [],
@@ -119162,13 +119165,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 4,
-    "registrationDisplay": "4",
+    "registrationCount": 5,
+    "registrationDisplay": "5",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "ORE8",
-        "entries": 4
+        "entries": 5
       },
       "ORET"
     ],
