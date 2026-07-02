@@ -5019,6 +5019,13 @@
     "country": "NL"
   },
   {
+    "hostId": "rc-divoke-jeleni",
+    "hostName": "RC DIVOKE JELENI",
+    "lat": 50.04866171507171,
+    "lng": 16.076642373663937,
+    "myrcmOrgId": "41010"
+  },
+  {
     "hostId": "rc-drecksloch-e-v",
     "hostName": "RC Drecksloch e.V.",
     "lat": 51.539601453420495,
