@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rc-team-rychvald",
-    "hostName": "RC Team Rychvald",
-    "source": "myrcm",
-    "myrcmOrgId": "33726",
-    "possibleVenue": "Rychvald"
-  },
-  {
     "hostId": "rca-starec",
     "hostName": "RCA Stařeč",
     "source": "myrcm",
