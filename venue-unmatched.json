@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "modelklub-svitavy",
-    "hostName": "Modelklub Svitavy",
-    "source": "myrcm",
-    "myrcmOrgId": "49095",
-    "possibleVenue": "Svitavy"
-  },
-  {
     "hostId": "racing-club-zlin",
     "hostName": "Racing Club Zlín",
     "source": "myrcm",
