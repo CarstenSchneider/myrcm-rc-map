@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rc-model-car-club-brno",
-    "hostName": "RC Model Car Club Brno",
-    "source": "myrcm",
-    "myrcmOrgId": "3202",
-    "possibleVenue": "Brno"
-  },
-  {
     "hostId": "rc-team-rychvald",
     "hostName": "RC Team Rychvald",
     "source": "myrcm",
