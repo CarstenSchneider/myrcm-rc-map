@@ -4057,6 +4057,22 @@
     "website": "http://www.wmw-fehring.at/"
   },
   {
+    "id": "cz-general",
+    "name": "Tschechien (Ort unbekannt)",
+    "locationUnknown": true,
+    "source": "manual",
+    "country": "CZ",
+    "hostIds": [],
+    "skipTextMatch": true
+  },
+  {
+    "hostId": "1-mini-z-racer-cr",
+    "hostName": "1. Mini-Z Racer ČR",
+    "lat": 50.255168222363444,
+    "lng": 14.52495200953727,
+    "myrcmOrgId": "16978"
+  },
+  {
     "hostId": "dmc-ov-386",
     "hostName": "3 Sesselracer",
     "lat": 48.735275140194894,
@@ -5304,14 +5320,5 @@
     "locationUnknown": true,
     "myrcmOrgId": "41053",
     "country": "BE"
-  },
-  {
-    "id": "cz-general",
-    "name": "Tschechien (Ort unbekannt)",
-    "locationUnknown": true,
-    "source": "manual",
-    "country": "CZ",
-    "hostIds": [],
-    "skipTextMatch": true
   }
 ]
