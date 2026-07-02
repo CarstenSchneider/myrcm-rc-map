@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "auto-rc-olomouc",
-    "hostName": "Auto RC Olomouc",
-    "source": "myrcm",
-    "myrcmOrgId": "6309",
-    "possibleVenue": "Velký Týnec"
-  },
-  {
     "hostId": "domansky-s-r-o",
     "hostName": "Domanský s.r.o.",
     "source": "myrcm",
