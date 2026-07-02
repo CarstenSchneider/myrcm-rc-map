@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rc-auta-vizovice-z-s",
-    "hostName": "RC auta Vizovice, z.s.",
-    "source": "myrcm",
-    "myrcmOrgId": "63755",
-    "possibleVenue": "Vizovice"
-  },
-  {
     "hostId": "rc-blansko-z-s",
     "hostName": "RC Blansko,z.s.",
     "source": "myrcm",
