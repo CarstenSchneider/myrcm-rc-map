@@ -5116,6 +5116,13 @@
     "website": "http://www.rc-racecrew.de"
   },
   {
+    "hostId": "rc-team-rychvald",
+    "hostName": "RC Team Rychvald",
+    "lat": 49.86742314591384,
+    "lng": 18.3914475355822,
+    "myrcmOrgId": "33726"
+  },
+  {
     "hostId": "dmc-rc-club-grossheubach-e-v",
     "hostName": "RC-Club Grossheubach e.V.",
     "lat": 49.71631983331656,
