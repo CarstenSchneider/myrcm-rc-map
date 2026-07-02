@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rc-blansko-z-s",
-    "hostName": "RC Blansko,z.s.",
-    "source": "myrcm",
-    "myrcmOrgId": "590",
-    "possibleVenue": "Blansko"
-  },
-  {
     "hostId": "rc-carsclub-ostrov",
     "hostName": "RC Carsclub Ostrov",
     "source": "myrcm",
