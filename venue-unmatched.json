@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "team-rebels",
-    "hostName": "Team Rebels",
-    "source": "myrcm",
-    "myrcmOrgId": "11482",
-    "possibleVenue": "Náchod"
-  },
-  {
     "hostId": "vegatrucks",
     "hostName": "Vegatrucks",
     "source": "myrcm",
