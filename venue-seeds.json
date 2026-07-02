@@ -4656,6 +4656,13 @@
     "website": "http://www.mttg.ch/"
   },
   {
+    "hostId": "mini-z-ostrava",
+    "hostName": "Mini-Z Ostrava",
+    "lat": 49.83110048568248,
+    "lng": 18.28046581005652,
+    "myrcmOrgId": "1334"
+  },
+  {
     "hostId": "mini-zshop-nl",
     "hostName": "Mini-zshop.nl",
     "lat": 52.823655571694204,
