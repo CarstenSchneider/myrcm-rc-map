@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "domansky-s-r-o",
-    "hostName": "Domanský s.r.o.",
-    "source": "myrcm",
-    "myrcmOrgId": "11567",
-    "possibleVenue": "Praha"
-  },
-  {
     "hostId": "jmkracing",
     "hostName": "JMKracing",
     "source": "myrcm",
