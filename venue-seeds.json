@@ -5419,6 +5419,12 @@
     "lng": 0.509122
   },
   {
+    "hostId": "vegatrucks",
+    "hostName": "Vegatrucks",
+    "locationUnknown": true,
+    "myrcmOrgId": "215"
+  },
+  {
     "hostId": "yellowracing-v2-0",
     "hostName": "Yellowracing V2.0",
     "locationUnknown": true,
