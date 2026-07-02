@@ -2015,9 +2015,8 @@ async function runImportOnce() {
       const record = unmatchedRecordForMyRcmHost(
           host,
           hostRecord,
-          venueSeed?.locationUnknown ? "locationUnknown venue — no coordinates" : "no confirmed venue for at least one current MyRCM race"
+          venueSeed?.locationUnknown ? "locationUnknown venue — needs real coordinates" : "no confirmed venue for at least one current MyRCM race"
         );
-      if (venueSeed?.locationUnknown) record.locationUnknown = true;
       importedUnmatched.push(record);
     }
 
