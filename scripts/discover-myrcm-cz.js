@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Discovers Czech RC clubs from myrcm.ch event listings and updates myrcm-hosts-cz.json.
+ * Discovers Czech RC clubs from myrcm.ch and updates myrcm-hosts-cz.json.
  * Runs on render.com where myrcm.ch is accessible.
  * Usage: node scripts/discover-myrcm-cz.js
  */
@@ -9,16 +9,23 @@ import * as cheerio from "cheerio";
 import { readFile, writeFile } from "node:fs/promises";
 
 const BASE = "https://www.myrcm.ch";
+// myrcm.ch serves table rows only when the request looks like an XHR
 const HEADERS = { "user-agent": "Mozilla/5.0 myrcm-rc-map importer" };
+const AJAX_HEADERS = {
+  ...HEADERS,
+  "X-Requested-With": "XMLHttpRequest",
+  "Accept": "text/html, */*; q=0.01",
+};
 const OUTPUT = "myrcm-hosts-cz.json";
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 4;
 
-async function fetchText(url) {
+async function fetchText(url, ajax = false) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  const headers = ajax ? AJAX_HEADERS : HEADERS;
   try {
-    const res = await fetch(url, { signal: ctrl.signal, headers: HEADERS });
+    const res = await fetch(url, { signal: ctrl.signal, headers });
     clearTimeout(timer);
     if (!res.ok) { console.warn(`  HTTP ${res.status} from ${url}`); return null; }
     return await res.text();
@@ -82,10 +89,11 @@ function extractCzechOrgsFromPage(html) {
   return found;
 }
 
+// Paginate org-list pages using AJAX mode (tId=O triggers row-only HTML response)
 async function paginateOrgIds(baseUrl, orgMap, label) {
   for (let page = 1; page <= 300; page++) {
-    const pageUrl = `${baseUrl}&pId[O]=${page}`;
-    const pageHtml = await fetchText(pageUrl);
+    const pageUrl = `${baseUrl}&tId=O&pId[O]=${page}`;
+    const pageHtml = await fetchText(pageUrl, true);
     if (!pageHtml) break;
     const pageOrgs = extractOrgIds(pageHtml);
     if (pageOrgs.length === 0) break;
@@ -97,10 +105,21 @@ async function paginateOrgIds(baseUrl, orgMap, label) {
   }
 }
 
-async function paginateCzechOrgs(baseUrl, orgMap, label, totalPages) {
-  for (let page = 1; page < totalPages; page++) {
-    const pageUrl = `${baseUrl}&pId[O]=${page}`;
-    const html = await fetchText(pageUrl);
+// Paginate org-list to find Czech rows (AJAX mode, tId=O)
+async function paginateCzechOrgsFromOrgList(baseUrl, orgMap, label, totalPages) {
+  for (let page = 1; page <= totalPages; page++) {
+    const html = await fetchText(`${baseUrl}&tId=O&pId[O]=${page}`, true);
+    if (!html) continue;
+    for (const [id, name] of extractCzechOrgsFromPage(html)) orgMap.set(id, name);
+    if (page % 50 === 0) console.log(`  [${label}] Page ${page}/${totalPages}: ${orgMap.size} Czech orgs`);
+    await new Promise(r => setTimeout(r, 150));
+  }
+}
+
+// Paginate event-list pages to find Czech org links (AJAX mode, tId=E + pId[E])
+async function paginateCzechOrgsFromEvents(baseUrl, orgMap, label, totalPages) {
+  for (let page = 1; page <= totalPages; page++) {
+    const html = await fetchText(`${baseUrl}&tId=E&pId[E]=${page}`, true);
     if (!html) continue;
     for (const [id, name] of extractCzechOrgsFromPage(html)) orgMap.set(id, name);
     if (page % 25 === 0) console.log(`  [${label}] Page ${page}/${totalPages}: ${orgMap.size} Czech orgs`);
@@ -111,7 +130,7 @@ async function paginateCzechOrgs(baseUrl, orgMap, label, totalPages) {
 async function discoverOrgIdsFromEvents() {
   const orgMap = new Map();
 
-  // Phase 1a: Try org-list URL filtered by CZE
+  // Phase 1a: Org-list filtered by CZE — try AJAX mode first (tId=O&pId[O]=1)
   const orgListPatterns = [
     `${BASE}/myrcm/main?pLa=en&hId[1]=orl&fId[C]=CZE`,
     `${BASE}/myrcm/main?pLa=en&hId[1]=orl&fId[C]=Czech+Republic`,
@@ -119,21 +138,37 @@ async function discoverOrgIdsFromEvents() {
   ];
   for (const url of orgListPatterns) {
     console.log(`Phase 1a: ${url}`);
+    const ajaxPage1 = await fetchText(`${url}&tId=O&pId[O]=1`, true);
+    if (ajaxPage1) {
+      const ajaxOrgs = extractOrgIds(ajaxPage1);
+      const ajaxCzOrgs = extractCzechOrgsFromPage(ajaxPage1);
+      console.log(`  → AJAX page 1: ${ajaxOrgs.length} org links, ${ajaxCzOrgs.size} CZ rows`);
+      if (ajaxOrgs.length > 0) {
+        for (const o of ajaxOrgs) if (!orgMap.has(o.orgId)) orgMap.set(o.orgId, o.name);
+        for (const [id, name] of ajaxCzOrgs) if (!orgMap.has(id)) orgMap.set(id, name);
+        await paginateOrgIds(url, orgMap, "org-list-ajax");
+        console.log(`Phase 1a (AJAX) found ${orgMap.size} Czech orgs`);
+        if (orgMap.size > 0) return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+      }
+    }
+    // Fallback: non-AJAX (static HTML, usually empty table)
     const html = await fetchText(url);
-    if (!html) continue;
+    if (!html) { await new Promise(r => setTimeout(r, 300)); continue; }
     const orgs = extractOrgIds(html);
-    console.log(`  → ${orgs.length} org links`);
+    console.log(`  → static: ${orgs.length} org links`);
     if (orgs.length > 0) {
       for (const o of orgs) if (!orgMap.has(o.orgId)) orgMap.set(o.orgId, o.name);
       await paginateOrgIds(url, orgMap, "org-list");
-      console.log(`Org-list worked. Czech orgs found: ${orgMap.size}`);
-      return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+      if (orgMap.size > 0) {
+        console.log(`Phase 1a (static) found ${orgMap.size} Czech orgs`);
+        return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+      }
     }
     await new Promise(r => setTimeout(r, 300));
   }
 
-  // Phase 1.5: Full org-list scan (no country filter)
-  console.log("\nPhase 1.5: Full org-list scan...");
+  // Phase 1.5: Full org-list scan (AJAX, all countries, filter by CZ text)
+  console.log("\nPhase 1.5: Full org-list AJAX scan...");
   const orgListUrl = `${BASE}/myrcm/main?pLa=en&hId[1]=orl`;
   const orgListFirst = await fetchText(orgListUrl);
   if (orgListFirst) {
@@ -142,19 +177,12 @@ async function discoverOrgIdsFromEvents() {
     const totalPages = Math.min(Math.ceil(totalOrgs / 50), 500);
     console.log(`  Org list: ~${totalOrgs} orgs, ${totalPages} pages`);
     for (const [id, name] of extractCzechOrgsFromPage(orgListFirst)) orgMap.set(id, name);
-    for (let page = 1; page <= totalPages; page++) {
-      const html = await fetchText(`${orgListUrl}&pId[O]=${page}`);
-      if (!html) continue;
-      const before = orgMap.size;
-      for (const [id, name] of extractCzechOrgsFromPage(html)) orgMap.set(id, name);
-      if (page % 50 === 0) console.log(`  [org-list] Page ${page}/${totalPages}: ${orgMap.size} Czech orgs`);
-      await new Promise(r => setTimeout(r, 150));
-    }
-    console.log(`Org-list scan complete. Czech orgs: ${orgMap.size}`);
+    await paginateCzechOrgsFromOrgList(orgListUrl, orgMap, "org-list-full", totalPages);
+    console.log(`Phase 1.5 done. Czech orgs: ${orgMap.size}`);
     if (orgMap.size > 0) return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
   }
 
-  // Phase 1b: Try filtered event-list URLs
+  // Phase 1b: Filtered event-list URLs (AJAX mode, tId=E&pId[E]=N)
   const eventListPatterns = [
     `${BASE}/myrcm/main?pLa=en&hId[1]=arv&fId[C]=CZE`,
     `${BASE}/myrcm/main?pLa=en&hId[1]=arv&country=CZE`,
@@ -162,27 +190,50 @@ async function discoverOrgIdsFromEvents() {
   ];
   for (const url of eventListPatterns) {
     console.log(`Phase 1b: ${url}`);
+    const ajaxPage1 = await fetchText(`${url}&tId=E&pId[E]=1`, true);
+    if (ajaxPage1) {
+      const orgsById = extractOrgIds(ajaxPage1);
+      const orgsByRow = extractCzechOrgsFromPage(ajaxPage1);
+      console.log(`  → AJAX: ${orgsById.length} org links, ${orgsByRow.size} CZ rows`);
+      const combined = new Map([...orgsById.map(o => [o.orgId, o.name]), ...orgsByRow]);
+      if (combined.size > 0) {
+        for (const [id, name] of combined) if (!orgMap.has(id)) orgMap.set(id, name);
+        const totalMatch = ajaxPage1.match(/from\s+([\d,]+)/i);
+        const totalEvents = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 2000;
+        const totalPages = Math.min(Math.ceil(totalEvents / 50), 300);
+        console.log(`  Total events: ${totalEvents}, pages: ${totalPages}`);
+        await paginateCzechOrgsFromEvents(url, orgMap, "filtered-events-ajax", totalPages);
+        if (orgMap.size > 0) {
+          console.log(`Phase 1b (AJAX) found ${orgMap.size} Czech orgs`);
+          return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+        }
+      }
+    }
+    // Fallback: non-AJAX
     const html = await fetchText(url);
-    if (!html) continue;
+    if (!html) { await new Promise(r => setTimeout(r, 300)); continue; }
     const orgsById = extractOrgIds(html);
     const orgsByRow = extractCzechOrgsFromPage(html);
-    console.log(`  → extractOrgIds: ${orgsById.length}, extractCzechOrgs: ${orgsByRow.size}`);
     const combined = new Map([...orgsById.map(o => [o.orgId, o.name]), ...orgsByRow]);
     if (combined.size > 0) {
       for (const [id, name] of combined) if (!orgMap.has(id)) orgMap.set(id, name);
       const totalMatch = html.match(/from\s+([\d,]+)/i);
       const totalEvents = totalMatch ? parseInt(totalMatch[1].replace(/,/g, ""), 10) : 2000;
       const totalPages = Math.min(Math.ceil(totalEvents / 50), 300);
-      console.log(`  Total events: ${totalEvents}, pages: ${totalPages}`);
-      await paginateCzechOrgs(url, orgMap, "filtered-events", totalPages);
-      console.log(`Filtered event URL worked. Czech orgs: ${orgMap.size}`);
-      return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+      await paginateCzechOrgsFromEvents(url, orgMap, "filtered-events", totalPages);
+      if (orgMap.size > 0) {
+        console.log(`Phase 1b (static) found ${orgMap.size} Czech orgs`);
+        return [...orgMap.entries()].map(([orgId, name]) => ({ orgId, name }));
+      }
     }
     await new Promise(r => setTimeout(r, 300));
   }
 
-  // Phase 2: Full scan of all event pages (arv + upc)
-  for (const [label, evUrl] of [["arv", `${BASE}/myrcm/main?pLa=en&hId[1]=arv`], ["upc", `${BASE}/myrcm/main?pLa=en&hId[1]=upc`]]) {
+  // Phase 2: Full scan of all event pages (AJAX mode, tId=E + pId[E])
+  for (const [label, evUrl] of [
+    ["arv", `${BASE}/myrcm/main?pLa=en&hId[1]=arv`],
+    ["upc", `${BASE}/myrcm/main?pLa=en&hId[1]=upc`],
+  ]) {
     console.log(`\nPhase 2 [${label}]: Full scan...`);
     const firstHtml = await fetchText(evUrl);
     if (!firstHtml) continue;
@@ -191,7 +242,7 @@ async function discoverOrgIdsFromEvents() {
     const totalPages = Math.min(Math.ceil(totalEvents / 50), 500);
     console.log(`  Total: ${totalEvents} events, ${totalPages} pages`);
     for (const [id, name] of extractCzechOrgsFromPage(firstHtml)) orgMap.set(id, name);
-    await paginateCzechOrgs(evUrl, orgMap, label, totalPages);
+    await paginateCzechOrgsFromEvents(evUrl, orgMap, label, totalPages);
     console.log(`  [${label}] Done. Czech orgs so far: ${orgMap.size}`);
   }
   console.log(`Full scan complete. ${orgMap.size} unique Czech org IDs found.`);
@@ -261,7 +312,7 @@ async function main() {
   const orgs = await discoverOrgIdsFromEvents();
   console.log(`\nTotal unique orgs found: ${orgs.length}`);
   if (orgs.length === 0) {
-    console.error("No org links found.");
+    console.error("No org links found — myrcm-hosts-cz.json unchanged.");
     process.exit(0);
   }
   console.log("Fetching org details...");
