@@ -4971,6 +4971,13 @@
     "myrcmOrgId": "63755"
   },
   {
+    "hostId": "rc-blansko-z-s",
+    "hostName": "RC Blansko,z.s.",
+    "lat": 49.36653038904138,
+    "lng": 16.64071232948592,
+    "myrcmOrgId": "590"
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "city": "Chemnitz",
