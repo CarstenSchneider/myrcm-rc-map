@@ -4724,6 +4724,13 @@
     "locationUnknown": true
   },
   {
+    "hostId": "modelklub-svitavy",
+    "hostName": "Modelklub Svitavy",
+    "lat": 49.752323904872526,
+    "lng": 16.452584331335146,
+    "myrcmOrgId": "49095"
+  },
+  {
     "hostId": "dmc-modell-car-club-rhein-ahr-e-v",
     "hostName": "Modell Car Club Rhein Ahr e.V.",
     "lat": 50.63815574143907,
