@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rc-divoke-jeleni",
-    "hostName": "RC DIVOKE JELENI",
-    "source": "myrcm",
-    "myrcmOrgId": "41010",
-    "possibleVenue": "Horní Jelení"
-  },
-  {
     "hostId": "rc-model-car-club-brno",
     "hostName": "RC Model Car Club Brno",
     "source": "myrcm",
