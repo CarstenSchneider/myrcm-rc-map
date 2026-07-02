@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "vegatrucks",
-    "hostName": "Vegatrucks",
-    "source": "myrcm",
-    "myrcmOrgId": "215",
-    "possibleVenue": "Praha"
-  },
-  {
     "hostId": "xraystore-cz",
     "hostName": "XRAYstore.cz",
     "source": "myrcm",
