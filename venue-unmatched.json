@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "mini-z-ostrava",
-    "hostName": "Mini-Z Ostrava",
-    "source": "myrcm",
-    "myrcmOrgId": "1334",
-    "possibleVenue": "Ostrava"
-  },
-  {
     "hostId": "modelklub-svitavy",
     "hostName": "Modelklub Svitavy",
     "source": "myrcm",
