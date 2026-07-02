@@ -4997,6 +4997,12 @@
     "website": "https://rc-car-wr.de/"
   },
   {
+    "hostId": "rc-carsclub-ostrov",
+    "hostName": "RC Carsclub Ostrov",
+    "locationUnknown": true,
+    "myrcmOrgId": "28176"
+  },
+  {
     "hostId": "rc-club-zoetermeer",
     "hostName": "RC Club Zoetermeer",
     "lat": 52.04886289303367,
