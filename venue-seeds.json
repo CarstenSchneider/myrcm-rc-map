@@ -5163,6 +5163,13 @@
     "website": "http://www.rco-ottendorf-okrilla.de"
   },
   {
+    "hostId": "rca-starec",
+    "hostName": "RCA Stařeč",
+    "lat": 49.20340073954207,
+    "lng": 15.82479122154042,
+    "myrcmOrgId": "38058"
+  },
+  {
     "hostId": "rcc-grafenworth",
     "hostName": "RCC-Grafenwörth",
     "city": "Grafenwörth",
