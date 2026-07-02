@@ -113892,8 +113892,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 49,
-    "registrationDisplay": "49",
+    "registrationCount": 50,
+    "registrationDisplay": "50",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -113914,7 +113914,7 @@
       },
       {
         "name": "AC26-Monster/ShortCourse 2WD",
-        "entries": 8
+        "entries": 9
       }
     ],
     "documents": [],
@@ -115770,8 +115770,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 23,
-    "registrationDisplay": "23",
+    "registrationCount": 24,
+    "registrationDisplay": "24",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -115784,7 +115784,7 @@
       },
       {
         "name": "Nordbayern Cup GT / LMH 17.5T",
-        "entries": 6
+        "entries": 7
       },
       {
         "name": "Nordbayern Cup TW 17.5T",
@@ -116383,8 +116383,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 8,
-    "registrationDisplay": "8",
+    "registrationCount": 11,
+    "registrationDisplay": "11",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
@@ -116397,7 +116397,7 @@
       },
       {
         "name": "Verbrenner-Glattbahn 1:8 Klasse 2",
-        "entries": 1
+        "entries": 3
       },
       {
         "name": "Verbrenner Glattbahn 1:8 Sport",
@@ -116406,7 +116406,7 @@
       "Verbrenner-Glattbahn 1:10 Sport",
       {
         "name": "JumpstartRC Trophy Elektro-Glattbahn 1:8",
-        "entries": 3
+        "entries": 4
       },
       "Elektro-Glattbahn 1:8 GT",
       "Verbrenner Glattbahn 1:8 GT",
@@ -117087,8 +117087,8 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 6,
-    "registrationDisplay": "6",
+    "registrationCount": 8,
+    "registrationDisplay": "8",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       "4WD Buggy Modified",
@@ -117103,11 +117103,11 @@
       },
       {
         "name": "2WD Buggy Ruddog",
-        "entries": 2
+        "entries": 3
       },
       {
         "name": "Tamiya / Classic",
-        "entries": 1
+        "entries": 2
       },
       "Truck / Short Course"
     ],
@@ -120812,13 +120812,13 @@
     "registrationStatus": "login_required",
     "registrationOpens": null,
     "registrationRequiresLogin": true,
-    "registrationCount": 11,
-    "registrationDisplay": "11",
+    "registrationCount": 13,
+    "registrationDisplay": "13",
     "note": "Anmeldung bei MyRCM nur nach Login sichtbar.",
     "classes": [
       {
         "name": "OR8-E Elektro Buggy",
-        "entries": 9
+        "entries": 10
       },
       {
         "name": "OR8-E Jugend",
@@ -120826,7 +120826,7 @@
       },
       {
         "name": "OR8-E Truggy",
-        "entries": 1
+        "entries": 2
       }
     ],
     "documents": [],
