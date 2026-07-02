@@ -5350,6 +5350,13 @@
     "country": "BE"
   },
   {
+    "hostId": "team-rebels",
+    "hostName": "Team Rebels",
+    "lat": 50.42242112705359,
+    "lng": 16.188961942979105,
+    "myrcmOrgId": "11482"
+  },
+  {
     "hostId": "ffvrc-0554",
     "hostName": "TOUT TERRAIN RADIOCOMMANDE 90",
     "lat": 47.57798701841962,
