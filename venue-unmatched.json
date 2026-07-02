@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "mibosport",
-    "hostName": "MIBOSPORT",
-    "source": "myrcm",
-    "myrcmOrgId": "6957",
-    "possibleVenue": "Třebíč"
-  },
-  {
     "hostId": "mini-z-ostrava",
     "hostName": "Mini-Z Ostrava",
     "source": "myrcm",
