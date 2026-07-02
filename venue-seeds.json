@@ -4406,6 +4406,13 @@
     "country": "NL"
   },
   {
+    "hostId": "jmkracing",
+    "hostName": "JMKracing",
+    "lat": 49.73870648216009,
+    "lng": 13.381834707652416,
+    "myrcmOrgId": "14814"
+  },
+  {
     "hostId": "ffvrc-0393",
     "hostName": "LES MINI BOLIDES NIVERNAIS",
     "lat": 47.03859159840167,
