@@ -4582,6 +4582,13 @@
     "website": "http://modellfreunde-kuerten.de/"
   },
   {
+    "hostId": "mibosport",
+    "hostName": "MIBOSPORT",
+    "lat": 49.108373227998804,
+    "lng": 16.05843926941689,
+    "myrcmOrgId": "6957"
+  },
+  {
     "hostId": "ffvrc-0365",
     "hostName": "MINI AUTO CLUB ANDELYSIEN",
     "locationUnknown": true
