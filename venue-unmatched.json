@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "rc-carsclub-ostrov",
-    "hostName": "RC Carsclub Ostrov",
-    "source": "myrcm",
-    "myrcmOrgId": "28176",
-    "possibleVenue": "Ostrov"
-  },
-  {
     "hostId": "rc-divoke-jeleni",
     "hostName": "RC DIVOKE JELENI",
     "source": "myrcm",
