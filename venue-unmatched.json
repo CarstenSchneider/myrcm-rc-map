@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "racing-club-zlin",
-    "hostName": "Racing Club Zlín",
-    "source": "myrcm",
-    "myrcmOrgId": "21771",
-    "possibleVenue": "Želechovice nad Dřevnicí"
-  },
-  {
     "hostId": "rc-auta-vizovice-z-s",
     "hostName": "RC auta Vizovice, z.s.",
     "source": "myrcm",
