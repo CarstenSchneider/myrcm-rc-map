@@ -1,12 +1,5 @@
 [
   {
-    "hostId": "jmkracing",
-    "hostName": "JMKracing",
-    "source": "myrcm",
-    "myrcmOrgId": "14814",
-    "possibleVenue": "Štěnovice"
-  },
-  {
     "hostId": "mibosport",
     "hostName": "MIBOSPORT",
     "source": "myrcm",
