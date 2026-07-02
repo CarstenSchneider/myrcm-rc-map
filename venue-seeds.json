@@ -4258,6 +4258,13 @@
     "locationUnknown": true
   },
   {
+    "hostId": "domansky-s-r-o",
+    "hostName": "Domanský s.r.o.",
+    "lat": 50.08414863820599,
+    "lng": 14.30881852383651,
+    "myrcmOrgId": "11567"
+  },
+  {
     "hostId": "dutch-rc-series",
     "hostName": "Dutch RC Series",
     "locationUnknown": true,
