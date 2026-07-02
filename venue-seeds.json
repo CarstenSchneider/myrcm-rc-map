@@ -4964,6 +4964,13 @@
     "website": "https://www.raco2000.nl/"
   },
   {
+    "hostId": "rc-auta-vizovice-z-s",
+    "hostName": "RC auta Vizovice, z.s.",
+    "lat": 49.21080420609778,
+    "lng": 17.531489315415463,
+    "myrcmOrgId": "63755"
+  },
+  {
     "hostId": "rc-car-chemnitz",
     "hostName": "RC Car Chemnitz",
     "city": "Chemnitz",
