@@ -4114,6 +4114,13 @@
     "lng": 3.924720522751046
   },
   {
+    "hostId": "auto-rc-olomouc",
+    "hostName": "Auto RC Olomouc",
+    "lat": 49.55014151001649,
+    "lng": 17.324919881201666,
+    "myrcmOrgId": "6309"
+  },
+  {
     "hostId": "dmc-bc-mitterkreith",
     "hostName": "BC Mitterkreith",
     "lat": 49.21155192592243,
