@@ -2010,16 +2010,15 @@ async function runImportOnce() {
 
     importedHosts.push(hostRecord);
 
-    if (races.some(race => !race.venueId) && !isIgnoredUnmatchedHost(hostRecord)) {
+    const lacksRealVenue = races.some(race => !race.venueId) || !!venueSeed?.locationUnknown;
+    if (lacksRealVenue && !isIgnoredUnmatchedHost(hostRecord)) {
       const record = unmatchedRecordForMyRcmHost(
           host,
           hostRecord,
-          "no confirmed venue for at least one current MyRCM race"
+          venueSeed?.locationUnknown ? "locationUnknown venue — no coordinates" : "no confirmed venue for at least one current MyRCM race"
         );
       if (venueSeed?.locationUnknown) record.locationUnknown = true;
-      importedUnmatched.push(
-        record
-      );
+      importedUnmatched.push(record);
     }
 
     console.log(`  ${races.length} Rennen gefunden`);
